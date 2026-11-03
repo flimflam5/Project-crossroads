@@ -1,0 +1,17 @@
+name: Crossroads story checks
+on:
+  push:
+    paths:
+      - 'crossroads/**'
+      - '.github/workflows/crossroads-story.yml'
+  pull_request:
+    paths:
+      - 'crossroads/**'
+      - '.github/workflows/crossroads-story.yml'
+jobs:
+  narrative-validation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate opening story data
+        run: python3 crossroads/tools/validate_opening.py
