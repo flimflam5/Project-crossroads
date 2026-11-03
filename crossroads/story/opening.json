@@ -1,0 +1,95 @@
+{
+  "title": "Wrong Place, Wrong Time",
+  "protagonist": {
+    "name": "Joseph Mercer",
+    "age": 35,
+    "occupation": "Silph Co. regional logistics manager"
+  },
+  "starter_choices": [
+    {
+      "species": "PORYGON",
+      "origin": "Silph prototype lab"
+    },
+    {
+      "species": "HOUNDOUR",
+      "origin": "abandoned Meridian kennel"
+    },
+    {
+      "species": "TRUBBISH",
+      "origin": "waste processing bay"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "apartment",
+      "location": "Saffron apartment",
+      "lines": [
+        "6:45 AM. Another Monday.",
+        "SUPERVISOR: Your PTO request has been denied.",
+        "JOE: Of course it has."
+      ]
+    },
+    {
+      "id": "office",
+      "location": "Silph Co.",
+      "lines": [
+        "JOE: Eleven years. Still no promotion.",
+        "INTERCOM: Security alert. Remain at your stations."
+      ]
+    },
+    {
+      "id": "heist",
+      "location": "Silph elevator",
+      "lines": [
+        "MARA: Hold this.",
+        "JOE: What is it?",
+        "MARA: Don't open it.",
+        "SECURITY: Drop the case!",
+        "JOE: I WORK HERE!"
+      ]
+    },
+    {
+      "id": "starter",
+      "location": "Silph containment floor",
+      "action": "choose_starter",
+      "lines": [
+        "Three frightened Pokemon need help.",
+        "Choose the one you'll rescue."
+      ]
+    },
+    {
+      "id": "security",
+      "location": "Silph maintenance corridor",
+      "action": "trainer_battle",
+      "lines": [
+        "SECURITY: You're coming with us!",
+        "JOE: I'm trying to leave!"
+      ]
+    },
+    {
+      "id": "extraction",
+      "location": "Silph loading dock",
+      "lines": [
+        "MERIDIAN DRIVER: Get in!",
+        "JOE: I think you've got the wrong guy."
+      ]
+    },
+    {
+      "id": "safehouse",
+      "location": "Meridian safehouse",
+      "lines": [
+        "VALE: Exceptional work, Mercer.",
+        "JOE: This is a misunderstanding.",
+        "VALE: Naturally. Plausible deniability.",
+        "JOE: Does this job offer dental?"
+      ]
+    }
+  ],
+  "progression_flags": [
+    "CROSSROADS_HEIST_STARTED",
+    "CROSSROADS_STARTER_CHOSEN",
+    "CROSSROADS_SECURITY_DEFEATED",
+    "CROSSROADS_PROLOGUE_COMPLETE"
+  ],
+  "status": "Narrative data prototype only; not wired into pokeemerald-expansion maps or event scripts."
+}
