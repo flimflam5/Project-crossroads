@@ -32,7 +32,8 @@ script = (crossroads / "scripts/prologue.inc").read_text()
 for species, value in (("PORYGON", 1), ("HOUNDOUR", 2), ("TRUBBISH", 3)):
     block = script.split(f"Crossroads_EventScript_{species.title()}::", 1)[1]
     block = block.split("Crossroads_EventScript_", 1)[0]
-    assert f"givepokemon SPECIES_{species}, 5, ITEM_NONE" in block
+    assert f"givemon SPECIES_{species}, 5, ITEM_NONE" in block
+    assert "goto_if_eq VAR_RESULT, MON_CANT_GIVE, Crossroads_EventScript_NoRoom" in block
     assert f"setvar VAR_CROSSROADS_STARTER, {value}" in block
 assert "goto_if_ne VAR_CROSSROADS_STARTER, 0" in script
 assert "MULTI_CHOICE_CROSSROADS_STARTERS" not in script
