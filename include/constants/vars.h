@@ -269,7 +269,7 @@
 #define VAR_UNUSED_0x40F7                                0x40F7 // Unused Var
 #define VAR_UNUSED_0x40F8                                0x40F8 // Unused Var
 #define VAR_UNUSED_0x40F9                                0x40F9 // Unused Var
-#define VAR_UNUSED_0x40FA                                0x40FA // Unused Var
+#define VAR_CROSSROADS_STARTER                            0x40FA // Project Crossroads: 0=none, 1=Porygon, 2=Houndour, 3=Trubbish
 #define VAR_UNUSED_0x40FB                                0x40FB // Unused Var
 #define VAR_UNUSED_0x40FC                                0x40FC // Unused Var
 #define VAR_UNUSED_0x40FD                                0x40FD // Unused Var
