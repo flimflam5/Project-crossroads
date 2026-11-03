@@ -383,7 +383,7 @@ Crossroads_Text_AlreadyChosen:
 
 
 @ Crossroads alpha: the GameCube doubles as Joe's Silph work terminal.
-@ This is a dialogue-only prologue preview, not the finished Saffron map.
+@ This is a dialogue-only Olivine prologue preview, not the finished Johto map.
 Crossroads_EventScript_SilphTerminal::
     lockall
     goto_if_ne VAR_CROSSROADS_STARTER, 0, Crossroads_EventScript_SilphTerminalAfterRescue
@@ -395,6 +395,9 @@ Crossroads_EventScript_SilphTerminal::
 
 Crossroads_EventScript_SilphTerminalAfterRescue::
     msgbox Crossroads_Text_OfficeAfterRescue, MSGBOX_DEFAULT
+    msgbox Crossroads_Text_OlivineHarbor, MSGBOX_DEFAULT
+    msgbox Crossroads_Text_MeridianExtraction, MSGBOX_DEFAULT
+    msgbox Crossroads_Text_MeridianSafehouse, MSGBOX_DEFAULT
     releaseall
     end
 
@@ -418,3 +421,20 @@ Crossroads_Text_OfficeAfterRescue:
     .string "SILPH SECURITY BULLETIN\p"
     .string "JOSEPH MERCER - WANTED\nFOR QUESTIONING.\p"
     .string "JOE: I just wanted a day off.$"
+
+@ Project Crossroads: Olivine harbor escape story slice (temporary terminal preview).
+Crossroads_Text_OlivineHarbor:
+    .string "OLIVINE CITY - HARBOR ROAD\\p"
+    .string "Cargo cranes loom over the\\nwater. Sirens echo behind Joe.\\p"
+    .string "JOE: I move freight for a living.\\nI do not steal it!$"
+
+Crossroads_Text_MeridianExtraction:
+    .string "MARA: You want to explain\\nthe case, or get in the truck?\\p"
+    .string "JOE: I want my day off!\\p"
+    .string "MARA: Then get in.$"
+
+Crossroads_Text_MeridianSafehouse:
+    .string "MERIDIAN SAFEHOUSE\\p"
+    .string "VALE: Exceptional work, Mercer.\\p"
+    .string "JOE: You have the wrong guy.\\p"
+    .string "VALE: So everyone keeps saying.$"
