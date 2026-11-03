@@ -3,16 +3,16 @@
   "protagonist": {
     "name": "Joseph Mercer",
     "age": 35,
-    "occupation": "Silph Co. regional logistics manager"
+    "occupation": "Silph Co. Olivine subsidiary logistics manager"
   },
   "starter_choices": [
     {
-      "species": "PORYGON",
-      "origin": "Silph prototype lab"
+      "species": "ELGYEM",
+      "origin": "Silph subsidiary research wing"
     },
     {
-      "species": "HOUNDOUR",
-      "origin": "abandoned Meridian kennel"
+      "species": "SEEDOT",
+      "origin": "Olivine harbor cargo hold"
     },
     {
       "species": "TRUBBISH",
@@ -22,7 +22,7 @@
   "scenes": [
     {
       "id": "apartment",
-      "location": "Saffron apartment",
+      "location": "Olivine City apartment",
       "lines": [
         "6:45 AM. Another Monday.",
         "SUPERVISOR: Your PTO request has been denied.",
@@ -39,7 +39,7 @@
     },
     {
       "id": "heist",
-      "location": "Silph elevator",
+      "location": "Olivine Silph subsidiary elevator",
       "lines": [
         "MARA: Hold this.",
         "JOE: What is it?",
@@ -50,7 +50,7 @@
     },
     {
       "id": "starter",
-      "location": "Silph containment floor",
+      "location": "Olivine Silph subsidiary containment floor",
       "action": "choose_starter",
       "lines": [
         "Three frightened Pokemon need help.",
@@ -59,7 +59,7 @@
     },
     {
       "id": "security",
-      "location": "Silph maintenance corridor",
+      "location": "Olivine Silph subsidiary maintenance corridor",
       "action": "trainer_battle",
       "lines": [
         "SECURITY: You're coming with us!",
@@ -68,7 +68,7 @@
     },
     {
       "id": "extraction",
-      "location": "Silph loading dock",
+      "location": "Olivine harbor loading dock",
       "lines": [
         "MERIDIAN DRIVER: Get in!",
         "JOE: I think you've got the wrong guy."
