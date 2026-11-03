@@ -424,17 +424,17 @@ Crossroads_Text_OfficeAfterRescue:
 
 @ Project Crossroads: Olivine harbor escape story slice (temporary terminal preview).
 Crossroads_Text_OlivineHarbor:
-    .string "OLIVINE CITY - HARBOR ROAD\\p"
-    .string "Cargo cranes loom over the\\nwater. Sirens echo behind Joe.\\p"
-    .string "JOE: I move freight for a living.\\nI do not steal it!$"
+    .string "OLIVINE CITY - HARBOR ROAD\p"
+    .string "Cargo cranes loom over the\nwater. Sirens echo behind Joe.\p"
+    .string "JOE: I move freight for a living.\nI do not steal it!$"
 
 Crossroads_Text_MeridianExtraction:
-    .string "MARA: You want to explain\\nthe case, or get in the truck?\\p"
-    .string "JOE: I want my day off!\\p"
+    .string "MARA: You want to explain\nthe case, or get in the truck?\p"
+    .string "JOE: I want my day off!\p"
     .string "MARA: Then get in.$"
 
 Crossroads_Text_MeridianSafehouse:
-    .string "MERIDIAN SAFEHOUSE\\p"
-    .string "VALE: Exceptional work, Mercer.\\p"
-    .string "JOE: You have the wrong guy.\\p"
+    .string "MERIDIAN SAFEHOUSE\p"
+    .string "VALE: Exceptional work, Mercer.\p"
+    .string "JOE: You have the wrong guy.\p"
     .string "VALE: So everyone keeps saying.$"
