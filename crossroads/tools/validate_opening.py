@@ -10,7 +10,7 @@ from pathlib import Path
 root = Path(__file__).resolve().parents[2]
 crossroads = root / "crossroads"
 story = json.loads((crossroads / "story" / "opening.json").read_text())
-expected = {"PORYGON", "HOUNDOUR", "TRUBBISH"}
+expected = {"ELGYEM", "SEEDOT", "TRUBBISH"}
 actual = {choice["species"] for choice in story["starter_choices"]}
 assert actual == expected, (actual, expected)
 
@@ -29,7 +29,7 @@ assert re.search(r"^#define\s+VAR_CROSSROADS_STARTER\s+0x40FA\b", vars_header, r
 assert "VAR_UNUSED_0x40FA" not in vars_header
 
 script = (crossroads / "scripts/prologue.inc").read_text()
-for species, value in (("PORYGON", 1), ("HOUNDOUR", 2), ("TRUBBISH", 3)):
+for species, value in (("ELGYEM", 1), ("SEEDOT", 2), ("TRUBBISH", 3)):
     block = script.split(f"Crossroads_EventScript_{species.title()}::", 1)[1]
     block = block.split("Crossroads_EventScript_", 1)[0]
     assert f"givemon SPECIES_{species}, 5, ITEM_NONE" in block
