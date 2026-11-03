@@ -320,21 +320,21 @@ Crossroads_EventScript_AskTrubbish::
 
 Crossroads_EventScript_Porygon::
     givemon SPECIES_PORYGON, 5, ITEM_NONE
-    goto_if_eq VAR_RESULT, 0, Crossroads_EventScript_NoRoom
+    goto_if_eq VAR_RESULT, MON_CANT_GIVE, Crossroads_EventScript_NoRoom
     setvar VAR_CROSSROADS_STARTER, 1
     msgbox Crossroads_Text_Porygon, MSGBOX_DEFAULT
     goto Crossroads_EventScript_Finish
 
 Crossroads_EventScript_Houndour::
     givemon SPECIES_HOUNDOUR, 5, ITEM_NONE
-    goto_if_eq VAR_RESULT, 0, Crossroads_EventScript_NoRoom
+    goto_if_eq VAR_RESULT, MON_CANT_GIVE, Crossroads_EventScript_NoRoom
     setvar VAR_CROSSROADS_STARTER, 2
     msgbox Crossroads_Text_Houndour, MSGBOX_DEFAULT
     goto Crossroads_EventScript_Finish
 
 Crossroads_EventScript_Trubbish::
     givemon SPECIES_TRUBBISH, 5, ITEM_NONE
-    goto_if_eq VAR_RESULT, 0, Crossroads_EventScript_NoRoom
+    goto_if_eq VAR_RESULT, MON_CANT_GIVE, Crossroads_EventScript_NoRoom
     setvar VAR_CROSSROADS_STARTER, 3
     msgbox Crossroads_Text_Trubbish, MSGBOX_DEFAULT
     goto Crossroads_EventScript_Finish
