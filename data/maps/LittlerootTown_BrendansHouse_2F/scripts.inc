@@ -380,3 +380,41 @@ Crossroads_Text_NoRoom:
 
 Crossroads_Text_AlreadyChosen:
     .string "JOE: We already have a partner.\nTime to get moving.$"
+
+
+@ Crossroads alpha: the GameCube doubles as Joe's Silph work terminal.
+@ This is a dialogue-only prologue preview, not the finished Saffron map.
+Crossroads_EventScript_SilphTerminal::
+    lockall
+    goto_if_ne VAR_CROSSROADS_STARTER, 0, Crossroads_EventScript_SilphTerminalAfterRescue
+    msgbox Crossroads_Text_OfficeMorning, MSGBOX_DEFAULT
+    msgbox Crossroads_Text_OfficeAlarm, MSGBOX_DEFAULT
+    msgbox Crossroads_Text_MaraCase, MSGBOX_DEFAULT
+    releaseall
+    end
+
+Crossroads_EventScript_SilphTerminalAfterRescue::
+    msgbox Crossroads_Text_OfficeAfterRescue, MSGBOX_DEFAULT
+    releaseall
+    end
+
+Crossroads_Text_OfficeMorning:
+    .string "SILPH CO. - 6:45 AM\\p"
+    .string "SUPERVISOR: Your time-off\\nrequest was denied.\\p"
+    .string "JOE: Of course it was.$"
+
+Crossroads_Text_OfficeAlarm:
+    .string "INTERCOM: Security alert!\\nRemain at your stations!\\p"
+    .string "JOE: Eleven years here...\\nWhat now?$"
+
+Crossroads_Text_MaraCase:
+    .string "MARA: Hold this case.\\p"
+    .string "JOE: What is it?\\p"
+    .string "MARA: Don't open it.\\p"
+    .string "SECURITY: Drop the case!\\p"
+    .string "JOE: I WORK HERE!$"
+
+Crossroads_Text_OfficeAfterRescue:
+    .string "SILPH SECURITY BULLETIN\\p"
+    .string "JOSEPH MERCER - WANTED\\nFOR QUESTIONING.\\p"
+    .string "JOE: I just wanted a day off.$"
