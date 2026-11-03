@@ -399,22 +399,22 @@ Crossroads_EventScript_SilphTerminalAfterRescue::
     end
 
 Crossroads_Text_OfficeMorning:
-    .string "SILPH CO. - 6:45 AM\\p"
-    .string "SUPERVISOR: Your time-off\\nrequest was denied.\\p"
+    .string "SILPH CO. - 6:45 AM\p"
+    .string "SUPERVISOR: Your time-off\nrequest was denied.\p"
     .string "JOE: Of course it was.$"
 
 Crossroads_Text_OfficeAlarm:
-    .string "INTERCOM: Security alert!\\nRemain at your stations!\\p"
-    .string "JOE: Eleven years here...\\nWhat now?$"
+    .string "INTERCOM: Security alert!\nRemain at your stations!\p"
+    .string "JOE: Eleven years here...\nWhat now?$"
 
 Crossroads_Text_MaraCase:
-    .string "MARA: Hold this case.\\p"
-    .string "JOE: What is it?\\p"
-    .string "MARA: Don't open it.\\p"
-    .string "SECURITY: Drop the case!\\p"
+    .string "MARA: Hold this case.\p"
+    .string "JOE: What is it?\p"
+    .string "MARA: Don't open it.\p"
+    .string "SECURITY: Drop the case!\p"
     .string "JOE: I WORK HERE!$"
 
 Crossroads_Text_OfficeAfterRescue:
-    .string "SILPH SECURITY BULLETIN\\p"
-    .string "JOSEPH MERCER - WANTED\\nFOR QUESTIONING.\\p"
+    .string "SILPH SECURITY BULLETIN\p"
+    .string "JOSEPH MERCER - WANTED\nFOR QUESTIONING.\p"
     .string "JOE: I just wanted a day off.$"
