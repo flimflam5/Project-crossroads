@@ -1350,3 +1350,30 @@ SlateportCity_Text_TakingBattleTentChallenge:
 	.string "After all, a tough TRAINER is\n"
 	.string "the perfect fit for the BATTLE TENT!\p"
 	.string "Give it your best effort!$"
+
+
+@ Project Crossroads: first explorable Olivine port-city prototype.
+@ Slateport's existing walkable layout is temporary until Johto art/maps are authored.
+Crossroads_Olivine_EventScript_PortSign::
+    msgbox Crossroads_Olivine_Text_Port, MSGBOX_SIGN
+    end
+
+Crossroads_Olivine_EventScript_CitySign::
+    msgbox Crossroads_Olivine_Text_City, MSGBOX_SIGN
+    end
+
+Crossroads_Olivine_EventScript_SilphSign::
+    msgbox Crossroads_Olivine_Text_Silph, MSGBOX_SIGN
+    end
+
+Crossroads_Olivine_Text_Port:
+    .string "OLIVINE HARBOR\p"
+    .string "Cargo traffic and passenger\nships arrive around the clock.$"
+
+Crossroads_Olivine_Text_City:
+    .string "OLIVINE CITY\p"
+    .string "A working port on JOHTO's\nwestern coast.$"
+
+Crossroads_Olivine_Text_Silph:
+    .string "SILPH CO. - OLIVINE BRANCH\p"
+    .string "Logistics, freight and\nregional distribution.$"
