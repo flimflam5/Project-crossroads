@@ -637,7 +637,7 @@
       "y": 12,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "SlateportCity_EventScript_HarborSign"
+      "script": "Crossroads_Olivine_EventScript_PortSign"
     },
     {
       "type": "sign",
@@ -669,7 +669,7 @@
       "y": 22,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "SlateportCity_EventScript_CitySign"
+      "script": "Crossroads_Olivine_EventScript_CitySign"
     },
     {
       "type": "sign",
@@ -693,7 +693,7 @@
       "y": 38,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "SlateportCity_EventScript_SternsShipyardSign"
+      "script": "Crossroads_Olivine_EventScript_SilphSign"
     },
     {
       "type": "sign",
