@@ -85,6 +85,8 @@ heal = read('src/data/heal_locations.json')['heal_locations'][-1]
 assert heal['id'] == 'HEAL_LOCATION_OLIVINE_CITY'
 assert (heal['x'], heal['y']) in seen
 assert heal['respawn_map'] == 'MAP_OLIVINE_CITY_POKEMON_CENTER_1F'
+center_scripts = (ROOT / 'data/maps/OlivineCity_PokemonCenter_1F/scripts.inc').read_text()
+assert 'map_script MAP_SCRIPT_ON_RESUME, CableClub_OnResume' in center_scripts, 'Standard nurse requires Union Room name-buffer initialization'
 if args.built:
     headers = (ROOT / 'data/maps/headers.inc').read_text()
     table = (ROOT / 'data/maps/groups.inc').read_text()
