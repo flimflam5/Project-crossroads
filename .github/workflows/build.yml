@@ -57,7 +57,7 @@ jobs:
       - name: Crossroads regression checks
         run: |
           python3 crossroads/tools/validate_opening.py
-          python3 crossroads/tools/validate_olivine.py
+          python3 crossroads/tools/validate_olivine.py --built
           python3 crossroads/tools/build_olivine_layout.py --check
 
       - name: Identify test build

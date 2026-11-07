@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Structural regression checks; not a substitute for emulator playtesting."""
 import json
+import argparse
 import re
 import struct
 from collections import deque
@@ -9,6 +10,9 @@ from pathlib import Path
 from build_olivine_layout import generate
 
 ROOT = Path(__file__).resolve().parents[2]
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--built', action='store_true', help='also verify mapjson target inclusion after make')
+args = parser.parse_args()
 
 
 def read(path):
@@ -29,7 +33,8 @@ script = (ROOT / 'crossroads/scripts/olivine.inc').read_text()
 assert 'givemon' not in script, 'City must never grant a second starter'
 
 for mid, m in maps.items():
-    assert m['region'] == 'REGION_JOHTO'
+    # mapjson uses this field as the Emerald build filter, not geography.
+    assert m['region'] == 'REGION_HOENN'
     assert m['region_map_section'] == 'MAPSEC_OLIVINE_CITY'
     assert f'data/maps/{m["name"]}/scripts.inc' in linked
     layout = layouts[m['layout']]
@@ -80,4 +85,11 @@ heal = read('src/data/heal_locations.json')['heal_locations'][-1]
 assert heal['id'] == 'HEAL_LOCATION_OLIVINE_CITY'
 assert (heal['x'], heal['y']) in seen
 assert heal['respawn_map'] == 'MAP_OLIVINE_CITY_POKEMON_CENTER_1F'
+if args.built:
+    headers = (ROOT / 'data/maps/headers.inc').read_text()
+    table = (ROOT / 'data/maps/groups.inc').read_text()
+    for name in names:
+        assert f'data/maps/{name}/header.inc' in headers, ('Map excluded from Emerald build', name)
+        assert re.search(r'^\s*\.4byte ' + name + r'\s*$', table, re.M), ('Missing map pointer', name)
+    print('Generated Emerald map headers and non-null Olivine map pointers: PASS')
 print('Olivine map registration, reciprocal warps, NPC placement, pedestrian access and respawn data: PASS')

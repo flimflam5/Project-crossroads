@@ -37,8 +37,9 @@ make -j4 -O all
 
 Map headers/events are JSON; scripts use existing assembly macros. Map groups and
 layouts generate constants; do not hand-edit generated headers. New IDs append.
-The new group is gMapGroup_CrossroadsOlivine (75); maps use REGION_JOHTO and
-MAPSEC_OLIVINE_CITY. No full Johto region-map UI exists yet.
+The new group is gMapGroup_CrossroadsOlivine (75); maps use MAPSEC_OLIVINE_CITY. The JSON region field must be REGION_HOENN
+for inclusion in the Emerald target: mapjson uses it as a build filter, not a
+geographic field in the runtime map header. Olivine is narratively in Johto. No full Johto region-map UI exists yet.
 
 crossroads/tools/build_olivine_layout.py authors the blockout reproducibly using
 compatible General/Slateport metatiles and collision data. Copy rectangles are
