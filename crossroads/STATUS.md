@@ -39,3 +39,13 @@ Original new-game introduction and player graphics remain.
 
 Verification results: TESTING.md. This is an incremental city foundation, not a
 claim that the entire city or game is complete. Owner acceptance is pending.
+
+
+## Verification update
+
+Both baseline and city compiled locally. Debugger-assisted mGBA tests passed for
+city traversal/returns, all three live starter branches and duplication guards,
+terminal travel, and healing/menu stability. Normal UI purchase and real SRAM
+Save/Continue were also checked; detailed coverage and gaps are in TESTING.md.
+The complete opening and finished Olivine are not claimed. No merge into master
+has been performed. Draft review: https://github.com/flimflam5/Project-crossroads/pull/1

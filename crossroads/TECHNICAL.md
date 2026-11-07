@@ -67,3 +67,24 @@ Before adding regions measure linked ROM/EWRAM/IWRAM against 32 MiB / 256 KiB /
 32 KiB limits. Audit tileset/sprite budgets, map ID widths, save capacity, travel,
 world-state persistence and encounter/progression balance. Do not promise all
 regions fit. Existing engine difficulty constants are not approved Crossroads rules.
+
+## Optional emulator regression runner
+
+`crossroads/tools/emulator_smoke.py` uses mGBA 0.10 (tested with Debian's 0.10.5),
+Python, an ARM `nm`, a host C compiler and libmgba-dev. It builds the small
+mgba_bridge.c helper in ignored build output; no ROM modifications or supplied
+commercial BIOS are required.
+
+```sh
+python3 crossroads/tools/emulator_smoke.py
+```
+
+It initializes a fresh test game through the debugger, skips the original intro,
+sets a valid test name, then sends controller input through real door transitions,
+the Alpha notebook/terminal and nurse scripts. It checks all seven building returns,
+both piers, each level-5 starter, duplication prevention, city travel and healing
+without loss of menu fonts. Engine-specific RAM layout assumptions are deliberately
+pinned to the audited version. Revisit those if the engine is ever upgraded.
+Screenshots/snapshots stay in build/emulator-smoke and must not be committed.
+This runner uses emulator snapshots for branch setup; it does **not** claim to test
+normal SRAM saving, the normal introduction, battle stability, or owner acceptance.

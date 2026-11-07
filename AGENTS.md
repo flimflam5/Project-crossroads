@@ -18,7 +18,9 @@ and ROADMAP.md before changing content. Current owner instructions outrank old d
 - For map/event changes run python3 crossroads/tools/validate_opening.py,
   python3 crossroads/tools/validate_olivine.py and an Emerald build. Also run
   python3 crossroads/tools/build_olivine_layout.py --check for the city blockout.
-  Update that generator when editing its authored map.
+  Update that generator when editing its authored map. After building, also use
+  validate_olivine.py --built to catch maps omitted by the build-target filter.
+  Optional runtime regression: python3 crossroads/tools/emulator_smoke.py (libmgba-dev).
 - Report implemented, compiled, automatically tested, emulator-tested,
   owner-playtested, and accepted separately. Record exact commits/artifacts.
 - Update documentation and give an actionable owner playtest checklist.

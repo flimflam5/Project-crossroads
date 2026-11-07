@@ -7,8 +7,33 @@ starter scripts, city registration, reciprocal exits, pedestrian access to every
 doorway/interaction, object placement, reproducible layout and healing data.
 These checks do not execute game scripts.
 
-Compilation and emulator results will be updated after the corresponding checks.
-Owner playtesting: pending. Owner acceptance: pending.
+Compiled locally: baseline master d3ac7cf788 and the corrected city implementation
+through d624211868, using ARM GCC 14.2.1. Latest city linked size: 26,762,616 bytes;
+EWRAM 226,420 bytes; IWRAM 28,392 bytes. The padded .gba file is 32 MiB.
+
+Emulator: mGBA 0.10.5, HLE BIOS, debugger-assisted initial setup. Actual tested
+behavior: all seven entrance/return pairs, both piers on foot, live notebook rescue
+of each intended level-5 species, repeated notebook interactions without duplication,
+original post-rescue terminal travel with every choice preserved, and nurse healing
+from 1 HP without corrupting menu fonts. The optional emulator_smoke.py runner
+repeats these tests and saves screenshots in ignored build output.
+
+Separately tested through the normal UI: one Potion purchase (money 3000 to 2800;
+bag item 28, quantity 1), and actual Save followed by fresh-emulator normal Continue
+outside and inside the Center. Those save/reload checks used Seedot and preserved
+map/coordinates, one party member, starter value 2, healed HP and working menu text.
+No raw emulator snapshot was used for those Continue checks.
+
+Two runtime integration faults were found and fixed: the map target filter excluded
+REGION_JOHTO maps from Emerald; and the Center lacked CableClub_OnResume, leaving
+the Union Room name buffer uninitialized when the standard nurse used it. The
+regression checks now cover both. Compilation alone had not detected either fault.
+
+Still unverified: normal opening playthrough, actual SRAM reload for Elgyem/Trubbish,
+saving in every other interior, PC deposit/withdraw, whiteout/Teleport recovery,
+all NPC dialogue, full bags/boxes, prolonged battles and old owner-supplied saves.
+Historical Alpha-v2 results remain owner-reported. Owner playtesting and acceptance
+are pending. See the checklist below.
 
 ## Owner checklist
 
