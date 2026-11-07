@@ -9323,6 +9323,28 @@
       "border_filepath": "data/layouts/OneIsland_KindleRoad_EmberSpa_Frlg/border.bin",
       "blockdata_filepath": "data/layouts/OneIsland_KindleRoad_EmberSpa_Frlg/map.bin",
       "layout_version": "frlg"
+    },
+    {
+      "id": "LAYOUT_OLIVINE_CITY",
+      "name": "OlivineCity_Layout",
+      "width": 48,
+      "height": 48,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Slateport",
+      "border_filepath": "data/layouts/OlivineCity/border.bin",
+      "blockdata_filepath": "data/layouts/OlivineCity/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_OLIVINE_POKEMON_CENTER_1F",
+      "name": "OlivinePokemonCenter_1F_Layout",
+      "width": 14,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/OlivinePokemonCenter_1F/border.bin",
+      "blockdata_filepath": "data/layouts/OlivinePokemonCenter_1F/map.bin",
+      "layout_version": "emerald"
     }
   ]
 }

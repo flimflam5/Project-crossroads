@@ -390,16 +390,14 @@ Crossroads_EventScript_SilphTerminal::
     msgbox Crossroads_Text_OfficeMorning, MSGBOX_DEFAULT
     msgbox Crossroads_Text_OfficeAlarm, MSGBOX_DEFAULT
     msgbox Crossroads_Text_MaraCase, MSGBOX_DEFAULT
-    releaseall
-    end
+    goto Olivine_OfferVisit
 
 Crossroads_EventScript_SilphTerminalAfterRescue::
     msgbox Crossroads_Text_OfficeAfterRescue, MSGBOX_DEFAULT
     msgbox Crossroads_Text_OlivineHarbor, MSGBOX_DEFAULT
     msgbox Crossroads_Text_MeridianExtraction, MSGBOX_DEFAULT
     msgbox Crossroads_Text_MeridianSafehouse, MSGBOX_DEFAULT
-    releaseall
-    end
+    goto Olivine_OfferVisit
 
 Crossroads_Text_OfficeMorning:
     .string "OLIVINE SILPH - 6:45 AM\p"

@@ -1738,3 +1738,13 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/scripts/battle_frontier.inc"
 	.include "data/scripts/apricorn_tree.inc"
 	.include "data/scripts/wild_encounter.inc"
+
+	.include "crossroads/scripts/olivine.inc"
+	.include "data/maps/OlivineCity/scripts.inc"
+	.include "data/maps/OlivineCity_Residence/scripts.inc"
+	.include "data/maps/OlivineCity_NeighborHouse/scripts.inc"
+	.include "data/maps/OlivineCity_Gym/scripts.inc"
+	.include "data/maps/OlivineCity_PokemonCenter_1F/scripts.inc"
+	.include "data/maps/OlivineCity_Mart/scripts.inc"
+	.include "data/maps/OlivineCity_SilphOffice/scripts.inc"
+	.include "data/maps/OlivineCity_HarborOffice/scripts.inc"
