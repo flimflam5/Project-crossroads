@@ -38,3 +38,18 @@ for species, value in (("ELGYEM", 1), ("SEEDOT", 2), ("TRUBBISH", 3)):
 assert "goto_if_ne VAR_CROSSROADS_STARTER, 0" in script
 assert "MULTI_CHOICE_CROSSROADS_STARTERS" not in script
 print("Project Crossroads narrative and staged script checks: PASS")
+
+# The staged copy alone does not prove that the ROM uses a safe starter event.
+live = (root / 'data/maps/LittlerootTown_BrendansHouse_2F/scripts.inc').read_text()
+live = live.split('Crossroads_EventScript_ChooseStarter::', 1)[1]
+assert 'goto_if_ne VAR_CROSSROADS_STARTER, 0, Crossroads_EventScript_AlreadyChosen' in live
+assert len(re.findall(r'^    givemon ', live, re.M)) == 3
+for species, value in (("ELGYEM", 1), ("SEEDOT", 2), ("TRUBBISH", 3)):
+    block = live.split(f'Crossroads_EventScript_{species.title()}::', 1)[1]
+    block = re.split(r'(?m)^Crossroads_EventScript_[A-Za-z0-9_]+::', block, maxsplit=1)[0]
+    grant = block.index(f'givemon SPECIES_{species}, 5, ITEM_NONE')
+    failed = block.index('goto_if_eq VAR_RESULT, MON_CANT_GIVE, Crossroads_EventScript_NoRoom')
+    persist = block.index(f'setvar VAR_CROSSROADS_STARTER, {value}')
+    assert grant < failed < persist
+assert 'data/maps/LittlerootTown_BrendansHouse_2F/scripts.inc' in (root / 'data/event_scripts.s').read_text()
+print('Linked Alpha starter scripts, duplication guard and success-only persistence: PASS')

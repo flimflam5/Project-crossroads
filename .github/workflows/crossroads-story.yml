@@ -3,10 +3,22 @@ on:
   push:
     paths:
       - 'crossroads/**'
+      - 'data/maps/**'
+      - 'data/layouts/**'
+      - 'data/event_scripts.s'
+      - 'include/constants/vars.h'
+      - 'src/data/heal_locations.json'
+      - 'src/data/region_map/region_map_sections.json'
       - '.github/workflows/crossroads-story.yml'
   pull_request:
     paths:
       - 'crossroads/**'
+      - 'data/maps/**'
+      - 'data/layouts/**'
+      - 'data/event_scripts.s'
+      - 'include/constants/vars.h'
+      - 'src/data/heal_locations.json'
+      - 'src/data/region_map/region_map_sections.json'
       - '.github/workflows/crossroads-story.yml'
 jobs:
   narrative-validation:
@@ -15,3 +27,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Validate opening story data
         run: python3 crossroads/tools/validate_opening.py
+      - name: Validate Olivine map and event structure
+        run: |
+          python3 crossroads/tools/validate_olivine.py
+          python3 crossroads/tools/build_olivine_layout.py --check

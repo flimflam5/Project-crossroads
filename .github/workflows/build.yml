@@ -5,7 +5,9 @@ on:
     branches:
       - master
       - upcoming
+      - feature/olivine-city-foundation
   pull_request:
+  workflow_dispatch:
 
 env:
   GAME_REVISION: 0
@@ -52,12 +54,25 @@ jobs:
           GAME_VERSION: EMERALD
         run: make -j$(nproc) -O all
 
+      - name: Crossroads regression checks
+        run: |
+          python3 crossroads/tools/validate_opening.py
+          python3 crossroads/tools/validate_olivine.py
+          python3 crossroads/tools/build_olivine_layout.py --check
+
+      - name: Identify test build
+        run: |
+          python3 crossroads/tools/write_build_manifest.py
+
       - name: Upload playable Emerald ROM
         uses: actions/upload-artifact@v4
         with:
-          name: project-crossroads-emerald
+          name: crossroads-olivine-0.1-${{ github.sha }}
           path: |
-            *.gba
+            pokeemerald.gba
+            build-info.json
+            crossroads/TESTING.md
+            crossroads/STATUS.md
           if-no-files-found: error
           retention-days: 14
 
