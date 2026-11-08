@@ -1,10 +1,10 @@
-> Owner update, 2026-11-08: the player-facing game title is now **Pokémon:
-> Black Ledger**, presented by **Voidstar Interactive**. The supplied Black Ledger
-> title image supersedes the earlier harbor proposal. Project Crossroads remains
-> the repository/internal development name. This presentation change does not
-> change Joe's gameplay outfit, story canon, starters or saved identifiers.
+# Pokémon: Black Ledger
 
-# Pokémon: Project Crossroads
+Repository/internal project name: Project Crossroads. Owner clarification on
+2026-11-08: keep the original nighttime Olivine Harbor title artwork and update
+its game title to **Pokémon: Black Ledger**. The later coat/pagoda/book image is
+a title-name reference, not replacement artwork. Joe's corporate outfit, story
+canon, starters and saved identifiers remain unchanged.
 
 Owner and creative director: **J Fritts**. Platform: Game Boy Advance.
 Foundation: existing RHH pokeemerald-expansion 1.17.2 fork.

@@ -6,6 +6,7 @@ controller input through real scripts/doors. Never modifies the ROM. Test snapsh
 and screenshots go into ignored build output. Not a substitute for owner playtesting.
 """
 import argparse
+import sys
 import ctypes as C
 import subprocess
 import shutil
@@ -17,6 +18,7 @@ parser.add_argument('--rom', type=Path, default=root / 'pokeemerald.gba')
 parser.add_argument('--output', type=Path, default=root / 'build/emulator-smoke')
 parser.add_argument('--library', type=Path, help='optional prebuilt mgba_bridge shared library')
 parser.add_argument('--gender', type=int, choices=(0, 1), default=0, help='exercise both existing save gender values')
+parser.add_argument('--title-only', action='store_true', help='normal cold boot, native title VRAM, animation, Start/New Game handoff and soft reset')
 args = parser.parse_args()
 args.output.mkdir(parents=True, exist_ok=True)
 bridge = args.library or args.output / 'mgba_bridge.so'
@@ -69,6 +71,34 @@ def script(name):
     write(a + 96, syms['gScriptCmdTableEnd'])
     write('sLockFieldControls', 1, 1)
     write('sGlobalScriptContextStatus', 0, 1)
+if args.title_only:
+    # No debugger initialization: run the actual boot/intro/title chain.
+    frames(4500)
+    assert read(syms['gMain'] + 4) == syms['CB2_BlackLedgerTitle'] | 1
+    assets = root / 'graphics/title_screen/black_ledger'
+    expected = (assets / 'tiles.bin').read_bytes()
+    assert bytes(read(0x06000000 + i, 1) for i in range(len(expected))) == expected
+    index = json.loads((assets / 'metadata.json').read_text())['light_palette_index']
+    before = read(0x05000000 + index * 2, 2)
+    frames(32)
+    assert read(0x05000000 + index * 2, 2) != before, 'Harbor light palette must animate'
+    assert lib.emu_image(str(args.output / 'title.png').encode())
+    key(8)
+    frames(180)
+    assert read(syms['gMain'] + 4) == syms['CB2_MainMenu'] | 1
+    assert lib.emu_image(str(args.output / 'main-menu.png').encode())
+    key(1)
+    frames(300)
+    speech = {value | 1 for name, value in syms.items() if name.startswith('Task_NewGameBirchSpeech')}
+    assert any(read(syms['gTasks'] + i * 40 + 4, 1) and read(syms['gTasks'] + i * 40) in speech for i in range(16)), 'New Game must hand off to existing intro'
+    assert lib.emu_image(str(args.output / 'new-game-handoff.png').encode())
+    frames(3, 15)  # A+B+Start+Select: real in-game soft reset.
+    frames(4500)
+    assert read(syms['gMain'] + 4) == syms['CB2_BlackLedgerTitle'] | 1
+    print('Normal cold boot, exact title VRAM, lighting animation, Start, New Game handoff and soft reset: PASS')
+    print('Original Birch introduction is still present; replacement opening and owner title QA remain pending.')
+    sys.exit(0)
+
 # Debugger-assisted fresh-game setup; the Emerald opening is not playtested.
 frames(400)
 write(syms['gMain'] + 1080, 0, 1)
