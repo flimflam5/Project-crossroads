@@ -296,3 +296,19 @@ Olivine_NorthBoundary::
 Olivine_Text_NorthBoundary:
     .string "CITY EXPLORATION BOUNDARY\p"
     .string "Routes beyond Olivine are not\nconnected in this build.$"
+
+@ Keep old Alpha saves usable without granting a new mon in Littleroot.
+Crossroads_EventScript_VisitRescueCase::
+    lockall
+    goto_if_ne VAR_CROSSROADS_STARTER, 0, Crossroads_EventScript_AlreadyChosen
+    msgbox Crossroads_Text_VisitRescueCase, MSGBOX_YESNO
+    goto_if_eq VAR_RESULT, NO, Olivine_EndVisit
+    closemessage
+    warp MAP_OLIVINE_CITY_SILPH_OFFICE, 3, 6
+    waitstate
+    releaseall
+    end
+
+Crossroads_Text_VisitRescueCase:
+    .string "The rescue case is at SILPH's\nOLIVINE office now.\p"
+    .string "Visit the SILPH office?$"

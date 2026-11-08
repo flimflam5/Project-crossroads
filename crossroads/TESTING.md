@@ -32,8 +32,9 @@ regression checks now cover both. Compilation alone had not detected either faul
 Still unverified: normal opening playthrough, actual SRAM reload for Elgyem/Trubbish,
 saving in every other interior, PC deposit/withdraw, whiteout/Teleport recovery,
 all NPC dialogue, full bags/boxes, prolonged battles and old owner-supplied saves.
-Historical Alpha-v2 results remain owner-reported. Owner playtesting and acceptance
-are pending. See the checklist below.
+Historical Alpha-v2 results remain owner-reported. The owner has now accepted
+the tested exploration foundation on Delta/iPhone; detailed coverage is recorded
+in STATUS.md. New increments still require their own owner QA.
 
 ## Owner checklist
 

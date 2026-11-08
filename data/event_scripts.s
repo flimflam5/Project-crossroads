@@ -1748,3 +1748,5 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/OlivineCity_Mart/scripts.inc"
 	.include "data/maps/OlivineCity_SilphOffice/scripts.inc"
 	.include "data/maps/OlivineCity_HarborOffice/scripts.inc"
+
+	.include "crossroads/scripts/starter_rescue.inc"

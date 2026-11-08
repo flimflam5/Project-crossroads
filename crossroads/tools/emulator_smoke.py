@@ -16,6 +16,7 @@ parser = argparse.ArgumentParser(description='Debugger-assisted Olivine smoke te
 parser.add_argument('--rom', type=Path, default=root / 'pokeemerald.gba')
 parser.add_argument('--output', type=Path, default=root / 'build/emulator-smoke')
 parser.add_argument('--library', type=Path, help='optional prebuilt mgba_bridge shared library')
+parser.add_argument('--gender', type=int, choices=(0, 1), default=0, help='exercise both existing save gender values')
 args = parser.parse_args()
 args.output.mkdir(parents=True, exist_ok=True)
 bridge = args.library or args.output / 'mgba_bridge.so'
@@ -71,6 +72,7 @@ def script(name):
 # Debugger-assisted fresh-game setup; the Emerald opening is not playtested.
 frames(400)
 write(syms['gMain'] + 1080, 0, 1)
+write(read('gSaveBlock2Ptr') + 8, args.gender, 1)
 write(syms['gMain'] + 4, syms['CB2_NewGame'] | 1)
 frames(300)
 # Supply the valid name normally entered in the skipped naming screen.
@@ -86,6 +88,39 @@ frames(180)
 assert read(syms['gMain'] + 4) == syms['CB2_Overworld'] | 1
 assert read(read('gSaveBlock1Ptr') + 4, 1) == 75
 assert lib.emu_image(str(args.output / 'city.png').encode())
+
+
+def verify_joe():
+    obj_id = read(syms['gPlayerAvatar'] + 5, 1)
+    obj = syms['gObjectEvents'] + obj_id * 36
+    assert read(obj + 4, 2) == 250, 'Actual player must use reserved Joe graphics ID'
+    assert read(read('gSaveBlock2Ptr') + 8, 1) == args.gender, 'Never rewrite saved gender'
+    sprite_id = read(syms['gPlayerAvatar'] + 4, 1)
+    sprite = syms['gSprites'] + sprite_id * 68
+    assert read(sprite + 63, 1) & 1 == 0, 'Joe must use authored east art, not hFlip'
+    tile = read(sprite + 4, 2) & 1023
+    return bytes(read(0x06010000 + tile * 32 + i, 1) for i in range(256))
+
+joe_tiles = (root / 'build/assets/graphics/object_events/pics/people/joe/corporate/walking.png_mwidth_2__mheight_4.4bpp').read_bytes()
+for direction, button, base in [('south', 128, 0), ('north', 64, 12), ('west', 32, 4), ('east', 16, 8)]:
+    frames(8, button)
+    frames(30)
+    current = verify_joe()
+    matches = [i for i in range(16) if current == joe_tiles[i*256:(i+1)*256]]
+    assert lib.emu_image(str(args.output / f'joe-standing-{direction}.png').encode())
+    assert any(base <= i < base + 4 for i in matches), (direction, matches)
+    assert lib.emu_image(str(args.output / f'joe-standing-{direction}.png').encode())
+    print('Joe idle/turn VRAM matches supplied direction:', direction, flush=True)
+# Movement is performed later by walk(); collect actual changing walking frames too.
+seen_joe_frames = set()
+for _ in range(40):
+    frames(1, 32)
+    seen_joe_frames.add(verify_joe())
+frames(30)
+assert len(seen_joe_frames) >= 2, 'Walking must animate instead of sliding a static sprite'
+verify_joe()
+print('Joe walking frames change in VRAM; saved gender preserved', args.gender, flush=True)
+
 import struct
 from collections import deque
 city = json.load(open(root / 'data/maps/OlivineCity/map.json'))
@@ -139,13 +174,15 @@ for i, w in enumerate(city['warp_events']):
     sb = read('gSaveBlock1Ptr')
     assert read(sb + 4, 1) == 75 and read(sb + 5, 1) == i + 1, (i, pos(), read(sb + 5, 1))
     assert read(syms['gMain'] + 4) == syms['CB2_Overworld'] | 1
-    print('Entered', w['dest_map'], flush=True)
+    verify_joe()
+    print('Entered with Joe', w['dest_map'], flush=True)
     assert lib.emu_image(str(args.output / f'interior-{i}.png').encode())
     frames(16, 128)
     frames(180)
     sb = read('gSaveBlock1Ptr')
     assert read(sb + 4, 1) == 75 and read(sb + 5, 1) == 0, (i, pos(), read(sb + 5, 1))
-    print('Returned from', w['dest_map'], flush=True)
+    verify_joe()
+    print('Returned with Joe from', w['dest_map'], flush=True)
 walk((20, 42))
 walk((29, 42))
 print('Both piers reached on foot', flush=True)
@@ -160,6 +197,24 @@ for _ in range(2):
     frames(16, 32)
     frames(20)
 frames(1, 64)
+frames(20)
+key(1)
+frames(120)
+for _ in range(2):
+    key(1)
+    frames(120)
+# The legacy notebook now offers travel, never a grant in Littleroot.
+for _ in range(3):
+    key(1)
+    frames(120)
+frames(180)
+sb = read('gSaveBlock1Ptr')
+assert read(sb + 4, 1) == 75 and read(sb + 5, 1) == 6
+assert read(read('gPlayerPartyCountPtr'), 1) == 0
+for _ in range(2):
+    frames(16, 64)
+    frames(20)
+frames(1, 16)
 frames(20)
 key(1)
 frames(120)
@@ -185,6 +240,12 @@ for choice, species in ((1, 605), (2, 273), (3, 568)):
     offset = [0, 0, 0, 0, 0, 0, 1, 1, 2, 3, 2, 3, 1, 1, 2, 3, 2, 3, 1, 1, 2, 3, 2, 3][read(p) % 24]
     actual = (read(p + 32 + 12 * offset) ^ read(p) ^ read(p + 4)) & 2047
     assert actual == species and read(p + 84, 1) == 5
+    sub3 = [3, 2, 3, 2, 1, 1, 3, 2, 3, 2, 1, 1, 3, 2, 3, 2, 1, 1, 0, 0, 0, 0, 0, 0][read(p) % 24]
+    origin = read(p + 32 + 12 * sub3) ^ read(p) ^ read(p + 4)
+    sections = json.loads((root / 'src/data/region_map/region_map_sections.json').read_text())['map_sections']
+    olivine = next(i for i, section in enumerate(sections) if section['id'] == 'MAPSEC_OLIVINE_CITY')
+    assert (origin >> 8 & 255) == olivine and (origin >> 16 & 127) == 5
+    assert lib.emu_image(str(args.output / f'rescue-{species}.png').encode())
     for _ in range(8):
         key(1)
         frames(100)
@@ -193,6 +254,25 @@ for choice, species in ((1, 605), (2, 273), (3, 568)):
         frames(90)
     assert read(read('gPlayerPartyCountPtr'), 1) == 1
     assert read(read('gSaveBlock1Ptr') + 5020 + 500, 2) == choice
+    script('Olivine_ReturnToAlpha')
+    frames(120)
+    for _ in range(4):
+        key(1)
+        frames(90)
+    frames(180)
+    assert read(read('gSaveBlock1Ptr') + 4, 1) == 1
+    # Recheck the old notebook with the same saved guard.
+    for _ in range(2):
+        frames(16, 32)
+        frames(20)
+    frames(1, 64)
+    frames(20)
+    key(1)
+    frames(120)
+    for _ in range(5):
+        key(2)
+        frames(90)
+    assert read(read('gPlayerPartyCountPtr'), 1) == 1
     for _ in range(2):
         frames(16, 16)
         frames(20)
@@ -207,7 +287,7 @@ for choice, species in ((1, 605), (2, 273), (3, 568)):
     sb = read('gSaveBlock1Ptr')
     assert read(sb + 4, 1) == 75 and read(sb + 5, 1) == 0
     assert read(sb + 5020 + 500, 2) == choice and read(read('gPlayerPartyCountPtr'), 1) == 1
-    print('Live rescue, duplicate guard and terminal travel passed:', species, flush=True)
+    print('Live Olivine met location/level, rescue, duplicate guard and terminal travel passed:', species, flush=True)
 walk((11, 22))
 frames(16, 64)
 frames(180)
@@ -226,6 +306,7 @@ for _ in range(5):
     frames(60)
 p = read('gPlayerPartyPtr')
 assert read(p + 86, 2) == read(p + 88, 2) and read('gFonts') != 0
+assert lib.emu_state(str(args.output / 'field-ready.snapshot').encode(), 0)
 key(8)
 frames(120)
 assert lib.emu_image(str(args.output / 'menu-after-healing.png').encode())

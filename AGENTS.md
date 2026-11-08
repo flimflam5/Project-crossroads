@@ -4,11 +4,16 @@ Owner/creative director: J Fritts. Continue the existing Pokémon Emerald projec
 Read docs/PROJECT_CROSSROADS.md and crossroads/STATUS.md, TECHNICAL.md, TESTING.md,
 and ROADMAP.md before changing content. Current owner instructions outrank old docs.
 
-- Joe: adult in his thirties, Olivine resident, Silph subsidiary middle manager.
+- Joe: Joseph "Joe" Mercer, 35, Olivine resident, Silph subsidiary logistics manager.
 - Starters: exactly one Elgyem (saved value 1), Seedot (2), or Trubbish (3).
   VAR_CROSSROADS_STARTER is 0x40FA; 0 means none. Preserve that save contract.
-- Legacy Mara/Meridian/Vale/Mercer text is a proposal, not approved canon.
-- Preserve the Alpha bedroom rescue, terminal preview, and Slateport prototype.
+- Latest owner directive approves Meridian Syndicate, Atlas Drive, Mara Voss and
+  Cassian Vale as core premise. Do not assume every legacy preview line, relationship
+  or ending is approved. Corporate outfit design is in docs/PROJECT_CROSSROADS.md.
+- Preserve the existing Pokémon summary UI; its redesign is out of scope.
+- Preserve the accepted Olivine exploration baseline, terminal and Slateport prototype.
+  New starter grants now belong to the Olivine Silph office case; the old Alpha
+  notebook is a travel bridge. Never silently rewrite old Pokémon met data.
   Append new map/layout/heal IDs; do not renumber old ones or alter save structures.
 - Work on feature branches. Never merge into master, force-push, delete working
   systems, or upgrade the engine without owner approval.

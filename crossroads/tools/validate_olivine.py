@@ -30,6 +30,7 @@ raw = ROOT / layouts[city['layout']]['blockdata_filepath']
 assert raw.read_bytes() == generate(), 'Regenerate the city layout'
 linked = (ROOT / 'data/event_scripts.s').read_text()
 script = (ROOT / 'crossroads/scripts/olivine.inc').read_text()
+all_scripts = script + (ROOT / 'crossroads/scripts/starter_rescue.inc').read_text()
 assert 'givemon' not in script, 'City must never grant a second starter'
 
 for mid, m in maps.items():
@@ -49,7 +50,7 @@ for mid, m in maps.items():
         assert tiles[obj['y'] * w + obj['x']] & 0xC00 == 0, (mid, obj)
     for event in m['object_events'] + m['bg_events']:
         assert 0 <= event['x'] < w and 0 <= event['y'] < h, (mid, event)
-        assert re.search(r'^' + event['script'] + r'(?:::|:)', script, re.M), event
+        assert re.search(r'^' + event['script'] + r'(?:::|:)', all_scripts, re.M), event
     for warp in m['warp_events']:
         assert 0 <= warp['x'] < w and 0 <= warp['y'] < h, (mid, warp)
         dest = maps[warp['dest_map']]
