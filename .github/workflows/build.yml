@@ -10,6 +10,7 @@ on:
       - feature/western-johto-01
       - feature/black-ledger-title-01
       - feature/ecruteak-connection-01
+      - feature/olivine-detail-01
   pull_request:
   workflow_dispatch:
 
@@ -68,6 +69,8 @@ jobs:
           python3 crossroads/tools/build_black_ledger_title.py --check
           python3 crossroads/tools/build_route39_layout.py --check
           python3 crossroads/tools/validate_olivine.py --built
+          python3 crossroads/tools/validate_olivine_interiors.py
+          python3 crossroads/tools/build_olivine_interiors.py --check
           python3 crossroads/tools/build_olivine_layout.py --check
 
       - name: Identify test build
@@ -77,7 +80,7 @@ jobs:
       - name: Upload playable Emerald ROM
         uses: actions/upload-artifact@v4
         with:
-          name: black-ledger-ecruteak-0.6-${{ github.sha }}
+          name: black-ledger-olivine-detail-0.7-${{ github.sha }}
           path: |
             pokeemerald.gba
             build-info.json
@@ -86,6 +89,7 @@ jobs:
             crossroads/RELEASE_0_4.md
             crossroads/RELEASE_0_5.md
             crossroads/RELEASE_0_6.md
+            crossroads/RELEASE_0_7.md
           if-no-files-found: error
           retention-days: 14
 

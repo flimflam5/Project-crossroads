@@ -113,3 +113,14 @@ build_route39_layout.py. Run validate_western_johto.py --built after an Emerald
 build. emulator_smoke.py now tours the whole network, all seven Ecruteak doors,
 city interactions and both Centers. Use --gender 0/1 for both saved gender values.
 Private SRAM/snapshots remain ignored build output. No save structure changed.
+
+## Olivine detail 0.7
+
+OlivineCity_SilphOffice and HarborOffice keep map IDs 75.6/75.7, dimensions 10×8,
+and accepted warps. Their appended layouts use Building/Facility tiles; exit
+metatiles 0x206/0x207 retain MB_SOUTH_ARROW_WARP (unlike GenericBuilding's 0x208/9).
+Author via build_olivine_interiors.py and run validate_olivine_interiors.py. The
+validator also checks interaction access and escape from old walkable coordinates.
+Home rest calls HealPlayerParty without setting respawn, story or starter state.
+The detail smoke module covers decline/accept, empty party, HP/status, notes,
+records and both offices, alongside the existing regional regression runner.

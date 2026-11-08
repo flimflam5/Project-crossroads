@@ -99,7 +99,7 @@ Olivine_Text_Return:
 Olivine_Text_Terminal:
     .string "SILPH OLIVINE: STAFF TERMINAL\p"
     .string "Freight schedules and delivery\nrecords fill the screen.\p"
-    .string "Story integration pending.$"
+    .string "Incoming loads: check the seals.\nOutgoing loads: match the records.$"
 
 Olivine_Text_NoPartner:
     .string "A partner makes a long walk\nfeel a little shorter.$"
@@ -262,7 +262,7 @@ Olivine_OfficeSign::
 
 Olivine_Text_OfficeSign:
     .string "SILPH CO. - OLIVINE OFFICE\p"
-    .string "Temporary interior. Story pending.$"
+    .string "Logistics and freight coordination.$"
 
 Olivine_HarborSign::
     msgbox Olivine_Text_HarborSign, MSGBOX_SIGN

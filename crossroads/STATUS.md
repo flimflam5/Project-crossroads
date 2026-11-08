@@ -125,3 +125,23 @@ RELEASE_0_6.md. Owner Delta QA pending. Full Johto is not complete.
 Opening proposal 1 is pending owner review at design/opening/PROPOSAL_01.md; no
 new intro dialogue has been made permanent or enabled. Accepted 0.5 remains the
 owner-tested baseline until this next checkpoint is accepted.
+
+## Accepted owner QA and content freeze — 0.6
+
+Owner reported “Everything works” for the delivered 0.6 checkpoint from source
+68bce285d2537c8e3960640234fd083f0a3886e0. Record owner Delta QA PASS for the
+tested build; do not infer separate results for unreported tests. The owner now
+requires completing existing Olivine/39/38/Ecruteak before new cities or routes.
+The immediate detail pass targets distinct Olivine office interiors and useful
+interactions while preserving existing rescues, doors, saved variables and returns.
+
+## Olivine detail 0.7 — implementation checkpoint
+
+Dedicated corporate and harbor office layouts replace their shared bedroom art.
+Home rest supports decline/accept, empty party and party recovery without story,
+starter or respawn changes. Staff/freight/dispatch/home records are interactable.
+Map IDs, dimensions and accepted warps remain stable; layout IDs append. Final
+Emerald build, structural checks and both-gender full emulator regressions passed.
+Normal 0.6 save compatibility and new office Save/Continue/exit checks passed.
+See RELEASE_0_7.md. Owner Delta QA pending for this increment. Existing-area
+completion continues under AREA_COMPLETION.md; no new cities/routes were added.

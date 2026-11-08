@@ -1,3 +1,25 @@
+# Current priority — finish the existing western area
+
+Owner accepted 0.6 and instructed that no new cities or routes be added until the
+current ones are fleshed out. This supersedes the expansion order below.
+
+1. Olivine: distinct residence/workplace/harbor interiors and useful interactions;
+   recognizable lighthouse with working floors; fuller harbor, residences and NPCs.
+2. Routes 39/38: richer scenery, appropriate accessible local facilities, approved
+   encounter roster and trainer balance, reasons to explore, reliable return paths.
+3. Ecruteak: distinctive town/landmark art, meaningful residences and theater,
+   tower progression and approved Gym progression instead of temporary lobbies.
+4. Polish and regress the complete current footprint before reopening expansion.
+
+Permanent curated Pokémon availability, Gym progression, substantial story scenes
+and difficulty rules remain creative decisions. Routine technical work continues
+without requiring permission for every interior or interaction. The opening
+proposal remains separate and pending; the accepted harbor title stays intact.
+
+---
+
+Historical roadmap and release ordering follow for context.
+
 # Milestones and pending decisions
 
 1. **Olivine foundation 0.1:** audit, separate walkable city, seven interiors,
