@@ -1752,3 +1752,14 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "crossroads/scripts/starter_rescue.inc"
 
 	.include "data/maps/JohtoRoute39/scripts.inc"
+
+    .include "data/maps/JohtoRoute38/scripts.inc"
+    .include "data/maps/EcruteakCity/scripts.inc"
+    .include "data/maps/EcruteakCity_BurnedTower/scripts.inc"
+    .include "data/maps/EcruteakCity_BellTower/scripts.inc"
+    .include "data/maps/EcruteakCity_Residence/scripts.inc"
+    .include "data/maps/EcruteakCity_DanceTheater/scripts.inc"
+    .include "data/maps/EcruteakCity_Gym/scripts.inc"
+    .include "data/maps/EcruteakCity_PokemonCenter_1F/scripts.inc"
+    .include "data/maps/EcruteakCity_Mart/scripts.inc"
+    .include "crossroads/scripts/western_johto.inc"

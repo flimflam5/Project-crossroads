@@ -111,3 +111,17 @@ checkpoint, including its title and Route 39 exploration increment. This is the
 new working baseline. No additional per-test results beyond the owner's blanket
 verdict are inferred. Unfinished intro, special-state art and regional content
 remain unfinished. This verdict does not authorize merging into master.
+
+## Ecruteak connection 0.6
+
+Connects Olivine/39/38/Ecruteak without teleport shortcuts. New map IDs append:
+75.9 Route 38, 75.10 Ecruteak, 75.11–17 interiors. Seven doors have reciprocal
+returns; Center healing/respawn and basic Mart services are wired. Landmark/Gym/
+theater rooms and exterior art remain explicitly temporary. Routes 37/42 are
+closed. Local Emerald build and both-gender emulator tours/regressions passed.
+Normal old-save Continue plus new Center/Route 38 SRAM checks are documented in
+RELEASE_0_6.md. Owner Delta QA pending. Full Johto is not complete.
+
+Opening proposal 1 is pending owner review at design/opening/PROPOSAL_01.md; no
+new intro dialogue has been made permanent or enabled. Accepted 0.5 remains the
+owner-tested baseline until this next checkpoint is accepted.

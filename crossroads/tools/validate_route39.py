@@ -11,7 +11,7 @@ def load(path):
 city = load('data/maps/OlivineCity/map.json')
 route = load('data/maps/JohtoRoute39/map.json')
 assert city['connections'] == [dict(map='MAP_JOHTO_ROUTE39', offset=16, direction='up')]
-assert route['connections'] == [dict(map='MAP_OLIVINE_CITY', offset=-16, direction='down')]
+assert route['connections'] == [dict(map='MAP_OLIVINE_CITY', offset=-16, direction='down'), dict(map='MAP_JOHTO_ROUTE38', offset=0, direction='up')]
 groups = load('data/maps/map_groups.json')['gMapGroup_CrossroadsOlivine']
 assert groups[:8] == ['OlivineCity', 'OlivineCity_Residence', 'OlivineCity_NeighborHouse', 'OlivineCity_Gym', 'OlivineCity_PokemonCenter_1F', 'OlivineCity_Mart', 'OlivineCity_SilphOffice', 'OlivineCity_HarborOffice']
 assert groups[8] == 'JohtoRoute39', 'Append map IDs without changing saved locations'

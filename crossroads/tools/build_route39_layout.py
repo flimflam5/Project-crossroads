@@ -23,7 +23,7 @@ def generate():
         trees(22, y)
     for x in range(2, 22, 2):
         trees(x, 0)
-    rect(11, 4, 3, 44, 0x3202)
+    rect(11, 0, 3, 48, 0x3202)
     rect(7, 20, 10, 3, 0x3202)
     # Meadow clearings and shrubs provide landmarks without HM/encounter gates.
     for x, y in ((4, 9), (18, 8), (4, 30), (18, 33), (17, 25)):
@@ -31,7 +31,7 @@ def generate():
     for x in (4, 6, 8, 16, 18, 20):
         for y in (15, 37):
             rect(x, y, 1, 1, 0x0415)
-    for x, y in ((9, 44), (13, 3)):
+    for x, y in ((9, 44), (9, 3)):
         rect(x, y, 1, 1, 0x0403)
     return struct.pack('<1152H', *tiles)
 

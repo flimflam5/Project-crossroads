@@ -98,3 +98,18 @@ Mon creation itself assigns the actual current map section; no summary changes
 or hidden rewrite of existing party/box origins are involved. The runtime smoke
 test decrypts each new mon's growth/origin blocks to check species, level,
 MAPSEC_OLIVINE_CITY and recorded met level 5.
+
+## Western extension 0.6
+
+Route 39's north road joins Route 38 with offset 0. Route 38's right connection
+has offset -14 into Ecruteak; the city's reciprocal left offset is +14. This
+aligns Route 38 rows 12–14 with the Ecruteak street at rows 26–28. Map group 75
+remains append-only: Route 38=9, city=10, interiors=11–17. Ecruteak heal location
+and map sections append via their source JSON; generated headers are not authored.
+The Center retains CableClub_OnResume for safe nurse/menu buffer initialization.
+
+Regenerate city/Route 38 with build_western_johto_layouts.py, Route 39 with
+build_route39_layout.py. Run validate_western_johto.py --built after an Emerald
+build. emulator_smoke.py now tours the whole network, all seven Ecruteak doors,
+city interactions and both Centers. Use --gender 0/1 for both saved gender values.
+Private SRAM/snapshots remain ignored build output. No save structure changed.

@@ -154,8 +154,7 @@ print('Joe walking frames change in VRAM; saved gender preserved', args.gender, 
 import struct
 from collections import deque
 city = json.load(open(root / 'data/maps/OlivineCity/map.json'))
-tiles = struct.unpack('<2304H', (root / 'data/layouts/OlivineCity/map.bin').read_bytes())
-blocked = {(o['x'], o['y']) for o in city['object_events']}
+layouts = {l['id']: l for l in json.loads((root / 'data/layouts/layouts.json').read_text())['layouts']}
 
 def pos():
     sb = read('gSaveBlock1Ptr')
@@ -164,8 +163,13 @@ def pos():
 def direction(a, b):
     return 16 if b[0] > a[0] else 32 if b[0] < a[0] else 128 if b[1] > a[1] else 64
 
-def walk(target):
+def walk(target, map_name='OlivineCity'):
     """Navigate with controller input; verify every actual in-game step."""
+    current = json.loads((root / f'data/maps/{map_name}/map.json').read_text())
+    layout = layouts[current['layout']]
+    width, height = layout['width'], layout['height']
+    tiles = struct.unpack(f'<{width*height}H', (root / layout['blockdata_filepath']).read_bytes())
+    blocked = {(o['x'], o['y']) for o in current['object_events']}
     start = pos()
     q = deque([start])
     prev = {start: None}
@@ -175,9 +179,9 @@ def walk(target):
             break
         for n in [(p[0] + 1, p[1]), (p[0] - 1, p[1]), (p[0], p[1] + 1), (p[0], p[1] - 1)]:
             x, y = n
-            if n in prev or n in blocked or (not 0 <= x < 48) or (not 0 <= y < 48):
+            if n in prev or n in blocked or (not 0 <= x < width) or (not 0 <= y < height):
                 continue
-            t = tiles[y * 48 + x]
+            t = tiles[y * width + x]
             if t & 3072 or t >> 12 != 3:
                 continue
             prev[n] = p
@@ -217,48 +221,9 @@ walk((20, 42))
 walk((29, 42))
 print('Both piers reached on foot', flush=True)
 
-# Exercise actual border transitions, not warp shortcuts, in both directions.
-walk((28, 0))
-frames(16, 64)
-frames(180)
-sb = read('gSaveBlock1Ptr')
-assert (read(sb + 4, 1), read(sb + 5, 1)) == (75, 8), ('Route 39 entry', pos())
-assert pos() == (12, 47), pos()
-verify_joe()
-for y in range(46, 3, -1):
-    frames(16, 64)
-    frames(20)
-    assert pos() == (12, y), ('Route 39 northbound', y, pos())
-assert lib.emu_image(str(args.output / 'route39-north.png').encode())
-# Sign above the road's end; remaining routes are deliberately not claimed open.
-frames(16, 16)
-frames(20)
-frames(1, 64)
-frames(20)
-key(1)
-frames(120)
-assert lib.emu_image(str(args.output / 'route39-boundary-sign.png').encode())
-for _ in range(8):
-    if read('sLockFieldControls', 1) == 0:
-        break
-    key(1)
-    frames(90)
-assert read('sLockFieldControls', 1) == 0, 'Route sign must release field controls'
-frames(16, 32)
-frames(20)
-assert pos() == (12, 4), pos()
-for y in range(5, 48):
-    frames(16, 128)
-    frames(20)
-    assert pos() == (12, y), ('Route 39 southbound', y, pos())
-frames(16, 128)
-frames(180)
-sb = read('gSaveBlock1Ptr')
-assert (read(sb + 4, 1), read(sb + 5, 1)) == (75, 0), ('Olivine return', pos())
-assert pos() == (28, 0), pos()
-verify_joe()
-assert read(syms['gMain'] + 4) == syms['CB2_Overworld'] | 1
-print('Route 39 border entry, full north/south road, boundary sign and Olivine return: PASS', flush=True)
+# Cross every new seam on foot; inspect all city exits/lobbies and return.
+from western_johto_smoke import tour
+western = tour(root, syms, lib, args.output, read, frames, key, walk, pos, verify_joe)
 script('Olivine_ReturnToAlpha')
 frames(120)
 for _ in range(4):
@@ -380,6 +345,40 @@ for _ in range(5):
 p = read('gPlayerPartyPtr')
 assert read(p + 86, 2) == read(p + 88, 2) and read('gFonts') != 0
 assert lib.emu_state(str(args.output / 'field-ready.snapshot').encode(), 0)
+# Revisit the connected network with a real acquired partner and heal in Ecruteak.
+walk((7,7), 'OlivineCity_PokemonCenter_1F')
+for _ in range(2):
+    frames(16,128)
+    frames(180)
+    if read(read('gSaveBlock1Ptr')+5,1)==0:
+        break
+assert read(read('gSaveBlock1Ptr')+5,1)==0
+western[0]()
+walk((21,35), 'EcruteakCity')
+frames(16,64)
+frames(180)
+assert read(read('gSaveBlock1Ptr')+5,1)==16
+walk((7,4), 'EcruteakCity_PokemonCenter_1F')
+p=read('gPlayerPartyPtr')
+write(p+86,1,2)
+frames(1,64)
+frames(20)
+key(1)
+frames(180)
+for _ in range(7):
+    key(1)
+    frames(180)
+for _ in range(5):
+    key(2)
+    frames(60)
+p=read('gPlayerPartyPtr')
+assert read(p+86,2)==read(p+88,2) and read('gFonts')!=0
+sb=read('gSaveBlock1Ptr')
+assert (read(sb+0x1c,1),read(sb+0x1d,1))==(75,10)
+verify_joe()
+assert lib.emu_state(str(args.output/'ecruteak-field-ready.snapshot').encode(),0)
+print('Connected return visit with starter: Ecruteak nurse heals 1 HP to full and retains correct respawn/fonts/Joe: PASS',flush=True)
+
 key(8)
 frames(120)
 assert lib.emu_image(str(args.output / 'menu-after-healing.png').encode())

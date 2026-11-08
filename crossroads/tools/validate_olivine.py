@@ -83,7 +83,7 @@ for warp in city['warp_events']:
 for event in city['object_events'] + city['bg_events']:
     assert any((event['x']+dx, event['y']+dy) in seen for dx, dy in [(0,1),(0,-1),(1,0),(-1,0)]), ('Unreachable interaction', event)
 assert (20, 42) in seen and (29, 42) in seen, 'Both piers must be reachable'
-heal = read('src/data/heal_locations.json')['heal_locations'][-1]
+heal = next(h for h in read('src/data/heal_locations.json')['heal_locations'] if h['id'] == 'HEAL_LOCATION_OLIVINE_CITY')
 assert heal['id'] == 'HEAL_LOCATION_OLIVINE_CITY'
 assert (heal['x'], heal['y']) in seen
 assert heal['respawn_map'] == 'MAP_OLIVINE_CITY_POKEMON_CENTER_1F'
