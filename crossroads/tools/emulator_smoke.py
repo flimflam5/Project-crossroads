@@ -186,6 +186,49 @@ for i, w in enumerate(city['warp_events']):
 walk((20, 42))
 walk((29, 42))
 print('Both piers reached on foot', flush=True)
+
+# Exercise actual border transitions, not warp shortcuts, in both directions.
+walk((28, 0))
+frames(16, 64)
+frames(180)
+sb = read('gSaveBlock1Ptr')
+assert (read(sb + 4, 1), read(sb + 5, 1)) == (75, 8), ('Route 39 entry', pos())
+assert pos() == (12, 47), pos()
+verify_joe()
+for y in range(46, 3, -1):
+    frames(16, 64)
+    frames(20)
+    assert pos() == (12, y), ('Route 39 northbound', y, pos())
+assert lib.emu_image(str(args.output / 'route39-north.png').encode())
+# Sign above the road's end; remaining routes are deliberately not claimed open.
+frames(16, 16)
+frames(20)
+frames(1, 64)
+frames(20)
+key(1)
+frames(120)
+assert lib.emu_image(str(args.output / 'route39-boundary-sign.png').encode())
+for _ in range(8):
+    if read('sLockFieldControls', 1) == 0:
+        break
+    key(1)
+    frames(90)
+assert read('sLockFieldControls', 1) == 0, 'Route sign must release field controls'
+frames(16, 32)
+frames(20)
+assert pos() == (12, 4), pos()
+for y in range(5, 48):
+    frames(16, 128)
+    frames(20)
+    assert pos() == (12, y), ('Route 39 southbound', y, pos())
+frames(16, 128)
+frames(180)
+sb = read('gSaveBlock1Ptr')
+assert (read(sb + 4, 1), read(sb + 5, 1)) == (75, 0), ('Olivine return', pos())
+assert pos() == (28, 0), pos()
+verify_joe()
+assert read(syms['gMain'] + 4) == syms['CB2_Overworld'] | 1
+print('Route 39 border entry, full north/south road, boundary sign and Olivine return: PASS', flush=True)
 script('Olivine_ReturnToAlpha')
 frames(120)
 for _ in range(4):

@@ -78,6 +78,8 @@ def generate():
         rect(x, y, 2, 1, 0x0404)
     stamp(3, 33, 3, 2, 19, 30)
     stamp(3, 33, 3, 2, 24, 30)
+    # Route 39 now joins the existing north road; keep all building IDs/warps.
+    rect(27, 0, 3, 2, 0x3202)
     return struct.pack('<2304H', *tiles)
 
 

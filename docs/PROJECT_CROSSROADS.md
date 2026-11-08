@@ -1,3 +1,9 @@
+> Owner update, 2026-11-08: the player-facing game title is now **Pokémon:
+> Black Ledger**, presented by **Voidstar Interactive**. The supplied Black Ledger
+> title image supersedes the earlier harbor proposal. Project Crossroads remains
+> the repository/internal development name. This presentation change does not
+> change Joe's gameplay outfit, story canon, starters or saved identifiers.
+
 # Pokémon: Project Crossroads
 
 Owner and creative director: **J Fritts**. Platform: Game Boy Advance.

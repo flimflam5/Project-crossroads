@@ -9345,6 +9345,17 @@
       "border_filepath": "data/layouts/OlivinePokemonCenter_1F/border.bin",
       "blockdata_filepath": "data/layouts/OlivinePokemonCenter_1F/map.bin",
       "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_JOHTO_ROUTE39",
+      "name": "JohtoRoute39_Layout",
+      "width": 24,
+      "height": 48,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Slateport",
+      "border_filepath": "data/layouts/JohtoRoute39/border.bin",
+      "blockdata_filepath": "data/layouts/JohtoRoute39/map.bin",
+      "layout_version": "emerald"
     }
   ]
 }
