@@ -1,3 +1,4 @@
+#include <iterator>
 // mapjson.cpp
 
 #include <iostream>
@@ -57,6 +58,14 @@ string read_text_file(string filepath) {
 }
 
 void write_text_file(string filepath, string text) {
+    // Generated constants are widely included. Preserve their timestamps when
+    // map edits do not change their contents, avoiding unrelated recompilation.
+    ifstream previous(filepath, std::ifstream::binary);
+    if (previous.is_open()) {
+        string current{std::istreambuf_iterator<char>(previous), std::istreambuf_iterator<char>()};
+        if (current == text)
+            return;
+    }
     ofstream out_file(filepath, std::ofstream::binary);
 
     if (!out_file.is_open())
