@@ -68,3 +68,24 @@ move the existing rescue case to the Olivine Silph office, keep the old notebook
 as a travel bridge, preserve saved choice 0x40FA and all previous Pokémon data.
 Joe graphics await joe_mercer_overworld_draft.zip; the owner is attaching it.
 Do not fabricate inspection, replacement artwork, or completed Joe integration.
+
+## Joe corporate 0.3 — owner QA accepted
+
+Source f40e5028c31d3470f4795fdcc869c356898a784a; owner tested the delivered
+Joe 0.3 ROM in Delta and confirmed everything tested works as intended.
+Record this as manual QA PASS for that checkpoint, not completion of all character
+states or future region/title content. Joe walking, draft trainer artwork and the
+Silph rescue/met-location fixes are the preserved baseline. Special movement art
+and the original introduction remain unfinished. PR #2 remains draft/unmerged.
+The earlier “awaiting archive” paragraph describes the historical 0.2 state only.
+
+## Western Johto 0.4
+
+Route 39 is appended as map 75.8, with a reciprocal normal border connection to
+Olivine's north road. The city/interior IDs 75.0 through 75.7 remain unchanged.
+The reproducible exploration blockout has countryside scenery, a pedestrian,
+signs and an explicit closed northern boundary. Route 38/Ecruteak, encounters,
+trainers and farm interiors remain unfinished. See RELEASE_0_4.md for verification
+and Delta checks. The owner has supplied Pokémon: Black Ledger / Voidstar
+Interactive title artwork, superseding the former harbor proposal; implementation
+is a separate forthcoming increment. No title replacement is included in 0.4.

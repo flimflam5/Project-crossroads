@@ -11,15 +11,15 @@ rom = root / 'pokeemerald.gba'
 sha = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=root, text=True).strip()
 dirty = bool(subprocess.check_output(['git', 'status', '--porcelain', '--untracked-files=no'], cwd=root))
 manifest = {
-    'version': 'joe-corporate-0.3',
+    'version': 'western-johto-0.4',
     'source_commit': sha,
     'dirty_tracked_sources': dirty,
     'rom': rom.name,
     'rom_sha256': hashlib.sha256(rom.read_bytes()).hexdigest(),
     'rom_bytes': rom.stat().st_size,
     'ci_run_id': os.environ.get('GITHUB_RUN_ID'),
-    'summary': 'Integrate Joe corporate walking and draft trainer graphics; preserve Silph starter rescue and Olivine acquisition metadata.',
-    'known_limitations': 'See crossroads/RELEASE_0_3.md. Special movement art and original intro remain; title proposal is unapproved and unintegrated; Delta QA pending.',
+    'summary': 'Connect Olivine north road to traversable Route 39; preserve the owner-tested Joe 0.3 baseline.',
+    'known_limitations': 'See crossroads/RELEASE_0_4.md. Route 39 exploration blockout only; Route 38 not open. Special movement art and original intro remain; title proposal unimplemented; Delta QA pending.',
     'testing': 'Compilation is not playtesting. Follow crossroads/TESTING.md.',
 }
 (root / 'build-info.json').write_text(json.dumps(manifest, indent=2) + '\n')

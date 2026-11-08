@@ -33,3 +33,10 @@ shared story/map set. Vary strategic teams, AI, held items and assistance. Use
 modest level adjustments where balance needs them. Agree mode names, restrictions,
 switch timing, economy and EXP rules before implementation. Avoid duplicating
 quest branches or raising every opponent's level excessively.
+
+## Current independent geographic increment
+
+The owner accepted Joe 0.3 manual QA. While title appearance awaits review, the
+approved western-first expansion proceeds with Olivine-to-Route-39 traversal.
+Route 38 and Ecruteak follow after the border/save regression checkpoint. This
+does not complete remaining Joe special-state art or approve title/intro visuals.

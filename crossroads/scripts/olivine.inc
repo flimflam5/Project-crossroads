@@ -294,8 +294,8 @@ Olivine_NorthBoundary::
     end
 
 Olivine_Text_NorthBoundary:
-    .string "CITY EXPLORATION BOUNDARY\p"
-    .string "Routes beyond Olivine are not\nconnected in this build.$"
+    .string "NORTH: ROUTE 39\p"
+    .string "Follow the road north to ROUTE 39.\nThe road back remains open.$"
 
 @ Keep old Alpha saves usable without granting a new mon in Littleroot.
 Crossroads_EventScript_VisitRescueCase::
