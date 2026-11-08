@@ -75,7 +75,7 @@ jobs:
             build-info.json
             crossroads/TESTING.md
             crossroads/STATUS.md
-            crossroads/RELEASE_0_2.md
+            crossroads/RELEASE_0_3.md
           if-no-files-found: error
           retention-days: 14
 

@@ -11,9 +11,11 @@ Both gender0 and gender1 runtime smoke tests PASS: Joe directional VRAM, all sev
 building returns, both piers, all three rescue/met-location branches, duplicate
 guards, terminal travel and healing/menu stability. Asset validator PASS.
 
-Interrupted operation: old-save Continue/100-byte Pokémon comparison; no captured
-result. Still required: actual Joe battle throw/return and Trainer Card rendering,
-normal SRAM save/reload including old saves, special movement return tests, Delta QA.
+Recovery verification: the resumed old-save Continue/100-byte comparison produced
+a Trainer Card screenshot showing Joe. A debugger-started wild battle visibly
+rendered Joe’s back artwork and returned to the Center with Joe visible.
+Still required: comprehensive normal SRAM save/reload, special movement return
+tests, and owner Delta QA. These checks do not constitute a complete opening playthrough.
 Special bike/surf/fish/field-move art and original introduction remain placeholders.
 Running reuses supplied walk poses at faster timing. Title concept is unapproved
 and unintegrated. Do not mark full Release1 accepted or complete from these checks.
