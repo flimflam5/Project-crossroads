@@ -19,4 +19,5 @@ Existing Abandoned Ship engine music is temporary audio, not an original score.
 
 This title increment does not implement the new opening. New Game still hands off
 to the original Birch introduction pending a separately reviewed replacement.
-Owner Delta QA of the new title is pending; see crossroads/RELEASE_0_5.md.
+Owner accepted the delivered 0.5 Delta checkpoint: “Everything works as expected.”
+See crossroads/RELEASE_0_5.md.

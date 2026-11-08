@@ -43,7 +43,9 @@ These are development fixtures, not the owner's private Delta save.
 
 ## Unfinished
 
-Owner Delta QA pending for 0.4/0.5; only Joe 0.3 has the new accepted owner verdict.
+Owner Delta QA PASS for the delivered 0.5 build: “Everything works as expected.”
+This accepts the tested checkpoint, including Route 39, without completing future
+content or inferring additional results for unreported tests.
 Original Birch/Hoenn introduction remains. Title music temporarily reuses the
 existing Abandoned Ship engine track; no original score is claimed. Clear-save,
 RTC and Berry Fix shortcut behavior was preserved in source but not newly exercised.

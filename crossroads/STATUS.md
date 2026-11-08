@@ -99,5 +99,15 @@ Local build, cold boot/rendering/lighting, Start, New Game handoff, soft reset a
 normal Continue checks passed. A Route 39 save reloaded through the title with
 position, saved starter choice and all 100 Pokémon bytes preserved, then returned
 to Olivine on foot. The Joe/city/starter/healing regression runner also passed.
-See RELEASE_0_5.md for exact coverage and pending owner Delta QA. The original
+See RELEASE_0_5.md for exact coverage and the accepted owner QA update. The original
 Birch introduction remains; it has not been replaced by the new prologue.
+
+## Accepted owner QA — Black Ledger 0.5
+
+Owner verdict: “Everything works as expected.” Recorded for the delivered Delta
+build from source 01b0ef25c8482e1c50a5a97244f119ae818931d6, artifact
+black-ledger-harbor-0.5-01b0ef25c8.zip. Manual QA PASS for the tested 0.5
+checkpoint, including its title and Route 39 exploration increment. This is the
+new working baseline. No additional per-test results beyond the owner's blanket
+verdict are inferred. Unfinished intro, special-state art and regional content
+remain unfinished. This verdict does not authorize merging into master.
