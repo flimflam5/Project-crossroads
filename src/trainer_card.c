@@ -1895,7 +1895,16 @@ static u8 VersionToCardType(enum GameVersion version)
 
 static void CreateTrainerCardTrainerPic(void)
 {
-    if (InUnionRoom() == TRUE && gReceivedRemoteLinkPlayers)
+    if (!IS_FRLG && !sData->isLink)
+    {
+        CreateTrainerCardTrainerPicSprite(TRAINER_PIC_JOE,
+                    TRUE,
+                    sTrainerPicOffset[sData->isHoenn][sData->trainerCard.gender][0],
+                    sTrainerPicOffset[sData->isHoenn][sData->trainerCard.gender][1],
+                    8,
+                    WIN_TRAINER_PIC);
+    }
+    else if (InUnionRoom() == TRUE && gReceivedRemoteLinkPlayers)
     {
         CreateTrainerCardTrainerPicSprite(FacilityClassToPicIndex(sData->trainerCard.unionRoomClass),
                     TRUE,

@@ -28,7 +28,7 @@ jobs:
       - name: Install binutils
         run: |
           sudo apt-get update
-          sudo apt-get install -y --no-install-recommends binutils-arm-none-eabi gcc-arm-none-eabi libnewlib-arm-none-eabi libpng-dev python3
+          sudo apt-get install -y --no-install-recommends binutils-arm-none-eabi gcc-arm-none-eabi libnewlib-arm-none-eabi libpng-dev python3 python3-pil
 
       - name: Cache build tools
         uses: actions/cache@v4
@@ -58,6 +58,7 @@ jobs:
       - name: Crossroads regression checks
         run: |
           python3 crossroads/tools/validate_opening.py
+          python3 crossroads/tools/validate_joe_assets.py
           python3 crossroads/tools/validate_olivine.py --built
           python3 crossroads/tools/build_olivine_layout.py --check
 
@@ -68,7 +69,7 @@ jobs:
       - name: Upload playable Emerald ROM
         uses: actions/upload-artifact@v4
         with:
-          name: crossroads-met-location-0.2-${{ github.sha }}
+          name: crossroads-joe-corporate-0.3-${{ github.sha }}
           path: |
             pokeemerald.gba
             build-info.json
@@ -88,7 +89,7 @@ jobs:
       - name: Install binutils
         run: |
           sudo apt-get update
-          sudo apt-get install -y --no-install-recommends binutils-arm-none-eabi gcc-arm-none-eabi libnewlib-arm-none-eabi libpng-dev python3
+          sudo apt-get install -y --no-install-recommends binutils-arm-none-eabi gcc-arm-none-eabi libnewlib-arm-none-eabi libpng-dev python3 python3-pil
 
       - name: Cache build tools
         uses: actions/cache@v4
@@ -123,7 +124,7 @@ jobs:
       - name: Install binutils
         run: |
           sudo apt-get update
-          sudo apt-get install -y --no-install-recommends binutils-arm-none-eabi gcc-arm-none-eabi libnewlib-arm-none-eabi libpng-dev python3
+          sudo apt-get install -y --no-install-recommends binutils-arm-none-eabi gcc-arm-none-eabi libnewlib-arm-none-eabi libpng-dev python3 python3-pil
 
       - name: Cache build tools
         uses: actions/cache@v4
@@ -158,7 +159,7 @@ jobs:
       - name: Install binutils
         run: |
           sudo apt-get update
-          sudo apt-get install -y --no-install-recommends binutils-arm-none-eabi gcc-arm-none-eabi libnewlib-arm-none-eabi libpng-dev python3
+          sudo apt-get install -y --no-install-recommends binutils-arm-none-eabi gcc-arm-none-eabi libnewlib-arm-none-eabi libpng-dev python3 python3-pil
 
       - name: Cache build tools
         uses: actions/cache@v4
@@ -195,7 +196,7 @@ jobs:
       - name: Install binutils
         run: |
           sudo apt-get update
-          sudo apt-get install -y --no-install-recommends binutils-arm-none-eabi gcc-arm-none-eabi libnewlib-arm-none-eabi libpng-dev python3
+          sudo apt-get install -y --no-install-recommends binutils-arm-none-eabi gcc-arm-none-eabi libnewlib-arm-none-eabi libpng-dev python3 python3-pil
 
       - name: Cache build tools
         uses: actions/cache@v4

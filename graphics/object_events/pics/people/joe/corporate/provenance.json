@@ -1,0 +1,22 @@
+{
+  "archive_sha256": "66c0dcf8e63e7f6b60cf4586f47c029f1115b1c38fb3c7d92aa6cdca16eb63ea",
+  "source": "Owner supplied joe_mercer_overworld_draft.zip",
+  "frame_size": [
+    16,
+    32
+  ],
+  "order": [
+    "down_0..3",
+    "left_0..3",
+    "right_0..3",
+    "up_0..3"
+  ],
+  "frames": 16,
+  "palette_entries": 16,
+  "transparent_index": 0,
+  "visible_height_pixels": [
+    19,
+    20
+  ],
+  "normalization": "Repacked only; no trimming, rescaling, redrawing or mirroring. Near-black colors collapse in GBA RGB555."
+}
