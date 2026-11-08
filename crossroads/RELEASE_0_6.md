@@ -45,7 +45,7 @@ in a fresh emulator core with position, starter data and respawn intact. A separ
 Route 38 save reloaded and returned on foot through Route 39 to Olivine. These are
 synthetic development saves, not the owner's private Delta save.
 
-## Delta checklist — manual QA pending
+## Delta checklist — owner QA accepted
 
 1. Back up your accepted 0.5 save. Load it with this ROM; check title, Joe, party,
    inventory and existing origin metadata.
@@ -70,3 +70,9 @@ region remain unfinished. Actual battle-loss/blackout respawn, new Mart purchase
 and outdoor Ecruteak Save/Continue were not newly exercised in emulator; the
 registered respawn, nurse, Center/Route 38 saves and existing save compatibility
 were checked separately. No full Johto or complete-release claim is made.
+
+## Owner QA update
+
+Owner verdict for the delivered 68bce285d2 build: “Everything works.” Manual QA
+PASS for the tested checkpoint. This does not make temporary content finished.
+Expansion beyond these cities/routes is paused by the owner's latest instruction.

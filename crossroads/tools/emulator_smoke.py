@@ -211,6 +211,27 @@ for i, w in enumerate(city['warp_events']):
     verify_joe()
     print('Entered with Joe', w['dest_map'], flush=True)
     assert lib.emu_image(str(args.output / f'interior-{i}.png').encode())
+    if i == 0:
+        # Rest must also work before the first rescue, without inventing a party.
+        walk((0,5), 'OlivineCity_Residence')
+        frames(1,64)
+        frames(20)
+        key(1)
+        frames(180)
+        key(1)
+        frames(600)
+        for _ in range(8):
+            if read('sLockFieldControls',1)==0:
+                break
+            key(1)
+            frames(90)
+        assert read('sLockFieldControls',1)==0
+        assert read(read('gPlayerPartyCountPtr'),1)==0
+        assert read(read('gSaveBlock1Ptr')+0x139c+500,2)==0
+        walk((3,6), 'OlivineCity_Residence')
+        frames(16,128)
+        frames(20)
+        print('Home rest before rescue preserves empty party and unchosen starter: PASS',flush=True)
     frames(16, 128)
     frames(180)
     sb = read('gSaveBlock1Ptr')
@@ -378,6 +399,8 @@ assert (read(sb+0x1c,1),read(sb+0x1d,1))==(75,10)
 verify_joe()
 assert lib.emu_state(str(args.output/'ecruteak-field-ready.snapshot').encode(),0)
 print('Connected return visit with starter: Ecruteak nurse heals 1 HP to full and retains correct respawn/fonts/Joe: PASS',flush=True)
+from olivine_detail_smoke import run as run_detail_checks
+run_detail_checks(root,syms,lib,args.output,read,write,frames,key,walk,pos,verify_joe,western)
 
 key(8)
 frames(120)

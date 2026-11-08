@@ -1763,3 +1763,5 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
     .include "data/maps/EcruteakCity_PokemonCenter_1F/scripts.inc"
     .include "data/maps/EcruteakCity_Mart/scripts.inc"
     .include "crossroads/scripts/western_johto.inc"
+
+    .include "crossroads/scripts/olivine_interiors.inc"

@@ -29,3 +29,11 @@ and ROADMAP.md before changing content. Current owner instructions outrank old d
 - Report implemented, compiled, automatically tested, emulator-tested,
   owner-playtested, and accepted separately. Record exact commits/artifacts.
 - Update documentation and give an actionable owner playtest checklist.
+
+## Current owner priority
+
+Owner accepted 0.6 QA (“Everything works”) and paused expansion beyond the existing
+Olivine, Route 39, Route 38 and Ecruteak footprint. Fully flesh out these areas
+before adding new cities/routes. Interiors/landmark floors inside these locations
+are within scope; major story, curated roster and Gym progression decisions still
+require creative review. Preserve accepted saves, title and starter behavior.
