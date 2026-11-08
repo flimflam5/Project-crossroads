@@ -9356,6 +9356,28 @@
       "border_filepath": "data/layouts/JohtoRoute39/border.bin",
       "blockdata_filepath": "data/layouts/JohtoRoute39/map.bin",
       "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_JOHTO_ROUTE38",
+      "name": "JohtoRoute38_Layout",
+      "width": 64,
+      "height": 28,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Slateport",
+      "border_filepath": "data/layouts/JohtoRoute38/border.bin",
+      "blockdata_filepath": "data/layouts/JohtoRoute38/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ECRUTEAK_CITY",
+      "name": "EcruteakCity_Layout",
+      "width": 48,
+      "height": 48,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Slateport",
+      "border_filepath": "data/layouts/EcruteakCity/border.bin",
+      "blockdata_filepath": "data/layouts/EcruteakCity/map.bin",
+      "layout_version": "emerald"
     }
   ]
 }

@@ -1638,6 +1638,14 @@
     {
       "id": "MAPSEC_JOHTO_ROUTE_39",
       "name": "ROUTE 39"
+    },
+    {
+      "id": "MAPSEC_JOHTO_ROUTE_38",
+      "name": "ROUTE 38"
+    },
+    {
+      "id": "MAPSEC_ECRUTEAK_CITY",
+      "name": "ECRUTEAK CITY"
     }
   ]
 }

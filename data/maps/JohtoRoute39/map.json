@@ -18,6 +18,11 @@
       "map": "MAP_OLIVINE_CITY",
       "offset": -16,
       "direction": "down"
+    },
+    {
+      "map": "MAP_JOHTO_ROUTE38",
+      "offset": 0,
+      "direction": "up"
     }
   ],
   "object_events": [
@@ -48,7 +53,7 @@
     },
     {
       "type": "sign",
-      "x": 13,
+      "x": 9,
       "y": 3,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",

@@ -11,8 +11,8 @@ Route39_NorthSign::
     msgbox Route39_Text_North, MSGBOX_SIGN
     end
 Route39_Text_North:
-    .string "NORTHERN DEVELOPMENT BOUNDARY\p"
-    .string "ROUTE 38 is not open in this build.\nReturn south to OLIVINE CITY.$"
+    .string "ROUTE 39\p"
+    .string "North: ROUTE 38 and ECRUTEAK.\nSouth: OLIVINE CITY.$"
 
 Route39_Walker::
     lock

@@ -40,3 +40,12 @@ The owner accepted Joe 0.3 manual QA. While title appearance awaits review, the
 approved western-first expansion proceeds with Olivine-to-Route-39 traversal.
 Route 38 and Ecruteak follow after the border/save regression checkpoint. This
 does not complete remaining Joe special-state art or approve title/intro visuals.
+
+## Current checkpoint after owner 0.5 acceptance
+
+Owner accepted Black Ledger harbor title/Route 39 build 0.5. The older “title
+appearance awaits review” entry is historical. Current geographic work connects
+Route 38 and Ecruteak, with services and enterable landmark lobbies. These are
+exploration foundations, not completed tower progression, Gym battles or final
+Johto art. Next opening proposal: design/opening/PROPOSAL_01.md, pending creative
+review; no replacement intro has been enabled yet.
