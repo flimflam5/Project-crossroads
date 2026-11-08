@@ -11,15 +11,15 @@ rom = root / 'pokeemerald.gba'
 sha = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=root, text=True).strip()
 dirty = bool(subprocess.check_output(['git', 'status', '--porcelain', '--untracked-files=no'], cwd=root))
 manifest = {
-    'version': 'olivine-foundation-0.1',
+    'version': 'olivine-0.2-met-location',
     'source_commit': sha,
     'dirty_tracked_sources': dirty,
     'rom': rom.name,
     'rom_sha256': hashlib.sha256(rom.read_bytes()).hexdigest(),
     'rom_bytes': rom.stat().st_size,
     'ci_run_id': os.environ.get('GITHUB_RUN_ID'),
-    'summary': 'Standalone Olivine exploration blockout with seven interiors and preserved Alpha access.',
-    'known_limitations': 'See crossroads/TESTING.md; placeholder art/geography, original intro, no new story/battles.',
+    'summary': 'Move live starter rescue to the Olivine Silph office; preserve existing Pokemon and accepted exploration gameplay.',
+    'known_limitations': 'See crossroads/RELEASE_0_2.md. Joe assets await upload; title proposal is unintegrated; original intro and city placeholders remain.',
     'testing': 'Compilation is not playtesting. Follow crossroads/TESTING.md.',
 }
 (root / 'build-info.json').write_text(json.dumps(manifest, indent=2) + '\n')

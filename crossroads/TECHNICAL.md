@@ -88,3 +88,13 @@ pinned to the audited version. Revisit those if the engine is ever upgraded.
 Screenshots/snapshots stay in build/emulator-smoke and must not be committed.
 This runner uses emulator snapshots for branch setup; it does **not** claim to test
 normal SRAM saving, the normal introduction, battle stability, or owner acceptance.
+
+## Starter acquisition location (0.2)
+
+The rescue implementation now lives in crossroads/scripts/starter_rescue.inc.
+Only the Olivine Silph office case links to its entry point. The old notebook
+links to Crossroads_EventScript_VisitRescueCase, a transport/duplicate-check bridge.
+Mon creation itself assigns the actual current map section; no summary changes
+or hidden rewrite of existing party/box origins are involved. The runtime smoke
+test decrypts each new mon's growth/origin blocks to check species, level,
+MAPSEC_OLIVINE_CITY and recorded met level 5.

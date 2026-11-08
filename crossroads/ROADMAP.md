@@ -13,11 +13,18 @@
 5. **Johto and later regions:** expand against approved story/capacity budgets;
    then content completion, regression QA, polish and patch release.
 
-## Creative approvals still needed
+## Latest approved release order
 
-Robbery location/participants, corporate conspiracy, affiliations, villains,
-endings, Joe's exact age/surname, further regions and roles, curated roster and
-final difficulty definitions. These do not block ordinary city programming.
+1. Joe corporate-outfit graphics/trainer art plus corrected acquisition location.
+2. Original title-screen prototype, reviewed art direction, Start/Continue tests.
+3. Original introduction: Joe, Olivine and Silph; playable prologue integration.
+4. Complete Olivine lighthouse/harbor and connect Routes 39 and 38 to Ecruteak.
+5. Central Johto, then southern/eastern Johto, northern/western Johto, remaining
+   landmarks and League access. Include all ten towns and relevant routes through 48.
+
+Meridian/Atlas/Mara/Vale and Joe's name/age are now approved in the owner's handoff.
+Exact cinematic dialogue/pacing, relationships, revelations, endings, final title
+art and difficulty definitions still need review. Do not redesign Pokémon summary.
 
 ## Difficulty proposal — not implemented or approved
 

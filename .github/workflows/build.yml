@@ -6,6 +6,7 @@ on:
       - master
       - upcoming
       - feature/olivine-city-foundation
+      - feature/joe-integration-01
   pull_request:
   workflow_dispatch:
 
@@ -67,12 +68,13 @@ jobs:
       - name: Upload playable Emerald ROM
         uses: actions/upload-artifact@v4
         with:
-          name: crossroads-olivine-0.1-${{ github.sha }}
+          name: crossroads-met-location-0.2-${{ github.sha }}
           path: |
             pokeemerald.gba
             build-info.json
             crossroads/TESTING.md
             crossroads/STATUS.md
+            crossroads/RELEASE_0_2.md
           if-no-files-found: error
           retention-days: 14
 

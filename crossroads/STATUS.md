@@ -38,7 +38,7 @@ system, starter grant, difficulty rules, or regional travel is introduced.
 Original new-game introduction and player graphics remain.
 
 Verification results: TESTING.md. This is an incremental city foundation, not a
-claim that the entire city or game is complete. Owner acceptance is pending.
+claim that the entire city or game is complete. The owner has since accepted manual QA for the tested exploration alpha; see the handoff below.
 
 
 ## Verification update
@@ -49,3 +49,22 @@ terminal travel, and healing/menu stability. Normal UI purchase and real SRAM
 Save/Continue were also checked; detailed coverage and gaps are in TESTING.md.
 The complete opening and finished Olivine are not claimed. No merge into master
 has been performed. Draft review: https://github.com/flimflam5/Project-crossroads/pull/1
+
+
+## Accepted owner QA and next increment
+
+Tester: Dr. QA Daddy (project owner), Delta on iPhone. Tested build: Olivine City
+Exploration Alpha / Foundation 0.1. Verdict: PASS — "Yes everything is a pass."
+Accepted coverage: exploration, listed signs, lighthouse placeholder dialogue,
+Center/Mart access, Elgyem waterfront dialogue, harbor restriction, residence return,
+Gym lobby, save prompt, Elgyem summary, save/reload, return with starter, stability.
+Earlier starter trio, duplication and battle checks remain reported as passing.
+This accepts the tested foundation, not untested future character/title/region work.
+Placeholders are unfinished development work, not regressions in that QA verdict.
+
+Current branch: feature/joe-integration-01, based on accepted c66b089815 rather than
+master (PR #1 remains unmerged). Release 1 starts with actual acquisition metadata:
+move the existing rescue case to the Olivine Silph office, keep the old notebook
+as a travel bridge, preserve saved choice 0x40FA and all previous Pokémon data.
+Joe graphics await joe_mercer_overworld_draft.zip; the owner is attaching it.
+Do not fabricate inspection, replacement artwork, or completed Joe integration.

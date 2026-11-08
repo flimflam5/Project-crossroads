@@ -166,6 +166,24 @@ frames(120)
 for _ in range(2):
     key(1)
     frames(120)
+# The legacy notebook now offers travel, never a grant in Littleroot.
+for _ in range(3):
+    key(1)
+    frames(120)
+frames(180)
+sb = read('gSaveBlock1Ptr')
+assert read(sb + 4, 1) == 75 and read(sb + 5, 1) == 6
+assert read(read('gPlayerPartyCountPtr'), 1) == 0
+for _ in range(2):
+    frames(16, 64)
+    frames(20)
+frames(1, 16)
+frames(20)
+key(1)
+frames(120)
+for _ in range(2):
+    key(1)
+    frames(120)
 assert lib.emu_state(state.encode(), 0)
 for choice, species in ((1, 605), (2, 273), (3, 568)):
     assert lib.emu_state(state.encode(), 1)
@@ -185,6 +203,12 @@ for choice, species in ((1, 605), (2, 273), (3, 568)):
     offset = [0, 0, 0, 0, 0, 0, 1, 1, 2, 3, 2, 3, 1, 1, 2, 3, 2, 3, 1, 1, 2, 3, 2, 3][read(p) % 24]
     actual = (read(p + 32 + 12 * offset) ^ read(p) ^ read(p + 4)) & 2047
     assert actual == species and read(p + 84, 1) == 5
+    sub3 = [3, 2, 3, 2, 1, 1, 3, 2, 3, 2, 1, 1, 3, 2, 3, 2, 1, 1, 0, 0, 0, 0, 0, 0][read(p) % 24]
+    origin = read(p + 32 + 12 * sub3) ^ read(p) ^ read(p + 4)
+    sections = json.loads((root / 'src/data/region_map/region_map_sections.json').read_text())['map_sections']
+    olivine = next(i for i, section in enumerate(sections) if section['id'] == 'MAPSEC_OLIVINE_CITY')
+    assert (origin >> 8 & 255) == olivine and (origin >> 16 & 127) == 5
+    assert lib.emu_image(str(args.output / f'rescue-{species}.png').encode())
     for _ in range(8):
         key(1)
         frames(100)
@@ -193,6 +217,25 @@ for choice, species in ((1, 605), (2, 273), (3, 568)):
         frames(90)
     assert read(read('gPlayerPartyCountPtr'), 1) == 1
     assert read(read('gSaveBlock1Ptr') + 5020 + 500, 2) == choice
+    script('Olivine_ReturnToAlpha')
+    frames(120)
+    for _ in range(4):
+        key(1)
+        frames(90)
+    frames(180)
+    assert read(read('gSaveBlock1Ptr') + 4, 1) == 1
+    # Recheck the old notebook with the same saved guard.
+    for _ in range(2):
+        frames(16, 32)
+        frames(20)
+    frames(1, 64)
+    frames(20)
+    key(1)
+    frames(120)
+    for _ in range(5):
+        key(2)
+        frames(90)
+    assert read(read('gPlayerPartyCountPtr'), 1) == 1
     for _ in range(2):
         frames(16, 16)
         frames(20)
@@ -207,7 +250,7 @@ for choice, species in ((1, 605), (2, 273), (3, 568)):
     sb = read('gSaveBlock1Ptr')
     assert read(sb + 4, 1) == 75 and read(sb + 5, 1) == 0
     assert read(sb + 5020 + 500, 2) == choice and read(read('gPlayerPartyCountPtr'), 1) == 1
-    print('Live rescue, duplicate guard and terminal travel passed:', species, flush=True)
+    print('Live Olivine met location/level, rescue, duplicate guard and terminal travel passed:', species, flush=True)
 walk((11, 22))
 frames(16, 64)
 frames(180)
