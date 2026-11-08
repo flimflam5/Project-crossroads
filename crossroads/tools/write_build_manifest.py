@@ -11,15 +11,15 @@ rom = root / 'pokeemerald.gba'
 sha = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=root, text=True).strip()
 dirty = bool(subprocess.check_output(['git', 'status', '--porcelain', '--untracked-files=no'], cwd=root))
 manifest = {
-    'version': 'western-johto-0.4',
+    'version': 'black-ledger-title-0.5',
     'source_commit': sha,
     'dirty_tracked_sources': dirty,
     'rom': rom.name,
     'rom_sha256': hashlib.sha256(rom.read_bytes()).hexdigest(),
     'rom_bytes': rom.stat().st_size,
     'ci_run_id': os.environ.get('GITHUB_RUN_ID'),
-    'summary': 'Connect Olivine north road to traversable Route 39; preserve the owner-tested Joe 0.3 baseline.',
-    'known_limitations': 'See crossroads/RELEASE_0_4.md. Route 39 exploration blockout only; Route 38 not open. Special movement art and original intro remain; title proposal unimplemented; Delta QA pending.',
+    'summary': 'Use the approved Olivine harbor scene with the updated Pokemon: Black Ledger title; preserve Joe and connected Route 39.',
+    'known_limitations': 'See crossroads/RELEASE_0_5.md. Original Birch intro and special movement art remain; Route 38 not open. Title/Route 39 Delta QA pending.',
     'testing': 'Compilation is not playtesting. Follow crossroads/TESTING.md.',
 }
 (root / 'build-info.json').write_text(json.dumps(manifest, indent=2) + '\n')

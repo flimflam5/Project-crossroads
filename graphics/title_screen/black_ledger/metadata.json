@@ -1,0 +1,11 @@
+{
+  "title": "Pokémon: Black Ledger",
+  "source_sha256": "02cf51946a7a487fe038153f20d5594fb262371f36c479cc725991c5a4ac8762",
+  "dimensions": [
+    240,
+    160
+  ],
+  "bpp": 8,
+  "tiles": 600,
+  "light_palette_index": 95
+}

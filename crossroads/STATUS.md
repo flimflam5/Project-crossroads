@@ -89,3 +89,25 @@ trainers and farm interiors remain unfinished. See RELEASE_0_4.md for verificati
 and Delta checks. The owner has supplied Pokémon: Black Ledger / Voidstar
 Interactive title artwork, superseding the former harbor proposal; implementation
 is a separate forthcoming increment. No title replacement is included in 0.4.
+
+## Black Ledger title 0.5
+
+Owner clarification supersedes the intermediate 0.4 title note: retain the old
+harbor scene with the new Pokémon: Black Ledger title. The coat/pagoda/book image
+is not used. A native GBA title implementation now uses the revised harbor art.
+Local build, cold boot/rendering/lighting, Start, New Game handoff, soft reset and
+normal Continue checks passed. A Route 39 save reloaded through the title with
+position, saved starter choice and all 100 Pokémon bytes preserved, then returned
+to Olivine on foot. The Joe/city/starter/healing regression runner also passed.
+See RELEASE_0_5.md for exact coverage and the accepted owner QA update. The original
+Birch introduction remains; it has not been replaced by the new prologue.
+
+## Accepted owner QA — Black Ledger 0.5
+
+Owner verdict: “Everything works as expected.” Recorded for the delivered Delta
+build from source 01b0ef25c8482e1c50a5a97244f119ae818931d6, artifact
+black-ledger-harbor-0.5-01b0ef25c8.zip. Manual QA PASS for the tested 0.5
+checkpoint, including its title and Route 39 exploration increment. This is the
+new working baseline. No additional per-test results beyond the owner's blanket
+verdict are inferred. Unfinished intro, special-state art and regional content
+remain unfinished. This verdict does not authorize merging into master.
