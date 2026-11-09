@@ -1844,3 +1844,69 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "crossroads/scripts/johto_network.inc"
 
 	.include "crossroads/scripts/johto_runtime.inc"
+
+	.include "data/maps/AzaleaTown/scripts.inc"
+
+	.include "data/maps/AzaleaTown_PokemonCenter_1F/scripts.inc"
+
+	.include "data/maps/AzaleaTown_Mart/scripts.inc"
+
+	.include "data/maps/AzaleaTown_Gym/scripts.inc"
+
+	.include "data/maps/AzaleaTown_Residence/scripts.inc"
+
+	.include "data/maps/AzaleaTown_Workshop/scripts.inc"
+
+	.include "data/maps/CherrygroveCity/scripts.inc"
+
+	.include "data/maps/CherrygroveCity_PokemonCenter_1F/scripts.inc"
+
+	.include "data/maps/CherrygroveCity_Mart/scripts.inc"
+
+	.include "data/maps/CherrygroveCity_Gym/scripts.inc"
+
+	.include "data/maps/CherrygroveCity_Residence/scripts.inc"
+
+	.include "data/maps/CherrygroveCity_Workshop/scripts.inc"
+
+	.include "data/maps/NewBarkTown/scripts.inc"
+
+	.include "data/maps/NewBarkTown_PokemonCenter_1F/scripts.inc"
+
+	.include "data/maps/NewBarkTown_Mart/scripts.inc"
+
+	.include "data/maps/NewBarkTown_Gym/scripts.inc"
+
+	.include "data/maps/NewBarkTown_Residence/scripts.inc"
+
+	.include "data/maps/NewBarkTown_Workshop/scripts.inc"
+
+	.include "data/maps/JohtoRoute34/scripts.inc"
+
+	.include "data/maps/JohtoRoute33/scripts.inc"
+
+	.include "data/maps/JohtoRoute32/scripts.inc"
+
+	.include "data/maps/JohtoRoute31/scripts.inc"
+
+	.include "data/maps/JohtoRoute30/scripts.inc"
+
+	.include "data/maps/JohtoRoute29/scripts.inc"
+
+	.include "data/maps/IlexForest/scripts.inc"
+
+	.include "data/maps/UnionCave_1F/scripts.inc"
+
+	.include "data/maps/UnionCave_2F/scripts.inc"
+
+	.include "data/maps/UnionCave_3F/scripts.inc"
+
+	.include "data/maps/SlowpokeWell_1F/scripts.inc"
+
+	.include "data/maps/SlowpokeWell_2F/scripts.inc"
+
+	.include "data/maps/TohjoFalls_1F/scripts.inc"
+
+	.include "data/maps/TohjoFalls_2F/scripts.inc"
+
+	.include "data/maps/NewBarkLab/scripts.inc"

@@ -18,6 +18,11 @@
       "map": "MAP_JOHTO_ROUTE35",
       "offset": 16,
       "direction": "up"
+    },
+    {
+      "map": "MAP_JOHTO_ROUTE34",
+      "offset": 16,
+      "direction": "down"
     }
   ],
   "object_events": [
@@ -84,6 +89,13 @@
       "elevation": 0,
       "dest_map": "MAP_GOLDENROD_UNDERGROUND",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 17,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_GOLDENROD_UNDERGROUND",
+      "dest_warp_id": "1"
     },
     {
       "x": 49,

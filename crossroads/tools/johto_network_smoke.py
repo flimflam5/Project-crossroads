@@ -52,7 +52,7 @@ write('sWildEncountersDisabled',1,1)
 choice=read(sb()+0x1590,2);partycount=read(read('gPlayerPartyCountPtr'),1)
 def safe(n,p):
  x,y=p;w,h=size[n]
- return 0<=x<w and 0<=y<h and raw[n][y*w+x]&0xc00==0 and raw[n][y*w+x]>>12==3 and not any((o['x'],o['y'])==p for o in maps[n]['object_events'])
+ return 0<=x<w and 0<=y<h and raw[n][y*w+x]&0xc00==0 and raw[n][y*w+x]>>12 in (1,3) and not any((o['x'],o['y'])==p for o in maps[n]['object_events'])
 def path(n,target):
  start=pos();blocked={(e['x'],e['y']) for e in maps[n]['warp_events']} - {start,target};q=deque([start]);prev={start:None}
  while q:
@@ -68,8 +68,16 @@ def walk(target):
  n=current();route=path(n,target);assert route is not None,(n,pos(),'No foot path',target)
  for to in route:
   old=pos();k=16 if to[0]>old[0] else 32 if to[0]<old[0] else 128 if to[1]>old[1] else 64
-  frames(16,k);frames(20)
-  if pos()==old:frames(16,k);frames(20)
+  water=raw[n][to[1]*size[n][0]+to[0]]>>12==1
+  surfing=read('gPlayerAvatar',1)&8
+  if water and not surfing:
+   frames(1,k);frames(20);key(1);frames(180)
+   for _ in range(4):key(1);frames(180)
+   frames(400);close()
+   assert read('gPlayerAvatar',1)&8,('Survey Surf failed',n,old,to)
+  else:
+   frames(8 if surfing else 16,k);frames(20)
+   if pos()==old:frames(8 if surfing else 16,k);frames(20)
   assert current()==n and pos()==to,(n,old,to,current(),pos())
 def warp(index):
  n=current();e=maps[n]['warp_events'][index];x,y=e['x'],e['y'];w,h=size[n]
@@ -112,6 +120,16 @@ def go(dst):
   kind,e=edges[v];a,b=border(e) if kind=='border' else warp(e);transitions.append([a,b,kind]);visited.add(b)
  raise AssertionError(('Too many transitions',dst))
 plans=json.loads((R/'crossroads/johto/manifest.json').read_text())['planned'];targets=[p['name'] for p in plans if p['name'] in names and (not args.cluster or p['cluster']==args.cluster)]
+# Use the actual desk UI; prove the assistance does not alter saved flag bytes.
+go('OlivineCity_HarborOffice');walk((1,6))
+flags=bytes(read(sb()+0x1270+i,1) for i in range(300))
+frames(1,64);frames(20);key(1);frames(180)
+for _ in range(8):
+ if not read('sLockFieldControls',1):break
+ key(1);frames(180)
+assert read('sJohtoTestAccess',1)==1
+assert bytes(read(sb()+0x1270+i,1) for i in range(300))==flags
+print('Actual survey desk enables RAM-only water access without changing saved flags: PASS',flush=True)
 for n in targets:
  go(n);visited.add(n)
  assert lib.emu_image(str(args.output/f'{n}.png').encode())

@@ -1155,6 +1155,11 @@
           "map": "MAP_JOHTO_ROUTE35",
           "offset": 16,
           "direction": "up"
+        },
+        {
+          "map": "MAP_JOHTO_ROUTE34",
+          "offset": 16,
+          "direction": "down"
         }
       ],
       "entrances": [
@@ -1206,6 +1211,13 @@
           "elevation": 0,
           "dest_map": "MAP_GOLDENROD_UNDERGROUND",
           "dest_warp_id": "0"
+        },
+        {
+          "x": 17,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_GOLDENROD_UNDERGROUND",
+          "dest_warp_id": "1"
         },
         {
           "x": 49,
@@ -1365,6 +1377,16 @@
           "map": "MAP_JOHTO_ROUTE36",
           "offset": 8,
           "direction": "left"
+        },
+        {
+          "map": "MAP_JOHTO_ROUTE32",
+          "offset": 10,
+          "direction": "down"
+        },
+        {
+          "map": "MAP_JOHTO_ROUTE31",
+          "offset": 8,
+          "direction": "right"
         }
       ],
       "entrances": [
@@ -1694,6 +1716,11 @@
           "map": "MAP_JOHTO_ROUTE36",
           "offset": -8,
           "direction": "up"
+        },
+        {
+          "map": "MAP_JOHTO_ROUTE32",
+          "offset": -14,
+          "direction": "right"
         }
       ],
       "entrances": [
@@ -1895,8 +1922,8 @@
       "connections": null,
       "entrances": [
         {
-          "x": 6,
-          "y": 11,
+          "x": 10,
+          "y": 15,
           "elevation": 0,
           "dest_map": "MAP_GOLDENROD_CITY",
           "dest_warp_id": "5"
@@ -1918,11 +1945,18 @@
       "connections": null,
       "entrances": [
         {
-          "x": 6,
+          "x": 14,
           "y": 11,
           "elevation": 0,
           "dest_map": "MAP_GOLDENROD_CITY",
           "dest_warp_id": "6"
+        },
+        {
+          "x": 3,
+          "y": 3,
+          "elevation": 0,
+          "dest_map": "MAP_GOLDENROD_CITY",
+          "dest_warp_id": "7"
         }
       ]
     },
@@ -1941,11 +1975,11 @@
       "connections": null,
       "entrances": [
         {
-          "x": 6,
-          "y": 11,
+          "x": 10,
+          "y": 13,
           "elevation": 0,
           "dest_map": "MAP_GOLDENROD_CITY",
-          "dest_warp_id": "7"
+          "dest_warp_id": "8"
         }
       ]
     },
@@ -1964,8 +1998,8 @@
       "connections": null,
       "entrances": [
         {
-          "x": 6,
-          "y": 11,
+          "x": 10,
+          "y": 15,
           "elevation": 0,
           "dest_map": "MAP_VIOLET_CITY",
           "dest_warp_id": "5"
@@ -1980,66 +2014,198 @@
         13,
         19
       ],
-      "status": "planned",
+      "status": "implemented",
       "map_group": 75,
       "map_num": 64,
-      "coverage": "not implemented/tested",
-      "services": ""
+      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "services": "",
+      "id": "MAP_AZALEA_TOWN",
+      "layout": "LAYOUT_AZALEA_TOWN",
+      "connections": [
+        {
+          "map": "MAP_ILEX_FOREST",
+          "offset": -2,
+          "direction": "left"
+        },
+        {
+          "map": "MAP_JOHTO_ROUTE33",
+          "offset": 10,
+          "direction": "right"
+        }
+      ],
+      "entrances": [
+        {
+          "x": 9,
+          "y": 18,
+          "elevation": 0,
+          "dest_map": "MAP_AZALEA_TOWN_POKEMON_CENTER_1_F",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 37,
+          "y": 18,
+          "elevation": 0,
+          "dest_map": "MAP_AZALEA_TOWN_MART",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 37,
+          "y": 34,
+          "elevation": 0,
+          "dest_map": "MAP_AZALEA_TOWN_GYM",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 8,
+          "y": 33,
+          "elevation": 0,
+          "dest_map": "MAP_AZALEA_TOWN_RESIDENCE",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 23,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_AZALEA_TOWN_WORKSHOP",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 38,
+          "y": 26,
+          "elevation": 0,
+          "dest_map": "MAP_SLOWPOKE_WELL_1_F",
+          "dest_warp_id": "1"
+        }
+      ]
     },
     {
       "name": "AzaleaTown_PokemonCenter_1F",
       "cluster": "south",
       "kind": "service",
       "parent": "AzaleaTown",
-      "status": "planned",
+      "status": "implemented",
       "map_group": 75,
       "map_num": 65,
-      "coverage": "not implemented/tested",
-      "services": "healing"
+      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "services": "healing",
+      "id": "MAP_AZALEA_TOWN_POKEMON_CENTER_1_F",
+      "layout": "LAYOUT_OLIVINE_POKEMON_CENTER_1F",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 7,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_AZALEA_TOWN",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 6,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_AZALEA_TOWN",
+          "dest_warp_id": "0"
+        }
+      ]
     },
     {
       "name": "AzaleaTown_Mart",
       "cluster": "south",
       "kind": "service",
       "parent": "AzaleaTown",
-      "status": "planned",
+      "status": "implemented",
       "map_group": 75,
       "map_num": 66,
-      "coverage": "not implemented/tested",
-      "services": "shop"
+      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "services": "shop",
+      "id": "MAP_AZALEA_TOWN_MART",
+      "layout": "LAYOUT_MART",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 3,
+          "y": 7,
+          "elevation": 0,
+          "dest_map": "MAP_AZALEA_TOWN",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 4,
+          "y": 7,
+          "elevation": 0,
+          "dest_map": "MAP_AZALEA_TOWN",
+          "dest_warp_id": "1"
+        }
+      ]
     },
     {
       "name": "AzaleaTown_Gym",
       "cluster": "south",
       "kind": "interior",
       "parent": "AzaleaTown",
-      "status": "planned",
+      "status": "implemented",
       "map_group": 75,
       "map_num": 67,
-      "coverage": "not implemented/tested",
-      "services": ""
+      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "services": "",
+      "id": "MAP_AZALEA_TOWN_GYM",
+      "layout": "LAYOUT_AZALEA_TOWN_GYM",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 6,
+          "y": 11,
+          "elevation": 0,
+          "dest_map": "MAP_AZALEA_TOWN",
+          "dest_warp_id": "2"
+        }
+      ]
     },
     {
       "name": "AzaleaTown_Residence",
       "cluster": "south",
       "kind": "interior",
       "parent": "AzaleaTown",
-      "status": "planned",
+      "status": "implemented",
       "map_group": 75,
       "map_num": 68,
-      "coverage": "not implemented/tested",
-      "services": ""
+      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "services": "",
+      "id": "MAP_AZALEA_TOWN_RESIDENCE",
+      "layout": "LAYOUT_AZALEA_TOWN_RESIDENCE",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 6,
+          "y": 11,
+          "elevation": 0,
+          "dest_map": "MAP_AZALEA_TOWN",
+          "dest_warp_id": "3"
+        }
+      ]
     },
     {
       "name": "AzaleaTown_Workshop",
       "cluster": "south",
       "kind": "interior",
       "parent": "AzaleaTown",
-      "status": "planned",
+      "status": "implemented",
       "map_group": 75,
       "map_num": 69,
-      "coverage": "not implemented/tested",
-      "services": ""
+      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "services": "",
+      "id": "MAP_AZALEA_TOWN_WORKSHOP",
+      "layout": "LAYOUT_AZALEA_TOWN_WORKSHOP",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 6,
+          "y": 11,
+          "elevation": 0,
+          "dest_map": "MAP_AZALEA_TOWN",
+          "dest_warp_id": "4"
+        }
+      ]
     },
     {
       "name": "CherrygroveCity",
@@ -2049,66 +2215,191 @@
         20,
         16
       ],
-      "status": "planned",
+      "status": "implemented",
       "map_group": 75,
       "map_num": 70,
-      "coverage": "not implemented/tested",
-      "services": ""
+      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "services": "",
+      "id": "MAP_CHERRYGROVE_CITY",
+      "layout": "LAYOUT_CHERRYGROVE_CITY",
+      "connections": [
+        {
+          "map": "MAP_JOHTO_ROUTE30",
+          "offset": 10,
+          "direction": "up"
+        },
+        {
+          "map": "MAP_JOHTO_ROUTE29",
+          "offset": 8,
+          "direction": "right"
+        }
+      ],
+      "entrances": [
+        {
+          "x": 9,
+          "y": 18,
+          "elevation": 0,
+          "dest_map": "MAP_CHERRYGROVE_CITY_POKEMON_CENTER_1_F",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 37,
+          "y": 18,
+          "elevation": 0,
+          "dest_map": "MAP_CHERRYGROVE_CITY_MART",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 37,
+          "y": 34,
+          "elevation": 0,
+          "dest_map": "MAP_CHERRYGROVE_CITY_GYM",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 8,
+          "y": 33,
+          "elevation": 0,
+          "dest_map": "MAP_CHERRYGROVE_CITY_RESIDENCE",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 23,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_CHERRYGROVE_CITY_WORKSHOP",
+          "dest_warp_id": "0"
+        }
+      ]
     },
     {
       "name": "CherrygroveCity_PokemonCenter_1F",
       "cluster": "south",
       "kind": "service",
       "parent": "CherrygroveCity",
-      "status": "planned",
+      "status": "implemented",
       "map_group": 75,
       "map_num": 71,
-      "coverage": "not implemented/tested",
-      "services": "healing"
+      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "services": "healing",
+      "id": "MAP_CHERRYGROVE_CITY_POKEMON_CENTER_1_F",
+      "layout": "LAYOUT_OLIVINE_POKEMON_CENTER_1F",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 7,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_CHERRYGROVE_CITY",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 6,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_CHERRYGROVE_CITY",
+          "dest_warp_id": "0"
+        }
+      ]
     },
     {
       "name": "CherrygroveCity_Mart",
       "cluster": "south",
       "kind": "service",
       "parent": "CherrygroveCity",
-      "status": "planned",
+      "status": "implemented",
       "map_group": 75,
       "map_num": 72,
-      "coverage": "not implemented/tested",
-      "services": "shop"
+      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "services": "shop",
+      "id": "MAP_CHERRYGROVE_CITY_MART",
+      "layout": "LAYOUT_MART",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 3,
+          "y": 7,
+          "elevation": 0,
+          "dest_map": "MAP_CHERRYGROVE_CITY",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 4,
+          "y": 7,
+          "elevation": 0,
+          "dest_map": "MAP_CHERRYGROVE_CITY",
+          "dest_warp_id": "1"
+        }
+      ]
     },
     {
       "name": "CherrygroveCity_Gym",
       "cluster": "south",
       "kind": "interior",
       "parent": "CherrygroveCity",
-      "status": "planned",
+      "status": "implemented",
       "map_group": 75,
       "map_num": 73,
-      "coverage": "not implemented/tested",
-      "services": ""
+      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "services": "",
+      "id": "MAP_CHERRYGROVE_CITY_GYM",
+      "layout": "LAYOUT_CHERRYGROVE_CITY_GYM",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 6,
+          "y": 11,
+          "elevation": 0,
+          "dest_map": "MAP_CHERRYGROVE_CITY",
+          "dest_warp_id": "2"
+        }
+      ]
     },
     {
       "name": "CherrygroveCity_Residence",
       "cluster": "south",
       "kind": "interior",
       "parent": "CherrygroveCity",
-      "status": "planned",
+      "status": "implemented",
       "map_group": 75,
       "map_num": 74,
-      "coverage": "not implemented/tested",
-      "services": ""
+      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "services": "",
+      "id": "MAP_CHERRYGROVE_CITY_RESIDENCE",
+      "layout": "LAYOUT_CHERRYGROVE_CITY_RESIDENCE",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 6,
+          "y": 11,
+          "elevation": 0,
+          "dest_map": "MAP_CHERRYGROVE_CITY",
+          "dest_warp_id": "3"
+        }
+      ]
     },
     {
       "name": "CherrygroveCity_Workshop",
       "cluster": "south",
       "kind": "interior",
       "parent": "CherrygroveCity",
-      "status": "planned",
+      "status": "implemented",
       "map_group": 75,
       "map_num": 75,
-      "coverage": "not implemented/tested",
-      "services": ""
+      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "services": "",
+      "id": "MAP_CHERRYGROVE_CITY_WORKSHOP",
+      "layout": "LAYOUT_CHERRYGROVE_CITY_WORKSHOP",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 6,
+          "y": 11,
+          "elevation": 0,
+          "dest_map": "MAP_CHERRYGROVE_CITY",
+          "dest_warp_id": "4"
+        }
+      ]
     },
     {
       "name": "NewBarkTown",
@@ -2118,66 +2409,200 @@
         25,
         16
       ],
-      "status": "planned",
+      "status": "implemented",
       "map_group": 75,
       "map_num": 76,
-      "coverage": "not implemented/tested",
-      "services": ""
+      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "services": "",
+      "id": "MAP_NEW_BARK_TOWN",
+      "layout": "LAYOUT_NEW_BARK_TOWN",
+      "connections": [
+        {
+          "map": "MAP_JOHTO_ROUTE29",
+          "offset": 8,
+          "direction": "left"
+        }
+      ],
+      "entrances": [
+        {
+          "x": 9,
+          "y": 18,
+          "elevation": 0,
+          "dest_map": "MAP_NEW_BARK_TOWN_POKEMON_CENTER_1_F",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 37,
+          "y": 18,
+          "elevation": 0,
+          "dest_map": "MAP_NEW_BARK_TOWN_MART",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 37,
+          "y": 34,
+          "elevation": 0,
+          "dest_map": "MAP_NEW_BARK_TOWN_GYM",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 8,
+          "y": 33,
+          "elevation": 0,
+          "dest_map": "MAP_NEW_BARK_TOWN_RESIDENCE",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 23,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_NEW_BARK_TOWN_WORKSHOP",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 22,
+          "y": 37,
+          "elevation": 0,
+          "dest_map": "MAP_NEW_BARK_LAB",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 44,
+          "y": 18,
+          "elevation": 0,
+          "dest_map": "MAP_TOHJO_FALLS_1_F",
+          "dest_warp_id": "1"
+        }
+      ]
     },
     {
       "name": "NewBarkTown_PokemonCenter_1F",
       "cluster": "south",
       "kind": "service",
       "parent": "NewBarkTown",
-      "status": "planned",
+      "status": "implemented",
       "map_group": 75,
       "map_num": 77,
-      "coverage": "not implemented/tested",
-      "services": "healing"
+      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "services": "healing",
+      "id": "MAP_NEW_BARK_TOWN_POKEMON_CENTER_1_F",
+      "layout": "LAYOUT_OLIVINE_POKEMON_CENTER_1F",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 7,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_NEW_BARK_TOWN",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 6,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_NEW_BARK_TOWN",
+          "dest_warp_id": "0"
+        }
+      ]
     },
     {
       "name": "NewBarkTown_Mart",
       "cluster": "south",
       "kind": "service",
       "parent": "NewBarkTown",
-      "status": "planned",
+      "status": "implemented",
       "map_group": 75,
       "map_num": 78,
-      "coverage": "not implemented/tested",
-      "services": "shop"
+      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "services": "shop",
+      "id": "MAP_NEW_BARK_TOWN_MART",
+      "layout": "LAYOUT_MART",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 3,
+          "y": 7,
+          "elevation": 0,
+          "dest_map": "MAP_NEW_BARK_TOWN",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 4,
+          "y": 7,
+          "elevation": 0,
+          "dest_map": "MAP_NEW_BARK_TOWN",
+          "dest_warp_id": "1"
+        }
+      ]
     },
     {
       "name": "NewBarkTown_Gym",
       "cluster": "south",
       "kind": "interior",
       "parent": "NewBarkTown",
-      "status": "planned",
+      "status": "implemented",
       "map_group": 75,
       "map_num": 79,
-      "coverage": "not implemented/tested",
-      "services": ""
+      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "services": "",
+      "id": "MAP_NEW_BARK_TOWN_GYM",
+      "layout": "LAYOUT_NEW_BARK_TOWN_GYM",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 6,
+          "y": 11,
+          "elevation": 0,
+          "dest_map": "MAP_NEW_BARK_TOWN",
+          "dest_warp_id": "2"
+        }
+      ]
     },
     {
       "name": "NewBarkTown_Residence",
       "cluster": "south",
       "kind": "interior",
       "parent": "NewBarkTown",
-      "status": "planned",
+      "status": "implemented",
       "map_group": 75,
       "map_num": 80,
-      "coverage": "not implemented/tested",
-      "services": ""
+      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "services": "",
+      "id": "MAP_NEW_BARK_TOWN_RESIDENCE",
+      "layout": "LAYOUT_NEW_BARK_TOWN_RESIDENCE",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 6,
+          "y": 11,
+          "elevation": 0,
+          "dest_map": "MAP_NEW_BARK_TOWN",
+          "dest_warp_id": "3"
+        }
+      ]
     },
     {
       "name": "NewBarkTown_Workshop",
       "cluster": "south",
       "kind": "interior",
       "parent": "NewBarkTown",
-      "status": "planned",
+      "status": "implemented",
       "map_group": 75,
       "map_num": 81,
-      "coverage": "not implemented/tested",
-      "services": ""
+      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "services": "",
+      "id": "MAP_NEW_BARK_TOWN_WORKSHOP",
+      "layout": "LAYOUT_NEW_BARK_TOWN_WORKSHOP",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 6,
+          "y": 11,
+          "elevation": 0,
+          "dest_map": "MAP_NEW_BARK_TOWN",
+          "dest_warp_id": "4"
+        }
+      ]
     },
     {
       "name": "JohtoRoute34",
@@ -2187,11 +2612,26 @@
         9,
         17
       ],
-      "status": "planned",
+      "status": "implemented",
       "map_group": 75,
       "map_num": 82,
-      "coverage": "not implemented/tested",
-      "services": ""
+      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "services": "",
+      "id": "MAP_JOHTO_ROUTE34",
+      "layout": "LAYOUT_JOHTO_ROUTE34",
+      "connections": [
+        {
+          "map": "MAP_GOLDENROD_CITY",
+          "offset": -16,
+          "direction": "up"
+        },
+        {
+          "map": "MAP_ILEX_FOREST",
+          "offset": -6,
+          "direction": "down"
+        }
+      ],
+      "entrances": []
     },
     {
       "name": "JohtoRoute33",
@@ -2201,11 +2641,29 @@
         16,
         19
       ],
-      "status": "planned",
+      "status": "implemented",
       "map_group": 75,
       "map_num": 83,
-      "coverage": "not implemented/tested",
-      "services": ""
+      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "services": "",
+      "id": "MAP_JOHTO_ROUTE33",
+      "layout": "LAYOUT_JOHTO_ROUTE33",
+      "connections": [
+        {
+          "map": "MAP_AZALEA_TOWN",
+          "offset": -10,
+          "direction": "left"
+        }
+      ],
+      "entrances": [
+        {
+          "x": 24,
+          "y": 7,
+          "elevation": 0,
+          "dest_map": "MAP_UNION_CAVE_1_F",
+          "dest_warp_id": "2"
+        }
+      ]
     },
     {
       "name": "JohtoRoute32",
@@ -2215,11 +2673,34 @@
         18,
         15
       ],
-      "status": "planned",
+      "status": "implemented",
       "map_group": 75,
       "map_num": 84,
-      "coverage": "not implemented/tested",
-      "services": ""
+      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "services": "",
+      "id": "MAP_JOHTO_ROUTE32",
+      "layout": "LAYOUT_JOHTO_ROUTE32",
+      "connections": [
+        {
+          "map": "MAP_VIOLET_CITY",
+          "offset": -10,
+          "direction": "up"
+        },
+        {
+          "map": "MAP_RUINS_OF_ALPH",
+          "offset": 14,
+          "direction": "left"
+        }
+      ],
+      "entrances": [
+        {
+          "x": 18,
+          "y": 55,
+          "elevation": 0,
+          "dest_map": "MAP_UNION_CAVE_1_F",
+          "dest_warp_id": "1"
+        }
+      ]
     },
     {
       "name": "JohtoRoute31",
@@ -2229,11 +2710,26 @@
         20,
         10
       ],
-      "status": "planned",
+      "status": "implemented",
       "map_group": 75,
       "map_num": 85,
-      "coverage": "not implemented/tested",
-      "services": ""
+      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "services": "",
+      "id": "MAP_JOHTO_ROUTE31",
+      "layout": "LAYOUT_JOHTO_ROUTE31",
+      "connections": [
+        {
+          "map": "MAP_VIOLET_CITY",
+          "offset": -8,
+          "direction": "left"
+        },
+        {
+          "map": "MAP_JOHTO_ROUTE30",
+          "offset": 6,
+          "direction": "down"
+        }
+      ],
+      "entrances": []
     },
     {
       "name": "JohtoRoute30",
@@ -2243,11 +2739,26 @@
         21,
         13
       ],
-      "status": "planned",
+      "status": "implemented",
       "map_group": 75,
       "map_num": 86,
-      "coverage": "not implemented/tested",
-      "services": ""
+      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "services": "",
+      "id": "MAP_JOHTO_ROUTE30",
+      "layout": "LAYOUT_JOHTO_ROUTE30",
+      "connections": [
+        {
+          "map": "MAP_JOHTO_ROUTE31",
+          "offset": -6,
+          "direction": "up"
+        },
+        {
+          "map": "MAP_CHERRYGROVE_CITY",
+          "offset": -10,
+          "direction": "down"
+        }
+      ],
+      "entrances": []
     },
     {
       "name": "JohtoRoute29",
@@ -2257,11 +2768,26 @@
         23,
         16
       ],
-      "status": "planned",
+      "status": "implemented",
       "map_group": 75,
       "map_num": 87,
-      "coverage": "not implemented/tested",
-      "services": ""
+      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "services": "",
+      "id": "MAP_JOHTO_ROUTE29",
+      "layout": "LAYOUT_JOHTO_ROUTE29",
+      "connections": [
+        {
+          "map": "MAP_CHERRYGROVE_CITY",
+          "offset": -8,
+          "direction": "left"
+        },
+        {
+          "map": "MAP_NEW_BARK_TOWN",
+          "offset": -8,
+          "direction": "right"
+        }
+      ],
+      "entrances": []
     },
     {
       "name": "IlexForest",
@@ -2271,126 +2797,238 @@
         10,
         19
       ],
-      "status": "planned",
+      "status": "implemented",
       "map_group": 75,
       "map_num": 88,
-      "coverage": "not implemented/tested",
-      "services": ""
+      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "services": "",
+      "id": "MAP_ILEX_FOREST",
+      "layout": "LAYOUT_ILEX_FOREST",
+      "connections": [
+        {
+          "map": "MAP_JOHTO_ROUTE34",
+          "offset": 6,
+          "direction": "up"
+        },
+        {
+          "map": "MAP_AZALEA_TOWN",
+          "offset": 2,
+          "direction": "right"
+        }
+      ],
+      "entrances": []
     },
     {
       "name": "UnionCave_1F",
       "cluster": "south",
       "kind": "cave",
       "entrances": [
-        [
-          "JohtoRoute32",
-          18,
-          55,
-          0
-        ],
-        [
-          "JohtoRoute33",
-          24,
-          7,
-          0
-        ]
+        {
+          "x": 22,
+          "y": 4,
+          "elevation": 0,
+          "dest_map": "MAP_UNION_CAVE_2_F",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 10,
+          "y": 19,
+          "elevation": 0,
+          "dest_map": "MAP_JOHTO_ROUTE32",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 14,
+          "y": 19,
+          "elevation": 0,
+          "dest_map": "MAP_JOHTO_ROUTE33",
+          "dest_warp_id": "0"
+        }
       ],
-      "status": "planned",
+      "status": "implemented",
       "map_group": 75,
       "map_num": 89,
-      "coverage": "not implemented/tested",
-      "services": ""
+      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "services": "",
+      "id": "MAP_UNION_CAVE_1_F",
+      "layout": "LAYOUT_UNION_CAVE_1_F",
+      "connections": null
     },
     {
       "name": "UnionCave_2F",
       "cluster": "south",
       "kind": "cave",
-      "entrances": [],
-      "status": "planned",
+      "entrances": [
+        {
+          "x": 5,
+          "y": 16,
+          "elevation": 0,
+          "dest_map": "MAP_UNION_CAVE_1_F",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 22,
+          "y": 4,
+          "elevation": 0,
+          "dest_map": "MAP_UNION_CAVE_3_F",
+          "dest_warp_id": "0"
+        }
+      ],
+      "status": "implemented",
       "map_group": 75,
       "map_num": 90,
-      "coverage": "not implemented/tested",
-      "services": ""
+      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "services": "",
+      "id": "MAP_UNION_CAVE_2_F",
+      "layout": "LAYOUT_UNION_CAVE_2_F",
+      "connections": null
     },
     {
       "name": "UnionCave_3F",
       "cluster": "south",
       "kind": "cave",
-      "entrances": [],
-      "status": "planned",
+      "entrances": [
+        {
+          "x": 5,
+          "y": 16,
+          "elevation": 0,
+          "dest_map": "MAP_UNION_CAVE_2_F",
+          "dest_warp_id": "1"
+        }
+      ],
+      "status": "implemented",
       "map_group": 75,
       "map_num": 91,
-      "coverage": "not implemented/tested",
-      "services": ""
+      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "services": "",
+      "id": "MAP_UNION_CAVE_3_F",
+      "layout": "LAYOUT_UNION_CAVE_3_F",
+      "connections": null
     },
     {
       "name": "SlowpokeWell_1F",
       "cluster": "south",
       "kind": "well",
       "entrances": [
-        [
-          "AzaleaTown",
-          38,
-          26,
-          0
-        ]
+        {
+          "x": 22,
+          "y": 4,
+          "elevation": 0,
+          "dest_map": "MAP_SLOWPOKE_WELL_2_F",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 10,
+          "y": 19,
+          "elevation": 0,
+          "dest_map": "MAP_AZALEA_TOWN",
+          "dest_warp_id": "5"
+        }
       ],
-      "status": "planned",
+      "status": "implemented",
       "map_group": 75,
       "map_num": 92,
-      "coverage": "not implemented/tested",
-      "services": ""
+      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "services": "",
+      "id": "MAP_SLOWPOKE_WELL_1_F",
+      "layout": "LAYOUT_SLOWPOKE_WELL_1_F",
+      "connections": null
     },
     {
       "name": "SlowpokeWell_2F",
       "cluster": "south",
       "kind": "well",
-      "entrances": [],
-      "status": "planned",
+      "entrances": [
+        {
+          "x": 5,
+          "y": 16,
+          "elevation": 0,
+          "dest_map": "MAP_SLOWPOKE_WELL_1_F",
+          "dest_warp_id": "0"
+        }
+      ],
+      "status": "implemented",
       "map_group": 75,
       "map_num": 93,
-      "coverage": "not implemented/tested",
-      "services": ""
+      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "services": "",
+      "id": "MAP_SLOWPOKE_WELL_2_F",
+      "layout": "LAYOUT_SLOWPOKE_WELL_2_F",
+      "connections": null
     },
     {
       "name": "TohjoFalls_1F",
       "cluster": "south",
       "kind": "falls",
       "entrances": [
-        [
-          "NewBarkTown",
-          40,
-          28,
-          0
-        ]
+        {
+          "x": 22,
+          "y": 4,
+          "elevation": 0,
+          "dest_map": "MAP_TOHJO_FALLS_2_F",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 10,
+          "y": 19,
+          "elevation": 0,
+          "dest_map": "MAP_NEW_BARK_TOWN",
+          "dest_warp_id": "6"
+        }
       ],
-      "status": "planned",
+      "status": "implemented",
       "map_group": 75,
       "map_num": 94,
-      "coverage": "not implemented/tested",
-      "services": ""
+      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "services": "",
+      "id": "MAP_TOHJO_FALLS_1_F",
+      "layout": "LAYOUT_TOHJO_FALLS_1_F",
+      "connections": null
     },
     {
       "name": "TohjoFalls_2F",
       "cluster": "south",
       "kind": "falls",
-      "entrances": [],
-      "status": "planned",
+      "entrances": [
+        {
+          "x": 5,
+          "y": 16,
+          "elevation": 0,
+          "dest_map": "MAP_TOHJO_FALLS_1_F",
+          "dest_warp_id": "0"
+        }
+      ],
+      "status": "implemented",
       "map_group": 75,
       "map_num": 95,
-      "coverage": "not implemented/tested",
-      "services": ""
+      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "services": "",
+      "id": "MAP_TOHJO_FALLS_2_F",
+      "layout": "LAYOUT_TOHJO_FALLS_2_F",
+      "connections": null
     },
     {
       "name": "NewBarkLab",
       "cluster": "south",
       "kind": "facility",
       "parent": "NewBarkTown",
-      "status": "planned",
+      "status": "implemented",
       "map_group": 75,
       "map_num": 96,
-      "coverage": "not implemented/tested",
-      "services": ""
+      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "services": "",
+      "id": "MAP_NEW_BARK_LAB",
+      "layout": "LAYOUT_NEW_BARK_LAB",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 7,
+          "y": 11,
+          "elevation": 0,
+          "dest_map": "MAP_NEW_BARK_TOWN",
+          "dest_warp_id": "5"
+        }
+      ]
     },
     {
       "name": "MahoganyTown",
@@ -3537,8 +4175,8 @@
       [
         [
           "NewBarkTown",
-          40,
-          28,
+          44,
+          18,
           0
         ]
       ]
@@ -3550,7 +4188,7 @@
     "Battle Frontier/future regions: closed",
     "No legend, badge, Gym-order, encounter or trainer decisions added"
   ],
-  "checkpoint": "central",
+  "checkpoint": "south",
   "internal_checkpoints": {
     "central": {
       "registered_maps": 64,
@@ -3560,6 +4198,16 @@
       "healing": "Goldenrod and Violet tested",
       "atlas": "Ecruteak marker, cursor and safe close tested",
       "build": "Emerald PASS; 29,297,268 linked bytes",
+      "owner_qa": "pending"
+    },
+    "south": {
+      "registered_maps": 97,
+      "new_maps": 33,
+      "controller_map_visits": 33,
+      "controller_transitions": 131,
+      "healing": "Azalea, Cherrygrove and New Bark tested",
+      "water": "Actual desk UI, unchanged saved flag block, Surf to offshore Tohjo entry and return",
+      "build": "Emerald PASS; 29,353,500 linked bytes",
       "owner_qa": "pending"
     }
   }

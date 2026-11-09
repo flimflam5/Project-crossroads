@@ -19,6 +19,7 @@ def script(n):return 'Johto_'+n
 
 def main():
  ap=argparse.ArgumentParser();ap.add_argument('--through',choices=CLUSTERS,default='west');ap.add_argument('--check',action='store_true');args=ap.parse_args()
+ ambient=load('crossroads/johto/ambient.json')
  manifest=load('crossroads/johto/manifest.json');plans=manifest['planned'];selected=[p for p in plans if CLUSTERS.index(p['cluster'])<=CLUSTERS.index(args.through)]
  # --check runs the deterministic writer against an in-memory file comparison.
  global write
@@ -68,7 +69,9 @@ def main():
  def addlayout(n,w,h,primary,secondary,data,border):
   lid='LAYOUT_'+sym(n);l=dict(id=lid,name=n+'_Layout',width=w,height=h,primary_tileset=primary,secondary_tileset=secondary,border_filepath=f'data/layouts/{n}/border.bin',blockdata_filepath=f'data/layouts/{n}/map.bin',layout_version='emerald')
   if lid not in bylayout:layouts['layouts'].append(l);bylayout[lid]=l
-  else:assert bylayout[lid]==l
+  elif bylayout[lid]!=l:
+   # Only newly authored layouts pass here; their numeric IDs remain fixed.
+   bylayout[lid].clear();bylayout[lid].update(l)
   tiles[n]=data;sizes[n]=(w,h);write(l['border_filepath'],struct.pack('<4H',*([border]*4)));return lid
  for n,m in existing.items():
   l=bylayout[m['layout']];sizes[n]=(l['width'],l['height']);tiles[n]=list(struct.unpack('<'+str(l['width']*l['height'])+'H',oldbytes[n]));sections[n]=m['region_map_section']
@@ -88,7 +91,11 @@ def main():
   elif re.search(r'_\d+F$',n) and kind!='service':
    theme=kind;w,h=28,22
    if kind not in ['tower','shrine','gate']:primary='gTileset_General';secondary='gTileset_Cave';floor=0x3201;border=0x0611
-  else:theme=n.split('_')[-1].lower()
+  else:
+   theme=n.split('_')[-1].lower()
+   if n in ['GoldenrodDepartmentStore','VioletAcademy']:w,h=20,16
+   if n=='GoldenrodRadioLobby':w,h=20,14
+   if n=='GoldenrodUnderground':w,h=28,12
   isout=n in CITIES or n.startswith('JohtoRoute') or any(n==s[0] for s in LANDMARKS)
   m=dict(id=mid(n),name=n,layout='',music=('MUS_ROUTE119' if 'Route' in n else 'MUS_PETALBURG_WOODS' if not isout else 'MUS_LILYCOVE'),region='REGION_HOENN',region_map_section=sec,requires_flash=False,weather='WEATHER_NONE' if not isout else 'WEATHER_SUNNY',map_type='MAP_TYPE_CITY' if n in CITIES else 'MAP_TYPE_ROUTE' if isout else 'MAP_TYPE_UNDERGROUND' if primary=='gTileset_General' else 'MAP_TYPE_INDOOR',allow_cycling=isout,allow_escaping=False,allow_running=True,show_map_name=isout or kind in ['cave','ice','tower'],battle_scene='MAP_BATTLE_SCENE_NORMAL',connections=None,object_events=[],warp_events=[],coord_events=[],bg_events=[])
   maps[n]=m;meta[n]=dict(theme=theme,kind=kind,outdoor=isout,parent=parent,floor=floor)
@@ -103,12 +110,21 @@ def main():
     road(n,(w//2,3),(w//2,h-4));road(n,(3,h//2),(w-4,h//2))
     if theme in ['coastal','coast','commercial']:rect(n,3,h-11,w//3,7,0x1170)
     if theme in ['riverside','lakes','ponds','lake','wetlands']:rect(n,w-11,8,7,h-16,0x1170)
-    if theme in ['ridge','mountain','foothills','cliff']: 
+    if theme in ['ridge','mountain','foothills','cliff']:
      for y in range(7,h-6,10):rect(n,4,y,6,2,0x4c6)
     if theme in ['forest','woodland','orchard']:
      for x in range(7,w-7,7):
       for y in range(6,h-7,10):
        if abs(x-w//2)>3 and abs(y-h//2)>3:stamp(n,3,2,2,4,x,y)
+    if n=='CherrygroveCity':
+     rect(n,2,3,4,h-6,0x1170);rect(n,6,3,2,h-6,0x3124)
+    if n=='NewBarkTown':rect(n,w-7,h//2-4,5,h//2+2,0x1170)
+    if n=='CianwoodCity':
+     rect(n,w-8,3,6,h-6,0x1170);rect(n,w-10,3,2,h-6,0x3124)
+    if theme=='lake':
+     rect(n,8,8,w-16,h-16,0x1170)
+     road(n,(w//2,h//2),(w//2-3,h//2+3),width=1)
+     road(n,(w//2,h//2),(w//2+3,h//2+3),width=1)
     if theme=='park':
      rect(n,7,7,w-14,h-14,0x3001)
      for x,y in [(7,7),(w-10,7),(7,h-11),(w-10,h-11)]:stamp(n,3,2,2,4,x,y)
@@ -120,7 +136,7 @@ def main():
    title=CITIES[n][0] if n in CITIES else 'ROUTE '+n[10:] if n.startswith('JohtoRoute') else next(s[1] for s in LANDMARKS if s[0]==n)
    say(label,title+'. Follow the marked roads and direction signs.','SIGN')
    if theme not in ['sea','islands']:
-    x,y=w//2+3,h//2+3;rect(n,x,y,1,1,floor);label=script(n+'_Resident');m['object_events'].append(obj(x,y,label,'WOMAN_3'));say(label,{'commercial':'There is always another delivery crossing this city. I take the side streets when the market is busy.','academy':'The tower and the school are good landmarks. You can hear the bells from almost anywhere.','woodland':'The shade is welcome after a long walk. The forest path stays open in both directions.','ridge':'The mountain trail winds down to the south. Take your time on the descent.','mountain':'The lake road runs north. Pack something warm if you head toward the Ice Path.','village':'It is quiet here, apart from the wind off the water. The west road leads to Cherrygrove.','island':'The sea road reaches Olivine. Our pharmacy and Center are both near the main street.'}.get(theme,'The signs help when the paths turn. There is no need to rush the walk.'))
+    x,y=w//2+3,h//2+3;rect(n,x,y,1,1,floor);label=script(n+'_Resident');m['object_events'].append(obj(x,y,label,'WOMAN_3'));say(label,ambient[n] if n in ambient else {'commercial':'There is always another delivery crossing this city. I take the side streets when the market is busy.','academy':'The tower and the school are good landmarks. You can hear the bells from almost anywhere.','woodland':'The shade is welcome after a long walk. The forest path stays open in both directions.','ridge':'The mountain trail winds down to the south. Take your time on the descent.','mountain':'The lake road runs north. Pack something warm if you head toward the Ice Path.','village':'It is quiet here, apart from the wind off the water. The west road leads to Cherrygrove.','island':'The sea road reaches Olivine. Our pharmacy and Center are both near the main street.'}.get(theme,'The signs help when the paths turn. There is no need to rush the walk.'))
   else:
    rect(n,0,0,w,2,border);rect(n,0,h-1,w,1,border);rect(n,0,0,1,h,border);rect(n,w-1,0,1,h,border)
    if primary=='gTileset_General':
@@ -140,7 +156,7 @@ def main():
      for x in (2,3,4):rect(n,x,3,1,1,0x064c)
      rect(n,w-4,3,1,1,0x0654);rect(n,3,h-4,2,1,0x3224)
    label=script(n+'_Guide');x,y=3,4;rect(n,x,y,1,1,floor);m['object_events'].append(obj(x,y,label,'EXPERT_M'))
-   text=('The display cases hold local records and everyday tools. There is no admission charge.' if kind=='facility' else 'Visitors are welcome. Battle schedules and badges are not being issued here today.' if theme=='gym' else 'This is a quiet place to stop. The paths and stairs lead back the way you came.')
+   text=ambient.get(n,ambient.get(n.rsplit('_',1)[0])) or ('The display cases hold local records and everyday tools. There is no admission charge.' if kind=='facility' else 'Visitors are welcome. Training sessions are not scheduled today.' if theme=='gym' else 'This is a quiet place to stop. The paths and stairs lead back the way you came.')
    say(label,text)
    label=script(n+'_Notes');sign(m,w-3,2,label);rect(n,w-3,2,1,1,border)
    say(label,('Local maps, repair notes and a well-used workbench.' if 'Workshop' in n else 'Please leave the displays as you found them. Take care on the stairs.'),'SIGN')
@@ -186,8 +202,12 @@ def main():
   if p['kind']!='facility':continue
   n=p['name'];parent=p['parent'];w,h=sizes[parent]
   x,y=(5,4) if parent=='GoldenrodCity' and n.endswith('Store') else (w-12,4) if 'Radio' in n else (w//2-3,h-10)
-  stamp(parent,18,16,4,4,x,y);protected.setdefault(parent,set()).update((xx,yy) for xx in range(x,x+4) for yy in range(y,y+4));dx,dy=x+1,y+3;road(parent,(dx,dy+1),(w//2,dy+1),width=1);warp(parent,dx,dy,n,6,11,bt=0x0208)
+  stamp(parent,18,16,4,4,x,y);protected.setdefault(parent,set()).update((xx,yy) for xx in range(x,x+4) for yy in range(y,y+4));dx,dy=x+1,y+3;road(parent,(dx,dy+1),(w//2,dy+1),width=1);warp(parent,dx,dy,n,sizes[n][0]//2,sizes[n][1]-1,bt=0x0208)
   label=script(n+'_Entrance');sign(maps[parent],dx-1,dy+1,label);rect(parent,dx-1,dy+1,1,1,0x403);say(label,re.sub(r'([a-z])([A-Z])',r'\1 \2',n).upper()+'.','SIGN')
+  if n=='GoldenrodUnderground':
+   # A second public stair makes this a real through passage rather than a lobby.
+   x2,y2=16,5;stamp(parent,4,16,4,4,x2,y2);protected.setdefault(parent,set()).update((xx,yy) for xx in range(x2,x2+4) for yy in range(y2,y2+4));road(parent,(x2+1,y2+4),(w//2,y2+4),width=1)
+   warp(parent,x2+1,y2+3,n,3,3,bt=0x33fc)
   if 'Store' in n or 'Pharmacy' in n:
    maps[n]['object_events'].append(obj(9,7,'Olivine_Clerk','MAN_1'))
  # Caverns/towers: actual floor stairs and reciprocal external entrances.
@@ -202,13 +222,13 @@ def main():
    dst=base+f'_{i+1}F';u,v=(7+j*4)%20+3,19
    # A visible entrance marker and approach, never an unmarked teleport.
    if parent not in existing:
-    
+
     # General tiles 0x64/0x71/... are the native Route 106 cave mouth, no new art.
     for yy,row in enumerate([[0x0471,0x0471,0x0475],[0x047c,0x0464,0x047d],[0x0474,0x00a7,0x0491]]):
      for xx,t in enumerate(row):rect(parent,x-1+xx,y-2+yy,1,1,t)
     protected.setdefault(parent,set()).update((xx,yy) for xx in range(x-1,x+2) for yy in range(y-2,y+1))
     rect(parent,x-1,y+1,3,2,0x3202)
-    road(parent,(x,y+2),(sizes[parent][0]//2,y+2),0x3202,1)
+    if base!='TohjoFalls':road(parent,(x,y+2),(sizes[parent][0]//2,y+2),0x3202,1)
    warp(parent,x,y,dst,u,v,at=0x00a7,bt=0x323f if meta[dst]['floor']==0x3201 else 0x33fd)
    labelscript=script(base+f'_Mouth{j}');sign(maps[parent],x-1,y+1,labelscript);rect(parent,x-1,y+1,1,1,0x403);say(labelscript,label+'. Public walking access. Please respect the surroundings.','SIGN')
   if base=='TohjoFalls':
@@ -255,6 +275,7 @@ def main():
  for p in plans:
   if p['name'] in maps:
    n=p['name'];m=maps[n];p.update(status='implemented',id=m['id'],layout=m['layout'],connections=m['connections'],entrances=m['warp_events'],coverage='structural/build/runtime checks recorded separately; no owner QA yet')
+ manifest['dungeons']=DUNGEONS;manifest['border_topology']=EDGES
  manifest['checkpoint']=args.through;js('crossroads/johto/manifest.json',manifest)
  from build_johto_atlas import generate as generate_atlas
  generate_atlas(args.check)

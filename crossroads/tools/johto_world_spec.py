@@ -63,7 +63,7 @@ DUNGEONS=[
  ('WhirlIslands','WHIRL ISLANDS','west',4,'islandcave',[('JohtoRoute41',12,10,0),('JohtoRoute41',33,10,1),('JohtoRoute41',12,31,2),('JohtoRoute41',33,31,3)]),
  ('CliffEdgeGate','CLIFF EDGE GATE','west',1,'gate',[('CianwoodCity',12,36,0),('JohtoRoute47',38,10,0)]),
  ('CliffCave','CLIFF CAVE','west',2,'cave',[('JohtoRoute47',28,8,0),('JohtoRoute47',18,24,1)]),
- ('TohjoFalls','TOHJO FALLS','south',2,'falls',[('NewBarkTown',40,28,0)]),
+ ('TohjoFalls','TOHJO FALLS','south',2,'falls',[('NewBarkTown',44,18,0)]),
 ]
 # New sectional IDs must fit <=252; preserve pre-existing NONE=213.
 SECTIONS=['NewBarkTown','CherrygroveCity','VioletCity','AzaleaTown','GoldenrodCity','CianwoodCity','MahoganyTown','BlackthornCity']+[f'JohtoRoute{i}' for i in range(29,49) if i not in (38,39)]+['SproutTower','RuinsOfAlph','UnionCave','IlexForest','NationalPark','DarkCave','MtMortar','LakeOfRage','IcePath','DragonsDen','WhirlIslands','SlowpokeWell','TohjoFalls']
