@@ -55,3 +55,18 @@ and restores prior settings on exit. Owner explicitly requested/confirmed a
 Black Ledger pre-title boot movie replacing Game Freak/Emerald scenes and asked
 for another agent on that track. Keep the New Game prologue separate and preserve
 its creative approval boundary. No new region expansion is part of this work.
+
+
+## Current Johto exploration authorization
+
+The latest owner directive explicitly supersedes the previous four-area expansion
+pause. Preserve the accepted 37-map western foundation and newer 0.8.3 boot/audio
+successor. Expand Johto exploration in geographic clusters using the manifest and
+topology in crossroads/johto. No new story, regions, encounter/trainer rosters,
+badge order, difficulty definitions or permanent progress grants. Current Act I
+direction: oblivious corporate supervisor opens at work with deadlines and a
+coffee errand; preserve this direction without implementing a full prologue here.
+Append IDs only. Existing MAPSEC_NONE stays 213; new section IDs 214..252 use the
+remaining safe met-location space and must not collide with 253..255 special IDs.
+Survey Surf assistance is opt-in RAM only; reset/Continue must not grant moves or
+badges. Native atlas is informational and must not grant travel destinations.

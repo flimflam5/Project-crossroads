@@ -12,14 +12,14 @@ parser=argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--built',action='store_true')
 args=parser.parse_args()
 def load(path):return json.loads((root/path).read_text())
-names=load('data/maps/map_groups.json')['gMapGroup_CrossroadsOlivine']
+groups=load('data/maps/map_groups.json');names=groups['gMapGroup_CrossroadsOlivine']+groups.get('gMapGroup_CrossroadsJohtoExpansion',[])
 assert names[:9]==['OlivineCity','OlivineCity_Residence','OlivineCity_NeighborHouse','OlivineCity_Gym','OlivineCity_PokemonCenter_1F','OlivineCity_Mart','OlivineCity_SilphOffice','OlivineCity_HarborOffice','JohtoRoute39']
 assert names[9:11]==['JohtoRoute38','EcruteakCity']
 maps={m['id']:m for m in [load(f'data/maps/{n}/map.json') for n in names]}
 layouts={l['id']:l for l in load('data/layouts/layouts.json')['layouts']}
 raw={mid:struct.unpack('<'+'H'*(layouts[m['layout']]['width']*layouts[m['layout']]['height']),(root/layouts[m['layout']]['blockdata_filepath']).read_bytes()) for mid,m in maps.items()}
 linked=(root/'data/event_scripts.s').read_text()
-scripts=(root/'crossroads/scripts/area_completion.inc').read_text()+'\n'+(root/'crossroads/scripts/olivine_interiors.inc').read_text()+'\n'+'\n'.join((root/f'data/maps/{n}/scripts.inc').read_text() for n in names)+'\n'+(root/'crossroads/scripts/olivine.inc').read_text()+'\n'+(root/'crossroads/scripts/western_johto.inc').read_text()+'\n'+(root/'crossroads/scripts/starter_rescue.inc').read_text()
+scripts='\n'.join(p.read_text() for p in (root/'crossroads/scripts').glob('johto*.inc'))+'\n'+(root/'crossroads/scripts/area_completion.inc').read_text()+'\n'+(root/'crossroads/scripts/olivine_interiors.inc').read_text()+'\n'+'\n'.join((root/f'data/maps/{n}/scripts.inc').read_text() for n in names)+'\n'+(root/'crossroads/scripts/olivine.inc').read_text()+'\n'+(root/'crossroads/scripts/western_johto.inc').read_text()+'\n'+(root/'crossroads/scripts/starter_rescue.inc').read_text()
 for name,data in generate().items():assert (root/f'data/layouts/{name}/map.bin').read_bytes()==data
 reverse={'up':'down','down':'up','left':'right','right':'left'}
 for mid,m in maps.items():
@@ -66,8 +66,8 @@ for mid in ['MAP_JOHTO_ROUTE39','MAP_JOHTO_ROUTE38','MAP_ECRUTEAK_CITY']:
  for e in m['object_events']+m['bg_events']:
   assert any((mid,e['x']+dx,e['y']+dy) in seen for dx,dy in [(1,0),(-1,0),(0,1),(0,-1)]),('Unreachable interaction',mid,e)
 heals=load('src/data/heal_locations.json')['heal_locations']
-assert heals[-1]['id']=='HEAL_LOCATION_ECRUTEAK_CITY' and heals[-2]['id']=='HEAL_LOCATION_OLIVINE_CITY'
-assert (heals[-1]['map'],heals[-1]['x'],heals[-1]['y']) in seen
+heal=next(h for h in heals if h['id']=='HEAL_LOCATION_ECRUTEAK_CITY')
+assert (heal['map'],heal['x'],heal['y']) in seen
 center=(root/'data/maps/EcruteakCity_PokemonCenter_1F/scripts.inc').read_text()
 assert 'CableClub_OnResume' in center and 'Ecruteak_CenterOnTransition' in center
 if args.built:

@@ -122,3 +122,25 @@ int emu_audio(const char *path, int frames)
     }
     return fclose(file) == 0;
 }
+
+/* Battery-save copies for normal Continue regression tests. */
+#include <stdlib.h>
+int emu_save(const char *path, int load)
+{
+    void *bytes = NULL;
+    size_t size;
+    FILE *file = fopen(path, load ? "rb" : "wb");
+    if (!file) return 0;
+    if (load)
+    {
+        if (fseek(file, 0, SEEK_END) || (long)(size = ftell(file)) <= 0 || fseek(file, 0, SEEK_SET))
+        { fclose(file); return 0; }
+        bytes = malloc(size);
+        if (!bytes) { fclose(file); return 0; }
+        int ok = fread(bytes, 1, size, file) == size && core->savedataRestore(core, bytes, size, false);
+        fclose(file); free(bytes); return ok;
+    }
+    size = core->savedataClone(core, &bytes);
+    int ok = bytes && fwrite(bytes, 1, size, file) == size;
+    fclose(file); free(bytes); return ok;
+}

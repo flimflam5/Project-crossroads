@@ -1,3 +1,9 @@
+# Johto exploration architecture —0.9
+
+Append-only groups 75 (nums0..126) and76 (nums0..21) avoid signed WarpData and reserved mapNum 127. Emerald build filtering uses REGION_HOENN for these narratively Johto maps. Met sections214..252 are appended while NONE213/special253..255 stay stable. RAM-only survey Surf and 51-node field atlas add no save fields. Measured ROM29,455,512 bytes; EWRAM226,448; IWRAM28,392. Legacy PokeNav/Fly/habitat maps remain unchanged. See johto/manifest.json for IDs/services and johto/coverage.json for measured coverage.
+
+---
+
 # Technical architecture and builds
 
 ## Existing engine and toolchain

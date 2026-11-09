@@ -15,6 +15,7 @@ on:
       - feature/title-music-01
       - feature/title-audio-cleanup-01
       - feature/boot-audio-refinement-01
+      - feature/johto-exploration-network-01
   pull_request:
   workflow_dispatch:
 
@@ -65,6 +66,9 @@ jobs:
 
       - name: Crossroads regression checks
         run: |
+          python3 crossroads/tools/build_johto_network.py --through west --check
+          python3 crossroads/tools/validate_johto_network.py --built
+          python3 crossroads/tools/check_mapjson_outputs.py
           python3 crossroads/tools/validate_black_ledger_intro.py
           python3 crossroads/tools/validate_title_music.py
           python3 crossroads/tools/validate_area_completion.py
@@ -87,7 +91,7 @@ jobs:
       - name: Upload playable Emerald ROM
         uses: actions/upload-artifact@v4
         with:
-          name: black-ledger-boot-audio-0.8.3-${{ github.sha }}
+          name: black-ledger-johto-exploration-0.9-${{ github.sha }}
           path: |
             pokeemerald.gba
             build-info.json
@@ -101,6 +105,11 @@ jobs:
             crossroads/RELEASE_0_8_1.md
             crossroads/RELEASE_0_8_2.md
             crossroads/RELEASE_0_8_3.md
+            crossroads/RELEASE_0_9.md
+            crossroads/johto/manifest.json
+            crossroads/johto/TOPOLOGY.md
+            crossroads/johto/DELTA_QA.md
+            crossroads/johto/coverage.json
           if-no-files-found: error
           retention-days: 14
 

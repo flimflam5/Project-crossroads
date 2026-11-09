@@ -1,3 +1,9 @@
+# Current Johto QA —0.9
+
+Use johto/DELTA_QA.md for iPhone itinerary and old-save precautions. validate_johto_network.py --built checks IDs, reciprocal topology, local access, services and actual Emerald inclusion. build_johto_network.py --through west --check checks deterministic generation. johto_network_smoke.py --all-edges performs actual controller traversal using copies of battery saves; no map/warp debugger writes. Test-only encounter suppression/HP fixtures are disclosed. Final tour112 new maps/622 transitions/141 roundtrip pairs PASS; five representative normal Save/Continue checks PASS. Owner gameplay acceptance remains pending.
+
+---
+
 # Olivine foundation 0.1 testing
 
 ## Verification status

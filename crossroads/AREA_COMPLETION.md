@@ -1,3 +1,9 @@
+# Current exploration coverage —0.9
+
+The accepted western 37-map content is preserved. The new 149-map Johto network is implemented for traversal QA; manifest, topology and coverage are in johto/. New services/interiors and landmarks are accessible, but story, badges, new rosters/teams and final art/gameplay polish remain pending. Legacy notes below describe earlier checkpoints.
+
+---
+
 # Current western area — 0.8 QA candidate
 
 Owner requested completion of Olivine, Routes 39/38 and Ecruteak before expansion.
