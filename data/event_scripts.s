@@ -2014,3 +2014,11 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/CianwoodPharmacy/scripts.inc"
 
 	.include "data/maps/SafariReception/scripts.inc"
+
+	.include "data/maps/EcruteakCity_BarrierStation/scripts.inc"
+
+	.include "data/maps/EcruteakCity_BarrierCorridor/scripts.inc"
+
+	.include "data/maps/BellchimeTrail/scripts.inc"
+
+	.include "crossroads/scripts/hgss_ecruteak.inc"

@@ -8,7 +8,8 @@ R=Path(__file__).resolve().parents[2]
 REVIEWED=('EcruteakCity','MahoganyTown','MahoganyTown_Workshop','JohtoRoute38','JohtoRoute39')
 
 def repair(name,data,w,h):
- if name not in REVIEWED:return data
+ from hgss_connection_buffer import repair as repair_seam
+ if name not in REVIEWED:return repair_seam(name,data,w,h)
  t=list(struct.unpack('<'+str(w*h)+'H',data))
  m=json.loads((R/f'data/maps/{name}/map.json').read_text())
  saved=t[:]
@@ -103,4 +104,4 @@ def repair(name,data,w,h):
   x,y=e['x'],e['y'];t[y*w+x]=0x3389 if name=='MahoganyTown_Workshop' and e in m['bg_events'] else saved[y*w+x]
  for e in m['object_events']:
   x,y=e['x'],e['y'];t[y*w+x]=0x3223 if name.endswith('Workshop') else 0x3001
- return struct.pack('<'+str(w*h)+'H',*t)
+ return repair_seam(name,struct.pack('<'+str(w*h)+'H',*t),w,h)

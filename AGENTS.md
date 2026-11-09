@@ -80,3 +80,13 @@ Review representative areas visually before propagation. Record every reviewed
 map in crossroads/qa/visual-0.9.1/manifest.json; unreviewed maps stay unreviewed.
 Connectivity/build success is not visual acceptance. Keep existing assertions;
 run validate_visual_repairs.py in addition to existing map checks.
+
+## Authoritative HGSS reconstruction milestone
+
+Owner now requires faithful HGSS Johto layouts, architecture, terrain and interiors
+in GBA style. All map work comes before the next gameplay/story step. Start with
+Ecruteak and its relevant landmarks; use actual references and record missing
+references. No generic Emerald Gym/house stand-ins described as accurate. Preserve
+IDs/saves/network, title/music/Joe/starters/approved content. Record additions,
+necessary technical deviations and unfinished areas separately. Reference manifest
+in crossroads/hgss. No region-wide accuracy claims based on sample maps.

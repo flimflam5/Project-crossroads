@@ -1,0 +1,94 @@
+{
+  "source": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/eventdata/zone_event/083_T27R0501.json",
+  "source_blob_sha": "0b2030a8cad9289157b09513a21ad86289984f47",
+  "warps": [
+    {
+      "x": 7,
+      "z": 17,
+      "header": "MAP_ECRUTEAK",
+      "anchor": 4,
+      "y": 0
+    }
+  ],
+  "objects": [
+    {
+      "x": 10,
+      "z": 10,
+      "y": 0,
+      "spriteId": "SPRITE_GSOLDWOMAN1"
+    },
+    {
+      "x": 4,
+      "z": 12,
+      "y": 0,
+      "spriteId": "SPRITE_GSMAN1"
+    },
+    {
+      "x": 8,
+      "z": 12,
+      "y": 0,
+      "spriteId": "SPRITE_GSGENTLEMAN"
+    },
+    {
+      "x": 9,
+      "z": 12,
+      "y": 0,
+      "spriteId": "SPRITE_FOLLOWER_MON_STATIC_PSYDUCK"
+    },
+    {
+      "x": 2,
+      "z": 6,
+      "y": 0,
+      "spriteId": "SPRITE_DANCER"
+    },
+    {
+      "x": 4,
+      "z": 5,
+      "y": 0,
+      "spriteId": "SPRITE_DANCER"
+    },
+    {
+      "x": 10,
+      "z": 6,
+      "y": 0,
+      "spriteId": "SPRITE_DANCER"
+    },
+    {
+      "x": 10,
+      "z": 5,
+      "y": 0,
+      "spriteId": "SPRITE_DANCER"
+    },
+    {
+      "x": 12,
+      "z": 6,
+      "y": 0,
+      "spriteId": "SPRITE_DANCER"
+    },
+    {
+      "x": 7,
+      "z": 6,
+      "y": 0,
+      "spriteId": "SPRITE_ROCKETM"
+    },
+    {
+      "x": 7,
+      "z": 6,
+      "y": 0,
+      "spriteId": "SPRITE_DANCER"
+    },
+    {
+      "x": 3,
+      "z": 16,
+      "y": 0,
+      "spriteId": "SPRITE_GSBABYGIRL1"
+    },
+    {
+      "x": 29,
+      "z": 29,
+      "y": 0,
+      "spriteId": "SPRITE_ROCKETM"
+    }
+  ],
+  "sign_positions": []
+}

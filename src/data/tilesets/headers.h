@@ -1568,3 +1568,23 @@ const struct Tileset gTileset_HgssEcruteakSecondary = {
  .metatiles=gMetatiles_HgssEcruteakSecondary, .metatileAttributes=gMetatileAttributes_HgssEcruteakSecondary,
  .callback=NULL,
 };
+
+#if !IS_FRLG
+const struct Tileset gTileset_HgssBellPrimary = {
+ .isCompressed=TRUE, .isSecondary=FALSE,
+ .tiles=gTilesetTiles_HgssBellPrimary, .palettes=gTilesetPalettes_HgssBellPrimary,
+ .metatiles=gMetatiles_HgssBellPrimary, .metatileAttributes=gMetatileAttributes_HgssBellPrimary,
+ .callback=InitTilesetAnim_General,
+};
+const struct Tileset gTileset_HgssBellSecondary = {
+ .isCompressed=TRUE, .isSecondary=TRUE,
+ .tiles=gTilesetTiles_HgssBellSecondary, .palettes=gTilesetPalettes_HgssBellSecondary,
+ .metatiles=gMetatiles_HgssBellSecondary, .metatileAttributes=gMetatileAttributes_HgssBellSecondary,
+ .callback=NULL,
+};
+const struct Tileset gTileset_HgssTemple = {
+ .isCompressed=TRUE, .isSecondary=TRUE, .tiles=gTilesetTiles_GenericBuilding,
+ .palettes=gTilesetPalettes_HgssTemple, .metatiles=gMetatiles_WesternInteriors,
+ .metatileAttributes=gMetatileAttributes_WesternInteriors, .callback=NULL,
+};
+#endif

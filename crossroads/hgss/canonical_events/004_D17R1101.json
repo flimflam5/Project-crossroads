@@ -1,0 +1,36 @@
+{
+  "source": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/eventdata/zone_event/004_D17R1101.json",
+  "source_blob_sha": "a72175ab87840ecd2f28db6cad7073ee3a229c08",
+  "warps": [
+    {
+      "x": 9,
+      "z": 9,
+      "header": "MAP_ECRUTEAK_BELL_TOWER_BARRIER_STATION_CORRIDOR",
+      "anchor": 1,
+      "y": 0
+    },
+    {
+      "x": 9,
+      "z": 10,
+      "header": "MAP_ECRUTEAK_BELL_TOWER_BARRIER_STATION_CORRIDOR",
+      "anchor": 1,
+      "y": 0
+    },
+    {
+      "x": 37,
+      "z": 16,
+      "header": "MAP_BELL_TOWER_1F",
+      "anchor": 0,
+      "y": 0
+    }
+  ],
+  "objects": [
+    {
+      "x": 30,
+      "z": 11,
+      "y": 0,
+      "spriteId": "SPRITE_GSLEADER4"
+    }
+  ],
+  "sign_positions": []
+}

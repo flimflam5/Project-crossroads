@@ -1,3 +1,22 @@
+# Preliminary HGSS QA checkpoint 01
+
+Owner requested a preliminary test build before reconstruction is complete.
+See RELEASE_HGSS_PRELIM_01.md for scope, limitations and Delta checklist.
+The reconstruction remains unfinished and owner visual acceptance is pending.
+
+# Active HGSS reconstruction — not a release
+
+Branch: feature/hgss-ecruteak-reconstruction-01. Asset/reference checkpoint93d8e8b02c
+is committed; city/transition/validator integration is in progress. The existing
+0.9.1 download remains the last delivered repair build, not an accepted visual map.
+Actual HGSS references cover all ten towns/cities and Routes29–48; most are not
+yet visually inspected/reconstructed. Ecruteak's logical64x64 area and entrance
+positions are verified against canonical event/world-matrix facts. Dedicated
+facades replace the warehouse stand-in in the draft. No full-region completion
+claim. Do not advance story/gameplay while the map milestone remains unfinished.
+
+---
+
 # Visual/collision QA — repair pass0.9.1
 
 Owner reports0.9 network works but has NOT passed visual/collision QA. Expansion

@@ -1,0 +1,93 @@
+#!/usr/bin/env python3
+"""Reference-led Ecruteak city authoring. Work-in-progress, not full HGSS acceptance.
+
+Reference: archived HGSS city mosaic1032x785. Projected into64x50 native metatiles.
+Existing map/layout/warp indexes retain identities; positions follow the reference.
+"""
+import json,struct,argparse,copy
+from pathlib import Path
+R=Path(__file__).resolve().parents[2]
+def canonical_positions():
+ source=json.loads((R/'crossroads/hgss/canonical_events/075_T27.json').read_text())
+ names=['MAP_BURNED_TOWER_1F','MAP_ECRUTEAK_BELL_TOWER_BARRIER_STATION','MAP_ECRUTEAK_SOUTHWEST_HOUSE','MAP_ECRUTEAK_DANCE_THEATER','MAP_ECRUTEAK_GYM','MAP_ECRUTEAK_POKECENTER_1F','MAP_ECRUTEAK_POKEMART']
+ return [(next(e for e in source['warps'] if e['header']==n)['x']-352,next(e for e in source['warps'] if e['header']==n)['z']-128) for n in names]
+
+def city_data():
+ specs=json.loads((R/'crossroads/hgss/art/native-manifest.json').read_text())['specs'];w=h=64;t=[0x3001]*(w*h);pave=0x3000|specs['paving'];earth=0x3000|specs['earth']
+ def rect(x,y,ww,hh,v):
+  assert 0<=x<x+ww<=w and 0<=y<y+hh<=h,(x,y,ww,hh)
+  for yy in range(y,y+hh):t[yy*w+x:yy*w+x+ww]=[v]*ww
+ def tree(x,y,autumn=False,overhang=True):
+  a=specs['autumn_tree' if autumn else 'tree']
+  for yy in range(3):
+   for xx in range(2):t[(y+yy)*w+x+xx]=a['start']+yy*2+xx+(0x3000 if yy==0 and overhang else 0x400)
+ def building(kind,x,y,open_door=True):
+  a=specs[kind]
+  for yy in range(a['height']):
+   for xx in range(a['width']):
+    door=(xx,yy)==(a['door_x'],a['door_y'])
+    blocked=[xx,yy] in a['solid_footprint'] or (kind=='barrier' and not door) or (door and not open_door)
+    t[(y+yy)*w+x+xx]=a['start']+yy*a['width']+xx+(0x400 if blocked else 0x3000)
+ # Absolute HGSS event coordinates translated by(-352,-128). This preserves
+ # actual relative entrance spacing rather than estimating DS perspective pixels.
+ for y in range(0,62,2):
+  for x in range(0,64,2):
+   if x<17 or x>=60 or y<29 or y>=61:tree(x,min(y,61),y<29,False)
+ rect(17,29,26,3,pave);rect(33,26,11,3,pave);rect(6,38,56,3,pave)
+ for x in [17,29,40,49,60]:rect(x,31 if x<43 else 38,2,30 if x<43 else 23,pave)
+ for y in [48,59]:rect(17,y,45,3,pave)
+ # Canonical housing plots: two accessible houses; unused decorative buildings
+ # stay closed, not invented generic interiors. Dowsing house awaits its interior.
+ houses=[(20,33,False),(32,33,False),(20,42,True),(31,52,False),(51,52,False)]
+ for x,y,opened in houses:rect(x-1,y-1,8,7,earth)
+ rect(31,42,8,5,earth);rect(42,40,7,8,earth);rect(52,41,7,7,earth)
+ rect(21,49,8,9,earth);rect(43,50,7,8,earth)
+ # Burned Tower's raised precinct and south stair axis. Actual height/ledge
+ # behavior is still pending; the surrounding visual terrain is not final.
+ rect(18,17,12,12,0x471);rect(19,17,10,11,pave);rect(23,21,3,9,pave)
+ positions=canonical_positions()
+ for kind,(dx,dy) in zip(['burned','barrier','house','theater','gym','center','mart'],positions):
+  asset=specs[kind];building(kind,dx-asset['door_x'],dy-asset['door_y'])
+ rect(44,28,10,5,0x1170);rect(49,33,5,2,0x1170)
+ for x,y,opened in houses:
+  if (x,y)!=(20,42):building('house',x,y,opened)
+ for x,y in [(26,33),(38,33),(26,42),(29,52),(49,52),(58,42)]:tree(x,y)
+ # Existing regional destinations retained. Port coordinates now follow the
+ # actual HGSS gate positions; adjacent route interiors remain pending.
+ rect(0,37,18,3,pave);rect(60,46,4,3,pave);rect(38,59,3,5,pave)
+ # Legacy Black Ledger shuttle arrival must remain safe.
+ rect(26,27,1,1,pave)
+ for x,y in [(26,25),(42,26),(25,46),(43,46),(26,56),(43,56),(55,46),(8,37),(61,49),(39,61),(36,45)]:rect(x,y,1,1,0x403)
+ from hgss_connection_buffer import repair
+ return repair('EcruteakCity',struct.pack('<'+str(w*h)+'H',*t),w,h,specs)
+
+def generate(check=False):
+ def write(p,b):
+  if isinstance(b,str):b=b.encode()
+  p=R/p
+  if check:assert p.read_bytes()==b,('Regenerate',p)
+  elif not p.exists() or p.read_bytes()!=b:p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(b)
+ def js(p,v):write(p,json.dumps(v,indent=2)+'\n')
+ layouts=json.loads((R/'data/layouts/layouts.json').read_text());l=next(l for l in layouts['layouts'] if l['id']=='LAYOUT_ECRUTEAK_CITY');l.update(width=64,height=64,primary_tileset='gTileset_HgssEcruteakPrimary',secondary_tileset='gTileset_HgssEcruteakSecondary');js('data/layouts/layouts.json',layouts)
+ m=json.loads((R/'data/maps/EcruteakCity/map.json').read_text());positions=canonical_positions()
+ for e,(x,y) in zip(m['warp_events'],positions):e.update(x=x,y=y)
+ # Sign/NPC identities and scripts remain stable; only their physical placements
+ # follow the new town. Bell sign currently explicitly labels an unfinished approach.
+ signpos=[(26,25),(42,26),(25,46),(43,46),(26,56),(43,56),(55,46),(8,37),(61,49),(39,61),(36,45)]
+ for e,(x,y) in zip(m['bg_events'],signpos):e.update(x=x,y=y)
+ npcpos=[(27,27),(29,34),(26,48),(44,34),(40,43),(52,57)]
+ for e,(x,y) in zip(m['object_events'],npcpos):e.update(x=x,y=y)
+
+ for c in m['connections']:
+  c['offset']={'left':25,'right':33,'down':25}[c['direction']]
+ js('data/maps/EcruteakCity/map.json',m)
+ for n,d,off in [('JohtoRoute38','right',-25),('JohtoRoute42','left',-33),('JohtoRoute37','up',-25)]:
+  other=json.loads((R/f'data/maps/{n}/map.json').read_text())
+  next(c for c in other['connections'] if c['direction']==d)['offset']=off
+  js(f'data/maps/{n}/map.json',other)
+ heals=json.loads((R/'src/data/heal_locations.json').read_text());next(h for h in heals['heal_locations'] if h['id']=='HEAL_LOCATION_ECRUTEAK_CITY').update(x=45,y=56);js('src/data/heal_locations.json',heals)
+ # Return destinations reference stable warp indices, so reciprocal destination
+ # positions need no changes; the native door engine resolves current coordinates.
+ write('data/layouts/EcruteakCity/map.bin',city_data());print('HGSS-directed Ecruteak city layout generated. Trail/extra houses/interiors remain unfinished.')
+if __name__=='__main__':
+ p=argparse.ArgumentParser();p.add_argument('--check',action='store_true');generate(p.parse_args().check)

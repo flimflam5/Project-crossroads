@@ -339,7 +339,7 @@
         },
         {
           "map": "MAP_ECRUTEAK_CITY",
-          "offset": -14,
+          "offset": -25,
           "direction": "right"
         }
       ],
@@ -358,66 +358,66 @@
       "connections": [
         {
           "map": "MAP_JOHTO_ROUTE38",
-          "offset": 14,
+          "offset": 25,
           "direction": "left"
         },
         {
           "map": "MAP_JOHTO_ROUTE37",
-          "offset": 10,
+          "offset": 25,
           "direction": "down"
         },
         {
           "map": "MAP_JOHTO_ROUTE42",
-          "offset": 13,
+          "offset": 33,
           "direction": "right"
         }
       ],
       "entrances": [
         {
-          "x": 11,
-          "y": 7,
+          "x": 24,
+          "y": 21,
           "elevation": 0,
           "dest_map": "MAP_ECRUTEAK_CITY_BURNED_TOWER",
           "dest_warp_id": "0"
         },
         {
-          "x": 37,
-          "y": 7,
+          "x": 40,
+          "y": 25,
           "elevation": 0,
-          "dest_map": "MAP_ECRUTEAK_CITY_BELL_TOWER",
+          "dest_map": "MAP_ECRUTEAK_CITY_BARRIER_STATION",
           "dest_warp_id": "0"
         },
         {
-          "x": 11,
-          "y": 18,
+          "x": 23,
+          "y": 45,
           "elevation": 0,
           "dest_map": "MAP_ECRUTEAK_CITY_RESIDENCE",
           "dest_warp_id": "0"
         },
         {
-          "x": 22,
-          "y": 18,
+          "x": 45,
+          "y": 45,
           "elevation": 0,
           "dest_map": "MAP_ECRUTEAK_CITY_DANCE_THEATER",
           "dest_warp_id": "0"
         },
         {
-          "x": 10,
-          "y": 36,
+          "x": 24,
+          "y": 55,
           "elevation": 0,
           "dest_map": "MAP_ECRUTEAK_CITY_GYM",
           "dest_warp_id": "0"
         },
         {
-          "x": 21,
-          "y": 34,
+          "x": 45,
+          "y": 55,
           "elevation": 0,
           "dest_map": "MAP_ECRUTEAK_CITY_POKEMON_CENTER_1F",
           "dest_warp_id": "0"
         },
         {
-          "x": 35,
-          "y": 34,
+          "x": 54,
+          "y": 45,
           "elevation": 0,
           "dest_map": "MAP_ECRUTEAK_CITY_MART",
           "dest_warp_id": "0"
@@ -475,14 +475,14 @@
           "x": 3,
           "y": 7,
           "elevation": 0,
-          "dest_map": "MAP_ECRUTEAK_CITY",
+          "dest_map": "MAP_BELLCHIME_TRAIL",
           "dest_warp_id": "1"
         },
         {
           "x": 4,
           "y": 7,
           "elevation": 0,
-          "dest_map": "MAP_ECRUTEAK_CITY",
+          "dest_map": "MAP_BELLCHIME_TRAIL",
           "dest_warp_id": "1"
         },
         {
@@ -1679,7 +1679,7 @@
       "connections": [
         {
           "map": "MAP_ECRUTEAK_CITY",
-          "offset": -10,
+          "offset": -25,
           "direction": "up"
         },
         {
@@ -4002,7 +4002,7 @@
       "connections": [
         {
           "map": "MAP_ECRUTEAK_CITY",
-          "offset": -13,
+          "offset": -33,
           "direction": "left"
         },
         {
@@ -5414,6 +5414,99 @@
           "dest_warp_id": "0"
         }
       ]
+    },
+    {
+      "name": "EcruteakCity_BarrierStation",
+      "kind": "hgss",
+      "parent": "EcruteakCity",
+      "cluster": "west",
+      "status": "implemented",
+      "map_group": 76,
+      "map_num": 22,
+      "display_name": "EcruteakCity_BarrierStation",
+      "role": "hgss",
+      "id": "MAP_ECRUTEAK_CITY_BARRIER_STATION",
+      "layout": "LAYOUT_ECRUTEAK_CITY_BARRIER_STATION",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 9,
+          "y": 11,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 15,
+          "y": 3,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_BARRIER_CORRIDOR",
+          "dest_warp_id": "0"
+        }
+      ],
+      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet"
+    },
+    {
+      "name": "EcruteakCity_BarrierCorridor",
+      "kind": "hgss",
+      "parent": "EcruteakCity",
+      "cluster": "west",
+      "status": "implemented",
+      "map_group": 76,
+      "map_num": 23,
+      "display_name": "EcruteakCity_BarrierCorridor",
+      "role": "hgss",
+      "id": "MAP_ECRUTEAK_CITY_BARRIER_CORRIDOR",
+      "layout": "LAYOUT_ECRUTEAK_CITY_BARRIER_CORRIDOR",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 3,
+          "y": 19,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_BARRIER_STATION",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 6,
+          "y": 3,
+          "elevation": 0,
+          "dest_map": "MAP_BELLCHIME_TRAIL",
+          "dest_warp_id": "0"
+        }
+      ],
+      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet"
+    },
+    {
+      "name": "BellchimeTrail",
+      "kind": "hgss",
+      "parent": "EcruteakCity",
+      "cluster": "west",
+      "status": "implemented",
+      "map_group": 76,
+      "map_num": 24,
+      "display_name": "BellchimeTrail",
+      "role": "hgss",
+      "id": "MAP_BELLCHIME_TRAIL",
+      "layout": "LAYOUT_BELLCHIME_TRAIL",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 9,
+          "y": 14,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_BARRIER_CORRIDOR",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 37,
+          "y": 20,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_BELL_TOWER",
+          "dest_warp_id": "0"
+        }
+      ],
+      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet"
     }
   ],
   "border_topology": [

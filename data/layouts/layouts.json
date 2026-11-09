@@ -9371,10 +9371,10 @@
     {
       "id": "LAYOUT_ECRUTEAK_CITY",
       "name": "EcruteakCity_Layout",
-      "width": 48,
-      "height": 48,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_WesternCity",
+      "width": 64,
+      "height": 64,
+      "primary_tileset": "gTileset_HgssEcruteakPrimary",
+      "secondary_tileset": "gTileset_HgssEcruteakSecondary",
       "border_filepath": "data/layouts/EcruteakCity/border.bin",
       "blockdata_filepath": "data/layouts/EcruteakCity/map.bin",
       "layout_version": "emerald"
@@ -10719,6 +10719,39 @@
       "secondary_tileset": "gTileset_WesternInteriors",
       "border_filepath": "data/layouts/SafariReception/border.bin",
       "blockdata_filepath": "data/layouts/SafariReception/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ECRUTEAK_CITY_BARRIER_STATION",
+      "name": "EcruteakCity_BarrierStation_Layout",
+      "width": 20,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_HgssTemple",
+      "border_filepath": "data/layouts/EcruteakCity_BarrierStation/border.bin",
+      "blockdata_filepath": "data/layouts/EcruteakCity_BarrierStation/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ECRUTEAK_CITY_BARRIER_CORRIDOR",
+      "name": "EcruteakCity_BarrierCorridor_Layout",
+      "width": 10,
+      "height": 22,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_HgssTemple",
+      "border_filepath": "data/layouts/EcruteakCity_BarrierCorridor/border.bin",
+      "blockdata_filepath": "data/layouts/EcruteakCity_BarrierCorridor/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_BELLCHIME_TRAIL",
+      "name": "BellchimeTrail_Layout",
+      "width": 64,
+      "height": 36,
+      "primary_tileset": "gTileset_HgssBellPrimary",
+      "secondary_tileset": "gTileset_HgssBellSecondary",
+      "border_filepath": "data/layouts/BellchimeTrail/border.bin",
+      "blockdata_filepath": "data/layouts/BellchimeTrail/map.bin",
       "layout_version": "emerald"
     }
   ]

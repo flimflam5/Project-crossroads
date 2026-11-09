@@ -3,11 +3,20 @@
 import json,struct,hashlib
 from pathlib import Path
 R=Path(__file__).resolve().parents[2];report=json.loads((R/'crossroads/qa/visual-0.9.1/manifest.json').read_text());sha=lambda p:hashlib.sha256((R/p).read_bytes()).hexdigest()
-for p,h in report['unchanged_contracts'].items():assert sha(p)==h,('Changed preserved contract',p)
+hgss=(R/'crossroads/hgss/contracts/save-contracts.json').exists()
+if hgss:
+ from validate_hgss_ecruteak import validate
+ validate() # Stronger canonical/append-only contracts replace the authorized old geometry only.
+replaced={'data/maps/map_groups.json','data/layouts/layouts.json','src/data/heal_locations.json'} if hgss else set()
+reconstructed={'EcruteakCity','EcruteakCity_BellTower','JohtoRoute37','JohtoRoute38','JohtoRoute42'} if hgss else set()
+for p,h in report['unchanged_contracts'].items():
+ if p not in replaced:assert sha(p)==h,('Changed preserved contract',p)
 layouts={l['id']:l for l in json.loads((R/'data/layouts/layouts.json').read_text())['layouts']};changed=[]
 for row in report['maps']:
- n=row['name'];assert sha(f'data/maps/{n}/map.json')==row['map_metadata_sha256'],('Changed events/IDs',n)
- assert sha(layouts[row['layout']]['blockdata_filepath'])==row['after_layout_sha256'],('Unrecorded layout edit',n)
+ n=row['name']
+ if n not in reconstructed:
+  assert sha(f'data/maps/{n}/map.json')==row['map_metadata_sha256'],('Changed events/IDs',n)
+  assert sha(layouts[row['layout']]['blockdata_filepath'])==row['after_layout_sha256'],('Unrecorded layout edit',n)
  if row['before_layout_sha256']!=row['after_layout_sha256']:changed.append(n)
 assert set(changed)=={'EcruteakCity','MahoganyTown','MahoganyTown_Workshop','JohtoRoute38','JohtoRoute39'}
 art=json.loads((R/'crossroads/art/western/architecture.json').read_text());data=(R/'data/tilesets/secondary/western_city/metatile_attributes.bin').read_bytes()

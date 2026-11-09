@@ -77,6 +77,8 @@ def main():
   l=bylayout[m['layout']];sizes[n]=(l['width'],l['height']);tiles[n]=list(struct.unpack('<'+str(l['width']*l['height'])+'H',oldbytes[n]));sections[n]=m['region_map_section']
  for p in selected:
   n=p['name'];parent=p.get('parent');kind=p['kind'];c=p['cluster'];section=parent or n
+  if kind=='hgss':
+   m=load(f'data/maps/{n}/map.json');l=bylayout[m['layout']];maps[n]=m;sizes[n]=(l['width'],l['height']);tiles[n]=list(struct.unpack('<'+str(l['width']*l['height'])+'H',(R/l['blockdata_filepath']).read_bytes()));meta[n]=dict(kind='hgss',outdoor=n=='BellchimeTrail',parent=parent,theme='hgss',floor=0x3223);sections[n]=m['region_map_section'];continue
   if kind in ['cave','tower','ruins','well','ice','shrine','islandcave','falls','gate'] and re.search(r'_\d+F$',n):section=n.rsplit('_',1)[0]
   if section=='AlphChambers':section='RuinsOfAlph'
   if section in ['CliffCave','CliffEdgeGate','SafariZoneGate','SafariWetlands','SafariReception']:section='CianwoodCity'
@@ -173,7 +175,7 @@ def main():
  # Border graph, with reciprocal offsets and matching edge corridors.
  for a,d,b in EDGES:
   if a not in maps or b not in maps:continue
-  aw,ah=sizes[a];bw,bh=sizes[b];horizontal=d in ['left','right'];anchor=27 if a=='EcruteakCity' and d=='right' else (aw//2 if not horizontal else ah//2)
+  aw,ah=sizes[a];bw,bh=sizes[b];horizontal=d in ['left','right'];anchor=39 if a=='EcruteakCity' and d=='down' else 47 if a=='EcruteakCity' and d=='right' else (aw//2 if not horizontal else ah//2)
   offset=anchor-(bw//2 if not horizontal else bh//2)
   for n,other,direction,off in [(a,b,d,offset),(b,a,{'up':'down','down':'up','left':'right','right':'left'}[d],-offset)]:
    cs=maps[n]['connections'] or [];entry=dict(map=maps[other]['id'],offset=off,direction=direction)
@@ -182,7 +184,7 @@ def main():
    maps[n]['connections']=cs
    w,h=sizes[n];axis=anchor if n==a else anchor-offset;sea=n in ['OlivineCity','JohtoRoute40','JohtoRoute41'];v=0x1170 if sea else 0x3202
    if n in existing:
-    if n=='EcruteakCity' and direction=='down':rect(n,24,43,3,5,v)
+    if n=='EcruteakCity' and direction=='down':pass # HGSS authoring owns this layout
     if n=='OlivineCity' and direction=='left':rect(n,6,24,1,3,0x3202)
    else:
     port=(0,axis) if direction=='left' else (w-1,axis) if direction=='right' else (axis,0) if direction=='up' else (axis,h-1)
@@ -269,6 +271,7 @@ def main():
   for e in maps[n]['bg_events']:
    if n=='EcruteakCity':rect(n,e['x'],e['y'],1,1,struct.unpack_from('<H',oldbytes[n],(e['y']*sizes[n][0]+e['x'])*2)[0])
  for n,m in maps.items():
+  if n=='EcruteakCity' or (n in meta and meta[n]['kind']=='hgss'):continue # Dedicated HGSS authoring
   if n=='CianwoodCity':rect(n,sizes[n][0]-3,sizes[n][1]//2-1,3,3,0x1170)
   if n not in existing and meta[n]['outdoor']:
    for e in m['bg_events']:rect(n,e['x'],e['y'],1,1,0x403)
@@ -322,5 +325,9 @@ def main():
  manifest['checkpoint']=args.through;js('crossroads/johto/manifest.json',manifest)
  from build_johto_atlas import generate as generate_atlas
  generate_atlas(args.check)
+ from build_hgss_ecruteak import generate as generate_hgss
+ generate_hgss(args.check)
+ from build_hgss_ecruteak_chain import generate as generate_chain
+ generate_chain(args.check)
  print('Johto cluster',args.through,':',len(names),'maps registered;',len(services),'new Centers; IDs preserved')
 if __name__=='__main__':main()

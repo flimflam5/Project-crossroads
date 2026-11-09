@@ -1,0 +1,78 @@
+{
+  "source": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/eventdata/zone_event/078_T27PC0101.json",
+  "source_blob_sha": "9d6657c7b305f945b5841189449fd5b29977fff5",
+  "warps": [
+    {
+      "x": 8,
+      "z": 19,
+      "header": "MAP_ECRUTEAK",
+      "anchor": 5,
+      "y": 0
+    },
+    {
+      "x": 7,
+      "z": 2,
+      "header": "MAP_UNION",
+      "anchor": 0,
+      "y": 0
+    },
+    {
+      "x": 14,
+      "z": 17,
+      "header": "MAP_ECRUTEAK_POKECENTER_B1F",
+      "anchor": 0,
+      "y": 0
+    }
+  ],
+  "objects": [
+    {
+      "x": 8,
+      "z": 11,
+      "y": 0,
+      "spriteId": "SPRITE_PCWOMAN1"
+    },
+    {
+      "x": 6,
+      "z": 4,
+      "y": 0,
+      "spriteId": "SPRITE_PCWOMAN2"
+    },
+    {
+      "x": 11,
+      "z": 4,
+      "y": 0,
+      "spriteId": "SPRITE_PCWOMAN2"
+    },
+    {
+      "x": 2,
+      "z": 4,
+      "y": 0,
+      "spriteId": "SPRITE_PCWOMAN2"
+    },
+    {
+      "x": 2,
+      "z": 11,
+      "y": 0,
+      "spriteId": "SPRITE_MASAKI"
+    },
+    {
+      "x": 15,
+      "z": 11,
+      "y": 0,
+      "spriteId": "SPRITE_GSASSISTANTM"
+    },
+    {
+      "x": 4,
+      "z": 18,
+      "y": 0,
+      "spriteId": "SPRITE_GSWOMAN3"
+    },
+    {
+      "x": 12,
+      "z": 15,
+      "y": 0,
+      "spriteId": "SPRITE_GSMIDDLEMAN1"
+    }
+  ],
+  "sign_positions": []
+}

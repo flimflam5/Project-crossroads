@@ -1,0 +1,58 @@
+{
+  "source": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/eventdata/zone_event/077_T27GYM0101.json",
+  "source_blob_sha": "5cac2d015c6848cc83dca86c5d477224eae860cc",
+  "warps": [
+    {
+      "x": 16,
+      "z": 53,
+      "header": "MAP_ECRUTEAK",
+      "anchor": 7,
+      "y": 0
+    }
+  ],
+  "objects": [
+    {
+      "x": 18,
+      "z": 51,
+      "y": 0,
+      "spriteId": "SPRITE_SUNGLASSES"
+    },
+    {
+      "x": 10,
+      "z": 8,
+      "y": 0,
+      "spriteId": "SPRITE_GSLEADER4"
+    },
+    {
+      "x": 17,
+      "z": 39,
+      "y": 0,
+      "spriteId": "SPRITE_ITAKO"
+    },
+    {
+      "x": 19,
+      "z": 30,
+      "y": 0,
+      "spriteId": "SPRITE_ITAKO"
+    },
+    {
+      "x": 9,
+      "z": 29,
+      "y": 0,
+      "spriteId": "SPRITE_ITAKO"
+    },
+    {
+      "x": 11,
+      "z": 19,
+      "y": 0,
+      "spriteId": "SPRITE_ITAKO"
+    },
+    {
+      "x": 16,
+      "z": 49,
+      "y": 0,
+      "spriteId": "SPRITE_GSOLDMAN1"
+    }
+  ],
+  "sign_positions": []
+}

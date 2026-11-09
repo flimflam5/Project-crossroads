@@ -1,0 +1,16 @@
+{
+  "source": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0067_D17R1101.bin",
+  "source_blob_sha": "255e4ae1dba787eb5c64a3612897cf7988032917",
+  "width_cells": 2,
+  "height_cells": 1,
+  "logical_bounds": [
+    64,
+    32
+  ],
+  "headers": [],
+  "altitudes": [],
+  "models": [
+    446,
+    447
+  ]
+}

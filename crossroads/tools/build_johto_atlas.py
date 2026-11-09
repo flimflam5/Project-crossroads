@@ -21,6 +21,10 @@ def generate(check=False):
    parent=mouths[0][0]
    if parent in points:
     x,y=points[parent][1];points[n]=(label,(x+1,min(19,y+1)),'')
+ if 'BellchimeTrail' in names:
+  points['EcruteakCity_BellTower']=('BELL TOWER',(14,4),'')
+  points['EcruteakCity_BarrierStation']=('BARRIER STATION',(12,5),'')
+  points['BellchimeTrail']=('BELLCHIME TRAIL',(13,4),'')
  keys=list(points);rows=[]
  for n,(label,(x,y),abbr) in points.items():rows.append(dict(name=n,label=label,x=8+x*7,y=14+y*5,abbreviation=abbr))
  def root(n):
@@ -33,6 +37,8 @@ def generate(check=False):
   return 'OlivineCity'
  mapping=[keys.index(root(n)) for n in names]
  edges=[]
+ if 'BellchimeTrail' in names:
+  for a,b in [('EcruteakCity','EcruteakCity_BarrierStation'),('EcruteakCity_BarrierStation','BellchimeTrail'),('BellchimeTrail','EcruteakCity_BellTower')]:edges.append([keys.index(a),keys.index(b)])
  for a,d,b in [('OlivineCity','up','JohtoRoute39'),('JohtoRoute39','up','JohtoRoute38'),('JohtoRoute38','right','EcruteakCity')]+EDGES:
   if a in keys and b in keys:edges.append([keys.index(a),keys.index(b)])
  for n,label,c,count,theme,mouths in DUNGEONS:

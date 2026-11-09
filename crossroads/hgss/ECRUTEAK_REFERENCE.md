@@ -1,3 +1,13 @@
+# Current authority update — canonical logical grid
+
+The actual HGSS world matrix confirms a64x64 Ecruteak area at global tile origin
+(352,128). Door/house/gate positions are now traced from source event coordinates,
+not estimated from perspective pixels. The older64x50 projection notes below are
+superseded. Source facts/provenance are in canonical_events/. Nothing is marked
+reference-matched or accepted; station/Trail/interiors/gates/detail remain unfinished.
+
+---
+
 # Ecruteak reconstruction reference audit
 
 Baseline: 512a4d5658973d7d54c531ba8aa62037c67b517a (0.9.1 repair).

@@ -6,7 +6,8 @@ from collections import deque
 R=Path(__file__).resolve().parents[2]
 def load(p):return json.loads((R/p).read_text())
 layouts={l['id']:l for l in load('data/layouts/layouts.json')['layouts']}
-names=load('data/maps/map_groups.json')['gMapGroup_CrossroadsOlivine']
+groups=load('data/maps/map_groups.json')
+names=groups['gMapGroup_CrossroadsOlivine']+groups.get('gMapGroup_CrossroadsJohtoExpansion',[])
 maps={m['id']:m for m in [load(f'data/maps/{n}/map.json') for n in names]}
 script=(R/'crossroads/scripts/area_completion.inc').read_text()
 for spec in load('crossroads/art/western/rooms.json'):

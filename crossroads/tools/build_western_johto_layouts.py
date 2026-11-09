@@ -84,7 +84,8 @@ def generate():
     for x,y in [(6,11),(17,24),(30,25),(43,36),(28,39)]:
         city.rect(x,y,1,1,0x0415)
     from area_layouts import decorate
-    return {'JohtoRoute38':decorate('JohtoRoute38',route.packed(),64,28),'EcruteakCity':decorate('EcruteakCity',city.packed(),48,48)}
+    from build_hgss_ecruteak import city_data
+    return {'JohtoRoute38':decorate('JohtoRoute38',route.packed(),64,28),'EcruteakCity':city_data()}
 
 
 if __name__ == '__main__':

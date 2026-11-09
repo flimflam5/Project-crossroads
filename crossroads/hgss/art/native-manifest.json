@@ -983,7 +983,8 @@
       "height": 3
     },
     "paving": 753,
-    "earth": 754
+    "earth": 754,
+    "leaf_ground": 755
   },
   "terrain": [
     0,

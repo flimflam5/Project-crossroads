@@ -14,19 +14,57 @@
         "sha256": "91e0dd8e59ad7894298e503b1ae40c643976c0ed99bb575083d1dcae664fd5c1"
       },
       "reference_inspected": true,
-      "layout_features": {},
+      "layout_features": {
+        "grid_origin": [
+          352,
+          128
+        ],
+        "matrix_header_id": 78,
+        "matrix_cells": [
+          [
+            11,
+            4
+          ],
+          [
+            12,
+            4
+          ],
+          [
+            11,
+            5
+          ],
+          [
+            12,
+            5
+          ]
+        ],
+        "logical_dimensions": [
+          64,
+          64
+        ],
+        "enterable_houses": [
+          "southwest house",
+          "Dowsing Machine house"
+        ],
+        "canonical_missing_warps": [
+          "Dowsing Machine house",
+          "western gatehouse pair",
+          "eastern gatehouse pair"
+        ],
+        "station_chain": "Barrier Station to corridor to Bellchime Trail to Bell Tower"
+      },
       "build_status": "initial-city-layout-and-facades-in-progress",
       "reference_matched": false,
       "black_ledger_additions": [],
       "technical_deviations": [
-        "64x50 Emerald projection of1032x785 reference mosaic",
+        "64x64 logical grid confirmed from actual HGSS world-matrix cells; 2D camera replaces DS perspective.",
         "Facade palette/size adaptation within GBA tile budget",
         "Compatible native terrain strips preserve scrolling seams until adjacent routes are reconstructed",
         "Existing practice facilities and scripts retained; source canonical events not imported"
       ],
       "unfinished": [
         "Barrier Station/corridor/Trail chain",
-        "Verified enterability/interior reference for ordinary houses",
+        "Southwest house interior and new Dowsing Machine house; other three houses are canonically non-enterable, not missing generic interiors.",
         "Raised Burned Tower terrain and actual stairs",
         "Reference-accurate Gym/Center/Mart/Theater/house interiors",
         "Detailed lamps/fences/fountain/gates/terrain",
@@ -1836,5 +1874,10 @@
   "source_code_reference": {
     "url": "https://github.com/pret/pokeheartgold/blob/master/include/constants/maps.h",
     "use": "Map-name inventory only; no imported story events, code, encounters or proprietary ROM. Distinguish unused interiors from actual enterable rooms."
-  }
+  },
+  "canonical_sources": [
+    "canonical_events/world-matrix.json",
+    "canonical_events/johto-outdoor-bounds.json",
+    "canonical_events/075_T27.json"
+  ]
 }

@@ -1,0 +1,173 @@
+{
+  "source": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/eventdata/zone_event/075_T27.json",
+  "source_blob_sha": "8f6fae4c4491b5611057f866564c010d09cd04b2",
+  "warps": [
+    {
+      "x": 376,
+      "z": 149,
+      "header": "MAP_BURNED_TOWER_1F",
+      "anchor": 0,
+      "y": 0
+    },
+    {
+      "x": 375,
+      "z": 173,
+      "header": "MAP_ECRUTEAK_SOUTHWEST_HOUSE",
+      "anchor": 0,
+      "y": 0
+    },
+    {
+      "x": 392,
+      "z": 153,
+      "header": "MAP_ECRUTEAK_BELL_TOWER_BARRIER_STATION",
+      "anchor": 0,
+      "y": 0
+    },
+    {
+      "x": 386,
+      "z": 183,
+      "header": "MAP_ECRUTEAK_DOWSING_MACHINE_HOUSE",
+      "anchor": 0,
+      "y": 0
+    },
+    {
+      "x": 397,
+      "z": 173,
+      "header": "MAP_ECRUTEAK_DANCE_THEATER",
+      "anchor": 0,
+      "y": 0
+    },
+    {
+      "x": 397,
+      "z": 183,
+      "header": "MAP_ECRUTEAK_POKECENTER_1F",
+      "anchor": 0,
+      "y": 0
+    },
+    {
+      "x": 406,
+      "z": 173,
+      "header": "MAP_ECRUTEAK_POKEMART",
+      "anchor": 0,
+      "y": 0
+    },
+    {
+      "x": 376,
+      "z": 183,
+      "header": "MAP_ECRUTEAK_GYM",
+      "anchor": 0,
+      "y": 0
+    },
+    {
+      "x": 358,
+      "z": 166,
+      "header": "MAP_ROUTE_38_ECRUTEAK_GATEHOUSE",
+      "anchor": 0,
+      "y": 0
+    },
+    {
+      "x": 358,
+      "z": 167,
+      "header": "MAP_ROUTE_38_ECRUTEAK_GATEHOUSE",
+      "anchor": 0,
+      "y": 0
+    },
+    {
+      "x": 415,
+      "z": 175,
+      "header": "MAP_ROUTE_42_ECRUTEAK_GATEHOUSE",
+      "anchor": 0,
+      "y": 0
+    },
+    {
+      "x": 415,
+      "z": 176,
+      "header": "MAP_ROUTE_42_ECRUTEAK_GATEHOUSE",
+      "anchor": 0,
+      "y": 0
+    }
+  ],
+  "objects": [
+    {
+      "x": 379,
+      "z": 155,
+      "y": 0,
+      "spriteId": "SPRITE_GSGIRL1"
+    },
+    {
+      "x": 381,
+      "z": 162,
+      "y": 0,
+      "spriteId": "SPRITE_GSBOY1"
+    },
+    {
+      "x": 378,
+      "z": 176,
+      "y": 0,
+      "spriteId": "SPRITE_GSBIGMAN"
+    },
+    {
+      "x": 396,
+      "z": 162,
+      "y": 0,
+      "spriteId": "SPRITE_GSOLDMAN1"
+    },
+    {
+      "x": 392,
+      "z": 171,
+      "y": 0,
+      "spriteId": "SPRITE_GSOLDMAN1"
+    },
+    {
+      "x": 404,
+      "z": 185,
+      "y": 0,
+      "spriteId": "SPRITE_GSGIRL2"
+    },
+    {
+      "x": 397,
+      "z": 173,
+      "y": 0,
+      "spriteId": "SPRITE_GSRIVEL"
+    },
+    {
+      "x": 374,
+      "z": 153,
+      "y": 0,
+      "spriteId": "SPRITE_GSOLDMAN1"
+    },
+    {
+      "x": 390,
+      "z": 160,
+      "y": 0,
+      "spriteId": "SPRITE_GSMIDDLEMAN1"
+    }
+  ],
+  "sign_positions": [
+    {
+      "x": 388,
+      "z": 173,
+      "y": 0
+    },
+    {
+      "x": 378,
+      "z": 184,
+      "y": 0
+    },
+    {
+      "x": 395,
+      "z": 174,
+      "y": 0
+    },
+    {
+      "x": 378,
+      "z": 153,
+      "y": 0
+    },
+    {
+      "x": 394,
+      "z": 154,
+      "y": 0
+    }
+  ]
+}

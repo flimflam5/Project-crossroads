@@ -1,0 +1,22 @@
+{
+  "source": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/eventdata/zone_event/203_T27R0202.json",
+  "source_blob_sha": "60a63c4741521edb873a2d50e59f252293771080",
+  "warps": [
+    {
+      "x": 3,
+      "z": 19,
+      "header": "MAP_ECRUTEAK_BELL_TOWER_BARRIER_STATION",
+      "anchor": 1,
+      "y": 0
+    },
+    {
+      "x": 6,
+      "z": 3,
+      "header": "MAP_BELLCHIME_TOWER",
+      "anchor": 0,
+      "y": 0
+    }
+  ],
+  "objects": [],
+  "sign_positions": []
+}

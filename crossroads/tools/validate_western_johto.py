@@ -20,6 +20,8 @@ layouts={l['id']:l for l in load('data/layouts/layouts.json')['layouts']}
 raw={mid:struct.unpack('<'+'H'*(layouts[m['layout']]['width']*layouts[m['layout']]['height']),(root/layouts[m['layout']]['blockdata_filepath']).read_bytes()) for mid,m in maps.items()}
 linked=(root/'data/event_scripts.s').read_text()
 scripts='\n'.join(p.read_text() for p in (root/'crossroads/scripts').glob('johto*.inc'))+'\n'+(root/'crossroads/scripts/area_completion.inc').read_text()+'\n'+(root/'crossroads/scripts/olivine_interiors.inc').read_text()+'\n'+'\n'.join((root/f'data/maps/{n}/scripts.inc').read_text() for n in names)+'\n'+(root/'crossroads/scripts/olivine.inc').read_text()+'\n'+(root/'crossroads/scripts/western_johto.inc').read_text()+'\n'+(root/'crossroads/scripts/starter_rescue.inc').read_text()
+scripts+='\n'+(root/'crossroads/scripts/hgss_ecruteak.inc').read_text()
+assert 'crossroads/scripts/hgss_ecruteak.inc' in linked
 for name,data in generate().items():assert (root/f'data/layouts/{name}/map.bin').read_bytes()==data
 reverse={'up':'down','down':'up','left':'right','right':'left'}
 for mid,m in maps.items():

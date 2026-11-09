@@ -16,25 +16,25 @@
   "connections": [
     {
       "map": "MAP_JOHTO_ROUTE38",
-      "offset": 14,
+      "offset": 25,
       "direction": "left"
     },
     {
       "map": "MAP_JOHTO_ROUTE37",
-      "offset": 10,
+      "offset": 25,
       "direction": "down"
     },
     {
       "map": "MAP_JOHTO_ROUTE42",
-      "offset": 13,
+      "offset": 33,
       "direction": "right"
     }
   ],
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_1",
-      "x": 17,
-      "y": 13,
+      "x": 27,
+      "y": 27,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -46,8 +46,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_3",
-      "x": 31,
-      "y": 27,
+      "x": 29,
+      "y": 34,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -59,8 +59,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_1",
-      "x": 16,
-      "y": 38,
+      "x": 26,
+      "y": 48,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -72,8 +72,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
-      "x": 40,
-      "y": 13,
+      "x": 44,
+      "y": 34,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -85,8 +85,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
-      "x": 30,
-      "y": 39,
+      "x": 40,
+      "y": 43,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -98,8 +98,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_1",
-      "x": 21,
-      "y": 23,
+      "x": 52,
+      "y": 57,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -112,50 +112,50 @@
   ],
   "warp_events": [
     {
-      "x": 11,
-      "y": 7,
+      "x": 24,
+      "y": 21,
       "elevation": 0,
       "dest_map": "MAP_ECRUTEAK_CITY_BURNED_TOWER",
       "dest_warp_id": "0"
     },
     {
-      "x": 37,
-      "y": 7,
+      "x": 40,
+      "y": 25,
       "elevation": 0,
-      "dest_map": "MAP_ECRUTEAK_CITY_BELL_TOWER",
+      "dest_map": "MAP_ECRUTEAK_CITY_BARRIER_STATION",
       "dest_warp_id": "0"
     },
     {
-      "x": 11,
-      "y": 18,
+      "x": 23,
+      "y": 45,
       "elevation": 0,
       "dest_map": "MAP_ECRUTEAK_CITY_RESIDENCE",
       "dest_warp_id": "0"
     },
     {
-      "x": 22,
-      "y": 18,
+      "x": 45,
+      "y": 45,
       "elevation": 0,
       "dest_map": "MAP_ECRUTEAK_CITY_DANCE_THEATER",
       "dest_warp_id": "0"
     },
     {
-      "x": 10,
-      "y": 36,
+      "x": 24,
+      "y": 55,
       "elevation": 0,
       "dest_map": "MAP_ECRUTEAK_CITY_GYM",
       "dest_warp_id": "0"
     },
     {
-      "x": 21,
-      "y": 34,
+      "x": 45,
+      "y": 55,
       "elevation": 0,
       "dest_map": "MAP_ECRUTEAK_CITY_POKEMON_CENTER_1F",
       "dest_warp_id": "0"
     },
     {
-      "x": 35,
-      "y": 34,
+      "x": 54,
+      "y": 45,
       "elevation": 0,
       "dest_map": "MAP_ECRUTEAK_CITY_MART",
       "dest_warp_id": "0"
@@ -165,35 +165,59 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 9,
-      "y": 8,
+      "x": 26,
+      "y": 25,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Ecruteak_BurnedTowerSign"
     },
     {
       "type": "sign",
-      "x": 35,
-      "y": 8,
+      "x": 42,
+      "y": 26,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Ecruteak_BellTowerSign"
     },
     {
       "type": "sign",
-      "x": 9,
-      "y": 19,
+      "x": 25,
+      "y": 46,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Ecruteak_ResidenceSign"
     },
     {
       "type": "sign",
-      "x": 20,
-      "y": 19,
+      "x": 43,
+      "y": 46,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Ecruteak_DanceTheaterSign"
+    },
+    {
+      "type": "sign",
+      "x": 26,
+      "y": 56,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Ecruteak_GymSign"
+    },
+    {
+      "type": "sign",
+      "x": 43,
+      "y": 56,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Ecruteak_PokemonCenter_1FSign"
+    },
+    {
+      "type": "sign",
+      "x": 55,
+      "y": 46,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Ecruteak_MartSign"
     },
     {
       "type": "sign",
@@ -201,52 +225,28 @@
       "y": 37,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Ecruteak_GymSign"
-    },
-    {
-      "type": "sign",
-      "x": 19,
-      "y": 35,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Ecruteak_PokemonCenter_1FSign"
-    },
-    {
-      "type": "sign",
-      "x": 33,
-      "y": 35,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Ecruteak_MartSign"
-    },
-    {
-      "type": "sign",
-      "x": 4,
-      "y": 25,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Ecruteak_WestSign"
     },
     {
       "type": "sign",
-      "x": 44,
-      "y": 27,
+      "x": 61,
+      "y": 49,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Ecruteak_EastBoundary"
     },
     {
       "type": "sign",
-      "x": 24,
-      "y": 44,
+      "x": 39,
+      "y": 61,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Ecruteak_SouthBoundary"
     },
     {
       "type": "sign",
-      "x": 27,
-      "y": 25,
+      "x": 36,
+      "y": 45,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Ecruteak_Directory"
