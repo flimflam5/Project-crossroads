@@ -1,0 +1,15 @@
+{
+  "source_sha256": "02cf51946a7a487fe038153f20d5594fb262371f36c479cc725991c5a4ac8762",
+  "format": "4bpp, palette bank 1",
+  "tiles": 600,
+  "dimensions": [
+    240,
+    160
+  ],
+  "visible_source_y": [
+    70,
+    138
+  ],
+  "light_palette_index": 20,
+  "status": "Pre-title prototype for owner appearance review; accepted source artwork unchanged."
+}

@@ -102,9 +102,10 @@ void CB2_InitBlackLedgerTitleScreen(void)
     EnableInterrupts(INTR_FLAG_VBLANK);
     sPreviousSoundMode = (gSoundInfo.freq << SOUND_MODE_FREQ_SHIFT)
                        | (gSoundInfo.masterVolume << SOUND_MODE_MASVOL_SHIFT)
+                       | SOUND_MODE_REVERB_SET | gSoundInfo.reverb
                        | SOUND_MODE_DA_BIT_9
                        | ((REG_SOUNDBIAS_H & 0xC0) << 14);
-    m4aSoundMode(SOUND_MODE_FREQ_31536 | SOUND_MODE_DA_BIT_9
+    m4aSoundMode(SOUND_MODE_REVERB_SET | SOUND_MODE_FREQ_31536 | SOUND_MODE_DA_BIT_9
                 | (15 << SOUND_MODE_MASVOL_SHIFT));
     PlayBGM(MUS_BLACK_LEDGER_TITLE);
     SetMainCallback2(CB2_BlackLedgerTitle);

@@ -24,6 +24,7 @@ assert read(syms['BlackLedgerTitleWave']+12)==2522880
 assert len(active())==1
 assert read(syms['gSoundInfo']+8,1)==9, 'Title mixer must use 31.5 kHz'
 assert read(syms['gSoundInfo']+7,1)==15
+assert read(syms['gSoundInfo']+5,1)==0, 'No inherited reverb on a mixed recording'
 assert read(0x04000089,1)&0xc0==0, 'Title DAC must use 9-bit mode'
 assert read(active()[0]+1,1)&8, 'Fixed-rate voice must avoid resampling'
 raw=a.output/'title-audio.s16le';assert lib.emu_audio(str(raw).encode(),180)
@@ -31,21 +32,27 @@ samples=array.array('h',raw.read_bytes());rms=math.sqrt(sum(v*v for v in samples
 assert rms>20 and peak<32767,('Audio silent or clipped',rms,peak)
 with wave.open(str(a.output/'title-audio.wav'),'wb') as w:w.setnchannels(2);w.setsampwidth(2);w.setframerate(32768);w.writeframes(samples.tobytes())
 print('Actual emulator audio signal: PASS; RMS',round(rms,1),'peak',peak,flush=True)
+previous_mode=read('sPreviousSoundMode')
 last=read(active()[0]+40);wrapped=False
+per_frame=read(syms['gSoundInfo']+0x10);sample_count=read(syms['BlackLedgerTitleWave']+12)
+continuity_frames=0
 for _ in range(48):
- frames(120);assert read(syms['gMain']+4)==syms['CB2_BlackLedgerTitle']|1
- channels=active();assert len(channels)==1
- now=read(channels[0]+40)
- assert syms['BlackLedgerTitleSamples']<=now<syms['BlackLedgerTitleSamplesEnd']
- if now<last:wrapped=True
- last=now
+ for _frame in range(120):
+  frames(1);assert read(syms['gMain']+4)==syms['CB2_BlackLedgerTitle']|1
+  channels=active();assert len(channels)==1
+  now=read(channels[0]+40)
+  assert syms['BlackLedgerTitleSamples']<=now<syms['BlackLedgerTitleSamplesEnd']
+  assert (now-last)%sample_count==per_frame, ('Audio skipped or repeated samples',continuity_frames,now-last)
+  if now<last:wrapped=True
+  last=now;continuity_frames+=1
 assert wrapped,'The actual sound channel must wrap across the full-track loop'
-print('96 seconds of continued title playback, bounded sample pointer and actual end-to-start loop: PASS',flush=True)
+print('96 seconds of title playback, all 5,760 frame advances exact, no skipped/repeated sample blocks, actual loop: PASS',flush=True)
 frames(1,8);frames(180)
 assert read(syms['gMain']+4)==syms['CB2_MainMenu']|1
 assert not active(),'Title sample must fade/stop on Start'
 assert read(syms['gSoundInfo']+8,1)==4, 'Restore normal gameplay frequency'
 assert read(syms['gSoundInfo']+7,1)==12, 'Restore normal gameplay volume'
+assert read(syms['gSoundInfo']+5,1)==previous_mode&127, 'Restore previous reverb'
 assert read(0x04000089,1)&0xc0==0x40, 'Restore normal gameplay DAC mode'
 frames(3,15);frames(4500)
 assert read(syms['gMain']+4)==syms['CB2_BlackLedgerTitle']|1

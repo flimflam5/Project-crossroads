@@ -44,3 +44,14 @@ repeatable Jasmine/Morty practice battles are approved; defer badges/story gates
 Trainer IDs 855–860 use existing reserved space; keep MAX_TRAINERS_COUNT=864 so
 system/save flag offsets never shift. Custom NPC IDs 0x3F00–03 must not change
 NUM_OBJ_EVENT_GFX or dynamic graphics IDs.
+
+
+## Latest audio and boot QA
+
+Owner accepted 0.8/0.8.1 tested content/music loop, except title static. 0.8.2
+is only partly improved and has reported skips; do not mark audio quality fixed.
+Current work explicitly disables inherited reverb for the recorded title track
+and restores prior settings on exit. Owner explicitly requested/confirmed a
+Black Ledger pre-title boot movie replacing Game Freak/Emerald scenes and asked
+for another agent on that track. Keep the New Game prologue separate and preserve
+its creative approval boundary. No new region expansion is part of this work.

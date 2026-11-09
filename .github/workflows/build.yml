@@ -14,6 +14,7 @@ on:
       - feature/western-area-completion-01
       - feature/title-music-01
       - feature/title-audio-cleanup-01
+      - feature/boot-audio-refinement-01
   pull_request:
   workflow_dispatch:
 
@@ -64,6 +65,7 @@ jobs:
 
       - name: Crossroads regression checks
         run: |
+          python3 crossroads/tools/validate_black_ledger_intro.py
           python3 crossroads/tools/validate_title_music.py
           python3 crossroads/tools/validate_area_completion.py
           python3 crossroads/tools/validate_opening.py
@@ -85,7 +87,7 @@ jobs:
       - name: Upload playable Emerald ROM
         uses: actions/upload-artifact@v4
         with:
-          name: black-ledger-title-audio-0.8.2-${{ github.sha }}
+          name: black-ledger-boot-audio-0.8.3-${{ github.sha }}
           path: |
             pokeemerald.gba
             build-info.json
@@ -98,6 +100,7 @@ jobs:
             crossroads/RELEASE_0_8.md
             crossroads/RELEASE_0_8_1.md
             crossroads/RELEASE_0_8_2.md
+            crossroads/RELEASE_0_8_3.md
           if-no-files-found: error
           retention-days: 14
 

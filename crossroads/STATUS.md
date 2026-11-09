@@ -1,3 +1,22 @@
+# Current QA candidate — 0.8.3 boot/audio
+
+Inherited title reverb explicitly disabled/restored; custom Black Ledger pre-title
+prototype implemented independently. Combined Emerald build, native boot/skip/
+reset, title audio per-frame continuity, title UI and real old-save Continue pass.
+Delta static/skip comparison and pre-title appearance/pacing QA remain pending.
+See RELEASE_0_8_3.md for exact coverage and limitations. Original New Game prologue
+remains unchanged. No map or story expansion in this increment.
+
+# Active audio/boot refinement after 0.8.2
+
+Owner says 0.8.2 is a bit better, but reports remaining static and track skips.
+Audio listening QA remains open. An inherited reverb=50 effect was verified and
+is now explicitly disabled for the title and restored on exit. See
+AUDIO_REFINEMENT.md for actual checks and limits. Owner also confirmed replacing
+the Emerald/Game Freak pre-title boot movie with a Black Ledger sequence. A
+second agent is implementing that independent branded harbor prototype. This
+is separate from the unapproved New Game prologue and adds no story canon.
+
 # Owner QA accepted — 0.8 and 0.8.1; title audio refinement
 
 Owner: “the music is there it loops and everything is good in 8 and 8.1,” with
