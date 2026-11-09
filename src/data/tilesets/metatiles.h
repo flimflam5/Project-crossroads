@@ -415,3 +415,11 @@ const u16 gMetatileAttributes_WesternCity[] = INCBIN_U16("data/tilesets/secondar
 const u16 gMetatiles_WesternInteriors[] = INCBIN_U16("data/tilesets/secondary/western_interiors/metatiles.bin");
 const u16 gMetatileAttributes_WesternInteriors[] = INCBIN_U16("data/tilesets/secondary/western_interiors/metatile_attributes.bin");
 #endif
+
+const u16 gMetatiles_HgssEcruteakPrimary[] = INCBIN_U16("data/tilesets/primary/hgss_ecruteak/metatiles.bin");
+
+const u16 gMetatileAttributes_HgssEcruteakPrimary[] = INCBIN_U16("data/tilesets/primary/hgss_ecruteak/metatile_attributes.bin");
+
+const u16 gMetatiles_HgssEcruteakSecondary[] = INCBIN_U16("data/tilesets/secondary/hgss_ecruteak/metatiles.bin");
+
+const u16 gMetatileAttributes_HgssEcruteakSecondary[] = INCBIN_U16("data/tilesets/secondary/hgss_ecruteak/metatile_attributes.bin");

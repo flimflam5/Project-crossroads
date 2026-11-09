@@ -1554,3 +1554,17 @@ const struct Tileset gTileset_WesternInteriors = {
  .metatileAttributes = gMetatileAttributes_WesternInteriors, .callback = NULL,
 };
 #endif
+
+const struct Tileset gTileset_HgssEcruteakPrimary = {
+ .isCompressed=TRUE, .isSecondary=FALSE,
+ .tiles=gTilesetTiles_HgssEcruteakPrimary, .palettes=gTilesetPalettes_HgssEcruteakPrimary,
+ .metatiles=gMetatiles_HgssEcruteakPrimary, .metatileAttributes=gMetatileAttributes_HgssEcruteakPrimary,
+ .callback=InitTilesetAnim_General,
+};
+
+const struct Tileset gTileset_HgssEcruteakSecondary = {
+ .isCompressed=TRUE, .isSecondary=TRUE,
+ .tiles=gTilesetTiles_HgssEcruteakSecondary, .palettes=gTilesetPalettes_HgssEcruteakSecondary,
+ .metatiles=gMetatiles_HgssEcruteakSecondary, .metatileAttributes=gMetatileAttributes_HgssEcruteakSecondary,
+ .callback=NULL,
+};

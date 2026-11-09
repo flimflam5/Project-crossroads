@@ -1,0 +1,87 @@
+#!/usr/bin/env python3
+"""Quantize reference-directed facades into isolated Ecruteak GBA tilesets.
+
+Never overwrites shared General/Slateport graphics. Native terrain and animation
+slots are reserved before assigning building tiles. Stable map IDs are unrelated.
+"""
+import json,struct,argparse,hashlib
+from pathlib import Path
+from PIL import Image
+R=Path(__file__).resolve().parents[2]
+A=R/'crossroads/hgss/art';P=R/'data/tilesets/primary/hgss_ecruteak';S=R/'data/tilesets/secondary/hgss_ecruteak'
+SPECS=[('gym','a',(0,0,740,724),(112,96),6,3),('house','a',(750,0,1250,724),(80,64),7,3),('barrier','a',(1280,0,2172,724),(160,80),7,7),('burned','b',(0,0,565,724),(96,112),8,3),('theater','b',(565,0,1175,724),(96,80),9,3),('center','b',(1180,0,1665,724),(80,80),10,2),('mart','b',(1670,0,2172,724),(80,64),11,2)]
+# Every primary terrain metatile used by the authored city/trail. Animation slots
+#432..511 are reserved even when not currently referenced, preventing live corruption.
+TERRAIN=[0,1,3,4,13,0xc6,0x114,0x15,0x19,0x71,0x75,0x7c,0x7d,0xa7,0x170,0x1d4,0x1d5,0x1dc,0x1dd,0x1e6,0x1e7]
+def generate(check=False):
+ def write(p,b):
+  if isinstance(b,str):b=b.encode()
+  if check:assert p.read_bytes()==b,('Regenerate',str(p))
+  else:p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(b)
+ general=R/'data/tilesets/primary/general';gm=struct.unpack('<4096H',(general/'metatiles.bin').read_bytes());reserved=set(range(432,512))|{v&1023 for n in TERRAIN for v in gm[n*8:n*8+8]}
+ free=[n for n in range(1024) if n>=512 or n not in reserved];primary=Image.open(general/'tiles.png').copy();secondary=Image.new('P',(128,256));secondary.putpalette(primary.getpalette())
+ images={}
+ for name,src,box,size,bank,door in SPECS:
+  im=Image.open(A/f'ecruteak-facades-{src}.png').convert('RGBA').crop(box);alpha=im.getchannel('A').point(lambda x:255 if x>=180 else 0);im.putalpha(alpha);im=im.crop(alpha.getbbox());im=im.resize(size,Image.Resampling.NEAREST);images[name]=im
+ pals={}
+ for bank in range(6,12):
+  ims=[images[n] for n,src,box,size,b,d in SPECS if b==bank];strip=Image.new('RGB',(sum(i.width for i in ims),max(i.height for i in ims)))
+  x=0
+  for im in ims:strip.paste(im,(x,0),im.getchannel('A'));x+=im.width
+  colors=strip.quantize(colors=11,method=Image.Quantize.MEDIANCUT).getpalette()[:33]+[0]*12;pals[bank]=[0,0,0]+colors
+ words=[];attrs=[];unique={};cursor=0;specs={}
+ # Transparent tile has a real zero source; don't depend on mutable General tile0.
+ def alloc(tile,bank):
+  nonlocal cursor
+  key=tile.tobytes()
+  if key not in unique:
+   assert cursor<len(free),('Graphics capacity',cursor,len(free));n=free[cursor];cursor+=1;unique[key]=n
+   sheet=primary if n<512 else secondary;i=n%512;sheet.paste(tile,(i%16*8,i//16*8))
+  return unique[key]|(bank<<12)
+ under=list(gm[8:12]);empty=alloc(Image.new('P',(8,8)),6)
+ for name,src,box,size,bank,door in SPECS:
+  print('Allocating',name,'after',cursor,'tiles',flush=True)
+  im=images[name];ref=Image.new('P',(1,1));ref.putpalette(pals[bank]+[0]*(768-48));indexed=im.convert('RGB').quantize(palette=ref,dither=Image.Dither.NONE);values=bytearray(indexed.tobytes());alpha=im.getchannel('A').tobytes()
+  for i in range(len(values)):
+   if alpha[i]<128:values[i]=0
+   elif not values[i]:values[i]=1
+  indexed=Image.frombytes('P',im.size,bytes(values));indexed.putpalette(pals[bank]);write(A/(name+'-native.png'),b'') if False else None
+  if not check:indexed.save(A/(name+'-native.png'),bits=4)
+  w,h=size[0]//16,size[1]//16;start=512+len(attrs)
+  for y in range(h):
+   for x in range(w):
+    top=[alloc(indexed.crop((x*16+dx,y*16+dy,x*16+dx+8,y*16+dy+8)),bank) for dx,dy in [(0,0),(8,0),(0,8),(8,8)]]
+    words.extend(under+top);attrs.append((0x1000 if y>=h-2 else 0)|(0x60 if (x,y)==(door,h-1) else 0))
+  specs[name]=dict(start=start,width=w,height=h,door_x=door,door_y=h-1,palette=bank,solid_footprint=[[x,y] for y in range(h) for x in range(w) if y>0 and (y>=h-2 or 0<x<w-1) and (x,y)!=(door,h-1)],walkable_overhang=[[x,y] for y in range(h) for x in range(w) if y==0 or (y<h-2 and x in (0,w-1))])
+ # Native trees, with solid roots drawn behind the player from the south.
+ for n in [0x1d4,0x1d5,0x1dc,0x1dd,0x1e6,0x1e7]:
+  words.extend(gm[n*8:n*8+8]);attrs.append(0x1000 if n in [0x1e6,0x1e7] else 0)
+ specs['tree']=dict(start=512+len(attrs)-6,width=2,height=3)
+ for n in [0x1d4,0x1d5,0x1dc,0x1dd,0x1e6,0x1e7]:
+  words.extend([(v&0xfff)|(5<<12) for v in gm[n*8:n*8+8]]);attrs.append(0x1000 if n in [0x1e6,0x1e7] else 0)
+ specs['autumn_tree']=dict(start=512+len(attrs)-6,width=2,height=3)
+ # A source-compatible paved ground tile with its own palette.
+ slate=R/'data/tilesets/secondary/slateport';sheet=Image.open(slate/'tiles.png');stone=sheet.crop((6*8,4*8,7*8,5*8));stone_ref=alloc(stone,12)
+ specs['paving']=512+len(attrs);words.extend([stone_ref]*4+[empty]*4);attrs.append(0x1000)
+ colors=[pals[8][j:j+3] for j in range(3,48,3)]
+ soilindex=1+min(range(15),key=lambda j:sum((colors[j][k]-[142,122,102][k])**2 for k in range(3)))
+ soil=Image.new('P',(8,8),soilindex);soilref=alloc(soil,8)
+ specs['earth']=512+len(attrs);words.extend([soilref]*4+[empty]*4);attrs.append(0x1000)
+ assert len(attrs)<=512
+ for path,im in [(P/'tiles.png',primary),(S/'tiles.png',secondary)]:
+  if not check:path.parent.mkdir(parents=True,exist_ok=True);im.save(path,bits=4)
+ for i in range(16):
+  native=(general/f'palettes/{i:02}.pal').read_bytes()
+  if i==5:
+   colors=[tuple(map(int,l.split())) for l in (general/'palettes/02.pal').read_text().splitlines()[3:]]
+   native=('JASC-PAL\n0100\n16\n'+'\n'.join(f'{min(255,int(g*1.2))} {int(g*.55)} {int(g*.13)}' for r,g,b in colors)+'\n').encode()
+  write(P/f'palettes/{i:02}.pal',native)
+  pal=pals.get(i)
+  if i==12:
+   old=[tuple(map(int,l.split())) for l in (R/'data/tilesets/secondary/slateport/palettes/06.pal').read_text().splitlines()[3:]]
+   pal=[v for rgb in old for v in (int(sum(rgb)/3*.8),int(sum(rgb)/3*.84),int(sum(rgb)/3*.73))]
+  write(S/f'palettes/{i:02}.pal','JASC-PAL\n0100\n16\n'+'\n'.join(' '.join(map(str,pal[j:j+3])) for j in range(0,48,3))+'\n' if pal else (general/f'palettes/{i:02}.pal').read_bytes())
+ write(P/'metatiles.bin',(general/'metatiles.bin').read_bytes());write(P/'metatile_attributes.bin',(general/'metatile_attributes.bin').read_bytes());write(S/'metatiles.bin',struct.pack('<'+str(len(words))+'H',*words));write(S/'metatile_attributes.bin',struct.pack('<'+str(len(attrs))+'H',*attrs));write(A/'native-manifest.json',json.dumps(dict(specs=specs,terrain=TERRAIN,reserved_primary_tiles=sorted(reserved),allocated_tiles=cursor,available_tiles=len(free)),indent=2)+'\n')
+ print('HGSS-directed Ecruteak facades:',cursor,'of',len(free),'available graphics tiles;',len(attrs),'metatiles. Visual acceptance pending.')
+if __name__=='__main__':
+ p=argparse.ArgumentParser();p.add_argument('--check',action='store_true');generate(p.parse_args().check)

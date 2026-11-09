@@ -1,0 +1,1840 @@
+{
+  "authority": "Actual Pokemon HeartGold/SoulSilver game references; never substitute memory or unrelated Emerald buildings.",
+  "baseline_commit": "512a4d5658973d7d54c531ba8aa62037c67b517a",
+  "areas": [
+    {
+      "area": "Ecruteak City",
+      "reference": {
+        "area": "Ecruteak City",
+        "filename": "Ecruteak_City_HGSS.png",
+        "url": "https://archives.bulbagarden.net/media/upload/7/77/Ecruteak_City_HGSS.png",
+        "page": "https://archives.bulbagarden.net/wiki/File:Ecruteak_City_HGSS.png",
+        "status": "downloaded-not-inspected",
+        "http_status": 200,
+        "sha256": "91e0dd8e59ad7894298e503b1ae40c643976c0ed99bb575083d1dcae664fd5c1"
+      },
+      "reference_inspected": true,
+      "layout_features": {},
+      "build_status": "initial-city-layout-and-facades-in-progress",
+      "reference_matched": false,
+      "black_ledger_additions": [],
+      "technical_deviations": [
+        "64x50 Emerald projection of1032x785 reference mosaic",
+        "Facade palette/size adaptation within GBA tile budget",
+        "Compatible native terrain strips preserve scrolling seams until adjacent routes are reconstructed",
+        "Existing practice facilities and scripts retained; source canonical events not imported"
+      ],
+      "unfinished": [
+        "Barrier Station/corridor/Trail chain",
+        "Verified enterability/interior reference for ordinary houses",
+        "Raised Burned Tower terrain and actual stairs",
+        "Reference-accurate Gym/Center/Mart/Theater/house interiors",
+        "Detailed lamps/fences/fountain/gates/terrain",
+        "Movement/Continue/old-save/whiteout and owner visual QA"
+      ]
+    },
+    {
+      "area": "New Bark Town",
+      "reference": {
+        "area": "New Bark Town",
+        "filename": "New_Bark_Town_HGSS.png",
+        "url": "https://archives.bulbagarden.net/media/upload/d/dd/New_Bark_Town_HGSS.png",
+        "page": "https://archives.bulbagarden.net/wiki/File:New_Bark_Town_HGSS.png",
+        "status": "downloaded-not-inspected",
+        "http_status": 200,
+        "sha256": "756ba2a429287b668258d3945aaac9ded197b4ca36b9589c87031ae9c5fdea93"
+      },
+      "reference_inspected": false,
+      "layout_features": {},
+      "build_status": "not-reconstructed",
+      "reference_matched": false,
+      "black_ledger_additions": [],
+      "technical_deviations": [],
+      "unfinished": [
+        "Trace layout, architecture, collision, entrances and interior references; reconstruct and visually compare; actual emulator tests; owner acceptance."
+      ]
+    },
+    {
+      "area": "Cherrygrove City",
+      "reference": {
+        "area": "Cherrygrove City",
+        "filename": "Cherrygrove_City_HGSS.png",
+        "url": "https://archives.bulbagarden.net/media/upload/b/bb/Cherrygrove_City_HGSS.png",
+        "page": "https://archives.bulbagarden.net/wiki/File:Cherrygrove_City_HGSS.png",
+        "status": "downloaded-not-inspected",
+        "http_status": 200,
+        "sha256": "e5444bcfe9ddfe3d874c2c69a1592a7a20ea65b116f10e3fb7aab3bf59d24115"
+      },
+      "reference_inspected": false,
+      "layout_features": {},
+      "build_status": "not-reconstructed",
+      "reference_matched": false,
+      "black_ledger_additions": [],
+      "technical_deviations": [],
+      "unfinished": [
+        "Trace layout, architecture, collision, entrances and interior references; reconstruct and visually compare; actual emulator tests; owner acceptance."
+      ]
+    },
+    {
+      "area": "Violet City",
+      "reference": {
+        "area": "Violet City",
+        "filename": "Violet_City_HGSS.png",
+        "url": "https://archives.bulbagarden.net/media/upload/5/55/Violet_City_HGSS.png",
+        "page": "https://archives.bulbagarden.net/wiki/File:Violet_City_HGSS.png",
+        "status": "downloaded-not-inspected",
+        "http_status": 200,
+        "sha256": "419cd943756c9324eb18a92a8f61e0f997c0cfe46a8d626ba22ff15128145495"
+      },
+      "reference_inspected": false,
+      "layout_features": {},
+      "build_status": "not-reconstructed",
+      "reference_matched": false,
+      "black_ledger_additions": [],
+      "technical_deviations": [],
+      "unfinished": [
+        "Trace layout, architecture, collision, entrances and interior references; reconstruct and visually compare; actual emulator tests; owner acceptance."
+      ]
+    },
+    {
+      "area": "Azalea Town",
+      "reference": {
+        "area": "Azalea Town",
+        "filename": "Azalea_Town_HGSS.png",
+        "url": "https://archives.bulbagarden.net/media/upload/0/0f/Azalea_Town_HGSS.png",
+        "page": "https://archives.bulbagarden.net/wiki/File:Azalea_Town_HGSS.png",
+        "status": "downloaded-not-inspected",
+        "http_status": 200,
+        "sha256": "d7a62b187281e3b23481c974b145b9ebc1bbc8f2e68b012c9fca9324b46bafc1"
+      },
+      "reference_inspected": false,
+      "layout_features": {},
+      "build_status": "not-reconstructed",
+      "reference_matched": false,
+      "black_ledger_additions": [],
+      "technical_deviations": [],
+      "unfinished": [
+        "Trace layout, architecture, collision, entrances and interior references; reconstruct and visually compare; actual emulator tests; owner acceptance."
+      ]
+    },
+    {
+      "area": "Goldenrod City",
+      "reference": {
+        "area": "Goldenrod City",
+        "filename": "Goldenrod_City_HGSS.png",
+        "url": "https://archives.bulbagarden.net/media/upload/6/65/Goldenrod_City_HGSS.png",
+        "page": "https://archives.bulbagarden.net/wiki/File:Goldenrod_City_HGSS.png",
+        "status": "downloaded-not-inspected",
+        "http_status": 200,
+        "sha256": "87428cb29b31b5362413c32f9b47050283ca9125aa489b87c7db0900cf302799"
+      },
+      "reference_inspected": false,
+      "layout_features": {},
+      "build_status": "not-reconstructed",
+      "reference_matched": false,
+      "black_ledger_additions": [],
+      "technical_deviations": [],
+      "unfinished": [
+        "Trace layout, architecture, collision, entrances and interior references; reconstruct and visually compare; actual emulator tests; owner acceptance."
+      ]
+    },
+    {
+      "area": "Olivine City",
+      "reference": {
+        "area": "Olivine City",
+        "filename": "Olivine_City_HGSS.png",
+        "url": "https://archives.bulbagarden.net/media/upload/f/f6/Olivine_City_HGSS.png",
+        "page": "https://archives.bulbagarden.net/wiki/File:Olivine_City_HGSS.png",
+        "status": "downloaded-not-inspected",
+        "http_status": 200,
+        "sha256": "c6a8233c1d2d010115493edb98f23aad4b774a4fe2b891cb7a250bcc42af8b84"
+      },
+      "reference_inspected": false,
+      "layout_features": {},
+      "build_status": "not-reconstructed",
+      "reference_matched": false,
+      "black_ledger_additions": [],
+      "technical_deviations": [],
+      "unfinished": [
+        "Trace layout, architecture, collision, entrances and interior references; reconstruct and visually compare; actual emulator tests; owner acceptance."
+      ]
+    },
+    {
+      "area": "Cianwood City",
+      "reference": {
+        "area": "Cianwood City",
+        "filename": "Cianwood_City_HGSS.png",
+        "url": "https://archives.bulbagarden.net/media/upload/8/8a/Cianwood_City_HGSS.png",
+        "page": "https://archives.bulbagarden.net/wiki/File:Cianwood_City_HGSS.png",
+        "status": "downloaded-not-inspected",
+        "http_status": 200,
+        "sha256": "90d704336f51f868b0b5103bb4a66bc45a305e7a3e7ff163c5a72c50c205d8e1"
+      },
+      "reference_inspected": false,
+      "layout_features": {},
+      "build_status": "not-reconstructed",
+      "reference_matched": false,
+      "black_ledger_additions": [],
+      "technical_deviations": [],
+      "unfinished": [
+        "Trace layout, architecture, collision, entrances and interior references; reconstruct and visually compare; actual emulator tests; owner acceptance."
+      ]
+    },
+    {
+      "area": "Mahogany Town",
+      "reference": {
+        "area": "Mahogany Town",
+        "filename": "Mahogany_Town_HGSS.png",
+        "url": "https://archives.bulbagarden.net/media/upload/9/9f/Mahogany_Town_HGSS.png",
+        "page": "https://archives.bulbagarden.net/wiki/File:Mahogany_Town_HGSS.png",
+        "status": "downloaded-not-inspected",
+        "http_status": 200,
+        "sha256": "553208dbc7af883b0e76eb9df4f5ddbb3590dd155e5d2ae8b0b1b13978cb0a50"
+      },
+      "reference_inspected": false,
+      "layout_features": {},
+      "build_status": "not-reconstructed",
+      "reference_matched": false,
+      "black_ledger_additions": [],
+      "technical_deviations": [],
+      "unfinished": [
+        "Trace layout, architecture, collision, entrances and interior references; reconstruct and visually compare; actual emulator tests; owner acceptance."
+      ]
+    },
+    {
+      "area": "Blackthorn City",
+      "reference": {
+        "area": "Blackthorn City",
+        "filename": "Blackthorn_City_HGSS.png",
+        "url": "https://archives.bulbagarden.net/media/upload/9/96/Blackthorn_City_HGSS.png",
+        "page": "https://archives.bulbagarden.net/wiki/File:Blackthorn_City_HGSS.png",
+        "status": "downloaded-not-inspected",
+        "http_status": 200,
+        "sha256": "2d5affba0ce0e1652ebb75e1af26966ae43192ebd49a9938715569898a0d5877"
+      },
+      "reference_inspected": false,
+      "layout_features": {},
+      "build_status": "not-reconstructed",
+      "reference_matched": false,
+      "black_ledger_additions": [],
+      "technical_deviations": [],
+      "unfinished": [
+        "Trace layout, architecture, collision, entrances and interior references; reconstruct and visually compare; actual emulator tests; owner acceptance."
+      ]
+    },
+    {
+      "area": "Johto Route 29",
+      "reference": {
+        "area": "Johto Route 29",
+        "filename": "Johto_Route_29_HGSS.png",
+        "url": "https://archives.bulbagarden.net/media/upload/5/5c/Johto_Route_29_HGSS.png",
+        "page": "https://archives.bulbagarden.net/wiki/File:Johto_Route_29_HGSS.png",
+        "status": "downloaded-not-inspected",
+        "http_status": 200,
+        "sha256": "e9562b1e1a1aba6edb1cd024f46b44fd1c44aef78a92e48307c9eae5a39885fb"
+      },
+      "reference_inspected": false,
+      "layout_features": {},
+      "build_status": "not-reconstructed",
+      "reference_matched": false,
+      "black_ledger_additions": [],
+      "technical_deviations": [],
+      "unfinished": [
+        "Trace layout, architecture, collision, entrances and interior references; reconstruct and visually compare; actual emulator tests; owner acceptance."
+      ]
+    },
+    {
+      "area": "Johto Route 30",
+      "reference": {
+        "area": "Johto Route 30",
+        "filename": "Johto_Route_30_HGSS.png",
+        "url": "https://archives.bulbagarden.net/media/upload/a/a9/Johto_Route_30_HGSS.png",
+        "page": "https://archives.bulbagarden.net/wiki/File:Johto_Route_30_HGSS.png",
+        "status": "downloaded-not-inspected",
+        "http_status": 200,
+        "sha256": "af12f1338f8a2a2c33bef7b6c0c3ef27e67715ef79b3e091aae3bbaac096ab1d"
+      },
+      "reference_inspected": false,
+      "layout_features": {},
+      "build_status": "not-reconstructed",
+      "reference_matched": false,
+      "black_ledger_additions": [],
+      "technical_deviations": [],
+      "unfinished": [
+        "Trace layout, architecture, collision, entrances and interior references; reconstruct and visually compare; actual emulator tests; owner acceptance."
+      ]
+    },
+    {
+      "area": "Johto Route 31",
+      "reference": {
+        "area": "Johto Route 31",
+        "filename": "Johto_Route_31_HGSS.png",
+        "url": "https://archives.bulbagarden.net/media/upload/d/d8/Johto_Route_31_HGSS.png",
+        "page": "https://archives.bulbagarden.net/wiki/File:Johto_Route_31_HGSS.png",
+        "status": "downloaded-not-inspected",
+        "http_status": 200,
+        "sha256": "f94c72aec1bab8cc1956ed22abdbb35549b084b69b068025db693a66fa3cd4b9"
+      },
+      "reference_inspected": false,
+      "layout_features": {},
+      "build_status": "not-reconstructed",
+      "reference_matched": false,
+      "black_ledger_additions": [],
+      "technical_deviations": [],
+      "unfinished": [
+        "Trace layout, architecture, collision, entrances and interior references; reconstruct and visually compare; actual emulator tests; owner acceptance."
+      ]
+    },
+    {
+      "area": "Johto Route 32",
+      "reference": {
+        "area": "Johto Route 32",
+        "filename": "Johto_Route_32_HGSS.png",
+        "url": "https://archives.bulbagarden.net/media/upload/8/86/Johto_Route_32_HGSS.png",
+        "page": "https://archives.bulbagarden.net/wiki/File:Johto_Route_32_HGSS.png",
+        "status": "downloaded-not-inspected",
+        "http_status": 200,
+        "sha256": "fa619392db7450000b1b6d646c09bdf92296e44a78040b8d76f93604c734a82a"
+      },
+      "reference_inspected": false,
+      "layout_features": {},
+      "build_status": "not-reconstructed",
+      "reference_matched": false,
+      "black_ledger_additions": [],
+      "technical_deviations": [],
+      "unfinished": [
+        "Trace layout, architecture, collision, entrances and interior references; reconstruct and visually compare; actual emulator tests; owner acceptance."
+      ]
+    },
+    {
+      "area": "Johto Route 33",
+      "reference": {
+        "area": "Johto Route 33",
+        "filename": "Johto_Route_33_HGSS.png",
+        "url": "https://archives.bulbagarden.net/media/upload/8/8b/Johto_Route_33_HGSS.png",
+        "page": "https://archives.bulbagarden.net/wiki/File:Johto_Route_33_HGSS.png",
+        "status": "downloaded-not-inspected",
+        "http_status": 200,
+        "sha256": "9da1a75ae264f406499d27ca84618ec6bbf43ac6c2ed9e51addefb4b0e7d91ef"
+      },
+      "reference_inspected": false,
+      "layout_features": {},
+      "build_status": "not-reconstructed",
+      "reference_matched": false,
+      "black_ledger_additions": [],
+      "technical_deviations": [],
+      "unfinished": [
+        "Trace layout, architecture, collision, entrances and interior references; reconstruct and visually compare; actual emulator tests; owner acceptance."
+      ]
+    },
+    {
+      "area": "Johto Route 34",
+      "reference": {
+        "area": "Johto Route 34",
+        "filename": "Johto_Route_34_HGSS.png",
+        "url": "https://archives.bulbagarden.net/media/upload/1/1f/Johto_Route_34_HGSS.png",
+        "page": "https://archives.bulbagarden.net/wiki/File:Johto_Route_34_HGSS.png",
+        "status": "downloaded-not-inspected",
+        "http_status": 200,
+        "sha256": "6ec8914e641b800031337e63f477c14c863283aa388e3d377b3457507c30b354"
+      },
+      "reference_inspected": false,
+      "layout_features": {},
+      "build_status": "not-reconstructed",
+      "reference_matched": false,
+      "black_ledger_additions": [],
+      "technical_deviations": [],
+      "unfinished": [
+        "Trace layout, architecture, collision, entrances and interior references; reconstruct and visually compare; actual emulator tests; owner acceptance."
+      ]
+    },
+    {
+      "area": "Johto Route 35",
+      "reference": {
+        "area": "Johto Route 35",
+        "filename": "Johto_Route_35_HGSS.png",
+        "url": "https://archives.bulbagarden.net/media/upload/d/d5/Johto_Route_35_HGSS.png",
+        "page": "https://archives.bulbagarden.net/wiki/File:Johto_Route_35_HGSS.png",
+        "status": "downloaded-not-inspected",
+        "http_status": 200,
+        "sha256": "c2eb6a95153dc92e0684d2b901d93b87255bffba342e9177a74c75e1818ac9e9"
+      },
+      "reference_inspected": false,
+      "layout_features": {},
+      "build_status": "not-reconstructed",
+      "reference_matched": false,
+      "black_ledger_additions": [],
+      "technical_deviations": [],
+      "unfinished": [
+        "Trace layout, architecture, collision, entrances and interior references; reconstruct and visually compare; actual emulator tests; owner acceptance."
+      ]
+    },
+    {
+      "area": "Johto Route 36",
+      "reference": {
+        "area": "Johto Route 36",
+        "filename": "Johto_Route_36_HGSS.png",
+        "url": "https://archives.bulbagarden.net/media/upload/c/c2/Johto_Route_36_HGSS.png",
+        "page": "https://archives.bulbagarden.net/wiki/File:Johto_Route_36_HGSS.png",
+        "status": "downloaded-not-inspected",
+        "http_status": 200,
+        "sha256": "886c3c2c77607787eed73d0009a59e29cfea1b248c6f23090b6666628a36773b"
+      },
+      "reference_inspected": false,
+      "layout_features": {},
+      "build_status": "not-reconstructed",
+      "reference_matched": false,
+      "black_ledger_additions": [],
+      "technical_deviations": [],
+      "unfinished": [
+        "Trace layout, architecture, collision, entrances and interior references; reconstruct and visually compare; actual emulator tests; owner acceptance."
+      ]
+    },
+    {
+      "area": "Johto Route 37",
+      "reference": {
+        "area": "Johto Route 37",
+        "filename": "Johto_Route_37_HGSS.png",
+        "url": "https://archives.bulbagarden.net/media/upload/1/11/Johto_Route_37_HGSS.png",
+        "page": "https://archives.bulbagarden.net/wiki/File:Johto_Route_37_HGSS.png",
+        "status": "downloaded-not-inspected",
+        "http_status": 200,
+        "sha256": "def2b2aa8bb65f63d9b096a8953230743e9fb7a0b1574a84695265f548cb0b15"
+      },
+      "reference_inspected": false,
+      "layout_features": {},
+      "build_status": "not-reconstructed",
+      "reference_matched": false,
+      "black_ledger_additions": [],
+      "technical_deviations": [],
+      "unfinished": [
+        "Trace layout, architecture, collision, entrances and interior references; reconstruct and visually compare; actual emulator tests; owner acceptance."
+      ]
+    },
+    {
+      "area": "Johto Route 38",
+      "reference": {
+        "area": "Johto Route 38",
+        "filename": "Johto_Route_38_HGSS.png",
+        "url": "https://archives.bulbagarden.net/media/upload/6/64/Johto_Route_38_HGSS.png",
+        "page": "https://archives.bulbagarden.net/wiki/File:Johto_Route_38_HGSS.png",
+        "status": "downloaded-not-inspected",
+        "http_status": 200,
+        "sha256": "836db0b047a145772dfeed6414172da03d2b9773a5a1516be387c716dff6b765"
+      },
+      "reference_inspected": false,
+      "layout_features": {},
+      "build_status": "not-reconstructed",
+      "reference_matched": false,
+      "black_ledger_additions": [],
+      "technical_deviations": [],
+      "unfinished": [
+        "Trace layout, architecture, collision, entrances and interior references; reconstruct and visually compare; actual emulator tests; owner acceptance."
+      ]
+    },
+    {
+      "area": "Johto Route 39",
+      "reference": {
+        "area": "Johto Route 39",
+        "filename": "Johto_Route_39_HGSS.png",
+        "url": "https://archives.bulbagarden.net/media/upload/0/08/Johto_Route_39_HGSS.png",
+        "page": "https://archives.bulbagarden.net/wiki/File:Johto_Route_39_HGSS.png",
+        "status": "downloaded-not-inspected",
+        "http_status": 200,
+        "sha256": "cc3a2a4e98a240d16fd27483465b66012cc846ff45b781f84954e21bc940a649"
+      },
+      "reference_inspected": false,
+      "layout_features": {},
+      "build_status": "not-reconstructed",
+      "reference_matched": false,
+      "black_ledger_additions": [],
+      "technical_deviations": [],
+      "unfinished": [
+        "Trace layout, architecture, collision, entrances and interior references; reconstruct and visually compare; actual emulator tests; owner acceptance."
+      ]
+    },
+    {
+      "area": "Johto Route 40",
+      "reference": {
+        "area": "Johto Route 40",
+        "filename": "Johto_Route_40_HGSS.png",
+        "url": "https://archives.bulbagarden.net/media/upload/6/69/Johto_Route_40_HGSS.png",
+        "page": "https://archives.bulbagarden.net/wiki/File:Johto_Route_40_HGSS.png",
+        "status": "downloaded-not-inspected",
+        "http_status": 200,
+        "sha256": "8139af6b9f1715f7e24425fc9cc494225135e09b28239b0b63d630c1dc5c12c7"
+      },
+      "reference_inspected": false,
+      "layout_features": {},
+      "build_status": "not-reconstructed",
+      "reference_matched": false,
+      "black_ledger_additions": [],
+      "technical_deviations": [],
+      "unfinished": [
+        "Trace layout, architecture, collision, entrances and interior references; reconstruct and visually compare; actual emulator tests; owner acceptance."
+      ]
+    },
+    {
+      "area": "Johto Route 41",
+      "reference": {
+        "area": "Johto Route 41",
+        "filename": "Johto_Route_41_HGSS.png",
+        "url": "https://archives.bulbagarden.net/media/upload/8/8e/Johto_Route_41_HGSS.png",
+        "page": "https://archives.bulbagarden.net/wiki/File:Johto_Route_41_HGSS.png",
+        "status": "downloaded-not-inspected",
+        "http_status": 200,
+        "sha256": "229559cb4ebd77f1a9a5accd6537d2c6ffbdfd025c908c09de97312ebe464291"
+      },
+      "reference_inspected": false,
+      "layout_features": {},
+      "build_status": "not-reconstructed",
+      "reference_matched": false,
+      "black_ledger_additions": [],
+      "technical_deviations": [],
+      "unfinished": [
+        "Trace layout, architecture, collision, entrances and interior references; reconstruct and visually compare; actual emulator tests; owner acceptance."
+      ]
+    },
+    {
+      "area": "Johto Route 42",
+      "reference": {
+        "area": "Johto Route 42",
+        "filename": "Johto_Route_42_HGSS.png",
+        "url": "https://archives.bulbagarden.net/media/upload/f/fa/Johto_Route_42_HGSS.png",
+        "page": "https://archives.bulbagarden.net/wiki/File:Johto_Route_42_HGSS.png",
+        "status": "downloaded-not-inspected",
+        "http_status": 200,
+        "sha256": "a97c0ebe330969a1f43a64dcdeed1408aea0742c9ba157ea3f33081581f64448"
+      },
+      "reference_inspected": false,
+      "layout_features": {},
+      "build_status": "not-reconstructed",
+      "reference_matched": false,
+      "black_ledger_additions": [],
+      "technical_deviations": [],
+      "unfinished": [
+        "Trace layout, architecture, collision, entrances and interior references; reconstruct and visually compare; actual emulator tests; owner acceptance."
+      ]
+    },
+    {
+      "area": "Johto Route 43",
+      "reference": {
+        "area": "Johto Route 43",
+        "filename": "Johto_Route_43_HGSS.png",
+        "url": "https://archives.bulbagarden.net/media/upload/5/5a/Johto_Route_43_HGSS.png",
+        "page": "https://archives.bulbagarden.net/wiki/File:Johto_Route_43_HGSS.png",
+        "status": "downloaded-not-inspected",
+        "http_status": 200,
+        "sha256": "db1f20595326ad7e458c7f427a47539c8ec77ba617bf3a8a7ad2d04fd8b7756b"
+      },
+      "reference_inspected": false,
+      "layout_features": {},
+      "build_status": "not-reconstructed",
+      "reference_matched": false,
+      "black_ledger_additions": [],
+      "technical_deviations": [],
+      "unfinished": [
+        "Trace layout, architecture, collision, entrances and interior references; reconstruct and visually compare; actual emulator tests; owner acceptance."
+      ]
+    },
+    {
+      "area": "Johto Route 44",
+      "reference": {
+        "area": "Johto Route 44",
+        "filename": "Johto_Route_44_HGSS.png",
+        "url": "https://archives.bulbagarden.net/media/upload/3/31/Johto_Route_44_HGSS.png",
+        "page": "https://archives.bulbagarden.net/wiki/File:Johto_Route_44_HGSS.png",
+        "status": "downloaded-not-inspected",
+        "http_status": 200,
+        "sha256": "97093128d460c865e733043e04d257b1a15560452c95d383ccf0de9cec18bf33"
+      },
+      "reference_inspected": false,
+      "layout_features": {},
+      "build_status": "not-reconstructed",
+      "reference_matched": false,
+      "black_ledger_additions": [],
+      "technical_deviations": [],
+      "unfinished": [
+        "Trace layout, architecture, collision, entrances and interior references; reconstruct and visually compare; actual emulator tests; owner acceptance."
+      ]
+    },
+    {
+      "area": "Johto Route 45",
+      "reference": {
+        "area": "Johto Route 45",
+        "filename": "Johto_Route_45_HGSS.png",
+        "url": "https://archives.bulbagarden.net/media/upload/a/a4/Johto_Route_45_HGSS.png",
+        "page": "https://archives.bulbagarden.net/wiki/File:Johto_Route_45_HGSS.png",
+        "status": "downloaded-not-inspected",
+        "http_status": 200,
+        "sha256": "a334f5144036253210bad270e55a72e8967a2104c00713abce54d592aeff4f2f"
+      },
+      "reference_inspected": false,
+      "layout_features": {},
+      "build_status": "not-reconstructed",
+      "reference_matched": false,
+      "black_ledger_additions": [],
+      "technical_deviations": [],
+      "unfinished": [
+        "Trace layout, architecture, collision, entrances and interior references; reconstruct and visually compare; actual emulator tests; owner acceptance."
+      ]
+    },
+    {
+      "area": "Johto Route 46",
+      "reference": {
+        "area": "Johto Route 46",
+        "filename": "Johto_Route_46_HGSS.png",
+        "url": "https://archives.bulbagarden.net/media/upload/e/e4/Johto_Route_46_HGSS.png",
+        "page": "https://archives.bulbagarden.net/wiki/File:Johto_Route_46_HGSS.png",
+        "status": "downloaded-not-inspected",
+        "http_status": 200,
+        "sha256": "a9589700a445d83829ad36de17da87723aa7125dcda27238ec197d746278dfe0"
+      },
+      "reference_inspected": false,
+      "layout_features": {},
+      "build_status": "not-reconstructed",
+      "reference_matched": false,
+      "black_ledger_additions": [],
+      "technical_deviations": [],
+      "unfinished": [
+        "Trace layout, architecture, collision, entrances and interior references; reconstruct and visually compare; actual emulator tests; owner acceptance."
+      ]
+    },
+    {
+      "area": "Johto Route 47",
+      "reference": {
+        "area": "Johto Route 47",
+        "filename": "Johto_Route_47_HGSS.png",
+        "url": "https://archives.bulbagarden.net/media/upload/8/83/Johto_Route_47_HGSS.png",
+        "page": "https://archives.bulbagarden.net/wiki/File:Johto_Route_47_HGSS.png",
+        "status": "downloaded-not-inspected",
+        "http_status": 200,
+        "sha256": "4f81353599b49f8cf7e5dffc61bb7cdc138531f3c16b069000615f48f59d6740"
+      },
+      "reference_inspected": false,
+      "layout_features": {},
+      "build_status": "not-reconstructed",
+      "reference_matched": false,
+      "black_ledger_additions": [],
+      "technical_deviations": [],
+      "unfinished": [
+        "Trace layout, architecture, collision, entrances and interior references; reconstruct and visually compare; actual emulator tests; owner acceptance."
+      ]
+    },
+    {
+      "area": "Johto Route 48",
+      "reference": {
+        "area": "Johto Route 48",
+        "filename": "Johto_Route_48_HGSS.png",
+        "url": "https://archives.bulbagarden.net/media/upload/0/08/Johto_Route_48_HGSS.png",
+        "page": "https://archives.bulbagarden.net/wiki/File:Johto_Route_48_HGSS.png",
+        "status": "downloaded-not-inspected",
+        "http_status": 200,
+        "sha256": "267b3623ecd454a18389974a76e7e15aa4be9ff5a5537bd77432e0795b390715"
+      },
+      "reference_inspected": false,
+      "layout_features": {},
+      "build_status": "not-reconstructed",
+      "reference_matched": false,
+      "black_ledger_additions": [],
+      "technical_deviations": [],
+      "unfinished": [
+        "Trace layout, architecture, collision, entrances and interior references; reconstruct and visually compare; actual emulator tests; owner acceptance."
+      ]
+    },
+    {
+      "area": "Bellchime Trail",
+      "reference": {
+        "area": "Bellchime Trail",
+        "filename": "Bellchime_Trail_HGSS.png",
+        "url": "https://archives.bulbagarden.net/media/upload/8/8c/Bellchime_Trail_HGSS.png",
+        "page": "https://archives.bulbagarden.net/wiki/File:Bellchime_Trail_HGSS.png",
+        "status": "downloaded-not-inspected",
+        "http_status": 200,
+        "sha256": "021ffa24b760e1f781362b2875fae8140294f8790f58f167524de345b0fca1c5"
+      },
+      "reference_inspected": true,
+      "layout_features": {},
+      "build_status": "not-reconstructed",
+      "reference_matched": false,
+      "black_ledger_additions": [],
+      "technical_deviations": [],
+      "unfinished": [
+        "Trace layout, architecture, collision, entrances and interior references; reconstruct and visually compare; actual emulator tests; owner acceptance."
+      ]
+    },
+    {
+      "area": "Burned Tower",
+      "reference": {
+        "area": "Burned Tower",
+        "status": "download-failed",
+        "error": "HTTPError"
+      },
+      "reference_inspected": false,
+      "layout_features": {},
+      "build_status": "not-reconstructed",
+      "reference_matched": false,
+      "black_ledger_additions": [],
+      "technical_deviations": [],
+      "unfinished": [
+        "Trace layout, architecture, collision, entrances and interior references; reconstruct and visually compare; actual emulator tests; owner acceptance."
+      ]
+    },
+    {
+      "area": "Bell Tower",
+      "reference": {
+        "area": "Bell Tower",
+        "filename": "Bell_Tower_HGSS.png",
+        "url": "https://archives.bulbagarden.net/media/upload/1/1a/Bell_Tower_HGSS.png",
+        "page": "https://archives.bulbagarden.net/wiki/File:Bell_Tower_HGSS.png",
+        "status": "downloaded-not-inspected",
+        "http_status": 200,
+        "sha256": "8394c765320cf8d211a97c2aa0322d8749a1154caeb20fa6a8034b50fc083ae0"
+      },
+      "reference_inspected": true,
+      "layout_features": {},
+      "build_status": "not-reconstructed",
+      "reference_matched": false,
+      "black_ledger_additions": [],
+      "technical_deviations": [],
+      "unfinished": [
+        "Trace layout, architecture, collision, entrances and interior references; reconstruct and visually compare; actual emulator tests; owner acceptance."
+      ]
+    },
+    {
+      "area": "National Park",
+      "reference": {
+        "area": "National Park",
+        "filename": "National_Park_HGSS.png",
+        "url": "https://archives.bulbagarden.net/media/upload/2/2c/National_Park_HGSS.png",
+        "page": "https://archives.bulbagarden.net/wiki/File:National_Park_HGSS.png",
+        "status": "downloaded-not-inspected",
+        "http_status": 200,
+        "sha256": "6c62d5b59facedd0824d33619ca0c8071b566957c644e2bf0de154c91eb0da0f"
+      },
+      "reference_inspected": false,
+      "layout_features": {},
+      "build_status": "not-reconstructed",
+      "reference_matched": false,
+      "black_ledger_additions": [],
+      "technical_deviations": [],
+      "unfinished": [
+        "Trace layout, architecture, collision, entrances and interior references; reconstruct and visually compare; actual emulator tests; owner acceptance."
+      ]
+    },
+    {
+      "area": "Ruins of Alph",
+      "reference": {
+        "area": "Ruins of Alph",
+        "status": "download-failed",
+        "error": "HTTPError"
+      },
+      "reference_inspected": false,
+      "layout_features": {},
+      "build_status": "not-reconstructed",
+      "reference_matched": false,
+      "black_ledger_additions": [],
+      "technical_deviations": [],
+      "unfinished": [
+        "Trace layout, architecture, collision, entrances and interior references; reconstruct and visually compare; actual emulator tests; owner acceptance."
+      ]
+    },
+    {
+      "area": "Union Cave",
+      "reference": {
+        "area": "Union Cave",
+        "status": "download-failed",
+        "error": "HTTPError"
+      },
+      "reference_inspected": false,
+      "layout_features": {},
+      "build_status": "not-reconstructed",
+      "reference_matched": false,
+      "black_ledger_additions": [],
+      "technical_deviations": [],
+      "unfinished": [
+        "Trace layout, architecture, collision, entrances and interior references; reconstruct and visually compare; actual emulator tests; owner acceptance."
+      ]
+    },
+    {
+      "area": "Ilex Forest",
+      "reference": {
+        "area": "Ilex Forest",
+        "filename": "Ilex_Forest_HGSS.png",
+        "url": "https://archives.bulbagarden.net/media/upload/6/6c/Ilex_Forest_HGSS.png",
+        "page": "https://archives.bulbagarden.net/wiki/File:Ilex_Forest_HGSS.png",
+        "status": "downloaded-not-inspected",
+        "http_status": 200,
+        "sha256": "c2a0263ee3d8ae227a0f4867fc8026e92120db1819b3ea2b4a6a6d5ba2c4620e"
+      },
+      "reference_inspected": false,
+      "layout_features": {},
+      "build_status": "not-reconstructed",
+      "reference_matched": false,
+      "black_ledger_additions": [],
+      "technical_deviations": [],
+      "unfinished": [
+        "Trace layout, architecture, collision, entrances and interior references; reconstruct and visually compare; actual emulator tests; owner acceptance."
+      ]
+    },
+    {
+      "area": "Whirl Islands",
+      "reference": {
+        "area": "Whirl Islands",
+        "status": "download-failed",
+        "error": "HTTPError"
+      },
+      "reference_inspected": false,
+      "layout_features": {},
+      "build_status": "not-reconstructed",
+      "reference_matched": false,
+      "black_ledger_additions": [],
+      "technical_deviations": [],
+      "unfinished": [
+        "Trace layout, architecture, collision, entrances and interior references; reconstruct and visually compare; actual emulator tests; owner acceptance."
+      ]
+    },
+    {
+      "area": "Mt. Mortar",
+      "reference": {
+        "area": "Mt. Mortar",
+        "status": "download-failed",
+        "error": "HTTPError"
+      },
+      "reference_inspected": false,
+      "layout_features": {},
+      "build_status": "not-reconstructed",
+      "reference_matched": false,
+      "black_ledger_additions": [],
+      "technical_deviations": [],
+      "unfinished": [
+        "Trace layout, architecture, collision, entrances and interior references; reconstruct and visually compare; actual emulator tests; owner acceptance."
+      ]
+    },
+    {
+      "area": "Lake of Rage",
+      "reference": {
+        "area": "Lake of Rage",
+        "filename": "Lake_of_Rage_HGSS.png",
+        "url": "https://archives.bulbagarden.net/media/upload/f/f9/Lake_of_Rage_HGSS.png",
+        "page": "https://archives.bulbagarden.net/wiki/File:Lake_of_Rage_HGSS.png",
+        "status": "downloaded-not-inspected",
+        "http_status": 200,
+        "sha256": "6c45f659287ee44dfa09bf7552b85b79bec4c788e2fdfe785955ca2f5fe1e281"
+      },
+      "reference_inspected": false,
+      "layout_features": {},
+      "build_status": "not-reconstructed",
+      "reference_matched": false,
+      "black_ledger_additions": [],
+      "technical_deviations": [],
+      "unfinished": [
+        "Trace layout, architecture, collision, entrances and interior references; reconstruct and visually compare; actual emulator tests; owner acceptance."
+      ]
+    },
+    {
+      "area": "Ice Path",
+      "reference": {
+        "area": "Ice Path",
+        "status": "download-failed",
+        "error": "HTTPError"
+      },
+      "reference_inspected": false,
+      "layout_features": {},
+      "build_status": "not-reconstructed",
+      "reference_matched": false,
+      "black_ledger_additions": [],
+      "technical_deviations": [],
+      "unfinished": [
+        "Trace layout, architecture, collision, entrances and interior references; reconstruct and visually compare; actual emulator tests; owner acceptance."
+      ]
+    },
+    {
+      "area": "Dragon's Den",
+      "reference": {
+        "area": "Dragon's Den",
+        "status": "download-failed",
+        "error": "HTTPError"
+      },
+      "reference_inspected": false,
+      "layout_features": {},
+      "build_status": "not-reconstructed",
+      "reference_matched": false,
+      "black_ledger_additions": [],
+      "technical_deviations": [],
+      "unfinished": [
+        "Trace layout, architecture, collision, entrances and interior references; reconstruct and visually compare; actual emulator tests; owner acceptance."
+      ]
+    },
+    {
+      "area": "Dark Cave",
+      "reference": {
+        "area": "Dark Cave",
+        "status": "download-failed",
+        "error": "HTTPError"
+      },
+      "reference_inspected": false,
+      "layout_features": {},
+      "build_status": "not-reconstructed",
+      "reference_matched": false,
+      "black_ledger_additions": [],
+      "technical_deviations": [],
+      "unfinished": [
+        "Trace layout, architecture, collision, entrances and interior references; reconstruct and visually compare; actual emulator tests; owner acceptance."
+      ]
+    },
+    {
+      "area": "Slowpoke Well",
+      "reference": {
+        "area": "Slowpoke Well",
+        "filename": "Slowpoke_Well_HGSS.png",
+        "url": "https://archives.bulbagarden.net/media/upload/e/e6/Slowpoke_Well_HGSS.png",
+        "page": "https://archives.bulbagarden.net/wiki/File:Slowpoke_Well_HGSS.png",
+        "status": "downloaded-not-inspected",
+        "http_status": 200,
+        "sha256": "303e48972e65665e696b004955374f391e7e888f5995cfd36567e30aa29196eb"
+      },
+      "reference_inspected": false,
+      "layout_features": {},
+      "build_status": "not-reconstructed",
+      "reference_matched": false,
+      "black_ledger_additions": [],
+      "technical_deviations": [],
+      "unfinished": [
+        "Trace layout, architecture, collision, entrances and interior references; reconstruct and visually compare; actual emulator tests; owner acceptance."
+      ]
+    },
+    {
+      "area": "Ecruteak Gym Exterior HGSS screenshot",
+      "reference": {
+        "area": "Ecruteak Gym Exterior HGSS screenshot",
+        "filename": "Ecruteak_Gym_Exterior_HGSS_screenshot.png",
+        "url": "https://archives.bulbagarden.net/media/upload/d/dd/Ecruteak_Gym_Exterior_HGSS_screenshot.png",
+        "page": "https://archives.bulbagarden.net/wiki/File:Ecruteak_Gym_Exterior_HGSS_screenshot.png",
+        "status": "downloaded-not-inspected",
+        "http_status": 200,
+        "sha256": "0af23eb9b0cd23f7cb9f8818c536876fa56da89e2e1d1979eaaf38330c27da4e"
+      },
+      "reference_inspected": true,
+      "layout_features": {},
+      "build_status": "not-reconstructed",
+      "reference_matched": false,
+      "black_ledger_additions": [],
+      "technical_deviations": [],
+      "unfinished": [
+        "Trace layout, architecture, collision, entrances and interior references; reconstruct and visually compare; actual emulator tests; owner acceptance."
+      ]
+    }
+  ],
+  "map_coverage": [
+    {
+      "name": "OlivineCity",
+      "map_group": 75,
+      "map_num": 0,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "OlivineCity_Residence",
+      "map_group": 75,
+      "map_num": 1,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "OlivineCity_NeighborHouse",
+      "map_group": 75,
+      "map_num": 2,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "OlivineCity_Gym",
+      "map_group": 75,
+      "map_num": 3,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "OlivineCity_PokemonCenter_1F",
+      "map_group": 75,
+      "map_num": 4,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "OlivineCity_Mart",
+      "map_group": 75,
+      "map_num": 5,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "OlivineCity_SilphOffice",
+      "map_group": 75,
+      "map_num": 6,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "OlivineCity_HarborOffice",
+      "map_group": 75,
+      "map_num": 7,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "JohtoRoute39",
+      "map_group": 75,
+      "map_num": 8,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "JohtoRoute38",
+      "map_group": 75,
+      "map_num": 9,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "EcruteakCity",
+      "map_group": 75,
+      "map_num": 10,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "EcruteakCity_BurnedTower",
+      "map_group": 75,
+      "map_num": 11,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "EcruteakCity_BellTower",
+      "map_group": 75,
+      "map_num": 12,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "EcruteakCity_Residence",
+      "map_group": 75,
+      "map_num": 13,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "EcruteakCity_DanceTheater",
+      "map_group": 75,
+      "map_num": 14,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "EcruteakCity_Gym",
+      "map_group": 75,
+      "map_num": 15,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "EcruteakCity_PokemonCenter_1F",
+      "map_group": 75,
+      "map_num": 16,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "EcruteakCity_Mart",
+      "map_group": 75,
+      "map_num": 17,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "OlivineCity_Lighthouse_1F",
+      "map_group": 75,
+      "map_num": 18,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "OlivineCity_Lighthouse_2F",
+      "map_group": 75,
+      "map_num": 19,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "OlivineCity_Lighthouse_3F",
+      "map_group": 75,
+      "map_num": 20,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "OlivineCity_Lighthouse_4F",
+      "map_group": 75,
+      "map_num": 21,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "OlivineCity_Lighthouse_5F",
+      "map_group": 75,
+      "map_num": 22,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "OlivineCity_Lighthouse_6F",
+      "map_group": 75,
+      "map_num": 23,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "EcruteakCity_BellTower_2F",
+      "map_group": 75,
+      "map_num": 24,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "EcruteakCity_BellTower_3F",
+      "map_group": 75,
+      "map_num": 25,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "EcruteakCity_BellTower_4F",
+      "map_group": 75,
+      "map_num": 26,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "EcruteakCity_BellTower_5F",
+      "map_group": 75,
+      "map_num": 27,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "EcruteakCity_BellTower_6F",
+      "map_group": 75,
+      "map_num": 28,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "EcruteakCity_BellTower_7F",
+      "map_group": 75,
+      "map_num": 29,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "EcruteakCity_BellTower_8F",
+      "map_group": 75,
+      "map_num": 30,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "EcruteakCity_BellTower_9F",
+      "map_group": 75,
+      "map_num": 31,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "EcruteakCity_BurnedTower_B1F",
+      "map_group": 75,
+      "map_num": 32,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "OlivineCity_Gym_Arena",
+      "map_group": 75,
+      "map_num": 33,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "EcruteakCity_Gym_Arena",
+      "map_group": 75,
+      "map_num": 34,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "JohtoRoute39_FarmHouse",
+      "map_group": 75,
+      "map_num": 35,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "JohtoRoute39_Barn",
+      "map_group": 75,
+      "map_num": 36,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "GoldenrodCity",
+      "map_group": 75,
+      "map_num": 37,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "GoldenrodCity_PokemonCenter_1F",
+      "map_group": 75,
+      "map_num": 38,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "GoldenrodCity_Mart",
+      "map_group": 75,
+      "map_num": 39,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "GoldenrodCity_Gym",
+      "map_group": 75,
+      "map_num": 40,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "GoldenrodCity_Residence",
+      "map_group": 75,
+      "map_num": 41,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "GoldenrodCity_Workshop",
+      "map_group": 75,
+      "map_num": 42,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "VioletCity",
+      "map_group": 75,
+      "map_num": 43,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "VioletCity_PokemonCenter_1F",
+      "map_group": 75,
+      "map_num": 44,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "VioletCity_Mart",
+      "map_group": 75,
+      "map_num": 45,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "VioletCity_Gym",
+      "map_group": 75,
+      "map_num": 46,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "VioletCity_Residence",
+      "map_group": 75,
+      "map_num": 47,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "VioletCity_Workshop",
+      "map_group": 75,
+      "map_num": 48,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "JohtoRoute37",
+      "map_group": 75,
+      "map_num": 49,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "JohtoRoute36",
+      "map_group": 75,
+      "map_num": 50,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "JohtoRoute35",
+      "map_group": 75,
+      "map_num": 51,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "NationalPark",
+      "map_group": 75,
+      "map_num": 52,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "RuinsOfAlph",
+      "map_group": 75,
+      "map_num": 53,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "SproutTower_1F",
+      "map_group": 75,
+      "map_num": 54,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "SproutTower_2F",
+      "map_group": 75,
+      "map_num": 55,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "SproutTower_3F",
+      "map_group": 75,
+      "map_num": 56,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "AlphChambers_1F",
+      "map_group": 75,
+      "map_num": 57,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "AlphChambers_2F",
+      "map_group": 75,
+      "map_num": 58,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "AlphChambers_3F",
+      "map_group": 75,
+      "map_num": 59,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "GoldenrodDepartmentStore",
+      "map_group": 75,
+      "map_num": 60,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "GoldenrodUnderground",
+      "map_group": 75,
+      "map_num": 61,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "GoldenrodRadioLobby",
+      "map_group": 75,
+      "map_num": 62,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "VioletAcademy",
+      "map_group": 75,
+      "map_num": 63,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "AzaleaTown",
+      "map_group": 75,
+      "map_num": 64,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "AzaleaTown_PokemonCenter_1F",
+      "map_group": 75,
+      "map_num": 65,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "AzaleaTown_Mart",
+      "map_group": 75,
+      "map_num": 66,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "AzaleaTown_Gym",
+      "map_group": 75,
+      "map_num": 67,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "AzaleaTown_Residence",
+      "map_group": 75,
+      "map_num": 68,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "AzaleaTown_Workshop",
+      "map_group": 75,
+      "map_num": 69,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "CherrygroveCity",
+      "map_group": 75,
+      "map_num": 70,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "CherrygroveCity_PokemonCenter_1F",
+      "map_group": 75,
+      "map_num": 71,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "CherrygroveCity_Mart",
+      "map_group": 75,
+      "map_num": 72,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "CherrygroveCity_Gym",
+      "map_group": 75,
+      "map_num": 73,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "CherrygroveCity_Residence",
+      "map_group": 75,
+      "map_num": 74,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "CherrygroveCity_Workshop",
+      "map_group": 75,
+      "map_num": 75,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "NewBarkTown",
+      "map_group": 75,
+      "map_num": 76,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "NewBarkTown_PokemonCenter_1F",
+      "map_group": 75,
+      "map_num": 77,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "NewBarkTown_Mart",
+      "map_group": 75,
+      "map_num": 78,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "NewBarkTown_Gym",
+      "map_group": 75,
+      "map_num": 79,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "NewBarkTown_Residence",
+      "map_group": 75,
+      "map_num": 80,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "NewBarkTown_Workshop",
+      "map_group": 75,
+      "map_num": 81,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "JohtoRoute34",
+      "map_group": 75,
+      "map_num": 82,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "JohtoRoute33",
+      "map_group": 75,
+      "map_num": 83,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "JohtoRoute32",
+      "map_group": 75,
+      "map_num": 84,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "JohtoRoute31",
+      "map_group": 75,
+      "map_num": 85,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "JohtoRoute30",
+      "map_group": 75,
+      "map_num": 86,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "JohtoRoute29",
+      "map_group": 75,
+      "map_num": 87,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "IlexForest",
+      "map_group": 75,
+      "map_num": 88,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "UnionCave_1F",
+      "map_group": 75,
+      "map_num": 89,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "UnionCave_2F",
+      "map_group": 75,
+      "map_num": 90,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "UnionCave_3F",
+      "map_group": 75,
+      "map_num": 91,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "SlowpokeWell_1F",
+      "map_group": 75,
+      "map_num": 92,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "SlowpokeWell_2F",
+      "map_group": 75,
+      "map_num": 93,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "TohjoFalls_1F",
+      "map_group": 75,
+      "map_num": 94,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "TohjoFalls_2F",
+      "map_group": 75,
+      "map_num": 95,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "NewBarkLab",
+      "map_group": 75,
+      "map_num": 96,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "MahoganyTown",
+      "map_group": 75,
+      "map_num": 97,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "MahoganyTown_PokemonCenter_1F",
+      "map_group": 75,
+      "map_num": 98,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "MahoganyTown_Mart",
+      "map_group": 75,
+      "map_num": 99,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "MahoganyTown_Gym",
+      "map_group": 75,
+      "map_num": 100,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "MahoganyTown_Residence",
+      "map_group": 75,
+      "map_num": 101,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "MahoganyTown_Workshop",
+      "map_group": 75,
+      "map_num": 102,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "BlackthornCity",
+      "map_group": 75,
+      "map_num": 103,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "BlackthornCity_PokemonCenter_1F",
+      "map_group": 75,
+      "map_num": 104,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "BlackthornCity_Mart",
+      "map_group": 75,
+      "map_num": 105,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "BlackthornCity_Gym",
+      "map_group": 75,
+      "map_num": 106,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "BlackthornCity_Residence",
+      "map_group": 75,
+      "map_num": 107,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "BlackthornCity_Workshop",
+      "map_group": 75,
+      "map_num": 108,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "JohtoRoute46",
+      "map_group": 75,
+      "map_num": 109,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "JohtoRoute45",
+      "map_group": 75,
+      "map_num": 110,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "JohtoRoute42",
+      "map_group": 75,
+      "map_num": 111,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "JohtoRoute43",
+      "map_group": 75,
+      "map_num": 112,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "JohtoRoute44",
+      "map_group": 75,
+      "map_num": 113,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "LakeOfRage",
+      "map_group": 75,
+      "map_num": 114,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "DarkCave_1F",
+      "map_group": 75,
+      "map_num": 115,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "DarkCave_2F",
+      "map_group": 75,
+      "map_num": 116,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "DarkCave_3F",
+      "map_group": 75,
+      "map_num": 117,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "MtMortar_1F",
+      "map_group": 75,
+      "map_num": 118,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "MtMortar_2F",
+      "map_group": 75,
+      "map_num": 119,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "MtMortar_3F",
+      "map_group": 75,
+      "map_num": 120,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "MtMortar_4F",
+      "map_group": 75,
+      "map_num": 121,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "IcePath_1F",
+      "map_group": 75,
+      "map_num": 122,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "IcePath_2F",
+      "map_group": 75,
+      "map_num": 123,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "IcePath_3F",
+      "map_group": 75,
+      "map_num": 124,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "IcePath_4F",
+      "map_group": 75,
+      "map_num": 125,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "DragonsDen_1F",
+      "map_group": 75,
+      "map_num": 126,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "DragonsDen_2F",
+      "map_group": 76,
+      "map_num": 0,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "CianwoodCity",
+      "map_group": 76,
+      "map_num": 1,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "CianwoodCity_PokemonCenter_1F",
+      "map_group": 76,
+      "map_num": 2,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "CianwoodCity_Mart",
+      "map_group": 76,
+      "map_num": 3,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "CianwoodCity_Gym",
+      "map_group": 76,
+      "map_num": 4,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "CianwoodCity_Residence",
+      "map_group": 76,
+      "map_num": 5,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "CianwoodCity_Workshop",
+      "map_group": 76,
+      "map_num": 6,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "JohtoRoute40",
+      "map_group": 76,
+      "map_num": 7,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "JohtoRoute41",
+      "map_group": 76,
+      "map_num": 8,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "JohtoRoute47",
+      "map_group": 76,
+      "map_num": 9,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "JohtoRoute48",
+      "map_group": 76,
+      "map_num": 10,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "SafariZoneGate",
+      "map_group": 76,
+      "map_num": 11,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "SafariWetlands",
+      "map_group": 76,
+      "map_num": 12,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "WhirlIslands_1F",
+      "map_group": 76,
+      "map_num": 13,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "WhirlIslands_2F",
+      "map_group": 76,
+      "map_num": 14,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "WhirlIslands_3F",
+      "map_group": 76,
+      "map_num": 15,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "WhirlIslands_4F",
+      "map_group": 76,
+      "map_num": 16,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "CliffEdgeGate_1F",
+      "map_group": 76,
+      "map_num": 17,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "CliffCave_1F",
+      "map_group": 76,
+      "map_num": 18,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "CliffCave_2F",
+      "map_group": 76,
+      "map_num": 19,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "CianwoodPharmacy",
+      "map_group": 76,
+      "map_num": 20,
+      "status": "HGSS-reference-audit-pending"
+    },
+    {
+      "name": "SafariReception",
+      "map_group": 76,
+      "map_num": 21,
+      "status": "HGSS-reference-audit-pending"
+    }
+  ],
+  "global_additions": [
+    {
+      "area": "Olivine City",
+      "locations": [
+        "Joe residence",
+        "Silph subsidiary",
+        "Harbor office"
+      ],
+      "status": "Required Black Ledger additions; fit against canonical reference without deleting landmarks; conflict analysis pending."
+    }
+  ],
+  "source_code_reference": {
+    "url": "https://github.com/pret/pokeheartgold/blob/master/include/constants/maps.h",
+    "use": "Map-name inventory only; no imported story events, code, encounters or proprietary ROM. Distinguish unused interiors from actual enterable rooms."
+  }
+}
