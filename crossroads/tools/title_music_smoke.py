@@ -19,9 +19,13 @@ def active():
 frames(4500)
 assert read(syms['gMain']+4)==syms['CB2_BlackLedgerTitle']|1
 assert read('gMPlayInfo_BGM')==syms['mus_black_ledger_title']
-assert read(syms['BlackLedgerTitleWave']+4)==16000*1024
-assert read(syms['BlackLedgerTitleWave']+12)==1280000
+assert read(syms['BlackLedgerTitleWave']+4)==31536*1024
+assert read(syms['BlackLedgerTitleWave']+12)==2522880
 assert len(active())==1
+assert read(syms['gSoundInfo']+8,1)==9, 'Title mixer must use 31.5 kHz'
+assert read(syms['gSoundInfo']+7,1)==15
+assert read(0x04000089,1)&0xc0==0, 'Title DAC must use 9-bit mode'
+assert read(active()[0]+1,1)&8, 'Fixed-rate voice must avoid resampling'
 raw=a.output/'title-audio.s16le';assert lib.emu_audio(str(raw).encode(),180)
 samples=array.array('h',raw.read_bytes());rms=math.sqrt(sum(v*v for v in samples)/len(samples));peak=max(abs(v) for v in samples)
 assert rms>20 and peak<32767,('Audio silent or clipped',rms,peak)
@@ -40,6 +44,9 @@ print('96 seconds of continued title playback, bounded sample pointer and actual
 frames(1,8);frames(180)
 assert read(syms['gMain']+4)==syms['CB2_MainMenu']|1
 assert not active(),'Title sample must fade/stop on Start'
+assert read(syms['gSoundInfo']+8,1)==4, 'Restore normal gameplay frequency'
+assert read(syms['gSoundInfo']+7,1)==12, 'Restore normal gameplay volume'
+assert read(0x04000089,1)&0xc0==0x40, 'Restore normal gameplay DAC mode'
 frames(3,15);frames(4500)
 assert read(syms['gMain']+4)==syms['CB2_BlackLedgerTitle']|1
 assert read('gMPlayInfo_BGM')==syms['mus_black_ledger_title'] and len(active())==1

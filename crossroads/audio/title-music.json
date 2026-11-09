@@ -1,13 +1,13 @@
 {
   "source": "Black_Ledger_Title_Demo_v5.mp3",
   "source_sha256": "cde00969c8359eb3e77629fbaac1cf45f798abcd70657ced6dee365f7a6acd8c",
-  "sample_sha256": "2ee0185030b5478b153286abd94f8729540f99f25cdfeb501b402ed741e45b75",
-  "sample_rate": 16000,
+  "sample_sha256": "d1b6d3a234021d11ff68b14f9470f29f3befbafd1bc36a7a43b917886af97e19",
+  "sample_rate": 31536,
   "channels": 1,
   "encoding": "signed 8-bit PCM",
-  "samples": 1280000,
+  "samples": 2522880,
   "duration_seconds": 80.0,
   "loop_start_sample": 0,
-  "edge_fade_samples": 320,
-  "loop_status": "Provisional full-track repeat; owner may supply musical loop points."
+  "edge_fade_samples": 631,
+  "loop_status": "Owner accepted the full-track repeat in 0.8.1; retained unchanged."
 }

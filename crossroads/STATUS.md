@@ -1,3 +1,20 @@
+# Owner QA accepted — 0.8 and 0.8.1; title audio refinement
+
+Owner: “the music is there it loops and everything is good in 8 and 8.1,” with
+“the new music is kinda static-y” as the reported issue. Record manual QA PASS
+for the tested 0.8 area and 0.8.1 music/loop functionality; do not infer any extra
+individual test beyond this blanket verdict. Audio quality remains a known issue.
+
+feature/title-audio-cleanup-01 prepares 0.8.2 for listening QA: native 31.5 kHz
+title playback and 9-bit DAC, restoring normal audio before gameplay. Build and
+emulator checks pass; whether the static is sufficiently improved needs owner
+Delta comparison. Source MP3, accepted loop, art, maps, starter and saves retained.
+See RELEASE_0_8_2.md. No additional cities/routes or story content in this fix.
+
+Historical checkpoint notes follow.
+
+---
+
 # Latest audio increment — 0.8.1
 
 feature/title-music-01 integrates the owner-supplied 80-second title recording

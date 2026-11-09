@@ -9,6 +9,8 @@
 #include "task.h"
 #include "scanline_effect.h"
 #include "sound.h"
+#include "m4a.h"
+#include "gba/m4a_internal.h"
 #include "event_data.h"
 #include "reset_rtc_screen.h"
 #include "clear_save_data_menu.h"
@@ -23,6 +25,7 @@ static const u16 sHarborTilemap[] = INCBIN_U16("graphics/title_screen/black_ledg
 static const u16 sHarborPalette[] = INCBIN_U16("graphics/title_screen/black_ledger/palette.bin");
 static EWRAM_DATA MainCallback sNextCallback = NULL;
 static EWRAM_DATA u16 sLightTimer = 0;
+static EWRAM_DATA u32 sPreviousSoundMode = 0;
 
 static void VBlankCB_BlackLedgerTitle(void)
 {
@@ -36,6 +39,10 @@ static void CB2_BlackLedgerTitle(void)
         return;
     if (sNextCallback != NULL)
     {
+        // The recording uses a higher mixer rate only while the title is active.
+        // Stop before restoring the rate so its final samples cannot slow down.
+        m4aMPlayStop(&gMPlayInfo_BGM);
+        m4aSoundMode(sPreviousSoundMode);
         SetMainCallback2(sNextCallback);
         return;
     }
@@ -93,6 +100,12 @@ void CB2_InitBlackLedgerTitleScreen(void)
     BeginNormalPaletteFade(PALETTES_ALL, 0, 16, 0, RGB_BLACK);
     SetVBlankCallback(VBlankCB_BlackLedgerTitle);
     EnableInterrupts(INTR_FLAG_VBLANK);
+    sPreviousSoundMode = (gSoundInfo.freq << SOUND_MODE_FREQ_SHIFT)
+                       | (gSoundInfo.masterVolume << SOUND_MODE_MASVOL_SHIFT)
+                       | SOUND_MODE_DA_BIT_9
+                       | ((REG_SOUNDBIAS_H & 0xC0) << 14);
+    m4aSoundMode(SOUND_MODE_FREQ_31536 | SOUND_MODE_DA_BIT_9
+                | (15 << SOUND_MODE_MASVOL_SHIFT));
     PlayBGM(MUS_BLACK_LEDGER_TITLE);
     SetMainCallback2(CB2_BlackLedgerTitle);
 }
