@@ -19,6 +19,7 @@
 #include "intro_credits_graphics.h"
 #include "trig.h"
 #include "intro.h"
+#include "black_ledger_intro.h"
 #include "graphics.h"
 #include "sound.h"
 #include "util.h"
@@ -1138,6 +1139,22 @@ static u8 SetUpCopyrightScreen(void)
 
 void CB2_InitCopyrightScreenAfterBootup(void)
 {
+    // Keep the original boot save/heap initialization, but Emerald now enters
+    // the dedicated Black Ledger presentation instead of the inherited movie.
+    if (!IS_FRLG)
+    {
+        SetSaveBlocksPointers(GetSaveBlocksPointersBaseOffset());
+        ResetMenuAndMonGlobals();
+        Save_ResetSaveCounters();
+        LoadGameSave(SAVE_NORMAL);
+        if (gSaveFileStatus == SAVE_STATUS_EMPTY || gSaveFileStatus == SAVE_STATUS_CORRUPT)
+            Sav2_ClearSetDefault();
+        SetPokemonCryStereo(gSaveBlock2Ptr->optionsSound);
+        InitHeap(gHeap, HEAP_SIZE);
+        SetSerialCallback(SerialCB);
+        SetMainCallback2(CB2_InitBlackLedgerIntro);
+        return;
+    }
     if (!SetUpCopyrightScreen())
     {
         SetSaveBlocksPointers(GetSaveBlocksPointersBaseOffset());
@@ -1153,6 +1170,11 @@ void CB2_InitCopyrightScreenAfterBootup(void)
 
 void CB2_InitCopyrightScreenAfterTitleScreen(void)
 {
+    if (!IS_FRLG)
+    {
+        SetMainCallback2(CB2_InitBlackLedgerIntro);
+        return;
+    }
     SetUpCopyrightScreen();
 }
 
