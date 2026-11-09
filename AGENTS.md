@@ -70,3 +70,13 @@ Append IDs only. Existing MAPSEC_NONE stays 213; new section IDs 214..252 use th
 remaining safe met-location space and must not collide with 253..255 special IDs.
 Survey Surf assistance is opt-in RAM only; reset/Continue must not grant moves or
 badges. Native atlas is informational and must not grant travel destinations.
+
+## Current visual/collision repair priority
+
+Owner confirms 0.9 connectivity works but explicitly rejects its visual/collision
+QA. Stop geographic expansion. Preserve map/save IDs, connections, old saves,
+approved encounters/practice battles, Joe, title/music and accepted functions.
+Review representative areas visually before propagation. Record every reviewed
+map in crossroads/qa/visual-0.9.1/manifest.json; unreviewed maps stay unreviewed.
+Connectivity/build success is not visual acceptance. Keep existing assertions;
+run validate_visual_repairs.py in addition to existing map checks.

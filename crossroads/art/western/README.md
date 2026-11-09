@@ -16,3 +16,10 @@ props are 16×16 crops of bell.png (16,22,32,38) and lighthouse.png (16,14,32,30
 using palette 08. These fixed props currently have their own committed native PNGs.
 All new art remains subject to the owner's in-game visual QA. No outfit system or
 legendary story scene is implied by these graphics.
+
+
+0.9.1 repair: lower two rows of each custom building use covered ground layers,
+while roof rows stay foreground. Door behavior IDs are unchanged. Appended
+WesternCity metatiles0x3E8/0x3E9 reuse native General root graphics with covered
+layers; shared General graphics/attributes are untouched. visual_repairs.py uses
+these only in the explicitly reviewed layouts. They consume no new graphics slots.

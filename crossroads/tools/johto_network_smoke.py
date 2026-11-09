@@ -165,4 +165,4 @@ for n in targets:
 go('OlivineCity')
 end=args.output/'finished.snapshot';lib.emu_state(str(end).encode(),0);end.with_suffix('.sha256').write_text(hashlib.sha256((R/'pokeemerald.gba').read_bytes()).hexdigest())
 (args.output/'coverage.json').write_text(json.dumps(dict(visited=sorted(visited),targets=targets,transitions=transitions,tested_roundtrip_edges=len(tested_edges),tested_edges=sorted(tested_edges),actual_surf_entries=water_entries),indent=2)+'\n')
-print('Actual controller visits/return, healing and retained starter/party: PASS',len(targets),'new maps',len(transitions),'transitions',flush=True)
+print('Actual controller visits/return, healing and retained starter/party: PASS',len(targets),'target maps',len(transitions),'transitions',flush=True)

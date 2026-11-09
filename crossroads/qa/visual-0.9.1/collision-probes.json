@@ -1,0 +1,1766 @@
+[
+  {
+    "map": "EcruteakCity",
+    "fixture": "Bell Tower",
+    "side": "north",
+    "start": [
+      36,
+      1
+    ],
+    "solid": [
+      36,
+      2
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Bell Tower",
+    "side": "south",
+    "start": [
+      36,
+      8
+    ],
+    "solid": [
+      36,
+      7
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Bell Tower",
+    "side": "north",
+    "start": [
+      37,
+      1
+    ],
+    "solid": [
+      37,
+      2
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Bell Tower",
+    "side": "north",
+    "start": [
+      38,
+      1
+    ],
+    "solid": [
+      38,
+      2
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Bell Tower",
+    "side": "south",
+    "start": [
+      38,
+      8
+    ],
+    "solid": [
+      38,
+      7
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Bell Tower",
+    "side": "west",
+    "start": [
+      35,
+      2
+    ],
+    "solid": [
+      36,
+      2
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Bell Tower",
+    "side": "east",
+    "start": [
+      39,
+      2
+    ],
+    "solid": [
+      38,
+      2
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Bell Tower",
+    "side": "west",
+    "start": [
+      35,
+      3
+    ],
+    "solid": [
+      36,
+      3
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Bell Tower",
+    "side": "east",
+    "start": [
+      39,
+      3
+    ],
+    "solid": [
+      38,
+      3
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Bell Tower",
+    "side": "west",
+    "start": [
+      35,
+      4
+    ],
+    "solid": [
+      36,
+      4
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Bell Tower",
+    "side": "east",
+    "start": [
+      39,
+      4
+    ],
+    "solid": [
+      38,
+      4
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Bell Tower",
+    "side": "west",
+    "start": [
+      35,
+      5
+    ],
+    "solid": [
+      36,
+      5
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Bell Tower",
+    "side": "east",
+    "start": [
+      39,
+      5
+    ],
+    "solid": [
+      38,
+      5
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Bell Tower",
+    "side": "west",
+    "start": [
+      35,
+      6
+    ],
+    "solid": [
+      36,
+      6
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Bell Tower",
+    "side": "east",
+    "start": [
+      39,
+      6
+    ],
+    "solid": [
+      38,
+      6
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Bell Tower",
+    "side": "west",
+    "start": [
+      35,
+      7
+    ],
+    "solid": [
+      36,
+      7
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Bell Tower",
+    "side": "east",
+    "start": [
+      39,
+      7
+    ],
+    "solid": [
+      38,
+      7
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Burned Tower",
+    "side": "north",
+    "start": [
+      9,
+      3
+    ],
+    "solid": [
+      9,
+      4
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Burned Tower",
+    "side": "north",
+    "start": [
+      10,
+      3
+    ],
+    "solid": [
+      10,
+      4
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Burned Tower",
+    "side": "south",
+    "start": [
+      10,
+      8
+    ],
+    "solid": [
+      10,
+      7
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Burned Tower",
+    "side": "north",
+    "start": [
+      11,
+      3
+    ],
+    "solid": [
+      11,
+      4
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Burned Tower",
+    "side": "north",
+    "start": [
+      12,
+      3
+    ],
+    "solid": [
+      12,
+      4
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Burned Tower",
+    "side": "south",
+    "start": [
+      12,
+      8
+    ],
+    "solid": [
+      12,
+      7
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Burned Tower",
+    "side": "west",
+    "start": [
+      8,
+      4
+    ],
+    "solid": [
+      9,
+      4
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Burned Tower",
+    "side": "east",
+    "start": [
+      13,
+      4
+    ],
+    "solid": [
+      12,
+      4
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Burned Tower",
+    "side": "west",
+    "start": [
+      8,
+      5
+    ],
+    "solid": [
+      9,
+      5
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Burned Tower",
+    "side": "east",
+    "start": [
+      13,
+      5
+    ],
+    "solid": [
+      12,
+      5
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Burned Tower",
+    "side": "west",
+    "start": [
+      8,
+      6
+    ],
+    "solid": [
+      9,
+      6
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Burned Tower",
+    "side": "east",
+    "start": [
+      13,
+      6
+    ],
+    "solid": [
+      12,
+      6
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Burned Tower",
+    "side": "west",
+    "start": [
+      8,
+      7
+    ],
+    "solid": [
+      9,
+      7
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Burned Tower",
+    "side": "east",
+    "start": [
+      13,
+      7
+    ],
+    "solid": [
+      12,
+      7
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Residence",
+    "side": "north",
+    "start": [
+      10,
+      15
+    ],
+    "solid": [
+      10,
+      16
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Residence",
+    "side": "south",
+    "start": [
+      10,
+      19
+    ],
+    "solid": [
+      10,
+      18
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Residence",
+    "side": "north",
+    "start": [
+      11,
+      15
+    ],
+    "solid": [
+      11,
+      16
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Residence",
+    "side": "north",
+    "start": [
+      12,
+      15
+    ],
+    "solid": [
+      12,
+      16
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Residence",
+    "side": "south",
+    "start": [
+      12,
+      19
+    ],
+    "solid": [
+      12,
+      18
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Residence",
+    "side": "west",
+    "start": [
+      9,
+      16
+    ],
+    "solid": [
+      10,
+      16
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Residence",
+    "side": "east",
+    "start": [
+      13,
+      16
+    ],
+    "solid": [
+      12,
+      16
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Residence",
+    "side": "west",
+    "start": [
+      9,
+      17
+    ],
+    "solid": [
+      10,
+      17
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Residence",
+    "side": "east",
+    "start": [
+      13,
+      17
+    ],
+    "solid": [
+      12,
+      17
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Residence",
+    "side": "west",
+    "start": [
+      9,
+      18
+    ],
+    "solid": [
+      10,
+      18
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Residence",
+    "side": "east",
+    "start": [
+      13,
+      18
+    ],
+    "solid": [
+      12,
+      18
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Theater",
+    "side": "north",
+    "start": [
+      20,
+      15
+    ],
+    "solid": [
+      20,
+      16
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Theater",
+    "side": "north",
+    "start": [
+      21,
+      15
+    ],
+    "solid": [
+      21,
+      16
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Theater",
+    "side": "south",
+    "start": [
+      21,
+      19
+    ],
+    "solid": [
+      21,
+      18
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Theater",
+    "side": "north",
+    "start": [
+      22,
+      15
+    ],
+    "solid": [
+      22,
+      16
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Theater",
+    "side": "north",
+    "start": [
+      23,
+      15
+    ],
+    "solid": [
+      23,
+      16
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Theater",
+    "side": "south",
+    "start": [
+      23,
+      19
+    ],
+    "solid": [
+      23,
+      18
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Theater",
+    "side": "west",
+    "start": [
+      19,
+      16
+    ],
+    "solid": [
+      20,
+      16
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Theater",
+    "side": "east",
+    "start": [
+      24,
+      16
+    ],
+    "solid": [
+      23,
+      16
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Theater",
+    "side": "west",
+    "start": [
+      19,
+      17
+    ],
+    "solid": [
+      20,
+      17
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Theater",
+    "side": "east",
+    "start": [
+      24,
+      17
+    ],
+    "solid": [
+      23,
+      17
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Theater",
+    "side": "west",
+    "start": [
+      19,
+      18
+    ],
+    "solid": [
+      20,
+      18
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Theater",
+    "side": "east",
+    "start": [
+      24,
+      18
+    ],
+    "solid": [
+      23,
+      18
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "OlivineCity",
+    "fixture": "Lighthouse",
+    "side": "north",
+    "start": [
+      38,
+      27
+    ],
+    "solid": [
+      38,
+      28
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "OlivineCity",
+    "fixture": "Lighthouse",
+    "side": "south",
+    "start": [
+      38,
+      33
+    ],
+    "solid": [
+      38,
+      32
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "OlivineCity",
+    "fixture": "Lighthouse",
+    "side": "north",
+    "start": [
+      39,
+      27
+    ],
+    "solid": [
+      39,
+      28
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "OlivineCity",
+    "fixture": "Lighthouse",
+    "side": "north",
+    "start": [
+      40,
+      27
+    ],
+    "solid": [
+      40,
+      28
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "OlivineCity",
+    "fixture": "Lighthouse",
+    "side": "south",
+    "start": [
+      40,
+      33
+    ],
+    "solid": [
+      40,
+      32
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "OlivineCity",
+    "fixture": "Lighthouse",
+    "side": "west",
+    "start": [
+      37,
+      28
+    ],
+    "solid": [
+      38,
+      28
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "OlivineCity",
+    "fixture": "Lighthouse",
+    "side": "east",
+    "start": [
+      41,
+      28
+    ],
+    "solid": [
+      40,
+      28
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "OlivineCity",
+    "fixture": "Lighthouse",
+    "side": "west",
+    "start": [
+      37,
+      29
+    ],
+    "solid": [
+      38,
+      29
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "OlivineCity",
+    "fixture": "Lighthouse",
+    "side": "east",
+    "start": [
+      41,
+      29
+    ],
+    "solid": [
+      40,
+      29
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "OlivineCity",
+    "fixture": "Lighthouse",
+    "side": "west",
+    "start": [
+      37,
+      30
+    ],
+    "solid": [
+      38,
+      30
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "OlivineCity",
+    "fixture": "Lighthouse",
+    "side": "east",
+    "start": [
+      41,
+      30
+    ],
+    "solid": [
+      40,
+      30
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "OlivineCity",
+    "fixture": "Lighthouse",
+    "side": "west",
+    "start": [
+      37,
+      31
+    ],
+    "solid": [
+      38,
+      31
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "OlivineCity",
+    "fixture": "Lighthouse",
+    "side": "east",
+    "start": [
+      41,
+      31
+    ],
+    "solid": [
+      40,
+      31
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "OlivineCity",
+    "fixture": "Lighthouse",
+    "side": "west",
+    "start": [
+      37,
+      32
+    ],
+    "solid": [
+      38,
+      32
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "OlivineCity",
+    "fixture": "Lighthouse",
+    "side": "east",
+    "start": [
+      41,
+      32
+    ],
+    "solid": [
+      40,
+      32
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "JohtoRoute39",
+    "fixture": "Farmhouse",
+    "side": "north",
+    "start": [
+      5,
+      4
+    ],
+    "solid": [
+      5,
+      5
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "JohtoRoute39",
+    "fixture": "Farmhouse",
+    "side": "south",
+    "start": [
+      5,
+      8
+    ],
+    "solid": [
+      5,
+      7
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "JohtoRoute39",
+    "fixture": "Farmhouse",
+    "side": "north",
+    "start": [
+      6,
+      4
+    ],
+    "solid": [
+      6,
+      5
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "JohtoRoute39",
+    "fixture": "Farmhouse",
+    "side": "north",
+    "start": [
+      7,
+      4
+    ],
+    "solid": [
+      7,
+      5
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "JohtoRoute39",
+    "fixture": "Farmhouse",
+    "side": "south",
+    "start": [
+      7,
+      8
+    ],
+    "solid": [
+      7,
+      7
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "JohtoRoute39",
+    "fixture": "Farmhouse",
+    "side": "west",
+    "start": [
+      4,
+      5
+    ],
+    "solid": [
+      5,
+      5
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "JohtoRoute39",
+    "fixture": "Farmhouse",
+    "side": "east",
+    "start": [
+      8,
+      5
+    ],
+    "solid": [
+      7,
+      5
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "JohtoRoute39",
+    "fixture": "Farmhouse",
+    "side": "west",
+    "start": [
+      4,
+      6
+    ],
+    "solid": [
+      5,
+      6
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "JohtoRoute39",
+    "fixture": "Farmhouse",
+    "side": "east",
+    "start": [
+      8,
+      6
+    ],
+    "solid": [
+      7,
+      6
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "JohtoRoute39",
+    "fixture": "Farmhouse",
+    "side": "west",
+    "start": [
+      4,
+      7
+    ],
+    "solid": [
+      5,
+      7
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "JohtoRoute39",
+    "fixture": "Farmhouse",
+    "side": "east",
+    "start": [
+      8,
+      7
+    ],
+    "solid": [
+      7,
+      7
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "JohtoRoute39",
+    "fixture": "Barn",
+    "side": "north",
+    "start": [
+      3,
+      14
+    ],
+    "solid": [
+      3,
+      15
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "JohtoRoute39",
+    "fixture": "Barn",
+    "side": "north",
+    "start": [
+      4,
+      14
+    ],
+    "solid": [
+      4,
+      15
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "JohtoRoute39",
+    "fixture": "Barn",
+    "side": "south",
+    "start": [
+      4,
+      18
+    ],
+    "solid": [
+      4,
+      17
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "JohtoRoute39",
+    "fixture": "Barn",
+    "side": "north",
+    "start": [
+      5,
+      14
+    ],
+    "solid": [
+      5,
+      15
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "JohtoRoute39",
+    "fixture": "Barn",
+    "side": "north",
+    "start": [
+      6,
+      14
+    ],
+    "solid": [
+      6,
+      15
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "JohtoRoute39",
+    "fixture": "Barn",
+    "side": "south",
+    "start": [
+      6,
+      18
+    ],
+    "solid": [
+      6,
+      17
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "JohtoRoute39",
+    "fixture": "Barn",
+    "side": "west",
+    "start": [
+      2,
+      15
+    ],
+    "solid": [
+      3,
+      15
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "JohtoRoute39",
+    "fixture": "Barn",
+    "side": "east",
+    "start": [
+      7,
+      15
+    ],
+    "solid": [
+      6,
+      15
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "JohtoRoute39",
+    "fixture": "Barn",
+    "side": "west",
+    "start": [
+      2,
+      16
+    ],
+    "solid": [
+      3,
+      16
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "JohtoRoute39",
+    "fixture": "Barn",
+    "side": "east",
+    "start": [
+      7,
+      16
+    ],
+    "solid": [
+      6,
+      16
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "JohtoRoute39",
+    "fixture": "Barn",
+    "side": "west",
+    "start": [
+      2,
+      17
+    ],
+    "solid": [
+      3,
+      17
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "JohtoRoute39",
+    "fixture": "Barn",
+    "side": "east",
+    "start": [
+      7,
+      17
+    ],
+    "solid": [
+      6,
+      17
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Native tree",
+    "side": "north",
+    "start": [
+      16,
+      16
+    ],
+    "solid": [
+      16,
+      17
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Native tree",
+    "side": "south",
+    "start": [
+      16,
+      20
+    ],
+    "solid": [
+      16,
+      19
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Native tree",
+    "side": "north",
+    "start": [
+      17,
+      16
+    ],
+    "solid": [
+      17,
+      17
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Native tree",
+    "side": "south",
+    "start": [
+      17,
+      20
+    ],
+    "solid": [
+      17,
+      19
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Native tree",
+    "side": "west",
+    "start": [
+      15,
+      17
+    ],
+    "solid": [
+      16,
+      17
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Native tree",
+    "side": "east",
+    "start": [
+      18,
+      17
+    ],
+    "solid": [
+      17,
+      17
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Native tree",
+    "side": "west",
+    "start": [
+      15,
+      18
+    ],
+    "solid": [
+      16,
+      18
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Native tree",
+    "side": "east",
+    "start": [
+      18,
+      18
+    ],
+    "solid": [
+      17,
+      18
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Native tree",
+    "side": "west",
+    "start": [
+      15,
+      19
+    ],
+    "solid": [
+      16,
+      19
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "EcruteakCity",
+    "fixture": "Native tree",
+    "side": "east",
+    "start": [
+      18,
+      19
+    ],
+    "solid": [
+      17,
+      19
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "MahoganyTown",
+    "fixture": "Workshop exterior",
+    "side": "south",
+    "start": [
+      36,
+      11
+    ],
+    "solid": [
+      36,
+      10
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "MahoganyTown",
+    "fixture": "Workshop exterior",
+    "side": "south",
+    "start": [
+      37,
+      11
+    ],
+    "solid": [
+      37,
+      10
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "MahoganyTown",
+    "fixture": "Workshop exterior",
+    "side": "west",
+    "start": [
+      33,
+      8
+    ],
+    "solid": [
+      34,
+      8
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "MahoganyTown",
+    "fixture": "Workshop exterior",
+    "side": "east",
+    "start": [
+      38,
+      8
+    ],
+    "solid": [
+      37,
+      8
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "MahoganyTown",
+    "fixture": "Workshop exterior",
+    "side": "west",
+    "start": [
+      33,
+      9
+    ],
+    "solid": [
+      34,
+      9
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "MahoganyTown",
+    "fixture": "Workshop exterior",
+    "side": "east",
+    "start": [
+      38,
+      9
+    ],
+    "solid": [
+      37,
+      9
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "MahoganyTown",
+    "fixture": "Workshop exterior",
+    "side": "west",
+    "start": [
+      33,
+      10
+    ],
+    "solid": [
+      34,
+      10
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "MahoganyTown",
+    "fixture": "Workshop exterior",
+    "side": "east",
+    "start": [
+      38,
+      10
+    ],
+    "solid": [
+      37,
+      10
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "MahoganyTown_Workshop",
+    "fixture": "Dry workbench",
+    "side": "north",
+    "start": [
+      8,
+      3
+    ],
+    "solid": [
+      8,
+      4
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "MahoganyTown_Workshop",
+    "fixture": "Dry workbench",
+    "side": "south",
+    "start": [
+      8,
+      6
+    ],
+    "solid": [
+      8,
+      5
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "MahoganyTown_Workshop",
+    "fixture": "Dry workbench",
+    "side": "north",
+    "start": [
+      9,
+      3
+    ],
+    "solid": [
+      9,
+      4
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "MahoganyTown_Workshop",
+    "fixture": "Dry workbench",
+    "side": "south",
+    "start": [
+      9,
+      6
+    ],
+    "solid": [
+      9,
+      5
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "MahoganyTown_Workshop",
+    "fixture": "Dry workbench",
+    "side": "west",
+    "start": [
+      7,
+      4
+    ],
+    "solid": [
+      8,
+      4
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "MahoganyTown_Workshop",
+    "fixture": "Dry workbench",
+    "side": "east",
+    "start": [
+      10,
+      4
+    ],
+    "solid": [
+      9,
+      4
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "MahoganyTown_Workshop",
+    "fixture": "Dry workbench",
+    "side": "west",
+    "start": [
+      7,
+      5
+    ],
+    "solid": [
+      8,
+      5
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "MahoganyTown_Workshop",
+    "fixture": "Dry workbench",
+    "side": "east",
+    "start": [
+      10,
+      5
+    ],
+    "solid": [
+      9,
+      5
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "MahoganyTown_Workshop",
+    "fixture": "Timber workbench",
+    "side": "north",
+    "start": [
+      2,
+      6
+    ],
+    "solid": [
+      2,
+      7
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "MahoganyTown_Workshop",
+    "fixture": "Timber workbench",
+    "side": "south",
+    "start": [
+      2,
+      9
+    ],
+    "solid": [
+      2,
+      8
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "MahoganyTown_Workshop",
+    "fixture": "Timber workbench",
+    "side": "north",
+    "start": [
+      3,
+      6
+    ],
+    "solid": [
+      3,
+      7
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "MahoganyTown_Workshop",
+    "fixture": "Timber workbench",
+    "side": "south",
+    "start": [
+      3,
+      9
+    ],
+    "solid": [
+      3,
+      8
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "MahoganyTown_Workshop",
+    "fixture": "Timber workbench",
+    "side": "west",
+    "start": [
+      1,
+      7
+    ],
+    "solid": [
+      2,
+      7
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "MahoganyTown_Workshop",
+    "fixture": "Timber workbench",
+    "side": "east",
+    "start": [
+      4,
+      7
+    ],
+    "solid": [
+      3,
+      7
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "MahoganyTown_Workshop",
+    "fixture": "Timber workbench",
+    "side": "west",
+    "start": [
+      1,
+      8
+    ],
+    "solid": [
+      2,
+      8
+    ],
+    "result": "blocked"
+  },
+  {
+    "map": "MahoganyTown_Workshop",
+    "fixture": "Timber workbench",
+    "side": "east",
+    "start": [
+      4,
+      8
+    ],
+    "solid": [
+      3,
+      8
+    ],
+    "result": "blocked"
+  }
+]

@@ -639,7 +639,7 @@ Johto_MahoganyTown_Workshop_Guide::
     msgbox Johto_MahoganyTown_Workshop_Guide_Text, MSGBOX_NPC
     end
 Johto_MahoganyTown_Workshop_Guide_Text:
-    .string "People come for the lake. I\nstay for the quiet after they\pleave.$"
+    .string "The left bench is for timber\nrepairs. Electrical parts stay\pon the dry bench; the sink is\nfor cleanup.$"
 
 Johto_MahoganyTown_Workshop_Notes::
     msgbox Johto_MahoganyTown_Workshop_Notes_Text, MSGBOX_SIGN

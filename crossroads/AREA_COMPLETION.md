@@ -1,3 +1,13 @@
+# Visual/collision QA — repair pass0.9.1
+
+Owner reports0.9 network works but has NOT passed visual/collision QA. Expansion
+is paused. The first repair pass covers Ecruteak exterior, Mahogany town/workshop,
+Routes38/39 and shared ground-layer fixes also affecting Olivine. This is not a
+region-wide polish claim. See RELEASE_0_9_1.md and qa/visual-0.9.1/manifest.json.
+All other map visual reviews remain open; owner visual acceptance is pending.
+
+---
+
 # Current exploration coverage —0.9
 
 The accepted western 37-map content is preserved. The new 149-map Johto network is implemented for traversal QA; manifest, topology and coverage are in johto/. New services/interiors and landmarks are accessible, but story, badges, new rosters/teams and final art/gameplay polish remain pending. Legacy notes below describe earlier checkpoints.

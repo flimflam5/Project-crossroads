@@ -16,6 +16,7 @@ on:
       - feature/title-audio-cleanup-01
       - feature/boot-audio-refinement-01
       - feature/johto-exploration-network-01
+      - feature/johto-visual-collision-01
   pull_request:
   workflow_dispatch:
 
@@ -68,6 +69,7 @@ jobs:
         run: |
           python3 crossroads/tools/build_johto_network.py --through west --check
           python3 crossroads/tools/validate_johto_network.py --built
+          python3 crossroads/tools/validate_visual_repairs.py
           python3 crossroads/tools/check_mapjson_outputs.py
           python3 crossroads/tools/validate_black_ledger_intro.py
           python3 crossroads/tools/validate_title_music.py
@@ -91,7 +93,7 @@ jobs:
       - name: Upload playable Emerald ROM
         uses: actions/upload-artifact@v4
         with:
-          name: black-ledger-johto-exploration-0.9-${{ github.sha }}
+          name: black-ledger-visual-repairs-0.9.1-${{ github.sha }}
           path: |
             pokeemerald.gba
             build-info.json
@@ -106,6 +108,8 @@ jobs:
             crossroads/RELEASE_0_8_2.md
             crossroads/RELEASE_0_8_3.md
             crossroads/RELEASE_0_9.md
+            crossroads/RELEASE_0_9_1.md
+            crossroads/qa/visual-0.9.1
             crossroads/johto/manifest.json
             crossroads/johto/TOPOLOGY.md
             crossroads/johto/DELTA_QA.md
