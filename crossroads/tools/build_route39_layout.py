@@ -33,7 +33,8 @@ def generate():
             rect(x, y, 1, 1, 0x0415)
     for x, y in ((9, 44), (9, 3)):
         rect(x, y, 1, 1, 0x0403)
-    return struct.pack('<1152H', *tiles)
+    from area_layouts import decorate
+    return decorate('JohtoRoute39', struct.pack('<1152H', *tiles), 24, 48)
 
 
 if __name__ == '__main__':

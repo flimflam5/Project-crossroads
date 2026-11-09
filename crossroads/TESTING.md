@@ -74,3 +74,36 @@ result. Screenshots and a backed-up save help reproduce failures.
 - No new encounters, trainer battles, Gym challenge, external routes, ship travel,
   robbery, difficulty selection or quest system. Existing content is preserved.
 - Historical Alpha-v2 gameplay tests are not automatically verified by these checks.
+
+
+# Western area 0.8 final candidate
+
+Emerald compiled successfully after the room-border polish. All 13 linked-source,
+graphics, layout reproducibility, map registration and mapjson timestamp checks
+passed. Final-ROM mGBA tour passed all starter branches and duplicate guards,
+Olivine/39/38/Ecruteak borders, services, home rest, every lighthouse/Bell Tower
+floor, Burned basement, farm/barn, both arenas and repeatable dance performance.
+
+Actual normal menu Save followed by fresh-core battery-save Continue passed at
+lighthouse floor 6 and Bell Tower floor 9: exact map/coordinates, starter choice
+and all 100 party Pokémon bytes preserved. No snapshot was loaded for Continue.
+An archived 0.7 battery save on newly blocked farm ground (4,16) loaded at nearby
+clear ground (4,14), retained the starter byte-for-byte and could walk afterward.
+A first battle loss before visiting a Center returned to Olivine and healed.
+
+Optional battle-flow tests use a boosted, internally consistent level-50 starter
+in RAM, not in the shipped ROM. They cover all six new trainers and a Jasmine
+rematch, return control/Joe and unchanged badge flags. Normal-level balance needs
+owner QA. Live encounters, Poké Ball catch with correct met data and the milk
+shop's 600-price transaction were checked separately before cosmetic border polish.
+
+Repeat the runtime tour with emulator_smoke.py (libmgba-dev + ARM nm), passing
+--gender 0 or 1. Exact-ROM output includes area-ready.snapshot and
+elgyem-field.snapshot, guarded by ROM SHA checks. Use --area-resume or
+--battle-resume plus the matching --gender to repeat those portions.
+--first-loss-only checks the uninitialized-respawn fallback. Runtime screenshots
+and local logs are ignored build outputs, never committed owner saves.
+
+Owner Delta QA remains pending. See RELEASE_0_8.md for the playtest checklist.
+Original introduction, Joe special movements, long-term balance, complete prologue,
+all later regions and permanent badge/story progression are not verified here.

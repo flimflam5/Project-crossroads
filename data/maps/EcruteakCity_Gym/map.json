@@ -1,7 +1,7 @@
 {
   "id": "MAP_ECRUTEAK_CITY_GYM",
   "name": "EcruteakCity_Gym",
-  "layout": "LAYOUT_HOUSE_WITH_BED",
+  "layout": "LAYOUT_ECRUTEAKCITY_GYM",
   "music": "MUS_LILYCOVE",
   "region": "REGION_HOENN",
   "region_map_section": "MAPSEC_ECRUTEAK_CITY",
@@ -25,7 +25,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Ecruteak_GymGuide",
+      "script": "Area_GymGuide",
       "flag": "0"
     }
   ],
@@ -43,6 +43,13 @@
       "elevation": 0,
       "dest_map": "MAP_ECRUTEAK_CITY",
       "dest_warp_id": "4"
+    },
+    {
+      "x": 7,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_ECRUTEAKCITY_GYM_ARENA",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],

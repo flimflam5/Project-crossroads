@@ -23,6 +23,7 @@ Olivine_ReturnToAlpha::
     end
 
 Olivine_OnTransition:
+    callnative Crossroads_EnsureAreaRespawn
     @ Standard menu availability after a successful Alpha rescue.
     goto_if_eq VAR_CROSSROADS_STARTER, 0, Olivine_NoPartnerYet
     setflag FLAG_SYS_POKEMON_GET
@@ -151,7 +152,7 @@ Olivine_HarborClerk::
 
 Olivine_Text_HarborClerk:
     .string "The piers are open for a walk.\p"
-    .string "Passenger travel is not available\nin this exploration build.$"
+    .string "There are no passenger departures\ntoday. Freight crews report here.$"
 
 Olivine_CenterVisitor::
     msgbox Olivine_Text_CenterVisitor, MSGBOX_NPC
@@ -207,7 +208,7 @@ Olivine_LighthouseVisitor::
 
 Olivine_Text_LighthouseVisitor:
     .string "The lighthouse belongs down here,\nwatching over the harbor.\p"
-    .string "This small beacon is temporary art.\nThe tower is still to be built.$"
+    .string "You can climb to the lantern room.\nThe view is worth the stairs.$"
 
 Olivine_PierWorker::
     msgbox Olivine_Text_PierWorker, MSGBOX_NPC
@@ -238,7 +239,7 @@ Olivine_GymSign::
 
 Olivine_Text_GymSign:
     .string "OLIVINE GYM\p"
-    .string "Temporary lobby. Battles pending.$"
+    .string "Optional practice battles inside.$"
 
 Olivine_CenterSign::
     msgbox Olivine_Text_CenterSign, MSGBOX_SIGN
@@ -270,24 +271,24 @@ Olivine_HarborSign::
 
 Olivine_Text_HarborSign:
     .string "OLIVINE HARBOR OFFICE\p"
-    .string "Passenger routes pending.$"
+    .string "Freight records and berth schedules.$"
 
 Olivine_LighthouseSign::
     msgbox Olivine_Text_LighthouseSign, MSGBOX_SIGN
     end
 
 Olivine_Text_LighthouseSign:
-    .string "OLIVINE LIGHTHOUSE SITE\p"
-    .string "Temporary beacon. Tower pending.$"
+    .string "OLIVINE LIGHTHOUSE\p"
+    .string "Six floors. Lantern room above.$"
 
 Olivine_CityDirectory::
     msgbox Olivine_Text_CityDirectory, MSGBOX_SIGN
     end
 
 Olivine_Text_CityDirectory:
-    .string "OLIVINE CITY - BUILD 0.1\p"
-    .string "NORTH: Homes and GYM lobby.\nCENTRE: Healing, MART and SILPH.\p"
-    .string "SOUTH: Harbor and lighthouse site.\nFinal geography and art pending.$"
+    .string "OLIVINE CITY\p"
+    .string "NORTH: Homes and GYM practice hall.\nCENTRE: Healing, MART and SILPH.\p"
+    .string "SOUTH: Harbor offices and LIGHTHOUSE.\nNorth road: ROUTE 39.$"
 
 Olivine_NorthBoundary::
     msgbox Olivine_Text_NorthBoundary, MSGBOX_SIGN

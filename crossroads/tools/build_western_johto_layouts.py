@@ -83,7 +83,8 @@ def generate():
         city.rect(x,y,1,1,0x0403)
     for x,y in [(6,11),(17,24),(30,25),(43,36),(28,39)]:
         city.rect(x,y,1,1,0x0415)
-    return {'JohtoRoute38':route.packed(),'EcruteakCity':city.packed()}
+    from area_layouts import decorate
+    return {'JohtoRoute38':decorate('JohtoRoute38',route.packed(),64,28),'EcruteakCity':decorate('EcruteakCity',city.packed(),48,48)}
 
 
 if __name__ == '__main__':

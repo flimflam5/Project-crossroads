@@ -11,6 +11,7 @@ on:
       - feature/black-ledger-title-01
       - feature/ecruteak-connection-01
       - feature/olivine-detail-01
+      - feature/western-area-completion-01
   pull_request:
   workflow_dispatch:
 
@@ -61,6 +62,7 @@ jobs:
 
       - name: Crossroads regression checks
         run: |
+          python3 crossroads/tools/validate_area_completion.py
           python3 crossroads/tools/validate_opening.py
           python3 crossroads/tools/validate_joe_assets.py
           python3 crossroads/tools/validate_route39.py
@@ -80,7 +82,7 @@ jobs:
       - name: Upload playable Emerald ROM
         uses: actions/upload-artifact@v4
         with:
-          name: black-ledger-olivine-detail-0.7-${{ github.sha }}
+          name: black-ledger-western-area-0.8-${{ github.sha }}
           path: |
             pokeemerald.gba
             build-info.json
@@ -90,6 +92,7 @@ jobs:
             crossroads/RELEASE_0_5.md
             crossroads/RELEASE_0_6.md
             crossroads/RELEASE_0_7.md
+            crossroads/RELEASE_0_8.md
           if-no-files-found: error
           retention-days: 14
 

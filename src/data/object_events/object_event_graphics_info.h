@@ -7244,3 +7244,33 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_JoeCorporate = {
     .anims = sAnimTable_JoeCorporate,
     .images = sPicTable_JoeCorporate,
 };
+
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CrossroadsJasmine = {
+ .tileTag = TAG_NONE, .paletteTag = OBJ_EVENT_PAL_TAG_CROSSROADS_JASMINE,
+ .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE, .size = 256, .width = 16, .height = 32,
+ .paletteSlot = PALSLOT_NPC_1, .shadowSize = SHADOW_SIZE_M, .inanimate = TRUE,
+ .compressed = FALSE, .tracks = TRACKS_FOOT, .oam = &gObjectEventBaseOam_16x32,
+ .subspriteTables = sOamTables_16x32, .anims = sAnimTable_Inanimate, .images = sPicTable_CrossroadsJasmine,
+};
+
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CrossroadsMorty = {
+ .tileTag = TAG_NONE, .paletteTag = OBJ_EVENT_PAL_TAG_CROSSROADS_MORTY,
+ .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE, .size = 256, .width = 16, .height = 32,
+ .paletteSlot = PALSLOT_NPC_1, .shadowSize = SHADOW_SIZE_M, .inanimate = TRUE,
+ .compressed = FALSE, .tracks = TRACKS_FOOT, .oam = &gObjectEventBaseOam_16x32,
+ .subspriteTables = sOamTables_16x32, .anims = sAnimTable_Inanimate, .images = sPicTable_CrossroadsMorty,
+};
+
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AreaBell = {
+ .tileTag = TAG_NONE, .paletteTag = OBJ_EVENT_PAL_TAG_AREA_BELL, .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+ .size = 128, .width = 16, .height = 16, .paletteSlot = PALSLOT_NPC_1, .shadowSize = SHADOW_SIZE_S,
+ .inanimate = TRUE, .compressed = FALSE, .tracks = TRACKS_NONE, .oam = &gObjectEventBaseOam_16x16,
+ .anims = sAnimTable_Inanimate, .images = sPicTable_AreaBell,
+};
+
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AreaLantern = {
+ .tileTag = TAG_NONE, .paletteTag = OBJ_EVENT_PAL_TAG_AREA_LANTERN, .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+ .size = 128, .width = 16, .height = 16, .paletteSlot = PALSLOT_NPC_1, .shadowSize = SHADOW_SIZE_S,
+ .inanimate = TRUE, .compressed = FALSE, .tracks = TRACKS_NONE, .oam = &gObjectEventBaseOam_16x16,
+ .anims = sAnimTable_Inanimate, .images = sPicTable_AreaLantern,
+};

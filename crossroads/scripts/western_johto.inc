@@ -51,13 +51,13 @@ Ecruteak_GymVisitor::
     msgbox Ecruteak_GymVisitor_Text, MSGBOX_NPC
     end
 Ecruteak_GymVisitor_Text:
-    .string "The GYM is in the southwest.\nIts battle area is not open yet.$"
+    .string "The GYM is in the southwest.\nPractice battles are open inside.$"
 
 Ecruteak_TowerVisitor::
     msgbox Ecruteak_TowerVisitor_Text, MSGBOX_NPC
     end
 Ecruteak_TowerVisitor_Text:
-    .string "The BELL TOWER entrance is ahead.\nThe upper floors are not open yet.$"
+    .string "The BELL TOWER entrance is ahead.\nThe upper floors are open.$"
 
 Ecruteak_Shopper::
     msgbox Ecruteak_Shopper_Text, MSGBOX_NPC
@@ -69,19 +69,19 @@ Ecruteak_TheaterVisitor::
     msgbox Ecruteak_TheaterVisitor_Text, MSGBOX_NPC
     end
 Ecruteak_TheaterVisitor_Text:
-    .string "The DANCE THEATER is up this path.\nThere are no performances yet.$"
+    .string "The DANCE THEATER is up this path.\nThere are short performances.$"
 
 Ecruteak_BurnedGuide::
     msgbox Ecruteak_BurnedGuide_Text, MSGBOX_NPC
     end
 Ecruteak_BurnedGuide_Text:
-    .string "BURNED TOWER\pThis is a temporary entrance room.\nThe tower interior is not built yet.$"
+    .string "BURNED TOWER\pThe basement is open to visitors.\nPlease watch your footing.$"
 
 Ecruteak_BellGuide::
     msgbox Ecruteak_BellGuide_Text, MSGBOX_NPC
     end
 Ecruteak_BellGuide_Text:
-    .string "BELL TOWER\pThis is a temporary entrance room.\nThe upper floors are not built yet.$"
+    .string "BELL TOWER\pThe stairs lead to the upper floors.\nPlease treat the tower with care.$"
 
 Ecruteak_Host::
     msgbox Ecruteak_Host_Text, MSGBOX_NPC
@@ -93,13 +93,13 @@ Ecruteak_TheaterGuide::
     msgbox Ecruteak_TheaterGuide_Text, MSGBOX_NPC
     end
 Ecruteak_TheaterGuide_Text:
-    .string "ECRUTEAK DANCE THEATER\pThis is a temporary lobby.\nThe stage is not built yet.$"
+    .string "ECRUTEAK DANCE THEATER\pShort performances are held here.\nSpeak to the host inside.$"
 
 Ecruteak_GymGuide::
     msgbox Ecruteak_GymGuide_Text, MSGBOX_NPC
     end
 Ecruteak_GymGuide_Text:
-    .string "ECRUTEAK GYM\pThis is a temporary lobby.\nBattles and badges come later.$"
+    .string "ECRUTEAK GYM\pOptional practice battles inside.\nBadges are not awarded here.$"
 
 Ecruteak_CenterVisitor::
     msgbox Ecruteak_CenterVisitor_Text, MSGBOX_NPC
@@ -111,13 +111,13 @@ Ecruteak_BurnedTowerSign::
     msgbox Ecruteak_BurnedTowerSign_Text, MSGBOX_SIGN
     end
 Ecruteak_BurnedTowerSign_Text:
-    .string "BURNED TOWER\nTemporary exterior and entrance.$"
+    .string "BURNED TOWER\nOpen to visitors.$"
 
 Ecruteak_BellTowerSign::
     msgbox Ecruteak_BellTowerSign_Text, MSGBOX_SIGN
     end
 Ecruteak_BellTowerSign_Text:
-    .string "BELL TOWER\nTemporary exterior and entrance.$"
+    .string "BELL TOWER\nOpen to visitors.$"
 
 Ecruteak_ResidenceSign::
     msgbox Ecruteak_ResidenceSign_Text, MSGBOX_SIGN
@@ -129,13 +129,13 @@ Ecruteak_DanceTheaterSign::
     msgbox Ecruteak_DanceTheaterSign_Text, MSGBOX_SIGN
     end
 Ecruteak_DanceTheaterSign_Text:
-    .string "ECRUTEAK DANCE THEATER\nTemporary exterior and lobby.$"
+    .string "ECRUTEAK DANCE THEATER\nPerformances inside.$"
 
 Ecruteak_GymSign::
     msgbox Ecruteak_GymSign_Text, MSGBOX_SIGN
     end
 Ecruteak_GymSign_Text:
-    .string "ECRUTEAK GYM\nTemporary lobby. Battles pending.$"
+    .string "ECRUTEAK GYM\nOptional practice battles inside.$"
 
 Ecruteak_PokemonCenter_1FSign::
     msgbox Ecruteak_PokemonCenter_1FSign_Text, MSGBOX_SIGN

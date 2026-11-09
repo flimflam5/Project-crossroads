@@ -1,5 +1,6 @@
 #include "global.h"
 #include "overworld.h"
+#include "crossroads_continue.h"
 #include "battle_pyramid.h"
 #include "battle_setup.h"
 #include "battle_util.h"
@@ -2115,6 +2116,7 @@ static void FieldCB_FadeTryShowMapPopup(void)
 void CB2_ContinueSavedGame(void)
 {
     u8 trainerHillMapId;
+    bool32 crossroadsMap;
 
     FieldClearVBlankHBlankCallbacks();
     StopMapMusic();
@@ -2123,12 +2125,15 @@ void CB2_ContinueSavedGame(void)
         ResetWinStreaks();
 
     LoadSaveblockMapHeader();
+    crossroadsMap = Crossroads_PrepareContinue();
     ClearDiveAndHoleWarps();
     trainerHillMapId = GetCurrentTrainerHillMapId();
     if (gMapHeader.mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PYRAMID_FLOOR)
         LoadBattlePyramidFloorObjectEventScripts();
     else if (trainerHillMapId != 0 && trainerHillMapId != TRAINER_HILL_ENTRANCE)
         LoadTrainerHillFloorObjectEventScripts();
+    else if (crossroadsMap)
+        LoadObjEventTemplatesFromHeader();
     else
         LoadSaveblockObjEventScripts();
 

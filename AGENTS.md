@@ -37,3 +37,10 @@ Olivine, Route 39, Route 38 and Ecruteak footprint. Fully flesh out these areas
 before adding new cities/routes. Interiors/landmark floors inside these locations
 are within scope; major story, curated roster and Gym progression decisions still
 require creative review. Preserve accepted saves, title and starter behavior.
+
+Owner approved curated Route 39 Sentret/Hoothoot/Mareep/rare Miltank levels 4–7 and
+Route 38 Meowth/Farfetch’d/Magnemite/Hoothoot levels 5–9. Optional trainers and
+repeatable Jasmine/Morty practice battles are approved; defer badges/story gates.
+Trainer IDs 855–860 use existing reserved space; keep MAX_TRAINERS_COUNT=864 so
+system/save flag offsets never shift. Custom NPC IDs 0x3F00–03 must not change
+NUM_OBJ_EVENT_GFX or dynamic graphics IDs.

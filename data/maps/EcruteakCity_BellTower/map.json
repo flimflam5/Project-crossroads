@@ -1,7 +1,7 @@
 {
   "id": "MAP_ECRUTEAK_CITY_BELL_TOWER",
   "name": "EcruteakCity_BellTower",
-  "layout": "LAYOUT_HOUSE_WITH_BED",
+  "layout": "LAYOUT_ECRUTEAKCITY_BELLTOWER",
   "music": "MUS_LILYCOVE",
   "region": "REGION_HOENN",
   "region_map_section": "MAPSEC_ECRUTEAK_CITY",
@@ -16,7 +16,7 @@
   "connections": null,
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_WOMAN_3",
+      "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
       "x": 7,
       "y": 5,
       "elevation": 3,
@@ -25,7 +25,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Ecruteak_BellGuide",
+      "script": "Area_BellCaretaker",
       "flag": "0"
     }
   ],
@@ -43,8 +43,24 @@
       "elevation": 0,
       "dest_map": "MAP_ECRUTEAK_CITY",
       "dest_warp_id": "1"
+    },
+    {
+      "x": 7,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_2F",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],
-  "bg_events": []
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 5,
+      "y": 1,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Area_Floor_EcruteakCity_BellTower"
+    }
+  ]
 }

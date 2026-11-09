@@ -1,3 +1,15 @@
+# Current checkpoint — western area 0.8
+
+Current branch: feature/western-area-completion-01. Current-area exploration content
+is implemented and compiled for QA; see RELEASE_0_8.md and AREA_COMPLETION.md.
+Owner Delta QA is pending. Earlier accepted 0.6 behavior is the regression baseline.
+No additional cities/routes, badges, story gates or unapproved prologue scenes.
+
+Historical development record follows; older unfinished-content statements refer
+to their respective checkpoints, not the current candidate.
+
+---
+
 # Development status
 
 ## Audit baseline — 2026-11-07
@@ -145,3 +157,12 @@ Emerald build, structural checks and both-gender full emulator regressions passe
 Normal 0.6 save compatibility and new office Save/Continue/exit checks passed.
 See RELEASE_0_7.md. Owner Delta QA pending for this increment. Existing-area
 completion continues under AREA_COMPLETION.md; no new cities/routes were added.
+
+## Current area completion approvals
+
+Owner approved Route 39 Sentret/Hoothoot/Mareep/rare Miltank levels 4–7 and Route 38
+Meowth/Farfetch’d/Magnemite/Hoothoot levels 5–9, optional grass/trainer battles and
+safe roads. Owner also approved optional trainers plus repeatable Jasmine/Morty
+practice battles, deferring badges and permanent story gates. No new cities/routes
+are authorized in this completion pass. Current work adds actual lighthouse/tower
+floors, farm, theater and arenas inside the existing footprint.

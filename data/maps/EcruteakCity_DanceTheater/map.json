@@ -1,7 +1,7 @@
 {
   "id": "MAP_ECRUTEAK_CITY_DANCE_THEATER",
   "name": "EcruteakCity_DanceTheater",
-  "layout": "LAYOUT_HOUSE_WITH_BED",
+  "layout": "LAYOUT_ECRUTEAKCITY_DANCETHEATER",
   "music": "MUS_LILYCOVE",
   "region": "REGION_HOENN",
   "region_map_section": "MAPSEC_ECRUTEAK_CITY",
@@ -25,8 +25,50 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Ecruteak_TheaterGuide",
+      "script": "Area_TheaterHost",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
+      "x": 2,
+      "y": 2,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Area_Dancer",
+      "flag": "0",
+      "local_id": "LOCALID_AREA_DANCER_1"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_1",
+      "x": 4,
+      "y": 2,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Area_Dancer",
+      "flag": "0",
+      "local_id": "LOCALID_AREA_DANCER_2"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_3",
+      "x": 6,
+      "y": 2,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Area_Dancer",
+      "flag": "0",
+      "local_id": "LOCALID_AREA_DANCER_3"
     }
   ],
   "warp_events": [

@@ -1229,7 +1229,8 @@ static const struct DoorGraphics *GetDoorGraphics(const struct DoorGraphics *gfx
 {
     while (gfx->tiles != NULL)
     {
-        if (gfx->metatileNum == metatileNum && (gfx->tileset == gMapHeader.mapLayout->primaryTileset || gfx->tileset == gMapHeader.mapLayout->secondaryTileset))
+        if (gfx->metatileNum == metatileNum && (gfx->tileset == gMapHeader.mapLayout->primaryTileset || gfx->tileset == gMapHeader.mapLayout->secondaryTileset
+            || (!IS_FRLG && gfx->tileset == &gTileset_Slateport && gMapHeader.mapLayout->secondaryTileset == &gTileset_WesternCity)))
             return gfx;
         gfx++;
     }

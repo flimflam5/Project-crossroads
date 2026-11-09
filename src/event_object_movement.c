@@ -585,6 +585,10 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPaletteNeonLight,          OBJ_EVENT_PAL_TAG_NEON_LIGHT},
     // Append: berry-tree palette data relies on the existing ordinal positions.
     {gObjectEventPal_JoeCorporate,          OBJ_EVENT_PAL_TAG_JOE_CORPORATE},
+    {gObjectEventPal_CrossroadsJasmine, OBJ_EVENT_PAL_TAG_CROSSROADS_JASMINE},
+    {gObjectEventPal_AreaBell, OBJ_EVENT_PAL_TAG_AREA_BELL},
+    {gObjectEventPal_AreaLantern, OBJ_EVENT_PAL_TAG_AREA_LANTERN},
+    {gObjectEventPal_CrossroadsMorty, OBJ_EVENT_PAL_TAG_CROSSROADS_MORTY},
 #ifdef BUGFIX
     {NULL,                                  OBJ_EVENT_PAL_TAG_NONE},
 #else
@@ -3209,6 +3213,14 @@ const struct ObjectEventGraphicsInfo *GetObjectEventGraphicsInfo(u16 graphicsId)
     if (graphicsId & OBJ_EVENT_MON)
         return SpeciesToGraphicsInfo(graphicsId & OBJ_EVENT_MON_SPECIES_MASK, graphicsId & OBJ_EVENT_MON_SHINY, graphicsId & OBJ_EVENT_MON_FEMALE);
 
+    if (graphicsId == OBJ_EVENT_GFX_CROSSROADS_JASMINE)
+        return &gObjectEventGraphicsInfo_CrossroadsJasmine;
+    if (graphicsId == OBJ_EVENT_GFX_CROSSROADS_MORTY)
+        return &gObjectEventGraphicsInfo_CrossroadsMorty;
+    if (graphicsId == OBJ_EVENT_GFX_AREA_BELL)
+        return &gObjectEventGraphicsInfo_AreaBell;
+    if (graphicsId == OBJ_EVENT_GFX_AREA_LANTERN)
+        return &gObjectEventGraphicsInfo_AreaLantern;
     if (graphicsId >= NUM_OBJ_EVENT_GFX)
         graphicsId = OBJ_EVENT_GFX_NINJA_BOY;
 

@@ -1,3 +1,15 @@
+# Current checkpoint — western area 0.8
+
+Current branch: feature/western-area-completion-01. Current-area exploration content
+is implemented and compiled for QA; see RELEASE_0_8.md and AREA_COMPLETION.md.
+Owner Delta QA is pending. Earlier accepted 0.6 behavior is the regression baseline.
+No additional cities/routes, badges, story gates or unapproved prologue scenes.
+
+Historical development record follows; older unfinished-content statements refer
+to their respective checkpoints, not the current candidate.
+
+---
+
 # Current priority — finish the existing western area
 
 Owner accepted 0.6 and instructed that no new cities or routes be added until the

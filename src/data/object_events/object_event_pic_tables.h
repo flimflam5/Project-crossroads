@@ -2498,3 +2498,11 @@ static const struct SpriteFrameImage sPicTable_MomFrlg[] = {
 static const struct SpriteFrameImage sPicTable_JoeCorporate[] = {
     overworld_ascending_frames(gObjectEventPic_JoeCorporate, 2, 4),
 };
+
+static const struct SpriteFrameImage sPicTable_CrossroadsJasmine[] = { overworld_frame(gObjectEventPic_CrossroadsJasmine, 2, 4, 0), };
+
+static const struct SpriteFrameImage sPicTable_CrossroadsMorty[] = { overworld_frame(gObjectEventPic_CrossroadsMorty, 2, 4, 0), };
+
+static const struct SpriteFrameImage sPicTable_AreaBell[] = { overworld_frame(gObjectEventPic_AreaBell,2,2,0), };
+
+static const struct SpriteFrameImage sPicTable_AreaLantern[] = { overworld_frame(gObjectEventPic_AreaLantern,2,2,0), };

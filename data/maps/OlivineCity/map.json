@@ -162,6 +162,13 @@
       "elevation": 0,
       "dest_map": "MAP_OLIVINE_CITY_HARBOR_OFFICE",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 39,
+      "y": 32,
+      "elevation": 0,
+      "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_1F",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],

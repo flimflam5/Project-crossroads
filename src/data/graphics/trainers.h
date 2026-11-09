@@ -1,3 +1,7 @@
+const u32 gTrainerFrontPic_CrossroadsJasmine[] = INCGFX_U32("graphics/trainers/crossroads_jasmine/front.png", ".4bpp.smol");
+const u16 gTrainerPalette_CrossroadsJasmine[] = INCGFX_U16("graphics/trainers/crossroads_jasmine/leader.pal", ".gbapal");
+const u32 gTrainerFrontPic_CrossroadsMorty[] = INCGFX_U32("graphics/trainers/crossroads_morty/front.png", ".4bpp.smol");
+const u16 gTrainerPalette_CrossroadsMorty[] = INCGFX_U16("graphics/trainers/crossroads_morty/leader.pal", ".gbapal");
 #include "constants/trainers.h"
 #include "data.h"
 
@@ -1235,4 +1239,6 @@ const struct TrainerPicInfo gTrainerPicInfo[TRAINER_PIC_COUNT] =
         .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_Joe, gTrainerPalette_Joe),
         .backPic = TRAINER_BACK_PIC(4, gTrainerBackPic_Joe, gTrainerPalette_Joe, sBackAnims_Hoenn),
     },
+    [TRAINER_PIC_CROSSROADS_JASMINE] = { .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_CrossroadsJasmine, gTrainerPalette_CrossroadsJasmine), },
+    [TRAINER_PIC_CROSSROADS_MORTY] = { .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_CrossroadsMorty, gTrainerPalette_CrossroadsMorty), },
 };

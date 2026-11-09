@@ -636,3 +636,15 @@ const u16 gObjectEventPic_ClefairyOld[] = INCGFX_U16("graphics/object_events/pic
 
 const u32 gObjectEventPic_JoeCorporate[] = INCGFX_U32("graphics/object_events/pics/people/joe/corporate/walking.png", ".4bpp", "-mwidth 2 -mheight 4");
 const u16 gObjectEventPal_JoeCorporate[] = INCGFX_U16("graphics/object_events/pics/people/joe/corporate/walking.png", ".gbapal");
+
+const u32 gObjectEventPic_CrossroadsJasmine[] = INCGFX_U32("graphics/trainers/crossroads_jasmine/overworld.png", ".4bpp");
+const u16 gObjectEventPal_CrossroadsJasmine[] = INCGFX_U16("graphics/trainers/crossroads_jasmine/leader.pal", ".gbapal");
+
+const u32 gObjectEventPic_CrossroadsMorty[] = INCGFX_U32("graphics/trainers/crossroads_morty/overworld.png", ".4bpp");
+const u16 gObjectEventPal_CrossroadsMorty[] = INCGFX_U16("graphics/trainers/crossroads_morty/leader.pal", ".gbapal");
+
+const u32 gObjectEventPic_AreaBell[] = INCGFX_U32("graphics/object_events/pics/misc/area_bell.png", ".4bpp");
+const u16 gObjectEventPal_AreaBell[] = INCGFX_U16("graphics/object_events/pics/misc/area_bell.pal", ".gbapal");
+
+const u32 gObjectEventPic_AreaLantern[] = INCGFX_U32("graphics/object_events/pics/misc/area_lantern.png", ".4bpp");
+const u16 gObjectEventPal_AreaLantern[] = INCGFX_U16("graphics/object_events/pics/misc/area_lantern.pal", ".gbapal");

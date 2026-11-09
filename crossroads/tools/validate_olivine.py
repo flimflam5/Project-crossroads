@@ -24,17 +24,17 @@ groups = read('data/maps/map_groups.json')
 names = groups['gMapGroup_CrossroadsOlivine'][:8]
 assert groups['group_order'][-1] == 'gMapGroup_CrossroadsOlivine'
 assert len(names) == 8
-maps = {m['id']: m for m in (read(f'data/maps/{n}/map.json') for n in names)}
+maps = {m['id']: m for m in (read(f'data/maps/{n}/map.json') for n in groups['gMapGroup_CrossroadsOlivine'])}
 layouts = {l['id']: l for l in read('data/layouts/layouts.json')['layouts']}
 city = maps['MAP_OLIVINE_CITY']
 raw = ROOT / layouts[city['layout']]['blockdata_filepath']
 assert raw.read_bytes() == generate(), 'Regenerate the city layout'
 linked = (ROOT / 'data/event_scripts.s').read_text()
 script = (ROOT / 'crossroads/scripts/olivine.inc').read_text()
-all_scripts = script + (ROOT / 'crossroads/scripts/starter_rescue.inc').read_text() + (ROOT / 'crossroads/scripts/olivine_interiors.inc').read_text()
+all_scripts = (ROOT / 'crossroads/scripts/area_completion.inc').read_text() + script + (ROOT / 'crossroads/scripts/starter_rescue.inc').read_text() + (ROOT / 'crossroads/scripts/olivine_interiors.inc').read_text()
 assert 'givemon' not in script, 'City must never grant a second starter'
 
-for mid, m in maps.items():
+for mid, m in [(m["id"],m) for m in maps.values() if m["name"] in names]:
     # mapjson uses this field as the Emerald build filter, not geography.
     assert m['region'] == 'REGION_HOENN'
     assert m['region_map_section'] == 'MAPSEC_OLIVINE_CITY'

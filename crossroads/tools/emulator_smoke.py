@@ -6,6 +6,7 @@ controller input through real scripts/doors. Never modifies the ROM. Test snapsh
 and screenshots go into ignored build output. Not a substitute for owner playtesting.
 """
 import argparse
+import hashlib
 import sys
 import ctypes as C
 import subprocess
@@ -19,6 +20,9 @@ parser.add_argument('--output', type=Path, default=root / 'build/emulator-smoke'
 parser.add_argument('--library', type=Path, help='optional prebuilt mgba_bridge shared library')
 parser.add_argument('--gender', type=int, choices=(0, 1), default=0, help='exercise both existing save gender values')
 parser.add_argument('--title-only', action='store_true', help='normal cold boot, native title VRAM, animation, Start/New Game handoff and soft reset')
+parser.add_argument('--first-loss-only', action='store_true', help='fresh player practice loss must respawn in Olivine')
+parser.add_argument('--battle-resume', type=Path, help='exact-ROM Elgyem fixture for optional practice battle flow tests')
+parser.add_argument('--area-resume', type=Path, help='resume the area-only tour from an exact-ROM area-ready.snapshot')
 args = parser.parse_args()
 args.output.mkdir(parents=True, exist_ok=True)
 bridge = args.library or args.output / 'mgba_bridge.so'
@@ -109,6 +113,7 @@ frames(300)
 sb2 = read('gSaveBlock2Ptr')
 for i, v in enumerate([196, 201, 191, 255, 255, 255, 255, 255]):
     write(sb2 + i, v, 1)
+write('sWildEncountersDisabled', 1, 1)
 script('Olivine_OfferVisit')
 frames(120)
 for _ in range(4):
@@ -171,6 +176,7 @@ def walk(target, map_name='OlivineCity'):
     tiles = struct.unpack(f'<{width*height}H', (root / layout['blockdata_filepath']).read_bytes())
     blocked = {(o['x'], o['y']) for o in current['object_events']}
     start = pos()
+    blocked.update((e["x"],e["y"]) for e in current["warp_events"] if (e["x"],e["y"]) not in (start,target))
     q = deque([start])
     prev = {start: None}
     while q:
@@ -201,12 +207,62 @@ def walk(target, map_name='OlivineCity'):
             frames(16, k)
             frames(20)
         assert pos() == n, (old, n, pos())
+map_ids = {json.loads((root/f'data/maps/{n}/map.json').read_text())['id']: i for i,n in enumerate(json.loads((root/'data/maps/map_groups.json').read_text())['gMapGroup_CrossroadsOlivine'])}
+if args.first_loss_only:
+    script('Crossroads_EventScript_VisitRescueCase')
+    frames(180)
+    for _ in range(5):key(1);frames(90)
+    walk((4,5),'OlivineCity_SilphOffice')
+    frames(1,64);frames(20);key(1);frames(120)
+    for _ in range(3):key(1);frames(120)
+    for _ in range(8):key(2);frames(60)
+    assert read(read('gPlayerPartyCountPtr'),1)==1
+    script('Olivine_OfferVisit');frames(180)
+    for _ in range(4):key(1);frames(90)
+    sb=read('gSaveBlock1Ptr')
+    assert (read(sb+0x1c,1),read(sb+0x1d,1))==(75,0)
+    walk((38,10));frames(16,64);frames(180)
+    walk((7,3),'OlivineCity_Gym')
+    for _ in range(2):frames(16,64);frames(180)
+    walk((6,4),'OlivineCity_Gym_Arena');frames(1,64);frames(20)
+    write(read('gPlayerPartyPtr')+86,1,2)
+    key(1);frames(180);key(1);frames(120);key(1);frames(300)
+    for _ in range(120):
+        key(1);frames(120)
+        sb=read('gSaveBlock1Ptr')
+        if read(sb+4,1)!=75 or read(sb+5,1)!=33:break
+    for _ in range(16):
+        if not read('sLockFieldControls',1):break
+        key(1);frames(120)
+    assert (read(sb+4,1),read(sb+5,1))==(75,4), 'First loss must return to local Center'
+    p=read('gPlayerPartyPtr')
+    assert read(p+86,2)==read(p+88,2)>0
+    verify_joe()
+    assert lib.emu_image(str(args.output/'first-loss-olivine-center.png').encode())
+    print('Fresh player with no prior Center visit: real practice battle loss returns to Olivine Center, heals and preserves Joe/party: PASS')
+    sys.exit(0)
+
+if args.battle_resume:
+    assert args.battle_resume.with_suffix('.rom.sha256').read_text().strip() == hashlib.sha256(args.rom.read_bytes()).hexdigest()
+    assert lib.emu_state(str(args.battle_resume).encode(),1)
+    from practice_battle_smoke import run
+    run(root,syms,lib,args.output,read,write,frames,key,walk,pos,verify_joe)
+    sys.exit(0)
+
+if args.area_resume:
+    expected = args.area_resume.with_suffix('.rom.sha256').read_text().strip()
+    assert expected == hashlib.sha256(args.rom.read_bytes()).hexdigest(), 'Snapshot belongs to a different ROM'
+    assert lib.emu_state(str(args.area_resume).encode(),1)
+    from area_completion_smoke import run as run_area_checks
+    run_area_checks(root,syms,lib,args.output,read,frames,key,walk,pos,verify_joe)
+    sys.exit(0)
+
 for i, w in enumerate(city['warp_events']):
     walk((w['x'], w['y'] + 1))
     frames(16, 64)
     frames(180)
     sb = read('gSaveBlock1Ptr')
-    assert read(sb + 4, 1) == 75 and read(sb + 5, 1) == i + 1, (i, pos(), read(sb + 5, 1))
+    assert read(sb + 4, 1) == 75 and read(sb + 5, 1) == map_ids[w['dest_map']], (i, pos(), read(sb + 5, 1))
     assert read(syms['gMain'] + 4) == syms['CB2_Overworld'] | 1
     verify_joe()
     print('Entered with Joe', w['dest_map'], flush=True)
@@ -347,6 +403,9 @@ for choice, species in ((1, 605), (2, 273), (3, 568)):
     assert read(sb + 4, 1) == 75 and read(sb + 5, 1) == 0
     assert read(sb + 5020 + 500, 2) == choice and read(read('gPlayerPartyCountPtr'), 1) == 1
     print('Live Olivine met location/level, rescue, duplicate guard and terminal travel passed:', species, flush=True)
+    if choice == 1:
+        assert lib.emu_state(str(args.output/'elgyem-field.snapshot').encode(),0)
+        (args.output/'elgyem-field.rom.sha256').write_text(hashlib.sha256(args.rom.read_bytes()).hexdigest())
 walk((11, 22))
 frames(16, 64)
 frames(180)
@@ -401,6 +460,10 @@ assert lib.emu_state(str(args.output/'ecruteak-field-ready.snapshot').encode(),0
 print('Connected return visit with starter: Ecruteak nurse heals 1 HP to full and retains correct respawn/fonts/Joe: PASS',flush=True)
 from olivine_detail_smoke import run as run_detail_checks
 run_detail_checks(root,syms,lib,args.output,read,write,frames,key,walk,pos,verify_joe,western)
+assert lib.emu_state(str(args.output/'area-ready.snapshot').encode(),0)
+(args.output/'area-ready.rom.sha256').write_text(hashlib.sha256(args.rom.read_bytes()).hexdigest())
+from area_completion_smoke import run as run_area_checks
+run_area_checks(root,syms,lib,args.output,read,frames,key,walk,pos,verify_joe)
 
 key(8)
 frames(120)
