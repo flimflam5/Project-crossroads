@@ -1,3 +1,12 @@
+# Current QA candidate — 0.8.3 boot/audio
+
+Inherited title reverb explicitly disabled/restored; custom Black Ledger pre-title
+prototype implemented independently. Combined Emerald build, native boot/skip/
+reset, title audio per-frame continuity, title UI and real old-save Continue pass.
+Delta static/skip comparison and pre-title appearance/pacing QA remain pending.
+See RELEASE_0_8_3.md for exact coverage and limitations. Original New Game prologue
+remains unchanged. No map or story expansion in this increment.
+
 # Active audio/boot refinement after 0.8.2
 
 Owner says 0.8.2 is a bit better, but reports remaining static and track skips.

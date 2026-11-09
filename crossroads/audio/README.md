@@ -24,3 +24,10 @@ validate_title_music.py. Optional mGBA check: compile mgba_bridge.c as a shared
 library with libmgba-dev and run title_music_smoke.py --library /path/to/bridge.so.
 The test captures emulator audio, checks non-silence/clipping, actual sample wrap,
 Start/reset and restoration of the normal mixer/DAC before the main menu.
+
+
+0.8.3 additionally fixes inherited reverb: the old boot movie left effect level
+50, and a song header of zero did not clear it. The title now explicitly clears
+reverb and restores the prior value on exit. Exact 5,760-frame pointer progression
+is checked across the full loop; Delta listening/static/skip QA remains pending.
+See AUDIO_REFINEMENT.md and RELEASE_0_8_3.md for comparison evidence and limits.
