@@ -93,6 +93,6 @@ void CB2_InitBlackLedgerTitleScreen(void)
     BeginNormalPaletteFade(PALETTES_ALL, 0, 16, 0, RGB_BLACK);
     SetVBlankCallback(VBlankCB_BlackLedgerTitle);
     EnableInterrupts(INTR_FLAG_VBLANK);
-    PlayBGM(MUS_ABANDONED_SHIP); // Existing engine track, temporary title audio.
+    PlayBGM(MUS_BLACK_LEDGER_TITLE);
     SetMainCallback2(CB2_BlackLedgerTitle);
 }
