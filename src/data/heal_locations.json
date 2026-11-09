@@ -365,6 +365,22 @@
       "y": 35,
       "respawn_map": "MAP_ECRUTEAK_CITY_POKEMON_CENTER_1F",
       "respawn_npc": "LOCALID_ECRUTEAK_NURSE"
+    },
+    {
+      "id": "HEAL_LOCATION_GOLDENROD_CITY",
+      "map": "MAP_GOLDENROD_CITY",
+      "x": 9,
+      "y": 19,
+      "respawn_map": "MAP_GOLDENROD_CITY_POKEMON_CENTER_1_F",
+      "respawn_npc": "LOCALID_JOHTO_NURSE_GOLDENROD_CITY"
+    },
+    {
+      "id": "HEAL_LOCATION_VIOLET_CITY",
+      "map": "MAP_VIOLET_CITY",
+      "x": 9,
+      "y": 19,
+      "respawn_map": "MAP_VIOLET_CITY_POKEMON_CENTER_1_F",
+      "respawn_npc": "LOCALID_JOHTO_NURSE_VIOLET_CITY"
     }
   ]
 }

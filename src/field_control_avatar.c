@@ -1,4 +1,6 @@
 #include "global.h"
+#include "johto_exploration.h"
+extern const u8 Johto_TestSurf[];
 #include "battle_setup.h"
 #include "bike.h"
 #include "coord_event_weather.h"
@@ -638,6 +640,9 @@ static const u8 *GetInteractedMetatileScript(struct MapPosition *position, u8 me
 
 static const u8 *GetInteractedWaterScript(struct MapPosition *unused1, u8 metatileBehavior, enum Direction direction)
 {
+    if (Johto_CanTestSurf() && IsPlayerFacingSurfableFishableWater()
+     && CheckFollowerNPCFlag(FOLLOWER_NPC_FLAG_CAN_SURF))
+        return Johto_TestSurf;
     if (MetatileBehavior_IsFastWater(metatileBehavior) == TRUE && !TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING))
         return EventScript_CurrentTooFast;
     if (IsFieldMoveUnlocked(FIELD_MOVE_SURF) && PartyHasMonWithSurf() == TRUE && IsPlayerFacingSurfableFishableWater() == TRUE

@@ -1,4 +1,6 @@
 #include "global.h"
+#include "johto_atlas.h"
+#include "constants/maps.h"
 #include "bg.h"
 #include "event_data.h"
 #include "field_effect.h"
@@ -97,6 +99,11 @@ static const struct WindowTemplate sFieldRegionMapWindowTemplates[] =
 
 void FieldInitRegionMap(MainCallback callback)
 {
+    if (!IS_FRLG && gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_OLIVINE_CITY))
+    {
+        Johto_OpenAtlas(callback);
+        return;
+    }
     SetVBlankCallback(NULL);
     sFieldRegionMapHandler = Alloc(sizeof(*sFieldRegionMapHandler));
     sFieldRegionMapHandler->state = 0;

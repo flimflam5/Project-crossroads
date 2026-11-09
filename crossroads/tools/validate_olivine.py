@@ -31,7 +31,7 @@ raw = ROOT / layouts[city['layout']]['blockdata_filepath']
 assert raw.read_bytes() == generate(), 'Regenerate the city layout'
 linked = (ROOT / 'data/event_scripts.s').read_text()
 script = (ROOT / 'crossroads/scripts/olivine.inc').read_text()
-all_scripts = (ROOT / 'crossroads/scripts/area_completion.inc').read_text() + script + (ROOT / 'crossroads/scripts/starter_rescue.inc').read_text() + (ROOT / 'crossroads/scripts/olivine_interiors.inc').read_text()
+all_scripts = '\n'.join(p.read_text() for p in (ROOT/'crossroads/scripts').glob('johto*.inc')) + (ROOT / 'crossroads/scripts/area_completion.inc').read_text() + script + (ROOT / 'crossroads/scripts/starter_rescue.inc').read_text() + (ROOT / 'crossroads/scripts/olivine_interiors.inc').read_text()
 assert 'givemon' not in script, 'City must never grant a second starter'
 
 for mid, m in [(m["id"],m) for m in maps.values() if m["name"] in names]:

@@ -34,6 +34,12 @@ def decorate(name,data,w,h):
                 for xx in range(x,x+ww):
                     v=t[yy*w+xx]
                     if v&0xc00==0 and v>>12==3 and (v&1023)!=0x202:t[yy*w+xx]=0x3000|grass
+    # Regional expansion opens the existing south road; preserve the accepted sign.
+    phase=R/'crossroads/johto/manifest.json'
+    if name=='EcruteakCity' and phase.exists() and 'checkpoint' in json.loads(phase.read_text()):
+        for yy in range(43,48):
+            for xx in range(24,27):
+                if (xx,yy)!=(24,44):t[yy*w+xx]=0x3202
     return struct.pack('<'+str(len(t))+'H',*t)
 
 

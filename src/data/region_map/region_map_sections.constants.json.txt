@@ -4,9 +4,11 @@
 
 enum {
 ## for map_section in map_sections
+{% if loop.index == 213 %}
+    MAPSEC_NONE, // Preserve the pre-Johto saved sentinel ID.
+{% endif %}
     {{ map_section.id }},
 ## endfor
-    MAPSEC_NONE,
     MAPSEC_COUNT
 };
 

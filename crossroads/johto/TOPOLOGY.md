@@ -1,0 +1,70 @@
+# Johto exploration topology
+
+Existing western maps are retained. Planned append-only IDs and coverage: [manifest.json](manifest.json).
+
+```mermaid
+graph LR
+  OlivineCity --- JohtoRoute39
+  JohtoRoute39 --- JohtoRoute38
+  JohtoRoute38 --- EcruteakCity
+  EcruteakCity --- JohtoRoute37
+  JohtoRoute37 --- JohtoRoute36
+  JohtoRoute36 --- VioletCity
+  JohtoRoute36 --- NationalPark
+  NationalPark --- JohtoRoute35
+  JohtoRoute35 --- GoldenrodCity
+  JohtoRoute36 --- RuinsOfAlph
+  GoldenrodCity --- JohtoRoute34
+  JohtoRoute34 --- IlexForest
+  IlexForest --- AzaleaTown
+  AzaleaTown --- JohtoRoute33
+  JohtoRoute32 --- VioletCity
+  JohtoRoute32 --- RuinsOfAlph
+  VioletCity --- JohtoRoute31
+  JohtoRoute31 --- JohtoRoute30
+  JohtoRoute30 --- CherrygroveCity
+  CherrygroveCity --- JohtoRoute29
+  JohtoRoute29 --- NewBarkTown
+  EcruteakCity --- JohtoRoute42
+  JohtoRoute42 --- MahoganyTown
+  MahoganyTown --- JohtoRoute43
+  JohtoRoute43 --- LakeOfRage
+  MahoganyTown --- JohtoRoute44
+  BlackthornCity --- JohtoRoute45
+  JohtoRoute45 --- JohtoRoute46
+  JohtoRoute46 --- JohtoRoute29
+  OlivineCity --- JohtoRoute40
+  JohtoRoute40 --- JohtoRoute41
+  JohtoRoute41 --- CianwoodCity
+  JohtoRoute47 --- JohtoRoute48
+  JohtoRoute48 --- SafariZoneGate
+  SafariZoneGate --- SafariWetlands
+  VioletCity --- SproutTower
+  RuinsOfAlph --- AlphChambers
+  RuinsOfAlph --- AlphChambers
+  JohtoRoute32 --- UnionCave
+  JohtoRoute33 --- UnionCave
+  AzaleaTown --- SlowpokeWell
+  JohtoRoute31 --- DarkCave
+  JohtoRoute46 --- DarkCave
+  JohtoRoute45 --- DarkCave
+  JohtoRoute42 --- MtMortar
+  JohtoRoute42 --- MtMortar
+  JohtoRoute42 --- MtMortar
+  JohtoRoute44 --- IcePath
+  BlackthornCity --- IcePath
+  BlackthornCity --- DragonsDen
+  JohtoRoute41 --- WhirlIslands
+  JohtoRoute41 --- WhirlIslands
+  JohtoRoute41 --- WhirlIslands
+  JohtoRoute41 --- WhirlIslands
+  CianwoodCity --- CliffEdgeGate
+  JohtoRoute47 --- CliffEdgeGate
+  JohtoRoute47 --- CliffCave
+  JohtoRoute47 --- CliffCave
+  NewBarkTown --- TohjoFalls
+```
+
+League approach terminates at a labeled Kanto boundary beyond Tohjo Falls; no other region or League completion is claimed.
+
+Each cluster must compile and pass topology checks before the next. Services/rooms have reciprocal exits. New rosters and teams remain pending. Test water access will be session-only and explicitly labeled.

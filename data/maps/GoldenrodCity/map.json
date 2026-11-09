@@ -1,0 +1,179 @@
+{
+  "id": "MAP_GOLDENROD_CITY",
+  "name": "GoldenrodCity",
+  "layout": "LAYOUT_GOLDENROD_CITY",
+  "music": "MUS_LILYCOVE",
+  "region": "REGION_HOENN",
+  "region_map_section": "MAPSEC_GOLDENROD_CITY",
+  "requires_flash": false,
+  "weather": "WEATHER_SUNNY",
+  "map_type": "MAP_TYPE_CITY",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_JOHTO_ROUTE35",
+      "offset": 16,
+      "direction": "up"
+    }
+  ],
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_3",
+      "x": 33,
+      "y": 31,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Johto_GoldenrodCity_Resident",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 9,
+      "y": 18,
+      "elevation": 0,
+      "dest_map": "MAP_GOLDENROD_CITY_POKEMON_CENTER_1_F",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 49,
+      "y": 18,
+      "elevation": 0,
+      "dest_map": "MAP_GOLDENROD_CITY_MART",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 49,
+      "y": 46,
+      "elevation": 0,
+      "dest_map": "MAP_GOLDENROD_CITY_GYM",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 8,
+      "y": 45,
+      "elevation": 0,
+      "dest_map": "MAP_GOLDENROD_CITY_RESIDENCE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 29,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_GOLDENROD_CITY_WORKSHOP",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 6,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_GOLDENROD_DEPARTMENT_STORE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 28,
+      "y": 49,
+      "elevation": 0,
+      "dest_map": "MAP_GOLDENROD_UNDERGROUND",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 49,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_GOLDENROD_RADIO_LOBBY",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 27,
+      "y": 31,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Johto_GoldenrodCity_Sign"
+    },
+    {
+      "type": "sign",
+      "x": 8,
+      "y": 19,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Johto_GoldenrodCity_PokemonCenter_1F_Plaque"
+    },
+    {
+      "type": "sign",
+      "x": 7,
+      "y": 19,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Johto_AtlasBoard"
+    },
+    {
+      "type": "sign",
+      "x": 48,
+      "y": 19,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Johto_GoldenrodCity_Mart_Plaque"
+    },
+    {
+      "type": "sign",
+      "x": 48,
+      "y": 47,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Johto_GoldenrodCity_Gym_Plaque"
+    },
+    {
+      "type": "sign",
+      "x": 7,
+      "y": 46,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Johto_GoldenrodCity_Residence_Plaque"
+    },
+    {
+      "type": "sign",
+      "x": 28,
+      "y": 9,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Johto_GoldenrodCity_Workshop_Plaque"
+    },
+    {
+      "type": "sign",
+      "x": 5,
+      "y": 8,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Johto_GoldenrodDepartmentStore_Entrance"
+    },
+    {
+      "type": "sign",
+      "x": 27,
+      "y": 50,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Johto_GoldenrodUnderground_Entrance"
+    },
+    {
+      "type": "sign",
+      "x": 48,
+      "y": 8,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Johto_GoldenrodRadioLobby_Entrance"
+    }
+  ]
+}

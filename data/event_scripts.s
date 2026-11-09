@@ -1786,3 +1786,61 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
     .include "data/maps/JohtoRoute39_FarmHouse/scripts.inc"
     .include "data/maps/JohtoRoute39_Barn/scripts.inc"
     .include "crossroads/scripts/area_completion.inc"
+
+	.include "data/maps/GoldenrodCity/scripts.inc"
+
+	.include "data/maps/GoldenrodCity_PokemonCenter_1F/scripts.inc"
+
+	.include "data/maps/GoldenrodCity_Mart/scripts.inc"
+
+	.include "data/maps/GoldenrodCity_Gym/scripts.inc"
+
+	.include "data/maps/GoldenrodCity_Residence/scripts.inc"
+
+	.include "data/maps/GoldenrodCity_Workshop/scripts.inc"
+
+	.include "data/maps/VioletCity/scripts.inc"
+
+	.include "data/maps/VioletCity_PokemonCenter_1F/scripts.inc"
+
+	.include "data/maps/VioletCity_Mart/scripts.inc"
+
+	.include "data/maps/VioletCity_Gym/scripts.inc"
+
+	.include "data/maps/VioletCity_Residence/scripts.inc"
+
+	.include "data/maps/VioletCity_Workshop/scripts.inc"
+
+	.include "data/maps/JohtoRoute37/scripts.inc"
+
+	.include "data/maps/JohtoRoute36/scripts.inc"
+
+	.include "data/maps/JohtoRoute35/scripts.inc"
+
+	.include "data/maps/NationalPark/scripts.inc"
+
+	.include "data/maps/RuinsOfAlph/scripts.inc"
+
+	.include "data/maps/SproutTower_1F/scripts.inc"
+
+	.include "data/maps/SproutTower_2F/scripts.inc"
+
+	.include "data/maps/SproutTower_3F/scripts.inc"
+
+	.include "data/maps/AlphChambers_1F/scripts.inc"
+
+	.include "data/maps/AlphChambers_2F/scripts.inc"
+
+	.include "data/maps/AlphChambers_3F/scripts.inc"
+
+	.include "data/maps/GoldenrodDepartmentStore/scripts.inc"
+
+	.include "data/maps/GoldenrodUnderground/scripts.inc"
+
+	.include "data/maps/GoldenrodRadioLobby/scripts.inc"
+
+	.include "data/maps/VioletAcademy/scripts.inc"
+
+	.include "crossroads/scripts/johto_network.inc"
+
+	.include "crossroads/scripts/johto_runtime.inc"
