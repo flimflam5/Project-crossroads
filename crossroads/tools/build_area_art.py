@@ -78,8 +78,13 @@ def build():
                     piece=im.crop((x*16+dx,y*16+dy,x*16+dx+8,y*16+dy+8))
                     tiles.paste(piece,(slot%16*8,slot//16*8));top.append((slot+512)|(bank<<12))
                 words.extend(under+top)
-                attrs.append(0x60 if y==h-1 and x==w//2 else 0)
+                attrs.append((0x1000 if y>=h-2 else 0) | (0x60 if y==h-1 and x==w//2 else 0))
         manifest[name]={'start':start,'width':w,'height':h,'door_x':w//2,'door_y':h-1}
+    # Johto-only tree roots: same native graphics, ground layer behind sprites.
+    general=(R/'data/tilesets/primary/general/metatiles.bin').read_bytes()
+    assert 512+len(attrs)==0x3e8
+    for root in (0x1e6,0x1e7):
+        words.extend(struct.unpack('<8H',general[root*16:(root+1)*16]));attrs.append(0x1000)
     assert len(attrs)<=512
     tiles.save(CITY/'tiles.png',bits=4)
     (CITY/'metatiles.bin').write_bytes(struct.pack('<'+str(len(words))+'H',*words))

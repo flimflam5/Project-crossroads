@@ -281,7 +281,9 @@ def main():
    write(f'data/maps/{n}/scripts.inc',f'{n}_MapScripts::\n'+extra+'    .byte 0\n')
   # Reused Center/Mart layouts stay byte-for-byte unchanged.
   if n not in existing and meta[n]['kind']=='service':continue
-  path=bylayout[m['layout']]['blockdata_filepath'];write(path,struct.pack('<'+str(len(tiles[n]))+'H',*tiles[n]))
+  path=bylayout[m['layout']]['blockdata_filepath']
+  from visual_repairs import repair
+  write(path,repair(n,struct.pack('<'+str(len(tiles[n]))+'H',*tiles[n]),*sizes[n]))
  groups['gMapGroup_CrossroadsOlivine']=names[:127]
  if len(names)>127:
   groups['gMapGroup_CrossroadsJohtoExpansion']=names[127:]

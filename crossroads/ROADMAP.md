@@ -1,3 +1,13 @@
+# Visual/collision QA — repair pass0.9.1
+
+Owner reports0.9 network works but has NOT passed visual/collision QA. Expansion
+is paused. The first repair pass covers Ecruteak exterior, Mahogany town/workshop,
+Routes38/39 and shared ground-layer fixes also affecting Olivine. This is not a
+region-wide polish claim. See RELEASE_0_9_1.md and qa/visual-0.9.1/manifest.json.
+All other map visual reviews remain open; owner visual acceptance is pending.
+
+---
+
 # Current authorized map pass —0.9
 
 All four geographic clusters are implemented and compiled. Current task is regression/delivery and owner exploration QA, not inventing the prologue, Gym order, new encounters or additional regions. Future work follows QA defects and approved design decisions. See johto/DELTA_QA.md and RELEASE_0_9.md.

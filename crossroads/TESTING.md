@@ -1,3 +1,13 @@
+# Visual/collision QA — repair pass0.9.1
+
+Owner reports0.9 network works but has NOT passed visual/collision QA. Expansion
+is paused. The first repair pass covers Ecruteak exterior, Mahogany town/workshop,
+Routes38/39 and shared ground-layer fixes also affecting Olivine. This is not a
+region-wide polish claim. See RELEASE_0_9_1.md and qa/visual-0.9.1/manifest.json.
+All other map visual reviews remain open; owner visual acceptance is pending.
+
+---
+
 # Current Johto QA —0.9
 
 Use johto/DELTA_QA.md for iPhone itinerary and old-save precautions. validate_johto_network.py --built checks IDs, reciprocal topology, local access, services and actual Emerald inclusion. build_johto_network.py --through west --check checks deterministic generation. johto_network_smoke.py --all-edges performs actual controller traversal using copies of battery saves; no map/warp debugger writes. Test-only encounter suppression/HP fixtures are disclosed. Final tour112 new maps/622 transitions/141 roundtrip pairs PASS; five representative normal Save/Continue checks PASS. Owner gameplay acceptance remains pending.

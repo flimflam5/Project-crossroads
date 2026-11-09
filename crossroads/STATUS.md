@@ -1,3 +1,13 @@
+# Visual/collision QA — repair pass0.9.1
+
+Owner reports0.9 network works but has NOT passed visual/collision QA. Expansion
+is paused. The first repair pass covers Ecruteak exterior, Mahogany town/workshop,
+Routes38/39 and shared ground-layer fixes also affecting Olivine. This is not a
+region-wide polish claim. See RELEASE_0_9_1.md and qa/visual-0.9.1/manifest.json.
+All other map visual reviews remain open; owner visual acceptance is pending.
+
+---
+
 # Current QA candidate — Johto exploration0.9
 
 149 maps registered/built (37 preserved +112 new); all ten towns and Routes29–48 connected. Final emulator tour:112 new maps,622 transitions,141 roundtrip pairs PASS. Five normal Save/Continue checks PASS. Owner Delta acceptance pending. See RELEASE_0_9.md and johto/DELTA_QA.md. The newer owner directive supersedes historical expansion pauses below.
