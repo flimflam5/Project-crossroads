@@ -19,7 +19,7 @@ manifest = {
     'rom_bytes': rom.stat().st_size,
     'ci_run_id': os.environ.get('GITHUB_RUN_ID'),
     'summary': 'Disable inherited title reverb, verify sample continuity and replace the Emerald boot movie with a skippable Black Ledger harbor prototype.',
-    'known_limitations': 'See crossroads/RELEASE_0_8_3.md. Badges and story gates deferred; original intro and Joe special movement art remain. Delta audio-quality and pre-title appearance QA pending.',
+    'known_limitations': 'See crossroads/RELEASE_0_8_3.md. Badges and story gates deferred; original New Game prologue and Joe special movement art remain. Delta audio-quality and pre-title appearance QA pending.',
     'testing': 'Compilation is not playtesting. Follow crossroads/TESTING.md.',
 }
 (root / 'build-info.json').write_text(json.dumps(manifest, indent=2) + '\n')
