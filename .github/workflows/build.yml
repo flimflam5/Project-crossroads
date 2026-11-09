@@ -13,6 +13,7 @@ on:
       - feature/olivine-detail-01
       - feature/western-area-completion-01
       - feature/title-music-01
+      - feature/title-audio-cleanup-01
   pull_request:
   workflow_dispatch:
 
@@ -84,7 +85,7 @@ jobs:
       - name: Upload playable Emerald ROM
         uses: actions/upload-artifact@v4
         with:
-          name: black-ledger-title-music-0.8.1-${{ github.sha }}
+          name: black-ledger-title-audio-0.8.2-${{ github.sha }}
           path: |
             pokeemerald.gba
             build-info.json
@@ -96,6 +97,7 @@ jobs:
             crossroads/RELEASE_0_7.md
             crossroads/RELEASE_0_8.md
             crossroads/RELEASE_0_8_1.md
+            crossroads/RELEASE_0_8_2.md
           if-no-files-found: error
           retention-days: 14
 

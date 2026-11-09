@@ -4,14 +4,14 @@
 
 @ Dedicated voice and sample; no stock instrument/song is replaced.
 BlackLedgerTitleVoice:
-	.byte 0, 60, 0, 0
+	.byte 8, 60, 0, 0 @ fixed-rate voice: no second resampling stage
 	.word BlackLedgerTitleWave
 	.byte 255, 0, 255, 0
 
 	.align 2
 BlackLedgerTitleWave:
 	.word 0x40000000 @ ordinary direct sound with sample looping enabled
-	.word 16000 * 1024 @ source rate at MIDI C3 (60)
+	.word 31536 * 1024 @ source rate at MIDI C3 (60)
 	.word 0 @ provisional loop starts at sample zero
 	.word BlackLedgerTitleSamplesEnd - BlackLedgerTitleSamples
 BlackLedgerTitleSamples:
@@ -23,7 +23,7 @@ BlackLedgerTitleTrack:
 	.byte KEYSH, 0
 	.byte TEMPO, 60
 	.byte VOICE, 0
-	.byte VOL, 100
+	.byte VOL, 127
 	.byte PAN, c_v
 	.byte TIE, Cn3, v127
 BlackLedgerTitleWait:

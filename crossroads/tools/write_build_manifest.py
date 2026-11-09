@@ -11,15 +11,15 @@ rom = root / 'pokeemerald.gba'
 sha = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=root, text=True).strip()
 dirty = bool(subprocess.check_output(['git', 'status', '--porcelain', '--untracked-files=no'], cwd=root))
 manifest = {
-    'version': 'black-ledger-title-music-0.8.1',
+    'version': 'black-ledger-title-audio-0.8.2',
     'source_commit': sha,
     'dirty_tracked_sources': dirty,
     'rom': rom.name,
     'rom_sha256': hashlib.sha256(rom.read_bytes()).hexdigest(),
     'rom_bytes': rom.stat().st_size,
     'ci_run_id': os.environ.get('GITHUB_RUN_ID'),
-    'summary': 'Integrate the owner-supplied title recording into the accepted harbor screen; preserve the western-area 0.8 QA candidate.',
-    'known_limitations': 'See crossroads/RELEASE_0_8_1.md. Badges and story gates deferred; original intro and Joe special movement art remain. Delta QA pending.',
+    'summary': 'Refine title audio with a matching native playback rate and title-only DAC/mixer settings; preserve accepted 0.8/0.8.1 gameplay and loop.',
+    'known_limitations': 'See crossroads/RELEASE_0_8_2.md. Badges and story gates deferred; original intro and Joe special movement art remain. Delta audio-quality comparison pending.',
     'testing': 'Compilation is not playtesting. Follow crossroads/TESTING.md.',
 }
 (root / 'build-info.json').write_text(json.dumps(manifest, indent=2) + '\n')

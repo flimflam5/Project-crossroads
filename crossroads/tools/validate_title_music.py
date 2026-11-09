@@ -5,7 +5,7 @@ from pathlib import Path
 R=Path(__file__).resolve().parents[2]
 m=json.loads((R/'crossroads/audio/title-music.json').read_text())
 p=(R/'sound/direct_sound_samples/crossroads/black_ledger_title.pcm').read_bytes()
-assert len(p)==m['samples']==1280000 and m['sample_rate']==16000
+assert len(p)==m['samples']==2522880 and m['sample_rate']==31536
 assert hashlib.sha256(p).hexdigest()==m['sample_sha256']
 assert hashlib.sha256((R/'crossroads/audio'/m['source']).read_bytes()).hexdigest()==m['source_sha256']
 assert p[0]==p[-1]==0 and len(set(p))>128
