@@ -6,9 +6,11 @@ from pathlib import Path
 R=Path(__file__).resolve().parents[2]
 ap=argparse.ArgumentParser();ap.add_argument('--built',action='store_true');a=ap.parse_args()
 def load(p):return json.loads((R/p).read_text())
-names=load('data/maps/map_groups.json')['gMapGroup_CrossroadsOlivine'];manifest=load('crossroads/johto/manifest.json')
+groups=load('data/maps/map_groups.json');base=groups['gMapGroup_CrossroadsOlivine'];west=groups.get('gMapGroup_CrossroadsJohtoExpansion',[]);names=base+west;locations={n:(75,i) for i,n in enumerate(base)}|{n:(76,i) for i,n in enumerate(west)};manifest=load('crossroads/johto/manifest.json')
 assert names[:37]==[p['name'] for p in manifest['existing']]
-assert len(names)<256
+assert groups['group_order'].index('gMapGroup_CrossroadsOlivine')==75
+if west:assert groups['group_order'].index('gMapGroup_CrossroadsJohtoExpansion')==76
+assert len(base)<=127 and len(west)<=127, 'Signed warp indices must avoid reserved dynamic value 127'
 maps={n:load(f'data/maps/{n}/map.json') for n in names};ids={m['id']:n for n,m in maps.items()}
 layouts={l['id']:l for l in load('data/layouts/layouts.json')['layouts']};raw={};sizes={};attrs={};actors={}
 headers=(R/'src/data/tilesets/headers.h').read_text();met=(R/'src/data/tilesets/metatiles.h').read_text()
@@ -92,7 +94,7 @@ for h in heals:
   center=ids[h['respawn_map']];assert 'CableClub_OnResume' in (R/f'data/maps/{center}/scripts.inc').read_text()
   assert any(o.get('local_id')==h['respawn_npc'] for o in maps[center]['object_events'])
 for p in manifest['planned']:
- if p['name'] in names:assert names.index(p['name'])==p['map_num'],('ID shifted',p)
+ if p['name'] in names:assert locations[p['name']]==(p['map_group'],p['map_num']),('ID shifted',p)
 ops=(R/'include/constants/opponents.h').read_text();assert '#define MAX_TRAINERS_COUNT_EMERALD 864' in ops
 runtime=(R/'crossroads/scripts/johto_runtime.inc').read_text();assert all(t not in runtime for t in ['setflag','setvar VAR_CROSSROADS','givemon','giveitem'])
 if a.built:

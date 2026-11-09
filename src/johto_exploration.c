@@ -7,10 +7,15 @@
 // Explicit survey assistance: RAM only. No badges, moves, flags or save changes.
 static EWRAM_DATA bool8 sJohtoTestAccess = FALSE;
 
+bool32 Johto_IsExplorationGroup(u8 group)
+{
+    return !IS_FRLG && (group == MAP_GROUP(MAP_OLIVINE_CITY) || group == JOHTO_EXTRA_MAP_GROUP);
+}
+
 bool32 Johto_CanTestSurf(void)
 {
     bool32 emergency = JOY_HELD(L_BUTTON | R_BUTTON | SELECT_BUTTON) == (L_BUTTON | R_BUTTON | SELECT_BUTTON);
-    return !IS_FRLG && gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_OLIVINE_CITY)
+    return Johto_IsExplorationGroup(gSaveBlock1Ptr->location.mapGroup)
         && gPartiesCount[B_TRAINER_PLAYER] != 0 && (sJohtoTestAccess || emergency);
 }
 

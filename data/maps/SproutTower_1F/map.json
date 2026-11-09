@@ -2,7 +2,7 @@
   "id": "MAP_SPROUT_TOWER_1_F",
   "name": "SproutTower_1F",
   "layout": "LAYOUT_SPROUT_TOWER_1_F",
-  "music": "MUS_PETALBURG_WOODS",
+  "music": "MUS_LITTLEROOT",
   "region": "REGION_HOENN",
   "region_map_section": "MAPSEC_SPROUT_TOWER",
   "requires_flash": false,

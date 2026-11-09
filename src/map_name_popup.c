@@ -1,4 +1,6 @@
 #include "global.h"
+#include "johto_atlas.h"
+#include "johto_exploration.h"
 #include "battle_pyramid.h"
 #include "bg.h"
 #include "event_data.h"
@@ -86,7 +88,7 @@ static const u16 sMapPopUp_Palette_Underwater[16] = INCGFX_U16("graphics/map_pop
 // -1 in the size excludes MAPSEC_NONE.
 // The MAPSEC values for Kanto (between MAPSEC_DYNAMIC and MAPSEC_AQUA_HIDEOUT) are also excluded,
 // and this is then handled by subtracting KANTO_MAPSEC_COUNT here and in LoadMapNamePopUpWindowBg.
-static const u8 sMapSectionToThemeId[MAPSEC_COUNT - KANTO_MAPSEC_COUNT - 1] =
+static const u8 sMapSectionToThemeId[MAPSEC_COUNT - KANTO_MAPSEC_COUNT] =
 {
     [MAPSEC_LITTLEROOT_TOWN] = MAPPOPUP_THEME_WOOD,
     [MAPSEC_OLDALE_TOWN] = MAPPOPUP_THEME_WOOD,
@@ -562,7 +564,9 @@ static bool32 IsCeladonDeptStore(const struct MapHeader *mapHeader)
 
 u8 *GetPopUpMapName(u8 *dest, const struct MapHeader *mapHeader)
 {
-    if (IsCeladonDeptStore(mapHeader))
+    if (mapHeader == &gMapHeader && Johto_IsExplorationGroup(gSaveBlock1Ptr->location.mapGroup))
+        StringCopy(dest, Johto_GetCurrentMapName());
+    else if (IsCeladonDeptStore(mapHeader))
         StringCopy(dest, COMPOUND_STRING("CELADON DEPT."));
     else
         GetMapName(dest, mapHeader->regionMapSectionId, 0);
@@ -689,7 +693,7 @@ static void LoadMapNamePopUpWindowBg(void)
 
     if (OW_POPUP_GENERATION == GEN_5)
     {
-        popUpThemeId = sRegionMapSectionId_To_PopUpThemeIdMapping_BW[regionMapSectionId];
+        popUpThemeId = regionMapSectionId < ARRAY_COUNT(sRegionMapSectionId_To_PopUpThemeIdMapping_BW) ? sRegionMapSectionId_To_PopUpThemeIdMapping_BW[regionMapSectionId] : MAPPOPUP_THEME_BW_DEFAULT;
         switch (popUpThemeId)
         {
         // add additional gen 5-style pop-up themes as cases here
@@ -709,7 +713,7 @@ static void LoadMapNamePopUpWindowBg(void)
     }
     else
     {
-        popUpThemeId = sMapSectionToThemeId[regionMapSectionId];
+        popUpThemeId = regionMapSectionId < ARRAY_COUNT(sMapSectionToThemeId) ? sMapSectionToThemeId[regionMapSectionId] : 0;
         LoadBgTiles(GetWindowAttribute(popupWindowId, WINDOW_BG), sMapPopUp_OutlineTable[popUpThemeId], 0x400, 0x21D);
         CallWindowFunction(popupWindowId, DrawMapNamePopUpFrame);
         PutWindowTilemap(popupWindowId);

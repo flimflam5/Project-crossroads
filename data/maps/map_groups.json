@@ -75,7 +75,8 @@
     "gMapGroup_IndoorTwoIslandRoute_Frlg",
     "gMapGroup_IndoorSixIslandRoute_Frlg",
     "gMapGroup_IndoorSevenIslandRoute_Frlg",
-    "gMapGroup_CrossroadsOlivine"
+    "gMapGroup_CrossroadsOlivine",
+    "gMapGroup_CrossroadsJohtoExpansion"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -1259,6 +1260,39 @@
     "SlowpokeWell_2F",
     "TohjoFalls_1F",
     "TohjoFalls_2F",
-    "NewBarkLab"
+    "NewBarkLab",
+    "MahoganyTown",
+    "MahoganyTown_PokemonCenter_1F",
+    "MahoganyTown_Mart",
+    "MahoganyTown_Gym",
+    "MahoganyTown_Residence",
+    "MahoganyTown_Workshop",
+    "BlackthornCity",
+    "BlackthornCity_PokemonCenter_1F",
+    "BlackthornCity_Mart",
+    "BlackthornCity_Gym",
+    "BlackthornCity_Residence",
+    "BlackthornCity_Workshop",
+    "JohtoRoute46",
+    "JohtoRoute45",
+    "JohtoRoute42",
+    "JohtoRoute43",
+    "JohtoRoute44",
+    "LakeOfRage",
+    "DarkCave_1F",
+    "DarkCave_2F",
+    "DarkCave_3F",
+    "MtMortar_1F",
+    "MtMortar_2F",
+    "MtMortar_3F",
+    "MtMortar_4F",
+    "IcePath_1F",
+    "IcePath_2F",
+    "IcePath_3F",
+    "IcePath_4F",
+    "DragonsDen_1F"
+  ],
+  "gMapGroup_CrossroadsJohtoExpansion": [
+    "DragonsDen_2F"
   ]
 }

@@ -4,7 +4,7 @@ import argparse,ctypes as C,hashlib,json,struct,subprocess,shutil
 from pathlib import Path
 from collections import deque
 R=Path(__file__).resolve().parents[2]
-p=argparse.ArgumentParser();p.add_argument('--save',type=Path,required=True);p.add_argument('--library',type=Path,required=True);p.add_argument('--output',type=Path,required=True);p.add_argument('--cluster');p.add_argument('--resume',type=Path);args=p.parse_args();args.output.mkdir(parents=True,exist_ok=True)
+p=argparse.ArgumentParser();p.add_argument('--save',type=Path,required=True);p.add_argument('--library',type=Path,required=True);p.add_argument('--output',type=Path,required=True);p.add_argument('--cluster');p.add_argument('--all-edges',action='store_true');p.add_argument('--resume',type=Path);args=p.parse_args();args.output.mkdir(parents=True,exist_ok=True)
 lib=C.CDLL(str(args.library.resolve()))
 for fn,types in [('emu_init',[C.c_char_p]),('emu_frames',[C.c_int,C.c_int]),('emu_read',[C.c_uint,C.c_int]),('emu_write',[C.c_uint,C.c_uint,C.c_int]),('emu_save',[C.c_char_p,C.c_int]),('emu_state',[C.c_char_p,C.c_int]),('emu_image',[C.c_char_p])]:getattr(lib,fn).argtypes=types
 lib.emu_read.restype=C.c_uint
@@ -21,11 +21,11 @@ def frames(n=60,k=0):lib.emu_frames(k,n)
 def key(k):frames(1,k);frames(20)
 def sb():return read('gSaveBlock1Ptr')
 def pos():return read(sb(),2),read(sb()+2,2)
-names=json.loads((R/'data/maps/map_groups.json').read_text())['gMapGroup_CrossroadsOlivine'];maps={n:json.loads((R/f'data/maps/{n}/map.json').read_text()) for n in names};ids={m['id']:n for n,m in maps.items()};layouts={l['id']:l for l in json.loads((R/'data/layouts/layouts.json').read_text())['layouts']}
+groups=json.loads((R/'data/maps/map_groups.json').read_text());base=groups['gMapGroup_CrossroadsOlivine'];west=groups.get('gMapGroup_CrossroadsJohtoExpansion',[]);names=base+west;locations={n:(75,i) for i,n in enumerate(base)}|{n:(76,i) for i,n in enumerate(west)};bylocation={v:k for k,v in locations.items()};maps={n:json.loads((R/f'data/maps/{n}/map.json').read_text()) for n in names};ids={m['id']:n for n,m in maps.items()};layouts={l['id']:l for l in json.loads((R/'data/layouts/layouts.json').read_text())['layouts']}
 size={n:(layouts[m['layout']]['width'],layouts[m['layout']]['height']) for n,m in maps.items()};raw={n:struct.unpack('<'+str(size[n][0]*size[n][1])+'H',(R/layouts[m['layout']]['blockdata_filepath']).read_bytes()) for n,m in maps.items()}
 def current():
- assert read(sb()+4,1)==75,('Left Johto',read(sb()+4,1))
- return names[read(sb()+5,1)]
+ loc=(read(sb()+4,1),read(sb()+5,1));assert loc in bylocation,('Left Johto',loc)
+ return bylocation[loc]
 def close():
  for _ in range(18):
   if not read('sLockFieldControls',1):return
@@ -52,7 +52,7 @@ write('sWildEncountersDisabled',1,1)
 choice=read(sb()+0x1590,2);partycount=read(read('gPlayerPartyCountPtr'),1)
 def safe(n,p):
  x,y=p;w,h=size[n]
- return 0<=x<w and 0<=y<h and raw[n][y*w+x]&0xc00==0 and raw[n][y*w+x]>>12 in (1,3) and not any((o['x'],o['y'])==p for o in maps[n]['object_events'])
+ return 0<=x<w and 0<=y<h and raw[n][y*w+x]&0xc00==0 and raw[n][y*w+x]>>12 in (1,3) and (raw[n][y*w+x]&1023)!=0x38d and not any((o['x'],o['y'])==p for o in maps[n]['object_events'])
 def path(n,target):
  start=pos();blocked={(e['x'],e['y']) for e in maps[n]['warp_events']} - {start,target};q=deque([start]);prev={start:None}
  while q:
@@ -65,6 +65,7 @@ def path(n,target):
  while prev[v] is not None:route.append(v);v=prev[v]
  return list(reversed(route))
 def walk(target):
+ global water_entries
  n=current();route=path(n,target);assert route is not None,(n,pos(),'No foot path',target)
  for to in route:
   old=pos();k=16 if to[0]>old[0] else 32 if to[0]<old[0] else 128 if to[1]>old[1] else 64
@@ -75,6 +76,8 @@ def walk(target):
    for _ in range(4):key(1);frames(180)
    frames(400);close()
    assert read('gPlayerAvatar',1)&8,('Survey Surf failed',n,old,to)
+   water_entries+=1
+   print('Actual session-only Surf entry:',n,old,'to',pos(),'PASS',flush=True)
   else:
    frames(8 if surfing else 16,k);frames(20)
    if pos()==old:frames(8 if surfing else 16,k);frames(20)
@@ -102,7 +105,7 @@ def border(c):
  _,old,new=min(candidates);walk(old);k={'up':64,'down':128,'left':32,'right':16}[d];frames(16,k);frames(180)
  assert current()==dst,('Wrong border',n,c,current(),pos())
  return n,current()
-visited=set();transitions=[]
+visited=set();transitions=[];tested_edges=set();water_entries=0
 def go(dst):
  for _ in range(60):
   cur=current()
@@ -132,17 +135,32 @@ assert bytes(read(sb()+0x1270+i,1) for i in range(300))==flags
 print('Actual survey desk enables RAM-only water access without changing saved flags: PASS',flush=True)
 for n in targets:
  go(n);visited.add(n)
+ if maps[n]['map_type'] in ['MAP_TYPE_CITY','MAP_TYPE_ROUTE'] and safe(n,(size[n][0]//2,size[n][1]//2)):
+  walk((size[n][0]//2,size[n][1]//2))
  assert lib.emu_image(str(args.output/f'{n}.png').encode())
+ if n in ['IcePath_3F','BlackthornCity','CianwoodCity','JohtoRoute41','NewBarkLab','NewBarkTown','GoldenrodCity_PokemonCenter_1F']:
+  snap=args.output/(n+'.snapshot');lib.emu_state(str(snap).encode(),0);snap.with_suffix('.sha256').write_text(hashlib.sha256((R/'pokeemerald.gba').read_bytes()).hexdigest())
  if 'PokemonCenter_1F' in n:
   walk((7,4));write(read('gPlayerPartyPtr')+86,1,2);frames(1,64);frames(20);key(1);frames(180)
   for _ in range(8):key(1);frames(180)
   for _ in range(5):key(2);frames(60)
   assert read(read('gPlayerPartyPtr')+86,2)==read(read('gPlayerPartyPtr')+88,2)>0
-  assert read(sb()+0x1c,1)==75
+  assert (read(sb()+0x1c,1),read(sb()+0x1d,1))==locations[n.rsplit('_PokemonCenter_1F',1)[0]]
   print('Nurse healing/local respawn:',n,'PASS',flush=True)
+ if args.all_edges:
+  for index,e in enumerate(maps[n]['warp_events']):
+   other=ids[e['dest_map']];back=int(e['dest_warp_id']);ident=tuple(sorted([(n,index),(other,back)]))
+   if ident in tested_edges:continue
+   go(n);a,b=warp(index);transitions.append([a,b,'warp']);a,b=warp(back);transitions.append([a,b,'warp'])
+   assert current()==n;tested_edges.add(ident)
+  for c in maps[n]['connections'] or []:
+   other=ids[c['map']];ident=tuple(sorted([(n,-1),(other,-1)]))
+   if ident in tested_edges:continue
+   go(n);a,b=border(c);transitions.append([a,b,'border']);reverse=next(b for b in maps[other]['connections'] if ids[b['map']]==n);a,b=border(reverse);transitions.append([a,b,'border'])
+   assert current()==n;tested_edges.add(ident)
  assert read(sb()+0x1590,2)==choice and read(read('gPlayerPartyCountPtr'),1)==partycount
  print('Controller visit:',n,pos(),'PASS',flush=True)
 go('OlivineCity')
 end=args.output/'finished.snapshot';lib.emu_state(str(end).encode(),0);end.with_suffix('.sha256').write_text(hashlib.sha256((R/'pokeemerald.gba').read_bytes()).hexdigest())
-(args.output/'coverage.json').write_text(json.dumps(dict(visited=sorted(visited),targets=targets,transitions=transitions),indent=2)+'\n')
+(args.output/'coverage.json').write_text(json.dumps(dict(visited=sorted(visited),targets=targets,transitions=transitions,tested_roundtrip_edges=len(tested_edges),actual_surf_entries=water_entries),indent=2)+'\n')
 print('Actual controller visits/return, healing and retained starter/party: PASS',len(targets),'new maps',len(transitions),'transitions',flush=True)

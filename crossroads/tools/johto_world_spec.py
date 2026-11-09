@@ -1,4 +1,5 @@
 """Authored Johto geography and scope; never an encounter/story roster."""
+GYM_CITIES={'VioletCity','AzaleaTown','GoldenrodCity','CianwoodCity','MahoganyTown','BlackthornCity'}
 CITIES={
  'GoldenrodCity':('GOLDENROD CITY','central',(9,14),'commercial'),
  'VioletCity':('VIOLET CITY','central',(18,10),'academy'),
@@ -7,28 +8,28 @@ CITIES={
  'NewBarkTown':('NEW BARK TOWN','south',(25,16),'village'),
  'MahoganyTown':('MAHOGANY TOWN','east',(21,6),'mountain'),
  'BlackthornCity':('BLACKTHORN CITY','east',(27,6),'ridge'),
- 'CianwoodCity':('CIANWOOD CITY','west',(1,17),'island'),
+ 'CianwoodCity':('CIANWOOD CITY','west',(2,17),'island'),
 }
 # Map name, cluster, relative atlas position, terrain, dimensions.
 ROUTES={
- 37:('central',(12,9),'orchard',(28,40)),36:('central',(15,11),'junction',(56,28)),
- 35:('central',(9,11),'garden',(28,36)),34:('south',(9,17),'coast',(28,44)),
+ 37:('central',(12,9),'orchard',(28,40)),36:('central',(15,10),'junction',(56,28)),
+ 35:('central',(9,12),'garden',(28,36)),34:('south',(9,17),'coast',(28,44)),
  33:('south',(16,19),'rain',(32,24)),32:('south',(18,15),'riverside',(28,64)),
  31:('south',(20,10),'woodland',(40,28)),30:('south',(21,13),'orchard',(28,44)),
  29:('south',(23,16),'meadow',(52,28)),46:('east',(26,14),'foothills',(28,40)),
  45:('east',(27,11),'ridge',(28,64)),42:('east',(17,6),'lakes',(64,28)),
  43:('east',(21,3),'lakepath',(28,40)),44:('east',(24,6),'ponds',(48,28)),
  40:('west',(3,13),'sea',(32,48)),41:('west',(2,16),'islands',(48,48)),
- 47:('west',(2,19),'cliff',(48,32)),48:('west',(3,17),'valley',(28,40)),
+ 47:('west',(0,19),'cliff',(48,32)),48:('west',(0,16),'valley',(28,40)),
 }
 # name,label,cluster,terrain,dimensions,atlas position,parent section label
 LANDMARKS=[
- ('NationalPark','NATIONAL PARK','central','park',(40,40),(9,9)),
+ ('NationalPark','NATIONAL PARK','central','park',(40,40),(9,11)),
  ('RuinsOfAlph','RUINS OF ALPH','central','ruins',(40,36),(16,13)),
  ('IlexForest','ILEX FOREST','south','forest',(40,48),(10,19)),
  ('LakeOfRage','LAKE OF RAGE','east','lake',(48,44),(21,1)),
- ('SafariZoneGate','SAFARI GATE','west','gate',(32,32),(3,15)),
- ('SafariWetlands','SAFARI WETLANDS','west','wetlands',(40,40),(3,14)),
+ ('SafariZoneGate','SAFARI GATE','west','gate',(32,32),(0,14)),
+ ('SafariWetlands','SAFARI WETLANDS','west','wetlands',(40,40),(0,13)),
 ]
 # Outdoor border edges: A direction B. Coordinate chosen at center of overlap.
 EDGES=[

@@ -29,7 +29,7 @@ def main():
    if isinstance(b,str):b=b.encode()
    assert (R/p).read_bytes()==b,('Regenerate',p)
   write=compare
- groups=load('data/maps/map_groups.json');old=groups['gMapGroup_CrossroadsOlivine'];names=[p['name'] for p in manifest['existing']]+[p['name'] for p in selected]
+ groups=load('data/maps/map_groups.json');old=groups['gMapGroup_CrossroadsOlivine']+groups.get('gMapGroup_CrossroadsJohtoExpansion',[]);names=[p['name'] for p in manifest['existing']]+[p['name'] for p in selected]
  assert old==names[:len(old)],'Never discard newer maps/IDs when selecting an earlier checkpoint'
  layouts=load('data/layouts/layouts.json');bylayout={l['id']:l for l in layouts['layouts']}
  existing={n:load(f'data/maps/{n}/map.json') for n in names[:37]};maps=copy.deepcopy(existing);tiles={};sizes={};meta={};sections={};protected={}
@@ -93,11 +93,13 @@ def main():
    if kind not in ['tower','shrine','gate']:primary='gTileset_General';secondary='gTileset_Cave';floor=0x3201;border=0x0611
   else:
    theme=n.split('_')[-1].lower()
+   if n in ['NewBarkTown_Gym','CherrygroveCity_Gym']:theme='communityhall'
    if n in ['GoldenrodDepartmentStore','VioletAcademy']:w,h=20,16
    if n=='GoldenrodRadioLobby':w,h=20,14
    if n=='GoldenrodUnderground':w,h=28,12
   isout=n in CITIES or n.startswith('JohtoRoute') or any(n==s[0] for s in LANDMARKS)
-  m=dict(id=mid(n),name=n,layout='',music=('MUS_ROUTE119' if 'Route' in n else 'MUS_PETALBURG_WOODS' if not isout else 'MUS_LILYCOVE'),region='REGION_HOENN',region_map_section=sec,requires_flash=False,weather='WEATHER_NONE' if not isout else 'WEATHER_SUNNY',map_type='MAP_TYPE_CITY' if n in CITIES else 'MAP_TYPE_ROUTE' if isout else 'MAP_TYPE_UNDERGROUND' if primary=='gTileset_General' else 'MAP_TYPE_INDOOR',allow_cycling=isout,allow_escaping=False,allow_running=True,show_map_name=isout or kind in ['cave','ice','tower'],battle_scene='MAP_BATTLE_SCENE_NORMAL',connections=None,object_events=[],warp_events=[],coord_events=[],bg_events=[])
+  m=dict(id=mid(n),name=n,layout='',music=('MUS_ROUTE119' if 'Route' in n else 'MUS_PETALBURG_WOODS' if not isout else 'MUS_LILYCOVE'),region='REGION_HOENN',region_map_section=sec,requires_flash=False,weather='WEATHER_RAIN' if n=='JohtoRoute33' else 'WEATHER_NONE' if not isout else 'WEATHER_SUNNY',map_type='MAP_TYPE_CITY' if n in CITIES else 'MAP_TYPE_ROUTE' if isout else 'MAP_TYPE_UNDERGROUND' if primary=='gTileset_General' else 'MAP_TYPE_INDOOR',allow_cycling=isout,allow_escaping=False,allow_running=True,show_map_name=isout or kind in ['cave','ice','tower'],battle_scene='MAP_BATTLE_SCENE_NORMAL',connections=None,object_events=[],warp_events=[],coord_events=[],bg_events=[])
+  if not isout and primary=='gTileset_Building':m['music']='MUS_GYM' if theme=='gym' else 'MUS_LITTLEROOT'
   maps[n]=m;meta[n]=dict(theme=theme,kind=kind,outdoor=isout,parent=parent,floor=floor)
   if kind=='service':
    base=existing['EcruteakCity_PokemonCenter_1F' if 'PokemonCenter' in n else 'EcruteakCity_Mart'];m['layout']=base['layout'];l=bylayout[m['layout']];sizes[n]=(l['width'],l['height']);tiles[n]=list(struct.unpack('<'+str(l['width']*l['height'])+'H',(R/l['blockdata_filepath']).read_bytes()));m['music']='MUS_POKE_CENTER' if 'PokemonCenter' in n else 'MUS_POKE_MART';continue
@@ -132,7 +134,9 @@ def main():
     if theme=='ruins':
      for x in [6,16,26]:rect(n,x,6,4,5,0x4c6)
    # A real sign and a reachable resident give orientation, not story decisions.
-   sx,sy=w//2-3,h//2+3;rect(n,sx,sy,1,1,0x403);label=script(n+'_Sign');sign(m,sx,sy,label)
+   sx,sy=w//2-3,h//2+3
+   if theme in ['sea','islands']:rect(n,sx-1,sy-1,3,3,0x3124)
+   rect(n,sx,sy,1,1,0x403);label=script(n+'_Sign');sign(m,sx,sy,label)
    title=CITIES[n][0] if n in CITIES else 'ROUTE '+n[10:] if n.startswith('JohtoRoute') else next(s[1] for s in LANDMARKS if s[0]==n)
    say(label,title+'. Follow the marked roads and direction signs.','SIGN')
    if theme not in ['sea','islands']:
@@ -182,8 +186,9 @@ def main():
   if n not in maps:continue
   w,h=sizes[n];cx=w//2;placements=[('PokemonCenter_1F',8,15,18,16,4,4,1),('Mart',w-12,15,12,23,4,4,1),('Gym',w-14,h-15,25,7,7,6,3),('Residence',7,h-14,4,16,4,4,1),('Workshop',cx-2,5,4,16,4,4,1)]
   for suffix,x,y,sx,sy,ww,hh,doorx in placements:
+   if suffix=='Gym' and n not in GYM_CITIES:sx,sy,ww,hh,doorx=4,16,4,4,1
    dst=n+'_'+suffix;stamp(n,sx,sy,ww,hh,x,y);protected.setdefault(n,set()).update((xx,yy) for xx in range(x,x+ww) for yy in range(y,y+hh));dx,dy=x+doorx,y+hh-1
-   road(n,(dx,dy+1),(cx,dy+1),width=1);say(script(dst+'_Plaque'),CITIES[n][0]+' '+('POKEMON CENTER' if 'PokemonCenter' in suffix else suffix.upper())+'.','SIGN');sign(maps[n],dx-1,dy+1,script(dst+'_Plaque'));rect(n,dx-1,dy+1,1,1,0x403)
+   road(n,(dx,dy+1),(cx,dy+1),width=1);say(script(dst+'_Plaque'),CITIES[n][0]+' '+('POKEMON CENTER' if 'PokemonCenter' in suffix else 'COMMUNITY HALL' if suffix=='Gym' and n not in GYM_CITIES else suffix.upper())+'.','SIGN');sign(maps[n],dx-1,dy+1,script(dst+'_Plaque'));rect(n,dx-1,dy+1,1,1,0x403)
    if suffix=='PokemonCenter_1F':
     sign(maps[n],dx-2,dy+1,'Johto_AtlasBoard');rect(n,dx-2,dy+1,1,1,0x403)
     warp(n,dx,dy,dst,7,8);maps[dst]['warp_events'].append(dict(x=6,y=8,elevation=0,dest_map=maps[n]['id'],dest_warp_id=str(len(maps[n]['warp_events'])-1)))
@@ -222,14 +227,15 @@ def main():
    dst=base+f'_{i+1}F';u,v=(7+j*4)%20+3,19
    # A visible entrance marker and approach, never an unmarked teleport.
    if parent not in existing:
-
+    if meta[parent]['theme']=='islands':rect(parent,x-3,y-3,7,7,0x3124)
     # General tiles 0x64/0x71/... are the native Route 106 cave mouth, no new art.
     for yy,row in enumerate([[0x0471,0x0471,0x0475],[0x047c,0x0464,0x047d],[0x0474,0x00a7,0x0491]]):
      for xx,t in enumerate(row):rect(parent,x-1+xx,y-2+yy,1,1,t)
     protected.setdefault(parent,set()).update((xx,yy) for xx in range(x-1,x+2) for yy in range(y-2,y+1))
     rect(parent,x-1,y+1,3,2,0x3202)
-    if base!='TohjoFalls':road(parent,(x,y+2),(sizes[parent][0]//2,y+2),0x3202,1)
+    if base!='TohjoFalls' and meta[parent]['theme'] not in ['sea','islands']:road(parent,(x,y+2),(sizes[parent][0]//2,y+2),0x3202,1)
    warp(parent,x,y,dst,u,v,at=0x00a7,bt=0x323f if meta[dst]['floor']==0x3201 else 0x33fd)
+   if base in ['WhirlIslands','TohjoFalls']:maps[parent]['object_events'].append(obj(x+1,y+2,'Johto_TestDesk','SAILOR'))
    labelscript=script(base+f'_Mouth{j}');sign(maps[parent],x-1,y+1,labelscript);rect(parent,x-1,y+1,1,1,0x403);say(labelscript,label+'. Public walking access. Please respect the surroundings.','SIGN')
   if base=='TohjoFalls':
    final=base+f'_{count}F';lbl='Johto_KantoBoundary';sign(maps[final],24,5,lbl);rect(final,24,5,1,1,0x0611);say(lbl,'Beyond these falls is the Kanto approach to the Pokemon League. That destination is outside this exploration build. Return by the western passage.','SIGN')
@@ -250,7 +256,11 @@ def main():
   # Reused Center/Mart layouts stay byte-for-byte unchanged.
   if n not in existing and meta[n]['kind']=='service':continue
   path=bylayout[m['layout']]['blockdata_filepath'];write(path,struct.pack('<'+str(len(tiles[n]))+'H',*tiles[n]))
- groups['gMapGroup_CrossroadsOlivine']=names;js('data/maps/map_groups.json',groups);js('data/layouts/layouts.json',layouts)
+ groups['gMapGroup_CrossroadsOlivine']=names[:127]
+ if len(names)>127:
+  groups['gMapGroup_CrossroadsJohtoExpansion']=names[127:]
+  if 'gMapGroup_CrossroadsJohtoExpansion' not in groups['group_order']:groups['group_order'].append('gMapGroup_CrossroadsJohtoExpansion')
+ js('data/maps/map_groups.json',groups);js('data/layouts/layouts.json',layouts)
  heals=load('src/data/heal_locations.json');byheal={h['id']:h for h in heals['heal_locations']}
  for s in services:
   if s['id'] not in byheal:heals['heal_locations'].append(s)
@@ -272,9 +282,10 @@ def main():
  if inc not in linked:linked+='\n'+inc+'\n'
  write('data/event_scripts.s',linked)
  # Record actual IDs, warps, services and explicit unverified runtime state.
- for p in plans:
+ for linear,p in enumerate(plans,37):
+  p['map_group']=75 if linear<127 else 76;p['map_num']=linear if linear<127 else linear-127
   if p['name'] in maps:
-   n=p['name'];m=maps[n];p.update(status='implemented',id=m['id'],layout=m['layout'],connections=m['connections'],entrances=m['warp_events'],coverage='structural/build/runtime checks recorded separately; no owner QA yet')
+   n=p['name'];m=maps[n];linear=names.index(n);p['map_group']=75 if linear<127 else 76;p['map_num']=linear if linear<127 else linear-127;p.update(display_name=n.replace('_Gym','_CommunityHall') if n in ['NewBarkTown_Gym','CherrygroveCity_Gym'] else n,role='community hall (stable internal slot suffix Gym)' if n in ['NewBarkTown_Gym','CherrygroveCity_Gym'] else p['kind'],status='implemented',id=m['id'],layout=m['layout'],connections=m['connections'],entrances=m['warp_events'],coverage='structural/build/runtime checks recorded separately; no owner QA yet')
  manifest['dungeons']=DUNGEONS;manifest['border_topology']=EDGES
  manifest['checkpoint']=args.through;js('crossroads/johto/manifest.json',manifest)
  from build_johto_atlas import generate as generate_atlas

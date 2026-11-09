@@ -2,7 +2,7 @@
   "id": "MAP_GOLDENROD_UNDERGROUND",
   "name": "GoldenrodUnderground",
   "layout": "LAYOUT_GOLDENROD_UNDERGROUND",
-  "music": "MUS_PETALBURG_WOODS",
+  "music": "MUS_LITTLEROOT",
   "region": "REGION_HOENN",
   "region_map_section": "MAPSEC_GOLDENROD_CITY",
   "requires_flash": false,

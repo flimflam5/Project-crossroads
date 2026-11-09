@@ -23,6 +23,11 @@
       "map": "MAP_NEW_BARK_TOWN",
       "offset": -8,
       "direction": "right"
+    },
+    {
+      "map": "MAP_JOHTO_ROUTE46",
+      "offset": 12,
+      "direction": "up"
     }
   ],
   "object_events": [

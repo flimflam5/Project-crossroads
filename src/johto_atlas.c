@@ -73,6 +73,17 @@ static void CB2_Atlas(void)
         sAtlasSelection=sAtlasSelection?sAtlasSelection-1:ARRAY_COUNT(sAtlasNodes)-1;DrawAtlas();
     }
 }
+static u8 FindPlayerNode(void)
+{
+    u32 i;
+    for (i=0;i<ARRAY_COUNT(sMapAtlasNode);i++)
+        if (sMapAtlasGroup[i]==gSaveBlock1Ptr->location.mapGroup && sMapAtlasNumber[i]==gSaveBlock1Ptr->location.mapNum)
+            return sMapAtlasNode[i];
+    return 0;
+}
+
+const u8 *Johto_GetCurrentMapName(void) {return sAtlasNodes[FindPlayerNode()].label;}
+
 static void CB2_InitAtlas(void)
 {
     SetVBlankCallback(NULL);SetHBlankCallback(NULL);SetGpuReg(REG_OFFSET_DISPCNT,0);
@@ -84,7 +95,7 @@ static void CB2_InitAtlas(void)
     if (!InitWindows(sWindows)) {SetMainCallback2(sAtlasReturn);return;}
     DeactivateAllTextPrinters();LoadPalette(sPalette,0,sizeof(sPalette));
     SetGpuReg(REG_OFFSET_BG0HOFS,0);SetGpuReg(REG_OFFSET_BG0VOFS,0);
-    sAtlasPlayer=gSaveBlock1Ptr->location.mapNum<ARRAY_COUNT(sMapAtlasNode)?sMapAtlasNode[gSaveBlock1Ptr->location.mapNum]:0;
+    sAtlasPlayer=FindPlayerNode();
     sAtlasSelection=sAtlasPlayer;sAtlasClosing=FALSE;DrawAtlas();
     BeginNormalPaletteFade(PALETTES_ALL,0,16,0,RGB_BLACK);ShowBg(0);SetGpuReg(REG_OFFSET_DISPCNT,DISPCNT_MODE_0|DISPCNT_BG0_ON);
     SetVBlankCallback(VBlank_Atlas);SetMainCallback2(CB2_Atlas);

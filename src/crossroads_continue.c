@@ -1,4 +1,5 @@
 #include "global.h"
+#include "johto_exploration.h"
 #include "crossroads_continue.h"
 #include "event_object_movement.h"
 #include "fieldmap.h"
@@ -30,7 +31,7 @@ static bool32 IsClearContinueTile(s16 x, s16 y)
 void Crossroads_EnsureAreaRespawn(void)
 {
     const struct WarpData *heal = &gSaveBlock1Ptr->lastHealLocation;
-    if (!IS_FRLG && gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_OLIVINE_CITY)
+    if (Johto_IsExplorationGroup(gSaveBlock1Ptr->location.mapGroup)
      && heal->mapGroup == 0 && heal->mapNum == 0 && heal->warpId == 0
      && heal->x == 0 && heal->y == 0)
         SetLastHealLocationWarp(HEAL_LOCATION_OLIVINE_CITY);
@@ -41,7 +42,7 @@ bool32 Crossroads_PrepareContinue(void)
     const struct MapLayout *layout;
     s16 x, y, nx, ny, radius;
     u32 i;
-    if (IS_FRLG || gSaveBlock1Ptr->location.mapGroup != MAP_GROUP(MAP_OLIVINE_CITY))
+    if (!Johto_IsExplorationGroup(gSaveBlock1Ptr->location.mapGroup))
         return FALSE;
     Crossroads_EnsureAreaRespawn();
     layout = gMapHeader.mapLayout;

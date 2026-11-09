@@ -159,13 +159,13 @@ Ecruteak_EastBoundary::
     msgbox Ecruteak_EastBoundary_Text, MSGBOX_SIGN
     end
 Ecruteak_EastBoundary_Text:
-    .string "EASTERN DEVELOPMENT BOUNDARY\pROUTE 42 is not open in this build.\nThe road west remains open.$"
+    .string "ROUTE 42\nEast: MT. MORTAR and MAHOGANY.\pWest: The road to OLIVINE.$"
 
 Ecruteak_SouthBoundary::
     msgbox Ecruteak_SouthBoundary_Text, MSGBOX_SIGN
     end
 Ecruteak_SouthBoundary_Text:
-    .string "SOUTHERN DEVELOPMENT BOUNDARY\pROUTE 37 is not open in this build.\nThe road west remains open.$"
+    .string "ROUTE 37\nSouth: ROUTE 36 and the roads\pto NATIONAL PARK and GOLDENROD.$"
 
 Ecruteak_Directory::
     msgbox Ecruteak_Directory_Text, MSGBOX_SIGN

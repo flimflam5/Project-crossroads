@@ -12,7 +12,7 @@ parser=argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--built',action='store_true')
 args=parser.parse_args()
 def load(path):return json.loads((root/path).read_text())
-names=load('data/maps/map_groups.json')['gMapGroup_CrossroadsOlivine']
+groups=load('data/maps/map_groups.json');names=groups['gMapGroup_CrossroadsOlivine']+groups.get('gMapGroup_CrossroadsJohtoExpansion',[])
 assert names[:9]==['OlivineCity','OlivineCity_Residence','OlivineCity_NeighborHouse','OlivineCity_Gym','OlivineCity_PokemonCenter_1F','OlivineCity_Mart','OlivineCity_SilphOffice','OlivineCity_HarborOffice','JohtoRoute39']
 assert names[9:11]==['JohtoRoute38','EcruteakCity']
 maps={m['id']:m for m in [load(f'data/maps/{n}/map.json') for n in names]}

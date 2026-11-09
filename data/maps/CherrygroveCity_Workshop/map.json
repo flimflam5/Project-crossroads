@@ -2,7 +2,7 @@
   "id": "MAP_CHERRYGROVE_CITY_WORKSHOP",
   "name": "CherrygroveCity_Workshop",
   "layout": "LAYOUT_CHERRYGROVE_CITY_WORKSHOP",
-  "music": "MUS_PETALBURG_WOODS",
+  "music": "MUS_LITTLEROOT",
   "region": "REGION_HOENN",
   "region_map_section": "MAPSEC_CHERRYGROVE_CITY",
   "requires_flash": false,

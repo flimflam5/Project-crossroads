@@ -1,5 +1,6 @@
 #include "global.h"
 #include "johto_atlas.h"
+#include "johto_exploration.h"
 #include "constants/maps.h"
 #include "bg.h"
 #include "event_data.h"
@@ -99,7 +100,7 @@ static const struct WindowTemplate sFieldRegionMapWindowTemplates[] =
 
 void FieldInitRegionMap(MainCallback callback)
 {
-    if (!IS_FRLG && gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_OLIVINE_CITY))
+    if (Johto_IsExplorationGroup(gSaveBlock1Ptr->location.mapGroup))
     {
         Johto_OpenAtlas(callback);
         return;

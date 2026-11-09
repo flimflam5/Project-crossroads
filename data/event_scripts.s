@@ -1910,3 +1910,65 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/TohjoFalls_2F/scripts.inc"
 
 	.include "data/maps/NewBarkLab/scripts.inc"
+
+	.include "data/maps/MahoganyTown/scripts.inc"
+
+	.include "data/maps/MahoganyTown_PokemonCenter_1F/scripts.inc"
+
+	.include "data/maps/MahoganyTown_Mart/scripts.inc"
+
+	.include "data/maps/MahoganyTown_Gym/scripts.inc"
+
+	.include "data/maps/MahoganyTown_Residence/scripts.inc"
+
+	.include "data/maps/MahoganyTown_Workshop/scripts.inc"
+
+	.include "data/maps/BlackthornCity/scripts.inc"
+
+	.include "data/maps/BlackthornCity_PokemonCenter_1F/scripts.inc"
+
+	.include "data/maps/BlackthornCity_Mart/scripts.inc"
+
+	.include "data/maps/BlackthornCity_Gym/scripts.inc"
+
+	.include "data/maps/BlackthornCity_Residence/scripts.inc"
+
+	.include "data/maps/BlackthornCity_Workshop/scripts.inc"
+
+	.include "data/maps/JohtoRoute46/scripts.inc"
+
+	.include "data/maps/JohtoRoute45/scripts.inc"
+
+	.include "data/maps/JohtoRoute42/scripts.inc"
+
+	.include "data/maps/JohtoRoute43/scripts.inc"
+
+	.include "data/maps/JohtoRoute44/scripts.inc"
+
+	.include "data/maps/LakeOfRage/scripts.inc"
+
+	.include "data/maps/DarkCave_1F/scripts.inc"
+
+	.include "data/maps/DarkCave_2F/scripts.inc"
+
+	.include "data/maps/DarkCave_3F/scripts.inc"
+
+	.include "data/maps/MtMortar_1F/scripts.inc"
+
+	.include "data/maps/MtMortar_2F/scripts.inc"
+
+	.include "data/maps/MtMortar_3F/scripts.inc"
+
+	.include "data/maps/MtMortar_4F/scripts.inc"
+
+	.include "data/maps/IcePath_1F/scripts.inc"
+
+	.include "data/maps/IcePath_2F/scripts.inc"
+
+	.include "data/maps/IcePath_3F/scripts.inc"
+
+	.include "data/maps/IcePath_4F/scripts.inc"
+
+	.include "data/maps/DragonsDen_1F/scripts.inc"
+
+	.include "data/maps/DragonsDen_2F/scripts.inc"

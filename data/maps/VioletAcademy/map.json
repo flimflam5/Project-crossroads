@@ -2,7 +2,7 @@
   "id": "MAP_VIOLET_ACADEMY",
   "name": "VioletAcademy",
   "layout": "LAYOUT_VIOLET_ACADEMY",
-  "music": "MUS_PETALBURG_WOODS",
+  "music": "MUS_LITTLEROOT",
   "region": "REGION_HOENN",
   "region_map_section": "MAPSEC_VIOLET_CITY",
   "requires_flash": false,
