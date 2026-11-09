@@ -40,6 +40,9 @@ def decorate(name,data,w,h):
         for yy in range(43,48):
             for xx in range(24,27):
                 if (xx,yy)!=(24,44):t[yy*w+xx]=0x3202
+    if name=='OlivineCity' and phase.exists() and json.loads(phase.read_text()).get('checkpoint')=='west':
+        for yy in range(24,27):t[yy*w+6]=0x3202
+        t[25*w+8]=0x403
     return struct.pack('<'+str(len(t))+'H',*t)
 
 

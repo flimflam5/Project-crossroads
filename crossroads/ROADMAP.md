@@ -1,3 +1,9 @@
+# Current authorized map pass —0.9
+
+All four geographic clusters are implemented and compiled. Current task is regression/delivery and owner exploration QA, not inventing the prologue, Gym order, new encounters or additional regions. Future work follows QA defects and approved design decisions. See johto/DELTA_QA.md and RELEASE_0_9.md.
+
+---
+
 # Current checkpoint — western area 0.8
 
 Current branch: feature/western-area-completion-01. Current-area exploration content

@@ -22,7 +22,7 @@ def read(path):
 groups = read('data/maps/map_groups.json')
 # Keep these eight accepted city/interior IDs fixed; routes have their own checks.
 names = groups['gMapGroup_CrossroadsOlivine'][:8]
-assert groups['group_order'][-1] == 'gMapGroup_CrossroadsOlivine'
+assert groups['group_order'].index('gMapGroup_CrossroadsOlivine') == 75
 assert len(names) == 8
 maps = {m['id']: m for m in (read(f'data/maps/{n}/map.json') for n in groups['gMapGroup_CrossroadsOlivine'])}
 layouts = {l['id']: l for l in read('data/layouts/layouts.json')['layouts']}

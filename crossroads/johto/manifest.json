@@ -13,6 +13,11 @@
           "map": "MAP_JOHTO_ROUTE39",
           "offset": 16,
           "direction": "up"
+        },
+        {
+          "map": "MAP_JOHTO_ROUTE40",
+          "offset": 0,
+          "direction": "left"
         }
       ],
       "entrances": [
@@ -355,6 +360,16 @@
           "map": "MAP_JOHTO_ROUTE38",
           "offset": 14,
           "direction": "left"
+        },
+        {
+          "map": "MAP_JOHTO_ROUTE37",
+          "offset": 10,
+          "direction": "down"
+        },
+        {
+          "map": "MAP_JOHTO_ROUTE42",
+          "offset": 13,
+          "direction": "right"
         }
       ],
       "entrances": [
@@ -1146,7 +1161,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 37,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "id": "MAP_GOLDENROD_CITY",
       "layout": "LAYOUT_GOLDENROD_CITY",
@@ -1164,50 +1183,50 @@
       ],
       "entrances": [
         {
-          "x": 9,
-          "y": 18,
+          "x": 13,
+          "y": 37,
           "elevation": 0,
           "dest_map": "MAP_GOLDENROD_CITY_POKEMON_CENTER_1_F",
           "dest_warp_id": "0"
         },
         {
-          "x": 49,
-          "y": 18,
+          "x": 8,
+          "y": 25,
           "elevation": 0,
           "dest_map": "MAP_GOLDENROD_CITY_MART",
           "dest_warp_id": "0"
         },
         {
-          "x": 49,
-          "y": 46,
+          "x": 47,
+          "y": 10,
           "elevation": 0,
           "dest_map": "MAP_GOLDENROD_CITY_GYM",
           "dest_warp_id": "0"
         },
         {
-          "x": 8,
-          "y": 45,
+          "x": 20,
+          "y": 24,
           "elevation": 0,
           "dest_map": "MAP_GOLDENROD_CITY_RESIDENCE",
           "dest_warp_id": "0"
         },
         {
-          "x": 29,
-          "y": 8,
+          "x": 43,
+          "y": 43,
           "elevation": 0,
           "dest_map": "MAP_GOLDENROD_CITY_WORKSHOP",
           "dest_warp_id": "0"
         },
         {
-          "x": 6,
-          "y": 7,
+          "x": 45,
+          "y": 25,
           "elevation": 0,
           "dest_map": "MAP_GOLDENROD_DEPARTMENT_STORE",
           "dest_warp_id": "0"
         },
         {
-          "x": 28,
-          "y": 49,
+          "x": 8,
+          "y": 45,
           "elevation": 0,
           "dest_map": "MAP_GOLDENROD_UNDERGROUND",
           "dest_warp_id": "0"
@@ -1220,8 +1239,8 @@
           "dest_warp_id": "1"
         },
         {
-          "x": 49,
-          "y": 7,
+          "x": 9,
+          "y": 8,
           "elevation": 0,
           "dest_map": "MAP_GOLDENROD_RADIO_LOBBY",
           "dest_warp_id": "0"
@@ -1238,7 +1257,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 38,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "healing",
       "id": "MAP_GOLDENROD_CITY_POKEMON_CENTER_1_F",
       "layout": "LAYOUT_OLIVINE_POKEMON_CENTER_1F",
@@ -1270,7 +1293,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 39,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "shop",
       "id": "MAP_GOLDENROD_CITY_MART",
       "layout": "LAYOUT_MART",
@@ -1302,7 +1329,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 40,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "id": "MAP_GOLDENROD_CITY_GYM",
       "layout": "LAYOUT_GOLDENROD_CITY_GYM",
@@ -1310,7 +1341,7 @@
       "entrances": [
         {
           "x": 6,
-          "y": 11,
+          "y": 19,
           "elevation": 0,
           "dest_map": "MAP_GOLDENROD_CITY",
           "dest_warp_id": "2"
@@ -1327,7 +1358,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 41,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "id": "MAP_GOLDENROD_CITY_RESIDENCE",
       "layout": "LAYOUT_GOLDENROD_CITY_RESIDENCE",
@@ -1352,7 +1387,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 42,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "id": "MAP_GOLDENROD_CITY_WORKSHOP",
       "layout": "LAYOUT_GOLDENROD_CITY_WORKSHOP",
@@ -1380,7 +1419,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 43,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "id": "MAP_VIOLET_CITY",
       "layout": "LAYOUT_VIOLET_CITY",
@@ -1403,43 +1446,43 @@
       ],
       "entrances": [
         {
-          "x": 9,
-          "y": 18,
+          "x": 35,
+          "y": 32,
           "elevation": 0,
           "dest_map": "MAP_VIOLET_CITY_POKEMON_CENTER_1_F",
           "dest_warp_id": "0"
         },
         {
-          "x": 37,
-          "y": 18,
+          "x": 8,
+          "y": 32,
           "elevation": 0,
           "dest_map": "MAP_VIOLET_CITY_MART",
           "dest_warp_id": "0"
         },
         {
-          "x": 37,
-          "y": 34,
+          "x": 9,
+          "y": 19,
           "elevation": 0,
           "dest_map": "MAP_VIOLET_CITY_GYM",
           "dest_warp_id": "0"
         },
         {
-          "x": 8,
-          "y": 33,
+          "x": 34,
+          "y": 8,
           "elevation": 0,
           "dest_map": "MAP_VIOLET_CITY_RESIDENCE",
           "dest_warp_id": "0"
         },
         {
-          "x": 23,
-          "y": 8,
+          "x": 27,
+          "y": 9,
           "elevation": 0,
           "dest_map": "MAP_VIOLET_CITY_WORKSHOP",
           "dest_warp_id": "0"
         },
         {
-          "x": 22,
-          "y": 37,
+          "x": 23,
+          "y": 35,
           "elevation": 0,
           "dest_map": "MAP_VIOLET_ACADEMY",
           "dest_warp_id": "0"
@@ -1463,7 +1506,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 44,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "healing",
       "id": "MAP_VIOLET_CITY_POKEMON_CENTER_1_F",
       "layout": "LAYOUT_OLIVINE_POKEMON_CENTER_1F",
@@ -1495,7 +1542,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 45,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "shop",
       "id": "MAP_VIOLET_CITY_MART",
       "layout": "LAYOUT_MART",
@@ -1527,7 +1578,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 46,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "id": "MAP_VIOLET_CITY_GYM",
       "layout": "LAYOUT_VIOLET_CITY_GYM",
@@ -1535,7 +1590,7 @@
       "entrances": [
         {
           "x": 6,
-          "y": 11,
+          "y": 19,
           "elevation": 0,
           "dest_map": "MAP_VIOLET_CITY",
           "dest_warp_id": "2"
@@ -1552,7 +1607,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 47,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "id": "MAP_VIOLET_CITY_RESIDENCE",
       "layout": "LAYOUT_VIOLET_CITY_RESIDENCE",
@@ -1577,7 +1636,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 48,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "id": "MAP_VIOLET_CITY_WORKSHOP",
       "layout": "LAYOUT_VIOLET_CITY_WORKSHOP",
@@ -1605,7 +1668,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 49,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "id": "MAP_JOHTO_ROUTE37",
       "layout": "LAYOUT_JOHTO_ROUTE37",
@@ -1636,7 +1703,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 50,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "id": "MAP_JOHTO_ROUTE36",
       "layout": "LAYOUT_JOHTO_ROUTE36",
@@ -1677,7 +1748,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 51,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "id": "MAP_JOHTO_ROUTE35",
       "layout": "LAYOUT_JOHTO_ROUTE35",
@@ -1708,7 +1783,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 52,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "id": "MAP_NATIONAL_PARK",
       "layout": "LAYOUT_NATIONAL_PARK",
@@ -1739,7 +1818,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 53,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "id": "MAP_RUINS_OF_ALPH",
       "layout": "LAYOUT_RUINS_OF_ALPH",
@@ -1797,7 +1880,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 54,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "id": "MAP_SPROUT_TOWER_1_F",
       "layout": "LAYOUT_SPROUT_TOWER_1_F",
@@ -1828,7 +1915,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 55,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "id": "MAP_SPROUT_TOWER_2_F",
       "layout": "LAYOUT_SPROUT_TOWER_2_F",
@@ -1852,7 +1943,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 56,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "id": "MAP_SPROUT_TOWER_3_F",
       "layout": "LAYOUT_SPROUT_TOWER_3_F",
@@ -1883,7 +1978,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 57,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "id": "MAP_ALPH_CHAMBERS_1_F",
       "layout": "LAYOUT_ALPH_CHAMBERS_1_F",
@@ -1914,7 +2013,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 58,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "id": "MAP_ALPH_CHAMBERS_2_F",
       "layout": "LAYOUT_ALPH_CHAMBERS_2_F",
@@ -1945,7 +2048,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 59,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "id": "MAP_ALPH_CHAMBERS_3_F",
       "layout": "LAYOUT_ALPH_CHAMBERS_3_F",
@@ -1961,7 +2068,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 60,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "shop",
       "id": "MAP_GOLDENROD_DEPARTMENT_STORE",
       "layout": "LAYOUT_GOLDENROD_DEPARTMENT_STORE",
@@ -1986,7 +2097,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 61,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "id": "MAP_GOLDENROD_UNDERGROUND",
       "layout": "LAYOUT_GOLDENROD_UNDERGROUND",
@@ -2018,7 +2133,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 62,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "id": "MAP_GOLDENROD_RADIO_LOBBY",
       "layout": "LAYOUT_GOLDENROD_RADIO_LOBBY",
@@ -2043,7 +2162,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 63,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "id": "MAP_VIOLET_ACADEMY",
       "layout": "LAYOUT_VIOLET_ACADEMY",
@@ -2071,7 +2194,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 64,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "id": "MAP_AZALEA_TOWN",
       "layout": "LAYOUT_AZALEA_TOWN",
@@ -2090,27 +2217,27 @@
       "entrances": [
         {
           "x": 9,
-          "y": 18,
+          "y": 13,
           "elevation": 0,
           "dest_map": "MAP_AZALEA_TOWN_POKEMON_CENTER_1_F",
           "dest_warp_id": "0"
         },
         {
-          "x": 37,
-          "y": 18,
+          "x": 34,
+          "y": 12,
           "elevation": 0,
           "dest_map": "MAP_AZALEA_TOWN_MART",
           "dest_warp_id": "0"
         },
         {
-          "x": 37,
+          "x": 10,
           "y": 34,
           "elevation": 0,
           "dest_map": "MAP_AZALEA_TOWN_GYM",
           "dest_warp_id": "0"
         },
         {
-          "x": 8,
+          "x": 33,
           "y": 33,
           "elevation": 0,
           "dest_map": "MAP_AZALEA_TOWN_RESIDENCE",
@@ -2142,7 +2269,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 65,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "healing",
       "id": "MAP_AZALEA_TOWN_POKEMON_CENTER_1_F",
       "layout": "LAYOUT_OLIVINE_POKEMON_CENTER_1F",
@@ -2174,7 +2305,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 66,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "shop",
       "id": "MAP_AZALEA_TOWN_MART",
       "layout": "LAYOUT_MART",
@@ -2206,7 +2341,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 67,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "id": "MAP_AZALEA_TOWN_GYM",
       "layout": "LAYOUT_AZALEA_TOWN_GYM",
@@ -2214,7 +2353,7 @@
       "entrances": [
         {
           "x": 6,
-          "y": 11,
+          "y": 19,
           "elevation": 0,
           "dest_map": "MAP_AZALEA_TOWN",
           "dest_warp_id": "2"
@@ -2231,7 +2370,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 68,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "id": "MAP_AZALEA_TOWN_RESIDENCE",
       "layout": "LAYOUT_AZALEA_TOWN_RESIDENCE",
@@ -2256,7 +2399,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 69,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "id": "MAP_AZALEA_TOWN_WORKSHOP",
       "layout": "LAYOUT_AZALEA_TOWN_WORKSHOP",
@@ -2284,7 +2431,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 70,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "id": "MAP_CHERRYGROVE_CITY",
       "layout": "LAYOUT_CHERRYGROVE_CITY",
@@ -2302,28 +2453,28 @@
       ],
       "entrances": [
         {
-          "x": 9,
-          "y": 18,
+          "x": 33,
+          "y": 9,
           "elevation": 0,
           "dest_map": "MAP_CHERRYGROVE_CITY_POKEMON_CENTER_1_F",
           "dest_warp_id": "0"
         },
         {
-          "x": 37,
-          "y": 18,
+          "x": 11,
+          "y": 15,
           "elevation": 0,
           "dest_map": "MAP_CHERRYGROVE_CITY_MART",
           "dest_warp_id": "0"
         },
         {
-          "x": 35,
+          "x": 33,
           "y": 32,
           "elevation": 0,
           "dest_map": "MAP_CHERRYGROVE_CITY_GYM",
           "dest_warp_id": "0"
         },
         {
-          "x": 8,
+          "x": 16,
           "y": 33,
           "elevation": 0,
           "dest_map": "MAP_CHERRYGROVE_CITY_RESIDENCE",
@@ -2348,7 +2499,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 71,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "healing",
       "id": "MAP_CHERRYGROVE_CITY_POKEMON_CENTER_1_F",
       "layout": "LAYOUT_OLIVINE_POKEMON_CENTER_1F",
@@ -2380,7 +2535,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 72,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "shop",
       "id": "MAP_CHERRYGROVE_CITY_MART",
       "layout": "LAYOUT_MART",
@@ -2412,7 +2571,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 73,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "id": "MAP_CHERRYGROVE_CITY_GYM",
       "layout": "LAYOUT_CHERRYGROVE_CITY_GYM",
@@ -2437,7 +2600,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 74,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "id": "MAP_CHERRYGROVE_CITY_RESIDENCE",
       "layout": "LAYOUT_CHERRYGROVE_CITY_RESIDENCE",
@@ -2462,7 +2629,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 75,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "id": "MAP_CHERRYGROVE_CITY_WORKSHOP",
       "layout": "LAYOUT_CHERRYGROVE_CITY_WORKSHOP",
@@ -2490,7 +2661,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 76,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "id": "MAP_NEW_BARK_TOWN",
       "layout": "LAYOUT_NEW_BARK_TOWN",
@@ -2503,15 +2678,15 @@
       ],
       "entrances": [
         {
-          "x": 9,
-          "y": 18,
+          "x": 8,
+          "y": 32,
           "elevation": 0,
           "dest_map": "MAP_NEW_BARK_TOWN_POKEMON_CENTER_1_F",
           "dest_warp_id": "0"
         },
         {
-          "x": 37,
-          "y": 18,
+          "x": 8,
+          "y": 8,
           "elevation": 0,
           "dest_map": "MAP_NEW_BARK_TOWN_MART",
           "dest_warp_id": "0"
@@ -2524,8 +2699,8 @@
           "dest_warp_id": "0"
         },
         {
-          "x": 8,
-          "y": 33,
+          "x": 11,
+          "y": 17,
           "elevation": 0,
           "dest_map": "MAP_NEW_BARK_TOWN_RESIDENCE",
           "dest_warp_id": "0"
@@ -2538,8 +2713,8 @@
           "dest_warp_id": "0"
         },
         {
-          "x": 22,
-          "y": 37,
+          "x": 34,
+          "y": 10,
           "elevation": 0,
           "dest_map": "MAP_NEW_BARK_LAB",
           "dest_warp_id": "0"
@@ -2563,7 +2738,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 77,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "healing",
       "id": "MAP_NEW_BARK_TOWN_POKEMON_CENTER_1_F",
       "layout": "LAYOUT_OLIVINE_POKEMON_CENTER_1F",
@@ -2595,7 +2774,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 78,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "shop",
       "id": "MAP_NEW_BARK_TOWN_MART",
       "layout": "LAYOUT_MART",
@@ -2627,7 +2810,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 79,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "id": "MAP_NEW_BARK_TOWN_GYM",
       "layout": "LAYOUT_NEW_BARK_TOWN_GYM",
@@ -2652,7 +2839,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 80,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "id": "MAP_NEW_BARK_TOWN_RESIDENCE",
       "layout": "LAYOUT_NEW_BARK_TOWN_RESIDENCE",
@@ -2677,7 +2868,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 81,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "id": "MAP_NEW_BARK_TOWN_WORKSHOP",
       "layout": "LAYOUT_NEW_BARK_TOWN_WORKSHOP",
@@ -2705,7 +2900,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 82,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "id": "MAP_JOHTO_ROUTE34",
       "layout": "LAYOUT_JOHTO_ROUTE34",
@@ -2736,7 +2935,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 83,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "id": "MAP_JOHTO_ROUTE33",
       "layout": "LAYOUT_JOHTO_ROUTE33",
@@ -2770,7 +2973,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 84,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "id": "MAP_JOHTO_ROUTE32",
       "layout": "LAYOUT_JOHTO_ROUTE32",
@@ -2809,7 +3016,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 85,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "id": "MAP_JOHTO_ROUTE31",
       "layout": "LAYOUT_JOHTO_ROUTE31",
@@ -2848,7 +3059,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 86,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "id": "MAP_JOHTO_ROUTE30",
       "layout": "LAYOUT_JOHTO_ROUTE30",
@@ -2879,7 +3094,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 87,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "id": "MAP_JOHTO_ROUTE29",
       "layout": "LAYOUT_JOHTO_ROUTE29",
@@ -2915,7 +3134,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 88,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "id": "MAP_ILEX_FOREST",
       "layout": "LAYOUT_ILEX_FOREST",
@@ -2965,7 +3188,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 89,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "id": "MAP_UNION_CAVE_1_F",
       "layout": "LAYOUT_UNION_CAVE_1_F",
@@ -2996,7 +3223,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 90,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "id": "MAP_UNION_CAVE_2_F",
       "layout": "LAYOUT_UNION_CAVE_2_F",
@@ -3020,7 +3251,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 91,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "id": "MAP_UNION_CAVE_3_F",
       "layout": "LAYOUT_UNION_CAVE_3_F",
@@ -3051,7 +3286,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 92,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "id": "MAP_SLOWPOKE_WELL_1_F",
       "layout": "LAYOUT_SLOWPOKE_WELL_1_F",
@@ -3075,7 +3314,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 93,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "id": "MAP_SLOWPOKE_WELL_2_F",
       "layout": "LAYOUT_SLOWPOKE_WELL_2_F",
@@ -3106,7 +3349,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 94,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "id": "MAP_TOHJO_FALLS_1_F",
       "layout": "LAYOUT_TOHJO_FALLS_1_F",
@@ -3130,7 +3377,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 95,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "id": "MAP_TOHJO_FALLS_2_F",
       "layout": "LAYOUT_TOHJO_FALLS_2_F",
@@ -3146,7 +3397,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 96,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "id": "MAP_NEW_BARK_LAB",
       "layout": "LAYOUT_NEW_BARK_LAB",
@@ -3174,7 +3429,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 97,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "display_name": "MahoganyTown",
       "role": "city",
@@ -3199,21 +3458,21 @@
       ],
       "entrances": [
         {
-          "x": 9,
-          "y": 18,
+          "x": 34,
+          "y": 32,
           "elevation": 0,
           "dest_map": "MAP_MAHOGANY_TOWN_POKEMON_CENTER_1_F",
           "dest_warp_id": "0"
         },
         {
-          "x": 37,
-          "y": 18,
+          "x": 21,
+          "y": 10,
           "elevation": 0,
           "dest_map": "MAP_MAHOGANY_TOWN_MART",
           "dest_warp_id": "0"
         },
         {
-          "x": 37,
+          "x": 9,
           "y": 34,
           "elevation": 0,
           "dest_map": "MAP_MAHOGANY_TOWN_GYM",
@@ -3221,14 +3480,14 @@
         },
         {
           "x": 8,
-          "y": 33,
+          "y": 10,
           "elevation": 0,
           "dest_map": "MAP_MAHOGANY_TOWN_RESIDENCE",
           "dest_warp_id": "0"
         },
         {
-          "x": 23,
-          "y": 8,
+          "x": 35,
+          "y": 10,
           "elevation": 0,
           "dest_map": "MAP_MAHOGANY_TOWN_WORKSHOP",
           "dest_warp_id": "0"
@@ -3243,7 +3502,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 98,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "healing",
       "display_name": "MahoganyTown_PokemonCenter_1F",
       "role": "service",
@@ -3275,7 +3538,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 99,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "shop",
       "display_name": "MahoganyTown_Mart",
       "role": "service",
@@ -3307,7 +3574,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 100,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "display_name": "MahoganyTown_Gym",
       "role": "interior",
@@ -3317,7 +3588,7 @@
       "entrances": [
         {
           "x": 6,
-          "y": 11,
+          "y": 19,
           "elevation": 0,
           "dest_map": "MAP_MAHOGANY_TOWN",
           "dest_warp_id": "2"
@@ -3332,7 +3603,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 101,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "display_name": "MahoganyTown_Residence",
       "role": "interior",
@@ -3357,7 +3632,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 102,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "display_name": "MahoganyTown_Workshop",
       "role": "interior",
@@ -3385,7 +3664,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 103,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "display_name": "BlackthornCity",
       "role": "city",
@@ -3401,35 +3684,35 @@
       "entrances": [
         {
           "x": 9,
-          "y": 18,
+          "y": 32,
           "elevation": 0,
           "dest_map": "MAP_BLACKTHORN_CITY_POKEMON_CENTER_1_F",
           "dest_warp_id": "0"
         },
         {
-          "x": 37,
-          "y": 18,
+          "x": 35,
+          "y": 32,
           "elevation": 0,
           "dest_map": "MAP_BLACKTHORN_CITY_MART",
           "dest_warp_id": "0"
         },
         {
-          "x": 37,
-          "y": 34,
+          "x": 24,
+          "y": 17,
           "elevation": 0,
           "dest_map": "MAP_BLACKTHORN_CITY_GYM",
           "dest_warp_id": "0"
         },
         {
-          "x": 8,
-          "y": 33,
+          "x": 35,
+          "y": 20,
           "elevation": 0,
           "dest_map": "MAP_BLACKTHORN_CITY_RESIDENCE",
           "dest_warp_id": "0"
         },
         {
-          "x": 23,
-          "y": 8,
+          "x": 9,
+          "y": 21,
           "elevation": 0,
           "dest_map": "MAP_BLACKTHORN_CITY_WORKSHOP",
           "dest_warp_id": "0"
@@ -3458,7 +3741,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 104,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "healing",
       "display_name": "BlackthornCity_PokemonCenter_1F",
       "role": "service",
@@ -3490,7 +3777,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 105,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "shop",
       "display_name": "BlackthornCity_Mart",
       "role": "service",
@@ -3522,7 +3813,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 106,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "display_name": "BlackthornCity_Gym",
       "role": "interior",
@@ -3532,7 +3827,7 @@
       "entrances": [
         {
           "x": 6,
-          "y": 11,
+          "y": 19,
           "elevation": 0,
           "dest_map": "MAP_BLACKTHORN_CITY",
           "dest_warp_id": "2"
@@ -3547,7 +3842,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 107,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "display_name": "BlackthornCity_Residence",
       "role": "interior",
@@ -3572,7 +3871,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 108,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "display_name": "BlackthornCity_Workshop",
       "role": "interior",
@@ -3600,7 +3903,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 109,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "display_name": "JohtoRoute46",
       "role": "route",
@@ -3639,7 +3946,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 110,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "display_name": "JohtoRoute45",
       "role": "route",
@@ -3678,7 +3989,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 111,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "display_name": "JohtoRoute42",
       "role": "route",
@@ -3731,7 +4046,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 112,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "display_name": "JohtoRoute43",
       "role": "route",
@@ -3762,7 +4081,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 113,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "display_name": "JohtoRoute44",
       "role": "route",
@@ -3796,7 +4119,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 114,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "display_name": "LakeOfRage",
       "role": "landmark",
@@ -3834,7 +4161,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 115,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "display_name": "DarkCave_1F",
       "role": "cave",
@@ -3872,7 +4203,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 116,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "display_name": "DarkCave_2F",
       "role": "cave",
@@ -3903,7 +4238,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 117,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "display_name": "DarkCave_3F",
       "role": "cave",
@@ -3934,7 +4273,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 118,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "display_name": "MtMortar_1F",
       "role": "cave",
@@ -3972,7 +4315,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 119,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "display_name": "MtMortar_2F",
       "role": "cave",
@@ -4003,7 +4350,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 120,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "display_name": "MtMortar_3F",
       "role": "cave",
@@ -4034,7 +4385,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 121,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "display_name": "MtMortar_4F",
       "role": "cave",
@@ -4065,7 +4420,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 122,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "display_name": "IcePath_1F",
       "role": "ice",
@@ -4096,7 +4455,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 123,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "display_name": "IcePath_2F",
       "role": "ice",
@@ -4127,7 +4490,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 124,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "display_name": "IcePath_3F",
       "role": "ice",
@@ -4158,7 +4525,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 125,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "display_name": "IcePath_4F",
       "role": "ice",
@@ -4189,7 +4560,11 @@
       "status": "implemented",
       "map_group": 75,
       "map_num": 126,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "display_name": "DragonsDen_1F",
       "role": "shrine",
@@ -4213,7 +4588,11 @@
       "status": "implemented",
       "map_group": 76,
       "map_num": 0,
-      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet",
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
       "services": "",
       "display_name": "DragonsDen_2F",
       "role": "shrine",
@@ -4229,66 +4608,236 @@
         1,
         17
       ],
-      "status": "planned",
+      "status": "implemented",
       "map_group": 76,
       "map_num": 1,
-      "coverage": "not implemented/tested",
-      "services": ""
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
+      "services": "",
+      "display_name": "CianwoodCity",
+      "role": "city",
+      "id": "MAP_CIANWOOD_CITY",
+      "layout": "LAYOUT_CIANWOOD_CITY",
+      "connections": [
+        {
+          "map": "MAP_JOHTO_ROUTE41",
+          "offset": -2,
+          "direction": "right"
+        }
+      ],
+      "entrances": [
+        {
+          "x": 9,
+          "y": 31,
+          "elevation": 0,
+          "dest_map": "MAP_CIANWOOD_CITY_POKEMON_CENTER_1_F",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 29,
+          "y": 16,
+          "elevation": 0,
+          "dest_map": "MAP_CIANWOOD_CITY_MART",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 11,
+          "y": 18,
+          "elevation": 0,
+          "dest_map": "MAP_CIANWOOD_CITY_GYM",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 9,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_CIANWOOD_CITY_RESIDENCE",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 25,
+          "y": 37,
+          "elevation": 0,
+          "dest_map": "MAP_CIANWOOD_CITY_WORKSHOP",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 18,
+          "y": 33,
+          "elevation": 0,
+          "dest_map": "MAP_CIANWOOD_PHARMACY",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 12,
+          "y": 36,
+          "elevation": 0,
+          "dest_map": "MAP_CLIFF_EDGE_GATE_1_F",
+          "dest_warp_id": "0"
+        }
+      ]
     },
     {
       "name": "CianwoodCity_PokemonCenter_1F",
       "cluster": "west",
       "kind": "service",
       "parent": "CianwoodCity",
-      "status": "planned",
+      "status": "implemented",
       "map_group": 76,
       "map_num": 2,
-      "coverage": "not implemented/tested",
-      "services": "healing"
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
+      "services": "healing",
+      "display_name": "CianwoodCity_PokemonCenter_1F",
+      "role": "service",
+      "id": "MAP_CIANWOOD_CITY_POKEMON_CENTER_1_F",
+      "layout": "LAYOUT_OLIVINE_POKEMON_CENTER_1F",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 7,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_CIANWOOD_CITY",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 6,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_CIANWOOD_CITY",
+          "dest_warp_id": "0"
+        }
+      ]
     },
     {
       "name": "CianwoodCity_Mart",
       "cluster": "west",
       "kind": "service",
       "parent": "CianwoodCity",
-      "status": "planned",
+      "status": "implemented",
       "map_group": 76,
       "map_num": 3,
-      "coverage": "not implemented/tested",
-      "services": "shop"
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
+      "services": "shop",
+      "display_name": "CianwoodCity_Mart",
+      "role": "service",
+      "id": "MAP_CIANWOOD_CITY_MART",
+      "layout": "LAYOUT_MART",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 3,
+          "y": 7,
+          "elevation": 0,
+          "dest_map": "MAP_CIANWOOD_CITY",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 4,
+          "y": 7,
+          "elevation": 0,
+          "dest_map": "MAP_CIANWOOD_CITY",
+          "dest_warp_id": "1"
+        }
+      ]
     },
     {
       "name": "CianwoodCity_Gym",
       "cluster": "west",
       "kind": "interior",
       "parent": "CianwoodCity",
-      "status": "planned",
+      "status": "implemented",
       "map_group": 76,
       "map_num": 4,
-      "coverage": "not implemented/tested",
-      "services": ""
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
+      "services": "",
+      "display_name": "CianwoodCity_Gym",
+      "role": "interior",
+      "id": "MAP_CIANWOOD_CITY_GYM",
+      "layout": "LAYOUT_CIANWOOD_CITY_GYM",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 6,
+          "y": 19,
+          "elevation": 0,
+          "dest_map": "MAP_CIANWOOD_CITY",
+          "dest_warp_id": "2"
+        }
+      ]
     },
     {
       "name": "CianwoodCity_Residence",
       "cluster": "west",
       "kind": "interior",
       "parent": "CianwoodCity",
-      "status": "planned",
+      "status": "implemented",
       "map_group": 76,
       "map_num": 5,
-      "coverage": "not implemented/tested",
-      "services": ""
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
+      "services": "",
+      "display_name": "CianwoodCity_Residence",
+      "role": "interior",
+      "id": "MAP_CIANWOOD_CITY_RESIDENCE",
+      "layout": "LAYOUT_CIANWOOD_CITY_RESIDENCE",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 6,
+          "y": 11,
+          "elevation": 0,
+          "dest_map": "MAP_CIANWOOD_CITY",
+          "dest_warp_id": "3"
+        }
+      ]
     },
     {
       "name": "CianwoodCity_Workshop",
       "cluster": "west",
       "kind": "interior",
       "parent": "CianwoodCity",
-      "status": "planned",
+      "status": "implemented",
       "map_group": 76,
       "map_num": 6,
-      "coverage": "not implemented/tested",
-      "services": ""
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
+      "services": "",
+      "display_name": "CianwoodCity_Workshop",
+      "role": "interior",
+      "id": "MAP_CIANWOOD_CITY_WORKSHOP",
+      "layout": "LAYOUT_CIANWOOD_CITY_WORKSHOP",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 6,
+          "y": 11,
+          "elevation": 0,
+          "dest_map": "MAP_CIANWOOD_CITY",
+          "dest_warp_id": "4"
+        }
+      ]
     },
     {
       "name": "JohtoRoute40",
@@ -4298,11 +4847,32 @@
         3,
         13
       ],
-      "status": "planned",
+      "status": "implemented",
       "map_group": 76,
       "map_num": 7,
-      "coverage": "not implemented/tested",
-      "services": ""
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
+      "services": "",
+      "display_name": "JohtoRoute40",
+      "role": "water route",
+      "id": "MAP_JOHTO_ROUTE40",
+      "layout": "LAYOUT_JOHTO_ROUTE40",
+      "connections": [
+        {
+          "map": "MAP_OLIVINE_CITY",
+          "offset": 0,
+          "direction": "right"
+        },
+        {
+          "map": "MAP_JOHTO_ROUTE41",
+          "offset": -8,
+          "direction": "down"
+        }
+      ],
+      "entrances": []
     },
     {
       "name": "JohtoRoute41",
@@ -4312,11 +4882,61 @@
         2,
         16
       ],
-      "status": "planned",
+      "status": "implemented",
       "map_group": 76,
       "map_num": 8,
-      "coverage": "not implemented/tested",
-      "services": ""
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
+      "services": "",
+      "display_name": "JohtoRoute41",
+      "role": "water route",
+      "id": "MAP_JOHTO_ROUTE41",
+      "layout": "LAYOUT_JOHTO_ROUTE41",
+      "connections": [
+        {
+          "map": "MAP_JOHTO_ROUTE40",
+          "offset": 8,
+          "direction": "up"
+        },
+        {
+          "map": "MAP_CIANWOOD_CITY",
+          "offset": 2,
+          "direction": "left"
+        }
+      ],
+      "entrances": [
+        {
+          "x": 12,
+          "y": 10,
+          "elevation": 0,
+          "dest_map": "MAP_WHIRL_ISLANDS_1_F",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 33,
+          "y": 10,
+          "elevation": 0,
+          "dest_map": "MAP_WHIRL_ISLANDS_2_F",
+          "dest_warp_id": "2"
+        },
+        {
+          "x": 12,
+          "y": 31,
+          "elevation": 0,
+          "dest_map": "MAP_WHIRL_ISLANDS_3_F",
+          "dest_warp_id": "2"
+        },
+        {
+          "x": 33,
+          "y": 31,
+          "elevation": 0,
+          "dest_map": "MAP_WHIRL_ISLANDS_4_F",
+          "dest_warp_id": "1"
+        }
+      ]
     },
     {
       "name": "JohtoRoute47",
@@ -4326,11 +4946,49 @@
         2,
         19
       ],
-      "status": "planned",
+      "status": "implemented",
       "map_group": 76,
       "map_num": 9,
-      "coverage": "not implemented/tested",
-      "services": ""
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
+      "services": "",
+      "display_name": "JohtoRoute47",
+      "role": "route",
+      "id": "MAP_JOHTO_ROUTE47",
+      "layout": "LAYOUT_JOHTO_ROUTE47",
+      "connections": [
+        {
+          "map": "MAP_JOHTO_ROUTE48",
+          "offset": 10,
+          "direction": "up"
+        }
+      ],
+      "entrances": [
+        {
+          "x": 38,
+          "y": 10,
+          "elevation": 0,
+          "dest_map": "MAP_CLIFF_EDGE_GATE_1_F",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 28,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_CLIFF_CAVE_1_F",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 18,
+          "y": 24,
+          "elevation": 0,
+          "dest_map": "MAP_CLIFF_CAVE_2_F",
+          "dest_warp_id": "1"
+        }
+      ]
     },
     {
       "name": "JohtoRoute48",
@@ -4340,11 +4998,32 @@
         3,
         17
       ],
-      "status": "planned",
+      "status": "implemented",
       "map_group": 76,
       "map_num": 10,
-      "coverage": "not implemented/tested",
-      "services": ""
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
+      "services": "",
+      "display_name": "JohtoRoute48",
+      "role": "route",
+      "id": "MAP_JOHTO_ROUTE48",
+      "layout": "LAYOUT_JOHTO_ROUTE48",
+      "connections": [
+        {
+          "map": "MAP_JOHTO_ROUTE47",
+          "offset": -10,
+          "direction": "down"
+        },
+        {
+          "map": "MAP_SAFARI_ZONE_GATE",
+          "offset": -2,
+          "direction": "up"
+        }
+      ],
+      "entrances": []
     },
     {
       "name": "SafariZoneGate",
@@ -4354,11 +5033,40 @@
         3,
         15
       ],
-      "status": "planned",
+      "status": "implemented",
       "map_group": 76,
       "map_num": 11,
-      "coverage": "not implemented/tested",
-      "services": ""
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
+      "services": "",
+      "display_name": "SafariZoneGate",
+      "role": "landmark",
+      "id": "MAP_SAFARI_ZONE_GATE",
+      "layout": "LAYOUT_SAFARI_ZONE_GATE",
+      "connections": [
+        {
+          "map": "MAP_JOHTO_ROUTE48",
+          "offset": 2,
+          "direction": "down"
+        },
+        {
+          "map": "MAP_SAFARI_WETLANDS",
+          "offset": -4,
+          "direction": "up"
+        }
+      ],
+      "entrances": [
+        {
+          "x": 14,
+          "y": 23,
+          "elevation": 0,
+          "dest_map": "MAP_SAFARI_RECEPTION",
+          "dest_warp_id": "0"
+        }
+      ]
     },
     {
       "name": "SafariWetlands",
@@ -4368,165 +5076,344 @@
         3,
         14
       ],
-      "status": "planned",
+      "status": "implemented",
       "map_group": 76,
       "map_num": 12,
-      "coverage": "not implemented/tested",
-      "services": ""
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
+      "services": "",
+      "display_name": "SafariWetlands",
+      "role": "landmark",
+      "id": "MAP_SAFARI_WETLANDS",
+      "layout": "LAYOUT_SAFARI_WETLANDS",
+      "connections": [
+        {
+          "map": "MAP_SAFARI_ZONE_GATE",
+          "offset": 4,
+          "direction": "down"
+        }
+      ],
+      "entrances": []
     },
     {
       "name": "WhirlIslands_1F",
       "cluster": "west",
       "kind": "islandcave",
       "entrances": [
-        [
-          "JohtoRoute41",
-          12,
-          10,
-          0
-        ]
+        {
+          "x": 22,
+          "y": 4,
+          "elevation": 0,
+          "dest_map": "MAP_WHIRL_ISLANDS_2_F",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 10,
+          "y": 19,
+          "elevation": 0,
+          "dest_map": "MAP_JOHTO_ROUTE41",
+          "dest_warp_id": "0"
+        }
       ],
-      "status": "planned",
+      "status": "implemented",
       "map_group": 76,
       "map_num": 13,
-      "coverage": "not implemented/tested",
-      "services": ""
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
+      "services": "",
+      "display_name": "WhirlIslands_1F",
+      "role": "islandcave",
+      "id": "MAP_WHIRL_ISLANDS_1_F",
+      "layout": "LAYOUT_WHIRL_ISLANDS_1_F",
+      "connections": null
     },
     {
       "name": "WhirlIslands_2F",
       "cluster": "west",
       "kind": "islandcave",
       "entrances": [
-        [
-          "JohtoRoute41",
-          33,
-          10,
-          1
-        ]
+        {
+          "x": 5,
+          "y": 16,
+          "elevation": 0,
+          "dest_map": "MAP_WHIRL_ISLANDS_1_F",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 22,
+          "y": 4,
+          "elevation": 0,
+          "dest_map": "MAP_WHIRL_ISLANDS_3_F",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 14,
+          "y": 19,
+          "elevation": 0,
+          "dest_map": "MAP_JOHTO_ROUTE41",
+          "dest_warp_id": "1"
+        }
       ],
-      "status": "planned",
+      "status": "implemented",
       "map_group": 76,
       "map_num": 14,
-      "coverage": "not implemented/tested",
-      "services": ""
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
+      "services": "",
+      "display_name": "WhirlIslands_2F",
+      "role": "islandcave",
+      "id": "MAP_WHIRL_ISLANDS_2_F",
+      "layout": "LAYOUT_WHIRL_ISLANDS_2_F",
+      "connections": null
     },
     {
       "name": "WhirlIslands_3F",
       "cluster": "west",
       "kind": "islandcave",
       "entrances": [
-        [
-          "JohtoRoute41",
-          12,
-          31,
-          2
-        ]
+        {
+          "x": 5,
+          "y": 16,
+          "elevation": 0,
+          "dest_map": "MAP_WHIRL_ISLANDS_2_F",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 22,
+          "y": 4,
+          "elevation": 0,
+          "dest_map": "MAP_WHIRL_ISLANDS_4_F",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 18,
+          "y": 19,
+          "elevation": 0,
+          "dest_map": "MAP_JOHTO_ROUTE41",
+          "dest_warp_id": "2"
+        }
       ],
-      "status": "planned",
+      "status": "implemented",
       "map_group": 76,
       "map_num": 15,
-      "coverage": "not implemented/tested",
-      "services": ""
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
+      "services": "",
+      "display_name": "WhirlIslands_3F",
+      "role": "islandcave",
+      "id": "MAP_WHIRL_ISLANDS_3_F",
+      "layout": "LAYOUT_WHIRL_ISLANDS_3_F",
+      "connections": null
     },
     {
       "name": "WhirlIslands_4F",
       "cluster": "west",
       "kind": "islandcave",
       "entrances": [
-        [
-          "JohtoRoute41",
-          33,
-          31,
-          3
-        ]
+        {
+          "x": 5,
+          "y": 16,
+          "elevation": 0,
+          "dest_map": "MAP_WHIRL_ISLANDS_3_F",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 22,
+          "y": 19,
+          "elevation": 0,
+          "dest_map": "MAP_JOHTO_ROUTE41",
+          "dest_warp_id": "3"
+        }
       ],
-      "status": "planned",
+      "status": "implemented",
       "map_group": 76,
       "map_num": 16,
-      "coverage": "not implemented/tested",
-      "services": ""
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
+      "services": "",
+      "display_name": "WhirlIslands_4F",
+      "role": "islandcave",
+      "id": "MAP_WHIRL_ISLANDS_4_F",
+      "layout": "LAYOUT_WHIRL_ISLANDS_4_F",
+      "connections": null
     },
     {
       "name": "CliffEdgeGate_1F",
       "cluster": "west",
       "kind": "gate",
       "entrances": [
-        [
-          "CianwoodCity",
-          12,
-          36,
-          0
-        ],
-        [
-          "JohtoRoute47",
-          38,
-          10,
-          0
-        ]
+        {
+          "x": 10,
+          "y": 19,
+          "elevation": 0,
+          "dest_map": "MAP_CIANWOOD_CITY",
+          "dest_warp_id": "6"
+        },
+        {
+          "x": 14,
+          "y": 19,
+          "elevation": 0,
+          "dest_map": "MAP_JOHTO_ROUTE47",
+          "dest_warp_id": "0"
+        }
       ],
-      "status": "planned",
+      "status": "implemented",
       "map_group": 76,
       "map_num": 17,
-      "coverage": "not implemented/tested",
-      "services": ""
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
+      "services": "",
+      "display_name": "CliffEdgeGate_1F",
+      "role": "gate",
+      "id": "MAP_CLIFF_EDGE_GATE_1_F",
+      "layout": "LAYOUT_CLIFF_EDGE_GATE_1_F",
+      "connections": null
     },
     {
       "name": "CliffCave_1F",
       "cluster": "west",
       "kind": "cave",
       "entrances": [
-        [
-          "JohtoRoute47",
-          28,
-          8,
-          0
-        ]
+        {
+          "x": 22,
+          "y": 4,
+          "elevation": 0,
+          "dest_map": "MAP_CLIFF_CAVE_2_F",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 10,
+          "y": 19,
+          "elevation": 0,
+          "dest_map": "MAP_JOHTO_ROUTE47",
+          "dest_warp_id": "1"
+        }
       ],
-      "status": "planned",
+      "status": "implemented",
       "map_group": 76,
       "map_num": 18,
-      "coverage": "not implemented/tested",
-      "services": ""
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
+      "services": "",
+      "display_name": "CliffCave_1F",
+      "role": "cave",
+      "id": "MAP_CLIFF_CAVE_1_F",
+      "layout": "LAYOUT_CLIFF_CAVE_1_F",
+      "connections": null
     },
     {
       "name": "CliffCave_2F",
       "cluster": "west",
       "kind": "cave",
       "entrances": [
-        [
-          "JohtoRoute47",
-          18,
-          24,
-          1
-        ]
+        {
+          "x": 5,
+          "y": 16,
+          "elevation": 0,
+          "dest_map": "MAP_CLIFF_CAVE_1_F",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 14,
+          "y": 19,
+          "elevation": 0,
+          "dest_map": "MAP_JOHTO_ROUTE47",
+          "dest_warp_id": "2"
+        }
       ],
-      "status": "planned",
+      "status": "implemented",
       "map_group": 76,
       "map_num": 19,
-      "coverage": "not implemented/tested",
-      "services": ""
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
+      "services": "",
+      "display_name": "CliffCave_2F",
+      "role": "cave",
+      "id": "MAP_CLIFF_CAVE_2_F",
+      "layout": "LAYOUT_CLIFF_CAVE_2_F",
+      "connections": null
     },
     {
       "name": "CianwoodPharmacy",
       "cluster": "west",
       "kind": "facility",
       "parent": "CianwoodCity",
-      "status": "planned",
+      "status": "implemented",
       "map_group": 76,
       "map_num": 20,
-      "coverage": "not implemented/tested",
-      "services": "shop"
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
+      "services": "shop",
+      "display_name": "CianwoodPharmacy",
+      "role": "facility",
+      "id": "MAP_CIANWOOD_PHARMACY",
+      "layout": "LAYOUT_CIANWOOD_PHARMACY",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 7,
+          "y": 11,
+          "elevation": 0,
+          "dest_map": "MAP_CIANWOOD_CITY",
+          "dest_warp_id": "5"
+        }
+      ]
     },
     {
       "name": "SafariReception",
       "cluster": "west",
       "kind": "facility",
       "parent": "SafariZoneGate",
-      "status": "planned",
+      "status": "implemented",
       "map_group": 76,
       "map_num": 21,
-      "coverage": "not implemented/tested",
-      "services": ""
+      "coverage": {
+        "controller_visited": true,
+        "roundtrip_scope": "All new-map warp and border pairs;141 unique pairs across final tour",
+        "owner_qa": "pending"
+      },
+      "services": "",
+      "display_name": "SafariReception",
+      "role": "facility",
+      "id": "MAP_SAFARI_RECEPTION",
+      "layout": "LAYOUT_SAFARI_RECEPTION",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 7,
+          "y": 11,
+          "elevation": 0,
+          "dest_map": "MAP_SAFARI_ZONE_GATE",
+          "dest_warp_id": "0"
+        }
+      ]
     }
   ],
   "border_topology": [
@@ -4951,7 +5838,7 @@
     "Battle Frontier/future regions: closed",
     "No legend, badge, Gym-order, encounter or trainer decisions added"
   ],
-  "checkpoint": "east",
+  "checkpoint": "west",
   "internal_checkpoints": {
     "central": {
       "registered_maps": 64,
@@ -4983,5 +5870,39 @@
       "build": "Emerald PASS; metadata/label update compiled after terrain tour; final full-network regression required",
       "owner_qa": "pending"
     }
-  }
+  },
+  "preserved_sources": {
+    "include/global.h": "265c63399ca88a7fc9421948e27bc03086a129ac4a731a14a367ff6759e0bcba",
+    "include/global.fieldmap.h": "5c4d47192e2950101df27b211501f9e3337b7754804d322033724c508f645b2d",
+    "include/constants/opponents.h": "f49c74920d86a8342f1a21ace149b8e8fba96e188dbee470c86bc906f2bc3ae9",
+    "src/data/trainers.party": "75eb7412c9fa3d757d1748660f3fc620be73c9827bf08de199f6ce89c0a17970",
+    "src/data/wild_encounters.json": "a4c28bf21c8c400afcb1332c948a5973582e209eb8e80132a34e8edce231b17c",
+    "crossroads/scripts/starter_rescue.inc": "d314587b76084a82c0e7404743d3bbb87fea1ff8c1f203ad9e5f5e4d5cb00f30",
+    "src/black_ledger_title.c": "074f9c73a3754386b3ecc580641d482a69920df8e16cf22da3452f2873fd67d9",
+    "src/black_ledger_intro.c": "d26d77f69422520f0c59a774f48704e7b17f9d180319c9b131a7866535fb3a76",
+    "data/black_ledger_title_music.s": "c753a311572740b62c8c4e58cc47efc13b46a23c5656c2ed3ee08aa9c976d3d4",
+    "sound/direct_sound_samples/crossroads/black_ledger_title.pcm": "d1b6d3a234021d11ff68b14f9470f29f3befbafd1bc36a7a43b917886af97e19"
+  },
+  "storage_constraints": {
+    "map_groups": {
+      "75": "0..126",
+      "76": "0..21"
+    },
+    "reserved_map_num": 127,
+    "reason": "WarpData signed bytes and SetupWarp treats mapNum127 as dynamic regardless of map group. No save structure/constants changed.",
+    "met_location_ids": "Existing 0..212 and NONE213 preserved; new names214..252; special253..255 preserved."
+  },
+  "gym_locations": [
+    "VioletCity",
+    "AzaleaTown",
+    "GoldenrodCity",
+    "EcruteakCity",
+    "OlivineCity",
+    "CianwoodCity",
+    "MahoganyTown",
+    "BlackthornCity"
+  ],
+  "community_hall_storage_note": "NewBarkTown_Gym and CherrygroveCity_Gym are stable internal authoring-slot names; player-facing buildings are community halls, not additional Gyms.",
+  "runtime_coverage": "coverage.json",
+  "manual_qa": "PENDING; DELTA_QA.md"
 }

@@ -1,6 +1,6 @@
 # Johto exploration topology
 
-Existing western maps are retained. Planned append-only IDs and coverage: [manifest.json](manifest.json).
+Existing western maps are retained. Append-only IDs and coverage: [manifest.json](manifest.json).
 
 ```mermaid
 graph LR
@@ -68,3 +68,11 @@ graph LR
 League approach terminates at a labeled Kanto boundary beyond Tohjo Falls; no other region or League completion is claimed.
 
 Each cluster must compile and pass topology checks before the next. Services/rooms have reciprocal exits. New rosters and teams remain pending. Test water access will be session-only and explicitly labeled.
+
+## Current validation
+
+149 maps built;112 new maps controller-visited. Final tour checked141 unique
+roundtrip door/border pairs and622 transitions. See coverage.json and DELTA_QA.md.
+Group75 uses nums0..126; group 76 uses0..21, avoiding reserved dynamic mapNum 127.
+Field atlas is informational; routes/caves/water provide actual travel.
+Kanto/League beyond Tohjo is a documented safe boundary, not a completed region.

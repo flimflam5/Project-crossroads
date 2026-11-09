@@ -15,7 +15,7 @@ Johto_GoldenrodCity_Gym_Guide::
     msgbox Johto_GoldenrodCity_Gym_Guide_Text, MSGBOX_NPC
     end
 Johto_GoldenrodCity_Gym_Guide_Text:
-    .string "Everyone knows a shortcut. On\nmarket days they all use the\psame one.$"
+    .string "A good training routine needs\nrest as well as exercise. The\pfloor is open, but battles are\nnot scheduled today.$"
 
 Johto_GoldenrodCity_Gym_Notes::
     msgbox Johto_GoldenrodCity_Gym_Notes_Text, MSGBOX_SIGN
@@ -63,7 +63,7 @@ Johto_VioletCity_Gym_Guide::
     msgbox Johto_VioletCity_Gym_Guide_Text, MSGBOX_NPC
     end
 Johto_VioletCity_Gym_Guide_Text:
-    .string "The monks walk so softly. The\nold tower does the creaking for\pthem.$"
+    .string "The perches leave plenty of\nroom to watch movement. Our\ptraining floor is open to\nvisitors; battles are not\pscheduled today.$"
 
 Johto_VioletCity_Gym_Notes::
     msgbox Johto_VioletCity_Gym_Notes_Text, MSGBOX_SIGN
@@ -291,7 +291,7 @@ Johto_AzaleaTown_Gym_Guide::
     msgbox Johto_AzaleaTown_Gym_Guide_Text, MSGBOX_NPC
     end
 Johto_AzaleaTown_Gym_Guide_Text:
-    .string "The well is older than the\nhouses around it. We try not to\phurry either one.$"
+    .string "Look closely at the small\nthings. Careful observation is\ppart of training, too. Visitors\nmay walk the floor.$"
 
 Johto_AzaleaTown_Gym_Notes::
     msgbox Johto_AzaleaTown_Gym_Notes_Text, MSGBOX_SIGN
@@ -615,7 +615,7 @@ Johto_MahoganyTown_Gym_Guide::
     msgbox Johto_MahoganyTown_Gym_Guide_Text, MSGBOX_NPC
     end
 Johto_MahoganyTown_Gym_Guide_Text:
-    .string "People come for the lake. I\nstay for the quiet after they\pleave.$"
+    .string "The cold makes everyone notice\ntheir footing. Take your time\paround the training markers.$"
 
 Johto_MahoganyTown_Gym_Notes::
     msgbox Johto_MahoganyTown_Gym_Notes_Text, MSGBOX_SIGN
@@ -663,7 +663,7 @@ Johto_BlackthornCity_Gym_Guide::
     msgbox Johto_BlackthornCity_Gym_Guide_Text, MSGBOX_NPC
     end
 Johto_BlackthornCity_Gym_Guide_Text:
-    .string "Everything here is uphill.\nComing home included, somehow.$"
+    .string "The practice court is open to\nvisitors. The equipment is\pchecked before every session.$"
 
 Johto_BlackthornCity_Gym_Notes::
     msgbox Johto_BlackthornCity_Gym_Notes_Text, MSGBOX_SIGN
@@ -922,6 +922,228 @@ Johto_DragonsDen_2F_Notes::
     end
 Johto_DragonsDen_2F_Notes_Text:
     .string "Please leave the displays as\nyou found them. Take care on\pthe stairs.$"
+
+Johto_CianwoodCity_Sign::
+    msgbox Johto_CianwoodCity_Sign_Text, MSGBOX_SIGN
+    end
+Johto_CianwoodCity_Sign_Text:
+    .string "CIANWOOD CITY. Follow the\nmarked roads and direction\psigns.$"
+
+Johto_CianwoodCity_Resident::
+    msgbox Johto_CianwoodCity_Resident_Text, MSGBOX_NPC
+    end
+Johto_CianwoodCity_Resident_Text:
+    .string "The sea brings visitors. The\npharmacy takes care of the\pseasickness.$"
+
+Johto_CianwoodCity_Gym_Guide::
+    msgbox Johto_CianwoodCity_Gym_Guide_Text, MSGBOX_NPC
+    end
+Johto_CianwoodCity_Gym_Guide_Text:
+    .string "Balance and breathing come\nfirst. There is space to\pobserve the training floor\nwithout joining a battle.$"
+
+Johto_CianwoodCity_Gym_Notes::
+    msgbox Johto_CianwoodCity_Gym_Notes_Text, MSGBOX_SIGN
+    end
+Johto_CianwoodCity_Gym_Notes_Text:
+    .string "Please leave the displays as\nyou found them. Take care on\pthe stairs.$"
+
+Johto_CianwoodCity_Residence_Guide::
+    msgbox Johto_CianwoodCity_Residence_Guide_Text, MSGBOX_NPC
+    end
+Johto_CianwoodCity_Residence_Guide_Text:
+    .string "The sea brings visitors. The\npharmacy takes care of the\pseasickness.$"
+
+Johto_CianwoodCity_Residence_Notes::
+    msgbox Johto_CianwoodCity_Residence_Notes_Text, MSGBOX_SIGN
+    end
+Johto_CianwoodCity_Residence_Notes_Text:
+    .string "Please leave the displays as\nyou found them. Take care on\pthe stairs.$"
+
+Johto_CianwoodCity_Workshop_Guide::
+    msgbox Johto_CianwoodCity_Workshop_Guide_Text, MSGBOX_NPC
+    end
+Johto_CianwoodCity_Workshop_Guide_Text:
+    .string "The sea brings visitors. The\npharmacy takes care of the\pseasickness.$"
+
+Johto_CianwoodCity_Workshop_Notes::
+    msgbox Johto_CianwoodCity_Workshop_Notes_Text, MSGBOX_SIGN
+    end
+Johto_CianwoodCity_Workshop_Notes_Text:
+    .string "Local maps, repair notes and a\nwell-used workbench.$"
+
+Johto_JohtoRoute40_Sign::
+    msgbox Johto_JohtoRoute40_Sign_Text, MSGBOX_SIGN
+    end
+Johto_JohtoRoute40_Sign_Text:
+    .string "ROUTE 40. Follow the marked\nroads and direction signs.$"
+
+Johto_JohtoRoute41_Sign::
+    msgbox Johto_JohtoRoute41_Sign_Text, MSGBOX_SIGN
+    end
+Johto_JohtoRoute41_Sign_Text:
+    .string "ROUTE 41. Follow the marked\nroads and direction signs.$"
+
+Johto_JohtoRoute47_Sign::
+    msgbox Johto_JohtoRoute47_Sign_Text, MSGBOX_SIGN
+    end
+Johto_JohtoRoute47_Sign_Text:
+    .string "ROUTE 47. Follow the marked\nroads and direction signs.$"
+
+Johto_JohtoRoute47_Resident::
+    msgbox Johto_JohtoRoute47_Resident_Text, MSGBOX_NPC
+    end
+Johto_JohtoRoute47_Resident_Text:
+    .string "The signs help when the paths\nturn. There is no need to rush\pthe walk.$"
+
+Johto_JohtoRoute48_Sign::
+    msgbox Johto_JohtoRoute48_Sign_Text, MSGBOX_SIGN
+    end
+Johto_JohtoRoute48_Sign_Text:
+    .string "ROUTE 48. Follow the marked\nroads and direction signs.$"
+
+Johto_JohtoRoute48_Resident::
+    msgbox Johto_JohtoRoute48_Resident_Text, MSGBOX_NPC
+    end
+Johto_JohtoRoute48_Resident_Text:
+    .string "The signs help when the paths\nturn. There is no need to rush\pthe walk.$"
+
+Johto_SafariZoneGate_Sign::
+    msgbox Johto_SafariZoneGate_Sign_Text, MSGBOX_SIGN
+    end
+Johto_SafariZoneGate_Sign_Text:
+    .string "SAFARI GATE. Follow the marked\nroads and direction signs.$"
+
+Johto_SafariZoneGate_Resident::
+    msgbox Johto_SafariZoneGate_Resident_Text, MSGBOX_NPC
+    end
+Johto_SafariZoneGate_Resident_Text:
+    .string "The signs help when the paths\nturn. There is no need to rush\pthe walk.$"
+
+Johto_SafariWetlands_Sign::
+    msgbox Johto_SafariWetlands_Sign_Text, MSGBOX_SIGN
+    end
+Johto_SafariWetlands_Sign_Text:
+    .string "SAFARI WETLANDS. Follow the\nmarked roads and direction\psigns.$"
+
+Johto_SafariWetlands_Resident::
+    msgbox Johto_SafariWetlands_Resident_Text, MSGBOX_NPC
+    end
+Johto_SafariWetlands_Resident_Text:
+    .string "The signs help when the paths\nturn. There is no need to rush\pthe walk.$"
+
+Johto_WhirlIslands_1F_Guide::
+    msgbox Johto_WhirlIslands_1F_Guide_Text, MSGBOX_NPC
+    end
+Johto_WhirlIslands_1F_Guide_Text:
+    .string "Four islands, many passages.\nKeep track of the ladders and\pthe shore you entered from.$"
+
+Johto_WhirlIslands_1F_Notes::
+    msgbox Johto_WhirlIslands_1F_Notes_Text, MSGBOX_SIGN
+    end
+Johto_WhirlIslands_1F_Notes_Text:
+    .string "Please leave the displays as\nyou found them. Take care on\pthe stairs.$"
+
+Johto_WhirlIslands_2F_Guide::
+    msgbox Johto_WhirlIslands_2F_Guide_Text, MSGBOX_NPC
+    end
+Johto_WhirlIslands_2F_Guide_Text:
+    .string "Four islands, many passages.\nKeep track of the ladders and\pthe shore you entered from.$"
+
+Johto_WhirlIslands_2F_Notes::
+    msgbox Johto_WhirlIslands_2F_Notes_Text, MSGBOX_SIGN
+    end
+Johto_WhirlIslands_2F_Notes_Text:
+    .string "Please leave the displays as\nyou found them. Take care on\pthe stairs.$"
+
+Johto_WhirlIslands_3F_Guide::
+    msgbox Johto_WhirlIslands_3F_Guide_Text, MSGBOX_NPC
+    end
+Johto_WhirlIslands_3F_Guide_Text:
+    .string "Four islands, many passages.\nKeep track of the ladders and\pthe shore you entered from.$"
+
+Johto_WhirlIslands_3F_Notes::
+    msgbox Johto_WhirlIslands_3F_Notes_Text, MSGBOX_SIGN
+    end
+Johto_WhirlIslands_3F_Notes_Text:
+    .string "Please leave the displays as\nyou found them. Take care on\pthe stairs.$"
+
+Johto_WhirlIslands_4F_Guide::
+    msgbox Johto_WhirlIslands_4F_Guide_Text, MSGBOX_NPC
+    end
+Johto_WhirlIslands_4F_Guide_Text:
+    .string "Four islands, many passages.\nKeep track of the ladders and\pthe shore you entered from.$"
+
+Johto_WhirlIslands_4F_Notes::
+    msgbox Johto_WhirlIslands_4F_Notes_Text, MSGBOX_SIGN
+    end
+Johto_WhirlIslands_4F_Notes_Text:
+    .string "Please leave the displays as\nyou found them. Take care on\pthe stairs.$"
+
+Johto_CliffEdgeGate_1F_Guide::
+    msgbox Johto_CliffEdgeGate_1F_Guide_Text, MSGBOX_NPC
+    end
+Johto_CliffEdgeGate_1F_Guide_Text:
+    .string "The coast path beyond the gate\nleads toward the cliffs and the\pvalley road.$"
+
+Johto_CliffEdgeGate_1F_Notes::
+    msgbox Johto_CliffEdgeGate_1F_Notes_Text, MSGBOX_SIGN
+    end
+Johto_CliffEdgeGate_1F_Notes_Text:
+    .string "Please leave the displays as\nyou found them. Take care on\pthe stairs.$"
+
+Johto_CliffCave_1F_Guide::
+    msgbox Johto_CliffCave_1F_Guide_Text, MSGBOX_NPC
+    end
+Johto_CliffCave_1F_Guide_Text:
+    .string "The upper and lower ledges meet\ninside. There is always a\preturn by the same stairs.$"
+
+Johto_CliffCave_1F_Notes::
+    msgbox Johto_CliffCave_1F_Notes_Text, MSGBOX_SIGN
+    end
+Johto_CliffCave_1F_Notes_Text:
+    .string "Please leave the displays as\nyou found them. Take care on\pthe stairs.$"
+
+Johto_CliffCave_2F_Guide::
+    msgbox Johto_CliffCave_2F_Guide_Text, MSGBOX_NPC
+    end
+Johto_CliffCave_2F_Guide_Text:
+    .string "The upper and lower ledges meet\ninside. There is always a\preturn by the same stairs.$"
+
+Johto_CliffCave_2F_Notes::
+    msgbox Johto_CliffCave_2F_Notes_Text, MSGBOX_SIGN
+    end
+Johto_CliffCave_2F_Notes_Text:
+    .string "Please leave the displays as\nyou found them. Take care on\pthe stairs.$"
+
+Johto_CianwoodPharmacy_Guide::
+    msgbox Johto_CianwoodPharmacy_Guide_Text, MSGBOX_NPC
+    end
+Johto_CianwoodPharmacy_Guide_Text:
+    .string "Travelers seldom plan to feel\nseasick. Keep your supplies dry\pand read the label before using\nanything.$"
+
+Johto_CianwoodPharmacy_Notes::
+    msgbox Johto_CianwoodPharmacy_Notes_Text, MSGBOX_SIGN
+    end
+Johto_CianwoodPharmacy_Notes_Text:
+    .string "Please leave the displays as\nyou found them. Take care on\pthe stairs.$"
+
+Johto_SafariReception_Guide::
+    msgbox Johto_SafariReception_Guide_Text, MSGBOX_NPC
+    end
+Johto_SafariReception_Guide_Text:
+    .string "The walking grounds are open\nfor visitors. Please stay on\pthe marked paths and leave the\nreeds undisturbed.$"
+
+Johto_SafariReception_Notes::
+    msgbox Johto_SafariReception_Notes_Text, MSGBOX_SIGN
+    end
+Johto_SafariReception_Notes_Text:
+    .string "Please leave the displays as\nyou found them. Take care on\pthe stairs.$"
+
+Johto_OlivineSeaSign::
+    msgbox Johto_OlivineSeaSign_Text, MSGBOX_SIGN
+    end
+Johto_OlivineSeaSign_Text:
+    .string "ROUTE 40. Western sea passage.\nSouth: WHIRL ISLANDS and\pCIANWOOD.$"
 
 Johto_GoldenrodCity_PokemonCenter_1F_Plaque::
     msgbox Johto_GoldenrodCity_PokemonCenter_1F_Plaque_Text, MSGBOX_SIGN
@@ -1210,6 +1432,47 @@ Johto_BlackthornCity_Workshop_Plaque::
 Johto_BlackthornCity_Workshop_Plaque_Text:
     .string "BLACKTHORN CITY WORKSHOP.$"
 
+Johto_CianwoodCity_PokemonCenter_1F_Plaque::
+    msgbox Johto_CianwoodCity_PokemonCenter_1F_Plaque_Text, MSGBOX_SIGN
+    end
+Johto_CianwoodCity_PokemonCenter_1F_Plaque_Text:
+    .string "CIANWOOD CITY POKEMON CENTER.$"
+
+Johto_CianwoodCity_Nurse::
+    setvar VAR_0x800B, LOCALID_JOHTO_NURSE_CIANWOOD_CITY
+    call Common_EventScript_PkmnCenterNurse
+    waitmessage
+    waitbuttonpress
+    release
+    end
+
+Johto_CianwoodCity_Mart_Plaque::
+    msgbox Johto_CianwoodCity_Mart_Plaque_Text, MSGBOX_SIGN
+    end
+Johto_CianwoodCity_Mart_Plaque_Text:
+    .string "CIANWOOD CITY MART.$"
+
+Johto_CianwoodCity_Gym_Plaque::
+    msgbox Johto_CianwoodCity_Gym_Plaque_Text, MSGBOX_SIGN
+    end
+Johto_CianwoodCity_Gym_Plaque_Text:
+    .string "CIANWOOD CITY GYM.$"
+
+Johto_CianwoodCity_Residence_Plaque::
+    msgbox Johto_CianwoodCity_Residence_Plaque_Text, MSGBOX_SIGN
+    end
+Johto_CianwoodCity_Residence_Plaque_Text:
+    .string "CIANWOOD CITY RESIDENCE.$"
+
+Johto_CianwoodCity_Rest::
+    goto Olivine_HomeRest
+
+Johto_CianwoodCity_Workshop_Plaque::
+    msgbox Johto_CianwoodCity_Workshop_Plaque_Text, MSGBOX_SIGN
+    end
+Johto_CianwoodCity_Workshop_Plaque_Text:
+    .string "CIANWOOD CITY WORKSHOP.$"
+
 Johto_GoldenrodDepartmentStore_Entrance::
     msgbox Johto_GoldenrodDepartmentStore_Entrance_Text, MSGBOX_SIGN
     end
@@ -1239,6 +1502,18 @@ Johto_NewBarkLab_Entrance::
     end
 Johto_NewBarkLab_Entrance_Text:
     .string "NEW BARK LAB.$"
+
+Johto_CianwoodPharmacy_Entrance::
+    msgbox Johto_CianwoodPharmacy_Entrance_Text, MSGBOX_SIGN
+    end
+Johto_CianwoodPharmacy_Entrance_Text:
+    .string "CIANWOOD PHARMACY.$"
+
+Johto_SafariReception_Entrance::
+    msgbox Johto_SafariReception_Entrance_Text, MSGBOX_SIGN
+    end
+Johto_SafariReception_Entrance_Text:
+    .string "SAFARI RECEPTION.$"
 
 Johto_SproutTower_Mouth0::
     msgbox Johto_SproutTower_Mouth0_Text, MSGBOX_SIGN
@@ -1330,6 +1605,54 @@ Johto_DragonsDen_Mouth0::
 Johto_DragonsDen_Mouth0_Text:
     .string "DRAGON'S DEN. Public walking\naccess. Please respect the\psurroundings.$"
 
+Johto_WhirlIslands_Mouth0::
+    msgbox Johto_WhirlIslands_Mouth0_Text, MSGBOX_SIGN
+    end
+Johto_WhirlIslands_Mouth0_Text:
+    .string "WHIRL ISLANDS. Public walking\naccess. Please respect the\psurroundings.$"
+
+Johto_WhirlIslands_Mouth1::
+    msgbox Johto_WhirlIslands_Mouth1_Text, MSGBOX_SIGN
+    end
+Johto_WhirlIslands_Mouth1_Text:
+    .string "WHIRL ISLANDS. Public walking\naccess. Please respect the\psurroundings.$"
+
+Johto_WhirlIslands_Mouth2::
+    msgbox Johto_WhirlIslands_Mouth2_Text, MSGBOX_SIGN
+    end
+Johto_WhirlIslands_Mouth2_Text:
+    .string "WHIRL ISLANDS. Public walking\naccess. Please respect the\psurroundings.$"
+
+Johto_WhirlIslands_Mouth3::
+    msgbox Johto_WhirlIslands_Mouth3_Text, MSGBOX_SIGN
+    end
+Johto_WhirlIslands_Mouth3_Text:
+    .string "WHIRL ISLANDS. Public walking\naccess. Please respect the\psurroundings.$"
+
+Johto_CliffEdgeGate_Mouth0::
+    msgbox Johto_CliffEdgeGate_Mouth0_Text, MSGBOX_SIGN
+    end
+Johto_CliffEdgeGate_Mouth0_Text:
+    .string "CLIFF EDGE GATE. Public walking\naccess. Please respect the\psurroundings.$"
+
+Johto_CliffEdgeGate_Mouth1::
+    msgbox Johto_CliffEdgeGate_Mouth1_Text, MSGBOX_SIGN
+    end
+Johto_CliffEdgeGate_Mouth1_Text:
+    .string "CLIFF EDGE GATE. Public walking\naccess. Please respect the\psurroundings.$"
+
+Johto_CliffCave_Mouth0::
+    msgbox Johto_CliffCave_Mouth0_Text, MSGBOX_SIGN
+    end
+Johto_CliffCave_Mouth0_Text:
+    .string "CLIFF CAVE. Public walking\naccess. Please respect the\psurroundings.$"
+
+Johto_CliffCave_Mouth1::
+    msgbox Johto_CliffCave_Mouth1_Text, MSGBOX_SIGN
+    end
+Johto_CliffCave_Mouth1_Text:
+    .string "CLIFF CAVE. Public walking\naccess. Please respect the\psurroundings.$"
+
 Johto_TohjoFalls_Mouth0::
     msgbox Johto_TohjoFalls_Mouth0_Text, MSGBOX_SIGN
     end
@@ -1341,6 +1664,150 @@ Johto_KantoBoundary::
     end
 Johto_KantoBoundary_Text:
     .string "Beyond these falls is the Kanto\napproach to the Pokemon League.\pThat destination is outside\nthis exploration build. Return\pby the western passage.$"
+
+Johto_GoldenrodCity_Local0::
+    msgbox Johto_GoldenrodCity_Local0_Text, MSGBOX_NPC
+    end
+Johto_GoldenrodCity_Local0_Text:
+    .string "The Center is a good place to\nrest before taking the next\proad.$"
+
+Johto_GoldenrodCity_Local1::
+    msgbox Johto_GoldenrodCity_Local1_Text, MSGBOX_NPC
+    end
+Johto_GoldenrodCity_Local1_Text:
+    .string "It is easy to get distracted on\na shopping trip. That is what\pthe shopkeepers are counting\non.$"
+
+Johto_GoldenrodCity_Local2::
+    msgbox Johto_GoldenrodCity_Local2_Text, MSGBOX_NPC
+    end
+Johto_GoldenrodCity_Local2_Text:
+    .string "There is no prize for arriving\ntired. Take a break when you\pneed one.$"
+
+Johto_VioletCity_Local0::
+    msgbox Johto_VioletCity_Local0_Text, MSGBOX_NPC
+    end
+Johto_VioletCity_Local0_Text:
+    .string "The Center is a good place to\nrest before taking the next\proad.$"
+
+Johto_VioletCity_Local1::
+    msgbox Johto_VioletCity_Local1_Text, MSGBOX_NPC
+    end
+Johto_VioletCity_Local1_Text:
+    .string "Today was map reading at the\nacademy. I am taking the\ppractical part very seriously.$"
+
+Johto_VioletCity_Local2::
+    msgbox Johto_VioletCity_Local2_Text, MSGBOX_NPC
+    end
+Johto_VioletCity_Local2_Text:
+    .string "There is no prize for arriving\ntired. Take a break when you\pneed one.$"
+
+Johto_AzaleaTown_Local0::
+    msgbox Johto_AzaleaTown_Local0_Text, MSGBOX_NPC
+    end
+Johto_AzaleaTown_Local0_Text:
+    .string "The Center is a good place to\nrest before taking the next\proad.$"
+
+Johto_AzaleaTown_Local1::
+    msgbox Johto_AzaleaTown_Local1_Text, MSGBOX_NPC
+    end
+Johto_AzaleaTown_Local1_Text:
+    .string "The forest always seems cooler\nthan the road. I stop here\pbefore walking through it.$"
+
+Johto_AzaleaTown_Local2::
+    msgbox Johto_AzaleaTown_Local2_Text, MSGBOX_NPC
+    end
+Johto_AzaleaTown_Local2_Text:
+    .string "There is no prize for arriving\ntired. Take a break when you\pneed one.$"
+
+Johto_CherrygroveCity_Local0::
+    msgbox Johto_CherrygroveCity_Local0_Text, MSGBOX_NPC
+    end
+Johto_CherrygroveCity_Local0_Text:
+    .string "The Center is a good place to\nrest before taking the next\proad.$"
+
+Johto_CherrygroveCity_Local1::
+    msgbox Johto_CherrygroveCity_Local1_Text, MSGBOX_NPC
+    end
+Johto_CherrygroveCity_Local1_Text:
+    .string "A walk by the water clears my\nhead. A walk into the water\pwould be less useful.$"
+
+Johto_CherrygroveCity_Local2::
+    msgbox Johto_CherrygroveCity_Local2_Text, MSGBOX_NPC
+    end
+Johto_CherrygroveCity_Local2_Text:
+    .string "There is no prize for arriving\ntired. Take a break when you\pneed one.$"
+
+Johto_NewBarkTown_Local0::
+    msgbox Johto_NewBarkTown_Local0_Text, MSGBOX_NPC
+    end
+Johto_NewBarkTown_Local0_Text:
+    .string "The Center is a good place to\nrest before taking the next\proad.$"
+
+Johto_NewBarkTown_Local1::
+    msgbox Johto_NewBarkTown_Local1_Text, MSGBOX_NPC
+    end
+Johto_NewBarkTown_Local1_Text:
+    .string "The lab keeps careful records.\nI keep promising to sort the\ppapers on my own desk.$"
+
+Johto_NewBarkTown_Local2::
+    msgbox Johto_NewBarkTown_Local2_Text, MSGBOX_NPC
+    end
+Johto_NewBarkTown_Local2_Text:
+    .string "There is no prize for arriving\ntired. Take a break when you\pneed one.$"
+
+Johto_MahoganyTown_Local0::
+    msgbox Johto_MahoganyTown_Local0_Text, MSGBOX_NPC
+    end
+Johto_MahoganyTown_Local0_Text:
+    .string "The Center is a good place to\nrest before taking the next\proad.$"
+
+Johto_MahoganyTown_Local1::
+    msgbox Johto_MahoganyTown_Local1_Text, MSGBOX_NPC
+    end
+Johto_MahoganyTown_Local1_Text:
+    .string "You can follow the lake road\nnorth without taking a mountain\ppath. It is a gentler walk.$"
+
+Johto_MahoganyTown_Local2::
+    msgbox Johto_MahoganyTown_Local2_Text, MSGBOX_NPC
+    end
+Johto_MahoganyTown_Local2_Text:
+    .string "There is no prize for arriving\ntired. Take a break when you\pneed one.$"
+
+Johto_BlackthornCity_Local0::
+    msgbox Johto_BlackthornCity_Local0_Text, MSGBOX_NPC
+    end
+Johto_BlackthornCity_Local0_Text:
+    .string "The Center is a good place to\nrest before taking the next\proad.$"
+
+Johto_BlackthornCity_Local1::
+    msgbox Johto_BlackthornCity_Local1_Text, MSGBOX_NPC
+    end
+Johto_BlackthornCity_Local1_Text:
+    .string "Good boots matter up here. Mine\nhave heard that speech more\pthan once.$"
+
+Johto_BlackthornCity_Local2::
+    msgbox Johto_BlackthornCity_Local2_Text, MSGBOX_NPC
+    end
+Johto_BlackthornCity_Local2_Text:
+    .string "There is no prize for arriving\ntired. Take a break when you\pneed one.$"
+
+Johto_CianwoodCity_Local0::
+    msgbox Johto_CianwoodCity_Local0_Text, MSGBOX_NPC
+    end
+Johto_CianwoodCity_Local0_Text:
+    .string "The Center is a good place to\nrest before taking the next\proad.$"
+
+Johto_CianwoodCity_Local1::
+    msgbox Johto_CianwoodCity_Local1_Text, MSGBOX_NPC
+    end
+Johto_CianwoodCity_Local1_Text:
+    .string "If the sea breeze took your\nhat, try asking down the\pstreet. It has a regular route.$"
+
+Johto_CianwoodCity_Local2::
+    msgbox Johto_CianwoodCity_Local2_Text, MSGBOX_NPC
+    end
+Johto_CianwoodCity_Local2_Text:
+    .string "There is no prize for arriving\ntired. Take a break when you\pneed one.$"
 
 Johto_GoldenrodCity_CenterOnTransition::
     setrespawn HEAL_LOCATION_GOLDENROD_CITY
@@ -1368,4 +1835,8 @@ Johto_MahoganyTown_CenterOnTransition::
 
 Johto_BlackthornCity_CenterOnTransition::
     setrespawn HEAL_LOCATION_BLACKTHORN_CITY
+    end
+
+Johto_CianwoodCity_CenterOnTransition::
+    setrespawn HEAL_LOCATION_CIANWOOD_CITY
     end

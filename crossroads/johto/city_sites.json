@@ -1,0 +1,10 @@
+{
+  "GoldenrodCity": {"PokemonCenter_1F":[12,34],"Mart":[7,22],"Gym":[44,5],"Residence":[19,21],"Workshop":[42,40]},
+  "VioletCity": {"PokemonCenter_1F":[34,29],"Mart":[7,29],"Gym":[6,14],"Residence":[33,5],"Workshop":[26,6]},
+  "AzaleaTown": {"PokemonCenter_1F":[8,10],"Mart":[33,9],"Gym":[7,29],"Residence":[32,30],"Workshop":[22,5]},
+  "CherrygroveCity": {"PokemonCenter_1F":[32,6],"Mart":[10,12],"Gym":[32,29],"Residence":[15,30],"Workshop":[22,5]},
+  "NewBarkTown": {"PokemonCenter_1F":[7,29],"Mart":[7,5],"Gym":[34,29],"Residence":[10,14],"Workshop":[22,5]},
+  "MahoganyTown": {"PokemonCenter_1F":[33,29],"Mart":[20,7],"Gym":[6,29],"Residence":[7,7],"Workshop":[34,7]},
+  "BlackthornCity": {"PokemonCenter_1F":[8,29],"Mart":[34,29],"Gym":[21,12],"Residence":[34,17],"Workshop":[8,18]},
+  "CianwoodCity": {"PokemonCenter_1F":[8,28],"Mart":[28,13],"Gym":[8,13],"Residence":[8,5],"Workshop":[24,34]}
+}

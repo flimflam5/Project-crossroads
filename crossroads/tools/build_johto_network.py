@@ -19,7 +19,7 @@ def script(n):return 'Johto_'+n
 
 def main():
  ap=argparse.ArgumentParser();ap.add_argument('--through',choices=CLUSTERS,default='west');ap.add_argument('--check',action='store_true');args=ap.parse_args()
- ambient=load('crossroads/johto/ambient.json')
+ ambient=load('crossroads/johto/ambient.json');city_sites=load('crossroads/johto/city_sites.json')
  manifest=load('crossroads/johto/manifest.json');plans=manifest['planned'];selected=[p for p in plans if CLUSTERS.index(p['cluster'])<=CLUSTERS.index(args.through)]
  # --check runs the deterministic writer against an in-memory file comparison.
  global write
@@ -94,6 +94,7 @@ def main():
   else:
    theme=n.split('_')[-1].lower()
    if n in ['NewBarkTown_Gym','CherrygroveCity_Gym']:theme='communityhall'
+   if theme=='gym':w,h=18,20
    if n in ['GoldenrodDepartmentStore','VioletAcademy']:w,h=20,16
    if n=='GoldenrodRadioLobby':w,h=20,14
    if n=='GoldenrodUnderground':w,h=28,12
@@ -139,6 +140,7 @@ def main():
    rect(n,sx,sy,1,1,0x403);label=script(n+'_Sign');sign(m,sx,sy,label)
    title=CITIES[n][0] if n in CITIES else 'ROUTE '+n[10:] if n.startswith('JohtoRoute') else next(s[1] for s in LANDMARKS if s[0]==n)
    say(label,title+'. Follow the marked roads and direction signs.','SIGN')
+   if theme in ['sea','islands']:m['object_events'].append(obj(sx+1,sy+1,'Johto_TestDesk','SAILOR'))
    if theme not in ['sea','islands']:
     x,y=w//2+3,h//2+3;rect(n,x,y,1,1,floor);label=script(n+'_Resident');m['object_events'].append(obj(x,y,label,'WOMAN_3'));say(label,ambient[n] if n in ambient else {'commercial':'There is always another delivery crossing this city. I take the side streets when the market is busy.','academy':'The tower and the school are good landmarks. You can hear the bells from almost anywhere.','woodland':'The shade is welcome after a long walk. The forest path stays open in both directions.','ridge':'The mountain trail winds down to the south. Take your time on the descent.','mountain':'The lake road runs north. Pack something warm if you head toward the Ice Path.','village':'It is quiet here, apart from the wind off the water. The west road leads to Cherrygrove.','island':'The sea road reaches Olivine. Our pharmacy and Center are both near the main street.'}.get(theme,'The signs help when the paths turn. There is no need to rush the walk.'))
   else:
@@ -153,6 +155,10 @@ def main():
      rect(n,7,8,4,4,0x338d)
     if kind in ['well','falls','islandcave']:rect(n,w-8,7,4,4,0x1170)
    else:
+    rect(n,1,0,w-2,1,0x0605);rect(n,1,1,w-2,1,0x060d)
+    if theme=='gym':
+     rect(n,7,4,4,h-7,0x3224)
+     for yy in range(5,h-4,4):rect(n,2,yy,1,1,0x0605);rect(n,w-3,yy,1,1,0x0605)
     if kind in ['tower','shrine']:
      for x in [4,w-5]:
       for y in [4,8,12,16]:rect(n,x,y,1,1,0x0605)
@@ -162,7 +168,7 @@ def main():
    label=script(n+'_Guide');x,y=3,4;rect(n,x,y,1,1,floor);m['object_events'].append(obj(x,y,label,'EXPERT_M'))
    text=ambient.get(n,ambient.get(n.rsplit('_',1)[0])) or ('The display cases hold local records and everyday tools. There is no admission charge.' if kind=='facility' else 'Visitors are welcome. Training sessions are not scheduled today.' if theme=='gym' else 'This is a quiet place to stop. The paths and stairs lead back the way you came.')
    say(label,text)
-   label=script(n+'_Notes');sign(m,w-3,2,label);rect(n,w-3,2,1,1,border)
+   label=script(n+'_Notes');sign(m,w-3,2,label);rect(n,w-3,2,1,1,0x064c if primary=='gTileset_Building' else border)
    say(label,('Local maps, repair notes and a well-used workbench.' if 'Workshop' in n else 'Please leave the displays as you found them. Take care on the stairs.'),'SIGN')
  # Border graph, with reciprocal offsets and matching edge corridors.
  for a,d,b in EDGES:
@@ -177,15 +183,22 @@ def main():
    w,h=sizes[n];axis=anchor if n==a else anchor-offset;sea=n in ['OlivineCity','JohtoRoute40','JohtoRoute41'];v=0x1170 if sea else 0x3202
    if n in existing:
     if n=='EcruteakCity' and direction=='down':rect(n,24,43,3,5,v)
+    if n=='OlivineCity' and direction=='left':rect(n,6,24,1,3,0x3202)
    else:
     port=(0,axis) if direction=='left' else (w-1,axis) if direction=='right' else (axis,0) if direction=='up' else (axis,h-1)
     road(n,(w//2,h//2),port,v)
+ if 'JohtoRoute40' in maps:
+  label='Johto_OlivineSeaSign'
+  if not any(e['script']==label for e in maps['OlivineCity']['bg_events']):sign(maps['OlivineCity'],8,25,label)
+  rect('OlivineCity',8,25,1,1,0x403)
+  say(label,'ROUTE 40. Western sea passage. South: WHIRL ISLANDS and CIANWOOD.','SIGN')
  # City buildings: distinct services, Gym, residence and workshop.
  services=[]
  for n,(_,cluster,pos,theme) in CITIES.items():
   if n not in maps:continue
   w,h=sizes[n];cx=w//2;placements=[('PokemonCenter_1F',8,15,18,16,4,4,1),('Mart',w-12,15,12,23,4,4,1),('Gym',w-14,h-15,25,7,7,6,3),('Residence',7,h-14,4,16,4,4,1),('Workshop',cx-2,5,4,16,4,4,1)]
   for suffix,x,y,sx,sy,ww,hh,doorx in placements:
+   x,y=city_sites[n][suffix]
    if suffix=='Gym' and n not in GYM_CITIES:sx,sy,ww,hh,doorx=4,16,4,4,1
    dst=n+'_'+suffix;stamp(n,sx,sy,ww,hh,x,y);protected.setdefault(n,set()).update((xx,yy) for xx in range(x,x+ww) for yy in range(y,y+hh));dx,dy=x+doorx,y+hh-1
    road(n,(dx,dy+1),(cx,dy+1),width=1);say(script(dst+'_Plaque'),CITIES[n][0]+' '+('POKEMON CENTER' if 'PokemonCenter' in suffix else 'COMMUNITY HALL' if suffix=='Gym' and n not in GYM_CITIES else suffix.upper())+'.','SIGN');sign(maps[n],dx-1,dy+1,script(dst+'_Plaque'));rect(n,dx-1,dy+1,1,1,0x403)
@@ -199,14 +212,14 @@ def main():
     warp(n,dx,dy,dst,3,7);maps[dst]['warp_events'].append(dict(x=4,y=7,elevation=0,dest_map=maps[n]['id'],dest_warp_id=str(len(maps[n]['warp_events'])-1)))
     maps[dst]['object_events']=copy.deepcopy(existing['EcruteakCity_Mart']['object_events'])
    else:
-    warp(n,dx,dy,dst,6,11,bt=0x0208)
+    warp(n,dx,dy,dst,6,sizes[dst][1]-1,bt=0x0208)
     if suffix=='Residence':
      label=script(n+'_Rest');maps[dst]['object_events'].append(obj(10,7,label,'WOMAN_5'));scripts.append(f'{label}::\n    goto Olivine_HomeRest\n')
  # Major civic facilities use a separate accessible building and fitting dialogue.
  for p in selected:
   if p['kind']!='facility':continue
   n=p['name'];parent=p['parent'];w,h=sizes[parent]
-  x,y=(5,4) if parent=='GoldenrodCity' and n.endswith('Store') else (w-12,4) if 'Radio' in n else (w//2-3,h-10)
+  x,y={'GoldenrodDepartmentStore':(44,22),'GoldenrodRadioLobby':(8,5),'GoldenrodUnderground':(7,42),'VioletAcademy':(22,32),'NewBarkLab':(33,7),'CianwoodPharmacy':(17,30),'SafariReception':(13,20)}.get(n,(w//2-3,h-10))
   stamp(parent,18,16,4,4,x,y);protected.setdefault(parent,set()).update((xx,yy) for xx in range(x,x+4) for yy in range(y,y+4));dx,dy=x+1,y+3;road(parent,(dx,dy+1),(w//2,dy+1),width=1);warp(parent,dx,dy,n,sizes[n][0]//2,sizes[n][1]-1,bt=0x0208)
   label=script(n+'_Entrance');sign(maps[parent],dx-1,dy+1,label);rect(parent,dx-1,dy+1,1,1,0x403);say(label,re.sub(r'([a-z])([A-Z])',r'\1 \2',n).upper()+'.','SIGN')
   if n=='GoldenrodUnderground':
@@ -239,11 +252,24 @@ def main():
    labelscript=script(base+f'_Mouth{j}');sign(maps[parent],x-1,y+1,labelscript);rect(parent,x-1,y+1,1,1,0x403);say(labelscript,label+'. Public walking access. Please respect the surroundings.','SIGN')
   if base=='TohjoFalls':
    final=base+f'_{count}F';lbl='Johto_KantoBoundary';sign(maps[final],24,5,lbl);rect(final,24,5,1,1,0x0611);say(lbl,'Beyond these falls is the Kanto approach to the Pokemon League. That destination is outside this exploration build. Return by the western passage.','SIGN')
+ # Populate the new streets without blocking buildings, doors or survey aprons.
+ for n in CITIES:
+  if n not in maps:continue
+  w,h=sizes[n];made=0
+  candidates=[(w//2-5,h//2-4),(w//2+5,h//2-5),(w//2-7,h//2+6),(w//2+7,h//2+7),(w//2-9,h//2-7),(w//2+9,h//2+5)]
+  for x,y in candidates:
+   if made==3:break
+   occupied={(e['x'],e['y']) for e in maps[n]['object_events']+maps[n]['bg_events']+maps[n]['warp_events']}
+   if (x,y) in protected.get(n,set()) or any(abs(x-a)+abs(y-b)<3 for a,b in occupied):continue
+   if tiles[n][y*w+x]&0xc00 or tiles[n][y*w+x]>>12!=3:continue
+   label=script(n+f'_Local{made}');maps[n]['object_events'].append(obj(x,y,label,['MAN_1','WOMAN_5','EXPERT_M'][made]))
+   say(label,ambient.get(n+f'_Local{made}', ['The Center is a good place to rest before taking the next road.','I like walking through town before the streets get busy.','There is no prize for arriving tired. Take a break when you need one.'][made]));made+=1
  # Restore accepted sign tiles if a new edge corridor crosses one.
  for n in existing:
   for e in maps[n]['bg_events']:
    if n=='EcruteakCity':rect(n,e['x'],e['y'],1,1,struct.unpack_from('<H',oldbytes[n],(e['y']*sizes[n][0]+e['x'])*2)[0])
  for n,m in maps.items():
+  if n=='CianwoodCity':rect(n,sizes[n][0]-3,sizes[n][1]//2-1,3,3,0x1170)
   if n not in existing and meta[n]['outdoor']:
    for e in m['bg_events']:rect(n,e['x'],e['y'],1,1,0x403)
   if n in existing and m==existing[n] and tiles[n]==list(struct.unpack('<'+str(len(oldbytes[n])//2)+'H',oldbytes[n])):continue
@@ -264,7 +290,9 @@ def main():
  heals=load('src/data/heal_locations.json');byheal={h['id']:h for h in heals['heal_locations']}
  for s in services:
   if s['id'] not in byheal:heals['heal_locations'].append(s)
-  else:assert byheal[s['id']]==s
+  elif byheal[s['id']]!=s:
+   # These are new, unreleased town services; retain their assigned heal IDs.
+   byheal[s['id']].clear();byheal[s['id']].update(s)
  js('src/data/heal_locations.json',heals)
  # Preserve all old section IDs including NONE=213; append 214..252, never 253+.
  secs=load('src/data/region_map/region_map_sections.json');known={s['id'] for s in secs['map_sections']}
@@ -285,7 +313,9 @@ def main():
  for linear,p in enumerate(plans,37):
   p['map_group']=75 if linear<127 else 76;p['map_num']=linear if linear<127 else linear-127
   if p['name'] in maps:
-   n=p['name'];m=maps[n];linear=names.index(n);p['map_group']=75 if linear<127 else 76;p['map_num']=linear if linear<127 else linear-127;p.update(display_name=n.replace('_Gym','_CommunityHall') if n in ['NewBarkTown_Gym','CherrygroveCity_Gym'] else n,role='community hall (stable internal slot suffix Gym)' if n in ['NewBarkTown_Gym','CherrygroveCity_Gym'] else p['kind'],status='implemented',id=m['id'],layout=m['layout'],connections=m['connections'],entrances=m['warp_events'],coverage='structural/build/runtime checks recorded separately; no owner QA yet')
+   n=p['name'];m=maps[n];linear=names.index(n);p['map_group']=75 if linear<127 else 76;p['map_num']=linear if linear<127 else linear-127;p.update(display_name=n.replace('_Gym','_CommunityHall') if n in ['NewBarkTown_Gym','CherrygroveCity_Gym'] else n,role='community hall (stable internal slot suffix Gym)' if n in ['NewBarkTown_Gym','CherrygroveCity_Gym'] else p['kind'],status='implemented',id=m['id'],layout=m['layout'],connections=m['connections'],entrances=m['warp_events']);p.setdefault('coverage','structural/build/runtime checks recorded separately; no owner QA yet')
+ for p in manifest['existing']:
+  m=maps[p['name']];p.update(connections=m['connections'],entrances=m['warp_events'])
  manifest['dungeons']=DUNGEONS;manifest['border_topology']=EDGES
  manifest['checkpoint']=args.through;js('crossroads/johto/manifest.json',manifest)
  from build_johto_atlas import generate as generate_atlas

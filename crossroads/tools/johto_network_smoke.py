@@ -4,7 +4,7 @@ import argparse,ctypes as C,hashlib,json,struct,subprocess,shutil
 from pathlib import Path
 from collections import deque
 R=Path(__file__).resolve().parents[2]
-p=argparse.ArgumentParser();p.add_argument('--save',type=Path,required=True);p.add_argument('--library',type=Path,required=True);p.add_argument('--output',type=Path,required=True);p.add_argument('--cluster');p.add_argument('--all-edges',action='store_true');p.add_argument('--resume',type=Path);args=p.parse_args();args.output.mkdir(parents=True,exist_ok=True)
+p=argparse.ArgumentParser();p.add_argument('--save',type=Path,required=True);p.add_argument('--library',type=Path,required=True);p.add_argument('--output',type=Path,required=True);p.add_argument('--cluster');p.add_argument('--targets',help='Comma-separated map names for focused checks; empty selects none');p.add_argument('--all-edges',action='store_true');p.add_argument('--resume',type=Path);args=p.parse_args();args.output.mkdir(parents=True,exist_ok=True)
 lib=C.CDLL(str(args.library.resolve()))
 for fn,types in [('emu_init',[C.c_char_p]),('emu_frames',[C.c_int,C.c_int]),('emu_read',[C.c_uint,C.c_int]),('emu_write',[C.c_uint,C.c_uint,C.c_int]),('emu_save',[C.c_char_p,C.c_int]),('emu_state',[C.c_char_p,C.c_int]),('emu_image',[C.c_char_p])]:getattr(lib,fn).argtypes=types
 lib.emu_read.restype=C.c_uint
@@ -123,6 +123,8 @@ def go(dst):
   kind,e=edges[v];a,b=border(e) if kind=='border' else warp(e);transitions.append([a,b,kind]);visited.add(b)
  raise AssertionError(('Too many transitions',dst))
 plans=json.loads((R/'crossroads/johto/manifest.json').read_text())['planned'];targets=[p['name'] for p in plans if p['name'] in names and (not args.cluster or p['cluster']==args.cluster)]
+if args.targets is not None:
+ targets=[n for n in args.targets.split(',') if n];assert all(n in names for n in targets)
 # Use the actual desk UI; prove the assistance does not alter saved flag bytes.
 go('OlivineCity_HarborOffice');walk((1,6))
 flags=bytes(read(sb()+0x1270+i,1) for i in range(300))
@@ -162,5 +164,5 @@ for n in targets:
  print('Controller visit:',n,pos(),'PASS',flush=True)
 go('OlivineCity')
 end=args.output/'finished.snapshot';lib.emu_state(str(end).encode(),0);end.with_suffix('.sha256').write_text(hashlib.sha256((R/'pokeemerald.gba').read_bytes()).hexdigest())
-(args.output/'coverage.json').write_text(json.dumps(dict(visited=sorted(visited),targets=targets,transitions=transitions,tested_roundtrip_edges=len(tested_edges),actual_surf_entries=water_entries),indent=2)+'\n')
+(args.output/'coverage.json').write_text(json.dumps(dict(visited=sorted(visited),targets=targets,transitions=transitions,tested_roundtrip_edges=len(tested_edges),tested_edges=sorted(tested_edges),actual_surf_entries=water_entries),indent=2)+'\n')
 print('Actual controller visits/return, healing and retained starter/party: PASS',len(targets),'new maps',len(transitions),'transitions',flush=True)

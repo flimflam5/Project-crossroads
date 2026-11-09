@@ -1,3 +1,9 @@
+# Current QA candidate — Johto exploration0.9
+
+149 maps registered/built (37 preserved +112 new); all ten towns and Routes29–48 connected. Final emulator tour:112 new maps,622 transitions,141 roundtrip pairs PASS. Five normal Save/Continue checks PASS. Owner Delta acceptance pending. See RELEASE_0_9.md and johto/DELTA_QA.md. The newer owner directive supersedes historical expansion pauses below.
+
+---
+
 # Current QA candidate — 0.8.3 boot/audio
 
 Inherited title reverb explicitly disabled/restored; custom Black Ledger pre-title

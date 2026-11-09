@@ -1972,3 +1972,45 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/DragonsDen_1F/scripts.inc"
 
 	.include "data/maps/DragonsDen_2F/scripts.inc"
+
+	.include "data/maps/CianwoodCity/scripts.inc"
+
+	.include "data/maps/CianwoodCity_PokemonCenter_1F/scripts.inc"
+
+	.include "data/maps/CianwoodCity_Mart/scripts.inc"
+
+	.include "data/maps/CianwoodCity_Gym/scripts.inc"
+
+	.include "data/maps/CianwoodCity_Residence/scripts.inc"
+
+	.include "data/maps/CianwoodCity_Workshop/scripts.inc"
+
+	.include "data/maps/JohtoRoute40/scripts.inc"
+
+	.include "data/maps/JohtoRoute41/scripts.inc"
+
+	.include "data/maps/JohtoRoute47/scripts.inc"
+
+	.include "data/maps/JohtoRoute48/scripts.inc"
+
+	.include "data/maps/SafariZoneGate/scripts.inc"
+
+	.include "data/maps/SafariWetlands/scripts.inc"
+
+	.include "data/maps/WhirlIslands_1F/scripts.inc"
+
+	.include "data/maps/WhirlIslands_2F/scripts.inc"
+
+	.include "data/maps/WhirlIslands_3F/scripts.inc"
+
+	.include "data/maps/WhirlIslands_4F/scripts.inc"
+
+	.include "data/maps/CliffEdgeGate_1F/scripts.inc"
+
+	.include "data/maps/CliffCave_1F/scripts.inc"
+
+	.include "data/maps/CliffCave_2F/scripts.inc"
+
+	.include "data/maps/CianwoodPharmacy/scripts.inc"
+
+	.include "data/maps/SafariReception/scripts.inc"

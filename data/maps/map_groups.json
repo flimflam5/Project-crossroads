@@ -1293,6 +1293,27 @@
     "DragonsDen_1F"
   ],
   "gMapGroup_CrossroadsJohtoExpansion": [
-    "DragonsDen_2F"
+    "DragonsDen_2F",
+    "CianwoodCity",
+    "CianwoodCity_PokemonCenter_1F",
+    "CianwoodCity_Mart",
+    "CianwoodCity_Gym",
+    "CianwoodCity_Residence",
+    "CianwoodCity_Workshop",
+    "JohtoRoute40",
+    "JohtoRoute41",
+    "JohtoRoute47",
+    "JohtoRoute48",
+    "SafariZoneGate",
+    "SafariWetlands",
+    "WhirlIslands_1F",
+    "WhirlIslands_2F",
+    "WhirlIslands_3F",
+    "WhirlIslands_4F",
+    "CliffEdgeGate_1F",
+    "CliffCave_1F",
+    "CliffCave_2F",
+    "CianwoodPharmacy",
+    "SafariReception"
   ]
 }

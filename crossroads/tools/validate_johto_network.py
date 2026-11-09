@@ -7,6 +7,8 @@ R=Path(__file__).resolve().parents[2]
 ap=argparse.ArgumentParser();ap.add_argument('--built',action='store_true');a=ap.parse_args()
 def load(p):return json.loads((R/p).read_text())
 groups=load('data/maps/map_groups.json');base=groups['gMapGroup_CrossroadsOlivine'];west=groups.get('gMapGroup_CrossroadsJohtoExpansion',[]);names=base+west;locations={n:(75,i) for i,n in enumerate(base)}|{n:(76,i) for i,n in enumerate(west)};manifest=load('crossroads/johto/manifest.json')
+for preserved,digest in manifest.get('preserved_sources',{}).items():
+ assert hashlib.sha256((R/preserved).read_bytes()).hexdigest()==digest,('Accepted source changed',preserved)
 assert names[:37]==[p['name'] for p in manifest['existing']]
 assert groups['group_order'].index('gMapGroup_CrossroadsOlivine')==75
 if west:assert groups['group_order'].index('gMapGroup_CrossroadsJohtoExpansion')==76
@@ -45,6 +47,19 @@ for n,m in maps.items():
   assert t-(512 if t>=512 else 0)<len(at),('Metatile out of bounds',n,e,t)
   assert at[t-(512 if t>=512 else 0)]&255!=0,('Warp lost its door/stair behavior',n,e,t)
  # Animated doors legitimately use a collision bit; they are entered via the warp interaction.
+# Connections need at least one matching-elevation seam, not a forced Surf
+# animation across an unloaded map boundary.
+for n,m in maps.items():
+ w,h=sizes[n]
+ for c in m['connections'] or []:
+  dst=ids[c['map']];dw,dh=sizes[dst];d=c['direction'];matched=[]
+  for t in range(w if d in ['up','down'] else h):
+   x,y=(t,0) if d=='up' else (t,h-1) if d=='down' else (0,t) if d=='left' else (w-1,t)
+   xx,yy=(t-c['offset'],dh-1) if d=='up' else (t-c['offset'],0) if d=='down' else (dw-1,t-c['offset']) if d=='left' else (0,t-c['offset'])
+   if not(0<=xx<dw and 0<=yy<dh):continue
+   left_tile,right_tile=raw[n][y*w+x],raw[dst][yy*dw+xx]
+   if not (left_tile&0xc00 or right_tile&0xc00) and left_tile>>12==right_tile>>12:matched.append(t)
+  assert matched,('No matching terrain/elevation across seam',n,c)
 # Traversal graph includes the explicitly labeled session-only survey Surf mode.
 start=('OlivineCity',12,13);q=deque([start]);seen={start}
 while q:

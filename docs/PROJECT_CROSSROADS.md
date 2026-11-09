@@ -49,3 +49,12 @@ out of scope; preserve the existing summary UI.
 
 Source changes, compilation, automated checks, emulator tests, owner playtesting,
 and owner acceptance are separate states. Never substitute one for another.
+
+
+## Latest approved Act I direction
+
+Joe’s oblivious corporate supervisor opens the workday with overwhelming deadlines
+and a coffee errand. Tone: dryly funny and grounded. This direction is preserved
+for creative development; the Johto map pass does not implement the full prologue
+or establish relationships, revelations or endings. The owner authorized Johto
+exploration expansion beyond the previously paused western footprint.
