@@ -83,3 +83,42 @@ int emu_image(const char *path)
     file->close(file);
     return ok;
 }
+
+/* Optional audio capture for repeatable title-music QA; never changes ROM/RAM. */
+#include <mgba/core/blip_buf.h>
+int emu_audio(const char *path, int frames)
+{
+    FILE *file = fopen(path, "wb");
+    if (!file) return 0;
+    struct blip_t *left = core->getAudioChannel(core, 0);
+    struct blip_t *right = core->getAudioChannel(core, 1);
+    blip_set_rates(left, core->frequency(core), 32768);
+    blip_set_rates(right, core->frequency(core), 32768);
+    blip_clear(left);
+    blip_clear(right);
+    core->setKeys(core, 0);
+    for (int i = 0; i < frames; i++)
+    {
+        short l[2048], r[2048], stereo[4096];
+        core->runFrame(core);
+        int count = blip_samples_avail(left);
+        if (count > 2048 || count != blip_samples_avail(right))
+        {
+            fclose(file);
+            return 0;
+        }
+        blip_read_samples(left, l, count, 0);
+        blip_read_samples(right, r, count, 0);
+        for (int j = 0; j < count; j++)
+        {
+            stereo[j * 2] = l[j];
+            stereo[j * 2 + 1] = r[j];
+        }
+        if (fwrite(stereo, sizeof(short) * 2, count, file) != (size_t)count)
+        {
+            fclose(file);
+            return 0;
+        }
+    }
+    return fclose(file) == 0;
+}

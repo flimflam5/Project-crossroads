@@ -1,3 +1,11 @@
+# Latest audio increment — 0.8.1
+
+feature/title-music-01 integrates the owner-supplied 80-second title recording
+using the existing sound engine. Emerald build, actual emulator audio/progression/
+loop/Start/reset checks and normal Continue from a 0.8 battery save passed.
+Owner listening QA and final loop selection pending. See RELEASE_0_8_1.md.
+The 0.8 current-area completion candidate remains awaiting owner Delta QA.
+
 # Current checkpoint — western area 0.8
 
 Current branch: feature/western-area-completion-01. Current-area exploration content
