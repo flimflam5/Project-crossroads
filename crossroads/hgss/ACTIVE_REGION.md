@@ -56,7 +56,7 @@ The ZIP contains the exact source commit, checksum and Delta checklist; use its
 build-info.json rather than guessing the source from an old chat. Tested game
 implementation checkpoint is e5b07bb9a8; a subsequent documentation-only checkpoint
 records delivery. The final artifact is regenerated from that clean HEAD, with the
-same verified ROM hash above. Draft PR #13 is open; no master merge is authorized.
+delivery hash recorded in delivery-binary-audit.json. Draft PR #13 is open; no master merge is authorized.
 
 All native exploration/save stages completed. Source archive/raw4bpp inputs and
 line endings are preserved for clean checkouts. CI's minimal story import now
@@ -72,3 +72,9 @@ Owner visual acceptance is pending. No new general authorization is needed for
 routine reference reconstruction. Preserve IDs, generators, saves, Joe/title/V5
 music, starter uniqueness, approved Route38/39 tables and practice battles. Treat
 Olivine office/residence/harbor conflicts against source plots explicitly.
+
+Delivery-only follow-up: party_menu.c also scopes its old QA Fly callback to
+Emerald. Executable/map/graphics bytes stay identical; two malloc source-line
+strings change. Final delivery SHA256 ffe8f84c8dee1e688d5e8f7615078a03953c51e0a337c2036fd4fa6a8bf820cb.
+All ten Fly/VRAM/cancel/Save/Continue checks were rerun on that final binary.
+See qa/hgss-qa06/delivery-binary-audit.json; original full-suite hashes remain.

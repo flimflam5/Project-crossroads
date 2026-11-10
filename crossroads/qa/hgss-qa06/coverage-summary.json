@@ -1,5 +1,4 @@
 {
-  "rom_sha256": "28b12ad6b01a5ef765f313c6eff6a35eb6a512a823e315b0811b097a6e0d6f28",
   "rom_bytes": 33554432,
   "used_rom_bytes": 30019116,
   "ewram_bytes": 226448,
@@ -53,5 +52,9 @@
     "Starter tests skip old introduction through an explicitly disclosed RAM fixture; original Birch prologue remains",
     "Copies only; synthetic obsolete-position and1HP battle-loss fixtures, temporary QA gear/survey and encounter suppression are isolated in test processes",
     "No human Delta acceptance claimed"
-  ]
+  ],
+  "full_suite_rom_sha256": "28b12ad6b01a5ef765f313c6eff6a35eb6a512a823e315b0811b097a6e0d6f28",
+  "delivery_rom_sha256": "ffe8f84c8dee1e688d5e8f7615078a03953c51e0a337c2036fd4fa6a8bf820cb",
+  "delivery_equivalence_audit": "delivery-binary-audit.json",
+  "delivery_emulator_recheck": "All ten Fly destinations, VRAM, cancel, normal Save/cold Continue and party/position PASS"
 }

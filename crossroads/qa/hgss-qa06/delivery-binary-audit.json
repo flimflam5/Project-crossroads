@@ -1,0 +1,19 @@
+{
+  "full_suite_rom_sha256": "28b12ad6b01a5ef765f313c6eff6a35eb6a512a823e315b0811b097a6e0d6f28",
+  "delivery_rom_sha256": "ffe8f84c8dee1e688d5e8f7615078a03953c51e0a337c2036fd4fa6a8bf820cb",
+  "changed_bytes": 2,
+  "changes": [
+    {
+      "offset": "0x3d2c2c",
+      "before": "src/party_menu.c:7873",
+      "after": "src/party_menu.c:7877"
+    },
+    {
+      "offset": "0x3d2c44",
+      "before": "src/party_menu.c:7840",
+      "after": "src/party_menu.c:7844"
+    }
+  ],
+  "proof": "Every other ROM byte, including executable instructions, graphics, map/event/save/battle data and palettes, is identical. Added cross-target preprocessor lines only change two malloc diagnostic source-line strings.",
+  "delivery_emulator": "All ten party-menu Fly destinations, Joe VRAM, cancellation, normal Save/fresh-core Continue and exact party/position passed again on the delivery ROM. See delivery-fly-tests.txt."
+}
