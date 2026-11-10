@@ -129,6 +129,11 @@ jobs:
             crossroads/RELEASE_0_9_1.md
             crossroads/RELEASE_HGSS_QA05.md
             crossroads/RELEASE_HGSS_QA06.md
+            crossroads/RELEASE_ECRUTEAK_QA07.md
+            crossroads/hgss/ECRUTEAK_QA07.md
+            crossroads/hgss/ECRUTEAK_QA07_TOPOLOGY.md
+            crossroads/hgss/ecruteak-qa07-checklist.json
+            crossroads/qa/ecruteak-qa07
             crossroads/hgss/VIOLET_QA06.md
             crossroads/hgss/REGION_CHECKLIST.md
             crossroads/hgss/ECRUTEAK_QA05.md
