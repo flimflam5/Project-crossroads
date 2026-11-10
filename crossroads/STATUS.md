@@ -1,3 +1,10 @@
+# Active Ecruteak interior/Joe completion — no new release yet
+
+Continue QA04; preserve the owner-liked exterior. Implemented Joe field-state
+wiring and reference-backed station/corridor work; tower/facility reconstruction
+and full regressions remain underway. See hgss/ACTIVE_COMPLETION.md and
+hgss/JOE_FIELD_AUDIT.md for actual tests and limitations.
+
 # QA04 Johto Fly integration
 
 Owner requested functioning Fly before Delta QA. Party-menu QA Fly connects ten

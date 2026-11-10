@@ -3158,3 +3158,5 @@ const u16 gTilesetPalettes_HgssTemple[][16] = {
  INCGFX_U16("data/tilesets/secondary/hgss_temple/palettes/14.pal", ".gbapal"),
  INCGFX_U16("data/tilesets/secondary/hgss_temple/palettes/15.pal", ".gbapal"),
 };
+
+const u32 gTilesetTiles_HgssTemple[] = INCGFX_U32("data/tilesets/secondary/hgss_temple/tiles.png", ".4bpp.lz");

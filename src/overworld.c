@@ -3645,7 +3645,9 @@ static void CreateLinkPlayerSprite(u8 linkPlayerId, enum GameVersion gameVersion
 
     if (linkPlayerObjEvent->active)
     {
-        switch (gameVersion)
+        if (!IS_FRLG && linkPlayerId == gLocalLinkPlayerId)
+            objEvent->spriteId = CreateObjectGraphicsSprite(OBJ_EVENT_GFX_JOE_NORMAL, SpriteCB_LinkPlayer, 0, 0, 0);
+        else switch (gameVersion)
         {
         case VERSION_FIRE_RED:
         case VERSION_LEAF_GREEN:

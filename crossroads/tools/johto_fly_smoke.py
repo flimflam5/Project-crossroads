@@ -2,7 +2,7 @@
 """Real menu/flight test using a copied old battery save; no map/warp RAM writes."""
 import argparse,sys,runpy,json
 from pathlib import Path
-p=argparse.ArgumentParser();p.add_argument('--save',required=True);p.add_argument('--library',default='/tmp/johto-bridge.so');args=p.parse_args()
+p=argparse.ArgumentParser();p.add_argument('--save',required=True);p.add_argument('--record',action='store_true');p.add_argument('--library',default='/tmp/johto-bridge.so');args=p.parse_args()
 sys.argv=['qa_kit_smoke.py','--save',args.save,'--library',args.library]
 k=runpy.run_path('crossroads/tools/qa_kit_smoke.py');d=k['d'];read=d['read'];key=d['key'];frames=d['frames'];sb=d['sb'];syms=d['syms'];lib=d['lib'];out=Path('build/qa04-fly');out.mkdir(parents=True,exist_ok=True)
 d['go']('OlivineCity')
@@ -41,6 +41,22 @@ for name,heal_id in destinations.items():
   key(16)
  assert read('sAtlasSelection',1)==target,(name,'selection failed')
  key(1)
+ if args.record and not visits:
+  movie=out/'fly-frames';movie.mkdir(exist_ok=True);seen_gfx=set();joe_verified=False
+  expected=(Path('build/assets/graphics/object_events/pics/people/joe/corporate/field_move.png_mwidth_4__mheight_4.4bpp')).read_bytes()
+  for frame in range(250):
+   frames(4);obj=syms['gObjectEvents']+read(syms['gPlayerAvatar']+5,1)*36;gfx=read(obj+4,2);seen_gfx.add(gfx)
+   if gfx==0x3f08:
+    sprite=syms['gSprites']+read(syms['gPlayerAvatar']+4,1)*68;tile=read(sprite+4,2)&1023;v=bytes(read(0x6010000+tile*32+j,1) for j in range(512))
+    # Graphics ID changes before the queued VBlank tile DMA completes.
+    if v not in [expected[k:k+512] for k in range(0,len(expected),512)]:
+     frames(1);v=bytes(read(0x6010000+tile*32+j,1) for j in range(512))
+    assert v in [expected[k:k+512] for k in range(0,len(expected),512)],'Fly field pose must upload Joe pixels after VBlank'
+    if not joe_verified:lib.emu_image(str(out/'joe-fly-pose.png').encode())
+    joe_verified=True
+   lib.emu_image(str(movie/f'{frame:04}.png').encode())
+  assert joe_verified,(seen_gfx,'Joe field pose was not observed')
+  print('Fly frame-by-frame Joe field-action ID and actual VRAM pixels: PASS',flush=True)
  for _ in range(35):
   frames(60)
   if read(syms['gMain']+4)==syms['CB2_Overworld']|1 and d['current']()==name and not read('sLockFieldControls',1):break

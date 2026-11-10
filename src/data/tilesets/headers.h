@@ -1583,8 +1583,8 @@ const struct Tileset gTileset_HgssBellSecondary = {
  .callback=NULL,
 };
 const struct Tileset gTileset_HgssTemple = {
- .isCompressed=TRUE, .isSecondary=TRUE, .tiles=gTilesetTiles_GenericBuilding,
- .palettes=gTilesetPalettes_HgssTemple, .metatiles=gMetatiles_WesternInteriors,
- .metatileAttributes=gMetatileAttributes_WesternInteriors, .callback=NULL,
+ .isCompressed=TRUE, .isSecondary=TRUE, .tiles=gTilesetTiles_HgssTemple,
+ .palettes=gTilesetPalettes_HgssTemple, .metatiles=gMetatiles_HgssTemple,
+ .metatileAttributes=gMetatileAttributes_HgssTemple, .callback=NULL,
 };
 #endif

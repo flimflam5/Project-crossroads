@@ -431,3 +431,6 @@ const u16 gMetatileAttributes_HgssBellPrimary[] = INCBIN_U16("data/tilesets/prim
 const u16 gMetatiles_HgssBellSecondary[] = INCBIN_U16("data/tilesets/secondary/hgss_bell/metatiles.bin");
 
 const u16 gMetatileAttributes_HgssBellSecondary[] = INCBIN_U16("data/tilesets/secondary/hgss_bell/metatile_attributes.bin");
+
+const u16 gMetatiles_HgssTemple[] = INCBIN_U16("data/tilesets/secondary/hgss_temple/metatiles.bin");
+const u16 gMetatileAttributes_HgssTemple[] = INCBIN_U16("data/tilesets/secondary/hgss_temple/metatile_attributes.bin");

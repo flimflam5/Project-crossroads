@@ -1,0 +1,334 @@
+{
+  "specs": {
+    "void": {
+      "start": 512,
+      "width": 1,
+      "height": 1
+    },
+    "wood": {
+      "start": 513,
+      "width": 1,
+      "height": 1
+    },
+    "burned_floor": {
+      "start": 514,
+      "width": 1,
+      "height": 1
+    },
+    "stone": {
+      "start": 515,
+      "width": 1,
+      "height": 1
+    },
+    "tatami": {
+      "start": 516,
+      "width": 1,
+      "height": 1
+    },
+    "temple_wall": {
+      "start": 517,
+      "width": 4,
+      "height": 2
+    },
+    "burned_wall": {
+      "start": 525,
+      "width": 4,
+      "height": 2
+    },
+    "house_wall": {
+      "start": 533,
+      "width": 4,
+      "height": 2
+    },
+    "stage": {
+      "start": 541,
+      "width": 4,
+      "height": 2
+    },
+    "pillar": {
+      "start": 549,
+      "width": 1,
+      "height": 3
+    },
+    "statue": {
+      "start": 552,
+      "width": 1,
+      "height": 2
+    },
+    "prayer_table": {
+      "start": 554,
+      "width": 2,
+      "height": 1
+    },
+    "partition": {
+      "start": 556,
+      "width": 1,
+      "height": 2
+    },
+    "rail_h": {
+      "start": 558,
+      "width": 4,
+      "height": 1
+    },
+    "rail_v": {
+      "start": 562,
+      "width": 1,
+      "height": 4
+    },
+    "stairs": {
+      "start": 566,
+      "width": 2,
+      "height": 2
+    },
+    "ladder": {
+      "start": 570,
+      "width": 1,
+      "height": 2
+    },
+    "temple_wall_burned_floor": {
+      "start": 572,
+      "width": 4,
+      "height": 2
+    },
+    "temple_wall_stone": {
+      "start": 580,
+      "width": 4,
+      "height": 2
+    },
+    "temple_wall_tatami": {
+      "start": 588,
+      "width": 4,
+      "height": 2
+    },
+    "burned_wall_burned_floor": {
+      "start": 596,
+      "width": 4,
+      "height": 2
+    },
+    "burned_wall_stone": {
+      "start": 604,
+      "width": 4,
+      "height": 2
+    },
+    "burned_wall_tatami": {
+      "start": 612,
+      "width": 4,
+      "height": 2
+    },
+    "house_wall_burned_floor": {
+      "start": 620,
+      "width": 4,
+      "height": 2
+    },
+    "house_wall_stone": {
+      "start": 628,
+      "width": 4,
+      "height": 2
+    },
+    "house_wall_tatami": {
+      "start": 636,
+      "width": 4,
+      "height": 2
+    },
+    "stage_burned_floor": {
+      "start": 644,
+      "width": 4,
+      "height": 2
+    },
+    "stage_stone": {
+      "start": 652,
+      "width": 4,
+      "height": 2
+    },
+    "stage_tatami": {
+      "start": 660,
+      "width": 4,
+      "height": 2
+    },
+    "pillar_burned_floor": {
+      "start": 668,
+      "width": 1,
+      "height": 3
+    },
+    "pillar_stone": {
+      "start": 671,
+      "width": 1,
+      "height": 3
+    },
+    "pillar_tatami": {
+      "start": 674,
+      "width": 1,
+      "height": 3
+    },
+    "statue_burned_floor": {
+      "start": 677,
+      "width": 1,
+      "height": 2
+    },
+    "statue_stone": {
+      "start": 679,
+      "width": 1,
+      "height": 2
+    },
+    "statue_tatami": {
+      "start": 681,
+      "width": 1,
+      "height": 2
+    },
+    "prayer_table_burned_floor": {
+      "start": 683,
+      "width": 2,
+      "height": 1
+    },
+    "prayer_table_stone": {
+      "start": 685,
+      "width": 2,
+      "height": 1
+    },
+    "prayer_table_tatami": {
+      "start": 687,
+      "width": 2,
+      "height": 1
+    },
+    "partition_burned_floor": {
+      "start": 689,
+      "width": 1,
+      "height": 2
+    },
+    "partition_stone": {
+      "start": 691,
+      "width": 1,
+      "height": 2
+    },
+    "partition_tatami": {
+      "start": 693,
+      "width": 1,
+      "height": 2
+    },
+    "rail_h_burned_floor": {
+      "start": 695,
+      "width": 4,
+      "height": 1
+    },
+    "rail_h_stone": {
+      "start": 699,
+      "width": 4,
+      "height": 1
+    },
+    "rail_h_tatami": {
+      "start": 703,
+      "width": 4,
+      "height": 1
+    },
+    "rail_v_burned_floor": {
+      "start": 707,
+      "width": 1,
+      "height": 4
+    },
+    "rail_v_stone": {
+      "start": 711,
+      "width": 1,
+      "height": 4
+    },
+    "rail_v_tatami": {
+      "start": 715,
+      "width": 1,
+      "height": 4
+    },
+    "stairs_burned_floor": {
+      "start": 719,
+      "width": 2,
+      "height": 2
+    },
+    "stairs_stone": {
+      "start": 723,
+      "width": 2,
+      "height": 2
+    },
+    "stairs_tatami": {
+      "start": 727,
+      "width": 2,
+      "height": 2
+    },
+    "ladder_burned_floor": {
+      "start": 731,
+      "width": 1,
+      "height": 2
+    },
+    "ladder_stone": {
+      "start": 733,
+      "width": 1,
+      "height": 2
+    },
+    "ladder_tatami": {
+      "start": 735,
+      "width": 1,
+      "height": 2
+    },
+    "warp": {
+      "start": 762,
+      "width": 1,
+      "height": 1
+    },
+    "exit": {
+      "start": 763,
+      "width": 1,
+      "height": 1
+    },
+    "jump_east": {
+      "start": 764,
+      "width": 1,
+      "height": 1
+    },
+    "jump_west": {
+      "start": 765,
+      "width": 1,
+      "height": 1
+    },
+    "jump_north": {
+      "start": 766,
+      "width": 1,
+      "height": 1
+    },
+    "jump_south": {
+      "start": 767,
+      "width": 1,
+      "height": 1
+    },
+    "panel": {
+      "start": 768,
+      "width": 1,
+      "height": 1
+    }
+  },
+  "warp_variants": {
+    "513": 737,
+    "566": 738,
+    "567": 739,
+    "568": 740,
+    "569": 741,
+    "570": 742,
+    "571": 743,
+    "719": 744,
+    "720": 745,
+    "721": 746,
+    "722": 747,
+    "723": 748,
+    "724": 749,
+    "725": 750,
+    "726": 751,
+    "727": 752,
+    "728": 753,
+    "729": 754,
+    "730": 755,
+    "731": 756,
+    "732": 757,
+    "733": 758,
+    "734": 759,
+    "735": 760,
+    "736": 761
+  },
+  "tiles": 222,
+  "metatiles": 257,
+  "source": "Original generated GBA adaptations of temple references; no HGSS graphics copied"
+}

@@ -98,3 +98,12 @@ marker0x20 permits Fly in Johto without badge grants. A separate party-menu Fly
 mode of the atlas uses existing ten city heal arrivals; ordinary atlas remains
 informational. All cities are available only as QA assistance, not final story
 progression. Preserve native Fly effects, map/layout/heal IDs and saved data.
+
+## Current owner assignment: Ecruteak and Joe field states
+
+Finish Ecruteak interiors/landmark floors, terrain details, entrances/boundaries
+and clipping against HGSS without replacing the exterior the owner likes. Audit
+all player action states for Joe, preserve saves/unrelated work, build and test
+actual emulator traversal/actions/save copies. Show native screenshots/evidence.
+No completion claim from compilation or a sample. Active checkpoint and exact
+unfinished operations: crossroads/hgss/ACTIVE_COMPLETION.md.

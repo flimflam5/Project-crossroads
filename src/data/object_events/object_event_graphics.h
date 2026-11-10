@@ -648,3 +648,17 @@ const u16 gObjectEventPal_AreaBell[] = INCGFX_U16("graphics/object_events/pics/m
 
 const u32 gObjectEventPic_AreaLantern[] = INCGFX_U32("graphics/object_events/pics/misc/area_lantern.png", ".4bpp");
 const u16 gObjectEventPal_AreaLantern[] = INCGFX_U16("graphics/object_events/pics/misc/area_lantern.pal", ".gbapal");
+
+const u32 gObjectEventPic_JoeMachBike[] = INCGFX_U32("graphics/object_events/pics/people/joe/corporate/mach_bike.png", ".4bpp", "-mwidth 4 -mheight 4");
+
+const u32 gObjectEventPic_JoeAcroBike[] = INCGFX_U32("graphics/object_events/pics/people/joe/corporate/acro_bike.png", ".4bpp", "-mwidth 4 -mheight 4");
+
+const u32 gObjectEventPic_JoeSurfing[] = INCGFX_U32("graphics/object_events/pics/people/joe/corporate/surfing.png", ".4bpp", "-mwidth 4 -mheight 4");
+
+const u32 gObjectEventPic_JoeUnderwater[] = INCGFX_U32("graphics/object_events/pics/people/joe/corporate/underwater.png", ".4bpp", "-mwidth 4 -mheight 4");
+
+const u32 gObjectEventPic_JoeFieldMove[] = INCGFX_U32("graphics/object_events/pics/people/joe/corporate/field_move.png", ".4bpp", "-mwidth 4 -mheight 4");
+
+const u32 gObjectEventPic_JoeFishing[] = INCGFX_U32("graphics/object_events/pics/people/joe/corporate/fishing.png", ".4bpp", "-mwidth 4 -mheight 4");
+
+const u32 gObjectEventPic_JoeWatering[] = INCGFX_U32("graphics/object_events/pics/people/joe/corporate/watering.png", ".4bpp", "-mwidth 4 -mheight 4");
