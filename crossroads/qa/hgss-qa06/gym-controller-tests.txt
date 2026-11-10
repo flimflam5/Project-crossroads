@@ -1,0 +1,15 @@
+Normal old battery-save Continue: EcruteakCity_BellTower_9F (7, 3) PASS
+Actual survey desk enables RAM-only water access without changing saved flags: PASS
+Actual controller visits/return, healing and retained starter/party: PASS 0 target maps 18 transitions
+Actual custom Gym doors, solid facade and walkable roof overhang: EcruteakCity PASS
+Actual custom Gym doors, solid facade and walkable roof overhang: OlivineCity PASS
+Actual custom Gym doors, solid facade and walkable roof overhang: VioletCity PASS
+Actual custom Gym doors, solid facade and walkable roof overhang: AzaleaTown PASS
+Actual custom Gym doors, solid facade and walkable roof overhang: GoldenrodCity PASS
+Actual session-only Surf entry: OlivineCity (6, 24) to (5, 24) PASS
+Actual custom Gym doors, solid facade and walkable roof overhang: CianwoodCity PASS
+Actual session-only Surf entry: CianwoodCity (39, 18) to (40, 18) PASS
+Actual custom Gym doors, solid facade and walkable roof overhang: MahoganyTown PASS
+Actual session-only Surf entry: JohtoRoute44 (36, 15) to (37, 15) PASS
+Actual custom Gym doors, solid facade and walkable roof overhang: BlackthornCity PASS
+All eight custom Gym exteriors actually traversed: PASS

@@ -1,0 +1,4 @@
+Actual Emerald make output: /tmp/qa06-delivery-build.log
+ROM used30,019,116 bytes of33,554,432; EWRAM226,448 of262,144; IWRAM28,392 of32,768.
+No engine memory/map/save limits were raised.
+Rebuild after checkout/CI guard fixes produced byte-identical ROM SHA256 28b12ad6b01a5ef765f313c6eff6a35eb6a512a823e315b0811b097a6e0d6f28

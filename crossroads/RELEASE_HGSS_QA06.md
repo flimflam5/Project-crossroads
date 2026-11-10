@@ -15,6 +15,16 @@ and [topology](johto/TOPOLOGY.md). Compiling/connectivity do not establish visua
 acceptance. Native screenshots, a bridge movement recording and actual test logs
 are in qa/hgss-qa06 and the evidence download. Owner visual acceptance is pending.
 
+## Verified results
+
+Local Emerald build PASS. Automated source/pixel/generator/ID/escape/build checks
+PASS. Actual mGBA13-map/124-transition tour,526 collision probes, both bridges,
+eight Gyms, Center/house/Surf Save and cold Continue, obsolete walking-position
+migration, exact party/boxes/starter persistence, actual practice loss/respawn,
+ten-city Fly, Joe field actions, all three starters and title/reset PASS. Owner
+Delta/visual acceptance is pending. ROM used30,019,116B; EWRAM226,448B; IWRAM28,392B.
+The original New Game prologue and most regional reconstruction remain unfinished.
+
 ## Delta on iPhone
 
 1. Export/back up your battery save. Import the QA06 .gba, import a COPY of the

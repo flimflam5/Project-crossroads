@@ -1,0 +1,4 @@
+Actual local extraction --check results:
+Verified canonical outdoor ground/props/endpoints:30 areas; no game completion asserted.
+Reproducible source SHA, matrix, extended-header terrain permissions and stripped prop/warp facts: PASS12 headers.
+Commands and selections: crossroads/hgss/canonical_events and VIOLET_QA06.md.

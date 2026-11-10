@@ -7,7 +7,6 @@ aliases without renumbering maps/layouts/heals. No story, teams or badge flags.
 """
 import argparse,copy,json,re,struct,hashlib
 from pathlib import Path
-from PIL import Image
 R=Path(__file__).resolve().parents[2];A=R/'crossroads/art/eight_gyms_v1';B=A/'baseline';BASE=json.loads((B/'contracts.json').read_text());PLANS=R/'crossroads/art/eight_gyms_v1/integration.json'
 SOURCES={'gTileset_HgssVioletPrimary':('primary','hgss_violet','InitTilesetAnim_General'),'gTileset_HgssVioletSecondary':('secondary','hgss_violet','NULL'),'gTileset_General':('primary','general','InitTilesetAnim_General'),'gTileset_WesternCity':('secondary','western_city','InitTilesetAnim_Slateport'),'gTileset_HgssEcruteakPrimary':('primary','hgss_ecruteak','InitTilesetAnim_General'),'gTileset_HgssEcruteakSecondary':('secondary','hgss_ecruteak','NULL')}
 CODES={'EcruteakCity':'ecruteak','OlivineCity':'olivine','VioletCity':'violet','AzaleaTown':'azalea','GoldenrodCity':'goldenrod','CianwoodCity':'cianwood','MahoganyTown':'mahogany','BlackthornCity':'blackthorn'}
@@ -66,6 +65,7 @@ def normalize_map(name,m):
    else:m['warp_events'][1]['dest_warp_id']=old['warp_events'][1]['dest_warp_id']
  return m
 def generate(check=False):
+ from PIL import Image
  def write(p,b):
   p=R/p
   if isinstance(b,str):b=b.encode()

@@ -61,7 +61,11 @@ actual harbor/Center desk when needed. Continue while already surfing is separat
 
 ## Validation and actual emulator coverage
 
-Results and exact ROM hash are recorded in qa/hgss-qa06 after the final run.
+Results and exact ROM hash are recorded in qa/hgss-qa06. Actual13-map/124-
+transition controller tour,526 blocked edges, both pedestrian bridges, all eight
+Gym doors/facades, normal Center/house/Surf saves, old walking-position migration,
+exact party/boxes/starter, real Morty loss to Violet nurse, ten-city Fly, Joe
+action/VRAM checks, three starter rescues/duplicate guards and title/reset PASS.
 Do not infer emulator success from generation or compilation. Automated checks
 verify source door/stair coordinates, every-public-tile escape, exact neighbor
 scope, append-only IDs, capacity and build inclusion. The eight-Gym test verifies
@@ -85,7 +89,8 @@ python3 crossroads/tools/validate_eight_gyms.py
 python3 crossroads/tools/validate_johto_network.py --built
 python3 crossroads/tools/validate_visual_repairs.py
 python3 crossroads/tools/johto_network_smoke.py --save COPY.sav --library /tmp/johto-bridge.so --output build/violet-tour --targets VioletCity,VioletCity_Residence,VioletCity_Workshop,VioletAcademy,VioletCity_PokemonCenter_1F,VioletCity_PokemonCenter_B1F,VioletCity_Mart,VioletCity_Gym,SproutTower_1F,SproutTower_2F,SproutTower_3F,VioletCity_WestGate,VioletCity_EastGate --all-edges
-python3 crossroads/tools/violet_detail_smoke.py --save COPY.sav
+python3 crossroads/tools/violet_detail_smoke.py --save COPY.sav --exploration-only --output build/violet-exploration
+python3 crossroads/tools/violet_detail_smoke.py --save COPY.sav --saves-only --output build/violet-saves
 python3 crossroads/tools/eight_gyms_smoke.py --save COPY.sav
 ```
 
@@ -94,3 +99,9 @@ fixture, encounter suppression and save copies. It does not edit an owner save o
 grant production progression. DS moving lift/pillar behavior, new regional Gym
 teams/progression, additional encounter tables and the unapproved prologue remain
 outside this increment. The inherited New Game prologue is still unfinished.
+
+Split exploration/save test modes preserve completed evidence when a separate
+stage is retried. No assertions were removed. CI imports Pillow only when packing
+images, and owner source archive bytes are exempt from Git text normalization;
+generated palettes use the repository CRLF convention. Source raw4bpp/gbapal
+archive entries are deliberately tracked despite the general build-output ignore.

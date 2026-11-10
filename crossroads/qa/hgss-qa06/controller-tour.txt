@@ -1,0 +1,20 @@
+Normal old battery-save Continue: EcruteakCity_BellTower_9F (7, 3) PASS
+Actual survey desk enables RAM-only water access without changing saved flags: PASS
+Actual session-only Surf entry: VioletCity (35, 17) to (35, 18) PASS
+Actual session-only Surf entry: VioletCity (35, 28) to (35, 29) PASS
+Controller visit: VioletCity (23, 71) PASS
+Controller visit: VioletCity_Residence (4, 8) PASS
+Controller visit: VioletCity_Workshop (4, 8) PASS
+Controller visit: VioletAcademy (6, 11) PASS
+Nurse healing/local respawn: VioletCity_PokemonCenter_1F PASS
+Controller visit: VioletCity_PokemonCenter_1F (15, 17) PASS
+Controller visit: VioletCity_PokemonCenter_B1F (15, 10) PASS
+Controller visit: VioletCity_Mart (4, 11) PASS
+Controller visit: VioletCity_Gym (8, 26) PASS
+Controller visit: SproutTower_1F (24, 9) PASS
+Controller visit: SproutTower_2F (15, 27) PASS
+Controller visit: SproutTower_3F (15, 27) PASS
+Actual session-only Surf entry: VioletCity (35, 17) to (34, 17) PASS
+Controller visit: VioletCity_WestGate (1, 7) PASS
+Controller visit: VioletCity_EastGate (10, 7) PASS
+Actual controller visits/return, healing and retained starter/party: PASS 13 target maps 124 transitions
