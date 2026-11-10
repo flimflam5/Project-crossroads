@@ -101,3 +101,11 @@ that count nor the new pixel checks claims owner visual acceptance. Shop testing
 was corrected to acknowledge its real welcome dialogue before requiring the actual
 ShopMenu task; the purchase/price assertion was retained and passed. Smoke tools
 now accept isolated output paths, preserving old evidence rather than overwriting it.
+
+The first clean GitHub build compiled Emerald, then the new facade generator
+check rejected autumn palette05: .gitattributes requires CRLF on checkout while
+the old writer emitted LF for generated palettes. The writer now emits canonical
+CRLF for every .pal, matching other project asset generators. Exact-byte checks
+remain strict; palette colors/game data are unchanged. A separate clean worktree
+is checked before rerunning CI. This is an asset-output portability fix, not an
+exception that ignores palette differences.

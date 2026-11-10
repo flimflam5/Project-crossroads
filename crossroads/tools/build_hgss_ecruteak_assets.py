@@ -20,6 +20,8 @@ def generate(check=False,variant="city"):
  secondary_dir=S if variant=="city" else R/"data/tilesets/secondary/hgss_bell"
  def write(p,b):
   if isinstance(b,str):b=b.encode()
+  # Match .gitattributes and clean checkouts exactly; keep strict byte checks.
+  if p.suffix=='.pal':b=b.replace(b'\r\n',b'\n').replace(b'\n',b'\r\n')
   if check:assert p.read_bytes()==b,('Regenerate',str(p))
   elif not p.exists() or p.read_bytes()!=b:p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(b)
  general=R/'data/tilesets/primary/general';gm,ga=neutral_metadata(struct.unpack('<4096H',(general/'metatiles.bin').read_bytes()),struct.unpack('<512H',(general/'metatile_attributes.bin').read_bytes()));reserved=set(range(432,512))|{v&1023 for n in TERRAIN for v in gm[n*8:n*8+8]}
