@@ -2,9 +2,10 @@
 """Real menu/flight test using a copied old battery save; no map/warp RAM writes."""
 import argparse,sys,runpy,json
 from pathlib import Path
-p=argparse.ArgumentParser();p.add_argument('--save',required=True);p.add_argument('--record',action='store_true');p.add_argument('--library',default='/tmp/johto-bridge.so');args=p.parse_args()
-sys.argv=['qa_kit_smoke.py','--save',args.save,'--library',args.library]
-k=runpy.run_path('crossroads/tools/qa_kit_smoke.py');d=k['d'];read=d['read'];key=d['key'];frames=d['frames'];sb=d['sb'];syms=d['syms'];lib=d['lib'];out=Path('build/qa04-fly');out.mkdir(parents=True,exist_ok=True)
+p=argparse.ArgumentParser();p.add_argument('--save',required=True);p.add_argument('--record',action='store_true');p.add_argument('--library',default='/tmp/johto-bridge.so');p.add_argument('--output',default='build/qa04-fly');args=p.parse_args()
+out=Path(args.output);out.mkdir(parents=True,exist_ok=True)
+sys.argv=['qa_kit_smoke.py','--save',args.save,'--library',args.library,'--output',str(out/'kit')]
+k=runpy.run_path('crossroads/tools/qa_kit_smoke.py');d=k['d'];read=d['read'];key=d['key'];frames=d['frames'];sb=d['sb'];syms=d['syms'];lib=d['lib']
 d['go']('OlivineCity')
 count=read(read('gPlayerPartyCountPtr'),1);choice=read(sb()+0x1590,2)
 def badges():return tuple((read(sb()+0x1270+i//8,1)>>(i%8))&1 for i in range(0x867,0x86f))

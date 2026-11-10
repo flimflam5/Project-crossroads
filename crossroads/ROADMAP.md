@@ -1,3 +1,13 @@
+# Current priority — Ecruteak owner review
+
+Stop regional expansion. Complete repairs/QA of the existing27-map Ecruteak scope,
+preserve the liked exterior and custom Gym, and wait for owner review before
+another area. QA07 implements confirmed ground-arrow/canopy fixes and has a real
+build plus normal-controller emulator evidence. The unmatched green-roof report
+and owner visual/collision acceptance remain open. See hgss/ECRUTEAK_QA07.md.
+The older Routes31/32/36 next-step instruction below is superseded, not authority
+to resume expansion. Main story, badges, rewards and new encounters remain deferred.
+
 # Current geographic reconstruction
 
 Finish Johto systematically against actual HGSS references. The eight custom Gym

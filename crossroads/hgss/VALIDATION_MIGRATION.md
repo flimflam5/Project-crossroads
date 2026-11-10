@@ -70,3 +70,54 @@ saves through the normal menu, then cold-boots/Continues and requires migration.
 then exits before its obsolete pre-HGSS hardcoded western tour. The replacement
 controller tour follows current JSON/native ledges and tests the complete reviewed
 Ecruteak graph. A passing short starter test is never reported as a region playtest.
+
+
+## QA07 semantic ground, occlusion and immutable preservation
+
+The old nonzero-behavior-at-every-warp assertion rejected legitimate neutral road
+coordinate portals. Its replacement permits MB_NORMAL only with an exact existing
+West/East City/Route gate trigger at that point, VAR_TEMP_0=0 and an actual script
+warp to the declared destination/index. Canonical gate endpoints, all aliases,
+reciprocity and every-floor escape still run separately. Ordinary blank doors or
+stairs still fail. No assertion is removed merely to make the build pass.
+
+The older15-warp city projection now explicitly verifies then removes only QA06's
+paired Gym alias for the historical comparison. Three appended private-door labels
+must exactly match their independent contract before projecting back to the older
+BG-event list. Existing actors/scripts/coordinates and every other field remain pinned.
+
+QA07's independent immutable9cd6a73717 contract adds exact map/layout/heal IDs,
+all27 map metadata records (only those three appended BG labels permitted), all
+interior raw bytes,6111 unaffected static exterior cells, expected ground-plane
+wall/door/trunk footprints and leaf-only foreground masks. The unused shared
+buffer tile is the sole metadata/graphic exception; all other General tiles and
+animation slots remain identical. CI fetches the specific old commit for pixel
+comparisons even when actions/checkout is shallow; no engine history upgrade occurs.
+
+Controller tests additionally require36 known trunk approaches and19 recorded
+arrow/canopy/facade cases. The native423-leaf-pixel check detects Joe over leaves,
+which raw blocked-edge sweeps missed. The broader500-edge sweep remains; neither
+that count nor the new pixel checks claims owner visual acceptance. Shop testing
+was corrected to acknowledge its real welcome dialogue before requiring the actual
+ShopMenu task; the purchase/price assertion was retained and passed. Smoke tools
+now accept isolated output paths, preserving old evidence rather than overwriting it.
+
+The first clean GitHub build compiled Emerald, then the new facade generator
+check rejected autumn palette05: .gitattributes requires CRLF on checkout while
+the old writer emitted LF for generated palettes. The writer now emits canonical
+CRLF for every .pal, matching other project asset generators. Exact-byte checks
+remain strict; palette colors/game data are unchanged. A separate clean worktree
+is checked before rerunning CI. This is an asset-output portability fix, not an
+exception that ignores palette differences.
+The inherited temple palette writer follows the same canonical CRLF rule; its
+exact-byte check is retained as well. Both are tested from the clean checkout.
+
+The shared CI's FireRed/LeafGreen link also exposed an inherited QA06 script
+reference to Emerald-only FLAG_BLACK_LEDGER_QA_FLYER. The QA-kit entry now returns
+to the existing desk exit on FRLG and retains its original body on Emerald. No
+flag is reassigned, no save layout changes, and Emerald's emitted script/ROM bytes
+remain identical. This completes the earlier C build guards at the script layer.
+
+The next strict CI step exposed the existing Joe graphics validator's separate
+historical enum input690485c997. Shallow CI now fetches that exact commit as well
+as QA06, preserving both comparisons instead of relaxing the enum assertion.

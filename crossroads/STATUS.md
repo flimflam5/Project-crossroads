@@ -1,3 +1,16 @@
+# Ecruteak QA07 — current owner review checkpoint
+
+Regional expansion is paused by owner instruction. Continue only Ecruteak until
+owner review. QA06 recovered at9cd6a73717; implementation checkpoint2daea5e0aa.
+Reproduced/fixed ordinary-road arrows and leaf-layer overlap; retained liked
+exterior/custom Gym/IDs/saves. Three private-door labels clarify closed facades.
+Emerald build/static checks and actual controller-driven mGBA city/service/save/
+field-action checks pass. Owner Delta/visual acceptance is pending; the exact
+current green-roof example remains unmatched, not declared fixed.
+See [city checklist, sources, deviations and remaining issues](hgss/ECRUTEAK_QA07.md),
+[Delta checklist](RELEASE_ECRUTEAK_QA07.md) and [native evidence](qa/ecruteak-qa07/comparisons.html).
+Older regional next-step instructions below are historical and superseded.
+
 # Johto QA06 — current checkpoint
 
 Eight supplied Gym exteriors are integrated. Violet now uses HGSS-reference

@@ -783,10 +783,12 @@
     476,
     477,
     484,
-    485
+    485,
+    511
   ],
   "reserved_primary_tiles": [
     0,
+    1,
     2,
     3,
     4,
@@ -925,6 +927,6 @@
     510,
     511
   ],
-  "allocated_tiles": 710,
-  "available_tiles": 886
+  "allocated_tiles": 718,
+  "available_tiles": 885
 }

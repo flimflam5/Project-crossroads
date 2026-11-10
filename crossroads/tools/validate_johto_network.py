@@ -45,7 +45,16 @@ for n,m in maps.items():
   t=raw[n][e['y']*w+e['x']]&1023
   at=lookup[l['primary_tileset'] if t<512 else l['secondary_tileset']]
   assert t-(512 if t>=512 else 0)<len(at),('Metatile out of bounds',n,e,t)
-  assert at[t-(512 if t>=512 else 0)]&255!=0,('Warp lost its door/stair behavior',n,e,t)
+  if at[t-(512 if t>=512 else 0)]&255==0:
+   # A neutral road portal is driven by an exact coordinate script, not a door
+   # metatile. Require the actual script to warp to this same destination/index;
+   # blank ordinary doors or stairs still fail. Canonical gate geometry and all
+   # aliases are independently checked below by validate_gates().
+   trigger=next((q for q in m['coord_events'] if (q['x'],q['y'])==(e['x'],e['y']) and q['var']=='VAR_TEMP_0' and q['var_value']=='0' and re.fullmatch(r'Hgss_(West|East)(City|Route)GateEnter',q['script'])),None)
+   assert trigger is not None,('Warp lost its door/stair behavior',n,e,t)
+   label=re.search(r'^'+trigger['script']+r'::\n(.*?)(?=^\w+::|\Z)',scripts,re.M|re.S)
+   assert label and re.search(r'^\s+warp '+e['dest_map']+r', '+re.escape(str(e['dest_warp_id']))+r'\s*$',label[1],re.M),('Coordinate portal destination mismatch',n,e,trigger)
+   assert raw[n][e['y']*w+e['x']]&0xc00==0,('Blocked coordinate portal',n,e)
  # Animated doors legitimately use a collision bit; they are entered via the warp interaction.
 # Connections need at least one matching-elevation seam, not a forced Surf
 # animation across an unloaded map boundary.

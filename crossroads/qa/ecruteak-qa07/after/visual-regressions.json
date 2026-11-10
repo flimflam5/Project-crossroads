@@ -1,0 +1,12 @@
+{
+  "native_size": [
+    240,
+    160
+  ],
+  "after_leaf_pixels_matched": 423,
+  "after_leaf_pixels_total": 423,
+  "rom_sha256": "1553ad2872e5e0b4a5c5d9fe78d47b73d8f7a541ce294e897db20ded8a6e21c3",
+  "before_leaf_pixels_matched": 262,
+  "before_leaf_pixels_total": 423,
+  "before_rom_sha256": "ffe8f84c8dee1e688d5e8f7615078a03953c51e0a337c2036fd4fa6a8bf820cb"
+}

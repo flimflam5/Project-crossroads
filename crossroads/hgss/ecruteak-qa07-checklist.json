@@ -1,0 +1,1729 @@
+{
+  "scope": "Ecruteak only; no geographic expansion",
+  "maps": [
+    {
+      "name": "EcruteakCity",
+      "map_constant": "MAP_ECRUTEAK_CITY",
+      "map_group": 75,
+      "map_number": 10,
+      "layout_constant": "LAYOUT_ECRUTEAK_CITY",
+      "layout_number": 790,
+      "dimensions": [
+        64,
+        64
+      ],
+      "purpose": "Liked exterior and owner Ghost Gym; signs, private-door labels, six freestanding trees, pond and three road apertures",
+      "connections": [
+        {
+          "map": "MAP_JOHTO_ROUTE38",
+          "offset": 25,
+          "direction": "left"
+        },
+        {
+          "map": "MAP_JOHTO_ROUTE37",
+          "offset": 25,
+          "direction": "down"
+        },
+        {
+          "map": "MAP_JOHTO_ROUTE42",
+          "offset": 33,
+          "direction": "right"
+        }
+      ],
+      "entrances": [
+        {
+          "x": 24,
+          "y": 21,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_BURNED_TOWER",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 40,
+          "y": 25,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_BARRIER_STATION",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 23,
+          "y": 45,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_RESIDENCE",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 45,
+          "y": 45,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_DANCE_THEATER",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 24,
+          "y": 55,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_GYM",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 45,
+          "y": 55,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_POKEMON_CENTER_1F",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 53,
+          "y": 45,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_MART",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 39,
+          "y": 25,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_BARRIER_STATION",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 34,
+          "y": 55,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_DOWSING_HOUSE",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 0,
+          "y": 37,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_WEST_GATE",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 0,
+          "y": 38,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_WEST_GATE",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 0,
+          "y": 39,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_WEST_GATE",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 63,
+          "y": 46,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_EAST_GATE",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 63,
+          "y": 47,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_EAST_GATE",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 63,
+          "y": 48,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_EAST_GATE",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 25,
+          "y": 55,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_GYM",
+          "dest_warp_id": "1"
+        }
+      ],
+      "services": [
+        "Ecruteak_Traveler",
+        "Ecruteak_Resident",
+        "Ecruteak_GymVisitor",
+        "Ecruteak_TowerVisitor",
+        "Ecruteak_Shopper",
+        "Ecruteak_TheaterVisitor"
+      ],
+      "reference_header": "MAP_ECRUTEAK",
+      "reference_geometry": "checked against pinned HGSS facts; supported by existing exact geometry validators",
+      "adaptations": [
+        "DS perspective/height projected into stable64x64 GBA city; original accepted facade art retained",
+        "Owner-supplied custom Ghost Gym is a deliberate Black Ledger addition",
+        "Three non-enterable reference facades remain private homes with explicit locked-door text",
+        "Neutral primary brick replaces flower/arrow tile only within7-tile scrolling buffers"
+      ],
+      "native_screenshot": "../qa/ecruteak-qa07/city-tour/EcruteakCity.png",
+      "native_view_inspected": true,
+      "controller_declared_warp_roundtrips": "PASS; city-tour/coverage.json lists each pair",
+      "unapproved_story": "not added",
+      "owner_visual_acceptance": "PENDING",
+      "remaining": "See ECRUTEAK_QA07.md: unmatched current green-roof report, visual acceptance and explicit reference/art limitations"
+    },
+    {
+      "name": "EcruteakCity_BurnedTower",
+      "map_constant": "MAP_ECRUTEAK_CITY_BURNED_TOWER",
+      "map_group": 75,
+      "map_number": 11,
+      "layout_constant": "LAYOUT_ECRUTEAKCITY_BURNEDTOWER",
+      "layout_number": 808,
+      "dimensions": [
+        24,
+        24
+      ],
+      "purpose": "Charred rear wall, statues, stone/wood floor, basement stair and return",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 11,
+          "y": 22,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 12,
+          "y": 22,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 18,
+          "y": 12,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BURNEDTOWER_B1F",
+          "dest_warp_id": "0"
+        }
+      ],
+      "services": [
+        "Area_BurnedCaretaker"
+      ],
+      "reference_header": "MAP_BURNED_TOWER_1F",
+      "reference_geometry": "checked against pinned HGSS facts; supported by existing exact geometry validators",
+      "adaptations": [
+        "Original GBA-compatible temple art, no HGSS graphics copied",
+        "DS coordinates translated to crop unused matrix margin; no relative layout change",
+        "Existing legacy exterior warp aliases preserved where applicable"
+      ],
+      "native_screenshot": "../qa/ecruteak-qa07/city-tour/EcruteakCity_BurnedTower.png",
+      "native_view_inspected": true,
+      "controller_declared_warp_roundtrips": "PASS; city-tour/coverage.json lists each pair",
+      "unapproved_story": "not added",
+      "owner_visual_acceptance": "PENDING",
+      "remaining": "See ECRUTEAK_QA07.md: unmatched current green-roof report, visual acceptance and explicit reference/art limitations",
+      "reference_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0025_D18R0101.bin",
+        "matrix_blob_sha": "562bdc79829113b1e2aa8b98efa3223615e5e5a0",
+        "events": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/eventdata/zone_event/005_D18R0101.json",
+        "events_blob_sha": "7a51dbca1dd77c7beff42225bce21b67f3229223",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      }
+    },
+    {
+      "name": "EcruteakCity_BellTower",
+      "map_constant": "MAP_ECRUTEAK_CITY_BELL_TOWER",
+      "map_group": 75,
+      "map_number": 12,
+      "layout_constant": "LAYOUT_ECRUTEAKCITY_BELLTOWER",
+      "layout_number": 799,
+      "dimensions": [
+        24,
+        24
+      ],
+      "purpose": "Reference Bell Tower 1F: wooden walkways, rails/braces, pillars and canonical stair/pad/jump network",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 11,
+          "y": 22,
+          "elevation": 0,
+          "dest_map": "MAP_BELLCHIME_TRAIL",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 12,
+          "y": 22,
+          "elevation": 0,
+          "dest_map": "MAP_BELLCHIME_TRAIL",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 5,
+          "y": 4,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_2F",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 5,
+          "y": 3,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_2F",
+          "dest_warp_id": "0"
+        }
+      ],
+      "services": [
+        "Area_BellCaretaker"
+      ],
+      "reference_header": "MAP_BELL_TOWER_1F",
+      "reference_geometry": "checked against pinned HGSS facts; supported by existing exact geometry validators",
+      "adaptations": [
+        "Original GBA-compatible temple art, no HGSS graphics copied",
+        "DS coordinates translated to crop unused matrix margin; no relative layout change",
+        "Existing legacy exterior warp aliases preserved where applicable"
+      ],
+      "native_screenshot": "../qa/ecruteak-qa07/city-tour/EcruteakCity_BellTower.png",
+      "native_view_inspected": true,
+      "controller_declared_warp_roundtrips": "PASS; city-tour/coverage.json lists each pair",
+      "unapproved_story": "not added",
+      "owner_visual_acceptance": "PENDING",
+      "remaining": "See ECRUTEAK_QA07.md: unmatched current green-roof report, visual acceptance and explicit reference/art limitations",
+      "reference_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0015_D17R0101.bin",
+        "matrix_blob_sha": "e02ceda7aaa0b8d5796f1a51ddc14b8151054b46",
+        "events": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/eventdata/zone_event/108_D17R0101.json",
+        "events_blob_sha": "60d939ff7e0c4094d9f4d6a4918404790a54d60b",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      }
+    },
+    {
+      "name": "EcruteakCity_Residence",
+      "map_constant": "MAP_ECRUTEAK_CITY_RESIDENCE",
+      "map_group": 75,
+      "map_number": 13,
+      "layout_constant": "LAYOUT_HGSS_ECRUTEAKCITY_RESIDENCE",
+      "layout_number": 918,
+      "dimensions": [
+        11,
+        10
+      ],
+      "purpose": "Furnished southwest home: refrigerator, cabinet, TV, dining table, chairs and two residents",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 4,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY",
+          "dest_warp_id": "2"
+        },
+        {
+          "x": 5,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY",
+          "dest_warp_id": "2"
+        }
+      ],
+      "services": [
+        "Area_EcruteakNeighbor",
+        "Hgss_HouseChild"
+      ],
+      "reference_header": "MAP_ECRUTEAK_SOUTHWEST_HOUSE",
+      "reference_geometry": "checked against pinned HGSS facts; supported by existing exact geometry validators",
+      "adaptations": [
+        "GBA furniture/flat room instead of DS models",
+        "No HGSS plot actors or item reward imported",
+        "Legacy paired exit retained"
+      ],
+      "native_screenshot": "../qa/ecruteak-qa07/city-tour/EcruteakCity_Residence.png",
+      "native_view_inspected": true,
+      "controller_declared_warp_roundtrips": "PASS; city-tour/coverage.json lists each pair",
+      "unapproved_story": "not added",
+      "owner_visual_acceptance": "PENDING",
+      "remaining": "See ECRUTEAK_QA07.md: unmatched current green-roof report, visual acceptance and explicit reference/art limitations",
+      "reference_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0066_T20R0301.bin",
+        "matrix_blob_sha": "c41931ad02b8576b73929e84389f185d95c04213",
+        "events": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/eventdata/zone_event/082_T27R0401.json",
+        "events_blob_sha": "b16449398a38d8043722c1d3e7789ff0e88e95fc",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      }
+    },
+    {
+      "name": "EcruteakCity_DanceTheater",
+      "map_constant": "MAP_ECRUTEAK_CITY_DANCE_THEATER",
+      "map_group": 75,
+      "map_number": 14,
+      "layout_constant": "LAYOUT_ECRUTEAKCITY_DANCETHEATER",
+      "layout_number": 810,
+      "dimensions": [
+        14,
+        19
+      ],
+      "purpose": "Stage, audience seating, five performers, optional working show",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 7,
+          "y": 17,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY",
+          "dest_warp_id": "3"
+        },
+        {
+          "x": 8,
+          "y": 17,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY",
+          "dest_warp_id": "3"
+        }
+      ],
+      "services": [
+        "Area_TheaterHost",
+        "Area_Dancer",
+        "Area_Dancer",
+        "Area_Dancer",
+        "Area_Dancer",
+        "Area_Dancer"
+      ],
+      "reference_header": "MAP_ECRUTEAK_DANCE_THEATER",
+      "reference_geometry": "checked against pinned HGSS facts; supported by existing exact geometry validators",
+      "adaptations": [
+        "GBA furniture/flat room instead of DS models",
+        "No HGSS plot actors or item reward imported",
+        "Legacy paired exit retained"
+      ],
+      "native_screenshot": "../qa/ecruteak-qa07/city-tour/EcruteakCity_DanceTheater.png",
+      "native_view_inspected": true,
+      "controller_declared_warp_roundtrips": "PASS; city-tour/coverage.json lists each pair",
+      "unapproved_story": "not added",
+      "owner_visual_acceptance": "PENDING",
+      "remaining": "See ECRUTEAK_QA07.md: unmatched current green-roof report, visual acceptance and explicit reference/art limitations",
+      "reference_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0126_T27R0501.bin",
+        "matrix_blob_sha": "de428ca74c8c37b1b6436bb2773a6101aba5f614",
+        "events": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/eventdata/zone_event/083_T27R0501.json",
+        "events_blob_sha": "0b2030a8cad9289157b09513a21ad86289984f47",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      }
+    },
+    {
+      "name": "EcruteakCity_Gym",
+      "map_constant": "MAP_ECRUTEAK_CITY_GYM",
+      "map_group": 75,
+      "map_number": 15,
+      "layout_constant": "LAYOUT_ECRUTEAKCITY_GYM",
+      "layout_number": 813,
+      "dimensions": [
+        18,
+        24
+      ],
+      "purpose": "Owner custom exterior; lower bridge, lamps, guide and safe falls",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 10,
+          "y": 21,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY",
+          "dest_warp_id": "4"
+        },
+        {
+          "x": 11,
+          "y": 21,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY",
+          "dest_warp_id": "15"
+        },
+        {
+          "x": 13,
+          "y": 0,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_GYM_ARENA",
+          "dest_warp_id": "0"
+        }
+      ],
+      "services": [
+        "Area_GymGuide",
+        "Hgss_GymLamp",
+        "Hgss_GymLamp"
+      ],
+      "reference_header": "MAP_ECRUTEAK_GYM",
+      "reference_geometry": "checked against pinned HGSS facts; supported by existing exact geometry validators",
+      "adaptations": [
+        "Tall DS room split at source chunk seam into existing two GBA map IDs",
+        "Native scripted return when stepping off bridge; no badge gate or candle-extinguishing battle rule",
+        "Accepted Morty/student practice scripts retained; optional student beside path"
+      ],
+      "native_screenshot": "../qa/ecruteak-qa07/city-tour/EcruteakCity_Gym.png",
+      "native_view_inspected": true,
+      "controller_declared_warp_roundtrips": "PASS; city-tour/coverage.json lists each pair",
+      "unapproved_story": "not added",
+      "owner_visual_acceptance": "PENDING",
+      "remaining": "See ECRUTEAK_QA07.md: unmatched current green-roof report, visual acceptance and explicit reference/art limitations",
+      "reference_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0090_T27GYM0101.bin",
+        "matrix_blob_sha": "dd26504c938b227763f32ecc2252e0d294f8e7b6",
+        "events": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/eventdata/zone_event/077_T27GYM0101.json",
+        "events_blob_sha": "5cac2d015c6848cc83dca86c5d477224eae860cc",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      }
+    },
+    {
+      "name": "EcruteakCity_PokemonCenter_1F",
+      "map_constant": "MAP_ECRUTEAK_CITY_POKEMON_CENTER_1F",
+      "map_group": 75,
+      "map_number": 16,
+      "layout_constant": "LAYOUT_HGSS_ECRUTEAKCITY_POKEMONCENTER_1F",
+      "layout_number": 920,
+      "dimensions": [
+        17,
+        21
+      ],
+      "purpose": "Healing, PC, local respawn, waiting area and communication reception",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 8,
+          "y": 19,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY",
+          "dest_warp_id": "5"
+        },
+        {
+          "x": 9,
+          "y": 19,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY",
+          "dest_warp_id": "5"
+        },
+        {
+          "x": 14,
+          "y": 17,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_POKEMON_CENTER_B1F",
+          "dest_warp_id": "0"
+        }
+      ],
+      "services": [
+        "Ecruteak_Nurse",
+        "Ecruteak_CenterVisitor",
+        "Hgss_CommunicationDesk",
+        "Hgss_CommunicationDesk",
+        "Hgss_CommunicationDesk"
+      ],
+      "reference_header": "MAP_ECRUTEAK_POKECENTER_1F",
+      "reference_geometry": "checked against pinned HGSS facts; supported by existing exact geometry validators",
+      "adaptations": [
+        "Native GBA heal/counter/PC tiles at HGSS service positions",
+        "DS elevated rear reception flattened; unavailable DS online entrance is a labeled service desk, not a broken warp",
+        "Existing nurse/heal ID/local ID preserved; shared Olivine layout unchanged"
+      ],
+      "native_screenshot": "../qa/ecruteak-qa07/city-tour/EcruteakCity_PokemonCenter_1F.png",
+      "native_view_inspected": true,
+      "controller_declared_warp_roundtrips": "PASS; city-tour/coverage.json lists each pair",
+      "unapproved_story": "not added",
+      "owner_visual_acceptance": "PENDING",
+      "remaining": "See ECRUTEAK_QA07.md: unmatched current green-roof report, visual acceptance and explicit reference/art limitations",
+      "reference_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0073_T21PC0101.bin",
+        "matrix_blob_sha": "993607934cd67d543de7bcdc4c42b0c01af3adcc",
+        "events": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/eventdata/zone_event/078_T27PC0101.json",
+        "events_blob_sha": "9d6657c7b305f945b5841189449fd5b29977fff5",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      }
+    },
+    {
+      "name": "EcruteakCity_Mart",
+      "map_constant": "MAP_ECRUTEAK_CITY_MART",
+      "map_group": 75,
+      "map_number": 17,
+      "layout_constant": "LAYOUT_HGSS_ECRUTEAKCITY_MART",
+      "layout_number": 922,
+      "dimensions": [
+        14,
+        13
+      ],
+      "purpose": "Two counters, stocked shelves and accepted original shop inventory",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 4,
+          "y": 11,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY",
+          "dest_warp_id": "6"
+        },
+        {
+          "x": 5,
+          "y": 11,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY",
+          "dest_warp_id": "6"
+        }
+      ],
+      "services": [
+        "Olivine_Clerk",
+        "Olivine_MartVisitor",
+        "Olivine_Clerk"
+      ],
+      "reference_header": "MAP_ECRUTEAK_POKEMART",
+      "reference_geometry": "checked against pinned HGSS facts; supported by existing exact geometry validators",
+      "adaptations": [
+        "Native GBA shelf/counter tiles replace DS furniture; accepted shop inventory unchanged",
+        "DS story delivery actors omitted"
+      ],
+      "native_screenshot": "../qa/ecruteak-qa07/city-tour/EcruteakCity_Mart.png",
+      "native_view_inspected": true,
+      "controller_declared_warp_roundtrips": "PASS; city-tour/coverage.json lists each pair",
+      "unapproved_story": "not added",
+      "owner_visual_acceptance": "PENDING",
+      "remaining": "See ECRUTEAK_QA07.md: unmatched current green-roof report, visual acceptance and explicit reference/art limitations",
+      "reference_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0104_T21FS0101.bin",
+        "matrix_blob_sha": "567a0d5d174171eebb5ddc5aa1245f00c5b52b5d",
+        "events": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/eventdata/zone_event/076_T27FS0101.json",
+        "events_blob_sha": "b67d9ef439e710849ef6d07f65fc62d97ad437aa",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      }
+    },
+    {
+      "name": "EcruteakCity_BellTower_2F",
+      "map_constant": "MAP_ECRUTEAKCITY_BELLTOWER_2F",
+      "map_group": 75,
+      "map_number": 24,
+      "layout_constant": "LAYOUT_ECRUTEAKCITY_BELLTOWER_2F",
+      "layout_number": 800,
+      "dimensions": [
+        24,
+        24
+      ],
+      "purpose": "Reference Bell Tower 2F: wooden walkways, rails/braces, pillars and canonical stair/pad/jump network",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 5,
+          "y": 4,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_BELL_TOWER",
+          "dest_warp_id": "2"
+        },
+        {
+          "x": 11,
+          "y": 21,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_3F",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 11,
+          "y": 20,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_3F",
+          "dest_warp_id": "0"
+        }
+      ],
+      "services": [],
+      "reference_header": "MAP_BELL_TOWER_2F",
+      "reference_geometry": "checked against pinned HGSS facts; supported by existing exact geometry validators",
+      "adaptations": [
+        "Original GBA-compatible temple art, no HGSS graphics copied",
+        "DS coordinates translated to crop unused matrix margin; no relative layout change",
+        "Existing legacy exterior warp aliases preserved where applicable"
+      ],
+      "native_screenshot": "../qa/ecruteak-qa07/city-tour/EcruteakCity_BellTower_2F.png",
+      "native_view_inspected": true,
+      "controller_declared_warp_roundtrips": "PASS; city-tour/coverage.json lists each pair",
+      "unapproved_story": "not added",
+      "owner_visual_acceptance": "PENDING",
+      "remaining": "See ECRUTEAK_QA07.md: unmatched current green-roof report, visual acceptance and explicit reference/art limitations",
+      "reference_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0016_D17R0102.bin",
+        "matrix_blob_sha": "b96eeacf62b879b9b282443d261d0f1e0f173cbb",
+        "events": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/eventdata/zone_event/303_D17R0102.json",
+        "events_blob_sha": "21d636fa7a8e0d4bfaf955ca04b58d7860551214",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      }
+    },
+    {
+      "name": "EcruteakCity_BellTower_3F",
+      "map_constant": "MAP_ECRUTEAKCITY_BELLTOWER_3F",
+      "map_group": 75,
+      "map_number": 25,
+      "layout_constant": "LAYOUT_ECRUTEAKCITY_BELLTOWER_3F",
+      "layout_number": 801,
+      "dimensions": [
+        24,
+        24
+      ],
+      "purpose": "Reference Bell Tower 3F: wooden walkways, rails/braces, pillars and canonical stair/pad/jump network",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 11,
+          "y": 21,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_2F",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 20,
+          "y": 4,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_4F",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 20,
+          "y": 3,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_4F",
+          "dest_warp_id": "0"
+        }
+      ],
+      "services": [
+        "Area_TowerVisitor"
+      ],
+      "reference_header": "MAP_BELL_TOWER_3F",
+      "reference_geometry": "checked against pinned HGSS facts; supported by existing exact geometry validators",
+      "adaptations": [
+        "Original GBA-compatible temple art, no HGSS graphics copied",
+        "DS coordinates translated to crop unused matrix margin; no relative layout change",
+        "Existing legacy exterior warp aliases preserved where applicable"
+      ],
+      "native_screenshot": "../qa/ecruteak-qa07/city-tour/EcruteakCity_BellTower_3F.png",
+      "native_view_inspected": true,
+      "controller_declared_warp_roundtrips": "PASS; city-tour/coverage.json lists each pair",
+      "unapproved_story": "not added",
+      "owner_visual_acceptance": "PENDING",
+      "remaining": "See ECRUTEAK_QA07.md: unmatched current green-roof report, visual acceptance and explicit reference/art limitations",
+      "reference_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0017_D17R0103.bin",
+        "matrix_blob_sha": "d87644b1addc44f1d84c6f85c4bb8dae007c0274",
+        "events": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/eventdata/zone_event/304_D17R0103.json",
+        "events_blob_sha": "7a73ea73e69dc005dca45c3e7bde568c1dbca98c",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      }
+    },
+    {
+      "name": "EcruteakCity_BellTower_4F",
+      "map_constant": "MAP_ECRUTEAKCITY_BELLTOWER_4F",
+      "map_group": 75,
+      "map_number": 26,
+      "layout_constant": "LAYOUT_ECRUTEAKCITY_BELLTOWER_4F",
+      "layout_number": 802,
+      "dimensions": [
+        24,
+        24
+      ],
+      "purpose": "Reference Bell Tower 4F: wooden walkways, rails/braces, pillars and canonical stair/pad/jump network",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 20,
+          "y": 4,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_3F",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 2,
+          "y": 4,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_5F",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 2,
+          "y": 3,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_5F",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 2,
+          "y": 21,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_5F",
+          "dest_warp_id": "2"
+        },
+        {
+          "x": 2,
+          "y": 20,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_5F",
+          "dest_warp_id": "2"
+        },
+        {
+          "x": 20,
+          "y": 21,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_5F",
+          "dest_warp_id": "3"
+        },
+        {
+          "x": 20,
+          "y": 20,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_5F",
+          "dest_warp_id": "3"
+        }
+      ],
+      "services": [],
+      "reference_header": "MAP_BELL_TOWER_4F",
+      "reference_geometry": "checked against pinned HGSS facts; supported by existing exact geometry validators",
+      "adaptations": [
+        "Original GBA-compatible temple art, no HGSS graphics copied",
+        "DS coordinates translated to crop unused matrix margin; no relative layout change",
+        "Existing legacy exterior warp aliases preserved where applicable"
+      ],
+      "native_screenshot": "../qa/ecruteak-qa07/city-tour/EcruteakCity_BellTower_4F.png",
+      "native_view_inspected": true,
+      "controller_declared_warp_roundtrips": "PASS; city-tour/coverage.json lists each pair",
+      "unapproved_story": "not added",
+      "owner_visual_acceptance": "PENDING",
+      "remaining": "See ECRUTEAK_QA07.md: unmatched current green-roof report, visual acceptance and explicit reference/art limitations",
+      "reference_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0018_D17R0104.bin",
+        "matrix_blob_sha": "52cd6eabf5ce709e9cde805d3e2b467676f1c33e",
+        "events": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/eventdata/zone_event/305_D17R0104.json",
+        "events_blob_sha": "0951bccf59eccc1da5bf045f5cb73dd96d0cbdf1",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      }
+    },
+    {
+      "name": "EcruteakCity_BellTower_5F",
+      "map_constant": "MAP_ECRUTEAKCITY_BELLTOWER_5F",
+      "map_group": 75,
+      "map_number": 27,
+      "layout_constant": "LAYOUT_ECRUTEAKCITY_BELLTOWER_5F",
+      "layout_number": 803,
+      "dimensions": [
+        24,
+        24
+      ],
+      "purpose": "Reference Bell Tower 5F: wooden walkways, rails/braces, pillars and canonical stair/pad/jump network",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 2,
+          "y": 4,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_4F",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 9,
+          "y": 21,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_6F",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 2,
+          "y": 21,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_4F",
+          "dest_warp_id": "3"
+        },
+        {
+          "x": 20,
+          "y": 21,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_4F",
+          "dest_warp_id": "5"
+        },
+        {
+          "x": 9,
+          "y": 20,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_6F",
+          "dest_warp_id": "0"
+        }
+      ],
+      "services": [],
+      "reference_header": "MAP_BELL_TOWER_5F",
+      "reference_geometry": "checked against pinned HGSS facts; supported by existing exact geometry validators",
+      "adaptations": [
+        "Original GBA-compatible temple art, no HGSS graphics copied",
+        "DS coordinates translated to crop unused matrix margin; no relative layout change",
+        "Existing legacy exterior warp aliases preserved where applicable"
+      ],
+      "native_screenshot": "../qa/ecruteak-qa07/city-tour/EcruteakCity_BellTower_5F.png",
+      "native_view_inspected": true,
+      "controller_declared_warp_roundtrips": "PASS; city-tour/coverage.json lists each pair",
+      "unapproved_story": "not added",
+      "owner_visual_acceptance": "PENDING",
+      "remaining": "See ECRUTEAK_QA07.md: unmatched current green-roof report, visual acceptance and explicit reference/art limitations",
+      "reference_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0019_D17R0105.bin",
+        "matrix_blob_sha": "976b35a857404a9fae8c4b645d0893b7ffdd0d3d",
+        "events": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/eventdata/zone_event/306_D17R0105.json",
+        "events_blob_sha": "9d92599e66fb909108e11db1828fbb89a703cca7",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      }
+    },
+    {
+      "name": "EcruteakCity_BellTower_6F",
+      "map_constant": "MAP_ECRUTEAKCITY_BELLTOWER_6F",
+      "map_group": 75,
+      "map_number": 28,
+      "layout_constant": "LAYOUT_ECRUTEAKCITY_BELLTOWER_6F",
+      "layout_number": 804,
+      "dimensions": [
+        24,
+        24
+      ],
+      "purpose": "Reference Bell Tower 6F: wooden walkways, rails/braces, pillars and canonical stair/pad/jump network",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 9,
+          "y": 21,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_5F",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 2,
+          "y": 15,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_7F",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 2,
+          "y": 14,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_7F",
+          "dest_warp_id": "0"
+        }
+      ],
+      "services": [],
+      "reference_header": "MAP_BELL_TOWER_6F",
+      "reference_geometry": "checked against pinned HGSS facts; supported by existing exact geometry validators",
+      "adaptations": [
+        "Original GBA-compatible temple art, no HGSS graphics copied",
+        "DS coordinates translated to crop unused matrix margin; no relative layout change",
+        "Existing legacy exterior warp aliases preserved where applicable"
+      ],
+      "native_screenshot": "../qa/ecruteak-qa07/city-tour/EcruteakCity_BellTower_6F.png",
+      "native_view_inspected": true,
+      "controller_declared_warp_roundtrips": "PASS; city-tour/coverage.json lists each pair",
+      "unapproved_story": "not added",
+      "owner_visual_acceptance": "PENDING",
+      "remaining": "See ECRUTEAK_QA07.md: unmatched current green-roof report, visual acceptance and explicit reference/art limitations",
+      "reference_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0020_D17R0106.bin",
+        "matrix_blob_sha": "21d8168cb6be5b8a0d64c6502ef0e07fdb585e09",
+        "events": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/eventdata/zone_event/307_D17R0106.json",
+        "events_blob_sha": "1b9c09cf83c9c854a22191208898491defba768e",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      }
+    },
+    {
+      "name": "EcruteakCity_BellTower_7F",
+      "map_constant": "MAP_ECRUTEAKCITY_BELLTOWER_7F",
+      "map_group": 75,
+      "map_number": 29,
+      "layout_constant": "LAYOUT_ECRUTEAKCITY_BELLTOWER_7F",
+      "layout_number": 805,
+      "dimensions": [
+        24,
+        24
+      ],
+      "purpose": "Reference Bell Tower 7F: wooden walkways, rails/braces, pillars and canonical stair/pad/jump network",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 2,
+          "y": 15,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_6F",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 11,
+          "y": 22,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_8F",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 8,
+          "y": 12,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_9F",
+          "dest_warp_id": "3"
+        },
+        {
+          "x": 14,
+          "y": 12,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_7F",
+          "dest_warp_id": "4"
+        },
+        {
+          "x": 5,
+          "y": 6,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_7F",
+          "dest_warp_id": "3"
+        }
+      ],
+      "services": [],
+      "reference_header": "MAP_BELL_TOWER_7F",
+      "reference_geometry": "checked against pinned HGSS facts; supported by existing exact geometry validators",
+      "adaptations": [
+        "Original GBA-compatible temple art, no HGSS graphics copied",
+        "DS coordinates translated to crop unused matrix margin; no relative layout change",
+        "Existing legacy exterior warp aliases preserved where applicable"
+      ],
+      "native_screenshot": "../qa/ecruteak-qa07/city-tour/EcruteakCity_BellTower_7F.png",
+      "native_view_inspected": true,
+      "controller_declared_warp_roundtrips": "PASS; city-tour/coverage.json lists each pair",
+      "unapproved_story": "not added",
+      "owner_visual_acceptance": "PENDING",
+      "remaining": "See ECRUTEAK_QA07.md: unmatched current green-roof report, visual acceptance and explicit reference/art limitations",
+      "reference_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0021_D17R0107.bin",
+        "matrix_blob_sha": "2c2618fea6803d0cc5e6faf422f7cc27b3b9d861",
+        "events": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/eventdata/zone_event/308_D17R0107.json",
+        "events_blob_sha": "2c09c71a6b9c13225ca004957c4055326e0b8818",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      }
+    },
+    {
+      "name": "EcruteakCity_BellTower_8F",
+      "map_constant": "MAP_ECRUTEAKCITY_BELLTOWER_8F",
+      "map_group": 75,
+      "map_number": 30,
+      "layout_constant": "LAYOUT_ECRUTEAKCITY_BELLTOWER_8F",
+      "layout_number": 806,
+      "dimensions": [
+        24,
+        24
+      ],
+      "purpose": "Reference Bell Tower 8F: wooden walkways, rails/braces, pillars and canonical stair/pad/jump network",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 3,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_7F",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 3,
+          "y": 16,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_9F",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 12,
+          "y": 5,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_9F",
+          "dest_warp_id": "2"
+        },
+        {
+          "x": 7,
+          "y": 14,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_9F",
+          "dest_warp_id": "5"
+        },
+        {
+          "x": 19,
+          "y": 13,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_9F",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 20,
+          "y": 20,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_9F",
+          "dest_warp_id": "4"
+        }
+      ],
+      "services": [],
+      "reference_header": "MAP_BELL_TOWER_8F",
+      "reference_geometry": "checked against pinned HGSS facts; supported by existing exact geometry validators",
+      "adaptations": [
+        "Original GBA-compatible temple art, no HGSS graphics copied",
+        "DS coordinates translated to crop unused matrix margin; no relative layout change",
+        "Existing legacy exterior warp aliases preserved where applicable"
+      ],
+      "native_screenshot": "../qa/ecruteak-qa07/city-tour/EcruteakCity_BellTower_8F.png",
+      "native_view_inspected": true,
+      "controller_declared_warp_roundtrips": "PASS; city-tour/coverage.json lists each pair",
+      "unapproved_story": "not added",
+      "owner_visual_acceptance": "PENDING",
+      "remaining": "See ECRUTEAK_QA07.md: unmatched current green-roof report, visual acceptance and explicit reference/art limitations",
+      "reference_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0022_D17R0108.bin",
+        "matrix_blob_sha": "a645b4f1be8b40998a2346643f4dc3e8d159a611",
+        "events": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/eventdata/zone_event/309_D17R0108.json",
+        "events_blob_sha": "80785f113ab1956f4f403477c962edc050d193b7",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      }
+    },
+    {
+      "name": "EcruteakCity_BellTower_9F",
+      "map_constant": "MAP_ECRUTEAKCITY_BELLTOWER_9F",
+      "map_group": 75,
+      "map_number": 31,
+      "layout_constant": "LAYOUT_ECRUTEAKCITY_BELLTOWER_9F",
+      "layout_number": 807,
+      "dimensions": [
+        24,
+        24
+      ],
+      "purpose": "Reference Bell Tower 9F: wooden walkways, rails/braces, pillars and canonical stair/pad/jump network",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 2,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_8F",
+          "dest_warp_id": "4"
+        },
+        {
+          "x": 16,
+          "y": 3,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_8F",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 14,
+          "y": 11,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_8F",
+          "dest_warp_id": "2"
+        },
+        {
+          "x": 20,
+          "y": 11,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_7F",
+          "dest_warp_id": "2"
+        },
+        {
+          "x": 6,
+          "y": 19,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_8F",
+          "dest_warp_id": "5"
+        },
+        {
+          "x": 10,
+          "y": 21,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_8F",
+          "dest_warp_id": "3"
+        },
+        {
+          "x": 8,
+          "y": 13,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER10F",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 8,
+          "y": 12,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER10F",
+          "dest_warp_id": "0"
+        }
+      ],
+      "services": [
+        "Area_TowerVisitor"
+      ],
+      "reference_header": "MAP_BELL_TOWER_9F",
+      "reference_geometry": "checked against pinned HGSS facts; supported by existing exact geometry validators",
+      "adaptations": [
+        "Original GBA-compatible temple art, no HGSS graphics copied",
+        "DS coordinates translated to crop unused matrix margin; no relative layout change",
+        "Existing legacy exterior warp aliases preserved where applicable"
+      ],
+      "native_screenshot": "../qa/ecruteak-qa07/city-tour/EcruteakCity_BellTower_9F.png",
+      "native_view_inspected": true,
+      "controller_declared_warp_roundtrips": "PASS; city-tour/coverage.json lists each pair",
+      "unapproved_story": "not added",
+      "owner_visual_acceptance": "PENDING",
+      "remaining": "See ECRUTEAK_QA07.md: unmatched current green-roof report, visual acceptance and explicit reference/art limitations",
+      "reference_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0023_D17R0109.bin",
+        "matrix_blob_sha": "c50958f12eadb43c11035791f1783e3a95f4d1e8",
+        "events": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/eventdata/zone_event/310_D17R0109.json",
+        "events_blob_sha": "6e8edfbaed1d61a95f8796322286e278a34e6dda",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      }
+    },
+    {
+      "name": "EcruteakCity_BurnedTower_B1F",
+      "map_constant": "MAP_ECRUTEAKCITY_BURNEDTOWER_B1F",
+      "map_group": 75,
+      "map_number": 32,
+      "layout_constant": "LAYOUT_ECRUTEAKCITY_BURNEDTOWER_B1F",
+      "layout_number": 809,
+      "dimensions": [
+        24,
+        24
+      ],
+      "purpose": "Ash/rubble, pillars, paths and reciprocal basement stair",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 19,
+          "y": 12,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_BURNED_TOWER",
+          "dest_warp_id": "2"
+        },
+        {
+          "x": 19,
+          "y": 11,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_BURNED_TOWER",
+          "dest_warp_id": "2"
+        }
+      ],
+      "services": [
+        "Area_BurnedVisitor"
+      ],
+      "reference_header": "MAP_BURNED_TOWER_B1F",
+      "reference_geometry": "checked against pinned HGSS facts; supported by existing exact geometry validators",
+      "adaptations": [
+        "Original GBA-compatible temple art, no HGSS graphics copied",
+        "DS coordinates translated to crop unused matrix margin; no relative layout change",
+        "Existing legacy exterior warp aliases preserved where applicable"
+      ],
+      "native_screenshot": "../qa/ecruteak-qa07/city-tour/EcruteakCity_BurnedTower_B1F.png",
+      "native_view_inspected": true,
+      "controller_declared_warp_roundtrips": "PASS; city-tour/coverage.json lists each pair",
+      "unapproved_story": "not added",
+      "owner_visual_acceptance": "PENDING",
+      "remaining": "See ECRUTEAK_QA07.md: unmatched current green-roof report, visual acceptance and explicit reference/art limitations",
+      "reference_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0026_D18R0102.bin",
+        "matrix_blob_sha": "1505fce5d161e2910626f09ff6c58b753357206c",
+        "events": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/eventdata/zone_event/204_D18R0102.json",
+        "events_blob_sha": "150ac6c065b07b37e792c938509c13d80a9acf71",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      }
+    },
+    {
+      "name": "EcruteakCity_Gym_Arena",
+      "map_constant": "MAP_ECRUTEAKCITY_GYM_ARENA",
+      "map_group": 75,
+      "map_number": 34,
+      "layout_constant": "LAYOUT_ECRUTEAKCITY_GYM_ARENA",
+      "layout_number": 814,
+      "dimensions": [
+        18,
+        27
+      ],
+      "purpose": "Upper bridge, lamps, optional Morty/student practices and safe falls",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 13,
+          "y": 26,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_GYM",
+          "dest_warp_id": "2"
+        }
+      ],
+      "services": [
+        "Area_PracticeMorty",
+        "Area_MortyApprentice",
+        "Hgss_GymLamp",
+        "Hgss_GymLamp"
+      ],
+      "reference_header": "MAP_ECRUTEAK_GYM",
+      "reference_geometry": "checked against pinned HGSS facts; supported by existing exact geometry validators",
+      "adaptations": [
+        "Tall DS room split at source chunk seam into existing two GBA map IDs",
+        "Native scripted return when stepping off bridge; no badge gate or candle-extinguishing battle rule",
+        "Accepted Morty/student practice scripts retained; optional student beside path"
+      ],
+      "native_screenshot": "../qa/ecruteak-qa07/city-tour/EcruteakCity_Gym_Arena.png",
+      "native_view_inspected": true,
+      "controller_declared_warp_roundtrips": "PASS; city-tour/coverage.json lists each pair",
+      "unapproved_story": "not added",
+      "owner_visual_acceptance": "PENDING",
+      "remaining": "See ECRUTEAK_QA07.md: unmatched current green-roof report, visual acceptance and explicit reference/art limitations",
+      "reference_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0090_T27GYM0101.bin",
+        "matrix_blob_sha": "dd26504c938b227763f32ecc2252e0d294f8e7b6",
+        "events": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/eventdata/zone_event/077_T27GYM0101.json",
+        "events_blob_sha": "5cac2d015c6848cc83dca86c5d477224eae860cc",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      }
+    },
+    {
+      "name": "EcruteakCity_BarrierStation",
+      "map_constant": "MAP_ECRUTEAK_CITY_BARRIER_STATION",
+      "map_group": 76,
+      "map_number": 22,
+      "layout_constant": "LAYOUT_ECRUTEAK_CITY_BARRIER_STATION",
+      "layout_number": 913,
+      "dimensions": [
+        20,
+        12
+      ],
+      "purpose": "Three caretakers, prayer alcoves, clear entrance and corridor stair",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 9,
+          "y": 11,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 15,
+          "y": 3,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_BARRIER_CORRIDOR",
+          "dest_warp_id": "0"
+        }
+      ],
+      "services": [
+        "Hgss_TempleCaretaker",
+        "Hgss_TempleCaretaker",
+        "Hgss_TempleCaretaker"
+      ],
+      "reference_header": "MAP_ECRUTEAK_BELL_TOWER_BARRIER_STATION",
+      "reference_geometry": "checked against pinned HGSS facts; supported by existing exact geometry validators",
+      "adaptations": [],
+      "native_screenshot": "../qa/ecruteak-qa07/city-tour/EcruteakCity_BarrierStation.png",
+      "native_view_inspected": true,
+      "controller_declared_warp_roundtrips": "PASS; city-tour/coverage.json lists each pair",
+      "unapproved_story": "not added",
+      "owner_visual_acceptance": "PENDING",
+      "remaining": "See ECRUTEAK_QA07.md: unmatched current green-roof report, visual acceptance and explicit reference/art limitations",
+      "reference_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0068_T27R0201.bin",
+        "matrix_blob_sha": "02eba1edd646a50979acf798c35b6cc25b2ceb9b",
+        "events": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/eventdata/zone_event/080_T27R0201.json",
+        "events_blob_sha": "988739734eb9fd992340bb6e670c31edc4585b5a",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      }
+    },
+    {
+      "name": "EcruteakCity_BarrierCorridor",
+      "map_constant": "MAP_ECRUTEAK_CITY_BARRIER_CORRIDOR",
+      "map_group": 76,
+      "map_number": 23,
+      "layout_constant": "LAYOUT_ECRUTEAK_CITY_BARRIER_CORRIDOR",
+      "layout_number": 914,
+      "dimensions": [
+        10,
+        22
+      ],
+      "purpose": "Timber corridor, rails and both stair endpoints",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 3,
+          "y": 19,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_BARRIER_STATION",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 6,
+          "y": 3,
+          "elevation": 0,
+          "dest_map": "MAP_BELLCHIME_TRAIL",
+          "dest_warp_id": "0"
+        }
+      ],
+      "services": [],
+      "reference_header": "MAP_ECRUTEAK_BELL_TOWER_BARRIER_STATION_CORRIDOR",
+      "reference_geometry": "checked against pinned HGSS facts; supported by existing exact geometry validators",
+      "adaptations": [],
+      "native_screenshot": "../qa/ecruteak-qa07/city-tour/EcruteakCity_BarrierCorridor.png",
+      "native_view_inspected": true,
+      "controller_declared_warp_roundtrips": "PASS; city-tour/coverage.json lists each pair",
+      "unapproved_story": "not added",
+      "owner_visual_acceptance": "PENDING",
+      "remaining": "See ECRUTEAK_QA07.md: unmatched current green-roof report, visual acceptance and explicit reference/art limitations",
+      "reference_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0130_T27R0202.bin",
+        "matrix_blob_sha": "35e168d4d7f897ffda1255c5c11b0853c1a26dfc",
+        "events": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/eventdata/zone_event/203_T27R0202.json",
+        "events_blob_sha": "60a63c4741521edb873a2d50e59f252293771080",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      }
+    },
+    {
+      "name": "BellchimeTrail",
+      "map_constant": "MAP_BELLCHIME_TRAIL",
+      "map_group": 76,
+      "map_number": 24,
+      "layout_constant": "LAYOUT_BELLCHIME_TRAIL",
+      "layout_number": 915,
+      "dimensions": [
+        64,
+        36
+      ],
+      "purpose": "Canonical autumn route footprint, station return, tall tower and clear approaches",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 9,
+          "y": 14,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_BARRIER_CORRIDOR",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 37,
+          "y": 20,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_BELL_TOWER",
+          "dest_warp_id": "0"
+        }
+      ],
+      "services": [],
+      "reference_header": "MAP_BELLCHIME_TOWER",
+      "reference_geometry": "checked against pinned HGSS facts; supported by existing exact geometry validators",
+      "adaptations": [
+        "Canonical source footprint translated four cells south to fit the tall2D tower; source connections retained",
+        "Autumn tree/leaf palettes and native stone path replace DS models; no legendary event"
+      ],
+      "native_screenshot": "../qa/ecruteak-qa07/city-tour/BellchimeTrail.png",
+      "native_view_inspected": true,
+      "controller_declared_warp_roundtrips": "PASS; city-tour/coverage.json lists each pair",
+      "unapproved_story": "not added",
+      "owner_visual_acceptance": "PENDING",
+      "remaining": "See ECRUTEAK_QA07.md: unmatched current green-roof report, visual acceptance and explicit reference/art limitations",
+      "reference_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0067_D17R1101.bin",
+        "matrix_blob_sha": "255e4ae1dba787eb5c64a3612897cf7988032917",
+        "events": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/eventdata/zone_event/004_D17R1101.json",
+        "events_blob_sha": "a72175ab87840ecd2f28db6cad7073ee3a229c08",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      }
+    },
+    {
+      "name": "EcruteakCity_BellTower_10F",
+      "map_constant": "MAP_ECRUTEAKCITY_BELLTOWER10F",
+      "map_group": 76,
+      "map_number": 25,
+      "layout_constant": "LAYOUT_HGSS_BELLTOWER10F",
+      "layout_number": 916,
+      "dimensions": [
+        24,
+        24
+      ],
+      "purpose": "Reference Bell Tower 10F: wooden walkways, rails/braces, pillars and canonical stair/pad/jump network",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 7,
+          "y": 13,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_9F",
+          "dest_warp_id": "6"
+        },
+        {
+          "x": 11,
+          "y": 21,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWERROOF",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 11,
+          "y": 20,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWERROOF",
+          "dest_warp_id": "0"
+        }
+      ],
+      "services": [],
+      "reference_header": "MAP_BELL_TOWER_10F",
+      "reference_geometry": "checked against pinned HGSS facts; supported by existing exact geometry validators",
+      "adaptations": [
+        "Original GBA-compatible temple art, no HGSS graphics copied",
+        "DS coordinates translated to crop unused matrix margin; no relative layout change",
+        "Existing legacy exterior warp aliases preserved where applicable"
+      ],
+      "native_screenshot": "../qa/ecruteak-qa07/city-tour/EcruteakCity_BellTower_10F.png",
+      "native_view_inspected": true,
+      "controller_declared_warp_roundtrips": "PASS; city-tour/coverage.json lists each pair",
+      "unapproved_story": "not added",
+      "owner_visual_acceptance": "PENDING",
+      "remaining": "See ECRUTEAK_QA07.md: unmatched current green-roof report, visual acceptance and explicit reference/art limitations",
+      "reference_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0183_D17R0112.bin",
+        "matrix_blob_sha": "9a42ceb5a1f1d3d7d497b38f6061b42e38c9eea2",
+        "events": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/eventdata/zone_event/312_D17R0112.json",
+        "events_blob_sha": "81ba9f8e39ab39966ca940d98fd591fa16566788",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      }
+    },
+    {
+      "name": "EcruteakCity_BellTower_Roof",
+      "map_constant": "MAP_ECRUTEAKCITY_BELLTOWERROOF",
+      "map_group": 76,
+      "map_number": 26,
+      "layout_constant": "LAYOUT_HGSS_BELLTOWERROOF",
+      "layout_number": 917,
+      "dimensions": [
+        32,
+        32
+      ],
+      "purpose": "Reference Bell Tower roof, spire and ladder",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 15,
+          "y": 24,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER10F",
+          "dest_warp_id": "1"
+        }
+      ],
+      "services": [],
+      "reference_header": "MAP_BELL_TOWER_ROOF",
+      "reference_geometry": "checked against pinned HGSS facts; supported by existing exact geometry validators",
+      "adaptations": [
+        "Original GBA-compatible temple art, no HGSS graphics copied",
+        "DS coordinates translated to crop unused matrix margin; no relative layout change",
+        "Existing legacy exterior warp aliases preserved where applicable"
+      ],
+      "native_screenshot": "../qa/ecruteak-qa07/city-tour/EcruteakCity_BellTower_Roof.png",
+      "native_view_inspected": true,
+      "controller_declared_warp_roundtrips": "PASS; city-tour/coverage.json lists each pair",
+      "unapproved_story": "not added",
+      "owner_visual_acceptance": "PENDING",
+      "remaining": "See ECRUTEAK_QA07.md: unmatched current green-roof report, visual acceptance and explicit reference/art limitations",
+      "reference_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0024_D17R0110.bin",
+        "matrix_blob_sha": "0b0029ce75d7cd4edf8d2aaf57d839658a812ad3",
+        "events": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/eventdata/zone_event/311_D17R0110.json",
+        "events_blob_sha": "40698806058b4b5407aea708de384b3376313fd2",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      }
+    },
+    {
+      "name": "EcruteakCity_DowsingHouse",
+      "map_constant": "MAP_ECRUTEAK_CITY_DOWSING_HOUSE",
+      "map_group": 76,
+      "map_number": 27,
+      "layout_constant": "LAYOUT_HGSS_ECRUTEAKCITY_DOWSINGHOUSE",
+      "layout_number": 919,
+      "dimensions": [
+        11,
+        10
+      ],
+      "purpose": "Second furnished canonical home, no unapproved item reward",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 4,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY",
+          "dest_warp_id": "8"
+        },
+        {
+          "x": 5,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY",
+          "dest_warp_id": "8"
+        }
+      ],
+      "services": [
+        "Hgss_HouseResident",
+        "Hgss_HouseChild"
+      ],
+      "reference_header": "MAP_ECRUTEAK_DOWSING_MACHINE_HOUSE",
+      "reference_geometry": "checked against pinned HGSS facts; supported by existing exact geometry validators",
+      "adaptations": [
+        "GBA furniture/flat room instead of DS models",
+        "No HGSS plot actors or item reward imported",
+        "Legacy paired exit retained"
+      ],
+      "native_screenshot": "../qa/ecruteak-qa07/city-tour/EcruteakCity_DowsingHouse.png",
+      "native_view_inspected": true,
+      "controller_declared_warp_roundtrips": "PASS; city-tour/coverage.json lists each pair",
+      "unapproved_story": "not added",
+      "owner_visual_acceptance": "PENDING",
+      "remaining": "See ECRUTEAK_QA07.md: unmatched current green-roof report, visual acceptance and explicit reference/art limitations",
+      "reference_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0066_T20R0301.bin",
+        "matrix_blob_sha": "c41931ad02b8576b73929e84389f185d95c04213",
+        "events": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/eventdata/zone_event/081_T27R0801.json",
+        "events_blob_sha": "8cbe81325f3caed794bd06e20588ede2096fb6ac",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      }
+    },
+    {
+      "name": "EcruteakCity_PokemonCenter_B1F",
+      "map_constant": "MAP_ECRUTEAK_CITY_POKEMON_CENTER_B1F",
+      "map_group": 76,
+      "map_number": 28,
+      "layout_constant": "LAYOUT_HGSS_ECRUTEAKCITY_POKEMONCENTER_B1F",
+      "layout_number": 921,
+      "dimensions": [
+        17,
+        12
+      ],
+      "purpose": "Offline communication desks, waiting bench and working return stairs",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 14,
+          "y": 10,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_POKEMON_CENTER_1F",
+          "dest_warp_id": "2"
+        }
+      ],
+      "services": [
+        "Hgss_CommunicationDesk",
+        "Hgss_CommunicationDesk",
+        "Hgss_CommunicationDesk"
+      ],
+      "reference_header": "MAP_ECRUTEAK_POKECENTER_B1F",
+      "reference_geometry": "checked against pinned HGSS facts; supported by existing exact geometry validators",
+      "adaptations": [
+        "Wi-Fi desks are ambient offline reception; no internet functionality claimed",
+        "Native GBA stairs retain canonical source coordinate"
+      ],
+      "native_screenshot": "../qa/ecruteak-qa07/city-tour/EcruteakCity_PokemonCenter_B1F.png",
+      "native_view_inspected": true,
+      "controller_declared_warp_roundtrips": "PASS; city-tour/coverage.json lists each pair",
+      "unapproved_story": "not added",
+      "owner_visual_acceptance": "PENDING",
+      "remaining": "See ECRUTEAK_QA07.md: unmatched current green-roof report, visual acceptance and explicit reference/art limitations",
+      "reference_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0077_T27PC0105.bin",
+        "matrix_blob_sha": "0c7f359a1e6d95db32ee52ef57a566bac1589119",
+        "events": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/eventdata/zone_event/127_T27PC0105.json",
+        "events_blob_sha": "c92af4e279062748f1a8519d244804dc35998f88",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      }
+    },
+    {
+      "name": "EcruteakCity_WestGate",
+      "map_constant": "MAP_ECRUTEAK_CITY_WEST_GATE",
+      "map_group": 76,
+      "map_number": 29,
+      "layout_constant": "LAYOUT_HGSS_ECRUTEAKCITY_WESTGATE",
+      "layout_number": 923,
+      "dimensions": [
+        12,
+        12
+      ],
+      "purpose": "Furnished reference gate, route/city wayfinding, all road-width aliases",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 10,
+          "y": 7,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY",
+          "dest_warp_id": "10"
+        },
+        {
+          "x": 1,
+          "y": 7,
+          "elevation": 0,
+          "dest_map": "MAP_JOHTO_ROUTE38",
+          "dest_warp_id": "1"
+        }
+      ],
+      "services": [
+        "Hgss_WestGateGuide"
+      ],
+      "reference_header": "MAP_ROUTE_38_ECRUTEAK_GATEHOUSE",
+      "reference_geometry": "checked against pinned HGSS facts; supported by existing exact geometry validators",
+      "adaptations": [
+        "GBA flat gatehouse/pillars instead of DS models",
+        "Three road-width aliases; canonical center entrance retained",
+        "Existing border metadata retained; safe horizontal coordinate portals use original shared-buffer paving"
+      ],
+      "native_screenshot": "../qa/ecruteak-qa07/city-tour/EcruteakCity_WestGate.png",
+      "native_view_inspected": true,
+      "controller_declared_warp_roundtrips": "PASS; city-tour/coverage.json lists each pair",
+      "unapproved_story": "not added",
+      "owner_visual_acceptance": "PENDING",
+      "remaining": "See ECRUTEAK_QA07.md: unmatched current green-roof report, visual acceptance and explicit reference/art limitations",
+      "reference_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0070_R31R0101.bin",
+        "matrix_blob_sha": "eaa041ca8ee65f17237aafbfe80de7d7bbe24f03",
+        "events": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/eventdata/zone_event/166_R38R0101.json",
+        "events_blob_sha": "24e849f612995791b6a16746b7810d33d7e11ab4",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      }
+    },
+    {
+      "name": "EcruteakCity_EastGate",
+      "map_constant": "MAP_ECRUTEAK_CITY_EAST_GATE",
+      "map_group": 76,
+      "map_number": 30,
+      "layout_constant": "LAYOUT_HGSS_ECRUTEAKCITY_EASTGATE",
+      "layout_number": 924,
+      "dimensions": [
+        12,
+        12
+      ],
+      "purpose": "Furnished reference gate, route/city wayfinding, all road-width aliases",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 1,
+          "y": 7,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY",
+          "dest_warp_id": "13"
+        },
+        {
+          "x": 10,
+          "y": 7,
+          "elevation": 0,
+          "dest_map": "MAP_JOHTO_ROUTE42",
+          "dest_warp_id": "4"
+        }
+      ],
+      "services": [
+        "Hgss_EastGateGuide"
+      ],
+      "reference_header": "MAP_ROUTE_42_ECRUTEAK_GATEHOUSE",
+      "reference_geometry": "checked against pinned HGSS facts; supported by existing exact geometry validators",
+      "adaptations": [
+        "GBA flat gatehouse/pillars instead of DS models",
+        "Three road-width aliases; canonical center entrance retained",
+        "Existing border metadata retained; safe horizontal coordinate portals use original shared-buffer paving"
+      ],
+      "native_screenshot": "../qa/ecruteak-qa07/city-tour/EcruteakCity_EastGate.png",
+      "native_view_inspected": true,
+      "controller_declared_warp_roundtrips": "PASS; city-tour/coverage.json lists each pair",
+      "unapproved_story": "not added",
+      "owner_visual_acceptance": "PENDING",
+      "remaining": "See ECRUTEAK_QA07.md: unmatched current green-roof report, visual acceptance and explicit reference/art limitations",
+      "reference_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0070_R31R0101.bin",
+        "matrix_blob_sha": "eaa041ca8ee65f17237aafbfe80de7d7bbe24f03",
+        "events": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/eventdata/zone_event/128_R42R0101.json",
+        "events_blob_sha": "c57eec3bb433d285cb5094f6fcea87ff94823a29",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      }
+    }
+  ]
+}

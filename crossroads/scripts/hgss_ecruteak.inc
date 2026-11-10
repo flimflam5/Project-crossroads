@@ -4,6 +4,11 @@ Hgss_TempleCaretaker::
     end
 Hgss_TempleText:
     .string "Please keep the steps clear.\nThe corridor leads to BELLCHIME TRAIL.$"
+Hgss_PrivateResidence::
+    msgbox Hgss_PrivateResidenceText, MSGBOX_SIGN
+    end
+Hgss_PrivateResidenceText:
+    .string "Private residence.\nThe door is locked.$"
 Hgss_GymLamp::
     msgbox Hgss_GymLampText, MSGBOX_NPC
     end

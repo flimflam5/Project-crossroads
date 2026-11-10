@@ -6,8 +6,9 @@ No ROM items, badges, maps or source-save data are patched.
 """
 import argparse,runpy,sys,json
 from pathlib import Path
-p=argparse.ArgumentParser();p.add_argument('--save',required=True);p.add_argument('--library',default='/tmp/johto-bridge.so');args=p.parse_args()
-sys.argv=['qa_kit_smoke.py','--save',args.save,'--library',args.library];k=runpy.run_path('crossroads/tools/qa_kit_smoke.py');d=k['d'];read=d['read'];write=d['write'];frames=d['frames'];key=d['key'];syms=d['syms'];sb=d['sb'];out=Path('build/qa05-joe-fields');out.mkdir(parents=True,exist_ok=True)
+p=argparse.ArgumentParser();p.add_argument('--save',required=True);p.add_argument('--library',default='/tmp/johto-bridge.so');p.add_argument('--output',default='build/qa05-joe-fields');args=p.parse_args()
+out=Path(args.output);out.mkdir(parents=True,exist_ok=True)
+sys.argv=['qa_kit_smoke.py','--save',args.save,'--library',args.library,'--output',str(out/'kit')];k=runpy.run_path('crossroads/tools/qa_kit_smoke.py');d=k['d'];read=d['read'];write=d['write'];frames=d['frames'];key=d['key'];syms=d['syms'];sb=d['sb']
 def graphics():return read(syms['gObjectEvents']+read(syms['gPlayerAvatar']+5,1)*36+4,2)
 def verify(name,gfx):
  assert graphics()==gfx,(name,hex(graphics()),hex(gfx))

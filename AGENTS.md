@@ -147,3 +147,20 @@ Most of Johto remains unreconstructed. Next geographic work is Routes31/32/36
 from recovered references, not a generic-town propagation. SaveObjectEvents
 byte-swaps graphics IDs; any pre-load migration must mirror LoadObjectEvents.
 Survey Surf assistance clears at cold boot; tests must use the actual desk again.
+
+## Current owner priority — Ecruteak dependability / QA07
+
+Stop geographic expansion. Continue QA06 on feature/ecruteak-dependability-qa07.
+Finish and inspect Ecruteak's27-map city/landmark/interior scope; preserve the
+liked exterior, building artwork, custom Gym, IDs, saves and accepted systems.
+Reproduce Delta reports with normal controller movement: tree/building clipping,
+spurious ground arrows, green-roof entrance/pass-through behavior. Identify exact
+maps/builds rather than assuming old screenshots represent the current ROM.
+Source-only fixes must update generators and meaningful semantic regressions;
+raw blocked-edge counts alone do not prove a wall/trunk is correctly marked.
+Record normal-play before/after clips, both-way doors/connections/stairs, services,
+Save/cold Continue and explicit GBA adaptations. No new story/teams/encounters.
+Do not move to another area until the owner reviews Ecruteak. Closed canonical
+private facades/unsupported DS online services must be explained, not mislabeled
+as unexplained placeholders. Checklist and exact resume state: crossroads/hgss/
+ECRUTEAK_QA07.md when created. Other-region expansion notes above are superseded.

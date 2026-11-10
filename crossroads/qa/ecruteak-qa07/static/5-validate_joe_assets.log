@@ -1,0 +1,3 @@
+Joe source frames, transparency, shared palette, exact repack, 4-direction animations and playable wiring: PASS
+Joe spin animations preserve finite completion and 4-direction rotation: PASS
+Joe palette appended without shifting existing ordinals; trainer assets and references: PASS
