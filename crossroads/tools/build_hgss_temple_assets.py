@@ -81,6 +81,7 @@ base=specs['stone']['start']-512;specs['stone_warp']=dict(start=512+len(attrs),w
 assert len(attrs)<=512,('Temple metatile capacity',len(attrs))
 def write(p,b):
  if isinstance(b,str):b=b.encode()
+ if p.suffix=='.pal':b=b.replace(b'\r\n',b'\n').replace(b'\n',b'\r\n')
  if args.check:assert p.exists() and p.read_bytes()==b,('Regenerate temple',str(p))
  elif not p.exists() or p.read_bytes()!=b:p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(b)
 if args.check:

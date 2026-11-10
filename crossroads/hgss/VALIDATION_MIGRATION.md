@@ -109,6 +109,8 @@ CRLF for every .pal, matching other project asset generators. Exact-byte checks
 remain strict; palette colors/game data are unchanged. A separate clean worktree
 is checked before rerunning CI. This is an asset-output portability fix, not an
 exception that ignores palette differences.
+The inherited temple palette writer follows the same canonical CRLF rule; its
+exact-byte check is retained as well. Both are tested from the clean checkout.
 
 The shared CI's FireRed/LeafGreen link also exposed an inherited QA06 script
 reference to Emerald-only FLAG_BLACK_LEDGER_QA_FLYER. The QA-kit entry now returns
