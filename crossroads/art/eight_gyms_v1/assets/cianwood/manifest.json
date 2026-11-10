@@ -1,0 +1,96 @@
+{
+  "name": "cianwood",
+  "type": "Fighting",
+  "tile_count": 127,
+  "metatile_count": 56,
+  "collision_rows": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0
+    ],
+    [
+      0,
+      1,
+      1,
+      0,
+      0,
+      1,
+      1,
+      0
+    ]
+  ],
+  "doors": [
+    [
+      3,
+      6
+    ],
+    [
+      4,
+      6
+    ]
+  ],
+  "arrival_recommendation": [
+    3,
+    7
+  ],
+  "door_behavior": "MB_NON_ANIMATED_DOOR",
+  "roof_layer": "NORMAL (above player)",
+  "facade_layer": "COVERED (behind player)",
+  "sha256_4bpp": "5b546981d0a568277306032ba6bde646aad099a34e2995646581ddc6541c03b1"
+}

@@ -1,3 +1,15 @@
+# Johto QA06 — current checkpoint
+
+Eight supplied Gym exteriors are integrated. Violet now uses HGSS-reference
+terrain, pond/bridges, door placement, houses, school, services, Sprout floors and
+gatehouses. Existing Ecruteak/IDs/saves/Joe/title/music/starters are preserved.
+See RELEASE_HGSS_QA06.md, hgss/VIOLET_QA06.md and hgss/REGION_CHECKLIST.md.
+
+The161-map network is structurally connected. Most of Johto still needs its
+individual HGSS reconstruction; new Gym art does not complete the surrounding
+cities or rooms. Owner visual acceptance remains pending. Source/build/test
+identity accompanies the artifact; earlier entries below are historical.
+
 # Ecruteak QA05 — build and emulator checks pass; owner visual QA pending
 
 Preserves the QA04 exterior and existing saves. Furnished houses/Theater/services,

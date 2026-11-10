@@ -1,0 +1,96 @@
+{
+  "name": "mahogany",
+  "type": "Ice",
+  "tile_count": 129,
+  "metatile_count": 56,
+  "collision_rows": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0
+    ],
+    [
+      0,
+      1,
+      1,
+      0,
+      0,
+      1,
+      1,
+      0
+    ]
+  ],
+  "doors": [
+    [
+      3,
+      6
+    ],
+    [
+      4,
+      6
+    ]
+  ],
+  "arrival_recommendation": [
+    3,
+    7
+  ],
+  "door_behavior": "MB_NON_ANIMATED_DOOR",
+  "roof_layer": "NORMAL (above player)",
+  "facade_layer": "COVERED (behind player)",
+  "sha256_4bpp": "1b08bcffb3239041f6d08b475a6f583c2a18a39bfd24c8b1686f1836820099f0"
+}

@@ -215,6 +215,13 @@
       "elevation": 0,
       "dest_map": "MAP_ECRUTEAK_CITY_EAST_GATE",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 25,
+      "y": 55,
+      "elevation": 0,
+      "dest_map": "MAP_ECRUTEAK_CITY_GYM",
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [

@@ -15,11 +15,6 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_VIOLET_CITY",
-      "offset": -8,
-      "direction": "left"
-    },
-    {
       "map": "MAP_JOHTO_ROUTE30",
       "offset": 6,
       "direction": "down"
@@ -47,9 +42,26 @@
       "elevation": 0,
       "dest_map": "MAP_DARK_CAVE_1_F",
       "dest_warp_id": "1"
+    },
+    {
+      "x": 0,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_VIOLET_CITY_EAST_GATE",
+      "dest_warp_id": "1"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 0,
+      "y": 14,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "HgssViolet_EastRouteEnter"
+    }
+  ],
   "bg_events": [
     {
       "type": "sign",

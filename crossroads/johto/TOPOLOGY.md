@@ -9,7 +9,8 @@ graph LR
   JohtoRoute38 --- EcruteakCity
   EcruteakCity --- JohtoRoute37
   JohtoRoute37 --- JohtoRoute36
-  JohtoRoute36 --- VioletCity
+  JohtoRoute36 --- VioletCity_WestGate
+  VioletCity_WestGate --- VioletCity
   JohtoRoute36 --- NationalPark
   NationalPark --- JohtoRoute35
   JohtoRoute35 --- GoldenrodCity
@@ -20,7 +21,8 @@ graph LR
   AzaleaTown --- JohtoRoute33
   JohtoRoute32 --- VioletCity
   JohtoRoute32 --- RuinsOfAlph
-  VioletCity --- JohtoRoute31
+  VioletCity --- VioletCity_EastGate
+  VioletCity_EastGate --- JohtoRoute31
   JohtoRoute31 --- JohtoRoute30
   JohtoRoute30 --- CherrygroveCity
   CherrygroveCity --- JohtoRoute29
@@ -76,3 +78,8 @@ roundtrip door/border pairs and622 transitions. See coverage.json and DELTA_QA.m
 Group75 uses nums0..126; group 76 uses0..21, avoiding reserved dynamic mapNum 127.
 Field atlas is informational; routes/caves/water provide actual travel.
 Kanto/League beyond Tohjo is a documented safe boundary, not a completed region.
+
+QA06 retains the same city/route traversal through actual Violet gatehouse rooms.
+The direct draft west/east border connections are replaced by reciprocal doorway
+portals; Route32 remains a normal scrolling connection with offset9/-9. All old
+map/layout/heal IDs are retained; Violet basement and two gates append.

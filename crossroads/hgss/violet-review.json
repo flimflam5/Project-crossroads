@@ -1,0 +1,143 @@
+[
+  {
+    "name": "VioletCity",
+    "source_header": "MAP_VIOLET",
+    "origin_translation": [
+      0,
+      8
+    ],
+    "dimensions": [
+      64,
+      72
+    ],
+    "runtime_qa": "pending for this source tree",
+    "owner_visual_qa": "pending",
+    "adaptations": [
+      "Eight-row north padding preserves full2D tower, same relative HGSS coordinates",
+      "Owner custom Gym replaces source facade",
+      "DS lift is fixed GBA access; no badge/battle gate",
+      "Legacy Workshop/Residence IDs now occupy the two actual canonical houses",
+      "Gate rooms replace old direct west/east debug borders; outside routes remain unreconstructed"
+    ]
+  },
+  {
+    "name": "VioletCity_Residence",
+    "source_header": "MAP_VIOLET_BELLSPROUT_ONYX_TRADE_HOUSE",
+    "dimensions": [
+      11,
+      10
+    ],
+    "runtime_qa": "pending for this source tree",
+    "owner_visual_qa": "pending"
+  },
+  {
+    "name": "VioletCity_Workshop",
+    "source_header": "MAP_VIOLET_NORTHWEST_HOUSE",
+    "dimensions": [
+      11,
+      10
+    ],
+    "runtime_qa": "pending for this source tree",
+    "owner_visual_qa": "pending"
+  },
+  {
+    "name": "VioletAcademy",
+    "source_header": "MAP_VIOLET_POKEMON_SCHOOL",
+    "dimensions": [
+      17,
+      13
+    ],
+    "runtime_qa": "pending for this source tree",
+    "owner_visual_qa": "pending"
+  },
+  {
+    "name": "VioletCity_PokemonCenter_1F",
+    "source_header": "MAP_VIOLET_POKECENTER_1F",
+    "dimensions": [
+      17,
+      21
+    ],
+    "runtime_qa": "pending for this source tree",
+    "owner_visual_qa": "pending"
+  },
+  {
+    "name": "VioletCity_Mart",
+    "source_header": "MAP_VIOLET_POKEMART",
+    "dimensions": [
+      14,
+      13
+    ],
+    "runtime_qa": "pending for this source tree",
+    "owner_visual_qa": "pending"
+  },
+  {
+    "name": "VioletCity_PokemonCenter_B1F",
+    "source_header": "MAP_VIOLET_POKECENTER_B1F",
+    "dimensions": [
+      17,
+      12
+    ],
+    "runtime_qa": "pending for this source tree",
+    "owner_visual_qa": "pending"
+  },
+  {
+    "name": "VioletCity_Gym",
+    "source_header": "MAP_VIOLET_GYM",
+    "dimensions": [
+      18,
+      28
+    ],
+    "runtime_qa": "pending for this source tree",
+    "owner_visual_qa": "pending"
+  },
+  {
+    "name": "SproutTower_1F",
+    "source_header": "MAP_SPROUT_TOWER_1F",
+    "dimensions": [
+      32,
+      32
+    ],
+    "runtime_qa": "pending for this source tree",
+    "owner_visual_qa": "pending"
+  },
+  {
+    "name": "SproutTower_2F",
+    "source_header": "MAP_SPROUT_TOWER_2F",
+    "dimensions": [
+      32,
+      32
+    ],
+    "runtime_qa": "pending for this source tree",
+    "owner_visual_qa": "pending"
+  },
+  {
+    "name": "SproutTower_3F",
+    "source_header": "MAP_SPROUT_TOWER_3F",
+    "dimensions": [
+      32,
+      32
+    ],
+    "runtime_qa": "pending for this source tree",
+    "owner_visual_qa": "pending"
+  },
+  {
+    "name": "VioletCity_WestGate",
+    "source_header": "MAP_VIOLET_ROUTE_36_GATEHOUSE",
+    "dimensions": [
+      12,
+      12
+    ],
+    "runtime_qa": "pending for this source tree",
+    "owner_visual_qa": "pending"
+  },
+  {
+    "name": "VioletCity_EastGate",
+    "source_header": "MAP_ROUTE_31_VIOLET_GATEHOUSE",
+    "dimensions": [
+      12,
+      12
+    ],
+    "runtime_qa": "pending for this source tree",
+    "owner_visual_qa": "pending"
+  }
+]

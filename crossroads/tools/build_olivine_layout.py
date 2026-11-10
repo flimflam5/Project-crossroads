@@ -81,7 +81,8 @@ def generate():
     # Route 39 now joins the existing north road; keep all building IDs/warps.
     rect(27, 0, 3, 2, 0x3202)
     from area_layouts import decorate
-    return decorate('OlivineCity', struct.pack('<2304H', *tiles), 48, 48)
+    from build_eight_gym_integration import overlay
+    return overlay('OlivineCity',decorate('OlivineCity', struct.pack('<2304H', *tiles), 48, 48),48,48)
 
 
 if __name__ == '__main__':

@@ -55,7 +55,9 @@
       },
       "build_status": "initial-city-layout-and-facades-in-progress",
       "reference_matched": false,
-      "black_ledger_additions": [],
+      "black_ledger_additions": [
+        "Owner-provided custom Gym exterior (eight-Gym pack v1)"
+      ],
       "technical_deviations": [
         "64x64 logical grid confirmed from actual HGSS world-matrix cells; 2D camera replaces DS perspective.",
         "Facade palette/size adaptation within GBA tile budget",
@@ -124,14 +126,56 @@
         "http_status": 200,
         "sha256": "419cd943756c9324eb18a92a8f61e0f997c0cfe46a8d626ba22ff15128145495"
       },
-      "reference_inspected": false,
-      "layout_features": {},
-      "build_status": "not-reconstructed",
+      "reference_inspected": true,
+      "layout_features": {
+        "grid_origin": [
+          448,
+          224
+        ],
+        "logical_source_dimensions": [
+          64,
+          64
+        ],
+        "native_dimensions": [
+          64,
+          72
+        ],
+        "native_translation": [
+          0,
+          8
+        ],
+        "features": [
+          "Northern pond",
+          "Two bridges and central plaza",
+          "Sprout Tower north of pond",
+          "Gym west of school",
+          "Mart southwest of Gym",
+          "Center southeast",
+          "Two canonical houses",
+          "West/east gatehouses",
+          "Southern Route32 connection"
+        ]
+      },
+      "build_status": "qa06-reconstruction-implemented-visual-qa-pending",
       "reference_matched": false,
-      "black_ledger_additions": [],
-      "technical_deviations": [],
+      "black_ledger_additions": [
+        "Owner-supplied Flying Gym exterior",
+        "Legacy guest-rest/survey services retained in canonical buildings",
+        "Owner-provided custom Gym exterior (eight-Gym pack v1)"
+      ],
+      "technical_deviations": [
+        "Eight-row north padding fits full2D tower roof",
+        "East gate facade placed one column west of reference boundary portal for a valid native walking approach",
+        "One courtyard corner expanded and sign moved to keep southern house side alley escapable",
+        "Violet Gym lift is fixed access in exploration build; no roster/badge/trade/story source scripts imported",
+        "DS vertical models rendered as original flat GBA art; shadows/heights adapted"
+      ],
       "unfinished": [
-        "Trace layout, architecture, collision, entrances and interior references; reconstruct and visually compare; actual emulator tests; owner acceptance."
+        "Owner visual acceptance",
+        "DS moving Gym lift and optional Gym progression designs",
+        "Source plot scripts/trades/rewards intentionally not implemented",
+        "Adjacent routes retain old exploration layouts apart from gate portals/safe south buffer",
+        "Additional interior reference raster comparisons remain open"
       ]
     },
     {
@@ -149,7 +193,9 @@
       "layout_features": {},
       "build_status": "not-reconstructed",
       "reference_matched": false,
-      "black_ledger_additions": [],
+      "black_ledger_additions": [
+        "Owner-provided custom Gym exterior (eight-Gym pack v1)"
+      ],
       "technical_deviations": [],
       "unfinished": [
         "Trace layout, architecture, collision, entrances and interior references; reconstruct and visually compare; actual emulator tests; owner acceptance."
@@ -170,7 +216,9 @@
       "layout_features": {},
       "build_status": "not-reconstructed",
       "reference_matched": false,
-      "black_ledger_additions": [],
+      "black_ledger_additions": [
+        "Owner-provided custom Gym exterior (eight-Gym pack v1)"
+      ],
       "technical_deviations": [],
       "unfinished": [
         "Trace layout, architecture, collision, entrances and interior references; reconstruct and visually compare; actual emulator tests; owner acceptance."
@@ -191,7 +239,9 @@
       "layout_features": {},
       "build_status": "not-reconstructed",
       "reference_matched": false,
-      "black_ledger_additions": [],
+      "black_ledger_additions": [
+        "Owner-provided custom Gym exterior (eight-Gym pack v1)"
+      ],
       "technical_deviations": [],
       "unfinished": [
         "Trace layout, architecture, collision, entrances and interior references; reconstruct and visually compare; actual emulator tests; owner acceptance."
@@ -212,7 +262,9 @@
       "layout_features": {},
       "build_status": "not-reconstructed",
       "reference_matched": false,
-      "black_ledger_additions": [],
+      "black_ledger_additions": [
+        "Owner-provided custom Gym exterior (eight-Gym pack v1)"
+      ],
       "technical_deviations": [],
       "unfinished": [
         "Trace layout, architecture, collision, entrances and interior references; reconstruct and visually compare; actual emulator tests; owner acceptance."
@@ -233,7 +285,9 @@
       "layout_features": {},
       "build_status": "not-reconstructed",
       "reference_matched": false,
-      "black_ledger_additions": [],
+      "black_ledger_additions": [
+        "Owner-provided custom Gym exterior (eight-Gym pack v1)"
+      ],
       "technical_deviations": [],
       "unfinished": [
         "Trace layout, architecture, collision, entrances and interior references; reconstruct and visually compare; actual emulator tests; owner acceptance."
@@ -254,7 +308,9 @@
       "layout_features": {},
       "build_status": "not-reconstructed",
       "reference_matched": false,
-      "black_ledger_additions": [],
+      "black_ledger_additions": [
+        "Owner-provided custom Gym exterior (eight-Gym pack v1)"
+      ],
       "technical_deviations": [],
       "unfinished": [
         "Trace layout, architecture, collision, entrances and interior references; reconstruct and visually compare; actual emulator tests; owner acceptance."

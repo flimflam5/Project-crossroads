@@ -9,31 +9,45 @@ from pathlib import Path
 from collections import deque
 from hgss_connection_buffer import repair
 R=Path(__file__).resolve().parents[2]
-def load(p):return json.loads((R/p).read_text())
+def load(p):
+ value=json.loads((R/p).read_text())
+ if p.startswith('data/maps/') and p.endswith('/map.json'):
+  from build_eight_gym_integration import normalize_map
+  value=normalize_map(p.split('/')[2],value)
+ return value
 def validate():
+ from validate_eight_gyms import validate as validate_gyms
+ validate_gyms()
+ from build_eight_gym_integration import relocate_layout,CODES
  from hgss_tower_validation import validate_towers
  reviewed=validate_towers()
  from hgss_room_validation import validate_rooms
  from hgss_service_validation import validate_services
  from hgss_gate_validation import validate_gates
  reviewed|=validate_rooms()|validate_services()|validate_gates();reviewed_layouts={load(f'data/maps/{n}/map.json')['layout'] for n in reviewed}
+ from validate_hgss_violet import validate as validate_violet
+ reviewed|=validate_violet();reviewed_layouts|={load(f'data/maps/{n}/map.json')['layout'] for n in reviewed}
  baseline=load('crossroads/hgss/contracts/save-contracts.json');groups=load('data/maps/map_groups.json');layouts=load('data/layouts/layouts.json');heals=load('src/data/heal_locations.json')
  assert groups['group_order']==baseline['groups']['group_order']
  for key,old in baseline['groups'].items():
-  if key=='gMapGroup_CrossroadsJohtoExpansion':assert groups[key][:len(old)]==old and groups[key][len(old):]==['EcruteakCity_BarrierStation','EcruteakCity_BarrierCorridor','BellchimeTrail','EcruteakCity_BellTower_10F','EcruteakCity_BellTower_Roof','EcruteakCity_DowsingHouse','EcruteakCity_PokemonCenter_B1F','EcruteakCity_WestGate','EcruteakCity_EastGate']
+  if key=='gMapGroup_CrossroadsJohtoExpansion':assert groups[key][:len(old)]==old and groups[key][len(old):]==['EcruteakCity_BarrierStation','EcruteakCity_BarrierCorridor','BellchimeTrail','EcruteakCity_BellTower_10F','EcruteakCity_BellTower_Roof','EcruteakCity_DowsingHouse','EcruteakCity_PokemonCenter_B1F','EcruteakCity_WestGate','EcruteakCity_EastGate','VioletCity_PokemonCenter_B1F','VioletCity_WestGate','VioletCity_EastGate']
   else:assert groups[key]==old,('Map IDs reordered',key)
  assert [l['id'] for l in layouts['layouts'][:len(baseline['layouts']['layouts'])]]==[l['id'] for l in baseline['layouts']['layouts']]
  for old,new in zip(baseline['layouts']['layouts'],layouts['layouts']):
   if old['id'] in reviewed_layouts:continue # Strong reference geometry/ID contracts run above.
-  if old['id']!='LAYOUT_ECRUTEAK_CITY':assert old==new,('Unrelated layout change',old['id'])
-  else:assert new['width']==64 and new['height']==64 and new['primary_tileset']=='gTileset_HgssEcruteakPrimary' and new['secondary_tileset']=='gTileset_HgssEcruteakSecondary'
+  if old['id']!='LAYOUT_ECRUTEAK_CITY':
+   expected=old.copy();name=next((n for n in CODES if load(f'data/maps/{n}/map.json')['layout']==old['id']),None)
+   if name:relocate_layout(name,expected)
+   assert expected==new,('Unrelated layout change',old['id'])
+  else:assert new['width']==64 and new['height']==64 and new['primary_tileset']=='gTileset_BlGymEcruteakPrimary' and new['secondary_tileset']=='gTileset_BlGymEcruteakSecondary'
  for old,new in zip(baseline['heals']['heal_locations'],heals['heal_locations']):
   assert old['id']==new['id']
   if old['id']=='HEAL_LOCATION_ECRUTEAK_CITY':assert dict(old,x=45,y=56,respawn_x=8,respawn_y=13)==new
+  elif old['id']=='HEAL_LOCATION_VIOLET_CITY':assert dict(old,x=49,y=56,respawn_x=8,respawn_y=13)==new
   else:assert old==new
  for n,digest in baseline['map_metadata_hashes'].items():
   if n in reviewed:continue
-  if n not in ['EcruteakCity','JohtoRoute37','JohtoRoute38','JohtoRoute42','EcruteakCity_BellTower']:assert hashlib.sha256((R/f'data/maps/{n}/map.json').read_bytes()).hexdigest()==digest,('Unexpected events change',n)
+  if n not in ['EcruteakCity','JohtoRoute37','JohtoRoute38','JohtoRoute42','EcruteakCity_BellTower']:assert hashlib.sha256((json.dumps(load(f'data/maps/{n}/map.json'),indent=2)+'\n').encode()).hexdigest()==digest,('Unexpected events change',n)
 
  for name,direction,offset in [('JohtoRoute37','up',-25),('JohtoRoute38','right',-25),('JohtoRoute42','left',-33)]:
   expected_meta=load(f'crossroads/hgss/contracts/{name}-metadata-0.9.1.json')

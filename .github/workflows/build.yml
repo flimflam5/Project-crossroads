@@ -17,6 +17,7 @@ on:
       - feature/boot-audio-refinement-01
       - feature/johto-exploration-network-01
       - feature/johto-visual-collision-01
+      - feature/hgss-johto-gym-integration-01
   pull_request:
   workflow_dispatch:
 
@@ -70,6 +71,11 @@ jobs:
           python3 crossroads/tools/build_johto_network.py --through west --check
           python3 crossroads/tools/validate_johto_network.py --built
           python3 crossroads/tools/validate_visual_repairs.py
+          python3 crossroads/tools/build_eight_gym_integration.py --check
+          python3 crossroads/tools/validate_eight_gyms.py
+          python3 crossroads/tools/build_hgss_violet_assets.py --check
+          python3 crossroads/tools/build_hgss_violet.py --check
+          python3 crossroads/tools/validate_hgss_violet.py
           python3 crossroads/tools/check_mapjson_outputs.py
           python3 crossroads/tools/validate_black_ledger_intro.py
           python3 crossroads/tools/validate_title_music.py
@@ -97,7 +103,7 @@ jobs:
       - name: Upload playable Emerald ROM
         uses: actions/upload-artifact@v4
         with:
-          name: black-ledger-ecruteak-qa05-${{ github.sha }}
+          name: black-ledger-johto-qa06-${{ github.sha }}
           path: |
             pokeemerald.gba
             build-info.json
@@ -114,6 +120,9 @@ jobs:
             crossroads/RELEASE_0_9.md
             crossroads/RELEASE_0_9_1.md
             crossroads/RELEASE_HGSS_QA05.md
+            crossroads/RELEASE_HGSS_QA06.md
+            crossroads/hgss/VIOLET_QA06.md
+            crossroads/hgss/REGION_CHECKLIST.md
             crossroads/hgss/ECRUTEAK_QA05.md
             crossroads/hgss/*-review.json
             crossroads/qa/visual-0.9.1

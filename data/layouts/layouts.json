@@ -9329,8 +9329,8 @@
       "name": "OlivineCity_Layout",
       "width": 48,
       "height": 48,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_WesternCity",
+      "primary_tileset": "gTileset_BlGymOlivinePrimary",
+      "secondary_tileset": "gTileset_BlGymOlivineSecondary",
       "border_filepath": "data/layouts/OlivineCity/border.bin",
       "blockdata_filepath": "data/layouts/OlivineCity/map.bin",
       "layout_version": "emerald"
@@ -9373,8 +9373,8 @@
       "name": "EcruteakCity_Layout",
       "width": 64,
       "height": 64,
-      "primary_tileset": "gTileset_HgssEcruteakPrimary",
-      "secondary_tileset": "gTileset_HgssEcruteakSecondary",
+      "primary_tileset": "gTileset_BlGymEcruteakPrimary",
+      "secondary_tileset": "gTileset_BlGymEcruteakSecondary",
       "border_filepath": "data/layouts/EcruteakCity/border.bin",
       "blockdata_filepath": "data/layouts/EcruteakCity/map.bin",
       "layout_version": "emerald"
@@ -9670,8 +9670,8 @@
       "name": "GoldenrodCity_Layout",
       "width": 60,
       "height": 56,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_WesternCity",
+      "primary_tileset": "gTileset_BlGymGoldenrodPrimary",
+      "secondary_tileset": "gTileset_BlGymGoldenrodSecondary",
       "border_filepath": "data/layouts/GoldenrodCity/border.bin",
       "blockdata_filepath": "data/layouts/GoldenrodCity/map.bin",
       "layout_version": "emerald"
@@ -9712,10 +9712,10 @@
     {
       "id": "LAYOUT_VIOLET_CITY",
       "name": "VioletCity_Layout",
-      "width": 48,
-      "height": 44,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_WesternCity",
+      "width": 64,
+      "height": 72,
+      "primary_tileset": "gTileset_BlGymVioletPrimary",
+      "secondary_tileset": "gTileset_BlGymVioletSecondary",
       "border_filepath": "data/layouts/VioletCity/border.bin",
       "blockdata_filepath": "data/layouts/VioletCity/map.bin",
       "layout_version": "emerald"
@@ -9724,9 +9724,9 @@
       "id": "LAYOUT_VIOLET_CITY_GYM",
       "name": "VioletCity_Gym_Layout",
       "width": 18,
-      "height": 20,
+      "height": 28,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_WesternInteriors",
+      "secondary_tileset": "gTileset_HgssTemple",
       "border_filepath": "data/layouts/VioletCity_Gym/border.bin",
       "blockdata_filepath": "data/layouts/VioletCity_Gym/map.bin",
       "layout_version": "emerald"
@@ -9811,10 +9811,10 @@
     {
       "id": "LAYOUT_SPROUT_TOWER_1_F",
       "name": "SproutTower_1F_Layout",
-      "width": 28,
-      "height": 22,
+      "width": 32,
+      "height": 32,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_WesternInteriors",
+      "secondary_tileset": "gTileset_HgssTemple",
       "border_filepath": "data/layouts/SproutTower_1F/border.bin",
       "blockdata_filepath": "data/layouts/SproutTower_1F/map.bin",
       "layout_version": "emerald"
@@ -9822,10 +9822,10 @@
     {
       "id": "LAYOUT_SPROUT_TOWER_2_F",
       "name": "SproutTower_2F_Layout",
-      "width": 28,
-      "height": 22,
+      "width": 32,
+      "height": 32,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_WesternInteriors",
+      "secondary_tileset": "gTileset_HgssTemple",
       "border_filepath": "data/layouts/SproutTower_2F/border.bin",
       "blockdata_filepath": "data/layouts/SproutTower_2F/map.bin",
       "layout_version": "emerald"
@@ -9833,10 +9833,10 @@
     {
       "id": "LAYOUT_SPROUT_TOWER_3_F",
       "name": "SproutTower_3F_Layout",
-      "width": 28,
-      "height": 22,
+      "width": 32,
+      "height": 32,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_WesternInteriors",
+      "secondary_tileset": "gTileset_HgssTemple",
       "border_filepath": "data/layouts/SproutTower_3F/border.bin",
       "blockdata_filepath": "data/layouts/SproutTower_3F/map.bin",
       "layout_version": "emerald"
@@ -9910,10 +9910,10 @@
     {
       "id": "LAYOUT_VIOLET_ACADEMY",
       "name": "VioletAcademy_Layout",
-      "width": 20,
-      "height": 16,
+      "width": 17,
+      "height": 13,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_WesternInteriors",
+      "secondary_tileset": "gTileset_HgssTemple",
       "border_filepath": "data/layouts/VioletAcademy/border.bin",
       "blockdata_filepath": "data/layouts/VioletAcademy/map.bin",
       "layout_version": "emerald"
@@ -9923,8 +9923,8 @@
       "name": "AzaleaTown_Layout",
       "width": 48,
       "height": 44,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_WesternCity",
+      "primary_tileset": "gTileset_BlGymAzaleaPrimary",
+      "secondary_tileset": "gTileset_BlGymAzaleaSecondary",
       "border_filepath": "data/layouts/AzaleaTown/border.bin",
       "blockdata_filepath": "data/layouts/AzaleaTown/map.bin",
       "layout_version": "emerald"
@@ -10077,7 +10077,7 @@
       "name": "JohtoRoute32_Layout",
       "width": 28,
       "height": 64,
-      "primary_tileset": "gTileset_General",
+      "primary_tileset": "gTileset_HgssVioletRoutePrimary",
       "secondary_tileset": "gTileset_WesternCity",
       "border_filepath": "data/layouts/JohtoRoute32/border.bin",
       "blockdata_filepath": "data/layouts/JohtoRoute32/map.bin",
@@ -10220,8 +10220,8 @@
       "name": "MahoganyTown_Layout",
       "width": 48,
       "height": 44,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_WesternCity",
+      "primary_tileset": "gTileset_BlGymMahoganyPrimary",
+      "secondary_tileset": "gTileset_BlGymMahoganySecondary",
       "border_filepath": "data/layouts/MahoganyTown/border.bin",
       "blockdata_filepath": "data/layouts/MahoganyTown/map.bin",
       "layout_version": "emerald"
@@ -10264,8 +10264,8 @@
       "name": "BlackthornCity_Layout",
       "width": 48,
       "height": 44,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_WesternCity",
+      "primary_tileset": "gTileset_BlGymBlackthornPrimary",
+      "secondary_tileset": "gTileset_BlGymBlackthornSecondary",
       "border_filepath": "data/layouts/BlackthornCity/border.bin",
       "blockdata_filepath": "data/layouts/BlackthornCity/map.bin",
       "layout_version": "emerald"
@@ -10517,8 +10517,8 @@
       "name": "CianwoodCity_Layout",
       "width": 48,
       "height": 44,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_WesternCity",
+      "primary_tileset": "gTileset_BlGymCianwoodPrimary",
+      "secondary_tileset": "gTileset_BlGymCianwoodSecondary",
       "border_filepath": "data/layouts/CianwoodCity/border.bin",
       "blockdata_filepath": "data/layouts/CianwoodCity/map.bin",
       "layout_version": "emerald"
@@ -10851,6 +10851,83 @@
       "secondary_tileset": "gTileset_HgssTemple",
       "border_filepath": "data/layouts/EcruteakCity_EastGate/border.bin",
       "blockdata_filepath": "data/layouts/EcruteakCity_EastGate/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_HGSS_VIOLETCITY_RESIDENCE",
+      "name": "HgssVioletCity_Residence_Layout",
+      "width": 11,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_HgssTemple",
+      "border_filepath": "data/layouts/VioletCity_Residence/border.bin",
+      "blockdata_filepath": "data/layouts/VioletCity_Residence/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_HGSS_VIOLETCITY_WORKSHOP",
+      "name": "HgssVioletCity_Workshop_Layout",
+      "width": 11,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_HgssTemple",
+      "border_filepath": "data/layouts/VioletCity_Workshop/border.bin",
+      "blockdata_filepath": "data/layouts/VioletCity_Workshop/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_HGSS_VIOLETCITY_POKEMONCENTER_1F",
+      "name": "HgssVioletCity_PokemonCenter_1F_Layout",
+      "width": 17,
+      "height": 21,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/VioletCity_PokemonCenter_1F/border.bin",
+      "blockdata_filepath": "data/layouts/VioletCity_PokemonCenter_1F/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_HGSS_VIOLETCITY_MART",
+      "name": "HgssVioletCity_Mart_Layout",
+      "width": 14,
+      "height": 13,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/VioletCity_Mart/border.bin",
+      "blockdata_filepath": "data/layouts/VioletCity_Mart/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_HGSS_VIOLETCITY_POKEMONCENTER_B1F",
+      "name": "HgssVioletCity_PokemonCenter_B1F_Layout",
+      "width": 17,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/VioletCity_PokemonCenter_B1F/border.bin",
+      "blockdata_filepath": "data/layouts/VioletCity_PokemonCenter_B1F/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_HGSS_VIOLETCITY_WESTGATE",
+      "name": "HgssVioletCity_WestGate_Layout",
+      "width": 12,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_HgssTemple",
+      "border_filepath": "data/layouts/VioletCity_WestGate/border.bin",
+      "blockdata_filepath": "data/layouts/VioletCity_WestGate/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_HGSS_VIOLETCITY_EASTGATE",
+      "name": "HgssVioletCity_EastGate_Layout",
+      "width": 12,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_HgssTemple",
+      "border_filepath": "data/layouts/VioletCity_EastGate/border.bin",
+      "blockdata_filepath": "data/layouts/VioletCity_EastGate/map.bin",
       "layout_version": "emerald"
     }
   ]

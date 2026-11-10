@@ -122,3 +122,28 @@ checks, not old rectangular-room assumptions. Native escalators need side landin
 space; Center respawn_x/y is8,13. Do not revert to default7,4 or alter heal IDs.
 Joe special IDs0x3f04–0x3f0b and NPC0x3f0c/d append without changing the engine enum.
 Owner visual acceptance remains required. No master merge is authorized.
+
+## Latest owner direction — remaining Johto and eight custom Gyms
+
+The owner now authorizes continuing the rest of the map and supplied
+Black_Ledger_Eight_Gym_Engine_Assets_v1.zip. Its eight original designs supersede
+literal HGSS Gym facade art as explicit Black Ledger additions; other geography
+still follows HGSS. Read crossroads/hgss/ACTIVE_REGION.md before resuming. Keep
+QA05 city/exploration/starter/save/title/Joe functionality. The pack's installer
+only registers unused assets; actual integration uses private city resource
+packing/overlays with independent pixel/door checks. Never assign a Gym-only
+secondary over a populated city or enlarge engine limits to fit it.
+
+
+## QA06 continuation ownership
+
+The eight owner Gyms and canonical Violet reconstruction now exist; do not
+regenerate the old Violet draft. Read hgss/ACTIVE_REGION.md and VIOLET_QA06.md
+under crossroads. New assets/generators are independently checked; network
+--check must still pass. Source North padding8, explicit Gym alias7/school8/
+gates9–12 and append-only CenterB1F/gate IDs are contracted. Route31/36 only have
+new gate portals; Route32 only its northern7-row shared-compatible buffer.
+Most of Johto remains unreconstructed. Next geographic work is Routes31/32/36
+from recovered references, not a generic-town propagation. SaveObjectEvents
+byte-swaps graphics IDs; any pre-load migration must mirror LoadObjectEvents.
+Survey Surf assistance clears at cold boot; tests must use the actual desk again.

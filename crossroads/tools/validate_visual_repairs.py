@@ -10,6 +10,10 @@ if hgss:
 replaced={'data/maps/map_groups.json','data/layouts/layouts.json','src/data/heal_locations.json'} if hgss else set()
 reconstructed={'EcruteakCity','EcruteakCity_BellTower','JohtoRoute37','JohtoRoute38','JohtoRoute42'} if hgss else set()
 if hgss:
+ from build_eight_gym_integration import CODES
+ reconstructed|=set(CODES)|{json.loads((R/'crossroads/art/eight_gyms_v1/baseline/contracts.json').read_text())['cities'][n]['interior']['name'] for n in CODES} # Full non-Gym pixel/data contracts run in validate_hgss_ecruteak above.
+ from build_hgss_violet import OWNED
+ reconstructed|=OWNED|{'JohtoRoute31','JohtoRoute32','JohtoRoute36'} # Independent canonical/escape/route contracts run above.
  for path in ['interior-review.json','room-review.json','service-review.json','gate-review.json']:reconstructed|={r['name'] for r in json.loads((R/'crossroads/hgss'/path).read_text())}
 for p,h in report['unchanged_contracts'].items():
  if p not in replaced:assert sha(p)==h,('Changed preserved contract',p)
