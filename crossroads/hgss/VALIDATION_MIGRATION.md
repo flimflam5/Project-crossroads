@@ -109,3 +109,13 @@ CRLF for every .pal, matching other project asset generators. Exact-byte checks
 remain strict; palette colors/game data are unchanged. A separate clean worktree
 is checked before rerunning CI. This is an asset-output portability fix, not an
 exception that ignores palette differences.
+
+The shared CI's FireRed/LeafGreen link also exposed an inherited QA06 script
+reference to Emerald-only FLAG_BLACK_LEDGER_QA_FLYER. The QA-kit entry now returns
+to the existing desk exit on FRLG and retains its original body on Emerald. No
+flag is reassigned, no save layout changes, and Emerald's emitted script/ROM bytes
+remain identical. This completes the earlier C build guards at the script layer.
+
+The next strict CI step exposed the existing Joe graphics validator's separate
+historical enum input690485c997. Shallow CI now fetches that exact commit as well
+as QA06, preserving both comparisons instead of relaxing the enum assertion.

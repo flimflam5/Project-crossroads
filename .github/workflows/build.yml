@@ -37,8 +37,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Fetch immutable QA06 visual baseline
-        run: git fetch --no-tags --depth=1 origin 9cd6a73717c1bfd124967b7e485740aa5b25d651
+      - name: Fetch immutable visual and player enum baselines
+        run: git fetch --no-tags --depth=1 origin 9cd6a73717c1bfd124967b7e485740aa5b25d651 690485c9971965af7d1a9134d1ba81f148b880b2
 
       - name: Install binutils
         run: |

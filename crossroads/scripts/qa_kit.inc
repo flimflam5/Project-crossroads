@@ -1,5 +1,9 @@
 @ Explicit owner-requested persistent QA grants. Hold R when speaking to desk.
 Johto_QAKit::
+#if IS_FRLG
+    @ The persistent QA flag belongs only to Emerald. Do not alias a FRLG flag.
+    goto Johto_TestEnd
+#else
     msgbox Johto_QAKitPrompt, MSGBOX_YESNO
     goto_if_eq VAR_RESULT, NO, Johto_TestEnd
     setflag FLAG_SYS_B_DASH
@@ -21,3 +25,4 @@ Johto_QAKitReady:
     .string "RUNNING SHOES enabled: hold B.\nYour QA PIDGEOT is ready.\pOnly one QA flyer per save.\nUse FLY outdoors to choose a city.$"
 Johto_QAKitNoRoom:
     .string "RUNNING SHOES enabled.\nMake room for one POKeMON,\pthen return for your QA flyer.$"
+#endif
