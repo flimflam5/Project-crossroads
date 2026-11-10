@@ -1,3 +1,9 @@
+# QA03 owner-requested testing kit
+
+Optional level100 Pidgeot with Fly and Running Shoes via R+talk at the survey
+desk. See RELEASE_HGSS_QA03.md. Build/controller grant checks pass; owner Delta
+QA and post-grant save/reload pending. Johto field Fly destination UI unfinished.
+
 # Ecruteak preliminary QA 02 repair
 
 Owner likes the city exterior but reports boundary and entrance issues.

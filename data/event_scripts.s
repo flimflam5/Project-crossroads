@@ -1844,6 +1844,7 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "crossroads/scripts/johto_network.inc"
 
 	.include "crossroads/scripts/johto_runtime.inc"
+	.include "crossroads/scripts/qa_kit.inc"
 
 	.include "data/maps/AzaleaTown/scripts.inc"
 

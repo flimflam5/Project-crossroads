@@ -123,3 +123,17 @@ if a.built:
 report=dict(maps=len(names),reachable_tiles=len(seen),warps=sum(len(m['warp_events']) for m in maps.values()),connections=sum(len(m['connections'] or []) for m in maps.values()),centers=sum('PokemonCenter' in n for n in names),mode='structural survey-water-enabled graph; not emulator playtesting')
 (R/'build').mkdir(exist_ok=True);(R/'build/johto-topology-validation.json').write_text(json.dumps(report,indent=2)+'\n')
 print('Johto valid IDs, whole tile/warp/border graph, interaction access, services and safe respawns: PASS',report)
+
+# Owner-requested persistent kit is separate from reversible survey assistance.
+qa=(R/'crossroads/scripts/qa_kit.inc').read_text()
+assert qa.count('givemon ')==1 and 'givemon SPECIES_PIDGEOT, 100,' in qa
+assert 'move1=MOVE_FLY' in qa
+assert 'goto_if_set FLAG_BLACK_LEDGER_QA_FLYER' in qa
+assert 'goto_if_ge VAR_RESULT, PARTY_SIZE' in qa
+assert 'goto_if_eq VAR_RESULT, MON_CANT_GIVE' in qa
+assert qa.index('givemon ')<qa.index('    setflag FLAG_BLACK_LEDGER_QA_FLYER')
+assert [l.strip() for l in qa.splitlines() if l.strip().startswith('setflag ')]==['setflag FLAG_SYS_B_DASH','setflag FLAG_BLACK_LEDGER_QA_FLYER']
+assert 'setvar ' not in qa and 'FLAG_BADGE' not in qa
+assert 'special Johto_QAKitRequested' in runtime
+assert '\t.include "crossroads/scripts/qa_kit.inc"' in (R/'data/event_scripts.s').read_text()
+print('Explicit QA kit: one guarded level100 flyer, shoes only, no badge/starter changes: PASS')

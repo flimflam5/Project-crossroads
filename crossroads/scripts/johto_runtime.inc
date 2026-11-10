@@ -2,6 +2,8 @@
 Johto_TestDesk::
     lockall
     faceplayer
+    special Johto_QAKitRequested
+    goto_if_eq VAR_RESULT, 1, Johto_QAKit
     msgbox Johto_TestDeskPrompt, MSGBOX_YESNO
     goto_if_eq VAR_RESULT, NO, Johto_TestEnd
     special Johto_ToggleTestAccess

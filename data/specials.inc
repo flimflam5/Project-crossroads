@@ -641,3 +641,5 @@ gSpecials::
 
 	def_special Johto_ToggleTestAccess
 	def_special Johto_EnableTestAccess
+
+	def_special Johto_QAKitRequested

@@ -29,3 +29,9 @@ void Johto_EnableTestAccess(void)
 {
     sJohtoTestAccess = TRUE;
 }
+
+// Owner-requested QA kit is explicit and separate from RAM-only survey access.
+void Johto_QAKitRequested(void)
+{
+    gSpecialVar_Result = JOY_HELD(R_BUTTON) != 0;
+}
