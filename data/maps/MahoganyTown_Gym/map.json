@@ -36,6 +36,13 @@
       "elevation": 0,
       "dest_map": "MAP_MAHOGANY_TOWN",
       "dest_warp_id": "2"
+    },
+    {
+      "x": 7,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_MAHOGANY_TOWN",
+      "dest_warp_id": "5"
     }
   ],
   "coord_events": [],

@@ -1,0 +1,138 @@
+[
+  {
+    "gym": "violet",
+    "passed": [
+      "indexed PNG 16 colors",
+      "GBA 4bpp round-trip",
+      "RGB555 palette length",
+      "56 metatiles",
+      "indices and palette bank",
+      "roof/facade layer flags",
+      "door behavior",
+      "collision stencil",
+      "binary art reconstruction"
+    ],
+    "unique_tiles": 128,
+    "allocated_tiles": 512,
+    "storage_bytes": 16384
+  },
+  {
+    "gym": "azalea",
+    "passed": [
+      "indexed PNG 16 colors",
+      "GBA 4bpp round-trip",
+      "RGB555 palette length",
+      "56 metatiles",
+      "indices and palette bank",
+      "roof/facade layer flags",
+      "door behavior",
+      "collision stencil",
+      "binary art reconstruction"
+    ],
+    "unique_tiles": 131,
+    "allocated_tiles": 512,
+    "storage_bytes": 16384
+  },
+  {
+    "gym": "goldenrod",
+    "passed": [
+      "indexed PNG 16 colors",
+      "GBA 4bpp round-trip",
+      "RGB555 palette length",
+      "56 metatiles",
+      "indices and palette bank",
+      "roof/facade layer flags",
+      "door behavior",
+      "collision stencil",
+      "binary art reconstruction"
+    ],
+    "unique_tiles": 139,
+    "allocated_tiles": 512,
+    "storage_bytes": 16384
+  },
+  {
+    "gym": "ecruteak",
+    "passed": [
+      "indexed PNG 16 colors",
+      "GBA 4bpp round-trip",
+      "RGB555 palette length",
+      "56 metatiles",
+      "indices and palette bank",
+      "roof/facade layer flags",
+      "door behavior",
+      "collision stencil",
+      "binary art reconstruction"
+    ],
+    "unique_tiles": 115,
+    "allocated_tiles": 512,
+    "storage_bytes": 16384
+  },
+  {
+    "gym": "cianwood",
+    "passed": [
+      "indexed PNG 16 colors",
+      "GBA 4bpp round-trip",
+      "RGB555 palette length",
+      "56 metatiles",
+      "indices and palette bank",
+      "roof/facade layer flags",
+      "door behavior",
+      "collision stencil",
+      "binary art reconstruction"
+    ],
+    "unique_tiles": 127,
+    "allocated_tiles": 512,
+    "storage_bytes": 16384
+  },
+  {
+    "gym": "olivine",
+    "passed": [
+      "indexed PNG 16 colors",
+      "GBA 4bpp round-trip",
+      "RGB555 palette length",
+      "56 metatiles",
+      "indices and palette bank",
+      "roof/facade layer flags",
+      "door behavior",
+      "collision stencil",
+      "binary art reconstruction"
+    ],
+    "unique_tiles": 115,
+    "allocated_tiles": 512,
+    "storage_bytes": 16384
+  },
+  {
+    "gym": "mahogany",
+    "passed": [
+      "indexed PNG 16 colors",
+      "GBA 4bpp round-trip",
+      "RGB555 palette length",
+      "56 metatiles",
+      "indices and palette bank",
+      "roof/facade layer flags",
+      "door behavior",
+      "collision stencil",
+      "binary art reconstruction"
+    ],
+    "unique_tiles": 129,
+    "allocated_tiles": 512,
+    "storage_bytes": 16384
+  },
+  {
+    "gym": "blackthorn",
+    "passed": [
+      "indexed PNG 16 colors",
+      "GBA 4bpp round-trip",
+      "RGB555 palette length",
+      "56 metatiles",
+      "indices and palette bank",
+      "roof/facade layer flags",
+      "door behavior",
+      "collision stencil",
+      "binary art reconstruction"
+    ],
+    "unique_tiles": 117,
+    "allocated_tiles": 512,
+    "storage_bytes": 16384
+  }
+]

@@ -4,6 +4,7 @@
 #include "event_object_movement.h"
 #include "fieldmap.h"
 #include "constants/maps.h"
+#include "constants/event_objects.h"
 #include "constants/heal_locations.h"
 #include "overworld.h"
 
@@ -40,6 +41,38 @@ void Crossroads_EnsureAreaRespawn(void)
      && heal->mapNum == MAP_NUM(MAP_ECRUTEAK_CITY)
      && heal->warpId == WARP_ID_NONE && heal->x == 21 && heal->y == 35)
         SetLastHealLocationWarp(HEAL_LOCATION_ECRUTEAK_CITY);
+    if (heal->mapGroup == MAP_GROUP(MAP_VIOLET_CITY)
+     && heal->mapNum == MAP_NUM(MAP_VIOLET_CITY)
+     && heal->warpId == WARP_ID_NONE && heal->x == 35 && heal->y == 33)
+        SetLastHealLocationWarp(HEAL_LOCATION_VIOLET_CITY);
+}
+
+static bool32 NeedsDryLanding(s16 x, s16 y)
+{
+    const struct MapLayout *layout = gMapHeader.mapLayout;
+    u32 i;
+    if (gSaveBlock1Ptr->location.mapGroup != MAP_GROUP(MAP_VIOLET_CITY)
+     || gSaveBlock1Ptr->location.mapNum != MAP_NUM(MAP_VIOLET_CITY)
+     || x < 0 || y < 0 || x >= layout->width || y >= layout->height
+     || (layout->map[y * layout->width + x] >> 12) != 1)
+        return FALSE;
+    // An old walking save can now occupy the reference pond. Preserve actual
+    // Surf saves; only move a walking avatar to nearby dry ground on Continue.
+    for (i = 0; i < OBJECT_EVENTS_COUNT; i++)
+    {
+        const struct ObjectEvent *event = &gSaveBlock1Ptr->objectEvents[i];
+        // SaveObjectEvents stores this field with bytes swapped for vanilla
+        // compatibility. Mirror LoadObjectEvents; never change the save format.
+        u16 graphicsId = (event->graphicsId >> 8) | (event->graphicsId << 8);
+        if (event->spriteId != 127)
+            graphicsId &= 0xFF;
+        if (event->isPlayer
+         && (graphicsId == OBJ_EVENT_GFX_JOE_SURFING
+          || graphicsId == OBJ_EVENT_GFX_BRENDAN_SURFING
+          || graphicsId == OBJ_EVENT_GFX_MAY_SURFING))
+            return FALSE;
+    }
+    return TRUE;
 }
 
 bool32 Crossroads_PrepareContinue(void)
@@ -61,7 +94,8 @@ bool32 Crossroads_PrepareContinue(void)
     x = gSaveBlock1Ptr->pos.x;
     y = gSaveBlock1Ptr->pos.y;
     if (x >= 0 && y >= 0 && x < layout->width && y < layout->height
-     && !(layout->map[y * layout->width + x] & MAPGRID_COLLISION_MASK))
+     && !(layout->map[y * layout->width + x] & MAPGRID_COLLISION_MASK)
+     && !NeedsDryLanding(x, y))
     {
         bool32 occupied = FALSE;
         for (i = 0; i < gMapHeader.events->objectEventCount; i++)

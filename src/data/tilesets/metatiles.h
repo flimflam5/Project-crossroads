@@ -434,3 +434,49 @@ const u16 gMetatileAttributes_HgssBellSecondary[] = INCBIN_U16("data/tilesets/se
 
 const u16 gMetatiles_HgssTemple[] = INCBIN_U16("data/tilesets/secondary/hgss_temple/metatiles.bin");
 const u16 gMetatileAttributes_HgssTemple[] = INCBIN_U16("data/tilesets/secondary/hgss_temple/metatile_attributes.bin");
+
+// BEGIN OWNER EIGHT GYMS INTEGRATION
+#if !IS_FRLG
+const u16 gMetatiles_BlGymEcruteakPrimary[] = INCBIN_U16("data/tilesets/primary/bl_gym_ecruteak/metatiles.bin");
+const u16 gMetatileAttributes_BlGymEcruteakPrimary[] = INCBIN_U16("data/tilesets/primary/bl_gym_ecruteak/metatile_attributes.bin");
+const u16 gMetatiles_BlGymEcruteakSecondary[] = INCBIN_U16("data/tilesets/secondary/bl_gym_ecruteak/metatiles.bin");
+const u16 gMetatileAttributes_BlGymEcruteakSecondary[] = INCBIN_U16("data/tilesets/secondary/bl_gym_ecruteak/metatile_attributes.bin");
+const u16 gMetatiles_BlGymOlivinePrimary[] = INCBIN_U16("data/tilesets/primary/bl_gym_olivine/metatiles.bin");
+const u16 gMetatileAttributes_BlGymOlivinePrimary[] = INCBIN_U16("data/tilesets/primary/bl_gym_olivine/metatile_attributes.bin");
+const u16 gMetatiles_BlGymOlivineSecondary[] = INCBIN_U16("data/tilesets/secondary/bl_gym_olivine/metatiles.bin");
+const u16 gMetatileAttributes_BlGymOlivineSecondary[] = INCBIN_U16("data/tilesets/secondary/bl_gym_olivine/metatile_attributes.bin");
+const u16 gMetatiles_BlGymVioletPrimary[] = INCBIN_U16("data/tilesets/primary/bl_gym_violet/metatiles.bin");
+const u16 gMetatileAttributes_BlGymVioletPrimary[] = INCBIN_U16("data/tilesets/primary/bl_gym_violet/metatile_attributes.bin");
+const u16 gMetatiles_BlGymVioletSecondary[] = INCBIN_U16("data/tilesets/secondary/bl_gym_violet/metatiles.bin");
+const u16 gMetatileAttributes_BlGymVioletSecondary[] = INCBIN_U16("data/tilesets/secondary/bl_gym_violet/metatile_attributes.bin");
+const u16 gMetatiles_BlGymAzaleaPrimary[] = INCBIN_U16("data/tilesets/primary/bl_gym_azalea/metatiles.bin");
+const u16 gMetatileAttributes_BlGymAzaleaPrimary[] = INCBIN_U16("data/tilesets/primary/bl_gym_azalea/metatile_attributes.bin");
+const u16 gMetatiles_BlGymAzaleaSecondary[] = INCBIN_U16("data/tilesets/secondary/bl_gym_azalea/metatiles.bin");
+const u16 gMetatileAttributes_BlGymAzaleaSecondary[] = INCBIN_U16("data/tilesets/secondary/bl_gym_azalea/metatile_attributes.bin");
+const u16 gMetatiles_BlGymGoldenrodPrimary[] = INCBIN_U16("data/tilesets/primary/bl_gym_goldenrod/metatiles.bin");
+const u16 gMetatileAttributes_BlGymGoldenrodPrimary[] = INCBIN_U16("data/tilesets/primary/bl_gym_goldenrod/metatile_attributes.bin");
+const u16 gMetatiles_BlGymGoldenrodSecondary[] = INCBIN_U16("data/tilesets/secondary/bl_gym_goldenrod/metatiles.bin");
+const u16 gMetatileAttributes_BlGymGoldenrodSecondary[] = INCBIN_U16("data/tilesets/secondary/bl_gym_goldenrod/metatile_attributes.bin");
+const u16 gMetatiles_BlGymCianwoodPrimary[] = INCBIN_U16("data/tilesets/primary/bl_gym_cianwood/metatiles.bin");
+const u16 gMetatileAttributes_BlGymCianwoodPrimary[] = INCBIN_U16("data/tilesets/primary/bl_gym_cianwood/metatile_attributes.bin");
+const u16 gMetatiles_BlGymCianwoodSecondary[] = INCBIN_U16("data/tilesets/secondary/bl_gym_cianwood/metatiles.bin");
+const u16 gMetatileAttributes_BlGymCianwoodSecondary[] = INCBIN_U16("data/tilesets/secondary/bl_gym_cianwood/metatile_attributes.bin");
+const u16 gMetatiles_BlGymMahoganyPrimary[] = INCBIN_U16("data/tilesets/primary/bl_gym_mahogany/metatiles.bin");
+const u16 gMetatileAttributes_BlGymMahoganyPrimary[] = INCBIN_U16("data/tilesets/primary/bl_gym_mahogany/metatile_attributes.bin");
+const u16 gMetatiles_BlGymMahoganySecondary[] = INCBIN_U16("data/tilesets/secondary/bl_gym_mahogany/metatiles.bin");
+const u16 gMetatileAttributes_BlGymMahoganySecondary[] = INCBIN_U16("data/tilesets/secondary/bl_gym_mahogany/metatile_attributes.bin");
+const u16 gMetatiles_BlGymBlackthornPrimary[] = INCBIN_U16("data/tilesets/primary/bl_gym_blackthorn/metatiles.bin");
+const u16 gMetatileAttributes_BlGymBlackthornPrimary[] = INCBIN_U16("data/tilesets/primary/bl_gym_blackthorn/metatile_attributes.bin");
+const u16 gMetatiles_BlGymBlackthornSecondary[] = INCBIN_U16("data/tilesets/secondary/bl_gym_blackthorn/metatiles.bin");
+const u16 gMetatileAttributes_BlGymBlackthornSecondary[] = INCBIN_U16("data/tilesets/secondary/bl_gym_blackthorn/metatile_attributes.bin");
+#endif
+// END OWNER EIGHT GYMS INTEGRATION
+
+// BEGIN HGSS VIOLET ORIGINAL ART
+#if !IS_FRLG
+const u16 gMetatiles_HgssVioletPrimary[] = INCBIN_U16("data/tilesets/primary/hgss_violet/metatiles.bin");
+const u16 gMetatileAttributes_HgssVioletPrimary[] = INCBIN_U16("data/tilesets/primary/hgss_violet/metatile_attributes.bin");
+const u16 gMetatiles_HgssVioletSecondary[] = INCBIN_U16("data/tilesets/secondary/hgss_violet/metatiles.bin");
+const u16 gMetatileAttributes_HgssVioletSecondary[] = INCBIN_U16("data/tilesets/secondary/hgss_violet/metatile_attributes.bin");
+#endif
+// END HGSS VIOLET ORIGINAL ART

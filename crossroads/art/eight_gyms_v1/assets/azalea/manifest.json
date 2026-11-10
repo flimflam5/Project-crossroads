@@ -1,0 +1,96 @@
+{
+  "name": "azalea",
+  "type": "Bug",
+  "tile_count": 131,
+  "metatile_count": 56,
+  "collision_rows": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0
+    ],
+    [
+      0,
+      1,
+      1,
+      0,
+      0,
+      1,
+      1,
+      0
+    ]
+  ],
+  "doors": [
+    [
+      3,
+      6
+    ],
+    [
+      4,
+      6
+    ]
+  ],
+  "arrival_recommendation": [
+    3,
+    7
+  ],
+  "door_behavior": "MB_NON_ANIMATED_DOOR",
+  "roof_layer": "NORMAL (above player)",
+  "facade_layer": "COVERED (behind player)",
+  "sha256_4bpp": "d7bf2d400039a3551eb728399fb4305a54496b1c81fd7ec9e68275bd1daca435"
+}

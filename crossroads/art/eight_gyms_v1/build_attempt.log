@@ -1,0 +1,26 @@
+make: Entering directory '/tmp/black-ledger-gyms'
+bash: line 1: arm-none-eabi-gcc: command not found
+bash: line 1: arm-none-eabi-gcc: command not found
+bash: line 1: arm-none-eabi-gcc: command not found
+bash: line 1: arm-none-eabi-gcc: command not found
+Package libpng was not found in the pkg-config search path.
+Perhaps you should add the directory containing `libpng.pc'
+to the PKG_CONFIG_PATH environment variable
+Package 'libpng', required by 'virtual:world', not found
+Package libpng was not found in the pkg-config search path.
+Perhaps you should add the directory containing `libpng.pc'
+to the PKG_CONFIG_PATH environment variable
+Package 'libpng', required by 'virtual:world', not found
+convert_png.c:5:10: fatal error: png.h: No such file or directory
+    5 | #include <png.h>
+      |          ^~~~~~~
+compilation terminated.
+make[2]: *** [Makefile:26: gbagfx] Error 1
+make[1]: *** [make_tools.mk:23: tools/gbagfx] Error 2
+make[1]: *** Waiting for unfinished jobs....
+cc -Wall -Wextra -Werror -std=c11 -O2 bin2c.c -o bin2c 
+cc gbafix.c -o gbafix 
+cc -Wall -Wextra -Werror -Wno-sign-compare -std=c11 -O2 -DPNG_SKIP_SETJMP_CHECK  main.c convert_png.c gfx.c jasc_pal.c lz.c rl.c util.c font.c huff.c -o gbagfx  -lpng -lz
+g++ -Wall -std=c++17 -O2 -I . jsonproc.cpp -o jsonproc 
+Makefile:296: *** Errors occurred while building tools. See error messages above for more details.  Stop.
+make: Leaving directory '/tmp/black-ledger-gyms'

@@ -71,16 +71,22 @@ def city_data():
   if y not in range(37,40):t[y*w]=0x4c6
   if y not in range(46,49):t[y*w+w-1]=0x4c6
  from hgss_connection_buffer import repair
- return repair('EcruteakCity',struct.pack('<'+str(w*h)+'H',*t),w,h,specs)
+ from build_eight_gym_integration import overlay
+ return overlay('EcruteakCity',repair('EcruteakCity',struct.pack('<'+str(w*h)+'H',*t),w,h,specs),w,h)
 
 def generate(check=False):
  def write(p,b):
+  if p.startswith('data/maps/') and p.endswith('/map.json'):
+   from build_eight_gym_integration import patch_events
+   b=json.dumps(patch_events(p.split('/')[2],json.loads(b)),indent=2)+'\n'
   if isinstance(b,str):b=b.encode()
   p=R/p
   if check:assert p.read_bytes()==b,('Regenerate',p)
   elif not p.exists() or p.read_bytes()!=b:p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(b)
  def js(p,v):write(p,json.dumps(v,indent=2)+'\n')
- layouts=json.loads((R/'data/layouts/layouts.json').read_text());l=next(l for l in layouts['layouts'] if l['id']=='LAYOUT_ECRUTEAK_CITY');l.update(width=64,height=64,primary_tileset='gTileset_HgssEcruteakPrimary',secondary_tileset='gTileset_HgssEcruteakSecondary');js('data/layouts/layouts.json',layouts)
+ layouts=json.loads((R/'data/layouts/layouts.json').read_text());l=next(l for l in layouts['layouts'] if l['id']=='LAYOUT_ECRUTEAK_CITY');l.update(width=64,height=64,primary_tileset='gTileset_HgssEcruteakPrimary',secondary_tileset='gTileset_HgssEcruteakSecondary')
+ from build_eight_gym_integration import relocate_layout
+ relocate_layout('EcruteakCity',l);js('data/layouts/layouts.json',layouts)
  m=json.loads((R/'data/maps/EcruteakCity/map.json').read_text());positions=canonical_positions()
  for e,(x,y) in zip(m['warp_events'],positions):e.update(x=x,y=y)
  # Both visible leaves of the station doorway enter the same room. Append the

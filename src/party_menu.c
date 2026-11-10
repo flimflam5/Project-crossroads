@@ -4133,7 +4133,11 @@ static void CursorCb_FieldMove(u8 taskId)
             sPartyMenuInternal->data[0] = fieldMove;
             break;
         case FIELD_MOVE_FLY:
+#if !IS_FRLG
             gPartyMenu.exitCallback = Johto_IsExplorationGroup(gSaveBlock1Ptr->location.mapGroup) && FlagGet(FLAG_BLACK_LEDGER_QA_FLYER) ? CB2_OpenJohtoFlyMap : CB2_OpenFlyMap;
+#else
+            gPartyMenu.exitCallback = CB2_OpenFlyMap;
+#endif
             Task_ClosePartyMenu(taskId);
             break;
         default:

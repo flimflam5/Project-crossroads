@@ -1323,6 +1323,9 @@
     "EcruteakCity_DowsingHouse",
     "EcruteakCity_PokemonCenter_B1F",
     "EcruteakCity_WestGate",
-    "EcruteakCity_EastGate"
+    "EcruteakCity_EastGate",
+    "VioletCity_PokemonCenter_B1F",
+    "VioletCity_WestGate",
+    "VioletCity_EastGate"
   ]
 }

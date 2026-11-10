@@ -15,14 +15,14 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_VIOLET_CITY",
-      "offset": -10,
-      "direction": "up"
-    },
-    {
       "map": "MAP_RUINS_OF_ALPH",
       "offset": 14,
       "direction": "left"
+    },
+    {
+      "map": "MAP_VIOLET_CITY",
+      "direction": "up",
+      "offset": -9
     }
   ],
   "object_events": [

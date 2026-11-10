@@ -1,0 +1,15 @@
+Normal old battery-save Continue: EcruteakCity_BellTower_9F (7, 3) PASS
+Actual survey desk enables RAM-only water access without changing saved flags: PASS
+Actual controller visits/return, healing and retained starter/party: PASS 0 target maps 18 transitions
+Actual session-only Surf entry: VioletCity (35, 17) to (35, 18) PASS
+Actual session-only Surf entry: VioletCity (35, 28) to (35, 29) PASS
+Actual session-only Surf entry: VioletCity (35, 17) to (35, 18) PASS
+Actual session-only Surf entry: VioletCity (35, 28) to (35, 29) PASS
+Actual pedestrian round trip across both reference bridges, no Surf: 378 recorded frames PASS
+Actual session-only Surf entry: VioletCity (35, 34) to (35, 33) PASS
+Actual session-only Surf entry: VioletCity (35, 23) to (35, 22) PASS
+Actual session-only Surf entry: VioletCity (35, 16) to (34, 16) PASS
+Actual session-only Surf entry: VioletCity (23, 16) to (24, 16) PASS
+Actual session-only Surf entry: VioletCity (43, 17) to (44, 17) PASS
+Actual session-only Surf entry: VioletCity (54, 24) to (53, 24) PASS
+Actual Violet city dry-edge wall/tree/bridge/boundary controller probes: 526 PASS

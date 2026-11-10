@@ -1,0 +1,96 @@
+{
+  "name": "ecruteak",
+  "type": "Ghost",
+  "tile_count": 115,
+  "metatile_count": 56,
+  "collision_rows": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0
+    ],
+    [
+      0,
+      1,
+      1,
+      0,
+      0,
+      1,
+      1,
+      0
+    ]
+  ],
+  "doors": [
+    [
+      3,
+      6
+    ],
+    [
+      4,
+      6
+    ]
+  ],
+  "arrival_recommendation": [
+    3,
+    7
+  ],
+  "door_behavior": "MB_NON_ANIMATED_DOOR",
+  "roof_layer": "NORMAL (above player)",
+  "facade_layer": "COVERED (behind player)",
+  "sha256_4bpp": "c6fc9b0b07d78a3eb83dd022322bec6076916829182bdd48376cd2114fe43bf1"
+}

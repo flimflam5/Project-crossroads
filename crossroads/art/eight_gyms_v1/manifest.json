@@ -1,0 +1,779 @@
+{
+  "reference_commit": "512a4d5658973d7d54c531ba8aa62037c67b517a",
+  "format": "Emerald secondary tileset; primary General",
+  "tile_base": 512,
+  "metatile_base": 512,
+  "palette_bank": 6,
+  "width_metatiles": 8,
+  "height_metatiles": 7,
+  "entries": [
+    {
+      "name": "violet",
+      "type": "Flying",
+      "tile_count": 128,
+      "metatile_count": 56,
+      "collision_rows": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          0,
+          0,
+          1,
+          1,
+          0
+        ]
+      ],
+      "doors": [
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "arrival_recommendation": [
+        3,
+        7
+      ],
+      "door_behavior": "MB_NON_ANIMATED_DOOR",
+      "roof_layer": "NORMAL (above player)",
+      "facade_layer": "COVERED (behind player)",
+      "sha256_4bpp": "640882c5da8185ed5a8ecba7e4b786b4e543ca27f4e11973738afdfbb0e60361"
+    },
+    {
+      "name": "azalea",
+      "type": "Bug",
+      "tile_count": 131,
+      "metatile_count": 56,
+      "collision_rows": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          0,
+          0,
+          1,
+          1,
+          0
+        ]
+      ],
+      "doors": [
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "arrival_recommendation": [
+        3,
+        7
+      ],
+      "door_behavior": "MB_NON_ANIMATED_DOOR",
+      "roof_layer": "NORMAL (above player)",
+      "facade_layer": "COVERED (behind player)",
+      "sha256_4bpp": "6a03c2c5116c2567f91b2002fb6d09c9724220414d4a846dcb18613398a6169c"
+    },
+    {
+      "name": "goldenrod",
+      "type": "Normal",
+      "tile_count": 139,
+      "metatile_count": 56,
+      "collision_rows": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          0,
+          0,
+          1,
+          1,
+          0
+        ]
+      ],
+      "doors": [
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "arrival_recommendation": [
+        3,
+        7
+      ],
+      "door_behavior": "MB_NON_ANIMATED_DOOR",
+      "roof_layer": "NORMAL (above player)",
+      "facade_layer": "COVERED (behind player)",
+      "sha256_4bpp": "2325c090ca5d2e6e28b47334cbb0ac4f7b685618be45924bbc2094cdbcab2465"
+    },
+    {
+      "name": "ecruteak",
+      "type": "Ghost",
+      "tile_count": 115,
+      "metatile_count": 56,
+      "collision_rows": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          0,
+          0,
+          1,
+          1,
+          0
+        ]
+      ],
+      "doors": [
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "arrival_recommendation": [
+        3,
+        7
+      ],
+      "door_behavior": "MB_NON_ANIMATED_DOOR",
+      "roof_layer": "NORMAL (above player)",
+      "facade_layer": "COVERED (behind player)",
+      "sha256_4bpp": "d0010a085f06cc06d48bb2b6df3a4c2ef0dc74c3c471964623667145a348ef9b"
+    },
+    {
+      "name": "cianwood",
+      "type": "Fighting",
+      "tile_count": 127,
+      "metatile_count": 56,
+      "collision_rows": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          0,
+          0,
+          1,
+          1,
+          0
+        ]
+      ],
+      "doors": [
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "arrival_recommendation": [
+        3,
+        7
+      ],
+      "door_behavior": "MB_NON_ANIMATED_DOOR",
+      "roof_layer": "NORMAL (above player)",
+      "facade_layer": "COVERED (behind player)",
+      "sha256_4bpp": "41eda8928c82fdd1ecef5d3e712d69d1938949b96e0dc63e826e31cf0eab77da"
+    },
+    {
+      "name": "olivine",
+      "type": "Steel",
+      "tile_count": 115,
+      "metatile_count": 56,
+      "collision_rows": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          0,
+          0,
+          1,
+          1,
+          0
+        ]
+      ],
+      "doors": [
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "arrival_recommendation": [
+        3,
+        7
+      ],
+      "door_behavior": "MB_NON_ANIMATED_DOOR",
+      "roof_layer": "NORMAL (above player)",
+      "facade_layer": "COVERED (behind player)",
+      "sha256_4bpp": "09d1e16be1bc5d4ff26cb02ba3a4831b531c5bdcbcb42f98ee511127bbb1e939"
+    },
+    {
+      "name": "mahogany",
+      "type": "Ice",
+      "tile_count": 129,
+      "metatile_count": 56,
+      "collision_rows": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          0,
+          0,
+          1,
+          1,
+          0
+        ]
+      ],
+      "doors": [
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "arrival_recommendation": [
+        3,
+        7
+      ],
+      "door_behavior": "MB_NON_ANIMATED_DOOR",
+      "roof_layer": "NORMAL (above player)",
+      "facade_layer": "COVERED (behind player)",
+      "sha256_4bpp": "cfdd093193bc5e599344b84dfff75877563d4e250b1265b4fcac5f20ef666de7"
+    },
+    {
+      "name": "blackthorn",
+      "type": "Dragon",
+      "tile_count": 117,
+      "metatile_count": 56,
+      "collision_rows": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          0,
+          0,
+          1,
+          1,
+          0
+        ]
+      ],
+      "doors": [
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "arrival_recommendation": [
+        3,
+        7
+      ],
+      "door_behavior": "MB_NON_ANIMATED_DOOR",
+      "roof_layer": "NORMAL (above player)",
+      "facade_layer": "COVERED (behind player)",
+      "sha256_4bpp": "7d0721bcca67321d296ccb3cff7f3f1987739f9842c538f0575fc0770ff05a79"
+    }
+  ]
+}

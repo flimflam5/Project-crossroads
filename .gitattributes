@@ -27,3 +27,7 @@ Makefile text eol=lf
 
 *.h linguist-language=C
 *.inc linguist-language=Assembly
+
+# Owner source archive is checksum verified byte-for-byte, including palette LF.
+crossroads/art/eight_gyms_v1/** -text
+crossroads/art/eight_gyms_v1/build_attempt.log -whitespace

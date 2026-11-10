@@ -20,11 +20,6 @@
       "direction": "up"
     },
     {
-      "map": "MAP_VIOLET_CITY",
-      "offset": -8,
-      "direction": "right"
-    },
-    {
       "map": "MAP_NATIONAL_PARK",
       "offset": -6,
       "direction": "left"
@@ -50,8 +45,26 @@
       "flag": "0"
     }
   ],
-  "warp_events": [],
-  "coord_events": [],
+  "warp_events": [
+    {
+      "x": 55,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_VIOLET_CITY_WEST_GATE",
+      "dest_warp_id": "1"
+    }
+  ],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 55,
+      "y": 14,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "HgssViolet_WestRouteEnter"
+    }
+  ],
   "bg_events": [
     {
       "type": "sign",

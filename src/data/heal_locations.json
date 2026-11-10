@@ -379,10 +379,12 @@
     {
       "id": "HEAL_LOCATION_VIOLET_CITY",
       "map": "MAP_VIOLET_CITY",
-      "x": 35,
-      "y": 33,
+      "x": 49,
+      "y": 56,
       "respawn_map": "MAP_VIOLET_CITY_POKEMON_CENTER_1_F",
-      "respawn_npc": "LOCALID_JOHTO_NURSE_VIOLET_CITY"
+      "respawn_npc": "LOCALID_JOHTO_NURSE_VIOLET_CITY",
+      "respawn_x": 8,
+      "respawn_y": 13
     },
     {
       "id": "HEAL_LOCATION_AZALEA_TOWN",

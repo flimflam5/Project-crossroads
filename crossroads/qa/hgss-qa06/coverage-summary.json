@@ -1,0 +1,60 @@
+{
+  "rom_bytes": 33554432,
+  "used_rom_bytes": 30019116,
+  "ewram_bytes": 226448,
+  "iwram_bytes": 28392,
+  "states": {
+    "implemented": true,
+    "compiled": true,
+    "automated_checks": "PASS; see automated-tests.txt",
+    "emulator_controller_tests": "PASS",
+    "owner_visual_qa": "PENDING; not accepted"
+  },
+  "actual_emulator": {
+    "violet_maps": 13,
+    "transitions": 124,
+    "city_blocked_edge_probes": 526,
+    "two_bridge_pedestrian_round_trip": true,
+    "gyms": 8,
+    "both_gym_doors": true,
+    "facade_probes_per_gym": 4,
+    "walkable_roof_probes_per_gym": 2,
+    "normal_save_cold_continue": [
+      "Violet Center",
+      "Violet house",
+      "Violet Surf"
+    ],
+    "exact_party_box_starter_persistence": true,
+    "synthetic_old_walking_pond_migration": true,
+    "actual_morty_loss_to_violet_center": true,
+    "fly_cities": 10,
+    "fly_joe_vram": true,
+    "joe_field_states": [
+      "Mach Bike",
+      "Acro Bike and wheelie",
+      "Surf all directions",
+      "fishing",
+      "disembark"
+    ],
+    "starters": [
+      "Elgyem",
+      "Seedot",
+      "Trubbish"
+    ],
+    "starter_duplicates_prevented": true,
+    "title_start_newgame_handoff_softreset": true
+  },
+  "limits": [
+    "This is a Violet/eight-Gym increment, not completed Johto",
+    "Most other towns/routes/interiors remain prior exploration drafts",
+    "Source raster comparisons/DS lightpost and elevation details remain open",
+    "Violet lift fixed, Sprout pillar static; no new teams, trades, badges or story",
+    "Starter tests skip old introduction through an explicitly disclosed RAM fixture; original Birch prologue remains",
+    "Copies only; synthetic obsolete-position and1HP battle-loss fixtures, temporary QA gear/survey and encounter suppression are isolated in test processes",
+    "No human Delta acceptance claimed"
+  ],
+  "full_suite_rom_sha256": "28b12ad6b01a5ef765f313c6eff6a35eb6a512a823e315b0811b097a6e0d6f28",
+  "delivery_rom_sha256": "ffe8f84c8dee1e688d5e8f7615078a03953c51e0a337c2036fd4fa6a8bf820cb",
+  "delivery_equivalence_audit": "delivery-binary-audit.json",
+  "delivery_emulator_recheck": "All ten Fly destinations, VRAM, cancel, normal Save/cold Continue and party/position PASS"
+}

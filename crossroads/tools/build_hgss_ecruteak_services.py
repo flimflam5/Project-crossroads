@@ -16,7 +16,11 @@ def generate(check=False):
   d=R/p
   if check:assert d.exists() and d.read_bytes()==b,('Regenerate service room',p)
   elif not d.exists() or d.read_bytes()!=b:d.parent.mkdir(parents=True,exist_ok=True);d.write_bytes(b)
- def js(p,v):write(p,json.dumps(v,indent=2)+'\n')
+ def js(p,v):
+  if p.startswith('data/maps/') and p.endswith('/map.json'):
+   from build_eight_gym_integration import patch_events
+   v=patch_events(p.split('/')[2],v)
+  write(p,json.dumps(v,indent=2)+'\n')
  layouts=load('data/layouts/layouts.json');ls={l['id']:l for l in layouts['layouts']};groups=load('data/maps/map_groups.json');manifest=load('crossroads/johto/manifest.json');new=[];reviews=[];maps={}
  base=load('crossroads/hgss/contracts/ecruteak-rooms-qa04.json')
  def obj(x,y,script,gfx='WOMAN_3'):

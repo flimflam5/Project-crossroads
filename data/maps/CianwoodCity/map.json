@@ -123,6 +123,13 @@
       "elevation": 0,
       "dest_map": "MAP_CLIFF_EDGE_GATE_1_F",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 12,
+      "y": 18,
+      "elevation": 0,
+      "dest_map": "MAP_CIANWOOD_CITY_GYM",
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [],

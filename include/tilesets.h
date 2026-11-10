@@ -64,4 +64,31 @@ extern const struct Tileset gTileset_TrainerTower;
 extern const struct Tileset gTileset_WesternCity;
 extern const struct Tileset gTileset_WesternInteriors;
 
+// BEGIN OWNER EIGHT GYMS INTEGRATION
+#if !IS_FRLG
+extern const struct Tileset gTileset_BlGymEcruteakPrimary;
+extern const struct Tileset gTileset_BlGymEcruteakSecondary;
+extern const struct Tileset gTileset_BlGymOlivinePrimary;
+extern const struct Tileset gTileset_BlGymOlivineSecondary;
+extern const struct Tileset gTileset_BlGymVioletPrimary;
+extern const struct Tileset gTileset_BlGymVioletSecondary;
+extern const struct Tileset gTileset_BlGymAzaleaPrimary;
+extern const struct Tileset gTileset_BlGymAzaleaSecondary;
+extern const struct Tileset gTileset_BlGymGoldenrodPrimary;
+extern const struct Tileset gTileset_BlGymGoldenrodSecondary;
+extern const struct Tileset gTileset_BlGymCianwoodPrimary;
+extern const struct Tileset gTileset_BlGymCianwoodSecondary;
+extern const struct Tileset gTileset_BlGymMahoganyPrimary;
+extern const struct Tileset gTileset_BlGymMahoganySecondary;
+extern const struct Tileset gTileset_BlGymBlackthornPrimary;
+extern const struct Tileset gTileset_BlGymBlackthornSecondary;
+#endif
+// END OWNER EIGHT GYMS INTEGRATION
+// BEGIN HGSS VIOLET ORIGINAL ART
+#if !IS_FRLG
+extern const struct Tileset gTileset_HgssVioletPrimary;
+extern const struct Tileset gTileset_HgssVioletSecondary;
+extern const struct Tileset gTileset_HgssVioletRoutePrimary;
+#endif
+// END HGSS VIOLET ORIGINAL ART
 #endif //GUARD_tilesets_H

@@ -1,3 +1,12 @@
+# Current geographic reconstruction
+
+Finish Johto systematically against actual HGSS references. The eight custom Gym
+facades are integrated; Ecruteak QA05 and the Violet QA06 reconstruction are QA
+checkpoints. Continue Routes31/32/36 and associated landmarks next, preserving
+IDs, approved encounters and existing traversal. Full per-area remaining scope:
+[hgss/REGION_CHECKLIST.md](hgss/REGION_CHECKLIST.md). No new story, regions,
+Gym progression/teams or arbitrary encounters are authorized by this map pass.
+
 # Current Ecruteak QA05 update
 
 See [Ecruteak scope, reference adaptations and actual tests](hgss/ECRUTEAK_QA05.md)

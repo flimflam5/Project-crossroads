@@ -1,0 +1,16 @@
+{
+  "rom_sha256": "28b12ad6b01a5ef765f313c6eff6a35eb6a512a823e315b0811b097a6e0d6f28",
+  "views": [],
+  "pedestrian_bridges_both_directions": false,
+  "blocked_edge_probes": 0,
+  "unreachable_probe_backs": [],
+  "mode": "saves-only",
+  "normal_saves": [
+    "center",
+    "house",
+    "surf"
+  ],
+  "synthetic_legacy_walking_migration": true,
+  "exact_party_box_starter_persistence": true,
+  "actual_morty_loss_to_violet_center": true
+}

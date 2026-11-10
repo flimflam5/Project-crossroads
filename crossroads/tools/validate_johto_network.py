@@ -67,6 +67,8 @@ from hgss_room_validation import validate_rooms
 from hgss_service_validation import validate_services
 from hgss_gate_validation import validate_gates
 reviewed|=validate_rooms()|validate_services()|validate_gates()
+from validate_hgss_violet import validate as validate_violet
+reviewed|=validate_violet()
 def behavior(n,x,y):
  w,h=sizes[n]
  if not(0<=x<w and 0<=y<h):return None

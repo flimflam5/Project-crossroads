@@ -1,3 +1,11 @@
+# Current QA06 testing
+
+Use RELEASE_HGSS_QA06.md for the current Delta checklist and hgss/VIOLET_QA06.md
+for source/deviation contracts and commands. Native emulator evidence/logs are in
+qa/hgss-qa06. Structural checks and emulator controller checks are distinct from
+owner visual acceptance, which remains pending. Test only copies of battery
+saves, using normal Continue; cross-build save states are unsupported.
+
 # Current Ecruteak QA05 update
 
 See [Ecruteak scope, reference adaptations and actual tests](hgss/ECRUTEAK_QA05.md)

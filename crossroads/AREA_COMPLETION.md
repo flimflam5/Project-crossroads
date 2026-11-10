@@ -1,3 +1,11 @@
+# Current QA06 scope
+
+Eight owner Gym facades; Violet exterior, two houses, school, Center/basement,
+Mart, fixed Gym access, Sprout1–3F and west/east gates. Per-area source/deviation/
+remaining checklist: [REGION_CHECKLIST.md](hgss/REGION_CHECKLIST.md).
+Ecruteak QA05 remains preserved apart from its requested new Gym. Neither a
+connected network nor the current increment means all Johto is polished.
+
 # Current Ecruteak QA05 update
 
 See [Ecruteak scope, reference adaptations and actual tests](hgss/ECRUTEAK_QA05.md)

@@ -1,0 +1,96 @@
+{
+  "name": "blackthorn",
+  "type": "Dragon",
+  "tile_count": 117,
+  "metatile_count": 56,
+  "collision_rows": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0
+    ],
+    [
+      0,
+      1,
+      1,
+      0,
+      0,
+      1,
+      1,
+      0
+    ]
+  ],
+  "doors": [
+    [
+      3,
+      6
+    ],
+    [
+      4,
+      6
+    ]
+  ],
+  "arrival_recommendation": [
+    3,
+    7
+  ],
+  "door_behavior": "MB_NON_ANIMATED_DOOR",
+  "roof_layer": "NORMAL (above player)",
+  "facade_layer": "COVERED (behind player)",
+  "sha256_4bpp": "927b1e470bf14842e6126d726f37de0e12f9e422444f2d1ea7c74a03ab6f198c"
+}

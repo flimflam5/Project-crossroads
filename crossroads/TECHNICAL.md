@@ -1,3 +1,22 @@
+# QA06 resource and generator ownership
+
+Eight custom Gyms are packed by build_eight_gym_integration.py into private
+per-city primary/secondary resources. Immutable QA05 baselines and authored
+Violet source inputs are separate; no shared General resources or engine limits
+are changed. build_hgss_violet.py owns Violet and the bounded neighbor portal/
+seam edits. The network skips its owned rooms and calls the dedicated generators.
+
+Three map/layout entries append; existing ordinal IDs/heals/structures remain.
+Normal Continue refreshes stale layouts/tiles and safely relocates newly blocked
+positions. Violet's new pond distinguishes saved Surf from old walking using
+the existing byte-swapped saved graphics ID convention; the save format is not
+changed. Route32's private primary shares General graphics/palettes and adds
+paving in previously unused metatile1ff. Its remaining terrain is untouched.
+
+map_data_rules.mk now correctly depends on layouts.json when regenerating map
+headers, preventing stale layout-symbol references after a dedicated room rename.
+See hgss/VIOLET_QA06.md and hgss/ACTIVE_REGION.md for details and next work.
+
 # Current Ecruteak QA05 update
 
 See [Ecruteak scope, reference adaptations and actual tests](hgss/ECRUTEAK_QA05.md)

@@ -1,0 +1,58 @@
+[
+  {
+    "city": "EcruteakCity",
+    "both_doors": true,
+    "facade_sides": 4,
+    "walkable_overhang": true,
+    "rom_sha256": "28b12ad6b01a5ef765f313c6eff6a35eb6a512a823e315b0811b097a6e0d6f28"
+  },
+  {
+    "city": "OlivineCity",
+    "both_doors": true,
+    "facade_sides": 4,
+    "walkable_overhang": true,
+    "rom_sha256": "28b12ad6b01a5ef765f313c6eff6a35eb6a512a823e315b0811b097a6e0d6f28"
+  },
+  {
+    "city": "VioletCity",
+    "both_doors": true,
+    "facade_sides": 4,
+    "walkable_overhang": true,
+    "rom_sha256": "28b12ad6b01a5ef765f313c6eff6a35eb6a512a823e315b0811b097a6e0d6f28"
+  },
+  {
+    "city": "AzaleaTown",
+    "both_doors": true,
+    "facade_sides": 4,
+    "walkable_overhang": true,
+    "rom_sha256": "28b12ad6b01a5ef765f313c6eff6a35eb6a512a823e315b0811b097a6e0d6f28"
+  },
+  {
+    "city": "GoldenrodCity",
+    "both_doors": true,
+    "facade_sides": 4,
+    "walkable_overhang": true,
+    "rom_sha256": "28b12ad6b01a5ef765f313c6eff6a35eb6a512a823e315b0811b097a6e0d6f28"
+  },
+  {
+    "city": "CianwoodCity",
+    "both_doors": true,
+    "facade_sides": 4,
+    "walkable_overhang": true,
+    "rom_sha256": "28b12ad6b01a5ef765f313c6eff6a35eb6a512a823e315b0811b097a6e0d6f28"
+  },
+  {
+    "city": "MahoganyTown",
+    "both_doors": true,
+    "facade_sides": 4,
+    "walkable_overhang": true,
+    "rom_sha256": "28b12ad6b01a5ef765f313c6eff6a35eb6a512a823e315b0811b097a6e0d6f28"
+  },
+  {
+    "city": "BlackthornCity",
+    "both_doors": true,
+    "facade_sides": 4,
+    "walkable_overhang": true,
+    "rom_sha256": "28b12ad6b01a5ef765f313c6eff6a35eb6a512a823e315b0811b097a6e0d6f28"
+  }
+]

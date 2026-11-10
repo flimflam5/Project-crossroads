@@ -8,8 +8,8 @@ from collections import deque
 R=Path(__file__).resolve().parents[2]
 FACTS=json.loads((R/'crossroads/hgss/canonical_events/ecruteak-interior-geometry.json').read_text())
 ART=json.loads((R/'crossroads/hgss/art/temple/manifest.json').read_text())['specs']
-def project(header,theme='wood',bounds=None):
- f=FACTS[header];cw,ch=f['matrix_dimensions'];W,H=cw*32,ch*32;perms=[0x8000]*(W*H)
+def project(header,theme='wood',bounds=None,facts=None):
+ f=(facts if facts is not None else FACTS)[header];cw,ch=f['matrix_dimensions'];W,H=cw*32,ch*32;perms=[0x8000]*(W*H)
  for k,c in enumerate(f['chunks']):
   for y in range(32):
    for x in range(32):perms[(k//cw*32+y)*W+k%cw*32+x]=c['permissions'][y*32+x]

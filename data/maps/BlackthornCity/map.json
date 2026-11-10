@@ -123,6 +123,13 @@
       "elevation": 0,
       "dest_map": "MAP_DRAGONS_DEN_1_F",
       "dest_warp_id": "1"
+    },
+    {
+      "x": 25,
+      "y": 17,
+      "elevation": 0,
+      "dest_map": "MAP_BLACKTHORN_CITY_GYM",
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [],

@@ -1,0 +1,23 @@
+{
+  "rom_sha256": "28b12ad6b01a5ef765f313c6eff6a35eb6a512a823e315b0811b097a6e0d6f28",
+  "views": [
+    "pond-plaza",
+    "sprout-exterior",
+    "owner-gym",
+    "school-exterior",
+    "center-exterior",
+    "northwest-house-exterior",
+    "guest-house",
+    "northwest-house",
+    "school-classroom",
+    "sprout-1f",
+    "sprout-2f",
+    "sprout-3f",
+    "gym-fixed-access",
+    "center-basement",
+    "mart-interior"
+  ],
+  "pedestrian_bridges_both_directions": true,
+  "blocked_edge_probes": 526,
+  "unreachable_probe_backs": []
+}

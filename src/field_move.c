@@ -22,8 +22,10 @@ static bool32 IsAlwaysTrue(enum FieldMove fieldMove)
 
 static bool32 HasBadgeForFieldMove(enum FieldMove fieldMove)
 {
+#if !IS_FRLG
     if (fieldMove == FIELD_MOVE_FLY && Johto_IsExplorationGroup(gSaveBlock1Ptr->location.mapGroup) && FlagGet(FLAG_BLACK_LEDGER_QA_FLYER))
         return TRUE; // Explicit QA kit only; no badges or normal progression grants.
+#endif
     return FlagGet(gFieldMoveInfo[fieldMove].arg + FLAG_BADGE01_GET);
 }
 

@@ -1588,3 +1588,120 @@ const struct Tileset gTileset_HgssTemple = {
  .metatileAttributes=gMetatileAttributes_HgssTemple, .callback=NULL,
 };
 #endif
+
+// BEGIN OWNER EIGHT GYMS INTEGRATION
+#if !IS_FRLG
+const struct Tileset gTileset_BlGymEcruteakPrimary = {
+ .isCompressed=TRUE, .isSecondary=FALSE,
+ .tiles=gTilesetTiles_BlGymEcruteakPrimary, .palettes=gTilesetPalettes_BlGymEcruteakPrimary,
+ .metatiles=gMetatiles_BlGymEcruteakPrimary, .metatileAttributes=gMetatileAttributes_BlGymEcruteakPrimary,
+ .callback=InitTilesetAnim_General,
+};
+const struct Tileset gTileset_BlGymEcruteakSecondary = {
+ .isCompressed=TRUE, .isSecondary=TRUE,
+ .tiles=gTilesetTiles_BlGymEcruteakSecondary, .palettes=gTilesetPalettes_BlGymEcruteakSecondary,
+ .metatiles=gMetatiles_BlGymEcruteakSecondary, .metatileAttributes=gMetatileAttributes_BlGymEcruteakSecondary,
+ .callback=NULL,
+};
+const struct Tileset gTileset_BlGymOlivinePrimary = {
+ .isCompressed=TRUE, .isSecondary=FALSE,
+ .tiles=gTilesetTiles_BlGymOlivinePrimary, .palettes=gTilesetPalettes_BlGymOlivinePrimary,
+ .metatiles=gMetatiles_BlGymOlivinePrimary, .metatileAttributes=gMetatileAttributes_BlGymOlivinePrimary,
+ .callback=InitTilesetAnim_General,
+};
+const struct Tileset gTileset_BlGymOlivineSecondary = {
+ .isCompressed=TRUE, .isSecondary=TRUE,
+ .tiles=gTilesetTiles_BlGymOlivineSecondary, .palettes=gTilesetPalettes_BlGymOlivineSecondary,
+ .metatiles=gMetatiles_BlGymOlivineSecondary, .metatileAttributes=gMetatileAttributes_BlGymOlivineSecondary,
+ .callback=InitTilesetAnim_Slateport,
+};
+const struct Tileset gTileset_BlGymVioletPrimary = {
+ .isCompressed=TRUE, .isSecondary=FALSE,
+ .tiles=gTilesetTiles_BlGymVioletPrimary, .palettes=gTilesetPalettes_BlGymVioletPrimary,
+ .metatiles=gMetatiles_BlGymVioletPrimary, .metatileAttributes=gMetatileAttributes_BlGymVioletPrimary,
+ .callback=InitTilesetAnim_General,
+};
+const struct Tileset gTileset_BlGymVioletSecondary = {
+ .isCompressed=TRUE, .isSecondary=TRUE,
+ .tiles=gTilesetTiles_BlGymVioletSecondary, .palettes=gTilesetPalettes_BlGymVioletSecondary,
+ .metatiles=gMetatiles_BlGymVioletSecondary, .metatileAttributes=gMetatileAttributes_BlGymVioletSecondary,
+ .callback=NULL,
+};
+const struct Tileset gTileset_BlGymAzaleaPrimary = {
+ .isCompressed=TRUE, .isSecondary=FALSE,
+ .tiles=gTilesetTiles_BlGymAzaleaPrimary, .palettes=gTilesetPalettes_BlGymAzaleaPrimary,
+ .metatiles=gMetatiles_BlGymAzaleaPrimary, .metatileAttributes=gMetatileAttributes_BlGymAzaleaPrimary,
+ .callback=InitTilesetAnim_General,
+};
+const struct Tileset gTileset_BlGymAzaleaSecondary = {
+ .isCompressed=TRUE, .isSecondary=TRUE,
+ .tiles=gTilesetTiles_BlGymAzaleaSecondary, .palettes=gTilesetPalettes_BlGymAzaleaSecondary,
+ .metatiles=gMetatiles_BlGymAzaleaSecondary, .metatileAttributes=gMetatileAttributes_BlGymAzaleaSecondary,
+ .callback=InitTilesetAnim_Slateport,
+};
+const struct Tileset gTileset_BlGymGoldenrodPrimary = {
+ .isCompressed=TRUE, .isSecondary=FALSE,
+ .tiles=gTilesetTiles_BlGymGoldenrodPrimary, .palettes=gTilesetPalettes_BlGymGoldenrodPrimary,
+ .metatiles=gMetatiles_BlGymGoldenrodPrimary, .metatileAttributes=gMetatileAttributes_BlGymGoldenrodPrimary,
+ .callback=InitTilesetAnim_General,
+};
+const struct Tileset gTileset_BlGymGoldenrodSecondary = {
+ .isCompressed=TRUE, .isSecondary=TRUE,
+ .tiles=gTilesetTiles_BlGymGoldenrodSecondary, .palettes=gTilesetPalettes_BlGymGoldenrodSecondary,
+ .metatiles=gMetatiles_BlGymGoldenrodSecondary, .metatileAttributes=gMetatileAttributes_BlGymGoldenrodSecondary,
+ .callback=InitTilesetAnim_Slateport,
+};
+const struct Tileset gTileset_BlGymCianwoodPrimary = {
+ .isCompressed=TRUE, .isSecondary=FALSE,
+ .tiles=gTilesetTiles_BlGymCianwoodPrimary, .palettes=gTilesetPalettes_BlGymCianwoodPrimary,
+ .metatiles=gMetatiles_BlGymCianwoodPrimary, .metatileAttributes=gMetatileAttributes_BlGymCianwoodPrimary,
+ .callback=InitTilesetAnim_General,
+};
+const struct Tileset gTileset_BlGymCianwoodSecondary = {
+ .isCompressed=TRUE, .isSecondary=TRUE,
+ .tiles=gTilesetTiles_BlGymCianwoodSecondary, .palettes=gTilesetPalettes_BlGymCianwoodSecondary,
+ .metatiles=gMetatiles_BlGymCianwoodSecondary, .metatileAttributes=gMetatileAttributes_BlGymCianwoodSecondary,
+ .callback=InitTilesetAnim_Slateport,
+};
+const struct Tileset gTileset_BlGymMahoganyPrimary = {
+ .isCompressed=TRUE, .isSecondary=FALSE,
+ .tiles=gTilesetTiles_BlGymMahoganyPrimary, .palettes=gTilesetPalettes_BlGymMahoganyPrimary,
+ .metatiles=gMetatiles_BlGymMahoganyPrimary, .metatileAttributes=gMetatileAttributes_BlGymMahoganyPrimary,
+ .callback=InitTilesetAnim_General,
+};
+const struct Tileset gTileset_BlGymMahoganySecondary = {
+ .isCompressed=TRUE, .isSecondary=TRUE,
+ .tiles=gTilesetTiles_BlGymMahoganySecondary, .palettes=gTilesetPalettes_BlGymMahoganySecondary,
+ .metatiles=gMetatiles_BlGymMahoganySecondary, .metatileAttributes=gMetatileAttributes_BlGymMahoganySecondary,
+ .callback=InitTilesetAnim_Slateport,
+};
+const struct Tileset gTileset_BlGymBlackthornPrimary = {
+ .isCompressed=TRUE, .isSecondary=FALSE,
+ .tiles=gTilesetTiles_BlGymBlackthornPrimary, .palettes=gTilesetPalettes_BlGymBlackthornPrimary,
+ .metatiles=gMetatiles_BlGymBlackthornPrimary, .metatileAttributes=gMetatileAttributes_BlGymBlackthornPrimary,
+ .callback=InitTilesetAnim_General,
+};
+const struct Tileset gTileset_BlGymBlackthornSecondary = {
+ .isCompressed=TRUE, .isSecondary=TRUE,
+ .tiles=gTilesetTiles_BlGymBlackthornSecondary, .palettes=gTilesetPalettes_BlGymBlackthornSecondary,
+ .metatiles=gMetatiles_BlGymBlackthornSecondary, .metatileAttributes=gMetatileAttributes_BlGymBlackthornSecondary,
+ .callback=InitTilesetAnim_Slateport,
+};
+#endif
+// END OWNER EIGHT GYMS INTEGRATION
+
+// BEGIN HGSS VIOLET ORIGINAL ART
+#if !IS_FRLG
+const struct Tileset gTileset_HgssVioletPrimary = {
+ .isCompressed=TRUE, .isSecondary=FALSE, .tiles=gTilesetTiles_HgssVioletPrimary,
+ .palettes=gTilesetPalettes_HgssVioletPrimary, .metatiles=gMetatiles_HgssVioletPrimary, .metatileAttributes=gMetatileAttributes_HgssVioletPrimary, .callback=InitTilesetAnim_General,
+};
+const struct Tileset gTileset_HgssVioletSecondary = {
+ .isCompressed=TRUE, .isSecondary=TRUE, .tiles=gTilesetTiles_HgssVioletSecondary,
+ .palettes=gTilesetPalettes_HgssVioletSecondary, .metatiles=gMetatiles_HgssVioletSecondary, .metatileAttributes=gMetatileAttributes_HgssVioletSecondary, .callback=NULL,
+};
+const struct Tileset gTileset_HgssVioletRoutePrimary = {
+ .isCompressed=TRUE, .isSecondary=FALSE, .tiles=gTilesetTiles_General, .palettes=gTilesetPalettes_General, .metatiles=gMetatiles_HgssVioletPrimary, .metatileAttributes=gMetatileAttributes_HgssVioletPrimary, .callback=InitTilesetAnim_General,
+};
+#endif
+// END HGSS VIOLET ORIGINAL ART

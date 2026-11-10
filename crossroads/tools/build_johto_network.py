@@ -3,6 +3,7 @@
 import argparse,copy,json,re,struct,textwrap,hashlib
 from pathlib import Path
 from johto_world_spec import *
+from build_hgss_violet import OWNED as VIOLET_OWNED,patch_neighbor,neighbor_tiles
 R=Path(__file__).resolve().parents[2]
 def load(p):return json.loads((R/p).read_text())
 def write(p,b):
@@ -69,6 +70,9 @@ def main():
   return ia,ib
  def addlayout(n,w,h,primary,secondary,data,border):
   lid='LAYOUT_'+sym(n);l=dict(id=lid,name=n+'_Layout',width=w,height=h,primary_tileset=primary,secondary_tileset=secondary,border_filepath=f'data/layouts/{n}/border.bin',blockdata_filepath=f'data/layouts/{n}/map.bin',layout_version='emerald')
+  from build_eight_gym_integration import relocate_layout
+  relocate_layout(n,l)
+  if n=='JohtoRoute32':l['primary_tileset']='gTileset_HgssVioletRoutePrimary'
   if lid not in bylayout:layouts['layouts'].append(l);bylayout[lid]=l
   elif bylayout[lid]!=l:
    # Only newly authored layouts pass here; their numeric IDs remain fixed.
@@ -176,6 +180,7 @@ def main():
  # Border graph, with reciprocal offsets and matching edge corridors.
  for a,d,b in EDGES:
   if a not in maps or b not in maps:continue
+  if a=='VioletCity' or b=='VioletCity':continue # Canonical gate/road author owns these endpoints.
   aw,ah=sizes[a];bw,bh=sizes[b];horizontal=d in ['left','right'];anchor=39 if a=='EcruteakCity' and d=='down' else 47 if a=='EcruteakCity' and d=='right' else (aw//2 if not horizontal else ah//2)
   offset=anchor-(bw//2 if not horizontal else bh//2)
   for n,other,direction,off in [(a,b,d,offset),(b,a,{'up':'down','down':'up','left':'right','right':'left'}[d],-offset)]:
@@ -199,6 +204,7 @@ def main():
  services=[]
  for n,(_,cluster,pos,theme) in CITIES.items():
   if n not in maps:continue
+  if n=='VioletCity':continue
   w,h=sizes[n];cx=w//2;placements=[('PokemonCenter_1F',8,15,18,16,4,4,1),('Mart',w-12,15,12,23,4,4,1),('Gym',w-14,h-15,25,7,7,6,3),('Residence',7,h-14,4,16,4,4,1),('Workshop',cx-2,5,4,16,4,4,1)]
   for suffix,x,y,sx,sy,ww,hh,doorx in placements:
    x,y=city_sites[n][suffix]
@@ -234,6 +240,7 @@ def main():
  # Caverns/towers: actual floor stairs and reciprocal external entrances.
  for base,label,cluster,count,theme,mouths in DUNGEONS:
   if base+'_1F' not in maps:continue
+  if base=='SproutTower':continue
   for i in range(count-1):
    a=base+f'_{i+1}F';b=base+f'_{i+2}F';cave=meta[a]['floor']==0x3201
    warp(a,22,4,b,5,16,at=0x323f if cave else 0x33fc,bt=0x323f if cave else 0x33fd)
@@ -258,6 +265,7 @@ def main():
  # Populate the new streets without blocking buildings, doors or survey aprons.
  for n in CITIES:
   if n not in maps:continue
+  if n=='VioletCity':continue
   w,h=sizes[n];made=0
   candidates=[(w//2-5,h//2-4),(w//2+5,h//2-5),(w//2-7,h//2+6),(w//2+7,h//2+7),(w//2-9,h//2-7),(w//2+9,h//2+5)]
   for x,y in candidates:
@@ -276,7 +284,11 @@ def main():
   if not any(e['dest_map']==gate_mid for e in maps[n]['warp_events']):
    maps[n]['warp_events'] += [copy.deepcopy(e) for e in old_gate['warp_events'] if e['dest_map']==gate_mid]
    maps[n]['coord_events'] += [copy.deepcopy(e) for e in old_gate['coord_events'] if e['script'].startswith('Hgss_') and 'GateEnter' in e['script']]
+ from build_eight_gym_integration import patch_events,overlay,interior_overlay,relocate_layout
  for n,m in maps.items():
+  patch_neighbor(n,m)
+  patch_events(n,m)
+  relocate_layout(n,bylayout[m['layout']])
   if n=='EcruteakCity' or (n in meta and meta[n]['kind']=='hgss'):continue # Dedicated HGSS authoring
   if n=='CianwoodCity':rect(n,sizes[n][0]-3,sizes[n][1]//2-1,3,3,0x1170)
   if n not in existing and meta[n]['outdoor']:
@@ -292,7 +304,7 @@ def main():
   if n not in existing and meta[n]['kind']=='service':continue
   path=bylayout[m['layout']]['blockdata_filepath']
   from visual_repairs import repair
-  write(path,repair(n,struct.pack('<'+str(len(tiles[n]))+'H',*tiles[n]),*sizes[n]))
+  write(path,neighbor_tiles(n,interior_overlay(n,overlay(n,repair(n,struct.pack('<'+str(len(tiles[n]))+'H',*tiles[n]),*sizes[n]),*sizes[n]),*sizes[n]),*sizes[n]))
  groups['gMapGroup_CrossroadsOlivine']=names[:127]
  if len(names)>127:
   groups['gMapGroup_CrossroadsJohtoExpansion']=names[127:]
@@ -324,7 +336,7 @@ def main():
  for linear,p in enumerate(plans,37):
   p['map_group']=75 if linear<127 else 76;p['map_num']=linear if linear<127 else linear-127
   if p['name'] in maps:
-   n=p['name'];m=maps[n];linear=names.index(n);p['map_group']=75 if linear<127 else 76;p['map_num']=linear if linear<127 else linear-127;p.update(display_name=n.replace('_Gym','_CommunityHall') if n in ['NewBarkTown_Gym','CherrygroveCity_Gym'] else n,role='community hall (stable internal slot suffix Gym)' if n in ['NewBarkTown_Gym','CherrygroveCity_Gym'] else p['kind'],status='implemented',id=m['id'],layout=m['layout'],connections=m['connections'],entrances=m['warp_events']);p.setdefault('coverage','structural/build/runtime checks recorded separately; no owner QA yet')
+   n=p['name'];m=maps[n];linear=names.index(n);p['map_group']=75 if linear<127 else 76;p['map_num']=linear if linear<127 else linear-127;p.update(display_name=n.replace('_Gym','_CommunityHall') if n in ['NewBarkTown_Gym','CherrygroveCity_Gym'] else n,role='community hall (stable internal slot suffix Gym)' if n in ['NewBarkTown_Gym','CherrygroveCity_Gym'] else p['kind'],status='reference-runtime-review-pending' if n in VIOLET_OWNED else 'implemented',id=m['id'],layout=m['layout'],connections=m['connections'],entrances=m['warp_events']);p.setdefault('coverage','structural/build/runtime checks recorded separately; no owner QA yet')
  for p in manifest['existing']:
   m=maps[p['name']];p.update(connections=m['connections'],entrances=m['warp_events'])
  manifest['dungeons']=DUNGEONS;manifest['border_topology']=EDGES
@@ -335,5 +347,9 @@ def main():
  generate_hgss(args.check)
  from build_hgss_ecruteak_chain import generate as generate_chain
  generate_chain(args.check)
+ from build_eight_gym_integration import generate as generate_gyms
+ from build_hgss_violet import generate as generate_violet
+ generate_violet(args.check)
+ generate_gyms(args.check)
  print('Johto cluster',args.through,':',len(names),'maps registered;',len(services),'new Centers; IDs preserved')
 if __name__=='__main__':main()
