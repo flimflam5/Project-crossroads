@@ -1,3 +1,9 @@
+# QA04 Johto Fly integration
+
+Owner requested functioning Fly before Delta QA. Party-menu QA Fly connects ten
+existing town/city heal arrivals with native animation; no badges/story flags.
+See RELEASE_HGSS_QA04.md. Full map reconstruction and owner visual QA stay open.
+
 # QA03 owner-requested testing kit
 
 Optional level100 Pidgeot with Fly and Running Shoes via R+talk at the survey

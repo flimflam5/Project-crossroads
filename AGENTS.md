@@ -90,3 +90,11 @@ references. No generic Emerald Gym/house stand-ins described as accurate. Preser
 IDs/saves/network, title/music/Joe/starters/approved content. Record additions,
 necessary technical deviations and unfinished areas separately. Reference manifest
 in crossroads/hgss. No region-wide accuracy claims based on sample maps.
+
+## Owner-requested QA Fly exception
+
+Owner explicitly requested working Fly before map QA. The optional QA03 kit
+marker0x20 permits Fly in Johto without badge grants. A separate party-menu Fly
+mode of the atlas uses existing ten city heal arrivals; ordinary atlas remains
+informational. All cities are available only as QA assistance, not final story
+progression. Preserve native Fly effects, map/layout/heal IDs and saved data.

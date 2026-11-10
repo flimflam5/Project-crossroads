@@ -1,4 +1,6 @@
 #include "global.h"
+#include "johto_atlas.h"
+#include "johto_exploration.h"
 #include "malloc.h"
 #include "battle.h"
 #include "battle_anim.h"
@@ -4131,7 +4133,7 @@ static void CursorCb_FieldMove(u8 taskId)
             sPartyMenuInternal->data[0] = fieldMove;
             break;
         case FIELD_MOVE_FLY:
-            gPartyMenu.exitCallback = CB2_OpenFlyMap;
+            gPartyMenu.exitCallback = Johto_IsExplorationGroup(gSaveBlock1Ptr->location.mapGroup) && FlagGet(FLAG_BLACK_LEDGER_QA_FLYER) ? CB2_OpenJohtoFlyMap : CB2_OpenFlyMap;
             Task_ClosePartyMenu(taskId);
             break;
         default:

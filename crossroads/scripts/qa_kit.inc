@@ -18,6 +18,6 @@ Johto_QAKitFull:
 Johto_QAKitPrompt:
     .string "QA KIT: Level 100 PIDGEOT with\nFLY, and RUNNING SHOES?\pThese stay in this save.\nAccept the testing kit?$"
 Johto_QAKitReady:
-    .string "RUNNING SHOES enabled: hold B.\nYour QA PIDGEOT is ready.\pOnly one QA flyer per save.\nJohto FLY travel is unfinished.$"
+    .string "RUNNING SHOES enabled: hold B.\nYour QA PIDGEOT is ready.\pOnly one QA flyer per save.\nUse FLY outdoors to choose a city.$"
 Johto_QAKitNoRoom:
     .string "RUNNING SHOES enabled.\nMake room for one POKeMON,\pthen return for your QA flyer.$"

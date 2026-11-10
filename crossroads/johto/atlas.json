@@ -1386,5 +1386,17 @@
       50
     ]
   ],
-  "scope": "Field/wall atlas; Fly and Pokenav interfaces retain legacy maps and are not enabled by this pass."
+  "fly_destinations": {
+    "OlivineCity": "HEAL_LOCATION_OLIVINE_CITY",
+    "EcruteakCity": "HEAL_LOCATION_ECRUTEAK_CITY",
+    "GoldenrodCity": "HEAL_LOCATION_GOLDENROD_CITY",
+    "VioletCity": "HEAL_LOCATION_VIOLET_CITY",
+    "AzaleaTown": "HEAL_LOCATION_AZALEA_TOWN",
+    "CherrygroveCity": "HEAL_LOCATION_CHERRYGROVE_CITY",
+    "NewBarkTown": "HEAL_LOCATION_NEW_BARK_TOWN",
+    "MahoganyTown": "HEAL_LOCATION_MAHOGANY_TOWN",
+    "BlackthornCity": "HEAL_LOCATION_BLACKTHORN_CITY",
+    "CianwoodCity": "HEAL_LOCATION_CIANWOOD_CITY"
+  },
+  "scope": "Field/wall atlas plus explicit QA Fly to existing ten city healing arrivals; legacy Pokenav remains unchanged."
 }

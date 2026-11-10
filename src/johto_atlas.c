@@ -1,4 +1,8 @@
 #include "global.h"
+#include "field_effect.h"
+#include "party_menu.h"
+#include "overworld.h"
+#include "constants/heal_locations.h"
 #include "johto_atlas.h"
 #include "bg.h"
 #include "gpu_regs.h"
@@ -16,19 +20,23 @@ static EWRAM_DATA MainCallback sAtlasReturn = NULL;
 static EWRAM_DATA u8 sAtlasSelection = 0;
 static EWRAM_DATA u8 sAtlasPlayer = 0;
 static EWRAM_DATA bool8 sAtlasClosing = FALSE;
+static EWRAM_DATA bool8 sAtlasFlyMode = FALSE;
+static EWRAM_DATA bool8 sAtlasFlyConfirmed = FALSE;
 static const struct BgTemplate sBgs[] = {{.bg=0,.charBaseIndex=0,.mapBaseIndex=31,.priority=0}};
 static const struct WindowTemplate sWindows[] = {{.bg=0,.width=30,.height=20,.paletteNum=0,.baseBlock=1},DUMMY_WIN_TEMPLATE};
 static const u16 sPalette[16] = {RGB(1,3,7),RGB(30,30,31),RGB(2,5,10),RGB(10,18,19),RGB(8,21,14),RGB(31,25,3),RGB(4,10,18),RGB(8,15,12),RGB(29,13,8)};
 static const u8 sText[] = {2,1,0};
 static const u8 sTitle[] = _("JOHTO ATLAS");
 static const u8 sControls[] = _("D-PAD: PLACE   A/B: CLOSE");
+static const u8 sFlyTitle[] = _("JOHTO QA FLY");
+static const u8 sFlyControls[] = _("D-PAD: CITY   A: FLY   B: CANCEL");
 static const u8 sYou[] = _("YOU");
 static void DrawAtlas(void)
 {
     u32 i;
     const struct JohtoAtlasNode *node;
     FillWindowPixelBuffer(0,PIXEL_FILL(2));
-    AddTextPrinterParameterized3(0,FONT_SMALL,80,1,sText,TEXT_SKIP_DRAW,sTitle);
+    AddTextPrinterParameterized3(0,FONT_SMALL,80,1,sText,TEXT_SKIP_DRAW,sAtlasFlyMode ? sFlyTitle : sTitle);
     FillWindowPixelRect(0,PIXEL_FILL(6),8,19,28,108);
     for (i=0;i<ARRAY_COUNT(sAtlasEdges);i++)
     {
@@ -49,7 +57,7 @@ static void DrawAtlas(void)
     FillWindowPixelRect(0,PIXEL_FILL(5),node->x-1,node->y-1,3,3);
     AddTextPrinterParameterized3(0,FONT_SMALL,node->x+2,node->y+2,sText,TEXT_SKIP_DRAW,sYou);
     AddTextPrinterParameterized3(0,FONT_NORMAL,8,128,sText,TEXT_SKIP_DRAW,sAtlasNodes[sAtlasSelection].label);
-    AddTextPrinterParameterized3(0,FONT_SMALL,8,146,sText,TEXT_SKIP_DRAW,sControls);
+    AddTextPrinterParameterized3(0,FONT_SMALL,8,146,sText,TEXT_SKIP_DRAW,sAtlasFlyMode ? sFlyControls : sControls);
     PutWindowTilemap(0);CopyWindowToVram(0,COPYWIN_FULL);
 }
 static void VBlank_Atlas(void) { LoadOam();TransferPlttBuffer(); }
@@ -58,19 +66,35 @@ static void CB2_Atlas(void)
     if (UpdatePaletteFade()) return;
     if (sAtlasClosing)
     {
-        SetVBlankCallback(NULL);FreeAllWindowBuffers();SetMainCallback2(sAtlasReturn);return;
+        SetVBlankCallback(NULL);FreeAllWindowBuffers();
+        if (sAtlasFlyConfirmed)
+        {
+            SetWarpDestinationToHealLocation(sAtlasFlyHealLocations[sAtlasSelection]);
+            ReturnToFieldFromFlyMapSelect();
+        }
+        else SetMainCallback2(sAtlasReturn);
+        return;
     }
-    if (JOY_NEW(A_BUTTON|B_BUTTON))
+    if (JOY_NEW(B_BUTTON) || (!sAtlasFlyMode && JOY_NEW(A_BUTTON)))
     {
         sAtlasClosing=TRUE;BeginNormalPaletteFade(PALETTES_ALL,0,0,16,RGB_BLACK);
     }
+    else if (sAtlasFlyMode && JOY_NEW(A_BUTTON) && sAtlasFlyHealLocations[sAtlasSelection] != HEAL_LOCATION_NONE)
+    {
+        sAtlasFlyConfirmed=TRUE;sAtlasClosing=TRUE;
+        BeginNormalPaletteFade(PALETTES_ALL,0,0,16,RGB_BLACK);
+    }
     else if (JOY_NEW(DPAD_RIGHT|DPAD_DOWN))
     {
-        sAtlasSelection=(sAtlasSelection+1)%ARRAY_COUNT(sAtlasNodes);DrawAtlas();
+        do {sAtlasSelection=(sAtlasSelection+1)%ARRAY_COUNT(sAtlasNodes);}
+        while (sAtlasFlyMode && sAtlasFlyHealLocations[sAtlasSelection] == HEAL_LOCATION_NONE);
+        DrawAtlas();
     }
     else if (JOY_NEW(DPAD_LEFT|DPAD_UP))
     {
-        sAtlasSelection=sAtlasSelection?sAtlasSelection-1:ARRAY_COUNT(sAtlasNodes)-1;DrawAtlas();
+        do {sAtlasSelection=sAtlasSelection?sAtlasSelection-1:ARRAY_COUNT(sAtlasNodes)-1;}
+        while (sAtlasFlyMode && sAtlasFlyHealLocations[sAtlasSelection] == HEAL_LOCATION_NONE);
+        DrawAtlas();
     }
 }
 static u8 FindPlayerNode(void)
@@ -96,8 +120,11 @@ static void CB2_InitAtlas(void)
     DeactivateAllTextPrinters();LoadPalette(sPalette,0,sizeof(sPalette));
     SetGpuReg(REG_OFFSET_BG0HOFS,0);SetGpuReg(REG_OFFSET_BG0VOFS,0);
     sAtlasPlayer=FindPlayerNode();
-    sAtlasSelection=sAtlasPlayer;sAtlasClosing=FALSE;DrawAtlas();
+    sAtlasSelection=sAtlasPlayer;
+    if (sAtlasFlyMode && sAtlasFlyHealLocations[sAtlasSelection] == HEAL_LOCATION_NONE) sAtlasSelection=0;
+    sAtlasFlyConfirmed=FALSE;sAtlasClosing=FALSE;DrawAtlas();
     BeginNormalPaletteFade(PALETTES_ALL,0,16,0,RGB_BLACK);ShowBg(0);SetGpuReg(REG_OFFSET_DISPCNT,DISPCNT_MODE_0|DISPCNT_BG0_ON);
     SetVBlankCallback(VBlank_Atlas);SetMainCallback2(CB2_Atlas);
 }
-void Johto_OpenAtlas(MainCallback callback) {sAtlasReturn=callback;SetMainCallback2(CB2_InitAtlas);}
+void Johto_OpenAtlas(MainCallback callback) {sAtlasFlyMode=FALSE;sAtlasReturn=callback;SetMainCallback2(CB2_InitAtlas);}
+void CB2_OpenJohtoFlyMap(void) {sAtlasFlyMode=TRUE;sAtlasReturn=CB2_ReturnToPartyMenuFromFlyMap;SetMainCallback2(CB2_InitAtlas);}
