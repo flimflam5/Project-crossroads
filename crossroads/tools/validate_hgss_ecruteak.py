@@ -14,6 +14,11 @@ def load(p):
  if p.startswith('data/maps/') and p.endswith('/map.json'):
   from build_eight_gym_integration import normalize_map
   value=normalize_map(p.split('/')[2],value)
+  if p=='data/maps/EcruteakCity/map.json':
+   # QA07 has a live authored base, including QA06's appended paired Gym door.
+   # Validate the exact alias before projecting to this older 15-warp contract.
+   assert value['warp_events'][15]==dict(value['warp_events'][4],x=25,dest_warp_id='1')
+   value['warp_events'].pop(15)
  return value
 def validate():
  from validate_eight_gyms import validate as validate_gyms
@@ -38,6 +43,7 @@ def validate():
   if old['id']!='LAYOUT_ECRUTEAK_CITY':
    expected=old.copy();name=next((n for n in CODES if load(f'data/maps/{n}/map.json')['layout']==old['id']),None)
    if name:relocate_layout(name,expected)
+   if old['id'] in ['LAYOUT_JOHTO_ROUTE37','LAYOUT_JOHTO_ROUTE38','LAYOUT_JOHTO_ROUTE42']:expected['primary_tileset']='gTileset_HgssEcruteakBuffer'
    assert expected==new,('Unrelated layout change',old['id'])
   else:assert new['width']==64 and new['height']==64 and new['primary_tileset']=='gTileset_BlGymEcruteakPrimary' and new['secondary_tileset']=='gTileset_BlGymEcruteakSecondary'
  for old,new in zip(baseline['heals']['heal_locations'],heals['heal_locations']):
@@ -61,6 +67,9 @@ def validate():
  assert len(normalized['warp_events'])==15
  normalized['warp_events']=normalized['warp_events'][:9]
  normalized['coord_events']=[] # Exact gate trigger/alias assertions run above.
+ private=[dict(type='sign',x=x,y=y,elevation=0,player_facing_dir='BG_EVENT_PLAYER_FACING_ANY',script='Hgss_PrivateResidence') for x,y in [(23,36),(35,36),(54,55)]]
+ assert normalized['bg_events'][len(old_city['bg_events']):]==private
+ normalized['bg_events']=normalized['bg_events'][:len(old_city['bg_events'])]
  assert normalized['warp_events'].pop()==dict(x=34,y=55,elevation=0,dest_map='MAP_ECRUTEAK_CITY_DOWSING_HOUSE',dest_warp_id='0')
  assert normalized['warp_events'].pop()==dict(new_city['warp_events'][1],x=39,y=25)
  for key in ['warp_events','object_events','bg_events']:
@@ -90,7 +99,8 @@ def validate():
  assert (45,56) in seen,'Preserved heal ID needs safe updated arrival'
  art=load('crossroads/hgss/art/native-manifest.json');assert art['allocated_tiles']<=art['available_tiles']<=1024
  from PIL import Image
- old=Image.open(R/'data/tilesets/primary/general/tiles.png');new=Image.open(R/'data/tilesets/primary/hgss_ecruteak/tiles.png')
+ from hgss_ecruteak_terrain import neutral_graphics
+ old=neutral_graphics();new=Image.open(R/'data/tilesets/primary/hgss_ecruteak/tiles.png')
  for tile in art['reserved_primary_tiles']:
   x=tile%16*8;y=tile//16*8;box=x,y,x+8,y+8;assert old.crop(box).tobytes()==new.crop(box).tobytes(),('Terrain/animation tile overwritten',tile)
  print('HGSS Ecruteak stable IDs, reciprocal target positions, safe entire ground component, preserved animation slots and compatible buffers: PASS. Reference/visual completion is NOT asserted.')

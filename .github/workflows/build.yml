@@ -18,6 +18,7 @@ on:
       - feature/johto-exploration-network-01
       - feature/johto-visual-collision-01
       - feature/hgss-johto-gym-integration-01
+      - feature/ecruteak-dependability-qa07
   pull_request:
   workflow_dispatch:
 
@@ -73,6 +74,10 @@ jobs:
           python3 crossroads/tools/validate_visual_repairs.py
           python3 crossroads/tools/build_eight_gym_integration.py --check
           python3 crossroads/tools/validate_eight_gyms.py
+          python3 crossroads/tools/build_hgss_ecruteak_assets.py --check
+          python3 crossroads/tools/build_hgss_ecruteak_assets.py --variant bell --check
+          python3 crossroads/tools/hgss_ecruteak_terrain.py --check
+          python3 crossroads/tools/validate_ecruteak_qa07.py
           python3 crossroads/tools/build_hgss_violet_assets.py --check
           python3 crossroads/tools/build_hgss_violet.py --check
           python3 crossroads/tools/validate_hgss_violet.py
@@ -103,7 +108,7 @@ jobs:
       - name: Upload playable Emerald ROM
         uses: actions/upload-artifact@v4
         with:
-          name: black-ledger-johto-qa06-${{ github.sha }}
+          name: black-ledger-ecruteak-qa07-${{ github.sha }}
           path: |
             pokeemerald.gba
             build-info.json

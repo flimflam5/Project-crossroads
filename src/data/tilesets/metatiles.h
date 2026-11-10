@@ -480,3 +480,10 @@ const u16 gMetatiles_HgssVioletSecondary[] = INCBIN_U16("data/tilesets/secondary
 const u16 gMetatileAttributes_HgssVioletSecondary[] = INCBIN_U16("data/tilesets/secondary/hgss_violet/metatile_attributes.bin");
 #endif
 // END HGSS VIOLET ORIGINAL ART
+
+// BEGIN ECRUTEAK NEUTRAL BUFFER
+#if !IS_FRLG
+const u16 gMetatiles_HgssEcruteakBuffer[] = INCBIN_U16("data/tilesets/primary/hgss_ecruteak_buffer/metatiles.bin");
+const u16 gMetatileAttributes_HgssEcruteakBuffer[] = INCBIN_U16("data/tilesets/primary/hgss_ecruteak_buffer/metatile_attributes.bin");
+#endif
+// END ECRUTEAK NEUTRAL BUFFER

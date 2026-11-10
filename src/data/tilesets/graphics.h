@@ -3512,3 +3512,9 @@ const u16 gTilesetPalettes_HgssVioletSecondary[][16] = {
 };
 #endif
 // END HGSS VIOLET ORIGINAL ART
+
+// BEGIN ECRUTEAK NEUTRAL BUFFER
+#if !IS_FRLG
+const u32 gTilesetTiles_HgssEcruteakBuffer[] = INCGFX_U32("data/tilesets/primary/hgss_ecruteak_buffer/tiles.png", ".4bpp.fastSmol");
+#endif
+// END ECRUTEAK NEUTRAL BUFFER

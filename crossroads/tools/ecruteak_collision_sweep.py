@@ -7,7 +7,7 @@ capture the representative trunk and building examples as well as the counts.
 """
 import argparse,runpy,sys,json
 from pathlib import Path
-p=argparse.ArgumentParser();p.add_argument('--save',required=True);p.add_argument('--library',default='/tmp/johto-bridge.so');a=p.parse_args();out=Path('build/qa05-collision');out.mkdir(parents=True,exist_ok=True)
+p=argparse.ArgumentParser();p.add_argument('--save',required=True);p.add_argument('--library',default='/tmp/johto-bridge.so');p.add_argument('--output',default='build/qa05-collision');a=p.parse_args();out=Path(a.output);out.mkdir(parents=True,exist_ok=True)
 sys.argv=['johto_network_smoke.py','--save',a.save,'--library',a.library,'--output',str(out),'--targets',''];d=runpy.run_path('crossroads/tools/johto_network_smoke.py');d['go']('EcruteakCity');n=d['current']();w,h=d['size'][n];raw=d['raw'][n];walk=d['walk'];pos=d['pos'];frames=d['frames'];lib=d['lib'];rows=[];warps={(e['x'],e['y']) for e in d['maps'][n]['warp_events']}
 for label,point,button in [('tree-north',(26,42),128),('tree-west',(25,43),16),('tree-east',(28,43),32),('tree-south',(26,44),64)]:
  walk(point);movie=out/label;movie.mkdir(exist_ok=True)

@@ -1705,3 +1705,14 @@ const struct Tileset gTileset_HgssVioletRoutePrimary = {
 };
 #endif
 // END HGSS VIOLET ORIGINAL ART
+
+// BEGIN ECRUTEAK NEUTRAL BUFFER
+#if !IS_FRLG
+const struct Tileset gTileset_HgssEcruteakBuffer = {
+ .isCompressed=TRUE, .isSecondary=FALSE,
+ .tiles=gTilesetTiles_HgssEcruteakBuffer, .palettes=gTilesetPalettes_General,
+ .metatiles=gMetatiles_HgssEcruteakBuffer, .metatileAttributes=gMetatileAttributes_HgssEcruteakBuffer,
+ .callback=InitTilesetAnim_General,
+};
+#endif
+// END ECRUTEAK NEUTRAL BUFFER

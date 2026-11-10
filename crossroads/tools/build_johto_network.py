@@ -73,6 +73,7 @@ def main():
   from build_eight_gym_integration import relocate_layout
   relocate_layout(n,l)
   if n=='JohtoRoute32':l['primary_tileset']='gTileset_HgssVioletRoutePrimary'
+  if n in ['JohtoRoute37','JohtoRoute38','JohtoRoute42']:l['primary_tileset']='gTileset_HgssEcruteakBuffer'
   if lid not in bylayout:layouts['layouts'].append(l);bylayout[lid]=l
   elif bylayout[lid]!=l:
    # Only newly authored layouts pass here; their numeric IDs remain fixed.

@@ -91,4 +91,9 @@ extern const struct Tileset gTileset_HgssVioletSecondary;
 extern const struct Tileset gTileset_HgssVioletRoutePrimary;
 #endif
 // END HGSS VIOLET ORIGINAL ART
+// BEGIN ECRUTEAK NEUTRAL BUFFER
+#if !IS_FRLG
+extern const struct Tileset gTileset_HgssEcruteakBuffer;
+#endif
+// END ECRUTEAK NEUTRAL BUFFER
 #endif //GUARD_tilesets_H

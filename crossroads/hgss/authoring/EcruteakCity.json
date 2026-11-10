@@ -1,0 +1,839 @@
+{
+  "map": {
+    "id": "MAP_ECRUTEAK_CITY",
+    "name": "EcruteakCity",
+    "layout": "LAYOUT_ECRUTEAK_CITY",
+    "music": "MUS_LILYCOVE",
+    "region": "REGION_HOENN",
+    "region_map_section": "MAPSEC_ECRUTEAK_CITY",
+    "requires_flash": false,
+    "weather": "WEATHER_SUNNY",
+    "map_type": "MAP_TYPE_CITY",
+    "allow_cycling": true,
+    "allow_escaping": false,
+    "allow_running": true,
+    "show_map_name": true,
+    "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+    "connections": [
+      {
+        "map": "MAP_JOHTO_ROUTE38",
+        "offset": 25,
+        "direction": "left"
+      },
+      {
+        "map": "MAP_JOHTO_ROUTE37",
+        "offset": 25,
+        "direction": "down"
+      },
+      {
+        "map": "MAP_JOHTO_ROUTE42",
+        "offset": 33,
+        "direction": "right"
+      }
+    ],
+    "object_events": [
+      {
+        "graphics_id": "OBJ_EVENT_GFX_MAN_1",
+        "x": 27,
+        "y": 27,
+        "elevation": 3,
+        "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+        "movement_range_x": 0,
+        "movement_range_y": 0,
+        "trainer_type": "TRAINER_TYPE_NONE",
+        "trainer_sight_or_berry_tree_id": "0",
+        "script": "Ecruteak_Traveler",
+        "flag": "0"
+      },
+      {
+        "graphics_id": "OBJ_EVENT_GFX_WOMAN_3",
+        "x": 29,
+        "y": 34,
+        "elevation": 3,
+        "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+        "movement_range_x": 0,
+        "movement_range_y": 0,
+        "trainer_type": "TRAINER_TYPE_NONE",
+        "trainer_sight_or_berry_tree_id": "0",
+        "script": "Ecruteak_Resident",
+        "flag": "0"
+      },
+      {
+        "graphics_id": "OBJ_EVENT_GFX_MAN_1",
+        "x": 26,
+        "y": 48,
+        "elevation": 3,
+        "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+        "movement_range_x": 0,
+        "movement_range_y": 0,
+        "trainer_type": "TRAINER_TYPE_NONE",
+        "trainer_sight_or_berry_tree_id": "0",
+        "script": "Ecruteak_GymVisitor",
+        "flag": "0"
+      },
+      {
+        "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
+        "x": 44,
+        "y": 34,
+        "elevation": 3,
+        "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+        "movement_range_x": 0,
+        "movement_range_y": 0,
+        "trainer_type": "TRAINER_TYPE_NONE",
+        "trainer_sight_or_berry_tree_id": "0",
+        "script": "Ecruteak_TowerVisitor",
+        "flag": "0"
+      },
+      {
+        "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
+        "x": 40,
+        "y": 43,
+        "elevation": 3,
+        "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+        "movement_range_x": 0,
+        "movement_range_y": 0,
+        "trainer_type": "TRAINER_TYPE_NONE",
+        "trainer_sight_or_berry_tree_id": "0",
+        "script": "Ecruteak_Shopper",
+        "flag": "0"
+      },
+      {
+        "graphics_id": "OBJ_EVENT_GFX_MAN_1",
+        "x": 52,
+        "y": 57,
+        "elevation": 3,
+        "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+        "movement_range_x": 0,
+        "movement_range_y": 0,
+        "trainer_type": "TRAINER_TYPE_NONE",
+        "trainer_sight_or_berry_tree_id": "0",
+        "script": "Ecruteak_TheaterVisitor",
+        "flag": "0"
+      }
+    ],
+    "warp_events": [
+      {
+        "x": 24,
+        "y": 21,
+        "elevation": 0,
+        "dest_map": "MAP_ECRUTEAK_CITY_BURNED_TOWER",
+        "dest_warp_id": "0"
+      },
+      {
+        "x": 40,
+        "y": 25,
+        "elevation": 0,
+        "dest_map": "MAP_ECRUTEAK_CITY_BARRIER_STATION",
+        "dest_warp_id": "0"
+      },
+      {
+        "x": 23,
+        "y": 45,
+        "elevation": 0,
+        "dest_map": "MAP_ECRUTEAK_CITY_RESIDENCE",
+        "dest_warp_id": "0"
+      },
+      {
+        "x": 45,
+        "y": 45,
+        "elevation": 0,
+        "dest_map": "MAP_ECRUTEAK_CITY_DANCE_THEATER",
+        "dest_warp_id": "0"
+      },
+      {
+        "x": 24,
+        "y": 55,
+        "elevation": 0,
+        "dest_map": "MAP_ECRUTEAK_CITY_GYM",
+        "dest_warp_id": "0"
+      },
+      {
+        "x": 45,
+        "y": 55,
+        "elevation": 0,
+        "dest_map": "MAP_ECRUTEAK_CITY_POKEMON_CENTER_1F",
+        "dest_warp_id": "0"
+      },
+      {
+        "x": 53,
+        "y": 45,
+        "elevation": 0,
+        "dest_map": "MAP_ECRUTEAK_CITY_MART",
+        "dest_warp_id": "0"
+      },
+      {
+        "x": 39,
+        "y": 25,
+        "elevation": 0,
+        "dest_map": "MAP_ECRUTEAK_CITY_BARRIER_STATION",
+        "dest_warp_id": "0"
+      },
+      {
+        "x": 34,
+        "y": 55,
+        "elevation": 0,
+        "dest_map": "MAP_ECRUTEAK_CITY_DOWSING_HOUSE",
+        "dest_warp_id": "0"
+      },
+      {
+        "x": 0,
+        "y": 37,
+        "elevation": 0,
+        "dest_map": "MAP_ECRUTEAK_CITY_WEST_GATE",
+        "dest_warp_id": "0"
+      },
+      {
+        "x": 0,
+        "y": 38,
+        "elevation": 0,
+        "dest_map": "MAP_ECRUTEAK_CITY_WEST_GATE",
+        "dest_warp_id": "0"
+      },
+      {
+        "x": 0,
+        "y": 39,
+        "elevation": 0,
+        "dest_map": "MAP_ECRUTEAK_CITY_WEST_GATE",
+        "dest_warp_id": "0"
+      },
+      {
+        "x": 63,
+        "y": 46,
+        "elevation": 0,
+        "dest_map": "MAP_ECRUTEAK_CITY_EAST_GATE",
+        "dest_warp_id": "0"
+      },
+      {
+        "x": 63,
+        "y": 47,
+        "elevation": 0,
+        "dest_map": "MAP_ECRUTEAK_CITY_EAST_GATE",
+        "dest_warp_id": "0"
+      },
+      {
+        "x": 63,
+        "y": 48,
+        "elevation": 0,
+        "dest_map": "MAP_ECRUTEAK_CITY_EAST_GATE",
+        "dest_warp_id": "0"
+      },
+      {
+        "x": 25,
+        "y": 55,
+        "elevation": 0,
+        "dest_map": "MAP_ECRUTEAK_CITY_GYM",
+        "dest_warp_id": "1"
+      }
+    ],
+    "coord_events": [
+      {
+        "type": "trigger",
+        "x": 0,
+        "y": 37,
+        "elevation": 0,
+        "var": "VAR_TEMP_0",
+        "var_value": "0",
+        "script": "Hgss_WestCityGateEnter"
+      },
+      {
+        "type": "trigger",
+        "x": 0,
+        "y": 38,
+        "elevation": 0,
+        "var": "VAR_TEMP_0",
+        "var_value": "0",
+        "script": "Hgss_WestCityGateEnter"
+      },
+      {
+        "type": "trigger",
+        "x": 0,
+        "y": 39,
+        "elevation": 0,
+        "var": "VAR_TEMP_0",
+        "var_value": "0",
+        "script": "Hgss_WestCityGateEnter"
+      },
+      {
+        "type": "trigger",
+        "x": 63,
+        "y": 46,
+        "elevation": 0,
+        "var": "VAR_TEMP_0",
+        "var_value": "0",
+        "script": "Hgss_EastCityGateEnter"
+      },
+      {
+        "type": "trigger",
+        "x": 63,
+        "y": 47,
+        "elevation": 0,
+        "var": "VAR_TEMP_0",
+        "var_value": "0",
+        "script": "Hgss_EastCityGateEnter"
+      },
+      {
+        "type": "trigger",
+        "x": 63,
+        "y": 48,
+        "elevation": 0,
+        "var": "VAR_TEMP_0",
+        "var_value": "0",
+        "script": "Hgss_EastCityGateEnter"
+      }
+    ],
+    "bg_events": [
+      {
+        "type": "sign",
+        "x": 26,
+        "y": 25,
+        "elevation": 0,
+        "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+        "script": "Ecruteak_BurnedTowerSign"
+      },
+      {
+        "type": "sign",
+        "x": 42,
+        "y": 26,
+        "elevation": 0,
+        "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+        "script": "Ecruteak_BellTowerSign"
+      },
+      {
+        "type": "sign",
+        "x": 25,
+        "y": 46,
+        "elevation": 0,
+        "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+        "script": "Ecruteak_ResidenceSign"
+      },
+      {
+        "type": "sign",
+        "x": 43,
+        "y": 46,
+        "elevation": 0,
+        "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+        "script": "Ecruteak_DanceTheaterSign"
+      },
+      {
+        "type": "sign",
+        "x": 26,
+        "y": 56,
+        "elevation": 0,
+        "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+        "script": "Ecruteak_GymSign"
+      },
+      {
+        "type": "sign",
+        "x": 43,
+        "y": 56,
+        "elevation": 0,
+        "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+        "script": "Ecruteak_PokemonCenter_1FSign"
+      },
+      {
+        "type": "sign",
+        "x": 55,
+        "y": 46,
+        "elevation": 0,
+        "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+        "script": "Ecruteak_MartSign"
+      },
+      {
+        "type": "sign",
+        "x": 8,
+        "y": 37,
+        "elevation": 0,
+        "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+        "script": "Ecruteak_WestSign"
+      },
+      {
+        "type": "sign",
+        "x": 61,
+        "y": 49,
+        "elevation": 0,
+        "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+        "script": "Ecruteak_EastBoundary"
+      },
+      {
+        "type": "sign",
+        "x": 39,
+        "y": 61,
+        "elevation": 0,
+        "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+        "script": "Ecruteak_SouthBoundary"
+      },
+      {
+        "type": "sign",
+        "x": 36,
+        "y": 45,
+        "elevation": 0,
+        "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+        "script": "Ecruteak_Directory"
+      },
+      {
+        "type": "sign",
+        "x": 23,
+        "y": 36,
+        "elevation": 0,
+        "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+        "script": "Hgss_PrivateResidence"
+      },
+      {
+        "type": "sign",
+        "x": 35,
+        "y": 36,
+        "elevation": 0,
+        "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+        "script": "Hgss_PrivateResidence"
+      },
+      {
+        "type": "sign",
+        "x": 54,
+        "y": 55,
+        "elevation": 0,
+        "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+        "script": "Hgss_PrivateResidence"
+      }
+    ]
+  },
+  "layout": {
+    "id": "LAYOUT_ECRUTEAK_CITY",
+    "name": "EcruteakCity_Layout",
+    "width": 64,
+    "height": 64,
+    "primary_tileset": "gTileset_HgssEcruteakPrimary",
+    "secondary_tileset": "gTileset_HgssEcruteakSecondary",
+    "border_filepath": "data/layouts/EcruteakCity/border.bin",
+    "blockdata_filepath": "data/layouts/EcruteakCity/map.bin",
+    "layout_version": "emerald"
+  },
+  "gym_warp": 4,
+  "gym_alias": 15,
+  "interior": {
+    "id": "MAP_ECRUTEAK_CITY_GYM",
+    "name": "EcruteakCity_Gym",
+    "layout": "LAYOUT_ECRUTEAKCITY_GYM",
+    "music": "MUS_GYM",
+    "region": "REGION_HOENN",
+    "region_map_section": "MAPSEC_ECRUTEAK_CITY",
+    "requires_flash": false,
+    "weather": "WEATHER_NONE",
+    "map_type": "MAP_TYPE_INDOOR",
+    "allow_cycling": false,
+    "allow_escaping": false,
+    "allow_running": true,
+    "show_map_name": false,
+    "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+    "connections": null,
+    "object_events": [
+      {
+        "graphics_id": "OBJ_EVENT_GFX_MAN_1",
+        "x": 12,
+        "y": 19,
+        "elevation": 3,
+        "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+        "movement_range_x": 0,
+        "movement_range_y": 0,
+        "trainer_type": "TRAINER_TYPE_NONE",
+        "trainer_sight_or_berry_tree_id": "0",
+        "script": "Area_GymGuide",
+        "flag": "0"
+      },
+      {
+        "graphics_id": "OBJ_EVENT_GFX_AREA_LANTERN",
+        "x": 9,
+        "y": 18,
+        "elevation": 3,
+        "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+        "movement_range_x": 0,
+        "movement_range_y": 0,
+        "trainer_type": "TRAINER_TYPE_NONE",
+        "trainer_sight_or_berry_tree_id": "0",
+        "script": "Hgss_GymLamp",
+        "flag": "0"
+      },
+      {
+        "graphics_id": "OBJ_EVENT_GFX_AREA_LANTERN",
+        "x": 11,
+        "y": 18,
+        "elevation": 3,
+        "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+        "movement_range_x": 0,
+        "movement_range_y": 0,
+        "trainer_type": "TRAINER_TYPE_NONE",
+        "trainer_sight_or_berry_tree_id": "0",
+        "script": "Hgss_GymLamp",
+        "flag": "0"
+      }
+    ],
+    "warp_events": [
+      {
+        "x": 10,
+        "y": 21,
+        "elevation": 0,
+        "dest_map": "MAP_ECRUTEAK_CITY",
+        "dest_warp_id": "4"
+      },
+      {
+        "x": 11,
+        "y": 21,
+        "elevation": 0,
+        "dest_map": "MAP_ECRUTEAK_CITY",
+        "dest_warp_id": "15"
+      },
+      {
+        "x": 13,
+        "y": 0,
+        "elevation": 0,
+        "dest_map": "MAP_ECRUTEAKCITY_GYM_ARENA",
+        "dest_warp_id": "0"
+      }
+    ],
+    "coord_events": [
+      {
+        "type": "trigger",
+        "x": 12,
+        "y": 0,
+        "elevation": 0,
+        "var": "VAR_TEMP_0",
+        "var_value": "0",
+        "script": "Hgss_GymReturn"
+      },
+      {
+        "type": "trigger",
+        "x": 14,
+        "y": 0,
+        "elevation": 0,
+        "var": "VAR_TEMP_0",
+        "var_value": "0",
+        "script": "Hgss_GymReturn"
+      },
+      {
+        "type": "trigger",
+        "x": 12,
+        "y": 1,
+        "elevation": 0,
+        "var": "VAR_TEMP_0",
+        "var_value": "0",
+        "script": "Hgss_GymReturn"
+      },
+      {
+        "type": "trigger",
+        "x": 14,
+        "y": 1,
+        "elevation": 0,
+        "var": "VAR_TEMP_0",
+        "var_value": "0",
+        "script": "Hgss_GymReturn"
+      },
+      {
+        "type": "trigger",
+        "x": 12,
+        "y": 2,
+        "elevation": 0,
+        "var": "VAR_TEMP_0",
+        "var_value": "0",
+        "script": "Hgss_GymReturn"
+      },
+      {
+        "type": "trigger",
+        "x": 14,
+        "y": 2,
+        "elevation": 0,
+        "var": "VAR_TEMP_0",
+        "var_value": "0",
+        "script": "Hgss_GymReturn"
+      },
+      {
+        "type": "trigger",
+        "x": 12,
+        "y": 3,
+        "elevation": 0,
+        "var": "VAR_TEMP_0",
+        "var_value": "0",
+        "script": "Hgss_GymReturn"
+      },
+      {
+        "type": "trigger",
+        "x": 14,
+        "y": 3,
+        "elevation": 0,
+        "var": "VAR_TEMP_0",
+        "var_value": "0",
+        "script": "Hgss_GymReturn"
+      },
+      {
+        "type": "trigger",
+        "x": 12,
+        "y": 4,
+        "elevation": 0,
+        "var": "VAR_TEMP_0",
+        "var_value": "0",
+        "script": "Hgss_GymReturn"
+      },
+      {
+        "type": "trigger",
+        "x": 14,
+        "y": 4,
+        "elevation": 0,
+        "var": "VAR_TEMP_0",
+        "var_value": "0",
+        "script": "Hgss_GymReturn"
+      },
+      {
+        "type": "trigger",
+        "x": 10,
+        "y": 5,
+        "elevation": 0,
+        "var": "VAR_TEMP_0",
+        "var_value": "0",
+        "script": "Hgss_GymReturn"
+      },
+      {
+        "type": "trigger",
+        "x": 11,
+        "y": 5,
+        "elevation": 0,
+        "var": "VAR_TEMP_0",
+        "var_value": "0",
+        "script": "Hgss_GymReturn"
+      },
+      {
+        "type": "trigger",
+        "x": 12,
+        "y": 5,
+        "elevation": 0,
+        "var": "VAR_TEMP_0",
+        "var_value": "0",
+        "script": "Hgss_GymReturn"
+      },
+      {
+        "type": "trigger",
+        "x": 14,
+        "y": 5,
+        "elevation": 0,
+        "var": "VAR_TEMP_0",
+        "var_value": "0",
+        "script": "Hgss_GymReturn"
+      },
+      {
+        "type": "trigger",
+        "x": 9,
+        "y": 6,
+        "elevation": 0,
+        "var": "VAR_TEMP_0",
+        "var_value": "0",
+        "script": "Hgss_GymReturn"
+      },
+      {
+        "type": "trigger",
+        "x": 14,
+        "y": 6,
+        "elevation": 0,
+        "var": "VAR_TEMP_0",
+        "var_value": "0",
+        "script": "Hgss_GymReturn"
+      },
+      {
+        "type": "trigger",
+        "x": 9,
+        "y": 7,
+        "elevation": 0,
+        "var": "VAR_TEMP_0",
+        "var_value": "0",
+        "script": "Hgss_GymReturn"
+      },
+      {
+        "type": "trigger",
+        "x": 14,
+        "y": 7,
+        "elevation": 0,
+        "var": "VAR_TEMP_0",
+        "var_value": "0",
+        "script": "Hgss_GymReturn"
+      },
+      {
+        "type": "trigger",
+        "x": 9,
+        "y": 8,
+        "elevation": 0,
+        "var": "VAR_TEMP_0",
+        "var_value": "0",
+        "script": "Hgss_GymReturn"
+      },
+      {
+        "type": "trigger",
+        "x": 11,
+        "y": 8,
+        "elevation": 0,
+        "var": "VAR_TEMP_0",
+        "var_value": "0",
+        "script": "Hgss_GymReturn"
+      },
+      {
+        "type": "trigger",
+        "x": 12,
+        "y": 8,
+        "elevation": 0,
+        "var": "VAR_TEMP_0",
+        "var_value": "0",
+        "script": "Hgss_GymReturn"
+      },
+      {
+        "type": "trigger",
+        "x": 13,
+        "y": 8,
+        "elevation": 0,
+        "var": "VAR_TEMP_0",
+        "var_value": "0",
+        "script": "Hgss_GymReturn"
+      },
+      {
+        "type": "trigger",
+        "x": 9,
+        "y": 9,
+        "elevation": 0,
+        "var": "VAR_TEMP_0",
+        "var_value": "0",
+        "script": "Hgss_GymReturn"
+      },
+      {
+        "type": "trigger",
+        "x": 11,
+        "y": 9,
+        "elevation": 0,
+        "var": "VAR_TEMP_0",
+        "var_value": "0",
+        "script": "Hgss_GymReturn"
+      },
+      {
+        "type": "trigger",
+        "x": 9,
+        "y": 10,
+        "elevation": 0,
+        "var": "VAR_TEMP_0",
+        "var_value": "0",
+        "script": "Hgss_GymReturn"
+      },
+      {
+        "type": "trigger",
+        "x": 11,
+        "y": 10,
+        "elevation": 0,
+        "var": "VAR_TEMP_0",
+        "var_value": "0",
+        "script": "Hgss_GymReturn"
+      },
+      {
+        "type": "trigger",
+        "x": 9,
+        "y": 11,
+        "elevation": 0,
+        "var": "VAR_TEMP_0",
+        "var_value": "0",
+        "script": "Hgss_GymReturn"
+      },
+      {
+        "type": "trigger",
+        "x": 11,
+        "y": 11,
+        "elevation": 0,
+        "var": "VAR_TEMP_0",
+        "var_value": "0",
+        "script": "Hgss_GymReturn"
+      },
+      {
+        "type": "trigger",
+        "x": 9,
+        "y": 12,
+        "elevation": 0,
+        "var": "VAR_TEMP_0",
+        "var_value": "0",
+        "script": "Hgss_GymReturn"
+      },
+      {
+        "type": "trigger",
+        "x": 11,
+        "y": 12,
+        "elevation": 0,
+        "var": "VAR_TEMP_0",
+        "var_value": "0",
+        "script": "Hgss_GymReturn"
+      },
+      {
+        "type": "trigger",
+        "x": 9,
+        "y": 13,
+        "elevation": 0,
+        "var": "VAR_TEMP_0",
+        "var_value": "0",
+        "script": "Hgss_GymReturn"
+      },
+      {
+        "type": "trigger",
+        "x": 11,
+        "y": 13,
+        "elevation": 0,
+        "var": "VAR_TEMP_0",
+        "var_value": "0",
+        "script": "Hgss_GymReturn"
+      },
+      {
+        "type": "trigger",
+        "x": 9,
+        "y": 14,
+        "elevation": 0,
+        "var": "VAR_TEMP_0",
+        "var_value": "0",
+        "script": "Hgss_GymReturn"
+      },
+      {
+        "type": "trigger",
+        "x": 11,
+        "y": 14,
+        "elevation": 0,
+        "var": "VAR_TEMP_0",
+        "var_value": "0",
+        "script": "Hgss_GymReturn"
+      },
+      {
+        "type": "trigger",
+        "x": 9,
+        "y": 15,
+        "elevation": 0,
+        "var": "VAR_TEMP_0",
+        "var_value": "0",
+        "script": "Hgss_GymReturn"
+      },
+      {
+        "type": "trigger",
+        "x": 11,
+        "y": 15,
+        "elevation": 0,
+        "var": "VAR_TEMP_0",
+        "var_value": "0",
+        "script": "Hgss_GymReturn"
+      },
+      {
+        "type": "trigger",
+        "x": 9,
+        "y": 16,
+        "elevation": 0,
+        "var": "VAR_TEMP_0",
+        "var_value": "0",
+        "script": "Hgss_GymReturn"
+      },
+      {
+        "type": "trigger",
+        "x": 11,
+        "y": 16,
+        "elevation": 0,
+        "var": "VAR_TEMP_0",
+        "var_value": "0",
+        "script": "Hgss_GymReturn"
+      }
+    ],
+    "bg_events": []
+  },
+  "raw_path": "crossroads/hgss/authoring/EcruteakCity.bin"
+}

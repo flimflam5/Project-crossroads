@@ -4,6 +4,7 @@ Different city facade tilesets must not be used to decode the neighbor's buffer.
 No geography, encounters, events or IDs change; native grass tiles are retained.
 """
 import struct
+from hgss_ecruteak_terrain import PAVING
 
 def repair(name,data,w,h,specs=None):
  if name not in ['EcruteakCity','JohtoRoute38','JohtoRoute42','JohtoRoute37']:return data
@@ -16,7 +17,7 @@ def repair(name,data,w,h,specs=None):
    if n<512:continue
    if name=='EcruteakCity':
     assert specs is not None
-    if n in (specs['paving'],specs['earth']):t[i]=(t[i]&~1023)|0x24;continue
+    if n in (specs['paving'],specs['earth']):t[i]=(t[i]&~1023)|PAVING;continue
     matched=False
     for key in ['tree','autumn_tree']:
      offset=n-specs[key]['start']
@@ -24,5 +25,5 @@ def repair(name,data,w,h,specs=None):
     assert matched,('Facade intrudes into scrolling buffer',x,y,n)
    else:
     assert n in (0x202,0x3e8,0x3e9),('Unmapped secondary tile at city seam',name,x,y,n)
-    t[i]=(t[i]&~1023)|({0x202:0x24,0x3e8:0x1dc,0x3e9:0x1dd}[n])
+    t[i]=(t[i]&~1023)|({0x202:PAVING,0x3e8:0x1dc,0x3e9:0x1dd}[n])
  return struct.pack('<'+str(w*h)+'H',*t)

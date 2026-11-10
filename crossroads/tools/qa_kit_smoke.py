@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Use a copied battery save to claim the explicit owner-requested QA kit."""
 import sys,runpy,struct,argparse
-p=argparse.ArgumentParser();p.add_argument('--save',required=True);p.add_argument('--library',default='/tmp/johto-bridge.so');args=p.parse_args()
-sys.argv=['johto_network_smoke.py','--save',args.save,'--library',args.library,'--output','build/qa03-kit','--targets','']
+p=argparse.ArgumentParser();p.add_argument('--save',required=True);p.add_argument('--library',default='/tmp/johto-bridge.so');p.add_argument('--output',default='build/qa03-kit');args=p.parse_args()
+sys.argv=['johto_network_smoke.py','--save',args.save,'--library',args.library,'--output',args.output,'--targets','']
 d=runpy.run_path('crossroads/tools/johto_network_smoke.py');globals().update({n:d[n] for n in ['read','write','sb','frames','key','go','walk','lib']})
 go('OlivineCity_HarborOffice');walk((1,6));frames(1,64);frames(20)
 countptr=read('gPlayerPartyCountPtr');before=read(countptr,1);party=read('gPlayerPartyPtr');original=bytes(read(party+i,1) for i in range(before*100));choice=read(sb()+0x1590,2)
