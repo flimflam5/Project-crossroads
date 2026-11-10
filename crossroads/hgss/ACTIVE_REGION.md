@@ -48,17 +48,27 @@ migration/whiteout with --saves-only); /tmp/qa06-source-final-gyms.log; subseque
 title checks in /tmp/qa06-source-final-*.log. Use source battery COPY at
 build/area-delivery-sram/EcruteakCity_BellTower-save.state.sav; never overwrite it.
 
-## First unfinished work after this checkpoint
+## Delivered QA06 checkpoint / next work
 
-Finalize artifact source identity and delivery; draft PR #13 is open. No master
-merge. Source commits3f25fa9a1c and175997877f were pushed; later evidence/CI fixes
-are recorded by git log and build-info. CI found a missing Pillow import in the
-minimal story job (now lazy) and an existing FireRed/LeafGreen compile leak of
-the Emerald-only QA Fly flag (now guarded); do not claim all CI jobs pass unless
-the actual latest run finishes. Local Emerald remains byte-identical after fixes.
- The whole Johto reconstruction remains open. Next section:
-Routes31/32/36 from recovered world geometry and inspected rasters, then source
-cave/ruins headers/interiors. Existing layouts outside Ecruteak/Violet are still
-exploration drafts even though the eight Gym facades are new. Preserve map/layout/
-heal ordinals, source generators, save compatibility, Joe/title/music, starters,
-approved Route38/39 tables and practice battles. Record each actual reviewed area.
+QA06 local ROM, ZIP and evidence ZIP are verified at /workspace/BlackLedger-QA06.gba,
+/workspace/BlackLedger-QA06.zip and /workspace/BlackLedger-QA06-Evidence.zip.
+The ZIP contains the exact source commit, checksum and Delta checklist; use its
+build-info.json rather than guessing the source from an old chat. Tested game
+implementation checkpoint is e5b07bb9a8; a subsequent documentation-only checkpoint
+records delivery. The final artifact is regenerated from that clean HEAD, with the
+same verified ROM hash above. Draft PR #13 is open; no master merge is authorized.
+
+All native exploration/save stages completed. Source archive/raw4bpp inputs and
+line endings are preserved for clean checkouts. CI's minimal story import now
+loads Pillow only for packing, and the older Emerald-only QA Fly flag is guarded
+out of FireRed/LeafGreen. Latest CI confirmation must be read from GitHub; do not
+claim green from job startup. Emerald rebuild after these fixes is byte-identical.
+
+Resume the rest of Johto at Routes31/32/36 from recovered world geometry and
+inspected rasters, then source cave/ruins headers/interiors. Most areas outside
+Ecruteak/Violet are still older exploration drafts even though eight Gym facades
+are new. Do not call the entire map or even all Violet visual detail finished.
+Owner visual acceptance is pending. No new general authorization is needed for
+routine reference reconstruction. Preserve IDs, generators, saves, Joe/title/V5
+music, starter uniqueness, approved Route38/39 tables and practice battles. Treat
+Olivine office/residence/harbor conflicts against source plots explicitly.
