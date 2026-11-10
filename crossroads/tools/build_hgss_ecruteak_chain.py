@@ -58,7 +58,7 @@ def generate(check=False):
  rect(n,0,0,w,h,leaf)
  for y in range(0,h-2,2):
   for x in range(0,w,2):
-   for yy in range(3):
+   for yy in range(tree['height']):
     for xx in range(2):rect(n,x+xx,y+yy,1,1,tree['start']+yy*2+xx+0x400)
  def path(points):
   for (x,y),(u,v) in zip(points,points[1:]):

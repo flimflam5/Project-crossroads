@@ -9,10 +9,10 @@ from pathlib import Path
 from PIL import Image
 R=Path(__file__).resolve().parents[2]
 A=R/'crossroads/hgss/art';P=R/'data/tilesets/primary/hgss_ecruteak';S=R/'data/tilesets/secondary/hgss_ecruteak'
-SPECS=[('gym','a',(0,0,740,724),(112,96),6,3),('house','a',(750,0,1250,724),(80,64),7,3),('barrier','a',(1280,0,2172,724),(160,80),7,7),('burned','b',(0,0,565,724),(96,112),8,3),('theater','b',(565,0,1175,724),(96,80),9,3),('center','b',(1180,0,1665,724),(80,80),10,2),('mart','b',(1670,0,2172,724),(80,64),11,2)]
+SPECS=[('gym','a',(0,0,740,724),(112,96),6,3),('house','a',(750,0,1250,724),(80,64),7,3),('barrier','a',(1280,0,2172,724),(160,80),7,7),('burned','b',(0,0,565,724),(96,112),8,3),('theater','b',(565,0,1175,724),(96,80),9,3),('center','b',(1180,0,1665,724),(80,80),10,2),('mart','b',(1670,0,2172,724),(80,64),11,1)]
 # Every primary terrain metatile used by the authored city/trail. Animation slots
 #432..511 are reserved even when not currently referenced, preventing live corruption.
-TERRAIN=[0,1,3,4,13,0xc6,0x114,0x15,0x19,0x71,0x75,0x7c,0x7d,0xa7,0x170,0x1d4,0x1d5,0x1dc,0x1dd,0x1e6,0x1e7]
+TERRAIN=[0,1,3,4,13,0xc6,0x24,0x15,0x19,0x71,0x75,0x7c,0x7d,0xa7,0x170,0x1d4,0x1d5,0x1dc,0x1dd,0x1e4,0x1e5]
 def generate(check=False,variant="city"):
  spec_list=SPECS if variant=="city" else [("bell","tower",(0,0,724,2172),(112,304),8,3),("trail_station","trail",(0,0,1774,887),(160,80),7,8)]
  primary_dir=P if variant=="city" else R/"data/tilesets/primary/hgss_bell"
@@ -56,15 +56,15 @@ def generate(check=False,variant="city"):
   for y in range(h):
    for x in range(w):
     top=[alloc(indexed.crop((x*16+dx,y*16+dy,x*16+dx+8,y*16+dy+8)),bank) for dx,dy in [(0,0),(8,0),(0,8),(8,8)]]
-    words.extend(under+top);attrs.append((0x1000 if y>=h-2 else 0)|(0x60 if (x,y)==(door,h-1) else 0x61 if name=='trail_station' and (x,y)==(door,h-2) else 0))
+    words.extend(under+top);attrs.append((0x1000 if y>=h-2 else 0)|(0x60 if ((x,y)==(door,h-1) or name=='barrier' and (x,y)==(door-1,h-1)) else 0x61 if name=='trail_station' and (x,y)==(door,h-2) else 0))
   specs[name]=dict(start=start,width=w,height=h,door_x=door,door_y=h-1,palette=bank,solid_footprint=[[x,y] for y in range(h) for x in range(w) if y>0 and (y>=h-2 or 0<x<w-1) and (x,y)!=(door,h-1)],walkable_overhang=[[x,y] for y in range(h) for x in range(w) if y==0 or (y<h-2 and x in (0,w-1))])
  # Native trees, with solid roots drawn behind the player from the south.
- for n in [0x1d4,0x1d5,0x1dc,0x1dd,0x1e6,0x1e7]:
-  words.extend(gm[n*8:n*8+8]);attrs.append(0x1000 if n in [0x1e6,0x1e7] else 0)
- specs['tree']=dict(start=512+len(attrs)-6,width=2,height=3)
- for n in [0x1d4,0x1d5,0x1dc,0x1dd,0x1e6,0x1e7]:
-  words.extend([(v&0xfff)|(5<<12) for v in gm[n*8:n*8+8]]);attrs.append(0x1000 if n in [0x1e6,0x1e7] else 0)
- specs['autumn_tree']=dict(start=512+len(attrs)-6,width=2,height=3)
+ for n in [0x1d4,0x1d5,0x1dc,0x1dd]:
+  words.extend(gm[n*8:n*8+8]);attrs.append(0x1000 if n in [0x1dc,0x1dd] else 0)
+ specs['tree']=dict(start=512+len(attrs)-4,width=2,height=2)
+ for n in [0x1d4,0x1d5,0x1dc,0x1dd]:
+  words.extend([(v&0xfff)|(5<<12) for v in gm[n*8:n*8+8]]);attrs.append(0x1000 if n in [0x1dc,0x1dd] else 0)
+ specs['autumn_tree']=dict(start=512+len(attrs)-4,width=2,height=2)
  # A source-compatible paved ground tile with its own palette.
  slate=R/'data/tilesets/secondary/slateport';sheet=Image.open(slate/'tiles.png');stone=sheet.crop((6*8,4*8,7*8,5*8));stone_ref=alloc(stone,12)
  specs['paving']=512+len(attrs);words.extend([stone_ref]*4+[empty]*4);attrs.append(0x1000)

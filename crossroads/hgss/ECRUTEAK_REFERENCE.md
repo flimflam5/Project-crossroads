@@ -55,3 +55,11 @@ assumption. Conditional primary reload and compatible terrain strips are being
 verified. No source/reference matched status or owner acceptance is asserted.
 The old0.9.1 exact-layout validator must be superseded by equally strict HGSS
 ID/contract/buffer tests for authorized changes, never silently weakened.
+
+## Preliminary QA 02 doorway projection deviation
+
+The native Mart facade places its visible entrance on local column1, not2.
+Keeping the established building footprint changes its GBA warp from(54,45) to
+(53,45). Canonical source coordinates remain intact in canonical_events. Station
+warp1 stays(40,25); appended alias7 at(39,25) makes both door leaves usable.
+These change physical entry tiles, not map/layout/save IDs or story state.

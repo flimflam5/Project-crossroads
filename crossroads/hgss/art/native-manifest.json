@@ -888,7 +888,7 @@
       "start": 721,
       "width": 5,
       "height": 4,
-      "door_x": 2,
+      "door_x": 1,
       "door_y": 3,
       "palette": 11,
       "solid_footprint": [
@@ -929,7 +929,7 @@
           3
         ],
         [
-          1,
+          2,
           3
         ],
         [
@@ -975,16 +975,16 @@
     "tree": {
       "start": 741,
       "width": 2,
-      "height": 3
+      "height": 2
     },
     "autumn_tree": {
-      "start": 747,
+      "start": 745,
       "width": 2,
-      "height": 3
+      "height": 2
     },
-    "paving": 753,
-    "earth": 754,
-    "leaf_ground": 755
+    "paving": 749,
+    "earth": 750,
+    "leaf_ground": 751
   },
   "terrain": [
     0,
@@ -993,7 +993,7 @@
     4,
     13,
     198,
-    276,
+    36,
     21,
     25,
     113,
@@ -1006,8 +1006,8 @@
     469,
     476,
     477,
-    486,
-    487
+    484,
+    485
   ],
   "reserved_primary_tiles": [
     0,
@@ -1026,12 +1026,7 @@
     33,
     34,
     35,
-    40,
     41,
-    43,
-    56,
-    57,
-    59,
     98,
     99,
     100,
@@ -1057,10 +1052,10 @@
     204,
     205,
     211,
-    252,
-    300,
     309,
     310,
+    313,
+    314,
     325,
     326,
     384,
@@ -1155,5 +1150,5 @@
     511
   ],
   "allocated_tiles": 811,
-  "available_tiles": 881
+  "available_tiles": 886
 }

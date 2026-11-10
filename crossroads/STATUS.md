@@ -1,3 +1,9 @@
+# Ecruteak preliminary QA 02 repair
+
+Owner likes the city exterior but reports boundary and entrance issues.
+See RELEASE_HGSS_PRELIM_02.md for the focused fixes and remaining work.
+This is not full city/region acceptance.
+
 # Preliminary HGSS QA checkpoint 01
 
 Owner requested a preliminary test build before reconstruction is complete.

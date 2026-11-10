@@ -16,13 +16,13 @@ def repair(name,data,w,h,specs=None):
    if n<512:continue
    if name=='EcruteakCity':
     assert specs is not None
-    if n in (specs['paving'],specs['earth']):t[i]=(t[i]&~1023)|0x114;continue
+    if n in (specs['paving'],specs['earth']):t[i]=(t[i]&~1023)|0x24;continue
     matched=False
     for key in ['tree','autumn_tree']:
      offset=n-specs[key]['start']
-     if 0<=offset<6:t[i]=(t[i]&~1023)|[0x1d4,0x1d5,0x1dc,0x1dd,0x1e6,0x1e7][offset];matched=True;break
+     if 0<=offset<4:t[i]=(t[i]&~1023)|[0x1d4,0x1d5,0x1dc,0x1dd][offset];matched=True;break
     assert matched,('Facade intrudes into scrolling buffer',x,y,n)
    else:
     assert n in (0x202,0x3e8,0x3e9),('Unmapped secondary tile at city seam',name,x,y,n)
-    t[i]=(t[i]&~1023)|({0x202:0x114,0x3e8:0x1e6,0x3e9:0x1e7}[n])
+    t[i]=(t[i]&~1023)|({0x202:0x24,0x3e8:0x1dc,0x3e9:0x1dd}[n])
  return struct.pack('<'+str(w*h)+'H',*t)

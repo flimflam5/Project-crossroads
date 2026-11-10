@@ -35,6 +35,8 @@ def validate():
  # All preserved scripts, event IDs, graphics IDs and destinations remain pinned.
  import copy
  normalized=copy.deepcopy(new_city)
+ assert len(normalized['warp_events'])==8
+ assert normalized['warp_events'].pop()==dict(new_city['warp_events'][1],x=39,y=25)
  for key in ['warp_events','object_events','bg_events']:
   assert len(normalized[key])==len(old_city[key])
   for event,old_event in zip(normalized[key],old_city[key]):event['x']=old_event['x'];event['y']=old_event['y']
@@ -48,8 +50,8 @@ def validate():
  bell=load('data/maps/EcruteakCity_BellTower/map.json');old_bell=load('crossroads/hgss/contracts/EcruteakCity_BellTower-metadata-0.9.1.json')
  for e in old_bell['warp_events'][:2]:e.update(dest_map='MAP_BELLCHIME_TRAIL',dest_warp_id='1')
  assert bell==old_bell,'Bell floor IDs/events/stairs must be preserved'
- m=load('data/maps/EcruteakCity/map.json');assert len(m['warp_events'])==7
- expected=[('MAP_ECRUTEAK_CITY_BURNED_TOWER',24,21),('MAP_ECRUTEAK_CITY_BARRIER_STATION',40,25),('MAP_ECRUTEAK_CITY_RESIDENCE',23,45),('MAP_ECRUTEAK_CITY_DANCE_THEATER',45,45),('MAP_ECRUTEAK_CITY_GYM',24,55),('MAP_ECRUTEAK_CITY_POKEMON_CENTER_1F',45,55),('MAP_ECRUTEAK_CITY_MART',54,45)]
+ m=load('data/maps/EcruteakCity/map.json');assert len(m['warp_events'])==8
+ expected=[('MAP_ECRUTEAK_CITY_BURNED_TOWER',24,21),('MAP_ECRUTEAK_CITY_BARRIER_STATION',40,25),('MAP_ECRUTEAK_CITY_RESIDENCE',23,45),('MAP_ECRUTEAK_CITY_DANCE_THEATER',45,45),('MAP_ECRUTEAK_CITY_GYM',24,55),('MAP_ECRUTEAK_CITY_POKEMON_CENTER_1F',45,55),('MAP_ECRUTEAK_CITY_MART',53,45)]
  for e,(dest,x,y) in zip(m['warp_events'],expected):assert (e['dest_map'],e['x'],e['y'])==(dest,x,y)
  w=h=64;t=struct.unpack('<4096H',(R/'data/layouts/EcruteakCity/map.bin').read_bytes());walkable={(x,y) for y in range(h) for x in range(w) if not t[y*w+x]&0xc00 and t[y*w+x]>>12==3};q=deque([(26,27)]);seen=set(q)
  while q:
@@ -57,6 +59,10 @@ def validate():
   for p in [(x+1,y),(x-1,y),(x,y+1),(x,y-1)]:
    if p in walkable and p not in seen:seen.add(p);q.append(p)
  assert walkable<=seen,'Old-save relocation must not land in an isolated canopy pocket'
+ assert {y for y in range(h) if (0,y) in walkable}==set(range(37,40))
+ assert {y for y in range(h) if (63,y) in walkable}==set(range(46,49))
+ assert {x for x in range(w) if (x,63) in walkable}==set(range(38,41))
+ assert not any((x,0) in walkable for x in range(w))
  for e in m['object_events']:assert (e['x'],e['y']) in seen
  assert (45,56) in seen,'Preserved heal ID needs safe updated arrival'
  art=load('crossroads/hgss/art/native-manifest.json');assert art['allocated_tiles']<=art['available_tiles']<=1024

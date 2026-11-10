@@ -10,7 +10,11 @@ R=Path(__file__).resolve().parents[2]
 def canonical_positions():
  source=json.loads((R/'crossroads/hgss/canonical_events/075_T27.json').read_text())
  names=['MAP_BURNED_TOWER_1F','MAP_ECRUTEAK_BELL_TOWER_BARRIER_STATION','MAP_ECRUTEAK_SOUTHWEST_HOUSE','MAP_ECRUTEAK_DANCE_THEATER','MAP_ECRUTEAK_GYM','MAP_ECRUTEAK_POKECENTER_1F','MAP_ECRUTEAK_POKEMART']
- return [(next(e for e in source['warps'] if e['header']==n)['x']-352,next(e for e in source['warps'] if e['header']==n)['z']-128) for n in names]
+ positions=[(next(e for e in source['warps'] if e['header']==n)['x']-352,next(e for e in source['warps'] if e['header']==n)['z']-128) for n in names]
+ # GBA facade's visible Mart door is its left panel. Keep the building's
+ # established footprint; only move its entrance one tile west.
+ positions[-1]=(positions[-1][0]-1,positions[-1][1])
+ return positions
 
 def city_data():
  specs=json.loads((R/'crossroads/hgss/art/native-manifest.json').read_text())['specs'];w=h=64;t=[0x3001]*(w*h);pave=0x3000|specs['paving'];earth=0x3000|specs['earth']
@@ -19,14 +23,14 @@ def city_data():
   for yy in range(y,y+hh):t[yy*w+x:yy*w+x+ww]=[v]*ww
  def tree(x,y,autumn=False,overhang=True):
   a=specs['autumn_tree' if autumn else 'tree']
-  for yy in range(3):
+  for yy in range(a['height']):
    for xx in range(2):t[(y+yy)*w+x+xx]=a['start']+yy*2+xx+(0x3000 if yy==0 and overhang else 0x400)
  def building(kind,x,y,open_door=True):
   a=specs[kind]
   for yy in range(a['height']):
    for xx in range(a['width']):
-    door=(xx,yy)==(a['door_x'],a['door_y'])
-    blocked=[xx,yy] in a['solid_footprint'] or (kind=='barrier' and not door) or (door and not open_door)
+    door=(xx,yy)==(a['door_x'],a['door_y']) or kind=='barrier' and (xx,yy)==(a['door_x']-1,a['door_y'])
+    blocked=([xx,yy] in a['solid_footprint'] and not door) or (kind=='barrier' and not door) or (door and not open_door)
     t[(y+yy)*w+x+xx]=a['start']+yy*a['width']+xx+(0x400 if blocked else 0x3000)
  # Absolute HGSS event coordinates translated by(-352,-128). This preserves
  # actual relative entrance spacing rather than estimating DS perspective pixels.
@@ -58,6 +62,14 @@ def city_data():
  # Legacy Black Ledger shuttle arrival must remain safe.
  rect(26,27,1,1,pave)
  for x,y in [(26,25),(42,26),(25,46),(43,46),(26,56),(43,56),(55,46),(8,37),(61,49),(39,61),(36,45)]:rect(x,y,1,1,0x403)
+ # The map perimeter is solid except the three documented road apertures.
+ # Do not expose the full neighboring map width as an accidental crossing.
+ for x in range(w):
+  t[x]=0x4c6
+  if x not in range(38,41):t[(h-1)*w+x]=0x4c6
+ for y in range(h):
+  if y not in range(37,40):t[y*w]=0x4c6
+  if y not in range(46,49):t[y*w+w-1]=0x4c6
  from hgss_connection_buffer import repair
  return repair('EcruteakCity',struct.pack('<'+str(w*h)+'H',*t),w,h,specs)
 
@@ -71,6 +83,11 @@ def generate(check=False):
  layouts=json.loads((R/'data/layouts/layouts.json').read_text());l=next(l for l in layouts['layouts'] if l['id']=='LAYOUT_ECRUTEAK_CITY');l.update(width=64,height=64,primary_tileset='gTileset_HgssEcruteakPrimary',secondary_tileset='gTileset_HgssEcruteakSecondary');js('data/layouts/layouts.json',layouts)
  m=json.loads((R/'data/maps/EcruteakCity/map.json').read_text());positions=canonical_positions()
  for e,(x,y) in zip(m['warp_events'],positions):e.update(x=x,y=y)
+ # Both visible leaves of the station doorway enter the same room. Append the
+ # alias so all existing warp indices and return destinations remain stable.
+ alias=dict(m['warp_events'][1],x=39,y=25)
+ if len(m['warp_events'])==7:m['warp_events'].append(alias)
+ else:assert len(m['warp_events'])==8;m['warp_events'][7]=alias
  # Sign/NPC identities and scripts remain stable; only their physical placements
  # follow the new town. Bell sign currently explicitly labels an unfinished approach.
  signpos=[(26,25),(42,26),(25,46),(43,46),(26,56),(43,56),(55,46),(8,37),(61,49),(39,61),(36,45)]
