@@ -1,0 +1,27 @@
+Joe idle/turn VRAM matches supplied direction: south
+Joe idle/turn VRAM matches supplied direction: north
+Joe idle/turn VRAM matches supplied direction: west
+Joe idle/turn VRAM matches supplied direction: east
+Joe walking frames change in VRAM; saved gender preserved 1
+Entered with Joe MAP_OLIVINE_CITY_RESIDENCE
+Home rest before rescue preserves empty party and unchosen starter: PASS
+Returned with Joe from MAP_OLIVINE_CITY_RESIDENCE
+Entered with Joe MAP_OLIVINE_CITY_NEIGHBOR_HOUSE
+Returned with Joe from MAP_OLIVINE_CITY_NEIGHBOR_HOUSE
+Entered with Joe MAP_OLIVINE_CITY_GYM
+Returned with Joe from MAP_OLIVINE_CITY_GYM
+Entered with Joe MAP_OLIVINE_CITY_POKEMON_CENTER_1F
+Returned with Joe from MAP_OLIVINE_CITY_POKEMON_CENTER_1F
+Entered with Joe MAP_OLIVINE_CITY_MART
+Returned with Joe from MAP_OLIVINE_CITY_MART
+Entered with Joe MAP_OLIVINE_CITY_SILPH_OFFICE
+Returned with Joe from MAP_OLIVINE_CITY_SILPH_OFFICE
+Entered with Joe MAP_OLIVINE_CITY_HARBOR_OFFICE
+Returned with Joe from MAP_OLIVINE_CITY_HARBOR_OFFICE
+Entered with Joe MAP_OLIVINECITY_LIGHTHOUSE_1F
+Returned with Joe from MAP_OLIVINECITY_LIGHTHOUSE_1F
+Both piers reached on foot
+Live Olivine met location/level, rescue, duplicate guard and terminal travel passed: 605
+Live Olivine met location/level, rescue, duplicate guard and terminal travel passed: 273
+Live Olivine met location/level, rescue, duplicate guard and terminal travel passed: 568
+All three live rescue choices, met origin, duplicate guards, Olivine doors and Joe walking: PASS; opening skipped by disclosed RAM fixture

@@ -38,3 +38,30 @@ for species, value in (("ELGYEM", 1), ("SEEDOT", 2), ("TRUBBISH", 3)):
 assert "goto_if_ne VAR_CROSSROADS_STARTER, 0" in script
 assert "MULTI_CHOICE_CROSSROADS_STARTERS" not in script
 print("Project Crossroads narrative and staged script checks: PASS")
+
+# The staged copy alone does not prove that the ROM uses a safe starter event.
+live = (crossroads / 'scripts/starter_rescue.inc').read_text()
+live = live.split('Crossroads_EventScript_ChooseStarter::', 1)[1]
+assert 'goto_if_ne VAR_CROSSROADS_STARTER, 0, Crossroads_EventScript_AlreadyChosen' in live
+assert len(re.findall(r'^    givemon ', live, re.M)) == 3
+for species, value in (("ELGYEM", 1), ("SEEDOT", 2), ("TRUBBISH", 3)):
+    block = live.split(f'Crossroads_EventScript_{species.title()}::', 1)[1]
+    block = re.split(r'(?m)^Crossroads_EventScript_[A-Za-z0-9_]+::', block, maxsplit=1)[0]
+    grant = block.index(f'givemon SPECIES_{species}, 5, ITEM_NONE')
+    failed = block.index('goto_if_eq VAR_RESULT, MON_CANT_GIVE, Crossroads_EventScript_NoRoom')
+    persist = block.index(f'setvar VAR_CROSSROADS_STARTER, {value}')
+    assert grant < failed < persist
+assert 'crossroads/scripts/starter_rescue.inc' in (root / 'data/event_scripts.s').read_text()
+print('Linked starter rescue, duplication guard and success-only persistence: PASS')
+
+# A grant must run on the real Olivine acquisition map, not the legacy bedroom.
+links = []
+for path in (root / 'data/maps').glob('*/map.json'):
+    m = json.loads(path.read_text())
+    for event in (m.get('object_events') or []) + (m.get('bg_events') or []) + (m.get('coord_events') or []):
+        if event.get('script') == 'Crossroads_EventScript_ChooseStarter':
+            links.append((m['id'], m['region_map_section']))
+assert links == [('MAP_OLIVINE_CITY_SILPH_OFFICE', 'MAPSEC_OLIVINE_CITY')], links
+legacy = json.loads((root / 'data/maps/LittlerootTown_BrendansHouse_2F/map.json').read_text())
+assert any(e.get('script') == 'Crossroads_EventScript_VisitRescueCase' for e in legacy['bg_events'])
+print('Only live starter grant is in Olivine; legacy room is a travel bridge: PASS')

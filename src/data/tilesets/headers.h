@@ -1541,3 +1541,50 @@ const struct Tileset gTileset_HallOfFame =
 };
 
 #endif // IS_FRLG
+
+#if !IS_FRLG
+const struct Tileset gTileset_WesternCity = {
+ .isCompressed = TRUE, .isSecondary = TRUE, .tiles = gTilesetTiles_WesternCity,
+ .palettes = gTilesetPalettes_WesternCity, .metatiles = gMetatiles_WesternCity,
+ .metatileAttributes = gMetatileAttributes_WesternCity, .callback = InitTilesetAnim_Slateport,
+};
+const struct Tileset gTileset_WesternInteriors = {
+ .isCompressed = TRUE, .isSecondary = TRUE, .tiles = gTilesetTiles_GenericBuilding,
+ .palettes = gTilesetPalettes_GenericBuilding, .metatiles = gMetatiles_WesternInteriors,
+ .metatileAttributes = gMetatileAttributes_WesternInteriors, .callback = NULL,
+};
+#endif
+
+const struct Tileset gTileset_HgssEcruteakPrimary = {
+ .isCompressed=TRUE, .isSecondary=FALSE,
+ .tiles=gTilesetTiles_HgssEcruteakPrimary, .palettes=gTilesetPalettes_HgssEcruteakPrimary,
+ .metatiles=gMetatiles_HgssEcruteakPrimary, .metatileAttributes=gMetatileAttributes_HgssEcruteakPrimary,
+ .callback=InitTilesetAnim_General,
+};
+
+const struct Tileset gTileset_HgssEcruteakSecondary = {
+ .isCompressed=TRUE, .isSecondary=TRUE,
+ .tiles=gTilesetTiles_HgssEcruteakSecondary, .palettes=gTilesetPalettes_HgssEcruteakSecondary,
+ .metatiles=gMetatiles_HgssEcruteakSecondary, .metatileAttributes=gMetatileAttributes_HgssEcruteakSecondary,
+ .callback=NULL,
+};
+
+#if !IS_FRLG
+const struct Tileset gTileset_HgssBellPrimary = {
+ .isCompressed=TRUE, .isSecondary=FALSE,
+ .tiles=gTilesetTiles_HgssBellPrimary, .palettes=gTilesetPalettes_HgssBellPrimary,
+ .metatiles=gMetatiles_HgssBellPrimary, .metatileAttributes=gMetatileAttributes_HgssBellPrimary,
+ .callback=InitTilesetAnim_General,
+};
+const struct Tileset gTileset_HgssBellSecondary = {
+ .isCompressed=TRUE, .isSecondary=TRUE,
+ .tiles=gTilesetTiles_HgssBellSecondary, .palettes=gTilesetPalettes_HgssBellSecondary,
+ .metatiles=gMetatiles_HgssBellSecondary, .metatileAttributes=gMetatileAttributes_HgssBellSecondary,
+ .callback=NULL,
+};
+const struct Tileset gTileset_HgssTemple = {
+ .isCompressed=TRUE, .isSecondary=TRUE, .tiles=gTilesetTiles_HgssTemple,
+ .palettes=gTilesetPalettes_HgssTemple, .metatiles=gMetatiles_HgssTemple,
+ .metatileAttributes=gMetatileAttributes_HgssTemple, .callback=NULL,
+};
+#endif

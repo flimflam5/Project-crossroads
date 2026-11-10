@@ -7225,3 +7225,214 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SSAnne = {
 };
 
 #endif // IS_FRLG
+
+// Dedicated corporate outfit; source frames preserve their 16x32 canvas/foot baseline.
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_JoeCorporate = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_JOE_CORPORATE,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 512,
+    .width = 16,
+    .height = 32,
+    .paletteSlot = PALSLOT_PLAYER,
+    .shadowSize = SHADOW_SIZE_M,
+    .inanimate = FALSE,
+    .compressed = FALSE,
+    .tracks = TRACKS_FOOT,
+    .oam = &gObjectEventBaseOam_16x32,
+    .subspriteTables = sOamTables_16x32,
+    .anims = sAnimTable_JoeCorporate,
+    .images = sPicTable_JoeCorporate,
+};
+
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CrossroadsJasmine = {
+ .tileTag = TAG_NONE, .paletteTag = OBJ_EVENT_PAL_TAG_CROSSROADS_JASMINE,
+ .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE, .size = 256, .width = 16, .height = 32,
+ .paletteSlot = PALSLOT_NPC_1, .shadowSize = SHADOW_SIZE_M, .inanimate = TRUE,
+ .compressed = FALSE, .tracks = TRACKS_FOOT, .oam = &gObjectEventBaseOam_16x32,
+ .subspriteTables = sOamTables_16x32, .anims = sAnimTable_Inanimate, .images = sPicTable_CrossroadsJasmine,
+};
+
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CrossroadsMorty = {
+ .tileTag = TAG_NONE, .paletteTag = OBJ_EVENT_PAL_TAG_CROSSROADS_MORTY,
+ .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE, .size = 256, .width = 16, .height = 32,
+ .paletteSlot = PALSLOT_NPC_1, .shadowSize = SHADOW_SIZE_M, .inanimate = TRUE,
+ .compressed = FALSE, .tracks = TRACKS_FOOT, .oam = &gObjectEventBaseOam_16x32,
+ .subspriteTables = sOamTables_16x32, .anims = sAnimTable_Inanimate, .images = sPicTable_CrossroadsMorty,
+};
+
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AreaBell = {
+ .tileTag = TAG_NONE, .paletteTag = OBJ_EVENT_PAL_TAG_AREA_BELL, .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+ .size = 128, .width = 16, .height = 16, .paletteSlot = PALSLOT_NPC_1, .shadowSize = SHADOW_SIZE_S,
+ .inanimate = TRUE, .compressed = FALSE, .tracks = TRACKS_NONE, .oam = &gObjectEventBaseOam_16x16,
+ .anims = sAnimTable_Inanimate, .images = sPicTable_AreaBell,
+};
+
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_AreaLantern = {
+ .tileTag = TAG_NONE, .paletteTag = OBJ_EVENT_PAL_TAG_AREA_LANTERN, .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+ .size = 128, .width = 16, .height = 16, .paletteSlot = PALSLOT_NPC_1, .shadowSize = SHADOW_SIZE_S,
+ .inanimate = TRUE, .compressed = FALSE, .tracks = TRACKS_NONE, .oam = &gObjectEventBaseOam_16x16,
+ .anims = sAnimTable_Inanimate, .images = sPicTable_AreaLantern,
+};
+
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_JoeMachBike = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_JOE_CORPORATE,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 512,
+    .width = 32,
+    .height = 32,
+    .paletteSlot = PALSLOT_PLAYER,
+    .shadowSize = SHADOW_SIZE_M,
+    .inanimate = FALSE,
+    .compressed = FALSE,
+    .tracks = TRACKS_BIKE_TIRE,
+    .oam = &gObjectEventBaseOam_32x32,
+    .subspriteTables = sOamTables_32x32,
+    .anims = sAnimTable_JoeMachBike,
+    .images = sPicTable_JoeMachBike,
+};
+
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_JoeAcroBike = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_JOE_CORPORATE,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 512,
+    .width = 32,
+    .height = 32,
+    .paletteSlot = PALSLOT_PLAYER,
+    .shadowSize = SHADOW_SIZE_M,
+    .inanimate = FALSE,
+    .compressed = FALSE,
+    .tracks = TRACKS_BIKE_TIRE,
+    .oam = &gObjectEventBaseOam_32x32,
+    .subspriteTables = sOamTables_32x32,
+    .anims = sAnimTable_JoeAcroBike,
+    .images = sPicTable_JoeAcroBike,
+};
+
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_JoeSurfing = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_JOE_CORPORATE,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 512,
+    .width = 32,
+    .height = 32,
+    .paletteSlot = PALSLOT_PLAYER,
+    .shadowSize = SHADOW_SIZE_M,
+    .inanimate = FALSE,
+    .compressed = FALSE,
+    .tracks = TRACKS_FOOT,
+    .oam = &gObjectEventBaseOam_32x32,
+    .subspriteTables = sOamTables_32x32,
+    .anims = sAnimTable_JoeSurfing,
+    .images = sPicTable_JoeSurfing,
+};
+
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_JoeUnderwater = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_JOE_CORPORATE,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 512,
+    .width = 32,
+    .height = 32,
+    .paletteSlot = PALSLOT_PLAYER,
+    .shadowSize = SHADOW_SIZE_M,
+    .inanimate = FALSE,
+    .compressed = FALSE,
+    .tracks = TRACKS_FOOT,
+    .oam = &gObjectEventBaseOam_32x32,
+    .subspriteTables = sOamTables_32x32,
+    .anims = sAnimTable_JoeUnderwater,
+    .images = sPicTable_JoeUnderwater,
+};
+
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_JoeFieldMove = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_JOE_CORPORATE,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 512,
+    .width = 32,
+    .height = 32,
+    .paletteSlot = PALSLOT_PLAYER,
+    .shadowSize = SHADOW_SIZE_M,
+    .inanimate = FALSE,
+    .compressed = FALSE,
+    .tracks = TRACKS_FOOT,
+    .oam = &gObjectEventBaseOam_32x32,
+    .subspriteTables = sOamTables_32x32,
+    .anims = sAnimTable_FieldMove,
+    .images = sPicTable_JoeFieldMove,
+};
+
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_JoeFishing = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_JOE_CORPORATE,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 512,
+    .width = 32,
+    .height = 32,
+    .paletteSlot = PALSLOT_PLAYER,
+    .shadowSize = SHADOW_SIZE_M,
+    .inanimate = FALSE,
+    .compressed = FALSE,
+    .tracks = TRACKS_FOOT,
+    .oam = &gObjectEventBaseOam_32x32,
+    .subspriteTables = sOamTables_32x32,
+    .anims = sAnimTable_JoeFishing,
+    .images = sPicTable_JoeFishing,
+};
+
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_JoeWatering = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_JOE_CORPORATE,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 512,
+    .width = 32,
+    .height = 32,
+    .paletteSlot = PALSLOT_PLAYER,
+    .shadowSize = SHADOW_SIZE_M,
+    .inanimate = FALSE,
+    .compressed = FALSE,
+    .tracks = TRACKS_FOOT,
+    .oam = &gObjectEventBaseOam_32x32,
+    .subspriteTables = sOamTables_32x32,
+    .anims = sAnimTable_JoeWatering,
+    .images = sPicTable_JoeWatering,
+};
+
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_JoeDecorating = {
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_JOE_CORPORATE,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 256,
+    .width = 16,
+    .height = 32,
+    .paletteSlot = PALSLOT_NPC_SPECIAL,
+    .shadowSize = SHADOW_SIZE_M,
+    .inanimate = TRUE,
+    .compressed = FALSE,
+    .tracks = TRACKS_FOOT,
+    .oam = &gObjectEventBaseOam_16x32,
+    .subspriteTables = sOamTables_16x32,
+    .anims = sAnimTable_Inanimate,
+    .images = sPicTable_JoeDecorating,
+};
+
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EcruteakMonk = {
+ .tileTag=TAG_NONE, .paletteTag=OBJ_EVENT_PAL_TAG_ECRUTEAK_MONK,
+ .reflectionPaletteTag=OBJ_EVENT_PAL_TAG_NONE, .size=256, .width=16, .height=32,
+ .paletteSlot=PALSLOT_NPC_SPECIAL, .shadowSize=SHADOW_SIZE_M, .inanimate=FALSE,
+ .compressed=FALSE, .tracks=TRACKS_FOOT, .oam=&gObjectEventBaseOam_16x32,
+ .subspriteTables=sOamTables_16x32, .anims=sAnimTable_Standard,
+ .images=sPicTable_EcruteakMonk,
+};
+
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EcruteakPerformer = {
+ .tileTag=TAG_NONE, .paletteTag=OBJ_EVENT_PAL_TAG_ECRUTEAK_PERFORMER,
+ .reflectionPaletteTag=OBJ_EVENT_PAL_TAG_NONE, .size=256, .width=16, .height=32,
+ .paletteSlot=PALSLOT_NPC_SPECIAL, .shadowSize=SHADOW_SIZE_M, .inanimate=FALSE,
+ .compressed=FALSE, .tracks=TRACKS_FOOT, .oam=&gObjectEventBaseOam_16x32,
+ .subspriteTables=sOamTables_16x32, .anims=sAnimTable_Standard,
+ .images=sPicTable_EcruteakPerformer,
+};

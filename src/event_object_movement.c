@@ -490,6 +490,7 @@ const u8 gInitialMovementTypeFacingDirections[NUM_MOVEMENT_TYPES] = {
 #include "data/field_effects/field_effect_object_template_pointers.h"
 #include "data/object_events/object_event_pic_tables.h"
 #include "data/object_events/object_event_anims.h"
+#include "data/object_events/joe_special_anims.h"
 #include "data/object_events/base_oam.h"
 #include "data/object_events/object_event_subsprites.h"
 #include "data/object_events/object_event_graphics_info.h"
@@ -583,6 +584,14 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPaletteLight2,             OBJ_EVENT_PAL_TAG_LIGHT_2},
     {gObjectEventPaletteEmotes,             OBJ_EVENT_PAL_TAG_EMOTES},
     {gObjectEventPaletteNeonLight,          OBJ_EVENT_PAL_TAG_NEON_LIGHT},
+    // Append: berry-tree palette data relies on the existing ordinal positions.
+    {gObjectEventPal_JoeCorporate,          OBJ_EVENT_PAL_TAG_JOE_CORPORATE},
+    {gObjectEventPal_CrossroadsJasmine, OBJ_EVENT_PAL_TAG_CROSSROADS_JASMINE},
+    {gObjectEventPal_AreaBell, OBJ_EVENT_PAL_TAG_AREA_BELL},
+    {gObjectEventPal_AreaLantern, OBJ_EVENT_PAL_TAG_AREA_LANTERN},
+    {gObjectEventPal_CrossroadsMorty, OBJ_EVENT_PAL_TAG_CROSSROADS_MORTY},
+    {gObjectEventPal_EcruteakMonk, OBJ_EVENT_PAL_TAG_ECRUTEAK_MONK},
+    {gObjectEventPal_EcruteakPerformer, OBJ_EVENT_PAL_TAG_ECRUTEAK_PERFORMER},
 #ifdef BUGFIX
     {NULL,                                  OBJ_EVENT_PAL_TAG_NONE},
 #else
@@ -3207,6 +3216,34 @@ const struct ObjectEventGraphicsInfo *GetObjectEventGraphicsInfo(u16 graphicsId)
     if (graphicsId & OBJ_EVENT_MON)
         return SpeciesToGraphicsInfo(graphicsId & OBJ_EVENT_MON_SPECIES_MASK, graphicsId & OBJ_EVENT_MON_SHINY, graphicsId & OBJ_EVENT_MON_FEMALE);
 
+    if (graphicsId == OBJ_EVENT_GFX_CROSSROADS_JASMINE)
+        return &gObjectEventGraphicsInfo_CrossroadsJasmine;
+    if (graphicsId == OBJ_EVENT_GFX_CROSSROADS_MORTY)
+        return &gObjectEventGraphicsInfo_CrossroadsMorty;
+    if (graphicsId == OBJ_EVENT_GFX_AREA_BELL)
+        return &gObjectEventGraphicsInfo_AreaBell;
+    if (graphicsId == OBJ_EVENT_GFX_AREA_LANTERN)
+        return &gObjectEventGraphicsInfo_AreaLantern;
+    if (graphicsId == OBJ_EVENT_GFX_JOE_MACH_BIKE)
+        return &gObjectEventGraphicsInfo_JoeMachBike;
+    if (graphicsId == OBJ_EVENT_GFX_JOE_ACRO_BIKE)
+        return &gObjectEventGraphicsInfo_JoeAcroBike;
+    if (graphicsId == OBJ_EVENT_GFX_JOE_SURFING)
+        return &gObjectEventGraphicsInfo_JoeSurfing;
+    if (graphicsId == OBJ_EVENT_GFX_JOE_UNDERWATER)
+        return &gObjectEventGraphicsInfo_JoeUnderwater;
+    if (graphicsId == OBJ_EVENT_GFX_JOE_FIELD_MOVE)
+        return &gObjectEventGraphicsInfo_JoeFieldMove;
+    if (graphicsId == OBJ_EVENT_GFX_JOE_FISHING)
+        return &gObjectEventGraphicsInfo_JoeFishing;
+    if (graphicsId == OBJ_EVENT_GFX_JOE_WATERING)
+        return &gObjectEventGraphicsInfo_JoeWatering;
+    if (graphicsId == OBJ_EVENT_GFX_JOE_DECORATING)
+        return &gObjectEventGraphicsInfo_JoeDecorating;
+    if (graphicsId == OBJ_EVENT_GFX_ECRUTEAK_MONK)
+        return &gObjectEventGraphicsInfo_EcruteakMonk;
+    if (graphicsId == OBJ_EVENT_GFX_ECRUTEAK_PERFORMER)
+        return &gObjectEventGraphicsInfo_EcruteakPerformer;
     if (graphicsId >= NUM_OBJ_EVENT_GFX)
         graphicsId = OBJ_EVENT_GFX_NINJA_BOY;
 

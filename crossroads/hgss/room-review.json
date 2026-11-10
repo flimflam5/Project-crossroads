@@ -1,0 +1,68 @@
+[
+  {
+    "name": "EcruteakCity_Residence",
+    "source_header": "MAP_ECRUTEAK_SOUTHWEST_HOUSE",
+    "source": {
+      "matrix": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0066_T20R0301.bin",
+      "matrix_blob_sha": "c41931ad02b8576b73929e84389f185d95c04213",
+      "events": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/eventdata/zone_event/082_T27R0401.json",
+      "events_blob_sha": "b16449398a38d8043722c1d3e7789ff0e88e95fc",
+      "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+    },
+    "dimensions": [
+      11,
+      10
+    ],
+    "adaptations": [
+      "GBA furniture/flat room instead of DS models",
+      "No HGSS plot actors or item reward imported",
+      "Legacy paired exit retained"
+    ],
+    "visual_qa": "pending",
+    "runtime_qa": "pending"
+  },
+  {
+    "name": "EcruteakCity_DowsingHouse",
+    "source_header": "MAP_ECRUTEAK_DOWSING_MACHINE_HOUSE",
+    "source": {
+      "matrix": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0066_T20R0301.bin",
+      "matrix_blob_sha": "c41931ad02b8576b73929e84389f185d95c04213",
+      "events": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/eventdata/zone_event/081_T27R0801.json",
+      "events_blob_sha": "8cbe81325f3caed794bd06e20588ede2096fb6ac",
+      "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+    },
+    "dimensions": [
+      11,
+      10
+    ],
+    "adaptations": [
+      "GBA furniture/flat room instead of DS models",
+      "No HGSS plot actors or item reward imported",
+      "Legacy paired exit retained"
+    ],
+    "visual_qa": "pending",
+    "runtime_qa": "pending"
+  },
+  {
+    "name": "EcruteakCity_DanceTheater",
+    "source_header": "MAP_ECRUTEAK_DANCE_THEATER",
+    "source": {
+      "matrix": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0126_T27R0501.bin",
+      "matrix_blob_sha": "de428ca74c8c37b1b6436bb2773a6101aba5f614",
+      "events": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/eventdata/zone_event/083_T27R0501.json",
+      "events_blob_sha": "0b2030a8cad9289157b09513a21ad86289984f47",
+      "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+    },
+    "dimensions": [
+      14,
+      19
+    ],
+    "adaptations": [
+      "GBA furniture/flat room instead of DS models",
+      "No HGSS plot actors or item reward imported",
+      "Legacy paired exit retained"
+    ],
+    "visual_qa": "pending",
+    "runtime_qa": "pending"
+  }
+]

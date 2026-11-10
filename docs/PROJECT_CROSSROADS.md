@@ -1,39 +1,60 @@
-# Project Crossroads — Story and Development Bible
+# Pokémon: Black Ledger
 
-Status: preproduction. Engine: rh-hideout/pokeemerald-expansion (GBA). This repository is a fork of the engine.
+Repository/internal project name: Project Crossroads. Owner clarification on
+2026-11-08: keep the original nighttime Olivine Harbor title artwork and update
+its game title to **Pokémon: Black Ledger**. The later coat/pagoda/book image is
+a title-name reference, not replacement artwork. Joe's corporate outfit, story
+canon, starters and saved identifiers remain unchanged.
 
-## Premise
-Joseph "Joe" Mercer, 35, is a burned-out Silph Co. logistics middle manager in Saffron City. During a Meridian Syndicate raid to steal an experimental Atlas Drive, Joe is mistaken for an operative. Security sees him carrying the stolen case; Meridian mistakes him for its extraction contact. He becomes a fugitive and gradually embraces the criminal life. The player's choices shape his conscience, loyalty, and notoriety.
+Owner and creative director: **J Fritts**. Platform: Game Boy Advance.
+Foundation: existing RHH pokeemerald-expansion 1.17.2 fork.
 
-## Confirmed game pillars
-- Multiple regions, planned in phases: Kanto prologue, Johto, Sinnoh, Unova.
-- Curated regional Pokédexes, rather than unrestricted encounters everywhere.
-- Selectable Casual, Standard, and Expert difficulties.
-- Mega Evolution and a tournament-style endgame, subject to engine integration and testing.
-- Joe starts with one of three Pokémon chosen by the player: Porygon, Houndour, or Trubbish.
-- Adult corporate satire and a morally complicated crime story.
+## Approved direction
 
-## Opening mission: Wrong Place, Wrong Time
-1. Joe's apartment: alarm, supervisor message, and a rushed commute.
-2. Silph Co.: mundane logistics tasks and a meeting.
-3. Meridian raid: lockdown and chaos; operative Mara Voss hands Joe the Atlas Drive case.
-4. Starter choice: player rescues Porygon, Houndour, or Trubbish; persist the choice.
-5. First battle: escape a Silph security officer.
-6. Loading dock: Meridian mistakenly extracts Joe.
-7. Safehouse: commander Cassian Vale assumes Joe is a professional operative. Joe learns he's wanted.
+Joseph "Joe" Mercer is 35 and lives in Olivine City, Johto. He is the
+logistics manager at a Silph Co. subsidiary. His approved initial design has messy
+brown hair, a tired expression, light stubble where readable, a white shirt,
+a loosened maroon tie, dark slacks/shoes, and a brown shoulder satchel. A robbery and mistaken
+criminal identification disrupt his life. His later participation in crime must
+develop gradually through experiences, relationships, and consequential choices.
+The tone is mature and morally ambiguous while retaining Pokémon's humor,
+exploration, collecting, training, evolution, and battles.
 
-## Implementation checklist
-- [ ] Compile unmodified engine in a cloud Linux development environment.
-- [ ] Confirm emulator boots the unmodified build.
-- [ ] Define dedicated story flags/variables without colliding with engine constants.
-- [ ] Implement a prototype starter-choice event and test each branch.
-- [ ] Implement first security battle and healing/recovery logic.
-- [ ] Add apartment, office, maintenance corridor, loading dock, safehouse maps.
-- [ ] Script and test opening sequence, save/load, and all three starter choices.
-- [ ] Implement difficulty selection and persist settings.
-- [ ] Expand regional content only after a stable playable vertical slice.
+The opening rescue gives **exactly one of Elgyem, Seedot, or Trubbish**.
+The roster is curated. Johto comes first; further regions need approval and a
+capacity assessment. Difficulty selection is planned; exact rules are pending.
 
-## Technical guardrails
-- Do not commit commercial ROM binaries, copyrighted base ROMs, or secrets.
-- Source commits alone are not evidence of a playable game. Record compilation and emulator results separately.
-- The fork currently contains upstream engine source; this document is design groundwork, not an implemented event script.
+## Canon boundary
+
+The owner's latest directive approves Joe Mercer, age 35, the Meridian Syndicate,
+the stolen Atlas Drive, Mara Voss and Cassian Vale as important participants in
+his transformation. Joe is denied time off, becomes caught in the robbery and is
+mistaken for a participant by Silph security. This supersedes the earlier canon
+boundary. It does not approve every line of the legacy preview, exact relationships,
+plot revelations, endings, or future criminal outfits.
+
+The next work covers Joe's corporate outfit and trainer art, all ten Johto towns
+and their connected routes/landmarks, and original title/introduction presentation.
+Implement these in separate, buildable releases. Title art and exact cinematic
+pacing/dialogue require review. A Pokémon summary-screen redesign is explicitly
+out of scope; preserve the existing summary UI.
+
+## Development records
+
+- [Current milestone and repository audit](../crossroads/STATUS.md)
+- [Architecture and build instructions](../crossroads/TECHNICAL.md)
+- [Testing and known limitations](../crossroads/TESTING.md)
+- [Next increment: met location and Joe handoff](../crossroads/RELEASE_0_2.md)
+- [Milestones and pending design decisions](../crossroads/ROADMAP.md)
+
+Source changes, compilation, automated checks, emulator tests, owner playtesting,
+and owner acceptance are separate states. Never substitute one for another.
+
+
+## Latest approved Act I direction
+
+Joe’s oblivious corporate supervisor opens the workday with overwhelming deadlines
+and a coffee errand. Tone: dryly funny and grounded. This direction is preserved
+for creative development; the Johto map pass does not implement the full prologue
+or establish relationships, revelations or endings. The owner authorized Johto
+exploration expansion beyond the previously paused western footprint.

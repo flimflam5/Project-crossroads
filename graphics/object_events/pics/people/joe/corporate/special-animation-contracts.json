@@ -1,0 +1,76 @@
+[
+  {
+    "state": "MachBike",
+    "animation_indices": 20,
+    "max_frame": 11,
+    "east_mapping": {
+      "2": 9,
+      "7": 10,
+      "8": 11
+    },
+    "mirroring": false
+  },
+  {
+    "state": "AcroBike",
+    "animation_indices": 40,
+    "max_frame": 35,
+    "east_mapping": {
+      "2": 27,
+      "7": 28,
+      "8": 29,
+      "17": 30,
+      "18": 31,
+      "19": 32,
+      "20": 33,
+      "25": 34,
+      "26": 35
+    },
+    "mirroring": false
+  },
+  {
+    "state": "Surfing",
+    "animation_indices": 24,
+    "max_frame": 15,
+    "east_mapping": {
+      "2": 12,
+      "7": 13,
+      "8": 14,
+      "11": 15
+    },
+    "mirroring": false
+  },
+  {
+    "state": "Underwater",
+    "animation_indices": 20,
+    "max_frame": 11,
+    "east_mapping": {
+      "2": 9,
+      "7": 10,
+      "8": 11
+    },
+    "mirroring": false
+  },
+  {
+    "state": "Fishing",
+    "animation_indices": 12,
+    "max_frame": 15,
+    "east_mapping": {
+      "0": 12,
+      "1": 13,
+      "2": 14,
+      "3": 15
+    },
+    "mirroring": false
+  },
+  {
+    "state": "Watering",
+    "animation_indices": 20,
+    "max_frame": 11,
+    "east_mapping": {
+      "2": 9,
+      "7": 10,
+      "8": 11
+    },
+    "mirroring": false
+  }
+]

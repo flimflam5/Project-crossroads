@@ -1,0 +1,127 @@
+[
+  {
+    "header": "MAP_BELLCHIME_TOWER",
+    "matrix": "map_matrix_0067_D17R1101",
+    "event": "004_D17R1101"
+  },
+  {
+    "header": "MAP_BURNED_TOWER_1F",
+    "matrix": "map_matrix_0025_D18R0101",
+    "event": "005_D18R0101"
+  },
+  {
+    "header": "MAP_ECRUTEAK_POKEMART",
+    "matrix": "map_matrix_0104_T21FS0101",
+    "event": "076_T27FS0101"
+  },
+  {
+    "header": "MAP_ECRUTEAK_GYM",
+    "matrix": "map_matrix_0090_T27GYM0101",
+    "event": "077_T27GYM0101"
+  },
+  {
+    "header": "MAP_ECRUTEAK_POKECENTER_1F",
+    "matrix": "map_matrix_0073_T21PC0101",
+    "event": "078_T27PC0101"
+  },
+  {
+    "header": "MAP_ECRUTEAK_BELL_TOWER_BARRIER_STATION",
+    "matrix": "map_matrix_0068_T27R0201",
+    "event": "080_T27R0201"
+  },
+  {
+    "header": "MAP_ECRUTEAK_DOWSING_MACHINE_HOUSE",
+    "matrix": "map_matrix_0066_T20R0301",
+    "event": "081_T27R0801"
+  },
+  {
+    "header": "MAP_ECRUTEAK_SOUTHWEST_HOUSE",
+    "matrix": "map_matrix_0066_T20R0301",
+    "event": "082_T27R0401"
+  },
+  {
+    "header": "MAP_ECRUTEAK_DANCE_THEATER",
+    "matrix": "map_matrix_0126_T27R0501",
+    "event": "083_T27R0501"
+  },
+  {
+    "header": "MAP_BELL_TOWER_1F",
+    "matrix": "map_matrix_0015_D17R0101",
+    "event": "108_D17R0101"
+  },
+  {
+    "header": "MAP_ROUTE_42_ECRUTEAK_GATEHOUSE",
+    "matrix": "map_matrix_0070_R31R0101",
+    "event": "128_R42R0101"
+  },
+  {
+    "header": "MAP_ROUTE_38_ECRUTEAK_GATEHOUSE",
+    "matrix": "map_matrix_0070_R31R0101",
+    "event": "166_R38R0101"
+  },
+  {
+    "header": "MAP_ECRUTEAK_BELL_TOWER_BARRIER_STATION_CORRIDOR",
+    "matrix": "map_matrix_0130_T27R0202",
+    "event": "203_T27R0202"
+  },
+  {
+    "header": "MAP_BURNED_TOWER_B1F",
+    "matrix": "map_matrix_0026_D18R0102",
+    "event": "204_D18R0102"
+  },
+  {
+    "header": "MAP_BELL_TOWER_2F",
+    "matrix": "map_matrix_0016_D17R0102",
+    "event": "303_D17R0102"
+  },
+  {
+    "header": "MAP_BELL_TOWER_3F",
+    "matrix": "map_matrix_0017_D17R0103",
+    "event": "304_D17R0103"
+  },
+  {
+    "header": "MAP_BELL_TOWER_4F",
+    "matrix": "map_matrix_0018_D17R0104",
+    "event": "305_D17R0104"
+  },
+  {
+    "header": "MAP_BELL_TOWER_5F",
+    "matrix": "map_matrix_0019_D17R0105",
+    "event": "306_D17R0105"
+  },
+  {
+    "header": "MAP_BELL_TOWER_6F",
+    "matrix": "map_matrix_0020_D17R0106",
+    "event": "307_D17R0106"
+  },
+  {
+    "header": "MAP_BELL_TOWER_7F",
+    "matrix": "map_matrix_0021_D17R0107",
+    "event": "308_D17R0107"
+  },
+  {
+    "header": "MAP_BELL_TOWER_8F",
+    "matrix": "map_matrix_0022_D17R0108",
+    "event": "309_D17R0108"
+  },
+  {
+    "header": "MAP_BELL_TOWER_9F",
+    "matrix": "map_matrix_0023_D17R0109",
+    "event": "310_D17R0109"
+  },
+  {
+    "header": "MAP_BELL_TOWER_ROOF",
+    "matrix": "map_matrix_0024_D17R0110",
+    "event": "311_D17R0110"
+  },
+  {
+    "header": "MAP_BELL_TOWER_10F",
+    "matrix": "map_matrix_0183_D17R0112",
+    "event": "312_D17R0112"
+  },
+  {
+    "header": "MAP_ECRUTEAK_POKECENTER_B1F",
+    "matrix": "map_matrix_0077_T27PC0105",
+    "event": "127_T27PC0105"
+  }
+]

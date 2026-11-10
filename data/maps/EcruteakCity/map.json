@@ -1,0 +1,366 @@
+{
+  "id": "MAP_ECRUTEAK_CITY",
+  "name": "EcruteakCity",
+  "layout": "LAYOUT_ECRUTEAK_CITY",
+  "music": "MUS_LILYCOVE",
+  "region": "REGION_HOENN",
+  "region_map_section": "MAPSEC_ECRUTEAK_CITY",
+  "requires_flash": false,
+  "weather": "WEATHER_SUNNY",
+  "map_type": "MAP_TYPE_CITY",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "map": "MAP_JOHTO_ROUTE38",
+      "offset": 25,
+      "direction": "left"
+    },
+    {
+      "map": "MAP_JOHTO_ROUTE37",
+      "offset": 25,
+      "direction": "down"
+    },
+    {
+      "map": "MAP_JOHTO_ROUTE42",
+      "offset": 33,
+      "direction": "right"
+    }
+  ],
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAN_1",
+      "x": 27,
+      "y": 27,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Ecruteak_Traveler",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_3",
+      "x": 29,
+      "y": 34,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Ecruteak_Resident",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAN_1",
+      "x": 26,
+      "y": 48,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Ecruteak_GymVisitor",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
+      "x": 44,
+      "y": 34,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Ecruteak_TowerVisitor",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
+      "x": 40,
+      "y": 43,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Ecruteak_Shopper",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAN_1",
+      "x": 52,
+      "y": 57,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Ecruteak_TheaterVisitor",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 24,
+      "y": 21,
+      "elevation": 0,
+      "dest_map": "MAP_ECRUTEAK_CITY_BURNED_TOWER",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 40,
+      "y": 25,
+      "elevation": 0,
+      "dest_map": "MAP_ECRUTEAK_CITY_BARRIER_STATION",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 23,
+      "y": 45,
+      "elevation": 0,
+      "dest_map": "MAP_ECRUTEAK_CITY_RESIDENCE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 45,
+      "y": 45,
+      "elevation": 0,
+      "dest_map": "MAP_ECRUTEAK_CITY_DANCE_THEATER",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 24,
+      "y": 55,
+      "elevation": 0,
+      "dest_map": "MAP_ECRUTEAK_CITY_GYM",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 45,
+      "y": 55,
+      "elevation": 0,
+      "dest_map": "MAP_ECRUTEAK_CITY_POKEMON_CENTER_1F",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 53,
+      "y": 45,
+      "elevation": 0,
+      "dest_map": "MAP_ECRUTEAK_CITY_MART",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 39,
+      "y": 25,
+      "elevation": 0,
+      "dest_map": "MAP_ECRUTEAK_CITY_BARRIER_STATION",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 34,
+      "y": 55,
+      "elevation": 0,
+      "dest_map": "MAP_ECRUTEAK_CITY_DOWSING_HOUSE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 0,
+      "y": 37,
+      "elevation": 0,
+      "dest_map": "MAP_ECRUTEAK_CITY_WEST_GATE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 0,
+      "y": 38,
+      "elevation": 0,
+      "dest_map": "MAP_ECRUTEAK_CITY_WEST_GATE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 0,
+      "y": 39,
+      "elevation": 0,
+      "dest_map": "MAP_ECRUTEAK_CITY_WEST_GATE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 63,
+      "y": 46,
+      "elevation": 0,
+      "dest_map": "MAP_ECRUTEAK_CITY_EAST_GATE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 63,
+      "y": 47,
+      "elevation": 0,
+      "dest_map": "MAP_ECRUTEAK_CITY_EAST_GATE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 63,
+      "y": 48,
+      "elevation": 0,
+      "dest_map": "MAP_ECRUTEAK_CITY_EAST_GATE",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 0,
+      "y": 37,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_WestCityGateEnter"
+    },
+    {
+      "type": "trigger",
+      "x": 0,
+      "y": 38,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_WestCityGateEnter"
+    },
+    {
+      "type": "trigger",
+      "x": 0,
+      "y": 39,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_WestCityGateEnter"
+    },
+    {
+      "type": "trigger",
+      "x": 63,
+      "y": 46,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_EastCityGateEnter"
+    },
+    {
+      "type": "trigger",
+      "x": 63,
+      "y": 47,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_EastCityGateEnter"
+    },
+    {
+      "type": "trigger",
+      "x": 63,
+      "y": 48,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_EastCityGateEnter"
+    }
+  ],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 26,
+      "y": 25,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Ecruteak_BurnedTowerSign"
+    },
+    {
+      "type": "sign",
+      "x": 42,
+      "y": 26,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Ecruteak_BellTowerSign"
+    },
+    {
+      "type": "sign",
+      "x": 25,
+      "y": 46,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Ecruteak_ResidenceSign"
+    },
+    {
+      "type": "sign",
+      "x": 43,
+      "y": 46,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Ecruteak_DanceTheaterSign"
+    },
+    {
+      "type": "sign",
+      "x": 26,
+      "y": 56,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Ecruteak_GymSign"
+    },
+    {
+      "type": "sign",
+      "x": 43,
+      "y": 56,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Ecruteak_PokemonCenter_1FSign"
+    },
+    {
+      "type": "sign",
+      "x": 55,
+      "y": 46,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Ecruteak_MartSign"
+    },
+    {
+      "type": "sign",
+      "x": 8,
+      "y": 37,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Ecruteak_WestSign"
+    },
+    {
+      "type": "sign",
+      "x": 61,
+      "y": 49,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Ecruteak_EastBoundary"
+    },
+    {
+      "type": "sign",
+      "x": 39,
+      "y": 61,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Ecruteak_SouthBoundary"
+    },
+    {
+      "type": "sign",
+      "x": 36,
+      "y": 45,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Ecruteak_Directory"
+    }
+  ]
+}

@@ -1,3 +1,7 @@
+const u32 gTrainerFrontPic_CrossroadsJasmine[] = INCGFX_U32("graphics/trainers/crossroads_jasmine/front.png", ".4bpp.smol");
+const u16 gTrainerPalette_CrossroadsJasmine[] = INCGFX_U16("graphics/trainers/crossroads_jasmine/leader.pal", ".gbapal");
+const u32 gTrainerFrontPic_CrossroadsMorty[] = INCGFX_U32("graphics/trainers/crossroads_morty/front.png", ".4bpp.smol");
+const u16 gTrainerPalette_CrossroadsMorty[] = INCGFX_U16("graphics/trainers/crossroads_morty/leader.pal", ".gbapal");
 #include "constants/trainers.h"
 #include "data.h"
 
@@ -468,6 +472,10 @@ const u16 gTrainerPalette_LadyFrlg[] = INCGFX_U16("graphics/trainers/palettes/la
 
 const u32 gTrainerFrontPic_PainterFrlg[] = INCGFX_U32("graphics/trainers/front_pics/painter_frlg.png", ".4bpp.smol");
 const u16 gTrainerPalette_PainterFrlg[] = INCGFX_U16("graphics/trainers/palettes/painter_frlg.pal", ".gbapal");
+
+const u32 gTrainerFrontPic_Joe[] = INCGFX_U32("graphics/trainers/joe/front.png", ".4bpp.smol");
+const u8 gTrainerBackPic_Joe[] = INCGFX_U8("graphics/trainers/joe/back.png", ".4bpp");
+const u16 gTrainerPalette_Joe[] = INCGFX_U16("graphics/trainers/joe/joe.pal", ".gbapal");
 
 static const u8 gTrainerBackPic_None[] = INCGFX_U8("graphics/trainers/back_pics/none.png", ".4bpp");
 const u8 gTrainerBackPic_Brendan[] = INCGFX_U8("graphics/trainers/back_pics/brendan.png", ".4bpp");
@@ -1226,4 +1234,11 @@ const struct TrainerPicInfo gTrainerPicInfo[TRAINER_PIC_COUNT] =
     {
         .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_PainterFrlg, gTrainerPalette_PainterFrlg),
     },
+    [TRAINER_PIC_JOE] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_Joe, gTrainerPalette_Joe),
+        .backPic = TRAINER_BACK_PIC(4, gTrainerBackPic_Joe, gTrainerPalette_Joe, sBackAnims_Hoenn),
+    },
+    [TRAINER_PIC_CROSSROADS_JASMINE] = { .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_CrossroadsJasmine, gTrainerPalette_CrossroadsJasmine), },
+    [TRAINER_PIC_CROSSROADS_MORTY] = { .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_CrossroadsMorty, gTrainerPalette_CrossroadsMorty), },
 };

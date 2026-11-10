@@ -1,5 +1,6 @@
 #include "global.h"
 #include "overworld.h"
+#include "crossroads_continue.h"
 #include "battle_pyramid.h"
 #include "battle_setup.h"
 #include "battle_util.h"
@@ -872,6 +873,8 @@ bool8 SetDiveWarpDive(u16 x, u16 y)
 
 void LoadMapFromCameraTransition(u8 mapGroup, u8 mapNum)
 {
+    const struct Tileset *oldPrimary = gMapHeader.mapLayout->primaryTileset;
+    bool32 primaryChanged;
     SetWarpDestination(mapGroup, mapNum, WARP_ID_NONE, -1, -1);
 
     // Dont transition map music between BF Outside West/East
@@ -900,12 +903,23 @@ void LoadMapFromCameraTransition(u8 mapGroup, u8 mapNum)
     Overworld_ClearSavedMusic();
     RunOnTransitionMapScript();
     InitMap();
-    CopySecondaryTilesetToVramUsingHeap(gMapHeader.mapLayout);
-    LoadSecondaryTilesetPalette(gMapHeader.mapLayout, TRUE); // skip copying to Faded, gamma shift will take care of it
-
-    ApplyWeatherColorMapToPals(GetNumPalsInPrimary(gMapHeader.mapLayout), NUM_PALS_TOTAL - GetNumPalsInPrimary(gMapHeader.mapLayout)); // palettes [6,12]
-
-    InitSecondaryTilesetAnimation();
+    primaryChanged = oldPrimary != gMapHeader.mapLayout->primaryTileset;
+    if (primaryChanged)
+    {
+        // Scrolling maps normally share General. Dedicated city facades need
+        // both halves refreshed; connection buffers use shared terrain IDs.
+        CopyMapTilesetsToVram(gMapHeader.mapLayout);
+        LoadMapTilesetPalettes(gMapHeader.mapLayout);
+        ApplyWeatherColorMapToPals(0, NUM_PALS_TOTAL);
+        InitTilesetAnimations();
+    }
+    else
+    {
+        CopySecondaryTilesetToVramUsingHeap(gMapHeader.mapLayout);
+        LoadSecondaryTilesetPalette(gMapHeader.mapLayout, TRUE);
+        ApplyWeatherColorMapToPals(GetNumPalsInPrimary(gMapHeader.mapLayout), NUM_PALS_TOTAL - GetNumPalsInPrimary(gMapHeader.mapLayout));
+        InitSecondaryTilesetAnimation();
+    }
     UpdateLocationHistoryForRoamer();
     MoveAllRoamers();
     DoCurrentWeather();
@@ -2115,6 +2129,7 @@ static void FieldCB_FadeTryShowMapPopup(void)
 void CB2_ContinueSavedGame(void)
 {
     u8 trainerHillMapId;
+    bool32 crossroadsMap;
 
     FieldClearVBlankHBlankCallbacks();
     StopMapMusic();
@@ -2123,12 +2138,15 @@ void CB2_ContinueSavedGame(void)
         ResetWinStreaks();
 
     LoadSaveblockMapHeader();
+    crossroadsMap = Crossroads_PrepareContinue();
     ClearDiveAndHoleWarps();
     trainerHillMapId = GetCurrentTrainerHillMapId();
     if (gMapHeader.mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PYRAMID_FLOOR)
         LoadBattlePyramidFloorObjectEventScripts();
     else if (trainerHillMapId != 0 && trainerHillMapId != TRAINER_HILL_ENTRANCE)
         LoadTrainerHillFloorObjectEventScripts();
+    else if (crossroadsMap)
+        LoadObjEventTemplatesFromHeader();
     else
         LoadSaveblockObjEventScripts();
 
@@ -3627,7 +3645,9 @@ static void CreateLinkPlayerSprite(u8 linkPlayerId, enum GameVersion gameVersion
 
     if (linkPlayerObjEvent->active)
     {
-        switch (gameVersion)
+        if (!IS_FRLG && linkPlayerId == gLocalLinkPlayerId)
+            objEvent->spriteId = CreateObjectGraphicsSprite(OBJ_EVENT_GFX_JOE_NORMAL, SpriteCB_LinkPlayer, 0, 0, 0);
+        else switch (gameVersion)
         {
         case VERSION_FIRE_RED:
         case VERSION_LEAF_GREEN:

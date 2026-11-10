@@ -1,0 +1,41 @@
+{
+  "source": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/eventdata/zone_event/080_T27R0201.json",
+  "source_blob_sha": "988739734eb9fd992340bb6e670c31edc4585b5a",
+  "warps": [
+    {
+      "x": 9,
+      "z": 11,
+      "header": "MAP_ECRUTEAK",
+      "anchor": 2,
+      "y": 0
+    },
+    {
+      "x": 15,
+      "z": 3,
+      "header": "MAP_ECRUTEAK_BELL_TOWER_BARRIER_STATION_CORRIDOR",
+      "anchor": 0,
+      "y": 0
+    }
+  ],
+  "objects": [
+    {
+      "x": 15,
+      "z": 7,
+      "y": 0,
+      "spriteId": "SPRITE_BOZU"
+    },
+    {
+      "x": 9,
+      "z": 2,
+      "y": 0,
+      "spriteId": "SPRITE_BOZU"
+    },
+    {
+      "x": 3,
+      "z": 2,
+      "y": 0,
+      "spriteId": "SPRITE_BOZU"
+    }
+  ],
+  "sign_positions": []
+}

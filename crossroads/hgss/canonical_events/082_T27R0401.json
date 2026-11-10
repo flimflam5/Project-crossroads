@@ -1,0 +1,28 @@
+{
+  "source": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/eventdata/zone_event/082_T27R0401.json",
+  "source_blob_sha": "b16449398a38d8043722c1d3e7789ff0e88e95fc",
+  "warps": [
+    {
+      "x": 4,
+      "z": 8,
+      "header": "MAP_ECRUTEAK",
+      "anchor": 1,
+      "y": 0
+    }
+  ],
+  "objects": [
+    {
+      "x": 5,
+      "z": 5,
+      "y": 0,
+      "spriteId": "SPRITE_GSOLDMAN1"
+    },
+    {
+      "x": 8,
+      "z": 5,
+      "y": 0,
+      "spriteId": "SPRITE_GSBOY1"
+    }
+  ],
+  "sign_positions": []
+}

@@ -1,0 +1,68 @@
+[
+  {
+    "name": "EcruteakCity_WestGate",
+    "source_header": "MAP_ROUTE_38_ECRUTEAK_GATEHOUSE",
+    "source": {
+      "matrix": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0070_R31R0101.bin",
+      "matrix_blob_sha": "eaa041ca8ee65f17237aafbfe80de7d7bbe24f03",
+      "events": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/eventdata/zone_event/166_R38R0101.json",
+      "events_blob_sha": "24e849f612995791b6a16746b7810d33d7e11ab4",
+      "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+    },
+    "dimensions": [
+      12,
+      12
+    ],
+    "city_alias_indices": [
+      9,
+      10,
+      11
+    ],
+    "route": "JohtoRoute38",
+    "route_alias_indices": [
+      0,
+      1,
+      2
+    ],
+    "adaptations": [
+      "GBA flat gatehouse/pillars instead of DS models",
+      "Three road-width aliases; canonical center entrance retained",
+      "Existing border metadata retained; safe horizontal coordinate portals use original shared-buffer paving"
+    ],
+    "visual_qa": "pending",
+    "runtime_qa": "pending"
+  },
+  {
+    "name": "EcruteakCity_EastGate",
+    "source_header": "MAP_ROUTE_42_ECRUTEAK_GATEHOUSE",
+    "source": {
+      "matrix": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0070_R31R0101.bin",
+      "matrix_blob_sha": "eaa041ca8ee65f17237aafbfe80de7d7bbe24f03",
+      "events": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/eventdata/zone_event/128_R42R0101.json",
+      "events_blob_sha": "c57eec3bb433d285cb5094f6fcea87ff94823a29",
+      "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+    },
+    "dimensions": [
+      12,
+      12
+    ],
+    "city_alias_indices": [
+      12,
+      13,
+      14
+    ],
+    "route": "JohtoRoute42",
+    "route_alias_indices": [
+      3,
+      4,
+      5
+    ],
+    "adaptations": [
+      "GBA flat gatehouse/pillars instead of DS models",
+      "Three road-width aliases; canonical center entrance retained",
+      "Existing border metadata retained; safe horizontal coordinate portals use original shared-buffer paving"
+    ],
+    "visual_qa": "pending",
+    "runtime_qa": "pending"
+  }
+]

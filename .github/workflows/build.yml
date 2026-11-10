@@ -5,7 +5,20 @@ on:
     branches:
       - master
       - upcoming
+      - feature/olivine-city-foundation
+      - feature/joe-integration-01
+      - feature/western-johto-01
+      - feature/black-ledger-title-01
+      - feature/ecruteak-connection-01
+      - feature/olivine-detail-01
+      - feature/western-area-completion-01
+      - feature/title-music-01
+      - feature/title-audio-cleanup-01
+      - feature/boot-audio-refinement-01
+      - feature/johto-exploration-network-01
+      - feature/johto-visual-collision-01
   pull_request:
+  workflow_dispatch:
 
 env:
   GAME_REVISION: 0
@@ -25,7 +38,7 @@ jobs:
       - name: Install binutils
         run: |
           sudo apt-get update
-          sudo apt-get install -y --no-install-recommends binutils-arm-none-eabi gcc-arm-none-eabi libnewlib-arm-none-eabi libpng-dev python3
+          sudo apt-get install -y --no-install-recommends binutils-arm-none-eabi gcc-arm-none-eabi libnewlib-arm-none-eabi libpng-dev python3 python3-pil
 
       - name: Cache build tools
         uses: actions/cache@v4
@@ -52,12 +65,62 @@ jobs:
           GAME_VERSION: EMERALD
         run: make -j$(nproc) -O all
 
+      - name: Crossroads regression checks
+        run: |
+          python3 crossroads/tools/build_johto_network.py --through west --check
+          python3 crossroads/tools/validate_johto_network.py --built
+          python3 crossroads/tools/validate_visual_repairs.py
+          python3 crossroads/tools/check_mapjson_outputs.py
+          python3 crossroads/tools/validate_black_ledger_intro.py
+          python3 crossroads/tools/validate_title_music.py
+          python3 crossroads/tools/validate_area_completion.py
+          python3 crossroads/tools/validate_opening.py
+          python3 crossroads/tools/validate_joe_special_assets.py
+          python3 crossroads/tools/build_joe_special_assets.py --check
+          python3 crossroads/tools/build_ecruteak_npc_assets.py --check
+          python3 crossroads/tools/build_hgss_temple_assets.py --check
+          python3 crossroads/tools/validate_joe_assets.py
+          python3 crossroads/tools/validate_route39.py
+          python3 crossroads/tools/validate_western_johto.py --built
+          python3 crossroads/tools/build_western_johto_layouts.py --check
+          python3 crossroads/tools/build_black_ledger_title.py --check
+          python3 crossroads/tools/build_route39_layout.py --check
+          python3 crossroads/tools/validate_olivine.py --built
+          python3 crossroads/tools/validate_olivine_interiors.py
+          python3 crossroads/tools/build_olivine_interiors.py --check
+          python3 crossroads/tools/build_olivine_layout.py --check
+
+      - name: Identify test build
+        run: |
+          python3 crossroads/tools/write_build_manifest.py
+
       - name: Upload playable Emerald ROM
         uses: actions/upload-artifact@v4
         with:
-          name: project-crossroads-emerald
+          name: black-ledger-ecruteak-qa05-${{ github.sha }}
           path: |
-            *.gba
+            pokeemerald.gba
+            build-info.json
+            crossroads/TESTING.md
+            crossroads/STATUS.md
+            crossroads/RELEASE_0_4.md
+            crossroads/RELEASE_0_5.md
+            crossroads/RELEASE_0_6.md
+            crossroads/RELEASE_0_7.md
+            crossroads/RELEASE_0_8.md
+            crossroads/RELEASE_0_8_1.md
+            crossroads/RELEASE_0_8_2.md
+            crossroads/RELEASE_0_8_3.md
+            crossroads/RELEASE_0_9.md
+            crossroads/RELEASE_0_9_1.md
+            crossroads/RELEASE_HGSS_QA05.md
+            crossroads/hgss/ECRUTEAK_QA05.md
+            crossroads/hgss/*-review.json
+            crossroads/qa/visual-0.9.1
+            crossroads/johto/manifest.json
+            crossroads/johto/TOPOLOGY.md
+            crossroads/johto/DELTA_QA.md
+            crossroads/johto/coverage.json
           if-no-files-found: error
           retention-days: 14
 
@@ -71,7 +134,7 @@ jobs:
       - name: Install binutils
         run: |
           sudo apt-get update
-          sudo apt-get install -y --no-install-recommends binutils-arm-none-eabi gcc-arm-none-eabi libnewlib-arm-none-eabi libpng-dev python3
+          sudo apt-get install -y --no-install-recommends binutils-arm-none-eabi gcc-arm-none-eabi libnewlib-arm-none-eabi libpng-dev python3 python3-pil
 
       - name: Cache build tools
         uses: actions/cache@v4
@@ -106,7 +169,7 @@ jobs:
       - name: Install binutils
         run: |
           sudo apt-get update
-          sudo apt-get install -y --no-install-recommends binutils-arm-none-eabi gcc-arm-none-eabi libnewlib-arm-none-eabi libpng-dev python3
+          sudo apt-get install -y --no-install-recommends binutils-arm-none-eabi gcc-arm-none-eabi libnewlib-arm-none-eabi libpng-dev python3 python3-pil
 
       - name: Cache build tools
         uses: actions/cache@v4
@@ -141,7 +204,7 @@ jobs:
       - name: Install binutils
         run: |
           sudo apt-get update
-          sudo apt-get install -y --no-install-recommends binutils-arm-none-eabi gcc-arm-none-eabi libnewlib-arm-none-eabi libpng-dev python3
+          sudo apt-get install -y --no-install-recommends binutils-arm-none-eabi gcc-arm-none-eabi libnewlib-arm-none-eabi libpng-dev python3 python3-pil
 
       - name: Cache build tools
         uses: actions/cache@v4
@@ -178,7 +241,7 @@ jobs:
       - name: Install binutils
         run: |
           sudo apt-get update
-          sudo apt-get install -y --no-install-recommends binutils-arm-none-eabi gcc-arm-none-eabi libnewlib-arm-none-eabi libpng-dev python3
+          sudo apt-get install -y --no-install-recommends binutils-arm-none-eabi gcc-arm-none-eabi libnewlib-arm-none-eabi libpng-dev python3 python3-pil
 
       - name: Cache build tools
         uses: actions/cache@v4

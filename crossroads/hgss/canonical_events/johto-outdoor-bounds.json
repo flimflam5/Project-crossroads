@@ -1,0 +1,800 @@
+{
+  "source": "world-matrix.json; pret/pokeheartgold include/constants/maps.h",
+  "limits": "Emerald MAX_MAP_DATA_SIZE=10240; perimeter adds14 to each dimension",
+  "areas": {
+    "ROUTE_29": {
+      "source_header_id": 33,
+      "origin": [
+        576,
+        384
+      ],
+      "bounds_size": [
+        96,
+        32
+      ],
+      "occupied_cells": [
+        [
+          18,
+          12
+        ],
+        [
+          19,
+          12
+        ],
+        [
+          20,
+          12
+        ]
+      ],
+      "gba_buffer_tiles": 5060,
+      "fits_single_existing_emerald_buffer": true
+    },
+    "ROUTE_30": {
+      "source_header_id": 34,
+      "origin": [
+        544,
+        288
+      ],
+      "bounds_size": [
+        32,
+        96
+      ],
+      "occupied_cells": [
+        [
+          17,
+          9
+        ],
+        [
+          17,
+          10
+        ],
+        [
+          17,
+          11
+        ]
+      ],
+      "gba_buffer_tiles": 5060,
+      "fits_single_existing_emerald_buffer": true
+    },
+    "ROUTE_31": {
+      "source_header_id": 35,
+      "origin": [
+        512,
+        256
+      ],
+      "bounds_size": [
+        64,
+        32
+      ],
+      "occupied_cells": [
+        [
+          16,
+          8
+        ],
+        [
+          17,
+          8
+        ]
+      ],
+      "gba_buffer_tiles": 3588,
+      "fits_single_existing_emerald_buffer": true
+    },
+    "ROUTE_32": {
+      "source_header_id": 36,
+      "origin": [
+        448,
+        288
+      ],
+      "bounds_size": [
+        32,
+        160
+      ],
+      "occupied_cells": [
+        [
+          14,
+          9
+        ],
+        [
+          14,
+          10
+        ],
+        [
+          14,
+          11
+        ],
+        [
+          14,
+          12
+        ],
+        [
+          14,
+          13
+        ]
+      ],
+      "gba_buffer_tiles": 8004,
+      "fits_single_existing_emerald_buffer": true
+    },
+    "ROUTE_33": {
+      "source_header_id": 37,
+      "origin": [
+        448,
+        448
+      ],
+      "bounds_size": [
+        32,
+        32
+      ],
+      "occupied_cells": [
+        [
+          14,
+          14
+        ]
+      ],
+      "gba_buffer_tiles": 2116,
+      "fits_single_existing_emerald_buffer": true
+    },
+    "ROUTE_34": {
+      "source_header_id": 38,
+      "origin": [
+        352,
+        384
+      ],
+      "bounds_size": [
+        32,
+        96
+      ],
+      "occupied_cells": [
+        [
+          11,
+          12
+        ],
+        [
+          11,
+          13
+        ],
+        [
+          11,
+          14
+        ]
+      ],
+      "gba_buffer_tiles": 5060,
+      "fits_single_existing_emerald_buffer": true
+    },
+    "ROUTE_35": {
+      "source_header_id": 39,
+      "origin": [
+        352,
+        256
+      ],
+      "bounds_size": [
+        32,
+        64
+      ],
+      "occupied_cells": [
+        [
+          11,
+          8
+        ],
+        [
+          11,
+          9
+        ]
+      ],
+      "gba_buffer_tiles": 3588,
+      "fits_single_existing_emerald_buffer": true
+    },
+    "ROUTE_36": {
+      "source_header_id": 40,
+      "origin": [
+        352,
+        224
+      ],
+      "bounds_size": [
+        96,
+        32
+      ],
+      "occupied_cells": [
+        [
+          11,
+          7
+        ],
+        [
+          12,
+          7
+        ],
+        [
+          13,
+          7
+        ]
+      ],
+      "gba_buffer_tiles": 5060,
+      "fits_single_existing_emerald_buffer": true
+    },
+    "ROUTE_37": {
+      "source_header_id": 41,
+      "origin": [
+        384,
+        192
+      ],
+      "bounds_size": [
+        32,
+        32
+      ],
+      "occupied_cells": [
+        [
+          12,
+          6
+        ]
+      ],
+      "gba_buffer_tiles": 2116,
+      "fits_single_existing_emerald_buffer": true
+    },
+    "ROUTE_38": {
+      "source_header_id": 42,
+      "origin": [
+        288,
+        160
+      ],
+      "bounds_size": [
+        64,
+        32
+      ],
+      "occupied_cells": [
+        [
+          9,
+          5
+        ],
+        [
+          10,
+          5
+        ]
+      ],
+      "gba_buffer_tiles": 3588,
+      "fits_single_existing_emerald_buffer": true
+    },
+    "ROUTE_39": {
+      "source_header_id": 43,
+      "origin": [
+        256,
+        160
+      ],
+      "bounds_size": [
+        32,
+        64
+      ],
+      "occupied_cells": [
+        [
+          8,
+          5
+        ],
+        [
+          8,
+          6
+        ]
+      ],
+      "gba_buffer_tiles": 3588,
+      "fits_single_existing_emerald_buffer": true
+    },
+    "ROUTE_42": {
+      "source_header_id": 44,
+      "origin": [
+        416,
+        160
+      ],
+      "bounds_size": [
+        96,
+        32
+      ],
+      "occupied_cells": [
+        [
+          13,
+          5
+        ],
+        [
+          14,
+          5
+        ],
+        [
+          15,
+          5
+        ]
+      ],
+      "gba_buffer_tiles": 5060,
+      "fits_single_existing_emerald_buffer": true
+    },
+    "ROUTE_43": {
+      "source_header_id": 45,
+      "origin": [
+        512,
+        96
+      ],
+      "bounds_size": [
+        32,
+        64
+      ],
+      "occupied_cells": [
+        [
+          16,
+          3
+        ],
+        [
+          16,
+          4
+        ]
+      ],
+      "gba_buffer_tiles": 3588,
+      "fits_single_existing_emerald_buffer": true
+    },
+    "ROUTE_44": {
+      "source_header_id": 46,
+      "origin": [
+        544,
+        160
+      ],
+      "bounds_size": [
+        96,
+        32
+      ],
+      "occupied_cells": [
+        [
+          17,
+          5
+        ],
+        [
+          18,
+          5
+        ],
+        [
+          19,
+          5
+        ]
+      ],
+      "gba_buffer_tiles": 5060,
+      "fits_single_existing_emerald_buffer": true
+    },
+    "ROUTE_45": {
+      "source_header_id": 47,
+      "origin": [
+        640,
+        192
+      ],
+      "bounds_size": [
+        32,
+        160
+      ],
+      "occupied_cells": [
+        [
+          20,
+          6
+        ],
+        [
+          20,
+          7
+        ],
+        [
+          20,
+          8
+        ],
+        [
+          20,
+          9
+        ],
+        [
+          20,
+          10
+        ]
+      ],
+      "gba_buffer_tiles": 8004,
+      "fits_single_existing_emerald_buffer": true
+    },
+    "ROUTE_46": {
+      "source_header_id": 48,
+      "origin": [
+        608,
+        320
+      ],
+      "bounds_size": [
+        32,
+        64
+      ],
+      "occupied_cells": [
+        [
+          19,
+          10
+        ],
+        [
+          19,
+          11
+        ]
+      ],
+      "gba_buffer_tiles": 3588,
+      "fits_single_existing_emerald_buffer": true
+    },
+    "NEW_BARK": {
+      "source_header_id": 60,
+      "origin": [
+        672,
+        384
+      ],
+      "bounds_size": [
+        32,
+        32
+      ],
+      "occupied_cells": [
+        [
+          21,
+          12
+        ]
+      ],
+      "gba_buffer_tiles": 2116,
+      "fits_single_existing_emerald_buffer": true
+    },
+    "CHERRYGROVE": {
+      "source_header_id": 67,
+      "origin": [
+        512,
+        384
+      ],
+      "bounds_size": [
+        64,
+        32
+      ],
+      "occupied_cells": [
+        [
+          16,
+          12
+        ],
+        [
+          17,
+          12
+        ]
+      ],
+      "gba_buffer_tiles": 3588,
+      "fits_single_existing_emerald_buffer": true
+    },
+    "VIOLET": {
+      "source_header_id": 73,
+      "origin": [
+        448,
+        224
+      ],
+      "bounds_size": [
+        64,
+        64
+      ],
+      "occupied_cells": [
+        [
+          14,
+          7
+        ],
+        [
+          15,
+          7
+        ],
+        [
+          14,
+          8
+        ],
+        [
+          15,
+          8
+        ]
+      ],
+      "gba_buffer_tiles": 6084,
+      "fits_single_existing_emerald_buffer": true
+    },
+    "AZALEA": {
+      "source_header_id": 74,
+      "origin": [
+        384,
+        448
+      ],
+      "bounds_size": [
+        64,
+        32
+      ],
+      "occupied_cells": [
+        [
+          12,
+          14
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "gba_buffer_tiles": 3588,
+      "fits_single_existing_emerald_buffer": true
+    },
+    "CIANWOOD": {
+      "source_header_id": 75,
+      "origin": [
+        160,
+        320
+      ],
+      "bounds_size": [
+        32,
+        64
+      ],
+      "occupied_cells": [
+        [
+          5,
+          10
+        ],
+        [
+          5,
+          11
+        ]
+      ],
+      "gba_buffer_tiles": 3588,
+      "fits_single_existing_emerald_buffer": true
+    },
+    "GOLDENROD": {
+      "source_header_id": 76,
+      "origin": [
+        288,
+        320
+      ],
+      "bounds_size": [
+        96,
+        64
+      ],
+      "occupied_cells": [
+        [
+          9,
+          10
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          11,
+          10
+        ],
+        [
+          9,
+          11
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          11,
+          11
+        ]
+      ],
+      "gba_buffer_tiles": 8580,
+      "fits_single_existing_emerald_buffer": true
+    },
+    "OLIVINE": {
+      "source_header_id": 77,
+      "origin": [
+        256,
+        224
+      ],
+      "bounds_size": [
+        64,
+        64
+      ],
+      "occupied_cells": [
+        [
+          8,
+          7
+        ],
+        [
+          9,
+          7
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          9,
+          8
+        ]
+      ],
+      "gba_buffer_tiles": 6084,
+      "fits_single_existing_emerald_buffer": true
+    },
+    "ECRUTEAK": {
+      "source_header_id": 78,
+      "origin": [
+        352,
+        128
+      ],
+      "bounds_size": [
+        64,
+        64
+      ],
+      "occupied_cells": [
+        [
+          11,
+          4
+        ],
+        [
+          12,
+          4
+        ],
+        [
+          11,
+          5
+        ],
+        [
+          12,
+          5
+        ]
+      ],
+      "gba_buffer_tiles": 6084,
+      "fits_single_existing_emerald_buffer": true
+    },
+    "MAHOGANY": {
+      "source_header_id": 87,
+      "origin": [
+        512,
+        160
+      ],
+      "bounds_size": [
+        32,
+        32
+      ],
+      "occupied_cells": [
+        [
+          16,
+          5
+        ]
+      ],
+      "gba_buffer_tiles": 2116,
+      "fits_single_existing_emerald_buffer": true
+    },
+    "BLACKTHORN": {
+      "source_header_id": 89,
+      "origin": [
+        640,
+        128
+      ],
+      "bounds_size": [
+        64,
+        64
+      ],
+      "occupied_cells": [
+        [
+          20,
+          4
+        ],
+        [
+          21,
+          4
+        ],
+        [
+          20,
+          5
+        ],
+        [
+          21,
+          5
+        ]
+      ],
+      "gba_buffer_tiles": 6084,
+      "fits_single_existing_emerald_buffer": true
+    },
+    "ROUTE_40": {
+      "source_header_id": 94,
+      "origin": [
+        224,
+        256
+      ],
+      "bounds_size": [
+        32,
+        64
+      ],
+      "occupied_cells": [
+        [
+          7,
+          8
+        ],
+        [
+          7,
+          9
+        ]
+      ],
+      "gba_buffer_tiles": 3588,
+      "fits_single_existing_emerald_buffer": true
+    },
+    "ROUTE_41": {
+      "source_header_id": 95,
+      "origin": [
+        192,
+        320
+      ],
+      "bounds_size": [
+        64,
+        64
+      ],
+      "occupied_cells": [
+        [
+          6,
+          10
+        ],
+        [
+          7,
+          10
+        ],
+        [
+          6,
+          11
+        ],
+        [
+          7,
+          11
+        ]
+      ],
+      "gba_buffer_tiles": 6084,
+      "fits_single_existing_emerald_buffer": true
+    },
+    "ROUTE_47": {
+      "source_header_id": 151,
+      "origin": [
+        64,
+        352
+      ],
+      "bounds_size": [
+        96,
+        64
+      ],
+      "occupied_cells": [
+        [
+          2,
+          11
+        ],
+        [
+          3,
+          11
+        ],
+        [
+          4,
+          11
+        ],
+        [
+          2,
+          12
+        ],
+        [
+          3,
+          12
+        ],
+        [
+          4,
+          12
+        ]
+      ],
+      "gba_buffer_tiles": 8580,
+      "fits_single_existing_emerald_buffer": true
+    },
+    "ROUTE_48": {
+      "source_header_id": 152,
+      "origin": [
+        64,
+        320
+      ],
+      "bounds_size": [
+        64,
+        32
+      ],
+      "occupied_cells": [
+        [
+          2,
+          10
+        ],
+        [
+          3,
+          10
+        ]
+      ],
+      "gba_buffer_tiles": 3588,
+      "fits_single_existing_emerald_buffer": true
+    }
+  }
+}

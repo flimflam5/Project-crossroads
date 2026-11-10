@@ -1,5 +1,5 @@
 #include "global.h"
-#include "constants/trainers.h"
+#include "trainer.h"
 
 static enum TrainerPicID GetEmeraldTrainerPic(enum Gender gender)
 {
@@ -29,4 +29,12 @@ enum TrainerPicID GetPlayerTrainerPic(enum Gender gender, enum GameVersion versi
         default:
             return GetEmeraldTrainerPic(gender);
     }
+}
+
+enum TrainerPicID GetLocalPlayerTrainerPic(void)
+{
+    if (IS_FRLG)
+        return GetPlayerTrainerPic(gSaveBlock2Ptr->playerGender, GAME_VERSION);
+
+    return TRAINER_PIC_JOE;
 }

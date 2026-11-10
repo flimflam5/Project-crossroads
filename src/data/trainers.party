@@ -16877,3 +16877,121 @@ Double Battle: No
 Kyogre
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+
+=== TRAINER_CROSSROADS_JASMINE ===
+Name: JASMINE
+Class: Leader
+Pic: Crossroads Jasmine
+Gender: Female
+Music: Female
+AI: Check Bad Move / Try To Faint
+
+Magnemite
+Level: 9
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Tackle
+- Thunder Shock
+- Thunder Wave
+
+Aron
+Level: 11
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Tackle
+- Metal Claw
+- Harden
+
+
+=== TRAINER_CROSSROADS_MORTY ===
+Name: MORTY
+Class: Leader
+Pic: Crossroads Morty
+Gender: Male
+Music: Male
+AI: Check Bad Move / Try To Faint
+
+Gastly
+Level: 9
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Lick
+- Hypnosis
+- Spite
+
+Misdreavus
+Level: 11
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Psywave
+- Astonish
+- Growl
+
+
+=== TRAINER_CROSSROADS_STEEL_STUDENT ===
+Name: STUDENT
+Class: Youngster
+Pic: Youngster
+Gender: Male
+Music: Male
+AI: Check Bad Move / Try To Faint
+
+Magnemite
+Level: 7
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Tackle
+- Thunder Shock
+
+
+=== TRAINER_CROSSROADS_GHOST_STUDENT ===
+Name: STUDENT
+Class: Psychic
+Pic: Psychic M
+Gender: Male
+Music: Male
+AI: Check Bad Move / Try To Faint
+
+Gastly
+Level: 7
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Lick
+- Spite
+
+
+=== TRAINER_CROSSROADS_FARMHAND ===
+Name: FARMHAND
+Class: Pkmn Breeder
+Pic: Pokemon Breeder M
+Gender: Male
+Music: Male
+AI: Check Bad Move / Try To Faint
+
+Sentret
+Level: 5
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Scratch
+- Defense Curl
+
+Mareep
+Level: 6
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Tackle
+- Thunder Shock
+
+
+=== TRAINER_CROSSROADS_BIRDWATCHER ===
+Name: BIRDER
+Class: Bird Keeper
+Pic: Bird Keeper
+Gender: Male
+Music: Male
+AI: Check Bad Move / Try To Faint
+
+Hoothoot
+Level: 6
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Peck
+- Growl
+
+Farfetchd
+Level: 8
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- Peck
+- Sand Attack

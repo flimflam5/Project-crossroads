@@ -1738,3 +1738,302 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/scripts/battle_frontier.inc"
 	.include "data/scripts/apricorn_tree.inc"
 	.include "data/scripts/wild_encounter.inc"
+
+	.include "crossroads/scripts/olivine.inc"
+	.include "data/maps/OlivineCity/scripts.inc"
+	.include "data/maps/OlivineCity_Residence/scripts.inc"
+	.include "data/maps/OlivineCity_NeighborHouse/scripts.inc"
+	.include "data/maps/OlivineCity_Gym/scripts.inc"
+	.include "data/maps/OlivineCity_PokemonCenter_1F/scripts.inc"
+	.include "data/maps/OlivineCity_Mart/scripts.inc"
+	.include "data/maps/OlivineCity_SilphOffice/scripts.inc"
+	.include "data/maps/OlivineCity_HarborOffice/scripts.inc"
+
+	.include "crossroads/scripts/starter_rescue.inc"
+
+	.include "data/maps/JohtoRoute39/scripts.inc"
+
+    .include "data/maps/JohtoRoute38/scripts.inc"
+    .include "data/maps/EcruteakCity/scripts.inc"
+    .include "data/maps/EcruteakCity_BurnedTower/scripts.inc"
+    .include "data/maps/EcruteakCity_BellTower/scripts.inc"
+    .include "data/maps/EcruteakCity_Residence/scripts.inc"
+    .include "data/maps/EcruteakCity_DanceTheater/scripts.inc"
+    .include "data/maps/EcruteakCity_Gym/scripts.inc"
+    .include "data/maps/EcruteakCity_PokemonCenter_1F/scripts.inc"
+    .include "data/maps/EcruteakCity_Mart/scripts.inc"
+    .include "crossroads/scripts/western_johto.inc"
+
+    .include "crossroads/scripts/olivine_interiors.inc"
+
+    .include "data/maps/OlivineCity_Lighthouse_1F/scripts.inc"
+    .include "data/maps/OlivineCity_Lighthouse_2F/scripts.inc"
+    .include "data/maps/OlivineCity_Lighthouse_3F/scripts.inc"
+    .include "data/maps/OlivineCity_Lighthouse_4F/scripts.inc"
+    .include "data/maps/OlivineCity_Lighthouse_5F/scripts.inc"
+    .include "data/maps/OlivineCity_Lighthouse_6F/scripts.inc"
+    .include "data/maps/EcruteakCity_BellTower_2F/scripts.inc"
+    .include "data/maps/EcruteakCity_BellTower_3F/scripts.inc"
+    .include "data/maps/EcruteakCity_BellTower_4F/scripts.inc"
+    .include "data/maps/EcruteakCity_BellTower_5F/scripts.inc"
+    .include "data/maps/EcruteakCity_BellTower_6F/scripts.inc"
+    .include "data/maps/EcruteakCity_BellTower_7F/scripts.inc"
+    .include "data/maps/EcruteakCity_BellTower_8F/scripts.inc"
+    .include "data/maps/EcruteakCity_BellTower_9F/scripts.inc"
+    .include "data/maps/EcruteakCity_BurnedTower_B1F/scripts.inc"
+    .include "data/maps/OlivineCity_Gym_Arena/scripts.inc"
+    .include "data/maps/EcruteakCity_Gym_Arena/scripts.inc"
+    .include "data/maps/JohtoRoute39_FarmHouse/scripts.inc"
+    .include "data/maps/JohtoRoute39_Barn/scripts.inc"
+    .include "crossroads/scripts/area_completion.inc"
+
+	.include "data/maps/GoldenrodCity/scripts.inc"
+
+	.include "data/maps/GoldenrodCity_PokemonCenter_1F/scripts.inc"
+
+	.include "data/maps/GoldenrodCity_Mart/scripts.inc"
+
+	.include "data/maps/GoldenrodCity_Gym/scripts.inc"
+
+	.include "data/maps/GoldenrodCity_Residence/scripts.inc"
+
+	.include "data/maps/GoldenrodCity_Workshop/scripts.inc"
+
+	.include "data/maps/VioletCity/scripts.inc"
+
+	.include "data/maps/VioletCity_PokemonCenter_1F/scripts.inc"
+
+	.include "data/maps/VioletCity_Mart/scripts.inc"
+
+	.include "data/maps/VioletCity_Gym/scripts.inc"
+
+	.include "data/maps/VioletCity_Residence/scripts.inc"
+
+	.include "data/maps/VioletCity_Workshop/scripts.inc"
+
+	.include "data/maps/JohtoRoute37/scripts.inc"
+
+	.include "data/maps/JohtoRoute36/scripts.inc"
+
+	.include "data/maps/JohtoRoute35/scripts.inc"
+
+	.include "data/maps/NationalPark/scripts.inc"
+
+	.include "data/maps/RuinsOfAlph/scripts.inc"
+
+	.include "data/maps/SproutTower_1F/scripts.inc"
+
+	.include "data/maps/SproutTower_2F/scripts.inc"
+
+	.include "data/maps/SproutTower_3F/scripts.inc"
+
+	.include "data/maps/AlphChambers_1F/scripts.inc"
+
+	.include "data/maps/AlphChambers_2F/scripts.inc"
+
+	.include "data/maps/AlphChambers_3F/scripts.inc"
+
+	.include "data/maps/GoldenrodDepartmentStore/scripts.inc"
+
+	.include "data/maps/GoldenrodUnderground/scripts.inc"
+
+	.include "data/maps/GoldenrodRadioLobby/scripts.inc"
+
+	.include "data/maps/VioletAcademy/scripts.inc"
+
+	.include "crossroads/scripts/johto_network.inc"
+
+	.include "crossroads/scripts/johto_runtime.inc"
+	.include "crossroads/scripts/qa_kit.inc"
+
+	.include "data/maps/AzaleaTown/scripts.inc"
+
+	.include "data/maps/AzaleaTown_PokemonCenter_1F/scripts.inc"
+
+	.include "data/maps/AzaleaTown_Mart/scripts.inc"
+
+	.include "data/maps/AzaleaTown_Gym/scripts.inc"
+
+	.include "data/maps/AzaleaTown_Residence/scripts.inc"
+
+	.include "data/maps/AzaleaTown_Workshop/scripts.inc"
+
+	.include "data/maps/CherrygroveCity/scripts.inc"
+
+	.include "data/maps/CherrygroveCity_PokemonCenter_1F/scripts.inc"
+
+	.include "data/maps/CherrygroveCity_Mart/scripts.inc"
+
+	.include "data/maps/CherrygroveCity_Gym/scripts.inc"
+
+	.include "data/maps/CherrygroveCity_Residence/scripts.inc"
+
+	.include "data/maps/CherrygroveCity_Workshop/scripts.inc"
+
+	.include "data/maps/NewBarkTown/scripts.inc"
+
+	.include "data/maps/NewBarkTown_PokemonCenter_1F/scripts.inc"
+
+	.include "data/maps/NewBarkTown_Mart/scripts.inc"
+
+	.include "data/maps/NewBarkTown_Gym/scripts.inc"
+
+	.include "data/maps/NewBarkTown_Residence/scripts.inc"
+
+	.include "data/maps/NewBarkTown_Workshop/scripts.inc"
+
+	.include "data/maps/JohtoRoute34/scripts.inc"
+
+	.include "data/maps/JohtoRoute33/scripts.inc"
+
+	.include "data/maps/JohtoRoute32/scripts.inc"
+
+	.include "data/maps/JohtoRoute31/scripts.inc"
+
+	.include "data/maps/JohtoRoute30/scripts.inc"
+
+	.include "data/maps/JohtoRoute29/scripts.inc"
+
+	.include "data/maps/IlexForest/scripts.inc"
+
+	.include "data/maps/UnionCave_1F/scripts.inc"
+
+	.include "data/maps/UnionCave_2F/scripts.inc"
+
+	.include "data/maps/UnionCave_3F/scripts.inc"
+
+	.include "data/maps/SlowpokeWell_1F/scripts.inc"
+
+	.include "data/maps/SlowpokeWell_2F/scripts.inc"
+
+	.include "data/maps/TohjoFalls_1F/scripts.inc"
+
+	.include "data/maps/TohjoFalls_2F/scripts.inc"
+
+	.include "data/maps/NewBarkLab/scripts.inc"
+
+	.include "data/maps/MahoganyTown/scripts.inc"
+
+	.include "data/maps/MahoganyTown_PokemonCenter_1F/scripts.inc"
+
+	.include "data/maps/MahoganyTown_Mart/scripts.inc"
+
+	.include "data/maps/MahoganyTown_Gym/scripts.inc"
+
+	.include "data/maps/MahoganyTown_Residence/scripts.inc"
+
+	.include "data/maps/MahoganyTown_Workshop/scripts.inc"
+
+	.include "data/maps/BlackthornCity/scripts.inc"
+
+	.include "data/maps/BlackthornCity_PokemonCenter_1F/scripts.inc"
+
+	.include "data/maps/BlackthornCity_Mart/scripts.inc"
+
+	.include "data/maps/BlackthornCity_Gym/scripts.inc"
+
+	.include "data/maps/BlackthornCity_Residence/scripts.inc"
+
+	.include "data/maps/BlackthornCity_Workshop/scripts.inc"
+
+	.include "data/maps/JohtoRoute46/scripts.inc"
+
+	.include "data/maps/JohtoRoute45/scripts.inc"
+
+	.include "data/maps/JohtoRoute42/scripts.inc"
+
+	.include "data/maps/JohtoRoute43/scripts.inc"
+
+	.include "data/maps/JohtoRoute44/scripts.inc"
+
+	.include "data/maps/LakeOfRage/scripts.inc"
+
+	.include "data/maps/DarkCave_1F/scripts.inc"
+
+	.include "data/maps/DarkCave_2F/scripts.inc"
+
+	.include "data/maps/DarkCave_3F/scripts.inc"
+
+	.include "data/maps/MtMortar_1F/scripts.inc"
+
+	.include "data/maps/MtMortar_2F/scripts.inc"
+
+	.include "data/maps/MtMortar_3F/scripts.inc"
+
+	.include "data/maps/MtMortar_4F/scripts.inc"
+
+	.include "data/maps/IcePath_1F/scripts.inc"
+
+	.include "data/maps/IcePath_2F/scripts.inc"
+
+	.include "data/maps/IcePath_3F/scripts.inc"
+
+	.include "data/maps/IcePath_4F/scripts.inc"
+
+	.include "data/maps/DragonsDen_1F/scripts.inc"
+
+	.include "data/maps/DragonsDen_2F/scripts.inc"
+
+	.include "data/maps/CianwoodCity/scripts.inc"
+
+	.include "data/maps/CianwoodCity_PokemonCenter_1F/scripts.inc"
+
+	.include "data/maps/CianwoodCity_Mart/scripts.inc"
+
+	.include "data/maps/CianwoodCity_Gym/scripts.inc"
+
+	.include "data/maps/CianwoodCity_Residence/scripts.inc"
+
+	.include "data/maps/CianwoodCity_Workshop/scripts.inc"
+
+	.include "data/maps/JohtoRoute40/scripts.inc"
+
+	.include "data/maps/JohtoRoute41/scripts.inc"
+
+	.include "data/maps/JohtoRoute47/scripts.inc"
+
+	.include "data/maps/JohtoRoute48/scripts.inc"
+
+	.include "data/maps/SafariZoneGate/scripts.inc"
+
+	.include "data/maps/SafariWetlands/scripts.inc"
+
+	.include "data/maps/WhirlIslands_1F/scripts.inc"
+
+	.include "data/maps/WhirlIslands_2F/scripts.inc"
+
+	.include "data/maps/WhirlIslands_3F/scripts.inc"
+
+	.include "data/maps/WhirlIslands_4F/scripts.inc"
+
+	.include "data/maps/CliffEdgeGate_1F/scripts.inc"
+
+	.include "data/maps/CliffCave_1F/scripts.inc"
+
+	.include "data/maps/CliffCave_2F/scripts.inc"
+
+	.include "data/maps/CianwoodPharmacy/scripts.inc"
+
+	.include "data/maps/SafariReception/scripts.inc"
+
+	.include "data/maps/EcruteakCity_BarrierStation/scripts.inc"
+
+	.include "data/maps/EcruteakCity_BarrierCorridor/scripts.inc"
+
+	.include "data/maps/BellchimeTrail/scripts.inc"
+
+	.include "crossroads/scripts/hgss_ecruteak.inc"
+
+	.include "data/maps/EcruteakCity_BellTower_10F/scripts.inc"
+
+	.include "data/maps/EcruteakCity_BellTower_Roof/scripts.inc"
+
+	.include "data/maps/EcruteakCity_DowsingHouse/scripts.inc"
+
+	.include "data/maps/EcruteakCity_PokemonCenter_B1F/scripts.inc"
+
+	.include "data/maps/EcruteakCity_WestGate/scripts.inc"
+
+	.include "data/maps/EcruteakCity_EastGate/scripts.inc"
+
+	.include "crossroads/scripts/hgss_gates.inc"

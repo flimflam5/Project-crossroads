@@ -633,3 +633,38 @@ const u16 gObjectEventPic_PidgeyOld[] = INCGFX_U16("graphics/object_events/pics/
 const u16 gObjectEventPic_ClefairyOld[] = INCGFX_U16("graphics/object_events/pics/pokemon_old/clefairy.png", ".4bpp", "-mwidth 2 -mheight 2");
 
 #endif // IS_FRLG
+
+const u32 gObjectEventPic_JoeCorporate[] = INCGFX_U32("graphics/object_events/pics/people/joe/corporate/walking.png", ".4bpp", "-mwidth 2 -mheight 4");
+const u16 gObjectEventPal_JoeCorporate[] = INCGFX_U16("graphics/object_events/pics/people/joe/corporate/walking.png", ".gbapal");
+
+const u32 gObjectEventPic_CrossroadsJasmine[] = INCGFX_U32("graphics/trainers/crossroads_jasmine/overworld.png", ".4bpp");
+const u16 gObjectEventPal_CrossroadsJasmine[] = INCGFX_U16("graphics/trainers/crossroads_jasmine/leader.pal", ".gbapal");
+
+const u32 gObjectEventPic_CrossroadsMorty[] = INCGFX_U32("graphics/trainers/crossroads_morty/overworld.png", ".4bpp");
+const u16 gObjectEventPal_CrossroadsMorty[] = INCGFX_U16("graphics/trainers/crossroads_morty/leader.pal", ".gbapal");
+
+const u32 gObjectEventPic_AreaBell[] = INCGFX_U32("graphics/object_events/pics/misc/area_bell.png", ".4bpp");
+const u16 gObjectEventPal_AreaBell[] = INCGFX_U16("graphics/object_events/pics/misc/area_bell.pal", ".gbapal");
+
+const u32 gObjectEventPic_AreaLantern[] = INCGFX_U32("graphics/object_events/pics/misc/area_lantern.png", ".4bpp");
+const u16 gObjectEventPal_AreaLantern[] = INCGFX_U16("graphics/object_events/pics/misc/area_lantern.pal", ".gbapal");
+
+const u32 gObjectEventPic_JoeMachBike[] = INCGFX_U32("graphics/object_events/pics/people/joe/corporate/mach_bike.png", ".4bpp", "-mwidth 4 -mheight 4");
+
+const u32 gObjectEventPic_JoeAcroBike[] = INCGFX_U32("graphics/object_events/pics/people/joe/corporate/acro_bike.png", ".4bpp", "-mwidth 4 -mheight 4");
+
+const u32 gObjectEventPic_JoeSurfing[] = INCGFX_U32("graphics/object_events/pics/people/joe/corporate/surfing.png", ".4bpp", "-mwidth 4 -mheight 4");
+
+const u32 gObjectEventPic_JoeUnderwater[] = INCGFX_U32("graphics/object_events/pics/people/joe/corporate/underwater.png", ".4bpp", "-mwidth 4 -mheight 4");
+
+const u32 gObjectEventPic_JoeFieldMove[] = INCGFX_U32("graphics/object_events/pics/people/joe/corporate/field_move.png", ".4bpp", "-mwidth 4 -mheight 4");
+
+const u32 gObjectEventPic_JoeFishing[] = INCGFX_U32("graphics/object_events/pics/people/joe/corporate/fishing.png", ".4bpp", "-mwidth 4 -mheight 4");
+
+const u32 gObjectEventPic_JoeWatering[] = INCGFX_U32("graphics/object_events/pics/people/joe/corporate/watering.png", ".4bpp", "-mwidth 4 -mheight 4");
+
+const u32 gObjectEventPic_EcruteakMonk[] = INCGFX_U32("graphics/object_events/pics/people/ecruteak/monk.png", ".4bpp", "-mwidth 2 -mheight 4");
+const u16 gObjectEventPal_EcruteakMonk[] = INCGFX_U16("graphics/object_events/pics/people/ecruteak/monk.png", ".gbapal");
+
+const u32 gObjectEventPic_EcruteakPerformer[] = INCGFX_U32("graphics/object_events/pics/people/ecruteak/performer.png", ".4bpp", "-mwidth 2 -mheight 4");
+const u16 gObjectEventPal_EcruteakPerformer[] = INCGFX_U16("graphics/object_events/pics/people/ecruteak/performer.png", ".gbapal");

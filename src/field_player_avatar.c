@@ -1593,6 +1593,9 @@ enum Gender GetPlayerAvatarGenderByGraphicsId(u16 gfxId)
 {
     switch (gfxId)
     {
+    case OBJ_EVENT_GFX_JOE_NORMAL:
+        // Appearance does not change the original save's gender-dependent data.
+        return gSaveBlock2Ptr->playerGender;
     case OBJ_EVENT_GFX_MAY_NORMAL:
     case OBJ_EVENT_GFX_MAY_MACH_BIKE:
     case OBJ_EVENT_GFX_MAY_ACRO_BIKE:

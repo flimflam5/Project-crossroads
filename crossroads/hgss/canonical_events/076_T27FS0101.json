@@ -1,0 +1,52 @@
+{
+  "source": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/eventdata/zone_event/076_T27FS0101.json",
+  "source_blob_sha": "b67d9ef439e710849ef6d07f65fc62d97ad437aa",
+  "warps": [
+    {
+      "x": 4,
+      "z": 11,
+      "header": "MAP_ECRUTEAK",
+      "anchor": 6,
+      "y": 0
+    }
+  ],
+  "objects": [
+    {
+      "x": 2,
+      "z": 6,
+      "y": 0,
+      "spriteId": "SPRITE_SHOPM1_2"
+    },
+    {
+      "x": 2,
+      "z": 4,
+      "y": 0,
+      "spriteId": "SPRITE_SHOPM1_2"
+    },
+    {
+      "x": 7,
+      "z": 9,
+      "y": 0,
+      "spriteId": "SPRITE_GSOLDWOMAN1"
+    },
+    {
+      "x": 9,
+      "z": 4,
+      "y": 0,
+      "spriteId": "SPRITE_GSMAN1"
+    },
+    {
+      "x": 3,
+      "z": 8,
+      "y": 0,
+      "spriteId": "SPRITE_DELIVERY2"
+    },
+    {
+      "x": 2,
+      "z": 8,
+      "y": 0,
+      "spriteId": "SPRITE_DELIVERY"
+    }
+  ],
+  "sign_positions": []
+}

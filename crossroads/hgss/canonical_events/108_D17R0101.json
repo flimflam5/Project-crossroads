@@ -1,0 +1,36 @@
+{
+  "source": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/eventdata/zone_event/108_D17R0101.json",
+  "source_blob_sha": "60d939ff7e0c4094d9f4d6a4918404790a54d60b",
+  "warps": [
+    {
+      "x": 15,
+      "z": 26,
+      "header": "MAP_BELLCHIME_TOWER",
+      "anchor": 2,
+      "y": 0
+    },
+    {
+      "x": 9,
+      "z": 8,
+      "header": "MAP_BELL_TOWER_2F",
+      "anchor": 0,
+      "y": 0
+    },
+    {
+      "x": 9,
+      "z": 7,
+      "header": "MAP_BELL_TOWER_2F",
+      "anchor": 0,
+      "y": 0
+    }
+  ],
+  "objects": [
+    {
+      "x": 8,
+      "z": 8,
+      "y": 0,
+      "spriteId": "SPRITE_BOZU"
+    }
+  ],
+  "sign_positions": []
+}
