@@ -41,7 +41,7 @@ Full region reconstruction, interiors and remaining clipping audits stay open.
 
 ## Verification performed
 
-Fresh Emerald build PASS; ROM used29,539,856bytes (padded32MiB). Existing opening,
+Fresh Emerald build PASS; ROM used29,539,696bytes (padded32MiB). Existing opening,
 Olivine, western Johto, area completion, visual-repair/save-contract and whole
 network validators PASS; built-map inclusion and generator reproducibility PASS.
 Actual old-battery Continue plus six target maps/67 controller transitions PASS,
