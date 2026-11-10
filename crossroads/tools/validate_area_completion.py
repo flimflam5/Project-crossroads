@@ -9,8 +9,15 @@ layouts={l['id']:l for l in load('data/layouts/layouts.json')['layouts']}
 groups=load('data/maps/map_groups.json')
 names=groups['gMapGroup_CrossroadsOlivine']+groups.get('gMapGroup_CrossroadsJohtoExpansion',[])
 maps={m['id']:m for m in [load(f'data/maps/{n}/map.json') for n in names]}
+from hgss_tower_validation import validate_towers
+reviewed=validate_towers()
+from hgss_room_validation import validate_rooms
+from hgss_service_validation import validate_services
+from hgss_gate_validation import validate_gates
+reviewed|=validate_rooms()|validate_services()|validate_gates()
 script=(R/'crossroads/scripts/area_completion.inc').read_text()
 for spec in load('crossroads/art/western/rooms.json'):
+ if spec['name'] in reviewed:continue # Exact reference/directed escape checks above supersede single-room flood.
  m=load(f'data/maps/{spec["name"]}/map.json');l=layouts[m['layout']];w,h=l['width'],l['height']
  t=struct.unpack('<'+str(w*h)+'H',(R/l['blockdata_filepath']).read_bytes());start=m['warp_events'][0];seed=(start['x'],start['y'])
  blocked={(o['x'],o['y']) for o in m['object_events']};q=deque([seed]);seen={seed}
@@ -46,5 +53,5 @@ from PIL import Image
 for path in list((R/'graphics/trainers/crossroads_jasmine').glob('*.png'))+list((R/'graphics/trainers/crossroads_morty').glob('*.png'))+[R/'graphics/object_events/pics/misc/area_bell.png',R/'graphics/object_events/pics/misc/area_lantern.png']:
  im=Image.open(path);assert im.mode=='P' and max(im.tobytes())<16,(path,'native 4bpp indices')
 for spec in load('crossroads/art/western/rooms.json'):
- assert (R/f'data/layouts/{spec["name"]}/border.bin').read_bytes()==struct.pack('<4H',*([0x601]*4))
+ assert (R/f'data/layouts/{spec["name"]}/border.bin').read_bytes()==struct.pack('<4H',*([0x600 if spec['name'] in reviewed else 0x601]*4))
 print('All landmark/farm/Gym doors, indoor access, original graphics, tile limits, approved roster and unchanged flag space: PASS')

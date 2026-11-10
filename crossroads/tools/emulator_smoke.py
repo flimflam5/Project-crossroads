@@ -20,6 +20,7 @@ parser.add_argument('--output', type=Path, default=root / 'build/emulator-smoke'
 parser.add_argument('--library', type=Path, help='optional prebuilt mgba_bridge shared library')
 parser.add_argument('--gender', type=int, choices=(0, 1), default=0, help='exercise both existing save gender values')
 parser.add_argument('--title-only', action='store_true', help='normal cold boot, native title VRAM, animation, Start/New Game handoff and soft reset')
+parser.add_argument('--starters-only',action='store_true',help='Run existing Olivine doors/rescue/duplicate checks, excluding the superseded pre-HGSS western tour')
 parser.add_argument('--first-loss-only', action='store_true', help='fresh player practice loss must respawn in Olivine')
 parser.add_argument('--battle-resume', type=Path, help='exact-ROM Elgyem fixture for optional practice battle flow tests')
 parser.add_argument('--area-resume', type=Path, help='resume the area-only tour from an exact-ROM area-ready.snapshot')
@@ -300,7 +301,7 @@ print('Both piers reached on foot', flush=True)
 
 # Cross every new seam on foot; inspect all city exits/lobbies and return.
 from western_johto_smoke import tour
-western = tour(root, syms, lib, args.output, read, frames, key, walk, pos, verify_joe)
+if not args.starters_only:western = tour(root, syms, lib, args.output, read, frames, key, walk, pos, verify_joe)
 script('Olivine_ReturnToAlpha')
 frames(120)
 for _ in range(4):
@@ -406,6 +407,9 @@ for choice, species in ((1, 605), (2, 273), (3, 568)):
     if choice == 1:
         assert lib.emu_state(str(args.output/'elgyem-field.snapshot').encode(),0)
         (args.output/'elgyem-field.rom.sha256').write_text(hashlib.sha256(args.rom.read_bytes()).hexdigest())
+if args.starters_only:
+    print('All three live rescue choices, met origin, duplicate guards, Olivine doors and Joe walking: PASS; opening skipped by disclosed RAM fixture',flush=True)
+    sys.exit(0)
 walk((11, 22))
 frames(16, 64)
 frames(180)

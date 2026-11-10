@@ -2023,3 +2023,17 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/BellchimeTrail/scripts.inc"
 
 	.include "crossroads/scripts/hgss_ecruteak.inc"
+
+	.include "data/maps/EcruteakCity_BellTower_10F/scripts.inc"
+
+	.include "data/maps/EcruteakCity_BellTower_Roof/scripts.inc"
+
+	.include "data/maps/EcruteakCity_DowsingHouse/scripts.inc"
+
+	.include "data/maps/EcruteakCity_PokemonCenter_B1F/scripts.inc"
+
+	.include "data/maps/EcruteakCity_WestGate/scripts.inc"
+
+	.include "data/maps/EcruteakCity_EastGate/scripts.inc"
+
+	.include "crossroads/scripts/hgss_gates.inc"

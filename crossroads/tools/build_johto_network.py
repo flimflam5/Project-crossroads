@@ -32,6 +32,7 @@ def main():
  groups=load('data/maps/map_groups.json');old=groups['gMapGroup_CrossroadsOlivine']+groups.get('gMapGroup_CrossroadsJohtoExpansion',[]);names=[p['name'] for p in manifest['existing']]+[p['name'] for p in selected]
  assert old==names[:len(old)],'Never discard newer maps/IDs when selecting an earlier checkpoint'
  layouts=load('data/layouts/layouts.json');bylayout={l['id']:l for l in layouts['layouts']}
+ service_templates=load('crossroads/hgss/contracts/ecruteak-rooms-qa04.json')
  existing={n:load(f'data/maps/{n}/map.json') for n in names[:37]};maps=copy.deepcopy(existing);tiles={};sizes={};meta={};sections={};protected={}
  source=struct.unpack('<2400H',(R/'data/layouts/SlateportCity/map.bin').read_bytes())
  oldbytes={n:(R/bylayout[m['layout']]['blockdata_filepath']).read_bytes() for n,m in existing.items()}
@@ -105,7 +106,7 @@ def main():
   if not isout and primary=='gTileset_Building':m['music']='MUS_GYM' if theme=='gym' else 'MUS_LITTLEROOT'
   maps[n]=m;meta[n]=dict(theme=theme,kind=kind,outdoor=isout,parent=parent,floor=floor)
   if kind=='service':
-   base=existing['EcruteakCity_PokemonCenter_1F' if 'PokemonCenter' in n else 'EcruteakCity_Mart'];m['layout']=base['layout'];l=bylayout[m['layout']];sizes[n]=(l['width'],l['height']);tiles[n]=list(struct.unpack('<'+str(l['width']*l['height'])+'H',(R/l['blockdata_filepath']).read_bytes()));m['music']='MUS_POKE_CENTER' if 'PokemonCenter' in n else 'MUS_POKE_MART';continue
+   base=service_templates['EcruteakCity_PokemonCenter_1F' if 'PokemonCenter' in n else 'EcruteakCity_Mart'];m['layout']=base['layout'];l=bylayout[m['layout']];sizes[n]=(l['width'],l['height']);tiles[n]=list(struct.unpack('<'+str(l['width']*l['height'])+'H',(R/l['blockdata_filepath']).read_bytes()));m['music']='MUS_POKE_CENTER' if 'PokemonCenter' in n else 'MUS_POKE_MART';continue
   data=[floor]*(w*h);m['layout']=addlayout(n,w,h,primary,secondary,data,border)
   if isout:
    if theme not in ['sea','islands']:
@@ -212,7 +213,7 @@ def main():
     services.append(dict(id='HEAL_LOCATION_'+sym(n),map=maps[n]['id'],x=dx,y=dy+1,respawn_map=maps[dst]['id'],respawn_npc=nurse))
    elif suffix=='Mart':
     warp(n,dx,dy,dst,3,7);maps[dst]['warp_events'].append(dict(x=4,y=7,elevation=0,dest_map=maps[n]['id'],dest_warp_id=str(len(maps[n]['warp_events'])-1)))
-    maps[dst]['object_events']=copy.deepcopy(existing['EcruteakCity_Mart']['object_events'])
+    maps[dst]['object_events']=copy.deepcopy(service_templates['EcruteakCity_Mart']['object_events'])
    else:
     warp(n,dx,dy,dst,6,sizes[dst][1]-1,bt=0x0208)
     if suffix=='Residence':
@@ -270,6 +271,11 @@ def main():
  for n in existing:
   for e in maps[n]['bg_events']:
    if n=='EcruteakCity':rect(n,e['x'],e['y'],1,1,struct.unpack_from('<H',oldbytes[n],(e['y']*sizes[n][0]+e['x'])*2)[0])
+ for r in load('crossroads/hgss/gate-review.json'):
+  n=r['route'];old_gate=load(f'data/maps/{n}/map.json');gate_mid=load(f'data/maps/{r["name"]}/map.json')['id']
+  if not any(e['dest_map']==gate_mid for e in maps[n]['warp_events']):
+   maps[n]['warp_events'] += [copy.deepcopy(e) for e in old_gate['warp_events'] if e['dest_map']==gate_mid]
+   maps[n]['coord_events'] += [copy.deepcopy(e) for e in old_gate['coord_events'] if e['script'].startswith('Hgss_') and 'GateEnter' in e['script']]
  for n,m in maps.items():
   if n=='EcruteakCity' or (n in meta and meta[n]['kind']=='hgss'):continue # Dedicated HGSS authoring
   if n=='CianwoodCity':rect(n,sizes[n][0]-3,sizes[n][1]//2-1,3,3,0x1170)

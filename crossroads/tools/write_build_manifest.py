@@ -11,15 +11,15 @@ rom = root / 'pokeemerald.gba'
 sha = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=root, text=True).strip()
 dirty = bool(subprocess.check_output(['git', 'status', '--porcelain', '--untracked-files=no'], cwd=root))
 manifest = {
-    'version': 'black-ledger-visual-repairs-0.9.1',
+    'version': 'black-ledger-ecruteak-qa05',
     'source_commit': sha,
     'dirty_tracked_sources': dirty,
     'rom': rom.name,
     'rom_sha256': hashlib.sha256(rom.read_bytes()).hexdigest(),
     'rom_bytes': rom.stat().st_size,
     'ci_run_id': os.environ.get('GITHUB_RUN_ID'),
-    'summary': 'First visual/collision repair pass: five authored layouts, landmark ground layers, Johto-only tree roots and assembled Mahogany workshop; geography frozen.',
-    'known_limitations': 'See crossroads/RELEASE_0_9_1.md and crossroads/qa/visual-0.9.1/README.md. Badges and story gates deferred; original New Game prologue and Joe special movement art remain. Delta audio-quality and pre-title appearance QA pending.',
+    'summary': 'Ecruteak HGSS interior/landmark reconstruction, gatehouses, safe respawns and Joe field-state graphics; preserve approved city exterior.',
+    'known_limitations': 'See crossroads/RELEASE_HGSS_QA05.md and crossroads/hgss/ECRUTEAK_QA05.md. Owner visual acceptance pending. DS online desks offline; no badges/story gates added. Some Joe action phases reuse poses; unavailable modes lack gameplay tests. Entire Johto reconstruction is not complete.',
     'testing': 'Compilation is not playtesting. Follow crossroads/TESTING.md.',
 }
 (root / 'build-info.json').write_text(json.dumps(manifest, indent=2) + '\n')

@@ -9470,10 +9470,10 @@
     {
       "id": "LAYOUT_ECRUTEAKCITY_BELLTOWER",
       "name": "EcruteakCity_BellTower_Layout",
-      "width": 10,
-      "height": 8,
+      "width": 24,
+      "height": 24,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_WesternInteriors",
+      "secondary_tileset": "gTileset_HgssTemple",
       "border_filepath": "data/layouts/EcruteakCity_BellTower/border.bin",
       "blockdata_filepath": "data/layouts/EcruteakCity_BellTower/map.bin",
       "layout_version": "emerald"
@@ -9481,10 +9481,10 @@
     {
       "id": "LAYOUT_ECRUTEAKCITY_BELLTOWER_2F",
       "name": "EcruteakCity_BellTower_2F_Layout",
-      "width": 14,
-      "height": 12,
+      "width": 24,
+      "height": 24,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_WesternInteriors",
+      "secondary_tileset": "gTileset_HgssTemple",
       "border_filepath": "data/layouts/EcruteakCity_BellTower_2F/border.bin",
       "blockdata_filepath": "data/layouts/EcruteakCity_BellTower_2F/map.bin",
       "layout_version": "emerald"
@@ -9492,10 +9492,10 @@
     {
       "id": "LAYOUT_ECRUTEAKCITY_BELLTOWER_3F",
       "name": "EcruteakCity_BellTower_3F_Layout",
-      "width": 14,
-      "height": 12,
+      "width": 24,
+      "height": 24,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_WesternInteriors",
+      "secondary_tileset": "gTileset_HgssTemple",
       "border_filepath": "data/layouts/EcruteakCity_BellTower_3F/border.bin",
       "blockdata_filepath": "data/layouts/EcruteakCity_BellTower_3F/map.bin",
       "layout_version": "emerald"
@@ -9503,10 +9503,10 @@
     {
       "id": "LAYOUT_ECRUTEAKCITY_BELLTOWER_4F",
       "name": "EcruteakCity_BellTower_4F_Layout",
-      "width": 14,
-      "height": 12,
+      "width": 24,
+      "height": 24,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_WesternInteriors",
+      "secondary_tileset": "gTileset_HgssTemple",
       "border_filepath": "data/layouts/EcruteakCity_BellTower_4F/border.bin",
       "blockdata_filepath": "data/layouts/EcruteakCity_BellTower_4F/map.bin",
       "layout_version": "emerald"
@@ -9514,10 +9514,10 @@
     {
       "id": "LAYOUT_ECRUTEAKCITY_BELLTOWER_5F",
       "name": "EcruteakCity_BellTower_5F_Layout",
-      "width": 14,
-      "height": 12,
+      "width": 24,
+      "height": 24,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_WesternInteriors",
+      "secondary_tileset": "gTileset_HgssTemple",
       "border_filepath": "data/layouts/EcruteakCity_BellTower_5F/border.bin",
       "blockdata_filepath": "data/layouts/EcruteakCity_BellTower_5F/map.bin",
       "layout_version": "emerald"
@@ -9525,10 +9525,10 @@
     {
       "id": "LAYOUT_ECRUTEAKCITY_BELLTOWER_6F",
       "name": "EcruteakCity_BellTower_6F_Layout",
-      "width": 14,
-      "height": 12,
+      "width": 24,
+      "height": 24,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_WesternInteriors",
+      "secondary_tileset": "gTileset_HgssTemple",
       "border_filepath": "data/layouts/EcruteakCity_BellTower_6F/border.bin",
       "blockdata_filepath": "data/layouts/EcruteakCity_BellTower_6F/map.bin",
       "layout_version": "emerald"
@@ -9536,10 +9536,10 @@
     {
       "id": "LAYOUT_ECRUTEAKCITY_BELLTOWER_7F",
       "name": "EcruteakCity_BellTower_7F_Layout",
-      "width": 14,
-      "height": 12,
+      "width": 24,
+      "height": 24,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_WesternInteriors",
+      "secondary_tileset": "gTileset_HgssTemple",
       "border_filepath": "data/layouts/EcruteakCity_BellTower_7F/border.bin",
       "blockdata_filepath": "data/layouts/EcruteakCity_BellTower_7F/map.bin",
       "layout_version": "emerald"
@@ -9547,10 +9547,10 @@
     {
       "id": "LAYOUT_ECRUTEAKCITY_BELLTOWER_8F",
       "name": "EcruteakCity_BellTower_8F_Layout",
-      "width": 14,
-      "height": 12,
+      "width": 24,
+      "height": 24,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_WesternInteriors",
+      "secondary_tileset": "gTileset_HgssTemple",
       "border_filepath": "data/layouts/EcruteakCity_BellTower_8F/border.bin",
       "blockdata_filepath": "data/layouts/EcruteakCity_BellTower_8F/map.bin",
       "layout_version": "emerald"
@@ -9558,10 +9558,10 @@
     {
       "id": "LAYOUT_ECRUTEAKCITY_BELLTOWER_9F",
       "name": "EcruteakCity_BellTower_9F_Layout",
-      "width": 14,
-      "height": 12,
+      "width": 24,
+      "height": 24,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_WesternInteriors",
+      "secondary_tileset": "gTileset_HgssTemple",
       "border_filepath": "data/layouts/EcruteakCity_BellTower_9F/border.bin",
       "blockdata_filepath": "data/layouts/EcruteakCity_BellTower_9F/map.bin",
       "layout_version": "emerald"
@@ -9569,10 +9569,10 @@
     {
       "id": "LAYOUT_ECRUTEAKCITY_BURNEDTOWER",
       "name": "EcruteakCity_BurnedTower_Layout",
-      "width": 10,
-      "height": 8,
+      "width": 24,
+      "height": 24,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_WesternInteriors",
+      "secondary_tileset": "gTileset_HgssTemple",
       "border_filepath": "data/layouts/EcruteakCity_BurnedTower/border.bin",
       "blockdata_filepath": "data/layouts/EcruteakCity_BurnedTower/map.bin",
       "layout_version": "emerald"
@@ -9580,10 +9580,10 @@
     {
       "id": "LAYOUT_ECRUTEAKCITY_BURNEDTOWER_B1F",
       "name": "EcruteakCity_BurnedTower_B1F_Layout",
-      "width": 18,
-      "height": 14,
+      "width": 24,
+      "height": 24,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_WesternInteriors",
+      "secondary_tileset": "gTileset_HgssTemple",
       "border_filepath": "data/layouts/EcruteakCity_BurnedTower_B1F/border.bin",
       "blockdata_filepath": "data/layouts/EcruteakCity_BurnedTower_B1F/map.bin",
       "layout_version": "emerald"
@@ -9591,10 +9591,10 @@
     {
       "id": "LAYOUT_ECRUTEAKCITY_DANCETHEATER",
       "name": "EcruteakCity_DanceTheater_Layout",
-      "width": 10,
-      "height": 8,
+      "width": 14,
+      "height": 19,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_WesternInteriors",
+      "secondary_tileset": "gTileset_HgssTemple",
       "border_filepath": "data/layouts/EcruteakCity_DanceTheater/border.bin",
       "blockdata_filepath": "data/layouts/EcruteakCity_DanceTheater/map.bin",
       "layout_version": "emerald"
@@ -9624,10 +9624,10 @@
     {
       "id": "LAYOUT_ECRUTEAKCITY_GYM",
       "name": "EcruteakCity_Gym_Layout",
-      "width": 10,
-      "height": 8,
+      "width": 18,
+      "height": 24,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_WesternInteriors",
+      "secondary_tileset": "gTileset_HgssTemple",
       "border_filepath": "data/layouts/EcruteakCity_Gym/border.bin",
       "blockdata_filepath": "data/layouts/EcruteakCity_Gym/map.bin",
       "layout_version": "emerald"
@@ -9635,10 +9635,10 @@
     {
       "id": "LAYOUT_ECRUTEAKCITY_GYM_ARENA",
       "name": "EcruteakCity_Gym_Arena_Layout",
-      "width": 14,
-      "height": 18,
+      "width": 18,
+      "height": 27,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_WesternInteriors",
+      "secondary_tileset": "gTileset_HgssTemple",
       "border_filepath": "data/layouts/EcruteakCity_Gym_Arena/border.bin",
       "blockdata_filepath": "data/layouts/EcruteakCity_Gym_Arena/map.bin",
       "layout_version": "emerald"
@@ -10752,6 +10752,105 @@
       "secondary_tileset": "gTileset_HgssBellSecondary",
       "border_filepath": "data/layouts/BellchimeTrail/border.bin",
       "blockdata_filepath": "data/layouts/BellchimeTrail/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_HGSS_BELLTOWER10F",
+      "name": "EcruteakCity_BellTower_10F_Layout",
+      "width": 24,
+      "height": 24,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_HgssTemple",
+      "border_filepath": "data/layouts/EcruteakCity_BellTower_10F/border.bin",
+      "blockdata_filepath": "data/layouts/EcruteakCity_BellTower_10F/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_HGSS_BELLTOWERROOF",
+      "name": "EcruteakCity_BellTower_Roof_Layout",
+      "width": 32,
+      "height": 32,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_HgssTemple",
+      "border_filepath": "data/layouts/EcruteakCity_BellTower_Roof/border.bin",
+      "blockdata_filepath": "data/layouts/EcruteakCity_BellTower_Roof/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_HGSS_ECRUTEAKCITY_RESIDENCE",
+      "name": "EcruteakCity_Residence_Layout",
+      "width": 11,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_HgssTemple",
+      "border_filepath": "data/layouts/EcruteakCity_Residence/border.bin",
+      "blockdata_filepath": "data/layouts/EcruteakCity_Residence/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_HGSS_ECRUTEAKCITY_DOWSINGHOUSE",
+      "name": "EcruteakCity_DowsingHouse_Layout",
+      "width": 11,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_HgssTemple",
+      "border_filepath": "data/layouts/EcruteakCity_DowsingHouse/border.bin",
+      "blockdata_filepath": "data/layouts/EcruteakCity_DowsingHouse/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_HGSS_ECRUTEAKCITY_POKEMONCENTER_1F",
+      "name": "EcruteakCity_PokemonCenter_1F_Layout",
+      "width": 17,
+      "height": 21,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/EcruteakCity_PokemonCenter_1F/border.bin",
+      "blockdata_filepath": "data/layouts/EcruteakCity_PokemonCenter_1F/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_HGSS_ECRUTEAKCITY_POKEMONCENTER_B1F",
+      "name": "EcruteakCity_PokemonCenter_B1F_Layout",
+      "width": 17,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/EcruteakCity_PokemonCenter_B1F/border.bin",
+      "blockdata_filepath": "data/layouts/EcruteakCity_PokemonCenter_B1F/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_HGSS_ECRUTEAKCITY_MART",
+      "name": "EcruteakCity_Mart_Layout",
+      "width": 14,
+      "height": 13,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/EcruteakCity_Mart/border.bin",
+      "blockdata_filepath": "data/layouts/EcruteakCity_Mart/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_HGSS_ECRUTEAKCITY_WESTGATE",
+      "name": "EcruteakCity_WestGate_Layout",
+      "width": 12,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_HgssTemple",
+      "border_filepath": "data/layouts/EcruteakCity_WestGate/border.bin",
+      "blockdata_filepath": "data/layouts/EcruteakCity_WestGate/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_HGSS_ECRUTEAKCITY_EASTGATE",
+      "name": "EcruteakCity_EastGate_Layout",
+      "width": 12,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_HgssTemple",
+      "border_filepath": "data/layouts/EcruteakCity_EastGate/border.bin",
+      "blockdata_filepath": "data/layouts/EcruteakCity_EastGate/map.bin",
       "layout_version": "emerald"
     }
   ]

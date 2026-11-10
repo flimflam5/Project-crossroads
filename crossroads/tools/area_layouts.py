@@ -50,7 +50,9 @@ def decorate(name,data,w,h):
 def rooms():
     specs=json.loads((R/'crossroads/art/western/rooms.json').read_text())
     for spec in specs:
-        name=spec['name'];w,h=spec['width'],spec['height'];theme=spec['theme'];floor=spec['floor']
+        name=spec['name']
+        if name in ['EcruteakCity_DanceTheater','EcruteakCity_Gym_Arena'] or name.startswith(('EcruteakCity_BellTower','EcruteakCity_BurnedTower')):continue # Dedicated canonical generator owns these layouts.
+        w,h=spec['width'],spec['height'];theme=spec['theme'];floor=spec['floor']
         m=json.loads((R/f'data/maps/{name}/map.json').read_text());t=[0x3223]*(w*h)
         for x in range(w):t[x]=0x0605;t[w+x]=0x060d;t[(h-1)*w+x]=0x0601
         for y in range(h):t[y*w]=t[y*w+w-1]=0x0601

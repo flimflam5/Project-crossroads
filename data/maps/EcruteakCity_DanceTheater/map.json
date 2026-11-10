@@ -17,8 +17,8 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_3",
-      "x": 7,
-      "y": 5,
+      "x": 10,
+      "y": 9,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -29,9 +29,9 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
+      "graphics_id": "OBJ_EVENT_GFX_ECRUTEAK_PERFORMER",
       "x": 2,
-      "y": 2,
+      "y": 6,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -43,9 +43,9 @@
       "local_id": "LOCALID_AREA_DANCER_1"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_WOMAN_1",
+      "graphics_id": "OBJ_EVENT_GFX_ECRUTEAK_PERFORMER",
       "x": 4,
-      "y": 2,
+      "y": 6,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -57,9 +57,9 @@
       "local_id": "LOCALID_AREA_DANCER_2"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_WOMAN_3",
+      "graphics_id": "OBJ_EVENT_GFX_ECRUTEAK_PERFORMER",
       "x": 6,
-      "y": 2,
+      "y": 6,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -69,19 +69,45 @@
       "script": "Area_Dancer",
       "flag": "0",
       "local_id": "LOCALID_AREA_DANCER_3"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ECRUTEAK_PERFORMER",
+      "x": 8,
+      "y": 6,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Area_Dancer",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ECRUTEAK_PERFORMER",
+      "x": 10,
+      "y": 6,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Area_Dancer",
+      "flag": "0"
     }
   ],
   "warp_events": [
     {
-      "x": 3,
-      "y": 7,
+      "x": 7,
+      "y": 17,
       "elevation": 0,
       "dest_map": "MAP_ECRUTEAK_CITY",
       "dest_warp_id": "3"
     },
     {
-      "x": 4,
-      "y": 7,
+      "x": 8,
+      "y": 17,
       "elevation": 0,
       "dest_map": "MAP_ECRUTEAK_CITY",
       "dest_warp_id": "3"

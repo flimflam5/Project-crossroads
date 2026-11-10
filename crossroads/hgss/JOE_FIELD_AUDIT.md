@@ -19,7 +19,7 @@ player art is retained. All converted action sheets use Joe's original palette.
 | VS Seeker | Joe field-action state in Emerald; FRLG unchanged | Wired; unavailable/unexercised in current Johto |
 | Contest local trainer | Joe normal250 fits existing8-bit field | Wired; no contest playtest |
 | Link-room local avatar | Joe normal; remote/rival version art preserved | Wired; no multi-emulator link test |
-| Battle/Trainer Card | Existing dedicated Joe front/back/Card retained | Existing validation; fresh battle regression still required |
+| Battle/Trainer Card | Existing dedicated Joe front/back/Card retained | Existing validation; actual Morty practice loss/return now passed; no fresh trainer-Card interaction test |
 
 Animation timing/frame bounds are preserved. Several bike/fishing/watering phases
 currently reuse their directional pose rather than separate limb/rod drawings;

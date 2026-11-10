@@ -107,3 +107,18 @@ all player action states for Joe, preserve saves/unrelated work, build and test
 actual emulator traversal/actions/save copies. Show native screenshots/evidence.
 No completion claim from compilation or a sample. Active checkpoint and exact
 unfinished operations: crossroads/hgss/ACTIVE_COMPLETION.md.
+
+## Ecruteak QA05 generator ownership and continuation
+
+Read crossroads/hgss/ACTIVE_COMPLETION.md and ECRUTEAK_QA05.md before changes.
+Native evidence is crossroads/qa/hgss-qa05; source/artifact identity is build-info.
+The city exterior is owner-liked; preserve it. Dedicated chain/interior/room/service/
+gate generators own Ecruteak. area_layouts skips those rooms. The network generator
+uses pinned generic service templates, never clones rebuilt Ecruteak rooms into
+other cities. Run build_johto_network.py --through west --check after any change.
+Reference extraction-selection and Git blob SHA facts are versioned; no raw NARC,
+ROM, private save or commercial asset pack is committed. Re-run exact source/escape
+checks, not old rectangular-room assumptions. Native escalators need side landing
+space; Center respawn_x/y is8,13. Do not revert to default7,4 or alter heal IDs.
+Joe special IDs0x3f04–0x3f0b and NPC0x3f0c/d append without changing the engine enum.
+Owner visual acceptance remains required. No master merge is authorized.

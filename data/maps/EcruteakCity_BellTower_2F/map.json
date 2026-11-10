@@ -2,7 +2,7 @@
   "id": "MAP_ECRUTEAKCITY_BELLTOWER_2F",
   "name": "EcruteakCity_BellTower_2F",
   "layout": "LAYOUT_ECRUTEAKCITY_BELLTOWER_2F",
-  "music": "MUS_LILYCOVE",
+  "music": "MUS_MT_PYRE",
   "region": "REGION_HOENN",
   "region_map_section": "MAPSEC_ECRUTEAK_CITY",
   "requires_flash": false,
@@ -17,15 +17,22 @@
   "object_events": [],
   "warp_events": [
     {
-      "x": 2,
-      "y": 9,
+      "x": 5,
+      "y": 4,
       "elevation": 0,
       "dest_map": "MAP_ECRUTEAK_CITY_BELL_TOWER",
       "dest_warp_id": "2"
     },
     {
       "x": 11,
-      "y": 2,
+      "y": 21,
+      "elevation": 0,
+      "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_3F",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 11,
+      "y": 20,
       "elevation": 0,
       "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_3F",
       "dest_warp_id": "0"
@@ -35,8 +42,8 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 5,
-      "y": 1,
+      "x": 13,
+      "y": 12,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Area_Floor_EcruteakCity_BellTower_2F"

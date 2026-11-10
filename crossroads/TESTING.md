@@ -1,3 +1,10 @@
+# Current Ecruteak QA05 update
+
+See [Ecruteak scope, reference adaptations and actual tests](hgss/ECRUTEAK_QA05.md)
+and [Delta QA instructions](RELEASE_HGSS_QA05.md). New work preserves the QA04 city
+exterior/IDs/saves and is awaiting owner visual acceptance. Older sections below
+are historical milestones; they do not override the current reference-room geometry.
+
 # Visual/collision QA — repair pass0.9.1
 
 Owner reports0.9 network works but has NOT passed visual/collision QA. Expansion

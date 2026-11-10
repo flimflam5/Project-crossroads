@@ -1,0 +1,60 @@
+validate_opening
+Project Crossroads narrative and staged script checks: PASS
+Linked starter rescue, duplication guard and success-only persistence: PASS
+Only live starter grant is in Olivine; legacy room is a travel bridge: PASS
+
+validate_olivine
+Olivine map registration, reciprocal warps, NPC placement, pedestrian access and respawn data: PASS
+
+validate_olivine_interiors
+Office interactions/exit behaviors, starter coordinates, legacy escape paths and nonpersistent home rest: PASS
+
+validate_route39
+Route 39 reciprocal connections, stable map IDs, reachable signs/NPC and city seam: PASS
+
+validate_western_johto
+Western Johto connected pedestrian graph, all doors/interactions, reciprocal exits, IDs and Center respawn: PASS
+
+validate_black_ledger_intro
+Pre-title accepted-art conversion, palette isolation, tilemap and VRAM bounds: PASS
+Pre-title branding, skip/fade cleanup, preserved save initialization and isolated assets: PASS
+
+validate_joe_assets
+Joe source frames, transparency, shared palette, exact repack, 4-direction animations and playable wiring: PASS
+Joe spin animations preserve finite completion and 4-direction rotation: PASS
+Joe palette appended without shifting existing ordinals; trainer assets and references: PASS
+
+validate_joe_special_assets
+Joe action palette/frame bounds, authored east timing, both saved genders and unchanged graphics enum: PASS
+
+validate_title_music
+Title music source/hash, PCM limits, appended song ID and actual title wiring: PASS
+
+validate_visual_repairs
+HGSS tower contracts, canonical stair/pad graph, directed jumps and escape from every public tile: PASS 2430 tiles
+Canonical Ecruteak houses/theater, preserved actors/IDs, furnished room access, performance lanes and every-tile escape: PASS 3
+HGSS Center/Mart/Gym reference paths, accepted service/practice scripts, safe floor and scripted fall coverage: PASS 556 public tiles
+Canonical west/east gate endpoints, all six aliases per road, temporary coordinate portals and safe floor: PASS
+HGSS Ecruteak stable IDs, reciprocal target positions, safe entire ground component, preserved animation slots and compatible buffers: PASS. Reference/visual completion is NOT asserted.
+Visual repair scope, stable map/save contracts, complete benches, layers/door behavior: PASS. Owner visual QA remains pending.
+
+validate_area_completion
+HGSS tower contracts, canonical stair/pad graph, directed jumps and escape from every public tile: PASS 2430 tiles
+Canonical Ecruteak houses/theater, preserved actors/IDs, furnished room access, performance lanes and every-tile escape: PASS 3
+HGSS Center/Mart/Gym reference paths, accepted service/practice scripts, safe floor and scripted fall coverage: PASS 556 public tiles
+Canonical west/east gate endpoints, all six aliases per road, temporary coordinate portals and safe floor: PASS
+All landmark/farm/Gym doors, indoor access, original graphics, tile limits, approved roster and unchanged flag space: PASS
+
+validate_johto_fly
+Johto QA Fly: ten existing heal IDs, safe non-door arrivals, no NPC overlap: PASS
+
+validate_hgss_ecruteak
+HGSS tower contracts, canonical stair/pad graph, directed jumps and escape from every public tile: PASS 2430 tiles
+Canonical Ecruteak houses/theater, preserved actors/IDs, furnished room access, performance lanes and every-tile escape: PASS 3
+HGSS Center/Mart/Gym reference paths, accepted service/practice scripts, safe floor and scripted fall coverage: PASS 556 public tiles
+Canonical west/east gate endpoints, all six aliases per road, temporary coordinate portals and safe floor: PASS
+HGSS Ecruteak stable IDs, reciprocal target positions, safe entire ground component, preserved animation slots and compatible buffers: PASS. Reference/visual completion is NOT asserted.
+
+check_mapjson_outputs
+Mapjson stable timestamps and genuine content updates: PASS
+

@@ -1317,6 +1317,12 @@
     "SafariReception",
     "EcruteakCity_BarrierStation",
     "EcruteakCity_BarrierCorridor",
-    "BellchimeTrail"
+    "BellchimeTrail",
+    "EcruteakCity_BellTower_10F",
+    "EcruteakCity_BellTower_Roof",
+    "EcruteakCity_DowsingHouse",
+    "EcruteakCity_PokemonCenter_B1F",
+    "EcruteakCity_WestGate",
+    "EcruteakCity_EastGate"
   ]
 }

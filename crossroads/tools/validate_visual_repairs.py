@@ -9,6 +9,8 @@ if hgss:
  validate() # Stronger canonical/append-only contracts replace the authorized old geometry only.
 replaced={'data/maps/map_groups.json','data/layouts/layouts.json','src/data/heal_locations.json'} if hgss else set()
 reconstructed={'EcruteakCity','EcruteakCity_BellTower','JohtoRoute37','JohtoRoute38','JohtoRoute42'} if hgss else set()
+if hgss:
+ for path in ['interior-review.json','room-review.json','service-review.json','gate-review.json']:reconstructed|={r['name'] for r in json.loads((R/'crossroads/hgss'/path).read_text())}
 for p,h in report['unchanged_contracts'].items():
  if p not in replaced:assert sha(p)==h,('Changed preserved contract',p)
 layouts={l['id']:l for l in json.loads((R/'data/layouts/layouts.json').read_text())['layouts']};changed=[]

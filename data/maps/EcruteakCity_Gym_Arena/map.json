@@ -17,7 +17,7 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_CROSSROADS_MORTY",
-      "x": 6,
+      "x": 4,
       "y": 3,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -30,8 +30,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_1",
-      "x": 2,
-      "y": 10,
+      "x": 14,
+      "y": 24,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -40,17 +40,602 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Area_MortyApprentice",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_AREA_LANTERN",
+      "x": 3,
+      "y": 5,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Hgss_GymLamp",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_AREA_LANTERN",
+      "x": 5,
+      "y": 5,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Hgss_GymLamp",
+      "flag": "0"
     }
   ],
   "warp_events": [
     {
-      "x": 6,
-      "y": 17,
+      "x": 13,
+      "y": 26,
       "elevation": 0,
       "dest_map": "MAP_ECRUTEAK_CITY_GYM",
       "dest_warp_id": "2"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 3,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    },
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    },
+    {
+      "type": "trigger",
+      "x": 3,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    },
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    },
+    {
+      "type": "trigger",
+      "x": 3,
+      "y": 9,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    },
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 9,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    },
+    {
+      "type": "trigger",
+      "x": 3,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    },
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    },
+    {
+      "type": "trigger",
+      "x": 3,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    },
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    },
+    {
+      "type": "trigger",
+      "x": 3,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    },
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    },
+    {
+      "type": "trigger",
+      "x": 3,
+      "y": 13,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    },
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 13,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    },
+    {
+      "type": "trigger",
+      "x": 3,
+      "y": 14,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    },
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 14,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    },
+    {
+      "type": "trigger",
+      "x": 7,
+      "y": 14,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    },
+    {
+      "type": "trigger",
+      "x": 3,
+      "y": 15,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    },
+    {
+      "type": "trigger",
+      "x": 8,
+      "y": 15,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    },
+    {
+      "type": "trigger",
+      "x": 4,
+      "y": 16,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    },
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 16,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    },
+    {
+      "type": "trigger",
+      "x": 8,
+      "y": 16,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    },
+    {
+      "type": "trigger",
+      "x": 4,
+      "y": 17,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    },
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 17,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    },
+    {
+      "type": "trigger",
+      "x": 8,
+      "y": 17,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    },
+    {
+      "type": "trigger",
+      "x": 4,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    },
+    {
+      "type": "trigger",
+      "x": 8,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    },
+    {
+      "type": "trigger",
+      "x": 4,
+      "y": 19,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    },
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 19,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    },
+    {
+      "type": "trigger",
+      "x": 7,
+      "y": 19,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    },
+    {
+      "type": "trigger",
+      "x": 4,
+      "y": 20,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    },
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 20,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    },
+    {
+      "type": "trigger",
+      "x": 4,
+      "y": 21,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    },
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 21,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    },
+    {
+      "type": "trigger",
+      "x": 4,
+      "y": 22,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    },
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 22,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    },
+    {
+      "type": "trigger",
+      "x": 3,
+      "y": 23,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    },
+    {
+      "type": "trigger",
+      "x": 4,
+      "y": 23,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    },
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 23,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    },
+    {
+      "type": "trigger",
+      "x": 7,
+      "y": 23,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    },
+    {
+      "type": "trigger",
+      "x": 8,
+      "y": 23,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    },
+    {
+      "type": "trigger",
+      "x": 9,
+      "y": 23,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 23,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 23,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    },
+    {
+      "type": "trigger",
+      "x": 12,
+      "y": 23,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    },
+    {
+      "type": "trigger",
+      "x": 13,
+      "y": 23,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    },
+    {
+      "type": "trigger",
+      "x": 14,
+      "y": 23,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    },
+    {
+      "type": "trigger",
+      "x": 2,
+      "y": 24,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    },
+    {
+      "type": "trigger",
+      "x": 15,
+      "y": 24,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    },
+    {
+      "type": "trigger",
+      "x": 3,
+      "y": 25,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    },
+    {
+      "type": "trigger",
+      "x": 4,
+      "y": 25,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    },
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 25,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    },
+    {
+      "type": "trigger",
+      "x": 9,
+      "y": 25,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 25,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 25,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    },
+    {
+      "type": "trigger",
+      "x": 12,
+      "y": 25,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    },
+    {
+      "type": "trigger",
+      "x": 15,
+      "y": 25,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    },
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 26,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    },
+    {
+      "type": "trigger",
+      "x": 7,
+      "y": 26,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    },
+    {
+      "type": "trigger",
+      "x": 8,
+      "y": 26,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    },
+    {
+      "type": "trigger",
+      "x": 12,
+      "y": 26,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    },
+    {
+      "type": "trigger",
+      "x": 15,
+      "y": 26,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_GymReturn"
+    }
+  ],
   "bg_events": []
 }

@@ -1,0 +1,574 @@
+{
+  "source_commit": "690485c9971965af7d1a9134d1ba81f148b880b2",
+  "maps": {
+    "EcruteakCity_BellTower": {
+      "id": "MAP_ECRUTEAK_CITY_BELL_TOWER",
+      "name": "EcruteakCity_BellTower",
+      "layout": "LAYOUT_ECRUTEAKCITY_BELLTOWER",
+      "music": "MUS_LILYCOVE",
+      "region": "REGION_HOENN",
+      "region_map_section": "MAPSEC_ECRUTEAK_CITY",
+      "requires_flash": false,
+      "weather": "WEATHER_NONE",
+      "map_type": "MAP_TYPE_INDOOR",
+      "allow_cycling": false,
+      "allow_escaping": false,
+      "allow_running": true,
+      "show_map_name": false,
+      "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+      "connections": null,
+      "object_events": [
+        {
+          "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
+          "x": 7,
+          "y": 5,
+          "elevation": 3,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "Area_BellCaretaker",
+          "flag": "0"
+        }
+      ],
+      "warp_events": [
+        {
+          "x": 3,
+          "y": 7,
+          "elevation": 0,
+          "dest_map": "MAP_BELLCHIME_TRAIL",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 4,
+          "y": 7,
+          "elevation": 0,
+          "dest_map": "MAP_BELLCHIME_TRAIL",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 7,
+          "y": 2,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_2F",
+          "dest_warp_id": "0"
+        }
+      ],
+      "coord_events": [],
+      "bg_events": [
+        {
+          "type": "sign",
+          "x": 5,
+          "y": 1,
+          "elevation": 0,
+          "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+          "script": "Area_Floor_EcruteakCity_BellTower"
+        }
+      ]
+    },
+    "EcruteakCity_BellTower_2F": {
+      "id": "MAP_ECRUTEAKCITY_BELLTOWER_2F",
+      "name": "EcruteakCity_BellTower_2F",
+      "layout": "LAYOUT_ECRUTEAKCITY_BELLTOWER_2F",
+      "music": "MUS_LILYCOVE",
+      "region": "REGION_HOENN",
+      "region_map_section": "MAPSEC_ECRUTEAK_CITY",
+      "requires_flash": false,
+      "weather": "WEATHER_NONE",
+      "map_type": "MAP_TYPE_INDOOR",
+      "allow_cycling": false,
+      "allow_escaping": false,
+      "allow_running": true,
+      "show_map_name": false,
+      "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+      "connections": null,
+      "object_events": [],
+      "warp_events": [
+        {
+          "x": 2,
+          "y": 9,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_BELL_TOWER",
+          "dest_warp_id": "2"
+        },
+        {
+          "x": 11,
+          "y": 2,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_3F",
+          "dest_warp_id": "0"
+        }
+      ],
+      "coord_events": [],
+      "bg_events": [
+        {
+          "type": "sign",
+          "x": 5,
+          "y": 1,
+          "elevation": 0,
+          "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+          "script": "Area_Floor_EcruteakCity_BellTower_2F"
+        }
+      ]
+    },
+    "EcruteakCity_BellTower_3F": {
+      "id": "MAP_ECRUTEAKCITY_BELLTOWER_3F",
+      "name": "EcruteakCity_BellTower_3F",
+      "layout": "LAYOUT_ECRUTEAKCITY_BELLTOWER_3F",
+      "music": "MUS_LILYCOVE",
+      "region": "REGION_HOENN",
+      "region_map_section": "MAPSEC_ECRUTEAK_CITY",
+      "requires_flash": false,
+      "weather": "WEATHER_NONE",
+      "map_type": "MAP_TYPE_INDOOR",
+      "allow_cycling": false,
+      "allow_escaping": false,
+      "allow_running": true,
+      "show_map_name": false,
+      "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+      "connections": null,
+      "object_events": [
+        {
+          "graphics_id": "OBJ_EVENT_GFX_WOMAN_3",
+          "x": 10,
+          "y": 9,
+          "elevation": 3,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "Area_TowerVisitor",
+          "flag": "0"
+        }
+      ],
+      "warp_events": [
+        {
+          "x": 2,
+          "y": 9,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_2F",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 11,
+          "y": 2,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_4F",
+          "dest_warp_id": "0"
+        }
+      ],
+      "coord_events": [],
+      "bg_events": [
+        {
+          "type": "sign",
+          "x": 5,
+          "y": 1,
+          "elevation": 0,
+          "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+          "script": "Area_Floor_EcruteakCity_BellTower_3F"
+        }
+      ]
+    },
+    "EcruteakCity_BellTower_4F": {
+      "id": "MAP_ECRUTEAKCITY_BELLTOWER_4F",
+      "name": "EcruteakCity_BellTower_4F",
+      "layout": "LAYOUT_ECRUTEAKCITY_BELLTOWER_4F",
+      "music": "MUS_LILYCOVE",
+      "region": "REGION_HOENN",
+      "region_map_section": "MAPSEC_ECRUTEAK_CITY",
+      "requires_flash": false,
+      "weather": "WEATHER_NONE",
+      "map_type": "MAP_TYPE_INDOOR",
+      "allow_cycling": false,
+      "allow_escaping": false,
+      "allow_running": true,
+      "show_map_name": false,
+      "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+      "connections": null,
+      "object_events": [],
+      "warp_events": [
+        {
+          "x": 2,
+          "y": 9,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_3F",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 11,
+          "y": 2,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_5F",
+          "dest_warp_id": "0"
+        }
+      ],
+      "coord_events": [],
+      "bg_events": [
+        {
+          "type": "sign",
+          "x": 5,
+          "y": 1,
+          "elevation": 0,
+          "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+          "script": "Area_Floor_EcruteakCity_BellTower_4F"
+        }
+      ]
+    },
+    "EcruteakCity_BellTower_5F": {
+      "id": "MAP_ECRUTEAKCITY_BELLTOWER_5F",
+      "name": "EcruteakCity_BellTower_5F",
+      "layout": "LAYOUT_ECRUTEAKCITY_BELLTOWER_5F",
+      "music": "MUS_LILYCOVE",
+      "region": "REGION_HOENN",
+      "region_map_section": "MAPSEC_ECRUTEAK_CITY",
+      "requires_flash": false,
+      "weather": "WEATHER_NONE",
+      "map_type": "MAP_TYPE_INDOOR",
+      "allow_cycling": false,
+      "allow_escaping": false,
+      "allow_running": true,
+      "show_map_name": false,
+      "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+      "connections": null,
+      "object_events": [],
+      "warp_events": [
+        {
+          "x": 2,
+          "y": 9,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_4F",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 11,
+          "y": 2,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_6F",
+          "dest_warp_id": "0"
+        }
+      ],
+      "coord_events": [],
+      "bg_events": [
+        {
+          "type": "sign",
+          "x": 5,
+          "y": 1,
+          "elevation": 0,
+          "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+          "script": "Area_Floor_EcruteakCity_BellTower_5F"
+        }
+      ]
+    },
+    "EcruteakCity_BellTower_6F": {
+      "id": "MAP_ECRUTEAKCITY_BELLTOWER_6F",
+      "name": "EcruteakCity_BellTower_6F",
+      "layout": "LAYOUT_ECRUTEAKCITY_BELLTOWER_6F",
+      "music": "MUS_LILYCOVE",
+      "region": "REGION_HOENN",
+      "region_map_section": "MAPSEC_ECRUTEAK_CITY",
+      "requires_flash": false,
+      "weather": "WEATHER_NONE",
+      "map_type": "MAP_TYPE_INDOOR",
+      "allow_cycling": false,
+      "allow_escaping": false,
+      "allow_running": true,
+      "show_map_name": false,
+      "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+      "connections": null,
+      "object_events": [],
+      "warp_events": [
+        {
+          "x": 2,
+          "y": 9,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_5F",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 11,
+          "y": 2,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_7F",
+          "dest_warp_id": "0"
+        }
+      ],
+      "coord_events": [],
+      "bg_events": [
+        {
+          "type": "sign",
+          "x": 5,
+          "y": 1,
+          "elevation": 0,
+          "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+          "script": "Area_Floor_EcruteakCity_BellTower_6F"
+        }
+      ]
+    },
+    "EcruteakCity_BellTower_7F": {
+      "id": "MAP_ECRUTEAKCITY_BELLTOWER_7F",
+      "name": "EcruteakCity_BellTower_7F",
+      "layout": "LAYOUT_ECRUTEAKCITY_BELLTOWER_7F",
+      "music": "MUS_LILYCOVE",
+      "region": "REGION_HOENN",
+      "region_map_section": "MAPSEC_ECRUTEAK_CITY",
+      "requires_flash": false,
+      "weather": "WEATHER_NONE",
+      "map_type": "MAP_TYPE_INDOOR",
+      "allow_cycling": false,
+      "allow_escaping": false,
+      "allow_running": true,
+      "show_map_name": false,
+      "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+      "connections": null,
+      "object_events": [],
+      "warp_events": [
+        {
+          "x": 2,
+          "y": 9,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_6F",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 11,
+          "y": 2,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_8F",
+          "dest_warp_id": "0"
+        }
+      ],
+      "coord_events": [],
+      "bg_events": [
+        {
+          "type": "sign",
+          "x": 5,
+          "y": 1,
+          "elevation": 0,
+          "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+          "script": "Area_Floor_EcruteakCity_BellTower_7F"
+        }
+      ]
+    },
+    "EcruteakCity_BellTower_8F": {
+      "id": "MAP_ECRUTEAKCITY_BELLTOWER_8F",
+      "name": "EcruteakCity_BellTower_8F",
+      "layout": "LAYOUT_ECRUTEAKCITY_BELLTOWER_8F",
+      "music": "MUS_LILYCOVE",
+      "region": "REGION_HOENN",
+      "region_map_section": "MAPSEC_ECRUTEAK_CITY",
+      "requires_flash": false,
+      "weather": "WEATHER_NONE",
+      "map_type": "MAP_TYPE_INDOOR",
+      "allow_cycling": false,
+      "allow_escaping": false,
+      "allow_running": true,
+      "show_map_name": false,
+      "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+      "connections": null,
+      "object_events": [],
+      "warp_events": [
+        {
+          "x": 2,
+          "y": 9,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_7F",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 11,
+          "y": 2,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_9F",
+          "dest_warp_id": "0"
+        }
+      ],
+      "coord_events": [],
+      "bg_events": [
+        {
+          "type": "sign",
+          "x": 5,
+          "y": 1,
+          "elevation": 0,
+          "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+          "script": "Area_Floor_EcruteakCity_BellTower_8F"
+        }
+      ]
+    },
+    "EcruteakCity_BellTower_9F": {
+      "id": "MAP_ECRUTEAKCITY_BELLTOWER_9F",
+      "name": "EcruteakCity_BellTower_9F",
+      "layout": "LAYOUT_ECRUTEAKCITY_BELLTOWER_9F",
+      "music": "MUS_LILYCOVE",
+      "region": "REGION_HOENN",
+      "region_map_section": "MAPSEC_ECRUTEAK_CITY",
+      "requires_flash": false,
+      "weather": "WEATHER_NONE",
+      "map_type": "MAP_TYPE_INDOOR",
+      "allow_cycling": false,
+      "allow_escaping": false,
+      "allow_running": true,
+      "show_map_name": false,
+      "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+      "connections": null,
+      "object_events": [
+        {
+          "graphics_id": "OBJ_EVENT_GFX_WOMAN_3",
+          "x": 10,
+          "y": 9,
+          "elevation": 3,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "Area_TowerVisitor",
+          "flag": "0"
+        },
+        {
+          "graphics_id": "OBJ_EVENT_GFX_AREA_BELL",
+          "x": 7,
+          "y": 2,
+          "elevation": 3,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "Area_RingBell",
+          "flag": "0"
+        }
+      ],
+      "warp_events": [
+        {
+          "x": 2,
+          "y": 9,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_8F",
+          "dest_warp_id": "1"
+        }
+      ],
+      "coord_events": [],
+      "bg_events": [
+        {
+          "type": "sign",
+          "x": 5,
+          "y": 1,
+          "elevation": 0,
+          "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+          "script": "Area_Floor_EcruteakCity_BellTower_9F"
+        }
+      ]
+    },
+    "EcruteakCity_BurnedTower": {
+      "id": "MAP_ECRUTEAK_CITY_BURNED_TOWER",
+      "name": "EcruteakCity_BurnedTower",
+      "layout": "LAYOUT_ECRUTEAKCITY_BURNEDTOWER",
+      "music": "MUS_MT_PYRE",
+      "region": "REGION_HOENN",
+      "region_map_section": "MAPSEC_ECRUTEAK_CITY",
+      "requires_flash": false,
+      "weather": "WEATHER_NONE",
+      "map_type": "MAP_TYPE_INDOOR",
+      "allow_cycling": false,
+      "allow_escaping": false,
+      "allow_running": true,
+      "show_map_name": false,
+      "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+      "connections": null,
+      "object_events": [
+        {
+          "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
+          "x": 7,
+          "y": 5,
+          "elevation": 3,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "Area_BurnedCaretaker",
+          "flag": "0"
+        }
+      ],
+      "warp_events": [
+        {
+          "x": 3,
+          "y": 7,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 4,
+          "y": 7,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 7,
+          "y": 2,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BURNEDTOWER_B1F",
+          "dest_warp_id": "0"
+        }
+      ],
+      "coord_events": [],
+      "bg_events": []
+    },
+    "EcruteakCity_BurnedTower_B1F": {
+      "id": "MAP_ECRUTEAKCITY_BURNEDTOWER_B1F",
+      "name": "EcruteakCity_BurnedTower_B1F",
+      "layout": "LAYOUT_ECRUTEAKCITY_BURNEDTOWER_B1F",
+      "music": "MUS_MT_PYRE",
+      "region": "REGION_HOENN",
+      "region_map_section": "MAPSEC_ECRUTEAK_CITY",
+      "requires_flash": false,
+      "weather": "WEATHER_NONE",
+      "map_type": "MAP_TYPE_INDOOR",
+      "allow_cycling": false,
+      "allow_escaping": false,
+      "allow_running": true,
+      "show_map_name": false,
+      "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+      "connections": null,
+      "object_events": [
+        {
+          "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
+          "x": 14,
+          "y": 3,
+          "elevation": 3,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "Area_BurnedVisitor",
+          "flag": "0"
+        }
+      ],
+      "warp_events": [
+        {
+          "x": 2,
+          "y": 11,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_BURNED_TOWER",
+          "dest_warp_id": "2"
+        }
+      ],
+      "coord_events": [],
+      "bg_events": [
+        {
+          "type": "sign",
+          "x": 15,
+          "y": 1,
+          "elevation": 0,
+          "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+          "script": "Area_BurnedMemorial"
+        }
+      ]
+    }
+  }
+}

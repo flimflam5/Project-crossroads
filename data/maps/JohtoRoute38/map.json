@@ -66,8 +66,58 @@
       "flag": "0"
     }
   ],
-  "warp_events": [],
-  "coord_events": [],
+  "warp_events": [
+    {
+      "x": 63,
+      "y": 12,
+      "elevation": 0,
+      "dest_map": "MAP_ECRUTEAK_CITY_WEST_GATE",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 63,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_ECRUTEAK_CITY_WEST_GATE",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 63,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_ECRUTEAK_CITY_WEST_GATE",
+      "dest_warp_id": "1"
+    }
+  ],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 63,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_WestRouteGateEnter"
+    },
+    {
+      "type": "trigger",
+      "x": 63,
+      "y": 13,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_WestRouteGateEnter"
+    },
+    {
+      "type": "trigger",
+      "x": 63,
+      "y": 14,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_WestRouteGateEnter"
+    }
+  ],
   "bg_events": [
     {
       "type": "sign",

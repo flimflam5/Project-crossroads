@@ -1,9 +1,11 @@
-# Active Ecruteak interior/Joe completion — no new release yet
+# Ecruteak QA05 — build and emulator checks pass; owner visual QA pending
 
-Continue QA04; preserve the owner-liked exterior. Implemented Joe field-state
-wiring and reference-backed station/corridor work; tower/facility reconstruction
-and full regressions remain underway. See hgss/ACTIVE_COMPLETION.md and
-hgss/JOE_FIELD_AUDIT.md for actual tests and limitations.
+Preserves the QA04 exterior and existing saves. Furnished houses/Theater/services,
+reference gatehouses/Trail, Bell1–10F/roof and Burned floors, optional Gym bridge and
+Joe field actions are implemented. Actual27-map/246-transition tour,509 collision
+probes, healing/respawn/show/save cycles and field actions passed. See
+RELEASE_HGSS_QA05.md and hgss/ECRUTEAK_QA05.md for exact scope/deviations/untested modes.
+This does not finish the rest of Johto or grant visual acceptance.
 
 # QA04 Johto Fly integration
 

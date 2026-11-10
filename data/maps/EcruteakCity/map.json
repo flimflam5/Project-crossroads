@@ -166,9 +166,113 @@
       "elevation": 0,
       "dest_map": "MAP_ECRUTEAK_CITY_BARRIER_STATION",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 34,
+      "y": 55,
+      "elevation": 0,
+      "dest_map": "MAP_ECRUTEAK_CITY_DOWSING_HOUSE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 0,
+      "y": 37,
+      "elevation": 0,
+      "dest_map": "MAP_ECRUTEAK_CITY_WEST_GATE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 0,
+      "y": 38,
+      "elevation": 0,
+      "dest_map": "MAP_ECRUTEAK_CITY_WEST_GATE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 0,
+      "y": 39,
+      "elevation": 0,
+      "dest_map": "MAP_ECRUTEAK_CITY_WEST_GATE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 63,
+      "y": 46,
+      "elevation": 0,
+      "dest_map": "MAP_ECRUTEAK_CITY_EAST_GATE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 63,
+      "y": 47,
+      "elevation": 0,
+      "dest_map": "MAP_ECRUTEAK_CITY_EAST_GATE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 63,
+      "y": 48,
+      "elevation": 0,
+      "dest_map": "MAP_ECRUTEAK_CITY_EAST_GATE",
+      "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 0,
+      "y": 37,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_WestCityGateEnter"
+    },
+    {
+      "type": "trigger",
+      "x": 0,
+      "y": 38,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_WestCityGateEnter"
+    },
+    {
+      "type": "trigger",
+      "x": 0,
+      "y": 39,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_WestCityGateEnter"
+    },
+    {
+      "type": "trigger",
+      "x": 63,
+      "y": 46,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_EastCityGateEnter"
+    },
+    {
+      "type": "trigger",
+      "x": 63,
+      "y": 47,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_EastCityGateEnter"
+    },
+    {
+      "type": "trigger",
+      "x": 63,
+      "y": 48,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Hgss_EastCityGateEnter"
+    }
+  ],
   "bg_events": [
     {
       "type": "sign",

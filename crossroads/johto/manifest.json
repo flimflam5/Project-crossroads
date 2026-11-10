@@ -343,7 +343,29 @@
           "direction": "right"
         }
       ],
-      "entrances": [],
+      "entrances": [
+        {
+          "x": 63,
+          "y": 12,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_WEST_GATE",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 63,
+          "y": 13,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_WEST_GATE",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 63,
+          "y": 14,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_WEST_GATE",
+          "dest_warp_id": "1"
+        }
+      ],
       "services": "",
       "coverage": "Prior 0.8 accepted owner QA; 0.8.3 successor boot/audio QA pending",
       "layout_sha256": "ddce7a1e6a0ab77b22b9977edd05cd392448ec54b25099404f2fd528f7413a24"
@@ -428,6 +450,55 @@
           "elevation": 0,
           "dest_map": "MAP_ECRUTEAK_CITY_BARRIER_STATION",
           "dest_warp_id": "0"
+        },
+        {
+          "x": 34,
+          "y": 55,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_DOWSING_HOUSE",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 0,
+          "y": 37,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_WEST_GATE",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 0,
+          "y": 38,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_WEST_GATE",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 0,
+          "y": 39,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_WEST_GATE",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 63,
+          "y": 46,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_EAST_GATE",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 63,
+          "y": 47,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_EAST_GATE",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 63,
+          "y": 48,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_EAST_GATE",
+          "dest_warp_id": "0"
         }
       ],
       "services": "",
@@ -444,22 +515,22 @@
       "connections": null,
       "entrances": [
         {
-          "x": 3,
-          "y": 7,
+          "x": 11,
+          "y": 22,
           "elevation": 0,
           "dest_map": "MAP_ECRUTEAK_CITY",
           "dest_warp_id": "0"
         },
         {
-          "x": 4,
-          "y": 7,
+          "x": 12,
+          "y": 22,
           "elevation": 0,
           "dest_map": "MAP_ECRUTEAK_CITY",
           "dest_warp_id": "0"
         },
         {
-          "x": 7,
-          "y": 2,
+          "x": 18,
+          "y": 12,
           "elevation": 0,
           "dest_map": "MAP_ECRUTEAKCITY_BURNEDTOWER_B1F",
           "dest_warp_id": "0"
@@ -479,22 +550,29 @@
       "connections": null,
       "entrances": [
         {
-          "x": 3,
-          "y": 7,
+          "x": 11,
+          "y": 22,
           "elevation": 0,
           "dest_map": "MAP_BELLCHIME_TRAIL",
           "dest_warp_id": "1"
         },
         {
-          "x": 4,
-          "y": 7,
+          "x": 12,
+          "y": 22,
           "elevation": 0,
           "dest_map": "MAP_BELLCHIME_TRAIL",
           "dest_warp_id": "1"
         },
         {
-          "x": 7,
-          "y": 2,
+          "x": 5,
+          "y": 4,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_2F",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 5,
+          "y": 3,
           "elevation": 0,
           "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_2F",
           "dest_warp_id": "0"
@@ -514,15 +592,15 @@
       "connections": null,
       "entrances": [
         {
-          "x": 3,
-          "y": 7,
+          "x": 4,
+          "y": 8,
           "elevation": 0,
           "dest_map": "MAP_ECRUTEAK_CITY",
           "dest_warp_id": "2"
         },
         {
-          "x": 4,
-          "y": 7,
+          "x": 5,
+          "y": 8,
           "elevation": 0,
           "dest_map": "MAP_ECRUTEAK_CITY",
           "dest_warp_id": "2"
@@ -542,15 +620,15 @@
       "connections": null,
       "entrances": [
         {
-          "x": 3,
-          "y": 7,
+          "x": 7,
+          "y": 17,
           "elevation": 0,
           "dest_map": "MAP_ECRUTEAK_CITY",
           "dest_warp_id": "3"
         },
         {
-          "x": 4,
-          "y": 7,
+          "x": 8,
+          "y": 17,
           "elevation": 0,
           "dest_map": "MAP_ECRUTEAK_CITY",
           "dest_warp_id": "3"
@@ -570,22 +648,22 @@
       "connections": null,
       "entrances": [
         {
-          "x": 3,
-          "y": 7,
+          "x": 10,
+          "y": 21,
           "elevation": 0,
           "dest_map": "MAP_ECRUTEAK_CITY",
           "dest_warp_id": "4"
         },
         {
-          "x": 4,
-          "y": 7,
+          "x": 11,
+          "y": 21,
           "elevation": 0,
           "dest_map": "MAP_ECRUTEAK_CITY",
           "dest_warp_id": "4"
         },
         {
-          "x": 7,
-          "y": 2,
+          "x": 13,
+          "y": 0,
           "elevation": 0,
           "dest_map": "MAP_ECRUTEAKCITY_GYM_ARENA",
           "dest_warp_id": "0"
@@ -605,18 +683,25 @@
       "connections": null,
       "entrances": [
         {
-          "x": 7,
-          "y": 8,
+          "x": 8,
+          "y": 19,
           "elevation": 0,
           "dest_map": "MAP_ECRUTEAK_CITY",
           "dest_warp_id": "5"
         },
         {
-          "x": 6,
-          "y": 8,
+          "x": 9,
+          "y": 19,
           "elevation": 0,
           "dest_map": "MAP_ECRUTEAK_CITY",
           "dest_warp_id": "5"
+        },
+        {
+          "x": 14,
+          "y": 17,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_POKEMON_CENTER_B1F",
+          "dest_warp_id": "0"
         }
       ],
       "services": "healing",
@@ -633,15 +718,15 @@
       "connections": null,
       "entrances": [
         {
-          "x": 3,
-          "y": 7,
+          "x": 4,
+          "y": 11,
           "elevation": 0,
           "dest_map": "MAP_ECRUTEAK_CITY",
           "dest_warp_id": "6"
         },
         {
-          "x": 4,
-          "y": 7,
+          "x": 5,
+          "y": 11,
           "elevation": 0,
           "dest_map": "MAP_ECRUTEAK_CITY",
           "dest_warp_id": "6"
@@ -829,15 +914,22 @@
       "connections": null,
       "entrances": [
         {
-          "x": 2,
-          "y": 9,
+          "x": 5,
+          "y": 4,
           "elevation": 0,
           "dest_map": "MAP_ECRUTEAK_CITY_BELL_TOWER",
           "dest_warp_id": "2"
         },
         {
           "x": 11,
-          "y": 2,
+          "y": 21,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_3F",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 11,
+          "y": 20,
           "elevation": 0,
           "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_3F",
           "dest_warp_id": "0"
@@ -857,15 +949,22 @@
       "connections": null,
       "entrances": [
         {
-          "x": 2,
-          "y": 9,
+          "x": 11,
+          "y": 21,
           "elevation": 0,
           "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_2F",
           "dest_warp_id": "1"
         },
         {
-          "x": 11,
-          "y": 2,
+          "x": 20,
+          "y": 4,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_4F",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 20,
+          "y": 3,
           "elevation": 0,
           "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_4F",
           "dest_warp_id": "0"
@@ -885,18 +984,53 @@
       "connections": null,
       "entrances": [
         {
-          "x": 2,
-          "y": 9,
+          "x": 20,
+          "y": 4,
           "elevation": 0,
           "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_3F",
           "dest_warp_id": "1"
         },
         {
-          "x": 11,
-          "y": 2,
+          "x": 2,
+          "y": 4,
           "elevation": 0,
           "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_5F",
           "dest_warp_id": "0"
+        },
+        {
+          "x": 2,
+          "y": 3,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_5F",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 2,
+          "y": 21,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_5F",
+          "dest_warp_id": "2"
+        },
+        {
+          "x": 2,
+          "y": 20,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_5F",
+          "dest_warp_id": "2"
+        },
+        {
+          "x": 20,
+          "y": 21,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_5F",
+          "dest_warp_id": "3"
+        },
+        {
+          "x": 20,
+          "y": 20,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_5F",
+          "dest_warp_id": "3"
         }
       ],
       "services": "",
@@ -914,14 +1048,35 @@
       "entrances": [
         {
           "x": 2,
-          "y": 9,
+          "y": 4,
           "elevation": 0,
           "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_4F",
           "dest_warp_id": "1"
         },
         {
-          "x": 11,
-          "y": 2,
+          "x": 9,
+          "y": 21,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_6F",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 2,
+          "y": 21,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_4F",
+          "dest_warp_id": "3"
+        },
+        {
+          "x": 20,
+          "y": 21,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_4F",
+          "dest_warp_id": "5"
+        },
+        {
+          "x": 9,
+          "y": 20,
           "elevation": 0,
           "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_6F",
           "dest_warp_id": "0"
@@ -941,15 +1096,22 @@
       "connections": null,
       "entrances": [
         {
-          "x": 2,
-          "y": 9,
+          "x": 9,
+          "y": 21,
           "elevation": 0,
           "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_5F",
           "dest_warp_id": "1"
         },
         {
-          "x": 11,
-          "y": 2,
+          "x": 2,
+          "y": 15,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_7F",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 2,
+          "y": 14,
           "elevation": 0,
           "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_7F",
           "dest_warp_id": "0"
@@ -970,17 +1132,38 @@
       "entrances": [
         {
           "x": 2,
-          "y": 9,
+          "y": 15,
           "elevation": 0,
           "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_6F",
           "dest_warp_id": "1"
         },
         {
           "x": 11,
-          "y": 2,
+          "y": 22,
           "elevation": 0,
           "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_8F",
           "dest_warp_id": "0"
+        },
+        {
+          "x": 8,
+          "y": 12,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_9F",
+          "dest_warp_id": "3"
+        },
+        {
+          "x": 14,
+          "y": 12,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_7F",
+          "dest_warp_id": "4"
+        },
+        {
+          "x": 5,
+          "y": 6,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_7F",
+          "dest_warp_id": "3"
         }
       ],
       "services": "",
@@ -997,18 +1180,46 @@
       "connections": null,
       "entrances": [
         {
-          "x": 2,
-          "y": 9,
+          "x": 3,
+          "y": 8,
           "elevation": 0,
           "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_7F",
           "dest_warp_id": "1"
         },
         {
-          "x": 11,
-          "y": 2,
+          "x": 3,
+          "y": 16,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_9F",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 12,
+          "y": 5,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_9F",
+          "dest_warp_id": "2"
+        },
+        {
+          "x": 7,
+          "y": 14,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_9F",
+          "dest_warp_id": "5"
+        },
+        {
+          "x": 19,
+          "y": 13,
           "elevation": 0,
           "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_9F",
           "dest_warp_id": "0"
+        },
+        {
+          "x": 20,
+          "y": 20,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_9F",
+          "dest_warp_id": "4"
         }
       ],
       "services": "",
@@ -1026,10 +1237,59 @@
       "entrances": [
         {
           "x": 2,
-          "y": 9,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_8F",
+          "dest_warp_id": "4"
+        },
+        {
+          "x": 16,
+          "y": 3,
           "elevation": 0,
           "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_8F",
           "dest_warp_id": "1"
+        },
+        {
+          "x": 14,
+          "y": 11,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_8F",
+          "dest_warp_id": "2"
+        },
+        {
+          "x": 20,
+          "y": 11,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_7F",
+          "dest_warp_id": "2"
+        },
+        {
+          "x": 6,
+          "y": 19,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_8F",
+          "dest_warp_id": "5"
+        },
+        {
+          "x": 10,
+          "y": 21,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_8F",
+          "dest_warp_id": "3"
+        },
+        {
+          "x": 8,
+          "y": 13,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER10F",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 8,
+          "y": 12,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER10F",
+          "dest_warp_id": "0"
         }
       ],
       "services": "",
@@ -1046,7 +1306,14 @@
       "connections": null,
       "entrances": [
         {
-          "x": 2,
+          "x": 19,
+          "y": 12,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_BURNED_TOWER",
+          "dest_warp_id": "2"
+        },
+        {
+          "x": 19,
           "y": 11,
           "elevation": 0,
           "dest_map": "MAP_ECRUTEAK_CITY_BURNED_TOWER",
@@ -1088,8 +1355,8 @@
       "connections": null,
       "entrances": [
         {
-          "x": 6,
-          "y": 17,
+          "x": 13,
+          "y": 26,
           "elevation": 0,
           "dest_map": "MAP_ECRUTEAK_CITY_GYM",
           "dest_warp_id": "2"
@@ -4039,6 +4306,27 @@
           "elevation": 0,
           "dest_map": "MAP_MT_MORTAR_4_F",
           "dest_warp_id": "1"
+        },
+        {
+          "x": 0,
+          "y": 13,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_EAST_GATE",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 0,
+          "y": 14,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_EAST_GATE",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 0,
+          "y": 15,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_EAST_GATE",
+          "dest_warp_id": "1"
         }
       ]
     },
@@ -5511,6 +5799,185 @@
           "elevation": 0,
           "dest_map": "MAP_ECRUTEAK_CITY_BELL_TOWER",
           "dest_warp_id": "0"
+        }
+      ],
+      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet"
+    },
+    {
+      "name": "EcruteakCity_BellTower_10F",
+      "kind": "hgss",
+      "parent": "EcruteakCity_BellTower",
+      "cluster": "west",
+      "status": "implemented",
+      "map_group": 76,
+      "map_num": 25,
+      "display_name": "EcruteakCity_BellTower_10F",
+      "role": "hgss",
+      "id": "MAP_ECRUTEAKCITY_BELLTOWER10F",
+      "layout": "LAYOUT_HGSS_BELLTOWER10F",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 7,
+          "y": 13,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER_9F",
+          "dest_warp_id": "6"
+        },
+        {
+          "x": 11,
+          "y": 21,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWERROOF",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 11,
+          "y": 20,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWERROOF",
+          "dest_warp_id": "0"
+        }
+      ],
+      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet"
+    },
+    {
+      "name": "EcruteakCity_BellTower_Roof",
+      "kind": "hgss",
+      "parent": "EcruteakCity_BellTower",
+      "cluster": "west",
+      "status": "implemented",
+      "map_group": 76,
+      "map_num": 26,
+      "display_name": "EcruteakCity_BellTower_Roof",
+      "role": "hgss",
+      "id": "MAP_ECRUTEAKCITY_BELLTOWERROOF",
+      "layout": "LAYOUT_HGSS_BELLTOWERROOF",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 15,
+          "y": 24,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAKCITY_BELLTOWER10F",
+          "dest_warp_id": "1"
+        }
+      ],
+      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet"
+    },
+    {
+      "name": "EcruteakCity_DowsingHouse",
+      "kind": "hgss",
+      "parent": "EcruteakCity",
+      "cluster": "west",
+      "status": "implemented",
+      "map_group": 76,
+      "map_num": 27,
+      "display_name": "EcruteakCity_DowsingHouse",
+      "role": "hgss",
+      "id": "MAP_ECRUTEAK_CITY_DOWSING_HOUSE",
+      "layout": "LAYOUT_HGSS_ECRUTEAKCITY_DOWSINGHOUSE",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 4,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY",
+          "dest_warp_id": "8"
+        },
+        {
+          "x": 5,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY",
+          "dest_warp_id": "8"
+        }
+      ],
+      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet"
+    },
+    {
+      "name": "EcruteakCity_PokemonCenter_B1F",
+      "kind": "hgss",
+      "parent": "EcruteakCity",
+      "cluster": "west",
+      "status": "implemented",
+      "map_group": 76,
+      "map_num": 28,
+      "display_name": "EcruteakCity_PokemonCenter_B1F",
+      "role": "hgss",
+      "id": "MAP_ECRUTEAK_CITY_POKEMON_CENTER_B1F",
+      "layout": "LAYOUT_HGSS_ECRUTEAKCITY_POKEMONCENTER_B1F",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 14,
+          "y": 10,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_POKEMON_CENTER_1F",
+          "dest_warp_id": "2"
+        }
+      ],
+      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet"
+    },
+    {
+      "name": "EcruteakCity_WestGate",
+      "kind": "hgss",
+      "parent": "EcruteakCity",
+      "cluster": "west",
+      "status": "implemented",
+      "map_group": 76,
+      "map_num": 29,
+      "display_name": "EcruteakCity_WestGate",
+      "role": "hgss",
+      "id": "MAP_ECRUTEAK_CITY_WEST_GATE",
+      "layout": "LAYOUT_HGSS_ECRUTEAKCITY_WESTGATE",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 10,
+          "y": 7,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY",
+          "dest_warp_id": "10"
+        },
+        {
+          "x": 1,
+          "y": 7,
+          "elevation": 0,
+          "dest_map": "MAP_JOHTO_ROUTE38",
+          "dest_warp_id": "1"
+        }
+      ],
+      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet"
+    },
+    {
+      "name": "EcruteakCity_EastGate",
+      "kind": "hgss",
+      "parent": "EcruteakCity",
+      "cluster": "west",
+      "status": "implemented",
+      "map_group": 76,
+      "map_num": 30,
+      "display_name": "EcruteakCity_EastGate",
+      "role": "hgss",
+      "id": "MAP_ECRUTEAK_CITY_EAST_GATE",
+      "layout": "LAYOUT_HGSS_ECRUTEAKCITY_EASTGATE",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 1,
+          "y": 7,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY",
+          "dest_warp_id": "13"
+        },
+        {
+          "x": 10,
+          "y": 7,
+          "elevation": 0,
+          "dest_map": "MAP_JOHTO_ROUTE42",
+          "dest_warp_id": "4"
         }
       ],
       "coverage": "structural/build/runtime checks recorded separately; no owner QA yet"

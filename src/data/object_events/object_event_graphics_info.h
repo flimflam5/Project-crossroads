@@ -7418,3 +7418,21 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_JoeDecorating = {
     .anims = sAnimTable_Inanimate,
     .images = sPicTable_JoeDecorating,
 };
+
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EcruteakMonk = {
+ .tileTag=TAG_NONE, .paletteTag=OBJ_EVENT_PAL_TAG_ECRUTEAK_MONK,
+ .reflectionPaletteTag=OBJ_EVENT_PAL_TAG_NONE, .size=256, .width=16, .height=32,
+ .paletteSlot=PALSLOT_NPC_SPECIAL, .shadowSize=SHADOW_SIZE_M, .inanimate=FALSE,
+ .compressed=FALSE, .tracks=TRACKS_FOOT, .oam=&gObjectEventBaseOam_16x32,
+ .subspriteTables=sOamTables_16x32, .anims=sAnimTable_Standard,
+ .images=sPicTable_EcruteakMonk,
+};
+
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_EcruteakPerformer = {
+ .tileTag=TAG_NONE, .paletteTag=OBJ_EVENT_PAL_TAG_ECRUTEAK_PERFORMER,
+ .reflectionPaletteTag=OBJ_EVENT_PAL_TAG_NONE, .size=256, .width=16, .height=32,
+ .paletteSlot=PALSLOT_NPC_SPECIAL, .shadowSize=SHADOW_SIZE_M, .inanimate=FALSE,
+ .compressed=FALSE, .tracks=TRACKS_FOOT, .oam=&gObjectEventBaseOam_16x32,
+ .subspriteTables=sOamTables_16x32, .anims=sAnimTable_Standard,
+ .images=sPicTable_EcruteakPerformer,
+};

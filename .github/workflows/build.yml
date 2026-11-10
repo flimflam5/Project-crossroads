@@ -75,6 +75,10 @@ jobs:
           python3 crossroads/tools/validate_title_music.py
           python3 crossroads/tools/validate_area_completion.py
           python3 crossroads/tools/validate_opening.py
+          python3 crossroads/tools/validate_joe_special_assets.py
+          python3 crossroads/tools/build_joe_special_assets.py --check
+          python3 crossroads/tools/build_ecruteak_npc_assets.py --check
+          python3 crossroads/tools/build_hgss_temple_assets.py --check
           python3 crossroads/tools/validate_joe_assets.py
           python3 crossroads/tools/validate_route39.py
           python3 crossroads/tools/validate_western_johto.py --built
@@ -93,7 +97,7 @@ jobs:
       - name: Upload playable Emerald ROM
         uses: actions/upload-artifact@v4
         with:
-          name: black-ledger-visual-repairs-0.9.1-${{ github.sha }}
+          name: black-ledger-ecruteak-qa05-${{ github.sha }}
           path: |
             pokeemerald.gba
             build-info.json
@@ -109,6 +113,9 @@ jobs:
             crossroads/RELEASE_0_8_3.md
             crossroads/RELEASE_0_9.md
             crossroads/RELEASE_0_9_1.md
+            crossroads/RELEASE_HGSS_QA05.md
+            crossroads/hgss/ECRUTEAK_QA05.md
+            crossroads/hgss/*-review.json
             crossroads/qa/visual-0.9.1
             crossroads/johto/manifest.json
             crossroads/johto/TOPOLOGY.md

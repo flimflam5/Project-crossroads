@@ -42,7 +42,7 @@ def city_data():
  for y in [48,59]:rect(17,y,45,3,pave)
  # Canonical housing plots: two accessible houses; unused decorative buildings
  # stay closed, not invented generic interiors. Dowsing house awaits its interior.
- houses=[(20,33,False),(32,33,False),(20,42,True),(31,52,False),(51,52,False)]
+ houses=[(20,33,False),(32,33,False),(20,42,True),(31,52,True),(51,52,False)]
  for x,y,opened in houses:rect(x-1,y-1,8,7,earth)
  rect(31,42,8,5,earth);rect(42,40,7,8,earth);rect(52,41,7,7,earth)
  rect(21,49,8,9,earth);rect(43,50,7,8,earth)
@@ -87,7 +87,7 @@ def generate(check=False):
  # alias so all existing warp indices and return destinations remain stable.
  alias=dict(m['warp_events'][1],x=39,y=25)
  if len(m['warp_events'])==7:m['warp_events'].append(alias)
- else:assert len(m['warp_events'])==8;m['warp_events'][7]=alias
+ else:assert len(m['warp_events'])>=8;m['warp_events'][7]=alias
  # Sign/NPC identities and scripts remain stable; only their physical placements
  # follow the new town. Bell sign currently explicitly labels an unfinished approach.
  signpos=[(26,25),(42,26),(25,46),(43,46),(26,56),(43,56),(55,46),(8,37),(61,49),(39,61),(36,45)]
@@ -102,7 +102,7 @@ def generate(check=False):
   other=json.loads((R/f'data/maps/{n}/map.json').read_text())
   next(c for c in other['connections'] if c['direction']==d)['offset']=off
   js(f'data/maps/{n}/map.json',other)
- heals=json.loads((R/'src/data/heal_locations.json').read_text());next(h for h in heals['heal_locations'] if h['id']=='HEAL_LOCATION_ECRUTEAK_CITY').update(x=45,y=56);js('src/data/heal_locations.json',heals)
+ heals=json.loads((R/'src/data/heal_locations.json').read_text());next(h for h in heals['heal_locations'] if h['id']=='HEAL_LOCATION_ECRUTEAK_CITY').update(x=45,y=56,respawn_x=8,respawn_y=13);js('src/data/heal_locations.json',heals)
  # Return destinations reference stable warp indices, so reciprocal destination
  # positions need no changes; the native door engine resolves current coordinates.
  write('data/layouts/EcruteakCity/map.bin',city_data());print('HGSS-directed Ecruteak city layout generated. Trail/extra houses/interiors remain unfinished.')

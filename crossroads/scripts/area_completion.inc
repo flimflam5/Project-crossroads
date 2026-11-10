@@ -122,14 +122,20 @@ Area_TheaterHost::
     applymovement LOCALID_AREA_DANCER_1, Area_DanceLeft
     applymovement LOCALID_AREA_DANCER_2, Area_DanceLeft
     applymovement LOCALID_AREA_DANCER_3, Area_DanceLeft
+    applymovement 5, Area_DanceLeft
+    applymovement 6, Area_DanceLeft
     waitmovement 0
     applymovement LOCALID_AREA_DANCER_1, Area_DanceRight
     applymovement LOCALID_AREA_DANCER_2, Area_DanceRight
     applymovement LOCALID_AREA_DANCER_3, Area_DanceRight
+    applymovement 5, Area_DanceRight
+    applymovement 6, Area_DanceRight
     waitmovement 0
     applymovement LOCALID_AREA_DANCER_1, Area_DanceBow
     applymovement LOCALID_AREA_DANCER_2, Area_DanceBow
     applymovement LOCALID_AREA_DANCER_3, Area_DanceBow
+    applymovement 5, Area_DanceBow
+    applymovement 6, Area_DanceBow
     waitmovement 0
     playbgm MUS_LILYCOVE, 0
     msgbox Area_PerformanceDone, MSGBOX_DEFAULT

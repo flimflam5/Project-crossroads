@@ -17,7 +17,14 @@ def project(header,theme='wood',bounds=None):
  while q:
   x,y=q.popleft()
   for a,b in [(x-1,y),(x+1,y),(x,y-1),(x,y+1)]:
-   if 0<=a<W and 0<=b<H and (a,b) not in seen and not perms[b*W+a]&0x8000:seen.add((a,b));q.append((a,b))
+   if not(0<=a<W and 0<=b<H):continue
+   behavior=perms[b*W+a]&255
+   if behavior in range(56,60):
+    dx,dy=[(1,0),(-1,0),(0,-1),(0,1)][behavior-56]
+    if (a-x,b-y)!=(dx,dy):continue
+    a,b=a+dx,b+dy
+    if not(0<=a<W and 0<=b<H):continue
+   if (a,b) not in seen and not perms[b*W+a]&0x8000:seen.add((a,b));q.append((a,b))
  if bounds:w,h=bounds
  else:w=min(W,max(x for x,y in seen)+2);h=min(H,max(y for x,y in seen)+2)
  # Keep original coordinate origin; crop only unused southern/eastern cells.
@@ -33,6 +40,15 @@ def project(header,theme='wood',bounds=None):
  for y in range(h):
   for x in range(w):
    if (x,y) in seen:tiles[y*w+x]=0x3000|ART[theme]['start']
+ # Decorative structure stays visible outside the reachable walking strip.
+ # Closed floors inside rails remain drawn but blocked; open joists are distinct.
+ if header.startswith('MAP_BELL_TOWER_') and header!='MAP_BELL_TOWER_ROOF':
+  for y in range(6,min(27,h)):
+   for x in range(5,min(26,w)):
+    if (x,y) not in seen:
+     a=ART['braces'];tiles[y*w+x]=0x400|(ART[theme]['start'] if not perms[y*W+x]&0x8000 else a['start']+(y%2)*2+x%2)
+  for y in [4,5]:
+   for x in range(5,min(26,w)):tiles[y*w+x]=0x400|ART['temple_wall']['start']+(y%2)*4+x%4
  # Rear walls and rail footprints are source-derived, never blanket walkable.
  for y in range(h):
   for x in range(w):
@@ -45,6 +61,17 @@ def project(header,theme='wood',bounds=None):
   for y in range(2):
    for x in range(1,w-2):
     if (x,y) not in seen:tiles[y*w+x]=0x400|ART['temple_wall']['start']+(y%2)*4+x%4
+ if header.startswith('MAP_BURNED_TOWER'):
+  for y in [4,5]:
+   for x in range(5,min(26,w)):tiles[y*w+x]=0x400|ART['burned_wall']['start']+(y%2)*4+x%4
+ if header=='MAP_BURNED_TOWER_1F':
+  for y in range(10,min(24,h)):
+   for x in range(8,min(23,w)):
+    if (x,y) not in seen:tiles[y*w+x]=0x400|ART['stone']['start']
+ if header=='MAP_BURNED_TOWER_B1F':
+  for y in range(7,min(26,h)):
+   for x in range(5,min(26,w)):
+    if (x,y) not in seen and sum((x+dx,y+dy) in seen for dx,dy in [(1,0),(-1,0),(0,1),(0,-1)])>=2:tiles[y*w+x]=0x400|ART['rubble']['start']
  for k,c in enumerate(f['chunks']):
   for p in c['props']:
    x=int(p['tile_x'])+k%cw*32;y=int(p['tile_z'])+k//cw*32;model=p['model']
@@ -53,14 +80,14 @@ def project(header,theme='wood',bounds=None):
    elif model in (4,66):stamp('stairs',x,y-1)
    elif model==67:stamp('ladder',x,y-1)
    elif model==65:
-    # The central pillar's top remains foreground; actual base collision is from HGSS.
-    stamp('pillar',x,y-2)
+    # Compression of DS vertical height; the source base footprint stays blocked.
+    stamp('pillar_big',x-1,y-4)
  # Native one-way jump behavior. Geometry is preserved; the runtime test must
  # understand the two-tile GBA jump instead of pretending it is normal walking.
- for x,y in seen:
-  if not(0<=x<w and 0<=y<h):continue
-  behavior=perms[y*W+x]&255
-  if behavior in range(56,60):tiles[y*w+x]=0x3000|ART[['jump_east','jump_west','jump_north','jump_south'][behavior-56]]['start']
+ for y in range(h):
+  for x in range(w):
+   behavior=perms[y*W+x]&255
+   if behavior in range(56,60):tiles[y*w+x]=0x3400|ART[['jump_east','jump_west','jump_north','jump_south'][behavior-56]]['start']
  return dict(width=w,height=h,tiles=tiles,walkable=seen,permissions=perms,source_width=W,stamp=stamp)
 
 def warp_tile(tile):

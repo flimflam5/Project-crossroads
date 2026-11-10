@@ -2573,3 +2573,27 @@ static const struct SpriteFrameImage sPicTable_JoeWatering[] = {
 };
 
 static const struct SpriteFrameImage sPicTable_JoeDecorating[] = {overworld_frame(gObjectEventPic_JoeCorporate, 2, 4, 0)};
+
+static const struct SpriteFrameImage sPicTable_EcruteakMonk[] = {
+    overworld_frame(gObjectEventPic_EcruteakMonk, 2, 4, 0),
+    overworld_frame(gObjectEventPic_EcruteakMonk, 2, 4, 1),
+    overworld_frame(gObjectEventPic_EcruteakMonk, 2, 4, 2),
+    overworld_frame(gObjectEventPic_EcruteakMonk, 2, 4, 0),
+    overworld_frame(gObjectEventPic_EcruteakMonk, 2, 4, 0),
+    overworld_frame(gObjectEventPic_EcruteakMonk, 2, 4, 1),
+    overworld_frame(gObjectEventPic_EcruteakMonk, 2, 4, 1),
+    overworld_frame(gObjectEventPic_EcruteakMonk, 2, 4, 2),
+    overworld_frame(gObjectEventPic_EcruteakMonk, 2, 4, 2),
+};
+
+static const struct SpriteFrameImage sPicTable_EcruteakPerformer[] = {
+    overworld_frame(gObjectEventPic_EcruteakPerformer, 2, 4, 0),
+    overworld_frame(gObjectEventPic_EcruteakPerformer, 2, 4, 1),
+    overworld_frame(gObjectEventPic_EcruteakPerformer, 2, 4, 2),
+    overworld_frame(gObjectEventPic_EcruteakPerformer, 2, 4, 0),
+    overworld_frame(gObjectEventPic_EcruteakPerformer, 2, 4, 0),
+    overworld_frame(gObjectEventPic_EcruteakPerformer, 2, 4, 1),
+    overworld_frame(gObjectEventPic_EcruteakPerformer, 2, 4, 1),
+    overworld_frame(gObjectEventPic_EcruteakPerformer, 2, 4, 2),
+    overworld_frame(gObjectEventPic_EcruteakPerformer, 2, 4, 2),
+};

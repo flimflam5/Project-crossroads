@@ -662,3 +662,9 @@ const u32 gObjectEventPic_JoeFieldMove[] = INCGFX_U32("graphics/object_events/pi
 const u32 gObjectEventPic_JoeFishing[] = INCGFX_U32("graphics/object_events/pics/people/joe/corporate/fishing.png", ".4bpp", "-mwidth 4 -mheight 4");
 
 const u32 gObjectEventPic_JoeWatering[] = INCGFX_U32("graphics/object_events/pics/people/joe/corporate/watering.png", ".4bpp", "-mwidth 4 -mheight 4");
+
+const u32 gObjectEventPic_EcruteakMonk[] = INCGFX_U32("graphics/object_events/pics/people/ecruteak/monk.png", ".4bpp", "-mwidth 2 -mheight 4");
+const u16 gObjectEventPal_EcruteakMonk[] = INCGFX_U16("graphics/object_events/pics/people/ecruteak/monk.png", ".gbapal");
+
+const u32 gObjectEventPic_EcruteakPerformer[] = INCGFX_U32("graphics/object_events/pics/people/ecruteak/performer.png", ".4bpp", "-mwidth 2 -mheight 4");
+const u16 gObjectEventPal_EcruteakPerformer[] = INCGFX_U16("graphics/object_events/pics/people/ecruteak/performer.png", ".gbapal");

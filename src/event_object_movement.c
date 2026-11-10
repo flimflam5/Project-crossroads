@@ -590,6 +590,8 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_AreaBell, OBJ_EVENT_PAL_TAG_AREA_BELL},
     {gObjectEventPal_AreaLantern, OBJ_EVENT_PAL_TAG_AREA_LANTERN},
     {gObjectEventPal_CrossroadsMorty, OBJ_EVENT_PAL_TAG_CROSSROADS_MORTY},
+    {gObjectEventPal_EcruteakMonk, OBJ_EVENT_PAL_TAG_ECRUTEAK_MONK},
+    {gObjectEventPal_EcruteakPerformer, OBJ_EVENT_PAL_TAG_ECRUTEAK_PERFORMER},
 #ifdef BUGFIX
     {NULL,                                  OBJ_EVENT_PAL_TAG_NONE},
 #else
@@ -3238,6 +3240,10 @@ const struct ObjectEventGraphicsInfo *GetObjectEventGraphicsInfo(u16 graphicsId)
         return &gObjectEventGraphicsInfo_JoeWatering;
     if (graphicsId == OBJ_EVENT_GFX_JOE_DECORATING)
         return &gObjectEventGraphicsInfo_JoeDecorating;
+    if (graphicsId == OBJ_EVENT_GFX_ECRUTEAK_MONK)
+        return &gObjectEventGraphicsInfo_EcruteakMonk;
+    if (graphicsId == OBJ_EVENT_GFX_ECRUTEAK_PERFORMER)
+        return &gObjectEventGraphicsInfo_EcruteakPerformer;
     if (graphicsId >= NUM_OBJ_EVENT_GFX)
         graphicsId = OBJ_EVENT_GFX_NINJA_BOY;
 

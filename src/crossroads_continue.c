@@ -35,6 +35,11 @@ void Crossroads_EnsureAreaRespawn(void)
      && heal->mapGroup == 0 && heal->mapNum == 0 && heal->warpId == 0
      && heal->x == 0 && heal->y == 0)
         SetLastHealLocationWarp(HEAL_LOCATION_OLIVINE_CITY);
+    // Preserve the chosen Center for pre-HGSS saves whose outdoor doorway moved.
+    if (heal->mapGroup == MAP_GROUP(MAP_ECRUTEAK_CITY)
+     && heal->mapNum == MAP_NUM(MAP_ECRUTEAK_CITY)
+     && heal->warpId == WARP_ID_NONE && heal->x == 21 && heal->y == 35)
+        SetLastHealLocationWarp(HEAL_LOCATION_ECRUTEAK_CITY);
 }
 
 bool32 Crossroads_PrepareContinue(void)
@@ -45,6 +50,10 @@ bool32 Crossroads_PrepareContinue(void)
     if (!Johto_IsExplorationGroup(gSaveBlock1Ptr->location.mapGroup))
         return FALSE;
     Crossroads_EnsureAreaRespawn();
+    // Old saves inside a shared-layout room must use that room's new dedicated
+    // layout. Map/layout identities remain appended/stable; save format is intact.
+    if (gSaveBlock1Ptr->mapLayoutId != gMapHeader.mapLayoutId)
+        SetCurrentMapLayout(gMapHeader.mapLayoutId);
     layout = gMapHeader.mapLayout;
     // These authored maps do not use persistent terrain puzzles. Old cached tiles
     // must not overlay new buildings, stairways or approved encounter grass.
@@ -53,7 +62,14 @@ bool32 Crossroads_PrepareContinue(void)
     y = gSaveBlock1Ptr->pos.y;
     if (x >= 0 && y >= 0 && x < layout->width && y < layout->height
      && !(layout->map[y * layout->width + x] & MAPGRID_COLLISION_MASK))
-        return TRUE;
+    {
+        bool32 occupied = FALSE;
+        for (i = 0; i < gMapHeader.events->objectEventCount; i++)
+            if (gMapHeader.events->objectEvents[i].x == x && gMapHeader.events->objectEvents[i].y == y)
+                occupied = TRUE;
+        if (!occupied)
+            return TRUE;
+    }
     // Only repair positions that became blocked; valid saves never move.
     for (radius = 1; radius <= layout->width + layout->height; radius++)
         for (ny = y - radius; ny <= y + radius; ny++)

@@ -1,46 +1,24 @@
-# Active Ecruteak completion after QA04 — not a release
+# Ecruteak QA05 checkpoint
 
-Continue branch feature/hgss-ecruteak-reconstruction-01 from690485c997.
-The owner likes the city exterior. Preserve its facade/street composition. This
-pass completes interiors, landmark floors and Joe's remaining player graphics.
-No story actors, HGSS plot/reward flags, new rosters, badges or engine upgrades.
+Branch feature/hgss-ecruteak-reconstruction-01. QA04 exterior preserved; Joe field
+state checkpoint fe201d2174 precedes the Ecruteak floor/service reconstruction.
+Current deliverable scope/tests/known limitations are in ECRUTEAK_QA05.md and
+../RELEASE_HGSS_QA05.md. Source commit/checksum are in the artifact build-info.json.
 
-## Implemented checkpoint1
+Implemented: two furnished houses, Theater/five-performer show, dedicated
+Center/Mart/basement, optional-practice Gym bridge with safe returns, both regional
+gatehouses, reference-backed station/corridor, canonical autumn Trail floor,
+Bell1–10F/roof and Burned1F/B1F. Appended six map IDs after QA04; old IDs/save format
+remain. Native stairs and whiteout arrivals were fixed after actual emulator failures.
 
-- Joe corporate field/Surf/Dive/bike/fish/water/decorating graphics; reserved custom
-  IDs0x3f04–0x3f0b, no enum/dynamic-ID shift. Six dedicated animation tables retain
-  timing and use authored east views rather than mirroring his satchel.
-- Link-room and contest local-avatar source also points to Joe; remote/rival art
-  remains. These modes are not playtested. See JOE_FIELD_AUDIT.md for exact scope.
-- Station/corridor physical layouts and red prayer tables/tatami alcoves now follow
-  HGSS geometry; original GBA temple assets. Station guard moves(15,7)->(16,6) to
-  avoid the source's story-gated one-tile choke, without adding flags.
-- Published Bell/Burned1–10F/summit references retrieved into scratch. Canonical
-  interior permissions/prop/warp facts extracted for24 source headers. No HGSS
-  graphics/story scripts are embedded in game data.
+Verification: build PASS; structural/generator/build-inclusion checks PASS; actual
+27-map/246-transition tour,509 exterior collision probes, five-performer show,
+healing/bridge falls/Morty loss/local respawn, normal Save/cold Continue and copied
+stale-layout migration PASS. Fly/Surf/bikes/fishing and three starter choices pass.
+Native evidence/logs are in ../qa/hgss-qa05/. They do not assert owner visual acceptance.
 
-## Verified before tower reconstruction
-
-Joe direction build /tmp/qa05-joe-direction-build.log PASS. Actual Fly ID+VRAM,
-all ten cities, normal Save/fresh-core Continue PASS in
-/tmp/qa05-directions-fly-runtime.log. Bikes, Acro wheelie, four-direction survey
-Surf, rod casting/return to Surf and disembark PASS in
-/tmp/qa05-directions-field-runtime.log. Temporary bike/rod inventory only exists
-in private test emulator RAM. Existing opening/area/visual/save-contract/network
-validators PASS before further map changes. Station/corridor two-way tour33
-transitions PASS in /tmp/qa05-stage1b-station-runtime.log.
-
-Latest build /tmp/qa05-checkpoint1-build.log PASS (ROM29,599,040bytes) includes local
-contest/link previews and crisper palette-converted native timber floor. These later preview modes remain unplayed.
-
-## Genuinely unfinished
-
-build_hgss_ecruteak_interiors.py is authored but not yet executed/validated. It
-projects canonical tower grids/branching warps and appends10F/roof. Preserve the
-existing bell interaction by relocating it to the roof. Review actual rendering,
-ramps/warp pads, all floor traversal and save compatibility before acceptance.
-
-Still to implement/review: houses and Dowsing entrance, Theater, Center/Mart
-reconstruction, Gym geometry/practice integration, region gates, city terrain
-finishing and final whole-area regressions. Source branch is not owner-accepted
-as finished. No QA05 download has been delivered. Original QA04 download remains.
+Next: owner Delta QA and reported fixes. Do not expand geography or replace the
+exterior as an incidental cleanup. See JOE_FIELD_AUDIT.md for unavailable/unplayed
+states and reused animation poses. DS online/candle story gates/rewards remain
+explicit adaptations/omissions, not secretly implemented content. Broader HGSS
+Johto and the original prologue remain unfinished. No merge to master is authorized.

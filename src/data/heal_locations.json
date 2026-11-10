@@ -364,7 +364,9 @@
       "x": 45,
       "y": 56,
       "respawn_map": "MAP_ECRUTEAK_CITY_POKEMON_CENTER_1F",
-      "respawn_npc": "LOCALID_ECRUTEAK_NURSE"
+      "respawn_npc": "LOCALID_ECRUTEAK_NURSE",
+      "respawn_x": 8,
+      "respawn_y": 13
     },
     {
       "id": "HEAL_LOCATION_GOLDENROD_CITY",

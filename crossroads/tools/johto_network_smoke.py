@@ -50,20 +50,35 @@ start=args.output/'start.snapshot';assert lib.emu_state(str(start).encode(),0);s
 # Disable random encounters only in the test process, never the ROM.
 write('sWildEncountersDisabled',1,1)
 choice=read(sb()+0x1590,2);partycount=read(read('gPlayerPartyCountPtr'),1)
+# Resolve real native behaviors, including directional Bell Tower ramps.
+import re
+from johto_movement import next_position
+headers=(R/'src/data/tilesets/headers.h').read_text();met=(R/'src/data/tilesets/metatiles.h').read_text();attrfiles=dict(re.findall(r'const u16 (gMetatileAttributes_\w+)\[\] = INCBIN_U16\("([^" ]+)"\)',met));attrs={}
+for tileset_key,body in re.findall(r'const struct Tileset (gTileset_\w+)\s*=\s*\{([^}]+)\}',headers,re.S):
+ m=re.search(r'\.metatileAttributes\s*=\s*(\w+)',body)
+ if m and m[1] in attrfiles:
+  data=(R/attrfiles[m[1]]).read_bytes();attrs[tileset_key]=struct.unpack('<'+str(len(data)//2)+'H',data)
+def behavior(n,x,y):
+ w,h=size[n]
+ if not(0<=x<w and 0<=y<h):return None
+ tile=raw[n][y*w+x]&1023;l=layouts[maps[n]['layout']];return attrs[l['primary_tileset'] if tile<512 else l['secondary_tileset']][tile%512]&255
+fall_cells={r['name']:{tuple(p) for p in r.get('fall_tiles',[])} for r in json.loads((R/'crossroads/hgss/service-review.json').read_text())}
 def safe(n,p):
  x,y=p;w,h=size[n]
- return 0<=x<w and 0<=y<h and raw[n][y*w+x]&0xc00==0 and raw[n][y*w+x]>>12 in (1,3) and (raw[n][y*w+x]&1023)!=0x38d and not any((o['x'],o['y'])==p for o in maps[n]['object_events'])
-def path(n,target):
- start=pos();blocked={(e['x'],e['y']) for e in maps[n]['warp_events']} - {start,target};q=deque([start]);prev={start:None}
+ return p not in fall_cells.get(n,set()) and 0<=x<w and 0<=y<h and raw[n][y*w+x]&0xc00==0 and raw[n][y*w+x]>>12 in (1,3) and (raw[n][y*w+x]&1023)!=0x38d and not any((o['x'],o['y'])==p for o in maps[n]['object_events'])
+def local_path(n,start,target):
+ blocked={(e['x'],e['y']) for e in maps[n]['warp_events']} - {start,target};q=deque([start]);prev={start:None}
  while q:
   x,y=q.popleft()
   if (x,y)==target:break
-  for v in [(x+1,y),(x-1,y),(x,y+1),(x,y-1)]:
-   if v not in prev and v not in blocked and safe(n,v):prev[v]=(x,y);q.append(v)
+  for dx,dy in [(1,0),(-1,0),(0,1),(0,-1)]:
+   v=next_position(x,y,dx,dy,lambda a,b:behavior(n,a,b))
+   if v is not None and v not in prev and v not in blocked and safe(n,v):prev[v]=(x,y);q.append(v)
  if target not in prev:return None
  route=[];v=target
  while prev[v] is not None:route.append(v);v=prev[v]
  return list(reversed(route))
+def path(n,target):return local_path(n,pos(),target)
 def walk(target):
  global water_entries
  n=current();route=path(n,target);assert route is not None,(n,pos(),'No foot path',target)
@@ -79,19 +94,19 @@ def walk(target):
    water_entries+=1
    print('Actual session-only Surf entry:',n,old,'to',pos(),'PASS',flush=True)
   else:
-   frames(8 if surfing else 16,k);frames(20)
+   frames(1 if abs(to[0]-old[0])+abs(to[1]-old[1])==2 else 8 if surfing else 16,k);frames(60 if abs(to[0]-old[0])+abs(to[1]-old[1])==2 else 20)
    if pos()==old:frames(8 if surfing else 16,k);frames(20)
   assert current()==n and pos()==to,(n,old,to,current(),pos())
 def warp(index):
  n=current();e=maps[n]['warp_events'][index];x,y=e['x'],e['y'];w,h=size[n]
  approaches=[((x,y+1),64),((x-1,y),16),((x+1,y),32),((x,y-1),128)]
- if y==h-1:approaches=[((x,y-1),128)]+approaches[:-1]
+ if y==h-1 or behavior(n,x,y)==0x65:approaches=[((x,y-1),128)]+approaches[:-1]
  for target,k in approaches:
-  if path(n,target) is not None:walk(target);break
+  if (target==pos() or target not in {(v['x'],v['y']) for v in maps[n]['warp_events']}) and path(n,target) is not None:walk(target);break
  else:raise AssertionError((n,'No warp approach',e,pos()))
  for _ in range(3):
   frames(16,k);frames(180)
-  if current()!=n:break
+  if current()!=n or (ids[e['dest_map']]==n and pos() not in [(x,y),target]):break
  assert current()==ids[e['dest_map']],('Wrong warp',n,index,current(),pos())
  return n,current()
 def border(c):
@@ -99,29 +114,51 @@ def border(c):
  for t in range(w if d in ['up','down'] else h):
   old=(t,0) if d=='up' else (t,h-1) if d=='down' else (0,t) if d=='left' else (w-1,t)
   new=(t-c['offset'],dh-1) if d=='up' else (t-c['offset'],0) if d=='down' else (dw-1,t-c['offset']) if d=='left' else (0,t-c['offset'])
+  if old in {(e['x'],e['y']) for e in maps[n]['warp_events']}:continue
   route=path(n,old)
   if route is not None and safe(dst,new):candidates.append((len(route),old,new))
+ if not candidates and any(e['script'].startswith('Hgss_') and 'GateEnter' in e['script'] for e in maps[n]['coord_events']):
+  go(dst);return n,current()
  assert candidates,(n,pos(),'No crossing',c)
  _,old,new=min(candidates);walk(old);k={'up':64,'down':128,'left':32,'right':16}[d];frames(16,k);frames(180)
  assert current()==dst,('Wrong border',n,c,current(),pos())
  return n,current()
 visited=set();transitions=[];tested_edges=set();water_entries=0
-def go(dst):
- for _ in range(60):
-  cur=current()
-  if cur==dst:return
-  q=deque([cur]);prev={cur:None};edges={}
+route_cache={}
+def ports(n,start):
+ key=(n,start)
+ if key in route_cache:return route_cache[key]
+ result=[];w,h=size[n]
+ for i,e in enumerate(maps[n]['warp_events']):
+  x,y=e['x'],e['y'];approaches=[(x,y+1),(x-1,y),(x+1,y),(x,y-1)]
+  if any((p==start or p not in {(v['x'],v['y']) for v in maps[n]['warp_events']}) and safe(n,p) and local_path(n,start,p) is not None for p in approaches):
+   other=ids[e['dest_map']];back=maps[other]['warp_events'][int(e['dest_warp_id'])]
+   result.append((('warp',i),(other,(back['x'],back['y']))))
+ for c in maps[n]['connections'] or []:
+  other=ids[c['map']];dw,dh=size[other];d=c['direction']
+  for t in range(w if d in ['up','down'] else h):
+   old=(t,0) if d=='up' else (t,h-1) if d=='down' else (0,t) if d=='left' else (w-1,t)
+   new=(t-c['offset'],dh-1) if d=='up' else (t-c['offset'],0) if d=='down' else (dw-1,t-c['offset']) if d=='left' else (0,t-c['offset'])
+   if old not in {(e['x'],e['y']) for e in maps[n]['warp_events']} and safe(other,new) and local_path(n,start,old) is not None:
+    result.append((('border',c),(other,new)));break
+ route_cache[key]=result;return result
+def go(dst,target_warp=None):
+ # Canonical Bell floors have disjoint walkway components and same-map pads.
+ # Plan by entry position rather than assuming every exit on a map is reachable.
+ for _ in range(160):
+  initial=(current(),pos());q=deque([initial]);prev={initial:None};edges={};goal=None
   while q:
-   n=q.popleft()
-   if n==dst:break
-   for kind,e in [('border',c) for c in maps[n]['connections'] or []]+[('warp',i) for i in range(len(maps[n]['warp_events']))]:
-    other=ids[e['map']] if kind=='border' else ids[maps[n]['warp_events'][e]['dest_map']]
-    if other not in prev:prev[other]=n;edges[other]=(kind,e);q.append(other)
-  assert dst in prev,('No map route',cur,dst)
-  v=dst
-  while prev[v]!=cur:v=prev[v]
+   state=q.popleft();n,start=state;out=ports(n,start)
+   if n==dst and (target_warp is None or any(e==('warp',target_warp) for e,_ in out)):goal=state;break
+   for edge,to in out:
+    if to not in prev:prev[to]=state;edges[to]=edge;q.append(to)
+  assert goal is not None,('No traversable map route',initial,dst,target_warp)
+  if goal==initial:return
+  v=goal
+  while prev[v]!=initial:v=prev[v]
   kind,e=edges[v];a,b=border(e) if kind=='border' else warp(e);transitions.append([a,b,kind]);visited.add(b)
  raise AssertionError(('Too many transitions',dst))
+
 plans=json.loads((R/'crossroads/johto/manifest.json').read_text())['planned'];targets=[p['name'] for p in plans if p['name'] in names and (not args.cluster or p['cluster']==args.cluster)]
 if args.targets is not None:
  targets=[n for n in args.targets.split(',') if n];assert all(n in names for n in targets)
@@ -139,11 +176,12 @@ for n in targets:
  go(n);visited.add(n)
  if maps[n]['map_type'] in ['MAP_TYPE_CITY','MAP_TYPE_ROUTE'] and safe(n,(size[n][0]//2,size[n][1]//2)):
   walk((size[n][0]//2,size[n][1]//2))
+ if n=='EcruteakCity_BellTower_Roof':walk((15,17))
  assert lib.emu_image(str(args.output/f'{n}.png').encode())
  if n in ['IcePath_3F','BlackthornCity','CianwoodCity','JohtoRoute41','NewBarkLab','NewBarkTown','GoldenrodCity_PokemonCenter_1F']:
   snap=args.output/(n+'.snapshot');lib.emu_state(str(snap).encode(),0);snap.with_suffix('.sha256').write_text(hashlib.sha256((R/'pokeemerald.gba').read_bytes()).hexdigest())
  if 'PokemonCenter_1F' in n:
-  walk((7,4));write(read('gPlayerPartyPtr')+86,1,2);frames(1,64);frames(20);key(1);frames(180)
+  nurse=next(o for o in maps[n]['object_events'] if 'NURSE' in o.get('local_id',''));walk((nurse['x'],nurse['y']+2));write(read('gPlayerPartyPtr')+86,1,2);frames(1,64);frames(20);key(1);frames(180)
   for _ in range(8):key(1);frames(180)
   for _ in range(5):key(2);frames(60)
   assert read(read('gPlayerPartyPtr')+86,2)==read(read('gPlayerPartyPtr')+88,2)>0
@@ -153,7 +191,7 @@ for n in targets:
   for index,e in enumerate(maps[n]['warp_events']):
    other=ids[e['dest_map']];back=int(e['dest_warp_id']);ident=tuple(sorted([(n,index),(other,back)]))
    if ident in tested_edges:continue
-   go(n);a,b=warp(index);transitions.append([a,b,'warp']);a,b=warp(back);transitions.append([a,b,'warp'])
+   go(n,index);a,b=warp(index);transitions.append([a,b,'warp']);a,b=warp(back);transitions.append([a,b,'warp'])
    assert current()==n;tested_edges.add(ident)
   for c in maps[n]['connections'] or []:
    other=ids[c['map']];ident=tuple(sorted([(n,-1),(other,-1)]))

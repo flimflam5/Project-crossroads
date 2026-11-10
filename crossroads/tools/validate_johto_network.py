@@ -60,13 +60,27 @@ for n,m in maps.items():
    left_tile,right_tile=raw[n][y*w+x],raw[dst][yy*dw+xx]
    if not (left_tile&0xc00 or right_tile&0xc00) and left_tile>>12==right_tile>>12:matched.append(t)
   assert matched,('No matching terrain/elevation across seam',n,c)
+from hgss_tower_validation import validate_towers
+from johto_movement import next_position
+reviewed=validate_towers()
+from hgss_room_validation import validate_rooms
+from hgss_service_validation import validate_services
+from hgss_gate_validation import validate_gates
+reviewed|=validate_rooms()|validate_services()|validate_gates()
+def behavior(n,x,y):
+ w,h=sizes[n]
+ if not(0<=x<w and 0<=y<h):return None
+ t=raw[n][y*w+x]&1023;l=layouts[maps[n]['layout']]
+ return lookup[l['primary_tileset'] if t<512 else l['secondary_tileset']][t%512]&255
 # Traversal graph includes the explicitly labeled session-only survey Surf mode.
 start=('OlivineCity',12,13);q=deque([start]);seen={start}
 while q:
  n,x,y=q.popleft();w,h=sizes[n];m=maps[n]
  moves=[]
  for dx,dy,d in [(1,0,'right'),(-1,0,'left'),(0,1,'down'),(0,-1,'up')]:
-  xx,yy=x+dx,y+dy;dst=n
+  step=next_position(x,y,dx,dy,lambda a,b:behavior(n,a,b))
+  if step is None:continue
+  xx,yy=step;dst=n
   if not(0<=xx<w and 0<=yy<h):
    c=next((c for c in m['connections'] or [] if c['direction']==d),None)
    if c is None:continue
@@ -93,11 +107,15 @@ for n in names:
 # A global warp graph can conceal a trapped cave-mouth pocket. Require local
 # exits to connect without leaving/re-entering the same map through another floor.
 for n,m in maps.items():
+ if n in reviewed:continue # Canonical branched floors checked by exact graph and every-tile escape.
  if not m['warp_events']:continue
  w,h=sizes[n];start=(m['warp_events'][0]['x'],m['warp_events'][0]['y']);local={start};todo=deque([start]);doors={(e['x'],e['y']) for e in m['warp_events']}
  while todo:
   x,y=todo.popleft()
-  for xx,yy in [(x+1,y),(x-1,y),(x,y+1),(x,y-1)]:
+  for dx,dy in [(1,0),(-1,0),(0,1),(0,-1)]:
+   point=next_position(x,y,dx,dy,lambda a,b:behavior(n,a,b))
+   if point is None:continue
+   xx,yy=point
    if not(0<=xx<w and 0<=yy<h) or (xx,yy) in local or (xx,yy) in actors[n]:continue
    if raw[n][yy*w+xx]&0xc00 and (xx,yy) not in doors:continue
    local.add((xx,yy));todo.append((xx,yy))
@@ -108,6 +126,7 @@ for h in heals:
   assert (ids[h['map']],h['x'],h['y']) in seen,('Unsafe heal',h)
   center=ids[h['respawn_map']];assert 'CableClub_OnResume' in (R/f'data/maps/{center}/scripts.inc').read_text()
   assert any(o.get('local_id')==h['respawn_npc'] for o in maps[center]['object_events'])
+  assert (center,h.get('respawn_x',7),h.get('respawn_y',4)) in seen,('Unsafe nurse arrival',h)
 for p in manifest['planned']:
  if p['name'] in names:assert locations[p['name']]==(p['map_group'],p['map_num']),('ID shifted',p)
 ops=(R/'include/constants/opponents.h').read_text();assert '#define MAX_TRAINERS_COUNT_EMERALD 864' in ops
@@ -120,7 +139,7 @@ if a.built:
  sec=(R/'include/constants/region_map_sections.h').read_text();values=re.findall(r'^\s*(MAPSEC_\w+),',sec,re.M)
  assert values.index('MAPSEC_NONE')==213 and len(values)==253
  assert len((R/'pokeemerald.gba').read_bytes())<=32*1024*1024
-report=dict(maps=len(names),reachable_tiles=len(seen),warps=sum(len(m['warp_events']) for m in maps.values()),connections=sum(len(m['connections'] or []) for m in maps.values()),centers=sum('PokemonCenter' in n for n in names),mode='structural survey-water-enabled graph; not emulator playtesting')
+report=dict(maps=len(names),reachable_tiles=len(seen),warps=sum(len(m['warp_events']) for m in maps.values()),connections=sum(len(m['connections'] or []) for m in maps.values()),centers=sum(n.endswith('PokemonCenter_1F') for n in names),mode='structural survey-water-enabled graph; not emulator playtesting')
 (R/'build').mkdir(exist_ok=True);(R/'build/johto-topology-validation.json').write_text(json.dumps(report,indent=2)+'\n')
 print('Johto valid IDs, whole tile/warp/border graph, interaction access, services and safe respawns: PASS',report)
 
