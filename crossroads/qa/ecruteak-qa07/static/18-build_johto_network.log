@@ -1,0 +1,10 @@
+Johto atlas: 53 labeled nodes, player positions for 161 maps
+HGSS-directed Ecruteak city generated; owner visual acceptance remains separate.
+Projected 13 canonical tower floors; missing10F/roof appended. Visual/runtime review required.
+Canonical house/theater rooms generated; source rewards/story omitted; runtime/visual review required.
+HGSS service footprints/Gym bridge generated; no DS online/story/badge implementation claimed.
+HGSS west/east gatehouses and road-width reciprocal portals registered; no existing IDs removed.
+Station/corridor/Bellchime Trail registered; existing Bell floor IDs/stairs retained. Full visual reference review pending.
+Canonical Violet ground/doors and twelve interior/gate/floor maps generated; runtime/visual QA required.
+Eight owner Gym exteriors fitted into private city resources; all legacy IDs retained.
+Johto cluster west : 161 maps registered; 7 new Centers; IDs preserved

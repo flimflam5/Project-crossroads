@@ -1,0 +1,5 @@
+HGSS tower contracts, canonical stair/pad graph, directed jumps and escape from every public tile: PASS 2430 tiles
+Canonical Ecruteak houses/theater, preserved actors/IDs, furnished room access, performance lanes and every-tile escape: PASS 3
+HGSS Center/Mart/Gym reference paths, accepted service/practice scripts, safe floor and scripted fall coverage: PASS 556 public tiles
+Canonical west/east gate endpoints, all six aliases per road, temporary coordinate portals and safe floor: PASS
+All landmark/farm/Gym doors, indoor access, original graphics, tile limits, approved roster and unchanged flag space: PASS

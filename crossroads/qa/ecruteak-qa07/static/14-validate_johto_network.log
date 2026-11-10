@@ -1,0 +1,7 @@
+HGSS tower contracts, canonical stair/pad graph, directed jumps and escape from every public tile: PASS 2430 tiles
+Canonical Ecruteak houses/theater, preserved actors/IDs, furnished room access, performance lanes and every-tile escape: PASS 3
+HGSS Center/Mart/Gym reference paths, accepted service/practice scripts, safe floor and scripted fall coverage: PASS 556 public tiles
+Canonical west/east gate endpoints, all six aliases per road, temporary coordinate portals and safe floor: PASS
+Canonical Violet door/stair coordinates, retained map/save IDs, exact neighbor changes and every-tile escape: PASS 3068 tiles in 13 maps
+Johto valid IDs, whole tile/warp/border graph, interaction access, services and safe respawns: PASS {'maps': 161, 'reachable_tiles': 71265, 'warps': 381, 'connections': 66, 'centers': 10, 'mode': 'structural survey-water-enabled graph; not emulator playtesting'}
+Explicit QA kit: one guarded level100 flyer, shoes only, no badge/starter changes: PASS

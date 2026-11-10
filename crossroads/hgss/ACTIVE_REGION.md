@@ -1,3 +1,12 @@
+# Active scope override — Ecruteak QA07 only
+
+The newest owner directive pauses Johto expansion. Branch
+feature/ecruteak-dependability-qa07 continues QA06 9cd6a73717; source fixes2daea5e0aa.
+Current work/results/evidence/remaining are in ECRUTEAK_QA07.md and
+../RELEASE_ECRUTEAK_QA07.md. Keep the accepted exterior/custom Gym/IDs/saves.
+Do not continue Routes31/32/36 or another city until owner review. The prior
+regional checkpoint below is retained as history, not the active next instruction.
+
 # Active Johto reconstruction — QA06 source checkpoint
 
 Branch: feature/hgss-johto-gym-integration-01, based on526829f9674905d4d7efde83c65af65d31ebe3d6.

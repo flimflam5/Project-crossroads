@@ -37,6 +37,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Fetch immutable QA06 visual baseline
+        run: git fetch --no-tags --depth=1 origin 9cd6a73717c1bfd124967b7e485740aa5b25d651
+
       - name: Install binutils
         run: |
           sudo apt-get update

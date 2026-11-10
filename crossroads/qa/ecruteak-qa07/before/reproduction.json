@@ -1,0 +1,136 @@
+{
+  "rom_sha256": "ffe8f84c8dee1e688d5e8f7615078a03953c51e0a337c2036fd4fa6a8bf820cb",
+  "records": [
+    {
+      "label": "ordinary-paving-south",
+      "map": "EcruteakCity",
+      "position": [
+        40,
+        61
+      ],
+      "arrow": {
+        "sprite": 61,
+        "visible": true,
+        "behavior": 101
+      }
+    },
+    {
+      "label": "canopy-entry",
+      "map": "EcruteakCity",
+      "position": [
+        26,
+        42
+      ],
+      "arrow": {
+        "sprite": 61,
+        "visible": false,
+        "behavior": 0
+      }
+    },
+    {
+      "label": "trunk-from-north",
+      "map": "EcruteakCity",
+      "position": [
+        26,
+        42
+      ],
+      "arrow": {
+        "sprite": 61,
+        "visible": false,
+        "behavior": 0
+      }
+    },
+    {
+      "label": "trunk-west",
+      "map": "EcruteakCity",
+      "position": [
+        25,
+        43
+      ],
+      "arrow": {
+        "sprite": 61,
+        "visible": false,
+        "behavior": 0
+      }
+    },
+    {
+      "label": "trunk-east",
+      "map": "EcruteakCity",
+      "position": [
+        28,
+        43
+      ],
+      "arrow": {
+        "sprite": 61,
+        "visible": false,
+        "behavior": 0
+      }
+    },
+    {
+      "label": "trunk-south",
+      "map": "EcruteakCity",
+      "position": [
+        26,
+        44
+      ],
+      "arrow": {
+        "sprite": 61,
+        "visible": false,
+        "behavior": 0
+      }
+    },
+    {
+      "label": "house-west-gutter",
+      "map": "EcruteakCity",
+      "position": [
+        20,
+        43
+      ],
+      "arrow": {
+        "sprite": 61,
+        "visible": false,
+        "behavior": 0
+      }
+    },
+    {
+      "label": "house-west-base",
+      "map": "EcruteakCity",
+      "position": [
+        19,
+        44
+      ],
+      "arrow": {
+        "sprite": 61,
+        "visible": false,
+        "behavior": 0
+      }
+    },
+    {
+      "label": "house-front-wall",
+      "map": "EcruteakCity",
+      "position": [
+        22,
+        46
+      ],
+      "arrow": {
+        "sprite": 61,
+        "visible": false,
+        "behavior": 0
+      }
+    },
+    {
+      "label": "station-front-wall",
+      "map": "EcruteakCity",
+      "position": [
+        37,
+        26
+      ],
+      "arrow": {
+        "sprite": 61,
+        "visible": false,
+        "behavior": 0
+      }
+    }
+  ],
+  "setup": "Copied old battery; normal Continue and controller travel. Existing harness uses temporary encounter suppression and actual survey desk, no map/warp writes."
+}

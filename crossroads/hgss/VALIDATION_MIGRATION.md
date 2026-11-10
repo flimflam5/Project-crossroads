@@ -70,3 +70,34 @@ saves through the normal menu, then cold-boots/Continues and requires migration.
 then exits before its obsolete pre-HGSS hardcoded western tour. The replacement
 controller tour follows current JSON/native ledges and tests the complete reviewed
 Ecruteak graph. A passing short starter test is never reported as a region playtest.
+
+
+## QA07 semantic ground, occlusion and immutable preservation
+
+The old nonzero-behavior-at-every-warp assertion rejected legitimate neutral road
+coordinate portals. Its replacement permits MB_NORMAL only with an exact existing
+West/East City/Route gate trigger at that point, VAR_TEMP_0=0 and an actual script
+warp to the declared destination/index. Canonical gate endpoints, all aliases,
+reciprocity and every-floor escape still run separately. Ordinary blank doors or
+stairs still fail. No assertion is removed merely to make the build pass.
+
+The older15-warp city projection now explicitly verifies then removes only QA06's
+paired Gym alias for the historical comparison. Three appended private-door labels
+must exactly match their independent contract before projecting back to the older
+BG-event list. Existing actors/scripts/coordinates and every other field remain pinned.
+
+QA07's independent immutable9cd6a73717 contract adds exact map/layout/heal IDs,
+all27 map metadata records (only those three appended BG labels permitted), all
+interior raw bytes,6111 unaffected static exterior cells, expected ground-plane
+wall/door/trunk footprints and leaf-only foreground masks. The unused shared
+buffer tile is the sole metadata/graphic exception; all other General tiles and
+animation slots remain identical. CI fetches the specific old commit for pixel
+comparisons even when actions/checkout is shallow; no engine history upgrade occurs.
+
+Controller tests additionally require36 known trunk approaches and19 recorded
+arrow/canopy/facade cases. The native423-leaf-pixel check detects Joe over leaves,
+which raw blocked-edge sweeps missed. The broader500-edge sweep remains; neither
+that count nor the new pixel checks claims owner visual acceptance. Shop testing
+was corrected to acknowledge its real welcome dialogue before requiring the actual
+ShopMenu task; the purchase/price assertion was retained and passed. Smoke tools
+now accept isolated output paths, preserving old evidence rather than overwriting it.

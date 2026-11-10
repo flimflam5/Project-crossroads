@@ -1,3 +1,18 @@
+# Ecruteak QA07 terrain and preservation
+
+General0x24 has south-arrow-warp behavior: never use it for ordinary city seam
+paving. Private unused metatile0x1ff is neutral; its brick uses General palette3
+and graphic slot1, independently proven unused by all original General metatiles
+and below animation slots432–511. Shared General resources are unchanged.
+The three neighboring layouts retain IDs/dimensions and only swap their primary
+pointer to the compatible private buffer clone. No save layout/engine constants change.
+General tree leaves were bottom-layer pixels: the private canopy now has an
+additional leaf-only foreground mask; roots still block, static art is unchanged.
+Source Ecruteak authoring feeds the owner-Gym packer; immutable QA06 contracts
+separately pin non-Gym appearance/events/IDs. CI shallow clones explicitly fetch
+QA06's pinned commit for pixel comparisons. See hgss/ECRUTEAK_QA07.md and
+hgss/VALIDATION_MIGRATION.md for tests/deviations; ROM/RAM measurements are there.
+
 # QA06 resource and generator ownership
 
 Eight custom Gyms are packed by build_eight_gym_integration.py into private

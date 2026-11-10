@@ -1,0 +1,8 @@
+Eight owner asset checksums/pixel identity, all non-Gym pixels/collision/events, stable IDs and reciprocal two-door pairs: PASS 807 legacy metatiles
+HGSS tower contracts, canonical stair/pad graph, directed jumps and escape from every public tile: PASS 2430 tiles
+Canonical Ecruteak houses/theater, preserved actors/IDs, furnished room access, performance lanes and every-tile escape: PASS 3
+HGSS Center/Mart/Gym reference paths, accepted service/practice scripts, safe floor and scripted fall coverage: PASS 556 public tiles
+Canonical west/east gate endpoints, all six aliases per road, temporary coordinate portals and safe floor: PASS
+Canonical Violet door/stair coordinates, retained map/save IDs, exact neighbor changes and every-tile escape: PASS 3068 tiles in 13 maps
+HGSS Ecruteak stable IDs, reciprocal target positions, safe entire ground component, preserved animation slots and compatible buffers: PASS. Reference/visual completion is NOT asserted.
+Visual repair scope, stable map/save contracts, complete benches, layers/door behavior: PASS. Owner visual QA remains pending.

@@ -1,0 +1,62 @@
+{
+  "version": "BlackLedger-Ecruteak-QA07-A1",
+  "game_source_commit": "2daea5e0aace6c23fa7159bec8e85431f1f49609",
+  "rom_sha256": "1553ad2872e5e0b4a5c5d9fe78d47b73d8f7a541ce294e897db20ded8a6e21c3",
+  "prior_source_commit": "9cd6a73717c1bfd124967b7e485740aa5b25d651",
+  "prior_rom_sha256": "ffe8f84c8dee1e688d5e8f7615078a03953c51e0a337c2036fd4fa6a8bf820cb",
+  "build": {
+    "result": "PASS",
+    "ROM_used_bytes": 30039792,
+    "ROM_capacity_bytes": 33554432,
+    "EWRAM_used_bytes": 226448,
+    "IWRAM_used_bytes": 28392
+  },
+  "static": {
+    "result": "PASS",
+    "checks": 30,
+    "manifest": "static/results.json"
+  },
+  "emulator": {
+    "result": "PASS",
+    "method": "Automated controller input in mGBA0.10.5; native240x160 screenshots visually inspected by development agent. No claim of human manual playthrough.",
+    "target_maps": 27,
+    "transitions": 288,
+    "roundtrip_edges": 63,
+    "exterior_blocked_edges": 500,
+    "independent_trunk_approaches": 36,
+    "recorded_repro_cases": 19,
+    "tests": [
+      "all declared doors/stairs/pads and three city connections both ways",
+      "all six freestanding trees from accessible sides",
+      "wall probes on ten facade groups; house roof overhang preserved",
+      "all three private-door messages",
+      "five performers move, return and release controls",
+      "actual one-Poke-Ball purchase at original price/stock",
+      "PC menu/cancel with unchanged party/box bytes",
+      "nurse healing, two bridge falls, Morty practice loss and local whiteout heal",
+      "house/Center Save and cold Continue, old cached-layout copied fixture",
+      "real old0.8 battery Continue at Bell9F7,3",
+      "Fly cancel, all ten landings, exact Joe departure/arrival VRAM, postflight Save/Continue",
+      "Joe Surf four directions, Mach/Acro bikes, wheelie, fishing/return",
+      "three starter rescues/met origins/duplication guards",
+      "normal title/Start/NewGame handoff/reset"
+    ],
+    "fixtures": [
+      "Source battery read only, all saved test copies ignored under build/",
+      "Temporary encounter suppression in emulator RAM",
+      "Actual desk opt-in for session-only water access",
+      "1HP and stale cached layout on private fixtures only",
+      "Bike/rod test gear in private RAM; existing production QA kit claimed through its actual guarded script",
+      "Starter suite uses debugger initialization to skip unchanged legacy intro, then actual rescue/controller scripts"
+    ],
+    "not_tested": [
+      "owner Delta QA07 visual/collision acceptance",
+      "identity/location of newly reported green-roof example without current screenshot/ROM reply",
+      "every furniture edge on every interior with individual controller input",
+      "Dive/watering/advanced bike tricks/contests/multiplayer",
+      "replacement story prologue; existing original Birch NewGame introduction remains outside this city pass"
+    ]
+  },
+  "owner_acceptance": "PENDING; geographic expansion paused",
+  "published_log_normalization": "Trailing spaces removed from compiler command lines only; original log retained in /tmp/qa07-city-build.log. Messages/status/contents otherwise preserved."
+}

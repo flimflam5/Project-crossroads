@@ -1,0 +1,233 @@
+[
+  {
+    "command": [
+      "validate_opening"
+    ],
+    "exit_code": 0,
+    "log": "build/qa07-static/0-validate_opening.log"
+  },
+  {
+    "command": [
+      "validate_olivine",
+      "--built"
+    ],
+    "exit_code": 0,
+    "log": "build/qa07-static/1-validate_olivine.log"
+  },
+  {
+    "command": [
+      "validate_olivine_interiors"
+    ],
+    "exit_code": 0,
+    "log": "build/qa07-static/2-validate_olivine_interiors.log"
+  },
+  {
+    "command": [
+      "validate_route39"
+    ],
+    "exit_code": 0,
+    "log": "build/qa07-static/3-validate_route39.log"
+  },
+  {
+    "command": [
+      "validate_western_johto",
+      "--built"
+    ],
+    "exit_code": 0,
+    "log": "build/qa07-static/4-validate_western_johto.log"
+  },
+  {
+    "command": [
+      "validate_joe_assets"
+    ],
+    "exit_code": 0,
+    "log": "build/qa07-static/5-validate_joe_assets.log"
+  },
+  {
+    "command": [
+      "validate_joe_special_assets"
+    ],
+    "exit_code": 0,
+    "log": "build/qa07-static/6-validate_joe_special_assets.log"
+  },
+  {
+    "command": [
+      "validate_black_ledger_intro"
+    ],
+    "exit_code": 0,
+    "log": "build/qa07-static/7-validate_black_ledger_intro.log"
+  },
+  {
+    "command": [
+      "validate_title_music"
+    ],
+    "exit_code": 0,
+    "log": "build/qa07-static/8-validate_title_music.log"
+  },
+  {
+    "command": [
+      "validate_visual_repairs"
+    ],
+    "exit_code": 0,
+    "log": "build/qa07-static/9-validate_visual_repairs.log"
+  },
+  {
+    "command": [
+      "validate_area_completion"
+    ],
+    "exit_code": 0,
+    "log": "build/qa07-static/10-validate_area_completion.log"
+  },
+  {
+    "command": [
+      "validate_johto_fly"
+    ],
+    "exit_code": 0,
+    "log": "build/qa07-static/11-validate_johto_fly.log"
+  },
+  {
+    "command": [
+      "validate_hgss_ecruteak"
+    ],
+    "exit_code": 0,
+    "log": "build/qa07-static/12-validate_hgss_ecruteak.log"
+  },
+  {
+    "command": [
+      "validate_ecruteak_qa07"
+    ],
+    "exit_code": 0,
+    "log": "build/qa07-static/13-validate_ecruteak_qa07.log"
+  },
+  {
+    "command": [
+      "validate_johto_network",
+      "--built"
+    ],
+    "exit_code": 0,
+    "log": "build/qa07-static/14-validate_johto_network.log"
+  },
+  {
+    "command": [
+      "build_hgss_ecruteak_assets",
+      "--check"
+    ],
+    "exit_code": 0,
+    "log": "build/qa07-static/15-build_hgss_ecruteak_assets.log"
+  },
+  {
+    "command": [
+      "build_hgss_ecruteak_assets",
+      "--variant",
+      "bell",
+      "--check"
+    ],
+    "exit_code": 0,
+    "log": "build/qa07-static/16-build_hgss_ecruteak_assets.log"
+  },
+  {
+    "command": [
+      "hgss_ecruteak_terrain",
+      "--check"
+    ],
+    "exit_code": 0,
+    "log": "build/qa07-static/17-hgss_ecruteak_terrain.log"
+  },
+  {
+    "command": [
+      "build_johto_network",
+      "--through",
+      "west",
+      "--check"
+    ],
+    "exit_code": 0,
+    "log": "build/qa07-static/18-build_johto_network.log"
+  },
+  {
+    "command": [
+      "build_eight_gym_integration",
+      "--check"
+    ],
+    "exit_code": 0,
+    "log": "build/qa07-static/19-build_eight_gym_integration.log"
+  },
+  {
+    "command": [
+      "build_hgss_violet_assets",
+      "--check"
+    ],
+    "exit_code": 0,
+    "log": "build/qa07-static/20-build_hgss_violet_assets.log"
+  },
+  {
+    "command": [
+      "build_joe_special_assets",
+      "--check"
+    ],
+    "exit_code": 0,
+    "log": "build/qa07-static/21-build_joe_special_assets.log"
+  },
+  {
+    "command": [
+      "build_black_ledger_title",
+      "--check"
+    ],
+    "exit_code": 0,
+    "log": "build/qa07-static/22-build_black_ledger_title.log"
+  },
+  {
+    "command": [
+      "build_olivine_interiors",
+      "--check"
+    ],
+    "exit_code": 0,
+    "log": "build/qa07-static/23-build_olivine_interiors.log"
+  },
+  {
+    "command": [
+      "build_olivine_layout",
+      "--check"
+    ],
+    "exit_code": 0,
+    "log": "build/qa07-static/24-build_olivine_layout.log"
+  },
+  {
+    "command": [
+      "build_route39_layout",
+      "--check"
+    ],
+    "exit_code": 0,
+    "log": "build/qa07-static/25-build_route39_layout.log"
+  },
+  {
+    "command": [
+      "build_western_johto_layouts",
+      "--check"
+    ],
+    "exit_code": 0,
+    "log": "build/qa07-static/26-build_western_johto_layouts.log"
+  },
+  {
+    "command": [
+      "build_hgss_temple_assets",
+      "--check"
+    ],
+    "exit_code": 0,
+    "log": "build/qa07-static/27-build_hgss_temple_assets.log"
+  },
+  {
+    "command": [
+      "build_ecruteak_npc_assets",
+      "--check"
+    ],
+    "exit_code": 0,
+    "log": "build/qa07-static/28-build_ecruteak_npc_assets.log"
+  },
+  {
+    "command": [
+      "check_mapjson_outputs"
+    ],
+    "exit_code": 0,
+    "log": "build/qa07-static/29-check_mapjson_outputs.log"
+  }
+]

@@ -1,3 +1,13 @@
+# Ecruteak QA07 completion review
+
+Use [the27-map checklist](hgss/ECRUTEAK_QA07.md) and its machine-readable
+[evidence manifest](hgss/ecruteak-qa07-checklist.json) for current Ecruteak status.
+All intended doors/stairs/connections were exercised both ways in mGBA; furnished
+rooms/services inspected. Known reproduced ground-arrow/leaf overlap defects are
+fixed. Owner Delta visual acceptance and the specific current green-roof report
+are still open. Do not call Ecruteak finally complete or move to another region.
+Older tables below are historical scope; structural connectivity is not visual QA.
+
 # Current QA06 scope
 
 Eight owner Gym facades; Violet exterior, two houses, school, Center/basement,

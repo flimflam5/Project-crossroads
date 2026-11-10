@@ -1,3 +1,14 @@
+# Current Ecruteak QA07 testing
+
+Use [RELEASE_ECRUTEAK_QA07.md](RELEASE_ECRUTEAK_QA07.md) for Delta import/checklist,
+and [hgss/ECRUTEAK_QA07.md](hgss/ECRUTEAK_QA07.md) for exact scope and limitations.
+Use private copied battery saves through normal Continue. No owner manual QA07
+pass is recorded. Native clips/screenshots and exact test results are in
+qa/ecruteak-qa07. The new semantic regression checks native leaf pixels and arrow
+visibility; the blocked-edge count alone is not visual acceptance.
+All27 Ecruteak map/warp/room entries have an individual review row. Geographic
+expansion stays paused until owner review. Earlier test notes below are historical.
+
 # Current QA06 testing
 
 Use RELEASE_HGSS_QA06.md for the current Delta checklist and hgss/VIOLET_QA06.md

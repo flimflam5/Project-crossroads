@@ -1,3 +1,12 @@
+# Ecruteak QA07 current checkpoint
+
+Owner scope is Ecruteak only. The active review is ECRUTEAK_QA07.md with per-map
+JSON and native qa/ecruteak-qa07 evidence. Reproduced arrows/leaf overlap repaired;
+all27 maps/63 round-trip edge pairs checked in an actual Emerald build/mGBA.
+Owner visual acceptance and the unmatched current green-roof report remain open.
+Do not call the city accepted or resume regional expansion. Older QA05 notes below
+remain historical evidence of preserved work.
+
 # Ecruteak QA05 checkpoint
 
 Branch feature/hgss-ecruteak-reconstruction-01. QA04 exterior preserved; Joe field
