@@ -2,6 +2,7 @@
 
 Branch feature/hgss-ecruteak-reconstruction-01. QA04 exterior preserved; Joe field
 state checkpoint fe201d2174 precedes the Ecruteak floor/service reconstruction.
+Gameplay/evidence checkpoint: a9d0a5fdc3.
 Current deliverable scope/tests/known limitations are in ECRUTEAK_QA05.md and
 ../RELEASE_HGSS_QA05.md. Source commit/checksum are in the artifact build-info.json.
 
