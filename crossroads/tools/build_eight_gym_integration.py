@@ -69,6 +69,7 @@ def generate(check=False):
  def write(p,b):
   p=R/p
   if isinstance(b,str):b=b.encode()
+  if p.suffix=='.pal':b=b.replace(b'\r\n',b'\n').replace(b'\n',b'\r\n')
   if check:assert p.exists() and p.read_bytes()==b,('Regenerate eight Gym integration',str(p))
   elif not p.exists() or p.read_bytes()!=b:p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(b)
  def js(p,v):write(p,json.dumps(v,indent=2)+'\n')

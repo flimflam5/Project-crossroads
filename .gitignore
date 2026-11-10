@@ -67,3 +67,7 @@ tools/aif2pcm/aif2pcm
 __pycache__
 .map_version
 /build-info.json
+
+# These are supplied source assets, not generated compiler output.
+!crossroads/art/eight_gyms_v1/assets/*/tiles.4bpp
+!crossroads/art/eight_gyms_v1/assets/*/palette.gbapal

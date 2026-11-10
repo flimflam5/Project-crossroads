@@ -12,6 +12,7 @@ def generate(check=False):
  def write(p,b):
   if isinstance(b,str):b=b.encode()
   p=R/p
+  if p.suffix=='.pal':b=b.replace(b'\r\n',b'\n').replace(b'\n',b'\r\n')
   if check:assert p.exists() and p.read_bytes()==b,('Regenerate Violet assets',str(p))
   elif not p.exists() or p.read_bytes()!=b:p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(b)
  P=R/'data/tilesets/primary/hgss_violet';S=R/'data/tilesets/secondary/hgss_violet';general=R/'data/tilesets/primary/general';native=json.loads((R/'crossroads/hgss/art/native-manifest.json').read_text());gm=list(struct.unpack('<4096H',(general/'metatiles.bin').read_bytes()));ga=list(struct.unpack('<512H',(general/'metatile_attributes.bin').read_bytes()));gm[0x1ff*8:0x200*8]=[0x30aa,0x30ab,0x30aa,0x30ab,0,0,0,0];ga[0x1ff]=0x1000;terrain=set(native['terrain'])|{0x1ff,0x170,0x171,0x1d4,0x1d5,0x1dc,0x1dd,0x24,0x71,0x75,0xc6,0xa7};protected=set(range(432,512))|{v&1023 for id in terrain for v in gm[id*8:id*8+8]};free=[i for i in range(512,1024)]+[i for i in range(432) if i not in protected];sheets=[Image.open(general/'tiles.png').copy(),Image.new('P',(128,256))];sheets[1].putpalette(sheets[0].getpalette());images={};meta=[];attrs=[];spec={};unique={};cursor=0

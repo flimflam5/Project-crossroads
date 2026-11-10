@@ -98,7 +98,7 @@ for _ in range(12):key(1);frames(180)
 close();assert read(read('gPlayerPartyPtr')+86,2)==read(read('gPlayerPartyPtr')+88,2)>1;image('nurse-healed');save_continue('center-normal-save')
 go('VioletCity_Residence');walk((4,6));save_continue('house-normal-save')
 enable_survey();go('VioletCity');walk((31,44));walk((35,20));assert read('gPlayerAvatar',1)&8;save_continue('surf-normal-save');assert read('gPlayerAvatar',1)&8
-walk((31,44));assert not read('gPlayerAvatar',1)&8
+walk((35,23));assert not read('gPlayerAvatar',1)&8;dry_walk((31,44))
 # Synthetic legacy walking save on a coordinate flooded by new canonical pond.
 target=(31,20);assert d['raw']['VioletCity'][target[1]*64+target[0]]>>12==1
 write(sb(),target[0],2);write(sb()+2,target[1],2)

@@ -2037,3 +2037,11 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/EcruteakCity_EastGate/scripts.inc"
 
 	.include "crossroads/scripts/hgss_gates.inc"
+
+	.include "data/maps/VioletCity_PokemonCenter_B1F/scripts.inc"
+
+	.include "data/maps/VioletCity_WestGate/scripts.inc"
+
+	.include "data/maps/VioletCity_EastGate/scripts.inc"
+
+	.include "crossroads/scripts/hgss_violet.inc"
