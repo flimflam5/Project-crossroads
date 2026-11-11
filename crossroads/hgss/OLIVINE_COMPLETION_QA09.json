@@ -1,0 +1,4209 @@
+{
+  "version": "qa09-olivine-b11-emulator-verified",
+  "scope": "Olivine City only, including canonical buildings, services, lighthouse/port maps and four preserved Black Ledger additions",
+  "source_revision": "489c404346f572aefb6856b3dd48a9b364a08ceb",
+  "rom_sha256": "df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4",
+  "identity_status": "Frozen BUILD11 source and actual delivery-byte identity verified; all final runtime reports refer to this checksum",
+  "canonical_enterable_buildings_expected": 9,
+  "canonical_enterable_buildings_registered": 9,
+  "native_maps_expected": 24,
+  "native_maps_registered": 24,
+  "all_intended_buildings_present": true,
+  "completion_claim": "All intended Olivine physical city/interior/landmark content in this approved scope is implemented, compiled, source checked and final-ROM controller verified. No known functional defect remains in the exercised scope. Owner Delta visual acceptance is pending; no100% owner-acceptance or pixel-identity claim.",
+  "review_authority": [
+    "Actual HGSS city mosaic",
+    "Pinned pret source geometry/prop/permission/warp facts",
+    "Actual trade-house/cafe/Center/Mart/Gym and lighthouse/port screenshots",
+    "Owner-approved original Gym and four accepted Black Ledger locations"
+  ],
+  "reference_files": {
+    "city_mosaic": "https://archives.bulbagarden.net/wiki/File:Olivine_City_HGSS.png",
+    "cafe_raster": "https://www.serebii.net/heartgoldsoulsilver/gym/gym6-r.png",
+    "cafe_sha256": "eae47433799fbd97549e8e58df5b47f057bbd608fada5161243b1d1175bbc647",
+    "rooms": "canonical_events/olivine-interior-geometry.json",
+    "outdoor": "canonical_events/johto-outdoor-geometry.json#MAP_OLIVINE",
+    "room_review": "OLIVINE_ROOM_DESIGN_QA09.md",
+    "landmark_visual_index": "olivine-landmark-visual-references.json",
+    "landmark_instance_coverage": "olivine-landmark-prop-coverage.json",
+    "comparison_gallery": "../qa/qa09/olivine-review/comparisons.html",
+    "comparison_scale_note": "Published HGSS source dimensions recorded separately from native240x160 GBA frames; no pixel1:1 equivalence asserted",
+    "historical_b9_native_screenshots": "../qa/qa09/olivine-tour-v9/manifest.json",
+    "current_b11_native_screenshots": "../qa/qa09/olivine-review/native-b11-manifest.json"
+  },
+  "completion_criteria": {
+    "build_and_source_identity": "Fresh final ROM/commit/checksum, no uncommitted game-source ambiguity",
+    "building_inventory": "All nine canonical city buildings and four accepted original additions; no unrelated Emerald stand-in replacing a canonical building",
+    "entrances": "Every visible walkable leaf/segment works independently in both directions, including accessible lateral approaches and safe walk-away after arrival",
+    "interiors": "Purposeful source-backed furnishing and terrain; no unexplained empty shell; only documented genuinely closed/inapplicable source content",
+    "traversal": "All city connections, stairs, lighthouse branch/balcony/elevator and port returns controller-tested on final ROM",
+    "collision_rendering": "Normal movement around every accessible tree/building/boundary and natural canopy/roof overlap; no ordinary ground arrows",
+    "services": "Actual heal, PC/party/box, shop purchase and accepted practice battles; correct safe whiteout arrivals",
+    "compatibility": "Copies of old/current saves preserve party/boxes/bag/money/flags/starter, native Save/cold Continue, Joe actions, title/music and existing routes/encounters",
+    "visual_acceptance": "Owner Delta review required; compilation/connectivity alone never substitutes"
+  },
+  "known_work_assigned_before_final_build": [],
+  "unfinished_transport_separate": [
+    "S.S. Aqua sailing, ship interiors and other-region arrival are outside this approved two-city map pass. Docked ship/port scenery and safe boarding boundary are implemented; this is not a claim of missing city buildings being complete",
+    "Accepted Harbor Office travel services remain functional, separate from canonical S.S. Aqua sailing"
+  ],
+  "deferred_story_and_rewards": [
+    "No new main-story events, badge gates/progression/rewards, source trades/Seal Case or curated encounters",
+    "DS communication reception is explicitly offline; no online functionality claimed"
+  ],
+  "buildings": [
+    {
+      "building": "Gym",
+      "classification": "HGSS canonical enterable building",
+      "source_header": "MAP_OLIVINE_GYM",
+      "source_city_entrance": {
+        "x": 13,
+        "y": 14,
+        "destination": "MAP_OLIVINE_GYM",
+        "anchor": 0
+      },
+      "native_city_doors": [
+        {
+          "index": 2,
+          "x": 13,
+          "y": 14,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_GYM",
+          "dest_warp_id": "0"
+        },
+        {
+          "index": 8,
+          "x": 14,
+          "y": 14,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_GYM",
+          "dest_warp_id": "1"
+        }
+      ],
+      "native_interiors": [
+        "OlivineCity_Gym",
+        "OlivineCity_Gym_Arena"
+      ],
+      "all_intended_maps_registered": true,
+      "pending_until_final_delivery": false,
+      "pending_owner_delta_visual_review": true,
+      "reference_basis": "Actual HGSS corridor/arena geometry and inspected Gym raster; approved custom Steel facade",
+      "implemented_content": "Enterable corridor/arena, optional accepted Jasmine practice battle",
+      "closed_or_deferred_services": "Permanent badges/progression/rewards deferred",
+      "current_b11_verification": "PASS current B11 named interiors visited, all applicable doorway segments/returns and listed services/collision/save coverage; owner visual review pending"
+    },
+    {
+      "building": "Pokemon Center",
+      "classification": "HGSS canonical enterable building",
+      "source_header": "MAP_OLIVINE_POKECENTER_1F",
+      "source_city_entrance": {
+        "x": 16,
+        "y": 33,
+        "destination": "MAP_OLIVINE_POKECENTER_1F",
+        "anchor": 0
+      },
+      "native_city_doors": [
+        {
+          "index": 3,
+          "x": 16,
+          "y": 33,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_POKEMON_CENTER_1F",
+          "dest_warp_id": "0"
+        },
+        {
+          "index": 14,
+          "x": 17,
+          "y": 33,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_POKEMON_CENTER_1F",
+          "dest_warp_id": "1"
+        }
+      ],
+      "native_interiors": [
+        "OlivineCity_PokemonCenter_1F",
+        "OlivineCity_PokemonCenter_B1F"
+      ],
+      "all_intended_maps_registered": true,
+      "pending_until_final_delivery": false,
+      "pending_owner_delta_visual_review": true,
+      "reference_basis": "Actual identical common HGSS matrices/raster and source prop inventory",
+      "implemented_content": "Healing, PC, reception and17x14 basement with three booths/furniture",
+      "closed_or_deferred_services": "DS communication functionality unsupported/offline; closed blue desk panels are not missing open doorways",
+      "current_b11_verification": "PASS current B11 named interiors visited, all applicable doorway segments/returns and listed services/collision/save coverage; owner visual review pending"
+    },
+    {
+      "building": "Poke Mart",
+      "classification": "HGSS canonical enterable building",
+      "source_header": "MAP_OLIVINE_POKEMART",
+      "source_city_entrance": {
+        "x": 29,
+        "y": 33,
+        "destination": "MAP_OLIVINE_POKEMART",
+        "anchor": 0
+      },
+      "native_city_doors": [
+        {
+          "index": 4,
+          "x": 29,
+          "y": 33,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_MART",
+          "dest_warp_id": "0"
+        }
+      ],
+      "native_interiors": [
+        "OlivineCity_Mart"
+      ],
+      "all_intended_maps_registered": true,
+      "pending_until_final_delivery": false,
+      "pending_owner_delta_visual_review": true,
+      "reference_basis": "Actual common HGSS matrix/raster; fixtures retain source anchors",
+      "implemented_content": "Native shop, stock and purchase flow; source shelves/table/seats/plants",
+      "closed_or_deferred_services": "No new stock/progression decisions",
+      "current_b11_verification": "PASS current B11 named interiors visited, all applicable doorway segments/returns and listed services/collision/save coverage; owner visual review pending"
+    },
+    {
+      "building": "Glitter Lighthouse",
+      "classification": "HGSS canonical enterable building",
+      "source_header": "MAP_OLIVINE_LIGHTHOUSE_1F",
+      "source_city_entrance": {
+        "x": 45,
+        "y": 39,
+        "destination": "MAP_OLIVINE_LIGHTHOUSE_1F",
+        "anchor": 0
+      },
+      "native_city_doors": [
+        {
+          "index": 7,
+          "x": 45,
+          "y": 39,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_1F",
+          "dest_warp_id": "0"
+        }
+      ],
+      "native_interiors": [
+        "OlivineCity_Lighthouse_1F",
+        "OlivineCity_Lighthouse_2F",
+        "OlivineCity_Lighthouse_3F",
+        "OlivineCity_Lighthouse_4F",
+        "OlivineCity_Lighthouse_5F",
+        "OlivineCity_Lighthouse_6F",
+        "OlivineCity_Lighthouse_Balcony",
+        "OlivineCity_Lighthouse_Elevator"
+      ],
+      "all_intended_maps_registered": true,
+      "pending_until_final_delivery": false,
+      "pending_owner_delta_visual_review": true,
+      "reference_basis": "Actual six-floor/balcony source geometry and annotated raster; every maritime prop accounted",
+      "implemented_content": "Six floors, intentional4F window/balcony branch, paired two-stop lift, preserved beacon",
+      "closed_or_deferred_services": "No imported Jasmine/Ampharos plot; separate cabin full raster unavailable",
+      "current_b11_verification": "PASS current B11 named interiors visited, all applicable doorway segments/returns and listed services/collision/save coverage; owner visual review pending"
+    },
+    {
+      "building": "Fishing house",
+      "classification": "HGSS canonical enterable building",
+      "source_header": "MAP_OLIVINE_NORTHWEST_HOUSE",
+      "source_city_entrance": {
+        "x": 17,
+        "y": 23,
+        "destination": "MAP_OLIVINE_NORTHWEST_HOUSE",
+        "anchor": 0
+      },
+      "native_city_doors": [
+        {
+          "index": 9,
+          "x": 17,
+          "y": 23,
+          "elevation": 0,
+          "dest_map": "MAP_HGSS_OLIVINECITY_FISHINGHOUSE",
+          "dest_warp_id": "0"
+        }
+      ],
+      "native_interiors": [
+        "OlivineCity_FishingHouse"
+      ],
+      "all_intended_maps_registered": true,
+      "pending_until_final_delivery": false,
+      "pending_owner_delta_visual_review": true,
+      "reference_basis": "Actual0097 shared house matrix and inspected house raster",
+      "implemented_content": "Canonical furnished house and resident dialogue",
+      "closed_or_deferred_services": "Old Rod reward not added during this no-new-rewards map pass",
+      "current_b11_verification": "PASS current B11 named interiors visited, all applicable doorway segments/returns and listed services/collision/save coverage; owner visual review pending"
+    },
+    {
+      "building": "Trade house",
+      "classification": "HGSS canonical enterable building",
+      "source_header": "MAP_OLIVINE_NORTH_HOUSE",
+      "source_city_entrance": {
+        "x": 31,
+        "y": 17,
+        "destination": "MAP_OLIVINE_NORTH_HOUSE",
+        "anchor": 0
+      },
+      "native_city_doors": [
+        {
+          "index": 10,
+          "x": 31,
+          "y": 17,
+          "elevation": 0,
+          "dest_map": "MAP_HGSS_OLIVINECITY_TRADEHOUSE",
+          "dest_warp_id": "0"
+        }
+      ],
+      "native_interiors": [
+        "OlivineCity_TradeHouse"
+      ],
+      "all_intended_maps_registered": true,
+      "pending_until_final_delivery": false,
+      "pending_owner_delta_visual_review": true,
+      "reference_basis": "Actual0097 shared house matrix and inspected house raster",
+      "implemented_content": "Canonical furnished house and resident dialogue",
+      "closed_or_deferred_services": "Source trade/rewards deferred; dialogue is not a functional trade claim",
+      "current_b11_verification": "PASS current B11 named interiors visited, all applicable doorway segments/returns and listed services/collision/save coverage; owner visual review pending"
+    },
+    {
+      "building": "Seal house",
+      "classification": "HGSS canonical enterable building",
+      "source_header": "MAP_OLIVINE_NORTHEAST_HOUSE",
+      "source_city_entrance": {
+        "x": 36,
+        "y": 17,
+        "destination": "MAP_OLIVINE_NORTHEAST_HOUSE",
+        "anchor": 0
+      },
+      "native_city_doors": [
+        {
+          "index": 11,
+          "x": 36,
+          "y": 17,
+          "elevation": 0,
+          "dest_map": "MAP_HGSS_OLIVINECITY_SEALHOUSE",
+          "dest_warp_id": "0"
+        }
+      ],
+      "native_interiors": [
+        "OlivineCity_SealHouse"
+      ],
+      "all_intended_maps_registered": true,
+      "pending_until_final_delivery": false,
+      "pending_owner_delta_visual_review": true,
+      "reference_basis": "Actual0097 shared house matrix and inspected house raster",
+      "implemented_content": "Canonical furnished house and resident dialogue",
+      "closed_or_deferred_services": "DS Seal Case/Seal feature unsupported and not claimed implemented",
+      "current_b11_verification": "PASS current B11 named interiors visited, all applicable doorway segments/returns and listed services/collision/save coverage; owner visual review pending"
+    },
+    {
+      "building": "Cafe",
+      "classification": "HGSS canonical enterable building",
+      "source_header": "MAP_OLIVINE_CAFE",
+      "source_city_entrance": {
+        "x": 9,
+        "y": 33,
+        "destination": "MAP_OLIVINE_CAFE",
+        "anchor": 0
+      },
+      "native_city_doors": [
+        {
+          "index": 12,
+          "x": 9,
+          "y": 33,
+          "elevation": 0,
+          "dest_map": "MAP_HGSS_OLIVINECITY_CAFE",
+          "dest_warp_id": "0"
+        }
+      ],
+      "native_interiors": [
+        "OlivineCity_Cafe"
+      ],
+      "all_intended_maps_registered": true,
+      "pending_until_final_delivery": false,
+      "pending_owner_delta_visual_review": true,
+      "reference_basis": "Actual0136 matrix/raster; table, L-counter, windows and two plants",
+      "implemented_content": "Furnished public cafe with actual counter dialogue/access",
+      "closed_or_deferred_services": "One-cell staff aisle is a documented native safety adaptation",
+      "current_b11_verification": "PASS current B11 named interiors visited, all applicable doorway segments/returns and listed services/collision/save coverage; owner visual review pending"
+    },
+    {
+      "building": "Port terminal",
+      "classification": "HGSS canonical enterable building",
+      "source_header": "MAP_SS_AQUA_OLIVINE_PORT_INTERIOR",
+      "source_city_entrance": {
+        "x": 23,
+        "y": 52,
+        "destination": "MAP_SS_AQUA_OLIVINE_PORT_INTERIOR",
+        "anchor": 0
+      },
+      "native_city_doors": [
+        {
+          "index": 13,
+          "x": 23,
+          "y": 52,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_PORT_TERMINAL",
+          "dest_warp_id": "0"
+        },
+        {
+          "index": 15,
+          "x": 24,
+          "y": 52,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_PORT_TERMINAL",
+          "dest_warp_id": "3"
+        }
+      ],
+      "native_interiors": [
+        "OlivineCity_PortTerminal",
+        "OlivineCity_PortQuay"
+      ],
+      "all_intended_maps_registered": true,
+      "pending_until_final_delivery": false,
+      "pending_owner_delta_visual_review": true,
+      "reference_basis": "Actual terminal raster plus canonical quay prop/warp facts; reverse full-view limitation explicit",
+      "implemented_content": "Furnished terminal, main/side leaves, quay, rear facade, docked ferry, boats and dry return",
+      "closed_or_deferred_services": "S.S.Aqua voyages/ship interiors/other-region arrival outside authorized city pass",
+      "current_b11_verification": "PASS current B11 named interiors visited, all applicable doorway segments/returns and listed services/collision/save coverage; owner visual review pending"
+    },
+    {
+      "building": "Joe Mercer residence",
+      "classification": "deliberate Black Ledger addition",
+      "native_city_doors": [
+        {
+          "index": 0,
+          "x": 8,
+          "y": 23,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_RESIDENCE",
+          "dest_warp_id": "0"
+        }
+      ],
+      "native_interiors": [
+        "OlivineCity_Residence"
+      ],
+      "all_intended_maps_registered": true,
+      "pending_until_final_delivery": false,
+      "pending_owner_delta_visual_review": true,
+      "reference_basis": "Preserved Black Ledger addition, no HGSS counterpart",
+      "implemented_content": "Accepted residence/rest/interaction and reciprocal door",
+      "closed_or_deferred_services": "Original location remains separate from canonical homes",
+      "current_b11_verification": "PASS current B11 named interiors visited, all applicable doorway segments/returns and listed services/collision/save coverage; owner visual review pending"
+    },
+    {
+      "building": "Accepted neighbour residence",
+      "classification": "deliberate Black Ledger addition",
+      "native_city_doors": [
+        {
+          "index": 1,
+          "x": 8,
+          "y": 28,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_NEIGHBOR_HOUSE",
+          "dest_warp_id": "0"
+        }
+      ],
+      "native_interiors": [
+        "OlivineCity_NeighborHouse"
+      ],
+      "all_intended_maps_registered": true,
+      "pending_until_final_delivery": false,
+      "pending_owner_delta_visual_review": true,
+      "reference_basis": "Preserved Black Ledger addition, no HGSS counterpart",
+      "implemented_content": "Accepted furnished residence/dialogue and reciprocal door",
+      "closed_or_deferred_services": "Original location remains separate from canonical homes",
+      "current_b11_verification": "PASS current B11 named interiors visited, all applicable doorway segments/returns and listed services/collision/save coverage; owner visual review pending"
+    },
+    {
+      "building": "Silph subsidiary office",
+      "classification": "deliberate Black Ledger addition",
+      "native_city_doors": [
+        {
+          "index": 5,
+          "x": 31,
+          "y": 40,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_SILPH_OFFICE",
+          "dest_warp_id": "0"
+        }
+      ],
+      "native_interiors": [
+        "OlivineCity_SilphOffice"
+      ],
+      "all_intended_maps_registered": true,
+      "pending_until_final_delivery": false,
+      "pending_owner_delta_visual_review": true,
+      "reference_basis": "Preserved Black Ledger addition, no HGSS counterpart",
+      "implemented_content": "Existing terminal, starter rescue/uniqueness/metadata and office interactions",
+      "closed_or_deferred_services": "Main prologue/story remains outside this map pass",
+      "current_b11_verification": "PASS current B11 named interiors visited, all applicable doorway segments/returns and listed services/collision/save coverage; owner visual review pending"
+    },
+    {
+      "building": "Harbor Office",
+      "classification": "deliberate Black Ledger addition",
+      "native_city_doors": [
+        {
+          "index": 6,
+          "x": 8,
+          "y": 40,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_HARBOR_OFFICE",
+          "dest_warp_id": "0"
+        }
+      ],
+      "native_interiors": [
+        "OlivineCity_HarborOffice"
+      ],
+      "all_intended_maps_registered": true,
+      "pending_until_final_delivery": false,
+      "pending_owner_delta_visual_review": true,
+      "reference_basis": "Preserved Black Ledger addition, no HGSS counterpart",
+      "implemented_content": "Accepted harbor/travel/dispatch interactions and reciprocal door",
+      "closed_or_deferred_services": "Existing approved travel is separate from deferred S.S.Aqua voyages",
+      "current_b11_verification": "PASS current B11 named interiors visited, all applicable doorway segments/returns and listed services/collision/save coverage; owner visual review pending"
+    }
+  ],
+  "maps": [
+    {
+      "name": "OlivineCity",
+      "display_name": "OlivineCity",
+      "map_id": "MAP_OLIVINE_CITY",
+      "map_group_symbol": "gMapGroup_CrossroadsOlivine",
+      "map_group_number": 75,
+      "map_number": 0,
+      "layout_id": "LAYOUT_OLIVINE_CITY",
+      "dimensions": [
+        64,
+        64
+      ],
+      "layout_file": "data/layouts/OlivineCity/map.bin",
+      "primary_tileset": "gTileset_BlGymOlivinePrimary",
+      "secondary_tileset": "gTileset_BlGymOlivineSecondary",
+      "classification": [
+        "HGSS reference geometry",
+        "native GBA visual adaptation"
+      ],
+      "source_header": "MAP_OLIVINE",
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0000_EVERYWHERE.bin",
+        "matrix_blob_sha": "82e980aa3d42a210a6d748bceb518fd94901ad29",
+        "events": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/eventdata/zone_event/074_T26.json",
+        "events_blob_sha": "cd01a12eaa7fb6824db129e47dfb313bb15e8d5b",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "source_prop_models": {
+        "109": 3,
+        "110": 1,
+        "111": 1,
+        "114": 3,
+        "115": 3,
+        "118": 1,
+        "119": 2,
+        "120": 1,
+        "121": 3,
+        "15": 2,
+        "16": 1,
+        "167": 1,
+        "29": 1,
+        "31": 2,
+        "33": 1,
+        "39": 1,
+        "40": 1
+      },
+      "source_warps": [
+        {
+          "x": 13,
+          "y": 14,
+          "destination": "MAP_OLIVINE_GYM",
+          "anchor": 0
+        },
+        {
+          "x": 16,
+          "y": 33,
+          "destination": "MAP_OLIVINE_POKECENTER_1F",
+          "anchor": 0
+        },
+        {
+          "x": 29,
+          "y": 33,
+          "destination": "MAP_OLIVINE_POKEMART",
+          "anchor": 0
+        },
+        {
+          "x": 45,
+          "y": 39,
+          "destination": "MAP_OLIVINE_LIGHTHOUSE_1F",
+          "anchor": 0
+        },
+        {
+          "x": 17,
+          "y": 23,
+          "destination": "MAP_OLIVINE_NORTHWEST_HOUSE",
+          "anchor": 0
+        },
+        {
+          "x": 9,
+          "y": 33,
+          "destination": "MAP_OLIVINE_CAFE",
+          "anchor": 0
+        },
+        {
+          "x": 31,
+          "y": 17,
+          "destination": "MAP_OLIVINE_NORTH_HOUSE",
+          "anchor": 0
+        },
+        {
+          "x": 36,
+          "y": 17,
+          "destination": "MAP_OLIVINE_NORTHEAST_HOUSE",
+          "anchor": 0
+        },
+        {
+          "x": 23,
+          "y": 52,
+          "destination": "MAP_SS_AQUA_OLIVINE_PORT_INTERIOR",
+          "anchor": 0
+        }
+      ],
+      "native_warps": [
+        {
+          "x": 8,
+          "y": 23,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_RESIDENCE",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 8,
+          "y": 28,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_NEIGHBOR_HOUSE",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 13,
+          "y": 14,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_GYM",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 16,
+          "y": 33,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_POKEMON_CENTER_1F",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 29,
+          "y": 33,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_MART",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 31,
+          "y": 40,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_SILPH_OFFICE",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 8,
+          "y": 40,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_HARBOR_OFFICE",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 45,
+          "y": 39,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_1F",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 14,
+          "y": 14,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_GYM",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 17,
+          "y": 23,
+          "elevation": 0,
+          "dest_map": "MAP_HGSS_OLIVINECITY_FISHINGHOUSE",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 31,
+          "y": 17,
+          "elevation": 0,
+          "dest_map": "MAP_HGSS_OLIVINECITY_TRADEHOUSE",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 36,
+          "y": 17,
+          "elevation": 0,
+          "dest_map": "MAP_HGSS_OLIVINECITY_SEALHOUSE",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 9,
+          "y": 33,
+          "elevation": 0,
+          "dest_map": "MAP_HGSS_OLIVINECITY_CAFE",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 23,
+          "y": 52,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_PORT_TERMINAL",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 17,
+          "y": 33,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_POKEMON_CENTER_1F",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 24,
+          "y": 52,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_PORT_TERMINAL",
+          "dest_warp_id": "3"
+        }
+      ],
+      "native_connections": [
+        {
+          "map": "MAP_JOHTO_ROUTE39",
+          "offset": 12,
+          "direction": "up"
+        },
+        {
+          "map": "MAP_JOHTO_ROUTE40",
+          "offset": 10,
+          "direction": "left"
+        }
+      ],
+      "visible_doorway_segments": [
+        {
+          "doorway_group": "olivine-joe-residence",
+          "side": "outside",
+          "segments": [
+            [
+              8,
+              23
+            ]
+          ],
+          "arrivals": [
+            [
+              8,
+              23
+            ]
+          ]
+        },
+        {
+          "doorway_group": "olivine-accepted-neighbour",
+          "side": "outside",
+          "segments": [
+            [
+              8,
+              28
+            ]
+          ],
+          "arrivals": [
+            [
+              8,
+              28
+            ]
+          ]
+        },
+        {
+          "doorway_group": "olivine-custom-gym",
+          "side": "outside",
+          "segments": [
+            [
+              13,
+              14
+            ],
+            [
+              14,
+              14
+            ]
+          ],
+          "arrivals": [
+            [
+              13,
+              14
+            ],
+            [
+              14,
+              14
+            ]
+          ]
+        },
+        {
+          "doorway_group": "olivine-pokemon-center",
+          "side": "outside",
+          "segments": [
+            [
+              16,
+              33
+            ],
+            [
+              17,
+              33
+            ]
+          ],
+          "arrivals": [
+            [
+              16,
+              33
+            ],
+            [
+              17,
+              33
+            ]
+          ]
+        },
+        {
+          "doorway_group": "olivine-poke-mart",
+          "side": "outside",
+          "segments": [
+            [
+              29,
+              33
+            ]
+          ],
+          "arrivals": [
+            [
+              29,
+              33
+            ]
+          ]
+        },
+        {
+          "doorway_group": "olivine-silph-office",
+          "side": "outside",
+          "segments": [
+            [
+              31,
+              40
+            ]
+          ],
+          "arrivals": [
+            [
+              31,
+              40
+            ]
+          ]
+        },
+        {
+          "doorway_group": "olivine-harbor-office",
+          "side": "outside",
+          "segments": [
+            [
+              8,
+              40
+            ]
+          ],
+          "arrivals": [
+            [
+              8,
+              40
+            ]
+          ]
+        },
+        {
+          "doorway_group": "olivine-lighthouse",
+          "side": "outside",
+          "segments": [
+            [
+              45,
+              39
+            ]
+          ],
+          "arrivals": [
+            [
+              45,
+              39
+            ]
+          ]
+        },
+        {
+          "doorway_group": "olivine-fishing-house",
+          "side": "outside",
+          "segments": [
+            [
+              17,
+              23
+            ]
+          ],
+          "arrivals": [
+            [
+              17,
+              23
+            ]
+          ]
+        },
+        {
+          "doorway_group": "olivine-trade-house",
+          "side": "outside",
+          "segments": [
+            [
+              31,
+              17
+            ]
+          ],
+          "arrivals": [
+            [
+              31,
+              17
+            ]
+          ]
+        },
+        {
+          "doorway_group": "olivine-seal-house",
+          "side": "outside",
+          "segments": [
+            [
+              36,
+              17
+            ]
+          ],
+          "arrivals": [
+            [
+              36,
+              17
+            ]
+          ]
+        },
+        {
+          "doorway_group": "olivine-cafe",
+          "side": "outside",
+          "segments": [
+            [
+              9,
+              33
+            ]
+          ],
+          "arrivals": [
+            [
+              9,
+              33
+            ]
+          ]
+        },
+        {
+          "doorway_group": "olivine-port-city-entrance",
+          "side": "outside",
+          "segments": [
+            [
+              23,
+              52
+            ],
+            [
+              24,
+              52
+            ]
+          ],
+          "arrivals": [
+            [
+              23,
+              52
+            ],
+            [
+              24,
+              52
+            ]
+          ]
+        }
+      ],
+      "objects": [
+        {
+          "graphics_id": "OBJ_EVENT_GFX_SAILOR",
+          "x": 17,
+          "y": 38,
+          "script": "Olivine_DockWorker"
+        },
+        {
+          "graphics_id": "OBJ_EVENT_GFX_WOMAN_3",
+          "x": 19,
+          "y": 18,
+          "script": "Olivine_Commuter"
+        },
+        {
+          "graphics_id": "OBJ_EVENT_GFX_MAN_1",
+          "x": 26,
+          "y": 36,
+          "script": "Olivine_Resident"
+        },
+        {
+          "graphics_id": "OBJ_EVENT_GFX_DEVON_EMPLOYEE",
+          "x": 28,
+          "y": 35,
+          "script": "Olivine_OfficeCommuter"
+        },
+        {
+          "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
+          "x": 44,
+          "y": 42,
+          "script": "Olivine_LighthouseVisitor"
+        },
+        {
+          "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
+          "x": 18,
+          "y": 25,
+          "script": "Olivine_PartnerReaction"
+        },
+        {
+          "graphics_id": "OBJ_EVENT_GFX_SAILOR",
+          "x": 22,
+          "y": 45,
+          "script": "Olivine_PierWorker"
+        }
+      ],
+      "services": [
+        "Ambient interaction and normal source floor traversal"
+      ],
+      "technical_adaptations": [
+        "Original GBA facades/metatiles replace DS models, preserving source relative canonical entrance coordinates",
+        "Four accepted Black Ledger additions are explicit infill, not replacements for canonical homes",
+        "Owner Steel Gym art is an approved exterior exception",
+        "GBA south-facing port facade requires bounded east boardwalk; source north covered approach retained",
+        "Three terrace parasols retained, western parasol shifted to fit Harbor Office",
+        "Source elevations/perspective flattened into collision-safe native terrain"
+      ],
+      "static_visual_review": "All24 current full-layout static previews inspected; HGSS raster/geometry and chosen adaptations recorded; owner acceptance pending",
+      "verification": {
+        "automated_checks": "PASS final source/generator/topology/semantic/resource/save-ID/build checks; engine palette bounds0\u201312 preserved",
+        "emulator_gameplay": "PASS current B11 controller tour plus applicable doorway/stair/landmark/service/collision tests; evidence scopes/exclusions recorded",
+        "save_continue": "PASS direct normal Save/coldContinue on exact B11",
+        "owner_delta_visual_acceptance": "PENDING"
+      },
+      "pending_until_final_delivery": false,
+      "pending_owner_delta_visual_review": true,
+      "historical_b9_native_frame": "crossroads/qa/qa09/olivine-tour-v9/OlivineCity.png",
+      "current_b11_native_frame": "crossroads/qa/qa09/olivine/final-v11-tour/OlivineCity.png"
+    },
+    {
+      "name": "OlivineCity_Residence",
+      "display_name": "Joe Mercer residence",
+      "map_id": "MAP_OLIVINE_CITY_RESIDENCE",
+      "map_group_symbol": "gMapGroup_CrossroadsOlivine",
+      "map_group_number": 75,
+      "map_number": 1,
+      "layout_id": "LAYOUT_HOUSE_WITH_BED",
+      "dimensions": [
+        10,
+        8
+      ],
+      "layout_file": "data/layouts/HouseWithBed/map.bin",
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "classification": [
+        "deliberate Black Ledger addition"
+      ],
+      "source_header": null,
+      "source_provenance": null,
+      "source_prop_models": {},
+      "source_warps": [],
+      "native_warps": [
+        {
+          "x": 3,
+          "y": 7,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 4,
+          "y": 7,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY",
+          "dest_warp_id": "0"
+        }
+      ],
+      "native_connections": null,
+      "visible_doorway_segments": [
+        {
+          "doorway_group": "olivine-joe-residence",
+          "side": "inside",
+          "segments": [
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "arrivals": [
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              7
+            ]
+          ]
+        }
+      ],
+      "objects": [
+        {
+          "graphics_id": "OBJ_EVENT_GFX_DEVON_EMPLOYEE",
+          "x": 7,
+          "y": 5,
+          "script": "Olivine_ReturnToAlpha"
+        }
+      ],
+      "services": [
+        "Accepted home rest",
+        "Legacy Alpha return transport"
+      ],
+      "technical_adaptations": [
+        "Accepted original Black Ledger location outside the nine HGSS canonical buildings",
+        "Existing interior script/party/starter/travel/rest contracts preserved; no claim of an HGSS counterpart"
+      ],
+      "static_visual_review": "All24 current full-layout static previews inspected; HGSS raster/geometry and chosen adaptations recorded; owner acceptance pending",
+      "verification": {
+        "automated_checks": "PASS final source/generator/topology/semantic/resource/save-ID/build checks; engine palette bounds0\u201312 preserved",
+        "emulator_gameplay": "PASS current B11 controller tour plus applicable doorway/stair/landmark/service/collision tests; evidence scopes/exclusions recorded",
+        "save_continue": "PASS direct normal Save/coldContinue on exact B11",
+        "owner_delta_visual_acceptance": "PENDING"
+      },
+      "pending_until_final_delivery": false,
+      "pending_owner_delta_visual_review": true,
+      "historical_b9_native_frame": "crossroads/qa/qa09/olivine-tour-v9/OlivineCity_Residence.png",
+      "current_b11_native_frame": "crossroads/qa/qa09/olivine/final-v11-tour/OlivineCity_Residence.png"
+    },
+    {
+      "name": "OlivineCity_NeighborHouse",
+      "display_name": "Accepted neighbour residence",
+      "map_id": "MAP_OLIVINE_CITY_NEIGHBOR_HOUSE",
+      "map_group_symbol": "gMapGroup_CrossroadsOlivine",
+      "map_group_number": 75,
+      "map_number": 2,
+      "layout_id": "LAYOUT_HOUSE_WITH_BED",
+      "dimensions": [
+        10,
+        8
+      ],
+      "layout_file": "data/layouts/HouseWithBed/map.bin",
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "classification": [
+        "deliberate Black Ledger addition"
+      ],
+      "source_header": null,
+      "source_provenance": null,
+      "source_prop_models": {},
+      "source_warps": [],
+      "native_warps": [
+        {
+          "x": 3,
+          "y": 7,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 4,
+          "y": 7,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY",
+          "dest_warp_id": "1"
+        }
+      ],
+      "native_connections": null,
+      "visible_doorway_segments": [
+        {
+          "doorway_group": "olivine-accepted-neighbour",
+          "side": "inside",
+          "segments": [
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "arrivals": [
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              7
+            ]
+          ]
+        }
+      ],
+      "objects": [
+        {
+          "graphics_id": "OBJ_EVENT_GFX_WOMAN_3",
+          "x": 7,
+          "y": 5,
+          "script": "Area_OlivineNeighbor"
+        }
+      ],
+      "services": [
+        "Ambient resident interactions"
+      ],
+      "technical_adaptations": [
+        "Accepted original Black Ledger location outside the nine HGSS canonical buildings",
+        "Existing interior script/party/starter/travel/rest contracts preserved; no claim of an HGSS counterpart"
+      ],
+      "static_visual_review": "All24 current full-layout static previews inspected; HGSS raster/geometry and chosen adaptations recorded; owner acceptance pending",
+      "verification": {
+        "automated_checks": "PASS final source/generator/topology/semantic/resource/save-ID/build checks; engine palette bounds0\u201312 preserved",
+        "emulator_gameplay": "PASS current B11 controller tour plus applicable doorway/stair/landmark/service/collision tests; evidence scopes/exclusions recorded",
+        "save_continue": "Current B11 compatibility/save matrix PASS; no separate normal-save point on this particular map claimed",
+        "owner_delta_visual_acceptance": "PENDING"
+      },
+      "pending_until_final_delivery": false,
+      "pending_owner_delta_visual_review": true,
+      "historical_b9_native_frame": "crossroads/qa/qa09/olivine-tour-v9/OlivineCity_NeighborHouse.png",
+      "current_b11_native_frame": "crossroads/qa/qa09/olivine/final-v11-tour/OlivineCity_NeighborHouse.png"
+    },
+    {
+      "name": "OlivineCity_Gym",
+      "display_name": "Gym",
+      "map_id": "MAP_OLIVINE_CITY_GYM",
+      "map_group_symbol": "gMapGroup_CrossroadsOlivine",
+      "map_group_number": 75,
+      "map_number": 3,
+      "layout_id": "LAYOUT_OLIVINECITY_GYM",
+      "dimensions": [
+        11,
+        12
+      ],
+      "layout_file": "data/layouts/OlivineCity_Gym/map.bin",
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_HgssOlivineGym",
+      "classification": [
+        "HGSS reference geometry",
+        "native GBA visual adaptation",
+        "approved owner Gym exterior replaces canonical HGSS facade"
+      ],
+      "source_header": "MAP_OLIVINE_GYM",
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0091_T26GYM0101.bin",
+        "matrix_blob_sha": "cf24368e5f50e691e985809610d8468ad6d0bed8",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/134_T26GYM0101.json",
+        "events_blob_sha": "d783ecb187c5c586c51e409954f87c8f548701ac",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "source_prop_models": {
+        "78": 2
+      },
+      "source_warps": [
+        {
+          "x": 6,
+          "z": 27,
+          "header": "MAP_OLIVINE",
+          "anchor": 0,
+          "y": 0
+        }
+      ],
+      "native_warps": [
+        {
+          "x": 6,
+          "y": 10,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY",
+          "dest_warp_id": "2"
+        },
+        {
+          "x": 7,
+          "y": 10,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY",
+          "dest_warp_id": "8"
+        },
+        {
+          "x": 6,
+          "y": 0,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINECITY_GYM_ARENA",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 5,
+          "y": 0,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINECITY_GYM_ARENA",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 7,
+          "y": 0,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINECITY_GYM_ARENA",
+          "dest_warp_id": "2"
+        }
+      ],
+      "native_connections": null,
+      "visible_doorway_segments": [
+        {
+          "doorway_group": "olivine-custom-gym",
+          "side": "inside",
+          "segments": [
+            [
+              6,
+              10
+            ],
+            [
+              7,
+              10
+            ]
+          ],
+          "arrivals": [
+            [
+              6,
+              10
+            ],
+            [
+              7,
+              10
+            ]
+          ]
+        },
+        {
+          "doorway_group": "olivine-gym-hallway",
+          "side": "outside",
+          "segments": [
+            [
+              5,
+              0
+            ],
+            [
+              6,
+              0
+            ],
+            [
+              7,
+              0
+            ]
+          ],
+          "arrivals": [
+            [
+              5,
+              0
+            ],
+            [
+              6,
+              0
+            ],
+            [
+              7,
+              0
+            ]
+          ]
+        }
+      ],
+      "objects": [
+        {
+          "graphics_id": "OBJ_EVENT_GFX_MAN_1",
+          "x": 3,
+          "y": 6,
+          "script": "Area_GymGuide"
+        }
+      ],
+      "services": [
+        "Guide interaction",
+        "Three-wide corridor to Arena"
+      ],
+      "technical_adaptations": [
+        "Canonical HGSS long central steel runway/platform/pylons/source actor positions",
+        "Original silver/salmon/hex modules replace 3D perspective; owner exterior Gym unchanged",
+        "Sourcey17 split across two stable map IDs; all three corridor segments reciprocal",
+        "Accepted Jasmine/apprentice optional practice scripts retained, no rewards/badges/gates"
+      ],
+      "static_visual_review": "All24 current full-layout static previews inspected; HGSS raster/geometry and chosen adaptations recorded; owner acceptance pending",
+      "verification": {
+        "automated_checks": "PASS final source/generator/topology/semantic/resource/save-ID/build checks; engine palette bounds0\u201312 preserved",
+        "emulator_gameplay": "PASS current B11 controller tour plus applicable doorway/stair/landmark/service/collision tests; evidence scopes/exclusions recorded",
+        "save_continue": "Current B11 compatibility/save matrix PASS; no separate normal-save point on this particular map claimed",
+        "owner_delta_visual_acceptance": "PENDING"
+      },
+      "pending_until_final_delivery": false,
+      "pending_owner_delta_visual_review": true,
+      "historical_b9_native_frame": "crossroads/qa/qa09/olivine-tour-v9/OlivineCity_Gym.png",
+      "current_b11_native_frame": "crossroads/qa/qa09/olivine/final-v11-tour/OlivineCity_Gym.png"
+    },
+    {
+      "name": "OlivineCity_PokemonCenter_1F",
+      "display_name": "PokemonCenter 1F",
+      "map_id": "MAP_OLIVINE_CITY_POKEMON_CENTER_1F",
+      "map_group_symbol": "gMapGroup_CrossroadsOlivine",
+      "map_group_number": 75,
+      "map_number": 4,
+      "layout_id": "LAYOUT_HGSS_OLIVINECITY_POKEMONCENTER_1F",
+      "dimensions": [
+        17,
+        21
+      ],
+      "layout_file": "data/layouts/OlivineCity_PokemonCenter_1F/map.bin",
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_HgssCenterReception",
+      "classification": [
+        "HGSS reference geometry",
+        "native GBA visual adaptation"
+      ],
+      "source_header": "MAP_OLIVINE_POKECENTER_1F",
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0073_T21PC0101.bin",
+        "matrix_blob_sha": "993607934cd67d543de7bcdc4c42b0c01af3adcc",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/212_T26PC0101.json",
+        "events_blob_sha": "69623161e72b96fddb1c220dc35cb82c7e610665",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "source_prop_models": {
+        "1": 1,
+        "108": 2,
+        "110": 3,
+        "14": 1,
+        "15": 1,
+        "23": 3,
+        "33": 1,
+        "35": 1,
+        "36": 1,
+        "37": 1,
+        "4": 1,
+        "40": 2,
+        "41": 2
+      },
+      "source_warps": [
+        {
+          "x": 8,
+          "z": 19,
+          "header": "MAP_OLIVINE",
+          "anchor": 1,
+          "y": 0
+        },
+        {
+          "x": 14,
+          "z": 17,
+          "header": "MAP_OLIVINE_POKECENTER_B1F",
+          "anchor": 0,
+          "y": 0
+        }
+      ],
+      "native_warps": [
+        {
+          "x": 8,
+          "y": 19,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY",
+          "dest_warp_id": "3"
+        },
+        {
+          "x": 9,
+          "y": 19,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY",
+          "dest_warp_id": "14"
+        },
+        {
+          "x": 14,
+          "y": 17,
+          "elevation": 0,
+          "dest_map": "MAP_HGSS_OLIVINECITY_POKEMONCENTER_B1F",
+          "dest_warp_id": "0"
+        }
+      ],
+      "native_connections": null,
+      "visible_doorway_segments": [
+        {
+          "doorway_group": "olivine-pokemon-center",
+          "side": "inside",
+          "segments": [
+            [
+              8,
+              19
+            ],
+            [
+              9,
+              19
+            ]
+          ],
+          "arrivals": [
+            [
+              8,
+              19
+            ],
+            [
+              9,
+              19
+            ]
+          ]
+        }
+      ],
+      "objects": [
+        {
+          "graphics_id": "OBJ_EVENT_GFX_NURSE",
+          "x": 8,
+          "y": 11,
+          "script": "Olivine_Nurse"
+        },
+        {
+          "graphics_id": "OBJ_EVENT_GFX_SAILOR",
+          "x": 4,
+          "y": 18,
+          "script": "Olivine_CenterVisitor"
+        },
+        {
+          "graphics_id": "OBJ_EVENT_GFX_LINK_RECEPTIONIST",
+          "x": 2,
+          "y": 2,
+          "script": "Hgss_CommunicationDesk"
+        },
+        {
+          "graphics_id": "OBJ_EVENT_GFX_LINK_RECEPTIONIST",
+          "x": 6,
+          "y": 2,
+          "script": "Hgss_CommunicationDesk"
+        },
+        {
+          "graphics_id": "OBJ_EVENT_GFX_LINK_RECEPTIONIST",
+          "x": 11,
+          "y": 2,
+          "script": "Hgss_CommunicationDesk"
+        }
+      ],
+      "services": [
+        "Native party healing",
+        "Existing local nurse/heal identity",
+        "Native PC/party/box access",
+        "Basement escalator"
+      ],
+      "technical_adaptations": [
+        "Actual HGSS matrix identical to Ecruteak service room; pinned tested native adaptation",
+        "Olivine nurse ID/shop stock/scripts preserved; native PC/counter/escalators",
+        "Raised DS reception flattened; communication desks explicitly offline"
+      ],
+      "static_visual_review": "All24 current full-layout static previews inspected; HGSS raster/geometry and chosen adaptations recorded; owner acceptance pending",
+      "verification": {
+        "automated_checks": "PASS final source/generator/topology/semantic/resource/save-ID/build checks; engine palette bounds0\u201312 preserved",
+        "emulator_gameplay": "PASS current B11 controller tour plus applicable doorway/stair/landmark/service/collision tests; evidence scopes/exclusions recorded",
+        "save_continue": "PASS direct normal Save/coldContinue on exact B11",
+        "owner_delta_visual_acceptance": "PENDING"
+      },
+      "pending_until_final_delivery": false,
+      "pending_owner_delta_visual_review": true,
+      "historical_b9_native_frame": "crossroads/qa/qa09/olivine-tour-v9/OlivineCity_PokemonCenter_1F.png",
+      "current_b11_native_frame": "crossroads/qa/qa09/olivine/final-v11-tour/OlivineCity_PokemonCenter_1F.png"
+    },
+    {
+      "name": "OlivineCity_Mart",
+      "display_name": "Mart",
+      "map_id": "MAP_OLIVINE_CITY_MART",
+      "map_group_symbol": "gMapGroup_CrossroadsOlivine",
+      "map_group_number": 75,
+      "map_number": 5,
+      "layout_id": "LAYOUT_HGSS_OLIVINECITY_MART",
+      "dimensions": [
+        14,
+        13
+      ],
+      "layout_file": "data/layouts/OlivineCity_Mart/map.bin",
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_HgssMart",
+      "classification": [
+        "HGSS reference geometry",
+        "native GBA visual adaptation"
+      ],
+      "source_header": "MAP_OLIVINE_POKEMART",
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0104_T21FS0101.bin",
+        "matrix_blob_sha": "567a0d5d174171eebb5ddc5aa1245f00c5b52b5d",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/213_T26FS0101.json",
+        "events_blob_sha": "4566c8933940b37f39876f21d0db980d5b880f3b",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "source_prop_models": {
+        "1": 1,
+        "23": 3,
+        "42": 1,
+        "43": 1,
+        "46": 1,
+        "48": 2,
+        "50": 2,
+        "52": 1,
+        "57": 2,
+        "58": 2,
+        "59": 1,
+        "75": 2
+      },
+      "source_warps": [
+        {
+          "x": 4,
+          "z": 11,
+          "header": "MAP_OLIVINE",
+          "anchor": 2,
+          "y": 0
+        }
+      ],
+      "native_warps": [
+        {
+          "x": 4,
+          "y": 11,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY",
+          "dest_warp_id": "4"
+        },
+        {
+          "x": 5,
+          "y": 11,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY",
+          "dest_warp_id": "4"
+        }
+      ],
+      "native_connections": null,
+      "visible_doorway_segments": [
+        {
+          "doorway_group": "olivine-poke-mart",
+          "side": "inside",
+          "segments": [
+            [
+              4,
+              11
+            ],
+            [
+              5,
+              11
+            ]
+          ],
+          "arrivals": [
+            [
+              4,
+              11
+            ],
+            [
+              5,
+              11
+            ]
+          ]
+        }
+      ],
+      "objects": [
+        {
+          "graphics_id": "OBJ_EVENT_GFX_MART_EMPLOYEE",
+          "x": 2,
+          "y": 6,
+          "script": "Olivine_Clerk"
+        },
+        {
+          "graphics_id": "OBJ_EVENT_GFX_MAN_3",
+          "x": 9,
+          "y": 4,
+          "script": "Olivine_MartVisitor"
+        },
+        {
+          "graphics_id": "OBJ_EVENT_GFX_MART_EMPLOYEE",
+          "x": 2,
+          "y": 4,
+          "script": "Olivine_Clerk"
+        }
+      ],
+      "services": [
+        "Existing shop inventory/purchase interface"
+      ],
+      "technical_adaptations": [
+        "Actual HGSS matrix identical to Ecruteak service room; pinned tested native adaptation",
+        "Olivine nurse ID/shop stock/scripts preserved; native PC/counter/escalators",
+        "Raised DS reception flattened; communication desks explicitly offline"
+      ],
+      "static_visual_review": "All24 current full-layout static previews inspected; HGSS raster/geometry and chosen adaptations recorded; owner acceptance pending",
+      "verification": {
+        "automated_checks": "PASS final source/generator/topology/semantic/resource/save-ID/build checks; engine palette bounds0\u201312 preserved",
+        "emulator_gameplay": "PASS current B11 controller tour plus applicable doorway/stair/landmark/service/collision tests; evidence scopes/exclusions recorded",
+        "save_continue": "Current B11 compatibility/save matrix PASS; no separate normal-save point on this particular map claimed",
+        "owner_delta_visual_acceptance": "PENDING"
+      },
+      "pending_until_final_delivery": false,
+      "pending_owner_delta_visual_review": true,
+      "historical_b9_native_frame": "crossroads/qa/qa09/olivine-tour-v9/OlivineCity_Mart.png",
+      "current_b11_native_frame": "crossroads/qa/qa09/olivine/final-v11-tour/OlivineCity_Mart.png"
+    },
+    {
+      "name": "OlivineCity_SilphOffice",
+      "display_name": "Silph subsidiary office",
+      "map_id": "MAP_OLIVINE_CITY_SILPH_OFFICE",
+      "map_group_symbol": "gMapGroup_CrossroadsOlivine",
+      "map_group_number": 75,
+      "map_number": 6,
+      "layout_id": "LAYOUT_OLIVINE_SILPH_OFFICE",
+      "dimensions": [
+        10,
+        8
+      ],
+      "layout_file": "data/layouts/OlivineSilphOffice/map.bin",
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "classification": [
+        "deliberate Black Ledger addition"
+      ],
+      "source_header": null,
+      "source_provenance": null,
+      "source_prop_models": {},
+      "source_warps": [],
+      "native_warps": [
+        {
+          "x": 3,
+          "y": 7,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY",
+          "dest_warp_id": "5"
+        },
+        {
+          "x": 4,
+          "y": 7,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY",
+          "dest_warp_id": "5"
+        }
+      ],
+      "native_connections": null,
+      "visible_doorway_segments": [
+        {
+          "doorway_group": "olivine-silph-office",
+          "side": "inside",
+          "segments": [
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "arrivals": [
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              7
+            ]
+          ]
+        }
+      ],
+      "objects": [
+        {
+          "graphics_id": "OBJ_EVENT_GFX_DEVON_EMPLOYEE",
+          "x": 7,
+          "y": 5,
+          "script": "Olivine_OfficeWorker"
+        },
+        {
+          "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+          "x": 4,
+          "y": 4,
+          "script": "Crossroads_EventScript_ChooseStarter"
+        }
+      ],
+      "services": [
+        "Existing exactly-one starter rescue/case",
+        "Silph terminal interaction"
+      ],
+      "technical_adaptations": [
+        "Accepted original Black Ledger location outside the nine HGSS canonical buildings",
+        "Existing interior script/party/starter/travel/rest contracts preserved; no claim of an HGSS counterpart"
+      ],
+      "static_visual_review": "All24 current full-layout static previews inspected; HGSS raster/geometry and chosen adaptations recorded; owner acceptance pending",
+      "verification": {
+        "automated_checks": "PASS final source/generator/topology/semantic/resource/save-ID/build checks; engine palette bounds0\u201312 preserved",
+        "emulator_gameplay": "PASS current B11 controller tour plus applicable doorway/stair/landmark/service/collision tests; evidence scopes/exclusions recorded",
+        "save_continue": "Current B11 compatibility/save matrix PASS; no separate normal-save point on this particular map claimed",
+        "owner_delta_visual_acceptance": "PENDING"
+      },
+      "pending_until_final_delivery": false,
+      "pending_owner_delta_visual_review": true,
+      "historical_b9_native_frame": "crossroads/qa/qa09/olivine-tour-v9/OlivineCity_SilphOffice.png",
+      "current_b11_native_frame": "crossroads/qa/qa09/olivine/final-v11-tour/OlivineCity_SilphOffice.png"
+    },
+    {
+      "name": "OlivineCity_HarborOffice",
+      "display_name": "Harbor Office",
+      "map_id": "MAP_OLIVINE_CITY_HARBOR_OFFICE",
+      "map_group_symbol": "gMapGroup_CrossroadsOlivine",
+      "map_group_number": 75,
+      "map_number": 7,
+      "layout_id": "LAYOUT_OLIVINE_HARBOR_OFFICE",
+      "dimensions": [
+        10,
+        8
+      ],
+      "layout_file": "data/layouts/OlivineHarborOffice/map.bin",
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Facility",
+      "classification": [
+        "deliberate Black Ledger addition"
+      ],
+      "source_header": null,
+      "source_provenance": null,
+      "source_prop_models": {},
+      "source_warps": [],
+      "native_warps": [
+        {
+          "x": 3,
+          "y": 7,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY",
+          "dest_warp_id": "6"
+        },
+        {
+          "x": 4,
+          "y": 7,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY",
+          "dest_warp_id": "6"
+        }
+      ],
+      "native_connections": null,
+      "visible_doorway_segments": [
+        {
+          "doorway_group": "olivine-harbor-office",
+          "side": "inside",
+          "segments": [
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "arrivals": [
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              7
+            ]
+          ]
+        }
+      ],
+      "objects": [
+        {
+          "graphics_id": "OBJ_EVENT_GFX_SAILOR",
+          "x": 7,
+          "y": 5,
+          "script": "Olivine_HarborClerk"
+        },
+        {
+          "graphics_id": "OBJ_EVENT_GFX_SAILOR",
+          "x": 1,
+          "y": 5,
+          "script": "Johto_TestDesk"
+        }
+      ],
+      "services": [
+        "Accepted Ecruteak/Alpha travel services",
+        "Local harbor interactions"
+      ],
+      "technical_adaptations": [
+        "Accepted original Black Ledger location outside the nine HGSS canonical buildings",
+        "Existing interior script/party/starter/travel/rest contracts preserved; no claim of an HGSS counterpart"
+      ],
+      "static_visual_review": "All24 current full-layout static previews inspected; HGSS raster/geometry and chosen adaptations recorded; owner acceptance pending",
+      "verification": {
+        "automated_checks": "PASS final source/generator/topology/semantic/resource/save-ID/build checks; engine palette bounds0\u201312 preserved",
+        "emulator_gameplay": "PASS current B11 controller tour plus applicable doorway/stair/landmark/service/collision tests; evidence scopes/exclusions recorded",
+        "save_continue": "Current B11 compatibility/save matrix PASS; no separate normal-save point on this particular map claimed",
+        "owner_delta_visual_acceptance": "PENDING"
+      },
+      "pending_until_final_delivery": false,
+      "pending_owner_delta_visual_review": true,
+      "historical_b9_native_frame": "crossroads/qa/qa09/olivine-tour-v9/OlivineCity_HarborOffice.png",
+      "current_b11_native_frame": "crossroads/qa/qa09/olivine/final-v11-tour/OlivineCity_HarborOffice.png"
+    },
+    {
+      "name": "OlivineCity_Lighthouse_1F",
+      "display_name": "Lighthouse 1F",
+      "map_id": "MAP_OLIVINECITY_LIGHTHOUSE_1F",
+      "map_group_symbol": "gMapGroup_CrossroadsOlivine",
+      "map_group_number": 75,
+      "map_number": 18,
+      "layout_id": "LAYOUT_OLIVINECITY_LIGHTHOUSE_1F",
+      "dimensions": [
+        17,
+        19
+      ],
+      "layout_file": "data/layouts/OlivineCity_Lighthouse_1F/map.bin",
+      "primary_tileset": "gTileset_HgssOlivineLandmarkIndoor",
+      "secondary_tileset": "gTileset_HgssOlivineLandmarks",
+      "classification": [
+        "HGSS reference geometry",
+        "native GBA visual adaptation"
+      ],
+      "source_header": "MAP_OLIVINE_LIGHTHOUSE_1F",
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0047_D27R0101.bin",
+        "matrix_blob_sha": "eb950e0ad409f48f13d29139bcf672378e474a7c",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/112_D27R0101.json",
+        "events_blob_sha": "380f6c22b55f61b350fc13d754e13bad3de6318b",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "source_prop_models": {
+        "1": 1,
+        "23": 6,
+        "4": 1,
+        "63": 1
+      },
+      "source_warps": [
+        {
+          "x": 8,
+          "z": 17,
+          "header": "MAP_OLIVINE",
+          "anchor": 3,
+          "y": 0
+        },
+        {
+          "x": 8,
+          "z": 4,
+          "header": "MAP_OLIVINE_LIGHTHOUSE_ELEVATOR",
+          "anchor": 0,
+          "y": 0
+        },
+        {
+          "x": 2,
+          "z": 3,
+          "header": "MAP_OLIVINE_LIGHTHOUSE_2F",
+          "anchor": 0,
+          "y": 0
+        }
+      ],
+      "native_warps": [
+        {
+          "x": 8,
+          "y": 17,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY",
+          "dest_warp_id": "7"
+        },
+        {
+          "x": 9,
+          "y": 17,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY",
+          "dest_warp_id": "7"
+        },
+        {
+          "x": 2,
+          "y": 3,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_2F",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 8,
+          "y": 4,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_LIGHTHOUSE_ELEVATOR",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 9,
+          "y": 4,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_LIGHTHOUSE_ELEVATOR",
+          "dest_warp_id": "1"
+        }
+      ],
+      "native_connections": null,
+      "visible_doorway_segments": [
+        {
+          "doorway_group": "olivine-lighthouse",
+          "side": "inside",
+          "segments": [
+            [
+              8,
+              17
+            ],
+            [
+              9,
+              17
+            ]
+          ],
+          "arrivals": [
+            [
+              8,
+              17
+            ],
+            [
+              9,
+              17
+            ]
+          ]
+        }
+      ],
+      "objects": [
+        {
+          "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
+          "x": 8,
+          "y": 15,
+          "script": "Area_LighthouseKeeper"
+        }
+      ],
+      "services": [
+        "Ambient interaction and normal source floor traversal"
+      ],
+      "technical_adaptations": [
+        "Original native GBA props/palettes replace DS perspective models; source coordinate origin retained",
+        "No source trainer/story/reward flags imported",
+        "Wide GBA door/stair aliases append without removing historical warp indices"
+      ],
+      "static_visual_review": "All24 current full-layout static previews inspected; HGSS raster/geometry and chosen adaptations recorded; owner acceptance pending",
+      "verification": {
+        "automated_checks": "PASS final source/generator/topology/semantic/resource/save-ID/build checks; engine palette bounds0\u201312 preserved",
+        "emulator_gameplay": "PASS current B11 controller tour plus applicable doorway/stair/landmark/service/collision tests; evidence scopes/exclusions recorded",
+        "save_continue": "Current B11 compatibility/save matrix PASS; no separate normal-save point on this particular map claimed",
+        "owner_delta_visual_acceptance": "PENDING"
+      },
+      "pending_until_final_delivery": false,
+      "source_prop_coverage": "olivine-landmark-prop-coverage.json#OlivineCity_Lighthouse_1F",
+      "pending_owner_delta_visual_review": true,
+      "historical_b9_native_frame": "crossroads/qa/qa09/olivine-tour-v9/OlivineCity_Lighthouse_1F.png",
+      "current_b11_native_frame": "crossroads/qa/qa09/olivine/final-v11-tour/OlivineCity_Lighthouse_1F.png"
+    },
+    {
+      "name": "OlivineCity_Lighthouse_2F",
+      "display_name": "Lighthouse 2F",
+      "map_id": "MAP_OLIVINECITY_LIGHTHOUSE_2F",
+      "map_group_symbol": "gMapGroup_CrossroadsOlivine",
+      "map_group_number": 75,
+      "map_number": 19,
+      "layout_id": "LAYOUT_OLIVINECITY_LIGHTHOUSE_2F",
+      "dimensions": [
+        17,
+        19
+      ],
+      "layout_file": "data/layouts/OlivineCity_Lighthouse_2F/map.bin",
+      "primary_tileset": "gTileset_HgssOlivineLandmarkIndoor",
+      "secondary_tileset": "gTileset_HgssOlivineLandmarks",
+      "classification": [
+        "HGSS reference geometry",
+        "native GBA visual adaptation"
+      ],
+      "source_header": "MAP_OLIVINE_LIGHTHOUSE_2F",
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0048_D27R0102.bin",
+        "matrix_blob_sha": "66764818b798d61ae5d9b870986328849686e03b",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/206_D27R0102.json",
+        "events_blob_sha": "49fcae8af2473b2583ac3beb704c4c6304382c04",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "source_prop_models": {
+        "145": 1,
+        "23": 2,
+        "4": 1
+      },
+      "source_warps": [
+        {
+          "x": 5,
+          "z": 3,
+          "header": "MAP_OLIVINE_LIGHTHOUSE_1F",
+          "anchor": 2,
+          "y": 0
+        },
+        {
+          "x": 13,
+          "z": 6,
+          "header": "MAP_OLIVINE_LIGHTHOUSE_3F",
+          "anchor": 0,
+          "y": 0
+        },
+        {
+          "x": 13,
+          "z": 5,
+          "header": "MAP_OLIVINE_LIGHTHOUSE_3F",
+          "anchor": 0,
+          "y": 0
+        }
+      ],
+      "native_warps": [
+        {
+          "x": 5,
+          "y": 3,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_1F",
+          "dest_warp_id": "2"
+        },
+        {
+          "x": 13,
+          "y": 6,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_3F",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 13,
+          "y": 5,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_3F",
+          "dest_warp_id": "0"
+        }
+      ],
+      "native_connections": null,
+      "visible_doorway_segments": [],
+      "objects": [],
+      "services": [
+        "Ambient interaction and normal source floor traversal"
+      ],
+      "technical_adaptations": [
+        "Original native GBA props/palettes replace DS perspective models; source coordinate origin retained",
+        "No source trainer/story/reward flags imported",
+        "Wide GBA door/stair aliases append without removing historical warp indices"
+      ],
+      "static_visual_review": "All24 current full-layout static previews inspected; HGSS raster/geometry and chosen adaptations recorded; owner acceptance pending",
+      "verification": {
+        "automated_checks": "PASS final source/generator/topology/semantic/resource/save-ID/build checks; engine palette bounds0\u201312 preserved",
+        "emulator_gameplay": "PASS current B11 controller tour plus applicable doorway/stair/landmark/service/collision tests; evidence scopes/exclusions recorded",
+        "save_continue": "Current B11 compatibility/save matrix PASS; no separate normal-save point on this particular map claimed",
+        "owner_delta_visual_acceptance": "PENDING"
+      },
+      "pending_until_final_delivery": false,
+      "source_prop_coverage": "olivine-landmark-prop-coverage.json#OlivineCity_Lighthouse_2F",
+      "pending_owner_delta_visual_review": true,
+      "historical_b9_native_frame": "crossroads/qa/qa09/olivine-tour-v9/OlivineCity_Lighthouse_2F.png",
+      "current_b11_native_frame": "crossroads/qa/qa09/olivine/final-v11-tour/OlivineCity_Lighthouse_2F.png"
+    },
+    {
+      "name": "OlivineCity_Lighthouse_3F",
+      "display_name": "Lighthouse 3F",
+      "map_id": "MAP_OLIVINECITY_LIGHTHOUSE_3F",
+      "map_group_symbol": "gMapGroup_CrossroadsOlivine",
+      "map_group_number": 75,
+      "map_number": 20,
+      "layout_id": "LAYOUT_OLIVINECITY_LIGHTHOUSE_3F",
+      "dimensions": [
+        17,
+        20
+      ],
+      "layout_file": "data/layouts/OlivineCity_Lighthouse_3F/map.bin",
+      "primary_tileset": "gTileset_HgssOlivineLandmarkIndoor",
+      "secondary_tileset": "gTileset_HgssOlivineLandmarks",
+      "classification": [
+        "HGSS reference geometry",
+        "native GBA visual adaptation"
+      ],
+      "source_header": "MAP_OLIVINE_LIGHTHOUSE_3F",
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0050_D27R0104.bin",
+        "matrix_blob_sha": "a654df56553acb73e364d438d993ee02c43c84fb",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/208_D27R0104.json",
+        "events_blob_sha": "8b670eb56a5f2ff10022fb19a18a0ae3d9329d9f",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "source_prop_models": {
+        "1": 1,
+        "144": 1,
+        "145": 2,
+        "15": 1
+      },
+      "source_warps": [
+        {
+          "x": 13,
+          "z": 7,
+          "header": "MAP_OLIVINE_LIGHTHOUSE_2F",
+          "anchor": 1,
+          "y": 0
+        },
+        {
+          "x": 10,
+          "z": 7,
+          "header": "MAP_OLIVINE_LIGHTHOUSE_4F",
+          "anchor": 0,
+          "y": 0
+        },
+        {
+          "x": 10,
+          "z": 6,
+          "header": "MAP_OLIVINE_LIGHTHOUSE_4F",
+          "anchor": 0,
+          "y": 0
+        },
+        {
+          "x": 6,
+          "z": 7,
+          "header": "MAP_OLIVINE_LIGHTHOUSE_4F",
+          "anchor": 1,
+          "y": 0
+        },
+        {
+          "x": 6,
+          "z": 6,
+          "header": "MAP_OLIVINE_LIGHTHOUSE_4F",
+          "anchor": 1,
+          "y": 0
+        },
+        {
+          "x": 8,
+          "z": 18,
+          "header": "MAP_OLIVINE_LIGHTHOUSE_EXTERIOR",
+          "anchor": 0,
+          "y": 0
+        }
+      ],
+      "native_warps": [
+        {
+          "x": 13,
+          "y": 7,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_2F",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 10,
+          "y": 7,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_4F",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 10,
+          "y": 6,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_4F",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 6,
+          "y": 7,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_4F",
+          "dest_warp_id": "3"
+        },
+        {
+          "x": 6,
+          "y": 6,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_4F",
+          "dest_warp_id": "3"
+        },
+        {
+          "x": 8,
+          "y": 18,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_LIGHTHOUSE_BALCONY",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 9,
+          "y": 18,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_LIGHTHOUSE_BALCONY",
+          "dest_warp_id": "1"
+        }
+      ],
+      "native_connections": null,
+      "visible_doorway_segments": [
+        {
+          "doorway_group": "olivine-lighthouse-balcony",
+          "side": "inside",
+          "segments": [
+            [
+              8,
+              18
+            ],
+            [
+              9,
+              18
+            ]
+          ],
+          "arrivals": [
+            [
+              8,
+              18
+            ],
+            [
+              9,
+              18
+            ]
+          ]
+        }
+      ],
+      "objects": [
+        {
+          "graphics_id": "OBJ_EVENT_GFX_WOMAN_3",
+          "x": 4,
+          "y": 13,
+          "script": "Area_TowerVisitor"
+        }
+      ],
+      "services": [
+        "Ambient interaction and normal source floor traversal"
+      ],
+      "technical_adaptations": [
+        "Original native GBA props/palettes replace DS perspective models; source coordinate origin retained",
+        "No source trainer/story/reward flags imported",
+        "Wide GBA door/stair aliases append without removing historical warp indices"
+      ],
+      "static_visual_review": "All24 current full-layout static previews inspected; HGSS raster/geometry and chosen adaptations recorded; owner acceptance pending",
+      "verification": {
+        "automated_checks": "PASS final source/generator/topology/semantic/resource/save-ID/build checks; engine palette bounds0\u201312 preserved",
+        "emulator_gameplay": "PASS current B11 controller tour plus applicable doorway/stair/landmark/service/collision tests; evidence scopes/exclusions recorded",
+        "save_continue": "PASS direct normal Save/coldContinue on exact B11",
+        "owner_delta_visual_acceptance": "PENDING"
+      },
+      "pending_until_final_delivery": false,
+      "source_prop_coverage": "olivine-landmark-prop-coverage.json#OlivineCity_Lighthouse_3F",
+      "pending_owner_delta_visual_review": true,
+      "historical_b9_native_frame": "crossroads/qa/qa09/olivine-tour-v9/OlivineCity_Lighthouse_3F.png",
+      "current_b11_native_frame": "crossroads/qa/qa09/olivine/final-v11-tour/OlivineCity_Lighthouse_3F.png"
+    },
+    {
+      "name": "OlivineCity_Lighthouse_4F",
+      "display_name": "Lighthouse 4F",
+      "map_id": "MAP_OLIVINECITY_LIGHTHOUSE_4F",
+      "map_group_symbol": "gMapGroup_CrossroadsOlivine",
+      "map_group_number": 75,
+      "map_number": 21,
+      "layout_id": "LAYOUT_OLIVINECITY_LIGHTHOUSE_4F",
+      "dimensions": [
+        17,
+        19
+      ],
+      "layout_file": "data/layouts/OlivineCity_Lighthouse_4F/map.bin",
+      "primary_tileset": "gTileset_HgssOlivineLandmarkIndoor",
+      "secondary_tileset": "gTileset_HgssOlivineLandmarks",
+      "classification": [
+        "HGSS reference geometry",
+        "native GBA visual adaptation"
+      ],
+      "source_header": "MAP_OLIVINE_LIGHTHOUSE_4F",
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0051_D27R0105.bin",
+        "matrix_blob_sha": "c19fa47a8e187560b7a351148fca9862e1ce4715",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/209_D27R0105.json",
+        "events_blob_sha": "732883dad10255ff73c33ee6d78097b5902570e1",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "source_prop_models": {
+        "144": 2,
+        "145": 1
+      },
+      "source_warps": [
+        {
+          "x": 10,
+          "z": 7,
+          "header": "MAP_OLIVINE_LIGHTHOUSE_3F",
+          "anchor": 1,
+          "y": 0
+        },
+        {
+          "x": 6,
+          "z": 7,
+          "header": "MAP_OLIVINE_LIGHTHOUSE_3F",
+          "anchor": 3,
+          "y": 0
+        },
+        {
+          "x": 3,
+          "z": 5,
+          "header": "MAP_OLIVINE_LIGHTHOUSE_5F",
+          "anchor": 0,
+          "y": 0
+        },
+        {
+          "x": 3,
+          "z": 4,
+          "header": "MAP_OLIVINE_LIGHTHOUSE_5F",
+          "anchor": 0,
+          "y": 0
+        }
+      ],
+      "native_warps": [
+        {
+          "x": 10,
+          "y": 7,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_3F",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 3,
+          "y": 5,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_5F",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 3,
+          "y": 4,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_5F",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 6,
+          "y": 7,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_3F",
+          "dest_warp_id": "3"
+        }
+      ],
+      "native_connections": null,
+      "visible_doorway_segments": [],
+      "objects": [],
+      "services": [
+        "Source window drop to exterior balcony",
+        "Normal stair traversal"
+      ],
+      "technical_adaptations": [
+        "Original native GBA props/palettes replace DS perspective models; source coordinate origin retained",
+        "No source trainer/story/reward flags imported",
+        "Wide GBA door/stair aliases append without removing historical warp indices"
+      ],
+      "static_visual_review": "All24 current full-layout static previews inspected; HGSS raster/geometry and chosen adaptations recorded; owner acceptance pending",
+      "verification": {
+        "automated_checks": "PASS final source/generator/topology/semantic/resource/save-ID/build checks; engine palette bounds0\u201312 preserved",
+        "emulator_gameplay": "PASS current B11 controller tour plus applicable doorway/stair/landmark/service/collision tests; evidence scopes/exclusions recorded",
+        "save_continue": "Current B11 compatibility/save matrix PASS; no separate normal-save point on this particular map claimed",
+        "owner_delta_visual_acceptance": "PENDING"
+      },
+      "pending_until_final_delivery": false,
+      "source_prop_coverage": "olivine-landmark-prop-coverage.json#OlivineCity_Lighthouse_4F",
+      "pending_owner_delta_visual_review": true,
+      "historical_b9_native_frame": "crossroads/qa/qa09/olivine-tour-v9/OlivineCity_Lighthouse_4F.png",
+      "current_b11_native_frame": "crossroads/qa/qa09/olivine/final-v11-tour/OlivineCity_Lighthouse_4F.png"
+    },
+    {
+      "name": "OlivineCity_Lighthouse_5F",
+      "display_name": "Lighthouse 5F",
+      "map_id": "MAP_OLIVINECITY_LIGHTHOUSE_5F",
+      "map_group_symbol": "gMapGroup_CrossroadsOlivine",
+      "map_group_number": 75,
+      "map_number": 22,
+      "layout_id": "LAYOUT_OLIVINECITY_LIGHTHOUSE_5F",
+      "dimensions": [
+        17,
+        19
+      ],
+      "layout_file": "data/layouts/OlivineCity_Lighthouse_5F/map.bin",
+      "primary_tileset": "gTileset_HgssOlivineLandmarkIndoor",
+      "secondary_tileset": "gTileset_HgssOlivineLandmarks",
+      "classification": [
+        "HGSS reference geometry",
+        "native GBA visual adaptation"
+      ],
+      "source_header": "MAP_OLIVINE_LIGHTHOUSE_5F",
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0052_D27R0106.bin",
+        "matrix_blob_sha": "c9c7113684985af9405df9fd4fca0b697e8da11b",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/210_D27R0106.json",
+        "events_blob_sha": "58595be5dd77623ab9e3986c15b0a0dd667c9133",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "source_prop_models": {
+        "144": 1,
+        "145": 1
+      },
+      "source_warps": [
+        {
+          "x": 4,
+          "z": 5,
+          "header": "MAP_OLIVINE_LIGHTHOUSE_4F",
+          "anchor": 2,
+          "y": 0
+        },
+        {
+          "x": 10,
+          "z": 10,
+          "header": "MAP_OLIVINE_LIGHTHOUSE_LIGHT_ROOM",
+          "anchor": 0,
+          "y": 0
+        },
+        {
+          "x": 10,
+          "z": 9,
+          "header": "MAP_OLIVINE_LIGHTHOUSE_LIGHT_ROOM",
+          "anchor": 0,
+          "y": 0
+        }
+      ],
+      "native_warps": [
+        {
+          "x": 4,
+          "y": 5,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_4F",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 10,
+          "y": 10,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_6F",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 10,
+          "y": 9,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_6F",
+          "dest_warp_id": "0"
+        }
+      ],
+      "native_connections": null,
+      "visible_doorway_segments": [],
+      "objects": [],
+      "services": [
+        "Ambient interaction and normal source floor traversal"
+      ],
+      "technical_adaptations": [
+        "Original native GBA props/palettes replace DS perspective models; source coordinate origin retained",
+        "No source trainer/story/reward flags imported",
+        "Wide GBA door/stair aliases append without removing historical warp indices"
+      ],
+      "static_visual_review": "All24 current full-layout static previews inspected; HGSS raster/geometry and chosen adaptations recorded; owner acceptance pending",
+      "verification": {
+        "automated_checks": "PASS final source/generator/topology/semantic/resource/save-ID/build checks; engine palette bounds0\u201312 preserved",
+        "emulator_gameplay": "PASS current B11 controller tour plus applicable doorway/stair/landmark/service/collision tests; evidence scopes/exclusions recorded",
+        "save_continue": "Current B11 compatibility/save matrix PASS; no separate normal-save point on this particular map claimed",
+        "owner_delta_visual_acceptance": "PENDING"
+      },
+      "pending_until_final_delivery": false,
+      "source_prop_coverage": "olivine-landmark-prop-coverage.json#OlivineCity_Lighthouse_5F",
+      "pending_owner_delta_visual_review": true,
+      "historical_b9_native_frame": "crossroads/qa/qa09/olivine-tour-v9/OlivineCity_Lighthouse_5F.png",
+      "current_b11_native_frame": "crossroads/qa/qa09/olivine/final-v11-tour/OlivineCity_Lighthouse_5F.png"
+    },
+    {
+      "name": "OlivineCity_Lighthouse_6F",
+      "display_name": "Lighthouse 6F",
+      "map_id": "MAP_OLIVINECITY_LIGHTHOUSE_6F",
+      "map_group_symbol": "gMapGroup_CrossroadsOlivine",
+      "map_group_number": 75,
+      "map_number": 23,
+      "layout_id": "LAYOUT_OLIVINECITY_LIGHTHOUSE_6F",
+      "dimensions": [
+        17,
+        19
+      ],
+      "layout_file": "data/layouts/OlivineCity_Lighthouse_6F/map.bin",
+      "primary_tileset": "gTileset_HgssOlivineLandmarkIndoor",
+      "secondary_tileset": "gTileset_HgssOlivineLandmarks",
+      "classification": [
+        "HGSS reference geometry",
+        "native GBA visual adaptation"
+      ],
+      "source_header": "MAP_OLIVINE_LIGHTHOUSE_LIGHT_ROOM",
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0131_D27R0107.bin",
+        "matrix_blob_sha": "21cde54d10af49aaba89b85fef06404f9cbf64ab",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/211_D27R0107.json",
+        "events_blob_sha": "f13bdcd507edd8a1532d26aad72a318afffa4f11",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "source_prop_models": {
+        "122": 1,
+        "124": 1
+      },
+      "source_warps": [
+        {
+          "x": 9,
+          "z": 10,
+          "header": "MAP_OLIVINE_LIGHTHOUSE_5F",
+          "anchor": 1,
+          "y": 0
+        },
+        {
+          "x": 8,
+          "z": 4,
+          "header": "MAP_OLIVINE_LIGHTHOUSE_ELEVATOR",
+          "anchor": 0,
+          "y": 0
+        }
+      ],
+      "native_warps": [
+        {
+          "x": 9,
+          "y": 10,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_5F",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 8,
+          "y": 4,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_LIGHTHOUSE_ELEVATOR",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 9,
+          "y": 4,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_LIGHTHOUSE_ELEVATOR",
+          "dest_warp_id": "1"
+        }
+      ],
+      "native_connections": null,
+      "visible_doorway_segments": [],
+      "objects": [
+        {
+          "graphics_id": "OBJ_EVENT_GFX_WOMAN_3",
+          "x": 11,
+          "y": 14,
+          "script": "Area_TowerVisitor"
+        },
+        {
+          "graphics_id": "OBJ_EVENT_GFX_AREA_LANTERN",
+          "x": 8,
+          "y": 6,
+          "script": "Area_LighthouseView"
+        }
+      ],
+      "services": [
+        "Ambient interaction and normal source floor traversal"
+      ],
+      "technical_adaptations": [
+        "Original native GBA props/palettes replace DS perspective models; source coordinate origin retained",
+        "No source trainer/story/reward flags imported",
+        "Wide GBA door/stair aliases append without removing historical warp indices"
+      ],
+      "static_visual_review": "All24 current full-layout static previews inspected; HGSS raster/geometry and chosen adaptations recorded; owner acceptance pending",
+      "verification": {
+        "automated_checks": "PASS final source/generator/topology/semantic/resource/save-ID/build checks; engine palette bounds0\u201312 preserved",
+        "emulator_gameplay": "PASS current B11 controller tour plus applicable doorway/stair/landmark/service/collision tests; evidence scopes/exclusions recorded",
+        "save_continue": "PASS direct normal Save/coldContinue on exact B11",
+        "owner_delta_visual_acceptance": "PENDING"
+      },
+      "pending_until_final_delivery": false,
+      "source_prop_coverage": "olivine-landmark-prop-coverage.json#OlivineCity_Lighthouse_6F",
+      "pending_owner_delta_visual_review": true,
+      "historical_b9_native_frame": "crossroads/qa/qa09/olivine-tour-v9/OlivineCity_Lighthouse_6F.png",
+      "current_b11_native_frame": "crossroads/qa/qa09/olivine/final-v11-tour/OlivineCity_Lighthouse_6F.png"
+    },
+    {
+      "name": "OlivineCity_Gym_Arena",
+      "display_name": "Gym Arena",
+      "map_id": "MAP_OLIVINECITY_GYM_ARENA",
+      "map_group_symbol": "gMapGroup_CrossroadsOlivine",
+      "map_group_number": 75,
+      "map_number": 33,
+      "layout_id": "LAYOUT_OLIVINECITY_GYM_ARENA",
+      "dimensions": [
+        11,
+        17
+      ],
+      "layout_file": "data/layouts/OlivineCity_Gym_Arena/map.bin",
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_HgssOlivineGym",
+      "classification": [
+        "HGSS reference geometry",
+        "native GBA visual adaptation",
+        "approved owner Gym exterior replaces canonical HGSS facade"
+      ],
+      "source_header": "MAP_OLIVINE_GYM",
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0091_T26GYM0101.bin",
+        "matrix_blob_sha": "cf24368e5f50e691e985809610d8468ad6d0bed8",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/134_T26GYM0101.json",
+        "events_blob_sha": "d783ecb187c5c586c51e409954f87c8f548701ac",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "source_prop_models": {
+        "78": 2
+      },
+      "source_warps": [
+        {
+          "x": 6,
+          "z": 27,
+          "header": "MAP_OLIVINE",
+          "anchor": 0,
+          "y": 0
+        }
+      ],
+      "native_warps": [
+        {
+          "x": 6,
+          "y": 16,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_GYM",
+          "dest_warp_id": "2"
+        },
+        {
+          "x": 5,
+          "y": 16,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_GYM",
+          "dest_warp_id": "3"
+        },
+        {
+          "x": 7,
+          "y": 16,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_GYM",
+          "dest_warp_id": "4"
+        }
+      ],
+      "native_connections": null,
+      "visible_doorway_segments": [
+        {
+          "doorway_group": "olivine-gym-hallway",
+          "side": "inside",
+          "segments": [
+            [
+              5,
+              16
+            ],
+            [
+              6,
+              16
+            ],
+            [
+              7,
+              16
+            ]
+          ],
+          "arrivals": [
+            [
+              5,
+              16
+            ],
+            [
+              6,
+              16
+            ],
+            [
+              7,
+              16
+            ]
+          ]
+        }
+      ],
+      "objects": [
+        {
+          "graphics_id": "OBJ_EVENT_GFX_CROSSROADS_JASMINE",
+          "x": 6,
+          "y": 5,
+          "script": "Area_PracticeJasmine"
+        },
+        {
+          "graphics_id": "OBJ_EVENT_GFX_MAN_1",
+          "x": 9,
+          "y": 15,
+          "script": "Area_JasmineApprentice"
+        }
+      ],
+      "services": [
+        "Accepted Jasmine reusable practice battle",
+        "Accepted apprentice interaction/practice"
+      ],
+      "technical_adaptations": [
+        "Canonical HGSS long central steel runway/platform/pylons/source actor positions",
+        "Original silver/salmon/hex modules replace 3D perspective; owner exterior Gym unchanged",
+        "Sourcey17 split across two stable map IDs; all three corridor segments reciprocal",
+        "Accepted Jasmine/apprentice optional practice scripts retained, no rewards/badges/gates"
+      ],
+      "static_visual_review": "All24 current full-layout static previews inspected; HGSS raster/geometry and chosen adaptations recorded; owner acceptance pending",
+      "verification": {
+        "automated_checks": "PASS final source/generator/topology/semantic/resource/save-ID/build checks; engine palette bounds0\u201312 preserved",
+        "emulator_gameplay": "PASS current B11 controller tour plus applicable doorway/stair/landmark/service/collision tests; evidence scopes/exclusions recorded",
+        "save_continue": "Current B11 compatibility/save matrix PASS; no separate normal-save point on this particular map claimed",
+        "owner_delta_visual_acceptance": "PENDING"
+      },
+      "pending_until_final_delivery": false,
+      "pending_owner_delta_visual_review": true,
+      "historical_b9_native_frame": "crossroads/qa/qa09/olivine-tour-v9/OlivineCity_Gym_Arena.png",
+      "current_b11_native_frame": "crossroads/qa/qa09/olivine/final-v11-tour/OlivineCity_Gym_Arena.png"
+    },
+    {
+      "name": "OlivineCity_FishingHouse",
+      "display_name": "FishingHouse",
+      "map_id": "MAP_HGSS_OLIVINECITY_FISHINGHOUSE",
+      "map_group_symbol": "gMapGroup_CrossroadsJohtoExpansion",
+      "map_group_number": 76,
+      "map_number": 34,
+      "layout_id": "LAYOUT_HGSS_OLIVINECITY_FISHINGHOUSE",
+      "dimensions": [
+        11,
+        10
+      ],
+      "layout_file": "data/layouts/OlivineCity_FishingHouse/map.bin",
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_HgssOlivineHome",
+      "classification": [
+        "HGSS reference geometry",
+        "native GBA visual adaptation"
+      ],
+      "source_header": "MAP_OLIVINE_NORTHWEST_HOUSE",
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0097_T21R0301.bin",
+        "matrix_blob_sha": "5e28ceacf076da9c4e81fe9376530d4aaa96ba5d",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/216_T26R0601.json",
+        "events_blob_sha": "49ec63006209d42ef103135d2a099a5565ff6365",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "source_prop_models": {
+        "1": 1,
+        "20": 1,
+        "21": 1,
+        "23": 1,
+        "53": 2,
+        "54": 2,
+        "66": 1,
+        "94": 1
+      },
+      "source_warps": [
+        {
+          "x": 4,
+          "z": 8,
+          "header": "MAP_OLIVINE",
+          "anchor": 4,
+          "y": 0
+        }
+      ],
+      "native_warps": [
+        {
+          "x": 4,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY",
+          "dest_warp_id": "9"
+        },
+        {
+          "x": 5,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY",
+          "dest_warp_id": "9"
+        }
+      ],
+      "native_connections": null,
+      "visible_doorway_segments": [
+        {
+          "doorway_group": "olivine-fishing-house",
+          "side": "inside",
+          "segments": [
+            [
+              4,
+              8
+            ],
+            [
+              5,
+              8
+            ]
+          ],
+          "arrivals": [
+            [
+              4,
+              8
+            ],
+            [
+              5,
+              8
+            ]
+          ]
+        }
+      ],
+      "objects": [
+        {
+          "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
+          "x": 5,
+          "y": 5,
+          "script": "Hgss_OlivineFishingResident"
+        }
+      ],
+      "services": [
+        "Ambient interaction and normal source floor traversal"
+      ],
+      "technical_adaptations": [
+        "HGSS room extent/table/counter footprints in native GBA furnishings; cafe12,8 adds one visible staff escape aisle",
+        "Source rewards/trades/Seal Case and plot actors are deferred by owner scope",
+        "Paired interior exit leaves both work; exterior house/cafe has its canonical single door",
+        "Actual shared0097 house matrix and trade-house screenshot support all three homes; native fridge/kitchen/window/bookcase/dining furniture",
+        "Source household actor positions/count retained; source rewards/trades/Seal Case are outside this map pass"
+      ],
+      "static_visual_review": "All24 current full-layout static previews inspected; HGSS raster/geometry and chosen adaptations recorded; owner acceptance pending",
+      "verification": {
+        "automated_checks": "PASS final source/generator/topology/semantic/resource/save-ID/build checks; engine palette bounds0\u201312 preserved",
+        "emulator_gameplay": "PASS current B11 controller tour plus applicable doorway/stair/landmark/service/collision tests; evidence scopes/exclusions recorded",
+        "save_continue": "PASS direct normal Save/coldContinue on exact B11",
+        "owner_delta_visual_acceptance": "PENDING"
+      },
+      "pending_until_final_delivery": false,
+      "open_fixture_review": [
+        "Source model23 plant beside rear bookcase lacks a distinct glyph in audited output; parent notified before final freeze, requires correction or explicit accepted art compression"
+      ],
+      "pending_owner_delta_visual_review": true,
+      "historical_b9_native_frame": "crossroads/qa/qa09/olivine-tour-v9/OlivineCity_FishingHouse.png",
+      "current_b11_native_frame": "crossroads/qa/qa09/olivine/final-v11-tour/OlivineCity_FishingHouse.png"
+    },
+    {
+      "name": "OlivineCity_TradeHouse",
+      "display_name": "TradeHouse",
+      "map_id": "MAP_HGSS_OLIVINECITY_TRADEHOUSE",
+      "map_group_symbol": "gMapGroup_CrossroadsJohtoExpansion",
+      "map_group_number": 76,
+      "map_number": 35,
+      "layout_id": "LAYOUT_HGSS_OLIVINECITY_TRADEHOUSE",
+      "dimensions": [
+        11,
+        10
+      ],
+      "layout_file": "data/layouts/OlivineCity_TradeHouse/map.bin",
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_HgssOlivineHome",
+      "classification": [
+        "HGSS reference geometry",
+        "native GBA visual adaptation"
+      ],
+      "source_header": "MAP_OLIVINE_NORTH_HOUSE",
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0097_T21R0301.bin",
+        "matrix_blob_sha": "5e28ceacf076da9c4e81fe9376530d4aaa96ba5d",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/214_T26R0301.json",
+        "events_blob_sha": "a5c457e801a0d4ab0c831aba1a8d4d0431dff0bc",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "source_prop_models": {
+        "1": 1,
+        "20": 1,
+        "21": 1,
+        "23": 1,
+        "53": 2,
+        "54": 2,
+        "66": 1,
+        "94": 1
+      },
+      "source_warps": [
+        {
+          "x": 4,
+          "z": 8,
+          "header": "MAP_OLIVINE",
+          "anchor": 6,
+          "y": 0
+        }
+      ],
+      "native_warps": [
+        {
+          "x": 4,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY",
+          "dest_warp_id": "10"
+        },
+        {
+          "x": 5,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY",
+          "dest_warp_id": "10"
+        }
+      ],
+      "native_connections": null,
+      "visible_doorway_segments": [
+        {
+          "doorway_group": "olivine-trade-house",
+          "side": "inside",
+          "segments": [
+            [
+              4,
+              8
+            ],
+            [
+              5,
+              8
+            ]
+          ],
+          "arrivals": [
+            [
+              4,
+              8
+            ],
+            [
+              5,
+              8
+            ]
+          ]
+        }
+      ],
+      "objects": [
+        {
+          "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
+          "x": 5,
+          "y": 5,
+          "script": "Hgss_OlivineTradeResident"
+        }
+      ],
+      "services": [
+        "Ambient interaction and normal source floor traversal"
+      ],
+      "technical_adaptations": [
+        "HGSS room extent/table/counter footprints in native GBA furnishings; cafe12,8 adds one visible staff escape aisle",
+        "Source rewards/trades/Seal Case and plot actors are deferred by owner scope",
+        "Paired interior exit leaves both work; exterior house/cafe has its canonical single door",
+        "Actual shared0097 house matrix and trade-house screenshot support all three homes; native fridge/kitchen/window/bookcase/dining furniture",
+        "Source household actor positions/count retained; source rewards/trades/Seal Case are outside this map pass"
+      ],
+      "static_visual_review": "All24 current full-layout static previews inspected; HGSS raster/geometry and chosen adaptations recorded; owner acceptance pending",
+      "verification": {
+        "automated_checks": "PASS final source/generator/topology/semantic/resource/save-ID/build checks; engine palette bounds0\u201312 preserved",
+        "emulator_gameplay": "PASS current B11 controller tour plus applicable doorway/stair/landmark/service/collision tests; evidence scopes/exclusions recorded",
+        "save_continue": "PASS direct normal Save/coldContinue on exact B11",
+        "owner_delta_visual_acceptance": "PENDING"
+      },
+      "pending_until_final_delivery": false,
+      "open_fixture_review": [
+        "Source model23 plant beside rear bookcase lacks a distinct glyph in audited output; parent notified before final freeze, requires correction or explicit accepted art compression"
+      ],
+      "pending_owner_delta_visual_review": true,
+      "historical_b9_native_frame": "crossroads/qa/qa09/olivine-tour-v9/OlivineCity_TradeHouse.png",
+      "current_b11_native_frame": "crossroads/qa/qa09/olivine/final-v11-tour/OlivineCity_TradeHouse.png"
+    },
+    {
+      "name": "OlivineCity_SealHouse",
+      "display_name": "SealHouse",
+      "map_id": "MAP_HGSS_OLIVINECITY_SEALHOUSE",
+      "map_group_symbol": "gMapGroup_CrossroadsJohtoExpansion",
+      "map_group_number": 76,
+      "map_number": 36,
+      "layout_id": "LAYOUT_HGSS_OLIVINECITY_SEALHOUSE",
+      "dimensions": [
+        11,
+        10
+      ],
+      "layout_file": "data/layouts/OlivineCity_SealHouse/map.bin",
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_HgssOlivineHome",
+      "classification": [
+        "HGSS reference geometry",
+        "native GBA visual adaptation"
+      ],
+      "source_header": "MAP_OLIVINE_NORTHEAST_HOUSE",
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0097_T21R0301.bin",
+        "matrix_blob_sha": "5e28ceacf076da9c4e81fe9376530d4aaa96ba5d",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/215_T26R0501.json",
+        "events_blob_sha": "2de125feb32c18be618d3044054d7550689c75f1",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "source_prop_models": {
+        "1": 1,
+        "20": 1,
+        "21": 1,
+        "23": 1,
+        "53": 2,
+        "54": 2,
+        "66": 1,
+        "94": 1
+      },
+      "source_warps": [
+        {
+          "x": 4,
+          "z": 8,
+          "header": "MAP_OLIVINE",
+          "anchor": 7,
+          "y": 0
+        }
+      ],
+      "native_warps": [
+        {
+          "x": 4,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY",
+          "dest_warp_id": "11"
+        },
+        {
+          "x": 5,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY",
+          "dest_warp_id": "11"
+        }
+      ],
+      "native_connections": null,
+      "visible_doorway_segments": [
+        {
+          "doorway_group": "olivine-seal-house",
+          "side": "inside",
+          "segments": [
+            [
+              4,
+              8
+            ],
+            [
+              5,
+              8
+            ]
+          ],
+          "arrivals": [
+            [
+              4,
+              8
+            ],
+            [
+              5,
+              8
+            ]
+          ]
+        }
+      ],
+      "objects": [
+        {
+          "graphics_id": "OBJ_EVENT_GFX_GIRL_1",
+          "x": 5,
+          "y": 5,
+          "script": "Hgss_OlivineSealResident"
+        },
+        {
+          "graphics_id": "OBJ_EVENT_GFX_MAN_3",
+          "x": 8,
+          "y": 5,
+          "script": "Hgss_OlivineSealResident"
+        },
+        {
+          "graphics_id": "OBJ_EVENT_GFX_LITTLE_GIRL",
+          "x": 2,
+          "y": 6,
+          "script": "Hgss_OlivineHouseChild"
+        }
+      ],
+      "services": [
+        "Ambient interaction and normal source floor traversal"
+      ],
+      "technical_adaptations": [
+        "HGSS room extent/table/counter footprints in native GBA furnishings; cafe12,8 adds one visible staff escape aisle",
+        "Source rewards/trades/Seal Case and plot actors are deferred by owner scope",
+        "Paired interior exit leaves both work; exterior house/cafe has its canonical single door",
+        "Actual shared0097 house matrix and trade-house screenshot support all three homes; native fridge/kitchen/window/bookcase/dining furniture",
+        "Source household actor positions/count retained; source rewards/trades/Seal Case are outside this map pass"
+      ],
+      "static_visual_review": "All24 current full-layout static previews inspected; HGSS raster/geometry and chosen adaptations recorded; owner acceptance pending",
+      "verification": {
+        "automated_checks": "PASS final source/generator/topology/semantic/resource/save-ID/build checks; engine palette bounds0\u201312 preserved",
+        "emulator_gameplay": "PASS current B11 controller tour plus applicable doorway/stair/landmark/service/collision tests; evidence scopes/exclusions recorded",
+        "save_continue": "PASS direct normal Save/coldContinue on exact B11",
+        "owner_delta_visual_acceptance": "PENDING"
+      },
+      "pending_until_final_delivery": false,
+      "open_fixture_review": [
+        "Source model23 plant beside rear bookcase lacks a distinct glyph in audited output; parent notified before final freeze, requires correction or explicit accepted art compression"
+      ],
+      "pending_owner_delta_visual_review": true,
+      "historical_b9_native_frame": "crossroads/qa/qa09/olivine-tour-v9/OlivineCity_SealHouse.png",
+      "current_b11_native_frame": "crossroads/qa/qa09/olivine/final-v11-tour/OlivineCity_SealHouse.png"
+    },
+    {
+      "name": "OlivineCity_Cafe",
+      "display_name": "Cafe",
+      "map_id": "MAP_HGSS_OLIVINECITY_CAFE",
+      "map_group_symbol": "gMapGroup_CrossroadsJohtoExpansion",
+      "map_group_number": 76,
+      "map_number": 37,
+      "layout_id": "LAYOUT_HGSS_OLIVINECITY_CAFE",
+      "dimensions": [
+        14,
+        12
+      ],
+      "layout_file": "data/layouts/OlivineCity_Cafe/map.bin",
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_HgssOlivineHome",
+      "classification": [
+        "HGSS reference geometry",
+        "native GBA visual adaptation"
+      ],
+      "source_header": "MAP_OLIVINE_CAFE",
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0136_T26R0701.bin",
+        "matrix_blob_sha": "7fa42e429494f67142ef822ac8138abe0c53a29c",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/217_T26R0701.json",
+        "events_blob_sha": "db39385bc0e6a9b8d01363b6f48e28e228f9abdf",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "source_prop_models": {
+        "1": 1,
+        "20": 1,
+        "23": 2
+      },
+      "source_warps": [
+        {
+          "x": 5,
+          "z": 10,
+          "header": "MAP_OLIVINE",
+          "anchor": 5,
+          "y": 0
+        }
+      ],
+      "native_warps": [
+        {
+          "x": 5,
+          "y": 10,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY",
+          "dest_warp_id": "12"
+        },
+        {
+          "x": 6,
+          "y": 10,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY",
+          "dest_warp_id": "12"
+        }
+      ],
+      "native_connections": null,
+      "visible_doorway_segments": [
+        {
+          "doorway_group": "olivine-cafe",
+          "side": "inside",
+          "segments": [
+            [
+              5,
+              10
+            ],
+            [
+              6,
+              10
+            ]
+          ],
+          "arrivals": [
+            [
+              5,
+              10
+            ],
+            [
+              6,
+              10
+            ]
+          ]
+        }
+      ],
+      "objects": [
+        {
+          "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
+          "x": 11,
+          "y": 4,
+          "script": "Hgss_OlivineCafeHost"
+        },
+        {
+          "graphics_id": "OBJ_EVENT_GFX_SAILOR",
+          "x": 2,
+          "y": 6,
+          "script": "Hgss_OlivineCafeSailor"
+        },
+        {
+          "graphics_id": "OBJ_EVENT_GFX_MAN_3",
+          "x": 6,
+          "y": 7,
+          "script": "Hgss_OlivineCafeVisitor"
+        }
+      ],
+      "services": [
+        "Native over-counter host dialogue",
+        "Ambient cafe patrons",
+        "Safe staff service aisle"
+      ],
+      "technical_adaptations": [
+        "HGSS room extent/table/counter footprints in native GBA furnishings; cafe12,8 adds one visible staff escape aisle",
+        "Source rewards/trades/Seal Case and plot actors are deferred by owner scope",
+        "Paired interior exit leaves both work; exterior house/cafe has its canonical single door",
+        "Actual cafe screenshot obtained and inspected: cream/checkered floor, left communal table, right serving counter, two rear windows and staff kitchen",
+        "Native source12,8 is an explicitly visible service escape aisle; solid counter retains MB_COUNTER"
+      ],
+      "static_visual_review": "All24 current full-layout static previews inspected; HGSS raster/geometry and chosen adaptations recorded; owner acceptance pending",
+      "verification": {
+        "automated_checks": "PASS final source/generator/topology/semantic/resource/save-ID/build checks; engine palette bounds0\u201312 preserved",
+        "emulator_gameplay": "PASS current B11 controller tour plus applicable doorway/stair/landmark/service/collision tests; evidence scopes/exclusions recorded",
+        "save_continue": "PASS direct normal Save/coldContinue on exact B11",
+        "owner_delta_visual_acceptance": "PENDING"
+      },
+      "pending_until_final_delivery": false,
+      "open_fixture_review": [
+        "Actual raster/model23 NW/SW potted plants absent from audited output; parent notified before final freeze"
+      ],
+      "pending_owner_delta_visual_review": true,
+      "historical_b9_native_frame": "crossroads/qa/qa09/olivine-tour-v9/OlivineCity_Cafe.png",
+      "current_b11_native_frame": "crossroads/qa/qa09/olivine/final-v11-tour/OlivineCity_Cafe.png"
+    },
+    {
+      "name": "OlivineCity_PokemonCenter_B1F",
+      "display_name": "PokemonCenter B1F",
+      "map_id": "MAP_HGSS_OLIVINECITY_POKEMONCENTER_B1F",
+      "map_group_symbol": "gMapGroup_CrossroadsJohtoExpansion",
+      "map_group_number": 76,
+      "map_number": 38,
+      "layout_id": "LAYOUT_HGSS_OLIVINECITY_POKEMONCENTER_B1F",
+      "dimensions": [
+        17,
+        14
+      ],
+      "layout_file": "data/layouts/OlivineCity_PokemonCenter_B1F/map.bin",
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_HgssCenterBasement",
+      "classification": [
+        "HGSS reference geometry",
+        "native GBA visual adaptation"
+      ],
+      "source_header": "MAP_OLIVINE_POKECENTER_B1F",
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0077_T27PC0105.bin",
+        "matrix_blob_sha": "0c7f359a1e6d95db32ee52ef57a566bac1589119",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/324_T26PC0102.json",
+        "events_blob_sha": "7888ff2c2dfa4f3c38e08c953999351a1c013802",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "source_prop_models": {
+        "109": 2,
+        "110": 3,
+        "12": 1,
+        "23": 2,
+        "33": 1,
+        "4": 1,
+        "41": 2,
+        "42": 1,
+        "57": 4,
+        "58": 6
+      },
+      "source_warps": [
+        {
+          "x": 14,
+          "z": 10,
+          "header": "MAP_OLIVINE_POKECENTER_1F",
+          "anchor": 1,
+          "y": 0
+        }
+      ],
+      "native_warps": [
+        {
+          "x": 14,
+          "y": 10,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_POKEMON_CENTER_1F",
+          "dest_warp_id": "2"
+        }
+      ],
+      "native_connections": null,
+      "visible_doorway_segments": [],
+      "objects": [
+        {
+          "graphics_id": "OBJ_EVENT_GFX_LINK_RECEPTIONIST",
+          "x": 4,
+          "y": 4,
+          "script": "Hgss_CommunicationDesk"
+        },
+        {
+          "graphics_id": "OBJ_EVENT_GFX_LINK_RECEPTIONIST",
+          "x": 8,
+          "y": 4,
+          "script": "Hgss_CommunicationDesk"
+        },
+        {
+          "graphics_id": "OBJ_EVENT_GFX_LINK_RECEPTIONIST",
+          "x": 12,
+          "y": 4,
+          "script": "Hgss_CommunicationDesk"
+        }
+      ],
+      "services": [
+        "Offline communication reception",
+        "Reciprocal escalator"
+      ],
+      "technical_adaptations": [
+        "Actual HGSS matrix identical to Ecruteak service room; pinned tested native adaptation",
+        "Olivine nurse ID/shop stock/scripts preserved; native PC/counter/escalators",
+        "Raised DS reception flattened; communication desks explicitly offline"
+      ],
+      "static_visual_review": "All24 current full-layout static previews inspected; HGSS raster/geometry and chosen adaptations recorded; owner acceptance pending",
+      "verification": {
+        "automated_checks": "PASS final source/generator/topology/semantic/resource/save-ID/build checks; engine palette bounds0\u201312 preserved",
+        "emulator_gameplay": "PASS current B11 controller tour plus applicable doorway/stair/landmark/service/collision tests; evidence scopes/exclusions recorded",
+        "save_continue": "PASS direct normal Save/coldContinue on exact B11",
+        "owner_delta_visual_acceptance": "PENDING"
+      },
+      "pending_until_final_delivery": false,
+      "queued_source_target": {
+        "dimensions": [
+          17,
+          14
+        ],
+        "secondary": "gTileset_HgssCenterBasement",
+        "content": "full source public y12, glass table, ten stools, two plants and terminal"
+      },
+      "pending_owner_delta_visual_review": true,
+      "historical_b9_native_frame": "crossroads/qa/qa09/olivine-tour-v9/OlivineCity_PokemonCenter_B1F.png",
+      "current_b11_native_frame": "crossroads/qa/qa09/olivine/final-v11-tour/OlivineCity_PokemonCenter_B1F.png"
+    },
+    {
+      "name": "OlivineCity_Lighthouse_Balcony",
+      "display_name": "Lighthouse Balcony",
+      "map_id": "MAP_OLIVINE_CITY_LIGHTHOUSE_BALCONY",
+      "map_group_symbol": "gMapGroup_CrossroadsJohtoExpansion",
+      "map_group_number": 76,
+      "map_number": 39,
+      "layout_id": "LAYOUT_OLIVINE_CITY_LIGHTHOUSE_BALCONY",
+      "dimensions": [
+        17,
+        17
+      ],
+      "layout_file": "data/layouts/OlivineCity_Lighthouse_Balcony/map.bin",
+      "primary_tileset": "gTileset_HgssOlivineLandmarkOutdoor",
+      "secondary_tileset": "gTileset_HgssOlivineLandmarks",
+      "classification": [
+        "HGSS reference geometry",
+        "native GBA visual adaptation"
+      ],
+      "source_header": "MAP_OLIVINE_LIGHTHOUSE_EXTERIOR",
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0049_D27R0103.bin",
+        "matrix_blob_sha": "f34a8d28acae8540ef803bbe3dd9b669f279c2d2",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/207_D27R0103.json",
+        "events_blob_sha": "bff57c361552a5590690ab654815e6636fd79ba0",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "source_prop_models": {
+        "123": 1
+      },
+      "source_warps": [
+        {
+          "x": 8,
+          "z": 12,
+          "header": "MAP_OLIVINE_LIGHTHOUSE_3F",
+          "anchor": 5,
+          "y": 0
+        }
+      ],
+      "native_warps": [
+        {
+          "x": 8,
+          "y": 12,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_3F",
+          "dest_warp_id": "5"
+        },
+        {
+          "x": 9,
+          "y": 12,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_3F",
+          "dest_warp_id": "6"
+        }
+      ],
+      "native_connections": null,
+      "visible_doorway_segments": [
+        {
+          "doorway_group": "olivine-lighthouse-balcony",
+          "side": "outside",
+          "segments": [
+            [
+              8,
+              12
+            ],
+            [
+              9,
+              12
+            ]
+          ],
+          "arrivals": [
+            [
+              8,
+              12
+            ],
+            [
+              9,
+              12
+            ]
+          ]
+        }
+      ],
+      "objects": [],
+      "services": [
+        "Balcony return into south3F branch"
+      ],
+      "technical_adaptations": [
+        "Original native GBA props/palettes replace DS perspective models; source coordinate origin retained",
+        "No source trainer/story/reward flags imported",
+        "Wide GBA door/stair aliases append without removing historical warp indices"
+      ],
+      "static_visual_review": "All24 current full-layout static previews inspected; HGSS raster/geometry and chosen adaptations recorded; owner acceptance pending",
+      "verification": {
+        "automated_checks": "PASS final source/generator/topology/semantic/resource/save-ID/build checks; engine palette bounds0\u201312 preserved",
+        "emulator_gameplay": "PASS current B11 controller tour plus applicable doorway/stair/landmark/service/collision tests; evidence scopes/exclusions recorded",
+        "save_continue": "PASS direct normal Save/coldContinue on exact B11",
+        "owner_delta_visual_acceptance": "PENDING"
+      },
+      "pending_until_final_delivery": false,
+      "source_prop_coverage": "olivine-landmark-prop-coverage.json#OlivineCity_Lighthouse_Balcony",
+      "pending_owner_delta_visual_review": true,
+      "historical_b9_native_frame": "crossroads/qa/qa09/olivine-tour-v9/OlivineCity_Lighthouse_Balcony.png",
+      "current_b11_native_frame": "crossroads/qa/qa09/olivine/final-v11-tour/OlivineCity_Lighthouse_Balcony.png"
+    },
+    {
+      "name": "OlivineCity_Lighthouse_Elevator",
+      "display_name": "Lighthouse Elevator",
+      "map_id": "MAP_OLIVINE_CITY_LIGHTHOUSE_ELEVATOR",
+      "map_group_symbol": "gMapGroup_CrossroadsJohtoExpansion",
+      "map_group_number": 76,
+      "map_number": 40,
+      "layout_id": "LAYOUT_OLIVINE_CITY_LIGHTHOUSE_ELEVATOR",
+      "dimensions": [
+        8,
+        8
+      ],
+      "layout_file": "data/layouts/OlivineCity_Lighthouse_Elevator/map.bin",
+      "primary_tileset": "gTileset_HgssOlivineLandmarkIndoor",
+      "secondary_tileset": "gTileset_HgssOlivineLandmarks",
+      "classification": [
+        "HGSS reference geometry",
+        "native GBA visual adaptation"
+      ],
+      "source_header": "MAP_OLIVINE_LIGHTHOUSE_ELEVATOR",
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0262_D31R0202.bin",
+        "matrix_blob_sha": "858d9b78c8d8f53b70b9e908803d8f700d03a4d4",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/401_D27R0108.json",
+        "events_blob_sha": "d3b79cfd50b193f73703aa62d06373384fea27ed",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "source_prop_models": {
+        "1": 1,
+        "208": 1
+      },
+      "source_warps": [
+        {
+          "x": 3,
+          "z": 6,
+          "header": 4095,
+          "anchor": 256,
+          "y": 0
+        }
+      ],
+      "native_warps": [
+        {
+          "x": 3,
+          "y": 6,
+          "elevation": 0,
+          "dest_map": "MAP_DYNAMIC",
+          "dest_warp_id": "WARP_ID_DYNAMIC"
+        },
+        {
+          "x": 4,
+          "y": 6,
+          "elevation": 0,
+          "dest_map": "MAP_DYNAMIC",
+          "dest_warp_id": "WARP_ID_DYNAMIC"
+        }
+      ],
+      "native_connections": null,
+      "visible_doorway_segments": [],
+      "objects": [],
+      "services": [
+        "Native two-stop dynamic-warp lift,1F/6F; no new saved progress flags"
+      ],
+      "technical_adaptations": [
+        "Original native GBA props/palettes replace DS perspective models; source coordinate origin retained",
+        "No source trainer/story/reward flags imported",
+        "Wide GBA door/stair aliases append without removing historical warp indices"
+      ],
+      "static_visual_review": "All24 current full-layout static previews inspected; HGSS raster/geometry and chosen adaptations recorded; owner acceptance pending",
+      "verification": {
+        "automated_checks": "PASS final source/generator/topology/semantic/resource/save-ID/build checks; engine palette bounds0\u201312 preserved",
+        "emulator_gameplay": "PASS current B11 controller tour plus applicable doorway/stair/landmark/service/collision tests; evidence scopes/exclusions recorded",
+        "save_continue": "PASS direct normal Save/coldContinue on exact B11",
+        "owner_delta_visual_acceptance": "PENDING"
+      },
+      "pending_until_final_delivery": false,
+      "source_prop_coverage": "olivine-landmark-prop-coverage.json#OlivineCity_Lighthouse_Elevator",
+      "pending_owner_delta_visual_review": true,
+      "historical_b9_native_frame": "crossroads/qa/qa09/olivine-tour-v9/OlivineCity_Lighthouse_Elevator.png",
+      "current_b11_native_frame": "crossroads/qa/qa09/olivine/final-v11-tour/OlivineCity_Lighthouse_Elevator.png"
+    },
+    {
+      "name": "OlivineCity_PortTerminal",
+      "display_name": "PortTerminal",
+      "map_id": "MAP_OLIVINE_CITY_PORT_TERMINAL",
+      "map_group_symbol": "gMapGroup_CrossroadsJohtoExpansion",
+      "map_group_number": 76,
+      "map_number": 41,
+      "layout_id": "LAYOUT_OLIVINE_CITY_PORT_TERMINAL",
+      "dimensions": [
+        15,
+        13
+      ],
+      "layout_file": "data/layouts/OlivineCity_PortTerminal/map.bin",
+      "primary_tileset": "gTileset_HgssOlivineLandmarkIndoor",
+      "secondary_tileset": "gTileset_HgssOlivineLandmarks",
+      "classification": [
+        "HGSS reference geometry",
+        "native GBA visual adaptation"
+      ],
+      "source_header": "MAP_SS_AQUA_OLIVINE_PORT_INTERIOR",
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0137_P01R0101.bin",
+        "matrix_blob_sha": "c13328f3da21d5d407aecc231b014c10a3cef234",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/226_P01R0101.json",
+        "events_blob_sha": "e8ca8d2df2c74f5e3378ef47fb77908e6804be79",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "source_prop_models": {
+        "1": 1,
+        "2": 1,
+        "54": 8
+      },
+      "source_warps": [
+        {
+          "x": 7,
+          "z": 2,
+          "header": "MAP_OLIVINE",
+          "anchor": 8,
+          "y": 0
+        },
+        {
+          "x": 7,
+          "z": 11,
+          "header": "MAP_SS_AQUA_OLIVINE_PORT_EXTERIOR",
+          "anchor": 0,
+          "y": 0
+        },
+        {
+          "x": 1,
+          "z": 7,
+          "header": "MAP_SS_AQUA_OLIVINE_PORT_EXTERIOR",
+          "anchor": 2,
+          "y": 0
+        }
+      ],
+      "native_warps": [
+        {
+          "x": 7,
+          "y": 2,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY",
+          "dest_warp_id": "13"
+        },
+        {
+          "x": 7,
+          "y": 11,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_PORT_QUAY",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 1,
+          "y": 7,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_PORT_QUAY",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 8,
+          "y": 2,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY",
+          "dest_warp_id": "15"
+        },
+        {
+          "x": 8,
+          "y": 11,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_PORT_QUAY",
+          "dest_warp_id": "2"
+        },
+        {
+          "x": 1,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_PORT_QUAY",
+          "dest_warp_id": "3"
+        }
+      ],
+      "native_connections": null,
+      "visible_doorway_segments": [
+        {
+          "doorway_group": "olivine-port-city-entrance",
+          "side": "inside",
+          "segments": [
+            [
+              7,
+              2
+            ],
+            [
+              8,
+              2
+            ]
+          ],
+          "arrivals": [
+            [
+              7,
+              2
+            ],
+            [
+              8,
+              2
+            ]
+          ]
+        },
+        {
+          "doorway_group": "olivine-port-quay-main",
+          "side": "inside",
+          "segments": [
+            [
+              7,
+              11
+            ],
+            [
+              8,
+              11
+            ]
+          ],
+          "arrivals": [
+            [
+              7,
+              11
+            ],
+            [
+              8,
+              11
+            ]
+          ]
+        },
+        {
+          "doorway_group": "olivine-port-inspection-side",
+          "side": "inside",
+          "segments": [
+            [
+              1,
+              7
+            ],
+            [
+              1,
+              8
+            ]
+          ],
+          "arrivals": [
+            [
+              1,
+              7
+            ],
+            [
+              1,
+              8
+            ]
+          ]
+        }
+      ],
+      "objects": [
+        {
+          "graphics_id": "OBJ_EVENT_GFX_SAILOR",
+          "x": 11,
+          "y": 4,
+          "script": "Hgss_OlivinePortDesk"
+        },
+        {
+          "graphics_id": "OBJ_EVENT_GFX_WOMAN_3",
+          "x": 5,
+          "y": 7,
+          "script": "Hgss_OlivinePortVisitor"
+        }
+      ],
+      "services": [
+        "Furnished terminal",
+        "Reciprocal main and side quay exits"
+      ],
+      "technical_adaptations": [
+        "Original native GBA props/palettes replace DS perspective models; source coordinate origin retained",
+        "No source trainer/story/reward flags imported",
+        "Wide GBA door/stair aliases append without removing historical warp indices"
+      ],
+      "static_visual_review": "All24 current full-layout static previews inspected; HGSS raster/geometry and chosen adaptations recorded; owner acceptance pending",
+      "verification": {
+        "automated_checks": "PASS final source/generator/topology/semantic/resource/save-ID/build checks; engine palette bounds0\u201312 preserved",
+        "emulator_gameplay": "PASS current B11 controller tour plus applicable doorway/stair/landmark/service/collision tests; evidence scopes/exclusions recorded",
+        "save_continue": "PASS direct normal Save/coldContinue on exact B11",
+        "owner_delta_visual_acceptance": "PENDING"
+      },
+      "pending_until_final_delivery": false,
+      "source_prop_coverage": "olivine-landmark-prop-coverage.json#OlivineCity_PortTerminal",
+      "pending_owner_delta_visual_review": true,
+      "historical_b9_native_frame": "crossroads/qa/qa09/olivine-tour-v9/OlivineCity_PortTerminal.png",
+      "current_b11_native_frame": "crossroads/qa/qa09/olivine/final-v11-tour/OlivineCity_PortTerminal.png"
+    },
+    {
+      "name": "OlivineCity_PortQuay",
+      "display_name": "PortQuay",
+      "map_id": "MAP_OLIVINE_CITY_PORT_QUAY",
+      "map_group_symbol": "gMapGroup_CrossroadsJohtoExpansion",
+      "map_group_number": 76,
+      "map_number": 42,
+      "layout_id": "LAYOUT_OLIVINE_CITY_PORT_QUAY",
+      "dimensions": [
+        40,
+        27
+      ],
+      "layout_file": "data/layouts/OlivineCity_PortQuay/map.bin",
+      "primary_tileset": "gTileset_HgssOlivineLandmarkOutdoor",
+      "secondary_tileset": "gTileset_HgssOlivineLandmarks",
+      "classification": [
+        "HGSS reference geometry",
+        "native GBA visual adaptation"
+      ],
+      "source_header": "MAP_SS_AQUA_OLIVINE_PORT_EXTERIOR",
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0178_P01R0102.bin",
+        "matrix_blob_sha": "a25137d22b2b83e4909fd90cbb51d537865e8812",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/301_P01R0102.json",
+        "events_blob_sha": "bf461d512f991780e110b4a4f23bcc89ca9dbe12",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "source_prop_models": {
+        "119": 2,
+        "167": 1,
+        "168": 1
+      },
+      "source_warps": [
+        {
+          "x": 16,
+          "z": 15,
+          "header": "MAP_SS_AQUA_OLIVINE_PORT_INTERIOR",
+          "anchor": 1,
+          "y": 0
+        },
+        {
+          "x": 27,
+          "z": 20,
+          "header": "MAP_SS_AQUA_1F",
+          "anchor": 0,
+          "y": 0
+        },
+        {
+          "x": 11,
+          "z": 13,
+          "header": "MAP_SS_AQUA_OLIVINE_PORT_INTERIOR",
+          "anchor": 2,
+          "y": 0
+        }
+      ],
+      "native_warps": [
+        {
+          "x": 16,
+          "y": 15,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_PORT_TERMINAL",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 11,
+          "y": 13,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_PORT_TERMINAL",
+          "dest_warp_id": "2"
+        },
+        {
+          "x": 17,
+          "y": 15,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_PORT_TERMINAL",
+          "dest_warp_id": "4"
+        },
+        {
+          "x": 11,
+          "y": 14,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_PORT_TERMINAL",
+          "dest_warp_id": "5"
+        }
+      ],
+      "native_connections": null,
+      "visible_doorway_segments": [
+        {
+          "doorway_group": "olivine-port-quay-main",
+          "side": "outside",
+          "segments": [
+            [
+              16,
+              15
+            ],
+            [
+              17,
+              15
+            ]
+          ],
+          "arrivals": [
+            [
+              16,
+              15
+            ],
+            [
+              17,
+              15
+            ]
+          ]
+        },
+        {
+          "doorway_group": "olivine-port-inspection-side",
+          "side": "outside",
+          "segments": [
+            [
+              11,
+              13
+            ],
+            [
+              11,
+              14
+            ]
+          ],
+          "arrivals": [
+            [
+              11,
+              13
+            ],
+            [
+              11,
+              14
+            ]
+          ]
+        }
+      ],
+      "objects": [
+        {
+          "graphics_id": "OBJ_EVENT_GFX_SAILOR",
+          "x": 24,
+          "y": 24,
+          "script": "Hgss_OlivinePortDesk"
+        }
+      ],
+      "services": [
+        "Quay walk/return routes",
+        "Clearly identified unfinished S.S. Aqua sailing boundary"
+      ],
+      "technical_adaptations": [
+        "Original native GBA props/palettes replace DS perspective models; source coordinate origin retained",
+        "No source trainer/story/reward flags imported",
+        "Wide GBA door/stair aliases append without removing historical warp indices"
+      ],
+      "static_visual_review": "All24 current full-layout static previews inspected; HGSS raster/geometry and chosen adaptations recorded; owner acceptance pending",
+      "verification": {
+        "automated_checks": "PASS final source/generator/topology/semantic/resource/save-ID/build checks; engine palette bounds0\u201312 preserved",
+        "emulator_gameplay": "PASS current B11 controller tour plus applicable doorway/stair/landmark/service/collision tests; evidence scopes/exclusions recorded",
+        "save_continue": "PASS direct normal Save/coldContinue on exact B11",
+        "owner_delta_visual_acceptance": "PENDING"
+      },
+      "pending_until_final_delivery": false,
+      "source_prop_coverage": "olivine-landmark-prop-coverage.json#OlivineCity_PortQuay",
+      "pending_owner_delta_visual_review": true,
+      "historical_b9_native_frame": "crossroads/qa/qa09/olivine-tour-v9/OlivineCity_PortQuay.png",
+      "current_b11_native_frame": "crossroads/qa/qa09/olivine/final-v11-tour/OlivineCity_PortQuay.png"
+    }
+  ],
+  "implemented_source_corrections": [
+    "All nine canonical enterable buildings, four preserved Black Ledger additions and24 city/interior/landmark maps registered; canonical homes not repurposed",
+    "V7 port roof/body defect fixed: two actual lower door leaves work, solid body blocks23/24,48; genuine sea/overhang remains surfable23/24,47; returns land on dry forecourt and bounded east boardwalk",
+    "V8 city material contract:20 surviving source-backed white fence cells;12 relocated terrace table cells on actual timber; corrected deck/parasols/gray offshore rocks; genuine cliff retained;65 pinned obsolete source model167 body cells restored to sea",
+    "Actual rear port facade model167, docked ferry168 and both sailboats119 rendered; all four rear terminal doorway segments operative; sailing separately outside city scope",
+    "Full lighthouse branch/window/balcony/two-stop lift, all eight source planters across1F/2F, circular mechanical lantern housing, purple light room, cool masonry and safe high-balcony rails",
+    "All eight source terminal stool instances, white tables, aqua waiting seats, central blue rug/life rings and tan flooring represented; seated solid NPC owns its chair tile",
+    "Actual0097 home rear-right plants/bookcase/kitchen/table and pale-blue wall/window palette;0136 cafe actual two plants, L-counter, table, staff aisle and cream wall/windows",
+    "Common Center B1F corrected to17x14 including source public y12 waiting row, ten stools, glass table, two footer plants, terminal and private blue palette; current dedicated Ecruteak service output cloned without changing old generic city templates",
+    "Current dedicated Center1F/private reception/emblem and Mart/private source furnishings cloned after their generators; Olivine nurse/warps/scripts/stock/heal identity preserved"
+  ],
+  "verification_checkpoints": {
+    "v7_diagnostic_historical": {
+      "rom_sha256": "0734501b031d05156a28e685dc1c2748153cb065222bd67b0d2e7cea47fefbca",
+      "source_revision": "3f935d5e8600c5a280b9172b555edb35ca52b6c0",
+      "classification": "controller-driven mGBA, not owner manual Delta QA; distinct from finalV8",
+      "tour": {
+        "scope": "all24 Olivine target maps plus transit approach maps",
+        "visited_total_including_approach": 39,
+        "transitions": 182,
+        "explicit_roundtrip_pairs": 53,
+        "individual_warp_trials": 174,
+        "evidence": "build/qa09-olivine-tour-v7/coverage.json"
+      },
+      "services": {
+        "records": 27,
+        "result": "PASS including actual heal/PC/shop/office/home interactions and Jasmine loss/localwhiteout",
+        "evidence": "build/qa09-olivine-services-v7/results.json"
+      },
+      "save_continue": {
+        "records": 21,
+        "result": "PASS copied old/current batteries, private obsolete-coordinate fixtures, selected elevator target persistence and exact party/box/bag/flags/starter preservation",
+        "evidence": "build/qa09-olivine-saves-v7/results.json"
+      },
+      "lift": {
+        "cases": 4,
+        "result": "PASS both chosen floors \u00d7 both exit leaves",
+        "evidence": "build/qa09-special-v7/elevator-completed.json"
+      },
+      "special_journeys": {
+        "cases": 6,
+        "result": "PASS window\u2192balcony\u2192weststairs\u2192top\u2192liftreturn, both port sea/overhang/body cases, boardwalk/rightleaf return and both balcony no-Surf rails",
+        "evidence": "build/qa09-special-v7-dry/doorway-results.json"
+      }
+    },
+    "owner_delta": {
+      "status": "PENDING owner playtest/visual acceptance"
+    },
+    "b9_emulator_checkpoint_historical": {
+      "status": "HISTORICAL BUILD9 actual emulator checkpoint; not the current B11 delivery",
+      "source_revision": "5664fecee4337c5bdd442583e24cc91c09c0a0cd",
+      "rom_sha256": "d5abac0deabc7d592eba302122b3d15c08501947f0f601eda7b5026da9ac6772",
+      "classification": "Scripted controller-driven mGBA gameplay on copies of a normal battery; not owner manual Delta QA",
+      "setup": "Normal title/Continue and actual survey-desk UI. No map/warp/player coordinate writes during traversal. Survey assistance and test-only encounter suppression disclosed; labelled legacy-location and HP/status fixtures are separate from normal gameplay tests. Original source batteries unchanged.",
+      "tour": {
+        "target_maps": 24,
+        "visited_including_transit": 39,
+        "transitions": 180,
+        "roundtrip_pairs": 53,
+        "warp_trials": 173,
+        "actual_survey_surf_entries": 5,
+        "evidence": "crossroads/qa/qa09/olivine-tour-v9/coverage.json",
+        "native_frames": "crossroads/qa/qa09/olivine-tour-v9/manifest.json"
+      },
+      "doors": {
+        "pass_count": 168,
+        "front_segments": 60,
+        "unavailable_lateral_approaches": 12,
+        "note": "All60 doorway segments have passing direct/front trials.12 lateral starting positions are physically unavailable, explicitly reported rather than silently counted as passes. Walking away after arrival is checked.",
+        "evidence": "crossroads/qa/qa09/olivine/final-v9-doorways/results.json"
+      },
+      "landmark_specials": {
+        "pass_count": 10,
+        "evidence": "crossroads/qa/qa09/olivine/final-v9-specials/results.json",
+        "scope": "Four native elevator floor/exit combinations;4Fwindow\u2192balcony\u2192south3F\u2192westernstairs\u2192top\u2192lift return; both port sea/overhang/body cases; dry boardwalk return; both balcony no-Surf rails"
+      },
+      "services": {
+        "pass_count": 51,
+        "evidence": "crossroads/qa/qa09/olivine/final-v9-services/results.json",
+        "scope": "Actual heal/PC/shop purchase/office/home/harbor/neighbour/cafe/landmark actors/signs/wayfinding and front communication desks; Jasmine practice battle and local whiteout"
+      },
+      "save_continue": {
+        "pass_count": 25,
+        "evidence": "crossroads/qa/qa09/olivine/final-v9-saves/results.json",
+        "source_battery_unchanged": true,
+        "scope": "Normal save/reset/coldContinue at listed representative maps, both selected lift destinations, copied old-save compatibility and explicitly labelled obsolete-coordinate/cached-layout/stool/sea-safety fixtures; exact party/boxes/bag/money/flags/starter preservation",
+        "direct_normal_save_maps": [
+          "OlivineCity",
+          "OlivineCity_Cafe",
+          "OlivineCity_FishingHouse",
+          "OlivineCity_Lighthouse_3F",
+          "OlivineCity_Lighthouse_6F",
+          "OlivineCity_Lighthouse_Balcony",
+          "OlivineCity_Lighthouse_Elevator",
+          "OlivineCity_PokemonCenter_1F",
+          "OlivineCity_PokemonCenter_B1F",
+          "OlivineCity_PortQuay",
+          "OlivineCity_PortTerminal",
+          "OlivineCity_Residence",
+          "OlivineCity_SealHouse",
+          "OlivineCity_TradeHouse"
+        ],
+        "note": "This matrix does not claim a separate save point at every one of24 maps."
+      },
+      "collision": {
+        "normal_controller_bumps": 204,
+        "skipped_approaches": 0,
+        "buildings": 13,
+        "intentional_canopy_overlap_cases": 3,
+        "evidence": "crossroads/qa/qa09/olivine/final-v9-collision/results.json"
+      },
+      "mart_props": {
+        "pass_count": 40,
+        "skipped_approaches": 0,
+        "scope": "Both cities, shelves/display racks/table/stools/plants",
+        "evidence": "crossroads/qa/qa09/olivine/final-v9-mart-props/results.json"
+      },
+      "front_counter_interactions": {
+        "pass_count": 6,
+        "scope": "Actual front-facing A interaction receives exact intended messages and returns control after formerly broken counter behavior",
+        "evidence": "crossroads/qa/qa09/olivine/final-v9-counters/results.json"
+      },
+      "city_materials": {
+        "dry_walks": 12,
+        "normal_controller_bumps": 43,
+        "white_fence_cells": 20,
+        "unavailable_fence_sides": 37,
+        "parasols": 3,
+        "surf_rock_groups": 4,
+        "evidence": "crossroads/qa/qa09/olivine-materials/results.json",
+        "scope": "Corrected timber/table paths, white fences, parasol bases/overhangs, gray offshore boulders, obsolete Port-model sea restoration and dry return; unreachable fence sides excluded explicitly"
+      },
+      "native_visual_review": {
+        "frames": 24,
+        "native_resolution": [
+          240,
+          160
+        ],
+        "contact_sheet": "crossroads/qa/qa09/olivine-tour-v9/contact-sheet.png",
+        "result": "Actual final1x contact sheet inspected; full static layouts supplement entry viewpoints. Owner review still required."
+      },
+      "resource_usage": {
+        "rom_file_bytes": 33554432,
+        "rom_payload_bytes": 30260764,
+        "rom_payload_headroom_bytes": 3293668,
+        "ewram_used_bytes": 226448,
+        "iwram_used_bytes": 28392
+      }
+    },
+    "current_b11_delivery": {
+      "status": "PASS all seven final B11 serial suites, all60 Olivine doorway fronts/168 accessible approaches, ten lighthouse/port specials and shared player regressions; owner Delta visual acceptance remains pending",
+      "source_revision": "489c404346f572aefb6856b3dd48a9b364a08ceb",
+      "rom_sha256": "df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4",
+      "classification": "Actual controller-driven mGBA on copied normal saves; distinct from source checks and owner Delta acceptance",
+      "owner_delta_visual_acceptance": "PENDING",
+      "tour": {
+        "status": "PASS",
+        "evidence": "crossroads/qa/qa09/olivine/final-v11-tour/results.json",
+        "target_maps": 24,
+        "visited_including_transit": 39,
+        "transitions": 180,
+        "roundtrip_pairs": 53,
+        "warp_trials": 173,
+        "actual_survey_surf_entries": 5,
+        "native_frames_checked": 24,
+        "debug_ff00ff_pixels": 0,
+        "source_battery_unchanged": true
+      },
+      "native_frames": "crossroads/qa/qa09/olivine-review/native-b11-manifest.json",
+      "native_visual_review": {
+        "status": "Actual final B11 native24-frame1x contact sheet inspected with source full layouts; owner visual acceptance remains pending",
+        "manifest": "crossroads/qa/qa09/olivine-review/native-b11-manifest.json",
+        "contact_sheet": "crossroads/qa/qa09/olivine-review/native-b11-contact-sheet.png"
+      },
+      "save_continue": {
+        "status": "PASS",
+        "evidence": "crossroads/qa/qa09/olivine/final-v11-saves/results.json",
+        "cases": 25,
+        "source_battery_unchanged": true,
+        "normal_save_maps": [
+          "OlivineCity",
+          "OlivineCity_Cafe",
+          "OlivineCity_FishingHouse",
+          "OlivineCity_Lighthouse_3F",
+          "OlivineCity_Lighthouse_6F",
+          "OlivineCity_Lighthouse_Balcony",
+          "OlivineCity_Lighthouse_Elevator",
+          "OlivineCity_PokemonCenter_1F",
+          "OlivineCity_PokemonCenter_B1F",
+          "OlivineCity_PortQuay",
+          "OlivineCity_PortTerminal",
+          "OlivineCity_Residence",
+          "OlivineCity_SealHouse",
+          "OlivineCity_TradeHouse"
+        ],
+        "scope": "All nine appended maps, split3F/6F, both actual panel-selected lift exits, Surf and four explicit immutable-V7 stool migrations; exact party/boxes/inventory/flags preservation",
+        "note": "Representative matrix, not an independent normal-save point on every map."
+      },
+      "lane_completion": "crossroads/qa/qa09/olivine/final-v11-lane/completed.json",
+      "doors": {
+        "status": "PASS",
+        "evidence": "crossroads/qa/qa09/doorways/v11/results.json",
+        "olive_segments": 60,
+        "olive_approach_passes": 168,
+        "olive_unavailable_laterals": 12,
+        "both_city_segments": 118,
+        "both_city_approach_passes": 329,
+        "both_city_unavailable_laterals": 25,
+        "failures": 0,
+        "note": "All required direct/front segments were executed. Physically unavailable lateral starting positions are explicit exclusions, not passes; actual arrival/walk-away checked."
+      },
+      "landmark_specials": {
+        "status": "PASS",
+        "evidence": "crossroads/qa/qa09/doorways/v11/results.json",
+        "cases": 10,
+        "scope": "Four native lift floor/leaf cases;4Fwindow\u2192balcony\u2192south3F\u2192westernstairs\u2192top\u2192liftreturn; both Port sea/overhang/body cases; dry boardwalk return; two high-balcony no-Surf rail cases"
+      },
+      "services": {
+        "status": "PASS",
+        "evidence": "crossroads/qa/qa09/olivine/final-v11-services/results.json",
+        "cases": 51,
+        "source_battery_unchanged": true,
+        "scope": "Actual heal/PC/purchase/rest/office/harbor/cafe/neighbour dialogue, all six front communication desks with exact text/LastTalked, maritime actors/plaques/view/port signs and Jasmine practice loss/local respawn"
+      },
+      "collision": {
+        "status": "PASS",
+        "evidence": "crossroads/qa/qa09/olivine/final-v11-collision/results.json",
+        "normal_controller_bumps": 204,
+        "buildings": 13,
+        "tree_cases": 3,
+        "inaccessible_skips": 0
+      },
+      "mart_props": {
+        "status": "PASS",
+        "evidence": "crossroads/qa/qa09/olivine/final-v11-mart-props/results.json",
+        "cases": 40,
+        "both_cities": true,
+        "inaccessible_skips": 0
+      },
+      "city_materials": {
+        "status": "PASS",
+        "evidence": "crossroads/qa/qa09/olivine/final-v11-materials/results.json",
+        "semantic_cases": 59,
+        "dry_deck_walks": 12,
+        "fence_bumps": 43,
+        "surf_boulder_groups": 4,
+        "native_clips": 18,
+        "unavailable_fence_approaches": 37,
+        "final_dry_return": [
+          16,
+          34
+        ],
+        "scope": "Source white fences/deck/table paths, gray offshore rock groups, normal parasol overlap/base movement, restored Port sea and dry return;37 inaccessible fence sides explicitly excluded."
+      },
+      "front_counter_interactions": {
+        "status": "PASS",
+        "evidence": "crossroads/qa/qa09/olivine/final-v11-counters/results.json",
+        "cases": 6,
+        "scope": "Actual front-facing A, exact intended text/LastTalked and control return; native recordings supplied"
+      },
+      "shared_player_regressions": {
+        "status": "PASS",
+        "evidence": "crossroads/qa/qa09/doorways/v11/results.json",
+        "scope": [
+          "All three actual starter rescues, met origin/level, duplicate guards, 16 facade visits/returns and Joe walking VRAM",
+          "Fresh player actual Jasmine loss, local heal respawn and Joe/party integrity",
+          "Actual native Fly to ten destinations, cancellation, Joe field-pose VRAM, normal postflight Save/cold title Continue and exact party/position",
+          "Mach/Acro bike mount/dismount/wheelie, Surf in four directions, rod casting/return/disembark with actual Joe VRAM",
+          "Exact-ROM resumed Survey session retained without toggling off; cold boot still enables through actual UI"
+        ]
+      }
+    }
+  },
+  "known_functional_defects_in_tested_scope": [],
+  "remaining_review": [
+    "Owner Delta old-save/visual playtest and final approval"
+  ],
+  "resource_usage": {
+    "rom_file_bytes": 33554432,
+    "rom_payload_bytes": 30261028,
+    "rom_payload_headroom_bytes": 3293404,
+    "ewram_used_bytes": 226448,
+    "iwram_used_bytes": 28392,
+    "measurement_source": "Root actual BUILD11 build report; padded binary checksum independently verified",
+    "source_revision": "489c404346f572aefb6856b3dd48a9b364a08ceb",
+    "rom_sha256": "df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4"
+  },
+  "owner_visual_acceptance": "PENDING",
+  "final_runtime_completion_status": "PASS current B11; owner Delta visual acceptance pending",
+  "source_static_provenance": {
+    "status": "All24 recorded static source layout hashes still match current frozen BUILD11 layouts",
+    "static_manifest": "../qa/qa09/olivine-review/authored-static-v8/manifest.json",
+    "gameplay_separate": "Historical B9 frames and source-preview identity are retained; no final B11 runtime pass inferred"
+  },
+  "reference_comparison_limits": [
+    "Separate full native lighthouse lift-cabin raster unavailable; source geometry/functional evidence present",
+    "Complete reverse-quay raster unavailable; source model/warp facts support placement",
+    "Different DS/GBA perspective and chosen original native art adaptations preclude a literal pixel1:1 claim"
+  ]
+}

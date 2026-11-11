@@ -16,6 +16,7 @@
     "adaptations": [
       "Native GBA heal/counter/PC tiles at HGSS service positions",
       "DS elevated rear reception flattened; unavailable DS online entrance is a labeled service desk, not a broken warp",
+      "Private original green floor emblem and rear blue service panels match actual warm HGSS1F reference",
       "Existing nurse/heal ID/local ID preserved; shared Olivine layout unchanged"
     ],
     "visual_qa": "pending",
@@ -33,11 +34,13 @@
     },
     "dimensions": [
       17,
-      12
+      14
     ],
     "adaptations": [
       "Wi-Fi desks are ambient offline reception; no internet functionality claimed",
-      "Native GBA stairs retain canonical source coordinate"
+      "Native GBA stairs retain canonical source coordinate",
+      "h14 retains actual source y12 floor and bottom waiting row; map/layout IDs and prior positions unchanged",
+      "Private cool blue palette and original table/stools/terminal replace mistaken mirror stand-in"
     ],
     "visual_qa": "pending",
     "runtime_qa": "pending"
@@ -58,6 +61,7 @@
     ],
     "adaptations": [
       "Native GBA shelf/counter tiles replace DS furniture; accepted shop inventory unchanged",
+      "Source three plants, southern glass display/stools and east-wall rack retained in private artwork",
       "DS story delivery actors omitted"
     ],
     "visual_qa": "pending",

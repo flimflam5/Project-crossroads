@@ -1,0 +1,16 @@
+{
+  "source_commit": "489c404346f572aefb6856b3dd48a9b364a08ceb",
+  "rom_sha256": "df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4",
+  "elf_sha256": "4fd33669202493ee44b17a1afd46158203eb52c011df677d4186fd011d0a090a",
+  "source_battery_sha256": "b03ff1ef488fbd25de016e828483bc3001787b84e450a45eaa0ac12a11de30ab",
+  "source_battery_unchanged": true,
+  "kind": "actual controller all-edges tour",
+  "target_maps": 24,
+  "executed_transitions": 180,
+  "roundtrip_pairs": 53,
+  "warp_trials": 173,
+  "actual_surf_entries": 5,
+  "native_frames_checked": 24,
+  "debug_ff00ff_pixels": 0,
+  "setup": "Fresh copied battery/normal title Continue; actual public Survey desk; no map/warp/player XY writes; shared temporary encounter suppression and private1HP nurse fixture disclosed."
+}

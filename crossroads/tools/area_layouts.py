@@ -45,13 +45,15 @@ def decorate(name,data,w,h):
         t[25*w+8]=0x403
     from visual_repairs import repair
     from hgss_ecruteak_family import route_data
-    return route_data(name,repair(name,struct.pack('<'+str(len(t))+'H',*t),w,h),w,h)
+    from hgss_olivine_connections import tiles as olivine_seam
+    return olivine_seam(name,route_data(name,repair(name,struct.pack('<'+str(len(t))+'H',*t),w,h),w,h),w,h)
 
 
 def rooms():
     specs=json.loads((R/'crossroads/art/western/rooms.json').read_text())
     for spec in specs:
         name=spec['name']
+        if name.startswith(('OlivineCity_Lighthouse','OlivineCity_Gym')) and (R/'crossroads/hgss/authoring/OlivineCity.json').exists():continue
         if name in ['EcruteakCity_DanceTheater','EcruteakCity_Gym_Arena'] or name.startswith(('EcruteakCity_BellTower','EcruteakCity_BurnedTower')):continue # Dedicated canonical generator owns these layouts.
         w,h=spec['width'],spec['height'];theme=spec['theme'];floor=spec['floor']
         m=json.loads((R/f'data/maps/{name}/map.json').read_text());t=[0x3223]*(w*h)

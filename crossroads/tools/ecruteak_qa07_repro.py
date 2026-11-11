@@ -44,4 +44,4 @@ for x,y in [(26,33),(38,33),(26,42),(29,52),(49,52),(58,42)]:
   assert not arrow()['visible']
   tree_probes.append(dict(tree=[x,y],approach=point,button=k,result='blocked through controller input'))
 (out/'semantic-tree-probes.json').write_text(json.dumps(tree_probes,indent=2)+'\n')
-(out/'reproduction.json').write_text(json.dumps(dict(rom_sha256=hashlib.sha256(Path('pokeemerald.gba').read_bytes()).hexdigest(),records=rows,setup='Copied old battery; normal Continue and controller travel. Existing harness uses temporary encounter suppression and actual survey desk, no map/warp writes.'),indent=2)+'\n');print(json.dumps(rows,indent=2),flush=True)
+(out/'reproduction.json').write_text(json.dumps(dict(rom_sha256=hashlib.sha256(Path('pokeemerald.gba').read_bytes()).hexdigest(),records=rows,setup='Copied old battery; normal Continue'+' and controller travel. Existing harness uses temporary encounter suppression and actual survey desk, no map/warp writes.'),indent=2)+'\n');print(json.dumps(rows,indent=2),flush=True)

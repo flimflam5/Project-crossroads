@@ -1,0 +1,90 @@
+[
+  {
+    "file": "references/Common_Ecruteak_house_matrix0066_HGSS.jpg",
+    "source_url": "https://static.guidestrats.com/images/11/1377/04-pokemon-hgss-man-will-give-you-the-apricorn-box.jpg",
+    "sha256": "6ededf93058319e51ff9283faa80c7782d209aba9713a78a0d87426b4b8e6d4b",
+    "published_dimensions": [
+      750,
+      558
+    ],
+    "transformation": "None; documentary reference only, never ROM asset",
+    "reference_kind": "Published enlarged/cropped house screenshot; not a raw DS framebuffer"
+  },
+  {
+    "file": "references/Ecruteak_City_HGSS.png",
+    "source_url": "https://archives.bulbagarden.net/wiki/File:Ecruteak_City_HGSS.png",
+    "sha256": "91e0dd8e59ad7894298e503b1ae40c643976c0ed99bb575083d1dcae664fd5c1",
+    "published_dimensions": [
+      1032,
+      785
+    ],
+    "transformation": "None; documentary reference only, never ROM asset",
+    "reference_kind": "Published full-map mosaic"
+  },
+  {
+    "file": "references/Bellchime_Trail_gate_1F_HGSS.png",
+    "source_url": "https://archives.bulbagarden.net/wiki/File:Bellchime_Trail_gate_1F_HGSS.png",
+    "sha256": "f1e1432884d7b1253422444bb51c817c9e2fa8089138e15a081e134bb87a226b",
+    "published_dimensions": [
+      676,
+      403
+    ],
+    "transformation": "None; documentary reference only, never ROM asset",
+    "reference_kind": "Published full-map mosaic"
+  },
+  {
+    "file": "references/Ecruteak_common_Center_inside_HGSS.png",
+    "source_url": "https://archives.bulbagarden.net/media/upload/5/50/Pok%C3%A9mon_Center_inside_HGSS.png",
+    "sha256": "3a1631fb84272c3cd7552420d07bfeb1720e8e734ba952ca47570c1084c84ba3",
+    "published_dimensions": [
+      256,
+      297
+    ],
+    "transformation": "None; documentary reference, never ROM texture",
+    "reference_kind": "Published HGSS screenshot/crop; source dimensions retained"
+  },
+  {
+    "file": "references/Common_Mart_interior_HGSS.png",
+    "source_url": "https://archives.bulbagarden.net/media/upload/0/08/Pok%C3%A9_Mart_interior_HGSS.png",
+    "sha256": "dbfa3e7e21a58089d07073e41f1c6a481379022d4e916bf007032767bdb67e79",
+    "published_dimensions": [
+      229,
+      175
+    ],
+    "transformation": "None; documentary reference, never ROM texture",
+    "reference_kind": "Published HGSS screenshot/crop; source dimensions retained"
+  },
+  {
+    "file": "references/Common_Center_B1F_HGSS.png",
+    "source_url": "https://www.pokewiki.de/images/8/81/Pok%C3%A9mon-Center_Untergeschoss_HGSS.png",
+    "sha256": "7865565de56598403fea4fa2b674549b410ece08830bad4a8e772059e363ec4c",
+    "published_dimensions": [
+      242,
+      163
+    ],
+    "transformation": "None; documentary reference, never ROM texture",
+    "reference_kind": "Published HGSS screenshot/crop; source dimensions retained"
+  },
+  {
+    "file": "references/Gate_inside_HGSS.png",
+    "source_url": "https://archives.bulbagarden.net/media/upload/2/2f/Gate_inside_HGSS.png",
+    "sha256": "93e12044f2ef26bb726e13207db919c577f18a4e0e533d17c6c02efc9cad6b33",
+    "published_dimensions": [
+      214,
+      180
+    ],
+    "transformation": "None; documentary reference, never ROM texture",
+    "reference_kind": "Published HGSS screenshot/crop; source dimensions retained"
+  },
+  {
+    "file": "references/Theater_HGSS_wikidex.jpg",
+    "source_url": "https://images.wikidexcdn.net/mwuploads/wikidex/0/09/latest/20100424181308/Teatro_de_Danza_HGSS.jpg",
+    "sha256": "05a655b8cc52f311c8660a1fb4dfeee3eeae5cf7e253a4651ae02e53b013421e",
+    "published_dimensions": [
+      256,
+      192
+    ],
+    "transformation": "None; documentary reference, never ROM texture",
+    "reference_kind": "Published HGSS screenshot/crop; source dimensions retained"
+  }
+]

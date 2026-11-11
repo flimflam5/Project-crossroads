@@ -11,78 +11,127 @@
       "connections": [
         {
           "map": "MAP_JOHTO_ROUTE39",
-          "offset": 16,
+          "offset": 12,
           "direction": "up"
         },
         {
           "map": "MAP_JOHTO_ROUTE40",
-          "offset": 0,
+          "offset": 10,
           "direction": "left"
         }
       ],
       "entrances": [
         {
-          "x": 11,
-          "y": 9,
+          "x": 8,
+          "y": 23,
           "elevation": 0,
           "dest_map": "MAP_OLIVINE_CITY_RESIDENCE",
           "dest_warp_id": "0"
         },
         {
-          "x": 21,
-          "y": 9,
+          "x": 8,
+          "y": 28,
           "elevation": 0,
           "dest_map": "MAP_OLIVINE_CITY_NEIGHBOR_HOUSE",
           "dest_warp_id": "0"
         },
         {
-          "x": 38,
-          "y": 9,
+          "x": 13,
+          "y": 14,
           "elevation": 0,
           "dest_map": "MAP_OLIVINE_CITY_GYM",
           "dest_warp_id": "0"
         },
         {
-          "x": 11,
-          "y": 21,
+          "x": 16,
+          "y": 33,
           "elevation": 0,
           "dest_map": "MAP_OLIVINE_CITY_POKEMON_CENTER_1F",
           "dest_warp_id": "0"
         },
         {
-          "x": 22,
-          "y": 21,
+          "x": 29,
+          "y": 33,
           "elevation": 0,
           "dest_map": "MAP_OLIVINE_CITY_MART",
           "dest_warp_id": "0"
         },
         {
-          "x": 37,
-          "y": 21,
+          "x": 31,
+          "y": 40,
           "elevation": 0,
           "dest_map": "MAP_OLIVINE_CITY_SILPH_OFFICE",
           "dest_warp_id": "0"
         },
         {
-          "x": 12,
-          "y": 32,
+          "x": 8,
+          "y": 40,
           "elevation": 0,
           "dest_map": "MAP_OLIVINE_CITY_HARBOR_OFFICE",
           "dest_warp_id": "0"
         },
         {
-          "x": 39,
-          "y": 32,
+          "x": 45,
+          "y": 39,
           "elevation": 0,
           "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_1F",
           "dest_warp_id": "0"
         },
         {
-          "x": 39,
-          "y": 9,
+          "x": 14,
+          "y": 14,
           "elevation": 0,
           "dest_map": "MAP_OLIVINE_CITY_GYM",
           "dest_warp_id": "1"
+        },
+        {
+          "x": 17,
+          "y": 23,
+          "elevation": 0,
+          "dest_map": "MAP_HGSS_OLIVINECITY_FISHINGHOUSE",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 31,
+          "y": 17,
+          "elevation": 0,
+          "dest_map": "MAP_HGSS_OLIVINECITY_TRADEHOUSE",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 36,
+          "y": 17,
+          "elevation": 0,
+          "dest_map": "MAP_HGSS_OLIVINECITY_SEALHOUSE",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 9,
+          "y": 33,
+          "elevation": 0,
+          "dest_map": "MAP_HGSS_OLIVINECITY_CAFE",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 23,
+          "y": 52,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_PORT_TERMINAL",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 17,
+          "y": 33,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_POKEMON_CENTER_1F",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 24,
+          "y": 52,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_PORT_TERMINAL",
+          "dest_warp_id": "3"
         }
       ],
       "services": "",
@@ -155,25 +204,39 @@
       "connections": null,
       "entrances": [
         {
-          "x": 3,
-          "y": 7,
+          "x": 6,
+          "y": 10,
           "elevation": 0,
           "dest_map": "MAP_OLIVINE_CITY",
           "dest_warp_id": "2"
         },
         {
-          "x": 4,
-          "y": 7,
+          "x": 7,
+          "y": 10,
           "elevation": 0,
           "dest_map": "MAP_OLIVINE_CITY",
           "dest_warp_id": "8"
         },
         {
-          "x": 7,
-          "y": 2,
+          "x": 6,
+          "y": 0,
           "elevation": 0,
           "dest_map": "MAP_OLIVINECITY_GYM_ARENA",
           "dest_warp_id": "0"
+        },
+        {
+          "x": 5,
+          "y": 0,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINECITY_GYM_ARENA",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 7,
+          "y": 0,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINECITY_GYM_ARENA",
+          "dest_warp_id": "2"
         }
       ],
       "services": "",
@@ -190,18 +253,25 @@
       "connections": null,
       "entrances": [
         {
-          "x": 7,
-          "y": 8,
+          "x": 8,
+          "y": 19,
           "elevation": 0,
           "dest_map": "MAP_OLIVINE_CITY",
           "dest_warp_id": "3"
         },
         {
-          "x": 6,
-          "y": 8,
+          "x": 9,
+          "y": 19,
           "elevation": 0,
           "dest_map": "MAP_OLIVINE_CITY",
-          "dest_warp_id": "3"
+          "dest_warp_id": "14"
+        },
+        {
+          "x": 14,
+          "y": 17,
+          "elevation": 0,
+          "dest_map": "MAP_HGSS_OLIVINECITY_POKEMONCENTER_B1F",
+          "dest_warp_id": "0"
         }
       ],
       "services": "healing",
@@ -218,15 +288,15 @@
       "connections": null,
       "entrances": [
         {
-          "x": 3,
-          "y": 7,
+          "x": 4,
+          "y": 11,
           "elevation": 0,
           "dest_map": "MAP_OLIVINE_CITY",
           "dest_warp_id": "4"
         },
         {
-          "x": 4,
-          "y": 7,
+          "x": 5,
+          "y": 11,
           "elevation": 0,
           "dest_map": "MAP_OLIVINE_CITY",
           "dest_warp_id": "4"
@@ -302,7 +372,7 @@
       "connections": [
         {
           "map": "MAP_OLIVINE_CITY",
-          "offset": -16,
+          "offset": -12,
           "direction": "down"
         },
         {
@@ -830,25 +900,39 @@
       "connections": null,
       "entrances": [
         {
-          "x": 3,
-          "y": 7,
+          "x": 8,
+          "y": 17,
           "elevation": 0,
           "dest_map": "MAP_OLIVINE_CITY",
           "dest_warp_id": "7"
         },
         {
-          "x": 4,
-          "y": 7,
+          "x": 9,
+          "y": 17,
           "elevation": 0,
           "dest_map": "MAP_OLIVINE_CITY",
           "dest_warp_id": "7"
         },
         {
-          "x": 7,
-          "y": 2,
+          "x": 2,
+          "y": 3,
           "elevation": 0,
           "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_2F",
           "dest_warp_id": "0"
+        },
+        {
+          "x": 8,
+          "y": 4,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_LIGHTHOUSE_ELEVATOR",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 9,
+          "y": 4,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_LIGHTHOUSE_ELEVATOR",
+          "dest_warp_id": "1"
         }
       ],
       "services": "",
@@ -865,15 +949,22 @@
       "connections": null,
       "entrances": [
         {
-          "x": 2,
-          "y": 9,
+          "x": 5,
+          "y": 3,
           "elevation": 0,
           "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_1F",
           "dest_warp_id": "2"
         },
         {
-          "x": 11,
-          "y": 2,
+          "x": 13,
+          "y": 6,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_3F",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 13,
+          "y": 5,
           "elevation": 0,
           "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_3F",
           "dest_warp_id": "0"
@@ -893,18 +984,53 @@
       "connections": null,
       "entrances": [
         {
-          "x": 2,
-          "y": 9,
+          "x": 13,
+          "y": 7,
           "elevation": 0,
           "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_2F",
           "dest_warp_id": "1"
         },
         {
-          "x": 11,
-          "y": 2,
+          "x": 10,
+          "y": 7,
           "elevation": 0,
           "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_4F",
           "dest_warp_id": "0"
+        },
+        {
+          "x": 10,
+          "y": 6,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_4F",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 6,
+          "y": 7,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_4F",
+          "dest_warp_id": "3"
+        },
+        {
+          "x": 6,
+          "y": 6,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_4F",
+          "dest_warp_id": "3"
+        },
+        {
+          "x": 8,
+          "y": 18,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_LIGHTHOUSE_BALCONY",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 9,
+          "y": 18,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_LIGHTHOUSE_BALCONY",
+          "dest_warp_id": "1"
         }
       ],
       "services": "",
@@ -921,18 +1047,32 @@
       "connections": null,
       "entrances": [
         {
-          "x": 2,
-          "y": 9,
+          "x": 10,
+          "y": 7,
           "elevation": 0,
           "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_3F",
           "dest_warp_id": "1"
         },
         {
-          "x": 11,
-          "y": 2,
+          "x": 3,
+          "y": 5,
           "elevation": 0,
           "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_5F",
           "dest_warp_id": "0"
+        },
+        {
+          "x": 3,
+          "y": 4,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_5F",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 6,
+          "y": 7,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_3F",
+          "dest_warp_id": "3"
         }
       ],
       "services": "",
@@ -949,15 +1089,22 @@
       "connections": null,
       "entrances": [
         {
-          "x": 2,
-          "y": 9,
+          "x": 4,
+          "y": 5,
           "elevation": 0,
           "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_4F",
           "dest_warp_id": "1"
         },
         {
-          "x": 11,
-          "y": 2,
+          "x": 10,
+          "y": 10,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_6F",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 10,
+          "y": 9,
           "elevation": 0,
           "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_6F",
           "dest_warp_id": "0"
@@ -977,10 +1124,24 @@
       "connections": null,
       "entrances": [
         {
-          "x": 2,
-          "y": 9,
+          "x": 9,
+          "y": 10,
           "elevation": 0,
           "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_5F",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 8,
+          "y": 4,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_LIGHTHOUSE_ELEVATOR",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 9,
+          "y": 4,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_LIGHTHOUSE_ELEVATOR",
           "dest_warp_id": "1"
         }
       ],
@@ -1419,10 +1580,24 @@
       "entrances": [
         {
           "x": 6,
-          "y": 17,
+          "y": 16,
           "elevation": 0,
           "dest_map": "MAP_OLIVINE_CITY_GYM",
           "dest_warp_id": "2"
+        },
+        {
+          "x": 5,
+          "y": 16,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_GYM",
+          "dest_warp_id": "3"
+        },
+        {
+          "x": 7,
+          "y": 16,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_GYM",
+          "dest_warp_id": "4"
         }
       ],
       "services": "",
@@ -5453,14 +5628,14 @@
       "layout": "LAYOUT_JOHTO_ROUTE40",
       "connections": [
         {
-          "map": "MAP_OLIVINE_CITY",
-          "offset": 0,
-          "direction": "right"
-        },
-        {
           "map": "MAP_JOHTO_ROUTE41",
           "offset": -8,
           "direction": "down"
+        },
+        {
+          "map": "MAP_OLIVINE_CITY",
+          "direction": "right",
+          "offset": -10
         }
       ],
       "entrances": []
@@ -6423,6 +6598,320 @@
           "elevation": 0,
           "dest_map": "MAP_JOHTO_ROUTE31",
           "dest_warp_id": "1"
+        }
+      ],
+      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet"
+    },
+    {
+      "name": "OlivineCity_FishingHouse",
+      "kind": "hgss",
+      "parent": "OlivineCity",
+      "cluster": "west",
+      "status": "implemented",
+      "map_group": 76,
+      "map_num": 34,
+      "display_name": "OlivineCity_FishingHouse",
+      "role": "hgss",
+      "id": "MAP_HGSS_OLIVINECITY_FISHINGHOUSE",
+      "layout": "LAYOUT_HGSS_OLIVINECITY_FISHINGHOUSE",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 4,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY",
+          "dest_warp_id": "9"
+        },
+        {
+          "x": 5,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY",
+          "dest_warp_id": "9"
+        }
+      ],
+      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet"
+    },
+    {
+      "name": "OlivineCity_TradeHouse",
+      "kind": "hgss",
+      "parent": "OlivineCity",
+      "cluster": "west",
+      "status": "implemented",
+      "map_group": 76,
+      "map_num": 35,
+      "display_name": "OlivineCity_TradeHouse",
+      "role": "hgss",
+      "id": "MAP_HGSS_OLIVINECITY_TRADEHOUSE",
+      "layout": "LAYOUT_HGSS_OLIVINECITY_TRADEHOUSE",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 4,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY",
+          "dest_warp_id": "10"
+        },
+        {
+          "x": 5,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY",
+          "dest_warp_id": "10"
+        }
+      ],
+      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet"
+    },
+    {
+      "name": "OlivineCity_SealHouse",
+      "kind": "hgss",
+      "parent": "OlivineCity",
+      "cluster": "west",
+      "status": "implemented",
+      "map_group": 76,
+      "map_num": 36,
+      "display_name": "OlivineCity_SealHouse",
+      "role": "hgss",
+      "id": "MAP_HGSS_OLIVINECITY_SEALHOUSE",
+      "layout": "LAYOUT_HGSS_OLIVINECITY_SEALHOUSE",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 4,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY",
+          "dest_warp_id": "11"
+        },
+        {
+          "x": 5,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY",
+          "dest_warp_id": "11"
+        }
+      ],
+      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet"
+    },
+    {
+      "name": "OlivineCity_Cafe",
+      "kind": "hgss",
+      "parent": "OlivineCity",
+      "cluster": "west",
+      "status": "implemented",
+      "map_group": 76,
+      "map_num": 37,
+      "display_name": "OlivineCity_Cafe",
+      "role": "hgss",
+      "id": "MAP_HGSS_OLIVINECITY_CAFE",
+      "layout": "LAYOUT_HGSS_OLIVINECITY_CAFE",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 5,
+          "y": 10,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY",
+          "dest_warp_id": "12"
+        },
+        {
+          "x": 6,
+          "y": 10,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY",
+          "dest_warp_id": "12"
+        }
+      ],
+      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet"
+    },
+    {
+      "name": "OlivineCity_PokemonCenter_B1F",
+      "kind": "hgss",
+      "parent": "OlivineCity",
+      "cluster": "west",
+      "status": "implemented",
+      "map_group": 76,
+      "map_num": 38,
+      "display_name": "OlivineCity_PokemonCenter_B1F",
+      "role": "hgss",
+      "id": "MAP_HGSS_OLIVINECITY_POKEMONCENTER_B1F",
+      "layout": "LAYOUT_HGSS_OLIVINECITY_POKEMONCENTER_B1F",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 14,
+          "y": 10,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_POKEMON_CENTER_1F",
+          "dest_warp_id": "2"
+        }
+      ],
+      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet"
+    },
+    {
+      "name": "OlivineCity_Lighthouse_Balcony",
+      "kind": "hgss",
+      "parent": "OlivineCity",
+      "cluster": "west",
+      "status": "implemented",
+      "map_group": 76,
+      "map_num": 39,
+      "display_name": "OlivineCity_Lighthouse_Balcony",
+      "role": "hgss",
+      "id": "MAP_OLIVINE_CITY_LIGHTHOUSE_BALCONY",
+      "layout": "LAYOUT_OLIVINE_CITY_LIGHTHOUSE_BALCONY",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 8,
+          "y": 12,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_3F",
+          "dest_warp_id": "5"
+        },
+        {
+          "x": 9,
+          "y": 12,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_3F",
+          "dest_warp_id": "6"
+        }
+      ],
+      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet"
+    },
+    {
+      "name": "OlivineCity_Lighthouse_Elevator",
+      "kind": "hgss",
+      "parent": "OlivineCity",
+      "cluster": "west",
+      "status": "implemented",
+      "map_group": 76,
+      "map_num": 40,
+      "display_name": "OlivineCity_Lighthouse_Elevator",
+      "role": "hgss",
+      "id": "MAP_OLIVINE_CITY_LIGHTHOUSE_ELEVATOR",
+      "layout": "LAYOUT_OLIVINE_CITY_LIGHTHOUSE_ELEVATOR",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 3,
+          "y": 6,
+          "elevation": 0,
+          "dest_map": "MAP_DYNAMIC",
+          "dest_warp_id": "WARP_ID_DYNAMIC"
+        },
+        {
+          "x": 4,
+          "y": 6,
+          "elevation": 0,
+          "dest_map": "MAP_DYNAMIC",
+          "dest_warp_id": "WARP_ID_DYNAMIC"
+        }
+      ],
+      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet"
+    },
+    {
+      "name": "OlivineCity_PortTerminal",
+      "kind": "hgss",
+      "parent": "OlivineCity",
+      "cluster": "west",
+      "status": "implemented",
+      "map_group": 76,
+      "map_num": 41,
+      "display_name": "OlivineCity_PortTerminal",
+      "role": "hgss",
+      "id": "MAP_OLIVINE_CITY_PORT_TERMINAL",
+      "layout": "LAYOUT_OLIVINE_CITY_PORT_TERMINAL",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 7,
+          "y": 2,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY",
+          "dest_warp_id": "13"
+        },
+        {
+          "x": 7,
+          "y": 11,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_PORT_QUAY",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 1,
+          "y": 7,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_PORT_QUAY",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 8,
+          "y": 2,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY",
+          "dest_warp_id": "15"
+        },
+        {
+          "x": 8,
+          "y": 11,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_PORT_QUAY",
+          "dest_warp_id": "2"
+        },
+        {
+          "x": 1,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_PORT_QUAY",
+          "dest_warp_id": "3"
+        }
+      ],
+      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet"
+    },
+    {
+      "name": "OlivineCity_PortQuay",
+      "kind": "hgss",
+      "parent": "OlivineCity",
+      "cluster": "west",
+      "status": "implemented",
+      "map_group": 76,
+      "map_num": 42,
+      "display_name": "OlivineCity_PortQuay",
+      "role": "hgss",
+      "id": "MAP_OLIVINE_CITY_PORT_QUAY",
+      "layout": "LAYOUT_OLIVINE_CITY_PORT_QUAY",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 16,
+          "y": 15,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_PORT_TERMINAL",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 11,
+          "y": 13,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_PORT_TERMINAL",
+          "dest_warp_id": "2"
+        },
+        {
+          "x": 17,
+          "y": 15,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_PORT_TERMINAL",
+          "dest_warp_id": "4"
+        },
+        {
+          "x": 11,
+          "y": 14,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_PORT_TERMINAL",
+          "dest_warp_id": "5"
         }
       ],
       "coverage": "structural/build/runtime checks recorded separately; no owner QA yet"

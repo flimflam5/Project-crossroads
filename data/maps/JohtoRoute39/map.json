@@ -16,7 +16,7 @@
   "connections": [
     {
       "map": "MAP_OLIVINE_CITY",
-      "offset": -16,
+      "offset": -12,
       "direction": "down"
     },
     {

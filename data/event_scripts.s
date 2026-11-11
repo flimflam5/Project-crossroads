@@ -2045,3 +2045,33 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/VioletCity_EastGate/scripts.inc"
 
 	.include "crossroads/scripts/hgss_violet.inc"
+
+	.include "data/maps/OlivineCity_FishingHouse/scripts.inc"
+
+	.include "data/maps/OlivineCity_TradeHouse/scripts.inc"
+
+	.include "data/maps/OlivineCity_SealHouse/scripts.inc"
+
+	.include "data/maps/OlivineCity_Cafe/scripts.inc"
+
+	.include "data/maps/OlivineCity_PokemonCenter_B1F/scripts.inc"
+
+	.include "crossroads/scripts/hgss_olivine_rooms.inc"
+
+
+
+
+
+
+
+	.include "data/maps/OlivineCity_Lighthouse_Balcony/scripts.inc"
+
+	.include "data/maps/OlivineCity_Lighthouse_Elevator/scripts.inc"
+
+	.include "data/maps/OlivineCity_PortTerminal/scripts.inc"
+
+	.include "data/maps/OlivineCity_PortQuay/scripts.inc"
+
+	.include "crossroads/scripts/hgss_olivine_landmarks.inc"
+
+	.include "crossroads/scripts/hgss_olivine_city.inc"

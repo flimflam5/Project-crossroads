@@ -113,7 +113,8 @@
           "dest_warp_id": "0"
         }
       ],
-      "deviation": "Flat GBA perspective/palette and furniture adaptation"
+      "deviation": "Flat GBA perspective/palette and furniture adaptation",
+      "qa09_inventory_review": "Existing canonical accessible building present; no new story/rewards; owner visual acceptance pending"
     },
     {
       "building": "Barrier Station",
@@ -146,7 +147,8 @@
           "dest_warp_id": "0"
         }
       ],
-      "deviation": "Flat GBA perspective/palette and furniture adaptation"
+      "deviation": "Flat GBA perspective/palette and furniture adaptation",
+      "qa09_inventory_review": "Existing canonical accessible building present; no new story/rewards; owner visual acceptance pending"
     },
     {
       "building": "Southwest home",
@@ -172,7 +174,8 @@
           "dest_warp_id": "0"
         }
       ],
-      "deviation": "Flat GBA perspective/palette and furniture adaptation"
+      "deviation": "Flat GBA perspective/palette and furniture adaptation",
+      "qa09_inventory_review": "Existing canonical accessible building present; no new story/rewards; owner visual acceptance pending"
     },
     {
       "building": "Dowsing home",
@@ -198,7 +201,8 @@
           "dest_warp_id": "0"
         }
       ],
-      "deviation": "Flat GBA perspective/palette and furniture adaptation"
+      "deviation": "Flat GBA perspective/palette and furniture adaptation",
+      "qa09_inventory_review": "Existing canonical accessible building present; no new story/rewards; owner visual acceptance pending"
     },
     {
       "building": "Dance Theater",
@@ -231,7 +235,8 @@
           "dest_warp_id": "0"
         }
       ],
-      "deviation": "Flat GBA perspective/palette and furniture adaptation"
+      "deviation": "Flat GBA perspective/palette and furniture adaptation",
+      "qa09_inventory_review": "Existing canonical accessible building present; no new story/rewards; owner visual acceptance pending"
     },
     {
       "building": "Gym",
@@ -264,7 +269,8 @@
           "dest_warp_id": "1"
         }
       ],
-      "deviation": "Owner custom exterior; tall room split across stable maps; practice only"
+      "deviation": "Owner custom exterior; tall room split across stable maps; practice only",
+      "qa09_inventory_review": "Existing canonical accessible building present; no new story/rewards; owner visual acceptance pending"
     },
     {
       "building": "Pokemon Center",
@@ -290,7 +296,8 @@
           "dest_warp_id": "0"
         }
       ],
-      "deviation": "Flat GBA perspective/palette and furniture adaptation"
+      "deviation": "Flat GBA perspective/palette and furniture adaptation",
+      "qa09_inventory_review": "Existing canonical accessible building present; no new story/rewards; owner visual acceptance pending"
     },
     {
       "building": "Poke Mart",
@@ -316,7 +323,8 @@
           "dest_warp_id": "0"
         }
       ],
-      "deviation": "Flat GBA perspective/palette and furniture adaptation"
+      "deviation": "Flat GBA perspective/palette and furniture adaptation",
+      "qa09_inventory_review": "Existing canonical accessible building present; no new story/rewards; owner visual acceptance pending"
     },
     {
       "building": "West gate",
@@ -335,28 +343,29 @@
       "interior": "source geometry/prop-backed original GBA adaptation",
       "door_segments": [
         {
-          "x": 0,
+          "x": 6,
           "y": 37,
           "elevation": 0,
           "dest_map": "MAP_ECRUTEAK_CITY_WEST_GATE",
           "dest_warp_id": "2"
         },
         {
-          "x": 0,
+          "x": 6,
           "y": 38,
           "elevation": 0,
           "dest_map": "MAP_ECRUTEAK_CITY_WEST_GATE",
           "dest_warp_id": "0"
         },
         {
-          "x": 0,
+          "x": 6,
           "y": 39,
           "elevation": 0,
           "dest_map": "MAP_ECRUTEAK_CITY_WEST_GATE",
           "dest_warp_id": "3"
         }
       ],
-      "deviation": "Boundary placement instead of HGSS full gate facade; existing street layout retained"
+      "deviation": "Original GBA green hipped-roof facade; walkable3-row tunnel beneath roof, solid front/ridge; canonical west entrancex6 and clear outside return-only landing anchors",
+      "qa09_inventory_review": "Existing canonical accessible building present; no new story/rewards; owner visual acceptance pending"
     },
     {
       "building": "East gate",
@@ -396,7 +405,8 @@
           "dest_warp_id": "3"
         }
       ],
-      "deviation": "Boundary placement instead of HGSS full gate facade; existing street layout retained"
+      "deviation": "Original GBA green hipped-roof facade; walkable3-row tunnel beneath roof, solid front/ridge; canonical west entrancex6 and clear outside return-only landing anchors",
+      "qa09_inventory_review": "Existing canonical accessible building present; no new story/rewards; owner visual acceptance pending"
     },
     {
       "building": "Northwest background home",
@@ -601,12 +611,13 @@
       "controller_declared_warp_roundtrips": "PASS; city-tour/coverage.json lists each pair",
       "unapproved_story": "not added",
       "owner_visual_acceptance": "PENDING",
-      "remaining": "See ECRUTEAK_QA07.md: unmatched current green-roof report, visual acceptance and explicit reference/art limitations",
+      "remaining": "Owner visual acceptance; complete raster comparison remains unavailable for Theater/route gates. Source-derived furniture corrections and final QA09 exact-ROM tests tracked in ECRUTEAK_FINAL_REVIEW.md",
       "qa08_controller_visited": true,
       "qa08_native_view": "crossroads/qa/qa08/ecruteak/EcruteakCity.png",
       "qa08_visual_acceptance": "owner pending",
       "qa08_b2_native_view": "crossroads/qa/qa08/ecruteak-b2/EcruteakCity.png",
-      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending"
+      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending",
+      "qa09_geometry_inventory": "Reference-backed room/floor exists; latest exact-ROM regression must be rerun after QA09 changes"
     },
     {
       "name": "EcruteakCity_BurnedTower",
@@ -659,7 +670,7 @@
       "controller_declared_warp_roundtrips": "PASS; city-tour/coverage.json lists each pair",
       "unapproved_story": "not added",
       "owner_visual_acceptance": "PENDING",
-      "remaining": "See ECRUTEAK_QA07.md: unmatched current green-roof report, visual acceptance and explicit reference/art limitations",
+      "remaining": "Owner visual acceptance; complete raster comparison remains unavailable for Theater/route gates. Source-derived furniture corrections and final QA09 exact-ROM tests tracked in ECRUTEAK_FINAL_REVIEW.md",
       "reference_provenance": {
         "matrix": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0025_D18R0101.bin",
         "matrix_blob_sha": "562bdc79829113b1e2aa8b98efa3223615e5e5a0",
@@ -671,7 +682,8 @@
       "qa08_native_view": "crossroads/qa/qa08/ecruteak/EcruteakCity_BurnedTower.png",
       "qa08_visual_acceptance": "owner pending",
       "qa08_b2_native_view": "crossroads/qa/qa08/ecruteak-b2/EcruteakCity_BurnedTower.png",
-      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending"
+      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending",
+      "qa09_geometry_inventory": "Reference-backed room/floor exists; latest exact-ROM regression must be rerun after QA09 changes"
     },
     {
       "name": "EcruteakCity_BellTower",
@@ -731,7 +743,7 @@
       "controller_declared_warp_roundtrips": "PASS; city-tour/coverage.json lists each pair",
       "unapproved_story": "not added",
       "owner_visual_acceptance": "PENDING",
-      "remaining": "See ECRUTEAK_QA07.md: unmatched current green-roof report, visual acceptance and explicit reference/art limitations",
+      "remaining": "Owner visual acceptance; complete raster comparison remains unavailable for Theater/route gates. Source-derived furniture corrections and final QA09 exact-ROM tests tracked in ECRUTEAK_FINAL_REVIEW.md",
       "reference_provenance": {
         "matrix": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0015_D17R0101.bin",
         "matrix_blob_sha": "e02ceda7aaa0b8d5796f1a51ddc14b8151054b46",
@@ -743,7 +755,8 @@
       "qa08_native_view": "crossroads/qa/qa08/ecruteak/EcruteakCity_BellTower.png",
       "qa08_visual_acceptance": "owner pending",
       "qa08_b2_native_view": "crossroads/qa/qa08/ecruteak-b2/EcruteakCity_BellTower.png",
-      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending"
+      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending",
+      "qa09_geometry_inventory": "Reference-backed room/floor exists; latest exact-ROM regression must be rerun after QA09 changes"
     },
     {
       "name": "EcruteakCity_Residence",
@@ -790,7 +803,7 @@
       "controller_declared_warp_roundtrips": "PASS; city-tour/coverage.json lists each pair",
       "unapproved_story": "not added",
       "owner_visual_acceptance": "PENDING",
-      "remaining": "See ECRUTEAK_QA07.md: unmatched current green-roof report, visual acceptance and explicit reference/art limitations",
+      "remaining": "Owner visual acceptance; complete raster comparison remains unavailable for Theater/route gates. Source-derived furniture corrections and final QA09 exact-ROM tests tracked in ECRUTEAK_FINAL_REVIEW.md",
       "reference_provenance": {
         "matrix": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0066_T20R0301.bin",
         "matrix_blob_sha": "c41931ad02b8576b73929e84389f185d95c04213",
@@ -802,7 +815,9 @@
       "qa08_native_view": "crossroads/qa/qa08/ecruteak/EcruteakCity_Residence.png",
       "qa08_visual_acceptance": "owner pending",
       "qa08_b2_native_view": "crossroads/qa/qa08/ecruteak-b2/EcruteakCity_Residence.png",
-      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending"
+      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending",
+      "raster_reference": "Actual HGSS Route30 Apricorn house shares matrix0066 and areaData25 with both Ecruteak homes; see ECRUTEAK_FINAL_REVIEW.md",
+      "qa09_geometry_inventory": "Reference-backed room/floor exists; latest exact-ROM regression must be rerun after QA09 changes"
     },
     {
       "name": "EcruteakCity_DanceTheater",
@@ -853,7 +868,7 @@
       "controller_declared_warp_roundtrips": "PASS; city-tour/coverage.json lists each pair",
       "unapproved_story": "not added",
       "owner_visual_acceptance": "PENDING",
-      "remaining": "See ECRUTEAK_QA07.md: unmatched current green-roof report, visual acceptance and explicit reference/art limitations",
+      "remaining": "Owner visual acceptance; complete raster comparison remains unavailable for Theater/route gates. Source-derived furniture corrections and final QA09 exact-ROM tests tracked in ECRUTEAK_FINAL_REVIEW.md",
       "reference_provenance": {
         "matrix": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0126_T27R0501.bin",
         "matrix_blob_sha": "de428ca74c8c37b1b6436bb2773a6101aba5f614",
@@ -865,7 +880,8 @@
       "qa08_native_view": "crossroads/qa/qa08/ecruteak/EcruteakCity_DanceTheater.png",
       "qa08_visual_acceptance": "owner pending",
       "qa08_b2_native_view": "crossroads/qa/qa08/ecruteak-b2/EcruteakCity_DanceTheater.png",
-      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending"
+      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending",
+      "qa09_geometry_inventory": "Reference-backed room/floor exists; latest exact-ROM regression must be rerun after QA09 changes"
     },
     {
       "name": "EcruteakCity_Gym",
@@ -920,7 +936,7 @@
       "controller_declared_warp_roundtrips": "PASS; city-tour/coverage.json lists each pair",
       "unapproved_story": "not added",
       "owner_visual_acceptance": "PENDING",
-      "remaining": "See ECRUTEAK_QA07.md: unmatched current green-roof report, visual acceptance and explicit reference/art limitations",
+      "remaining": "Owner visual acceptance; complete raster comparison remains unavailable for Theater/route gates. Source-derived furniture corrections and final QA09 exact-ROM tests tracked in ECRUTEAK_FINAL_REVIEW.md",
       "reference_provenance": {
         "matrix": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0090_T27GYM0101.bin",
         "matrix_blob_sha": "dd26504c938b227763f32ecc2252e0d294f8e7b6",
@@ -932,7 +948,8 @@
       "qa08_native_view": "crossroads/qa/qa08/ecruteak/EcruteakCity_Gym.png",
       "qa08_visual_acceptance": "owner pending",
       "qa08_b2_native_view": "crossroads/qa/qa08/ecruteak-b2/EcruteakCity_Gym.png",
-      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending"
+      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending",
+      "qa09_geometry_inventory": "Reference-backed room/floor exists; latest exact-ROM regression must be rerun after QA09 changes"
     },
     {
       "name": "EcruteakCity_PokemonCenter_1F",
@@ -989,7 +1006,7 @@
       "controller_declared_warp_roundtrips": "PASS; city-tour/coverage.json lists each pair",
       "unapproved_story": "not added",
       "owner_visual_acceptance": "PENDING",
-      "remaining": "See ECRUTEAK_QA07.md: unmatched current green-roof report, visual acceptance and explicit reference/art limitations",
+      "remaining": "Owner visual acceptance; complete raster comparison remains unavailable for Theater/route gates. Source-derived furniture corrections and final QA09 exact-ROM tests tracked in ECRUTEAK_FINAL_REVIEW.md",
       "reference_provenance": {
         "matrix": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0073_T21PC0101.bin",
         "matrix_blob_sha": "993607934cd67d543de7bcdc4c42b0c01af3adcc",
@@ -1001,7 +1018,9 @@
       "qa08_native_view": "crossroads/qa/qa08/ecruteak/EcruteakCity_PokemonCenter_1F.png",
       "qa08_visual_acceptance": "owner pending",
       "qa08_b2_native_view": "crossroads/qa/qa08/ecruteak-b2/EcruteakCity_PokemonCenter_1F.png",
-      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending"
+      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending",
+      "raster_reference": "Actual HGSS common Center/Mart full mosaics, same source matrices as Ecruteak; see ECRUTEAK_FINAL_REVIEW.md",
+      "qa09_geometry_inventory": "Reference-backed room/floor exists; latest exact-ROM regression must be rerun after QA09 changes"
     },
     {
       "name": "EcruteakCity_Mart",
@@ -1048,7 +1067,7 @@
       "controller_declared_warp_roundtrips": "PASS; city-tour/coverage.json lists each pair",
       "unapproved_story": "not added",
       "owner_visual_acceptance": "PENDING",
-      "remaining": "See ECRUTEAK_QA07.md: unmatched current green-roof report, visual acceptance and explicit reference/art limitations",
+      "remaining": "Owner visual acceptance; complete raster comparison remains unavailable for Theater/route gates. Source-derived furniture corrections and final QA09 exact-ROM tests tracked in ECRUTEAK_FINAL_REVIEW.md",
       "reference_provenance": {
         "matrix": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0104_T21FS0101.bin",
         "matrix_blob_sha": "567a0d5d174171eebb5ddc5aa1245f00c5b52b5d",
@@ -1060,7 +1079,9 @@
       "qa08_native_view": "crossroads/qa/qa08/ecruteak/EcruteakCity_Mart.png",
       "qa08_visual_acceptance": "owner pending",
       "qa08_b2_native_view": "crossroads/qa/qa08/ecruteak-b2/EcruteakCity_Mart.png",
-      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending"
+      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending",
+      "raster_reference": "Actual HGSS common Center/Mart full mosaics, same source matrices as Ecruteak; see ECRUTEAK_FINAL_REVIEW.md",
+      "qa09_geometry_inventory": "Reference-backed room/floor exists; latest exact-ROM regression must be rerun after QA09 changes"
     },
     {
       "name": "EcruteakCity_BellTower_2F",
@@ -1111,7 +1132,7 @@
       "controller_declared_warp_roundtrips": "PASS; city-tour/coverage.json lists each pair",
       "unapproved_story": "not added",
       "owner_visual_acceptance": "PENDING",
-      "remaining": "See ECRUTEAK_QA07.md: unmatched current green-roof report, visual acceptance and explicit reference/art limitations",
+      "remaining": "Owner visual acceptance; complete raster comparison remains unavailable for Theater/route gates. Source-derived furniture corrections and final QA09 exact-ROM tests tracked in ECRUTEAK_FINAL_REVIEW.md",
       "reference_provenance": {
         "matrix": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0016_D17R0102.bin",
         "matrix_blob_sha": "b96eeacf62b879b9b282443d261d0f1e0f173cbb",
@@ -1123,7 +1144,8 @@
       "qa08_native_view": "crossroads/qa/qa08/ecruteak/EcruteakCity_BellTower_2F.png",
       "qa08_visual_acceptance": "owner pending",
       "qa08_b2_native_view": "crossroads/qa/qa08/ecruteak-b2/EcruteakCity_BellTower_2F.png",
-      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending"
+      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending",
+      "qa09_geometry_inventory": "Reference-backed room/floor exists; latest exact-ROM regression must be rerun after QA09 changes"
     },
     {
       "name": "EcruteakCity_BellTower_3F",
@@ -1176,7 +1198,7 @@
       "controller_declared_warp_roundtrips": "PASS; city-tour/coverage.json lists each pair",
       "unapproved_story": "not added",
       "owner_visual_acceptance": "PENDING",
-      "remaining": "See ECRUTEAK_QA07.md: unmatched current green-roof report, visual acceptance and explicit reference/art limitations",
+      "remaining": "Owner visual acceptance; complete raster comparison remains unavailable for Theater/route gates. Source-derived furniture corrections and final QA09 exact-ROM tests tracked in ECRUTEAK_FINAL_REVIEW.md",
       "reference_provenance": {
         "matrix": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0017_D17R0103.bin",
         "matrix_blob_sha": "d87644b1addc44f1d84c6f85c4bb8dae007c0274",
@@ -1188,7 +1210,8 @@
       "qa08_native_view": "crossroads/qa/qa08/ecruteak/EcruteakCity_BellTower_3F.png",
       "qa08_visual_acceptance": "owner pending",
       "qa08_b2_native_view": "crossroads/qa/qa08/ecruteak-b2/EcruteakCity_BellTower_3F.png",
-      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending"
+      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending",
+      "qa09_geometry_inventory": "Reference-backed room/floor exists; latest exact-ROM regression must be rerun after QA09 changes"
     },
     {
       "name": "EcruteakCity_BellTower_4F",
@@ -1267,7 +1290,7 @@
       "controller_declared_warp_roundtrips": "PASS; city-tour/coverage.json lists each pair",
       "unapproved_story": "not added",
       "owner_visual_acceptance": "PENDING",
-      "remaining": "See ECRUTEAK_QA07.md: unmatched current green-roof report, visual acceptance and explicit reference/art limitations",
+      "remaining": "Owner visual acceptance; complete raster comparison remains unavailable for Theater/route gates. Source-derived furniture corrections and final QA09 exact-ROM tests tracked in ECRUTEAK_FINAL_REVIEW.md",
       "reference_provenance": {
         "matrix": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0018_D17R0104.bin",
         "matrix_blob_sha": "52cd6eabf5ce709e9cde805d3e2b467676f1c33e",
@@ -1279,7 +1302,8 @@
       "qa08_native_view": "crossroads/qa/qa08/ecruteak/EcruteakCity_BellTower_4F.png",
       "qa08_visual_acceptance": "owner pending",
       "qa08_b2_native_view": "crossroads/qa/qa08/ecruteak-b2/EcruteakCity_BellTower_4F.png",
-      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending"
+      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending",
+      "qa09_geometry_inventory": "Reference-backed room/floor exists; latest exact-ROM regression must be rerun after QA09 changes"
     },
     {
       "name": "EcruteakCity_BellTower_5F",
@@ -1344,7 +1368,7 @@
       "controller_declared_warp_roundtrips": "PASS; city-tour/coverage.json lists each pair",
       "unapproved_story": "not added",
       "owner_visual_acceptance": "PENDING",
-      "remaining": "See ECRUTEAK_QA07.md: unmatched current green-roof report, visual acceptance and explicit reference/art limitations",
+      "remaining": "Owner visual acceptance; complete raster comparison remains unavailable for Theater/route gates. Source-derived furniture corrections and final QA09 exact-ROM tests tracked in ECRUTEAK_FINAL_REVIEW.md",
       "reference_provenance": {
         "matrix": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0019_D17R0105.bin",
         "matrix_blob_sha": "976b35a857404a9fae8c4b645d0893b7ffdd0d3d",
@@ -1356,7 +1380,8 @@
       "qa08_native_view": "crossroads/qa/qa08/ecruteak/EcruteakCity_BellTower_5F.png",
       "qa08_visual_acceptance": "owner pending",
       "qa08_b2_native_view": "crossroads/qa/qa08/ecruteak-b2/EcruteakCity_BellTower_5F.png",
-      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending"
+      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending",
+      "qa09_geometry_inventory": "Reference-backed room/floor exists; latest exact-ROM regression must be rerun after QA09 changes"
     },
     {
       "name": "EcruteakCity_BellTower_6F",
@@ -1407,7 +1432,7 @@
       "controller_declared_warp_roundtrips": "PASS; city-tour/coverage.json lists each pair",
       "unapproved_story": "not added",
       "owner_visual_acceptance": "PENDING",
-      "remaining": "See ECRUTEAK_QA07.md: unmatched current green-roof report, visual acceptance and explicit reference/art limitations",
+      "remaining": "Owner visual acceptance; complete raster comparison remains unavailable for Theater/route gates. Source-derived furniture corrections and final QA09 exact-ROM tests tracked in ECRUTEAK_FINAL_REVIEW.md",
       "reference_provenance": {
         "matrix": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0020_D17R0106.bin",
         "matrix_blob_sha": "21d8168cb6be5b8a0d64c6502ef0e07fdb585e09",
@@ -1419,7 +1444,8 @@
       "qa08_native_view": "crossroads/qa/qa08/ecruteak/EcruteakCity_BellTower_6F.png",
       "qa08_visual_acceptance": "owner pending",
       "qa08_b2_native_view": "crossroads/qa/qa08/ecruteak-b2/EcruteakCity_BellTower_6F.png",
-      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending"
+      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending",
+      "qa09_geometry_inventory": "Reference-backed room/floor exists; latest exact-ROM regression must be rerun after QA09 changes"
     },
     {
       "name": "EcruteakCity_BellTower_7F",
@@ -1484,7 +1510,7 @@
       "controller_declared_warp_roundtrips": "PASS; city-tour/coverage.json lists each pair",
       "unapproved_story": "not added",
       "owner_visual_acceptance": "PENDING",
-      "remaining": "See ECRUTEAK_QA07.md: unmatched current green-roof report, visual acceptance and explicit reference/art limitations",
+      "remaining": "Owner visual acceptance; complete raster comparison remains unavailable for Theater/route gates. Source-derived furniture corrections and final QA09 exact-ROM tests tracked in ECRUTEAK_FINAL_REVIEW.md",
       "reference_provenance": {
         "matrix": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0021_D17R0107.bin",
         "matrix_blob_sha": "2c2618fea6803d0cc5e6faf422f7cc27b3b9d861",
@@ -1496,7 +1522,8 @@
       "qa08_native_view": "crossroads/qa/qa08/ecruteak/EcruteakCity_BellTower_7F.png",
       "qa08_visual_acceptance": "owner pending",
       "qa08_b2_native_view": "crossroads/qa/qa08/ecruteak-b2/EcruteakCity_BellTower_7F.png",
-      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending"
+      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending",
+      "qa09_geometry_inventory": "Reference-backed room/floor exists; latest exact-ROM regression must be rerun after QA09 changes"
     },
     {
       "name": "EcruteakCity_BellTower_8F",
@@ -1568,7 +1595,7 @@
       "controller_declared_warp_roundtrips": "PASS; city-tour/coverage.json lists each pair",
       "unapproved_story": "not added",
       "owner_visual_acceptance": "PENDING",
-      "remaining": "See ECRUTEAK_QA07.md: unmatched current green-roof report, visual acceptance and explicit reference/art limitations",
+      "remaining": "Owner visual acceptance; complete raster comparison remains unavailable for Theater/route gates. Source-derived furniture corrections and final QA09 exact-ROM tests tracked in ECRUTEAK_FINAL_REVIEW.md",
       "reference_provenance": {
         "matrix": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0022_D17R0108.bin",
         "matrix_blob_sha": "a645b4f1be8b40998a2346643f4dc3e8d159a611",
@@ -1580,7 +1607,8 @@
       "qa08_native_view": "crossroads/qa/qa08/ecruteak/EcruteakCity_BellTower_8F.png",
       "qa08_visual_acceptance": "owner pending",
       "qa08_b2_native_view": "crossroads/qa/qa08/ecruteak-b2/EcruteakCity_BellTower_8F.png",
-      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending"
+      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending",
+      "qa09_geometry_inventory": "Reference-backed room/floor exists; latest exact-ROM regression must be rerun after QA09 changes"
     },
     {
       "name": "EcruteakCity_BellTower_9F",
@@ -1668,7 +1696,7 @@
       "controller_declared_warp_roundtrips": "PASS; city-tour/coverage.json lists each pair",
       "unapproved_story": "not added",
       "owner_visual_acceptance": "PENDING",
-      "remaining": "See ECRUTEAK_QA07.md: unmatched current green-roof report, visual acceptance and explicit reference/art limitations",
+      "remaining": "Owner visual acceptance; complete raster comparison remains unavailable for Theater/route gates. Source-derived furniture corrections and final QA09 exact-ROM tests tracked in ECRUTEAK_FINAL_REVIEW.md",
       "reference_provenance": {
         "matrix": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0023_D17R0109.bin",
         "matrix_blob_sha": "c50958f12eadb43c11035791f1783e3a95f4d1e8",
@@ -1680,7 +1708,8 @@
       "qa08_native_view": "crossroads/qa/qa08/ecruteak/EcruteakCity_BellTower_9F.png",
       "qa08_visual_acceptance": "owner pending",
       "qa08_b2_native_view": "crossroads/qa/qa08/ecruteak-b2/EcruteakCity_BellTower_9F.png",
-      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending"
+      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending",
+      "qa09_geometry_inventory": "Reference-backed room/floor exists; latest exact-ROM regression must be rerun after QA09 changes"
     },
     {
       "name": "EcruteakCity_BurnedTower_B1F",
@@ -1726,7 +1755,7 @@
       "controller_declared_warp_roundtrips": "PASS; city-tour/coverage.json lists each pair",
       "unapproved_story": "not added",
       "owner_visual_acceptance": "PENDING",
-      "remaining": "See ECRUTEAK_QA07.md: unmatched current green-roof report, visual acceptance and explicit reference/art limitations",
+      "remaining": "Owner visual acceptance; complete raster comparison remains unavailable for Theater/route gates. Source-derived furniture corrections and final QA09 exact-ROM tests tracked in ECRUTEAK_FINAL_REVIEW.md",
       "reference_provenance": {
         "matrix": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0026_D18R0102.bin",
         "matrix_blob_sha": "1505fce5d161e2910626f09ff6c58b753357206c",
@@ -1738,7 +1767,8 @@
       "qa08_native_view": "crossroads/qa/qa08/ecruteak/EcruteakCity_BurnedTower_B1F.png",
       "qa08_visual_acceptance": "owner pending",
       "qa08_b2_native_view": "crossroads/qa/qa08/ecruteak-b2/EcruteakCity_BurnedTower_B1F.png",
-      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending"
+      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending",
+      "qa09_geometry_inventory": "Reference-backed room/floor exists; latest exact-ROM regression must be rerun after QA09 changes"
     },
     {
       "name": "EcruteakCity_Gym_Arena",
@@ -1780,7 +1810,7 @@
       "controller_declared_warp_roundtrips": "PASS; city-tour/coverage.json lists each pair",
       "unapproved_story": "not added",
       "owner_visual_acceptance": "PENDING",
-      "remaining": "See ECRUTEAK_QA07.md: unmatched current green-roof report, visual acceptance and explicit reference/art limitations",
+      "remaining": "Owner visual acceptance; complete raster comparison remains unavailable for Theater/route gates. Source-derived furniture corrections and final QA09 exact-ROM tests tracked in ECRUTEAK_FINAL_REVIEW.md",
       "reference_provenance": {
         "matrix": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0090_T27GYM0101.bin",
         "matrix_blob_sha": "dd26504c938b227763f32ecc2252e0d294f8e7b6",
@@ -1792,7 +1822,8 @@
       "qa08_native_view": "crossroads/qa/qa08/ecruteak/EcruteakCity_Gym_Arena.png",
       "qa08_visual_acceptance": "owner pending",
       "qa08_b2_native_view": "crossroads/qa/qa08/ecruteak-b2/EcruteakCity_Gym_Arena.png",
-      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending"
+      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending",
+      "qa09_geometry_inventory": "Reference-backed room/floor exists; latest exact-ROM regression must be rerun after QA09 changes"
     },
     {
       "name": "EcruteakCity_BarrierStation",
@@ -1843,7 +1874,7 @@
       "controller_declared_warp_roundtrips": "PASS; city-tour/coverage.json lists each pair",
       "unapproved_story": "not added",
       "owner_visual_acceptance": "PENDING",
-      "remaining": "See ECRUTEAK_QA07.md: unmatched current green-roof report, visual acceptance and explicit reference/art limitations",
+      "remaining": "Owner visual acceptance; complete raster comparison remains unavailable for Theater/route gates. Source-derived furniture corrections and final QA09 exact-ROM tests tracked in ECRUTEAK_FINAL_REVIEW.md",
       "reference_provenance": {
         "matrix": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0068_T27R0201.bin",
         "matrix_blob_sha": "02eba1edd646a50979acf798c35b6cc25b2ceb9b",
@@ -1855,7 +1886,9 @@
       "qa08_native_view": "crossroads/qa/qa08/ecruteak/EcruteakCity_BarrierStation.png",
       "qa08_visual_acceptance": "owner pending",
       "qa08_b2_native_view": "crossroads/qa/qa08/ecruteak-b2/EcruteakCity_BarrierStation.png",
-      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending"
+      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending",
+      "raster_reference": "Actual HGSS Bellchime gate1F/B1F full mosaics cached; source room topology retained in flat GBA projection",
+      "qa09_geometry_inventory": "Reference-backed room/floor exists; latest exact-ROM regression must be rerun after QA09 changes"
     },
     {
       "name": "EcruteakCity_BarrierCorridor",
@@ -1895,7 +1928,7 @@
       "controller_declared_warp_roundtrips": "PASS; city-tour/coverage.json lists each pair",
       "unapproved_story": "not added",
       "owner_visual_acceptance": "PENDING",
-      "remaining": "See ECRUTEAK_QA07.md: unmatched current green-roof report, visual acceptance and explicit reference/art limitations",
+      "remaining": "Owner visual acceptance; complete raster comparison remains unavailable for Theater/route gates. Source-derived furniture corrections and final QA09 exact-ROM tests tracked in ECRUTEAK_FINAL_REVIEW.md",
       "reference_provenance": {
         "matrix": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0130_T27R0202.bin",
         "matrix_blob_sha": "35e168d4d7f897ffda1255c5c11b0853c1a26dfc",
@@ -1907,7 +1940,9 @@
       "qa08_native_view": "crossroads/qa/qa08/ecruteak/EcruteakCity_BarrierCorridor.png",
       "qa08_visual_acceptance": "owner pending",
       "qa08_b2_native_view": "crossroads/qa/qa08/ecruteak-b2/EcruteakCity_BarrierCorridor.png",
-      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending"
+      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending",
+      "raster_reference": "Actual HGSS Bellchime gate1F/B1F full mosaics cached; source room topology retained in flat GBA projection",
+      "qa09_geometry_inventory": "Reference-backed room/floor exists; latest exact-ROM regression must be rerun after QA09 changes"
     },
     {
       "name": "BellchimeTrail",
@@ -1950,7 +1985,7 @@
       "controller_declared_warp_roundtrips": "PASS; city-tour/coverage.json lists each pair",
       "unapproved_story": "not added",
       "owner_visual_acceptance": "PENDING",
-      "remaining": "See ECRUTEAK_QA07.md: unmatched current green-roof report, visual acceptance and explicit reference/art limitations",
+      "remaining": "Owner visual acceptance; complete raster comparison remains unavailable for Theater/route gates. Source-derived furniture corrections and final QA09 exact-ROM tests tracked in ECRUTEAK_FINAL_REVIEW.md",
       "reference_provenance": {
         "matrix": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0067_D17R1101.bin",
         "matrix_blob_sha": "255e4ae1dba787eb5c64a3612897cf7988032917",
@@ -1962,7 +1997,8 @@
       "qa08_native_view": "crossroads/qa/qa08/ecruteak/BellchimeTrail.png",
       "qa08_visual_acceptance": "owner pending",
       "qa08_b2_native_view": "crossroads/qa/qa08/ecruteak-b2/BellchimeTrail.png",
-      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending"
+      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending",
+      "qa09_geometry_inventory": "Reference-backed room/floor exists; latest exact-ROM regression must be rerun after QA09 changes"
     },
     {
       "name": "EcruteakCity_BellTower_10F",
@@ -2013,7 +2049,7 @@
       "controller_declared_warp_roundtrips": "PASS; city-tour/coverage.json lists each pair",
       "unapproved_story": "not added",
       "owner_visual_acceptance": "PENDING",
-      "remaining": "See ECRUTEAK_QA07.md: unmatched current green-roof report, visual acceptance and explicit reference/art limitations",
+      "remaining": "Owner visual acceptance; complete raster comparison remains unavailable for Theater/route gates. Source-derived furniture corrections and final QA09 exact-ROM tests tracked in ECRUTEAK_FINAL_REVIEW.md",
       "reference_provenance": {
         "matrix": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0183_D17R0112.bin",
         "matrix_blob_sha": "9a42ceb5a1f1d3d7d497b38f6061b42e38c9eea2",
@@ -2025,7 +2061,8 @@
       "qa08_native_view": "crossroads/qa/qa08/ecruteak/EcruteakCity_BellTower_10F.png",
       "qa08_visual_acceptance": "owner pending",
       "qa08_b2_native_view": "crossroads/qa/qa08/ecruteak-b2/EcruteakCity_BellTower_10F.png",
-      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending"
+      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending",
+      "qa09_geometry_inventory": "Reference-backed room/floor exists; latest exact-ROM regression must be rerun after QA09 changes"
     },
     {
       "name": "EcruteakCity_BellTower_Roof",
@@ -2062,7 +2099,7 @@
       "controller_declared_warp_roundtrips": "PASS; city-tour/coverage.json lists each pair",
       "unapproved_story": "not added",
       "owner_visual_acceptance": "PENDING",
-      "remaining": "See ECRUTEAK_QA07.md: unmatched current green-roof report, visual acceptance and explicit reference/art limitations",
+      "remaining": "Owner visual acceptance; complete raster comparison remains unavailable for Theater/route gates. Source-derived furniture corrections and final QA09 exact-ROM tests tracked in ECRUTEAK_FINAL_REVIEW.md",
       "reference_provenance": {
         "matrix": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0024_D17R0110.bin",
         "matrix_blob_sha": "0b0029ce75d7cd4edf8d2aaf57d839658a812ad3",
@@ -2074,7 +2111,8 @@
       "qa08_native_view": "crossroads/qa/qa08/ecruteak/EcruteakCity_BellTower_Roof.png",
       "qa08_visual_acceptance": "owner pending",
       "qa08_b2_native_view": "crossroads/qa/qa08/ecruteak-b2/EcruteakCity_BellTower_Roof.png",
-      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending"
+      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending",
+      "qa09_geometry_inventory": "Reference-backed room/floor exists; latest exact-ROM regression must be rerun after QA09 changes"
     },
     {
       "name": "EcruteakCity_DowsingHouse",
@@ -2121,7 +2159,7 @@
       "controller_declared_warp_roundtrips": "PASS; city-tour/coverage.json lists each pair",
       "unapproved_story": "not added",
       "owner_visual_acceptance": "PENDING",
-      "remaining": "See ECRUTEAK_QA07.md: unmatched current green-roof report, visual acceptance and explicit reference/art limitations",
+      "remaining": "Owner visual acceptance; complete raster comparison remains unavailable for Theater/route gates. Source-derived furniture corrections and final QA09 exact-ROM tests tracked in ECRUTEAK_FINAL_REVIEW.md",
       "reference_provenance": {
         "matrix": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0066_T20R0301.bin",
         "matrix_blob_sha": "c41931ad02b8576b73929e84389f185d95c04213",
@@ -2133,7 +2171,9 @@
       "qa08_native_view": "crossroads/qa/qa08/ecruteak/EcruteakCity_DowsingHouse.png",
       "qa08_visual_acceptance": "owner pending",
       "qa08_b2_native_view": "crossroads/qa/qa08/ecruteak-b2/EcruteakCity_DowsingHouse.png",
-      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending"
+      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending",
+      "raster_reference": "Actual HGSS Route30 Apricorn house shares matrix0066 and areaData25 with both Ecruteak homes; see ECRUTEAK_FINAL_REVIEW.md",
+      "qa09_geometry_inventory": "Reference-backed room/floor exists; latest exact-ROM regression must be rerun after QA09 changes"
     },
     {
       "name": "EcruteakCity_PokemonCenter_B1F",
@@ -2173,7 +2213,7 @@
       "controller_declared_warp_roundtrips": "PASS; city-tour/coverage.json lists each pair",
       "unapproved_story": "not added",
       "owner_visual_acceptance": "PENDING",
-      "remaining": "See ECRUTEAK_QA07.md: unmatched current green-roof report, visual acceptance and explicit reference/art limitations",
+      "remaining": "Owner visual acceptance; complete raster comparison remains unavailable for Theater/route gates. Source-derived furniture corrections and final QA09 exact-ROM tests tracked in ECRUTEAK_FINAL_REVIEW.md",
       "reference_provenance": {
         "matrix": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0077_T27PC0105.bin",
         "matrix_blob_sha": "0c7f359a1e6d95db32ee52ef57a566bac1589119",
@@ -2185,7 +2225,8 @@
       "qa08_native_view": "crossroads/qa/qa08/ecruteak/EcruteakCity_PokemonCenter_B1F.png",
       "qa08_visual_acceptance": "owner pending",
       "qa08_b2_native_view": "crossroads/qa/qa08/ecruteak-b2/EcruteakCity_PokemonCenter_B1F.png",
-      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending"
+      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending",
+      "qa09_geometry_inventory": "Reference-backed room/floor exists; latest exact-ROM regression must be rerun after QA09 changes"
     },
     {
       "name": "EcruteakCity_WestGate",
@@ -2259,7 +2300,7 @@
       "controller_declared_warp_roundtrips": "PASS; city-tour/coverage.json lists each pair",
       "unapproved_story": "not added",
       "owner_visual_acceptance": "PENDING",
-      "remaining": "See ECRUTEAK_QA07.md: unmatched current green-roof report, visual acceptance and explicit reference/art limitations",
+      "remaining": "Owner visual acceptance; complete raster comparison remains unavailable for Theater/route gates. Source-derived furniture corrections and final QA09 exact-ROM tests tracked in ECRUTEAK_FINAL_REVIEW.md",
       "reference_provenance": {
         "matrix": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0070_R31R0101.bin",
         "matrix_blob_sha": "eaa041ca8ee65f17237aafbfe80de7d7bbe24f03",
@@ -2271,7 +2312,8 @@
       "qa08_native_view": "crossroads/qa/qa08/ecruteak/EcruteakCity_WestGate.png",
       "qa08_visual_acceptance": "owner pending",
       "qa08_b2_native_view": "crossroads/qa/qa08/ecruteak-b2/EcruteakCity_WestGate.png",
-      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending"
+      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending",
+      "qa09_geometry_inventory": "Reference-backed room/floor exists; latest exact-ROM regression must be rerun after QA09 changes"
     },
     {
       "name": "EcruteakCity_EastGate",
@@ -2345,7 +2387,7 @@
       "controller_declared_warp_roundtrips": "PASS; city-tour/coverage.json lists each pair",
       "unapproved_story": "not added",
       "owner_visual_acceptance": "PENDING",
-      "remaining": "See ECRUTEAK_QA07.md: unmatched current green-roof report, visual acceptance and explicit reference/art limitations",
+      "remaining": "Owner visual acceptance; complete raster comparison remains unavailable for Theater/route gates. Source-derived furniture corrections and final QA09 exact-ROM tests tracked in ECRUTEAK_FINAL_REVIEW.md",
       "reference_provenance": {
         "matrix": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0070_R31R0101.bin",
         "matrix_blob_sha": "eaa041ca8ee65f17237aafbfe80de7d7bbe24f03",
@@ -2357,7 +2399,8 @@
       "qa08_native_view": "crossroads/qa/qa08/ecruteak/EcruteakCity_EastGate.png",
       "qa08_visual_acceptance": "owner pending",
       "qa08_b2_native_view": "crossroads/qa/qa08/ecruteak-b2/EcruteakCity_EastGate.png",
-      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending"
+      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending",
+      "qa09_geometry_inventory": "Reference-backed room/floor exists; latest exact-ROM regression must be rerun after QA09 changes"
     }
   ],
   "olivine_buildings": [
@@ -2451,8 +2494,9 @@
   ],
   "remaining": [
     "Owner visual acceptance",
-    "Unmatched original green-roof report",
-    "Complete separate HGSS interior raster comparison",
-    "Olivine canonical reconstruction in progress"
+    "Exact original green-roof report not positively identified from attachment/build information; independentgatecases fixed/tested",
+    "Complete separate Theater and route-gate HGSS interior raster references unavailable; source geometry/props verified",
+    "Final QA09 exact delivery ROM tests after source-furniture corrections",
+    "Olivine canonical reconstruction in progress on separate checkpoint"
   ]
 }

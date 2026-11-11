@@ -1,0 +1,223 @@
+{
+  "source_commit": "5664fecee4337c5bdd442583e24cc91c09c0a0cd",
+  "rom_sha256": "d5abac0deabc7d592eba302122b3d15c08501947f0f601eda7b5026da9ac6772",
+  "maps": [
+    {
+      "map": "OlivineCity",
+      "image": "OlivineCity.png",
+      "native_size": [
+        240,
+        160
+      ],
+      "sha256": "bb6e81b64e8f874564596ed35e8bf092937cfb7c87b4ce88bf2ed6fb6bc28d73"
+    },
+    {
+      "map": "OlivineCity_Cafe",
+      "image": "OlivineCity_Cafe.png",
+      "native_size": [
+        240,
+        160
+      ],
+      "sha256": "d5b579bdfa615020e02e2835541406b9a1e79f586a592dee31cb0eac38ae1977"
+    },
+    {
+      "map": "OlivineCity_FishingHouse",
+      "image": "OlivineCity_FishingHouse.png",
+      "native_size": [
+        240,
+        160
+      ],
+      "sha256": "73db7b2222f70cc91da0f358462fb6fe6f3111fd02804ea1689e82317da2206f"
+    },
+    {
+      "map": "OlivineCity_Gym",
+      "image": "OlivineCity_Gym.png",
+      "native_size": [
+        240,
+        160
+      ],
+      "sha256": "f0d75878c1e6bb7749aba21f3981cb479f3ca79c84ff73652f11dfb5aa0f3417"
+    },
+    {
+      "map": "OlivineCity_Gym_Arena",
+      "image": "OlivineCity_Gym_Arena.png",
+      "native_size": [
+        240,
+        160
+      ],
+      "sha256": "704254af9dd887a3fe581a52bc6268ecc8bea219a5d7a0aa569d7092acdec924"
+    },
+    {
+      "map": "OlivineCity_HarborOffice",
+      "image": "OlivineCity_HarborOffice.png",
+      "native_size": [
+        240,
+        160
+      ],
+      "sha256": "e35b858d67d89068574713a0e44de88a75d92a1f3bedd6b22b89791a5d444bd1"
+    },
+    {
+      "map": "OlivineCity_Lighthouse_1F",
+      "image": "OlivineCity_Lighthouse_1F.png",
+      "native_size": [
+        240,
+        160
+      ],
+      "sha256": "5b917a5cb8aa78949caa361f5c6f893de53d2df2a2cd5e00cf5c18db368a850d"
+    },
+    {
+      "map": "OlivineCity_Lighthouse_2F",
+      "image": "OlivineCity_Lighthouse_2F.png",
+      "native_size": [
+        240,
+        160
+      ],
+      "sha256": "1aa1d0fafd2643c3947dd6b21c94a9e57e040beee50e5d5752065567cc7209f6"
+    },
+    {
+      "map": "OlivineCity_Lighthouse_3F",
+      "image": "OlivineCity_Lighthouse_3F.png",
+      "native_size": [
+        240,
+        160
+      ],
+      "sha256": "cda7f91e1e3d6be3a6256127788dccdc28c37b0379607e5078de7c237e471241"
+    },
+    {
+      "map": "OlivineCity_Lighthouse_4F",
+      "image": "OlivineCity_Lighthouse_4F.png",
+      "native_size": [
+        240,
+        160
+      ],
+      "sha256": "7fc070f6320bf7915b9ce811b4c86c7b02137f3a94bb6dfde2bd028a9161d951"
+    },
+    {
+      "map": "OlivineCity_Lighthouse_5F",
+      "image": "OlivineCity_Lighthouse_5F.png",
+      "native_size": [
+        240,
+        160
+      ],
+      "sha256": "540e74def76134b196f10641db01baef6df6b57548079ca752036fa861db3d74"
+    },
+    {
+      "map": "OlivineCity_Lighthouse_6F",
+      "image": "OlivineCity_Lighthouse_6F.png",
+      "native_size": [
+        240,
+        160
+      ],
+      "sha256": "06fd2deecb23397bbc9f17a7eb0c0980279b2b25132389c5f263d354bd350626"
+    },
+    {
+      "map": "OlivineCity_Lighthouse_Balcony",
+      "image": "OlivineCity_Lighthouse_Balcony.png",
+      "native_size": [
+        240,
+        160
+      ],
+      "sha256": "07a2e5509d5baa737715b62208c57e3cc162d08f301395d788e4a897893111ea"
+    },
+    {
+      "map": "OlivineCity_Lighthouse_Elevator",
+      "image": "OlivineCity_Lighthouse_Elevator.png",
+      "native_size": [
+        240,
+        160
+      ],
+      "sha256": "106f1ff98464cfee1fb711fb42e1ad17c09987a57538d6e129bfc61336e46cf0"
+    },
+    {
+      "map": "OlivineCity_Mart",
+      "image": "OlivineCity_Mart.png",
+      "native_size": [
+        240,
+        160
+      ],
+      "sha256": "ca45f5614c517695727847a21629b5338649f96ddf6320a32a2deb1c2e7bfef2"
+    },
+    {
+      "map": "OlivineCity_NeighborHouse",
+      "image": "OlivineCity_NeighborHouse.png",
+      "native_size": [
+        240,
+        160
+      ],
+      "sha256": "2bf1ff0145e57713eff60ad3fcca5d86e641bf92ff8ec13870235f3e654b4510"
+    },
+    {
+      "map": "OlivineCity_PokemonCenter_1F",
+      "image": "OlivineCity_PokemonCenter_1F.png",
+      "native_size": [
+        240,
+        160
+      ],
+      "sha256": "47f490083234d5bf6dd8a87310e6f96570b5dc7046279da6142996adb6b9db07"
+    },
+    {
+      "map": "OlivineCity_PokemonCenter_B1F",
+      "image": "OlivineCity_PokemonCenter_B1F.png",
+      "native_size": [
+        240,
+        160
+      ],
+      "sha256": "f82f3b26d36b0ccda37db9516c71e324009cc84250192ae01249a678232bd165"
+    },
+    {
+      "map": "OlivineCity_PortQuay",
+      "image": "OlivineCity_PortQuay.png",
+      "native_size": [
+        240,
+        160
+      ],
+      "sha256": "2c9ee386fc882b025495b3d7cc61314d17e0b55341d7d82323543a132399389e"
+    },
+    {
+      "map": "OlivineCity_PortTerminal",
+      "image": "OlivineCity_PortTerminal.png",
+      "native_size": [
+        240,
+        160
+      ],
+      "sha256": "bb420e4db3502cd64a35f152019061aea42d965efbe2e5a7ab15d60c9faceea6"
+    },
+    {
+      "map": "OlivineCity_Residence",
+      "image": "OlivineCity_Residence.png",
+      "native_size": [
+        240,
+        160
+      ],
+      "sha256": "97c0d66263d188775906e01b518a3ee32096fb69308124e18b87c7d8bc9a9080"
+    },
+    {
+      "map": "OlivineCity_SealHouse",
+      "image": "OlivineCity_SealHouse.png",
+      "native_size": [
+        240,
+        160
+      ],
+      "sha256": "d0e5a51d1290eac991fc9e5159104799813cf8458720bac1eb3f82a59f1e3e76"
+    },
+    {
+      "map": "OlivineCity_SilphOffice",
+      "image": "OlivineCity_SilphOffice.png",
+      "native_size": [
+        240,
+        160
+      ],
+      "sha256": "24f5f3ef1651267dd5aa804ab9f30d352f9a09e07d63dc95ddeb5b4cdb8dd3a8"
+    },
+    {
+      "map": "OlivineCity_TradeHouse",
+      "image": "OlivineCity_TradeHouse.png",
+      "native_size": [
+        240,
+        160
+      ],
+      "sha256": "73db7b2222f70cc91da0f358462fb6fe6f3111fd02804ea1689e82317da2206f"
+    }
+  ],
+  "method": "Actual controller-driven mGBA screenshots. Contact sheet preserves each frame at1x; labels outside frames. Survey access enabled through its actual UI, no player/map/warp coordinate writes. Authored static full-map renders are separate."
+}

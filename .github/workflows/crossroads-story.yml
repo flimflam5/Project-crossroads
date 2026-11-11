@@ -25,6 +25,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Fetch immutable QA08 migration baseline
+        run: git fetch --no-tags --depth=1 origin fd151242458efe5759b18650f35a5e5b2fa47e45
+      - name: Install image validation dependency
+        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends python3-pil
       - name: Validate opening story data
         run: python3 crossroads/tools/validate_opening.py
       - name: Validate Olivine map and event structure

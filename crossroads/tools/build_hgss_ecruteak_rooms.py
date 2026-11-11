@@ -22,7 +22,13 @@ def generate(check=False):
   existing=(R/f'data/maps/{name}/map.json').exists();m=load(f'data/maps/{name}/map.json') if existing else copy.deepcopy(load('data/maps/EcruteakCity_Residence/map.json'))
   if name=='EcruteakCity_DowsingHouse':m.update(name=name,id='MAP_ECRUTEAK_CITY_DOWSING_HOUSE',object_events=[],bg_events=[])
   if m['layout']=='LAYOUT_HOUSE_WITH_BED' or name=='EcruteakCity_DowsingHouse':m['layout']='LAYOUT_HGSS_'+name.upper()
-  room=project(header);w,h=room['width'],room['height'];tiles=room['tiles'];seen=room['walkable']
+  projection_facts=None
+  if header=='MAP_ECRUTEAK_DANCE_THEATER':
+   # The generic projector draws wide temple tables; this room instead owns
+   # its13 one-cell HGSS audience benches. Never draw both representations.
+   projection_facts=copy.deepcopy(FACTS)
+   for chunk in projection_facts[header]['chunks']:chunk['props']=[p for p in chunk['props'] if p['model']!=56]
+  room=project(header,facts=projection_facts);w,h=room['width'],room['height'];tiles=room['tiles'];seen=room['walkable']
   def stamp(part,x,y):
    a=ART[part]
    for yy in range(a['height']):
@@ -32,7 +38,7 @@ def generate(check=False):
   if 'HOUSE' in header:
    for y in (1,2):
     for x in range(1,10):tiles[y*w+x]=0x400|ART['house_wall']['start']+(y-1)*4+x%4
-   stamp('fridge',1,2);stamp('cabinet',2,2);stamp('television',8,2);stamp('dining_table',6,5)
+   stamp('house_window',4,1);stamp('fridge',1,2);stamp('house_kitchen',2,2);stamp('cabinet',8,2);stamp('dining_table',6,5)
    for x in (5,8):
     for y in (5,6):stamp('chair',x,y)
    if not m['object_events']:
@@ -41,18 +47,28 @@ def generate(check=False):
    if len(m['object_events'])==1:
     child=copy.deepcopy(m['object_events'][0]);child.update(x=8,y=5,graphics_id='OBJ_EVENT_GFX_BOY_1',script='Hgss_HouseChild');child.pop('local_id',None);m['object_events'].append(child)
   else:
+   stage_art=load('crossroads/hgss/art/theater/manifest.json')['specs']
    for y in (3,4):
-    for x in range(1,w-1):tiles[y*w+x]=0x400|ART['house_wall']['start']+(y-3)*4+x%4
+    for x in range(1,w-1):tiles[y*w+x]=0x400|stage_art['stage_backdrop']['start']+(y-3)*12+x-1
    for y in range(5,8):
-    for x in range(1,w-1):tiles[y*w+x]=0x3000|ART['tatami']['start']
+    for x in range(1,w-1):tiles[y*w+x]=0x3000|ART['wood']['start']
    # HGSS stage riser with two open stair aisles; no mandatory fight gate.
    for x in range(1,w-1):
-    if (x,8) not in seen:tiles[8*w+x]=0x400|ART['stage']['start']+4+x%4
-   for x in [4,6,8,10,12]:
-    for y in [10,12,14]:
-     if x+1>=w-1:continue
-     stamp('prayer_table',x,y)
-     for xx in [x,x+1]:tiles[y*w+xx]|=0x400
+    if (x,8) not in seen:tiles[8*w+x]=0x400|stage_art['stage_rope']['start']
+   # Read actual model56 positions: the upper center aisle deliberately has
+   # no benches at6,10 or8,10. A rectangular fill closed that aisle and also
+   # duplicated the generic projector's seats one row below.
+   for chunk in FACTS[header]['chunks']:
+    for prop in chunk['props']:
+     if prop['model']!=56:continue
+     x,y=int(prop['tile_x']),int(prop['tile_z']);stamp('theater_bench',x,y);tiles[y*w+x]=0x400|ART['theater_bench']['start']
+   # Actual final HGSS audience uses a green checker and purple floor
+   # cushions. The private seat drawing keeps its historical895 ID; replace
+   # only audience ground wood, leaving the brown raised stage/steps intact.
+   for y in range(9,h):
+    for x in range(w):
+     i=y*w+x
+     if tiles[i]&1023==ART['wood']['start']:tiles[i]=(tiles[i]&0xfc00)|stage_art['audience_floor']['start']
    m['object_events'][0].update(x=10,y=9)
    while len(m['object_events'])<6:
     o=copy.deepcopy(m['object_events'][1]);o.pop('local_id',None);m['object_events'].append(o)
@@ -62,7 +78,7 @@ def generate(check=False):
   if name=='EcruteakCity_DanceTheater':m['warp_events'][0]['dest_warp_id']='16'
   for e in m['warp_events']:tiles[e['y']*w+e['x']]=ART['exit']['start']
   for o in m['object_events']:assert not tiles[o['y']*w+o['x']]&0xc00,(name,'Actor in furniture',o)
-  l=dict(id=m['layout'],name=name+'_Layout',width=w,height=h,primary_tileset='gTileset_Building',secondary_tileset='gTileset_HgssTemple',border_filepath=f'data/layouts/{name}/border.bin',blockdata_filepath=f'data/layouts/{name}/map.bin',layout_version='emerald')
+  l=dict(id=m['layout'],name=name+'_Layout',width=w,height=h,primary_tileset='gTileset_Building',secondary_tileset='gTileset_HgssTheater' if name=='EcruteakCity_DanceTheater' else 'gTileset_HgssTemple',border_filepath=f'data/layouts/{name}/border.bin',blockdata_filepath=f'data/layouts/{name}/map.bin',layout_version='emerald')
   if l['id'] in ls:ls[l['id']].clear();ls[l['id']].update(l)
   else:layouts['layouts'].append(l);ls[l['id']]=l
   write(l['blockdata_filepath'],struct.pack('<'+str(w*h)+'H',*tiles));write(l['border_filepath'],struct.pack('<4H',*([0x600]*4)));js(f'data/maps/{name}/map.json',m)

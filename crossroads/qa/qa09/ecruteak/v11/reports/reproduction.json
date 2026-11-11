@@ -1,0 +1,614 @@
+{
+  "rom_sha256": "df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4",
+  "records": [
+    {
+      "label": "ordinary-paving-south",
+      "map": "EcruteakCity",
+      "position": [
+        40,
+        61
+      ],
+      "arrow": {
+        "sprite": 61,
+        "visible": false,
+        "behavior": 0
+      },
+      "arrow_visible_samples": 0,
+      "tree_palette_rgb555": [
+        10403,
+        17398,
+        13072,
+        6695,
+        327,
+        14939,
+        11629,
+        11668,
+        6376,
+        19231,
+        12731,
+        10521,
+        25428,
+        21262,
+        17096,
+        13955
+      ]
+    },
+    {
+      "label": "canopy-entry",
+      "map": "EcruteakCity",
+      "position": [
+        26,
+        42
+      ],
+      "arrow": {
+        "sprite": 61,
+        "visible": false,
+        "behavior": 0
+      },
+      "arrow_visible_samples": 0,
+      "tree_palette_rgb555": [
+        10403,
+        17398,
+        13072,
+        6695,
+        327,
+        14939,
+        11629,
+        11668,
+        6376,
+        19231,
+        12731,
+        10521,
+        25428,
+        21262,
+        17096,
+        13955
+      ]
+    },
+    {
+      "label": "trunk-from-north",
+      "map": "EcruteakCity",
+      "position": [
+        26,
+        42
+      ],
+      "arrow": {
+        "sprite": 61,
+        "visible": false,
+        "behavior": 0
+      },
+      "arrow_visible_samples": 0,
+      "tree_palette_rgb555": [
+        10403,
+        17398,
+        13072,
+        6695,
+        327,
+        14939,
+        11629,
+        11668,
+        6376,
+        19231,
+        12731,
+        10521,
+        25428,
+        21262,
+        17096,
+        13955
+      ]
+    },
+    {
+      "label": "trunk-west",
+      "map": "EcruteakCity",
+      "position": [
+        25,
+        43
+      ],
+      "arrow": {
+        "sprite": 61,
+        "visible": false,
+        "behavior": 0
+      },
+      "arrow_visible_samples": 0,
+      "tree_palette_rgb555": [
+        10403,
+        17398,
+        13072,
+        6695,
+        327,
+        14939,
+        11629,
+        11668,
+        6376,
+        19231,
+        12731,
+        10521,
+        25428,
+        21262,
+        17096,
+        13955
+      ]
+    },
+    {
+      "label": "trunk-east",
+      "map": "EcruteakCity",
+      "position": [
+        28,
+        43
+      ],
+      "arrow": {
+        "sprite": 61,
+        "visible": false,
+        "behavior": 0
+      },
+      "arrow_visible_samples": 0,
+      "tree_palette_rgb555": [
+        10403,
+        17398,
+        13072,
+        6695,
+        327,
+        14939,
+        11629,
+        11668,
+        6376,
+        19231,
+        12731,
+        10521,
+        25428,
+        21262,
+        17096,
+        13955
+      ]
+    },
+    {
+      "label": "trunk-south",
+      "map": "EcruteakCity",
+      "position": [
+        26,
+        44
+      ],
+      "arrow": {
+        "sprite": 61,
+        "visible": false,
+        "behavior": 0
+      },
+      "arrow_visible_samples": 0,
+      "tree_palette_rgb555": [
+        10403,
+        17398,
+        13072,
+        6695,
+        327,
+        14939,
+        11629,
+        11668,
+        6376,
+        19231,
+        12731,
+        10521,
+        25428,
+        21262,
+        17096,
+        13955
+      ]
+    },
+    {
+      "label": "house-west-gutter",
+      "map": "EcruteakCity",
+      "position": [
+        20,
+        43
+      ],
+      "arrow": {
+        "sprite": 61,
+        "visible": false,
+        "behavior": 0
+      },
+      "arrow_visible_samples": 0,
+      "tree_palette_rgb555": [
+        10403,
+        17398,
+        13072,
+        6695,
+        327,
+        14939,
+        11629,
+        11668,
+        6376,
+        19231,
+        12731,
+        10521,
+        25428,
+        21262,
+        17096,
+        13955
+      ]
+    },
+    {
+      "label": "house-west-base",
+      "map": "EcruteakCity",
+      "position": [
+        19,
+        44
+      ],
+      "arrow": {
+        "sprite": 61,
+        "visible": false,
+        "behavior": 0
+      },
+      "arrow_visible_samples": 0,
+      "tree_palette_rgb555": [
+        10403,
+        17398,
+        13072,
+        6695,
+        327,
+        14939,
+        11629,
+        11668,
+        6376,
+        19231,
+        12731,
+        10521,
+        25428,
+        21262,
+        17096,
+        13955
+      ]
+    },
+    {
+      "label": "house-front-wall",
+      "map": "EcruteakCity",
+      "position": [
+        22,
+        46
+      ],
+      "arrow": {
+        "sprite": 61,
+        "visible": false,
+        "behavior": 0
+      },
+      "arrow_visible_samples": 0,
+      "tree_palette_rgb555": [
+        10403,
+        17398,
+        13072,
+        6695,
+        327,
+        14939,
+        11629,
+        11668,
+        6376,
+        19231,
+        12731,
+        10521,
+        25428,
+        21262,
+        17096,
+        13955
+      ]
+    },
+    {
+      "label": "station-front-wall",
+      "map": "EcruteakCity",
+      "position": [
+        37,
+        26
+      ],
+      "arrow": {
+        "sprite": 61,
+        "visible": false,
+        "behavior": 0
+      },
+      "arrow_visible_samples": 0,
+      "tree_palette_rgb555": [
+        10403,
+        17398,
+        13072,
+        6695,
+        327,
+        14939,
+        11629,
+        11668,
+        6376,
+        19231,
+        12731,
+        10521,
+        25428,
+        21262,
+        17096,
+        13955
+      ]
+    },
+    {
+      "label": "dowsing-wall",
+      "map": "EcruteakCity",
+      "position": [
+        32,
+        56
+      ],
+      "arrow": {
+        "sprite": 61,
+        "visible": false,
+        "behavior": 0
+      },
+      "arrow_visible_samples": 0,
+      "tree_palette_rgb555": [
+        10403,
+        17398,
+        13072,
+        6695,
+        327,
+        14939,
+        11629,
+        11668,
+        6376,
+        19231,
+        12731,
+        10521,
+        25428,
+        21262,
+        17096,
+        13955
+      ]
+    },
+    {
+      "label": "theater-wall",
+      "map": "EcruteakCity",
+      "position": [
+        46,
+        46
+      ],
+      "arrow": {
+        "sprite": 61,
+        "visible": false,
+        "behavior": 0
+      },
+      "arrow_visible_samples": 0,
+      "tree_palette_rgb555": [
+        10403,
+        17398,
+        13072,
+        6695,
+        327,
+        14939,
+        11629,
+        11668,
+        6376,
+        19231,
+        12731,
+        10521,
+        25428,
+        21262,
+        17096,
+        13955
+      ]
+    },
+    {
+      "label": "center-wall",
+      "map": "EcruteakCity",
+      "position": [
+        44,
+        56
+      ],
+      "arrow": {
+        "sprite": 61,
+        "visible": false,
+        "behavior": 0
+      },
+      "arrow_visible_samples": 0,
+      "tree_palette_rgb555": [
+        10403,
+        17398,
+        13072,
+        6695,
+        327,
+        14939,
+        11629,
+        11668,
+        6376,
+        19231,
+        12731,
+        10521,
+        25428,
+        21262,
+        17096,
+        13955
+      ]
+    },
+    {
+      "label": "mart-wall",
+      "map": "EcruteakCity",
+      "position": [
+        52,
+        46
+      ],
+      "arrow": {
+        "sprite": 61,
+        "visible": false,
+        "behavior": 0
+      },
+      "arrow_visible_samples": 0,
+      "tree_palette_rgb555": [
+        10403,
+        17398,
+        13072,
+        6695,
+        327,
+        14939,
+        11629,
+        11668,
+        6376,
+        19231,
+        12731,
+        10521,
+        25428,
+        21262,
+        17096,
+        13955
+      ]
+    },
+    {
+      "label": "burned-wall",
+      "map": "EcruteakCity",
+      "position": [
+        23,
+        22
+      ],
+      "arrow": {
+        "sprite": 61,
+        "visible": false,
+        "behavior": 0
+      },
+      "arrow_visible_samples": 0,
+      "tree_palette_rgb555": [
+        10403,
+        17398,
+        13072,
+        6695,
+        327,
+        14939,
+        11629,
+        11668,
+        6376,
+        19231,
+        12731,
+        10521,
+        25428,
+        21262,
+        17096,
+        13955
+      ]
+    },
+    {
+      "label": "custom-gym-wall",
+      "map": "EcruteakCity",
+      "position": [
+        23,
+        56
+      ],
+      "arrow": {
+        "sprite": 61,
+        "visible": false,
+        "behavior": 0
+      },
+      "arrow_visible_samples": 0,
+      "tree_palette_rgb555": [
+        10403,
+        17398,
+        13072,
+        6695,
+        327,
+        14939,
+        11629,
+        11668,
+        6376,
+        19231,
+        12731,
+        10521,
+        25428,
+        21262,
+        17096,
+        13955
+      ]
+    },
+    {
+      "label": "northwest-private-wall",
+      "map": "EcruteakCity",
+      "position": [
+        22,
+        37
+      ],
+      "arrow": {
+        "sprite": 61,
+        "visible": false,
+        "behavior": 0
+      },
+      "arrow_visible_samples": 0,
+      "tree_palette_rgb555": [
+        10403,
+        17398,
+        13072,
+        6695,
+        327,
+        14939,
+        11629,
+        11668,
+        6376,
+        19231,
+        12731,
+        10521,
+        25428,
+        21262,
+        17096,
+        13955
+      ]
+    },
+    {
+      "label": "north-private-wall",
+      "map": "EcruteakCity",
+      "position": [
+        34,
+        37
+      ],
+      "arrow": {
+        "sprite": 61,
+        "visible": false,
+        "behavior": 0
+      },
+      "arrow_visible_samples": 0,
+      "tree_palette_rgb555": [
+        10403,
+        17398,
+        13072,
+        6695,
+        327,
+        14939,
+        11629,
+        11668,
+        6376,
+        19231,
+        12731,
+        10521,
+        25428,
+        21262,
+        17096,
+        13955
+      ]
+    },
+    {
+      "label": "southeast-private-wall",
+      "map": "EcruteakCity",
+      "position": [
+        53,
+        56
+      ],
+      "arrow": {
+        "sprite": 61,
+        "visible": false,
+        "behavior": 0
+      },
+      "arrow_visible_samples": 0,
+      "tree_palette_rgb555": [
+        10403,
+        17398,
+        13072,
+        6695,
+        327,
+        14939,
+        11629,
+        11668,
+        6376,
+        19231,
+        12731,
+        10521,
+        25428,
+        21262,
+        17096,
+        13955
+      ]
+    }
+  ],
+  "setup": "Copied old battery; normal Continue and controller travel. Existing harness uses temporary encounter suppression and actual survey desk, no map/warp writes."
+}

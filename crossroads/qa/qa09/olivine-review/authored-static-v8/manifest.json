@@ -1,0 +1,321 @@
+{
+  "stage": "Final BUILD9 source-art static previews; actual gameplay evidence is separately linked",
+  "maps": [
+    {
+      "map": "OlivineCity",
+      "layout_id": "LAYOUT_OLIVINE_CITY",
+      "dimensions": [
+        64,
+        64
+      ],
+      "layout_sha256": "74cbcf16c294259e0ebbce0c541bd70cf061c5617654a802510411ac4d9fba6c",
+      "png_sha256": "4a19ddbde211b8b5a05251104f46c2c141333091aa52ff7b0f521f0a2dd079ec",
+      "image": "OlivineCity.png",
+      "classification": "STATIC source render, not emulator footage",
+      "visually_inspected": true
+    },
+    {
+      "map": "OlivineCity_Cafe",
+      "layout_id": "LAYOUT_HGSS_OLIVINECITY_CAFE",
+      "dimensions": [
+        14,
+        12
+      ],
+      "layout_sha256": "45903d9ae7905080c3a89e66bee0e33a68b1b2974e7977d0aeff77a7f1f65180",
+      "png_sha256": "59b9fae9c6bdf58cf3d4c90d9bac95eadc1adc72e488abac4ae64d1a0ecf8b99",
+      "image": "OlivineCity_Cafe.png",
+      "classification": "STATIC source render, not emulator footage",
+      "visually_inspected": true
+    },
+    {
+      "map": "OlivineCity_FishingHouse",
+      "layout_id": "LAYOUT_HGSS_OLIVINECITY_FISHINGHOUSE",
+      "dimensions": [
+        11,
+        10
+      ],
+      "layout_sha256": "25b07d3946cdaa6466cb90d6489bd2ac0766c446a831b76fdd97be4047ffe9a2",
+      "png_sha256": "d25088b3e1f3b72c234f6fc397eb9b9bc9957972a7abeb9b4982eebb875e093e",
+      "image": "OlivineCity_FishingHouse.png",
+      "classification": "STATIC source render, not emulator footage",
+      "visually_inspected": true
+    },
+    {
+      "map": "OlivineCity_Gym",
+      "layout_id": "LAYOUT_OLIVINECITY_GYM",
+      "dimensions": [
+        11,
+        12
+      ],
+      "layout_sha256": "eb1df51961882138bdead348b89c043ed3f4cc1efa2264e2ef62b6fc80605e3f",
+      "png_sha256": "2bf1661916d67962a68db86ab7fe602ec0abc32e94e29cfa34404c4d769a5ecc",
+      "image": "OlivineCity_Gym.png",
+      "classification": "STATIC source render, not emulator footage",
+      "visually_inspected": true
+    },
+    {
+      "map": "OlivineCity_Gym_Arena",
+      "layout_id": "LAYOUT_OLIVINECITY_GYM_ARENA",
+      "dimensions": [
+        11,
+        17
+      ],
+      "layout_sha256": "9992d7a46133d1ed6e826eaf16d3f7538aab2a50eec8578c9e6f1854e68fc8da",
+      "png_sha256": "7d8b4d42ff71c7c85b1c1ca04e0e652571ae4a4b8c5326b37b87ea4646846f0f",
+      "image": "OlivineCity_Gym_Arena.png",
+      "classification": "STATIC source render, not emulator footage",
+      "visually_inspected": true
+    },
+    {
+      "map": "OlivineCity_HarborOffice",
+      "layout_id": "LAYOUT_OLIVINE_HARBOR_OFFICE",
+      "dimensions": [
+        10,
+        8
+      ],
+      "layout_sha256": "b3ad7984deefb024d01af8002afc612c63e6840a458ae7a37697c081d1490ea7",
+      "png_sha256": "21daa866f66a27b58941d4f79a33787c06ac0779a074a5cbac4bd58ee3dc4254",
+      "image": "OlivineCity_HarborOffice.png",
+      "classification": "STATIC source render, not emulator footage",
+      "visually_inspected": true
+    },
+    {
+      "map": "OlivineCity_Lighthouse_1F",
+      "layout_id": "LAYOUT_OLIVINECITY_LIGHTHOUSE_1F",
+      "dimensions": [
+        17,
+        19
+      ],
+      "layout_sha256": "7c0b23012ede837fcfdd1d460836034a15d5853aecf08c77219cf54186a90955",
+      "png_sha256": "71cce3519556596d41a9480e40f9cda6930a3639d007679c9efe5237056105f1",
+      "image": "OlivineCity_Lighthouse_1F.png",
+      "classification": "STATIC source render, not emulator footage",
+      "visually_inspected": true
+    },
+    {
+      "map": "OlivineCity_Lighthouse_2F",
+      "layout_id": "LAYOUT_OLIVINECITY_LIGHTHOUSE_2F",
+      "dimensions": [
+        17,
+        19
+      ],
+      "layout_sha256": "ce0f125d7b4c3a0a217cd1829856d5439155a7344253ef87ecce7d6fd40ac3e3",
+      "png_sha256": "bdbeb06cf39cb1dee7ebbdcc52238f6faea242d1493242b10e6f73aba548248a",
+      "image": "OlivineCity_Lighthouse_2F.png",
+      "classification": "STATIC source render, not emulator footage",
+      "visually_inspected": true
+    },
+    {
+      "map": "OlivineCity_Lighthouse_3F",
+      "layout_id": "LAYOUT_OLIVINECITY_LIGHTHOUSE_3F",
+      "dimensions": [
+        17,
+        20
+      ],
+      "layout_sha256": "6bd7afb0cb5082d6868bea964cabfcc4346507d4bdf2ba9259256909d331296c",
+      "png_sha256": "8c4f827ac35a5ca393f766e608dc7f0beaee1093087f95cf290b6eba77a1038a",
+      "image": "OlivineCity_Lighthouse_3F.png",
+      "classification": "STATIC source render, not emulator footage",
+      "visually_inspected": true
+    },
+    {
+      "map": "OlivineCity_Lighthouse_4F",
+      "layout_id": "LAYOUT_OLIVINECITY_LIGHTHOUSE_4F",
+      "dimensions": [
+        17,
+        19
+      ],
+      "layout_sha256": "6f8550139591fe7687ea055e76e795122f7acbb58ac57cbadb6170bcd4427915",
+      "png_sha256": "288965649a1cab93a7ca6fac44dde78218cd941bace3d156ff682e5976c15506",
+      "image": "OlivineCity_Lighthouse_4F.png",
+      "classification": "STATIC source render, not emulator footage",
+      "visually_inspected": true
+    },
+    {
+      "map": "OlivineCity_Lighthouse_5F",
+      "layout_id": "LAYOUT_OLIVINECITY_LIGHTHOUSE_5F",
+      "dimensions": [
+        17,
+        19
+      ],
+      "layout_sha256": "aa33bf2bd2529759a3bb2b2836020b5dba1bcabfb1fb797c9c07aade0aa9f4a0",
+      "png_sha256": "4eee6b594eff0c5666f35f393e079a0f16c04ba75dab665dbbc2890e5f70d28a",
+      "image": "OlivineCity_Lighthouse_5F.png",
+      "classification": "STATIC source render, not emulator footage",
+      "visually_inspected": true
+    },
+    {
+      "map": "OlivineCity_Lighthouse_6F",
+      "layout_id": "LAYOUT_OLIVINECITY_LIGHTHOUSE_6F",
+      "dimensions": [
+        17,
+        19
+      ],
+      "layout_sha256": "4c8f052b74ed8c0f18684f66471fd2eedb27c8058d9708c5d2919bf21cd1fa2e",
+      "png_sha256": "01de2a0a3238d308b3acb055aad41d9b940d5e6e5f9f18c2e8a9ba6440e9cbb9",
+      "image": "OlivineCity_Lighthouse_6F.png",
+      "classification": "STATIC source render, not emulator footage",
+      "visually_inspected": true
+    },
+    {
+      "map": "OlivineCity_Lighthouse_Balcony",
+      "layout_id": "LAYOUT_OLIVINE_CITY_LIGHTHOUSE_BALCONY",
+      "dimensions": [
+        17,
+        17
+      ],
+      "layout_sha256": "edc258e513560c6a5ac6963ffecb5d0c007fa6703a89cabd80d45a5788659f30",
+      "png_sha256": "d09ff2a9ebc4342bf7829a9cc4133a023139a2e5ae27ca64139147b16785636e",
+      "image": "OlivineCity_Lighthouse_Balcony.png",
+      "classification": "STATIC source render, not emulator footage",
+      "visually_inspected": true
+    },
+    {
+      "map": "OlivineCity_Lighthouse_Elevator",
+      "layout_id": "LAYOUT_OLIVINE_CITY_LIGHTHOUSE_ELEVATOR",
+      "dimensions": [
+        8,
+        8
+      ],
+      "layout_sha256": "70760b9b6e65837c512eb85157f02228868929b5d2f59b468df1feced98358bd",
+      "png_sha256": "341191172f55a8677b27aaad845250749aff544e6e2d760f5e035a2718d3d767",
+      "image": "OlivineCity_Lighthouse_Elevator.png",
+      "classification": "STATIC source render, not emulator footage",
+      "visually_inspected": true
+    },
+    {
+      "map": "OlivineCity_Mart",
+      "layout_id": "LAYOUT_HGSS_OLIVINECITY_MART",
+      "dimensions": [
+        14,
+        13
+      ],
+      "layout_sha256": "e5f5e5099e290e829e09c0590171400e40951bb744d3b07e708d11b4b672e1cb",
+      "png_sha256": "dd606e5db5ccbe785ff4f8af3d41ba1bc488814dbe79f6081a4e745b3fccd0a3",
+      "image": "OlivineCity_Mart.png",
+      "classification": "STATIC source render, not emulator footage",
+      "visually_inspected": true
+    },
+    {
+      "map": "OlivineCity_NeighborHouse",
+      "layout_id": "LAYOUT_HOUSE_WITH_BED",
+      "dimensions": [
+        10,
+        8
+      ],
+      "layout_sha256": "41b583aabcaa7f63be730c940faee672b8ea3e1249938857f3d290e0dfebe8d7",
+      "png_sha256": "87dc548f817ef694ec94119572a79a8cc8659b5140d820e307d53fc962fe296a",
+      "image": "OlivineCity_NeighborHouse.png",
+      "classification": "STATIC source render, not emulator footage",
+      "visually_inspected": true
+    },
+    {
+      "map": "OlivineCity_PokemonCenter_1F",
+      "layout_id": "LAYOUT_HGSS_OLIVINECITY_POKEMONCENTER_1F",
+      "dimensions": [
+        17,
+        21
+      ],
+      "layout_sha256": "2e1aa42553f03944f1aca339a50ef4cc3660d0be060cf0e9e84e7f6cd1a86b89",
+      "png_sha256": "b9325a7e148e9e414c0d9172d5a640bdf18062ab186d6a1f88069b5fcb4045dd",
+      "image": "OlivineCity_PokemonCenter_1F.png",
+      "classification": "STATIC source render, not emulator footage",
+      "visually_inspected": true
+    },
+    {
+      "map": "OlivineCity_PokemonCenter_B1F",
+      "layout_id": "LAYOUT_HGSS_OLIVINECITY_POKEMONCENTER_B1F",
+      "dimensions": [
+        17,
+        14
+      ],
+      "layout_sha256": "7de928bf3deba6fc04f9e02f14e940aacf54c54e017b40a0f2f7621e747725d3",
+      "png_sha256": "22efce7b53ddffb2c042a68a59ac15e25f2df1a649cb4eacf2bbb70d28dd2e8b",
+      "image": "OlivineCity_PokemonCenter_B1F.png",
+      "classification": "STATIC source render, not emulator footage",
+      "visually_inspected": true
+    },
+    {
+      "map": "OlivineCity_PortQuay",
+      "layout_id": "LAYOUT_OLIVINE_CITY_PORT_QUAY",
+      "dimensions": [
+        40,
+        27
+      ],
+      "layout_sha256": "d3595f1ffc90beca50e64e95763d9d949a1a7faf408ab36d5e6b818c640e45c9",
+      "png_sha256": "3fe2a454143eba5f654e7f937fa811f37e3b304781ca0f4b4e4ce4266ad55e04",
+      "image": "OlivineCity_PortQuay.png",
+      "classification": "STATIC source render, not emulator footage",
+      "visually_inspected": true
+    },
+    {
+      "map": "OlivineCity_PortTerminal",
+      "layout_id": "LAYOUT_OLIVINE_CITY_PORT_TERMINAL",
+      "dimensions": [
+        15,
+        13
+      ],
+      "layout_sha256": "06b9309b0cfba1ff6a689a7235cbea5f223ad87c05011fb8c9d6da544fa9fdd2",
+      "png_sha256": "bff8f40baff5c650ab23c435314eca254b99b88a453008e34526971f369bdcb1",
+      "image": "OlivineCity_PortTerminal.png",
+      "classification": "STATIC source render, not emulator footage",
+      "visually_inspected": true
+    },
+    {
+      "map": "OlivineCity_Residence",
+      "layout_id": "LAYOUT_HOUSE_WITH_BED",
+      "dimensions": [
+        10,
+        8
+      ],
+      "layout_sha256": "41b583aabcaa7f63be730c940faee672b8ea3e1249938857f3d290e0dfebe8d7",
+      "png_sha256": "87dc548f817ef694ec94119572a79a8cc8659b5140d820e307d53fc962fe296a",
+      "image": "OlivineCity_Residence.png",
+      "classification": "STATIC source render, not emulator footage",
+      "visually_inspected": true
+    },
+    {
+      "map": "OlivineCity_SealHouse",
+      "layout_id": "LAYOUT_HGSS_OLIVINECITY_SEALHOUSE",
+      "dimensions": [
+        11,
+        10
+      ],
+      "layout_sha256": "25b07d3946cdaa6466cb90d6489bd2ac0766c446a831b76fdd97be4047ffe9a2",
+      "png_sha256": "d25088b3e1f3b72c234f6fc397eb9b9bc9957972a7abeb9b4982eebb875e093e",
+      "image": "OlivineCity_SealHouse.png",
+      "classification": "STATIC source render, not emulator footage",
+      "visually_inspected": true
+    },
+    {
+      "map": "OlivineCity_SilphOffice",
+      "layout_id": "LAYOUT_OLIVINE_SILPH_OFFICE",
+      "dimensions": [
+        10,
+        8
+      ],
+      "layout_sha256": "e0cb2af3907e73569e1e49bf307c75736a3858a5f83068da775aab9dbfed41ff",
+      "png_sha256": "992966f174c1fafcaff715bc003fd3d5b9a33aed187d1ee2255e2ad96846afd7",
+      "image": "OlivineCity_SilphOffice.png",
+      "classification": "STATIC source render, not emulator footage",
+      "visually_inspected": true
+    },
+    {
+      "map": "OlivineCity_TradeHouse",
+      "layout_id": "LAYOUT_HGSS_OLIVINECITY_TRADEHOUSE",
+      "dimensions": [
+        11,
+        10
+      ],
+      "layout_sha256": "25b07d3946cdaa6466cb90d6489bd2ac0766c446a831b76fdd97be4047ffe9a2",
+      "png_sha256": "d25088b3e1f3b72c234f6fc397eb9b9bc9957972a7abeb9b4982eebb875e093e",
+      "image": "OlivineCity_TradeHouse.png",
+      "classification": "STATIC source render, not emulator footage",
+      "visually_inspected": true
+    }
+  ],
+  "acceptance": "Owner Delta review pending",
+  "game_source_revision": "5664fecee4337c5bdd442583e24cc91c09c0a0cd",
+  "compiled_comparison_rom_sha256": "d5abac0deabc7d592eba302122b3d15c08501947f0f601eda7b5026da9ac6772",
+  "legacy_directory_name": "authored-static-v8 retained for link stability; all24 source layout hashes verified against final BUILD9 generation"
+}

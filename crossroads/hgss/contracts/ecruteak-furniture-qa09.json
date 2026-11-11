@@ -1,0 +1,207 @@
+{
+  "source_commit": "fd151242458efe5759b18650f35a5e5b2fa47e45",
+  "maps": [
+    {
+      "map": "EcruteakCity_Residence",
+      "width": 11,
+      "height": 10,
+      "changes": [
+        {
+          "x": 4,
+          "y": 1,
+          "before": 1557,
+          "after": 1924
+        },
+        {
+          "x": 5,
+          "y": 1,
+          "before": 1558,
+          "after": 1925
+        },
+        {
+          "x": 2,
+          "y": 2,
+          "before": 1648,
+          "after": 1920
+        },
+        {
+          "x": 3,
+          "y": 2,
+          "before": 1649,
+          "after": 1921
+        },
+        {
+          "x": 4,
+          "y": 2,
+          "before": 1561,
+          "after": 1926
+        },
+        {
+          "x": 5,
+          "y": 2,
+          "before": 1562,
+          "after": 1927
+        },
+        {
+          "x": 8,
+          "y": 2,
+          "before": 1652,
+          "after": 1648
+        },
+        {
+          "x": 9,
+          "y": 2,
+          "before": 1653,
+          "after": 1649
+        },
+        {
+          "x": 2,
+          "y": 3,
+          "before": 1650,
+          "after": 1922
+        },
+        {
+          "x": 3,
+          "y": 3,
+          "before": 1651,
+          "after": 1923
+        },
+        {
+          "x": 8,
+          "y": 3,
+          "before": 1654,
+          "after": 1650
+        },
+        {
+          "x": 9,
+          "y": 3,
+          "before": 1655,
+          "after": 1651
+        }
+      ]
+    },
+    {
+      "map": "EcruteakCity_DowsingHouse",
+      "width": 11,
+      "height": 10,
+      "changes": [
+        {
+          "x": 4,
+          "y": 1,
+          "before": 1557,
+          "after": 1924
+        },
+        {
+          "x": 5,
+          "y": 1,
+          "before": 1558,
+          "after": 1925
+        },
+        {
+          "x": 2,
+          "y": 2,
+          "before": 1648,
+          "after": 1920
+        },
+        {
+          "x": 3,
+          "y": 2,
+          "before": 1649,
+          "after": 1921
+        },
+        {
+          "x": 4,
+          "y": 2,
+          "before": 1561,
+          "after": 1926
+        },
+        {
+          "x": 5,
+          "y": 2,
+          "before": 1562,
+          "after": 1927
+        },
+        {
+          "x": 8,
+          "y": 2,
+          "before": 1652,
+          "after": 1648
+        },
+        {
+          "x": 9,
+          "y": 2,
+          "before": 1653,
+          "after": 1649
+        },
+        {
+          "x": 2,
+          "y": 3,
+          "before": 1650,
+          "after": 1922
+        },
+        {
+          "x": 3,
+          "y": 3,
+          "before": 1651,
+          "after": 1923
+        },
+        {
+          "x": 8,
+          "y": 3,
+          "before": 1654,
+          "after": 1650
+        },
+        {
+          "x": 9,
+          "y": 3,
+          "before": 1655,
+          "after": 1651
+        }
+      ]
+    },
+    {
+      "map": "EcruteakCity_PokemonCenter_1F",
+      "width": 17,
+      "height": 21,
+      "changes": [
+        {
+          "x": 15,
+          "y": 3,
+          "before": 12802,
+          "after": 1546
+        },
+        {
+          "x": 15,
+          "y": 4,
+          "before": 12802,
+          "after": 1554
+        },
+        {
+          "x": 14,
+          "y": 14,
+          "before": 1537,
+          "after": 1546
+        },
+        {
+          "x": 15,
+          "y": 14,
+          "before": 1537,
+          "after": 1546
+        },
+        {
+          "x": 14,
+          "y": 15,
+          "before": 1537,
+          "after": 1554
+        },
+        {
+          "x": 15,
+          "y": 15,
+          "before": 1537,
+          "after": 1554
+        }
+      ]
+    }
+  ],
+  "reason": "Actual HGSS shared-room raster reveals kitchen/window/bookcase and three Center potted plants; no event/ID/save changes"
+}

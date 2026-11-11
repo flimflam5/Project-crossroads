@@ -15,6 +15,9 @@ from hgss_room_validation import validate_rooms
 from hgss_service_validation import validate_services
 from hgss_gate_validation import validate_gates
 reviewed|=validate_rooms()|validate_services()|validate_gates()
+if (R/'crossroads/hgss/authoring/OlivineCity.json').exists():
+ from hgss_olivine_validation import validate_olivine_graph
+ reviewed|=validate_olivine_graph() # Exact directed source stairs/window and paired dynamic-lift tests supersede the obsolete single-room reciprocal assumption.
 script=(R/'crossroads/scripts/area_completion.inc').read_text()
 for spec in load('crossroads/art/western/rooms.json'):
  if spec['name'] in reviewed:continue # Exact reference/directed escape checks above supersede single-room flood.
@@ -53,5 +56,13 @@ from PIL import Image
 for path in list((R/'graphics/trainers/crossroads_jasmine').glob('*.png'))+list((R/'graphics/trainers/crossroads_morty').glob('*.png'))+[R/'graphics/object_events/pics/misc/area_bell.png',R/'graphics/object_events/pics/misc/area_lantern.png']:
  im=Image.open(path);assert im.mode=='P' and max(im.tobytes())<16,(path,'native 4bpp indices')
 for spec in load('crossroads/art/western/rooms.json'):
- assert (R/f'data/layouts/{spec["name"]}/border.bin').read_bytes()==struct.pack('<4H',*([0x600 if spec['name'] in reviewed else 0x601]*4))
+ expected=0x600 if spec['name'] in reviewed else 0x601
+ if spec['name'] in ['OlivineCity_Gym','OlivineCity_Gym_Arena']:
+  # The dedicated Steel Gym owns a different native void index; require its
+  # exact blocked blank metatile instead of Temple's unrelated literal ID.
+  a=load('crossroads/hgss/art/olivine-rooms/manifest.json')['gym']['void'];expected=0x400|a['start']
+  m=load(f'data/maps/{spec["name"]}/map.json');l=layouts[m['layout']];assert l['secondary_tileset']=='gTileset_HgssOlivineGym'
+  metas=(R/'data/tilesets/secondary/hgss_olivine_gym/metatiles.bin').read_bytes();refs=struct.unpack_from('<8H',metas,(a['start']-512)*16);im=Image.open(R/'data/tilesets/secondary/hgss_olivine_gym/tiles.png')
+  assert all(v&1023>=512 and not any(im.crop((((v&1023)-512)%16*8,((v&1023)-512)//16*8,((v&1023)-512)%16*8+8,((v&1023)-512)//16*8+8)).tobytes()) for v in refs),'Gym border must remain actual empty art'
+ assert (R/f'data/layouts/{spec["name"]}/border.bin').read_bytes()==struct.pack('<4H',*([expected]*4)),('Changed actual room border',spec['name'])
 print('All landmark/farm/Gym doors, indoor access, original graphics, tile limits, approved roster and unchanged flag space: PASS')

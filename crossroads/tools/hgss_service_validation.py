@@ -33,6 +33,12 @@ def validate_services():
    ox,oy=r['origin_crop'];f=load('crossroads/hgss/canonical_events/ecruteak-interior-geometry.json')['MAP_ECRUTEAK_GYM'];p=[v for c in f['chunks'] for v in c['permissions']]
    expected={(x,y) for y in range(h) for x in range(w) if p[(y+oy)*32+x+ox]&0x8600==0x600}
    assert expected<=bridge,(n,'Source bridge missing')
+  if n=='EcruteakCity_PokemonCenter_B1F':
+   # Source y12 is public floor plus waiting furniture, not unused margin.
+   # h12 silently cropped that real row. Keep the ID/warp coordinates but
+   # require y12 and its solid y13 southern boundary in the private room.
+   assert(w,h)==(17,14)and l['secondary_tileset']=='gTileset_HgssCenterBasement'
+   assert not t[12*w+8]&0xc00 and all(v&0xc00 for v in t[13*w:14*w])
   count+=len(public)
  heal=next(h for h in load('src/data/heal_locations.json')['heal_locations'] if h['id']=='HEAL_LOCATION_ECRUTEAK_CITY');assert (heal['respawn_x'],heal['respawn_y'])==(8,13)
  # Scope: no shared native layouts were rebound or changed.

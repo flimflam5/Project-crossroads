@@ -39,6 +39,18 @@ go('EcruteakCity')
 for label,point in [('northwest-private-door',(23,37)),('north-private-door',(35,37)),('southeast-private-door',(54,56))]:
  talk(point);assert read('sLockFieldControls',1);image(label);close();assert current()=='EcruteakCity' and pos()==point
 print('All three closed facade labels, ordinary front approach and control return: PASS',flush=True)
+# Every communication receptionist must respond from the normal front of the
+# desk. A distance-two static "accessible" count missed absent MB_COUNTER.
+for name,centers,front_y,npc_y in [('EcruteakCity_PokemonCenter_1F',(2,6,11),4,2),('EcruteakCity_PokemonCenter_B1F',(4,8,12),6,4)]:
+ go(name)
+ for x in centers:
+  # Field objects outside the camera are intentionally not spawned. Reach the
+  # real front approach before reading the actual receptionist's local ID.
+  walk((x,front_y));frames(20)
+  expected=next(read(syms['gObjectEvents']+j*36+8,1)for j in range(16)if read(syms['gObjectEvents']+j*36,1)&1 and(read(syms['gObjectEvents']+j*36+16,2)-7,read(syms['gObjectEvents']+j*36+18,2)-7)==(x,npc_y))
+  talk((x,front_y));assert read('sLockFieldControls',1)and read('gSpecialVar_LastTalked',2)==expected,(name,x,'Front counter failed actual NPC dialogue')
+  image(name+'-front-desk-'+str(x));close();assert current()==name and pos()==(x,front_y)and not read('sLockFieldControls',1)
+print('All six communication staff: actual front-counter A dialogue, correct NPC and controls returned: PASS',flush=True)
 # Furnishing/camera inspection views, all reached from the actual network.
 for name,point,label in [('EcruteakCity_Residence',(4,5),'southwest-house'),('EcruteakCity_DowsingHouse',(4,5),'second-house'),('EcruteakCity_Mart',(4,8),'mart-interior'),('EcruteakCity_PokemonCenter_1F',(8,14),'center-interior'),('EcruteakCity_PokemonCenter_B1F',(8,7),'center-basement'),('EcruteakCity_BarrierStation',(15,8),'barrier-station'),('BellchimeTrail',(25,14),'autumn-trail'),('EcruteakCity_BellTower_Roof',(15,17),'tower-summit')]:
  go(name);walk(point);image(label)
@@ -85,6 +97,9 @@ go('EcruteakCity_PokemonCenter_1F');write(read('gPlayerPartyPtr')+86,1,2);talk((
 for _ in range(12):key(1);frames(180)
 close();assert read(read('gPlayerPartyPtr')+86,2)==read(read('gPlayerPartyPtr')+88,2)>1;image('nurse-healed');print('Actual rebuilt Center nurse heals and keeps heal ID: PASS',flush=True)
 save_continue('center-normal-save')
+go('EcruteakCity_PokemonCenter_B1F');walk((8,12));save_continue('restored-basement-floor-save')
+walk((8,11));go('EcruteakCity_PokemonCenter_1F');go('EcruteakCity_PokemonCenter_B1F');walk((8,12));image('restored-basement-return')
+print('Restored B1F lower public row normal Save/Continue, walking away and reciprocal stairs: PASS',flush=True)
 go('EcruteakCity_Residence');walk((4,6));save_continue('house-normal-save')
 # A synthetic old shared-layout cache, saved normally in a COPY, proves the scoped
 # migration path. This is separate from the real old Bell9F battery test.

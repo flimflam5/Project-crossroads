@@ -5,7 +5,7 @@ Olivine_OfferVisit::
     msgbox Olivine_Text_Visit, MSGBOX_YESNO
     goto_if_eq VAR_RESULT, NO, Olivine_EndVisit
     closemessage
-    warp MAP_OLIVINE_CITY, 12, 13
+    warp MAP_OLIVINE_CITY, 24, 36
     waitstate
 Olivine_EndVisit:
     releaseall
@@ -90,8 +90,8 @@ Olivine_TrubbishReaction:
     end
 
 Olivine_Text_Visit:
-    .string "OLIVINE EXPLORATION BUILD 0.1\p"
-    .string "Visit the city blockout?\nStory events are not active yet.$"
+    .string "BLACK LEDGER: OLIVINE\p"
+    .string "Visit OLIVINE CITY?\nStory events are not active yet.$"
 
 Olivine_Text_Return:
     .string "Return to the Alpha test room?\p"
@@ -135,8 +135,8 @@ Olivine_GymGuide::
     end
 
 Olivine_Text_GymGuide:
-    .string "OLIVINE GYM - temporary lobby.\p"
-    .string "Battles and the Gym interior\nare not in this build yet.$"
+    .string "OLIVINE GYM.\p"
+    .string "Practice sessions are optional.\nThe training hall is straight ahead.$"
 
 Olivine_OfficeWorker::
     msgbox Olivine_Text_OfficeWorker, MSGBOX_NPC
@@ -223,8 +223,7 @@ Olivine_ResidenceSign::
     end
 
 Olivine_Text_ResidenceSign:
-    .string "JOE'S RESIDENCE\p"
-    .string "Return to the Alpha room inside.$"
+    .string "JOE'S RESIDENCE$"
 
 Olivine_NeighborSign::
     msgbox Olivine_Text_NeighborSign, MSGBOX_SIGN

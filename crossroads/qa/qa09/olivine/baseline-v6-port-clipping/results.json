@@ -1,0 +1,122 @@
+{
+  "rom_sha256": "b9701dcc60a0bcf62cac6bfa177c433eae78dbfa8142b7739881ba839bc266bd",
+  "setup": "Normal copied old battery Continue, opt-in survey desk and controller travel; no map/warp/coordinate writes",
+  "results": [
+    {
+      "action": "normal north approach",
+      "target": [
+        23,
+        47
+      ],
+      "actual": [
+        23,
+        47
+      ],
+      "map": "OlivineCity"
+    },
+    {
+      "action": "normal north approach",
+      "target": [
+        23,
+        48
+      ],
+      "actual": [
+        23,
+        48
+      ],
+      "map": "OlivineCity"
+    },
+    {
+      "action": "normal north approach",
+      "target": [
+        23,
+        49
+      ],
+      "actual": [
+        23,
+        49
+      ],
+      "map": "OlivineCity"
+    },
+    {
+      "action": "normal north approach",
+      "target": [
+        23,
+        50
+      ],
+      "actual": [
+        23,
+        50
+      ],
+      "map": "OlivineCity"
+    },
+    {
+      "action": "normal north approach",
+      "target": [
+        23,
+        51
+      ],
+      "actual": [
+        23,
+        51
+      ],
+      "map": "OlivineCity"
+    },
+    {
+      "action": "enter port from north with Down",
+      "actual": [
+        7,
+        2
+      ],
+      "map": "OlivineCity_PortTerminal"
+    },
+    {
+      "action": "leave terminal north",
+      "source_leaf": [
+        7,
+        2
+      ],
+      "expected_city": [
+        23,
+        53
+      ],
+      "actual": [
+        23,
+        53
+      ],
+      "map": "OlivineCity"
+    },
+    {
+      "action": "walk around facade to main promenade",
+      "actual": [
+        24,
+        45
+      ],
+      "map": "OlivineCity"
+    },
+    {
+      "action": "leave terminal north",
+      "source_leaf": [
+        8,
+        2
+      ],
+      "expected_city": [
+        24,
+        53
+      ],
+      "actual": [
+        24,
+        53
+      ],
+      "map": "OlivineCity"
+    },
+    {
+      "action": "walk around facade to main promenade",
+      "actual": [
+        24,
+        45
+      ],
+      "map": "OlivineCity"
+    }
+  ]
+}

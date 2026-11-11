@@ -14,6 +14,9 @@ WIDTH = HEIGHT = 48
 
 
 def generate():
+    if (ROOT/"crossroads/hgss/authoring/OlivineCity.json").exists():
+        from build_hgss_olivine import city_data
+        return city_data()
     source = struct.unpack('<2400H', (ROOT / 'data/layouts/SlateportCity/map.bin').read_bytes())
     tiles = [0x3001] * (WIDTH * HEIGHT)  # passable grass, elevation 3
 

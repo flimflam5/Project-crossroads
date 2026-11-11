@@ -54,7 +54,18 @@ choice=read(sb()+0x1590,2);partycount=read(read('gPlayerPartyCountPtr'),1)
 import re
 from johto_movement import next_position
 from hgss_gate_arrivals import arrivals,gate_connections
-arrival_only=arrivals();gate_borders=gate_connections()
+arrival_only=arrivals();gate_borders=gate_connections();warp_trials=[];dry_only=False
+# These are actual scripted traversal actions, not debugger teleports. The
+# dynamic elevator destination is read from the engine immediately before exit.
+LIFT='OlivineCity_Lighthouse_Elevator'
+LIFT_FLOORS={'OlivineCity_Lighthouse_1F':(2,2,3),'OlivineCity_Lighthouse_6F':(5,2,1)}
+WINDOW='OlivineCity_Lighthouse_4F'
+BALCONY='OlivineCity_Lighthouse_Balcony'
+window_enabled=BALCONY in maps and any(e.get('script')=='Hgss_OlivineWindowDrop' for e in maps.get(WINDOW,{}).get('coord_events',[]))
+def dynamic_destination():
+ a=sb()+0x14;loc=read(a,1),read(a+1,1);assert loc in bylocation,('Dynamic warp leaves Johto',loc)
+ return bylocation[loc],read(a+2,1)
+
 headers=(R/'src/data/tilesets/headers.h').read_text();met=(R/'src/data/tilesets/metatiles.h').read_text();attrfiles=dict(re.findall(r'const u16 (gMetatileAttributes_\w+)\[\] = INCBIN_U16\("([^" ]+)"\)',met));attrs={}
 for tileset_key,body in re.findall(r'const struct Tileset (gTileset_\w+)\s*=\s*\{([^}]+)\}',headers,re.S):
  m=re.search(r'\.metatileAttributes\s*=\s*(\w+)',body)
@@ -65,9 +76,10 @@ def behavior(n,x,y):
  if not(0<=x<w and 0<=y<h):return None
  tile=raw[n][y*w+x]&1023;l=layouts[maps[n]['layout']];return attrs[l['primary_tileset'] if tile<512 else l['secondary_tileset']][tile%512]&255
 fall_cells={r['name']:{tuple(p) for p in r.get('fall_tiles',[])} for r in json.loads((R/'crossroads/hgss/service-review.json').read_text())}
+if window_enabled:fall_cells.setdefault(WINDOW,set()).add((16,9))
 def safe(n,p):
  x,y=p;w,h=size[n]
- return p not in fall_cells.get(n,set()) and 0<=x<w and 0<=y<h and raw[n][y*w+x]&0xc00==0 and raw[n][y*w+x]>>12 in (1,3) and (raw[n][y*w+x]&1023)!=0x38d and not any((o['x'],o['y'])==p for o in maps[n]['object_events'])
+ return p not in fall_cells.get(n,set()) and 0<=x<w and 0<=y<h and (not dry_only or raw[n][y*w+x]>>12==3) and raw[n][y*w+x]&0xc00==0 and raw[n][y*w+x]>>12 in (1,3) and (raw[n][y*w+x]&1023)!=0x38d and not any((o['x'],o['y'])==p for o in maps[n]['object_events'])
 def local_path(n,start,target):
  blocked={(e['x'],e['y']) for i,e in enumerate(maps[n]['warp_events']) if (n,i) not in arrival_only} - {start,target};q=deque([start]);prev={start:None}
  while q:
@@ -102,6 +114,7 @@ def walk(target):
   assert current()==n and pos()==to,(n,old,to,current(),pos())
 def warp(index):
  n=current();index=arrival_only.get((n,index),index);e=maps[n]['warp_events'][index];x,y=e['x'],e['y'];w,h=size[n]
+ expected=dynamic_destination()[0] if e['dest_map']=='MAP_DYNAMIC' else ids[e['dest_map']]
  approaches=[((x,y+1),64),((x-1,y),16),((x+1,y),32),((x,y-1),128)]
  if y==h-1 or behavior(n,x,y)==0x65:approaches=[((x,y-1),128)]+approaches[:-1]
  for target,k in approaches:
@@ -109,9 +122,26 @@ def warp(index):
  else:raise AssertionError((n,'No warp approach',e,pos()))
  for _ in range(3):
   frames(16,k);frames(180)
-  if current()!=n or (ids[e['dest_map']]==n and pos() not in [(x,y),target]):break
- assert current()==ids[e['dest_map']],('Wrong warp',n,index,current(),pos())
+  if current()!=n or (expected==n and pos() not in [(x,y),target]):break
+ assert current()==expected,('Wrong warp',n,index,current(),pos(),expected)
+ if expected==n:
+  back=maps[n]['warp_events'][int(e['dest_warp_id'])];expected_xy=(back['x'],back['y'])
+  # Native ladder/Aqua Hideout pads have no automatic exit step. Both Bell7F
+  # same-map pads use0x67, so a plain walk past a failed trigger cannot pass.
+  if behavior(n,*expected_xy) in [0x61,0x67]:assert pos()==expected_xy,('Same-map pad failed to relocate',n,index,pos(),expected_xy)
+ warp_trials.append(dict(source=n,source_warp=index,threshold=[x,y],expected_map=expected,actual_map=current(),arrival=list(pos()),result='PASS'))
  return n,current()
+def lift(floor,index=0):
+ assert current()==LIFT and floor in LIFT_FLOORS
+ x,y,target=LIFT_FLOORS[floor];walk((x,y+1));frames(1,64);frames(20);key(1);frames(180);close()
+ actual=dynamic_destination();assert actual==(floor,target),('Panel did not set native dynamic warp',floor,actual)
+ a,b=warp(index);assert b==floor;return a,b
+def window_fall():
+ assert window_enabled and current()==WINDOW
+ walk((15,9));frames(16,16);frames(240)
+ assert current()==BALCONY and pos()==(14,9),('Window drop did not reach balcony',current(),pos())
+ return WINDOW,BALCONY
+
 def border(c):
  n=current();dst=ids[c['map']];w,h=size[n];dw,dh=size[dst];d=c['direction'];candidates=[]
  if (n,dst) in gate_borders:go(dst);return n,current() # Actual gate-room journey, not an inert seam crossing.
@@ -134,7 +164,7 @@ def ports(n,start):
  if key in route_cache:return route_cache[key]
  result=[];w,h=size[n]
  for i,e in enumerate(maps[n]['warp_events']):
-  if (n,i) in arrival_only:continue
+  if (n,i) in arrival_only or e['dest_map']=='MAP_DYNAMIC':continue
   x,y=e['x'],e['y'];approaches=[(x,y+1),(x-1,y),(x+1,y),(x,y-1)]
   if any((p==start or p not in active_warps(n)) and safe(n,p) and local_path(n,start,p) is not None for p in approaches):
    other=ids[e['dest_map']];back=maps[other]['warp_events'][int(e['dest_warp_id'])]
@@ -147,6 +177,11 @@ def ports(n,start):
    new=(t-c['offset'],dh-1) if d=='up' else (t-c['offset'],0) if d=='down' else (dw-1,t-c['offset']) if d=='left' else (0,t-c['offset'])
    if old not in {(e['x'],e['y']) for e in maps[n]['warp_events']} and safe(other,new) and local_path(n,start,old) is not None:
     result.append((('border',c),(other,new)));break
+ if n==LIFT:
+  for floor,(_,_,index) in LIFT_FLOORS.items():
+   if floor in maps and local_path(n,start,(LIFT_FLOORS[floor][0],LIFT_FLOORS[floor][1]+1)) is not None:
+    dest=maps[floor]['warp_events'][index];result.append((('lift',floor),(floor,(dest['x'],dest['y']))))
+ if window_enabled and n==WINDOW and local_path(n,start,(15,9)) is not None:result.append((('window',None),(BALCONY,(14,9))))
  route_cache[key]=result;return result
 def go(dst,target_warp=None):
  # Canonical Bell floors have disjoint walkway components and same-map pads.
@@ -155,29 +190,36 @@ def go(dst,target_warp=None):
   initial=(current(),pos());q=deque([initial]);prev={initial:None};edges={};goal=None
   while q:
    state=q.popleft();n,start=state;out=ports(n,start)
-   if n==dst and (target_warp is None or any(e==('warp',target_warp) for e,_ in out)):goal=state;break
+   if n==dst and (target_warp is None or any(e==('warp',target_warp) if isinstance(target_warp,int) else e[0]==target_warp for e,_ in out)):goal=state;break
    for edge,to in out:
     if to not in prev:prev[to]=state;edges[to]=edge;q.append(to)
   assert goal is not None,('No traversable map route',initial,dst,target_warp)
   if goal==initial:return
   v=goal
   while prev[v]!=initial:v=prev[v]
-  kind,e=edges[v];a,b=border(e) if kind=='border' else warp(e);transitions.append([a,b,kind]);visited.add(b)
+  kind,e=edges[v];a,b=border(e) if kind=='border' else lift(e) if kind=='lift' else window_fall() if kind=='window' else warp(e);transitions.append([a,b,kind]);visited.add(b)
  raise AssertionError(('Too many transitions',dst))
 
 plans=json.loads((R/'crossroads/johto/manifest.json').read_text())['planned'];targets=[p['name'] for p in plans if p['name'] in names and (not args.cluster or p['cluster']==args.cluster)]
 if args.targets is not None:
  targets=[n for n in args.targets.split(',') if n];assert all(n in names for n in targets)
-# Use the actual desk UI; prove the assistance does not alter saved flag bytes.
-go('OlivineCity_HarborOffice');walk((1,6))
-flags=bytes(read(sb()+0x1270+i,1) for i in range(300))
-frames(1,64);frames(20);key(1);frames(180)
-for _ in range(8):
- if not read('sLockFieldControls',1):break
- key(1);frames(180)
+# The desk toggles access. A same-ROM resumed snapshot can already contain
+# the RAM-only session flag, so interacting again would disable it. Cold boot
+# still must enable access through the real UI, never a debugger flag write.
+access_before=read('sJohtoTestAccess',1);assert access_before in [0,1]
+if access_before==0:
+ go('OlivineCity_HarborOffice');walk((1,6))
+ flags=bytes(read(sb()+0x1270+i,1) for i in range(300))
+ frames(1,64);frames(20);key(1);frames(180)
+ for _ in range(8):
+  if not read('sLockFieldControls',1):break
+  key(1);frames(180)
+ assert bytes(read(sb()+0x1270+i,1) for i in range(300))==flags
+ print('Actual survey desk enables RAM-only water access without changing saved flags: PASS',flush=True)
+else:
+ assert args.resume is not None,'Cold Continue must not inherit session-only Survey access'
+ print('Exact-ROM resumed snapshot retains already-enabled Survey session; no second toggle: PASS',flush=True)
 assert read('sJohtoTestAccess',1)==1
-assert bytes(read(sb()+0x1270+i,1) for i in range(300))==flags
-print('Actual survey desk enables RAM-only water access without changing saved flags: PASS',flush=True)
 for n in targets:
  go(n);visited.add(n)
  if maps[n]['map_type'] in ['MAP_TYPE_CITY','MAP_TYPE_ROUTE'] and safe(n,(size[n][0]//2,size[n][1]//2)):
@@ -195,7 +237,7 @@ for n in targets:
   print('Nurse healing/local respawn:',n,'PASS',flush=True)
  if args.all_edges:
   for index,e in enumerate(maps[n]['warp_events']):
-   if (n,index) in arrival_only:continue
+   if (n,index) in arrival_only or e['dest_map']=='MAP_DYNAMIC':continue
    other=ids[e['dest_map']];back=int(e['dest_warp_id']);ident=tuple(sorted([(n,index),(other,back)]))
    if ident in tested_edges:continue
    go(n,index);a,b=warp(index);transitions.append([a,b,'warp']);a,b=warp(back);transitions.append([a,b,'warp'])
@@ -209,5 +251,5 @@ for n in targets:
  print('Controller visit:',n,pos(),'PASS',flush=True)
 go('OlivineCity')
 end=args.output/'finished.snapshot';lib.emu_state(str(end).encode(),0);end.with_suffix('.sha256').write_text(hashlib.sha256((R/'pokeemerald.gba').read_bytes()).hexdigest())
-(args.output/'coverage.json').write_text(json.dumps(dict(visited=sorted(visited),targets=targets,transitions=transitions,tested_roundtrip_edges=len(tested_edges),tested_edges=sorted(tested_edges),actual_surf_entries=water_entries),indent=2)+'\n')
+(args.output/'coverage.json').write_text(json.dumps(dict(visited=sorted(visited),targets=targets,transitions=transitions,tested_roundtrip_edges=len(tested_edges),tested_edges=sorted(tested_edges),warp_trials=warp_trials,actual_surf_entries=water_entries),indent=2)+'\n')
 print('Actual controller visits/return, healing and retained starter/party: PASS',len(targets),'target maps',len(transitions),'transitions',flush=True)

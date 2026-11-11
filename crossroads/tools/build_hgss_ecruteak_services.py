@@ -44,11 +44,11 @@ def generate(check=False):
   n=m['name'];l=dict(id=m['layout'],name=n+'_Layout',width=w,height=h,primary_tileset='gTileset_Building',secondary_tileset=secondary,border_filepath=f'data/layouts/{n}/border.bin',blockdata_filepath=f'data/layouts/{n}/map.bin',layout_version='emerald')
   if l['id'] in ls:ls[l['id']].clear();ls[l['id']].update(l)
   else:layouts['layouts'].append(l);ls[l['id']]=l
-  write(l['blockdata_filepath'],struct.pack('<'+str(w*h)+'H',*t));write(l['border_filepath'],struct.pack('<4H',*([0x601 if secondary=='gTileset_PokemonCenter' else 0x401 if secondary=='gTileset_Shop' else 0x600]*4)));js(f'data/maps/{n}/map.json',m);maps[n]=m
+  write(l['blockdata_filepath'],struct.pack('<'+str(w*h)+'H',*t));write(l['border_filepath'],struct.pack('<4H',*([0x601 if secondary in('gTileset_PokemonCenter','gTileset_HgssCenterBasement','gTileset_HgssCenterReception') else 0x401 if secondary in('gTileset_Shop','gTileset_HgssMart') else 0x600]*4)));js(f'data/maps/{n}/map.json',m);maps[n]=m
   reviews.append(dict(name=n,source_header=header,source=FACTS[header]['source'],dimensions=[w,h],adaptations=adapt,visual_qa='pending',runtime_qa='pending'))
  def warp(x,y,dst,index):return dict(x=x,y=y,elevation=0,dest_map=dst,dest_warp_id=str(index))
  # Native GBA Center module: sample existing accepted layout, never edit it.
- original=ls['LAYOUT_OLIVINE_POKEMON_CENTER_1F'];b=(R/original['blockdata_filepath']).read_bytes();stock=struct.unpack('<126H',b)
+ b=(R/'crossroads/hgss/contracts/olivine-center-stock-qa08.bin').read_bytes();stock=struct.unpack('<126H',b)
  n='EcruteakCity_PokemonCenter_1F';w,h=17,21;m,t,perms=native(n,'MAP_ECRUTEAK_POKECENTER_1F','gTileset_PokemonCenter',w,h,0x3202)
  def put(x,y,v):t[y*w+x]=v
  # Two-level DS reception adapted to a connected flat GBA service deck.
@@ -74,12 +74,22 @@ def generate(check=False):
  for yy in (17,18):
   for xx in (13,14,15):put(xx,yy,0x3202)
  put(8,19,0x3203);put(9,19,0x3204);put(14,17,0x3289)
+ # Source model23 denotes potted plants: the rear-east landing and the pair
+ # beside the lower waiting area. Their ground bases block, leaves overhang.
+ for x,y in [(15,3),(14,14),(15,14)]:put(x,y,0x60a);put(x,y+1,0x612)
  for yy in range(8,13):
   for xx in range(3,13):
    if t[yy*w+xx]==0x601:t[yy*w+xx]=0x621
  m['bg_events']=[dict(type='sign',x=7,y=2,elevation=0,player_facing_dir='BG_EVENT_PLAYER_FACING_ANY',script='Hgss_CommunicationDesk')]
- save(m,t,w,h,'gTileset_PokemonCenter','MAP_ECRUTEAK_POKECENTER_1F',['Native GBA heal/counter/PC tiles at HGSS service positions','DS elevated rear reception flattened; unavailable DS online entrance is a labeled service desk, not a broken warp','Existing nurse/heal ID/local ID preserved; shared Olivine layout unchanged'])
- n='EcruteakCity_PokemonCenter_B1F';w,h=17,12;m,t,perms=native(n,'MAP_ECRUTEAK_POKECENTER_B1F','gTileset_PokemonCenter',w,h,0x3202)
+ reception_art=load('crossroads/hgss/art/center-reception/manifest.json')['specs']
+ for x in (7,12):
+  for dy in range(2):t[dy*w+x]=(t[dy*w+x]&0xfc00)|reception_art['communication_back_panel']['start']+dy
+ emblem=reception_art['floor_emblem']
+ for dy in range(4):
+  for dx in range(5):t[(14+dy)*w+6+dx]=(t[(14+dy)*w+6+dx]&0xfc00)|emblem['start']+dy*5+dx
+ for x in (2,6,11):t[3*w+x]=(t[3*w+x]&0xfc00)|reception_art['service_counter']['start']
+ save(m,t,w,h,'gTileset_HgssCenterReception','MAP_ECRUTEAK_POKECENTER_1F',['Native GBA heal/counter/PC tiles at HGSS service positions','DS elevated rear reception flattened; unavailable DS online entrance is a labeled service desk, not a broken warp','Private original green floor emblem and rear blue service panels match actual warm HGSS1F reference','Existing nurse/heal ID/local ID preserved; shared Olivine layout unchanged'])
+ n='EcruteakCity_PokemonCenter_B1F';w,h=17,14;m,t,perms=native(n,'MAP_ECRUTEAK_POKECENTER_B1F','gTileset_PokemonCenter',w,h,0x3202)
  for y in (0,1):
   for x in range(1,16):t[y*w+x]=0x60b if y==0 else 0x621
  m['object_events']=[obj(x,4,'Hgss_CommunicationDesk','LINK_RECEPTIONIST') for x in (4,8,12)]
@@ -90,13 +100,32 @@ def generate(check=False):
  for x in (4,8,12):
   t[4*w+x]=0x3202
   for xx in range(x-1,x+2):t[5*w+xx]=0x621
- # Native waiting bench occupies the DS staircase/partition footprint.
- for yy,row in enumerate([[0x63d,0x63e],[0x645,0x646]],8):
-  for xx,v in enumerate(row,2):t[yy*w+xx]=v
+ # Source waiting table/stools and lower waiting row. The old h12 crop cut
+ # source y12 off entirely and its supposed bench was a mirrored wall graphic.
+ basement_art=load('crossroads/hgss/art/center-basement/manifest.json')['specs']
+ def basement_stamp(part,x,y):
+  a=basement_art[part]
+  for dy in range(a['height']):
+   for dx in range(a['width']):t[(y+dy)*w+x+dx]=0x400|a['start']+dy*a['width']+dx
+ basement_stamp('waiting_table',2,8)
+ for x,y in [(4,8),(3,7),(5,12),(7,12),(9,12),(11,12)]:basement_stamp('yellow_stool',x,y)
+ for x,y in [(4,9),(2,7),(6,12),(10,12)]:basement_stamp('blue_stool',x,y)
+ for x in (4,12):t[11*w+x]=0x60a;t[12*w+x]=0x612
+ basement_stamp('communication_terminal',15,4)
+ for x in (5,9):basement_stamp('communication_back_panel',x,1)
+ booth=basement_art['communication_booth']
+ for center in (4,8,12):
+  for dy in range(3):
+   for dx in range(3):
+    # The open staff center/standing floor stays untouched; only the actual
+    # side/front counter bodies receive their original blue booth artwork.
+    if dx==1 and dy<2:continue
+    i=(3+dy)*w+center-1+dx;t[i]=(t[i]&0xfc00)|booth['start']+dy*3+dx
  for yy in (9,10):
   for xx in (13,14,15):t[yy*w+xx]=0x3202
  m['warp_events']=[warp(14,10,'MAP_ECRUTEAK_CITY_POKEMON_CENTER_1F',2)];t[10*w+14]=0x32a1
- save(m,t,w,h,'gTileset_PokemonCenter','MAP_ECRUTEAK_POKECENTER_B1F',['Wi-Fi desks are ambient offline reception; no internet functionality claimed','Native GBA stairs retain canonical source coordinate'])
+ m['bg_events']=[dict(type='sign',x=15,y=5,elevation=0,player_facing_dir='BG_EVENT_PLAYER_FACING_ANY',script='Hgss_CommunicationDesk')]
+ save(m,t,w,h,'gTileset_HgssCenterBasement','MAP_ECRUTEAK_POKECENTER_B1F',['Wi-Fi desks are ambient offline reception; no internet functionality claimed','Native GBA stairs retain canonical source coordinate','h14 retains actual source y12 floor and bottom waiting row; map/layout IDs and prior positions unchanged','Private cool blue palette and original table/stools/terminal replace mistaken mirror stand-in'])
  # Shop uses its original script/stock and GBA shelves, placed at HGSS positions.
  n='EcruteakCity_Mart';w,h=14,13;m,t,perms=native(n,'MAP_ECRUTEAK_POKEMART','gTileset_Shop',w,h,0x3201)
  for x in range(1,13):t[w+x]=0x613;t[2*w+x]=0x61b
@@ -113,7 +142,9 @@ def generate(check=False):
  assistant=copy.deepcopy(m['object_events'][0]);assistant.pop('local_id',None);assistant.update(x=2,y=4);m['object_events'].append(assistant)
  for o in m['object_events']:t[o['y']*w+o['x']]=0x3208 if o['x']==2 else 0x3201
  m['warp_events']=[warp(4,11,'MAP_ECRUTEAK_CITY',6),warp(5,11,'MAP_ECRUTEAK_CITY',6)];t[11*w+4]=0x216;t[11*w+5]=0x217
- save(m,t,w,h,'gTileset_Shop','MAP_ECRUTEAK_POKEMART',['Native GBA shelf/counter tiles replace DS furniture; accepted shop inventory unchanged','DS story delivery actors omitted'])
+ from hgss_mart_furnishings import apply_mart_furnishings
+ secondary=apply_mart_furnishings(m,t,w,h)
+ save(m,t,w,h,secondary,'MAP_ECRUTEAK_POKEMART',['Native GBA shelf/counter tiles replace DS furniture; accepted shop inventory unchanged','Source three plants, southern glass display/stools and east-wall rack retained in private artwork','DS story delivery actors omitted'])
  # Gym reference bridge. Keep both existing IDs as two halves of the tall DS room.
  from hgss_room_projection import ART
  source=FACTS['MAP_ECRUTEAK_GYM'];p=[v for c in source['chunks'] for v in c['permissions']];bridge={(x,y) for y in range(64) for x in range(32) if p[y*32+x]&0x8600==0x600};bridge.add((16,53))

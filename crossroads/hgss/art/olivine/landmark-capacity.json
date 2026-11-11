@@ -1,0 +1,11 @@
+{
+  "primary_graphics": 370,
+  "primary_free": 50,
+  "secondary_metatiles": 510,
+  "secondary_free": 2,
+  "rear_terminal_primary_ids": [
+    256,
+    327
+  ],
+  "source_secondary_glyphs": "unchanged exact original image"
+}

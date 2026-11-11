@@ -29,6 +29,8 @@ for suffix,data in generate().items():
         x,y=warp['x'],warp['y'];assert (x,y-1) in seen
         tile=tiles[y*10+x]&0x3ff
         assert struct.unpack_from('<H',attrs,(tile-512)*2)[0]&255==0x65, 'Preserve south-arrow exit behavior'
+    public={(i%10,i//10) for i,tile in enumerate(tiles) if not tile&0xc00 and tile>>12==3}-{(o['x'],o['y']) for o in m['object_events']}
+    assert public<=seen,('Isolated public floor/obsolete-save trap',name,sorted(public-seen))
     for i,tile in enumerate(old):
         if tile&0xc00 or tile>>12!=3:continue
         x,y=i%10,i//10

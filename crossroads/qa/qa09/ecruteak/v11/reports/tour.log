@@ -1,0 +1,31 @@
+Normal old battery-save Continue: EcruteakCity_BellTower_9F (7, 3) PASS
+Actual survey desk enables RAM-only water access without changing saved flags: PASS
+Controller visit: EcruteakCity (59, 47) PASS
+Controller visit: EcruteakCity_BurnedTower (18, 12) PASS
+Controller visit: EcruteakCity_BellTower (5, 4) PASS
+Controller visit: EcruteakCity_Residence (4, 8) PASS
+Controller visit: EcruteakCity_DanceTheater (8, 17) PASS
+Controller visit: EcruteakCity_Gym (13, 0) PASS
+Nurse healing/local respawn: EcruteakCity_PokemonCenter_1F PASS
+Controller visit: EcruteakCity_PokemonCenter_1F (15, 17) PASS
+Controller visit: EcruteakCity_Mart (4, 11) PASS
+Controller visit: EcruteakCity_BellTower_2F (11, 21) PASS
+Controller visit: EcruteakCity_BellTower_3F (20, 4) PASS
+Controller visit: EcruteakCity_BellTower_4F (20, 21) PASS
+Controller visit: EcruteakCity_BellTower_5F (9, 21) PASS
+Controller visit: EcruteakCity_BellTower_6F (2, 15) PASS
+Controller visit: EcruteakCity_BellTower_7F (14, 12) PASS
+Controller visit: EcruteakCity_BellTower_8F (20, 20) PASS
+Controller visit: EcruteakCity_BellTower_9F (8, 13) PASS
+Controller visit: EcruteakCity_BurnedTower_B1F (19, 12) PASS
+Controller visit: EcruteakCity_Gym_Arena (13, 26) PASS
+Controller visit: EcruteakCity_BarrierStation (15, 3) PASS
+Controller visit: EcruteakCity_BarrierCorridor (6, 3) PASS
+Controller visit: BellchimeTrail (32, 18) PASS
+Controller visit: EcruteakCity_BellTower_10F (11, 21) PASS
+Controller visit: EcruteakCity_BellTower_Roof (15, 17) PASS
+Controller visit: EcruteakCity_DowsingHouse (4, 8) PASS
+Controller visit: EcruteakCity_PokemonCenter_B1F (15, 10) PASS
+Controller visit: EcruteakCity_WestGate (1, 8) PASS
+Controller visit: EcruteakCity_EastGate (10, 8) PASS
+Actual controller visits/return, healing and retained starter/party: PASS 27 target maps 308 transitions

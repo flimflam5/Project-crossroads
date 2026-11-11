@@ -1,0 +1,575 @@
+[
+  {
+    "name": "OlivineCity_Lighthouse_1F",
+    "source_header": "MAP_OLIVINE_LIGHTHOUSE_1F",
+    "source": {
+      "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0047_D27R0101.bin",
+      "matrix_blob_sha": "eb950e0ad409f48f13d29139bcf672378e474a7c",
+      "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/112_D27R0101.json",
+      "events_blob_sha": "380f6c22b55f61b350fc13d754e13bad3de6318b",
+      "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+    },
+    "dimensions": [
+      17,
+      19
+    ],
+    "warps": [
+      {
+        "x": 8,
+        "y": 17,
+        "elevation": 0,
+        "dest_map": "MAP_OLIVINE_CITY",
+        "dest_warp_id": "7"
+      },
+      {
+        "x": 9,
+        "y": 17,
+        "elevation": 0,
+        "dest_map": "MAP_OLIVINE_CITY",
+        "dest_warp_id": "7"
+      },
+      {
+        "x": 2,
+        "y": 3,
+        "elevation": 0,
+        "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_2F",
+        "dest_warp_id": "0"
+      },
+      {
+        "x": 8,
+        "y": 4,
+        "elevation": 0,
+        "dest_map": "MAP_OLIVINE_CITY_LIGHTHOUSE_ELEVATOR",
+        "dest_warp_id": "0"
+      },
+      {
+        "x": 9,
+        "y": 4,
+        "elevation": 0,
+        "dest_map": "MAP_OLIVINE_CITY_LIGHTHOUSE_ELEVATOR",
+        "dest_warp_id": "1"
+      }
+    ],
+    "source_warp_count": 3,
+    "adaptations": [
+      "Original native GBA props/palettes replace DS perspective models; source coordinate origin retained",
+      "No source trainer/story/reward flags imported",
+      "Wide GBA door/stair aliases append without removing historical warp indices"
+    ],
+    "runtime": "PENDING actual delivery-ROM testing",
+    "visual": "PENDING owner acceptance"
+  },
+  {
+    "name": "OlivineCity_Lighthouse_2F",
+    "source_header": "MAP_OLIVINE_LIGHTHOUSE_2F",
+    "source": {
+      "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0048_D27R0102.bin",
+      "matrix_blob_sha": "66764818b798d61ae5d9b870986328849686e03b",
+      "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/206_D27R0102.json",
+      "events_blob_sha": "49fcae8af2473b2583ac3beb704c4c6304382c04",
+      "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+    },
+    "dimensions": [
+      17,
+      19
+    ],
+    "warps": [
+      {
+        "x": 5,
+        "y": 3,
+        "elevation": 0,
+        "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_1F",
+        "dest_warp_id": "2"
+      },
+      {
+        "x": 13,
+        "y": 6,
+        "elevation": 0,
+        "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_3F",
+        "dest_warp_id": "0"
+      },
+      {
+        "x": 13,
+        "y": 5,
+        "elevation": 0,
+        "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_3F",
+        "dest_warp_id": "0"
+      }
+    ],
+    "source_warp_count": 3,
+    "adaptations": [
+      "Original native GBA props/palettes replace DS perspective models; source coordinate origin retained",
+      "No source trainer/story/reward flags imported",
+      "Wide GBA door/stair aliases append without removing historical warp indices"
+    ],
+    "runtime": "PENDING actual delivery-ROM testing",
+    "visual": "PENDING owner acceptance"
+  },
+  {
+    "name": "OlivineCity_Lighthouse_3F",
+    "source_header": "MAP_OLIVINE_LIGHTHOUSE_3F",
+    "source": {
+      "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0050_D27R0104.bin",
+      "matrix_blob_sha": "a654df56553acb73e364d438d993ee02c43c84fb",
+      "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/208_D27R0104.json",
+      "events_blob_sha": "8b670eb56a5f2ff10022fb19a18a0ae3d9329d9f",
+      "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+    },
+    "dimensions": [
+      17,
+      20
+    ],
+    "warps": [
+      {
+        "x": 13,
+        "y": 7,
+        "elevation": 0,
+        "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_2F",
+        "dest_warp_id": "1"
+      },
+      {
+        "x": 10,
+        "y": 7,
+        "elevation": 0,
+        "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_4F",
+        "dest_warp_id": "0"
+      },
+      {
+        "x": 10,
+        "y": 6,
+        "elevation": 0,
+        "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_4F",
+        "dest_warp_id": "0"
+      },
+      {
+        "x": 6,
+        "y": 7,
+        "elevation": 0,
+        "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_4F",
+        "dest_warp_id": "3"
+      },
+      {
+        "x": 6,
+        "y": 6,
+        "elevation": 0,
+        "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_4F",
+        "dest_warp_id": "3"
+      },
+      {
+        "x": 8,
+        "y": 18,
+        "elevation": 0,
+        "dest_map": "MAP_OLIVINE_CITY_LIGHTHOUSE_BALCONY",
+        "dest_warp_id": "0"
+      },
+      {
+        "x": 9,
+        "y": 18,
+        "elevation": 0,
+        "dest_map": "MAP_OLIVINE_CITY_LIGHTHOUSE_BALCONY",
+        "dest_warp_id": "1"
+      }
+    ],
+    "source_warp_count": 6,
+    "adaptations": [
+      "Original native GBA props/palettes replace DS perspective models; source coordinate origin retained",
+      "No source trainer/story/reward flags imported",
+      "Wide GBA door/stair aliases append without removing historical warp indices"
+    ],
+    "runtime": "PENDING actual delivery-ROM testing",
+    "visual": "PENDING owner acceptance"
+  },
+  {
+    "name": "OlivineCity_Lighthouse_4F",
+    "source_header": "MAP_OLIVINE_LIGHTHOUSE_4F",
+    "source": {
+      "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0051_D27R0105.bin",
+      "matrix_blob_sha": "c19fa47a8e187560b7a351148fca9862e1ce4715",
+      "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/209_D27R0105.json",
+      "events_blob_sha": "732883dad10255ff73c33ee6d78097b5902570e1",
+      "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+    },
+    "dimensions": [
+      17,
+      19
+    ],
+    "warps": [
+      {
+        "x": 10,
+        "y": 7,
+        "elevation": 0,
+        "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_3F",
+        "dest_warp_id": "1"
+      },
+      {
+        "x": 3,
+        "y": 5,
+        "elevation": 0,
+        "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_5F",
+        "dest_warp_id": "0"
+      },
+      {
+        "x": 3,
+        "y": 4,
+        "elevation": 0,
+        "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_5F",
+        "dest_warp_id": "0"
+      },
+      {
+        "x": 6,
+        "y": 7,
+        "elevation": 0,
+        "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_3F",
+        "dest_warp_id": "3"
+      }
+    ],
+    "source_warp_count": 4,
+    "adaptations": [
+      "Original native GBA props/palettes replace DS perspective models; source coordinate origin retained",
+      "No source trainer/story/reward flags imported",
+      "Wide GBA door/stair aliases append without removing historical warp indices"
+    ],
+    "runtime": "PENDING actual delivery-ROM testing",
+    "visual": "PENDING owner acceptance"
+  },
+  {
+    "name": "OlivineCity_Lighthouse_5F",
+    "source_header": "MAP_OLIVINE_LIGHTHOUSE_5F",
+    "source": {
+      "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0052_D27R0106.bin",
+      "matrix_blob_sha": "c9c7113684985af9405df9fd4fca0b697e8da11b",
+      "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/210_D27R0106.json",
+      "events_blob_sha": "58595be5dd77623ab9e3986c15b0a0dd667c9133",
+      "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+    },
+    "dimensions": [
+      17,
+      19
+    ],
+    "warps": [
+      {
+        "x": 4,
+        "y": 5,
+        "elevation": 0,
+        "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_4F",
+        "dest_warp_id": "1"
+      },
+      {
+        "x": 10,
+        "y": 10,
+        "elevation": 0,
+        "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_6F",
+        "dest_warp_id": "0"
+      },
+      {
+        "x": 10,
+        "y": 9,
+        "elevation": 0,
+        "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_6F",
+        "dest_warp_id": "0"
+      }
+    ],
+    "source_warp_count": 3,
+    "adaptations": [
+      "Original native GBA props/palettes replace DS perspective models; source coordinate origin retained",
+      "No source trainer/story/reward flags imported",
+      "Wide GBA door/stair aliases append without removing historical warp indices"
+    ],
+    "runtime": "PENDING actual delivery-ROM testing",
+    "visual": "PENDING owner acceptance"
+  },
+  {
+    "name": "OlivineCity_Lighthouse_6F",
+    "source_header": "MAP_OLIVINE_LIGHTHOUSE_LIGHT_ROOM",
+    "source": {
+      "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0131_D27R0107.bin",
+      "matrix_blob_sha": "21cde54d10af49aaba89b85fef06404f9cbf64ab",
+      "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/211_D27R0107.json",
+      "events_blob_sha": "f13bdcd507edd8a1532d26aad72a318afffa4f11",
+      "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+    },
+    "dimensions": [
+      17,
+      19
+    ],
+    "warps": [
+      {
+        "x": 9,
+        "y": 10,
+        "elevation": 0,
+        "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_5F",
+        "dest_warp_id": "1"
+      },
+      {
+        "x": 8,
+        "y": 4,
+        "elevation": 0,
+        "dest_map": "MAP_OLIVINE_CITY_LIGHTHOUSE_ELEVATOR",
+        "dest_warp_id": "0"
+      },
+      {
+        "x": 9,
+        "y": 4,
+        "elevation": 0,
+        "dest_map": "MAP_OLIVINE_CITY_LIGHTHOUSE_ELEVATOR",
+        "dest_warp_id": "1"
+      }
+    ],
+    "source_warp_count": 2,
+    "adaptations": [
+      "Original native GBA props/palettes replace DS perspective models; source coordinate origin retained",
+      "No source trainer/story/reward flags imported",
+      "Wide GBA door/stair aliases append without removing historical warp indices"
+    ],
+    "runtime": "PENDING actual delivery-ROM testing",
+    "visual": "PENDING owner acceptance"
+  },
+  {
+    "name": "OlivineCity_Lighthouse_Balcony",
+    "source_header": "MAP_OLIVINE_LIGHTHOUSE_EXTERIOR",
+    "source": {
+      "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0049_D27R0103.bin",
+      "matrix_blob_sha": "f34a8d28acae8540ef803bbe3dd9b669f279c2d2",
+      "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/207_D27R0103.json",
+      "events_blob_sha": "bff57c361552a5590690ab654815e6636fd79ba0",
+      "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+    },
+    "dimensions": [
+      17,
+      17
+    ],
+    "warps": [
+      {
+        "x": 8,
+        "y": 12,
+        "elevation": 0,
+        "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_3F",
+        "dest_warp_id": "5"
+      },
+      {
+        "x": 9,
+        "y": 12,
+        "elevation": 0,
+        "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_3F",
+        "dest_warp_id": "6"
+      }
+    ],
+    "source_warp_count": 1,
+    "adaptations": [
+      "Original native GBA props/palettes replace DS perspective models; source coordinate origin retained",
+      "No source trainer/story/reward flags imported",
+      "Wide GBA door/stair aliases append without removing historical warp indices"
+    ],
+    "runtime": "PENDING actual delivery-ROM testing",
+    "visual": "PENDING owner acceptance"
+  },
+  {
+    "name": "OlivineCity_Lighthouse_Elevator",
+    "source_header": "MAP_OLIVINE_LIGHTHOUSE_ELEVATOR",
+    "source": {
+      "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0262_D31R0202.bin",
+      "matrix_blob_sha": "858d9b78c8d8f53b70b9e908803d8f700d03a4d4",
+      "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/401_D27R0108.json",
+      "events_blob_sha": "d3b79cfd50b193f73703aa62d06373384fea27ed",
+      "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+    },
+    "dimensions": [
+      8,
+      8
+    ],
+    "warps": [
+      {
+        "x": 3,
+        "y": 6,
+        "elevation": 0,
+        "dest_map": "MAP_DYNAMIC",
+        "dest_warp_id": "WARP_ID_DYNAMIC"
+      },
+      {
+        "x": 4,
+        "y": 6,
+        "elevation": 0,
+        "dest_map": "MAP_DYNAMIC",
+        "dest_warp_id": "WARP_ID_DYNAMIC"
+      }
+    ],
+    "source_warp_count": 1,
+    "adaptations": [
+      "Original native GBA props/palettes replace DS perspective models; source coordinate origin retained",
+      "No source trainer/story/reward flags imported",
+      "Wide GBA door/stair aliases append without removing historical warp indices"
+    ],
+    "runtime": "PENDING actual delivery-ROM testing",
+    "visual": "PENDING owner acceptance"
+  },
+  {
+    "name": "OlivineCity_PortTerminal",
+    "source_header": "MAP_SS_AQUA_OLIVINE_PORT_INTERIOR",
+    "source": {
+      "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0137_P01R0101.bin",
+      "matrix_blob_sha": "c13328f3da21d5d407aecc231b014c10a3cef234",
+      "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/226_P01R0101.json",
+      "events_blob_sha": "e8ca8d2df2c74f5e3378ef47fb77908e6804be79",
+      "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+    },
+    "dimensions": [
+      15,
+      13
+    ],
+    "warps": [
+      {
+        "x": 7,
+        "y": 2,
+        "elevation": 0,
+        "dest_map": "MAP_OLIVINE_CITY",
+        "dest_warp_id": "13"
+      },
+      {
+        "x": 7,
+        "y": 11,
+        "elevation": 0,
+        "dest_map": "MAP_OLIVINE_CITY_PORT_QUAY",
+        "dest_warp_id": "0"
+      },
+      {
+        "x": 1,
+        "y": 7,
+        "elevation": 0,
+        "dest_map": "MAP_OLIVINE_CITY_PORT_QUAY",
+        "dest_warp_id": "1"
+      },
+      {
+        "x": 8,
+        "y": 2,
+        "elevation": 0,
+        "dest_map": "MAP_OLIVINE_CITY",
+        "dest_warp_id": "15"
+      },
+      {
+        "x": 8,
+        "y": 11,
+        "elevation": 0,
+        "dest_map": "MAP_OLIVINE_CITY_PORT_QUAY",
+        "dest_warp_id": "2"
+      },
+      {
+        "x": 1,
+        "y": 8,
+        "elevation": 0,
+        "dest_map": "MAP_OLIVINE_CITY_PORT_QUAY",
+        "dest_warp_id": "3"
+      }
+    ],
+    "source_warp_count": 3,
+    "adaptations": [
+      "Original native GBA props/palettes replace DS perspective models; source coordinate origin retained",
+      "No source trainer/story/reward flags imported",
+      "Wide GBA door/stair aliases append without removing historical warp indices"
+    ],
+    "runtime": "PENDING actual delivery-ROM testing",
+    "visual": "PENDING owner acceptance"
+  },
+  {
+    "name": "OlivineCity_PortQuay",
+    "source_header": "MAP_SS_AQUA_OLIVINE_PORT_EXTERIOR",
+    "source": {
+      "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0178_P01R0102.bin",
+      "matrix_blob_sha": "a25137d22b2b83e4909fd90cbb51d537865e8812",
+      "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/301_P01R0102.json",
+      "events_blob_sha": "bf461d512f991780e110b4a4f23bcc89ca9dbe12",
+      "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+    },
+    "dimensions": [
+      40,
+      27
+    ],
+    "warps": [
+      {
+        "x": 16,
+        "y": 15,
+        "elevation": 0,
+        "dest_map": "MAP_OLIVINE_CITY_PORT_TERMINAL",
+        "dest_warp_id": "1"
+      },
+      {
+        "x": 11,
+        "y": 13,
+        "elevation": 0,
+        "dest_map": "MAP_OLIVINE_CITY_PORT_TERMINAL",
+        "dest_warp_id": "2"
+      },
+      {
+        "x": 17,
+        "y": 15,
+        "elevation": 0,
+        "dest_map": "MAP_OLIVINE_CITY_PORT_TERMINAL",
+        "dest_warp_id": "4"
+      },
+      {
+        "x": 11,
+        "y": 14,
+        "elevation": 0,
+        "dest_map": "MAP_OLIVINE_CITY_PORT_TERMINAL",
+        "dest_warp_id": "5"
+      }
+    ],
+    "source_warp_count": 3,
+    "adaptations": [
+      "Original native GBA props/palettes replace DS perspective models; source coordinate origin retained",
+      "No source trainer/story/reward flags imported",
+      "Wide GBA door/stair aliases append without removing historical warp indices"
+    ],
+    "runtime": "PENDING actual delivery-ROM testing",
+    "visual": "PENDING owner acceptance"
+  },
+  {
+    "window_drop": {
+      "map": "OlivineCity_Lighthouse_4F",
+      "from_xy": [
+        16,
+        9
+      ],
+      "script": "Hgss_OlivineWindowDrop",
+      "destination": "OlivineCity_Lighthouse_Balcony",
+      "arrival": [
+        14,
+        9
+      ],
+      "classification": "intentional HGSS one-way drop; return via balcony door and western3F staircase"
+    },
+    "dynamic_elevator": {
+      "map": "OlivineCity_Lighthouse_Elevator",
+      "door_indices": [
+        0,
+        1
+      ],
+      "panels": [
+        {
+          "x": 2,
+          "y": 2,
+          "target": "OlivineCity_Lighthouse_1F",
+          "warp": 3
+        },
+        {
+          "x": 5,
+          "y": 2,
+          "target": "OlivineCity_Lighthouse_6F",
+          "warp": 1
+        }
+      ],
+      "state": "existing native dynamicWarp only; no new permanent progress"
+    },
+    "transport_boundary": {
+      "map": "OlivineCity_PortQuay",
+      "source_ship_warp": [
+        27,
+        20
+      ],
+      "native_sign": [
+        27,
+        21
+      ],
+      "status": "S.S. Aqua sailing/ship outside this map pass; accepted Harbor Office travel retained separately"
+    }
+  }
+]

@@ -1,0 +1,169 @@
+{
+  "source_commit": "5664fecee4337c5bdd442583e24cc91c09c0a0cd",
+  "raw_floor_changes": 82,
+  "source_cushions": 13,
+  "authorized_pixel_cells": 95,
+  "unchanged_pixel_cells": 171,
+  "unchanged_physics_cells": 266,
+  "native_size": [
+    240,
+    160
+  ],
+  "compiled_audience_pixels_matched": 3584,
+  "records": [
+    {
+      "source_cell": [
+        3,
+        11
+      ],
+      "screen": [
+        32,
+        72
+      ],
+      "pixels": 256
+    },
+    {
+      "source_cell": [
+        4,
+        10
+      ],
+      "screen": [
+        48,
+        56
+      ],
+      "pixels": 256
+    },
+    {
+      "source_cell": [
+        4,
+        12
+      ],
+      "screen": [
+        48,
+        88
+      ],
+      "pixels": 256
+    },
+    {
+      "source_cell": [
+        4,
+        14
+      ],
+      "screen": [
+        48,
+        120
+      ],
+      "pixels": 256
+    },
+    {
+      "source_cell": [
+        6,
+        12
+      ],
+      "screen": [
+        80,
+        88
+      ],
+      "pixels": 256
+    },
+    {
+      "source_cell": [
+        6,
+        14
+      ],
+      "screen": [
+        80,
+        120
+      ],
+      "pixels": 256
+    },
+    {
+      "source_cell": [
+        8,
+        12
+      ],
+      "screen": [
+        112,
+        88
+      ],
+      "pixels": 256
+    },
+    {
+      "source_cell": [
+        8,
+        14
+      ],
+      "screen": [
+        112,
+        120
+      ],
+      "pixels": 256
+    },
+    {
+      "source_cell": [
+        10,
+        10
+      ],
+      "screen": [
+        144,
+        56
+      ],
+      "pixels": 256
+    },
+    {
+      "source_cell": [
+        10,
+        12
+      ],
+      "screen": [
+        144,
+        88
+      ],
+      "pixels": 256
+    },
+    {
+      "source_cell": [
+        10,
+        14
+      ],
+      "screen": [
+        144,
+        120
+      ],
+      "pixels": 256
+    },
+    {
+      "source_cell": [
+        12,
+        10
+      ],
+      "screen": [
+        176,
+        56
+      ],
+      "pixels": 256
+    },
+    {
+      "source_cell": [
+        12,
+        12
+      ],
+      "screen": [
+        176,
+        88
+      ],
+      "pixels": 256
+    },
+    {
+      "source_cell": [
+        12,
+        14
+      ],
+      "screen": [
+        176,
+        120
+      ],
+      "pixels": 256
+    }
+  ]
+}

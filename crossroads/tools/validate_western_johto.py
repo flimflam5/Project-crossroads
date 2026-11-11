@@ -7,6 +7,7 @@ import struct
 from collections import deque
 from pathlib import Path
 from build_western_johto_layouts import generate
+from hgss_olivine_validation import active as olivine_active,dynamic_pair
 root=Path(__file__).resolve().parents[2]
 parser=argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--built',action='store_true')
@@ -16,11 +17,13 @@ groups=load('data/maps/map_groups.json');names=groups['gMapGroup_CrossroadsOlivi
 assert names[:9]==['OlivineCity','OlivineCity_Residence','OlivineCity_NeighborHouse','OlivineCity_Gym','OlivineCity_PokemonCenter_1F','OlivineCity_Mart','OlivineCity_SilphOffice','OlivineCity_HarborOffice','JohtoRoute39']
 assert names[9:11]==['JohtoRoute38','EcruteakCity']
 maps={m['id']:m for m in [load(f'data/maps/{n}/map.json') for n in names]}
+bynames={m['name']:m for m in maps.values()};idnames={mid:m['name'] for mid,m in maps.items()}
 layouts={l['id']:l for l in load('data/layouts/layouts.json')['layouts']}
 raw={mid:struct.unpack('<'+'H'*(layouts[m['layout']]['width']*layouts[m['layout']]['height']),(root/layouts[m['layout']]['blockdata_filepath']).read_bytes()) for mid,m in maps.items()}
 linked=(root/'data/event_scripts.s').read_text()
 scripts='\n'.join(p.read_text() for p in (root/'crossroads/scripts').glob('johto*.inc'))+'\n'+(root/'crossroads/scripts/area_completion.inc').read_text()+'\n'+(root/'crossroads/scripts/olivine_interiors.inc').read_text()+'\n'+'\n'.join((root/f'data/maps/{n}/scripts.inc').read_text() for n in names)+'\n'+(root/'crossroads/scripts/olivine.inc').read_text()+'\n'+(root/'crossroads/scripts/western_johto.inc').read_text()+'\n'+(root/'crossroads/scripts/starter_rescue.inc').read_text()
 scripts+='\n'+(root/'crossroads/scripts/hgss_ecruteak.inc').read_text()+'\n'+(root/'crossroads/scripts/hgss_gates.inc').read_text()+'\n'+(root/'crossroads/scripts/hgss_violet.inc').read_text()
+scripts+='\n'+'\n'.join(p.read_text() for p in (root/'crossroads/scripts').glob('hgss_olivine_*.inc'))
 assert 'crossroads/scripts/hgss_ecruteak.inc' in linked
 assert 'crossroads/scripts/hgss_violet.inc' in linked
 for name,data in generate().items():assert (root/f'data/layouts/{name}/map.bin').read_bytes()==data
@@ -34,14 +37,15 @@ for mid,m in maps.items():
   assert re.search(r'^'+e['script']+r'::?',scripts,re.M),(mid,e)
  for o in m['object_events']:assert raw[mid][o['y']*w+o['x']] & 0xC00==0,(mid,o)
  assert len({(o['x'],o['y']) for o in m['object_events']})==len(m['object_events'])<=16
- for warp in m['warp_events']:
+ for index,warp in enumerate(m['warp_events']):
+  if dynamic_pair(m['name'],index,warp,bynames,idnames):continue # Exact native two-stop lift contracts checked independently.
   dest=maps[warp['dest_map']];back=dest['warp_events'][int(warp['dest_warp_id'])]
   assert back['dest_map']==mid,(mid,warp)
  for c in m['connections'] or []:
   dest=maps[c['map']]
   assert any(b==dict(map=mid,direction=reverse[c['direction']],offset=-c['offset']) for b in dest['connections'] or []),(mid,c)
 # Flood the actual passable outdoor graph across correctly offset map borders.
-start=('MAP_OLIVINE_CITY',12,13);seen={start};queue=deque([start])
+start=('MAP_OLIVINE_CITY',16,34) if olivine_active() else ('MAP_OLIVINE_CITY',12,13);seen={start};queue=deque([start])
 while queue:
  mid,x,y=queue.popleft();m=maps[mid];w,h=layouts[m['layout']]['width'],layouts[m['layout']]['height']
  for dx,dy,direction in [(1,0,'right'),(-1,0,'left'),(0,1,'down'),(0,-1,'up')]:

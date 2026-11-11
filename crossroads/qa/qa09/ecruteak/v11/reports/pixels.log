@@ -1,0 +1,9 @@
+Theater actual green checker/13purple cushions: exact82raw/95pixel-cell migration;171othercells+all266physics/actors/events/IDs/stage/common resources preserved: PASS
+Theater stage exact69-cell art migration plus95 explicitly contracted audience pixels;all266physics and remaining102cells preserved;shared Temple unchanged: PASS
+Gate exact7d92 layer repair:50opaque-ground floors,8opaque plant underlays,2blackvoids;all144physics/attrs/aliases/events+oldglyphs/sharedTemple unchanged: PASS
+Gate art exact reviewed cells; both144-cell physics/layers, six alias behaviors, four source plants and shared Temple preserved: PASS
+B1F14-row source floor/complete furnishings; exact37old+34new cells;1F24visual+3pixel-identical counter cells;333othercells pixel-exact; exactly6counter behaviors fixed; shared Center unchanged: PASS
+HGSS common Mart:3 actual plants/glass display/4 stools/right rack;16 exact art cells;all289 native Shop signatures;only4 source stool bases gain collision;events/services unchanged: PASS
+Positive original-native Bell lamp fixtures and collapsed Burned shaft; exact prior raw outside 164 cells, all physics/events/IDs/old graphics retained: PASS 9 lamps, 155 shaft cells
+QA07 immutable QA06 IDs/events/interiors, static exterior pixels, semantic trunks/walls/doors, leaf foreground and neutral road behavior: PASS 6072 unchanged cells; 248 corrected road cells
+Recorded normal walking: no unintended arrow samples; actual native leaf occlusion matches original static tree: (423, 423) PASS

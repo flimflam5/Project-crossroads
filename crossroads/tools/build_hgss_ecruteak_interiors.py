@@ -12,6 +12,8 @@ TARGETS={**BELL,'MAP_BURNED_TOWER_1F':'EcruteakCity_BurnedTower','MAP_BURNED_TOW
 NEW=['EcruteakCity_BellTower_10F','EcruteakCity_BellTower_Roof']
 def load(p):return json.loads((R/p).read_text())
 def generate(check=False):
+ from hgss_ecruteak_tower_details import generate as details_assets,patch as details_patch,tileset as details_tileset
+ details_assets(check)
  def write(p,b):
   if isinstance(b,str):b=b.encode()
   p=R/p
@@ -107,7 +109,8 @@ def generate(check=False):
    if header=='MAP_BELL_TOWER_ROOF':continue
    choices=safe-occupied;x,y=min(choices,key=lambda p:abs(p[0]-w//2)+abs(p[1]-h//2));e.update(x=x,y=y)
   m['music']='MUS_MT_PYRE';m['allow_cycling']=False
-  lid=m['layout'];l=dict(id=lid,name=name+'_Layout',width=w,height=h,primary_tileset='gTileset_Building',secondary_tileset='gTileset_HgssTemple',border_filepath=f'data/layouts/{name}/border.bin',blockdata_filepath=f'data/layouts/{name}/map.bin',layout_version='emerald')
+  tiles=details_patch(header,tiles,w,h,ox,oy)
+  lid=m['layout'];l=dict(id=lid,name=name+'_Layout',width=w,height=h,primary_tileset='gTileset_Building',secondary_tileset=details_tileset(header),border_filepath=f'data/layouts/{name}/border.bin',blockdata_filepath=f'data/layouts/{name}/map.bin',layout_version='emerald')
   if lid in bylayout:bylayout[lid].clear();bylayout[lid].update(l)
   else:layouts['layouts'].append(l);bylayout[lid]=l
   js(f'data/maps/{name}/map.json',m);write(l['blockdata_filepath'],struct.pack('<'+str(w*h)+'H',*tiles));write(l['border_filepath'],struct.pack('<4H',*([0x400|ART['void']['start']]*4)))

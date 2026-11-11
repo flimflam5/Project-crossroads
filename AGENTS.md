@@ -178,3 +178,39 @@ office as documented Olivine additions. Append IDs only, preserve saves and all
 accepted systems. Record separate source/build/checksum checkpoints for the two
 cities, controller recordings, building checklists and remaining reference gaps.
 The owner still decides visual acceptance; do not call an unverified city100%.
+
+## Current QA09 two-city completion
+
+Owner scope is Ecruteak and Olivine only; finish and verify these cities before
+expansion elsewhere. Branch `feature/olivine-ecruteak-completion-qa09` preserves
+QA08 and source checkpoint `3f935d5e8600c5a280b9172b555edb35ca52b6c0`.
+Read `crossroads/hgss/ACTIVE_COMPLETION.md`, `CITIES_QA09.md` and both individual
+city inventories for the current binary, exact tests and remaining review.
+
+Keep old map/layout/heal IDs, party/boxes/bag/starter data, save format, Joe,
+accepted exteriors/custom Gyms, title/V5 music and approved encounters/practice
+battles. No master merge, reset, engine upgrade or new story/rewards/badges.
+
+Ecruteak owns27 maps. Olivine owns24, including9 append-only additions from QA09.
+Its four accepted Black Ledger facades are immutable per-layer pixel/physics
+contracts. Source-specific table/old-port collision cleanup has exact immutable
+before/after masks; never treat every HGSS blocked permission as an earth cliff.
+New private Theater/gate/Center/Mart/tower art must not overwrite shared resources.
+Private Center basements retain source row12 at height14 with unchanged IDs.
+Every public tile must escape through real doors, not through active thresholds.
+
+Generate centrally and sequentially: shared Temple assets when necessary; private
+Theater, gate, Center and Mart assets; Ecruteak rooms/services/gates/towers; Olivine
+assets -> rooms -> landmarks -> offices -> city -> owner Gyms; finally network
+`--through west` and its `--check`. The network must not copy mutable service
+rooms into unrelated cities: generic templates and Violet's actual V7 snapshots
+remain pinned. Original shared service layouts remain unchanged for other cities.
+
+All visible door leaves require actual front/both-way/lateral/arrival testing.
+Static graphs, compilation and probe counts are not visual acceptance. Preserve
+meaningful immutable assertions, adding only exact justified source migrations.
+Keep normal walking, foreground overlap, Surf and Save/cold Continue proof on the
+actual delivery bytes. Never replace a ROM/ELF while emulator processes use it.
+Only copied saves and explicit disclosed test fixtures; never commit batteries,
+private states, memory dumps or ROMs. Public evidence lives in `crossroads/qa/qa09`.
+Owner Delta/visual acceptance remains separate from automated gameplay.

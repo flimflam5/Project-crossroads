@@ -78,7 +78,18 @@ def generate(check=False):
     t[(e['z']+delta)*w+e['x']]=0x3000|ART['stone_warp']['start']
   text='West: ROUTE 38.\\nEast: ECRUTEAK CITY.' if direction=='West' else 'West: ECRUTEAK CITY.\\nEast: ROUTE 42.'
   scripts.append(f'Hgss_{direction}GateGuide::\n    msgbox Hgss_{direction}GateText, MSGBOX_NPC\n    end\nHgss_{direction}GateText:\n    .string "{text}$"\n')
-  l=dict(id=m['layout'],name=name+'_Layout',width=w,height=h,primary_tileset='gTileset_Building',secondary_tileset='gTileset_HgssTemple',border_filepath=f'data/layouts/{name}/border.bin',blockdata_filepath=f'data/layouts/{name}/map.bin',layout_version='emerald')
+  # Actual shared HGSS matrix0070/areaData63 has four potted plants, blue-gray
+  # reception counters, windowed north wall and diamond-gray paving. Apply a
+  # private art-only migration AFTER all native alias behavior is finalized.
+  # Every old movement/elevation bit and metatile attribute remains unchanged.
+  materials=load('crossroads/hgss/art/gate-interior/manifest.json')
+  for p in materials['placements']:
+   i=p['y']*w+p['x'];assert t[i]==p['before'],('Gate art source cell differs',name,p['x'],p['y']);t[i]=p['after']
+  # Art-only upper plant variants distinguish wall and floor underlays while
+  # preserving every old physical bit, actor, warp and established identifier.
+  for p in materials['layer_fixes']:
+   i=p['y']*w+p['x'];assert t[i]==p['before'],('Gate layer source cell differs',name,p['x'],p['y']);t[i]=p['after']
+  l=dict(id=m['layout'],name=name+'_Layout',width=w,height=h,primary_tileset='gTileset_Building',secondary_tileset='gTileset_HgssGateInterior',border_filepath=f'data/layouts/{name}/border.bin',blockdata_filepath=f'data/layouts/{name}/map.bin',layout_version='emerald')
   if l['id'] in ls:ls[l['id']].clear();ls[l['id']].update(l)
   else:layouts['layouts'].append(l);ls[l['id']]=l
   js(f'data/maps/{name}/map.json',m);js(f'data/maps/JohtoRoute{number}/map.json',route);write(l['blockdata_filepath'],struct.pack('<'+str(w*h)+'H',*t));write(l['border_filepath'],struct.pack('<4H',*([0x600]*4)))

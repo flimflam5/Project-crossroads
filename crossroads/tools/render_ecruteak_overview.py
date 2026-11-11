@@ -6,7 +6,9 @@ from PIL import Image
 from validate_ecruteak_family import js,data,resource
 p=argparse.ArgumentParser();p.add_argument('--map',default='EcruteakCity');p.add_argument('--baseline',action='store_true');p.add_argument('--output',required=True);a=p.parse_args()
 m=js(f'data/maps/{a.map}/map.json',a.baseline);ls={l['id']:l for l in js('data/layouts/layouts.json',a.baseline)['layouts']};l=ls[m['layout']];w,h=l['width'],l['height'];raw=data(l['blockdata_filepath'],a.baseline);raw=struct.unpack('<'+str(w*h)+'H',raw)
-primary,secondary=('bl_gym_ecruteak','bl_gym_ecruteak') if a.map=='EcruteakCity' else ('hgss_ecruteak_buffer' if a.baseline else 'hgss_ecruteak_gate_buffer','western_city');sheets,metas,attrs,pals=resource(primary,secondary,a.baseline)
+primary,secondary=('bl_gym_ecruteak','bl_gym_ecruteak') if a.map=='EcruteakCity' else ('hgss_ecruteak_buffer' if a.baseline else 'hgss_ecruteak_gate_buffer','western_city');
+if a.map=='OlivineCity':primary=secondary='bl_gym_olivine'
+sheets,metas,attrs,pals=resource(primary,secondary,a.baseline)
 @functools.lru_cache(None)
 def tile(n):
  out=Image.new('RGBA',(16,16))

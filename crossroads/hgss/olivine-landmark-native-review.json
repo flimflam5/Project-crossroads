@@ -1,0 +1,235 @@
+{
+  "scope": "Olivine lighthouse six floors, exterior balcony, elevator, port terminal and quay; does not certify owner acceptance",
+  "reference_manifest": "olivine-landmark-visual-references.json",
+  "source_facts": "canonical_events/olivine-interior-geometry.json",
+  "native_art": "Original generated GBA props and marine models; screenshots are reference only, not texture sources",
+  "models": [
+    {
+      "source_model": 167,
+      "area": "OlivineCity_PortQuay",
+      "meaning": "rear port terminal",
+      "source_anchor": [
+        16.5,
+        13.0
+      ],
+      "native_origin": [
+        11,
+        10
+      ],
+      "native_tiles": [
+        12,
+        6
+      ],
+      "entrances": [
+        [
+          16,
+          15
+        ],
+        [
+          17,
+          15
+        ],
+        [
+          11,
+          13
+        ],
+        [
+          11,
+          14
+        ]
+      ],
+      "status": "Current B11 map/door/landmark controller coverage PASS; source placement/art reviewed; owner visual acceptance pending"
+    },
+    {
+      "source_model": 168,
+      "area": "OlivineCity_PortQuay",
+      "meaning": "docked S.S. Aqua scenery",
+      "source_anchor": [
+        27.5,
+        19.0
+      ],
+      "native_origin": [
+        21,
+        15
+      ],
+      "native_tiles": [
+        16,
+        5
+      ],
+      "adaptation": "Repeated new mid-deck panels fit native graphics capacity; boarding mouth retains canonical source position",
+      "status": "visible vessel, sailing/ship interiors outside this city pass"
+    },
+    {
+      "source_model": 119,
+      "area": "OlivineCity_PortQuay",
+      "meaning": "two sailboats",
+      "source_anchors": [
+        [
+          9.30896,
+          3
+        ],
+        [
+          23.30894,
+          3
+        ]
+      ],
+      "native_origins": [
+        [
+          8,
+          1
+        ],
+        [
+          22,
+          1
+        ]
+      ],
+      "native_tiles": [
+        3,
+        3
+      ],
+      "adaptation": "Tile-grid rounding of perspective prop anchor"
+    },
+    {
+      "source_model": 23,
+      "area": "OlivineCity_Lighthouse_1F",
+      "meaning": "six potted visitor-deck plants",
+      "native_origins": [
+        [
+          6,
+          7
+        ],
+        [
+          10,
+          7
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          6,
+          13
+        ],
+        [
+          10,
+          13
+        ]
+      ],
+      "native_tiles": [
+        1,
+        2
+      ],
+      "status": "actual original green fern and terracotta pot; no brown post stand-in"
+    },
+    {
+      "source_model": 63,
+      "area": "OlivineCity_Lighthouse_1F",
+      "meaning": "elevator",
+      "native_thresholds": [
+        [
+          8,
+          4
+        ],
+        [
+          9,
+          4
+        ]
+      ],
+      "status": "paired actual blue-glass panels; native dynamic warp two-stop service"
+    },
+    {
+      "source_model": 124,
+      "area": "OlivineCity_Lighthouse_6F",
+      "meaning": "elevator upper landing",
+      "native_thresholds": [
+        [
+          8,
+          4
+        ],
+        [
+          9,
+          4
+        ]
+      ],
+      "status": "same panels, actual light-room and ground-floor controls"
+    },
+    {
+      "area": "OlivineCity_Lighthouse_6F",
+      "meaning": "lantern room",
+      "status": "Current B11 map/door/landmark controller coverage PASS; source placement/art reviewed; owner visual acceptance pending",
+      "source_model": 122,
+      "native_origin": [
+        7,
+        5
+      ],
+      "native_tiles": [
+        3,
+        3
+      ]
+    },
+    {
+      "source_model": 23,
+      "area": "OlivineCity_Lighthouse_2F",
+      "meaning": "two source upper-deck planters",
+      "source_anchors": [
+        [
+          11.5,
+          12.5
+        ],
+        [
+          15.5,
+          12.5
+        ]
+      ],
+      "native_origins": [
+        [
+          11,
+          11
+        ],
+        [
+          15,
+          11
+        ]
+      ],
+      "native_tiles": [
+        1,
+        2
+      ],
+      "status": "Current B11 map/door/landmark controller coverage PASS; source placement/art reviewed; owner visual acceptance pending"
+    }
+  ],
+  "adaptations": [
+    "Source room origins and six historical map/layout IDs retained; visible stair/door aliases append",
+    "Olivine quay crops unused east source ocean to40x27 native tiles; actual model inventory and all terminal return paths retained",
+    "Source4F eastern window is intentional one-way drop to the balcony, then source southern3F/westernstairs return",
+    "Rear port and ship use original compatible GBA art with flat layer/collision footprints, not DS polygons",
+    "Source maritime walls have cool gray/blue window palette; floorboards remain teal except purple lantern room and tan port",
+    "Private unused primary glyph/metatile slots store new models; shared resources, engine limits and save structures stay unchanged",
+    "All eight actual source-model54 port stools represented at source anchors; one tile stays unblocked underneath seated solid ambient NPC so the actor owns collision",
+    "All eight actual source-model54 port stools represented at source anchors; one tile stays unblocked underneath seated solid ambient NPC so the actor owns collision",
+    "Balcony wall uses repeated native windowed masonry rather than literal plain cylindrical DS wall; chosen art adaptation, owner visual review pending",
+    "Circular6F lantern housing compresses the larger DS optical pedestal to3x3 native metatiles; no pixel1:1 visual claim"
+  ],
+  "testing": {
+    "isolated_generator": "generate then exact check PASS",
+    "isolated_resource_validator": "full image dimensions, all glyph bounds, native source primary/secondary preservation, exact derived lift panels PASS",
+    "static_native_views": "all authored maritime maps rendered/inspected before delivery build; these are not emulator screenshots",
+    "actual_delivery_rom_gameplay": "PASS current frozen B11 maritime maps in24-map tour,60 Olive doorway fronts/168 approaches,10 special journeys,51 services,25 Save/Continue cases and applicable collision/material tests; owner visual acceptance pending",
+    "owner_delta_visual_acceptance": "PENDING",
+    "v7_diagnostic_gameplay": "PASS24-map normal-controller tour182 transitions/174 warp trials, services27, saves21, four lift cases and six special journeys; distinct earlier ROM0734501b...",
+    "native_views": "Actual current B11 native24-frame1x sheet inspected alongside full static source layouts; entry screenshots do not expose every prop"
+  },
+  "per_source_instance_coverage": "olivine-landmark-prop-coverage.json (42 instances; source furniture distinct from story actors)",
+  "independent_source_instance_audit": "42/42 source record keys/model IDs/anchors independently checked;41 represented/adapted instances plus1 explicitly off-room source machine cropped",
+  "source_revision": "489c404346f572aefb6856b3dd48a9b364a08ceb",
+  "rom_sha256": "df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4",
+  "historical_b9_identity": {
+    "source_revision": "5664fecee4337c5bdd442583e24cc91c09c0a0cd",
+    "rom_sha256": "d5abac0deabc7d592eba302122b3d15c08501947f0f601eda7b5026da9ac6772",
+    "actual_gameplay": "PASS finalB9 tour/60doorsegments/10specials/51services/25saves; see OLIVINE_COMPLETION_QA09.json"
+  }
+}

@@ -1,0 +1,1316 @@
+{
+  "rom_sha256": "d5abac0deabc7d592eba302122b3d15c08501947f0f601eda7b5026da9ac6772",
+  "source_save_sha256_before": "b03ff1ef488fbd25de016e828483bc3001787b84e450a45eaa0ac12a11de30ab",
+  "source_save_sha256_after": "b03ff1ef488fbd25de016e828483bc3001787b84e450a45eaa0ac12a11de30ab",
+  "setup": "Copied battery, normal title/Continue, real desk enables RAM-only survey Surf. Dry phases enforce dry paths and no Surf. Only shared test-RAM encounter suppression; no map/warp/player XY writes, no permanent grants.",
+  "cases": [
+    {
+      "kind": "old-table-now-deck",
+      "point": [
+        7,
+        42
+      ],
+      "result": "PASS"
+    },
+    {
+      "kind": "old-table-now-deck",
+      "point": [
+        8,
+        42
+      ],
+      "result": "PASS"
+    },
+    {
+      "kind": "old-table-now-deck",
+      "point": [
+        9,
+        42
+      ],
+      "result": "PASS"
+    },
+    {
+      "kind": "old-table-now-deck",
+      "point": [
+        10,
+        42
+      ],
+      "result": "PASS"
+    },
+    {
+      "kind": "old-table-now-deck",
+      "point": [
+        14,
+        42
+      ],
+      "result": "PASS"
+    },
+    {
+      "kind": "old-table-now-deck",
+      "point": [
+        15,
+        42
+      ],
+      "result": "PASS"
+    },
+    {
+      "kind": "old-table-now-deck",
+      "point": [
+        16,
+        42
+      ],
+      "result": "PASS"
+    },
+    {
+      "kind": "old-table-now-deck",
+      "point": [
+        17,
+        42
+      ],
+      "result": "PASS"
+    },
+    {
+      "kind": "old-table-now-deck",
+      "point": [
+        29,
+        42
+      ],
+      "result": "PASS"
+    },
+    {
+      "kind": "old-table-now-deck",
+      "point": [
+        30,
+        42
+      ],
+      "result": "PASS"
+    },
+    {
+      "kind": "old-table-now-deck",
+      "point": [
+        31,
+        42
+      ],
+      "result": "PASS"
+    },
+    {
+      "kind": "old-table-now-deck",
+      "point": [
+        32,
+        42
+      ],
+      "result": "PASS"
+    },
+    {
+      "kind": "white-fence",
+      "target": [
+        6,
+        10
+      ],
+      "approach": [
+        5,
+        10
+      ],
+      "result": "normal movement blocked"
+    },
+    {
+      "kind": "white-fence",
+      "target": [
+        6,
+        10
+      ],
+      "approach": [
+        6,
+        9
+      ],
+      "result": "normal movement blocked"
+    },
+    {
+      "kind": "white-fence",
+      "target": [
+        7,
+        10
+      ],
+      "approach": [
+        7,
+        9
+      ],
+      "result": "normal movement blocked"
+    },
+    {
+      "kind": "white-fence",
+      "target": [
+        7,
+        10
+      ],
+      "approach": [
+        7,
+        11
+      ],
+      "result": "normal movement blocked"
+    },
+    {
+      "kind": "white-fence",
+      "target": [
+        8,
+        10
+      ],
+      "approach": [
+        8,
+        9
+      ],
+      "result": "normal movement blocked"
+    },
+    {
+      "kind": "white-fence",
+      "target": [
+        8,
+        10
+      ],
+      "approach": [
+        8,
+        11
+      ],
+      "result": "normal movement blocked"
+    },
+    {
+      "kind": "white-fence",
+      "target": [
+        9,
+        10
+      ],
+      "approach": [
+        10,
+        10
+      ],
+      "result": "normal movement blocked"
+    },
+    {
+      "kind": "white-fence",
+      "target": [
+        9,
+        10
+      ],
+      "approach": [
+        9,
+        9
+      ],
+      "result": "normal movement blocked"
+    },
+    {
+      "kind": "white-fence",
+      "target": [
+        9,
+        10
+      ],
+      "approach": [
+        9,
+        11
+      ],
+      "result": "normal movement blocked"
+    },
+    {
+      "kind": "white-fence",
+      "target": [
+        17,
+        10
+      ],
+      "approach": [
+        16,
+        10
+      ],
+      "result": "normal movement blocked"
+    },
+    {
+      "kind": "white-fence",
+      "target": [
+        17,
+        10
+      ],
+      "approach": [
+        17,
+        9
+      ],
+      "result": "normal movement blocked"
+    },
+    {
+      "kind": "white-fence",
+      "target": [
+        17,
+        10
+      ],
+      "approach": [
+        17,
+        11
+      ],
+      "result": "normal movement blocked"
+    },
+    {
+      "kind": "white-fence",
+      "target": [
+        18,
+        10
+      ],
+      "approach": [
+        18,
+        9
+      ],
+      "result": "normal movement blocked"
+    },
+    {
+      "kind": "white-fence",
+      "target": [
+        18,
+        10
+      ],
+      "approach": [
+        18,
+        11
+      ],
+      "result": "normal movement blocked"
+    },
+    {
+      "kind": "white-fence",
+      "target": [
+        19,
+        10
+      ],
+      "approach": [
+        19,
+        9
+      ],
+      "result": "normal movement blocked"
+    },
+    {
+      "kind": "white-fence",
+      "target": [
+        19,
+        10
+      ],
+      "approach": [
+        19,
+        11
+      ],
+      "result": "normal movement blocked"
+    },
+    {
+      "kind": "white-fence",
+      "target": [
+        20,
+        10
+      ],
+      "approach": [
+        21,
+        10
+      ],
+      "result": "normal movement blocked"
+    },
+    {
+      "kind": "white-fence",
+      "target": [
+        20,
+        10
+      ],
+      "approach": [
+        20,
+        11
+      ],
+      "result": "normal movement blocked"
+    },
+    {
+      "kind": "white-fence",
+      "target": [
+        6,
+        11
+      ],
+      "approach": [
+        5,
+        11
+      ],
+      "result": "normal movement blocked"
+    },
+    {
+      "kind": "white-fence",
+      "target": [
+        6,
+        11
+      ],
+      "approach": [
+        7,
+        11
+      ],
+      "result": "normal movement blocked"
+    },
+    {
+      "kind": "white-fence",
+      "target": [
+        6,
+        12
+      ],
+      "approach": [
+        5,
+        12
+      ],
+      "result": "normal movement blocked"
+    },
+    {
+      "kind": "white-fence",
+      "target": [
+        6,
+        12
+      ],
+      "approach": [
+        7,
+        12
+      ],
+      "result": "normal movement blocked"
+    },
+    {
+      "kind": "white-fence",
+      "target": [
+        6,
+        13
+      ],
+      "approach": [
+        5,
+        13
+      ],
+      "result": "normal movement blocked"
+    },
+    {
+      "kind": "white-fence",
+      "target": [
+        6,
+        13
+      ],
+      "approach": [
+        7,
+        13
+      ],
+      "result": "normal movement blocked"
+    },
+    {
+      "kind": "white-fence",
+      "target": [
+        6,
+        14
+      ],
+      "approach": [
+        5,
+        14
+      ],
+      "result": "normal movement blocked"
+    },
+    {
+      "kind": "white-fence",
+      "target": [
+        6,
+        14
+      ],
+      "approach": [
+        7,
+        14
+      ],
+      "result": "normal movement blocked"
+    },
+    {
+      "kind": "white-fence",
+      "target": [
+        6,
+        15
+      ],
+      "approach": [
+        5,
+        15
+      ],
+      "result": "normal movement blocked"
+    },
+    {
+      "kind": "white-fence",
+      "target": [
+        6,
+        15
+      ],
+      "approach": [
+        7,
+        15
+      ],
+      "result": "normal movement blocked"
+    },
+    {
+      "kind": "white-fence",
+      "target": [
+        6,
+        16
+      ],
+      "approach": [
+        5,
+        16
+      ],
+      "result": "normal movement blocked"
+    },
+    {
+      "kind": "white-fence",
+      "target": [
+        6,
+        16
+      ],
+      "approach": [
+        7,
+        16
+      ],
+      "result": "normal movement blocked"
+    },
+    {
+      "kind": "white-fence",
+      "target": [
+        6,
+        17
+      ],
+      "approach": [
+        5,
+        17
+      ],
+      "result": "normal movement blocked"
+    },
+    {
+      "kind": "white-fence",
+      "target": [
+        6,
+        17
+      ],
+      "approach": [
+        7,
+        17
+      ],
+      "result": "normal movement blocked"
+    },
+    {
+      "kind": "white-fence",
+      "target": [
+        6,
+        18
+      ],
+      "approach": [
+        5,
+        18
+      ],
+      "result": "normal movement blocked"
+    },
+    {
+      "kind": "white-fence",
+      "target": [
+        6,
+        19
+      ],
+      "approach": [
+        5,
+        19
+      ],
+      "result": "normal movement blocked"
+    },
+    {
+      "kind": "white-fence",
+      "target": [
+        6,
+        19
+      ],
+      "approach": [
+        7,
+        19
+      ],
+      "result": "normal movement blocked"
+    },
+    {
+      "kind": "white-fence",
+      "target": [
+        6,
+        19
+      ],
+      "approach": [
+        6,
+        20
+      ],
+      "result": "normal movement blocked"
+    },
+    {
+      "kind": "white-fence",
+      "target": [
+        13,
+        21
+      ],
+      "approach": [
+        12,
+        21
+      ],
+      "result": "normal movement blocked"
+    },
+    {
+      "kind": "white-fence",
+      "target": [
+        13,
+        21
+      ],
+      "approach": [
+        14,
+        21
+      ],
+      "result": "normal movement blocked"
+    },
+    {
+      "kind": "white-fence",
+      "target": [
+        13,
+        22
+      ],
+      "approach": [
+        12,
+        22
+      ],
+      "result": "normal movement blocked"
+    },
+    {
+      "kind": "white-fence",
+      "target": [
+        13,
+        22
+      ],
+      "approach": [
+        14,
+        22
+      ],
+      "result": "normal movement blocked"
+    },
+    {
+      "kind": "white-fence",
+      "target": [
+        13,
+        23
+      ],
+      "approach": [
+        12,
+        23
+      ],
+      "result": "normal movement blocked"
+    },
+    {
+      "kind": "white-fence",
+      "target": [
+        13,
+        23
+      ],
+      "approach": [
+        14,
+        23
+      ],
+      "result": "normal movement blocked"
+    },
+    {
+      "kind": "white-fence",
+      "target": [
+        13,
+        23
+      ],
+      "approach": [
+        13,
+        24
+      ],
+      "result": "normal movement blocked"
+    },
+    {
+      "kind": "gray-boulder",
+      "target": [
+        58,
+        20
+      ],
+      "approach": [
+        57,
+        20
+      ],
+      "result": "actual Surf movement blocked"
+    },
+    {
+      "kind": "gray-boulder",
+      "target": [
+        59,
+        24
+      ],
+      "approach": [
+        58,
+        24
+      ],
+      "result": "actual Surf movement blocked"
+    },
+    {
+      "kind": "gray-boulder",
+      "target": [
+        55,
+        26
+      ],
+      "approach": [
+        55,
+        25
+      ],
+      "result": "actual Surf movement blocked"
+    },
+    {
+      "kind": "gray-boulder",
+      "target": [
+        58,
+        30
+      ],
+      "approach": [
+        59,
+        30
+      ],
+      "result": "actual Surf movement blocked"
+    }
+  ],
+  "unavailable_fence_approaches": [
+    {
+      "kind": "fence",
+      "target": [
+        6,
+        10
+      ],
+      "approach": [
+        7,
+        10
+      ],
+      "reason": "No dry public approach"
+    },
+    {
+      "kind": "fence",
+      "target": [
+        6,
+        10
+      ],
+      "approach": [
+        6,
+        11
+      ],
+      "reason": "No dry public approach"
+    },
+    {
+      "kind": "fence",
+      "target": [
+        7,
+        10
+      ],
+      "approach": [
+        6,
+        10
+      ],
+      "reason": "No dry public approach"
+    },
+    {
+      "kind": "fence",
+      "target": [
+        7,
+        10
+      ],
+      "approach": [
+        8,
+        10
+      ],
+      "reason": "No dry public approach"
+    },
+    {
+      "kind": "fence",
+      "target": [
+        8,
+        10
+      ],
+      "approach": [
+        7,
+        10
+      ],
+      "reason": "No dry public approach"
+    },
+    {
+      "kind": "fence",
+      "target": [
+        8,
+        10
+      ],
+      "approach": [
+        9,
+        10
+      ],
+      "reason": "No dry public approach"
+    },
+    {
+      "kind": "fence",
+      "target": [
+        9,
+        10
+      ],
+      "approach": [
+        8,
+        10
+      ],
+      "reason": "No dry public approach"
+    },
+    {
+      "kind": "fence",
+      "target": [
+        17,
+        10
+      ],
+      "approach": [
+        18,
+        10
+      ],
+      "reason": "No dry public approach"
+    },
+    {
+      "kind": "fence",
+      "target": [
+        18,
+        10
+      ],
+      "approach": [
+        17,
+        10
+      ],
+      "reason": "No dry public approach"
+    },
+    {
+      "kind": "fence",
+      "target": [
+        18,
+        10
+      ],
+      "approach": [
+        19,
+        10
+      ],
+      "reason": "No dry public approach"
+    },
+    {
+      "kind": "fence",
+      "target": [
+        19,
+        10
+      ],
+      "approach": [
+        18,
+        10
+      ],
+      "reason": "No dry public approach"
+    },
+    {
+      "kind": "fence",
+      "target": [
+        19,
+        10
+      ],
+      "approach": [
+        20,
+        10
+      ],
+      "reason": "No dry public approach"
+    },
+    {
+      "kind": "fence",
+      "target": [
+        20,
+        10
+      ],
+      "approach": [
+        19,
+        10
+      ],
+      "reason": "No dry public approach"
+    },
+    {
+      "kind": "fence",
+      "target": [
+        20,
+        10
+      ],
+      "approach": [
+        20,
+        9
+      ],
+      "reason": "No dry public approach"
+    },
+    {
+      "kind": "fence",
+      "target": [
+        6,
+        11
+      ],
+      "approach": [
+        6,
+        10
+      ],
+      "reason": "No dry public approach"
+    },
+    {
+      "kind": "fence",
+      "target": [
+        6,
+        11
+      ],
+      "approach": [
+        6,
+        12
+      ],
+      "reason": "No dry public approach"
+    },
+    {
+      "kind": "fence",
+      "target": [
+        6,
+        12
+      ],
+      "approach": [
+        6,
+        11
+      ],
+      "reason": "No dry public approach"
+    },
+    {
+      "kind": "fence",
+      "target": [
+        6,
+        12
+      ],
+      "approach": [
+        6,
+        13
+      ],
+      "reason": "No dry public approach"
+    },
+    {
+      "kind": "fence",
+      "target": [
+        6,
+        13
+      ],
+      "approach": [
+        6,
+        12
+      ],
+      "reason": "No dry public approach"
+    },
+    {
+      "kind": "fence",
+      "target": [
+        6,
+        13
+      ],
+      "approach": [
+        6,
+        14
+      ],
+      "reason": "No dry public approach"
+    },
+    {
+      "kind": "fence",
+      "target": [
+        6,
+        14
+      ],
+      "approach": [
+        6,
+        13
+      ],
+      "reason": "No dry public approach"
+    },
+    {
+      "kind": "fence",
+      "target": [
+        6,
+        14
+      ],
+      "approach": [
+        6,
+        15
+      ],
+      "reason": "No dry public approach"
+    },
+    {
+      "kind": "fence",
+      "target": [
+        6,
+        15
+      ],
+      "approach": [
+        6,
+        14
+      ],
+      "reason": "No dry public approach"
+    },
+    {
+      "kind": "fence",
+      "target": [
+        6,
+        15
+      ],
+      "approach": [
+        6,
+        16
+      ],
+      "reason": "No dry public approach"
+    },
+    {
+      "kind": "fence",
+      "target": [
+        6,
+        16
+      ],
+      "approach": [
+        6,
+        15
+      ],
+      "reason": "No dry public approach"
+    },
+    {
+      "kind": "fence",
+      "target": [
+        6,
+        16
+      ],
+      "approach": [
+        6,
+        17
+      ],
+      "reason": "No dry public approach"
+    },
+    {
+      "kind": "fence",
+      "target": [
+        6,
+        17
+      ],
+      "approach": [
+        6,
+        16
+      ],
+      "reason": "No dry public approach"
+    },
+    {
+      "kind": "fence",
+      "target": [
+        6,
+        17
+      ],
+      "approach": [
+        6,
+        18
+      ],
+      "reason": "No dry public approach"
+    },
+    {
+      "kind": "fence",
+      "target": [
+        6,
+        18
+      ],
+      "approach": [
+        7,
+        18
+      ],
+      "reason": "No dry public approach"
+    },
+    {
+      "kind": "fence",
+      "target": [
+        6,
+        18
+      ],
+      "approach": [
+        6,
+        17
+      ],
+      "reason": "No dry public approach"
+    },
+    {
+      "kind": "fence",
+      "target": [
+        6,
+        18
+      ],
+      "approach": [
+        6,
+        19
+      ],
+      "reason": "No dry public approach"
+    },
+    {
+      "kind": "fence",
+      "target": [
+        6,
+        19
+      ],
+      "approach": [
+        6,
+        18
+      ],
+      "reason": "No dry public approach"
+    },
+    {
+      "kind": "fence",
+      "target": [
+        13,
+        21
+      ],
+      "approach": [
+        13,
+        20
+      ],
+      "reason": "No dry public approach"
+    },
+    {
+      "kind": "fence",
+      "target": [
+        13,
+        21
+      ],
+      "approach": [
+        13,
+        22
+      ],
+      "reason": "No dry public approach"
+    },
+    {
+      "kind": "fence",
+      "target": [
+        13,
+        22
+      ],
+      "approach": [
+        13,
+        21
+      ],
+      "reason": "No dry public approach"
+    },
+    {
+      "kind": "fence",
+      "target": [
+        13,
+        22
+      ],
+      "approach": [
+        13,
+        23
+      ],
+      "reason": "No dry public approach"
+    },
+    {
+      "kind": "fence",
+      "target": [
+        13,
+        23
+      ],
+      "approach": [
+        13,
+        22
+      ],
+      "reason": "No dry public approach"
+    }
+  ],
+  "native_recordings": [
+    {
+      "label": "relocated-table-7",
+      "frame_count": 59,
+      "arrow_visible_samples": 0,
+      "position": [
+        10,
+        43
+      ],
+      "surfing": false
+    },
+    {
+      "label": "relocated-table-14",
+      "frame_count": 59,
+      "arrow_visible_samples": 0,
+      "position": [
+        17,
+        43
+      ],
+      "surfing": false
+    },
+    {
+      "label": "relocated-table-29",
+      "frame_count": 59,
+      "arrow_visible_samples": 0,
+      "position": [
+        32,
+        43
+      ],
+      "surfing": false
+    },
+    {
+      "label": "timber-promenade",
+      "frame_count": 50,
+      "arrow_visible_samples": 0,
+      "position": [
+        18,
+        43
+      ],
+      "surfing": false
+    },
+    {
+      "label": "parasol-11-canopy",
+      "frame_count": 14,
+      "arrow_visible_samples": 0,
+      "position": [
+        11,
+        42
+      ],
+      "surfing": false
+    },
+    {
+      "label": "parasol-11-base",
+      "frame_count": 13,
+      "arrow_visible_samples": 0,
+      "position": [
+        11,
+        45
+      ],
+      "surfing": false
+    },
+    {
+      "label": "parasol-16-canopy",
+      "frame_count": 14,
+      "arrow_visible_samples": 0,
+      "position": [
+        16,
+        42
+      ],
+      "surfing": false
+    },
+    {
+      "label": "parasol-16-base",
+      "frame_count": 13,
+      "arrow_visible_samples": 0,
+      "position": [
+        16,
+        45
+      ],
+      "surfing": false
+    },
+    {
+      "label": "parasol-32-canopy",
+      "frame_count": 14,
+      "arrow_visible_samples": 0,
+      "position": [
+        32,
+        42
+      ],
+      "surfing": false
+    },
+    {
+      "label": "parasol-32-base",
+      "frame_count": 13,
+      "arrow_visible_samples": 0,
+      "position": [
+        32,
+        45
+      ],
+      "surfing": false
+    },
+    {
+      "label": "outer-fence",
+      "frame_count": 16,
+      "arrow_visible_samples": 0,
+      "position": [
+        5,
+        10
+      ],
+      "surfing": false
+    },
+    {
+      "label": "garden-fence",
+      "frame_count": 16,
+      "arrow_visible_samples": 0,
+      "position": [
+        12,
+        21
+      ],
+      "surfing": false
+    },
+    {
+      "label": "east-rock-a",
+      "frame_count": 16,
+      "arrow_visible_samples": 0,
+      "position": [
+        57,
+        20
+      ],
+      "surfing": true
+    },
+    {
+      "label": "east-rock-b",
+      "frame_count": 16,
+      "arrow_visible_samples": 0,
+      "position": [
+        58,
+        24
+      ],
+      "surfing": true
+    },
+    {
+      "label": "east-rock-c",
+      "frame_count": 16,
+      "arrow_visible_samples": 0,
+      "position": [
+        55,
+        25
+      ],
+      "surfing": true
+    },
+    {
+      "label": "east-rock-chain",
+      "frame_count": 16,
+      "arrow_visible_samples": 0,
+      "position": [
+        59,
+        30
+      ],
+      "surfing": true
+    },
+    {
+      "label": "old-port-model-now-sea",
+      "frame_count": 33,
+      "arrow_visible_samples": 0,
+      "position": [
+        26,
+        58
+      ],
+      "surfing": true
+    },
+    {
+      "label": "southern-sea-boundary",
+      "frame_count": 13,
+      "arrow_visible_samples": 0,
+      "position": [
+        40,
+        62
+      ],
+      "surfing": true
+    }
+  ],
+  "final_dry_return": [
+    16,
+    34
+  ],
+  "public_native_recordings": [
+    "relocated-table-7",
+    "relocated-table-29",
+    "parasol-16-canopy",
+    "parasol-16-base",
+    "outer-fence",
+    "garden-fence",
+    "east-rock-chain",
+    "old-port-model-now-sea",
+    "southern-sea-boundary"
+  ],
+  "public_native_resolution": [
+    240,
+    160
+  ],
+  "review_status": "Actual controller suite passed on final BUILD9; representative native recording frames visually inspected. Owner Delta and visual acceptance remain pending."
+}

@@ -1,0 +1,100 @@
+[
+  {
+    "label": "HGSS common house matrix0066",
+    "page": "https://guidestrats.com/pokemon-hgss-apricorn-box/",
+    "image_url": "https://static.guidestrats.com/images/11/1377/04-pokemon-hgss-man-will-give-you-the-apricorn-box.jpg",
+    "sha256": "6ededf93058319e51ff9283faa80c7782d209aba9713a78a0d87426b4b8e6d4b",
+    "local_cache": "/workspace/scratch/hgss-reference/Common_Ecruteak_house_matrix0066_HGSS.jpg",
+    "use": "Reference inspection only; not game graphics",
+    "visually_inspected": true
+  },
+  {
+    "label": "HGSS common Pokemon Center",
+    "page": "https://archives.bulbagarden.net/wiki/File:Pok%C3%A9mon_Center_inside_HGSS.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/5/50/Pok%C3%A9mon_Center_inside_HGSS.png",
+    "sha256": "3a1631fb84272c3cd7552420d07bfeb1720e8e734ba952ca47570c1084c84ba3",
+    "local_cache": "/workspace/scratch/hgss-reference/Ecruteak_common_Center_inside_HGSS.png",
+    "use": "Reference inspection only; not game graphics",
+    "visually_inspected": true
+  },
+  {
+    "label": "HGSS common Poke Mart",
+    "page": "https://archives.bulbagarden.net/wiki/File:Pok%C3%A9_Mart_interior_HGSS.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/0/08/Pok%C3%A9_Mart_interior_HGSS.png",
+    "sha256": "dbfa3e7e21a58089d07073e41f1c6a481379022d4e916bf007032767bdb67e79",
+    "local_cache": "/workspace/scratch/hgss-reference/Common_Mart_interior_HGSS.png",
+    "use": "Reference inspection only; not game graphics",
+    "visually_inspected": true
+  },
+  {
+    "label": "Actual HGSS common Center basement",
+    "page": "https://www.pokewiki.de/Datei:Pok%C3%A9mon-Center_Untergeschoss_HGSS.png",
+    "image_url": "https://www.pokewiki.de/images/8/81/Pok%C3%A9mon-Center_Untergeschoss_HGSS.png",
+    "sha256": "7865565de56598403fea4fa2b674549b410ece08830bad4a8e772059e363ec4c",
+    "local_cache": "/workspace/scratch/hgss-reference/Common_Center_B1F_HGSS.png",
+    "use": "Reference inspection only; not game graphics",
+    "visually_inspected": true
+  },
+  {
+    "label": "Actual HGSS Theater stage screenshot (Pokebip)",
+    "page": "https://www.pokebip.com/page/jeux-video/pokemon-heartgold-soulsilver/soluce-du-jeu/partie9",
+    "image_url": "https://www.pokebip.com/pages/jeux-video/pokemon-heartgold-soulsilver/soluce-du-jeu/images/figure83.png",
+    "sha256": "1ca25fe43d58c758da64a538373d2a489bf604c616e4422018901f71033bfa9d",
+    "local_cache": "/workspace/scratch/hgss-reference/Theater_actual_HGSS_Pokebip.png",
+    "published_dimensions": [
+      256,
+      192
+    ],
+    "use": "Reference inspection only; never used as ROM graphics",
+    "visually_inspected": true
+  },
+  {
+    "label": "Actual HGSS Theater stage screenshot (Pokepedia)",
+    "page": "https://www.pokepedia.fr/Fichier:Salle_de_Danse_Rosalia_HGSS.png",
+    "image_url": "https://www.pokepedia.fr/images/f/f6/Salle_de_Danse_Rosalia_HGSS.png",
+    "sha256": "deecbfa87bcb6437a3365e1a51362926163cd06b9d8126f59a48b4f19500dbc7",
+    "local_cache": "/workspace/scratch/hgss-reference/Theater_actual_HGSS_Pokepedia.png",
+    "published_dimensions": [
+      204,
+      152
+    ],
+    "use": "Reference inspection only; never used as ROM graphics",
+    "visually_inspected": true
+  },
+  {
+    "label": "Actual HGSS common gate interior; same matrix0070/areaData63 as Ecruteak gates",
+    "page": "https://archives.bulbagarden.net/wiki/File:Gate_inside_HGSS.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/2/2f/Gate_inside_HGSS.png",
+    "sha256": "93e12044f2ef26bb726e13207db919c577f18a4e0e533d17c6c02efc9cad6b33",
+    "local_cache": "/workspace/scratch/hgss-reference/Gate_inside_HGSS.png",
+    "published_dimensions": [
+      214,
+      180
+    ],
+    "use": "Reference inspection only; never used as ROM graphics",
+    "visually_inspected": true
+  },
+  {
+    "label": "Actual HGSS Theater stage and complete13-seat audience view (WikiDex)",
+    "page": "https://www.wikidex.net/wiki/Teatro_de_Danza",
+    "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/0/09/latest/20100424181308/Teatro_de_Danza_HGSS.jpg",
+    "sha256": "05a655b8cc52f311c8660a1fb4dfeee3eeae5cf7e253a4651ae02e53b013421e",
+    "published_dimensions": [
+      256,
+      192
+    ],
+    "format": "JPEG",
+    "local_cache": "/workspace/scratch/hgss-reference/Theater_HGSS_wikidex.jpg",
+    "use": "Reference inspection only; no game graphics extracted",
+    "visually_inspected": true,
+    "shows_all_13_audience_seats": true,
+    "shows_stage_and_both_side_stairs": true,
+    "shows_south_exit": false,
+    "scope_note": "Published native-sized file with a cropped scene/black margins; it is not a whole-floor mosaic including the southern threshold",
+    "comparison": "Same13 model56 seating positions:3front +5middle +5rear; native GBA raised-stage/two-side-aisle plan agrees. Source/native south exit is supported by event/permission facts and runtime, not visible in this crop.",
+    "deliberate_art_deviations": [
+      "Original flat GBA stage/rope/lantern/cushion drawings replace DS perspective architecture; source colors,13 anchors and public geometry retained"
+    ],
+    "current_implementation": "BUILD10/11 replaces the earlier red benches/wooden audience with13 original purple cushions and light-green checkerfloor; brown stage retained. Earlier red/wood substitutions are historical, not current adaptations."
+  }
+]

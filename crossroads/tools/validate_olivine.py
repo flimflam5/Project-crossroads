@@ -14,6 +14,16 @@ parser = argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--built', action='store_true', help='also verify mapjson target inclusion after make')
 args = parser.parse_args()
 
+# The HGSS64x64 reconstruction retains all stable IDs, accepted Black Ledger
+# interiors and gameplay scripts, but deliberately replaces the temporary48x48
+# blockout/piers. Its independent validator pins canonical door coordinates,
+# exact paired returns, pedestrian service access, append-only IDs and the new
+# Center landing. Keep this historical path for pre-reconstruction checkouts.
+if (ROOT / 'crossroads/hgss/authoring/OlivineCity.json').exists():
+    from validate_hgss_olivine import validate
+    validate(args.built)
+    raise SystemExit(0)
+
 
 def read(path):
     return json.loads((ROOT / path).read_text())

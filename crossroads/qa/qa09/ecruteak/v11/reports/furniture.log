@@ -1,0 +1,55 @@
+Normal old battery-save Continue: EcruteakCity_BellTower_9F (7, 3) PASS
+Actual survey desk enables RAM-only water access without changing saved flags: PASS
+Actual controller visits/return, healing and retained starter/party: PASS 0 target maps 18 transitions
+Theater actual green checker/13purple cushions: exact82raw/95pixel-cell migration;171othercells+all266physics/actors/events/IDs/stage/common resources preserved: PASS
+Theater stage exact69-cell art migration plus95 explicitly contracted audience pixels;all266physics and remaining102cells preserved;shared Temple unchanged: PASS
+Compiled native stage6144/6144 pixels, gold crest/red lanterns: PASS
+Theater actual green checker/13purple cushions: exact82raw/95pixel-cell migration;171othercells+all266physics/actors/events/IDs/stage/common resources preserved: PASS
+Compiled checker+all13 cushions3584/3584 native pixels: PASS
+theater-front-aisle PASS
+theater-front-aisle-east PASS
+bench-4-10-south PASS
+bench-4-12-south PASS
+bench-4-14-south PASS
+bench-6-12-south PASS
+bench-6-14-south PASS
+bench-8-12-south PASS
+bench-8-14-south PASS
+bench-10-10-south PASS
+bench-10-12-south PASS
+bench-10-14-south PASS
+bench-12-10-south PASS
+bench-12-12-south PASS
+bench-12-14-south PASS
+EcruteakCity_Residence-furniture-2 PASS
+EcruteakCity_Residence-furniture-3 PASS
+EcruteakCity_Residence-furniture-8 PASS
+EcruteakCity_Residence-furniture-9 PASS
+EcruteakCity_DowsingHouse-furniture-2 PASS
+EcruteakCity_DowsingHouse-furniture-3 PASS
+EcruteakCity_DowsingHouse-furniture-8 PASS
+EcruteakCity_DowsingHouse-furniture-9 PASS
+center-plant-15-4 PASS
+center-plant-14-15-west PASS
+center-plant-15-14-north PASS
+basement-lower-stool-5 PASS
+basement-lower-stool-6 PASS
+basement-lower-stool-7 PASS
+basement-lower-stool-9 PASS
+basement-lower-stool-10 PASS
+basement-lower-stool-11 PASS
+basement-plant-west PASS
+basement-plant-east PASS
+basement-stool-2-7 PASS
+basement-stool-3-7 PASS
+basement-stool-4-8 PASS
+basement-stool-4-9 PASS
+basement-table-west-upper PASS
+basement-table-west-lower PASS
+basement-table-south-left PASS
+basement-table-south-right PASS
+basement-terminal PASS
+Compiled native green floor emblem5120/5120 pixels: PASS
+B1F14-row source floor/complete furnishings; exact37old+34new cells;1F24visual+3pixel-identical counter cells;333othercells pixel-exact; exactly6counter behaviors fixed; shared Center unchanged: PASS
+Normal controller walk across all20 emblem cells; native Joe frames/video captured for visual inspection: PASS
+Source benches/aisle/houses/Center plants/restored basement furniture: 43 controller cases PASS;20-cell emblem walk recorded

@@ -1,0 +1,2265 @@
+{
+  "purpose": "Final frozen Build11 controller regression evidence, with separate superseded V10 partial tour, V9/V7 historical results and V6/V8 failure baselines. Owner Delta/visual acceptance remains separate.",
+  "v7_rom_sha256": "0734501b031d05156a28e685dc1c2748153cb065222bd67b0d2e7cea47fefbca",
+  "baseline_v6_rom_sha256": "b9701dcc60a0bcf62cac6bfa177c433eae78dbfa8142b7739881ba839bc266bd",
+  "files": [
+    {
+      "path": "v7-services/results.json",
+      "source": "build/qa09-olivine-services-v7/results.json",
+      "size": 6981,
+      "sha256": "8a224181869052784a8459e53ff7eb26bdabecb68fd4c9efbce5daed63977548"
+    },
+    {
+      "path": "v7-services/nurse-healed.png",
+      "source": "build/qa09-olivine-services-v7/nurse-healed.png",
+      "size": 5673,
+      "sha256": "9d66e3748b15a9bac55c2fc2b6afcc467ea4dc00123e5e689b02c7ba2f6122e7"
+    },
+    {
+      "path": "v7-services/center-pc-menu.png",
+      "source": "build/qa09-olivine-services-v7/center-pc-menu.png",
+      "size": 5272,
+      "sha256": "08a6b8e56dcf06c561eb065daf5a7004500c44077163810b8ccb976ee715a91d"
+    },
+    {
+      "path": "v7-services/mart-purchase.png",
+      "source": "build/qa09-olivine-services-v7/mart-purchase.png",
+      "size": 5818,
+      "sha256": "0980df0b18898d80ec9f6960e177b6f979a72d8090f41e1d2e7217259868c6bf"
+    },
+    {
+      "path": "v7-services/home-rest-declined.png",
+      "source": "build/qa09-olivine-services-v7/home-rest-declined.png",
+      "size": 2995,
+      "sha256": "4a6eb006d280f31127272069589ec255717b27f2faced304198526508dc06a43"
+    },
+    {
+      "path": "v7-services/home-rest-accepted.png",
+      "source": "build/qa09-olivine-services-v7/home-rest-accepted.png",
+      "size": 2966,
+      "sha256": "f7454034ce8f4421b853272197abd9edefa1cd0849169048a8d13355c1d5f4db"
+    },
+    {
+      "path": "v7-services/cafe-host-across-counter.png",
+      "source": "build/qa09-olivine-services-v7/cafe-host-across-counter.png",
+      "size": 4894,
+      "sha256": "70f897d9e95727e3e8b0dd58c868f13dc8027371d8801179f1dcd600a8fdbc4e"
+    },
+    {
+      "path": "v7-services/OlivineCity_FishingHouse-resident-1.png",
+      "source": "build/qa09-olivine-services-v7/OlivineCity_FishingHouse-resident-1.png",
+      "size": 5213,
+      "sha256": "818293e42510745701790ce0f3bc6bd70580cfbab9c954675580cf127cc819cb"
+    },
+    {
+      "path": "v7-services/OlivineCity_TradeHouse-resident-1.png",
+      "source": "build/qa09-olivine-services-v7/OlivineCity_TradeHouse-resident-1.png",
+      "size": 5209,
+      "sha256": "86f2bffc62b33fa3e3d3862a1b3d41279360b55dc6f09b5f449dfd9c3be47bd5"
+    },
+    {
+      "path": "v7-services/OlivineCity_SealHouse-resident-1.png",
+      "source": "build/qa09-olivine-services-v7/OlivineCity_SealHouse-resident-1.png",
+      "size": 5901,
+      "sha256": "a1ef91dd772d906e7bcbfc03ead4566af5afeb7bd1165cd1b0a184f04c69766f"
+    },
+    {
+      "path": "v7-services/Hgss_OlivineSign_Cafe.png",
+      "source": "build/qa09-olivine-services-v7/Hgss_OlivineSign_Cafe.png",
+      "size": 6167,
+      "sha256": "eaf70c781e155b42cc3492113539b26d458dbb4c43337cf64b866917177e5f81"
+    },
+    {
+      "path": "v7-services/Hgss_OlivineSign_FishingHouse.png",
+      "source": "build/qa09-olivine-services-v7/Hgss_OlivineSign_FishingHouse.png",
+      "size": 7818,
+      "sha256": "43e12f96751ed577a56562dd2e9cb7de61b7c0c0e8d857fb3b048c2ce2631d1c"
+    },
+    {
+      "path": "v7-services/Hgss_OlivineSign_Port.png",
+      "source": "build/qa09-olivine-services-v7/Hgss_OlivineSign_Port.png",
+      "size": 7083,
+      "sha256": "e16b2aebf6dd2589d6c9ca089373412e05de70f08e9b1008200c6119b9a6e3e3"
+    },
+    {
+      "path": "v7-services/Hgss_OlivineSign_SealHouse.png",
+      "source": "build/qa09-olivine-services-v7/Hgss_OlivineSign_SealHouse.png",
+      "size": 8359,
+      "sha256": "011ac4438cc84b5fddaa50316d993493ba47741fc1955bf7b473229828aeca94"
+    },
+    {
+      "path": "v7-services/Hgss_OlivineSign_TradeHouse.png",
+      "source": "build/qa09-olivine-services-v7/Hgss_OlivineSign_TradeHouse.png",
+      "size": 6000,
+      "sha256": "37daaed44331121a5c3267891e2c967a1f694b192d10999cadc9e313a4d287c7"
+    },
+    {
+      "path": "v7-services/Olivine_Terminal.png",
+      "source": "build/qa09-olivine-services-v7/Olivine_Terminal.png",
+      "size": 3948,
+      "sha256": "a096c0bb539d013e841813659e8282d026ca8086b220d2620d8d1af0cda7ee26"
+    },
+    {
+      "path": "v7-services/Olivine_HarborLedger.png",
+      "source": "build/qa09-olivine-services-v7/Olivine_HarborLedger.png",
+      "size": 4842,
+      "sha256": "05de7feeac4e58ec014da23598ae400f1a111ed5f007853323246e633d9ecede"
+    },
+    {
+      "path": "v7-services/jasmine-practice-battle.png",
+      "source": "build/qa09-olivine-services-v7/jasmine-practice-battle.png",
+      "size": 8519,
+      "sha256": "47e76164e2b040a73038aba28943cfee35d7fa0912dd76b5cc6331d95761f77a"
+    },
+    {
+      "path": "v7-services/jasmine-loss-local-whiteout.png",
+      "source": "build/qa09-olivine-services-v7/jasmine-loss-local-whiteout.png",
+      "size": 5536,
+      "sha256": "5688e9d4816f2c727bba62a0244b522b1fb0317ce9f953b627af932b3283b5b8"
+    },
+    {
+      "path": "v7-saves/results.json",
+      "source": "build/qa09-olivine-saves-v7/results.json",
+      "size": 11320,
+      "sha256": "66a49984cf0c807c55bfa31542b70da483037bd785e89ba31424d7132c73f59c"
+    },
+    {
+      "path": "v7-saves/completed-prefix.json",
+      "source": "build/qa09-olivine-saves-v7/completed-prefix.json",
+      "size": 6922,
+      "sha256": "e146ba0c60467785ebc46b1451bf6d0ec12db530c0430f4a5c9b2db4e9dfab83"
+    },
+    {
+      "path": "v7-saves/center-normal-save.png",
+      "source": "build/qa09-olivine-saves-v7/center-normal-save.png",
+      "size": 5673,
+      "sha256": "9d66e3748b15a9bac55c2fc2b6afcc467ea4dc00123e5e689b02c7ba2f6122e7"
+    },
+    {
+      "path": "v7-saves/joe-home-normal-save.png",
+      "source": "build/qa09-olivine-saves-v7/joe-home-normal-save.png",
+      "size": 3194,
+      "sha256": "ece55e420f271b9027d99d845ed63aaee5daa8ce5151b8972c2c6db33b4186da"
+    },
+    {
+      "path": "v7-saves/surf-normal-save.png",
+      "source": "build/qa09-olivine-saves-v7/surf-normal-save.png",
+      "size": 9807,
+      "sha256": "c4fffe6e8906a2fc40b01728d6bc3d4da358d22f6f371a8664e9d538214c8bd4"
+    },
+    {
+      "path": "v7-saves/old-olivine-heal-fixture.png",
+      "source": "build/qa09-olivine-saves-v7/old-olivine-heal-fixture.png",
+      "size": 6446,
+      "sha256": "705e034b3c42e4ef556b3e72351c1860311fa6d6fdc0e4bc5365a999bc26bc0a"
+    },
+    {
+      "path": "v7-saves/old-walking-wall-fixture.png",
+      "source": "build/qa09-olivine-saves-v7/old-walking-wall-fixture.png",
+      "size": 6446,
+      "sha256": "705e034b3c42e4ef556b3e72351c1860311fa6d6fdc0e4bc5365a999bc26bc0a"
+    },
+    {
+      "path": "v7-saves/old-office-ceiling-cap-fixture.png",
+      "source": "build/qa09-olivine-saves-v7/old-office-ceiling-cap-fixture.png",
+      "size": 4577,
+      "sha256": "744064ba1d23f0047dda6970cd080c4407242399be65bafc5bf09a0697c933ec"
+    },
+    {
+      "path": "v7-saves/synthetic-walking-water-safety-fixture.png",
+      "source": "build/qa09-olivine-saves-v7/synthetic-walking-water-safety-fixture.png",
+      "size": 8443,
+      "sha256": "32768a48e941c1a80ee0b6c1d65c98a36759922b8144937fc6a2d22bcb6d4286"
+    },
+    {
+      "path": "v7-saves/OlivineCity_Lighthouse_3F-normal-save.png",
+      "source": "build/qa09-olivine-saves-v7/OlivineCity_Lighthouse_3F-normal-save.png",
+      "size": 3738,
+      "sha256": "5805f88344ff92ef7a37f802d6bf6b3b66a142b51ab23073c4ef7248fb1e3de3"
+    },
+    {
+      "path": "v7-saves/OlivineCity_Lighthouse_Balcony-normal-save.png",
+      "source": "build/qa09-olivine-saves-v7/OlivineCity_Lighthouse_Balcony-normal-save.png",
+      "size": 3923,
+      "sha256": "90f5ecf813ab0c15193fd2ba997ff4ed5f2af56e60a427004416159395f641d0"
+    },
+    {
+      "path": "v7-saves/OlivineCity_PortQuay-normal-save.png",
+      "source": "build/qa09-olivine-saves-v7/OlivineCity_PortQuay-normal-save.png",
+      "size": 8217,
+      "sha256": "0c61b4c9c1358a208b7cd190572a0c1d6d33bd565b2f29749b3b3a110b08fb13"
+    },
+    {
+      "path": "v7-saves/elevator-selected-1F-normal-save.png",
+      "source": "build/qa09-olivine-saves-v7/elevator-selected-1F-normal-save.png",
+      "size": 3418,
+      "sha256": "6a5924ee985fbb0605c215af2ae6be6555eb4061f29b7f3957d8c15c36023151"
+    },
+    {
+      "path": "v7-saves/elevator-selected-6F-normal-save.png",
+      "source": "build/qa09-olivine-saves-v7/elevator-selected-6F-normal-save.png",
+      "size": 3380,
+      "sha256": "cbe55dcd6e9c34023205ecef99095b08ec4a1295d8d5d603a2f762b38e707f78"
+    },
+    {
+      "path": "v7-collision/results.json",
+      "source": "build/qa09-olivine-collision-v7/results.json",
+      "size": 45192,
+      "sha256": "67ac6398ac1b7d12a8d5a8195293cb8013798c8faf62100d157468cca075ac65"
+    },
+    {
+      "path": "v7-collision/fishing-house-wall-bump.mp4",
+      "source": "build/qa09-olivine-collision-v7/fishing-house-wall-bump.mp4",
+      "size": 14971,
+      "sha256": "1cad1df818c7907cd2b992884cad7e22637fd91b16ea65ac0d80123ac52ecd0c"
+    },
+    {
+      "path": "v7-collision/fishing-house-wall-bump.png",
+      "source": "build/qa09-olivine-collision-v7/fishing-house-wall-bump.png",
+      "size": 8952,
+      "sha256": "14c5e09f2da041e49aad1e7c96e8eb9677363ae19afcbf082a6940d192069f20"
+    },
+    {
+      "path": "v7-collision/silph-office-wall-bump.mp4",
+      "source": "build/qa09-olivine-collision-v7/silph-office-wall-bump.mp4",
+      "size": 10942,
+      "sha256": "12dcdc1eddbd7246b9430d0a398888b5a6b35b8a3d18ddd774f5f2f0629a6b99"
+    },
+    {
+      "path": "v7-collision/silph-office-wall-bump.png",
+      "source": "build/qa09-olivine-collision-v7/silph-office-wall-bump.png",
+      "size": 5726,
+      "sha256": "f34405c287cfb03f720bc7b0120f0aec694938ab635c263de940a27810ed1f45"
+    },
+    {
+      "path": "v7-collision/residence-tree-wall-bump.mp4",
+      "source": "build/qa09-olivine-collision-v7/residence-tree-wall-bump.mp4",
+      "size": 16381,
+      "sha256": "d9db1d8d487d4bf84e6ce0a33e5e66a849d8aae69e7aa55598fe4ab2d5568335"
+    },
+    {
+      "path": "v7-collision/residence-tree-wall-bump.png",
+      "source": "build/qa09-olivine-collision-v7/residence-tree-wall-bump.png",
+      "size": 8950,
+      "sha256": "6bc0979bce598418df8b29f63ce19fea359ac5bb5f8783afcd0bf33a0351ccbc"
+    },
+    {
+      "path": "v7-collision/residence-tree-under-canopy.png",
+      "source": "build/qa09-olivine-collision-v7/residence-tree-under-canopy.png",
+      "size": 9976,
+      "sha256": "c4b1f67725020373dc3602269045a26c59a605f436d6d7c1f77c0a02d22df479"
+    },
+    {
+      "path": "v7-collision/south-tree-under-canopy.png",
+      "source": "build/qa09-olivine-collision-v7/south-tree-under-canopy.png",
+      "size": 8299,
+      "sha256": "0c8bd1a1757d76d24ab994f51aac4553abc17e381d8e13e8d91015aea1678940"
+    },
+    {
+      "path": "v7-collision/east-tree-under-canopy.png",
+      "source": "build/qa09-olivine-collision-v7/east-tree-under-canopy.png",
+      "size": 7937,
+      "sha256": "3700da770e16d84471c70d27f71c3482d1d7fe1a265084b61f5de4f60364a99a"
+    },
+    {
+      "path": "baseline-v6-port-clipping/results.json",
+      "source": "build/qa09-port-v6-baseline/results.json",
+      "size": 2057,
+      "sha256": "ac968b36cc925e196bcc700776896c013aeb4250b686aad463953cb51c5b1aae"
+    },
+    {
+      "path": "baseline-v6-port-clipping/north-roof-and-glass-walk.mp4",
+      "source": "build/qa09-port-v6-baseline/north-roof-and-glass-walk.mp4",
+      "size": 50000,
+      "sha256": "8887f8aa2cab84c4deea2a0dcfe5ec33399a3a7affff41ca89fa4c0d2fbe197f"
+    },
+    {
+      "path": "baseline-v8-center-counters/PokemonCenter_1F-11.png",
+      "source": "build/qa09-center-counter-before-v8/PokemonCenter_1F-11.png",
+      "size": 3233,
+      "sha256": "4db8bba9dade964d09bb72bff5182df0a9aa5f173852a8f41df7c7058778b5f8"
+    },
+    {
+      "path": "baseline-v8-center-counters/PokemonCenter_1F-2.png",
+      "source": "build/qa09-center-counter-before-v8/PokemonCenter_1F-2.png",
+      "size": 2779,
+      "sha256": "452a2ae694baa2fd58f07793d2c02bcb85366565bd53b49b41fbf6493f0e4094"
+    },
+    {
+      "path": "baseline-v8-center-counters/PokemonCenter_1F-6.png",
+      "source": "build/qa09-center-counter-before-v8/PokemonCenter_1F-6.png",
+      "size": 2845,
+      "sha256": "25b1ac444238e58aa5b2018d07751e46acdf794c21da05b0dfe19b8df8fd1b4c"
+    },
+    {
+      "path": "baseline-v8-center-counters/PokemonCenter_B1F-12.png",
+      "source": "build/qa09-center-counter-before-v8/PokemonCenter_B1F-12.png",
+      "size": 3098,
+      "sha256": "fb8c7aeede7dc99bc7b7cde446cb209adc32eab030f22bc97298f4316742a95c"
+    },
+    {
+      "path": "baseline-v8-center-counters/PokemonCenter_B1F-4.png",
+      "source": "build/qa09-center-counter-before-v8/PokemonCenter_B1F-4.png",
+      "size": 3398,
+      "sha256": "30047c7aa0ea87c266b72c517e9d05f8b5d3644da06296c3d312823410209403"
+    },
+    {
+      "path": "baseline-v8-center-counters/PokemonCenter_B1F-8.png",
+      "source": "build/qa09-center-counter-before-v8/PokemonCenter_B1F-8.png",
+      "size": 3643,
+      "sha256": "d755b9b890b0a11ebd460792cab5e6301e2a945bb06b157b5ddca4fb33f995e8"
+    },
+    {
+      "path": "baseline-v8-center-counters/PokemonCenter_B1F-4.mp4",
+      "source": "build/qa09-center-counter-before-v8/PokemonCenter_B1F-4.mp4",
+      "size": 10982,
+      "sha256": "e28fe04b68220721e1887cfa4788e792e7b77697584d7014d61de942af2819db"
+    },
+    {
+      "path": "baseline-v8-center-counters/results.json",
+      "source": "build/qa09-center-counter-before-v8/results.json",
+      "size": 2302,
+      "sha256": "83f22e4821eb9b4a3eddc70689acc7352637ba7a6bd806368e2844642eb9caab"
+    },
+    {
+      "path": "final-v9-counters/PokemonCenter_1F-11.png",
+      "source": "build/qa09-center-counter-after-v9/PokemonCenter_1F-11.png",
+      "size": 3697,
+      "sha256": "ca523f2b7124a22edf5d33550bce81564933596db7e892d486de409239ea1800"
+    },
+    {
+      "path": "final-v9-counters/PokemonCenter_1F-2.png",
+      "source": "build/qa09-center-counter-after-v9/PokemonCenter_1F-2.png",
+      "size": 3186,
+      "sha256": "9b5c4c30fd7ab7d41c0d33db12d2f25f097bc746c550b5439b5bacbf58079d06"
+    },
+    {
+      "path": "final-v9-counters/PokemonCenter_1F-6.png",
+      "source": "build/qa09-center-counter-after-v9/PokemonCenter_1F-6.png",
+      "size": 3242,
+      "sha256": "6ffed3a3a1e165344f692b64fb09d987df07c1c597b17f37b58a5013037d9524"
+    },
+    {
+      "path": "final-v9-counters/PokemonCenter_B1F-12.png",
+      "source": "build/qa09-center-counter-after-v9/PokemonCenter_B1F-12.png",
+      "size": 3560,
+      "sha256": "404118ef130cc249ec57849ab279f7b3c0c8bc3e9ed19ff5b908129a718d8c98"
+    },
+    {
+      "path": "final-v9-counters/PokemonCenter_B1F-4.png",
+      "source": "build/qa09-center-counter-after-v9/PokemonCenter_B1F-4.png",
+      "size": 3710,
+      "sha256": "e4c85e86a2b78a866a461aa928f326cf49f9cabdadf45b56462e80cee21eb2cb"
+    },
+    {
+      "path": "final-v9-counters/PokemonCenter_B1F-8.png",
+      "source": "build/qa09-center-counter-after-v9/PokemonCenter_B1F-8.png",
+      "size": 3913,
+      "sha256": "6fd58e2a0e71128495511ffd2fcb4527d9929b1bb12afb154e90c00cf4bb7473"
+    },
+    {
+      "path": "final-v9-counters/PokemonCenter_B1F-4.mp4",
+      "source": "build/qa09-center-counter-after-v9/PokemonCenter_B1F-4.mp4",
+      "size": 12846,
+      "sha256": "0a5f060f24a932c8f41a428e203b96638b1d3a0fd84cf868b5d5b7a6ca54ad82"
+    },
+    {
+      "path": "final-v9-counters/results.json",
+      "source": "build/qa09-center-counter-after-v9/results.json",
+      "size": 2309,
+      "sha256": "043f75600640af374dc42ac177104a51a56b5743b52545d923847bff621f0487"
+    },
+    {
+      "path": "final-v9-mart-props/results.json",
+      "source": "build/qa09-mart-props-v9/results.json",
+      "size": 9735,
+      "sha256": "2b45f2688b18f20ab62910218c853947c6aa5ecd3e857eb2c37871dceca3b17d"
+    },
+    {
+      "path": "final-v9-mart-props/EcruteakCity_Mart-furnished.png",
+      "source": "build/qa09-mart-props-v9/EcruteakCity_Mart-furnished.png",
+      "size": 3430,
+      "sha256": "ca90e7012ab5450072a62c796fb3dec6654d5792b9be0580cdc8f4417d6b6d79"
+    },
+    {
+      "path": "final-v9-mart-props/EcruteakCity_Mart-northeast-plant.png",
+      "source": "build/qa09-mart-props-v9/EcruteakCity_Mart-northeast-plant.png",
+      "size": 4228,
+      "sha256": "07baaab863357ae43960dbbf1c95bc69df08fffc0bf15da932b212c5dbc796c2"
+    },
+    {
+      "path": "final-v9-mart-props/EcruteakCity_Mart-northeast-plant.mp4",
+      "source": "build/qa09-mart-props-v9/EcruteakCity_Mart-northeast-plant.mp4",
+      "size": 10223,
+      "sha256": "1c91e8cfe231fe93150b88c9f34221605d49c070b556b04086c4f5afd20e94f6"
+    },
+    {
+      "path": "final-v9-mart-props/EcruteakCity_Mart-stool-northwest.png",
+      "source": "build/qa09-mart-props-v9/EcruteakCity_Mart-stool-northwest.png",
+      "size": 5039,
+      "sha256": "021f685e9308a43b28614a9514fa756da67f7e93226368938fa16e904ed0557f"
+    },
+    {
+      "path": "final-v9-mart-props/EcruteakCity_Mart-stool-northwest.mp4",
+      "source": "build/qa09-mart-props-v9/EcruteakCity_Mart-stool-northwest.mp4",
+      "size": 13597,
+      "sha256": "0367cda6bc5430bb3346163a804cb3eecbb87d32de66aec7040e88c340dce285"
+    },
+    {
+      "path": "final-v9-mart-props/OlivineCity_Mart-furnished.png",
+      "source": "build/qa09-mart-props-v9/OlivineCity_Mart-furnished.png",
+      "size": 3430,
+      "sha256": "ca90e7012ab5450072a62c796fb3dec6654d5792b9be0580cdc8f4417d6b6d79"
+    },
+    {
+      "path": "final-v9-mart-props/OlivineCity_Mart-northeast-plant.png",
+      "source": "build/qa09-mart-props-v9/OlivineCity_Mart-northeast-plant.png",
+      "size": 4228,
+      "sha256": "07baaab863357ae43960dbbf1c95bc69df08fffc0bf15da932b212c5dbc796c2"
+    },
+    {
+      "path": "final-v9-mart-props/OlivineCity_Mart-northeast-plant.mp4",
+      "source": "build/qa09-mart-props-v9/OlivineCity_Mart-northeast-plant.mp4",
+      "size": 10223,
+      "sha256": "1c91e8cfe231fe93150b88c9f34221605d49c070b556b04086c4f5afd20e94f6"
+    },
+    {
+      "path": "final-v9-mart-props/OlivineCity_Mart-stool-northwest.png",
+      "source": "build/qa09-mart-props-v9/OlivineCity_Mart-stool-northwest.png",
+      "size": 5039,
+      "sha256": "021f685e9308a43b28614a9514fa756da67f7e93226368938fa16e904ed0557f"
+    },
+    {
+      "path": "final-v9-mart-props/OlivineCity_Mart-stool-northwest.mp4",
+      "source": "build/qa09-mart-props-v9/OlivineCity_Mart-stool-northwest.mp4",
+      "size": 13597,
+      "sha256": "0367cda6bc5430bb3346163a804cb3eecbb87d32de66aec7040e88c340dce285"
+    },
+    {
+      "path": "final-v9-collision/results.json",
+      "source": "build/qa09-olivine-collision-v9/results.json",
+      "size": 45192,
+      "sha256": "be5bd0c5d112d4dbb7c6c77099b7554481ecc5b642397483e9e0c9e7a9ef6dae"
+    },
+    {
+      "path": "final-v9-collision/residence-tree-under-canopy.png",
+      "source": "build/qa09-olivine-collision-v9/residence-tree-under-canopy.png",
+      "size": 9713,
+      "sha256": "79cb92119c111fd786f0d683c3fe3f97beb9f706c996e11a1166d2ff6069a7ff"
+    },
+    {
+      "path": "final-v9-collision/south-tree-under-canopy.png",
+      "source": "build/qa09-olivine-collision-v9/south-tree-under-canopy.png",
+      "size": 8217,
+      "sha256": "9bee5b12941f019fcc0893dde732c2703a66a38386c3a2f95028e020e5ede8ad"
+    },
+    {
+      "path": "final-v9-collision/east-tree-under-canopy.png",
+      "source": "build/qa09-olivine-collision-v9/east-tree-under-canopy.png",
+      "size": 8065,
+      "sha256": "c027ef5fc61a7306edcc862d7790bcf2c692dfdd6e2c95124c0e35be4ea39366"
+    },
+    {
+      "path": "final-v9-collision/fishing-house-wall-bump.png",
+      "source": "build/qa09-olivine-collision-v9/fishing-house-wall-bump.png",
+      "size": 8674,
+      "sha256": "faf8bb73d7034f289126e3d022d62afeeb1356e2770c6d083d97b594d3fd9e4b"
+    },
+    {
+      "path": "final-v9-collision/fishing-house-wall-bump.mp4",
+      "source": "build/qa09-olivine-collision-v9/fishing-house-wall-bump.mp4",
+      "size": 15450,
+      "sha256": "4ce2ad19cacadc25fbf0043f06895596292eb9663895608c5afc0c54e5acb8dd"
+    },
+    {
+      "path": "final-v9-collision/silph-office-wall-bump.png",
+      "source": "build/qa09-olivine-collision-v9/silph-office-wall-bump.png",
+      "size": 5920,
+      "sha256": "02693de47c96d0b05ba8683a7218ef17689aa3d9a13650e657ce78b11519a306"
+    },
+    {
+      "path": "final-v9-collision/silph-office-wall-bump.mp4",
+      "source": "build/qa09-olivine-collision-v9/silph-office-wall-bump.mp4",
+      "size": 11921,
+      "sha256": "1584ac6b1c9f62532318899b5c97380a358b37da0b55621ef0dc7e1bc8f0f983"
+    },
+    {
+      "path": "final-v9-collision/residence-tree-wall-bump.png",
+      "source": "build/qa09-olivine-collision-v9/residence-tree-wall-bump.png",
+      "size": 8878,
+      "sha256": "a6fb4e1a91e0edf714d44c53a82fdd23832e7461fa9dbaf16e8afa4d7576d89e"
+    },
+    {
+      "path": "final-v9-collision/residence-tree-wall-bump.mp4",
+      "source": "build/qa09-olivine-collision-v9/residence-tree-wall-bump.mp4",
+      "size": 16908,
+      "sha256": "239b7d72ac4606a3fbf66dcc80f1f12276d5cc6ba112659f783de0c832c1e2a1"
+    },
+    {
+      "path": "final-v9-saves/OlivineCity_Cafe-normal-save.png",
+      "source": "build/qa09-olivine-saves-v9/OlivineCity_Cafe-normal-save.png",
+      "size": 4451,
+      "sha256": "e5c5ba96b3154418c5b8aec0169387624b85babc1bcefb0bc76d9c499ced744e"
+    },
+    {
+      "path": "final-v9-saves/OlivineCity_FishingHouse-normal-save.png",
+      "source": "build/qa09-olivine-saves-v9/OlivineCity_FishingHouse-normal-save.png",
+      "size": 4710,
+      "sha256": "7cd9a997aafb6db6054b6670ce5f718fbdd1e493988c0dd10bc4039f2ea35a70"
+    },
+    {
+      "path": "final-v9-saves/OlivineCity_Lighthouse_3F-normal-save.png",
+      "source": "build/qa09-olivine-saves-v9/OlivineCity_Lighthouse_3F-normal-save.png",
+      "size": 4151,
+      "sha256": "cac277fc17d078fb558f2f240fa0379b4e3e83eddb84f65c0986d88872bffaef"
+    },
+    {
+      "path": "final-v9-saves/OlivineCity_Lighthouse_6F-normal-save.png",
+      "source": "build/qa09-olivine-saves-v9/OlivineCity_Lighthouse_6F-normal-save.png",
+      "size": 4976,
+      "sha256": "5611517e767ea5134f5e0ca07ea160a0465e08caac898e364dbc49b93ed92193"
+    },
+    {
+      "path": "final-v9-saves/OlivineCity_Lighthouse_Balcony-normal-save.png",
+      "source": "build/qa09-olivine-saves-v9/OlivineCity_Lighthouse_Balcony-normal-save.png",
+      "size": 3852,
+      "sha256": "a8a4277664264daf56f6c3c93d862ef597d9ee3750e1578579ce60492f217b9c"
+    },
+    {
+      "path": "final-v9-saves/OlivineCity_Lighthouse_Elevator-normal-save.png",
+      "source": "build/qa09-olivine-saves-v9/OlivineCity_Lighthouse_Elevator-normal-save.png",
+      "size": 3457,
+      "sha256": "25315b619cb03213b1f5ec685b08853e967e9493fb59433494a4676b05f6db9e"
+    },
+    {
+      "path": "final-v9-saves/OlivineCity_PokemonCenter_B1F-normal-save.png",
+      "source": "build/qa09-olivine-saves-v9/OlivineCity_PokemonCenter_B1F-normal-save.png",
+      "size": 2678,
+      "sha256": "fd647aa18bd74b14ef4c56fff3ef1f0f1bd981a4f14d792e7a2fba06e4125a36"
+    },
+    {
+      "path": "final-v9-saves/OlivineCity_PortQuay-normal-save.png",
+      "source": "build/qa09-olivine-saves-v9/OlivineCity_PortQuay-normal-save.png",
+      "size": 8217,
+      "sha256": "076feacb8387f059cdfdcf6be673406871addc1b01bdcaa3581839c67d8ea7c6"
+    },
+    {
+      "path": "final-v9-saves/OlivineCity_PortTerminal-normal-save.png",
+      "source": "build/qa09-olivine-saves-v9/OlivineCity_PortTerminal-normal-save.png",
+      "size": 7068,
+      "sha256": "2f8d55b0b06296af67212e42385da75c20f38f05b39838ebdb2a7d43ecfb02fa"
+    },
+    {
+      "path": "final-v9-saves/OlivineCity_SealHouse-normal-save.png",
+      "source": "build/qa09-olivine-saves-v9/OlivineCity_SealHouse-normal-save.png",
+      "size": 5368,
+      "sha256": "680c64c9ed51f1fda46957d12c98fefd1e58487a88fd8d75bb62fbf246d9a0a8"
+    },
+    {
+      "path": "final-v9-saves/OlivineCity_TradeHouse-normal-save.png",
+      "source": "build/qa09-olivine-saves-v9/OlivineCity_TradeHouse-normal-save.png",
+      "size": 4710,
+      "sha256": "7cd9a997aafb6db6054b6670ce5f718fbdd1e493988c0dd10bc4039f2ea35a70"
+    },
+    {
+      "path": "final-v9-saves/center-normal-save.png",
+      "source": "build/qa09-olivine-saves-v9/center-normal-save.png",
+      "size": 6601,
+      "sha256": "69ceda8501183252b8a857a1a6cda161ca303734f00a1d9538d14727612e7c00"
+    },
+    {
+      "path": "final-v9-saves/elevator-selected-1F-normal-save.png",
+      "source": "build/qa09-olivine-saves-v9/elevator-selected-1F-normal-save.png",
+      "size": 3418,
+      "sha256": "6a5924ee985fbb0605c215af2ae6be6555eb4061f29b7f3957d8c15c36023151"
+    },
+    {
+      "path": "final-v9-saves/elevator-selected-6F-normal-save.png",
+      "source": "build/qa09-olivine-saves-v9/elevator-selected-6F-normal-save.png",
+      "size": 3380,
+      "sha256": "cbe55dcd6e9c34023205ecef99095b08ec4a1295d8d5d603a2f762b38e707f78"
+    },
+    {
+      "path": "final-v9-saves/joe-home-normal-save.png",
+      "source": "build/qa09-olivine-saves-v9/joe-home-normal-save.png",
+      "size": 3194,
+      "sha256": "ece55e420f271b9027d99d845ed63aaee5daa8ce5151b8972c2c6db33b4186da"
+    },
+    {
+      "path": "final-v9-saves/old-cached-layout-fixture.png",
+      "source": "build/qa09-olivine-saves-v9/old-cached-layout-fixture.png",
+      "size": 6601,
+      "sha256": "69ceda8501183252b8a857a1a6cda161ca303734f00a1d9538d14727612e7c00"
+    },
+    {
+      "path": "final-v9-saves/old-office-ceiling-cap-fixture.png",
+      "source": "build/qa09-olivine-saves-v9/old-office-ceiling-cap-fixture.png",
+      "size": 4577,
+      "sha256": "744064ba1d23f0047dda6970cd080c4407242399be65bafc5bf09a0697c933ec"
+    },
+    {
+      "path": "final-v9-saves/old-olivine-heal-fixture.png",
+      "source": "build/qa09-olivine-saves-v9/old-olivine-heal-fixture.png",
+      "size": 6499,
+      "sha256": "15bca390eb19856dd72cd7c942a2ab8b71bd6fe0b144fbd1e6fb115b33be016f"
+    },
+    {
+      "path": "final-v9-saves/old-walking-wall-fixture.png",
+      "source": "build/qa09-olivine-saves-v9/old-walking-wall-fixture.png",
+      "size": 6499,
+      "sha256": "15bca390eb19856dd72cd7c942a2ab8b71bd6fe0b144fbd1e6fb115b33be016f"
+    },
+    {
+      "path": "final-v9-saves/surf-normal-save.png",
+      "source": "build/qa09-olivine-saves-v9/surf-normal-save.png",
+      "size": 9677,
+      "sha256": "e85c2191df5eb2a2edef1e9a946e981070f092222a7bdca3d42ca930b3e70eaf"
+    },
+    {
+      "path": "final-v9-saves/synthetic-walking-water-safety-fixture.png",
+      "source": "build/qa09-olivine-saves-v9/synthetic-walking-water-safety-fixture.png",
+      "size": 8194,
+      "sha256": "4f03b38ad125ca7ad1f477ee2755e1a81b8016940bebe64a8badca106a95601f"
+    },
+    {
+      "path": "final-v9-saves/v7-old-EcruteakCity_Mart-stool-fixture.png",
+      "source": "build/qa09-olivine-saves-v9/v7-old-EcruteakCity_Mart-stool-fixture.png",
+      "size": 5906,
+      "sha256": "943797da42f382eca920e662261cb9be2264ce122303b62b2fb49624dfe0a623"
+    },
+    {
+      "path": "final-v9-saves/v7-old-EcruteakCity_PokemonCenter_B1F-stool-fixture.png",
+      "source": "build/qa09-olivine-saves-v9/v7-old-EcruteakCity_PokemonCenter_B1F-stool-fixture.png",
+      "size": 3660,
+      "sha256": "53b0f8c1a831daf3729f45966cb37055759a8cda22575d46d67866d3083046a9"
+    },
+    {
+      "path": "final-v9-saves/v7-old-OlivineCity_Mart-stool-fixture.png",
+      "source": "build/qa09-olivine-saves-v9/v7-old-OlivineCity_Mart-stool-fixture.png",
+      "size": 5906,
+      "sha256": "943797da42f382eca920e662261cb9be2264ce122303b62b2fb49624dfe0a623"
+    },
+    {
+      "path": "final-v9-saves/v7-old-OlivineCity_PokemonCenter_B1F-stool-fixture.png",
+      "source": "build/qa09-olivine-saves-v9/v7-old-OlivineCity_PokemonCenter_B1F-stool-fixture.png",
+      "size": 3660,
+      "sha256": "53b0f8c1a831daf3729f45966cb37055759a8cda22575d46d67866d3083046a9"
+    },
+    {
+      "path": "final-v9-saves/results.json",
+      "source": "build/qa09-olivine-saves-v9/results.json",
+      "size": 13410,
+      "sha256": "2c1cfcd204577a1c2051c48db9581a263ed62a9edbbb1490fc904283c86ed4d6"
+    },
+    {
+      "path": "final-v9-services/Hgss_OlivineSign_Cafe.png",
+      "source": "build/qa09-olivine-services-v9/Hgss_OlivineSign_Cafe.png",
+      "size": 6194,
+      "sha256": "0aebcfc85a1a7b0e41dcb89cd4b4860e2d6b1fa8e23ad3aab9d103cf894d9674"
+    },
+    {
+      "path": "final-v9-services/Hgss_OlivineSign_FishingHouse.png",
+      "source": "build/qa09-olivine-services-v9/Hgss_OlivineSign_FishingHouse.png",
+      "size": 7693,
+      "sha256": "d17d0311c75832469bf3b3d4f3ae336bcfffbb703f640a729feb09f00addfcce"
+    },
+    {
+      "path": "final-v9-services/Hgss_OlivineSign_Port.png",
+      "source": "build/qa09-olivine-services-v9/Hgss_OlivineSign_Port.png",
+      "size": 6228,
+      "sha256": "30781d0eb23d75f9cadd682a1e951f61cb491b641eb05d5bde8af9e86708c6a0"
+    },
+    {
+      "path": "final-v9-services/Hgss_OlivineSign_SealHouse.png",
+      "source": "build/qa09-olivine-services-v9/Hgss_OlivineSign_SealHouse.png",
+      "size": 8213,
+      "sha256": "bf41b477363a019a55ea452fe5903a9a9fc5bdea142781f0267cfd42b5808f79"
+    },
+    {
+      "path": "final-v9-services/Hgss_OlivineSign_TradeHouse.png",
+      "source": "build/qa09-olivine-services-v9/Hgss_OlivineSign_TradeHouse.png",
+      "size": 6024,
+      "sha256": "9dc6a530da3217f0e3551f930ffd1e7feccf784e286873c4ffc0e1e2d37ff4b2"
+    },
+    {
+      "path": "final-v9-services/OlivineCity_FishingHouse-resident-1.png",
+      "source": "build/qa09-olivine-services-v9/OlivineCity_FishingHouse-resident-1.png",
+      "size": 5242,
+      "sha256": "d70e2a23cfa840f61d28d897d1a4a3c2985fde5a83596b06d55dee1a70f6b2c0"
+    },
+    {
+      "path": "final-v9-services/OlivineCity_HarborOffice-Olivine_HarborClerk.png",
+      "source": "build/qa09-olivine-services-v9/OlivineCity_HarborOffice-Olivine_HarborClerk.png",
+      "size": 4557,
+      "sha256": "3a99aa5dfa89b93ea7834be91031d30d19a5f0a96457a77a0dc3c5ee3a65f66e"
+    },
+    {
+      "path": "final-v9-services/OlivineCity_Lighthouse_1F-ambient-1.png",
+      "source": "build/qa09-olivine-services-v9/OlivineCity_Lighthouse_1F-ambient-1.png",
+      "size": 3988,
+      "sha256": "e94a80955786a62b9291de5bc1dc9148baaa8e125b8d74c35753883da193ae11"
+    },
+    {
+      "path": "final-v9-services/OlivineCity_Lighthouse_1F-wayfinding-1.png",
+      "source": "build/qa09-olivine-services-v9/OlivineCity_Lighthouse_1F-wayfinding-1.png",
+      "size": 4513,
+      "sha256": "5134f91b810894013d314151652bd937fc68ffd51d68f0a427a93e0a4cf1d1c4"
+    },
+    {
+      "path": "final-v9-services/OlivineCity_Lighthouse_2F-wayfinding-1.png",
+      "source": "build/qa09-olivine-services-v9/OlivineCity_Lighthouse_2F-wayfinding-1.png",
+      "size": 3222,
+      "sha256": "2347fd1d16ca61791f2328bc49f88581ae52c8774de0c79a98fb9e7db81b3f9b"
+    },
+    {
+      "path": "final-v9-services/OlivineCity_Lighthouse_3F-ambient-1.png",
+      "source": "build/qa09-olivine-services-v9/OlivineCity_Lighthouse_3F-ambient-1.png",
+      "size": 4351,
+      "sha256": "44e3135f62e32577741fb9a64b65e3b56edfa06372685cf39d49f148b301ded9"
+    },
+    {
+      "path": "final-v9-services/OlivineCity_Lighthouse_3F-wayfinding-1.png",
+      "source": "build/qa09-olivine-services-v9/OlivineCity_Lighthouse_3F-wayfinding-1.png",
+      "size": 4125,
+      "sha256": "716fc1eab3a05402333ea0c1c019c8b41dec81af2725289c458dd67cd3ba1373"
+    },
+    {
+      "path": "final-v9-services/OlivineCity_Lighthouse_4F-wayfinding-1.png",
+      "source": "build/qa09-olivine-services-v9/OlivineCity_Lighthouse_4F-wayfinding-1.png",
+      "size": 3254,
+      "sha256": "67a655bab07d5f2a1797fca77ada81f282eab56d88b451a672cd6898a444295c"
+    },
+    {
+      "path": "final-v9-services/OlivineCity_Lighthouse_5F-wayfinding-1.png",
+      "source": "build/qa09-olivine-services-v9/OlivineCity_Lighthouse_5F-wayfinding-1.png",
+      "size": 3418,
+      "sha256": "0a6f9db1c2f106f12285dc3fa1f007172b47e3c3225e19258c62a3669ce7ac05"
+    },
+    {
+      "path": "final-v9-services/OlivineCity_Lighthouse_6F-ambient-1.png",
+      "source": "build/qa09-olivine-services-v9/OlivineCity_Lighthouse_6F-ambient-1.png",
+      "size": 4744,
+      "sha256": "e45fe89fc3328adf14ba1d7ebcd04c1d6581acfa9f19868d470c07ac12cd4bf4"
+    },
+    {
+      "path": "final-v9-services/OlivineCity_Lighthouse_6F-ambient-2.png",
+      "source": "build/qa09-olivine-services-v9/OlivineCity_Lighthouse_6F-ambient-2.png",
+      "size": 6068,
+      "sha256": "894597f94178e5a9dbf7ebefd70cf863bb0c8d6c6212a8433798b31e04440e98"
+    },
+    {
+      "path": "final-v9-services/OlivineCity_Lighthouse_6F-wayfinding-1.png",
+      "source": "build/qa09-olivine-services-v9/OlivineCity_Lighthouse_6F-wayfinding-1.png",
+      "size": 4595,
+      "sha256": "0b4093a8a1da8a995963483fd036ccafb5f9ec4a8b5b31042446e2a214194842"
+    },
+    {
+      "path": "final-v9-services/OlivineCity_Lighthouse_Balcony-wayfinding-1.png",
+      "source": "build/qa09-olivine-services-v9/OlivineCity_Lighthouse_Balcony-wayfinding-1.png",
+      "size": 4291,
+      "sha256": "bcb13f72d171258ccea3e86c1df70d691f33fed7d14ff456e536597bf2a4a652"
+    },
+    {
+      "path": "final-v9-services/OlivineCity_PokemonCenter_1F-front-desk-11.png",
+      "source": "build/qa09-olivine-services-v9/OlivineCity_PokemonCenter_1F-front-desk-11.png",
+      "size": 3768,
+      "sha256": "8d655193901592bfc1b4345638d44d0175851ac746780187da7dfd9a0e8faaa6"
+    },
+    {
+      "path": "final-v9-services/OlivineCity_PokemonCenter_1F-front-desk-2.png",
+      "source": "build/qa09-olivine-services-v9/OlivineCity_PokemonCenter_1F-front-desk-2.png",
+      "size": 3246,
+      "sha256": "973ec856dd526a77558482c1649a9010d6e69e6bd4480125004f83ed85a314d1"
+    },
+    {
+      "path": "final-v9-services/OlivineCity_PokemonCenter_1F-front-desk-6.png",
+      "source": "build/qa09-olivine-services-v9/OlivineCity_PokemonCenter_1F-front-desk-6.png",
+      "size": 3297,
+      "sha256": "46bfbbfb3e5e52d589a8cc52408eefb9391d1d00754215403de9bd2859d4a07e"
+    },
+    {
+      "path": "final-v9-services/OlivineCity_PokemonCenter_B1F-front-desk-12.png",
+      "source": "build/qa09-olivine-services-v9/OlivineCity_PokemonCenter_B1F-front-desk-12.png",
+      "size": 3616,
+      "sha256": "bbbfde33e7bc4f88ea0963a4e56c80785601feae72090971fad9695532d34ca6"
+    },
+    {
+      "path": "final-v9-services/OlivineCity_PokemonCenter_B1F-front-desk-4.png",
+      "source": "build/qa09-olivine-services-v9/OlivineCity_PokemonCenter_B1F-front-desk-4.png",
+      "size": 3766,
+      "sha256": "c7c4af0022360770f5bfa18bc3c58a818ab51f72a1aa5135f12fa7e41b352c15"
+    },
+    {
+      "path": "final-v9-services/OlivineCity_PokemonCenter_B1F-front-desk-8.png",
+      "source": "build/qa09-olivine-services-v9/OlivineCity_PokemonCenter_B1F-front-desk-8.png",
+      "size": 3969,
+      "sha256": "5aa82a0e197eceda60707ed473c2e84044e7abab05f88d486a991f1be5237011"
+    },
+    {
+      "path": "final-v9-services/OlivineCity_PortQuay-ambient-1.png",
+      "source": "build/qa09-olivine-services-v9/OlivineCity_PortQuay-ambient-1.png",
+      "size": 5198,
+      "sha256": "8f4532c30acadba4d87a9deaa823bc46ed127136d18da0b0900be5afeebec167"
+    },
+    {
+      "path": "final-v9-services/OlivineCity_PortQuay-wayfinding-1.png",
+      "source": "build/qa09-olivine-services-v9/OlivineCity_PortQuay-wayfinding-1.png",
+      "size": 6798,
+      "sha256": "ed54f63357ab8926f686ec3889dd355d2873fbf5c2aacab930e3a305470502f2"
+    },
+    {
+      "path": "final-v9-services/OlivineCity_PortTerminal-ambient-1.png",
+      "source": "build/qa09-olivine-services-v9/OlivineCity_PortTerminal-ambient-1.png",
+      "size": 5511,
+      "sha256": "68b9c0a5efd0b3bbe1df8ababe55436ecca01a63e84c1b0366e9baff94378c5c"
+    },
+    {
+      "path": "final-v9-services/OlivineCity_PortTerminal-ambient-2.png",
+      "source": "build/qa09-olivine-services-v9/OlivineCity_PortTerminal-ambient-2.png",
+      "size": 5709,
+      "sha256": "35eabdce1b7153be1837010cd69b5498f7822e60b3659ffda15971d58d729ac8"
+    },
+    {
+      "path": "final-v9-services/OlivineCity_SealHouse-resident-1.png",
+      "source": "build/qa09-olivine-services-v9/OlivineCity_SealHouse-resident-1.png",
+      "size": 5931,
+      "sha256": "1f61a0578081a8462bd355838f1825e02fe220a4a7fdabf9311e0975d7a9b84d"
+    },
+    {
+      "path": "final-v9-services/OlivineCity_SealHouse-resident-2.png",
+      "source": "build/qa09-olivine-services-v9/OlivineCity_SealHouse-resident-2.png",
+      "size": 5954,
+      "sha256": "5567e347bd0b52cf6809d4aa7f979a34c86dab8e204f9161ef331c4e5bdf3cbb"
+    },
+    {
+      "path": "final-v9-services/OlivineCity_SealHouse-resident-3.png",
+      "source": "build/qa09-olivine-services-v9/OlivineCity_SealHouse-resident-3.png",
+      "size": 5351,
+      "sha256": "6ad476d9d3e18ae1a52bfb427e49f7707d0d1ad8b6d52c9d15c02eb3b2ed2cda"
+    },
+    {
+      "path": "final-v9-services/OlivineCity_SilphOffice-Olivine_OfficeWorker.png",
+      "source": "build/qa09-olivine-services-v9/OlivineCity_SilphOffice-Olivine_OfficeWorker.png",
+      "size": 4528,
+      "sha256": "df8ecfbcfc94aac4f43463f333f5ba845b22521fe678737832605c038fee7fef"
+    },
+    {
+      "path": "final-v9-services/OlivineCity_TradeHouse-resident-1.png",
+      "source": "build/qa09-olivine-services-v9/OlivineCity_TradeHouse-resident-1.png",
+      "size": 5236,
+      "sha256": "c39515f2e339640ca1798f5f0023f985bf224ae4a7d0c95b24b06d2cc240ebaa"
+    },
+    {
+      "path": "final-v9-services/Olivine_FreightChecklist.png",
+      "source": "build/qa09-olivine-services-v9/Olivine_FreightChecklist.png",
+      "size": 4719,
+      "sha256": "2cc14ec348f2232cfb457b3039093350c5d4ee92a470c4043e5521c89bdf485a"
+    },
+    {
+      "path": "final-v9-services/Olivine_HarborDispatch.png",
+      "source": "build/qa09-olivine-services-v9/Olivine_HarborDispatch.png",
+      "size": 3528,
+      "sha256": "be4c55e5f7337dd5139d3dabefcd9f6634c533f23f4706221abcb7f9ce0dc880"
+    },
+    {
+      "path": "final-v9-services/Olivine_HarborLedger.png",
+      "source": "build/qa09-olivine-services-v9/Olivine_HarborLedger.png",
+      "size": 4842,
+      "sha256": "05de7feeac4e58ec014da23598ae400f1a111ed5f007853323246e633d9ecede"
+    },
+    {
+      "path": "final-v9-services/Olivine_HomeBooks.png",
+      "source": "build/qa09-olivine-services-v9/Olivine_HomeBooks.png",
+      "size": 2861,
+      "sha256": "01fc9ee55e9a3e3c6868d08d843c4c1763f0de05319fa418e244cb5f73ed2fdc"
+    },
+    {
+      "path": "final-v9-services/Olivine_HomeNotes.png",
+      "source": "build/qa09-olivine-services-v9/Olivine_HomeNotes.png",
+      "size": 3477,
+      "sha256": "106539ab8eaf295055cc0c16c0cc09927e8177ba11ed27b2842052a9d6f48e9e"
+    },
+    {
+      "path": "final-v9-services/Olivine_StaffBoard.png",
+      "source": "build/qa09-olivine-services-v9/Olivine_StaffBoard.png",
+      "size": 3663,
+      "sha256": "d7ed3f42fca031d0a956c0f4381688ca3144f2aa36bdf89827869afa838d7992"
+    },
+    {
+      "path": "final-v9-services/Olivine_Terminal.png",
+      "source": "build/qa09-olivine-services-v9/Olivine_Terminal.png",
+      "size": 3948,
+      "sha256": "a096c0bb539d013e841813659e8282d026ca8086b220d2620d8d1af0cda7ee26"
+    },
+    {
+      "path": "final-v9-services/accepted-neighbor-1.png",
+      "source": "build/qa09-olivine-services-v9/accepted-neighbor-1.png",
+      "size": 3886,
+      "sha256": "769128c0f7fbe3c40d6ad1362dc46a7b774ffe47c2514c2f49cd1f0e1dc94a08"
+    },
+    {
+      "path": "final-v9-services/cafe-host-across-counter.png",
+      "source": "build/qa09-olivine-services-v9/cafe-host-across-counter.png",
+      "size": 4903,
+      "sha256": "d33b679e49b9326cd40a48803f387be5e7e3d6f166b9689058485f1f85df9a33"
+    },
+    {
+      "path": "final-v9-services/cafe-visitor-1.png",
+      "source": "build/qa09-olivine-services-v9/cafe-visitor-1.png",
+      "size": 4900,
+      "sha256": "124e4197046f6d7211bc6a3e99b72376e508d6cffed578735cd6606e888e5aac"
+    },
+    {
+      "path": "final-v9-services/cafe-visitor-2.png",
+      "source": "build/qa09-olivine-services-v9/cafe-visitor-2.png",
+      "size": 5603,
+      "sha256": "fa08131c42cbfcd092b052d6f328da60cbec30b25a23496b4917c923be04c99b"
+    },
+    {
+      "path": "final-v9-services/center-pc-menu.png",
+      "source": "build/qa09-olivine-services-v9/center-pc-menu.png",
+      "size": 5377,
+      "sha256": "bece2b7a4403bdb7c2f063130b613e22459b42fa85cf67928b037c546fae1d1f"
+    },
+    {
+      "path": "final-v9-services/center-visitor.png",
+      "source": "build/qa09-olivine-services-v9/center-visitor.png",
+      "size": 3600,
+      "sha256": "5c70883913189588a3c331d8607faaaa2a46a7b57bb88c9253725573fd9a7c16"
+    },
+    {
+      "path": "final-v9-services/home-rest-accepted.png",
+      "source": "build/qa09-olivine-services-v9/home-rest-accepted.png",
+      "size": 2966,
+      "sha256": "f7454034ce8f4421b853272197abd9edefa1cd0849169048a8d13355c1d5f4db"
+    },
+    {
+      "path": "final-v9-services/home-rest-declined.png",
+      "source": "build/qa09-olivine-services-v9/home-rest-declined.png",
+      "size": 2995,
+      "sha256": "4a6eb006d280f31127272069589ec255717b27f2faced304198526508dc06a43"
+    },
+    {
+      "path": "final-v9-services/jasmine-loss-local-whiteout.png",
+      "source": "build/qa09-olivine-services-v9/jasmine-loss-local-whiteout.png",
+      "size": 6463,
+      "sha256": "3ddae1c7f7a451a607f8582dfd6e650121c29df283300be85d6d30c173099531"
+    },
+    {
+      "path": "final-v9-services/jasmine-practice-battle.png",
+      "source": "build/qa09-olivine-services-v9/jasmine-practice-battle.png",
+      "size": 8519,
+      "sha256": "47e76164e2b040a73038aba28943cfee35d7fa0912dd76b5cc6331d95761f77a"
+    },
+    {
+      "path": "final-v9-services/mart-menu.png",
+      "source": "build/qa09-olivine-services-v9/mart-menu.png",
+      "size": 6088,
+      "sha256": "35b6d23c77c08512b74c289065196e0669b945a48995d4253216030db885d6e7"
+    },
+    {
+      "path": "final-v9-services/mart-purchase.png",
+      "source": "build/qa09-olivine-services-v9/mart-purchase.png",
+      "size": 5882,
+      "sha256": "c9bd7e33a94cd73f8c488f05e533aae452ec47e9e73b55588b62bc2a9e8d3ac7"
+    },
+    {
+      "path": "final-v9-services/mart-stock.png",
+      "source": "build/qa09-olivine-services-v9/mart-stock.png",
+      "size": 5874,
+      "sha256": "3d64b6630612104d0122deca150e26650d58f515a162ea21d180616a1a3c7473"
+    },
+    {
+      "path": "final-v9-services/mart-visitor.png",
+      "source": "build/qa09-olivine-services-v9/mart-visitor.png",
+      "size": 6084,
+      "sha256": "99c9ee2ad990c6a5e6856784cb1a79e554235b80886c066af6ba5747e70bf236"
+    },
+    {
+      "path": "final-v9-services/nurse-healed.png",
+      "source": "build/qa09-olivine-services-v9/nurse-healed.png",
+      "size": 6601,
+      "sha256": "69ceda8501183252b8a857a1a6cda161ca303734f00a1d9538d14727612e7c00"
+    },
+    {
+      "path": "final-v9-services/results.json",
+      "source": "build/qa09-olivine-services-v9/results.json",
+      "size": 14051,
+      "sha256": "80419fd9e4b8560477b87bd051371cba127fb9b85d3b0bf1413f3a996ba9719a"
+    },
+    {
+      "path": "final-v10-tour/OlivineCity.png",
+      "source": "build/qa09-olivine-tour-v10/OlivineCity.png",
+      "size": 6539,
+      "sha256": "bb6e81b64e8f874564596ed35e8bf092937cfb7c87b4ce88bf2ed6fb6bc28d73"
+    },
+    {
+      "path": "final-v10-tour/OlivineCity_Cafe.png",
+      "source": "build/qa09-olivine-tour-v10/OlivineCity_Cafe.png",
+      "size": 4030,
+      "sha256": "d5b579bdfa615020e02e2835541406b9a1e79f586a592dee31cb0eac38ae1977"
+    },
+    {
+      "path": "final-v10-tour/OlivineCity_FishingHouse.png",
+      "source": "build/qa09-olivine-tour-v10/OlivineCity_FishingHouse.png",
+      "size": 2829,
+      "sha256": "73db7b2222f70cc91da0f358462fb6fe6f3111fd02804ea1689e82317da2206f"
+    },
+    {
+      "path": "final-v10-tour/OlivineCity_Gym.png",
+      "source": "build/qa09-olivine-tour-v10/OlivineCity_Gym.png",
+      "size": 5362,
+      "sha256": "f0d75878c1e6bb7749aba21f3981cb479f3ca79c84ff73652f11dfb5aa0f3417"
+    },
+    {
+      "path": "final-v10-tour/OlivineCity_Gym_Arena.png",
+      "source": "build/qa09-olivine-tour-v10/OlivineCity_Gym_Arena.png",
+      "size": 4920,
+      "sha256": "704254af9dd887a3fe581a52bc6268ecc8bea219a5d7a0aa569d7092acdec924"
+    },
+    {
+      "path": "final-v10-tour/OlivineCity_HarborOffice.png",
+      "source": "build/qa09-olivine-tour-v10/OlivineCity_HarborOffice.png",
+      "size": 3598,
+      "sha256": "e35b858d67d89068574713a0e44de88a75d92a1f3bedd6b22b89791a5d444bd1"
+    },
+    {
+      "path": "final-v10-tour/OlivineCity_Lighthouse_1F.png",
+      "source": "build/qa09-olivine-tour-v10/OlivineCity_Lighthouse_1F.png",
+      "size": 3273,
+      "sha256": "5b917a5cb8aa78949caa361f5c6f893de53d2df2a2cd5e00cf5c18db368a850d"
+    },
+    {
+      "path": "final-v10-tour/OlivineCity_Lighthouse_2F.png",
+      "source": "build/qa09-olivine-tour-v10/OlivineCity_Lighthouse_2F.png",
+      "size": 3799,
+      "sha256": "1aa1d0fafd2643c3947dd6b21c94a9e57e040beee50e5d5752065567cc7209f6"
+    },
+    {
+      "path": "final-v10-tour/OlivineCity_Lighthouse_3F.png",
+      "source": "build/qa09-olivine-tour-v10/OlivineCity_Lighthouse_3F.png",
+      "size": 5126,
+      "sha256": "cda7f91e1e3d6be3a6256127788dccdc28c37b0379607e5078de7c237e471241"
+    },
+    {
+      "path": "final-v10-tour/OlivineCity_Lighthouse_4F.png",
+      "source": "build/qa09-olivine-tour-v10/OlivineCity_Lighthouse_4F.png",
+      "size": 5280,
+      "sha256": "7fc070f6320bf7915b9ce811b4c86c7b02137f3a94bb6dfde2bd028a9161d951"
+    },
+    {
+      "path": "final-v10-tour/OlivineCity_Lighthouse_5F.png",
+      "source": "build/qa09-olivine-tour-v10/OlivineCity_Lighthouse_5F.png",
+      "size": 4357,
+      "sha256": "540e74def76134b196f10641db01baef6df6b57548079ca752036fa861db3d74"
+    },
+    {
+      "path": "final-v10-tour/OlivineCity_Lighthouse_6F.png",
+      "source": "build/qa09-olivine-tour-v10/OlivineCity_Lighthouse_6F.png",
+      "size": 7092,
+      "sha256": "06fd2deecb23397bbc9f17a7eb0c0980279b2b25132389c5f263d354bd350626"
+    },
+    {
+      "path": "final-v10-tour/OlivineCity_Lighthouse_Balcony.png",
+      "source": "build/qa09-olivine-tour-v10/OlivineCity_Lighthouse_Balcony.png",
+      "size": 4203,
+      "sha256": "07a2e5509d5baa737715b62208c57e3cc162d08f301395d788e4a897893111ea"
+    },
+    {
+      "path": "final-v10-tour/OlivineCity_Lighthouse_Elevator.png",
+      "source": "build/qa09-olivine-tour-v10/OlivineCity_Lighthouse_Elevator.png",
+      "size": 3235,
+      "sha256": "106f1ff98464cfee1fb711fb42e1ad17c09987a57538d6e129bfc61336e46cf0"
+    },
+    {
+      "path": "final-v10-tour/OlivineCity_Mart.png",
+      "source": "build/qa09-olivine-tour-v10/OlivineCity_Mart.png",
+      "size": 3677,
+      "sha256": "ca45f5614c517695727847a21629b5338649f96ddf6320a32a2deb1c2e7bfef2"
+    },
+    {
+      "path": "final-v10-tour/OlivineCity_NeighborHouse.png",
+      "source": "build/qa09-olivine-tour-v10/OlivineCity_NeighborHouse.png",
+      "size": 2860,
+      "sha256": "2bf1ff0145e57713eff60ad3fcca5d86e641bf92ff8ec13870235f3e654b4510"
+    },
+    {
+      "path": "final-v10-tour/OlivineCity_PokemonCenter_1F.png",
+      "source": "build/qa09-olivine-tour-v10/OlivineCity_PokemonCenter_1F.png",
+      "size": 3676,
+      "sha256": "47f490083234d5bf6dd8a87310e6f96570b5dc7046279da6142996adb6b9db07"
+    },
+    {
+      "path": "final-v10-tour/OlivineCity_PokemonCenter_B1F.png",
+      "source": "build/qa09-olivine-tour-v10/OlivineCity_PokemonCenter_B1F.png",
+      "size": 2358,
+      "sha256": "f82f3b26d36b0ccda37db9516c71e324009cc84250192ae01249a678232bd165"
+    },
+    {
+      "path": "final-v10-tour/OlivineCity_PortQuay.png",
+      "source": "build/qa09-olivine-tour-v10/OlivineCity_PortQuay.png",
+      "size": 10213,
+      "sha256": "2c9ee386fc882b025495b3d7cc61314d17e0b55341d7d82323543a132399389e"
+    },
+    {
+      "path": "final-v10-tour/OlivineCity_PortTerminal.png",
+      "source": "build/qa09-olivine-tour-v10/OlivineCity_PortTerminal.png",
+      "size": 5117,
+      "sha256": "bb420e4db3502cd64a35f152019061aea42d965efbe2e5a7ab15d60c9faceea6"
+    },
+    {
+      "path": "final-v10-tour/OlivineCity_Residence.png",
+      "source": "build/qa09-olivine-tour-v10/OlivineCity_Residence.png",
+      "size": 2804,
+      "sha256": "97c0d66263d188775906e01b518a3ee32096fb69308124e18b87c7d8bc9a9080"
+    },
+    {
+      "path": "final-v10-tour/OlivineCity_SealHouse.png",
+      "source": "build/qa09-olivine-tour-v10/OlivineCity_SealHouse.png",
+      "size": 3536,
+      "sha256": "d0e5a51d1290eac991fc9e5159104799813cf8458720bac1eb3f82a59f1e3e76"
+    },
+    {
+      "path": "final-v10-tour/OlivineCity_SilphOffice.png",
+      "source": "build/qa09-olivine-tour-v10/OlivineCity_SilphOffice.png",
+      "size": 3483,
+      "sha256": "24f5f3ef1651267dd5aa804ab9f30d352f9a09e07d63dc95ddeb5b4cdb8dd3a8"
+    },
+    {
+      "path": "final-v10-tour/OlivineCity_TradeHouse.png",
+      "source": "build/qa09-olivine-tour-v10/OlivineCity_TradeHouse.png",
+      "size": 2829,
+      "sha256": "73db7b2222f70cc91da0f358462fb6fe6f3111fd02804ea1689e82317da2206f"
+    },
+    {
+      "path": "final-v10-tour/coverage.json",
+      "source": "build/qa09-olivine-tour-v10/coverage.json",
+      "size": 75432,
+      "sha256": "cc50aa72e46cd910e215cd5c7fa641bd61a25f0c6440779352786094e9eee62d"
+    },
+    {
+      "path": "final-v10-tour/identity.json",
+      "source": "build/qa09-olivine-tour-v10/identity.json",
+      "size": 365,
+      "sha256": "ecf1696fa5082419e00c367c3732dee16e56b3db8c7b5fb4d8cf851ae828b060"
+    },
+    {
+      "path": "final-v10-tour/results.json",
+      "source": "build/qa09-olivine-tour-v10/results.json",
+      "size": 728,
+      "sha256": "c639ce934f1433eb9b8070aebf62f302363227d392e28e7fe1c378013e81ae00"
+    },
+    {
+      "path": "final-v11-tour/OlivineCity.png",
+      "source": "build/qa09-olivine-tour-v11/OlivineCity.png",
+      "size": 6539,
+      "sha256": "bb6e81b64e8f874564596ed35e8bf092937cfb7c87b4ce88bf2ed6fb6bc28d73"
+    },
+    {
+      "path": "final-v11-tour/OlivineCity_Cafe.png",
+      "source": "build/qa09-olivine-tour-v11/OlivineCity_Cafe.png",
+      "size": 4030,
+      "sha256": "d5b579bdfa615020e02e2835541406b9a1e79f586a592dee31cb0eac38ae1977"
+    },
+    {
+      "path": "final-v11-tour/OlivineCity_FishingHouse.png",
+      "source": "build/qa09-olivine-tour-v11/OlivineCity_FishingHouse.png",
+      "size": 2829,
+      "sha256": "73db7b2222f70cc91da0f358462fb6fe6f3111fd02804ea1689e82317da2206f"
+    },
+    {
+      "path": "final-v11-tour/OlivineCity_Gym.png",
+      "source": "build/qa09-olivine-tour-v11/OlivineCity_Gym.png",
+      "size": 5362,
+      "sha256": "f0d75878c1e6bb7749aba21f3981cb479f3ca79c84ff73652f11dfb5aa0f3417"
+    },
+    {
+      "path": "final-v11-tour/OlivineCity_Gym_Arena.png",
+      "source": "build/qa09-olivine-tour-v11/OlivineCity_Gym_Arena.png",
+      "size": 4920,
+      "sha256": "704254af9dd887a3fe581a52bc6268ecc8bea219a5d7a0aa569d7092acdec924"
+    },
+    {
+      "path": "final-v11-tour/OlivineCity_HarborOffice.png",
+      "source": "build/qa09-olivine-tour-v11/OlivineCity_HarborOffice.png",
+      "size": 3598,
+      "sha256": "e35b858d67d89068574713a0e44de88a75d92a1f3bedd6b22b89791a5d444bd1"
+    },
+    {
+      "path": "final-v11-tour/OlivineCity_Lighthouse_1F.png",
+      "source": "build/qa09-olivine-tour-v11/OlivineCity_Lighthouse_1F.png",
+      "size": 3273,
+      "sha256": "5b917a5cb8aa78949caa361f5c6f893de53d2df2a2cd5e00cf5c18db368a850d"
+    },
+    {
+      "path": "final-v11-tour/OlivineCity_Lighthouse_2F.png",
+      "source": "build/qa09-olivine-tour-v11/OlivineCity_Lighthouse_2F.png",
+      "size": 3799,
+      "sha256": "1aa1d0fafd2643c3947dd6b21c94a9e57e040beee50e5d5752065567cc7209f6"
+    },
+    {
+      "path": "final-v11-tour/OlivineCity_Lighthouse_3F.png",
+      "source": "build/qa09-olivine-tour-v11/OlivineCity_Lighthouse_3F.png",
+      "size": 5126,
+      "sha256": "cda7f91e1e3d6be3a6256127788dccdc28c37b0379607e5078de7c237e471241"
+    },
+    {
+      "path": "final-v11-tour/OlivineCity_Lighthouse_4F.png",
+      "source": "build/qa09-olivine-tour-v11/OlivineCity_Lighthouse_4F.png",
+      "size": 5280,
+      "sha256": "7fc070f6320bf7915b9ce811b4c86c7b02137f3a94bb6dfde2bd028a9161d951"
+    },
+    {
+      "path": "final-v11-tour/OlivineCity_Lighthouse_5F.png",
+      "source": "build/qa09-olivine-tour-v11/OlivineCity_Lighthouse_5F.png",
+      "size": 4357,
+      "sha256": "540e74def76134b196f10641db01baef6df6b57548079ca752036fa861db3d74"
+    },
+    {
+      "path": "final-v11-tour/OlivineCity_Lighthouse_6F.png",
+      "source": "build/qa09-olivine-tour-v11/OlivineCity_Lighthouse_6F.png",
+      "size": 7092,
+      "sha256": "06fd2deecb23397bbc9f17a7eb0c0980279b2b25132389c5f263d354bd350626"
+    },
+    {
+      "path": "final-v11-tour/OlivineCity_Lighthouse_Balcony.png",
+      "source": "build/qa09-olivine-tour-v11/OlivineCity_Lighthouse_Balcony.png",
+      "size": 4203,
+      "sha256": "07a2e5509d5baa737715b62208c57e3cc162d08f301395d788e4a897893111ea"
+    },
+    {
+      "path": "final-v11-tour/OlivineCity_Lighthouse_Elevator.png",
+      "source": "build/qa09-olivine-tour-v11/OlivineCity_Lighthouse_Elevator.png",
+      "size": 3235,
+      "sha256": "106f1ff98464cfee1fb711fb42e1ad17c09987a57538d6e129bfc61336e46cf0"
+    },
+    {
+      "path": "final-v11-tour/OlivineCity_Mart.png",
+      "source": "build/qa09-olivine-tour-v11/OlivineCity_Mart.png",
+      "size": 3677,
+      "sha256": "ca45f5614c517695727847a21629b5338649f96ddf6320a32a2deb1c2e7bfef2"
+    },
+    {
+      "path": "final-v11-tour/OlivineCity_NeighborHouse.png",
+      "source": "build/qa09-olivine-tour-v11/OlivineCity_NeighborHouse.png",
+      "size": 2860,
+      "sha256": "2bf1ff0145e57713eff60ad3fcca5d86e641bf92ff8ec13870235f3e654b4510"
+    },
+    {
+      "path": "final-v11-tour/OlivineCity_PokemonCenter_1F.png",
+      "source": "build/qa09-olivine-tour-v11/OlivineCity_PokemonCenter_1F.png",
+      "size": 3676,
+      "sha256": "47f490083234d5bf6dd8a87310e6f96570b5dc7046279da6142996adb6b9db07"
+    },
+    {
+      "path": "final-v11-tour/OlivineCity_PokemonCenter_B1F.png",
+      "source": "build/qa09-olivine-tour-v11/OlivineCity_PokemonCenter_B1F.png",
+      "size": 2358,
+      "sha256": "f82f3b26d36b0ccda37db9516c71e324009cc84250192ae01249a678232bd165"
+    },
+    {
+      "path": "final-v11-tour/OlivineCity_PortQuay.png",
+      "source": "build/qa09-olivine-tour-v11/OlivineCity_PortQuay.png",
+      "size": 10213,
+      "sha256": "2c9ee386fc882b025495b3d7cc61314d17e0b55341d7d82323543a132399389e"
+    },
+    {
+      "path": "final-v11-tour/OlivineCity_PortTerminal.png",
+      "source": "build/qa09-olivine-tour-v11/OlivineCity_PortTerminal.png",
+      "size": 5117,
+      "sha256": "bb420e4db3502cd64a35f152019061aea42d965efbe2e5a7ab15d60c9faceea6"
+    },
+    {
+      "path": "final-v11-tour/OlivineCity_Residence.png",
+      "source": "build/qa09-olivine-tour-v11/OlivineCity_Residence.png",
+      "size": 2804,
+      "sha256": "97c0d66263d188775906e01b518a3ee32096fb69308124e18b87c7d8bc9a9080"
+    },
+    {
+      "path": "final-v11-tour/OlivineCity_SealHouse.png",
+      "source": "build/qa09-olivine-tour-v11/OlivineCity_SealHouse.png",
+      "size": 3536,
+      "sha256": "d0e5a51d1290eac991fc9e5159104799813cf8458720bac1eb3f82a59f1e3e76"
+    },
+    {
+      "path": "final-v11-tour/OlivineCity_SilphOffice.png",
+      "source": "build/qa09-olivine-tour-v11/OlivineCity_SilphOffice.png",
+      "size": 3483,
+      "sha256": "24f5f3ef1651267dd5aa804ab9f30d352f9a09e07d63dc95ddeb5b4cdb8dd3a8"
+    },
+    {
+      "path": "final-v11-tour/OlivineCity_TradeHouse.png",
+      "source": "build/qa09-olivine-tour-v11/OlivineCity_TradeHouse.png",
+      "size": 2829,
+      "sha256": "73db7b2222f70cc91da0f358462fb6fe6f3111fd02804ea1689e82317da2206f"
+    },
+    {
+      "path": "final-v11-tour/coverage.json",
+      "source": "build/qa09-olivine-tour-v11/coverage.json",
+      "size": 75432,
+      "sha256": "cc50aa72e46cd910e215cd5c7fa641bd61a25f0c6440779352786094e9eee62d"
+    },
+    {
+      "path": "final-v11-tour/identity.json",
+      "source": "build/qa09-olivine-tour-v11/identity.json",
+      "size": 365,
+      "sha256": "5c4f1e4bdf361c956817199cc6fe846af757fe960dfa284bb6537aed34ea92f9"
+    },
+    {
+      "path": "final-v11-tour/results.json",
+      "source": "build/qa09-olivine-tour-v11/results.json",
+      "size": 791,
+      "sha256": "9afe5b012fd54f71c27fa8fdc0a2003ac5080f5f37fb0098d8f4d6df415e8675"
+    },
+    {
+      "path": "final-v11-saves/OlivineCity_Cafe-normal-save.png",
+      "source": "build/qa09-olivine-saves-v11/OlivineCity_Cafe-normal-save.png",
+      "size": 4451,
+      "sha256": "e5c5ba96b3154418c5b8aec0169387624b85babc1bcefb0bc76d9c499ced744e"
+    },
+    {
+      "path": "final-v11-saves/OlivineCity_FishingHouse-normal-save.png",
+      "source": "build/qa09-olivine-saves-v11/OlivineCity_FishingHouse-normal-save.png",
+      "size": 4710,
+      "sha256": "7cd9a997aafb6db6054b6670ce5f718fbdd1e493988c0dd10bc4039f2ea35a70"
+    },
+    {
+      "path": "final-v11-saves/OlivineCity_Lighthouse_3F-normal-save.png",
+      "source": "build/qa09-olivine-saves-v11/OlivineCity_Lighthouse_3F-normal-save.png",
+      "size": 4151,
+      "sha256": "cac277fc17d078fb558f2f240fa0379b4e3e83eddb84f65c0986d88872bffaef"
+    },
+    {
+      "path": "final-v11-saves/OlivineCity_Lighthouse_6F-normal-save.png",
+      "source": "build/qa09-olivine-saves-v11/OlivineCity_Lighthouse_6F-normal-save.png",
+      "size": 4976,
+      "sha256": "5611517e767ea5134f5e0ca07ea160a0465e08caac898e364dbc49b93ed92193"
+    },
+    {
+      "path": "final-v11-saves/OlivineCity_Lighthouse_Balcony-normal-save.png",
+      "source": "build/qa09-olivine-saves-v11/OlivineCity_Lighthouse_Balcony-normal-save.png",
+      "size": 3852,
+      "sha256": "a8a4277664264daf56f6c3c93d862ef597d9ee3750e1578579ce60492f217b9c"
+    },
+    {
+      "path": "final-v11-saves/OlivineCity_Lighthouse_Elevator-normal-save.png",
+      "source": "build/qa09-olivine-saves-v11/OlivineCity_Lighthouse_Elevator-normal-save.png",
+      "size": 3457,
+      "sha256": "25315b619cb03213b1f5ec685b08853e967e9493fb59433494a4676b05f6db9e"
+    },
+    {
+      "path": "final-v11-saves/OlivineCity_PokemonCenter_B1F-normal-save.png",
+      "source": "build/qa09-olivine-saves-v11/OlivineCity_PokemonCenter_B1F-normal-save.png",
+      "size": 2678,
+      "sha256": "fd647aa18bd74b14ef4c56fff3ef1f0f1bd981a4f14d792e7a2fba06e4125a36"
+    },
+    {
+      "path": "final-v11-saves/OlivineCity_PortQuay-normal-save.png",
+      "source": "build/qa09-olivine-saves-v11/OlivineCity_PortQuay-normal-save.png",
+      "size": 8217,
+      "sha256": "076feacb8387f059cdfdcf6be673406871addc1b01bdcaa3581839c67d8ea7c6"
+    },
+    {
+      "path": "final-v11-saves/OlivineCity_PortTerminal-normal-save.png",
+      "source": "build/qa09-olivine-saves-v11/OlivineCity_PortTerminal-normal-save.png",
+      "size": 7068,
+      "sha256": "2f8d55b0b06296af67212e42385da75c20f38f05b39838ebdb2a7d43ecfb02fa"
+    },
+    {
+      "path": "final-v11-saves/OlivineCity_SealHouse-normal-save.png",
+      "source": "build/qa09-olivine-saves-v11/OlivineCity_SealHouse-normal-save.png",
+      "size": 5368,
+      "sha256": "680c64c9ed51f1fda46957d12c98fefd1e58487a88fd8d75bb62fbf246d9a0a8"
+    },
+    {
+      "path": "final-v11-saves/OlivineCity_TradeHouse-normal-save.png",
+      "source": "build/qa09-olivine-saves-v11/OlivineCity_TradeHouse-normal-save.png",
+      "size": 4710,
+      "sha256": "7cd9a997aafb6db6054b6670ce5f718fbdd1e493988c0dd10bc4039f2ea35a70"
+    },
+    {
+      "path": "final-v11-saves/center-normal-save.png",
+      "source": "build/qa09-olivine-saves-v11/center-normal-save.png",
+      "size": 6601,
+      "sha256": "69ceda8501183252b8a857a1a6cda161ca303734f00a1d9538d14727612e7c00"
+    },
+    {
+      "path": "final-v11-saves/elevator-selected-1F-normal-save.png",
+      "source": "build/qa09-olivine-saves-v11/elevator-selected-1F-normal-save.png",
+      "size": 3418,
+      "sha256": "6a5924ee985fbb0605c215af2ae6be6555eb4061f29b7f3957d8c15c36023151"
+    },
+    {
+      "path": "final-v11-saves/elevator-selected-6F-normal-save.png",
+      "source": "build/qa09-olivine-saves-v11/elevator-selected-6F-normal-save.png",
+      "size": 3380,
+      "sha256": "cbe55dcd6e9c34023205ecef99095b08ec4a1295d8d5d603a2f762b38e707f78"
+    },
+    {
+      "path": "final-v11-saves/joe-home-normal-save.png",
+      "source": "build/qa09-olivine-saves-v11/joe-home-normal-save.png",
+      "size": 3194,
+      "sha256": "ece55e420f271b9027d99d845ed63aaee5daa8ce5151b8972c2c6db33b4186da"
+    },
+    {
+      "path": "final-v11-saves/old-cached-layout-fixture.png",
+      "source": "build/qa09-olivine-saves-v11/old-cached-layout-fixture.png",
+      "size": 6601,
+      "sha256": "69ceda8501183252b8a857a1a6cda161ca303734f00a1d9538d14727612e7c00"
+    },
+    {
+      "path": "final-v11-saves/old-office-ceiling-cap-fixture.png",
+      "source": "build/qa09-olivine-saves-v11/old-office-ceiling-cap-fixture.png",
+      "size": 4577,
+      "sha256": "744064ba1d23f0047dda6970cd080c4407242399be65bafc5bf09a0697c933ec"
+    },
+    {
+      "path": "final-v11-saves/old-olivine-heal-fixture.png",
+      "source": "build/qa09-olivine-saves-v11/old-olivine-heal-fixture.png",
+      "size": 6499,
+      "sha256": "15bca390eb19856dd72cd7c942a2ab8b71bd6fe0b144fbd1e6fb115b33be016f"
+    },
+    {
+      "path": "final-v11-saves/old-walking-wall-fixture.png",
+      "source": "build/qa09-olivine-saves-v11/old-walking-wall-fixture.png",
+      "size": 6499,
+      "sha256": "15bca390eb19856dd72cd7c942a2ab8b71bd6fe0b144fbd1e6fb115b33be016f"
+    },
+    {
+      "path": "final-v11-saves/surf-normal-save.png",
+      "source": "build/qa09-olivine-saves-v11/surf-normal-save.png",
+      "size": 9677,
+      "sha256": "e85c2191df5eb2a2edef1e9a946e981070f092222a7bdca3d42ca930b3e70eaf"
+    },
+    {
+      "path": "final-v11-saves/synthetic-walking-water-safety-fixture.png",
+      "source": "build/qa09-olivine-saves-v11/synthetic-walking-water-safety-fixture.png",
+      "size": 8194,
+      "sha256": "4f03b38ad125ca7ad1f477ee2755e1a81b8016940bebe64a8badca106a95601f"
+    },
+    {
+      "path": "final-v11-saves/v7-old-EcruteakCity_Mart-stool-fixture.png",
+      "source": "build/qa09-olivine-saves-v11/v7-old-EcruteakCity_Mart-stool-fixture.png",
+      "size": 5906,
+      "sha256": "943797da42f382eca920e662261cb9be2264ce122303b62b2fb49624dfe0a623"
+    },
+    {
+      "path": "final-v11-saves/v7-old-EcruteakCity_PokemonCenter_B1F-stool-fixture.png",
+      "source": "build/qa09-olivine-saves-v11/v7-old-EcruteakCity_PokemonCenter_B1F-stool-fixture.png",
+      "size": 3660,
+      "sha256": "53b0f8c1a831daf3729f45966cb37055759a8cda22575d46d67866d3083046a9"
+    },
+    {
+      "path": "final-v11-saves/v7-old-OlivineCity_Mart-stool-fixture.png",
+      "source": "build/qa09-olivine-saves-v11/v7-old-OlivineCity_Mart-stool-fixture.png",
+      "size": 5906,
+      "sha256": "943797da42f382eca920e662261cb9be2264ce122303b62b2fb49624dfe0a623"
+    },
+    {
+      "path": "final-v11-saves/v7-old-OlivineCity_PokemonCenter_B1F-stool-fixture.png",
+      "source": "build/qa09-olivine-saves-v11/v7-old-OlivineCity_PokemonCenter_B1F-stool-fixture.png",
+      "size": 3660,
+      "sha256": "53b0f8c1a831daf3729f45966cb37055759a8cda22575d46d67866d3083046a9"
+    },
+    {
+      "path": "final-v11-saves/results.json",
+      "source": "build/qa09-olivine-saves-v11/results.json",
+      "size": 13410,
+      "sha256": "223cbfe5396453eaab0bb9f32c9a64182bb0c2ab091e5b6e94a656e8f82ecc59"
+    },
+    {
+      "path": "final-v11-saves/identity.json",
+      "source": "build/qa09-olivine-saves-v11/identity.json",
+      "size": 365,
+      "sha256": "5c4f1e4bdf361c956817199cc6fe846af757fe960dfa284bb6537aed34ea92f9"
+    },
+    {
+      "path": "final-v11-services/Hgss_OlivineSign_Cafe.png",
+      "source": "build/qa09-olivine-services-v11/Hgss_OlivineSign_Cafe.png",
+      "size": 6194,
+      "sha256": "0aebcfc85a1a7b0e41dcb89cd4b4860e2d6b1fa8e23ad3aab9d103cf894d9674"
+    },
+    {
+      "path": "final-v11-services/Hgss_OlivineSign_FishingHouse.png",
+      "source": "build/qa09-olivine-services-v11/Hgss_OlivineSign_FishingHouse.png",
+      "size": 7693,
+      "sha256": "d17d0311c75832469bf3b3d4f3ae336bcfffbb703f640a729feb09f00addfcce"
+    },
+    {
+      "path": "final-v11-services/Hgss_OlivineSign_Port.png",
+      "source": "build/qa09-olivine-services-v11/Hgss_OlivineSign_Port.png",
+      "size": 6228,
+      "sha256": "30781d0eb23d75f9cadd682a1e951f61cb491b641eb05d5bde8af9e86708c6a0"
+    },
+    {
+      "path": "final-v11-services/Hgss_OlivineSign_SealHouse.png",
+      "source": "build/qa09-olivine-services-v11/Hgss_OlivineSign_SealHouse.png",
+      "size": 8213,
+      "sha256": "bf41b477363a019a55ea452fe5903a9a9fc5bdea142781f0267cfd42b5808f79"
+    },
+    {
+      "path": "final-v11-services/Hgss_OlivineSign_TradeHouse.png",
+      "source": "build/qa09-olivine-services-v11/Hgss_OlivineSign_TradeHouse.png",
+      "size": 6024,
+      "sha256": "9dc6a530da3217f0e3551f930ffd1e7feccf784e286873c4ffc0e1e2d37ff4b2"
+    },
+    {
+      "path": "final-v11-services/OlivineCity_FishingHouse-resident-1.png",
+      "source": "build/qa09-olivine-services-v11/OlivineCity_FishingHouse-resident-1.png",
+      "size": 5242,
+      "sha256": "d70e2a23cfa840f61d28d897d1a4a3c2985fde5a83596b06d55dee1a70f6b2c0"
+    },
+    {
+      "path": "final-v11-services/OlivineCity_HarborOffice-Olivine_HarborClerk.png",
+      "source": "build/qa09-olivine-services-v11/OlivineCity_HarborOffice-Olivine_HarborClerk.png",
+      "size": 4557,
+      "sha256": "3a99aa5dfa89b93ea7834be91031d30d19a5f0a96457a77a0dc3c5ee3a65f66e"
+    },
+    {
+      "path": "final-v11-services/OlivineCity_Lighthouse_1F-ambient-1.png",
+      "source": "build/qa09-olivine-services-v11/OlivineCity_Lighthouse_1F-ambient-1.png",
+      "size": 3988,
+      "sha256": "e94a80955786a62b9291de5bc1dc9148baaa8e125b8d74c35753883da193ae11"
+    },
+    {
+      "path": "final-v11-services/OlivineCity_Lighthouse_1F-wayfinding-1.png",
+      "source": "build/qa09-olivine-services-v11/OlivineCity_Lighthouse_1F-wayfinding-1.png",
+      "size": 4513,
+      "sha256": "5134f91b810894013d314151652bd937fc68ffd51d68f0a427a93e0a4cf1d1c4"
+    },
+    {
+      "path": "final-v11-services/OlivineCity_Lighthouse_2F-wayfinding-1.png",
+      "source": "build/qa09-olivine-services-v11/OlivineCity_Lighthouse_2F-wayfinding-1.png",
+      "size": 3222,
+      "sha256": "2347fd1d16ca61791f2328bc49f88581ae52c8774de0c79a98fb9e7db81b3f9b"
+    },
+    {
+      "path": "final-v11-services/OlivineCity_Lighthouse_3F-ambient-1.png",
+      "source": "build/qa09-olivine-services-v11/OlivineCity_Lighthouse_3F-ambient-1.png",
+      "size": 4351,
+      "sha256": "44e3135f62e32577741fb9a64b65e3b56edfa06372685cf39d49f148b301ded9"
+    },
+    {
+      "path": "final-v11-services/OlivineCity_Lighthouse_3F-wayfinding-1.png",
+      "source": "build/qa09-olivine-services-v11/OlivineCity_Lighthouse_3F-wayfinding-1.png",
+      "size": 4125,
+      "sha256": "716fc1eab3a05402333ea0c1c019c8b41dec81af2725289c458dd67cd3ba1373"
+    },
+    {
+      "path": "final-v11-services/OlivineCity_Lighthouse_4F-wayfinding-1.png",
+      "source": "build/qa09-olivine-services-v11/OlivineCity_Lighthouse_4F-wayfinding-1.png",
+      "size": 3254,
+      "sha256": "67a655bab07d5f2a1797fca77ada81f282eab56d88b451a672cd6898a444295c"
+    },
+    {
+      "path": "final-v11-services/OlivineCity_Lighthouse_5F-wayfinding-1.png",
+      "source": "build/qa09-olivine-services-v11/OlivineCity_Lighthouse_5F-wayfinding-1.png",
+      "size": 3418,
+      "sha256": "0a6f9db1c2f106f12285dc3fa1f007172b47e3c3225e19258c62a3669ce7ac05"
+    },
+    {
+      "path": "final-v11-services/OlivineCity_Lighthouse_6F-ambient-1.png",
+      "source": "build/qa09-olivine-services-v11/OlivineCity_Lighthouse_6F-ambient-1.png",
+      "size": 4744,
+      "sha256": "e45fe89fc3328adf14ba1d7ebcd04c1d6581acfa9f19868d470c07ac12cd4bf4"
+    },
+    {
+      "path": "final-v11-services/OlivineCity_Lighthouse_6F-ambient-2.png",
+      "source": "build/qa09-olivine-services-v11/OlivineCity_Lighthouse_6F-ambient-2.png",
+      "size": 6068,
+      "sha256": "894597f94178e5a9dbf7ebefd70cf863bb0c8d6c6212a8433798b31e04440e98"
+    },
+    {
+      "path": "final-v11-services/OlivineCity_Lighthouse_6F-wayfinding-1.png",
+      "source": "build/qa09-olivine-services-v11/OlivineCity_Lighthouse_6F-wayfinding-1.png",
+      "size": 4595,
+      "sha256": "0b4093a8a1da8a995963483fd036ccafb5f9ec4a8b5b31042446e2a214194842"
+    },
+    {
+      "path": "final-v11-services/OlivineCity_Lighthouse_Balcony-wayfinding-1.png",
+      "source": "build/qa09-olivine-services-v11/OlivineCity_Lighthouse_Balcony-wayfinding-1.png",
+      "size": 4291,
+      "sha256": "bcb13f72d171258ccea3e86c1df70d691f33fed7d14ff456e536597bf2a4a652"
+    },
+    {
+      "path": "final-v11-services/OlivineCity_PokemonCenter_1F-front-desk-11.png",
+      "source": "build/qa09-olivine-services-v11/OlivineCity_PokemonCenter_1F-front-desk-11.png",
+      "size": 3768,
+      "sha256": "8d655193901592bfc1b4345638d44d0175851ac746780187da7dfd9a0e8faaa6"
+    },
+    {
+      "path": "final-v11-services/OlivineCity_PokemonCenter_1F-front-desk-2.png",
+      "source": "build/qa09-olivine-services-v11/OlivineCity_PokemonCenter_1F-front-desk-2.png",
+      "size": 3246,
+      "sha256": "973ec856dd526a77558482c1649a9010d6e69e6bd4480125004f83ed85a314d1"
+    },
+    {
+      "path": "final-v11-services/OlivineCity_PokemonCenter_1F-front-desk-6.png",
+      "source": "build/qa09-olivine-services-v11/OlivineCity_PokemonCenter_1F-front-desk-6.png",
+      "size": 3297,
+      "sha256": "46bfbbfb3e5e52d589a8cc52408eefb9391d1d00754215403de9bd2859d4a07e"
+    },
+    {
+      "path": "final-v11-services/OlivineCity_PokemonCenter_B1F-front-desk-12.png",
+      "source": "build/qa09-olivine-services-v11/OlivineCity_PokemonCenter_B1F-front-desk-12.png",
+      "size": 3616,
+      "sha256": "bbbfde33e7bc4f88ea0963a4e56c80785601feae72090971fad9695532d34ca6"
+    },
+    {
+      "path": "final-v11-services/OlivineCity_PokemonCenter_B1F-front-desk-4.png",
+      "source": "build/qa09-olivine-services-v11/OlivineCity_PokemonCenter_B1F-front-desk-4.png",
+      "size": 3766,
+      "sha256": "c7c4af0022360770f5bfa18bc3c58a818ab51f72a1aa5135f12fa7e41b352c15"
+    },
+    {
+      "path": "final-v11-services/OlivineCity_PokemonCenter_B1F-front-desk-8.png",
+      "source": "build/qa09-olivine-services-v11/OlivineCity_PokemonCenter_B1F-front-desk-8.png",
+      "size": 3969,
+      "sha256": "5aa82a0e197eceda60707ed473c2e84044e7abab05f88d486a991f1be5237011"
+    },
+    {
+      "path": "final-v11-services/OlivineCity_PortQuay-ambient-1.png",
+      "source": "build/qa09-olivine-services-v11/OlivineCity_PortQuay-ambient-1.png",
+      "size": 5198,
+      "sha256": "8f4532c30acadba4d87a9deaa823bc46ed127136d18da0b0900be5afeebec167"
+    },
+    {
+      "path": "final-v11-services/OlivineCity_PortQuay-wayfinding-1.png",
+      "source": "build/qa09-olivine-services-v11/OlivineCity_PortQuay-wayfinding-1.png",
+      "size": 6798,
+      "sha256": "ed54f63357ab8926f686ec3889dd355d2873fbf5c2aacab930e3a305470502f2"
+    },
+    {
+      "path": "final-v11-services/OlivineCity_PortTerminal-ambient-1.png",
+      "source": "build/qa09-olivine-services-v11/OlivineCity_PortTerminal-ambient-1.png",
+      "size": 5511,
+      "sha256": "68b9c0a5efd0b3bbe1df8ababe55436ecca01a63e84c1b0366e9baff94378c5c"
+    },
+    {
+      "path": "final-v11-services/OlivineCity_PortTerminal-ambient-2.png",
+      "source": "build/qa09-olivine-services-v11/OlivineCity_PortTerminal-ambient-2.png",
+      "size": 5709,
+      "sha256": "35eabdce1b7153be1837010cd69b5498f7822e60b3659ffda15971d58d729ac8"
+    },
+    {
+      "path": "final-v11-services/OlivineCity_SealHouse-resident-1.png",
+      "source": "build/qa09-olivine-services-v11/OlivineCity_SealHouse-resident-1.png",
+      "size": 5931,
+      "sha256": "1f61a0578081a8462bd355838f1825e02fe220a4a7fdabf9311e0975d7a9b84d"
+    },
+    {
+      "path": "final-v11-services/OlivineCity_SealHouse-resident-2.png",
+      "source": "build/qa09-olivine-services-v11/OlivineCity_SealHouse-resident-2.png",
+      "size": 5954,
+      "sha256": "5567e347bd0b52cf6809d4aa7f979a34c86dab8e204f9161ef331c4e5bdf3cbb"
+    },
+    {
+      "path": "final-v11-services/OlivineCity_SealHouse-resident-3.png",
+      "source": "build/qa09-olivine-services-v11/OlivineCity_SealHouse-resident-3.png",
+      "size": 5351,
+      "sha256": "6ad476d9d3e18ae1a52bfb427e49f7707d0d1ad8b6d52c9d15c02eb3b2ed2cda"
+    },
+    {
+      "path": "final-v11-services/OlivineCity_SilphOffice-Olivine_OfficeWorker.png",
+      "source": "build/qa09-olivine-services-v11/OlivineCity_SilphOffice-Olivine_OfficeWorker.png",
+      "size": 4528,
+      "sha256": "df8ecfbcfc94aac4f43463f333f5ba845b22521fe678737832605c038fee7fef"
+    },
+    {
+      "path": "final-v11-services/OlivineCity_TradeHouse-resident-1.png",
+      "source": "build/qa09-olivine-services-v11/OlivineCity_TradeHouse-resident-1.png",
+      "size": 5236,
+      "sha256": "c39515f2e339640ca1798f5f0023f985bf224ae4a7d0c95b24b06d2cc240ebaa"
+    },
+    {
+      "path": "final-v11-services/Olivine_FreightChecklist.png",
+      "source": "build/qa09-olivine-services-v11/Olivine_FreightChecklist.png",
+      "size": 4719,
+      "sha256": "2cc14ec348f2232cfb457b3039093350c5d4ee92a470c4043e5521c89bdf485a"
+    },
+    {
+      "path": "final-v11-services/Olivine_HarborDispatch.png",
+      "source": "build/qa09-olivine-services-v11/Olivine_HarborDispatch.png",
+      "size": 3528,
+      "sha256": "be4c55e5f7337dd5139d3dabefcd9f6634c533f23f4706221abcb7f9ce0dc880"
+    },
+    {
+      "path": "final-v11-services/Olivine_HarborLedger.png",
+      "source": "build/qa09-olivine-services-v11/Olivine_HarborLedger.png",
+      "size": 4842,
+      "sha256": "05de7feeac4e58ec014da23598ae400f1a111ed5f007853323246e633d9ecede"
+    },
+    {
+      "path": "final-v11-services/Olivine_HomeBooks.png",
+      "source": "build/qa09-olivine-services-v11/Olivine_HomeBooks.png",
+      "size": 2861,
+      "sha256": "01fc9ee55e9a3e3c6868d08d843c4c1763f0de05319fa418e244cb5f73ed2fdc"
+    },
+    {
+      "path": "final-v11-services/Olivine_HomeNotes.png",
+      "source": "build/qa09-olivine-services-v11/Olivine_HomeNotes.png",
+      "size": 3477,
+      "sha256": "106539ab8eaf295055cc0c16c0cc09927e8177ba11ed27b2842052a9d6f48e9e"
+    },
+    {
+      "path": "final-v11-services/Olivine_StaffBoard.png",
+      "source": "build/qa09-olivine-services-v11/Olivine_StaffBoard.png",
+      "size": 3663,
+      "sha256": "d7ed3f42fca031d0a956c0f4381688ca3144f2aa36bdf89827869afa838d7992"
+    },
+    {
+      "path": "final-v11-services/Olivine_Terminal.png",
+      "source": "build/qa09-olivine-services-v11/Olivine_Terminal.png",
+      "size": 3948,
+      "sha256": "a096c0bb539d013e841813659e8282d026ca8086b220d2620d8d1af0cda7ee26"
+    },
+    {
+      "path": "final-v11-services/accepted-neighbor-1.png",
+      "source": "build/qa09-olivine-services-v11/accepted-neighbor-1.png",
+      "size": 3886,
+      "sha256": "769128c0f7fbe3c40d6ad1362dc46a7b774ffe47c2514c2f49cd1f0e1dc94a08"
+    },
+    {
+      "path": "final-v11-services/cafe-host-across-counter.png",
+      "source": "build/qa09-olivine-services-v11/cafe-host-across-counter.png",
+      "size": 4903,
+      "sha256": "d33b679e49b9326cd40a48803f387be5e7e3d6f166b9689058485f1f85df9a33"
+    },
+    {
+      "path": "final-v11-services/cafe-visitor-1.png",
+      "source": "build/qa09-olivine-services-v11/cafe-visitor-1.png",
+      "size": 4900,
+      "sha256": "124e4197046f6d7211bc6a3e99b72376e508d6cffed578735cd6606e888e5aac"
+    },
+    {
+      "path": "final-v11-services/cafe-visitor-2.png",
+      "source": "build/qa09-olivine-services-v11/cafe-visitor-2.png",
+      "size": 5603,
+      "sha256": "fa08131c42cbfcd092b052d6f328da60cbec30b25a23496b4917c923be04c99b"
+    },
+    {
+      "path": "final-v11-services/center-pc-menu.png",
+      "source": "build/qa09-olivine-services-v11/center-pc-menu.png",
+      "size": 5377,
+      "sha256": "bece2b7a4403bdb7c2f063130b613e22459b42fa85cf67928b037c546fae1d1f"
+    },
+    {
+      "path": "final-v11-services/center-visitor.png",
+      "source": "build/qa09-olivine-services-v11/center-visitor.png",
+      "size": 3600,
+      "sha256": "5c70883913189588a3c331d8607faaaa2a46a7b57bb88c9253725573fd9a7c16"
+    },
+    {
+      "path": "final-v11-services/home-rest-accepted.png",
+      "source": "build/qa09-olivine-services-v11/home-rest-accepted.png",
+      "size": 2966,
+      "sha256": "f7454034ce8f4421b853272197abd9edefa1cd0849169048a8d13355c1d5f4db"
+    },
+    {
+      "path": "final-v11-services/home-rest-declined.png",
+      "source": "build/qa09-olivine-services-v11/home-rest-declined.png",
+      "size": 2995,
+      "sha256": "4a6eb006d280f31127272069589ec255717b27f2faced304198526508dc06a43"
+    },
+    {
+      "path": "final-v11-services/jasmine-loss-local-whiteout.png",
+      "source": "build/qa09-olivine-services-v11/jasmine-loss-local-whiteout.png",
+      "size": 6463,
+      "sha256": "3ddae1c7f7a451a607f8582dfd6e650121c29df283300be85d6d30c173099531"
+    },
+    {
+      "path": "final-v11-services/jasmine-practice-battle.png",
+      "source": "build/qa09-olivine-services-v11/jasmine-practice-battle.png",
+      "size": 8519,
+      "sha256": "47e76164e2b040a73038aba28943cfee35d7fa0912dd76b5cc6331d95761f77a"
+    },
+    {
+      "path": "final-v11-services/mart-menu.png",
+      "source": "build/qa09-olivine-services-v11/mart-menu.png",
+      "size": 6088,
+      "sha256": "35b6d23c77c08512b74c289065196e0669b945a48995d4253216030db885d6e7"
+    },
+    {
+      "path": "final-v11-services/mart-purchase.png",
+      "source": "build/qa09-olivine-services-v11/mart-purchase.png",
+      "size": 5882,
+      "sha256": "c9bd7e33a94cd73f8c488f05e533aae452ec47e9e73b55588b62bc2a9e8d3ac7"
+    },
+    {
+      "path": "final-v11-services/mart-stock.png",
+      "source": "build/qa09-olivine-services-v11/mart-stock.png",
+      "size": 5874,
+      "sha256": "3d64b6630612104d0122deca150e26650d58f515a162ea21d180616a1a3c7473"
+    },
+    {
+      "path": "final-v11-services/mart-visitor.png",
+      "source": "build/qa09-olivine-services-v11/mart-visitor.png",
+      "size": 6084,
+      "sha256": "99c9ee2ad990c6a5e6856784cb1a79e554235b80886c066af6ba5747e70bf236"
+    },
+    {
+      "path": "final-v11-services/nurse-healed.png",
+      "source": "build/qa09-olivine-services-v11/nurse-healed.png",
+      "size": 6601,
+      "sha256": "69ceda8501183252b8a857a1a6cda161ca303734f00a1d9538d14727612e7c00"
+    },
+    {
+      "path": "final-v11-services/results.json",
+      "source": "build/qa09-olivine-services-v11/results.json",
+      "size": 14051,
+      "sha256": "f40600eee7b30be1adf190da5ebbee52c832b6de348889224adbf7c281a0b493"
+    },
+    {
+      "path": "final-v11-services/identity.json",
+      "source": "build/qa09-olivine-services-v11/identity.json",
+      "size": 365,
+      "sha256": "5c4f1e4bdf361c956817199cc6fe846af757fe960dfa284bb6537aed34ea92f9"
+    },
+    {
+      "path": "final-v11-collision/results.json",
+      "source": "build/qa09-olivine-collision-v11/results.json",
+      "size": 45192,
+      "sha256": "3d60918865001db193445b4a2acc11aa4bd4ea4ad0b43f343557ca4aafb42be6"
+    },
+    {
+      "path": "final-v11-collision/identity.json",
+      "source": "build/qa09-olivine-collision-v11/identity.json",
+      "size": 365,
+      "sha256": "5c4f1e4bdf361c956817199cc6fe846af757fe960dfa284bb6537aed34ea92f9"
+    },
+    {
+      "path": "final-v11-collision/residence-tree-under-canopy.png",
+      "source": "build/qa09-olivine-collision-v11/residence-tree-under-canopy.png",
+      "size": 9713,
+      "sha256": "79cb92119c111fd786f0d683c3fe3f97beb9f706c996e11a1166d2ff6069a7ff"
+    },
+    {
+      "path": "final-v11-collision/south-tree-under-canopy.png",
+      "source": "build/qa09-olivine-collision-v11/south-tree-under-canopy.png",
+      "size": 8217,
+      "sha256": "9bee5b12941f019fcc0893dde732c2703a66a38386c3a2f95028e020e5ede8ad"
+    },
+    {
+      "path": "final-v11-collision/east-tree-under-canopy.png",
+      "source": "build/qa09-olivine-collision-v11/east-tree-under-canopy.png",
+      "size": 8065,
+      "sha256": "c027ef5fc61a7306edcc862d7790bcf2c692dfdd6e2c95124c0e35be4ea39366"
+    },
+    {
+      "path": "final-v11-collision/fishing-house-wall-bump.png",
+      "source": "build/qa09-olivine-collision-v11/fishing-house-wall-bump.png",
+      "size": 8674,
+      "sha256": "faf8bb73d7034f289126e3d022d62afeeb1356e2770c6d083d97b594d3fd9e4b"
+    },
+    {
+      "path": "final-v11-collision/fishing-house-wall-bump.mp4",
+      "source": "build/qa09-olivine-collision-v11/fishing-house-wall-bump.mp4",
+      "size": 15450,
+      "sha256": "4ce2ad19cacadc25fbf0043f06895596292eb9663895608c5afc0c54e5acb8dd"
+    },
+    {
+      "path": "final-v11-collision/silph-office-wall-bump.png",
+      "source": "build/qa09-olivine-collision-v11/silph-office-wall-bump.png",
+      "size": 5920,
+      "sha256": "02693de47c96d0b05ba8683a7218ef17689aa3d9a13650e657ce78b11519a306"
+    },
+    {
+      "path": "final-v11-collision/silph-office-wall-bump.mp4",
+      "source": "build/qa09-olivine-collision-v11/silph-office-wall-bump.mp4",
+      "size": 11921,
+      "sha256": "1584ac6b1c9f62532318899b5c97380a358b37da0b55621ef0dc7e1bc8f0f983"
+    },
+    {
+      "path": "final-v11-collision/residence-tree-wall-bump.png",
+      "source": "build/qa09-olivine-collision-v11/residence-tree-wall-bump.png",
+      "size": 8878,
+      "sha256": "a6fb4e1a91e0edf714d44c53a82fdd23832e7461fa9dbaf16e8afa4d7576d89e"
+    },
+    {
+      "path": "final-v11-collision/residence-tree-wall-bump.mp4",
+      "source": "build/qa09-olivine-collision-v11/residence-tree-wall-bump.mp4",
+      "size": 16908,
+      "sha256": "239b7d72ac4606a3fbf66dcc80f1f12276d5cc6ba112659f783de0c832c1e2a1"
+    },
+    {
+      "path": "final-v11-mart-props/results.json",
+      "source": "build/qa09-mart-props-v11/results.json",
+      "size": 9735,
+      "sha256": "0b181c42f82928c1b06e19209b0af03441cdcb212a9f066eb8bc6c0e0e47e2c0"
+    },
+    {
+      "path": "final-v11-mart-props/identity.json",
+      "source": "build/qa09-mart-props-v11/identity.json",
+      "size": 365,
+      "sha256": "5c4f1e4bdf361c956817199cc6fe846af757fe960dfa284bb6537aed34ea92f9"
+    },
+    {
+      "path": "final-v11-mart-props/EcruteakCity_Mart-furnished.png",
+      "source": "build/qa09-mart-props-v11/EcruteakCity_Mart-furnished.png",
+      "size": 3430,
+      "sha256": "ca90e7012ab5450072a62c796fb3dec6654d5792b9be0580cdc8f4417d6b6d79"
+    },
+    {
+      "path": "final-v11-mart-props/EcruteakCity_Mart-northeast-plant.png",
+      "source": "build/qa09-mart-props-v11/EcruteakCity_Mart-northeast-plant.png",
+      "size": 4228,
+      "sha256": "07baaab863357ae43960dbbf1c95bc69df08fffc0bf15da932b212c5dbc796c2"
+    },
+    {
+      "path": "final-v11-mart-props/EcruteakCity_Mart-northeast-plant.mp4",
+      "source": "build/qa09-mart-props-v11/EcruteakCity_Mart-northeast-plant.mp4",
+      "size": 10223,
+      "sha256": "1c91e8cfe231fe93150b88c9f34221605d49c070b556b04086c4f5afd20e94f6"
+    },
+    {
+      "path": "final-v11-mart-props/EcruteakCity_Mart-stool-northwest.png",
+      "source": "build/qa09-mart-props-v11/EcruteakCity_Mart-stool-northwest.png",
+      "size": 5039,
+      "sha256": "021f685e9308a43b28614a9514fa756da67f7e93226368938fa16e904ed0557f"
+    },
+    {
+      "path": "final-v11-mart-props/EcruteakCity_Mart-stool-northwest.mp4",
+      "source": "build/qa09-mart-props-v11/EcruteakCity_Mart-stool-northwest.mp4",
+      "size": 13597,
+      "sha256": "0367cda6bc5430bb3346163a804cb3eecbb87d32de66aec7040e88c340dce285"
+    },
+    {
+      "path": "final-v11-mart-props/OlivineCity_Mart-furnished.png",
+      "source": "build/qa09-mart-props-v11/OlivineCity_Mart-furnished.png",
+      "size": 3430,
+      "sha256": "ca90e7012ab5450072a62c796fb3dec6654d5792b9be0580cdc8f4417d6b6d79"
+    },
+    {
+      "path": "final-v11-mart-props/OlivineCity_Mart-northeast-plant.png",
+      "source": "build/qa09-mart-props-v11/OlivineCity_Mart-northeast-plant.png",
+      "size": 4228,
+      "sha256": "07baaab863357ae43960dbbf1c95bc69df08fffc0bf15da932b212c5dbc796c2"
+    },
+    {
+      "path": "final-v11-mart-props/OlivineCity_Mart-northeast-plant.mp4",
+      "source": "build/qa09-mart-props-v11/OlivineCity_Mart-northeast-plant.mp4",
+      "size": 10223,
+      "sha256": "1c91e8cfe231fe93150b88c9f34221605d49c070b556b04086c4f5afd20e94f6"
+    },
+    {
+      "path": "final-v11-mart-props/OlivineCity_Mart-stool-northwest.png",
+      "source": "build/qa09-mart-props-v11/OlivineCity_Mart-stool-northwest.png",
+      "size": 5039,
+      "sha256": "021f685e9308a43b28614a9514fa756da67f7e93226368938fa16e904ed0557f"
+    },
+    {
+      "path": "final-v11-mart-props/OlivineCity_Mart-stool-northwest.mp4",
+      "source": "build/qa09-mart-props-v11/OlivineCity_Mart-stool-northwest.mp4",
+      "size": 13597,
+      "sha256": "0367cda6bc5430bb3346163a804cb3eecbb87d32de66aec7040e88c340dce285"
+    },
+    {
+      "path": "final-v11-materials/results.json",
+      "source": "build/qa09-olivine-materials-v11/results.json",
+      "size": 20631,
+      "sha256": "5d837aef555b2fa9750d037e80e546738b64bc6fb7f14285ec6a53152b8f4add"
+    },
+    {
+      "path": "final-v11-materials/identity.json",
+      "source": "build/qa09-olivine-materials-v11/identity.json",
+      "size": 365,
+      "sha256": "5c4f1e4bdf361c956817199cc6fe846af757fe960dfa284bb6537aed34ea92f9"
+    },
+    {
+      "path": "final-v11-materials/returned-to-dry-port-forecourt.png",
+      "source": "build/qa09-olivine-materials-v11/returned-to-dry-port-forecourt.png",
+      "size": 6258,
+      "sha256": "c07304391e2b6d0d1cdfa623e1c047a50ce53427b0e13ed22bc8b6ded3bdc2e9"
+    },
+    {
+      "path": "final-v11-materials/relocated-table-7.png",
+      "source": "build/qa09-olivine-materials-v11/relocated-table-7.png",
+      "size": 6822,
+      "sha256": "ba95d9d7d0bd702832ba81cd7dc0e66760371891faa65383f84894ea9a701662"
+    },
+    {
+      "path": "final-v11-materials/relocated-table-7.mp4",
+      "source": "build/qa09-olivine-materials-v11/relocated-table-7.mp4",
+      "size": 42328,
+      "sha256": "6c761e9c8b2eecd112b641b3eef6bb3772dff62eb6affc8afd1d9321eb244e02"
+    },
+    {
+      "path": "final-v11-materials/relocated-table-14.png",
+      "source": "build/qa09-olivine-materials-v11/relocated-table-14.png",
+      "size": 6171,
+      "sha256": "63a84c0106b48ffd9d3550d56e1bbc57aca2bee4766dbbf12f6407b0136204c2"
+    },
+    {
+      "path": "final-v11-materials/relocated-table-14.mp4",
+      "source": "build/qa09-olivine-materials-v11/relocated-table-14.mp4",
+      "size": 34443,
+      "sha256": "dadec6afbe3292482f7588f29d48ca8ad3274a3e5f8bee9f3b0de7a89287c222"
+    },
+    {
+      "path": "final-v11-materials/relocated-table-29.png",
+      "source": "build/qa09-olivine-materials-v11/relocated-table-29.png",
+      "size": 7069,
+      "sha256": "0f9d0795127dae369aab06023ae2fa739080f13a462a215d0e21a74acfb2102e"
+    },
+    {
+      "path": "final-v11-materials/relocated-table-29.mp4",
+      "source": "build/qa09-olivine-materials-v11/relocated-table-29.mp4",
+      "size": 33676,
+      "sha256": "1a7e3bb8c7482cc5577904268161c8086b0fa5ce16e61908a574e41cd628ce11"
+    },
+    {
+      "path": "final-v11-materials/timber-promenade.png",
+      "source": "build/qa09-olivine-materials-v11/timber-promenade.png",
+      "size": 6219,
+      "sha256": "c18a8cad9720ae068faa326985e677d926127354467aa97e1113c22dc37241ad"
+    },
+    {
+      "path": "final-v11-materials/timber-promenade.mp4",
+      "source": "build/qa09-olivine-materials-v11/timber-promenade.mp4",
+      "size": 35320,
+      "sha256": "cd9ed903cb564a5678270474318f53309695e4f686bda3e14a0ad2e8e73fea40"
+    },
+    {
+      "path": "final-v11-materials/parasol-11-canopy.png",
+      "source": "build/qa09-olivine-materials-v11/parasol-11-canopy.png",
+      "size": 6000,
+      "sha256": "2cc11c30c7605987bbac01a685f7b67e3b0481dc6bc122a0f7c4390c8c842be7"
+    },
+    {
+      "path": "final-v11-materials/parasol-11-canopy.mp4",
+      "source": "build/qa09-olivine-materials-v11/parasol-11-canopy.mp4",
+      "size": 17572,
+      "sha256": "5baf7e13253b908e26d9a346f5ac736653303f1fdb139fa0a29a43ab260662f8"
+    },
+    {
+      "path": "final-v11-materials/parasol-11-base.png",
+      "source": "build/qa09-olivine-materials-v11/parasol-11-base.png",
+      "size": 6550,
+      "sha256": "55d5e1a978c76b6befb0081ff6d279df8473b189b645c215e6651cc98145affc"
+    },
+    {
+      "path": "final-v11-materials/parasol-11-base.mp4",
+      "source": "build/qa09-olivine-materials-v11/parasol-11-base.mp4",
+      "size": 21030,
+      "sha256": "762d3870409648730b539429f487b986768848f44251ad64dbd1398c66c0fb53"
+    },
+    {
+      "path": "final-v11-materials/parasol-16-canopy.png",
+      "source": "build/qa09-olivine-materials-v11/parasol-16-canopy.png",
+      "size": 5314,
+      "sha256": "48b17b122d403a9b9955a4fdf5e7bc422ed39d88798e234c87f96db4663ca0c9"
+    },
+    {
+      "path": "final-v11-materials/parasol-16-canopy.mp4",
+      "source": "build/qa09-olivine-materials-v11/parasol-16-canopy.mp4",
+      "size": 15612,
+      "sha256": "ecc3db66a945dec3e93494fc69cf324cc6833abf51967b7b745944da7fb3b730"
+    },
+    {
+      "path": "final-v11-materials/parasol-16-base.png",
+      "source": "build/qa09-olivine-materials-v11/parasol-16-base.png",
+      "size": 6755,
+      "sha256": "f40cd4c82554a17981da666c13f2f700b9deaa5902362a4973f0b5957761991a"
+    },
+    {
+      "path": "final-v11-materials/parasol-16-base.mp4",
+      "source": "build/qa09-olivine-materials-v11/parasol-16-base.mp4",
+      "size": 19653,
+      "sha256": "211544a64566dc78ff5dd0a3f843922f68bc857ebe62a0d2014074188fe9c943"
+    },
+    {
+      "path": "final-v11-materials/parasol-32-canopy.png",
+      "source": "build/qa09-olivine-materials-v11/parasol-32-canopy.png",
+      "size": 6173,
+      "sha256": "95f15abdc667b9410c330deccc4c2c23c3958c8e63466911684259916a4cd911"
+    },
+    {
+      "path": "final-v11-materials/parasol-32-canopy.mp4",
+      "source": "build/qa09-olivine-materials-v11/parasol-32-canopy.mp4",
+      "size": 14936,
+      "sha256": "2289f714ac5f30d0f62b55caedcbec859781950220f857e6bdf8c77ce0a482f1"
+    },
+    {
+      "path": "final-v11-materials/parasol-32-base.png",
+      "source": "build/qa09-olivine-materials-v11/parasol-32-base.png",
+      "size": 7703,
+      "sha256": "1259da0d63c5f0e51d2c2dfb60d1409b2a0e4cef17ad37a0c2846c35b2f86844"
+    },
+    {
+      "path": "final-v11-materials/parasol-32-base.mp4",
+      "source": "build/qa09-olivine-materials-v11/parasol-32-base.mp4",
+      "size": 16261,
+      "sha256": "c7f96e4951179844c6df8792c6300dfa92fbab6f43fe825a32dea42e1d472fed"
+    },
+    {
+      "path": "final-v11-materials/outer-fence.png",
+      "source": "build/qa09-olivine-materials-v11/outer-fence.png",
+      "size": 7552,
+      "sha256": "0be38edbaa406a410b0234b82c7e41a472428da2177d7a1c28bfd3109950a43b"
+    },
+    {
+      "path": "final-v11-materials/outer-fence.mp4",
+      "source": "build/qa09-olivine-materials-v11/outer-fence.mp4",
+      "size": 23481,
+      "sha256": "c68a2e6efae629663a74f53948aea3c2422dc1d70d3dae6264b203d178bde01d"
+    },
+    {
+      "path": "final-v11-materials/garden-fence.png",
+      "source": "build/qa09-olivine-materials-v11/garden-fence.png",
+      "size": 9504,
+      "sha256": "50e342de156e7ef830b7e9f21d8032f9c1f05a14ed90272c9b7372b3ef6af365"
+    },
+    {
+      "path": "final-v11-materials/garden-fence.mp4",
+      "source": "build/qa09-olivine-materials-v11/garden-fence.mp4",
+      "size": 15156,
+      "sha256": "7510d297eabf79cee98e412eb029ebb5a844aa76c2cf266b91a7d31f9f49dbf6"
+    },
+    {
+      "path": "final-v11-materials/east-rock-a.png",
+      "source": "build/qa09-olivine-materials-v11/east-rock-a.png",
+      "size": 6204,
+      "sha256": "bc0c30573ea388f86f9c701cc9fb325772d322fabb331cb67d8e5dd0feeab968"
+    },
+    {
+      "path": "final-v11-materials/east-rock-a.mp4",
+      "source": "build/qa09-olivine-materials-v11/east-rock-a.mp4",
+      "size": 25269,
+      "sha256": "751e83b79ae9739af72b26c52b6c572fa0320c584d1d41967ee3a0ad8cca652a"
+    },
+    {
+      "path": "final-v11-materials/east-rock-b.png",
+      "source": "build/qa09-olivine-materials-v11/east-rock-b.png",
+      "size": 5955,
+      "sha256": "0112ad3296eb9aa4c5ecead3286236426e38da7d9ea5f582496e6085cfc6b760"
+    },
+    {
+      "path": "final-v11-materials/east-rock-b.mp4",
+      "source": "build/qa09-olivine-materials-v11/east-rock-b.mp4",
+      "size": 30947,
+      "sha256": "fa024db7a14e162f03e6ab9cacbeb6be889357417c82d4b10291f185cf6d1e89"
+    },
+    {
+      "path": "final-v11-materials/east-rock-c.png",
+      "source": "build/qa09-olivine-materials-v11/east-rock-c.png",
+      "size": 6242,
+      "sha256": "7636fcf1dc81834d3f98541dc5609597df929622975decf5df81443c3081d466"
+    },
+    {
+      "path": "final-v11-materials/east-rock-c.mp4",
+      "source": "build/qa09-olivine-materials-v11/east-rock-c.mp4",
+      "size": 24007,
+      "sha256": "8523d1c3e5290b214727e421dc638bd08ddd6b4663285f110a0f25fad43035a3"
+    },
+    {
+      "path": "final-v11-materials/east-rock-chain.png",
+      "source": "build/qa09-olivine-materials-v11/east-rock-chain.png",
+      "size": 5235,
+      "sha256": "a365846485362d1c0f968194a186f0b4b3dcfde5ec6fb68d38563bf2a42e4d65"
+    },
+    {
+      "path": "final-v11-materials/east-rock-chain.mp4",
+      "source": "build/qa09-olivine-materials-v11/east-rock-chain.mp4",
+      "size": 35635,
+      "sha256": "c708087cbb1452254eac6609db49fee05b1c89277788fc6815d940b9f4cd6d87"
+    },
+    {
+      "path": "final-v11-materials/old-port-model-now-sea.png",
+      "source": "build/qa09-olivine-materials-v11/old-port-model-now-sea.png",
+      "size": 3809,
+      "sha256": "cf613f0382cf6649f2bcac23660ba7b80646975b889a94300f30577545e0d96a"
+    },
+    {
+      "path": "final-v11-materials/old-port-model-now-sea.mp4",
+      "source": "build/qa09-olivine-materials-v11/old-port-model-now-sea.mp4",
+      "size": 57177,
+      "sha256": "cb48270c31cc298ba4ad06cebe022b157d397f2c24de4d10ac6bd3cba989c08d"
+    },
+    {
+      "path": "final-v11-materials/southern-sea-boundary.png",
+      "source": "build/qa09-olivine-materials-v11/southern-sea-boundary.png",
+      "size": 1956,
+      "sha256": "eaf261004cba5611d3518bb7c39487d02488f30f29262bd24167e7b6aea52e4f"
+    },
+    {
+      "path": "final-v11-materials/southern-sea-boundary.mp4",
+      "source": "build/qa09-olivine-materials-v11/southern-sea-boundary.mp4",
+      "size": 18045,
+      "sha256": "16adbc39d3b83356a0530a637d4974919851ac00efa0990591b2d1f750e640a4"
+    },
+    {
+      "path": "final-v11-counters/PokemonCenter_1F-11.png",
+      "source": "build/qa09-center-counter-after-v11/PokemonCenter_1F-11.png",
+      "size": 3697,
+      "sha256": "ca523f2b7124a22edf5d33550bce81564933596db7e892d486de409239ea1800"
+    },
+    {
+      "path": "final-v11-counters/PokemonCenter_1F-2.png",
+      "source": "build/qa09-center-counter-after-v11/PokemonCenter_1F-2.png",
+      "size": 3186,
+      "sha256": "9b5c4c30fd7ab7d41c0d33db12d2f25f097bc746c550b5439b5bacbf58079d06"
+    },
+    {
+      "path": "final-v11-counters/PokemonCenter_1F-6.png",
+      "source": "build/qa09-center-counter-after-v11/PokemonCenter_1F-6.png",
+      "size": 3242,
+      "sha256": "6ffed3a3a1e165344f692b64fb09d987df07c1c597b17f37b58a5013037d9524"
+    },
+    {
+      "path": "final-v11-counters/PokemonCenter_B1F-12.png",
+      "source": "build/qa09-center-counter-after-v11/PokemonCenter_B1F-12.png",
+      "size": 3560,
+      "sha256": "404118ef130cc249ec57849ab279f7b3c0c8bc3e9ed19ff5b908129a718d8c98"
+    },
+    {
+      "path": "final-v11-counters/PokemonCenter_B1F-4.png",
+      "source": "build/qa09-center-counter-after-v11/PokemonCenter_B1F-4.png",
+      "size": 3710,
+      "sha256": "e4c85e86a2b78a866a461aa928f326cf49f9cabdadf45b56462e80cee21eb2cb"
+    },
+    {
+      "path": "final-v11-counters/PokemonCenter_B1F-8.png",
+      "source": "build/qa09-center-counter-after-v11/PokemonCenter_B1F-8.png",
+      "size": 3913,
+      "sha256": "6fd58e2a0e71128495511ffd2fcb4527d9929b1bb12afb154e90c00cf4bb7473"
+    },
+    {
+      "path": "final-v11-counters/PokemonCenter_B1F-4.mp4",
+      "source": "build/qa09-center-counter-after-v11/PokemonCenter_B1F-4.mp4",
+      "size": 12846,
+      "sha256": "0a5f060f24a932c8f41a428e203b96638b1d3a0fd84cf868b5d5b7a6ca54ad82"
+    },
+    {
+      "path": "final-v11-counters/results.json",
+      "source": "build/qa09-center-counter-after-v11/results.json",
+      "size": 2309,
+      "sha256": "684f3ce363375015fbfe0c65d9e29c72e7c825f5059c026c7d77399b516865b5"
+    },
+    {
+      "path": "final-v11-counters/identity.json",
+      "source": "build/qa09-center-counter-after-v11/identity.json",
+      "size": 365,
+      "sha256": "5c4f1e4bdf361c956817199cc6fe846af757fe960dfa284bb6537aed34ea92f9"
+    },
+    {
+      "path": "final-v11-lane/completed.json",
+      "source": "build/qa09-olivine-lane-v11/completed.json",
+      "size": 1559,
+      "sha256": "cb9a4307478c99ccff42caa899acb497dbdb3f5a769caa7becd30b740d3e20ac"
+    },
+    {
+      "path": "final-v11-lane/identity.json",
+      "source": "build/qa09-olivine-lane-v11/identity.json",
+      "size": 365,
+      "sha256": "5c4f1e4bdf361c956817199cc6fe846af757fe960dfa284bb6537aed34ea92f9"
+    }
+  ],
+  "baseline_v8_rom_sha256": "24e8c300d564b98e6fdea3216a868dc4c5c920d19721a5de7ef4974387081fab",
+  "final_v9_rom_sha256": "d5abac0deabc7d592eba302122b3d15c08501947f0f601eda7b5026da9ac6772",
+  "final_v9_source_commit": "5664fecee4337c5bdd442583e24cc91c09c0a0cd",
+  "final_v10_source_commit": "7d92f79357b744dddb706bba121d7bd5e6fc4254",
+  "final_v10_rom_sha256": "3bec0fedbb481cc051c38d719499b584e9a4c219e42b66bef298f6aa0c5ec7a9",
+  "v10_candidate_status": "Stopped/superseded: Ecruteak gate magenta/foreground-floor defects found by final native review. Only completed24mapOlivine all-edges tour isPASS; interruptedSave25 and unstarted remaining suites are notPASS.",
+  "final_v11_source_commit": "489c404346f572aefb6856b3dd48a9b364a08ceb",
+  "final_v11_rom_sha256": "df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4"
+}

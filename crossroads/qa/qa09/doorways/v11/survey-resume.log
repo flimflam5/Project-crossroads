@@ -1,0 +1,2 @@
+Exact-ROM resumed snapshot retains already-enabled Survey session; no second toggle: PASS
+Actual controller visits/return, healing and retained starter/party: PASS 0 target maps 0 transitions

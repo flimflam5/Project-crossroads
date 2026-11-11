@@ -1,0 +1,202 @@
+[
+  {
+    "name": "OlivineCity_FishingHouse",
+    "source_header": "MAP_OLIVINE_NORTHWEST_HOUSE",
+    "source": {
+      "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0097_T21R0301.bin",
+      "matrix_blob_sha": "5e28ceacf076da9c4e81fe9376530d4aaa96ba5d",
+      "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/216_T26R0601.json",
+      "events_blob_sha": "49ec63006209d42ef103135d2a099a5565ff6365",
+      "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+    },
+    "dimensions": [
+      11,
+      10
+    ],
+    "adaptations": [
+      "HGSS room extent/table/counter footprints in native GBA furnishings; cafe12,8 adds one visible staff escape aisle",
+      "Source rewards/trades/Seal Case and plot actors are deferred by owner scope",
+      "Paired interior exit leaves both work; exterior house/cafe has its canonical single door"
+    ],
+    "runtime": "requires delivery-ROM controller tests",
+    "owner_visual_acceptance": "pending"
+  },
+  {
+    "name": "OlivineCity_TradeHouse",
+    "source_header": "MAP_OLIVINE_NORTH_HOUSE",
+    "source": {
+      "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0097_T21R0301.bin",
+      "matrix_blob_sha": "5e28ceacf076da9c4e81fe9376530d4aaa96ba5d",
+      "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/214_T26R0301.json",
+      "events_blob_sha": "a5c457e801a0d4ab0c831aba1a8d4d0431dff0bc",
+      "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+    },
+    "dimensions": [
+      11,
+      10
+    ],
+    "adaptations": [
+      "HGSS room extent/table/counter footprints in native GBA furnishings; cafe12,8 adds one visible staff escape aisle",
+      "Source rewards/trades/Seal Case and plot actors are deferred by owner scope",
+      "Paired interior exit leaves both work; exterior house/cafe has its canonical single door"
+    ],
+    "runtime": "requires delivery-ROM controller tests",
+    "owner_visual_acceptance": "pending"
+  },
+  {
+    "name": "OlivineCity_SealHouse",
+    "source_header": "MAP_OLIVINE_NORTHEAST_HOUSE",
+    "source": {
+      "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0097_T21R0301.bin",
+      "matrix_blob_sha": "5e28ceacf076da9c4e81fe9376530d4aaa96ba5d",
+      "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/215_T26R0501.json",
+      "events_blob_sha": "2de125feb32c18be618d3044054d7550689c75f1",
+      "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+    },
+    "dimensions": [
+      11,
+      10
+    ],
+    "adaptations": [
+      "HGSS room extent/table/counter footprints in native GBA furnishings; cafe12,8 adds one visible staff escape aisle",
+      "Source rewards/trades/Seal Case and plot actors are deferred by owner scope",
+      "Paired interior exit leaves both work; exterior house/cafe has its canonical single door"
+    ],
+    "runtime": "requires delivery-ROM controller tests",
+    "owner_visual_acceptance": "pending"
+  },
+  {
+    "name": "OlivineCity_Cafe",
+    "source_header": "MAP_OLIVINE_CAFE",
+    "source": {
+      "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0136_T26R0701.bin",
+      "matrix_blob_sha": "7fa42e429494f67142ef822ac8138abe0c53a29c",
+      "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/217_T26R0701.json",
+      "events_blob_sha": "db39385bc0e6a9b8d01363b6f48e28e228f9abdf",
+      "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+    },
+    "dimensions": [
+      14,
+      12
+    ],
+    "adaptations": [
+      "HGSS room extent/table/counter footprints in native GBA furnishings; cafe12,8 adds one visible staff escape aisle",
+      "Source rewards/trades/Seal Case and plot actors are deferred by owner scope",
+      "Paired interior exit leaves both work; exterior house/cafe has its canonical single door"
+    ],
+    "runtime": "requires delivery-ROM controller tests",
+    "owner_visual_acceptance": "pending"
+  },
+  {
+    "name": "OlivineCity_PokemonCenter_1F",
+    "source_header": "MAP_OLIVINE_POKECENTER_1F",
+    "source": {
+      "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0073_T21PC0101.bin",
+      "matrix_blob_sha": "993607934cd67d543de7bcdc4c42b0c01af3adcc",
+      "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/212_T26PC0101.json",
+      "events_blob_sha": "69623161e72b96fddb1c220dc35cb82c7e610665",
+      "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+    },
+    "dimensions": [
+      17,
+      21
+    ],
+    "adaptations": [
+      "Actual HGSS matrix identical to Ecruteak service room; clone current dedicated source-backed adaptation after its generator, retaining immutable generic templates",
+      "Olivine nurse ID/shop stock/scripts preserved; native PC/counter/escalators",
+      "Raised DS reception flattened; communication desks explicitly offline"
+    ],
+    "runtime": "requires delivery-ROM controller tests",
+    "owner_visual_acceptance": "pending"
+  },
+  {
+    "name": "OlivineCity_PokemonCenter_B1F",
+    "source_header": "MAP_OLIVINE_POKECENTER_B1F",
+    "source": {
+      "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0077_T27PC0105.bin",
+      "matrix_blob_sha": "0c7f359a1e6d95db32ee52ef57a566bac1589119",
+      "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/324_T26PC0102.json",
+      "events_blob_sha": "7888ff2c2dfa4f3c38e08c953999351a1c013802",
+      "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+    },
+    "dimensions": [
+      17,
+      14
+    ],
+    "adaptations": [
+      "Actual HGSS matrix identical to Ecruteak service room; clone current dedicated source-backed adaptation after its generator, retaining immutable generic templates",
+      "Olivine nurse ID/shop stock/scripts preserved; native PC/counter/escalators",
+      "Raised DS reception flattened; communication desks explicitly offline"
+    ],
+    "runtime": "requires delivery-ROM controller tests",
+    "owner_visual_acceptance": "pending"
+  },
+  {
+    "name": "OlivineCity_Mart",
+    "source_header": "MAP_OLIVINE_POKEMART",
+    "source": {
+      "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0104_T21FS0101.bin",
+      "matrix_blob_sha": "567a0d5d174171eebb5ddc5aa1245f00c5b52b5d",
+      "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/213_T26FS0101.json",
+      "events_blob_sha": "4566c8933940b37f39876f21d0db980d5b880f3b",
+      "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+    },
+    "dimensions": [
+      14,
+      13
+    ],
+    "adaptations": [
+      "Actual HGSS matrix identical to Ecruteak service room; clone current dedicated source-backed adaptation after its generator, retaining immutable generic templates",
+      "Olivine nurse ID/shop stock/scripts preserved; native PC/counter/escalators",
+      "Raised DS reception flattened; communication desks explicitly offline"
+    ],
+    "runtime": "requires delivery-ROM controller tests",
+    "owner_visual_acceptance": "pending"
+  },
+  {
+    "name": "OlivineCity_Gym",
+    "source_header": "MAP_OLIVINE_GYM",
+    "source": {
+      "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0091_T26GYM0101.bin",
+      "matrix_blob_sha": "cf24368e5f50e691e985809610d8468ad6d0bed8",
+      "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/134_T26GYM0101.json",
+      "events_blob_sha": "d783ecb187c5c586c51e409954f87c8f548701ac",
+      "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+    },
+    "dimensions": [
+      11,
+      12
+    ],
+    "adaptations": [
+      "Canonical HGSS long central steel runway/platform/pylons/source actor positions",
+      "Original silver/salmon/hex modules replace 3D perspective; owner exterior Gym unchanged",
+      "Sourcey17 split across two stable map IDs; all three corridor segments reciprocal",
+      "Accepted Jasmine/apprentice optional practice scripts retained, no rewards/badges/gates"
+    ],
+    "runtime": "requires delivery-ROM controller tests",
+    "owner_visual_acceptance": "pending"
+  },
+  {
+    "name": "OlivineCity_Gym_Arena",
+    "source_header": "MAP_OLIVINE_GYM",
+    "source": {
+      "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0091_T26GYM0101.bin",
+      "matrix_blob_sha": "cf24368e5f50e691e985809610d8468ad6d0bed8",
+      "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/134_T26GYM0101.json",
+      "events_blob_sha": "d783ecb187c5c586c51e409954f87c8f548701ac",
+      "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+    },
+    "dimensions": [
+      11,
+      17
+    ],
+    "adaptations": [
+      "Canonical HGSS long central steel runway/platform/pylons/source actor positions",
+      "Original silver/salmon/hex modules replace 3D perspective; owner exterior Gym unchanged",
+      "Sourcey17 split across two stable map IDs; all three corridor segments reciprocal",
+      "Accepted Jasmine/apprentice optional practice scripts retained, no rewards/badges/gates"
+    ],
+    "runtime": "requires delivery-ROM controller tests",
+    "owner_visual_acceptance": "pending"
+  }
+]

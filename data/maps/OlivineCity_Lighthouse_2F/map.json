@@ -17,15 +17,22 @@
   "object_events": [],
   "warp_events": [
     {
-      "x": 2,
-      "y": 9,
+      "x": 5,
+      "y": 3,
       "elevation": 0,
       "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_1F",
       "dest_warp_id": "2"
     },
     {
-      "x": 11,
-      "y": 2,
+      "x": 13,
+      "y": 6,
+      "elevation": 0,
+      "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_3F",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 13,
+      "y": 5,
       "elevation": 0,
       "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_3F",
       "dest_warp_id": "0"
@@ -35,8 +42,8 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 5,
-      "y": 1,
+      "x": 0,
+      "y": 16,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Area_Floor_OlivineCity_Lighthouse_2F"

@@ -1,0 +1,180 @@
+{
+  "home": {
+    "void": {
+      "start": 512,
+      "width": 1,
+      "height": 1
+    },
+    "wood": {
+      "start": 513,
+      "width": 1,
+      "height": 1
+    },
+    "house_wall": {
+      "start": 514,
+      "width": 4,
+      "height": 2
+    },
+    "fridge": {
+      "start": 522,
+      "width": 1,
+      "height": 2
+    },
+    "cabinet": {
+      "start": 524,
+      "width": 2,
+      "height": 2
+    },
+    "television": {
+      "start": 528,
+      "width": 2,
+      "height": 2
+    },
+    "dining_table": {
+      "start": 532,
+      "width": 2,
+      "height": 2
+    },
+    "chair": {
+      "start": 536,
+      "width": 1,
+      "height": 1
+    },
+    "prayer_table": {
+      "start": 537,
+      "width": 2,
+      "height": 1
+    },
+    "exit": {
+      "start": 539,
+      "width": 1,
+      "height": 1
+    },
+    "house_kitchen": {
+      "start": 540,
+      "width": 2,
+      "height": 2
+    },
+    "house_window": {
+      "start": 544,
+      "width": 2,
+      "height": 2
+    },
+    "cafe_table": {
+      "start": 548,
+      "width": 3,
+      "height": 3
+    },
+    "counter": {
+      "start": 557,
+      "width": 1,
+      "height": 1
+    },
+    "cafe_floor": {
+      "start": 558,
+      "width": 1,
+      "height": 1
+    },
+    "cafe_cafe_table": {
+      "start": 559,
+      "width": 3,
+      "height": 3
+    },
+    "cafe_chair": {
+      "start": 568,
+      "width": 1,
+      "height": 1
+    },
+    "cafe_counter": {
+      "start": 569,
+      "width": 1,
+      "height": 1
+    },
+    "cafe_house_kitchen": {
+      "start": 570,
+      "width": 2,
+      "height": 2
+    },
+    "house_plant": {
+      "start": 574,
+      "width": 1,
+      "height": 2
+    },
+    "cafe_plant": {
+      "start": 576,
+      "width": 1,
+      "height": 2
+    },
+    "cafe_house_wall": {
+      "start": 578,
+      "width": 4,
+      "height": 2
+    },
+    "cafe_house_window": {
+      "start": 586,
+      "width": 2,
+      "height": 2
+    }
+  },
+  "gym": {
+    "hex": {
+      "start": 512,
+      "width": 2,
+      "height": 2
+    },
+    "runway": {
+      "start": 516,
+      "width": 1,
+      "height": 1
+    },
+    "wall": {
+      "start": 517,
+      "width": 2,
+      "height": 2
+    },
+    "pillar": {
+      "start": 521,
+      "width": 1,
+      "height": 4
+    },
+    "rail": {
+      "start": 525,
+      "width": 3,
+      "height": 1
+    },
+    "stairs": {
+      "start": 528,
+      "width": 2,
+      "height": 2
+    },
+    "canopy": {
+      "start": 532,
+      "width": 5,
+      "height": 4
+    },
+    "pylon": {
+      "start": 552,
+      "width": 1,
+      "height": 2
+    },
+    "void": {
+      "start": 554,
+      "width": 1,
+      "height": 1
+    },
+    "warp": {
+      "start": 555,
+      "width": 1,
+      "height": 1
+    },
+    "exit": {
+      "start": 556,
+      "width": 1,
+      "height": 1
+    }
+  },
+  "home_gfx": 160,
+  "gym_gfx": 152,
+  "source_sha256": "76ec2e8ab12cbb4a0feaca294137a7fe9a2c3ed438f771de2b1b7c550c865a17",
+  "source": "Original generated silver gym modules directed by actual HGSS screenshot; repacked native GBA furniture at actual HGSS matrix footprints"
+}

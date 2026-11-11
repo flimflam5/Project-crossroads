@@ -16,20 +16,20 @@
   "connections": [
     {
       "map": "MAP_JOHTO_ROUTE39",
-      "offset": 16,
+      "offset": 12,
       "direction": "up"
     },
     {
       "map": "MAP_JOHTO_ROUTE40",
-      "offset": 0,
+      "offset": 10,
       "direction": "left"
     }
   ],
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_SAILOR",
-      "x": 16,
-      "y": 35,
+      "x": 17,
+      "y": 38,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -41,8 +41,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_3",
-      "x": 18,
-      "y": 13,
+      "x": 19,
+      "y": 18,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -54,8 +54,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_1",
-      "x": 32,
-      "y": 25,
+      "x": 26,
+      "y": 36,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -67,8 +67,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_DEVON_EMPLOYEE",
-      "x": 32,
-      "y": 13,
+      "x": 28,
+      "y": 35,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -80,8 +80,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
-      "x": 34,
-      "y": 34,
+      "x": 44,
+      "y": 42,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -93,7 +93,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
-      "x": 16,
+      "x": 18,
       "y": 25,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
@@ -106,8 +106,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SAILOR",
-      "x": 21,
-      "y": 40,
+      "x": 22,
+      "y": 45,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -120,158 +120,247 @@
   ],
   "warp_events": [
     {
-      "x": 11,
-      "y": 9,
+      "x": 8,
+      "y": 23,
       "elevation": 0,
       "dest_map": "MAP_OLIVINE_CITY_RESIDENCE",
       "dest_warp_id": "0"
     },
     {
-      "x": 21,
-      "y": 9,
+      "x": 8,
+      "y": 28,
       "elevation": 0,
       "dest_map": "MAP_OLIVINE_CITY_NEIGHBOR_HOUSE",
       "dest_warp_id": "0"
     },
     {
-      "x": 38,
-      "y": 9,
+      "x": 13,
+      "y": 14,
       "elevation": 0,
       "dest_map": "MAP_OLIVINE_CITY_GYM",
       "dest_warp_id": "0"
     },
     {
-      "x": 11,
-      "y": 21,
+      "x": 16,
+      "y": 33,
       "elevation": 0,
       "dest_map": "MAP_OLIVINE_CITY_POKEMON_CENTER_1F",
       "dest_warp_id": "0"
     },
     {
-      "x": 22,
-      "y": 21,
+      "x": 29,
+      "y": 33,
       "elevation": 0,
       "dest_map": "MAP_OLIVINE_CITY_MART",
       "dest_warp_id": "0"
     },
     {
-      "x": 37,
-      "y": 21,
+      "x": 31,
+      "y": 40,
       "elevation": 0,
       "dest_map": "MAP_OLIVINE_CITY_SILPH_OFFICE",
       "dest_warp_id": "0"
     },
     {
-      "x": 12,
-      "y": 32,
+      "x": 8,
+      "y": 40,
       "elevation": 0,
       "dest_map": "MAP_OLIVINE_CITY_HARBOR_OFFICE",
       "dest_warp_id": "0"
     },
     {
-      "x": 39,
-      "y": 32,
+      "x": 45,
+      "y": 39,
       "elevation": 0,
       "dest_map": "MAP_OLIVINECITY_LIGHTHOUSE_1F",
       "dest_warp_id": "0"
     },
     {
-      "x": 39,
-      "y": 9,
+      "x": 14,
+      "y": 14,
       "elevation": 0,
       "dest_map": "MAP_OLIVINE_CITY_GYM",
       "dest_warp_id": "1"
+    },
+    {
+      "x": 17,
+      "y": 23,
+      "elevation": 0,
+      "dest_map": "MAP_HGSS_OLIVINECITY_FISHINGHOUSE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 31,
+      "y": 17,
+      "elevation": 0,
+      "dest_map": "MAP_HGSS_OLIVINECITY_TRADEHOUSE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 36,
+      "y": 17,
+      "elevation": 0,
+      "dest_map": "MAP_HGSS_OLIVINECITY_SEALHOUSE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 9,
+      "y": 33,
+      "elevation": 0,
+      "dest_map": "MAP_HGSS_OLIVINECITY_CAFE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 23,
+      "y": 52,
+      "elevation": 0,
+      "dest_map": "MAP_OLIVINE_CITY_PORT_TERMINAL",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 17,
+      "y": 33,
+      "elevation": 0,
+      "dest_map": "MAP_OLIVINE_CITY_POKEMON_CENTER_1F",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 24,
+      "y": 52,
+      "elevation": 0,
+      "dest_map": "MAP_OLIVINE_CITY_PORT_TERMINAL",
+      "dest_warp_id": "3"
     }
   ],
   "coord_events": [],
   "bg_events": [
     {
       "type": "sign",
-      "x": 9,
-      "y": 10,
+      "x": 7,
+      "y": 24,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Olivine_ResidenceSign"
     },
     {
       "type": "sign",
-      "x": 20,
-      "y": 10,
+      "x": 7,
+      "y": 29,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Olivine_NeighborSign"
     },
     {
       "type": "sign",
-      "x": 36,
-      "y": 10,
+      "x": 9,
+      "y": 14,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Olivine_GymSign"
     },
     {
       "type": "sign",
-      "x": 9,
-      "y": 22,
+      "x": 14,
+      "y": 34,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Olivine_CenterSign"
     },
     {
       "type": "sign",
-      "x": 20,
-      "y": 22,
+      "x": 27,
+      "y": 34,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Olivine_MartSign"
     },
     {
       "type": "sign",
-      "x": 35,
-      "y": 22,
+      "x": 29,
+      "y": 41,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Olivine_OfficeSign"
     },
     {
       "type": "sign",
-      "x": 10,
-      "y": 33,
+      "x": 7,
+      "y": 41,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Olivine_HarborSign"
     },
     {
       "type": "sign",
-      "x": 36,
-      "y": 33,
+      "x": 46,
+      "y": 40,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Olivine_LighthouseSign"
     },
     {
       "type": "sign",
-      "x": 26,
-      "y": 26,
+      "x": 24,
+      "y": 42,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Olivine_CityDirectory"
     },
     {
       "type": "sign",
-      "x": 25,
-      "y": 3,
+      "x": 28,
+      "y": 7,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Olivine_NorthBoundary"
     },
     {
       "type": "sign",
-      "x": 8,
-      "y": 25,
+      "x": 7,
+      "y": 36,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Johto_OlivineSeaSign"
+    },
+    {
+      "type": "sign",
+      "x": 16,
+      "y": 24,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Hgss_OlivineSign_FishingHouse"
+    },
+    {
+      "type": "sign",
+      "x": 30,
+      "y": 18,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Hgss_OlivineSign_TradeHouse"
+    },
+    {
+      "type": "sign",
+      "x": 35,
+      "y": 18,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Hgss_OlivineSign_SealHouse"
+    },
+    {
+      "type": "sign",
+      "x": 8,
+      "y": 34,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Hgss_OlivineSign_Cafe"
+    },
+    {
+      "type": "sign",
+      "x": 22,
+      "y": 53,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Hgss_OlivineSign_Port"
     }
   ]
 }

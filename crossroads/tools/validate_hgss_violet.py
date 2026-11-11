@@ -11,11 +11,18 @@ from johto_movement import next_position
 from build_hgss_violet import OWNED,NEW,patch_neighbor,neighbor_tiles
 R=Path(__file__).resolve().parents[2]
 def validate():
+ from validate_violet_service_preservation import validate as preserved_services
+ preserved_services()
  def load(p):return json.loads((R/p).read_text())
  contract=load('crossroads/hgss/contracts/violet-qa06.json');ls={l['id']:l for l in load('data/layouts/layouts.json')['layouts']};groups=load('data/maps/map_groups.json')
  for key,old in contract['groups'].items():
   assert groups[key][:len(old)]==old,(key,'Existing map IDs changed')
- assert groups['gMapGroup_CrossroadsJohtoExpansion'][len(contract['groups']['gMapGroup_CrossroadsJohtoExpansion']):]==NEW
+ tail=groups['gMapGroup_CrossroadsJohtoExpansion'][len(contract['groups']['gMapGroup_CrossroadsJohtoExpansion']):]
+ # Violet's three new IDs remain at the exact original ordinals. The later
+ # explicitly contracted Olivine increment appends after them, never shifts
+ # them. All Violet map/layout/terrain/heal assertions below remain unchanged.
+ olivine_new=['OlivineCity_FishingHouse','OlivineCity_TradeHouse','OlivineCity_SealHouse','OlivineCity_Cafe','OlivineCity_PokemonCenter_B1F','OlivineCity_Lighthouse_Balcony','OlivineCity_Lighthouse_Elevator','OlivineCity_PortTerminal','OlivineCity_PortQuay'] if (R/'crossroads/hgss/authoring/OlivineCity.json').exists() else []
+ assert tail==NEW+olivine_new,('Violet IDs shifted or uncontracted appended maps',tail)
  maps={n:load(f'data/maps/{n}/map.json') for n in OWNED};ids={m['id']:n for n,m in maps.items()};raw={};size={};attrs={};actors={}
  paths=dict(re.findall(r'const u16 (gMetatileAttributes_\w+)\[\] = INCBIN_U16\("([^"]+)"\)',(R/'src/data/tilesets/metatiles.h').read_text()))
  for key,body in re.findall(r'const struct Tileset (gTileset_\w+)\s*=\s*\{([^}]+)\}',(R/'src/data/tilesets/headers.h').read_text(),re.S):

@@ -1,0 +1,344 @@
+{
+  "EcruteakCity_PokemonCenter_1F": {
+    "map": {
+      "id": "MAP_ECRUTEAK_CITY_POKEMON_CENTER_1F",
+      "name": "EcruteakCity_PokemonCenter_1F",
+      "layout": "LAYOUT_HGSS_ECRUTEAKCITY_POKEMONCENTER_1F",
+      "music": "MUS_POKE_CENTER",
+      "region": "REGION_HOENN",
+      "region_map_section": "MAPSEC_ECRUTEAK_CITY",
+      "requires_flash": false,
+      "weather": "WEATHER_NONE",
+      "map_type": "MAP_TYPE_INDOOR",
+      "allow_cycling": false,
+      "allow_escaping": false,
+      "allow_running": true,
+      "show_map_name": false,
+      "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+      "connections": null,
+      "object_events": [
+        {
+          "graphics_id": "OBJ_EVENT_GFX_NURSE",
+          "x": 8,
+          "y": 11,
+          "elevation": 3,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "Ecruteak_Nurse",
+          "flag": "0",
+          "local_id": "LOCALID_ECRUTEAK_NURSE"
+        },
+        {
+          "graphics_id": "OBJ_EVENT_GFX_SAILOR",
+          "x": 4,
+          "y": 18,
+          "elevation": 3,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "Ecruteak_CenterVisitor",
+          "flag": "0"
+        },
+        {
+          "graphics_id": "OBJ_EVENT_GFX_LINK_RECEPTIONIST",
+          "x": 2,
+          "y": 2,
+          "elevation": 3,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "Hgss_CommunicationDesk",
+          "flag": "0"
+        },
+        {
+          "graphics_id": "OBJ_EVENT_GFX_LINK_RECEPTIONIST",
+          "x": 6,
+          "y": 2,
+          "elevation": 3,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "Hgss_CommunicationDesk",
+          "flag": "0"
+        },
+        {
+          "graphics_id": "OBJ_EVENT_GFX_LINK_RECEPTIONIST",
+          "x": 11,
+          "y": 2,
+          "elevation": 3,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "Hgss_CommunicationDesk",
+          "flag": "0"
+        }
+      ],
+      "warp_events": [
+        {
+          "x": 8,
+          "y": 19,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY",
+          "dest_warp_id": "5"
+        },
+        {
+          "x": 9,
+          "y": 19,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY",
+          "dest_warp_id": "5"
+        },
+        {
+          "x": 14,
+          "y": 17,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_POKEMON_CENTER_B1F",
+          "dest_warp_id": "0"
+        }
+      ],
+      "coord_events": [],
+      "bg_events": [
+        {
+          "type": "sign",
+          "x": 7,
+          "y": 2,
+          "elevation": 0,
+          "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+          "script": "Hgss_CommunicationDesk"
+        }
+      ]
+    },
+    "layout": {
+      "id": "LAYOUT_HGSS_ECRUTEAKCITY_POKEMONCENTER_1F",
+      "name": "EcruteakCity_PokemonCenter_1F_Layout",
+      "width": 17,
+      "height": 21,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/EcruteakCity_PokemonCenter_1F/border.bin",
+      "blockdata_filepath": "data/layouts/EcruteakCity_PokemonCenter_1F/map.bin",
+      "layout_version": "emerald"
+    },
+    "raw_hex": "01060b060b060b060b060b060b060b060b060b060b060b060b060b060b060b0601060106210621062106210621062106210621062106210621062106210621062106010601062106023202320232023202320232023202320232023202320232023202320106010621062106210602322106210621060232023221062106210602320232023201060106023202320232023202320232023202320232023202320232023202320232010601060232023202320232023202320232023202320232023202320232023202320106010602320232023202320232023202320232023202320232023202320232023201060106023202320232023202320232023202320232023202320232023202320232010601060232023220062106210621062106210621062106210621060232023201060106010602320232200602320b060b060b064a064b060b06210621060232023201060106010602320232200602324806220623065206530649062106040402320232010601060106023202322006023250062a062b0602325b065106210624320232023202320106010602320232200602325806210621060506210659062106023202320232023201060106023202322006023260326c326d326e326f32063202320232023202320232010601060232023220060232023202320232023202320232023202320232010601060106010602320232023202320232023202320232023202320232343234320106010601060106023202320232023202320232023202320232023202320232023201060106010601063432343202320232023202320232023202320232023202320232893202320106010602320232023202320232023202320232023202320232023202320232023201060106010602320232023202320232023203320432023202320232023202320106010601060106010601060106010601060106010601060106010601060106010601060106",
+    "border_hex": "0106010601060106"
+  },
+  "EcruteakCity_PokemonCenter_B1F": {
+    "map": {
+      "id": "MAP_ECRUTEAK_CITY_POKEMON_CENTER_B1F",
+      "name": "EcruteakCity_PokemonCenter_B1F",
+      "layout": "LAYOUT_HGSS_ECRUTEAKCITY_POKEMONCENTER_B1F",
+      "music": "MUS_POKE_CENTER",
+      "region": "REGION_HOENN",
+      "region_map_section": "MAPSEC_ECRUTEAK_CITY",
+      "requires_flash": false,
+      "weather": "WEATHER_NONE",
+      "map_type": "MAP_TYPE_INDOOR",
+      "allow_cycling": false,
+      "allow_escaping": false,
+      "allow_running": true,
+      "show_map_name": false,
+      "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+      "connections": null,
+      "object_events": [
+        {
+          "graphics_id": "OBJ_EVENT_GFX_LINK_RECEPTIONIST",
+          "x": 4,
+          "y": 4,
+          "elevation": 3,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "Hgss_CommunicationDesk",
+          "flag": "0"
+        },
+        {
+          "graphics_id": "OBJ_EVENT_GFX_LINK_RECEPTIONIST",
+          "x": 8,
+          "y": 4,
+          "elevation": 3,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "Hgss_CommunicationDesk",
+          "flag": "0"
+        },
+        {
+          "graphics_id": "OBJ_EVENT_GFX_LINK_RECEPTIONIST",
+          "x": 12,
+          "y": 4,
+          "elevation": 3,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "Hgss_CommunicationDesk",
+          "flag": "0"
+        }
+      ],
+      "warp_events": [
+        {
+          "x": 14,
+          "y": 10,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_POKEMON_CENTER_1F",
+          "dest_warp_id": "2"
+        }
+      ],
+      "coord_events": [],
+      "bg_events": []
+    },
+    "layout": {
+      "id": "LAYOUT_HGSS_ECRUTEAKCITY_POKEMONCENTER_B1F",
+      "name": "EcruteakCity_PokemonCenter_B1F_Layout",
+      "width": 17,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/EcruteakCity_PokemonCenter_B1F/border.bin",
+      "blockdata_filepath": "data/layouts/EcruteakCity_PokemonCenter_B1F/map.bin",
+      "layout_version": "emerald"
+    },
+    "raw_hex": "01060b060b060b060b060b060b060b060b060b060b060b060b060b060b060b06010601062106210621062106210621062106210621062106210621062106210621060106010601060206020602060206020602060206020602060206020602060206020601060106010602060206020602060206020602060206020602060206020602060206010601060232020602060232020602060206023202060206020602320206020602060106010602322106210621062106210621062106210621062106210621062106010601060106023202320232023202320232023202320232023202320232023202320232010601060232023202320232023202320232023202320232023202320232023202320106010602323d063e0602320232023202320232023202320232023202320232023201060106023245064606023202320232023202320232023202320232023202320232010601060232023202320232023202320232023202320232023202320232a1320232010601060232023202320106023202320232023202320232023201060232010601060106",
+    "border_hex": "0106010601060106"
+  },
+  "EcruteakCity_Mart": {
+    "map": {
+      "id": "MAP_ECRUTEAK_CITY_MART",
+      "name": "EcruteakCity_Mart",
+      "layout": "LAYOUT_HGSS_ECRUTEAKCITY_MART",
+      "music": "MUS_LILYCOVE",
+      "region": "REGION_HOENN",
+      "region_map_section": "MAPSEC_ECRUTEAK_CITY",
+      "requires_flash": false,
+      "weather": "WEATHER_NONE",
+      "map_type": "MAP_TYPE_INDOOR",
+      "allow_cycling": false,
+      "allow_escaping": false,
+      "allow_running": true,
+      "show_map_name": false,
+      "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+      "connections": null,
+      "object_events": [
+        {
+          "local_id": "LOCALID_SLATEPORT_MART_CLERK",
+          "graphics_id": "OBJ_EVENT_GFX_MART_EMPLOYEE",
+          "x": 2,
+          "y": 6,
+          "elevation": 3,
+          "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "Olivine_Clerk",
+          "flag": "0"
+        },
+        {
+          "graphics_id": "OBJ_EVENT_GFX_MAN_3",
+          "x": 9,
+          "y": 4,
+          "elevation": 3,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "Olivine_MartVisitor",
+          "flag": "0"
+        },
+        {
+          "graphics_id": "OBJ_EVENT_GFX_MART_EMPLOYEE",
+          "x": 2,
+          "y": 4,
+          "elevation": 3,
+          "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "Olivine_Clerk",
+          "flag": "0"
+        }
+      ],
+      "warp_events": [
+        {
+          "x": 4,
+          "y": 11,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY",
+          "dest_warp_id": "6"
+        },
+        {
+          "x": 5,
+          "y": 11,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY",
+          "dest_warp_id": "6"
+        }
+      ],
+      "coord_events": [],
+      "bg_events": []
+    },
+    "layout": {
+      "id": "LAYOUT_HGSS_ECRUTEAKCITY_MART",
+      "name": "EcruteakCity_Mart_Layout",
+      "width": 14,
+      "height": 13,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/EcruteakCity_Mart/border.bin",
+      "blockdata_filepath": "data/layouts/EcruteakCity_Mart/map.bin",
+      "layout_version": "emerald"
+    },
+    "raw_hex": "010401040104010401040104010401040104010401040104010401040104130613061306130613061306130613061306130613061306010401041b061b061b061b0623062406230624061b061b061b061b060104010444062a063a0601042806290628062906013201320132010401040104083208323a0601320132013201320132013201320132013201040104083208323a0601320132013201320132013201320132013201040104083208323a06013201322b062c0601322b062c060132010401040104083208323a06013201323306340601323306340601320104010401040132013201320132013201320132013201320132013201320104010401320132013201320132013201322b062c060132013201320104010401040132013201320132013201323306340601320132010401040104010401320132160217020132013201320132013201320104010401040104010401040104010401040104010401040104010401040104",
+    "border_hex": "0104010401040104"
+  },
+  "_shared_templates": [
+    {
+      "layout": {
+        "id": "LAYOUT_OLIVINE_POKEMON_CENTER_1F",
+        "name": "OlivinePokemonCenter_1F_Layout",
+        "width": 14,
+        "height": 9,
+        "primary_tileset": "gTileset_Building",
+        "secondary_tileset": "gTileset_PokemonCenter",
+        "border_filepath": "data/layouts/OlivinePokemonCenter_1F/border.bin",
+        "blockdata_filepath": "data/layouts/OlivinePokemonCenter_1F/map.bin",
+        "layout_version": "emerald"
+      },
+      "raw_hex": "0806090669066a060b060b060b064a064b060b060c060d060e060f06100611067106720648062206230652065306490604041506160617061832193279327a3250062a062b0607325b06510624321d321e321f3220322632343202325806210621060506210659063c32023202322732203202320232023260326c326d326e326f32063225320232023227328032023202320232023230323132323233320232023202320232273288360232020202320232383239323a323b32023234323d063e0627329032913202320232023240324132423243320232263245064606273228060232023202320232023203320432023202320232263234323736",
+      "border_hex": "0102010201020102"
+    },
+    {
+      "layout": {
+        "id": "LAYOUT_MART",
+        "name": "Mart_Layout",
+        "width": 11,
+        "height": 8,
+        "primary_tileset": "gTileset_Building",
+        "secondary_tileset": "gTileset_Shop",
+        "border_filepath": "data/layouts/Mart/border.bin",
+        "blockdata_filepath": "data/layouts/Mart/map.bin",
+        "layout_version": "emerald"
+      },
+      "raw_hex": "10062206120613061306130623062406230624061506180644062a061b061b061b0628062906280629061d062032083232060b320832083230323132213231322532180339323a0606320132013201320132013201322d062007410642060632013201322b062c06043201322b060a3208320832023201320132330634060632013233060a32013201320132013201323b063c06063201323b061432013201321602170201320f320832023201321c32",
+      "border_hex": "0100010001000100"
+    }
+  ]
+}

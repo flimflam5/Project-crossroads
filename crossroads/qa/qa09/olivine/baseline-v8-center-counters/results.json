@@ -1,0 +1,111 @@
+{
+  "rom_sha256": "24e8c300d564b98e6fdea3216a868dc4c5c920d19721a5de7ef4974387081fab",
+  "source_battery_sha256": "b03ff1ef488fbd25de016e828483bc3001787b84e450a45eaa0ac12a11de30ab",
+  "source_battery_unchanged": true,
+  "expected_defect_baseline": true,
+  "setup": "Normal copied battery/title Continue and controller travel; no map/warp/player position writes. Shared harness discloses temporary encounter suppression and survey assistance.",
+  "records": [
+    {
+      "map": "OlivineCity_PokemonCenter_1F",
+      "staff": [
+        2,
+        2
+      ],
+      "player": [
+        2,
+        4
+      ],
+      "counter": [
+        2,
+        3
+      ],
+      "message_received": false,
+      "result": "BEFORE defect reproduced:frontA receives no message"
+    },
+    {
+      "map": "OlivineCity_PokemonCenter_1F",
+      "staff": [
+        6,
+        2
+      ],
+      "player": [
+        6,
+        4
+      ],
+      "counter": [
+        6,
+        3
+      ],
+      "message_received": false,
+      "result": "BEFORE defect reproduced:frontA receives no message"
+    },
+    {
+      "map": "OlivineCity_PokemonCenter_1F",
+      "staff": [
+        11,
+        2
+      ],
+      "player": [
+        11,
+        4
+      ],
+      "counter": [
+        11,
+        3
+      ],
+      "message_received": false,
+      "result": "BEFORE defect reproduced:frontA receives no message"
+    },
+    {
+      "map": "OlivineCity_PokemonCenter_B1F",
+      "staff": [
+        4,
+        4
+      ],
+      "player": [
+        4,
+        6
+      ],
+      "counter": [
+        4,
+        5
+      ],
+      "message_received": false,
+      "result": "BEFORE defect reproduced:frontA receives no message"
+    },
+    {
+      "map": "OlivineCity_PokemonCenter_B1F",
+      "staff": [
+        8,
+        4
+      ],
+      "player": [
+        8,
+        6
+      ],
+      "counter": [
+        8,
+        5
+      ],
+      "message_received": false,
+      "result": "BEFORE defect reproduced:frontA receives no message"
+    },
+    {
+      "map": "OlivineCity_PokemonCenter_B1F",
+      "staff": [
+        12,
+        4
+      ],
+      "player": [
+        12,
+        6
+      ],
+      "counter": [
+        12,
+        5
+      ],
+      "message_received": false,
+      "result": "BEFORE defect reproduced:frontA receives no message"
+    }
+  ]
+}

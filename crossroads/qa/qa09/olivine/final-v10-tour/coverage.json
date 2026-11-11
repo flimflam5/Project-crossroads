@@ -1,0 +1,4102 @@
+{
+  "visited": [
+    "BellchimeTrail",
+    "EcruteakCity",
+    "EcruteakCity_BarrierCorridor",
+    "EcruteakCity_BarrierStation",
+    "EcruteakCity_BellTower",
+    "EcruteakCity_BellTower_2F",
+    "EcruteakCity_BellTower_3F",
+    "EcruteakCity_BellTower_4F",
+    "EcruteakCity_BellTower_5F",
+    "EcruteakCity_BellTower_6F",
+    "EcruteakCity_BellTower_7F",
+    "EcruteakCity_BellTower_8F",
+    "EcruteakCity_WestGate",
+    "JohtoRoute38",
+    "JohtoRoute39",
+    "OlivineCity",
+    "OlivineCity_Cafe",
+    "OlivineCity_FishingHouse",
+    "OlivineCity_Gym",
+    "OlivineCity_Gym_Arena",
+    "OlivineCity_HarborOffice",
+    "OlivineCity_Lighthouse_1F",
+    "OlivineCity_Lighthouse_2F",
+    "OlivineCity_Lighthouse_3F",
+    "OlivineCity_Lighthouse_4F",
+    "OlivineCity_Lighthouse_5F",
+    "OlivineCity_Lighthouse_6F",
+    "OlivineCity_Lighthouse_Balcony",
+    "OlivineCity_Lighthouse_Elevator",
+    "OlivineCity_Mart",
+    "OlivineCity_NeighborHouse",
+    "OlivineCity_PokemonCenter_1F",
+    "OlivineCity_PokemonCenter_B1F",
+    "OlivineCity_PortQuay",
+    "OlivineCity_PortTerminal",
+    "OlivineCity_Residence",
+    "OlivineCity_SealHouse",
+    "OlivineCity_SilphOffice",
+    "OlivineCity_TradeHouse"
+  ],
+  "targets": [
+    "OlivineCity",
+    "OlivineCity_Cafe",
+    "OlivineCity_FishingHouse",
+    "OlivineCity_Gym",
+    "OlivineCity_Gym_Arena",
+    "OlivineCity_HarborOffice",
+    "OlivineCity_Lighthouse_1F",
+    "OlivineCity_Lighthouse_2F",
+    "OlivineCity_Lighthouse_3F",
+    "OlivineCity_Lighthouse_4F",
+    "OlivineCity_Lighthouse_5F",
+    "OlivineCity_Lighthouse_6F",
+    "OlivineCity_Lighthouse_Balcony",
+    "OlivineCity_Lighthouse_Elevator",
+    "OlivineCity_Mart",
+    "OlivineCity_NeighborHouse",
+    "OlivineCity_PokemonCenter_1F",
+    "OlivineCity_PokemonCenter_B1F",
+    "OlivineCity_PortQuay",
+    "OlivineCity_PortTerminal",
+    "OlivineCity_Residence",
+    "OlivineCity_SealHouse",
+    "OlivineCity_SilphOffice",
+    "OlivineCity_TradeHouse"
+  ],
+  "transitions": [
+    [
+      "EcruteakCity_BellTower_9F",
+      "EcruteakCity_BellTower_8F",
+      "warp"
+    ],
+    [
+      "EcruteakCity_BellTower_8F",
+      "EcruteakCity_BellTower_7F",
+      "warp"
+    ],
+    [
+      "EcruteakCity_BellTower_7F",
+      "EcruteakCity_BellTower_6F",
+      "warp"
+    ],
+    [
+      "EcruteakCity_BellTower_6F",
+      "EcruteakCity_BellTower_5F",
+      "warp"
+    ],
+    [
+      "EcruteakCity_BellTower_5F",
+      "EcruteakCity_BellTower_4F",
+      "warp"
+    ],
+    [
+      "EcruteakCity_BellTower_4F",
+      "EcruteakCity_BellTower_3F",
+      "warp"
+    ],
+    [
+      "EcruteakCity_BellTower_3F",
+      "EcruteakCity_BellTower_2F",
+      "warp"
+    ],
+    [
+      "EcruteakCity_BellTower_2F",
+      "EcruteakCity_BellTower",
+      "warp"
+    ],
+    [
+      "EcruteakCity_BellTower",
+      "BellchimeTrail",
+      "warp"
+    ],
+    [
+      "BellchimeTrail",
+      "EcruteakCity_BarrierCorridor",
+      "warp"
+    ],
+    [
+      "EcruteakCity_BarrierCorridor",
+      "EcruteakCity_BarrierStation",
+      "warp"
+    ],
+    [
+      "EcruteakCity_BarrierStation",
+      "EcruteakCity",
+      "warp"
+    ],
+    [
+      "EcruteakCity",
+      "EcruteakCity_WestGate",
+      "warp"
+    ],
+    [
+      "EcruteakCity_WestGate",
+      "JohtoRoute38",
+      "warp"
+    ],
+    [
+      "JohtoRoute38",
+      "JohtoRoute39",
+      "border"
+    ],
+    [
+      "JohtoRoute39",
+      "OlivineCity",
+      "border"
+    ],
+    [
+      "OlivineCity",
+      "OlivineCity_HarborOffice",
+      "warp"
+    ],
+    [
+      "OlivineCity_HarborOffice",
+      "OlivineCity",
+      "warp"
+    ],
+    [
+      "OlivineCity",
+      "OlivineCity_Residence",
+      "warp"
+    ],
+    [
+      "OlivineCity_Residence",
+      "OlivineCity",
+      "warp"
+    ],
+    [
+      "OlivineCity",
+      "OlivineCity_NeighborHouse",
+      "warp"
+    ],
+    [
+      "OlivineCity_NeighborHouse",
+      "OlivineCity",
+      "warp"
+    ],
+    [
+      "OlivineCity",
+      "OlivineCity_Gym",
+      "warp"
+    ],
+    [
+      "OlivineCity_Gym",
+      "OlivineCity",
+      "warp"
+    ],
+    [
+      "OlivineCity",
+      "OlivineCity_PokemonCenter_1F",
+      "warp"
+    ],
+    [
+      "OlivineCity_PokemonCenter_1F",
+      "OlivineCity",
+      "warp"
+    ],
+    [
+      "OlivineCity",
+      "OlivineCity_Mart",
+      "warp"
+    ],
+    [
+      "OlivineCity_Mart",
+      "OlivineCity",
+      "warp"
+    ],
+    [
+      "OlivineCity",
+      "OlivineCity_SilphOffice",
+      "warp"
+    ],
+    [
+      "OlivineCity_SilphOffice",
+      "OlivineCity",
+      "warp"
+    ],
+    [
+      "OlivineCity",
+      "OlivineCity_HarborOffice",
+      "warp"
+    ],
+    [
+      "OlivineCity_HarborOffice",
+      "OlivineCity",
+      "warp"
+    ],
+    [
+      "OlivineCity",
+      "OlivineCity_Lighthouse_1F",
+      "warp"
+    ],
+    [
+      "OlivineCity_Lighthouse_1F",
+      "OlivineCity",
+      "warp"
+    ],
+    [
+      "OlivineCity",
+      "OlivineCity_Gym",
+      "warp"
+    ],
+    [
+      "OlivineCity_Gym",
+      "OlivineCity",
+      "warp"
+    ],
+    [
+      "OlivineCity",
+      "OlivineCity_FishingHouse",
+      "warp"
+    ],
+    [
+      "OlivineCity_FishingHouse",
+      "OlivineCity",
+      "warp"
+    ],
+    [
+      "OlivineCity",
+      "OlivineCity_TradeHouse",
+      "warp"
+    ],
+    [
+      "OlivineCity_TradeHouse",
+      "OlivineCity",
+      "warp"
+    ],
+    [
+      "OlivineCity",
+      "OlivineCity_SealHouse",
+      "warp"
+    ],
+    [
+      "OlivineCity_SealHouse",
+      "OlivineCity",
+      "warp"
+    ],
+    [
+      "OlivineCity",
+      "OlivineCity_Cafe",
+      "warp"
+    ],
+    [
+      "OlivineCity_Cafe",
+      "OlivineCity",
+      "warp"
+    ],
+    [
+      "OlivineCity",
+      "OlivineCity_PortTerminal",
+      "warp"
+    ],
+    [
+      "OlivineCity_PortTerminal",
+      "OlivineCity",
+      "warp"
+    ],
+    [
+      "OlivineCity",
+      "OlivineCity_PokemonCenter_1F",
+      "warp"
+    ],
+    [
+      "OlivineCity_PokemonCenter_1F",
+      "OlivineCity",
+      "warp"
+    ],
+    [
+      "OlivineCity",
+      "OlivineCity_PortTerminal",
+      "warp"
+    ],
+    [
+      "OlivineCity_PortTerminal",
+      "OlivineCity",
+      "warp"
+    ],
+    [
+      "OlivineCity",
+      "JohtoRoute39",
+      "border"
+    ],
+    [
+      "JohtoRoute39",
+      "OlivineCity",
+      "border"
+    ],
+    [
+      "OlivineCity",
+      "JohtoRoute40",
+      "border"
+    ],
+    [
+      "JohtoRoute40",
+      "OlivineCity",
+      "border"
+    ],
+    [
+      "OlivineCity",
+      "OlivineCity_Cafe",
+      "warp"
+    ],
+    [
+      "OlivineCity_Cafe",
+      "OlivineCity",
+      "warp"
+    ],
+    [
+      "OlivineCity",
+      "OlivineCity_Cafe",
+      "warp"
+    ],
+    [
+      "OlivineCity_Cafe",
+      "OlivineCity",
+      "warp"
+    ],
+    [
+      "OlivineCity",
+      "OlivineCity_FishingHouse",
+      "warp"
+    ],
+    [
+      "OlivineCity_FishingHouse",
+      "OlivineCity",
+      "warp"
+    ],
+    [
+      "OlivineCity",
+      "OlivineCity_FishingHouse",
+      "warp"
+    ],
+    [
+      "OlivineCity_FishingHouse",
+      "OlivineCity",
+      "warp"
+    ],
+    [
+      "OlivineCity",
+      "OlivineCity_Gym",
+      "warp"
+    ],
+    [
+      "OlivineCity_Gym",
+      "OlivineCity_Gym_Arena",
+      "warp"
+    ],
+    [
+      "OlivineCity_Gym_Arena",
+      "OlivineCity_Gym",
+      "warp"
+    ],
+    [
+      "OlivineCity_Gym",
+      "OlivineCity_Gym_Arena",
+      "warp"
+    ],
+    [
+      "OlivineCity_Gym_Arena",
+      "OlivineCity_Gym",
+      "warp"
+    ],
+    [
+      "OlivineCity_Gym",
+      "OlivineCity_Gym_Arena",
+      "warp"
+    ],
+    [
+      "OlivineCity_Gym_Arena",
+      "OlivineCity_Gym",
+      "warp"
+    ],
+    [
+      "OlivineCity_Gym",
+      "OlivineCity_Gym_Arena",
+      "warp"
+    ],
+    [
+      "OlivineCity_Gym_Arena",
+      "OlivineCity_Gym",
+      "warp"
+    ],
+    [
+      "OlivineCity_Gym",
+      "OlivineCity",
+      "warp"
+    ],
+    [
+      "OlivineCity",
+      "OlivineCity_HarborOffice",
+      "warp"
+    ],
+    [
+      "OlivineCity_HarborOffice",
+      "OlivineCity",
+      "warp"
+    ],
+    [
+      "OlivineCity",
+      "OlivineCity_HarborOffice",
+      "warp"
+    ],
+    [
+      "OlivineCity_HarborOffice",
+      "OlivineCity",
+      "warp"
+    ],
+    [
+      "OlivineCity",
+      "OlivineCity_Lighthouse_1F",
+      "warp"
+    ],
+    [
+      "OlivineCity_Lighthouse_1F",
+      "OlivineCity",
+      "warp"
+    ],
+    [
+      "OlivineCity",
+      "OlivineCity_Lighthouse_1F",
+      "warp"
+    ],
+    [
+      "OlivineCity_Lighthouse_1F",
+      "OlivineCity_Lighthouse_2F",
+      "warp"
+    ],
+    [
+      "OlivineCity_Lighthouse_2F",
+      "OlivineCity_Lighthouse_1F",
+      "warp"
+    ],
+    [
+      "OlivineCity_Lighthouse_1F",
+      "OlivineCity_Lighthouse_Elevator",
+      "warp"
+    ],
+    [
+      "OlivineCity_Lighthouse_Elevator",
+      "OlivineCity_Lighthouse_1F",
+      "warp"
+    ],
+    [
+      "OlivineCity_Lighthouse_1F",
+      "OlivineCity_Lighthouse_Elevator",
+      "warp"
+    ],
+    [
+      "OlivineCity_Lighthouse_Elevator",
+      "OlivineCity_Lighthouse_1F",
+      "warp"
+    ],
+    [
+      "OlivineCity_Lighthouse_1F",
+      "OlivineCity_Lighthouse_2F",
+      "warp"
+    ],
+    [
+      "OlivineCity_Lighthouse_2F",
+      "OlivineCity_Lighthouse_3F",
+      "warp"
+    ],
+    [
+      "OlivineCity_Lighthouse_3F",
+      "OlivineCity_Lighthouse_2F",
+      "warp"
+    ],
+    [
+      "OlivineCity_Lighthouse_2F",
+      "OlivineCity_Lighthouse_3F",
+      "warp"
+    ],
+    [
+      "OlivineCity_Lighthouse_3F",
+      "OlivineCity_Lighthouse_2F",
+      "warp"
+    ],
+    [
+      "OlivineCity_Lighthouse_2F",
+      "OlivineCity_Lighthouse_3F",
+      "warp"
+    ],
+    [
+      "OlivineCity_Lighthouse_3F",
+      "OlivineCity_Lighthouse_4F",
+      "warp"
+    ],
+    [
+      "OlivineCity_Lighthouse_4F",
+      "OlivineCity_Lighthouse_3F",
+      "warp"
+    ],
+    [
+      "OlivineCity_Lighthouse_3F",
+      "OlivineCity_Lighthouse_4F",
+      "warp"
+    ],
+    [
+      "OlivineCity_Lighthouse_4F",
+      "OlivineCity_Lighthouse_3F",
+      "warp"
+    ],
+    [
+      "OlivineCity_Lighthouse_3F",
+      "OlivineCity_Lighthouse_4F",
+      "warp"
+    ],
+    [
+      "OlivineCity_Lighthouse_4F",
+      "OlivineCity_Lighthouse_Balcony",
+      "window"
+    ],
+    [
+      "OlivineCity_Lighthouse_Balcony",
+      "OlivineCity_Lighthouse_3F",
+      "warp"
+    ],
+    [
+      "OlivineCity_Lighthouse_3F",
+      "OlivineCity_Lighthouse_4F",
+      "warp"
+    ],
+    [
+      "OlivineCity_Lighthouse_4F",
+      "OlivineCity_Lighthouse_3F",
+      "warp"
+    ],
+    [
+      "OlivineCity_Lighthouse_3F",
+      "OlivineCity_Lighthouse_4F",
+      "warp"
+    ],
+    [
+      "OlivineCity_Lighthouse_4F",
+      "OlivineCity_Lighthouse_3F",
+      "warp"
+    ],
+    [
+      "OlivineCity_Lighthouse_3F",
+      "OlivineCity_Lighthouse_Balcony",
+      "warp"
+    ],
+    [
+      "OlivineCity_Lighthouse_Balcony",
+      "OlivineCity_Lighthouse_3F",
+      "warp"
+    ],
+    [
+      "OlivineCity_Lighthouse_3F",
+      "OlivineCity_Lighthouse_Balcony",
+      "warp"
+    ],
+    [
+      "OlivineCity_Lighthouse_Balcony",
+      "OlivineCity_Lighthouse_3F",
+      "warp"
+    ],
+    [
+      "OlivineCity_Lighthouse_3F",
+      "OlivineCity_Lighthouse_4F",
+      "warp"
+    ],
+    [
+      "OlivineCity_Lighthouse_4F",
+      "OlivineCity_Lighthouse_5F",
+      "warp"
+    ],
+    [
+      "OlivineCity_Lighthouse_5F",
+      "OlivineCity_Lighthouse_4F",
+      "warp"
+    ],
+    [
+      "OlivineCity_Lighthouse_4F",
+      "OlivineCity_Lighthouse_5F",
+      "warp"
+    ],
+    [
+      "OlivineCity_Lighthouse_5F",
+      "OlivineCity_Lighthouse_4F",
+      "warp"
+    ],
+    [
+      "OlivineCity_Lighthouse_4F",
+      "OlivineCity_Lighthouse_5F",
+      "warp"
+    ],
+    [
+      "OlivineCity_Lighthouse_5F",
+      "OlivineCity_Lighthouse_6F",
+      "warp"
+    ],
+    [
+      "OlivineCity_Lighthouse_6F",
+      "OlivineCity_Lighthouse_5F",
+      "warp"
+    ],
+    [
+      "OlivineCity_Lighthouse_5F",
+      "OlivineCity_Lighthouse_6F",
+      "warp"
+    ],
+    [
+      "OlivineCity_Lighthouse_6F",
+      "OlivineCity_Lighthouse_5F",
+      "warp"
+    ],
+    [
+      "OlivineCity_Lighthouse_5F",
+      "OlivineCity_Lighthouse_6F",
+      "warp"
+    ],
+    [
+      "OlivineCity_Lighthouse_6F",
+      "OlivineCity_Lighthouse_Elevator",
+      "warp"
+    ],
+    [
+      "OlivineCity_Lighthouse_Elevator",
+      "OlivineCity_Lighthouse_6F",
+      "warp"
+    ],
+    [
+      "OlivineCity_Lighthouse_6F",
+      "OlivineCity_Lighthouse_Elevator",
+      "warp"
+    ],
+    [
+      "OlivineCity_Lighthouse_Elevator",
+      "OlivineCity_Lighthouse_6F",
+      "warp"
+    ],
+    [
+      "OlivineCity_Lighthouse_6F",
+      "OlivineCity_Lighthouse_5F",
+      "warp"
+    ],
+    [
+      "OlivineCity_Lighthouse_5F",
+      "OlivineCity_Lighthouse_4F",
+      "warp"
+    ],
+    [
+      "OlivineCity_Lighthouse_4F",
+      "OlivineCity_Lighthouse_3F",
+      "warp"
+    ],
+    [
+      "OlivineCity_Lighthouse_3F",
+      "OlivineCity_Lighthouse_Balcony",
+      "warp"
+    ],
+    [
+      "OlivineCity_Lighthouse_Balcony",
+      "OlivineCity_Lighthouse_3F",
+      "warp"
+    ],
+    [
+      "OlivineCity_Lighthouse_3F",
+      "OlivineCity_Lighthouse_4F",
+      "warp"
+    ],
+    [
+      "OlivineCity_Lighthouse_4F",
+      "OlivineCity_Lighthouse_5F",
+      "warp"
+    ],
+    [
+      "OlivineCity_Lighthouse_5F",
+      "OlivineCity_Lighthouse_6F",
+      "warp"
+    ],
+    [
+      "OlivineCity_Lighthouse_6F",
+      "OlivineCity_Lighthouse_Elevator",
+      "warp"
+    ],
+    [
+      "OlivineCity_Lighthouse_Elevator",
+      "OlivineCity_Lighthouse_1F",
+      "lift"
+    ],
+    [
+      "OlivineCity_Lighthouse_1F",
+      "OlivineCity",
+      "warp"
+    ],
+    [
+      "OlivineCity",
+      "OlivineCity_Mart",
+      "warp"
+    ],
+    [
+      "OlivineCity_Mart",
+      "OlivineCity",
+      "warp"
+    ],
+    [
+      "OlivineCity",
+      "OlivineCity_Mart",
+      "warp"
+    ],
+    [
+      "OlivineCity_Mart",
+      "OlivineCity",
+      "warp"
+    ],
+    [
+      "OlivineCity",
+      "OlivineCity_NeighborHouse",
+      "warp"
+    ],
+    [
+      "OlivineCity_NeighborHouse",
+      "OlivineCity",
+      "warp"
+    ],
+    [
+      "OlivineCity",
+      "OlivineCity_NeighborHouse",
+      "warp"
+    ],
+    [
+      "OlivineCity_NeighborHouse",
+      "OlivineCity",
+      "warp"
+    ],
+    [
+      "OlivineCity",
+      "OlivineCity_PokemonCenter_1F",
+      "warp"
+    ],
+    [
+      "OlivineCity_PokemonCenter_1F",
+      "OlivineCity_PokemonCenter_B1F",
+      "warp"
+    ],
+    [
+      "OlivineCity_PokemonCenter_B1F",
+      "OlivineCity_PokemonCenter_1F",
+      "warp"
+    ],
+    [
+      "OlivineCity_PokemonCenter_1F",
+      "OlivineCity_PokemonCenter_B1F",
+      "warp"
+    ],
+    [
+      "OlivineCity_PokemonCenter_B1F",
+      "OlivineCity_PokemonCenter_1F",
+      "warp"
+    ],
+    [
+      "OlivineCity_PokemonCenter_1F",
+      "OlivineCity",
+      "warp"
+    ],
+    [
+      "OlivineCity",
+      "OlivineCity_PortTerminal",
+      "warp"
+    ],
+    [
+      "OlivineCity_PortTerminal",
+      "OlivineCity_PortQuay",
+      "warp"
+    ],
+    [
+      "OlivineCity_PortQuay",
+      "OlivineCity_PortTerminal",
+      "warp"
+    ],
+    [
+      "OlivineCity_PortTerminal",
+      "OlivineCity_PortQuay",
+      "warp"
+    ],
+    [
+      "OlivineCity_PortQuay",
+      "OlivineCity_PortTerminal",
+      "warp"
+    ],
+    [
+      "OlivineCity_PortTerminal",
+      "OlivineCity_PortQuay",
+      "warp"
+    ],
+    [
+      "OlivineCity_PortQuay",
+      "OlivineCity_PortTerminal",
+      "warp"
+    ],
+    [
+      "OlivineCity_PortTerminal",
+      "OlivineCity_PortQuay",
+      "warp"
+    ],
+    [
+      "OlivineCity_PortQuay",
+      "OlivineCity_PortTerminal",
+      "warp"
+    ],
+    [
+      "OlivineCity_PortTerminal",
+      "OlivineCity_PortQuay",
+      "warp"
+    ],
+    [
+      "OlivineCity_PortQuay",
+      "OlivineCity_PortTerminal",
+      "warp"
+    ],
+    [
+      "OlivineCity_PortTerminal",
+      "OlivineCity_PortQuay",
+      "warp"
+    ],
+    [
+      "OlivineCity_PortQuay",
+      "OlivineCity_PortTerminal",
+      "warp"
+    ],
+    [
+      "OlivineCity_PortTerminal",
+      "OlivineCity_PortQuay",
+      "warp"
+    ],
+    [
+      "OlivineCity_PortQuay",
+      "OlivineCity_PortTerminal",
+      "warp"
+    ],
+    [
+      "OlivineCity_PortTerminal",
+      "OlivineCity_PortQuay",
+      "warp"
+    ],
+    [
+      "OlivineCity_PortQuay",
+      "OlivineCity_PortTerminal",
+      "warp"
+    ],
+    [
+      "OlivineCity_PortTerminal",
+      "OlivineCity",
+      "warp"
+    ],
+    [
+      "OlivineCity",
+      "OlivineCity_Residence",
+      "warp"
+    ],
+    [
+      "OlivineCity_Residence",
+      "OlivineCity",
+      "warp"
+    ],
+    [
+      "OlivineCity",
+      "OlivineCity_Residence",
+      "warp"
+    ],
+    [
+      "OlivineCity_Residence",
+      "OlivineCity",
+      "warp"
+    ],
+    [
+      "OlivineCity",
+      "OlivineCity_SealHouse",
+      "warp"
+    ],
+    [
+      "OlivineCity_SealHouse",
+      "OlivineCity",
+      "warp"
+    ],
+    [
+      "OlivineCity",
+      "OlivineCity_SealHouse",
+      "warp"
+    ],
+    [
+      "OlivineCity_SealHouse",
+      "OlivineCity",
+      "warp"
+    ],
+    [
+      "OlivineCity",
+      "OlivineCity_SilphOffice",
+      "warp"
+    ],
+    [
+      "OlivineCity_SilphOffice",
+      "OlivineCity",
+      "warp"
+    ],
+    [
+      "OlivineCity",
+      "OlivineCity_SilphOffice",
+      "warp"
+    ],
+    [
+      "OlivineCity_SilphOffice",
+      "OlivineCity",
+      "warp"
+    ],
+    [
+      "OlivineCity",
+      "OlivineCity_TradeHouse",
+      "warp"
+    ],
+    [
+      "OlivineCity_TradeHouse",
+      "OlivineCity",
+      "warp"
+    ],
+    [
+      "OlivineCity",
+      "OlivineCity_TradeHouse",
+      "warp"
+    ],
+    [
+      "OlivineCity_TradeHouse",
+      "OlivineCity",
+      "warp"
+    ]
+  ],
+  "tested_roundtrip_edges": 53,
+  "tested_edges": [
+    [
+      [
+        "JohtoRoute39",
+        -1
+      ],
+      [
+        "OlivineCity",
+        -1
+      ]
+    ],
+    [
+      [
+        "JohtoRoute40",
+        -1
+      ],
+      [
+        "OlivineCity",
+        -1
+      ]
+    ],
+    [
+      [
+        "OlivineCity",
+        0
+      ],
+      [
+        "OlivineCity_Residence",
+        0
+      ]
+    ],
+    [
+      [
+        "OlivineCity",
+        0
+      ],
+      [
+        "OlivineCity_Residence",
+        1
+      ]
+    ],
+    [
+      [
+        "OlivineCity",
+        1
+      ],
+      [
+        "OlivineCity_NeighborHouse",
+        0
+      ]
+    ],
+    [
+      [
+        "OlivineCity",
+        1
+      ],
+      [
+        "OlivineCity_NeighborHouse",
+        1
+      ]
+    ],
+    [
+      [
+        "OlivineCity",
+        2
+      ],
+      [
+        "OlivineCity_Gym",
+        0
+      ]
+    ],
+    [
+      [
+        "OlivineCity",
+        3
+      ],
+      [
+        "OlivineCity_PokemonCenter_1F",
+        0
+      ]
+    ],
+    [
+      [
+        "OlivineCity",
+        4
+      ],
+      [
+        "OlivineCity_Mart",
+        0
+      ]
+    ],
+    [
+      [
+        "OlivineCity",
+        4
+      ],
+      [
+        "OlivineCity_Mart",
+        1
+      ]
+    ],
+    [
+      [
+        "OlivineCity",
+        5
+      ],
+      [
+        "OlivineCity_SilphOffice",
+        0
+      ]
+    ],
+    [
+      [
+        "OlivineCity",
+        5
+      ],
+      [
+        "OlivineCity_SilphOffice",
+        1
+      ]
+    ],
+    [
+      [
+        "OlivineCity",
+        6
+      ],
+      [
+        "OlivineCity_HarborOffice",
+        0
+      ]
+    ],
+    [
+      [
+        "OlivineCity",
+        6
+      ],
+      [
+        "OlivineCity_HarborOffice",
+        1
+      ]
+    ],
+    [
+      [
+        "OlivineCity",
+        7
+      ],
+      [
+        "OlivineCity_Lighthouse_1F",
+        0
+      ]
+    ],
+    [
+      [
+        "OlivineCity",
+        7
+      ],
+      [
+        "OlivineCity_Lighthouse_1F",
+        1
+      ]
+    ],
+    [
+      [
+        "OlivineCity",
+        8
+      ],
+      [
+        "OlivineCity_Gym",
+        1
+      ]
+    ],
+    [
+      [
+        "OlivineCity",
+        9
+      ],
+      [
+        "OlivineCity_FishingHouse",
+        0
+      ]
+    ],
+    [
+      [
+        "OlivineCity",
+        9
+      ],
+      [
+        "OlivineCity_FishingHouse",
+        1
+      ]
+    ],
+    [
+      [
+        "OlivineCity",
+        10
+      ],
+      [
+        "OlivineCity_TradeHouse",
+        0
+      ]
+    ],
+    [
+      [
+        "OlivineCity",
+        10
+      ],
+      [
+        "OlivineCity_TradeHouse",
+        1
+      ]
+    ],
+    [
+      [
+        "OlivineCity",
+        11
+      ],
+      [
+        "OlivineCity_SealHouse",
+        0
+      ]
+    ],
+    [
+      [
+        "OlivineCity",
+        11
+      ],
+      [
+        "OlivineCity_SealHouse",
+        1
+      ]
+    ],
+    [
+      [
+        "OlivineCity",
+        12
+      ],
+      [
+        "OlivineCity_Cafe",
+        0
+      ]
+    ],
+    [
+      [
+        "OlivineCity",
+        12
+      ],
+      [
+        "OlivineCity_Cafe",
+        1
+      ]
+    ],
+    [
+      [
+        "OlivineCity",
+        13
+      ],
+      [
+        "OlivineCity_PortTerminal",
+        0
+      ]
+    ],
+    [
+      [
+        "OlivineCity",
+        14
+      ],
+      [
+        "OlivineCity_PokemonCenter_1F",
+        1
+      ]
+    ],
+    [
+      [
+        "OlivineCity",
+        15
+      ],
+      [
+        "OlivineCity_PortTerminal",
+        3
+      ]
+    ],
+    [
+      [
+        "OlivineCity_Gym",
+        2
+      ],
+      [
+        "OlivineCity_Gym_Arena",
+        0
+      ]
+    ],
+    [
+      [
+        "OlivineCity_Gym",
+        3
+      ],
+      [
+        "OlivineCity_Gym_Arena",
+        1
+      ]
+    ],
+    [
+      [
+        "OlivineCity_Gym",
+        4
+      ],
+      [
+        "OlivineCity_Gym_Arena",
+        2
+      ]
+    ],
+    [
+      [
+        "OlivineCity_Lighthouse_1F",
+        2
+      ],
+      [
+        "OlivineCity_Lighthouse_2F",
+        0
+      ]
+    ],
+    [
+      [
+        "OlivineCity_Lighthouse_1F",
+        3
+      ],
+      [
+        "OlivineCity_Lighthouse_Elevator",
+        0
+      ]
+    ],
+    [
+      [
+        "OlivineCity_Lighthouse_1F",
+        4
+      ],
+      [
+        "OlivineCity_Lighthouse_Elevator",
+        1
+      ]
+    ],
+    [
+      [
+        "OlivineCity_Lighthouse_2F",
+        1
+      ],
+      [
+        "OlivineCity_Lighthouse_3F",
+        0
+      ]
+    ],
+    [
+      [
+        "OlivineCity_Lighthouse_2F",
+        2
+      ],
+      [
+        "OlivineCity_Lighthouse_3F",
+        0
+      ]
+    ],
+    [
+      [
+        "OlivineCity_Lighthouse_3F",
+        1
+      ],
+      [
+        "OlivineCity_Lighthouse_4F",
+        0
+      ]
+    ],
+    [
+      [
+        "OlivineCity_Lighthouse_3F",
+        2
+      ],
+      [
+        "OlivineCity_Lighthouse_4F",
+        0
+      ]
+    ],
+    [
+      [
+        "OlivineCity_Lighthouse_3F",
+        3
+      ],
+      [
+        "OlivineCity_Lighthouse_4F",
+        3
+      ]
+    ],
+    [
+      [
+        "OlivineCity_Lighthouse_3F",
+        4
+      ],
+      [
+        "OlivineCity_Lighthouse_4F",
+        3
+      ]
+    ],
+    [
+      [
+        "OlivineCity_Lighthouse_3F",
+        5
+      ],
+      [
+        "OlivineCity_Lighthouse_Balcony",
+        0
+      ]
+    ],
+    [
+      [
+        "OlivineCity_Lighthouse_3F",
+        6
+      ],
+      [
+        "OlivineCity_Lighthouse_Balcony",
+        1
+      ]
+    ],
+    [
+      [
+        "OlivineCity_Lighthouse_4F",
+        1
+      ],
+      [
+        "OlivineCity_Lighthouse_5F",
+        0
+      ]
+    ],
+    [
+      [
+        "OlivineCity_Lighthouse_4F",
+        2
+      ],
+      [
+        "OlivineCity_Lighthouse_5F",
+        0
+      ]
+    ],
+    [
+      [
+        "OlivineCity_Lighthouse_5F",
+        1
+      ],
+      [
+        "OlivineCity_Lighthouse_6F",
+        0
+      ]
+    ],
+    [
+      [
+        "OlivineCity_Lighthouse_5F",
+        2
+      ],
+      [
+        "OlivineCity_Lighthouse_6F",
+        0
+      ]
+    ],
+    [
+      [
+        "OlivineCity_Lighthouse_6F",
+        1
+      ],
+      [
+        "OlivineCity_Lighthouse_Elevator",
+        0
+      ]
+    ],
+    [
+      [
+        "OlivineCity_Lighthouse_6F",
+        2
+      ],
+      [
+        "OlivineCity_Lighthouse_Elevator",
+        1
+      ]
+    ],
+    [
+      [
+        "OlivineCity_PokemonCenter_1F",
+        2
+      ],
+      [
+        "OlivineCity_PokemonCenter_B1F",
+        0
+      ]
+    ],
+    [
+      [
+        "OlivineCity_PortQuay",
+        0
+      ],
+      [
+        "OlivineCity_PortTerminal",
+        1
+      ]
+    ],
+    [
+      [
+        "OlivineCity_PortQuay",
+        1
+      ],
+      [
+        "OlivineCity_PortTerminal",
+        2
+      ]
+    ],
+    [
+      [
+        "OlivineCity_PortQuay",
+        2
+      ],
+      [
+        "OlivineCity_PortTerminal",
+        4
+      ]
+    ],
+    [
+      [
+        "OlivineCity_PortQuay",
+        3
+      ],
+      [
+        "OlivineCity_PortTerminal",
+        5
+      ]
+    ]
+  ],
+  "warp_trials": [
+    {
+      "source": "EcruteakCity_BellTower_9F",
+      "source_warp": 1,
+      "threshold": [
+        16,
+        3
+      ],
+      "expected_map": "EcruteakCity_BellTower_8F",
+      "actual_map": "EcruteakCity_BellTower_8F",
+      "arrival": [
+        3,
+        16
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "EcruteakCity_BellTower_8F",
+      "source_warp": 0,
+      "threshold": [
+        3,
+        8
+      ],
+      "expected_map": "EcruteakCity_BellTower_7F",
+      "actual_map": "EcruteakCity_BellTower_7F",
+      "arrival": [
+        11,
+        22
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "EcruteakCity_BellTower_7F",
+      "source_warp": 0,
+      "threshold": [
+        2,
+        15
+      ],
+      "expected_map": "EcruteakCity_BellTower_6F",
+      "actual_map": "EcruteakCity_BellTower_6F",
+      "arrival": [
+        2,
+        15
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "EcruteakCity_BellTower_6F",
+      "source_warp": 0,
+      "threshold": [
+        9,
+        21
+      ],
+      "expected_map": "EcruteakCity_BellTower_5F",
+      "actual_map": "EcruteakCity_BellTower_5F",
+      "arrival": [
+        9,
+        21
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "EcruteakCity_BellTower_5F",
+      "source_warp": 2,
+      "threshold": [
+        2,
+        21
+      ],
+      "expected_map": "EcruteakCity_BellTower_4F",
+      "actual_map": "EcruteakCity_BellTower_4F",
+      "arrival": [
+        2,
+        21
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "EcruteakCity_BellTower_4F",
+      "source_warp": 0,
+      "threshold": [
+        20,
+        4
+      ],
+      "expected_map": "EcruteakCity_BellTower_3F",
+      "actual_map": "EcruteakCity_BellTower_3F",
+      "arrival": [
+        20,
+        4
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "EcruteakCity_BellTower_3F",
+      "source_warp": 0,
+      "threshold": [
+        11,
+        21
+      ],
+      "expected_map": "EcruteakCity_BellTower_2F",
+      "actual_map": "EcruteakCity_BellTower_2F",
+      "arrival": [
+        11,
+        21
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "EcruteakCity_BellTower_2F",
+      "source_warp": 0,
+      "threshold": [
+        5,
+        4
+      ],
+      "expected_map": "EcruteakCity_BellTower",
+      "actual_map": "EcruteakCity_BellTower",
+      "arrival": [
+        5,
+        4
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "EcruteakCity_BellTower",
+      "source_warp": 0,
+      "threshold": [
+        11,
+        22
+      ],
+      "expected_map": "BellchimeTrail",
+      "actual_map": "BellchimeTrail",
+      "arrival": [
+        37,
+        21
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "BellchimeTrail",
+      "source_warp": 0,
+      "threshold": [
+        9,
+        14
+      ],
+      "expected_map": "EcruteakCity_BarrierCorridor",
+      "actual_map": "EcruteakCity_BarrierCorridor",
+      "arrival": [
+        6,
+        3
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "EcruteakCity_BarrierCorridor",
+      "source_warp": 0,
+      "threshold": [
+        3,
+        19
+      ],
+      "expected_map": "EcruteakCity_BarrierStation",
+      "actual_map": "EcruteakCity_BarrierStation",
+      "arrival": [
+        15,
+        3
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "EcruteakCity_BarrierStation",
+      "source_warp": 0,
+      "threshold": [
+        9,
+        11
+      ],
+      "expected_map": "EcruteakCity",
+      "actual_map": "EcruteakCity",
+      "arrival": [
+        39,
+        26
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "EcruteakCity",
+      "source_warp": 9,
+      "threshold": [
+        6,
+        37
+      ],
+      "expected_map": "EcruteakCity_WestGate",
+      "actual_map": "EcruteakCity_WestGate",
+      "arrival": [
+        10,
+        6
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "EcruteakCity_WestGate",
+      "source_warp": 1,
+      "threshold": [
+        1,
+        7
+      ],
+      "expected_map": "JohtoRoute38",
+      "actual_map": "JohtoRoute38",
+      "arrival": [
+        62,
+        13
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity",
+      "source_warp": 6,
+      "threshold": [
+        8,
+        40
+      ],
+      "expected_map": "OlivineCity_HarborOffice",
+      "actual_map": "OlivineCity_HarborOffice",
+      "arrival": [
+        3,
+        7
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_HarborOffice",
+      "source_warp": 0,
+      "threshold": [
+        3,
+        7
+      ],
+      "expected_map": "OlivineCity",
+      "actual_map": "OlivineCity",
+      "arrival": [
+        8,
+        41
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity",
+      "source_warp": 0,
+      "threshold": [
+        8,
+        23
+      ],
+      "expected_map": "OlivineCity_Residence",
+      "actual_map": "OlivineCity_Residence",
+      "arrival": [
+        3,
+        7
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Residence",
+      "source_warp": 0,
+      "threshold": [
+        3,
+        7
+      ],
+      "expected_map": "OlivineCity",
+      "actual_map": "OlivineCity",
+      "arrival": [
+        8,
+        24
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity",
+      "source_warp": 1,
+      "threshold": [
+        8,
+        28
+      ],
+      "expected_map": "OlivineCity_NeighborHouse",
+      "actual_map": "OlivineCity_NeighborHouse",
+      "arrival": [
+        3,
+        7
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_NeighborHouse",
+      "source_warp": 0,
+      "threshold": [
+        3,
+        7
+      ],
+      "expected_map": "OlivineCity",
+      "actual_map": "OlivineCity",
+      "arrival": [
+        8,
+        29
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity",
+      "source_warp": 2,
+      "threshold": [
+        13,
+        14
+      ],
+      "expected_map": "OlivineCity_Gym",
+      "actual_map": "OlivineCity_Gym",
+      "arrival": [
+        6,
+        10
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Gym",
+      "source_warp": 0,
+      "threshold": [
+        6,
+        10
+      ],
+      "expected_map": "OlivineCity",
+      "actual_map": "OlivineCity",
+      "arrival": [
+        13,
+        15
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity",
+      "source_warp": 3,
+      "threshold": [
+        16,
+        33
+      ],
+      "expected_map": "OlivineCity_PokemonCenter_1F",
+      "actual_map": "OlivineCity_PokemonCenter_1F",
+      "arrival": [
+        8,
+        19
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_PokemonCenter_1F",
+      "source_warp": 0,
+      "threshold": [
+        8,
+        19
+      ],
+      "expected_map": "OlivineCity",
+      "actual_map": "OlivineCity",
+      "arrival": [
+        16,
+        34
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity",
+      "source_warp": 4,
+      "threshold": [
+        29,
+        33
+      ],
+      "expected_map": "OlivineCity_Mart",
+      "actual_map": "OlivineCity_Mart",
+      "arrival": [
+        4,
+        11
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Mart",
+      "source_warp": 0,
+      "threshold": [
+        4,
+        11
+      ],
+      "expected_map": "OlivineCity",
+      "actual_map": "OlivineCity",
+      "arrival": [
+        29,
+        34
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity",
+      "source_warp": 5,
+      "threshold": [
+        31,
+        40
+      ],
+      "expected_map": "OlivineCity_SilphOffice",
+      "actual_map": "OlivineCity_SilphOffice",
+      "arrival": [
+        3,
+        7
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_SilphOffice",
+      "source_warp": 0,
+      "threshold": [
+        3,
+        7
+      ],
+      "expected_map": "OlivineCity",
+      "actual_map": "OlivineCity",
+      "arrival": [
+        31,
+        41
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity",
+      "source_warp": 6,
+      "threshold": [
+        8,
+        40
+      ],
+      "expected_map": "OlivineCity_HarborOffice",
+      "actual_map": "OlivineCity_HarborOffice",
+      "arrival": [
+        3,
+        7
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_HarborOffice",
+      "source_warp": 0,
+      "threshold": [
+        3,
+        7
+      ],
+      "expected_map": "OlivineCity",
+      "actual_map": "OlivineCity",
+      "arrival": [
+        8,
+        41
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity",
+      "source_warp": 7,
+      "threshold": [
+        45,
+        39
+      ],
+      "expected_map": "OlivineCity_Lighthouse_1F",
+      "actual_map": "OlivineCity_Lighthouse_1F",
+      "arrival": [
+        8,
+        17
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Lighthouse_1F",
+      "source_warp": 0,
+      "threshold": [
+        8,
+        17
+      ],
+      "expected_map": "OlivineCity",
+      "actual_map": "OlivineCity",
+      "arrival": [
+        45,
+        40
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity",
+      "source_warp": 8,
+      "threshold": [
+        14,
+        14
+      ],
+      "expected_map": "OlivineCity_Gym",
+      "actual_map": "OlivineCity_Gym",
+      "arrival": [
+        7,
+        10
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Gym",
+      "source_warp": 1,
+      "threshold": [
+        7,
+        10
+      ],
+      "expected_map": "OlivineCity",
+      "actual_map": "OlivineCity",
+      "arrival": [
+        14,
+        15
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity",
+      "source_warp": 9,
+      "threshold": [
+        17,
+        23
+      ],
+      "expected_map": "OlivineCity_FishingHouse",
+      "actual_map": "OlivineCity_FishingHouse",
+      "arrival": [
+        4,
+        8
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_FishingHouse",
+      "source_warp": 0,
+      "threshold": [
+        4,
+        8
+      ],
+      "expected_map": "OlivineCity",
+      "actual_map": "OlivineCity",
+      "arrival": [
+        17,
+        24
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity",
+      "source_warp": 10,
+      "threshold": [
+        31,
+        17
+      ],
+      "expected_map": "OlivineCity_TradeHouse",
+      "actual_map": "OlivineCity_TradeHouse",
+      "arrival": [
+        4,
+        8
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_TradeHouse",
+      "source_warp": 0,
+      "threshold": [
+        4,
+        8
+      ],
+      "expected_map": "OlivineCity",
+      "actual_map": "OlivineCity",
+      "arrival": [
+        31,
+        18
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity",
+      "source_warp": 11,
+      "threshold": [
+        36,
+        17
+      ],
+      "expected_map": "OlivineCity_SealHouse",
+      "actual_map": "OlivineCity_SealHouse",
+      "arrival": [
+        4,
+        8
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_SealHouse",
+      "source_warp": 0,
+      "threshold": [
+        4,
+        8
+      ],
+      "expected_map": "OlivineCity",
+      "actual_map": "OlivineCity",
+      "arrival": [
+        36,
+        18
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity",
+      "source_warp": 12,
+      "threshold": [
+        9,
+        33
+      ],
+      "expected_map": "OlivineCity_Cafe",
+      "actual_map": "OlivineCity_Cafe",
+      "arrival": [
+        5,
+        10
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Cafe",
+      "source_warp": 0,
+      "threshold": [
+        5,
+        10
+      ],
+      "expected_map": "OlivineCity",
+      "actual_map": "OlivineCity",
+      "arrival": [
+        9,
+        34
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity",
+      "source_warp": 13,
+      "threshold": [
+        23,
+        52
+      ],
+      "expected_map": "OlivineCity_PortTerminal",
+      "actual_map": "OlivineCity_PortTerminal",
+      "arrival": [
+        7,
+        2
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_PortTerminal",
+      "source_warp": 0,
+      "threshold": [
+        7,
+        2
+      ],
+      "expected_map": "OlivineCity",
+      "actual_map": "OlivineCity",
+      "arrival": [
+        23,
+        53
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity",
+      "source_warp": 14,
+      "threshold": [
+        17,
+        33
+      ],
+      "expected_map": "OlivineCity_PokemonCenter_1F",
+      "actual_map": "OlivineCity_PokemonCenter_1F",
+      "arrival": [
+        9,
+        19
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_PokemonCenter_1F",
+      "source_warp": 1,
+      "threshold": [
+        9,
+        19
+      ],
+      "expected_map": "OlivineCity",
+      "actual_map": "OlivineCity",
+      "arrival": [
+        17,
+        34
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity",
+      "source_warp": 15,
+      "threshold": [
+        24,
+        52
+      ],
+      "expected_map": "OlivineCity_PortTerminal",
+      "actual_map": "OlivineCity_PortTerminal",
+      "arrival": [
+        8,
+        2
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_PortTerminal",
+      "source_warp": 3,
+      "threshold": [
+        8,
+        2
+      ],
+      "expected_map": "OlivineCity",
+      "actual_map": "OlivineCity",
+      "arrival": [
+        24,
+        53
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity",
+      "source_warp": 12,
+      "threshold": [
+        9,
+        33
+      ],
+      "expected_map": "OlivineCity_Cafe",
+      "actual_map": "OlivineCity_Cafe",
+      "arrival": [
+        5,
+        10
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Cafe",
+      "source_warp": 1,
+      "threshold": [
+        6,
+        10
+      ],
+      "expected_map": "OlivineCity",
+      "actual_map": "OlivineCity",
+      "arrival": [
+        9,
+        34
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity",
+      "source_warp": 12,
+      "threshold": [
+        9,
+        33
+      ],
+      "expected_map": "OlivineCity_Cafe",
+      "actual_map": "OlivineCity_Cafe",
+      "arrival": [
+        5,
+        10
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Cafe",
+      "source_warp": 0,
+      "threshold": [
+        5,
+        10
+      ],
+      "expected_map": "OlivineCity",
+      "actual_map": "OlivineCity",
+      "arrival": [
+        9,
+        34
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity",
+      "source_warp": 9,
+      "threshold": [
+        17,
+        23
+      ],
+      "expected_map": "OlivineCity_FishingHouse",
+      "actual_map": "OlivineCity_FishingHouse",
+      "arrival": [
+        4,
+        8
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_FishingHouse",
+      "source_warp": 1,
+      "threshold": [
+        5,
+        8
+      ],
+      "expected_map": "OlivineCity",
+      "actual_map": "OlivineCity",
+      "arrival": [
+        17,
+        24
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity",
+      "source_warp": 9,
+      "threshold": [
+        17,
+        23
+      ],
+      "expected_map": "OlivineCity_FishingHouse",
+      "actual_map": "OlivineCity_FishingHouse",
+      "arrival": [
+        4,
+        8
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_FishingHouse",
+      "source_warp": 0,
+      "threshold": [
+        4,
+        8
+      ],
+      "expected_map": "OlivineCity",
+      "actual_map": "OlivineCity",
+      "arrival": [
+        17,
+        24
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity",
+      "source_warp": 2,
+      "threshold": [
+        13,
+        14
+      ],
+      "expected_map": "OlivineCity_Gym",
+      "actual_map": "OlivineCity_Gym",
+      "arrival": [
+        6,
+        10
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Gym",
+      "source_warp": 2,
+      "threshold": [
+        6,
+        0
+      ],
+      "expected_map": "OlivineCity_Gym_Arena",
+      "actual_map": "OlivineCity_Gym_Arena",
+      "arrival": [
+        6,
+        16
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Gym_Arena",
+      "source_warp": 0,
+      "threshold": [
+        6,
+        16
+      ],
+      "expected_map": "OlivineCity_Gym",
+      "actual_map": "OlivineCity_Gym",
+      "arrival": [
+        6,
+        0
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Gym",
+      "source_warp": 3,
+      "threshold": [
+        5,
+        0
+      ],
+      "expected_map": "OlivineCity_Gym_Arena",
+      "actual_map": "OlivineCity_Gym_Arena",
+      "arrival": [
+        5,
+        16
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Gym_Arena",
+      "source_warp": 1,
+      "threshold": [
+        5,
+        16
+      ],
+      "expected_map": "OlivineCity_Gym",
+      "actual_map": "OlivineCity_Gym",
+      "arrival": [
+        5,
+        0
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Gym",
+      "source_warp": 4,
+      "threshold": [
+        7,
+        0
+      ],
+      "expected_map": "OlivineCity_Gym_Arena",
+      "actual_map": "OlivineCity_Gym_Arena",
+      "arrival": [
+        7,
+        16
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Gym_Arena",
+      "source_warp": 2,
+      "threshold": [
+        7,
+        16
+      ],
+      "expected_map": "OlivineCity_Gym",
+      "actual_map": "OlivineCity_Gym",
+      "arrival": [
+        7,
+        0
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Gym",
+      "source_warp": 2,
+      "threshold": [
+        6,
+        0
+      ],
+      "expected_map": "OlivineCity_Gym_Arena",
+      "actual_map": "OlivineCity_Gym_Arena",
+      "arrival": [
+        6,
+        16
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Gym_Arena",
+      "source_warp": 0,
+      "threshold": [
+        6,
+        16
+      ],
+      "expected_map": "OlivineCity_Gym",
+      "actual_map": "OlivineCity_Gym",
+      "arrival": [
+        6,
+        0
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Gym",
+      "source_warp": 0,
+      "threshold": [
+        6,
+        10
+      ],
+      "expected_map": "OlivineCity",
+      "actual_map": "OlivineCity",
+      "arrival": [
+        13,
+        15
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity",
+      "source_warp": 6,
+      "threshold": [
+        8,
+        40
+      ],
+      "expected_map": "OlivineCity_HarborOffice",
+      "actual_map": "OlivineCity_HarborOffice",
+      "arrival": [
+        3,
+        7
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_HarborOffice",
+      "source_warp": 1,
+      "threshold": [
+        4,
+        7
+      ],
+      "expected_map": "OlivineCity",
+      "actual_map": "OlivineCity",
+      "arrival": [
+        8,
+        41
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity",
+      "source_warp": 6,
+      "threshold": [
+        8,
+        40
+      ],
+      "expected_map": "OlivineCity_HarborOffice",
+      "actual_map": "OlivineCity_HarborOffice",
+      "arrival": [
+        3,
+        7
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_HarborOffice",
+      "source_warp": 0,
+      "threshold": [
+        3,
+        7
+      ],
+      "expected_map": "OlivineCity",
+      "actual_map": "OlivineCity",
+      "arrival": [
+        8,
+        41
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity",
+      "source_warp": 7,
+      "threshold": [
+        45,
+        39
+      ],
+      "expected_map": "OlivineCity_Lighthouse_1F",
+      "actual_map": "OlivineCity_Lighthouse_1F",
+      "arrival": [
+        8,
+        17
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Lighthouse_1F",
+      "source_warp": 1,
+      "threshold": [
+        9,
+        17
+      ],
+      "expected_map": "OlivineCity",
+      "actual_map": "OlivineCity",
+      "arrival": [
+        45,
+        40
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity",
+      "source_warp": 7,
+      "threshold": [
+        45,
+        39
+      ],
+      "expected_map": "OlivineCity_Lighthouse_1F",
+      "actual_map": "OlivineCity_Lighthouse_1F",
+      "arrival": [
+        8,
+        17
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Lighthouse_1F",
+      "source_warp": 2,
+      "threshold": [
+        2,
+        3
+      ],
+      "expected_map": "OlivineCity_Lighthouse_2F",
+      "actual_map": "OlivineCity_Lighthouse_2F",
+      "arrival": [
+        5,
+        3
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Lighthouse_2F",
+      "source_warp": 0,
+      "threshold": [
+        5,
+        3
+      ],
+      "expected_map": "OlivineCity_Lighthouse_1F",
+      "actual_map": "OlivineCity_Lighthouse_1F",
+      "arrival": [
+        2,
+        3
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Lighthouse_1F",
+      "source_warp": 3,
+      "threshold": [
+        8,
+        4
+      ],
+      "expected_map": "OlivineCity_Lighthouse_Elevator",
+      "actual_map": "OlivineCity_Lighthouse_Elevator",
+      "arrival": [
+        3,
+        6
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Lighthouse_Elevator",
+      "source_warp": 0,
+      "threshold": [
+        3,
+        6
+      ],
+      "expected_map": "OlivineCity_Lighthouse_1F",
+      "actual_map": "OlivineCity_Lighthouse_1F",
+      "arrival": [
+        8,
+        4
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Lighthouse_1F",
+      "source_warp": 4,
+      "threshold": [
+        9,
+        4
+      ],
+      "expected_map": "OlivineCity_Lighthouse_Elevator",
+      "actual_map": "OlivineCity_Lighthouse_Elevator",
+      "arrival": [
+        4,
+        6
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Lighthouse_Elevator",
+      "source_warp": 1,
+      "threshold": [
+        4,
+        6
+      ],
+      "expected_map": "OlivineCity_Lighthouse_1F",
+      "actual_map": "OlivineCity_Lighthouse_1F",
+      "arrival": [
+        9,
+        4
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Lighthouse_1F",
+      "source_warp": 2,
+      "threshold": [
+        2,
+        3
+      ],
+      "expected_map": "OlivineCity_Lighthouse_2F",
+      "actual_map": "OlivineCity_Lighthouse_2F",
+      "arrival": [
+        5,
+        3
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Lighthouse_2F",
+      "source_warp": 1,
+      "threshold": [
+        13,
+        6
+      ],
+      "expected_map": "OlivineCity_Lighthouse_3F",
+      "actual_map": "OlivineCity_Lighthouse_3F",
+      "arrival": [
+        13,
+        7
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Lighthouse_3F",
+      "source_warp": 0,
+      "threshold": [
+        13,
+        7
+      ],
+      "expected_map": "OlivineCity_Lighthouse_2F",
+      "actual_map": "OlivineCity_Lighthouse_2F",
+      "arrival": [
+        13,
+        6
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Lighthouse_2F",
+      "source_warp": 2,
+      "threshold": [
+        13,
+        5
+      ],
+      "expected_map": "OlivineCity_Lighthouse_3F",
+      "actual_map": "OlivineCity_Lighthouse_3F",
+      "arrival": [
+        13,
+        7
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Lighthouse_3F",
+      "source_warp": 0,
+      "threshold": [
+        13,
+        7
+      ],
+      "expected_map": "OlivineCity_Lighthouse_2F",
+      "actual_map": "OlivineCity_Lighthouse_2F",
+      "arrival": [
+        13,
+        6
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Lighthouse_2F",
+      "source_warp": 1,
+      "threshold": [
+        13,
+        6
+      ],
+      "expected_map": "OlivineCity_Lighthouse_3F",
+      "actual_map": "OlivineCity_Lighthouse_3F",
+      "arrival": [
+        13,
+        7
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Lighthouse_3F",
+      "source_warp": 1,
+      "threshold": [
+        10,
+        7
+      ],
+      "expected_map": "OlivineCity_Lighthouse_4F",
+      "actual_map": "OlivineCity_Lighthouse_4F",
+      "arrival": [
+        10,
+        7
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Lighthouse_4F",
+      "source_warp": 0,
+      "threshold": [
+        10,
+        7
+      ],
+      "expected_map": "OlivineCity_Lighthouse_3F",
+      "actual_map": "OlivineCity_Lighthouse_3F",
+      "arrival": [
+        10,
+        7
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Lighthouse_3F",
+      "source_warp": 2,
+      "threshold": [
+        10,
+        6
+      ],
+      "expected_map": "OlivineCity_Lighthouse_4F",
+      "actual_map": "OlivineCity_Lighthouse_4F",
+      "arrival": [
+        10,
+        7
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Lighthouse_4F",
+      "source_warp": 0,
+      "threshold": [
+        10,
+        7
+      ],
+      "expected_map": "OlivineCity_Lighthouse_3F",
+      "actual_map": "OlivineCity_Lighthouse_3F",
+      "arrival": [
+        10,
+        7
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Lighthouse_3F",
+      "source_warp": 1,
+      "threshold": [
+        10,
+        7
+      ],
+      "expected_map": "OlivineCity_Lighthouse_4F",
+      "actual_map": "OlivineCity_Lighthouse_4F",
+      "arrival": [
+        10,
+        7
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Lighthouse_Balcony",
+      "source_warp": 0,
+      "threshold": [
+        8,
+        12
+      ],
+      "expected_map": "OlivineCity_Lighthouse_3F",
+      "actual_map": "OlivineCity_Lighthouse_3F",
+      "arrival": [
+        8,
+        18
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Lighthouse_3F",
+      "source_warp": 3,
+      "threshold": [
+        6,
+        7
+      ],
+      "expected_map": "OlivineCity_Lighthouse_4F",
+      "actual_map": "OlivineCity_Lighthouse_4F",
+      "arrival": [
+        6,
+        7
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Lighthouse_4F",
+      "source_warp": 3,
+      "threshold": [
+        6,
+        7
+      ],
+      "expected_map": "OlivineCity_Lighthouse_3F",
+      "actual_map": "OlivineCity_Lighthouse_3F",
+      "arrival": [
+        6,
+        7
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Lighthouse_3F",
+      "source_warp": 4,
+      "threshold": [
+        6,
+        6
+      ],
+      "expected_map": "OlivineCity_Lighthouse_4F",
+      "actual_map": "OlivineCity_Lighthouse_4F",
+      "arrival": [
+        6,
+        7
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Lighthouse_4F",
+      "source_warp": 3,
+      "threshold": [
+        6,
+        7
+      ],
+      "expected_map": "OlivineCity_Lighthouse_3F",
+      "actual_map": "OlivineCity_Lighthouse_3F",
+      "arrival": [
+        6,
+        7
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Lighthouse_3F",
+      "source_warp": 5,
+      "threshold": [
+        8,
+        18
+      ],
+      "expected_map": "OlivineCity_Lighthouse_Balcony",
+      "actual_map": "OlivineCity_Lighthouse_Balcony",
+      "arrival": [
+        8,
+        12
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Lighthouse_Balcony",
+      "source_warp": 0,
+      "threshold": [
+        8,
+        12
+      ],
+      "expected_map": "OlivineCity_Lighthouse_3F",
+      "actual_map": "OlivineCity_Lighthouse_3F",
+      "arrival": [
+        8,
+        18
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Lighthouse_3F",
+      "source_warp": 6,
+      "threshold": [
+        9,
+        18
+      ],
+      "expected_map": "OlivineCity_Lighthouse_Balcony",
+      "actual_map": "OlivineCity_Lighthouse_Balcony",
+      "arrival": [
+        9,
+        12
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Lighthouse_Balcony",
+      "source_warp": 1,
+      "threshold": [
+        9,
+        12
+      ],
+      "expected_map": "OlivineCity_Lighthouse_3F",
+      "actual_map": "OlivineCity_Lighthouse_3F",
+      "arrival": [
+        9,
+        18
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Lighthouse_3F",
+      "source_warp": 3,
+      "threshold": [
+        6,
+        7
+      ],
+      "expected_map": "OlivineCity_Lighthouse_4F",
+      "actual_map": "OlivineCity_Lighthouse_4F",
+      "arrival": [
+        6,
+        7
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Lighthouse_4F",
+      "source_warp": 1,
+      "threshold": [
+        3,
+        5
+      ],
+      "expected_map": "OlivineCity_Lighthouse_5F",
+      "actual_map": "OlivineCity_Lighthouse_5F",
+      "arrival": [
+        4,
+        5
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Lighthouse_5F",
+      "source_warp": 0,
+      "threshold": [
+        4,
+        5
+      ],
+      "expected_map": "OlivineCity_Lighthouse_4F",
+      "actual_map": "OlivineCity_Lighthouse_4F",
+      "arrival": [
+        3,
+        5
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Lighthouse_4F",
+      "source_warp": 2,
+      "threshold": [
+        3,
+        4
+      ],
+      "expected_map": "OlivineCity_Lighthouse_5F",
+      "actual_map": "OlivineCity_Lighthouse_5F",
+      "arrival": [
+        4,
+        5
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Lighthouse_5F",
+      "source_warp": 0,
+      "threshold": [
+        4,
+        5
+      ],
+      "expected_map": "OlivineCity_Lighthouse_4F",
+      "actual_map": "OlivineCity_Lighthouse_4F",
+      "arrival": [
+        3,
+        5
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Lighthouse_4F",
+      "source_warp": 1,
+      "threshold": [
+        3,
+        5
+      ],
+      "expected_map": "OlivineCity_Lighthouse_5F",
+      "actual_map": "OlivineCity_Lighthouse_5F",
+      "arrival": [
+        4,
+        5
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Lighthouse_5F",
+      "source_warp": 1,
+      "threshold": [
+        10,
+        10
+      ],
+      "expected_map": "OlivineCity_Lighthouse_6F",
+      "actual_map": "OlivineCity_Lighthouse_6F",
+      "arrival": [
+        9,
+        10
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Lighthouse_6F",
+      "source_warp": 0,
+      "threshold": [
+        9,
+        10
+      ],
+      "expected_map": "OlivineCity_Lighthouse_5F",
+      "actual_map": "OlivineCity_Lighthouse_5F",
+      "arrival": [
+        10,
+        10
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Lighthouse_5F",
+      "source_warp": 2,
+      "threshold": [
+        10,
+        9
+      ],
+      "expected_map": "OlivineCity_Lighthouse_6F",
+      "actual_map": "OlivineCity_Lighthouse_6F",
+      "arrival": [
+        9,
+        10
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Lighthouse_6F",
+      "source_warp": 0,
+      "threshold": [
+        9,
+        10
+      ],
+      "expected_map": "OlivineCity_Lighthouse_5F",
+      "actual_map": "OlivineCity_Lighthouse_5F",
+      "arrival": [
+        10,
+        10
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Lighthouse_5F",
+      "source_warp": 1,
+      "threshold": [
+        10,
+        10
+      ],
+      "expected_map": "OlivineCity_Lighthouse_6F",
+      "actual_map": "OlivineCity_Lighthouse_6F",
+      "arrival": [
+        9,
+        10
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Lighthouse_6F",
+      "source_warp": 1,
+      "threshold": [
+        8,
+        4
+      ],
+      "expected_map": "OlivineCity_Lighthouse_Elevator",
+      "actual_map": "OlivineCity_Lighthouse_Elevator",
+      "arrival": [
+        3,
+        6
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Lighthouse_Elevator",
+      "source_warp": 0,
+      "threshold": [
+        3,
+        6
+      ],
+      "expected_map": "OlivineCity_Lighthouse_6F",
+      "actual_map": "OlivineCity_Lighthouse_6F",
+      "arrival": [
+        8,
+        4
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Lighthouse_6F",
+      "source_warp": 2,
+      "threshold": [
+        9,
+        4
+      ],
+      "expected_map": "OlivineCity_Lighthouse_Elevator",
+      "actual_map": "OlivineCity_Lighthouse_Elevator",
+      "arrival": [
+        4,
+        6
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Lighthouse_Elevator",
+      "source_warp": 1,
+      "threshold": [
+        4,
+        6
+      ],
+      "expected_map": "OlivineCity_Lighthouse_6F",
+      "actual_map": "OlivineCity_Lighthouse_6F",
+      "arrival": [
+        9,
+        4
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Lighthouse_6F",
+      "source_warp": 0,
+      "threshold": [
+        9,
+        10
+      ],
+      "expected_map": "OlivineCity_Lighthouse_5F",
+      "actual_map": "OlivineCity_Lighthouse_5F",
+      "arrival": [
+        10,
+        10
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Lighthouse_5F",
+      "source_warp": 0,
+      "threshold": [
+        4,
+        5
+      ],
+      "expected_map": "OlivineCity_Lighthouse_4F",
+      "actual_map": "OlivineCity_Lighthouse_4F",
+      "arrival": [
+        3,
+        5
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Lighthouse_4F",
+      "source_warp": 3,
+      "threshold": [
+        6,
+        7
+      ],
+      "expected_map": "OlivineCity_Lighthouse_3F",
+      "actual_map": "OlivineCity_Lighthouse_3F",
+      "arrival": [
+        6,
+        7
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Lighthouse_3F",
+      "source_warp": 5,
+      "threshold": [
+        8,
+        18
+      ],
+      "expected_map": "OlivineCity_Lighthouse_Balcony",
+      "actual_map": "OlivineCity_Lighthouse_Balcony",
+      "arrival": [
+        8,
+        12
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Lighthouse_Balcony",
+      "source_warp": 0,
+      "threshold": [
+        8,
+        12
+      ],
+      "expected_map": "OlivineCity_Lighthouse_3F",
+      "actual_map": "OlivineCity_Lighthouse_3F",
+      "arrival": [
+        8,
+        18
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Lighthouse_3F",
+      "source_warp": 3,
+      "threshold": [
+        6,
+        7
+      ],
+      "expected_map": "OlivineCity_Lighthouse_4F",
+      "actual_map": "OlivineCity_Lighthouse_4F",
+      "arrival": [
+        6,
+        7
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Lighthouse_4F",
+      "source_warp": 1,
+      "threshold": [
+        3,
+        5
+      ],
+      "expected_map": "OlivineCity_Lighthouse_5F",
+      "actual_map": "OlivineCity_Lighthouse_5F",
+      "arrival": [
+        4,
+        5
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Lighthouse_5F",
+      "source_warp": 1,
+      "threshold": [
+        10,
+        10
+      ],
+      "expected_map": "OlivineCity_Lighthouse_6F",
+      "actual_map": "OlivineCity_Lighthouse_6F",
+      "arrival": [
+        9,
+        10
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Lighthouse_6F",
+      "source_warp": 1,
+      "threshold": [
+        8,
+        4
+      ],
+      "expected_map": "OlivineCity_Lighthouse_Elevator",
+      "actual_map": "OlivineCity_Lighthouse_Elevator",
+      "arrival": [
+        3,
+        6
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Lighthouse_Elevator",
+      "source_warp": 0,
+      "threshold": [
+        3,
+        6
+      ],
+      "expected_map": "OlivineCity_Lighthouse_1F",
+      "actual_map": "OlivineCity_Lighthouse_1F",
+      "arrival": [
+        8,
+        4
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Lighthouse_1F",
+      "source_warp": 0,
+      "threshold": [
+        8,
+        17
+      ],
+      "expected_map": "OlivineCity",
+      "actual_map": "OlivineCity",
+      "arrival": [
+        45,
+        40
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity",
+      "source_warp": 4,
+      "threshold": [
+        29,
+        33
+      ],
+      "expected_map": "OlivineCity_Mart",
+      "actual_map": "OlivineCity_Mart",
+      "arrival": [
+        4,
+        11
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Mart",
+      "source_warp": 1,
+      "threshold": [
+        5,
+        11
+      ],
+      "expected_map": "OlivineCity",
+      "actual_map": "OlivineCity",
+      "arrival": [
+        29,
+        34
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity",
+      "source_warp": 4,
+      "threshold": [
+        29,
+        33
+      ],
+      "expected_map": "OlivineCity_Mart",
+      "actual_map": "OlivineCity_Mart",
+      "arrival": [
+        4,
+        11
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Mart",
+      "source_warp": 0,
+      "threshold": [
+        4,
+        11
+      ],
+      "expected_map": "OlivineCity",
+      "actual_map": "OlivineCity",
+      "arrival": [
+        29,
+        34
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity",
+      "source_warp": 1,
+      "threshold": [
+        8,
+        28
+      ],
+      "expected_map": "OlivineCity_NeighborHouse",
+      "actual_map": "OlivineCity_NeighborHouse",
+      "arrival": [
+        3,
+        7
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_NeighborHouse",
+      "source_warp": 1,
+      "threshold": [
+        4,
+        7
+      ],
+      "expected_map": "OlivineCity",
+      "actual_map": "OlivineCity",
+      "arrival": [
+        8,
+        29
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity",
+      "source_warp": 1,
+      "threshold": [
+        8,
+        28
+      ],
+      "expected_map": "OlivineCity_NeighborHouse",
+      "actual_map": "OlivineCity_NeighborHouse",
+      "arrival": [
+        3,
+        7
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_NeighborHouse",
+      "source_warp": 0,
+      "threshold": [
+        3,
+        7
+      ],
+      "expected_map": "OlivineCity",
+      "actual_map": "OlivineCity",
+      "arrival": [
+        8,
+        29
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity",
+      "source_warp": 3,
+      "threshold": [
+        16,
+        33
+      ],
+      "expected_map": "OlivineCity_PokemonCenter_1F",
+      "actual_map": "OlivineCity_PokemonCenter_1F",
+      "arrival": [
+        8,
+        19
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_PokemonCenter_1F",
+      "source_warp": 2,
+      "threshold": [
+        14,
+        17
+      ],
+      "expected_map": "OlivineCity_PokemonCenter_B1F",
+      "actual_map": "OlivineCity_PokemonCenter_B1F",
+      "arrival": [
+        15,
+        10
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_PokemonCenter_B1F",
+      "source_warp": 0,
+      "threshold": [
+        14,
+        10
+      ],
+      "expected_map": "OlivineCity_PokemonCenter_1F",
+      "actual_map": "OlivineCity_PokemonCenter_1F",
+      "arrival": [
+        15,
+        17
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_PokemonCenter_1F",
+      "source_warp": 2,
+      "threshold": [
+        14,
+        17
+      ],
+      "expected_map": "OlivineCity_PokemonCenter_B1F",
+      "actual_map": "OlivineCity_PokemonCenter_B1F",
+      "arrival": [
+        15,
+        10
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_PokemonCenter_B1F",
+      "source_warp": 0,
+      "threshold": [
+        14,
+        10
+      ],
+      "expected_map": "OlivineCity_PokemonCenter_1F",
+      "actual_map": "OlivineCity_PokemonCenter_1F",
+      "arrival": [
+        15,
+        17
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_PokemonCenter_1F",
+      "source_warp": 0,
+      "threshold": [
+        8,
+        19
+      ],
+      "expected_map": "OlivineCity",
+      "actual_map": "OlivineCity",
+      "arrival": [
+        16,
+        34
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity",
+      "source_warp": 13,
+      "threshold": [
+        23,
+        52
+      ],
+      "expected_map": "OlivineCity_PortTerminal",
+      "actual_map": "OlivineCity_PortTerminal",
+      "arrival": [
+        7,
+        2
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_PortTerminal",
+      "source_warp": 1,
+      "threshold": [
+        7,
+        11
+      ],
+      "expected_map": "OlivineCity_PortQuay",
+      "actual_map": "OlivineCity_PortQuay",
+      "arrival": [
+        16,
+        15
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_PortQuay",
+      "source_warp": 0,
+      "threshold": [
+        16,
+        15
+      ],
+      "expected_map": "OlivineCity_PortTerminal",
+      "actual_map": "OlivineCity_PortTerminal",
+      "arrival": [
+        7,
+        11
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_PortTerminal",
+      "source_warp": 1,
+      "threshold": [
+        7,
+        11
+      ],
+      "expected_map": "OlivineCity_PortQuay",
+      "actual_map": "OlivineCity_PortQuay",
+      "arrival": [
+        16,
+        15
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_PortQuay",
+      "source_warp": 0,
+      "threshold": [
+        16,
+        15
+      ],
+      "expected_map": "OlivineCity_PortTerminal",
+      "actual_map": "OlivineCity_PortTerminal",
+      "arrival": [
+        7,
+        11
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_PortTerminal",
+      "source_warp": 2,
+      "threshold": [
+        1,
+        7
+      ],
+      "expected_map": "OlivineCity_PortQuay",
+      "actual_map": "OlivineCity_PortQuay",
+      "arrival": [
+        11,
+        13
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_PortQuay",
+      "source_warp": 1,
+      "threshold": [
+        11,
+        13
+      ],
+      "expected_map": "OlivineCity_PortTerminal",
+      "actual_map": "OlivineCity_PortTerminal",
+      "arrival": [
+        1,
+        7
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_PortTerminal",
+      "source_warp": 2,
+      "threshold": [
+        1,
+        7
+      ],
+      "expected_map": "OlivineCity_PortQuay",
+      "actual_map": "OlivineCity_PortQuay",
+      "arrival": [
+        11,
+        13
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_PortQuay",
+      "source_warp": 1,
+      "threshold": [
+        11,
+        13
+      ],
+      "expected_map": "OlivineCity_PortTerminal",
+      "actual_map": "OlivineCity_PortTerminal",
+      "arrival": [
+        1,
+        7
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_PortTerminal",
+      "source_warp": 1,
+      "threshold": [
+        7,
+        11
+      ],
+      "expected_map": "OlivineCity_PortQuay",
+      "actual_map": "OlivineCity_PortQuay",
+      "arrival": [
+        16,
+        15
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_PortQuay",
+      "source_warp": 2,
+      "threshold": [
+        17,
+        15
+      ],
+      "expected_map": "OlivineCity_PortTerminal",
+      "actual_map": "OlivineCity_PortTerminal",
+      "arrival": [
+        8,
+        11
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_PortTerminal",
+      "source_warp": 4,
+      "threshold": [
+        8,
+        11
+      ],
+      "expected_map": "OlivineCity_PortQuay",
+      "actual_map": "OlivineCity_PortQuay",
+      "arrival": [
+        17,
+        15
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_PortQuay",
+      "source_warp": 0,
+      "threshold": [
+        16,
+        15
+      ],
+      "expected_map": "OlivineCity_PortTerminal",
+      "actual_map": "OlivineCity_PortTerminal",
+      "arrival": [
+        7,
+        11
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_PortTerminal",
+      "source_warp": 2,
+      "threshold": [
+        1,
+        7
+      ],
+      "expected_map": "OlivineCity_PortQuay",
+      "actual_map": "OlivineCity_PortQuay",
+      "arrival": [
+        11,
+        13
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_PortQuay",
+      "source_warp": 3,
+      "threshold": [
+        11,
+        14
+      ],
+      "expected_map": "OlivineCity_PortTerminal",
+      "actual_map": "OlivineCity_PortTerminal",
+      "arrival": [
+        1,
+        8
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_PortTerminal",
+      "source_warp": 5,
+      "threshold": [
+        1,
+        8
+      ],
+      "expected_map": "OlivineCity_PortQuay",
+      "actual_map": "OlivineCity_PortQuay",
+      "arrival": [
+        11,
+        14
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_PortQuay",
+      "source_warp": 1,
+      "threshold": [
+        11,
+        13
+      ],
+      "expected_map": "OlivineCity_PortTerminal",
+      "actual_map": "OlivineCity_PortTerminal",
+      "arrival": [
+        1,
+        7
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_PortTerminal",
+      "source_warp": 0,
+      "threshold": [
+        7,
+        2
+      ],
+      "expected_map": "OlivineCity",
+      "actual_map": "OlivineCity",
+      "arrival": [
+        23,
+        53
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity",
+      "source_warp": 0,
+      "threshold": [
+        8,
+        23
+      ],
+      "expected_map": "OlivineCity_Residence",
+      "actual_map": "OlivineCity_Residence",
+      "arrival": [
+        3,
+        7
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Residence",
+      "source_warp": 1,
+      "threshold": [
+        4,
+        7
+      ],
+      "expected_map": "OlivineCity",
+      "actual_map": "OlivineCity",
+      "arrival": [
+        8,
+        24
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity",
+      "source_warp": 0,
+      "threshold": [
+        8,
+        23
+      ],
+      "expected_map": "OlivineCity_Residence",
+      "actual_map": "OlivineCity_Residence",
+      "arrival": [
+        3,
+        7
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_Residence",
+      "source_warp": 0,
+      "threshold": [
+        3,
+        7
+      ],
+      "expected_map": "OlivineCity",
+      "actual_map": "OlivineCity",
+      "arrival": [
+        8,
+        24
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity",
+      "source_warp": 11,
+      "threshold": [
+        36,
+        17
+      ],
+      "expected_map": "OlivineCity_SealHouse",
+      "actual_map": "OlivineCity_SealHouse",
+      "arrival": [
+        4,
+        8
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_SealHouse",
+      "source_warp": 1,
+      "threshold": [
+        5,
+        8
+      ],
+      "expected_map": "OlivineCity",
+      "actual_map": "OlivineCity",
+      "arrival": [
+        36,
+        18
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity",
+      "source_warp": 11,
+      "threshold": [
+        36,
+        17
+      ],
+      "expected_map": "OlivineCity_SealHouse",
+      "actual_map": "OlivineCity_SealHouse",
+      "arrival": [
+        4,
+        8
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_SealHouse",
+      "source_warp": 0,
+      "threshold": [
+        4,
+        8
+      ],
+      "expected_map": "OlivineCity",
+      "actual_map": "OlivineCity",
+      "arrival": [
+        36,
+        18
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity",
+      "source_warp": 5,
+      "threshold": [
+        31,
+        40
+      ],
+      "expected_map": "OlivineCity_SilphOffice",
+      "actual_map": "OlivineCity_SilphOffice",
+      "arrival": [
+        3,
+        7
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_SilphOffice",
+      "source_warp": 1,
+      "threshold": [
+        4,
+        7
+      ],
+      "expected_map": "OlivineCity",
+      "actual_map": "OlivineCity",
+      "arrival": [
+        31,
+        41
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity",
+      "source_warp": 5,
+      "threshold": [
+        31,
+        40
+      ],
+      "expected_map": "OlivineCity_SilphOffice",
+      "actual_map": "OlivineCity_SilphOffice",
+      "arrival": [
+        3,
+        7
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_SilphOffice",
+      "source_warp": 0,
+      "threshold": [
+        3,
+        7
+      ],
+      "expected_map": "OlivineCity",
+      "actual_map": "OlivineCity",
+      "arrival": [
+        31,
+        41
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity",
+      "source_warp": 10,
+      "threshold": [
+        31,
+        17
+      ],
+      "expected_map": "OlivineCity_TradeHouse",
+      "actual_map": "OlivineCity_TradeHouse",
+      "arrival": [
+        4,
+        8
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_TradeHouse",
+      "source_warp": 1,
+      "threshold": [
+        5,
+        8
+      ],
+      "expected_map": "OlivineCity",
+      "actual_map": "OlivineCity",
+      "arrival": [
+        31,
+        18
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity",
+      "source_warp": 10,
+      "threshold": [
+        31,
+        17
+      ],
+      "expected_map": "OlivineCity_TradeHouse",
+      "actual_map": "OlivineCity_TradeHouse",
+      "arrival": [
+        4,
+        8
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_TradeHouse",
+      "source_warp": 0,
+      "threshold": [
+        4,
+        8
+      ],
+      "expected_map": "OlivineCity",
+      "actual_map": "OlivineCity",
+      "arrival": [
+        31,
+        18
+      ],
+      "result": "PASS"
+    }
+  ],
+  "actual_surf_entries": 5
+}

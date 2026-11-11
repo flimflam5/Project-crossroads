@@ -1,0 +1,318 @@
+{
+  "source_revision": "489c404346f572aefb6856b3dd48a9b364a08ceb",
+  "rom_sha256": "df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4",
+  "build": {
+    "payload_bytes": 30261028,
+    "ewram_bytes": 226448,
+    "iwram_bytes": 28392
+  },
+  "local_static_commands_passed": 60,
+  "automated_emulator_gameplay": {
+    "tour": {
+      "maps": 27,
+      "transitions": 308,
+      "roundtrip_pairs": 73,
+      "warp_trials": 296
+    },
+    "details": {
+      "actual_service_front_npcs": 6,
+      "normal_save_cold_continue_cases": 4,
+      "actual_theater_performers": 5,
+      "real_mart_purchase": true,
+      "pc_party_box_integrity": true,
+      "nurse_heal_id": true,
+      "both_gym_falls": true,
+      "actual_morty_loss_whiteout": true,
+      "restored_B1F_bottom_row_return": true
+    },
+    "furniture": {
+      "controller_cases": 43,
+      "source_cushions": 13,
+      "logo_normal_walk_cells": 20,
+      "all20_Joe_frames_visually_reviewed": true
+    },
+    "gate_layers": {
+      "rom_sha256": "df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4",
+      "phase": "fixed regression",
+      "method": "Actual controller movement; Joe opaque pixels decoded independently from current hardware OAM/OBJ VRAM/palette, not assumed from tile collision",
+      "records": [
+        {
+          "case": "debug-magenta",
+          "map": "EcruteakCity_WestGate",
+          "position": [
+            6,
+            6
+          ],
+          "pixels": 0,
+          "result": "PASS"
+        },
+        {
+          "case": "debug-magenta",
+          "map": "EcruteakCity_WestGate",
+          "position": [
+            6,
+            7
+          ],
+          "pixels": 0,
+          "result": "PASS"
+        },
+        {
+          "case": "normal-floor-Joe-visibility",
+          "map": "EcruteakCity_WestGate",
+          "position": [
+            2,
+            9
+          ],
+          "control": {
+            "opaque_expected": 187,
+            "opaque_visible": 187,
+            "opaque_hidden": 0,
+            "screen_bounds": [
+              112,
+              56,
+              16,
+              32
+            ]
+          },
+          "arrival": {
+            "opaque_expected": 192,
+            "opaque_visible": 192,
+            "opaque_hidden": 0,
+            "screen_bounds": [
+              112,
+              56,
+              16,
+              32
+            ]
+          },
+          "result": "PASS"
+        },
+        {
+          "case": "normal-floor-Joe-visibility",
+          "map": "EcruteakCity_WestGate",
+          "position": [
+            10,
+            9
+          ],
+          "control": {
+            "opaque_expected": 192,
+            "opaque_visible": 192,
+            "opaque_hidden": 0,
+            "screen_bounds": [
+              112,
+              56,
+              16,
+              32
+            ]
+          },
+          "arrival": {
+            "opaque_expected": 165,
+            "opaque_visible": 165,
+            "opaque_hidden": 0,
+            "screen_bounds": [
+              112,
+              56,
+              16,
+              32
+            ]
+          },
+          "result": "PASS"
+        },
+        {
+          "case": "debug-magenta",
+          "map": "EcruteakCity_EastGate",
+          "position": [
+            6,
+            6
+          ],
+          "pixels": 0,
+          "result": "PASS"
+        },
+        {
+          "case": "debug-magenta",
+          "map": "EcruteakCity_EastGate",
+          "position": [
+            6,
+            7
+          ],
+          "pixels": 0,
+          "result": "PASS"
+        },
+        {
+          "case": "normal-floor-Joe-visibility",
+          "map": "EcruteakCity_EastGate",
+          "position": [
+            2,
+            9
+          ],
+          "control": {
+            "opaque_expected": 187,
+            "opaque_visible": 187,
+            "opaque_hidden": 0,
+            "screen_bounds": [
+              112,
+              56,
+              16,
+              32
+            ]
+          },
+          "arrival": {
+            "opaque_expected": 192,
+            "opaque_visible": 192,
+            "opaque_hidden": 0,
+            "screen_bounds": [
+              112,
+              56,
+              16,
+              32
+            ]
+          },
+          "result": "PASS"
+        },
+        {
+          "case": "normal-floor-Joe-visibility",
+          "map": "EcruteakCity_EastGate",
+          "position": [
+            10,
+            9
+          ],
+          "control": {
+            "opaque_expected": 192,
+            "opaque_visible": 192,
+            "opaque_hidden": 0,
+            "screen_bounds": [
+              112,
+              56,
+              16,
+              32
+            ]
+          },
+          "arrival": {
+            "opaque_expected": 165,
+            "opaque_visible": 165,
+            "opaque_hidden": 0,
+            "screen_bounds": [
+              112,
+              56,
+              16,
+              32
+            ]
+          },
+          "result": "PASS"
+        }
+      ]
+    },
+    "ground": {
+      "recorded_cases": 19,
+      "normal_trunk_approaches": 36,
+      "stray_arrow_samples": 0
+    }
+  },
+  "compiled_pixel_matches": {
+    "stage": 6144,
+    "audience_cushions_and_floor": 3584,
+    "center_emblem": 5120,
+    "each_gate": 3072,
+    "foreground_leaf": 423
+  },
+  "native_frames": {
+    "all27_visually_reviewed": true,
+    "independent_second_review": true,
+    "debug_magenta_pixels": 0
+  },
+  "suites": [
+    {
+      "name": "tour",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "crossroads/tools/johto_network_smoke.py",
+        "--save",
+        "build/area-delivery-sram/EcruteakCity_BellTower-save.state.sav",
+        "--library",
+        "/tmp/johto-bridge.so",
+        "--output",
+        "build/qa09-ecruteak-tour-v11",
+        "--targets",
+        "EcruteakCity,EcruteakCity_BurnedTower,EcruteakCity_BellTower,EcruteakCity_Residence,EcruteakCity_DanceTheater,EcruteakCity_Gym,EcruteakCity_PokemonCenter_1F,EcruteakCity_Mart,EcruteakCity_BellTower_2F,EcruteakCity_BellTower_3F,EcruteakCity_BellTower_4F,EcruteakCity_BellTower_5F,EcruteakCity_BellTower_6F,EcruteakCity_BellTower_7F,EcruteakCity_BellTower_8F,EcruteakCity_BellTower_9F,EcruteakCity_BurnedTower_B1F,EcruteakCity_Gym_Arena,EcruteakCity_BarrierStation,EcruteakCity_BarrierCorridor,BellchimeTrail,EcruteakCity_BellTower_10F,EcruteakCity_BellTower_Roof,EcruteakCity_DowsingHouse,EcruteakCity_PokemonCenter_B1F,EcruteakCity_WestGate,EcruteakCity_EastGate",
+        "--all-edges"
+      ],
+      "exit_code": 0,
+      "rom_sha256": "df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4"
+    },
+    {
+      "name": "details",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "crossroads/tools/ecruteak_detail_smoke.py",
+        "--save",
+        "build/area-delivery-sram/EcruteakCity_BellTower-save.state.sav",
+        "--library",
+        "/tmp/johto-bridge.so",
+        "--output",
+        "build/qa09-ecruteak-details-v11"
+      ],
+      "exit_code": 0,
+      "rom_sha256": "df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4"
+    },
+    {
+      "name": "furniture",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "crossroads/tools/ecruteak_furniture_smoke.py",
+        "--save",
+        "build/area-delivery-sram/EcruteakCity_BellTower-save.state.sav",
+        "--library",
+        "/tmp/johto-bridge.so",
+        "--output",
+        "build/qa09-ecruteak-furniture-v11"
+      ],
+      "exit_code": 0,
+      "rom_sha256": "df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4"
+    },
+    {
+      "name": "gates",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/tmp/qa09-ecruteak-gates-v11-runner.py"
+      ],
+      "exit_code": 0,
+      "rom_sha256": "df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4"
+    },
+    {
+      "name": "ground",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "crossroads/tools/ecruteak_qa07_repro.py",
+        "--save",
+        "build/area-delivery-sram/EcruteakCity_BellTower-save.state.sav",
+        "--library",
+        "/tmp/johto-bridge.so",
+        "--output",
+        "build/qa09-ecruteak-ground-v11",
+        "--expect-fixed"
+      ],
+      "exit_code": 0,
+      "rom_sha256": "df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4"
+    },
+    {
+      "name": "pixels",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "crossroads/tools/validate_ecruteak_qa07.py",
+        "--recordings",
+        "build/qa09-ecruteak-ground-v11"
+      ],
+      "exit_code": 0,
+      "rom_sha256": "df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4"
+    }
+  ],
+  "original_input_battery_sha256": "b03ff1ef488fbd25de016e828483bc3001787b84e450a45eaa0ac12a11de30ab",
+  "original_battery_unchanged": true,
+  "fixtures": "Copied historical battery/cold Continue; temporary RAM-only survey access/encounter suppression; details explicitly uses1HP and legacy-layout cases. No player/map/warp position writes during movement.",
+  "owner_delta_visual_acceptance": "PENDING",
+  "remaining_limits": [
+    "Theater southern doorway/margins lack actual raster; source events/permissions+runtime geometry verified",
+    "Owners latest private Delta save not provided; historical battery copies and explicit compatibility fixtures tested"
+  ],
+  "known_gameplay_defects_found_remaining": []
+}

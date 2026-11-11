@@ -1,0 +1,15 @@
+{
+  "purpose": "Negative regression proof: current checker must reject the actual historical BUILD10 bad frame; expected failure is not a final-build failure.",
+  "historical_rom_sha256": "3bec0fedbb481cc051c38d719499b584e9a4c219e42b66bef298f6aa0c5ec7a9",
+  "checker_source": "489c404346f572aefb6856b3dd48a9b364a08ceb",
+  "command": [
+    "python3",
+    "crossroads/tools/validate_city_ground_layers.py",
+    "--frames",
+    "crossroads/qa/qa09/ecruteak/gate-layers-before/west-magenta-6.png"
+  ],
+  "expected_exit": "nonzero",
+  "actual_exit": 1,
+  "output": "/workspace/Project-crossroads/crossroads/tools/validate_city_ground_layers.py:64: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.\n  count=sum(c==(255,0,255)for c in im.getdata());frame_reports.append(dict(path=str(path),magenta_pixels=count));assert count==0,(path,'Actual framebuffer contains debug magenta',count)\nTraceback (most recent call last):\n  File \"/workspace/Project-crossroads/crossroads/tools/validate_city_ground_layers.py\", line 72, in <module>\n    p=argparse.ArgumentParser();p.add_argument('--frames',nargs='*',default=[]);p.add_argument('--report');a=p.parse_args();validate(a.frames,a.report)\n                                                                                                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/Project-crossroads/crossroads/tools/validate_city_ground_layers.py\", line 64, in validate\n    count=sum(c==(255,0,255)for c in im.getdata());frame_reports.append(dict(path=str(path),magenta_pixels=count));assert count==0,(path,'Actual framebuffer contains debug magenta',count)\n                                                                                                                          ^^^^^^^^\nAssertionError: ('crossroads/qa/qa09/ecruteak/gate-layers-before/west-magenta-6.png', 'Actual framebuffer contains debug magenta', 600)\n",
+  "passed": true
+}

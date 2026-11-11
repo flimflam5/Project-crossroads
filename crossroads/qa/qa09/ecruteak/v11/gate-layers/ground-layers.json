@@ -1,0 +1,23 @@
+{
+  "maps": 51,
+  "checked_cells": 27062,
+  "failures": [],
+  "native_frames": [
+    {
+      "path": "build/qa11-gate-layer-after/west-magenta-6.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa11-gate-layer-after/west-magenta-7.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa11-gate-layer-after/east-magenta-6.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa11-gate-layer-after/east-magenta-7.png",
+      "magenta_pixels": 0
+    }
+  ]
+}

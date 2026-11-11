@@ -1,0 +1,218 @@
+{
+  "status": "Current frozen B11 full runtime verification PASS; owner Delta visual acceptance pending",
+  "references": [
+    {
+      "area": "House matrix0097",
+      "maps": [
+        "OlivineCity_FishingHouse",
+        "OlivineCity_TradeHouse",
+        "OlivineCity_SealHouse"
+      ],
+      "cache": "Olivine_trade_house_HGSS.jpg",
+      "url": "https://static.guidestrats.com/images/01/10828/13-pokemon-hgss-in-richard-s-house.jpg",
+      "native": "OlivineCity_TradeHouse",
+      "note": "Published house screenshot; original GBA blue/pale walls/furniture; three source homes share exactly the same matrix",
+      "published_dimensions": [
+        750,
+        563
+      ],
+      "sha256": "d8630bfb3c330bd3ece780eff9fc73713adea4f2a72de6563a9962e3bb1f2752",
+      "reference_scale": "Published dimensions retained; do not infer pixel1:1 equivalence with GBA",
+      "native_static_is_gameplay": false,
+      "v7_frame_is_final_delivery": false,
+      "owner_visual_acceptance": "PENDING",
+      "historical_b9_native_frame": "../olivine-tour-v9/OlivineCity_TradeHouse.png",
+      "historical_b9_frame_is_actual_gameplay": true,
+      "current_b11_native_frame_status": "Actual current B11 screenshot; focused runtime tests PASS; owner visual acceptance pending",
+      "current_b11_native_frame": "../olivine/final-v11-tour/OlivineCity_TradeHouse.png"
+    },
+    {
+      "area": "Cafe matrix0136",
+      "maps": [
+        "OlivineCity_Cafe"
+      ],
+      "cache": "Olivine_Cafe_actual_HGSS.png",
+      "url": "https://www.serebii.net/heartgoldsoulsilver/gym/gym6-r.png",
+      "native": "OlivineCity_Cafe",
+      "note": "Published cafe screenshot; cream walls/checkered floor, actual table/bar/windows/plants; the native staff aisle is a documented safety adaptation",
+      "published_dimensions": [
+        256,
+        192
+      ],
+      "sha256": "eae47433799fbd97549e8e58df5b47f057bbd608fada5161243b1d1175bbc647",
+      "reference_scale": "Published dimensions retained; do not infer pixel1:1 equivalence with GBA",
+      "native_static_is_gameplay": false,
+      "v7_frame_is_final_delivery": false,
+      "owner_visual_acceptance": "PENDING",
+      "historical_b9_native_frame": "../olivine-tour-v9/OlivineCity_Cafe.png",
+      "historical_b9_frame_is_actual_gameplay": true,
+      "current_b11_native_frame_status": "Actual current B11 screenshot; focused runtime tests PASS; owner visual acceptance pending",
+      "current_b11_native_frame": "../olivine/final-v11-tour/OlivineCity_Cafe.png"
+    },
+    {
+      "area": "Port terminal",
+      "maps": [
+        "OlivineCity_PortTerminal"
+      ],
+      "cache": "SS_Aqua_port_HGSS_reference_4.png",
+      "url": "https://pokewave.net/assets/images/walkthrough/heartgold-soulsilver/1ff0f1d7-382.png",
+      "native": "OlivineCity_PortTerminal",
+      "note": "Published native DS screenshot256x192; source eight stools and full native furniture handled separately from source actors",
+      "published_dimensions": [
+        256,
+        192
+      ],
+      "sha256": "594bd152a637c9097eaf4be886fbd2c07e5b21a35940172f343fd8ba82697dec",
+      "reference_scale": "Published dimensions retained; do not infer pixel1:1 equivalence with GBA",
+      "native_static_is_gameplay": false,
+      "v7_frame_is_final_delivery": false,
+      "owner_visual_acceptance": "PENDING",
+      "historical_b9_native_frame": "../olivine-tour-v9/OlivineCity_PortTerminal.png",
+      "historical_b9_frame_is_actual_gameplay": true,
+      "current_b11_native_frame_status": "Actual current B11 screenshot; focused runtime tests PASS; owner visual acceptance pending",
+      "current_b11_native_frame": "../olivine/final-v11-tour/OlivineCity_PortTerminal.png"
+    },
+    {
+      "area": "Quay",
+      "maps": [
+        "OlivineCity_PortQuay"
+      ],
+      "cache": "SS_Aqua_port_HGSS_reference_5.png",
+      "url": "https://pokewave.net/assets/images/walkthrough/heartgold-soulsilver/f1119212-383.png",
+      "native": "OlivineCity_PortQuay",
+      "note": "Published native DS screenshot256x192 supports paving, pale edging, bollards, gangway and ship flank. Rear terminal and sailboat positions derive from canonical model/anchor records; not every model is visible in this crop. Ship interiors/sailing are outside this city pass",
+      "published_dimensions": [
+        256,
+        192
+      ],
+      "sha256": "2c45b023b96c070f1990728e315c1f83c498e29bbe91bf636007cbf037c651fd",
+      "reference_scale": "Published dimensions retained; do not infer pixel1:1 equivalence with GBA",
+      "native_static_is_gameplay": false,
+      "v7_frame_is_final_delivery": false,
+      "owner_visual_acceptance": "PENDING",
+      "historical_b9_native_frame": "../olivine-tour-v9/OlivineCity_PortQuay.png",
+      "historical_b9_frame_is_actual_gameplay": true,
+      "current_b11_native_frame_status": "Actual current B11 screenshot; focused runtime tests PASS; owner visual acceptance pending",
+      "current_b11_native_frame": "../olivine/final-v11-tour/OlivineCity_PortQuay.png"
+    },
+    {
+      "area": "Lighthouse all floors",
+      "maps": [
+        "OlivineCity_Lighthouse_1F",
+        "OlivineCity_Lighthouse_2F",
+        "OlivineCity_Lighthouse_3F",
+        "OlivineCity_Lighthouse_4F",
+        "OlivineCity_Lighthouse_5F",
+        "OlivineCity_Lighthouse_6F",
+        "OlivineCity_Lighthouse_Balcony"
+      ],
+      "cache": "Olivine_Lighthouse_Floors_HGSS.png",
+      "url": "https://www.pokebip.com/pages/jeux-video/pokemon-heartgold-soulsilver/guide-complet-johto-kanto/images/map/phare.png",
+      "native": "OlivineCity_Lighthouse_6F",
+      "note": "Annotated published guide composition, not a raw DS-native frame. Native source footprints retain correct branch/drop/lifts; teal floors/plants and purple lantern room with a circular housing; repeated native balcony-window masonry and3x3 housing scale compression are chosen visual adaptations, not forced hardware limits",
+      "published_dimensions": [
+        900,
+        668
+      ],
+      "sha256": "e37da3bd795c7fbc041ad593daad89fd3400bfabfc85afc096989537e627283f",
+      "reference_scale": "Published dimensions retained; do not infer pixel1:1 equivalence with GBA",
+      "native_static_is_gameplay": false,
+      "v7_frame_is_final_delivery": false,
+      "owner_visual_acceptance": "PENDING",
+      "historical_b9_native_frame": "../olivine-tour-v9/OlivineCity_Lighthouse_6F.png",
+      "historical_b9_frame_is_actual_gameplay": true,
+      "current_b11_native_frame_status": "Actual current B11 screenshot; focused runtime tests PASS; owner visual acceptance pending",
+      "current_b11_native_frame": "../olivine/final-v11-tour/OlivineCity_Lighthouse_6F.png"
+    },
+    {
+      "area": "Common Pokemon Center1F",
+      "maps": [
+        "OlivineCity_PokemonCenter_1F"
+      ],
+      "cache": "Ecruteak_common_Center_inside_HGSS.png",
+      "url": "https://archives.bulbagarden.net/media/upload/5/50/Pok%C3%A9mon_Center_inside_HGSS.png",
+      "page": "https://archives.bulbagarden.net/wiki/File:Pok%C3%A9mon_Center_inside_HGSS.png",
+      "native": "OlivineCity_PokemonCenter_1F",
+      "note": "Published composite/crop256x297; original native GBA warm reception with green floor emblem/blue rear panels; raised reception is flattened",
+      "published_dimensions": [
+        256,
+        297
+      ],
+      "sha256": "3a1631fb84272c3cd7552420d07bfeb1720e8e734ba952ca47570c1084c84ba3",
+      "reference_scale": "Published image dimensions retained; do not infer pixel1:1 DS/GBA equivalence",
+      "visually_inspected": true,
+      "native_static_is_gameplay": false,
+      "v7_frame_is_final_delivery": false,
+      "owner_visual_acceptance": "PENDING",
+      "historical_b9_native_frame": "../olivine-tour-v9/OlivineCity_PokemonCenter_1F.png",
+      "historical_b9_frame_is_actual_gameplay": true,
+      "current_b11_native_frame_status": "Actual current B11 screenshot; focused runtime tests PASS; owner visual acceptance pending",
+      "current_b11_native_frame": "../olivine/final-v11-tour/OlivineCity_PokemonCenter_1F.png"
+    },
+    {
+      "area": "Common Center basement",
+      "maps": [
+        "OlivineCity_PokemonCenter_B1F"
+      ],
+      "cache": "Common_Center_B1F_HGSS.png",
+      "url": "https://www.pokewiki.de/images/8/81/Pok%C3%A9mon-Center_Untergeschoss_HGSS.png",
+      "page": "https://www.pokewiki.de/Datei:Pok%C3%A9mon-Center_Untergeschoss_HGSS.png",
+      "native": "OlivineCity_PokemonCenter_B1F",
+      "note": "Published242x163 image; private native cool palette, three counters, glass table, ten source stools, plants, terminal and full footer row; communications explicitly offline",
+      "published_dimensions": [
+        242,
+        163
+      ],
+      "sha256": "7865565de56598403fea4fa2b674549b410ece08830bad4a8e772059e363ec4c",
+      "reference_scale": "Published image dimensions retained; do not infer pixel1:1 DS/GBA equivalence",
+      "visually_inspected": true,
+      "native_static_is_gameplay": false,
+      "v7_frame_is_final_delivery": false,
+      "owner_visual_acceptance": "PENDING",
+      "historical_b9_native_frame": "../olivine-tour-v9/OlivineCity_PokemonCenter_B1F.png",
+      "historical_b9_frame_is_actual_gameplay": true,
+      "current_b11_native_frame_status": "Actual current B11 screenshot; focused runtime tests PASS; owner visual acceptance pending",
+      "current_b11_native_frame": "../olivine/final-v11-tour/OlivineCity_PokemonCenter_B1F.png"
+    },
+    {
+      "area": "Common Poke Mart",
+      "maps": [
+        "OlivineCity_Mart"
+      ],
+      "cache": "Common_Mart_interior_HGSS.png",
+      "url": "https://archives.bulbagarden.net/media/upload/0/08/Pok%C3%A9_Mart_interior_HGSS.png",
+      "page": "https://archives.bulbagarden.net/wiki/File:Pok%C3%A9_Mart_interior_HGSS.png",
+      "native": "OlivineCity_Mart",
+      "note": "Published229x175 image; native source shelves/display racks/glass table/plant positions; stock preserved",
+      "published_dimensions": [
+        229,
+        175
+      ],
+      "sha256": "dbfa3e7e21a58089d07073e41f1c6a481379022d4e916bf007032767bdb67e79",
+      "reference_scale": "Published image dimensions retained; do not infer pixel1:1 DS/GBA equivalence",
+      "visually_inspected": true,
+      "native_static_is_gameplay": false,
+      "v7_frame_is_final_delivery": false,
+      "owner_visual_acceptance": "PENDING",
+      "historical_b9_native_frame": "../olivine-tour-v9/OlivineCity_Mart.png",
+      "historical_b9_frame_is_actual_gameplay": true,
+      "current_b11_native_frame_status": "Actual current B11 screenshot; focused runtime tests PASS; owner visual acceptance pending",
+      "current_b11_native_frame": "../olivine/final-v11-tour/OlivineCity_Mart.png"
+    }
+  ],
+  "missing_raster_views": [
+    "Complete raw native DS frames for every lighthouse floor (annotated guide composition available)",
+    "Separate full native HGSS lift-cabin raster (source geometry and actual controller-tested native cabin available)",
+    "Full reverse quay view showing complete rear port facade and both sailboats; placement is supported by canonical source prop records, not the cropped quay image"
+  ],
+  "source_preview_manifest": "authored-static-v8/manifest.json",
+  "source_revision": "489c404346f572aefb6856b3dd48a9b364a08ceb",
+  "rom_sha256": "df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4",
+  "historical_b9_identity": {
+    "source_revision": "5664fecee4337c5bdd442583e24cc91c09c0a0cd",
+    "rom_sha256": "d5abac0deabc7d592eba302122b3d15c08501947f0f601eda7b5026da9ac6772"
+  },
+  "historical_b9_native_manifest": "../olivine-tour-v9/manifest.json",
+  "current_b11_native_manifest": "native-b11-manifest.json",
+  "current_b11_tests": "../olivine/final-v11-lane/completed.json"
+}

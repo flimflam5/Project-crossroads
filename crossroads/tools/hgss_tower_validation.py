@@ -5,15 +5,19 @@ import json,re,struct
 from johto_movement import next_position
 R=Path(__file__).resolve().parents[2]
 def validate_towers():
+ from hgss_ecruteak_tower_details import validate as validate_details,tileset as detail_tileset
+ validate_details()
  def load(p):return json.loads((R/p).read_text())
  review=load('crossroads/hgss/interior-review.json');facts=load('crossroads/hgss/canonical_events/ecruteak-interior-geometry.json');base=load('crossroads/hgss/contracts/ecruteak-interiors-qa04.json')['maps'];rs={a['name']:a for a in review};hs={a['source_header']:a for a in review}
  assert len(rs)==13 and len(hs)==13
  assert set(hs)=={f'MAP_BELL_TOWER_{i}F' for i in range(1,11)}|{'MAP_BELL_TOWER_ROOF','MAP_BURNED_TOWER_1F','MAP_BURNED_TOWER_B1F'}
  layouts={l['id']:l for l in load('data/layouts/layouts.json')['layouts']};maps={n:load(f'data/maps/{n}/map.json') for n in rs};ids={m['id']:n for n,m in maps.items()};raw={};sizes={};behaviors={};actors={}
- attrs=struct.unpack('<'+str((R/'data/tilesets/secondary/hgss_temple/metatile_attributes.bin').stat().st_size//2)+'H',(R/'data/tilesets/secondary/hgss_temple/metatile_attributes.bin').read_bytes())
+ attributes={}
  for n,m in maps.items():
   l=layouts[m['layout']];w,h=l['width'],l['height'];sizes[n]=(w,h);data=(R/l['blockdata_filepath']).read_bytes();assert len(data)==w*h*2;raw[n]=struct.unpack('<'+str(w*h)+'H',data);actors[n]={(o['x'],o['y']) for o in m['object_events']}
-  assert l['secondary_tileset']=='gTileset_HgssTemple' and l['primary_tileset']=='gTileset_Building'
+  assert l['secondary_tileset']==detail_tileset(rs[n]['source_header']) and l['primary_tileset']=='gTileset_Building'
+  folder='hgss_ecruteak_tower_details' if l['secondary_tileset']=='gTileset_HgssEcruteakTowerDetails' else 'hgss_temple'
+  p=R/f'data/tilesets/secondary/{folder}/metatile_attributes.bin';attrs=struct.unpack('<'+str(p.stat().st_size//2)+'H',p.read_bytes());attributes[n]=attrs
   assert (R/l['border_filepath']).read_bytes()==struct.pack('<4H',*([0x600]*4))
   if n in base:
    old=base[n]
@@ -33,7 +37,7 @@ def validate_towers():
  def behavior(n,x,y):
   w,h=sizes[n]
   if not(0<=x<w and 0<=y<h):return None
-  return attrs[(raw[n][y*w+x]&1023)-512]&255
+  return attributes[n][(raw[n][y*w+x]&1023)-512]&255
  nodes=set();edges={};reverse={};outside=set()
  for n,m in maps.items():
   w,h=sizes[n];warps={(e['x'],e['y']) for e in m['warp_events']}

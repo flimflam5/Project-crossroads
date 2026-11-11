@@ -1,0 +1,59 @@
+{
+  "source_commit": "fd151242458efe5759b18650f35a5e5b2fa47e45",
+  "targets": {
+    "MAP_BELL_TOWER_5F": "EcruteakCity_BellTower_5F",
+    "MAP_BELL_TOWER_6F": "EcruteakCity_BellTower_6F",
+    "MAP_BELL_TOWER_7F": "EcruteakCity_BellTower_7F",
+    "MAP_BURNED_TOWER_1F": "EcruteakCity_BurnedTower"
+  },
+  "source_references": "Pinned HGSS matrix/permissions/props in canonical_events/ecruteak-interior-geometry.json; actual Bell5F/7F/Burned1F mosaics inspected",
+  "lamp_source_model": 186,
+  "lamp_source_positions": [
+    [
+      9,
+      5
+    ],
+    [
+      15,
+      5
+    ],
+    [
+      21,
+      5
+    ]
+  ],
+  "lamp_native_positions": [
+    [
+      5,
+      1
+    ],
+    [
+      11,
+      1
+    ],
+    [
+      17,
+      1
+    ]
+  ],
+  "lamp_by_base": {
+    "522": 904,
+    "524": 905,
+    "559": 906,
+    "561": 907
+  },
+  "base_metatiles": 392,
+  "new_metatiles": 4,
+  "new_graphics": [
+    507,
+    508,
+    509,
+    510
+  ],
+  "original_lantern_sha256": "038700743855b816b901f259dd51a17cd05a7cb3656030c2bc5839beea13c9b1",
+  "adaptations": [
+    "Existing original GBA lantern replaces perspective HGSS wall light; no new actor or interaction",
+    "Collapsed opening uses charred rear wall/dark interior/fragmented rim on source-blocked cells;2D depth replaces visible DS basement model",
+    "Public geometry, stairs, warps, actors, movement behaviors and stable IDs are unchanged"
+  ]
+}

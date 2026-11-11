@@ -1,0 +1,7763 @@
+{
+  "checkpoint": "Final V9 exact-byte controller verification",
+  "source_commit": "5664fecee4337c5bdd442583e24cc91c09c0a0cd",
+  "rom_sha256": "d5abac0deabc7d592eba302122b3d15c08501947f0f601eda7b5026da9ac6772",
+  "verification": "Automated controller-driven mGBA gameplay, not owner Delta/visual acceptance",
+  "doorways": {
+    "visible_segments": 118,
+    "approaches": 354,
+    "executed_pass": 329,
+    "unavailable_lateral_approaches": 25,
+    "failures": 0,
+    "all_required_fronts_executed": true,
+    "results": [
+      {
+        "label": "theater-outside-0-front",
+        "source": "EcruteakCity",
+        "segment": [
+          44,
+          45
+        ],
+        "expected_destination": "EcruteakCity_DanceTheater",
+        "result": "PASS",
+        "arrival": [
+          7,
+          17
+        ],
+        "expected_arrival": [
+          7,
+          17
+        ],
+        "walk_away": [
+          7,
+          16
+        ]
+      },
+      {
+        "label": "theater-outside-0-lateral-negative",
+        "source": "EcruteakCity",
+        "segment": [
+          44,
+          45
+        ],
+        "expected_destination": "EcruteakCity_DanceTheater",
+        "result": "inaccessible lateral approach",
+        "position": [
+          41,
+          46
+        ]
+      },
+      {
+        "label": "theater-outside-0-lateral-positive",
+        "source": "EcruteakCity",
+        "segment": [
+          44,
+          45
+        ],
+        "expected_destination": "EcruteakCity_DanceTheater",
+        "result": "PASS",
+        "arrival": [
+          7,
+          17
+        ],
+        "expected_arrival": [
+          7,
+          17
+        ],
+        "walk_away": [
+          7,
+          16
+        ]
+      },
+      {
+        "label": "theater-outside-1-front",
+        "source": "EcruteakCity",
+        "segment": [
+          45,
+          45
+        ],
+        "expected_destination": "EcruteakCity_DanceTheater",
+        "result": "PASS",
+        "arrival": [
+          8,
+          17
+        ],
+        "expected_arrival": [
+          8,
+          17
+        ],
+        "walk_away": [
+          8,
+          16
+        ]
+      },
+      {
+        "label": "theater-outside-1-lateral-negative",
+        "source": "EcruteakCity",
+        "segment": [
+          45,
+          45
+        ],
+        "expected_destination": "EcruteakCity_DanceTheater",
+        "result": "PASS",
+        "arrival": [
+          8,
+          17
+        ],
+        "expected_arrival": [
+          8,
+          17
+        ],
+        "walk_away": [
+          8,
+          16
+        ]
+      },
+      {
+        "label": "theater-outside-1-lateral-positive",
+        "source": "EcruteakCity",
+        "segment": [
+          45,
+          45
+        ],
+        "expected_destination": "EcruteakCity_DanceTheater",
+        "result": "PASS",
+        "arrival": [
+          8,
+          17
+        ],
+        "expected_arrival": [
+          8,
+          17
+        ],
+        "walk_away": [
+          8,
+          16
+        ]
+      },
+      {
+        "label": "theater-inside-0-front",
+        "source": "EcruteakCity_DanceTheater",
+        "segment": [
+          7,
+          17
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          44,
+          46
+        ],
+        "expected_arrival": [
+          44,
+          46
+        ],
+        "walk_away": [
+          44,
+          47
+        ]
+      },
+      {
+        "label": "theater-inside-0-lateral-negative",
+        "source": "EcruteakCity_DanceTheater",
+        "segment": [
+          7,
+          17
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          44,
+          46
+        ],
+        "expected_arrival": [
+          44,
+          46
+        ],
+        "walk_away": [
+          44,
+          47
+        ]
+      },
+      {
+        "label": "theater-inside-0-lateral-positive",
+        "source": "EcruteakCity_DanceTheater",
+        "segment": [
+          7,
+          17
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          44,
+          46
+        ],
+        "expected_arrival": [
+          44,
+          46
+        ],
+        "walk_away": [
+          44,
+          47
+        ]
+      },
+      {
+        "label": "theater-inside-1-front",
+        "source": "EcruteakCity_DanceTheater",
+        "segment": [
+          8,
+          17
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          45,
+          46
+        ],
+        "expected_arrival": [
+          45,
+          46
+        ],
+        "walk_away": [
+          45,
+          47
+        ]
+      },
+      {
+        "label": "theater-inside-1-lateral-negative",
+        "source": "EcruteakCity_DanceTheater",
+        "segment": [
+          8,
+          17
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          45,
+          46
+        ],
+        "expected_arrival": [
+          45,
+          46
+        ],
+        "walk_away": [
+          45,
+          47
+        ]
+      },
+      {
+        "label": "theater-inside-1-lateral-positive",
+        "source": "EcruteakCity_DanceTheater",
+        "segment": [
+          8,
+          17
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          45,
+          46
+        ],
+        "expected_arrival": [
+          45,
+          46
+        ],
+        "walk_away": [
+          45,
+          47
+        ]
+      },
+      {
+        "label": "barrier-outside-0-front",
+        "source": "EcruteakCity",
+        "segment": [
+          39,
+          25
+        ],
+        "expected_destination": "EcruteakCity_BarrierStation",
+        "result": "PASS",
+        "arrival": [
+          9,
+          11
+        ],
+        "expected_arrival": [
+          9,
+          11
+        ],
+        "walk_away": [
+          9,
+          10
+        ]
+      },
+      {
+        "label": "barrier-outside-0-lateral-negative",
+        "source": "EcruteakCity",
+        "segment": [
+          39,
+          25
+        ],
+        "expected_destination": "EcruteakCity_BarrierStation",
+        "result": "PASS",
+        "arrival": [
+          9,
+          11
+        ],
+        "expected_arrival": [
+          9,
+          11
+        ],
+        "walk_away": [
+          9,
+          10
+        ]
+      },
+      {
+        "label": "barrier-outside-0-lateral-positive",
+        "source": "EcruteakCity",
+        "segment": [
+          39,
+          25
+        ],
+        "expected_destination": "EcruteakCity_BarrierStation",
+        "result": "PASS",
+        "arrival": [
+          9,
+          11
+        ],
+        "expected_arrival": [
+          9,
+          11
+        ],
+        "walk_away": [
+          9,
+          10
+        ]
+      },
+      {
+        "label": "barrier-outside-1-front",
+        "source": "EcruteakCity",
+        "segment": [
+          40,
+          25
+        ],
+        "expected_destination": "EcruteakCity_BarrierStation",
+        "result": "PASS",
+        "arrival": [
+          10,
+          11
+        ],
+        "expected_arrival": [
+          10,
+          11
+        ],
+        "walk_away": [
+          10,
+          10
+        ]
+      },
+      {
+        "label": "barrier-outside-1-lateral-negative",
+        "source": "EcruteakCity",
+        "segment": [
+          40,
+          25
+        ],
+        "expected_destination": "EcruteakCity_BarrierStation",
+        "result": "PASS",
+        "arrival": [
+          10,
+          11
+        ],
+        "expected_arrival": [
+          10,
+          11
+        ],
+        "walk_away": [
+          10,
+          10
+        ]
+      },
+      {
+        "label": "barrier-outside-1-lateral-positive",
+        "source": "EcruteakCity",
+        "segment": [
+          40,
+          25
+        ],
+        "expected_destination": "EcruteakCity_BarrierStation",
+        "result": "PASS",
+        "arrival": [
+          10,
+          11
+        ],
+        "expected_arrival": [
+          10,
+          11
+        ],
+        "walk_away": [
+          10,
+          10
+        ]
+      },
+      {
+        "label": "barrier-inside-0-front",
+        "source": "EcruteakCity_BarrierStation",
+        "segment": [
+          9,
+          11
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          39,
+          26
+        ],
+        "expected_arrival": [
+          39,
+          26
+        ],
+        "walk_away": [
+          39,
+          27
+        ]
+      },
+      {
+        "label": "barrier-inside-0-lateral-negative",
+        "source": "EcruteakCity_BarrierStation",
+        "segment": [
+          9,
+          11
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          39,
+          26
+        ],
+        "expected_arrival": [
+          39,
+          26
+        ],
+        "walk_away": [
+          39,
+          27
+        ]
+      },
+      {
+        "label": "barrier-inside-0-lateral-positive",
+        "source": "EcruteakCity_BarrierStation",
+        "segment": [
+          9,
+          11
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          39,
+          26
+        ],
+        "expected_arrival": [
+          39,
+          26
+        ],
+        "walk_away": [
+          39,
+          27
+        ]
+      },
+      {
+        "label": "barrier-inside-1-front",
+        "source": "EcruteakCity_BarrierStation",
+        "segment": [
+          10,
+          11
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          40,
+          26
+        ],
+        "expected_arrival": [
+          40,
+          26
+        ],
+        "walk_away": [
+          40,
+          27
+        ]
+      },
+      {
+        "label": "barrier-inside-1-lateral-negative",
+        "source": "EcruteakCity_BarrierStation",
+        "segment": [
+          10,
+          11
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          40,
+          26
+        ],
+        "expected_arrival": [
+          40,
+          26
+        ],
+        "walk_away": [
+          40,
+          27
+        ]
+      },
+      {
+        "label": "barrier-inside-1-lateral-positive",
+        "source": "EcruteakCity_BarrierStation",
+        "segment": [
+          10,
+          11
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          40,
+          26
+        ],
+        "expected_arrival": [
+          40,
+          26
+        ],
+        "walk_away": [
+          40,
+          27
+        ]
+      },
+      {
+        "label": "gym-outside-0-front",
+        "source": "EcruteakCity",
+        "segment": [
+          24,
+          55
+        ],
+        "expected_destination": "EcruteakCity_Gym",
+        "result": "PASS",
+        "arrival": [
+          10,
+          21
+        ],
+        "expected_arrival": [
+          10,
+          21
+        ],
+        "walk_away": [
+          10,
+          20
+        ]
+      },
+      {
+        "label": "gym-outside-0-lateral-negative",
+        "source": "EcruteakCity",
+        "segment": [
+          24,
+          55
+        ],
+        "expected_destination": "EcruteakCity_Gym",
+        "result": "PASS",
+        "arrival": [
+          10,
+          21
+        ],
+        "expected_arrival": [
+          10,
+          21
+        ],
+        "walk_away": [
+          10,
+          20
+        ]
+      },
+      {
+        "label": "gym-outside-0-lateral-positive",
+        "source": "EcruteakCity",
+        "segment": [
+          24,
+          55
+        ],
+        "expected_destination": "EcruteakCity_Gym",
+        "result": "PASS",
+        "arrival": [
+          10,
+          21
+        ],
+        "expected_arrival": [
+          10,
+          21
+        ],
+        "walk_away": [
+          10,
+          20
+        ]
+      },
+      {
+        "label": "gym-outside-1-front",
+        "source": "EcruteakCity",
+        "segment": [
+          25,
+          55
+        ],
+        "expected_destination": "EcruteakCity_Gym",
+        "result": "PASS",
+        "arrival": [
+          11,
+          21
+        ],
+        "expected_arrival": [
+          11,
+          21
+        ],
+        "walk_away": [
+          11,
+          20
+        ]
+      },
+      {
+        "label": "gym-outside-1-lateral-negative",
+        "source": "EcruteakCity",
+        "segment": [
+          25,
+          55
+        ],
+        "expected_destination": "EcruteakCity_Gym",
+        "result": "PASS",
+        "arrival": [
+          11,
+          21
+        ],
+        "expected_arrival": [
+          11,
+          21
+        ],
+        "walk_away": [
+          11,
+          20
+        ]
+      },
+      {
+        "label": "gym-outside-1-lateral-positive",
+        "source": "EcruteakCity",
+        "segment": [
+          25,
+          55
+        ],
+        "expected_destination": "EcruteakCity_Gym",
+        "result": "inaccessible lateral approach",
+        "position": [
+          24,
+          58
+        ]
+      },
+      {
+        "label": "gym-inside-0-front",
+        "source": "EcruteakCity_Gym",
+        "segment": [
+          10,
+          21
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          24,
+          56
+        ],
+        "expected_arrival": [
+          24,
+          56
+        ],
+        "walk_away": [
+          24,
+          57
+        ]
+      },
+      {
+        "label": "gym-inside-0-lateral-negative",
+        "source": "EcruteakCity_Gym",
+        "segment": [
+          10,
+          21
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          24,
+          56
+        ],
+        "expected_arrival": [
+          24,
+          56
+        ],
+        "walk_away": [
+          24,
+          57
+        ]
+      },
+      {
+        "label": "gym-inside-0-lateral-positive",
+        "source": "EcruteakCity_Gym",
+        "segment": [
+          10,
+          21
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          24,
+          56
+        ],
+        "expected_arrival": [
+          24,
+          56
+        ],
+        "walk_away": [
+          24,
+          57
+        ]
+      },
+      {
+        "label": "gym-inside-1-front",
+        "source": "EcruteakCity_Gym",
+        "segment": [
+          11,
+          21
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          25,
+          56
+        ],
+        "expected_arrival": [
+          25,
+          56
+        ],
+        "walk_away": [
+          25,
+          57
+        ]
+      },
+      {
+        "label": "gym-inside-1-lateral-negative",
+        "source": "EcruteakCity_Gym",
+        "segment": [
+          11,
+          21
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          25,
+          56
+        ],
+        "expected_arrival": [
+          25,
+          56
+        ],
+        "walk_away": [
+          25,
+          57
+        ]
+      },
+      {
+        "label": "gym-inside-1-lateral-positive",
+        "source": "EcruteakCity_Gym",
+        "segment": [
+          11,
+          21
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          25,
+          56
+        ],
+        "expected_arrival": [
+          25,
+          56
+        ],
+        "walk_away": [
+          25,
+          57
+        ]
+      },
+      {
+        "label": "southwest-house-outside-0-front",
+        "source": "EcruteakCity",
+        "segment": [
+          23,
+          45
+        ],
+        "expected_destination": "EcruteakCity_Residence",
+        "result": "PASS",
+        "arrival": [
+          4,
+          8
+        ],
+        "expected_arrival": [
+          4,
+          8
+        ],
+        "walk_away": [
+          4,
+          7
+        ]
+      },
+      {
+        "label": "southwest-house-outside-0-lateral-negative",
+        "source": "EcruteakCity",
+        "segment": [
+          23,
+          45
+        ],
+        "expected_destination": "EcruteakCity_Residence",
+        "result": "PASS",
+        "arrival": [
+          4,
+          8
+        ],
+        "expected_arrival": [
+          4,
+          8
+        ],
+        "walk_away": [
+          4,
+          7
+        ]
+      },
+      {
+        "label": "southwest-house-outside-0-lateral-positive",
+        "source": "EcruteakCity",
+        "segment": [
+          23,
+          45
+        ],
+        "expected_destination": "EcruteakCity_Residence",
+        "result": "PASS",
+        "arrival": [
+          4,
+          8
+        ],
+        "expected_arrival": [
+          4,
+          8
+        ],
+        "walk_away": [
+          4,
+          7
+        ]
+      },
+      {
+        "label": "southwest-house-inside-0-front",
+        "source": "EcruteakCity_Residence",
+        "segment": [
+          4,
+          8
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          23,
+          46
+        ],
+        "expected_arrival": [
+          23,
+          46
+        ],
+        "walk_away": [
+          23,
+          47
+        ]
+      },
+      {
+        "label": "southwest-house-inside-0-lateral-negative",
+        "source": "EcruteakCity_Residence",
+        "segment": [
+          4,
+          8
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          23,
+          46
+        ],
+        "expected_arrival": [
+          23,
+          46
+        ],
+        "walk_away": [
+          23,
+          47
+        ]
+      },
+      {
+        "label": "southwest-house-inside-0-lateral-positive",
+        "source": "EcruteakCity_Residence",
+        "segment": [
+          4,
+          8
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          23,
+          46
+        ],
+        "expected_arrival": [
+          23,
+          46
+        ],
+        "walk_away": [
+          23,
+          47
+        ]
+      },
+      {
+        "label": "southwest-house-inside-1-front",
+        "source": "EcruteakCity_Residence",
+        "segment": [
+          5,
+          8
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          23,
+          46
+        ],
+        "expected_arrival": [
+          23,
+          46
+        ],
+        "walk_away": [
+          23,
+          47
+        ]
+      },
+      {
+        "label": "southwest-house-inside-1-lateral-negative",
+        "source": "EcruteakCity_Residence",
+        "segment": [
+          5,
+          8
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          23,
+          46
+        ],
+        "expected_arrival": [
+          23,
+          46
+        ],
+        "walk_away": [
+          23,
+          47
+        ]
+      },
+      {
+        "label": "southwest-house-inside-1-lateral-positive",
+        "source": "EcruteakCity_Residence",
+        "segment": [
+          5,
+          8
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          23,
+          46
+        ],
+        "expected_arrival": [
+          23,
+          46
+        ],
+        "walk_away": [
+          23,
+          47
+        ]
+      },
+      {
+        "label": "dowsing-house-outside-0-front",
+        "source": "EcruteakCity",
+        "segment": [
+          34,
+          55
+        ],
+        "expected_destination": "EcruteakCity_DowsingHouse",
+        "result": "PASS",
+        "arrival": [
+          4,
+          8
+        ],
+        "expected_arrival": [
+          4,
+          8
+        ],
+        "walk_away": [
+          4,
+          7
+        ]
+      },
+      {
+        "label": "dowsing-house-outside-0-lateral-negative",
+        "source": "EcruteakCity",
+        "segment": [
+          34,
+          55
+        ],
+        "expected_destination": "EcruteakCity_DowsingHouse",
+        "result": "PASS",
+        "arrival": [
+          4,
+          8
+        ],
+        "expected_arrival": [
+          4,
+          8
+        ],
+        "walk_away": [
+          4,
+          7
+        ]
+      },
+      {
+        "label": "dowsing-house-outside-0-lateral-positive",
+        "source": "EcruteakCity",
+        "segment": [
+          34,
+          55
+        ],
+        "expected_destination": "EcruteakCity_DowsingHouse",
+        "result": "PASS",
+        "arrival": [
+          4,
+          8
+        ],
+        "expected_arrival": [
+          4,
+          8
+        ],
+        "walk_away": [
+          4,
+          7
+        ]
+      },
+      {
+        "label": "dowsing-house-inside-0-front",
+        "source": "EcruteakCity_DowsingHouse",
+        "segment": [
+          4,
+          8
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          34,
+          56
+        ],
+        "expected_arrival": [
+          34,
+          56
+        ],
+        "walk_away": [
+          34,
+          57
+        ]
+      },
+      {
+        "label": "dowsing-house-inside-0-lateral-negative",
+        "source": "EcruteakCity_DowsingHouse",
+        "segment": [
+          4,
+          8
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          34,
+          56
+        ],
+        "expected_arrival": [
+          34,
+          56
+        ],
+        "walk_away": [
+          34,
+          57
+        ]
+      },
+      {
+        "label": "dowsing-house-inside-0-lateral-positive",
+        "source": "EcruteakCity_DowsingHouse",
+        "segment": [
+          4,
+          8
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          34,
+          56
+        ],
+        "expected_arrival": [
+          34,
+          56
+        ],
+        "walk_away": [
+          34,
+          57
+        ]
+      },
+      {
+        "label": "dowsing-house-inside-1-front",
+        "source": "EcruteakCity_DowsingHouse",
+        "segment": [
+          5,
+          8
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          34,
+          56
+        ],
+        "expected_arrival": [
+          34,
+          56
+        ],
+        "walk_away": [
+          34,
+          57
+        ]
+      },
+      {
+        "label": "dowsing-house-inside-1-lateral-negative",
+        "source": "EcruteakCity_DowsingHouse",
+        "segment": [
+          5,
+          8
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          34,
+          56
+        ],
+        "expected_arrival": [
+          34,
+          56
+        ],
+        "walk_away": [
+          34,
+          57
+        ]
+      },
+      {
+        "label": "dowsing-house-inside-1-lateral-positive",
+        "source": "EcruteakCity_DowsingHouse",
+        "segment": [
+          5,
+          8
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          34,
+          56
+        ],
+        "expected_arrival": [
+          34,
+          56
+        ],
+        "walk_away": [
+          34,
+          57
+        ]
+      },
+      {
+        "label": "center-outside-0-front",
+        "source": "EcruteakCity",
+        "segment": [
+          45,
+          55
+        ],
+        "expected_destination": "EcruteakCity_PokemonCenter_1F",
+        "result": "PASS",
+        "arrival": [
+          8,
+          19
+        ],
+        "expected_arrival": [
+          8,
+          19
+        ],
+        "walk_away": [
+          8,
+          18
+        ]
+      },
+      {
+        "label": "center-outside-0-lateral-negative",
+        "source": "EcruteakCity",
+        "segment": [
+          45,
+          55
+        ],
+        "expected_destination": "EcruteakCity_PokemonCenter_1F",
+        "result": "PASS",
+        "arrival": [
+          8,
+          19
+        ],
+        "expected_arrival": [
+          8,
+          19
+        ],
+        "walk_away": [
+          8,
+          18
+        ]
+      },
+      {
+        "label": "center-outside-0-lateral-positive",
+        "source": "EcruteakCity",
+        "segment": [
+          45,
+          55
+        ],
+        "expected_destination": "EcruteakCity_PokemonCenter_1F",
+        "result": "PASS",
+        "arrival": [
+          8,
+          19
+        ],
+        "expected_arrival": [
+          8,
+          19
+        ],
+        "walk_away": [
+          8,
+          18
+        ]
+      },
+      {
+        "label": "center-inside-0-front",
+        "source": "EcruteakCity_PokemonCenter_1F",
+        "segment": [
+          8,
+          19
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          45,
+          56
+        ],
+        "expected_arrival": [
+          45,
+          56
+        ],
+        "walk_away": [
+          45,
+          57
+        ]
+      },
+      {
+        "label": "center-inside-0-lateral-negative",
+        "source": "EcruteakCity_PokemonCenter_1F",
+        "segment": [
+          8,
+          19
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          45,
+          56
+        ],
+        "expected_arrival": [
+          45,
+          56
+        ],
+        "walk_away": [
+          45,
+          57
+        ]
+      },
+      {
+        "label": "center-inside-0-lateral-positive",
+        "source": "EcruteakCity_PokemonCenter_1F",
+        "segment": [
+          8,
+          19
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          45,
+          56
+        ],
+        "expected_arrival": [
+          45,
+          56
+        ],
+        "walk_away": [
+          45,
+          57
+        ]
+      },
+      {
+        "label": "center-inside-1-front",
+        "source": "EcruteakCity_PokemonCenter_1F",
+        "segment": [
+          9,
+          19
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          45,
+          56
+        ],
+        "expected_arrival": [
+          45,
+          56
+        ],
+        "walk_away": [
+          45,
+          57
+        ]
+      },
+      {
+        "label": "center-inside-1-lateral-negative",
+        "source": "EcruteakCity_PokemonCenter_1F",
+        "segment": [
+          9,
+          19
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          45,
+          56
+        ],
+        "expected_arrival": [
+          45,
+          56
+        ],
+        "walk_away": [
+          45,
+          57
+        ]
+      },
+      {
+        "label": "center-inside-1-lateral-positive",
+        "source": "EcruteakCity_PokemonCenter_1F",
+        "segment": [
+          9,
+          19
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          45,
+          56
+        ],
+        "expected_arrival": [
+          45,
+          56
+        ],
+        "walk_away": [
+          45,
+          57
+        ]
+      },
+      {
+        "label": "mart-outside-0-front",
+        "source": "EcruteakCity",
+        "segment": [
+          53,
+          45
+        ],
+        "expected_destination": "EcruteakCity_Mart",
+        "result": "PASS",
+        "arrival": [
+          4,
+          11
+        ],
+        "expected_arrival": [
+          4,
+          11
+        ],
+        "walk_away": [
+          4,
+          10
+        ]
+      },
+      {
+        "label": "mart-outside-0-lateral-negative",
+        "source": "EcruteakCity",
+        "segment": [
+          53,
+          45
+        ],
+        "expected_destination": "EcruteakCity_Mart",
+        "result": "PASS",
+        "arrival": [
+          4,
+          11
+        ],
+        "expected_arrival": [
+          4,
+          11
+        ],
+        "walk_away": [
+          4,
+          10
+        ]
+      },
+      {
+        "label": "mart-outside-0-lateral-positive",
+        "source": "EcruteakCity",
+        "segment": [
+          53,
+          45
+        ],
+        "expected_destination": "EcruteakCity_Mart",
+        "result": "PASS",
+        "arrival": [
+          4,
+          11
+        ],
+        "expected_arrival": [
+          4,
+          11
+        ],
+        "walk_away": [
+          4,
+          10
+        ]
+      },
+      {
+        "label": "mart-inside-0-front",
+        "source": "EcruteakCity_Mart",
+        "segment": [
+          4,
+          11
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          53,
+          46
+        ],
+        "expected_arrival": [
+          53,
+          46
+        ],
+        "walk_away": [
+          53,
+          47
+        ]
+      },
+      {
+        "label": "mart-inside-0-lateral-negative",
+        "source": "EcruteakCity_Mart",
+        "segment": [
+          4,
+          11
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          53,
+          46
+        ],
+        "expected_arrival": [
+          53,
+          46
+        ],
+        "walk_away": [
+          53,
+          47
+        ]
+      },
+      {
+        "label": "mart-inside-0-lateral-positive",
+        "source": "EcruteakCity_Mart",
+        "segment": [
+          4,
+          11
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          53,
+          46
+        ],
+        "expected_arrival": [
+          53,
+          46
+        ],
+        "walk_away": [
+          53,
+          47
+        ]
+      },
+      {
+        "label": "mart-inside-1-front",
+        "source": "EcruteakCity_Mart",
+        "segment": [
+          5,
+          11
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          53,
+          46
+        ],
+        "expected_arrival": [
+          53,
+          46
+        ],
+        "walk_away": [
+          53,
+          47
+        ]
+      },
+      {
+        "label": "mart-inside-1-lateral-negative",
+        "source": "EcruteakCity_Mart",
+        "segment": [
+          5,
+          11
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          53,
+          46
+        ],
+        "expected_arrival": [
+          53,
+          46
+        ],
+        "walk_away": [
+          53,
+          47
+        ]
+      },
+      {
+        "label": "mart-inside-1-lateral-positive",
+        "source": "EcruteakCity_Mart",
+        "segment": [
+          5,
+          11
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          53,
+          46
+        ],
+        "expected_arrival": [
+          53,
+          46
+        ],
+        "walk_away": [
+          53,
+          47
+        ]
+      },
+      {
+        "label": "burned-tower-outside-0-front",
+        "source": "EcruteakCity",
+        "segment": [
+          24,
+          21
+        ],
+        "expected_destination": "EcruteakCity_BurnedTower",
+        "result": "PASS",
+        "arrival": [
+          11,
+          22
+        ],
+        "expected_arrival": [
+          11,
+          22
+        ],
+        "walk_away": [
+          11,
+          21
+        ]
+      },
+      {
+        "label": "burned-tower-outside-0-lateral-negative",
+        "source": "EcruteakCity",
+        "segment": [
+          24,
+          21
+        ],
+        "expected_destination": "EcruteakCity_BurnedTower",
+        "result": "PASS",
+        "arrival": [
+          11,
+          22
+        ],
+        "expected_arrival": [
+          11,
+          22
+        ],
+        "walk_away": [
+          11,
+          21
+        ]
+      },
+      {
+        "label": "burned-tower-outside-0-lateral-positive",
+        "source": "EcruteakCity",
+        "segment": [
+          24,
+          21
+        ],
+        "expected_destination": "EcruteakCity_BurnedTower",
+        "result": "PASS",
+        "arrival": [
+          11,
+          22
+        ],
+        "expected_arrival": [
+          11,
+          22
+        ],
+        "walk_away": [
+          11,
+          21
+        ]
+      },
+      {
+        "label": "burned-tower-inside-0-front",
+        "source": "EcruteakCity_BurnedTower",
+        "segment": [
+          11,
+          22
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          24,
+          22
+        ],
+        "expected_arrival": [
+          24,
+          22
+        ],
+        "walk_away": [
+          24,
+          23
+        ]
+      },
+      {
+        "label": "burned-tower-inside-0-lateral-negative",
+        "source": "EcruteakCity_BurnedTower",
+        "segment": [
+          11,
+          22
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          24,
+          22
+        ],
+        "expected_arrival": [
+          24,
+          22
+        ],
+        "walk_away": [
+          24,
+          23
+        ]
+      },
+      {
+        "label": "burned-tower-inside-0-lateral-positive",
+        "source": "EcruteakCity_BurnedTower",
+        "segment": [
+          11,
+          22
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          24,
+          22
+        ],
+        "expected_arrival": [
+          24,
+          22
+        ],
+        "walk_away": [
+          24,
+          23
+        ]
+      },
+      {
+        "label": "burned-tower-inside-1-front",
+        "source": "EcruteakCity_BurnedTower",
+        "segment": [
+          12,
+          22
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          24,
+          22
+        ],
+        "expected_arrival": [
+          24,
+          22
+        ],
+        "walk_away": [
+          24,
+          23
+        ]
+      },
+      {
+        "label": "burned-tower-inside-1-lateral-negative",
+        "source": "EcruteakCity_BurnedTower",
+        "segment": [
+          12,
+          22
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          24,
+          22
+        ],
+        "expected_arrival": [
+          24,
+          22
+        ],
+        "walk_away": [
+          24,
+          23
+        ]
+      },
+      {
+        "label": "burned-tower-inside-1-lateral-positive",
+        "source": "EcruteakCity_BurnedTower",
+        "segment": [
+          12,
+          22
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          24,
+          22
+        ],
+        "expected_arrival": [
+          24,
+          22
+        ],
+        "walk_away": [
+          24,
+          23
+        ]
+      },
+      {
+        "label": "west-city-gate-outside-0-front",
+        "source": "EcruteakCity",
+        "segment": [
+          6,
+          37
+        ],
+        "expected_destination": "EcruteakCity_WestGate",
+        "result": "PASS",
+        "arrival": [
+          10,
+          6
+        ],
+        "expected_arrival": [
+          10,
+          6
+        ],
+        "walk_away": [
+          10,
+          5
+        ]
+      },
+      {
+        "label": "west-city-gate-outside-0-lateral-negative",
+        "source": "EcruteakCity",
+        "segment": [
+          6,
+          37
+        ],
+        "expected_destination": "EcruteakCity_WestGate",
+        "result": "PASS",
+        "arrival": [
+          10,
+          6
+        ],
+        "expected_arrival": [
+          10,
+          6
+        ],
+        "walk_away": [
+          10,
+          5
+        ]
+      },
+      {
+        "label": "west-city-gate-outside-0-lateral-positive",
+        "source": "EcruteakCity",
+        "segment": [
+          6,
+          37
+        ],
+        "expected_destination": "EcruteakCity_WestGate",
+        "result": "inaccessible lateral approach",
+        "position": [
+          8,
+          38
+        ]
+      },
+      {
+        "label": "west-city-gate-outside-1-front",
+        "source": "EcruteakCity",
+        "segment": [
+          6,
+          38
+        ],
+        "expected_destination": "EcruteakCity_WestGate",
+        "result": "PASS",
+        "arrival": [
+          10,
+          7
+        ],
+        "expected_arrival": [
+          10,
+          7
+        ],
+        "walk_away": [
+          9,
+          7
+        ]
+      },
+      {
+        "label": "west-city-gate-outside-1-lateral-negative",
+        "source": "EcruteakCity",
+        "segment": [
+          6,
+          38
+        ],
+        "expected_destination": "EcruteakCity_WestGate",
+        "result": "PASS",
+        "arrival": [
+          10,
+          7
+        ],
+        "expected_arrival": [
+          10,
+          7
+        ],
+        "walk_away": [
+          9,
+          7
+        ]
+      },
+      {
+        "label": "west-city-gate-outside-1-lateral-positive",
+        "source": "EcruteakCity",
+        "segment": [
+          6,
+          38
+        ],
+        "expected_destination": "EcruteakCity_WestGate",
+        "result": "PASS",
+        "arrival": [
+          10,
+          7
+        ],
+        "expected_arrival": [
+          10,
+          7
+        ],
+        "walk_away": [
+          9,
+          7
+        ]
+      },
+      {
+        "label": "west-city-gate-outside-2-front",
+        "source": "EcruteakCity",
+        "segment": [
+          6,
+          39
+        ],
+        "expected_destination": "EcruteakCity_WestGate",
+        "result": "PASS",
+        "arrival": [
+          10,
+          8
+        ],
+        "expected_arrival": [
+          10,
+          8
+        ],
+        "walk_away": [
+          10,
+          9
+        ]
+      },
+      {
+        "label": "west-city-gate-outside-2-lateral-negative",
+        "source": "EcruteakCity",
+        "segment": [
+          6,
+          39
+        ],
+        "expected_destination": "EcruteakCity_WestGate",
+        "result": "PASS",
+        "arrival": [
+          10,
+          8
+        ],
+        "expected_arrival": [
+          10,
+          8
+        ],
+        "walk_away": [
+          10,
+          9
+        ]
+      },
+      {
+        "label": "west-city-gate-outside-2-lateral-positive",
+        "source": "EcruteakCity",
+        "segment": [
+          6,
+          39
+        ],
+        "expected_destination": "EcruteakCity_WestGate",
+        "result": "PASS",
+        "arrival": [
+          10,
+          8
+        ],
+        "expected_arrival": [
+          10,
+          8
+        ],
+        "walk_away": [
+          10,
+          9
+        ]
+      },
+      {
+        "label": "west-city-gate-inside-0-front",
+        "source": "EcruteakCity_WestGate",
+        "segment": [
+          10,
+          6
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          7,
+          37
+        ],
+        "expected_arrival": [
+          7,
+          37
+        ],
+        "walk_away": [
+          8,
+          37
+        ]
+      },
+      {
+        "label": "west-city-gate-inside-0-lateral-negative",
+        "source": "EcruteakCity_WestGate",
+        "segment": [
+          10,
+          6
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          7,
+          37
+        ],
+        "expected_arrival": [
+          7,
+          37
+        ],
+        "walk_away": [
+          8,
+          37
+        ]
+      },
+      {
+        "label": "west-city-gate-inside-0-lateral-positive",
+        "source": "EcruteakCity_WestGate",
+        "segment": [
+          10,
+          6
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          7,
+          37
+        ],
+        "expected_arrival": [
+          7,
+          37
+        ],
+        "walk_away": [
+          8,
+          37
+        ]
+      },
+      {
+        "label": "west-city-gate-inside-1-front",
+        "source": "EcruteakCity_WestGate",
+        "segment": [
+          10,
+          7
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          7,
+          38
+        ],
+        "expected_arrival": [
+          7,
+          38
+        ],
+        "walk_away": [
+          8,
+          38
+        ]
+      },
+      {
+        "label": "west-city-gate-inside-1-lateral-negative",
+        "source": "EcruteakCity_WestGate",
+        "segment": [
+          10,
+          7
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          7,
+          38
+        ],
+        "expected_arrival": [
+          7,
+          38
+        ],
+        "walk_away": [
+          8,
+          38
+        ]
+      },
+      {
+        "label": "west-city-gate-inside-1-lateral-positive",
+        "source": "EcruteakCity_WestGate",
+        "segment": [
+          10,
+          7
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          7,
+          38
+        ],
+        "expected_arrival": [
+          7,
+          38
+        ],
+        "walk_away": [
+          8,
+          38
+        ]
+      },
+      {
+        "label": "west-city-gate-inside-2-front",
+        "source": "EcruteakCity_WestGate",
+        "segment": [
+          10,
+          8
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          7,
+          39
+        ],
+        "expected_arrival": [
+          7,
+          39
+        ],
+        "walk_away": [
+          8,
+          39
+        ]
+      },
+      {
+        "label": "west-city-gate-inside-2-lateral-negative",
+        "source": "EcruteakCity_WestGate",
+        "segment": [
+          10,
+          8
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          7,
+          39
+        ],
+        "expected_arrival": [
+          7,
+          39
+        ],
+        "walk_away": [
+          8,
+          39
+        ]
+      },
+      {
+        "label": "west-city-gate-inside-2-lateral-positive",
+        "source": "EcruteakCity_WestGate",
+        "segment": [
+          10,
+          8
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          7,
+          39
+        ],
+        "expected_arrival": [
+          7,
+          39
+        ],
+        "walk_away": [
+          8,
+          39
+        ]
+      },
+      {
+        "label": "west-route-gate-outside-0-front",
+        "source": "JohtoRoute38",
+        "segment": [
+          63,
+          12
+        ],
+        "expected_destination": "EcruteakCity_WestGate",
+        "result": "PASS",
+        "arrival": [
+          1,
+          6
+        ],
+        "expected_arrival": [
+          1,
+          6
+        ],
+        "walk_away": [
+          1,
+          5
+        ]
+      },
+      {
+        "label": "west-route-gate-outside-0-lateral-negative",
+        "source": "JohtoRoute38",
+        "segment": [
+          63,
+          12
+        ],
+        "expected_destination": "EcruteakCity_WestGate",
+        "result": "inaccessible lateral approach",
+        "position": [
+          61,
+          13
+        ]
+      },
+      {
+        "label": "west-route-gate-outside-0-lateral-positive",
+        "source": "JohtoRoute38",
+        "segment": [
+          63,
+          12
+        ],
+        "expected_destination": "EcruteakCity_WestGate",
+        "result": "PASS",
+        "arrival": [
+          1,
+          6
+        ],
+        "expected_arrival": [
+          1,
+          6
+        ],
+        "walk_away": [
+          1,
+          5
+        ]
+      },
+      {
+        "label": "west-route-gate-outside-1-front",
+        "source": "JohtoRoute38",
+        "segment": [
+          63,
+          13
+        ],
+        "expected_destination": "EcruteakCity_WestGate",
+        "result": "PASS",
+        "arrival": [
+          1,
+          7
+        ],
+        "expected_arrival": [
+          1,
+          7
+        ],
+        "walk_away": [
+          2,
+          7
+        ]
+      },
+      {
+        "label": "west-route-gate-outside-1-lateral-negative",
+        "source": "JohtoRoute38",
+        "segment": [
+          63,
+          13
+        ],
+        "expected_destination": "EcruteakCity_WestGate",
+        "result": "PASS",
+        "arrival": [
+          1,
+          7
+        ],
+        "expected_arrival": [
+          1,
+          7
+        ],
+        "walk_away": [
+          2,
+          7
+        ]
+      },
+      {
+        "label": "west-route-gate-outside-1-lateral-positive",
+        "source": "JohtoRoute38",
+        "segment": [
+          63,
+          13
+        ],
+        "expected_destination": "EcruteakCity_WestGate",
+        "result": "PASS",
+        "arrival": [
+          1,
+          7
+        ],
+        "expected_arrival": [
+          1,
+          7
+        ],
+        "walk_away": [
+          2,
+          7
+        ]
+      },
+      {
+        "label": "west-route-gate-outside-2-front",
+        "source": "JohtoRoute38",
+        "segment": [
+          63,
+          14
+        ],
+        "expected_destination": "EcruteakCity_WestGate",
+        "result": "PASS",
+        "arrival": [
+          1,
+          8
+        ],
+        "expected_arrival": [
+          1,
+          8
+        ],
+        "walk_away": [
+          1,
+          9
+        ]
+      },
+      {
+        "label": "west-route-gate-outside-2-lateral-negative",
+        "source": "JohtoRoute38",
+        "segment": [
+          63,
+          14
+        ],
+        "expected_destination": "EcruteakCity_WestGate",
+        "result": "PASS",
+        "arrival": [
+          1,
+          8
+        ],
+        "expected_arrival": [
+          1,
+          8
+        ],
+        "walk_away": [
+          1,
+          9
+        ]
+      },
+      {
+        "label": "west-route-gate-outside-2-lateral-positive",
+        "source": "JohtoRoute38",
+        "segment": [
+          63,
+          14
+        ],
+        "expected_destination": "EcruteakCity_WestGate",
+        "result": "inaccessible lateral approach",
+        "position": [
+          61,
+          13
+        ]
+      },
+      {
+        "label": "west-route-gate-inside-0-front",
+        "source": "EcruteakCity_WestGate",
+        "segment": [
+          1,
+          6
+        ],
+        "expected_destination": "JohtoRoute38",
+        "result": "PASS",
+        "arrival": [
+          62,
+          12
+        ],
+        "expected_arrival": [
+          62,
+          12
+        ],
+        "walk_away": [
+          61,
+          12
+        ]
+      },
+      {
+        "label": "west-route-gate-inside-0-lateral-negative",
+        "source": "EcruteakCity_WestGate",
+        "segment": [
+          1,
+          6
+        ],
+        "expected_destination": "JohtoRoute38",
+        "result": "PASS",
+        "arrival": [
+          62,
+          12
+        ],
+        "expected_arrival": [
+          62,
+          12
+        ],
+        "walk_away": [
+          61,
+          12
+        ]
+      },
+      {
+        "label": "west-route-gate-inside-0-lateral-positive",
+        "source": "EcruteakCity_WestGate",
+        "segment": [
+          1,
+          6
+        ],
+        "expected_destination": "JohtoRoute38",
+        "result": "PASS",
+        "arrival": [
+          62,
+          12
+        ],
+        "expected_arrival": [
+          62,
+          12
+        ],
+        "walk_away": [
+          61,
+          12
+        ]
+      },
+      {
+        "label": "west-route-gate-inside-1-front",
+        "source": "EcruteakCity_WestGate",
+        "segment": [
+          1,
+          7
+        ],
+        "expected_destination": "JohtoRoute38",
+        "result": "PASS",
+        "arrival": [
+          62,
+          13
+        ],
+        "expected_arrival": [
+          62,
+          13
+        ],
+        "walk_away": [
+          61,
+          13
+        ]
+      },
+      {
+        "label": "west-route-gate-inside-1-lateral-negative",
+        "source": "EcruteakCity_WestGate",
+        "segment": [
+          1,
+          7
+        ],
+        "expected_destination": "JohtoRoute38",
+        "result": "PASS",
+        "arrival": [
+          62,
+          13
+        ],
+        "expected_arrival": [
+          62,
+          13
+        ],
+        "walk_away": [
+          61,
+          13
+        ]
+      },
+      {
+        "label": "west-route-gate-inside-1-lateral-positive",
+        "source": "EcruteakCity_WestGate",
+        "segment": [
+          1,
+          7
+        ],
+        "expected_destination": "JohtoRoute38",
+        "result": "PASS",
+        "arrival": [
+          62,
+          13
+        ],
+        "expected_arrival": [
+          62,
+          13
+        ],
+        "walk_away": [
+          61,
+          13
+        ]
+      },
+      {
+        "label": "west-route-gate-inside-2-front",
+        "source": "EcruteakCity_WestGate",
+        "segment": [
+          1,
+          8
+        ],
+        "expected_destination": "JohtoRoute38",
+        "result": "PASS",
+        "arrival": [
+          62,
+          14
+        ],
+        "expected_arrival": [
+          62,
+          14
+        ],
+        "walk_away": [
+          61,
+          14
+        ]
+      },
+      {
+        "label": "west-route-gate-inside-2-lateral-negative",
+        "source": "EcruteakCity_WestGate",
+        "segment": [
+          1,
+          8
+        ],
+        "expected_destination": "JohtoRoute38",
+        "result": "PASS",
+        "arrival": [
+          62,
+          14
+        ],
+        "expected_arrival": [
+          62,
+          14
+        ],
+        "walk_away": [
+          61,
+          14
+        ]
+      },
+      {
+        "label": "west-route-gate-inside-2-lateral-positive",
+        "source": "EcruteakCity_WestGate",
+        "segment": [
+          1,
+          8
+        ],
+        "expected_destination": "JohtoRoute38",
+        "result": "PASS",
+        "arrival": [
+          62,
+          14
+        ],
+        "expected_arrival": [
+          62,
+          14
+        ],
+        "walk_away": [
+          61,
+          14
+        ]
+      },
+      {
+        "label": "east-city-gate-outside-0-front",
+        "source": "EcruteakCity",
+        "segment": [
+          63,
+          46
+        ],
+        "expected_destination": "EcruteakCity_EastGate",
+        "result": "PASS",
+        "arrival": [
+          1,
+          6
+        ],
+        "expected_arrival": [
+          1,
+          6
+        ],
+        "walk_away": [
+          1,
+          5
+        ]
+      },
+      {
+        "label": "east-city-gate-outside-0-lateral-negative",
+        "source": "EcruteakCity",
+        "segment": [
+          63,
+          46
+        ],
+        "expected_destination": "EcruteakCity_EastGate",
+        "result": "inaccessible lateral approach",
+        "position": [
+          61,
+          47
+        ]
+      },
+      {
+        "label": "east-city-gate-outside-0-lateral-positive",
+        "source": "EcruteakCity",
+        "segment": [
+          63,
+          46
+        ],
+        "expected_destination": "EcruteakCity_EastGate",
+        "result": "PASS",
+        "arrival": [
+          1,
+          6
+        ],
+        "expected_arrival": [
+          1,
+          6
+        ],
+        "walk_away": [
+          1,
+          5
+        ]
+      },
+      {
+        "label": "east-city-gate-outside-1-front",
+        "source": "EcruteakCity",
+        "segment": [
+          63,
+          47
+        ],
+        "expected_destination": "EcruteakCity_EastGate",
+        "result": "PASS",
+        "arrival": [
+          1,
+          7
+        ],
+        "expected_arrival": [
+          1,
+          7
+        ],
+        "walk_away": [
+          2,
+          7
+        ]
+      },
+      {
+        "label": "east-city-gate-outside-1-lateral-negative",
+        "source": "EcruteakCity",
+        "segment": [
+          63,
+          47
+        ],
+        "expected_destination": "EcruteakCity_EastGate",
+        "result": "PASS",
+        "arrival": [
+          1,
+          7
+        ],
+        "expected_arrival": [
+          1,
+          7
+        ],
+        "walk_away": [
+          2,
+          7
+        ]
+      },
+      {
+        "label": "east-city-gate-outside-1-lateral-positive",
+        "source": "EcruteakCity",
+        "segment": [
+          63,
+          47
+        ],
+        "expected_destination": "EcruteakCity_EastGate",
+        "result": "PASS",
+        "arrival": [
+          1,
+          7
+        ],
+        "expected_arrival": [
+          1,
+          7
+        ],
+        "walk_away": [
+          2,
+          7
+        ]
+      },
+      {
+        "label": "east-city-gate-outside-2-front",
+        "source": "EcruteakCity",
+        "segment": [
+          63,
+          48
+        ],
+        "expected_destination": "EcruteakCity_EastGate",
+        "result": "PASS",
+        "arrival": [
+          1,
+          8
+        ],
+        "expected_arrival": [
+          1,
+          8
+        ],
+        "walk_away": [
+          1,
+          9
+        ]
+      },
+      {
+        "label": "east-city-gate-outside-2-lateral-negative",
+        "source": "EcruteakCity",
+        "segment": [
+          63,
+          48
+        ],
+        "expected_destination": "EcruteakCity_EastGate",
+        "result": "PASS",
+        "arrival": [
+          1,
+          8
+        ],
+        "expected_arrival": [
+          1,
+          8
+        ],
+        "walk_away": [
+          1,
+          9
+        ]
+      },
+      {
+        "label": "east-city-gate-outside-2-lateral-positive",
+        "source": "EcruteakCity",
+        "segment": [
+          63,
+          48
+        ],
+        "expected_destination": "EcruteakCity_EastGate",
+        "result": "inaccessible lateral approach",
+        "position": [
+          61,
+          47
+        ]
+      },
+      {
+        "label": "east-city-gate-inside-0-front",
+        "source": "EcruteakCity_EastGate",
+        "segment": [
+          1,
+          6
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          59,
+          46
+        ],
+        "expected_arrival": [
+          59,
+          46
+        ],
+        "walk_away": [
+          58,
+          46
+        ]
+      },
+      {
+        "label": "east-city-gate-inside-0-lateral-negative",
+        "source": "EcruteakCity_EastGate",
+        "segment": [
+          1,
+          6
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          59,
+          46
+        ],
+        "expected_arrival": [
+          59,
+          46
+        ],
+        "walk_away": [
+          58,
+          46
+        ]
+      },
+      {
+        "label": "east-city-gate-inside-0-lateral-positive",
+        "source": "EcruteakCity_EastGate",
+        "segment": [
+          1,
+          6
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          59,
+          46
+        ],
+        "expected_arrival": [
+          59,
+          46
+        ],
+        "walk_away": [
+          58,
+          46
+        ]
+      },
+      {
+        "label": "east-city-gate-inside-1-front",
+        "source": "EcruteakCity_EastGate",
+        "segment": [
+          1,
+          7
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          59,
+          47
+        ],
+        "expected_arrival": [
+          59,
+          47
+        ],
+        "walk_away": [
+          58,
+          47
+        ]
+      },
+      {
+        "label": "east-city-gate-inside-1-lateral-negative",
+        "source": "EcruteakCity_EastGate",
+        "segment": [
+          1,
+          7
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          59,
+          47
+        ],
+        "expected_arrival": [
+          59,
+          47
+        ],
+        "walk_away": [
+          58,
+          47
+        ]
+      },
+      {
+        "label": "east-city-gate-inside-1-lateral-positive",
+        "source": "EcruteakCity_EastGate",
+        "segment": [
+          1,
+          7
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          59,
+          47
+        ],
+        "expected_arrival": [
+          59,
+          47
+        ],
+        "walk_away": [
+          58,
+          47
+        ]
+      },
+      {
+        "label": "east-city-gate-inside-2-front",
+        "source": "EcruteakCity_EastGate",
+        "segment": [
+          1,
+          8
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          59,
+          48
+        ],
+        "expected_arrival": [
+          59,
+          48
+        ],
+        "walk_away": [
+          58,
+          48
+        ]
+      },
+      {
+        "label": "east-city-gate-inside-2-lateral-negative",
+        "source": "EcruteakCity_EastGate",
+        "segment": [
+          1,
+          8
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          59,
+          48
+        ],
+        "expected_arrival": [
+          59,
+          48
+        ],
+        "walk_away": [
+          58,
+          48
+        ]
+      },
+      {
+        "label": "east-city-gate-inside-2-lateral-positive",
+        "source": "EcruteakCity_EastGate",
+        "segment": [
+          1,
+          8
+        ],
+        "expected_destination": "EcruteakCity",
+        "result": "PASS",
+        "arrival": [
+          59,
+          48
+        ],
+        "expected_arrival": [
+          59,
+          48
+        ],
+        "walk_away": [
+          58,
+          48
+        ]
+      },
+      {
+        "label": "east-route-gate-outside-0-front",
+        "source": "JohtoRoute42",
+        "segment": [
+          0,
+          13
+        ],
+        "expected_destination": "EcruteakCity_EastGate",
+        "result": "PASS",
+        "arrival": [
+          10,
+          6
+        ],
+        "expected_arrival": [
+          10,
+          6
+        ],
+        "walk_away": [
+          10,
+          5
+        ]
+      },
+      {
+        "label": "east-route-gate-outside-0-lateral-negative",
+        "source": "JohtoRoute42",
+        "segment": [
+          0,
+          13
+        ],
+        "expected_destination": "EcruteakCity_EastGate",
+        "result": "PASS",
+        "arrival": [
+          10,
+          6
+        ],
+        "expected_arrival": [
+          10,
+          6
+        ],
+        "walk_away": [
+          10,
+          5
+        ]
+      },
+      {
+        "label": "east-route-gate-outside-0-lateral-positive",
+        "source": "JohtoRoute42",
+        "segment": [
+          0,
+          13
+        ],
+        "expected_destination": "EcruteakCity_EastGate",
+        "result": "inaccessible lateral approach",
+        "position": [
+          2,
+          14
+        ]
+      },
+      {
+        "label": "east-route-gate-outside-1-front",
+        "source": "JohtoRoute42",
+        "segment": [
+          0,
+          14
+        ],
+        "expected_destination": "EcruteakCity_EastGate",
+        "result": "PASS",
+        "arrival": [
+          10,
+          7
+        ],
+        "expected_arrival": [
+          10,
+          7
+        ],
+        "walk_away": [
+          9,
+          7
+        ]
+      },
+      {
+        "label": "east-route-gate-outside-1-lateral-negative",
+        "source": "JohtoRoute42",
+        "segment": [
+          0,
+          14
+        ],
+        "expected_destination": "EcruteakCity_EastGate",
+        "result": "PASS",
+        "arrival": [
+          10,
+          7
+        ],
+        "expected_arrival": [
+          10,
+          7
+        ],
+        "walk_away": [
+          9,
+          7
+        ]
+      },
+      {
+        "label": "east-route-gate-outside-1-lateral-positive",
+        "source": "JohtoRoute42",
+        "segment": [
+          0,
+          14
+        ],
+        "expected_destination": "EcruteakCity_EastGate",
+        "result": "PASS",
+        "arrival": [
+          10,
+          7
+        ],
+        "expected_arrival": [
+          10,
+          7
+        ],
+        "walk_away": [
+          9,
+          7
+        ]
+      },
+      {
+        "label": "east-route-gate-outside-2-front",
+        "source": "JohtoRoute42",
+        "segment": [
+          0,
+          15
+        ],
+        "expected_destination": "EcruteakCity_EastGate",
+        "result": "PASS",
+        "arrival": [
+          10,
+          8
+        ],
+        "expected_arrival": [
+          10,
+          8
+        ],
+        "walk_away": [
+          10,
+          9
+        ]
+      },
+      {
+        "label": "east-route-gate-outside-2-lateral-negative",
+        "source": "JohtoRoute42",
+        "segment": [
+          0,
+          15
+        ],
+        "expected_destination": "EcruteakCity_EastGate",
+        "result": "inaccessible lateral approach",
+        "position": [
+          2,
+          14
+        ]
+      },
+      {
+        "label": "east-route-gate-outside-2-lateral-positive",
+        "source": "JohtoRoute42",
+        "segment": [
+          0,
+          15
+        ],
+        "expected_destination": "EcruteakCity_EastGate",
+        "result": "PASS",
+        "arrival": [
+          10,
+          8
+        ],
+        "expected_arrival": [
+          10,
+          8
+        ],
+        "walk_away": [
+          10,
+          9
+        ]
+      },
+      {
+        "label": "east-route-gate-inside-0-front",
+        "source": "EcruteakCity_EastGate",
+        "segment": [
+          10,
+          6
+        ],
+        "expected_destination": "JohtoRoute42",
+        "result": "PASS",
+        "arrival": [
+          3,
+          13
+        ],
+        "expected_arrival": [
+          3,
+          13
+        ],
+        "walk_away": [
+          4,
+          13
+        ]
+      },
+      {
+        "label": "east-route-gate-inside-0-lateral-negative",
+        "source": "EcruteakCity_EastGate",
+        "segment": [
+          10,
+          6
+        ],
+        "expected_destination": "JohtoRoute42",
+        "result": "PASS",
+        "arrival": [
+          3,
+          13
+        ],
+        "expected_arrival": [
+          3,
+          13
+        ],
+        "walk_away": [
+          4,
+          13
+        ]
+      },
+      {
+        "label": "east-route-gate-inside-0-lateral-positive",
+        "source": "EcruteakCity_EastGate",
+        "segment": [
+          10,
+          6
+        ],
+        "expected_destination": "JohtoRoute42",
+        "result": "PASS",
+        "arrival": [
+          3,
+          13
+        ],
+        "expected_arrival": [
+          3,
+          13
+        ],
+        "walk_away": [
+          4,
+          13
+        ]
+      },
+      {
+        "label": "east-route-gate-inside-1-front",
+        "source": "EcruteakCity_EastGate",
+        "segment": [
+          10,
+          7
+        ],
+        "expected_destination": "JohtoRoute42",
+        "result": "PASS",
+        "arrival": [
+          3,
+          14
+        ],
+        "expected_arrival": [
+          3,
+          14
+        ],
+        "walk_away": [
+          4,
+          14
+        ]
+      },
+      {
+        "label": "east-route-gate-inside-1-lateral-negative",
+        "source": "EcruteakCity_EastGate",
+        "segment": [
+          10,
+          7
+        ],
+        "expected_destination": "JohtoRoute42",
+        "result": "PASS",
+        "arrival": [
+          3,
+          14
+        ],
+        "expected_arrival": [
+          3,
+          14
+        ],
+        "walk_away": [
+          4,
+          14
+        ]
+      },
+      {
+        "label": "east-route-gate-inside-1-lateral-positive",
+        "source": "EcruteakCity_EastGate",
+        "segment": [
+          10,
+          7
+        ],
+        "expected_destination": "JohtoRoute42",
+        "result": "PASS",
+        "arrival": [
+          3,
+          14
+        ],
+        "expected_arrival": [
+          3,
+          14
+        ],
+        "walk_away": [
+          4,
+          14
+        ]
+      },
+      {
+        "label": "east-route-gate-inside-2-front",
+        "source": "EcruteakCity_EastGate",
+        "segment": [
+          10,
+          8
+        ],
+        "expected_destination": "JohtoRoute42",
+        "result": "PASS",
+        "arrival": [
+          3,
+          15
+        ],
+        "expected_arrival": [
+          3,
+          15
+        ],
+        "walk_away": [
+          4,
+          15
+        ]
+      },
+      {
+        "label": "east-route-gate-inside-2-lateral-negative",
+        "source": "EcruteakCity_EastGate",
+        "segment": [
+          10,
+          8
+        ],
+        "expected_destination": "JohtoRoute42",
+        "result": "PASS",
+        "arrival": [
+          3,
+          15
+        ],
+        "expected_arrival": [
+          3,
+          15
+        ],
+        "walk_away": [
+          4,
+          15
+        ]
+      },
+      {
+        "label": "east-route-gate-inside-2-lateral-positive",
+        "source": "EcruteakCity_EastGate",
+        "segment": [
+          10,
+          8
+        ],
+        "expected_destination": "JohtoRoute42",
+        "result": "PASS",
+        "arrival": [
+          3,
+          15
+        ],
+        "expected_arrival": [
+          3,
+          15
+        ],
+        "walk_away": [
+          4,
+          15
+        ]
+      },
+      {
+        "label": "bell-tower-outside-0-front",
+        "source": "BellchimeTrail",
+        "segment": [
+          37,
+          20
+        ],
+        "expected_destination": "EcruteakCity_BellTower",
+        "result": "PASS",
+        "arrival": [
+          11,
+          22
+        ],
+        "expected_arrival": [
+          11,
+          22
+        ],
+        "walk_away": [
+          11,
+          21
+        ]
+      },
+      {
+        "label": "bell-tower-outside-0-lateral-negative",
+        "source": "BellchimeTrail",
+        "segment": [
+          37,
+          20
+        ],
+        "expected_destination": "EcruteakCity_BellTower",
+        "result": "PASS",
+        "arrival": [
+          11,
+          22
+        ],
+        "expected_arrival": [
+          11,
+          22
+        ],
+        "walk_away": [
+          11,
+          21
+        ]
+      },
+      {
+        "label": "bell-tower-outside-0-lateral-positive",
+        "source": "BellchimeTrail",
+        "segment": [
+          37,
+          20
+        ],
+        "expected_destination": "EcruteakCity_BellTower",
+        "result": "PASS",
+        "arrival": [
+          11,
+          22
+        ],
+        "expected_arrival": [
+          11,
+          22
+        ],
+        "walk_away": [
+          11,
+          21
+        ]
+      },
+      {
+        "label": "bell-tower-inside-0-front",
+        "source": "EcruteakCity_BellTower",
+        "segment": [
+          11,
+          22
+        ],
+        "expected_destination": "BellchimeTrail",
+        "result": "PASS",
+        "arrival": [
+          37,
+          21
+        ],
+        "expected_arrival": [
+          37,
+          21
+        ],
+        "walk_away": [
+          37,
+          22
+        ]
+      },
+      {
+        "label": "bell-tower-inside-0-lateral-negative",
+        "source": "EcruteakCity_BellTower",
+        "segment": [
+          11,
+          22
+        ],
+        "expected_destination": "BellchimeTrail",
+        "result": "PASS",
+        "arrival": [
+          37,
+          21
+        ],
+        "expected_arrival": [
+          37,
+          21
+        ],
+        "walk_away": [
+          37,
+          22
+        ]
+      },
+      {
+        "label": "bell-tower-inside-0-lateral-positive",
+        "source": "EcruteakCity_BellTower",
+        "segment": [
+          11,
+          22
+        ],
+        "expected_destination": "BellchimeTrail",
+        "result": "PASS",
+        "arrival": [
+          37,
+          21
+        ],
+        "expected_arrival": [
+          37,
+          21
+        ],
+        "walk_away": [
+          37,
+          22
+        ]
+      },
+      {
+        "label": "bell-tower-inside-1-front",
+        "source": "EcruteakCity_BellTower",
+        "segment": [
+          12,
+          22
+        ],
+        "expected_destination": "BellchimeTrail",
+        "result": "PASS",
+        "arrival": [
+          37,
+          21
+        ],
+        "expected_arrival": [
+          37,
+          21
+        ],
+        "walk_away": [
+          37,
+          22
+        ]
+      },
+      {
+        "label": "bell-tower-inside-1-lateral-negative",
+        "source": "EcruteakCity_BellTower",
+        "segment": [
+          12,
+          22
+        ],
+        "expected_destination": "BellchimeTrail",
+        "result": "PASS",
+        "arrival": [
+          37,
+          21
+        ],
+        "expected_arrival": [
+          37,
+          21
+        ],
+        "walk_away": [
+          37,
+          22
+        ]
+      },
+      {
+        "label": "bell-tower-inside-1-lateral-positive",
+        "source": "EcruteakCity_BellTower",
+        "segment": [
+          12,
+          22
+        ],
+        "expected_destination": "BellchimeTrail",
+        "result": "PASS",
+        "arrival": [
+          37,
+          21
+        ],
+        "expected_arrival": [
+          37,
+          21
+        ],
+        "walk_away": [
+          37,
+          22
+        ]
+      },
+      {
+        "label": "trail-station-return-outside-0-front",
+        "source": "BellchimeTrail",
+        "segment": [
+          9,
+          14
+        ],
+        "expected_destination": "EcruteakCity_BarrierCorridor",
+        "result": "PASS",
+        "arrival": [
+          6,
+          3
+        ],
+        "expected_arrival": [
+          6,
+          3
+        ],
+        "walk_away": [
+          6,
+          4
+        ]
+      },
+      {
+        "label": "trail-station-return-outside-0-lateral-negative",
+        "source": "BellchimeTrail",
+        "segment": [
+          9,
+          14
+        ],
+        "expected_destination": "EcruteakCity_BarrierCorridor",
+        "result": "inaccessible lateral approach",
+        "position": [
+          10,
+          15
+        ]
+      },
+      {
+        "label": "trail-station-return-outside-0-lateral-positive",
+        "source": "BellchimeTrail",
+        "segment": [
+          9,
+          14
+        ],
+        "expected_destination": "EcruteakCity_BarrierCorridor",
+        "result": "PASS",
+        "arrival": [
+          6,
+          3
+        ],
+        "expected_arrival": [
+          6,
+          3
+        ],
+        "walk_away": [
+          6,
+          4
+        ]
+      },
+      {
+        "label": "trail-station-return-inside-0-front",
+        "source": "EcruteakCity_BarrierCorridor",
+        "segment": [
+          6,
+          3
+        ],
+        "expected_destination": "BellchimeTrail",
+        "result": "PASS",
+        "arrival": [
+          9,
+          15
+        ],
+        "expected_arrival": [
+          9,
+          15
+        ],
+        "walk_away": [
+          10,
+          15
+        ]
+      },
+      {
+        "label": "trail-station-return-inside-0-lateral-negative",
+        "source": "EcruteakCity_BarrierCorridor",
+        "segment": [
+          6,
+          3
+        ],
+        "expected_destination": "BellchimeTrail",
+        "result": "PASS",
+        "arrival": [
+          9,
+          15
+        ],
+        "expected_arrival": [
+          9,
+          15
+        ],
+        "walk_away": [
+          10,
+          15
+        ]
+      },
+      {
+        "label": "trail-station-return-inside-0-lateral-positive",
+        "source": "EcruteakCity_BarrierCorridor",
+        "segment": [
+          6,
+          3
+        ],
+        "expected_destination": "BellchimeTrail",
+        "result": "inaccessible lateral approach",
+        "position": [
+          6,
+          5
+        ]
+      },
+      {
+        "label": "station-corridor-stairs-outside-0-front",
+        "source": "EcruteakCity_BarrierStation",
+        "segment": [
+          15,
+          3
+        ],
+        "expected_destination": "EcruteakCity_BarrierCorridor",
+        "result": "PASS",
+        "arrival": [
+          3,
+          19
+        ],
+        "expected_arrival": [
+          3,
+          19
+        ],
+        "walk_away": [
+          3,
+          20
+        ]
+      },
+      {
+        "label": "station-corridor-stairs-outside-0-lateral-negative",
+        "source": "EcruteakCity_BarrierStation",
+        "segment": [
+          15,
+          3
+        ],
+        "expected_destination": "EcruteakCity_BarrierCorridor",
+        "result": "PASS",
+        "arrival": [
+          3,
+          19
+        ],
+        "expected_arrival": [
+          3,
+          19
+        ],
+        "walk_away": [
+          3,
+          20
+        ]
+      },
+      {
+        "label": "station-corridor-stairs-outside-0-lateral-positive",
+        "source": "EcruteakCity_BarrierStation",
+        "segment": [
+          15,
+          3
+        ],
+        "expected_destination": "EcruteakCity_BarrierCorridor",
+        "result": "inaccessible lateral approach",
+        "position": [
+          15,
+          6
+        ]
+      },
+      {
+        "label": "station-corridor-stairs-inside-0-front",
+        "source": "EcruteakCity_BarrierCorridor",
+        "segment": [
+          3,
+          19
+        ],
+        "expected_destination": "EcruteakCity_BarrierStation",
+        "result": "PASS",
+        "arrival": [
+          15,
+          3
+        ],
+        "expected_arrival": [
+          15,
+          3
+        ],
+        "walk_away": [
+          15,
+          4
+        ]
+      },
+      {
+        "label": "station-corridor-stairs-inside-0-lateral-negative",
+        "source": "EcruteakCity_BarrierCorridor",
+        "segment": [
+          3,
+          19
+        ],
+        "expected_destination": "EcruteakCity_BarrierStation",
+        "result": "PASS",
+        "arrival": [
+          15,
+          3
+        ],
+        "expected_arrival": [
+          15,
+          3
+        ],
+        "walk_away": [
+          15,
+          4
+        ]
+      },
+      {
+        "label": "station-corridor-stairs-inside-0-lateral-positive",
+        "source": "EcruteakCity_BarrierCorridor",
+        "segment": [
+          3,
+          19
+        ],
+        "expected_destination": "EcruteakCity_BarrierStation",
+        "result": "inaccessible lateral approach",
+        "position": [
+          3,
+          17
+        ]
+      },
+      {
+        "label": "olivine-joe-residence-outside-0-front",
+        "source": "OlivineCity",
+        "segment": [
+          8,
+          23
+        ],
+        "expected_destination": "OlivineCity_Residence",
+        "result": "PASS",
+        "arrival": [
+          3,
+          7
+        ],
+        "expected_arrival": [
+          3,
+          7
+        ],
+        "walk_away": [
+          3,
+          6
+        ]
+      },
+      {
+        "label": "olivine-joe-residence-outside-0-lateral-negative",
+        "source": "OlivineCity",
+        "segment": [
+          8,
+          23
+        ],
+        "expected_destination": "OlivineCity_Residence",
+        "result": "inaccessible lateral approach",
+        "position": [
+          8,
+          25
+        ]
+      },
+      {
+        "label": "olivine-joe-residence-outside-0-lateral-positive",
+        "source": "OlivineCity",
+        "segment": [
+          8,
+          23
+        ],
+        "expected_destination": "OlivineCity_Residence",
+        "result": "PASS",
+        "arrival": [
+          3,
+          7
+        ],
+        "expected_arrival": [
+          3,
+          7
+        ],
+        "walk_away": [
+          3,
+          6
+        ]
+      },
+      {
+        "label": "olivine-joe-residence-inside-0-front",
+        "source": "OlivineCity_Residence",
+        "segment": [
+          3,
+          7
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          8,
+          24
+        ],
+        "expected_arrival": [
+          8,
+          24
+        ],
+        "walk_away": [
+          8,
+          25
+        ]
+      },
+      {
+        "label": "olivine-joe-residence-inside-0-lateral-negative",
+        "source": "OlivineCity_Residence",
+        "segment": [
+          3,
+          7
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          8,
+          24
+        ],
+        "expected_arrival": [
+          8,
+          24
+        ],
+        "walk_away": [
+          8,
+          25
+        ]
+      },
+      {
+        "label": "olivine-joe-residence-inside-0-lateral-positive",
+        "source": "OlivineCity_Residence",
+        "segment": [
+          3,
+          7
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          8,
+          24
+        ],
+        "expected_arrival": [
+          8,
+          24
+        ],
+        "walk_away": [
+          8,
+          25
+        ]
+      },
+      {
+        "label": "olivine-joe-residence-inside-1-front",
+        "source": "OlivineCity_Residence",
+        "segment": [
+          4,
+          7
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          8,
+          24
+        ],
+        "expected_arrival": [
+          8,
+          24
+        ],
+        "walk_away": [
+          8,
+          25
+        ]
+      },
+      {
+        "label": "olivine-joe-residence-inside-1-lateral-negative",
+        "source": "OlivineCity_Residence",
+        "segment": [
+          4,
+          7
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          8,
+          24
+        ],
+        "expected_arrival": [
+          8,
+          24
+        ],
+        "walk_away": [
+          8,
+          25
+        ]
+      },
+      {
+        "label": "olivine-joe-residence-inside-1-lateral-positive",
+        "source": "OlivineCity_Residence",
+        "segment": [
+          4,
+          7
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          8,
+          24
+        ],
+        "expected_arrival": [
+          8,
+          24
+        ],
+        "walk_away": [
+          8,
+          25
+        ]
+      },
+      {
+        "label": "olivine-accepted-neighbour-outside-0-front",
+        "source": "OlivineCity",
+        "segment": [
+          8,
+          28
+        ],
+        "expected_destination": "OlivineCity_NeighborHouse",
+        "result": "PASS",
+        "arrival": [
+          3,
+          7
+        ],
+        "expected_arrival": [
+          3,
+          7
+        ],
+        "walk_away": [
+          3,
+          6
+        ]
+      },
+      {
+        "label": "olivine-accepted-neighbour-outside-0-lateral-negative",
+        "source": "OlivineCity",
+        "segment": [
+          8,
+          28
+        ],
+        "expected_destination": "OlivineCity_NeighborHouse",
+        "result": "inaccessible lateral approach",
+        "position": [
+          8,
+          30
+        ]
+      },
+      {
+        "label": "olivine-accepted-neighbour-outside-0-lateral-positive",
+        "source": "OlivineCity",
+        "segment": [
+          8,
+          28
+        ],
+        "expected_destination": "OlivineCity_NeighborHouse",
+        "result": "PASS",
+        "arrival": [
+          3,
+          7
+        ],
+        "expected_arrival": [
+          3,
+          7
+        ],
+        "walk_away": [
+          3,
+          6
+        ]
+      },
+      {
+        "label": "olivine-accepted-neighbour-inside-0-front",
+        "source": "OlivineCity_NeighborHouse",
+        "segment": [
+          3,
+          7
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          8,
+          29
+        ],
+        "expected_arrival": [
+          8,
+          29
+        ],
+        "walk_away": [
+          8,
+          30
+        ]
+      },
+      {
+        "label": "olivine-accepted-neighbour-inside-0-lateral-negative",
+        "source": "OlivineCity_NeighborHouse",
+        "segment": [
+          3,
+          7
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          8,
+          29
+        ],
+        "expected_arrival": [
+          8,
+          29
+        ],
+        "walk_away": [
+          8,
+          30
+        ]
+      },
+      {
+        "label": "olivine-accepted-neighbour-inside-0-lateral-positive",
+        "source": "OlivineCity_NeighborHouse",
+        "segment": [
+          3,
+          7
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          8,
+          29
+        ],
+        "expected_arrival": [
+          8,
+          29
+        ],
+        "walk_away": [
+          8,
+          30
+        ]
+      },
+      {
+        "label": "olivine-accepted-neighbour-inside-1-front",
+        "source": "OlivineCity_NeighborHouse",
+        "segment": [
+          4,
+          7
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          8,
+          29
+        ],
+        "expected_arrival": [
+          8,
+          29
+        ],
+        "walk_away": [
+          8,
+          30
+        ]
+      },
+      {
+        "label": "olivine-accepted-neighbour-inside-1-lateral-negative",
+        "source": "OlivineCity_NeighborHouse",
+        "segment": [
+          4,
+          7
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          8,
+          29
+        ],
+        "expected_arrival": [
+          8,
+          29
+        ],
+        "walk_away": [
+          8,
+          30
+        ]
+      },
+      {
+        "label": "olivine-accepted-neighbour-inside-1-lateral-positive",
+        "source": "OlivineCity_NeighborHouse",
+        "segment": [
+          4,
+          7
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          8,
+          29
+        ],
+        "expected_arrival": [
+          8,
+          29
+        ],
+        "walk_away": [
+          8,
+          30
+        ]
+      },
+      {
+        "label": "olivine-custom-gym-outside-0-front",
+        "source": "OlivineCity",
+        "segment": [
+          13,
+          14
+        ],
+        "expected_destination": "OlivineCity_Gym",
+        "result": "PASS",
+        "arrival": [
+          6,
+          10
+        ],
+        "expected_arrival": [
+          6,
+          10
+        ],
+        "walk_away": [
+          6,
+          9
+        ]
+      },
+      {
+        "label": "olivine-custom-gym-outside-0-lateral-negative",
+        "source": "OlivineCity",
+        "segment": [
+          13,
+          14
+        ],
+        "expected_destination": "OlivineCity_Gym",
+        "result": "PASS",
+        "arrival": [
+          6,
+          10
+        ],
+        "expected_arrival": [
+          6,
+          10
+        ],
+        "walk_away": [
+          6,
+          9
+        ]
+      },
+      {
+        "label": "olivine-custom-gym-outside-0-lateral-positive",
+        "source": "OlivineCity",
+        "segment": [
+          13,
+          14
+        ],
+        "expected_destination": "OlivineCity_Gym",
+        "result": "PASS",
+        "arrival": [
+          6,
+          10
+        ],
+        "expected_arrival": [
+          6,
+          10
+        ],
+        "walk_away": [
+          6,
+          9
+        ]
+      },
+      {
+        "label": "olivine-custom-gym-outside-1-front",
+        "source": "OlivineCity",
+        "segment": [
+          14,
+          14
+        ],
+        "expected_destination": "OlivineCity_Gym",
+        "result": "PASS",
+        "arrival": [
+          7,
+          10
+        ],
+        "expected_arrival": [
+          7,
+          10
+        ],
+        "walk_away": [
+          7,
+          9
+        ]
+      },
+      {
+        "label": "olivine-custom-gym-outside-1-lateral-negative",
+        "source": "OlivineCity",
+        "segment": [
+          14,
+          14
+        ],
+        "expected_destination": "OlivineCity_Gym",
+        "result": "PASS",
+        "arrival": [
+          7,
+          10
+        ],
+        "expected_arrival": [
+          7,
+          10
+        ],
+        "walk_away": [
+          7,
+          9
+        ]
+      },
+      {
+        "label": "olivine-custom-gym-outside-1-lateral-positive",
+        "source": "OlivineCity",
+        "segment": [
+          14,
+          14
+        ],
+        "expected_destination": "OlivineCity_Gym",
+        "result": "PASS",
+        "arrival": [
+          7,
+          10
+        ],
+        "expected_arrival": [
+          7,
+          10
+        ],
+        "walk_away": [
+          7,
+          9
+        ]
+      },
+      {
+        "label": "olivine-custom-gym-inside-0-front",
+        "source": "OlivineCity_Gym",
+        "segment": [
+          6,
+          10
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          13,
+          15
+        ],
+        "expected_arrival": [
+          13,
+          15
+        ],
+        "walk_away": [
+          13,
+          16
+        ]
+      },
+      {
+        "label": "olivine-custom-gym-inside-0-lateral-negative",
+        "source": "OlivineCity_Gym",
+        "segment": [
+          6,
+          10
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          13,
+          15
+        ],
+        "expected_arrival": [
+          13,
+          15
+        ],
+        "walk_away": [
+          13,
+          16
+        ]
+      },
+      {
+        "label": "olivine-custom-gym-inside-0-lateral-positive",
+        "source": "OlivineCity_Gym",
+        "segment": [
+          6,
+          10
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          13,
+          15
+        ],
+        "expected_arrival": [
+          13,
+          15
+        ],
+        "walk_away": [
+          13,
+          16
+        ]
+      },
+      {
+        "label": "olivine-custom-gym-inside-1-front",
+        "source": "OlivineCity_Gym",
+        "segment": [
+          7,
+          10
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          14,
+          15
+        ],
+        "expected_arrival": [
+          14,
+          15
+        ],
+        "walk_away": [
+          14,
+          16
+        ]
+      },
+      {
+        "label": "olivine-custom-gym-inside-1-lateral-negative",
+        "source": "OlivineCity_Gym",
+        "segment": [
+          7,
+          10
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          14,
+          15
+        ],
+        "expected_arrival": [
+          14,
+          15
+        ],
+        "walk_away": [
+          14,
+          16
+        ]
+      },
+      {
+        "label": "olivine-custom-gym-inside-1-lateral-positive",
+        "source": "OlivineCity_Gym",
+        "segment": [
+          7,
+          10
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          14,
+          15
+        ],
+        "expected_arrival": [
+          14,
+          15
+        ],
+        "walk_away": [
+          14,
+          16
+        ]
+      },
+      {
+        "label": "olivine-pokemon-center-outside-0-front",
+        "source": "OlivineCity",
+        "segment": [
+          16,
+          33
+        ],
+        "expected_destination": "OlivineCity_PokemonCenter_1F",
+        "result": "PASS",
+        "arrival": [
+          8,
+          19
+        ],
+        "expected_arrival": [
+          8,
+          19
+        ],
+        "walk_away": [
+          8,
+          18
+        ]
+      },
+      {
+        "label": "olivine-pokemon-center-outside-0-lateral-negative",
+        "source": "OlivineCity",
+        "segment": [
+          16,
+          33
+        ],
+        "expected_destination": "OlivineCity_PokemonCenter_1F",
+        "result": "PASS",
+        "arrival": [
+          8,
+          19
+        ],
+        "expected_arrival": [
+          8,
+          19
+        ],
+        "walk_away": [
+          8,
+          18
+        ]
+      },
+      {
+        "label": "olivine-pokemon-center-outside-0-lateral-positive",
+        "source": "OlivineCity",
+        "segment": [
+          16,
+          33
+        ],
+        "expected_destination": "OlivineCity_PokemonCenter_1F",
+        "result": "PASS",
+        "arrival": [
+          8,
+          19
+        ],
+        "expected_arrival": [
+          8,
+          19
+        ],
+        "walk_away": [
+          8,
+          18
+        ]
+      },
+      {
+        "label": "olivine-pokemon-center-outside-1-front",
+        "source": "OlivineCity",
+        "segment": [
+          17,
+          33
+        ],
+        "expected_destination": "OlivineCity_PokemonCenter_1F",
+        "result": "PASS",
+        "arrival": [
+          9,
+          19
+        ],
+        "expected_arrival": [
+          9,
+          19
+        ],
+        "walk_away": [
+          9,
+          18
+        ]
+      },
+      {
+        "label": "olivine-pokemon-center-outside-1-lateral-negative",
+        "source": "OlivineCity",
+        "segment": [
+          17,
+          33
+        ],
+        "expected_destination": "OlivineCity_PokemonCenter_1F",
+        "result": "PASS",
+        "arrival": [
+          9,
+          19
+        ],
+        "expected_arrival": [
+          9,
+          19
+        ],
+        "walk_away": [
+          9,
+          18
+        ]
+      },
+      {
+        "label": "olivine-pokemon-center-outside-1-lateral-positive",
+        "source": "OlivineCity",
+        "segment": [
+          17,
+          33
+        ],
+        "expected_destination": "OlivineCity_PokemonCenter_1F",
+        "result": "PASS",
+        "arrival": [
+          9,
+          19
+        ],
+        "expected_arrival": [
+          9,
+          19
+        ],
+        "walk_away": [
+          9,
+          18
+        ]
+      },
+      {
+        "label": "olivine-pokemon-center-inside-0-front",
+        "source": "OlivineCity_PokemonCenter_1F",
+        "segment": [
+          8,
+          19
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          16,
+          34
+        ],
+        "expected_arrival": [
+          16,
+          34
+        ],
+        "walk_away": [
+          16,
+          35
+        ]
+      },
+      {
+        "label": "olivine-pokemon-center-inside-0-lateral-negative",
+        "source": "OlivineCity_PokemonCenter_1F",
+        "segment": [
+          8,
+          19
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          16,
+          34
+        ],
+        "expected_arrival": [
+          16,
+          34
+        ],
+        "walk_away": [
+          16,
+          35
+        ]
+      },
+      {
+        "label": "olivine-pokemon-center-inside-0-lateral-positive",
+        "source": "OlivineCity_PokemonCenter_1F",
+        "segment": [
+          8,
+          19
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          16,
+          34
+        ],
+        "expected_arrival": [
+          16,
+          34
+        ],
+        "walk_away": [
+          16,
+          35
+        ]
+      },
+      {
+        "label": "olivine-pokemon-center-inside-1-front",
+        "source": "OlivineCity_PokemonCenter_1F",
+        "segment": [
+          9,
+          19
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          17,
+          34
+        ],
+        "expected_arrival": [
+          17,
+          34
+        ],
+        "walk_away": [
+          17,
+          35
+        ]
+      },
+      {
+        "label": "olivine-pokemon-center-inside-1-lateral-negative",
+        "source": "OlivineCity_PokemonCenter_1F",
+        "segment": [
+          9,
+          19
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          17,
+          34
+        ],
+        "expected_arrival": [
+          17,
+          34
+        ],
+        "walk_away": [
+          17,
+          35
+        ]
+      },
+      {
+        "label": "olivine-pokemon-center-inside-1-lateral-positive",
+        "source": "OlivineCity_PokemonCenter_1F",
+        "segment": [
+          9,
+          19
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          17,
+          34
+        ],
+        "expected_arrival": [
+          17,
+          34
+        ],
+        "walk_away": [
+          17,
+          35
+        ]
+      },
+      {
+        "label": "olivine-poke-mart-outside-0-front",
+        "source": "OlivineCity",
+        "segment": [
+          29,
+          33
+        ],
+        "expected_destination": "OlivineCity_Mart",
+        "result": "PASS",
+        "arrival": [
+          4,
+          11
+        ],
+        "expected_arrival": [
+          4,
+          11
+        ],
+        "walk_away": [
+          4,
+          10
+        ]
+      },
+      {
+        "label": "olivine-poke-mart-outside-0-lateral-negative",
+        "source": "OlivineCity",
+        "segment": [
+          29,
+          33
+        ],
+        "expected_destination": "OlivineCity_Mart",
+        "result": "PASS",
+        "arrival": [
+          4,
+          11
+        ],
+        "expected_arrival": [
+          4,
+          11
+        ],
+        "walk_away": [
+          4,
+          10
+        ]
+      },
+      {
+        "label": "olivine-poke-mart-outside-0-lateral-positive",
+        "source": "OlivineCity",
+        "segment": [
+          29,
+          33
+        ],
+        "expected_destination": "OlivineCity_Mart",
+        "result": "PASS",
+        "arrival": [
+          4,
+          11
+        ],
+        "expected_arrival": [
+          4,
+          11
+        ],
+        "walk_away": [
+          4,
+          10
+        ]
+      },
+      {
+        "label": "olivine-poke-mart-inside-0-front",
+        "source": "OlivineCity_Mart",
+        "segment": [
+          4,
+          11
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          29,
+          34
+        ],
+        "expected_arrival": [
+          29,
+          34
+        ],
+        "walk_away": [
+          29,
+          35
+        ]
+      },
+      {
+        "label": "olivine-poke-mart-inside-0-lateral-negative",
+        "source": "OlivineCity_Mart",
+        "segment": [
+          4,
+          11
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          29,
+          34
+        ],
+        "expected_arrival": [
+          29,
+          34
+        ],
+        "walk_away": [
+          29,
+          35
+        ]
+      },
+      {
+        "label": "olivine-poke-mart-inside-0-lateral-positive",
+        "source": "OlivineCity_Mart",
+        "segment": [
+          4,
+          11
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          29,
+          34
+        ],
+        "expected_arrival": [
+          29,
+          34
+        ],
+        "walk_away": [
+          29,
+          35
+        ]
+      },
+      {
+        "label": "olivine-poke-mart-inside-1-front",
+        "source": "OlivineCity_Mart",
+        "segment": [
+          5,
+          11
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          29,
+          34
+        ],
+        "expected_arrival": [
+          29,
+          34
+        ],
+        "walk_away": [
+          29,
+          35
+        ]
+      },
+      {
+        "label": "olivine-poke-mart-inside-1-lateral-negative",
+        "source": "OlivineCity_Mart",
+        "segment": [
+          5,
+          11
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          29,
+          34
+        ],
+        "expected_arrival": [
+          29,
+          34
+        ],
+        "walk_away": [
+          29,
+          35
+        ]
+      },
+      {
+        "label": "olivine-poke-mart-inside-1-lateral-positive",
+        "source": "OlivineCity_Mart",
+        "segment": [
+          5,
+          11
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          29,
+          34
+        ],
+        "expected_arrival": [
+          29,
+          34
+        ],
+        "walk_away": [
+          29,
+          35
+        ]
+      },
+      {
+        "label": "olivine-silph-office-outside-0-front",
+        "source": "OlivineCity",
+        "segment": [
+          31,
+          40
+        ],
+        "expected_destination": "OlivineCity_SilphOffice",
+        "result": "PASS",
+        "arrival": [
+          3,
+          7
+        ],
+        "expected_arrival": [
+          3,
+          7
+        ],
+        "walk_away": [
+          3,
+          6
+        ]
+      },
+      {
+        "label": "olivine-silph-office-outside-0-lateral-negative",
+        "source": "OlivineCity",
+        "segment": [
+          31,
+          40
+        ],
+        "expected_destination": "OlivineCity_SilphOffice",
+        "result": "PASS",
+        "arrival": [
+          3,
+          7
+        ],
+        "expected_arrival": [
+          3,
+          7
+        ],
+        "walk_away": [
+          3,
+          6
+        ]
+      },
+      {
+        "label": "olivine-silph-office-outside-0-lateral-positive",
+        "source": "OlivineCity",
+        "segment": [
+          31,
+          40
+        ],
+        "expected_destination": "OlivineCity_SilphOffice",
+        "result": "PASS",
+        "arrival": [
+          3,
+          7
+        ],
+        "expected_arrival": [
+          3,
+          7
+        ],
+        "walk_away": [
+          3,
+          6
+        ]
+      },
+      {
+        "label": "olivine-silph-office-inside-0-front",
+        "source": "OlivineCity_SilphOffice",
+        "segment": [
+          3,
+          7
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          31,
+          41
+        ],
+        "expected_arrival": [
+          31,
+          41
+        ],
+        "walk_away": [
+          31,
+          42
+        ]
+      },
+      {
+        "label": "olivine-silph-office-inside-0-lateral-negative",
+        "source": "OlivineCity_SilphOffice",
+        "segment": [
+          3,
+          7
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          31,
+          41
+        ],
+        "expected_arrival": [
+          31,
+          41
+        ],
+        "walk_away": [
+          31,
+          42
+        ]
+      },
+      {
+        "label": "olivine-silph-office-inside-0-lateral-positive",
+        "source": "OlivineCity_SilphOffice",
+        "segment": [
+          3,
+          7
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          31,
+          41
+        ],
+        "expected_arrival": [
+          31,
+          41
+        ],
+        "walk_away": [
+          31,
+          42
+        ]
+      },
+      {
+        "label": "olivine-silph-office-inside-1-front",
+        "source": "OlivineCity_SilphOffice",
+        "segment": [
+          4,
+          7
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          31,
+          41
+        ],
+        "expected_arrival": [
+          31,
+          41
+        ],
+        "walk_away": [
+          31,
+          42
+        ]
+      },
+      {
+        "label": "olivine-silph-office-inside-1-lateral-negative",
+        "source": "OlivineCity_SilphOffice",
+        "segment": [
+          4,
+          7
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          31,
+          41
+        ],
+        "expected_arrival": [
+          31,
+          41
+        ],
+        "walk_away": [
+          31,
+          42
+        ]
+      },
+      {
+        "label": "olivine-silph-office-inside-1-lateral-positive",
+        "source": "OlivineCity_SilphOffice",
+        "segment": [
+          4,
+          7
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          31,
+          41
+        ],
+        "expected_arrival": [
+          31,
+          41
+        ],
+        "walk_away": [
+          31,
+          42
+        ]
+      },
+      {
+        "label": "olivine-harbor-office-outside-0-front",
+        "source": "OlivineCity",
+        "segment": [
+          8,
+          40
+        ],
+        "expected_destination": "OlivineCity_HarborOffice",
+        "result": "PASS",
+        "arrival": [
+          3,
+          7
+        ],
+        "expected_arrival": [
+          3,
+          7
+        ],
+        "walk_away": [
+          3,
+          6
+        ]
+      },
+      {
+        "label": "olivine-harbor-office-outside-0-lateral-negative",
+        "source": "OlivineCity",
+        "segment": [
+          8,
+          40
+        ],
+        "expected_destination": "OlivineCity_HarborOffice",
+        "result": "inaccessible lateral approach",
+        "position": [
+          8,
+          43
+        ]
+      },
+      {
+        "label": "olivine-harbor-office-outside-0-lateral-positive",
+        "source": "OlivineCity",
+        "segment": [
+          8,
+          40
+        ],
+        "expected_destination": "OlivineCity_HarborOffice",
+        "result": "PASS",
+        "arrival": [
+          3,
+          7
+        ],
+        "expected_arrival": [
+          3,
+          7
+        ],
+        "walk_away": [
+          3,
+          6
+        ]
+      },
+      {
+        "label": "olivine-harbor-office-inside-0-front",
+        "source": "OlivineCity_HarborOffice",
+        "segment": [
+          3,
+          7
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          8,
+          41
+        ],
+        "expected_arrival": [
+          8,
+          41
+        ],
+        "walk_away": [
+          8,
+          42
+        ]
+      },
+      {
+        "label": "olivine-harbor-office-inside-0-lateral-negative",
+        "source": "OlivineCity_HarborOffice",
+        "segment": [
+          3,
+          7
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          8,
+          41
+        ],
+        "expected_arrival": [
+          8,
+          41
+        ],
+        "walk_away": [
+          8,
+          42
+        ]
+      },
+      {
+        "label": "olivine-harbor-office-inside-0-lateral-positive",
+        "source": "OlivineCity_HarborOffice",
+        "segment": [
+          3,
+          7
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          8,
+          41
+        ],
+        "expected_arrival": [
+          8,
+          41
+        ],
+        "walk_away": [
+          8,
+          42
+        ]
+      },
+      {
+        "label": "olivine-harbor-office-inside-1-front",
+        "source": "OlivineCity_HarborOffice",
+        "segment": [
+          4,
+          7
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          8,
+          41
+        ],
+        "expected_arrival": [
+          8,
+          41
+        ],
+        "walk_away": [
+          8,
+          42
+        ]
+      },
+      {
+        "label": "olivine-harbor-office-inside-1-lateral-negative",
+        "source": "OlivineCity_HarborOffice",
+        "segment": [
+          4,
+          7
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          8,
+          41
+        ],
+        "expected_arrival": [
+          8,
+          41
+        ],
+        "walk_away": [
+          8,
+          42
+        ]
+      },
+      {
+        "label": "olivine-harbor-office-inside-1-lateral-positive",
+        "source": "OlivineCity_HarborOffice",
+        "segment": [
+          4,
+          7
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          8,
+          41
+        ],
+        "expected_arrival": [
+          8,
+          41
+        ],
+        "walk_away": [
+          8,
+          42
+        ]
+      },
+      {
+        "label": "olivine-lighthouse-outside-0-front",
+        "source": "OlivineCity",
+        "segment": [
+          45,
+          39
+        ],
+        "expected_destination": "OlivineCity_Lighthouse_1F",
+        "result": "PASS",
+        "arrival": [
+          8,
+          17
+        ],
+        "expected_arrival": [
+          8,
+          17
+        ],
+        "walk_away": [
+          8,
+          16
+        ]
+      },
+      {
+        "label": "olivine-lighthouse-outside-0-lateral-negative",
+        "source": "OlivineCity",
+        "segment": [
+          45,
+          39
+        ],
+        "expected_destination": "OlivineCity_Lighthouse_1F",
+        "result": "PASS",
+        "arrival": [
+          8,
+          17
+        ],
+        "expected_arrival": [
+          8,
+          17
+        ],
+        "walk_away": [
+          8,
+          16
+        ]
+      },
+      {
+        "label": "olivine-lighthouse-outside-0-lateral-positive",
+        "source": "OlivineCity",
+        "segment": [
+          45,
+          39
+        ],
+        "expected_destination": "OlivineCity_Lighthouse_1F",
+        "result": "inaccessible lateral approach",
+        "position": [
+          45,
+          41
+        ]
+      },
+      {
+        "label": "olivine-lighthouse-inside-0-front",
+        "source": "OlivineCity_Lighthouse_1F",
+        "segment": [
+          8,
+          17
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          45,
+          40
+        ],
+        "expected_arrival": [
+          45,
+          40
+        ],
+        "walk_away": [
+          45,
+          41
+        ]
+      },
+      {
+        "label": "olivine-lighthouse-inside-0-lateral-negative",
+        "source": "OlivineCity_Lighthouse_1F",
+        "segment": [
+          8,
+          17
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          45,
+          40
+        ],
+        "expected_arrival": [
+          45,
+          40
+        ],
+        "walk_away": [
+          45,
+          41
+        ]
+      },
+      {
+        "label": "olivine-lighthouse-inside-0-lateral-positive",
+        "source": "OlivineCity_Lighthouse_1F",
+        "segment": [
+          8,
+          17
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          45,
+          40
+        ],
+        "expected_arrival": [
+          45,
+          40
+        ],
+        "walk_away": [
+          45,
+          41
+        ]
+      },
+      {
+        "label": "olivine-lighthouse-inside-1-front",
+        "source": "OlivineCity_Lighthouse_1F",
+        "segment": [
+          9,
+          17
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          45,
+          40
+        ],
+        "expected_arrival": [
+          45,
+          40
+        ],
+        "walk_away": [
+          45,
+          41
+        ]
+      },
+      {
+        "label": "olivine-lighthouse-inside-1-lateral-negative",
+        "source": "OlivineCity_Lighthouse_1F",
+        "segment": [
+          9,
+          17
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          45,
+          40
+        ],
+        "expected_arrival": [
+          45,
+          40
+        ],
+        "walk_away": [
+          45,
+          41
+        ]
+      },
+      {
+        "label": "olivine-lighthouse-inside-1-lateral-positive",
+        "source": "OlivineCity_Lighthouse_1F",
+        "segment": [
+          9,
+          17
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          45,
+          40
+        ],
+        "expected_arrival": [
+          45,
+          40
+        ],
+        "walk_away": [
+          45,
+          41
+        ]
+      },
+      {
+        "label": "olivine-fishing-house-outside-0-front",
+        "source": "OlivineCity",
+        "segment": [
+          17,
+          23
+        ],
+        "expected_destination": "OlivineCity_FishingHouse",
+        "result": "PASS",
+        "arrival": [
+          4,
+          8
+        ],
+        "expected_arrival": [
+          4,
+          8
+        ],
+        "walk_away": [
+          4,
+          7
+        ]
+      },
+      {
+        "label": "olivine-fishing-house-outside-0-lateral-negative",
+        "source": "OlivineCity",
+        "segment": [
+          17,
+          23
+        ],
+        "expected_destination": "OlivineCity_FishingHouse",
+        "result": "inaccessible lateral approach",
+        "position": [
+          17,
+          25
+        ]
+      },
+      {
+        "label": "olivine-fishing-house-outside-0-lateral-positive",
+        "source": "OlivineCity",
+        "segment": [
+          17,
+          23
+        ],
+        "expected_destination": "OlivineCity_FishingHouse",
+        "result": "PASS",
+        "arrival": [
+          4,
+          8
+        ],
+        "expected_arrival": [
+          4,
+          8
+        ],
+        "walk_away": [
+          4,
+          7
+        ]
+      },
+      {
+        "label": "olivine-fishing-house-inside-0-front",
+        "source": "OlivineCity_FishingHouse",
+        "segment": [
+          4,
+          8
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          17,
+          24
+        ],
+        "expected_arrival": [
+          17,
+          24
+        ],
+        "walk_away": [
+          17,
+          25
+        ]
+      },
+      {
+        "label": "olivine-fishing-house-inside-0-lateral-negative",
+        "source": "OlivineCity_FishingHouse",
+        "segment": [
+          4,
+          8
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          17,
+          24
+        ],
+        "expected_arrival": [
+          17,
+          24
+        ],
+        "walk_away": [
+          17,
+          25
+        ]
+      },
+      {
+        "label": "olivine-fishing-house-inside-0-lateral-positive",
+        "source": "OlivineCity_FishingHouse",
+        "segment": [
+          4,
+          8
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          17,
+          24
+        ],
+        "expected_arrival": [
+          17,
+          24
+        ],
+        "walk_away": [
+          17,
+          25
+        ]
+      },
+      {
+        "label": "olivine-fishing-house-inside-1-front",
+        "source": "OlivineCity_FishingHouse",
+        "segment": [
+          5,
+          8
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          17,
+          24
+        ],
+        "expected_arrival": [
+          17,
+          24
+        ],
+        "walk_away": [
+          17,
+          25
+        ]
+      },
+      {
+        "label": "olivine-fishing-house-inside-1-lateral-negative",
+        "source": "OlivineCity_FishingHouse",
+        "segment": [
+          5,
+          8
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          17,
+          24
+        ],
+        "expected_arrival": [
+          17,
+          24
+        ],
+        "walk_away": [
+          17,
+          25
+        ]
+      },
+      {
+        "label": "olivine-fishing-house-inside-1-lateral-positive",
+        "source": "OlivineCity_FishingHouse",
+        "segment": [
+          5,
+          8
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          17,
+          24
+        ],
+        "expected_arrival": [
+          17,
+          24
+        ],
+        "walk_away": [
+          17,
+          25
+        ]
+      },
+      {
+        "label": "olivine-trade-house-outside-0-front",
+        "source": "OlivineCity",
+        "segment": [
+          31,
+          17
+        ],
+        "expected_destination": "OlivineCity_TradeHouse",
+        "result": "PASS",
+        "arrival": [
+          4,
+          8
+        ],
+        "expected_arrival": [
+          4,
+          8
+        ],
+        "walk_away": [
+          4,
+          7
+        ]
+      },
+      {
+        "label": "olivine-trade-house-outside-0-lateral-negative",
+        "source": "OlivineCity",
+        "segment": [
+          31,
+          17
+        ],
+        "expected_destination": "OlivineCity_TradeHouse",
+        "result": "inaccessible lateral approach",
+        "position": [
+          31,
+          19
+        ]
+      },
+      {
+        "label": "olivine-trade-house-outside-0-lateral-positive",
+        "source": "OlivineCity",
+        "segment": [
+          31,
+          17
+        ],
+        "expected_destination": "OlivineCity_TradeHouse",
+        "result": "PASS",
+        "arrival": [
+          4,
+          8
+        ],
+        "expected_arrival": [
+          4,
+          8
+        ],
+        "walk_away": [
+          4,
+          7
+        ]
+      },
+      {
+        "label": "olivine-trade-house-inside-0-front",
+        "source": "OlivineCity_TradeHouse",
+        "segment": [
+          4,
+          8
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          31,
+          18
+        ],
+        "expected_arrival": [
+          31,
+          18
+        ],
+        "walk_away": [
+          31,
+          19
+        ]
+      },
+      {
+        "label": "olivine-trade-house-inside-0-lateral-negative",
+        "source": "OlivineCity_TradeHouse",
+        "segment": [
+          4,
+          8
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          31,
+          18
+        ],
+        "expected_arrival": [
+          31,
+          18
+        ],
+        "walk_away": [
+          31,
+          19
+        ]
+      },
+      {
+        "label": "olivine-trade-house-inside-0-lateral-positive",
+        "source": "OlivineCity_TradeHouse",
+        "segment": [
+          4,
+          8
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          31,
+          18
+        ],
+        "expected_arrival": [
+          31,
+          18
+        ],
+        "walk_away": [
+          31,
+          19
+        ]
+      },
+      {
+        "label": "olivine-trade-house-inside-1-front",
+        "source": "OlivineCity_TradeHouse",
+        "segment": [
+          5,
+          8
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          31,
+          18
+        ],
+        "expected_arrival": [
+          31,
+          18
+        ],
+        "walk_away": [
+          31,
+          19
+        ]
+      },
+      {
+        "label": "olivine-trade-house-inside-1-lateral-negative",
+        "source": "OlivineCity_TradeHouse",
+        "segment": [
+          5,
+          8
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          31,
+          18
+        ],
+        "expected_arrival": [
+          31,
+          18
+        ],
+        "walk_away": [
+          31,
+          19
+        ]
+      },
+      {
+        "label": "olivine-trade-house-inside-1-lateral-positive",
+        "source": "OlivineCity_TradeHouse",
+        "segment": [
+          5,
+          8
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          31,
+          18
+        ],
+        "expected_arrival": [
+          31,
+          18
+        ],
+        "walk_away": [
+          31,
+          19
+        ]
+      },
+      {
+        "label": "olivine-seal-house-outside-0-front",
+        "source": "OlivineCity",
+        "segment": [
+          36,
+          17
+        ],
+        "expected_destination": "OlivineCity_SealHouse",
+        "result": "PASS",
+        "arrival": [
+          4,
+          8
+        ],
+        "expected_arrival": [
+          4,
+          8
+        ],
+        "walk_away": [
+          4,
+          7
+        ]
+      },
+      {
+        "label": "olivine-seal-house-outside-0-lateral-negative",
+        "source": "OlivineCity",
+        "segment": [
+          36,
+          17
+        ],
+        "expected_destination": "OlivineCity_SealHouse",
+        "result": "inaccessible lateral approach",
+        "position": [
+          36,
+          19
+        ]
+      },
+      {
+        "label": "olivine-seal-house-outside-0-lateral-positive",
+        "source": "OlivineCity",
+        "segment": [
+          36,
+          17
+        ],
+        "expected_destination": "OlivineCity_SealHouse",
+        "result": "PASS",
+        "arrival": [
+          4,
+          8
+        ],
+        "expected_arrival": [
+          4,
+          8
+        ],
+        "walk_away": [
+          4,
+          7
+        ]
+      },
+      {
+        "label": "olivine-seal-house-inside-0-front",
+        "source": "OlivineCity_SealHouse",
+        "segment": [
+          4,
+          8
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          36,
+          18
+        ],
+        "expected_arrival": [
+          36,
+          18
+        ],
+        "walk_away": [
+          36,
+          19
+        ]
+      },
+      {
+        "label": "olivine-seal-house-inside-0-lateral-negative",
+        "source": "OlivineCity_SealHouse",
+        "segment": [
+          4,
+          8
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          36,
+          18
+        ],
+        "expected_arrival": [
+          36,
+          18
+        ],
+        "walk_away": [
+          36,
+          19
+        ]
+      },
+      {
+        "label": "olivine-seal-house-inside-0-lateral-positive",
+        "source": "OlivineCity_SealHouse",
+        "segment": [
+          4,
+          8
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          36,
+          18
+        ],
+        "expected_arrival": [
+          36,
+          18
+        ],
+        "walk_away": [
+          36,
+          19
+        ]
+      },
+      {
+        "label": "olivine-seal-house-inside-1-front",
+        "source": "OlivineCity_SealHouse",
+        "segment": [
+          5,
+          8
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          36,
+          18
+        ],
+        "expected_arrival": [
+          36,
+          18
+        ],
+        "walk_away": [
+          36,
+          19
+        ]
+      },
+      {
+        "label": "olivine-seal-house-inside-1-lateral-negative",
+        "source": "OlivineCity_SealHouse",
+        "segment": [
+          5,
+          8
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          36,
+          18
+        ],
+        "expected_arrival": [
+          36,
+          18
+        ],
+        "walk_away": [
+          36,
+          19
+        ]
+      },
+      {
+        "label": "olivine-seal-house-inside-1-lateral-positive",
+        "source": "OlivineCity_SealHouse",
+        "segment": [
+          5,
+          8
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          36,
+          18
+        ],
+        "expected_arrival": [
+          36,
+          18
+        ],
+        "walk_away": [
+          36,
+          19
+        ]
+      },
+      {
+        "label": "olivine-cafe-outside-0-front",
+        "source": "OlivineCity",
+        "segment": [
+          9,
+          33
+        ],
+        "expected_destination": "OlivineCity_Cafe",
+        "result": "PASS",
+        "arrival": [
+          5,
+          10
+        ],
+        "expected_arrival": [
+          5,
+          10
+        ],
+        "walk_away": [
+          5,
+          9
+        ]
+      },
+      {
+        "label": "olivine-cafe-outside-0-lateral-negative",
+        "source": "OlivineCity",
+        "segment": [
+          9,
+          33
+        ],
+        "expected_destination": "OlivineCity_Cafe",
+        "result": "inaccessible lateral approach",
+        "position": [
+          9,
+          35
+        ]
+      },
+      {
+        "label": "olivine-cafe-outside-0-lateral-positive",
+        "source": "OlivineCity",
+        "segment": [
+          9,
+          33
+        ],
+        "expected_destination": "OlivineCity_Cafe",
+        "result": "PASS",
+        "arrival": [
+          5,
+          10
+        ],
+        "expected_arrival": [
+          5,
+          10
+        ],
+        "walk_away": [
+          5,
+          9
+        ]
+      },
+      {
+        "label": "olivine-cafe-inside-0-front",
+        "source": "OlivineCity_Cafe",
+        "segment": [
+          5,
+          10
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          9,
+          34
+        ],
+        "expected_arrival": [
+          9,
+          34
+        ],
+        "walk_away": [
+          9,
+          35
+        ]
+      },
+      {
+        "label": "olivine-cafe-inside-0-lateral-negative",
+        "source": "OlivineCity_Cafe",
+        "segment": [
+          5,
+          10
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          9,
+          34
+        ],
+        "expected_arrival": [
+          9,
+          34
+        ],
+        "walk_away": [
+          9,
+          35
+        ]
+      },
+      {
+        "label": "olivine-cafe-inside-0-lateral-positive",
+        "source": "OlivineCity_Cafe",
+        "segment": [
+          5,
+          10
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          9,
+          34
+        ],
+        "expected_arrival": [
+          9,
+          34
+        ],
+        "walk_away": [
+          9,
+          35
+        ]
+      },
+      {
+        "label": "olivine-cafe-inside-1-front",
+        "source": "OlivineCity_Cafe",
+        "segment": [
+          6,
+          10
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          9,
+          34
+        ],
+        "expected_arrival": [
+          9,
+          34
+        ],
+        "walk_away": [
+          9,
+          35
+        ]
+      },
+      {
+        "label": "olivine-cafe-inside-1-lateral-negative",
+        "source": "OlivineCity_Cafe",
+        "segment": [
+          6,
+          10
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          9,
+          34
+        ],
+        "expected_arrival": [
+          9,
+          34
+        ],
+        "walk_away": [
+          9,
+          35
+        ]
+      },
+      {
+        "label": "olivine-cafe-inside-1-lateral-positive",
+        "source": "OlivineCity_Cafe",
+        "segment": [
+          6,
+          10
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          9,
+          34
+        ],
+        "expected_arrival": [
+          9,
+          34
+        ],
+        "walk_away": [
+          9,
+          35
+        ]
+      },
+      {
+        "label": "olivine-port-city-entrance-outside-0-front",
+        "source": "OlivineCity",
+        "segment": [
+          23,
+          52
+        ],
+        "expected_destination": "OlivineCity_PortTerminal",
+        "result": "PASS",
+        "arrival": [
+          7,
+          2
+        ],
+        "expected_arrival": [
+          7,
+          2
+        ],
+        "walk_away": [
+          7,
+          3
+        ]
+      },
+      {
+        "label": "olivine-port-city-entrance-outside-0-lateral-negative",
+        "source": "OlivineCity",
+        "segment": [
+          23,
+          52
+        ],
+        "expected_destination": "OlivineCity_PortTerminal",
+        "result": "inaccessible lateral approach",
+        "position": [
+          23,
+          54
+        ]
+      },
+      {
+        "label": "olivine-port-city-entrance-outside-0-lateral-positive",
+        "source": "OlivineCity",
+        "segment": [
+          23,
+          52
+        ],
+        "expected_destination": "OlivineCity_PortTerminal",
+        "result": "PASS",
+        "arrival": [
+          7,
+          2
+        ],
+        "expected_arrival": [
+          7,
+          2
+        ],
+        "walk_away": [
+          7,
+          3
+        ]
+      },
+      {
+        "label": "olivine-port-city-entrance-outside-1-front",
+        "source": "OlivineCity",
+        "segment": [
+          24,
+          52
+        ],
+        "expected_destination": "OlivineCity_PortTerminal",
+        "result": "PASS",
+        "arrival": [
+          8,
+          2
+        ],
+        "expected_arrival": [
+          8,
+          2
+        ],
+        "walk_away": [
+          8,
+          3
+        ]
+      },
+      {
+        "label": "olivine-port-city-entrance-outside-1-lateral-negative",
+        "source": "OlivineCity",
+        "segment": [
+          24,
+          52
+        ],
+        "expected_destination": "OlivineCity_PortTerminal",
+        "result": "PASS",
+        "arrival": [
+          8,
+          2
+        ],
+        "expected_arrival": [
+          8,
+          2
+        ],
+        "walk_away": [
+          8,
+          3
+        ]
+      },
+      {
+        "label": "olivine-port-city-entrance-outside-1-lateral-positive",
+        "source": "OlivineCity",
+        "segment": [
+          24,
+          52
+        ],
+        "expected_destination": "OlivineCity_PortTerminal",
+        "result": "PASS",
+        "arrival": [
+          8,
+          2
+        ],
+        "expected_arrival": [
+          8,
+          2
+        ],
+        "walk_away": [
+          8,
+          3
+        ]
+      },
+      {
+        "label": "olivine-port-city-entrance-inside-0-front",
+        "source": "OlivineCity_PortTerminal",
+        "segment": [
+          7,
+          2
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          23,
+          53
+        ],
+        "expected_arrival": [
+          23,
+          53
+        ],
+        "walk_away": [
+          23,
+          54
+        ]
+      },
+      {
+        "label": "olivine-port-city-entrance-inside-0-lateral-negative",
+        "source": "OlivineCity_PortTerminal",
+        "segment": [
+          7,
+          2
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          23,
+          53
+        ],
+        "expected_arrival": [
+          23,
+          53
+        ],
+        "walk_away": [
+          23,
+          54
+        ]
+      },
+      {
+        "label": "olivine-port-city-entrance-inside-0-lateral-positive",
+        "source": "OlivineCity_PortTerminal",
+        "segment": [
+          7,
+          2
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          23,
+          53
+        ],
+        "expected_arrival": [
+          23,
+          53
+        ],
+        "walk_away": [
+          23,
+          54
+        ]
+      },
+      {
+        "label": "olivine-port-city-entrance-inside-1-front",
+        "source": "OlivineCity_PortTerminal",
+        "segment": [
+          8,
+          2
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          24,
+          53
+        ],
+        "expected_arrival": [
+          24,
+          53
+        ],
+        "walk_away": [
+          24,
+          54
+        ]
+      },
+      {
+        "label": "olivine-port-city-entrance-inside-1-lateral-negative",
+        "source": "OlivineCity_PortTerminal",
+        "segment": [
+          8,
+          2
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          24,
+          53
+        ],
+        "expected_arrival": [
+          24,
+          53
+        ],
+        "walk_away": [
+          24,
+          54
+        ]
+      },
+      {
+        "label": "olivine-port-city-entrance-inside-1-lateral-positive",
+        "source": "OlivineCity_PortTerminal",
+        "segment": [
+          8,
+          2
+        ],
+        "expected_destination": "OlivineCity",
+        "result": "PASS",
+        "arrival": [
+          24,
+          53
+        ],
+        "expected_arrival": [
+          24,
+          53
+        ],
+        "walk_away": [
+          24,
+          54
+        ]
+      },
+      {
+        "label": "olivine-gym-hallway-outside-0-front",
+        "source": "OlivineCity_Gym",
+        "segment": [
+          5,
+          0
+        ],
+        "expected_destination": "OlivineCity_Gym_Arena",
+        "result": "PASS",
+        "arrival": [
+          5,
+          16
+        ],
+        "expected_arrival": [
+          5,
+          16
+        ],
+        "walk_away": [
+          5,
+          15
+        ]
+      },
+      {
+        "label": "olivine-gym-hallway-outside-0-lateral-negative",
+        "source": "OlivineCity_Gym",
+        "segment": [
+          5,
+          0
+        ],
+        "expected_destination": "OlivineCity_Gym_Arena",
+        "result": "inaccessible lateral approach",
+        "position": [
+          6,
+          2
+        ]
+      },
+      {
+        "label": "olivine-gym-hallway-outside-0-lateral-positive",
+        "source": "OlivineCity_Gym",
+        "segment": [
+          5,
+          0
+        ],
+        "expected_destination": "OlivineCity_Gym_Arena",
+        "result": "PASS",
+        "arrival": [
+          5,
+          16
+        ],
+        "expected_arrival": [
+          5,
+          16
+        ],
+        "walk_away": [
+          5,
+          15
+        ]
+      },
+      {
+        "label": "olivine-gym-hallway-outside-1-front",
+        "source": "OlivineCity_Gym",
+        "segment": [
+          6,
+          0
+        ],
+        "expected_destination": "OlivineCity_Gym_Arena",
+        "result": "PASS",
+        "arrival": [
+          6,
+          16
+        ],
+        "expected_arrival": [
+          6,
+          16
+        ],
+        "walk_away": [
+          6,
+          15
+        ]
+      },
+      {
+        "label": "olivine-gym-hallway-outside-1-lateral-negative",
+        "source": "OlivineCity_Gym",
+        "segment": [
+          6,
+          0
+        ],
+        "expected_destination": "OlivineCity_Gym_Arena",
+        "result": "PASS",
+        "arrival": [
+          6,
+          16
+        ],
+        "expected_arrival": [
+          6,
+          16
+        ],
+        "walk_away": [
+          6,
+          15
+        ]
+      },
+      {
+        "label": "olivine-gym-hallway-outside-1-lateral-positive",
+        "source": "OlivineCity_Gym",
+        "segment": [
+          6,
+          0
+        ],
+        "expected_destination": "OlivineCity_Gym_Arena",
+        "result": "PASS",
+        "arrival": [
+          6,
+          16
+        ],
+        "expected_arrival": [
+          6,
+          16
+        ],
+        "walk_away": [
+          6,
+          15
+        ]
+      },
+      {
+        "label": "olivine-gym-hallway-outside-2-front",
+        "source": "OlivineCity_Gym",
+        "segment": [
+          7,
+          0
+        ],
+        "expected_destination": "OlivineCity_Gym_Arena",
+        "result": "PASS",
+        "arrival": [
+          7,
+          16
+        ],
+        "expected_arrival": [
+          7,
+          16
+        ],
+        "walk_away": [
+          7,
+          15
+        ]
+      },
+      {
+        "label": "olivine-gym-hallway-outside-2-lateral-negative",
+        "source": "OlivineCity_Gym",
+        "segment": [
+          7,
+          0
+        ],
+        "expected_destination": "OlivineCity_Gym_Arena",
+        "result": "PASS",
+        "arrival": [
+          7,
+          16
+        ],
+        "expected_arrival": [
+          7,
+          16
+        ],
+        "walk_away": [
+          7,
+          15
+        ]
+      },
+      {
+        "label": "olivine-gym-hallway-outside-2-lateral-positive",
+        "source": "OlivineCity_Gym",
+        "segment": [
+          7,
+          0
+        ],
+        "expected_destination": "OlivineCity_Gym_Arena",
+        "result": "inaccessible lateral approach",
+        "position": [
+          6,
+          2
+        ]
+      },
+      {
+        "label": "olivine-gym-hallway-inside-0-front",
+        "source": "OlivineCity_Gym_Arena",
+        "segment": [
+          5,
+          16
+        ],
+        "expected_destination": "OlivineCity_Gym",
+        "result": "PASS",
+        "arrival": [
+          5,
+          0
+        ],
+        "expected_arrival": [
+          5,
+          0
+        ],
+        "walk_away": [
+          5,
+          1
+        ]
+      },
+      {
+        "label": "olivine-gym-hallway-inside-0-lateral-negative",
+        "source": "OlivineCity_Gym_Arena",
+        "segment": [
+          5,
+          16
+        ],
+        "expected_destination": "OlivineCity_Gym",
+        "result": "PASS",
+        "arrival": [
+          5,
+          0
+        ],
+        "expected_arrival": [
+          5,
+          0
+        ],
+        "walk_away": [
+          5,
+          1
+        ]
+      },
+      {
+        "label": "olivine-gym-hallway-inside-0-lateral-positive",
+        "source": "OlivineCity_Gym_Arena",
+        "segment": [
+          5,
+          16
+        ],
+        "expected_destination": "OlivineCity_Gym",
+        "result": "PASS",
+        "arrival": [
+          5,
+          0
+        ],
+        "expected_arrival": [
+          5,
+          0
+        ],
+        "walk_away": [
+          5,
+          1
+        ]
+      },
+      {
+        "label": "olivine-gym-hallway-inside-1-front",
+        "source": "OlivineCity_Gym_Arena",
+        "segment": [
+          6,
+          16
+        ],
+        "expected_destination": "OlivineCity_Gym",
+        "result": "PASS",
+        "arrival": [
+          6,
+          0
+        ],
+        "expected_arrival": [
+          6,
+          0
+        ],
+        "walk_away": [
+          6,
+          1
+        ]
+      },
+      {
+        "label": "olivine-gym-hallway-inside-1-lateral-negative",
+        "source": "OlivineCity_Gym_Arena",
+        "segment": [
+          6,
+          16
+        ],
+        "expected_destination": "OlivineCity_Gym",
+        "result": "PASS",
+        "arrival": [
+          6,
+          0
+        ],
+        "expected_arrival": [
+          6,
+          0
+        ],
+        "walk_away": [
+          6,
+          1
+        ]
+      },
+      {
+        "label": "olivine-gym-hallway-inside-1-lateral-positive",
+        "source": "OlivineCity_Gym_Arena",
+        "segment": [
+          6,
+          16
+        ],
+        "expected_destination": "OlivineCity_Gym",
+        "result": "PASS",
+        "arrival": [
+          6,
+          0
+        ],
+        "expected_arrival": [
+          6,
+          0
+        ],
+        "walk_away": [
+          6,
+          1
+        ]
+      },
+      {
+        "label": "olivine-gym-hallway-inside-2-front",
+        "source": "OlivineCity_Gym_Arena",
+        "segment": [
+          7,
+          16
+        ],
+        "expected_destination": "OlivineCity_Gym",
+        "result": "PASS",
+        "arrival": [
+          7,
+          0
+        ],
+        "expected_arrival": [
+          7,
+          0
+        ],
+        "walk_away": [
+          7,
+          1
+        ]
+      },
+      {
+        "label": "olivine-gym-hallway-inside-2-lateral-negative",
+        "source": "OlivineCity_Gym_Arena",
+        "segment": [
+          7,
+          16
+        ],
+        "expected_destination": "OlivineCity_Gym",
+        "result": "PASS",
+        "arrival": [
+          7,
+          0
+        ],
+        "expected_arrival": [
+          7,
+          0
+        ],
+        "walk_away": [
+          7,
+          1
+        ]
+      },
+      {
+        "label": "olivine-gym-hallway-inside-2-lateral-positive",
+        "source": "OlivineCity_Gym_Arena",
+        "segment": [
+          7,
+          16
+        ],
+        "expected_destination": "OlivineCity_Gym",
+        "result": "PASS",
+        "arrival": [
+          7,
+          0
+        ],
+        "expected_arrival": [
+          7,
+          0
+        ],
+        "walk_away": [
+          7,
+          1
+        ]
+      },
+      {
+        "label": "olivine-port-quay-main-outside-0-front",
+        "source": "OlivineCity_PortQuay",
+        "segment": [
+          16,
+          15
+        ],
+        "expected_destination": "OlivineCity_PortTerminal",
+        "result": "PASS",
+        "arrival": [
+          7,
+          11
+        ],
+        "expected_arrival": [
+          7,
+          11
+        ],
+        "walk_away": [
+          7,
+          10
+        ]
+      },
+      {
+        "label": "olivine-port-quay-main-outside-0-lateral-negative",
+        "source": "OlivineCity_PortQuay",
+        "segment": [
+          16,
+          15
+        ],
+        "expected_destination": "OlivineCity_PortTerminal",
+        "result": "PASS",
+        "arrival": [
+          7,
+          11
+        ],
+        "expected_arrival": [
+          7,
+          11
+        ],
+        "walk_away": [
+          7,
+          10
+        ]
+      },
+      {
+        "label": "olivine-port-quay-main-outside-0-lateral-positive",
+        "source": "OlivineCity_PortQuay",
+        "segment": [
+          16,
+          15
+        ],
+        "expected_destination": "OlivineCity_PortTerminal",
+        "result": "PASS",
+        "arrival": [
+          7,
+          11
+        ],
+        "expected_arrival": [
+          7,
+          11
+        ],
+        "walk_away": [
+          7,
+          10
+        ]
+      },
+      {
+        "label": "olivine-port-quay-main-outside-1-front",
+        "source": "OlivineCity_PortQuay",
+        "segment": [
+          17,
+          15
+        ],
+        "expected_destination": "OlivineCity_PortTerminal",
+        "result": "PASS",
+        "arrival": [
+          8,
+          11
+        ],
+        "expected_arrival": [
+          8,
+          11
+        ],
+        "walk_away": [
+          8,
+          10
+        ]
+      },
+      {
+        "label": "olivine-port-quay-main-outside-1-lateral-negative",
+        "source": "OlivineCity_PortQuay",
+        "segment": [
+          17,
+          15
+        ],
+        "expected_destination": "OlivineCity_PortTerminal",
+        "result": "PASS",
+        "arrival": [
+          8,
+          11
+        ],
+        "expected_arrival": [
+          8,
+          11
+        ],
+        "walk_away": [
+          8,
+          10
+        ]
+      },
+      {
+        "label": "olivine-port-quay-main-outside-1-lateral-positive",
+        "source": "OlivineCity_PortQuay",
+        "segment": [
+          17,
+          15
+        ],
+        "expected_destination": "OlivineCity_PortTerminal",
+        "result": "inaccessible lateral approach",
+        "position": [
+          16,
+          17
+        ]
+      },
+      {
+        "label": "olivine-port-quay-main-inside-0-front",
+        "source": "OlivineCity_PortTerminal",
+        "segment": [
+          7,
+          11
+        ],
+        "expected_destination": "OlivineCity_PortQuay",
+        "result": "PASS",
+        "arrival": [
+          16,
+          15
+        ],
+        "expected_arrival": [
+          16,
+          15
+        ],
+        "walk_away": [
+          16,
+          16
+        ]
+      },
+      {
+        "label": "olivine-port-quay-main-inside-0-lateral-negative",
+        "source": "OlivineCity_PortTerminal",
+        "segment": [
+          7,
+          11
+        ],
+        "expected_destination": "OlivineCity_PortQuay",
+        "result": "PASS",
+        "arrival": [
+          16,
+          15
+        ],
+        "expected_arrival": [
+          16,
+          15
+        ],
+        "walk_away": [
+          16,
+          16
+        ]
+      },
+      {
+        "label": "olivine-port-quay-main-inside-0-lateral-positive",
+        "source": "OlivineCity_PortTerminal",
+        "segment": [
+          7,
+          11
+        ],
+        "expected_destination": "OlivineCity_PortQuay",
+        "result": "PASS",
+        "arrival": [
+          16,
+          15
+        ],
+        "expected_arrival": [
+          16,
+          15
+        ],
+        "walk_away": [
+          16,
+          16
+        ]
+      },
+      {
+        "label": "olivine-port-quay-main-inside-1-front",
+        "source": "OlivineCity_PortTerminal",
+        "segment": [
+          8,
+          11
+        ],
+        "expected_destination": "OlivineCity_PortQuay",
+        "result": "PASS",
+        "arrival": [
+          17,
+          15
+        ],
+        "expected_arrival": [
+          17,
+          15
+        ],
+        "walk_away": [
+          17,
+          16
+        ]
+      },
+      {
+        "label": "olivine-port-quay-main-inside-1-lateral-negative",
+        "source": "OlivineCity_PortTerminal",
+        "segment": [
+          8,
+          11
+        ],
+        "expected_destination": "OlivineCity_PortQuay",
+        "result": "PASS",
+        "arrival": [
+          17,
+          15
+        ],
+        "expected_arrival": [
+          17,
+          15
+        ],
+        "walk_away": [
+          17,
+          16
+        ]
+      },
+      {
+        "label": "olivine-port-quay-main-inside-1-lateral-positive",
+        "source": "OlivineCity_PortTerminal",
+        "segment": [
+          8,
+          11
+        ],
+        "expected_destination": "OlivineCity_PortQuay",
+        "result": "PASS",
+        "arrival": [
+          17,
+          15
+        ],
+        "expected_arrival": [
+          17,
+          15
+        ],
+        "walk_away": [
+          17,
+          16
+        ]
+      },
+      {
+        "label": "olivine-port-inspection-side-outside-0-front",
+        "source": "OlivineCity_PortQuay",
+        "segment": [
+          11,
+          13
+        ],
+        "expected_destination": "OlivineCity_PortTerminal",
+        "result": "PASS",
+        "arrival": [
+          1,
+          7
+        ],
+        "expected_arrival": [
+          1,
+          7
+        ],
+        "walk_away": [
+          1,
+          6
+        ]
+      },
+      {
+        "label": "olivine-port-inspection-side-outside-0-lateral-negative",
+        "source": "OlivineCity_PortQuay",
+        "segment": [
+          11,
+          13
+        ],
+        "expected_destination": "OlivineCity_PortTerminal",
+        "result": "PASS",
+        "arrival": [
+          1,
+          7
+        ],
+        "expected_arrival": [
+          1,
+          7
+        ],
+        "walk_away": [
+          1,
+          6
+        ]
+      },
+      {
+        "label": "olivine-port-inspection-side-outside-0-lateral-positive",
+        "source": "OlivineCity_PortQuay",
+        "segment": [
+          11,
+          13
+        ],
+        "expected_destination": "OlivineCity_PortTerminal",
+        "result": "PASS",
+        "arrival": [
+          1,
+          7
+        ],
+        "expected_arrival": [
+          1,
+          7
+        ],
+        "walk_away": [
+          1,
+          6
+        ]
+      },
+      {
+        "label": "olivine-port-inspection-side-outside-1-front",
+        "source": "OlivineCity_PortQuay",
+        "segment": [
+          11,
+          14
+        ],
+        "expected_destination": "OlivineCity_PortTerminal",
+        "result": "PASS",
+        "arrival": [
+          1,
+          8
+        ],
+        "expected_arrival": [
+          1,
+          8
+        ],
+        "walk_away": [
+          1,
+          9
+        ]
+      },
+      {
+        "label": "olivine-port-inspection-side-outside-1-lateral-negative",
+        "source": "OlivineCity_PortQuay",
+        "segment": [
+          11,
+          14
+        ],
+        "expected_destination": "OlivineCity_PortTerminal",
+        "result": "PASS",
+        "arrival": [
+          1,
+          8
+        ],
+        "expected_arrival": [
+          1,
+          8
+        ],
+        "walk_away": [
+          1,
+          9
+        ]
+      },
+      {
+        "label": "olivine-port-inspection-side-outside-1-lateral-positive",
+        "source": "OlivineCity_PortQuay",
+        "segment": [
+          11,
+          14
+        ],
+        "expected_destination": "OlivineCity_PortTerminal",
+        "result": "PASS",
+        "arrival": [
+          1,
+          8
+        ],
+        "expected_arrival": [
+          1,
+          8
+        ],
+        "walk_away": [
+          1,
+          9
+        ]
+      },
+      {
+        "label": "olivine-port-inspection-side-inside-0-front",
+        "source": "OlivineCity_PortTerminal",
+        "segment": [
+          1,
+          7
+        ],
+        "expected_destination": "OlivineCity_PortQuay",
+        "result": "PASS",
+        "arrival": [
+          11,
+          13
+        ],
+        "expected_arrival": [
+          11,
+          13
+        ],
+        "walk_away": [
+          10,
+          13
+        ]
+      },
+      {
+        "label": "olivine-port-inspection-side-inside-0-lateral-negative",
+        "source": "OlivineCity_PortTerminal",
+        "segment": [
+          1,
+          7
+        ],
+        "expected_destination": "OlivineCity_PortQuay",
+        "result": "PASS",
+        "arrival": [
+          11,
+          13
+        ],
+        "expected_arrival": [
+          11,
+          13
+        ],
+        "walk_away": [
+          10,
+          13
+        ]
+      },
+      {
+        "label": "olivine-port-inspection-side-inside-0-lateral-positive",
+        "source": "OlivineCity_PortTerminal",
+        "segment": [
+          1,
+          7
+        ],
+        "expected_destination": "OlivineCity_PortQuay",
+        "result": "PASS",
+        "arrival": [
+          11,
+          13
+        ],
+        "expected_arrival": [
+          11,
+          13
+        ],
+        "walk_away": [
+          10,
+          13
+        ]
+      },
+      {
+        "label": "olivine-port-inspection-side-inside-1-front",
+        "source": "OlivineCity_PortTerminal",
+        "segment": [
+          1,
+          8
+        ],
+        "expected_destination": "OlivineCity_PortQuay",
+        "result": "PASS",
+        "arrival": [
+          11,
+          14
+        ],
+        "expected_arrival": [
+          11,
+          14
+        ],
+        "walk_away": [
+          10,
+          14
+        ]
+      },
+      {
+        "label": "olivine-port-inspection-side-inside-1-lateral-negative",
+        "source": "OlivineCity_PortTerminal",
+        "segment": [
+          1,
+          8
+        ],
+        "expected_destination": "OlivineCity_PortQuay",
+        "result": "PASS",
+        "arrival": [
+          11,
+          14
+        ],
+        "expected_arrival": [
+          11,
+          14
+        ],
+        "walk_away": [
+          10,
+          14
+        ]
+      },
+      {
+        "label": "olivine-port-inspection-side-inside-1-lateral-positive",
+        "source": "OlivineCity_PortTerminal",
+        "segment": [
+          1,
+          8
+        ],
+        "expected_destination": "OlivineCity_PortQuay",
+        "result": "PASS",
+        "arrival": [
+          11,
+          14
+        ],
+        "expected_arrival": [
+          11,
+          14
+        ],
+        "walk_away": [
+          10,
+          14
+        ]
+      },
+      {
+        "label": "olivine-lighthouse-balcony-outside-0-front",
+        "source": "OlivineCity_Lighthouse_Balcony",
+        "segment": [
+          8,
+          12
+        ],
+        "expected_destination": "OlivineCity_Lighthouse_3F",
+        "result": "PASS",
+        "arrival": [
+          8,
+          18
+        ],
+        "expected_arrival": [
+          8,
+          18
+        ],
+        "walk_away": [
+          8,
+          17
+        ]
+      },
+      {
+        "label": "olivine-lighthouse-balcony-outside-0-lateral-negative",
+        "source": "OlivineCity_Lighthouse_Balcony",
+        "segment": [
+          8,
+          12
+        ],
+        "expected_destination": "OlivineCity_Lighthouse_3F",
+        "result": "PASS",
+        "arrival": [
+          8,
+          18
+        ],
+        "expected_arrival": [
+          8,
+          18
+        ],
+        "walk_away": [
+          8,
+          17
+        ]
+      },
+      {
+        "label": "olivine-lighthouse-balcony-outside-0-lateral-positive",
+        "source": "OlivineCity_Lighthouse_Balcony",
+        "segment": [
+          8,
+          12
+        ],
+        "expected_destination": "OlivineCity_Lighthouse_3F",
+        "result": "PASS",
+        "arrival": [
+          8,
+          18
+        ],
+        "expected_arrival": [
+          8,
+          18
+        ],
+        "walk_away": [
+          8,
+          17
+        ]
+      },
+      {
+        "label": "olivine-lighthouse-balcony-outside-1-front",
+        "source": "OlivineCity_Lighthouse_Balcony",
+        "segment": [
+          9,
+          12
+        ],
+        "expected_destination": "OlivineCity_Lighthouse_3F",
+        "result": "PASS",
+        "arrival": [
+          9,
+          18
+        ],
+        "expected_arrival": [
+          9,
+          18
+        ],
+        "walk_away": [
+          9,
+          17
+        ]
+      },
+      {
+        "label": "olivine-lighthouse-balcony-outside-1-lateral-negative",
+        "source": "OlivineCity_Lighthouse_Balcony",
+        "segment": [
+          9,
+          12
+        ],
+        "expected_destination": "OlivineCity_Lighthouse_3F",
+        "result": "PASS",
+        "arrival": [
+          9,
+          18
+        ],
+        "expected_arrival": [
+          9,
+          18
+        ],
+        "walk_away": [
+          9,
+          17
+        ]
+      },
+      {
+        "label": "olivine-lighthouse-balcony-outside-1-lateral-positive",
+        "source": "OlivineCity_Lighthouse_Balcony",
+        "segment": [
+          9,
+          12
+        ],
+        "expected_destination": "OlivineCity_Lighthouse_3F",
+        "result": "PASS",
+        "arrival": [
+          9,
+          18
+        ],
+        "expected_arrival": [
+          9,
+          18
+        ],
+        "walk_away": [
+          9,
+          17
+        ]
+      },
+      {
+        "label": "olivine-lighthouse-balcony-inside-0-front",
+        "source": "OlivineCity_Lighthouse_3F",
+        "segment": [
+          8,
+          18
+        ],
+        "expected_destination": "OlivineCity_Lighthouse_Balcony",
+        "result": "PASS",
+        "arrival": [
+          8,
+          12
+        ],
+        "expected_arrival": [
+          8,
+          12
+        ],
+        "walk_away": [
+          8,
+          13
+        ]
+      },
+      {
+        "label": "olivine-lighthouse-balcony-inside-0-lateral-negative",
+        "source": "OlivineCity_Lighthouse_3F",
+        "segment": [
+          8,
+          18
+        ],
+        "expected_destination": "OlivineCity_Lighthouse_Balcony",
+        "result": "PASS",
+        "arrival": [
+          8,
+          12
+        ],
+        "expected_arrival": [
+          8,
+          12
+        ],
+        "walk_away": [
+          8,
+          13
+        ]
+      },
+      {
+        "label": "olivine-lighthouse-balcony-inside-0-lateral-positive",
+        "source": "OlivineCity_Lighthouse_3F",
+        "segment": [
+          8,
+          18
+        ],
+        "expected_destination": "OlivineCity_Lighthouse_Balcony",
+        "result": "PASS",
+        "arrival": [
+          8,
+          12
+        ],
+        "expected_arrival": [
+          8,
+          12
+        ],
+        "walk_away": [
+          8,
+          13
+        ]
+      },
+      {
+        "label": "olivine-lighthouse-balcony-inside-1-front",
+        "source": "OlivineCity_Lighthouse_3F",
+        "segment": [
+          9,
+          18
+        ],
+        "expected_destination": "OlivineCity_Lighthouse_Balcony",
+        "result": "PASS",
+        "arrival": [
+          9,
+          12
+        ],
+        "expected_arrival": [
+          9,
+          12
+        ],
+        "walk_away": [
+          9,
+          13
+        ]
+      },
+      {
+        "label": "olivine-lighthouse-balcony-inside-1-lateral-negative",
+        "source": "OlivineCity_Lighthouse_3F",
+        "segment": [
+          9,
+          18
+        ],
+        "expected_destination": "OlivineCity_Lighthouse_Balcony",
+        "result": "PASS",
+        "arrival": [
+          9,
+          12
+        ],
+        "expected_arrival": [
+          9,
+          12
+        ],
+        "walk_away": [
+          9,
+          13
+        ]
+      },
+      {
+        "label": "olivine-lighthouse-balcony-inside-1-lateral-positive",
+        "source": "OlivineCity_Lighthouse_3F",
+        "segment": [
+          9,
+          18
+        ],
+        "expected_destination": "OlivineCity_Lighthouse_Balcony",
+        "result": "PASS",
+        "arrival": [
+          9,
+          12
+        ],
+        "expected_arrival": [
+          9,
+          12
+        ],
+        "walk_away": [
+          9,
+          13
+        ]
+      }
+    ]
+  },
+  "special_journeys": [
+    {
+      "action": "native elevator",
+      "panel_destination": "OlivineCity_Lighthouse_1F",
+      "exit_leaf": 0,
+      "arrival": [
+        8,
+        4
+      ],
+      "walk_away": [
+        9,
+        5
+      ],
+      "result": "PASS"
+    },
+    {
+      "action": "native elevator",
+      "panel_destination": "OlivineCity_Lighthouse_1F",
+      "exit_leaf": 1,
+      "arrival": [
+        8,
+        4
+      ],
+      "walk_away": [
+        9,
+        5
+      ],
+      "result": "PASS"
+    },
+    {
+      "action": "native elevator",
+      "panel_destination": "OlivineCity_Lighthouse_6F",
+      "exit_leaf": 0,
+      "arrival": [
+        8,
+        4
+      ],
+      "walk_away": [
+        9,
+        5
+      ],
+      "result": "PASS"
+    },
+    {
+      "action": "native elevator",
+      "panel_destination": "OlivineCity_Lighthouse_6F",
+      "exit_leaf": 1,
+      "arrival": [
+        8,
+        4
+      ],
+      "walk_away": [
+        9,
+        5
+      ],
+      "result": "PASS"
+    },
+    {
+      "action": "4F window, balcony, south3F, west4F,5F,6F,elevator and city return",
+      "arrival": [
+        14,
+        9
+      ],
+      "returned_map": "OlivineCity",
+      "result": "PASS"
+    },
+    {
+      "action": "Port north sea/overhang/body collision",
+      "column": 23,
+      "surfable_overhang": [
+        23,
+        47
+      ],
+      "blocked_body": [
+        23,
+        48
+      ],
+      "normal_surf_and_disembark": true,
+      "result": "PASS"
+    },
+    {
+      "action": "Port north sea/overhang/body collision",
+      "column": 24,
+      "surfable_overhang": [
+        24,
+        47
+      ],
+      "blocked_body": [
+        24,
+        48
+      ],
+      "normal_surf_and_disembark": true,
+      "result": "PASS"
+    },
+    {
+      "action": "port exit, dry boardwalk to main promenade and right-leaf return",
+      "result": "PASS"
+    },
+    {
+      "action": "balcony-west-inner-rail",
+      "normal_controller_and_A": true,
+      "result": "PASS"
+    },
+    {
+      "action": "balcony-north-left-rail",
+      "normal_controller_and_A": true,
+      "result": "PASS"
+    }
+  ],
+  "running": [
+    {
+      "input": "walking",
+      "held_frames": 32,
+      "start": [
+        14,
+        24
+      ],
+      "end": [
+        14,
+        26
+      ],
+      "tiles_south": 2,
+      "joe_id": 250,
+      "joe_vram": true
+    },
+    {
+      "input": "running",
+      "held_frames": 32,
+      "start": [
+        14,
+        24
+      ],
+      "end": [
+        14,
+        27
+      ],
+      "tiles_south": 3,
+      "joe_id": 250,
+      "joe_vram": true
+    }
+  ],
+  "additional_runtime_pass": [
+    "All3 actual starter rescues, met origin/level, duplicate guards,16facade visits/returns and Joe walking VRAM",
+    "Fresh player actual Jasmine loss, local heal respawn and Joe/party integrity",
+    "Actual native Fly10destinations, cancellation, Joe field-pose VRAM, normal postflight Save/cold title Continue and exact party/position",
+    "Mach/Acro bike mount/dismount/wheelie, Surf4directions, rod casting/return/disembark with actual Joe VRAM",
+    "Exact-ROM resumed Survey session retained without toggling off; cold boot still enables via actual UI"
+  ],
+  "not_normally_activated": [
+    "Dive",
+    "watering",
+    "decoration camera",
+    "VS Seeker",
+    "contest local avatar",
+    "multi-emulator link"
+  ],
+  "manual_owner_visual_acceptance": "PENDING",
+  "fixture_disclosure": "Only private emulator copies; encounter suppression, owner-authorized QA kit/Survey UI, temporary bike/rod RAM gear and one-HP loss fixture. No map/warp/player coordinate writes for doorway/field journeys. Fresh starter setup skips inherited opening via disclosed RAM setup. No owner save file overwritten.",
+  "private_data": "No save/state/ROM/party dumps or private names included"
+}

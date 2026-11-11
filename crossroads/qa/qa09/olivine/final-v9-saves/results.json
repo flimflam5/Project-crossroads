@@ -1,0 +1,612 @@
+{
+  "rom_sha256": "d5abac0deabc7d592eba302122b3d15c08501947f0f601eda7b5026da9ac6772",
+  "source_battery_sha256": "b03ff1ef488fbd25de016e828483bc3001787b84e450a45eaa0ac12a11de30ab",
+  "source_battery_unchanged": true,
+  "resumed_same_rom_private_snapshot": false,
+  "completed_prefix_from_actual_log": false,
+  "setup": "Normal controller movement and menu saves. Explicit legacy fixtures seed obsolete XY/heal/cached-layout fields in private RAM; no party/box/bag/flag writes. The water guard uses a labelled synthetic current-shore coordinate because this baseline has no former walking cell newly flooded; actual Surf preservation is tested separately.",
+  "records": [
+    {
+      "label": "center-normal-save",
+      "result": "PASS",
+      "before": [
+        "OlivineCity_PokemonCenter_1F",
+        [
+          8,
+          13
+        ]
+      ],
+      "after": [
+        "OlivineCity_PokemonCenter_1F",
+        [
+          8,
+          13
+        ]
+      ],
+      "legacy_fixture": false,
+      "exact_party_boxes_inventory_flags_starter": true
+    },
+    {
+      "label": "joe-home-normal-save",
+      "result": "PASS",
+      "before": [
+        "OlivineCity_Residence",
+        [
+          3,
+          6
+        ]
+      ],
+      "after": [
+        "OlivineCity_Residence",
+        [
+          3,
+          6
+        ]
+      ],
+      "legacy_fixture": false,
+      "exact_party_boxes_inventory_flags_starter": true
+    },
+    {
+      "label": "old-olivine-heal-fixture",
+      "result": "PASS",
+      "before": [
+        "OlivineCity",
+        [
+          16,
+          34
+        ]
+      ],
+      "after": [
+        "OlivineCity",
+        [
+          16,
+          34
+        ]
+      ],
+      "legacy_fixture": true,
+      "exact_party_boxes_inventory_flags_starter": true
+    },
+    {
+      "label": "surf-normal-save",
+      "result": "PASS",
+      "before": [
+        "OlivineCity",
+        [
+          21,
+          47
+        ]
+      ],
+      "after": [
+        "OlivineCity",
+        [
+          21,
+          47
+        ]
+      ],
+      "legacy_fixture": false,
+      "exact_party_boxes_inventory_flags_starter": true
+    },
+    {
+      "label": "synthetic-walking-water-safety-fixture",
+      "result": "PASS",
+      "before": [
+        "OlivineCity",
+        [
+          21,
+          47
+        ]
+      ],
+      "after": [
+        "OlivineCity",
+        [
+          21,
+          46
+        ]
+      ],
+      "legacy_fixture": true,
+      "exact_party_boxes_inventory_flags_starter": true
+    },
+    {
+      "label": "old-walking-wall-fixture",
+      "result": "PASS",
+      "before": [
+        "OlivineCity",
+        [
+          16,
+          32
+        ]
+      ],
+      "after": [
+        "OlivineCity",
+        [
+          16,
+          34
+        ]
+      ],
+      "legacy_fixture": true,
+      "exact_party_boxes_inventory_flags_starter": true
+    },
+    {
+      "label": "old-cached-layout-fixture",
+      "result": "PASS",
+      "before": [
+        "OlivineCity_PokemonCenter_1F",
+        [
+          8,
+          13
+        ]
+      ],
+      "after": [
+        "OlivineCity_PokemonCenter_1F",
+        [
+          8,
+          13
+        ]
+      ],
+      "legacy_fixture": false,
+      "exact_party_boxes_inventory_flags_starter": true
+    },
+    {
+      "label": "old-office-ceiling-cap-fixture",
+      "result": "PASS",
+      "before": [
+        "OlivineCity_SilphOffice",
+        [
+          7,
+          0
+        ]
+      ],
+      "after": [
+        "OlivineCity_SilphOffice",
+        [
+          7,
+          2
+        ]
+      ],
+      "legacy_fixture": true,
+      "exact_party_boxes_inventory_flags_starter": true
+    },
+    {
+      "label": "v7-old-EcruteakCity_Mart-stool-fixture",
+      "result": "PASS",
+      "before": [
+        "EcruteakCity_Mart",
+        [
+          7,
+          9
+        ]
+      ],
+      "after": [
+        "EcruteakCity_Mart",
+        [
+          7,
+          8
+        ]
+      ],
+      "legacy_fixture": true,
+      "exact_party_boxes_inventory_flags_starter": true,
+      "legacy_source_commit": "3f935d5e8600c5a280b9172b555edb35ca52b6c0",
+      "old_source_word": 12801,
+      "actual_safe_landing": [
+        7,
+        8
+      ],
+      "actual_post_continue_exit": "EcruteakCity",
+      "actual_room_return": true
+    },
+    {
+      "label": "v7-old-OlivineCity_Mart-stool-fixture",
+      "result": "PASS",
+      "before": [
+        "OlivineCity_Mart",
+        [
+          7,
+          9
+        ]
+      ],
+      "after": [
+        "OlivineCity_Mart",
+        [
+          7,
+          8
+        ]
+      ],
+      "legacy_fixture": true,
+      "exact_party_boxes_inventory_flags_starter": true,
+      "legacy_source_commit": "3f935d5e8600c5a280b9172b555edb35ca52b6c0",
+      "old_source_word": 12801,
+      "actual_safe_landing": [
+        7,
+        8
+      ],
+      "actual_post_continue_exit": "OlivineCity",
+      "actual_room_return": true
+    },
+    {
+      "label": "v7-old-EcruteakCity_PokemonCenter_B1F-stool-fixture",
+      "result": "PASS",
+      "before": [
+        "EcruteakCity_PokemonCenter_B1F",
+        [
+          4,
+          8
+        ]
+      ],
+      "after": [
+        "EcruteakCity_PokemonCenter_B1F",
+        [
+          4,
+          7
+        ]
+      ],
+      "legacy_fixture": true,
+      "exact_party_boxes_inventory_flags_starter": true,
+      "legacy_source_commit": "3f935d5e8600c5a280b9172b555edb35ca52b6c0",
+      "old_source_word": 12802,
+      "actual_safe_landing": [
+        4,
+        7
+      ],
+      "actual_post_continue_exit": "EcruteakCity_PokemonCenter_1F",
+      "actual_room_return": true
+    },
+    {
+      "label": "v7-old-OlivineCity_PokemonCenter_B1F-stool-fixture",
+      "result": "PASS",
+      "before": [
+        "OlivineCity_PokemonCenter_B1F",
+        [
+          4,
+          8
+        ]
+      ],
+      "after": [
+        "OlivineCity_PokemonCenter_B1F",
+        [
+          4,
+          7
+        ]
+      ],
+      "legacy_fixture": true,
+      "exact_party_boxes_inventory_flags_starter": true,
+      "legacy_source_commit": "3f935d5e8600c5a280b9172b555edb35ca52b6c0",
+      "old_source_word": 12802,
+      "actual_safe_landing": [
+        4,
+        7
+      ],
+      "actual_post_continue_exit": "OlivineCity_PokemonCenter_1F",
+      "actual_room_return": true
+    },
+    {
+      "label": "OlivineCity_FishingHouse-normal-save",
+      "result": "PASS",
+      "before": [
+        "OlivineCity_FishingHouse",
+        [
+          4,
+          6
+        ]
+      ],
+      "after": [
+        "OlivineCity_FishingHouse",
+        [
+          4,
+          6
+        ]
+      ],
+      "legacy_fixture": false,
+      "exact_party_boxes_inventory_flags_starter": true,
+      "actual_walkaway": [
+        3,
+        6
+      ],
+      "actual_exit_destination": "OlivineCity",
+      "actual_return_to_saved_point": true
+    },
+    {
+      "label": "OlivineCity_TradeHouse-normal-save",
+      "result": "PASS",
+      "before": [
+        "OlivineCity_TradeHouse",
+        [
+          4,
+          6
+        ]
+      ],
+      "after": [
+        "OlivineCity_TradeHouse",
+        [
+          4,
+          6
+        ]
+      ],
+      "legacy_fixture": false,
+      "exact_party_boxes_inventory_flags_starter": true,
+      "actual_walkaway": [
+        3,
+        6
+      ],
+      "actual_exit_destination": "OlivineCity",
+      "actual_return_to_saved_point": true
+    },
+    {
+      "label": "OlivineCity_SealHouse-normal-save",
+      "result": "PASS",
+      "before": [
+        "OlivineCity_SealHouse",
+        [
+          4,
+          6
+        ]
+      ],
+      "after": [
+        "OlivineCity_SealHouse",
+        [
+          4,
+          6
+        ]
+      ],
+      "legacy_fixture": false,
+      "exact_party_boxes_inventory_flags_starter": true,
+      "actual_walkaway": [
+        3,
+        6
+      ],
+      "actual_exit_destination": "OlivineCity",
+      "actual_return_to_saved_point": true
+    },
+    {
+      "label": "OlivineCity_Cafe-normal-save",
+      "result": "PASS",
+      "before": [
+        "OlivineCity_Cafe",
+        [
+          6,
+          9
+        ]
+      ],
+      "after": [
+        "OlivineCity_Cafe",
+        [
+          6,
+          9
+        ]
+      ],
+      "legacy_fixture": false,
+      "exact_party_boxes_inventory_flags_starter": true,
+      "actual_walkaway": [
+        5,
+        9
+      ],
+      "actual_exit_destination": "OlivineCity",
+      "actual_return_to_saved_point": true
+    },
+    {
+      "label": "OlivineCity_PokemonCenter_B1F-normal-save",
+      "result": "PASS",
+      "before": [
+        "OlivineCity_PokemonCenter_B1F",
+        [
+          8,
+          12
+        ]
+      ],
+      "after": [
+        "OlivineCity_PokemonCenter_B1F",
+        [
+          8,
+          12
+        ]
+      ],
+      "legacy_fixture": false,
+      "exact_party_boxes_inventory_flags_starter": true,
+      "actual_walkaway": [
+        8,
+        11
+      ],
+      "actual_exit_destination": "OlivineCity_PokemonCenter_1F",
+      "actual_return_to_saved_point": true
+    },
+    {
+      "label": "OlivineCity_Lighthouse_Balcony-normal-save",
+      "result": "PASS",
+      "before": [
+        "OlivineCity_Lighthouse_Balcony",
+        [
+          14,
+          9
+        ]
+      ],
+      "after": [
+        "OlivineCity_Lighthouse_Balcony",
+        [
+          14,
+          9
+        ]
+      ],
+      "legacy_fixture": false,
+      "exact_party_boxes_inventory_flags_starter": true,
+      "actual_walkaway": [
+        15,
+        9
+      ],
+      "actual_exit_destination": "OlivineCity_Lighthouse_3F",
+      "actual_return_to_saved_point": true
+    },
+    {
+      "label": "OlivineCity_Lighthouse_Elevator-normal-save",
+      "result": "PASS",
+      "before": [
+        "OlivineCity_Lighthouse_Elevator",
+        [
+          4,
+          4
+        ]
+      ],
+      "after": [
+        "OlivineCity_Lighthouse_Elevator",
+        [
+          4,
+          4
+        ]
+      ],
+      "legacy_fixture": false,
+      "exact_party_boxes_inventory_flags_starter": true,
+      "actual_walkaway": [
+        3,
+        4
+      ],
+      "actual_exit_destination": "OlivineCity_Lighthouse_6F",
+      "actual_return_to_saved_point": true
+    },
+    {
+      "label": "OlivineCity_PortTerminal-normal-save",
+      "result": "PASS",
+      "before": [
+        "OlivineCity_PortTerminal",
+        [
+          7,
+          7
+        ]
+      ],
+      "after": [
+        "OlivineCity_PortTerminal",
+        [
+          7,
+          7
+        ]
+      ],
+      "legacy_fixture": false,
+      "exact_party_boxes_inventory_flags_starter": true,
+      "actual_walkaway": [
+        6,
+        7
+      ],
+      "actual_exit_destination": "OlivineCity",
+      "actual_return_to_saved_point": true
+    },
+    {
+      "label": "OlivineCity_PortQuay-normal-save",
+      "result": "PASS",
+      "before": [
+        "OlivineCity_PortQuay",
+        [
+          16,
+          18
+        ]
+      ],
+      "after": [
+        "OlivineCity_PortQuay",
+        [
+          16,
+          18
+        ]
+      ],
+      "legacy_fixture": false,
+      "exact_party_boxes_inventory_flags_starter": true,
+      "actual_walkaway": [
+        15,
+        18
+      ],
+      "actual_exit_destination": "OlivineCity_PortTerminal",
+      "actual_return_to_saved_point": true
+    },
+    {
+      "label": "OlivineCity_Lighthouse_3F-normal-save",
+      "result": "PASS",
+      "before": [
+        "OlivineCity_Lighthouse_3F",
+        [
+          8,
+          16
+        ]
+      ],
+      "after": [
+        "OlivineCity_Lighthouse_3F",
+        [
+          8,
+          16
+        ]
+      ],
+      "legacy_fixture": false,
+      "exact_party_boxes_inventory_flags_starter": true,
+      "actual_walkaway": [
+        7,
+        16
+      ],
+      "actual_exit_destination": "OlivineCity_Lighthouse_Balcony",
+      "actual_return_to_saved_point": true
+    },
+    {
+      "label": "OlivineCity_Lighthouse_6F-normal-save",
+      "result": "PASS",
+      "before": [
+        "OlivineCity_Lighthouse_6F",
+        [
+          11,
+          13
+        ]
+      ],
+      "after": [
+        "OlivineCity_Lighthouse_6F",
+        [
+          11,
+          13
+        ]
+      ],
+      "legacy_fixture": false,
+      "exact_party_boxes_inventory_flags_starter": true,
+      "actual_walkaway": [
+        12,
+        13
+      ],
+      "actual_exit_destination": "OlivineCity_Lighthouse_5F",
+      "actual_return_to_saved_point": true
+    },
+    {
+      "label": "elevator-selected-1F-normal-save",
+      "result": "PASS",
+      "before": [
+        "OlivineCity_Lighthouse_Elevator",
+        [
+          2,
+          3
+        ]
+      ],
+      "after": [
+        "OlivineCity_Lighthouse_Elevator",
+        [
+          2,
+          3
+        ]
+      ],
+      "legacy_fixture": false,
+      "exact_party_boxes_inventory_flags_starter": true,
+      "actual_exit_destination": "OlivineCity_Lighthouse_1F",
+      "actual_selected_floor_retained": true
+    },
+    {
+      "label": "elevator-selected-6F-normal-save",
+      "result": "PASS",
+      "before": [
+        "OlivineCity_Lighthouse_Elevator",
+        [
+          5,
+          3
+        ]
+      ],
+      "after": [
+        "OlivineCity_Lighthouse_Elevator",
+        [
+          5,
+          3
+        ]
+      ],
+      "legacy_fixture": false,
+      "exact_party_boxes_inventory_flags_starter": true,
+      "actual_exit_destination": "OlivineCity_Lighthouse_6F",
+      "actual_selected_floor_retained": true
+    }
+  ]
+}

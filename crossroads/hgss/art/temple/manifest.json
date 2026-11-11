@@ -419,6 +419,21 @@
       "start": 894,
       "width": 1,
       "height": 1
+    },
+    "theater_bench": {
+      "start": 895,
+      "width": 1,
+      "height": 1
+    },
+    "house_kitchen": {
+      "start": 896,
+      "width": 2,
+      "height": 2
+    },
+    "house_window": {
+      "start": 900,
+      "width": 2,
+      "height": 2
     }
   },
   "warp_variants": {
@@ -448,7 +463,7 @@
     "806": 885,
     "807": 886
   },
-  "tiles": 488,
-  "metatiles": 383,
+  "tiles": 507,
+  "metatiles": 392,
   "source": "Original generated GBA adaptations of temple references; no HGSS graphics copied"
 }

@@ -39,6 +39,11 @@ def generate():
         harbor[40+x]=first[4*19+4+x]
     stamp(harbor,6,3,2,3,7,3)
     harbor[57]=0x3380
+    # The sampled workstation graphic has passable top-cap words. At row0
+    # these are ceiling trim, not public floor: keep their pixels/metatile IDs
+    # and add only collision so an obsolete saved position cannot land there.
+    for x in (1,2,7,8):office[x]|=0x400
+    for x in (7,8):harbor[x]|=0x400
     return {'OlivineSilphOffice':struct.pack('<80H',*office),
             'OlivineHarborOffice':struct.pack('<80H',*harbor)}
 

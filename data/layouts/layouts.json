@@ -9327,8 +9327,8 @@
     {
       "id": "LAYOUT_OLIVINE_CITY",
       "name": "OlivineCity_Layout",
-      "width": 48,
-      "height": 48,
+      "width": 64,
+      "height": 64,
       "primary_tileset": "gTileset_BlGymOlivinePrimary",
       "secondary_tileset": "gTileset_BlGymOlivineSecondary",
       "border_filepath": "data/layouts/OlivineCity/border.bin",
@@ -9351,7 +9351,7 @@
       "name": "JohtoRoute39_Layout",
       "width": 24,
       "height": 48,
-      "primary_tileset": "gTileset_General",
+      "primary_tileset": "gTileset_HgssEcruteakBuffer",
       "secondary_tileset": "gTileset_WesternCity",
       "border_filepath": "data/layouts/JohtoRoute39/border.bin",
       "blockdata_filepath": "data/layouts/JohtoRoute39/map.bin",
@@ -9404,10 +9404,10 @@
     {
       "id": "LAYOUT_OLIVINECITY_LIGHTHOUSE_1F",
       "name": "OlivineCity_Lighthouse_1F_Layout",
-      "width": 10,
-      "height": 8,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_WesternInteriors",
+      "width": 17,
+      "height": 19,
+      "primary_tileset": "gTileset_HgssOlivineLandmarkIndoor",
+      "secondary_tileset": "gTileset_HgssOlivineLandmarks",
       "border_filepath": "data/layouts/OlivineCity_Lighthouse_1F/border.bin",
       "blockdata_filepath": "data/layouts/OlivineCity_Lighthouse_1F/map.bin",
       "layout_version": "emerald"
@@ -9415,10 +9415,10 @@
     {
       "id": "LAYOUT_OLIVINECITY_LIGHTHOUSE_2F",
       "name": "OlivineCity_Lighthouse_2F_Layout",
-      "width": 14,
-      "height": 12,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_WesternInteriors",
+      "width": 17,
+      "height": 19,
+      "primary_tileset": "gTileset_HgssOlivineLandmarkIndoor",
+      "secondary_tileset": "gTileset_HgssOlivineLandmarks",
       "border_filepath": "data/layouts/OlivineCity_Lighthouse_2F/border.bin",
       "blockdata_filepath": "data/layouts/OlivineCity_Lighthouse_2F/map.bin",
       "layout_version": "emerald"
@@ -9426,10 +9426,10 @@
     {
       "id": "LAYOUT_OLIVINECITY_LIGHTHOUSE_3F",
       "name": "OlivineCity_Lighthouse_3F_Layout",
-      "width": 14,
-      "height": 12,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_WesternInteriors",
+      "width": 17,
+      "height": 20,
+      "primary_tileset": "gTileset_HgssOlivineLandmarkIndoor",
+      "secondary_tileset": "gTileset_HgssOlivineLandmarks",
       "border_filepath": "data/layouts/OlivineCity_Lighthouse_3F/border.bin",
       "blockdata_filepath": "data/layouts/OlivineCity_Lighthouse_3F/map.bin",
       "layout_version": "emerald"
@@ -9437,10 +9437,10 @@
     {
       "id": "LAYOUT_OLIVINECITY_LIGHTHOUSE_4F",
       "name": "OlivineCity_Lighthouse_4F_Layout",
-      "width": 14,
-      "height": 12,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_WesternInteriors",
+      "width": 17,
+      "height": 19,
+      "primary_tileset": "gTileset_HgssOlivineLandmarkIndoor",
+      "secondary_tileset": "gTileset_HgssOlivineLandmarks",
       "border_filepath": "data/layouts/OlivineCity_Lighthouse_4F/border.bin",
       "blockdata_filepath": "data/layouts/OlivineCity_Lighthouse_4F/map.bin",
       "layout_version": "emerald"
@@ -9448,10 +9448,10 @@
     {
       "id": "LAYOUT_OLIVINECITY_LIGHTHOUSE_5F",
       "name": "OlivineCity_Lighthouse_5F_Layout",
-      "width": 14,
-      "height": 12,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_WesternInteriors",
+      "width": 17,
+      "height": 19,
+      "primary_tileset": "gTileset_HgssOlivineLandmarkIndoor",
+      "secondary_tileset": "gTileset_HgssOlivineLandmarks",
       "border_filepath": "data/layouts/OlivineCity_Lighthouse_5F/border.bin",
       "blockdata_filepath": "data/layouts/OlivineCity_Lighthouse_5F/map.bin",
       "layout_version": "emerald"
@@ -9459,10 +9459,10 @@
     {
       "id": "LAYOUT_OLIVINECITY_LIGHTHOUSE_6F",
       "name": "OlivineCity_Lighthouse_6F_Layout",
-      "width": 14,
-      "height": 12,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_WesternInteriors",
+      "width": 17,
+      "height": 19,
+      "primary_tileset": "gTileset_HgssOlivineLandmarkIndoor",
+      "secondary_tileset": "gTileset_HgssOlivineLandmarks",
       "border_filepath": "data/layouts/OlivineCity_Lighthouse_6F/border.bin",
       "blockdata_filepath": "data/layouts/OlivineCity_Lighthouse_6F/map.bin",
       "layout_version": "emerald"
@@ -9517,7 +9517,7 @@
       "width": 24,
       "height": 24,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_HgssTemple",
+      "secondary_tileset": "gTileset_HgssEcruteakTowerDetails",
       "border_filepath": "data/layouts/EcruteakCity_BellTower_5F/border.bin",
       "blockdata_filepath": "data/layouts/EcruteakCity_BellTower_5F/map.bin",
       "layout_version": "emerald"
@@ -9528,7 +9528,7 @@
       "width": 24,
       "height": 24,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_HgssTemple",
+      "secondary_tileset": "gTileset_HgssEcruteakTowerDetails",
       "border_filepath": "data/layouts/EcruteakCity_BellTower_6F/border.bin",
       "blockdata_filepath": "data/layouts/EcruteakCity_BellTower_6F/map.bin",
       "layout_version": "emerald"
@@ -9539,7 +9539,7 @@
       "width": 24,
       "height": 24,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_HgssTemple",
+      "secondary_tileset": "gTileset_HgssEcruteakTowerDetails",
       "border_filepath": "data/layouts/EcruteakCity_BellTower_7F/border.bin",
       "blockdata_filepath": "data/layouts/EcruteakCity_BellTower_7F/map.bin",
       "layout_version": "emerald"
@@ -9572,7 +9572,7 @@
       "width": 24,
       "height": 24,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_HgssTemple",
+      "secondary_tileset": "gTileset_HgssEcruteakTowerDetails",
       "border_filepath": "data/layouts/EcruteakCity_BurnedTower/border.bin",
       "blockdata_filepath": "data/layouts/EcruteakCity_BurnedTower/map.bin",
       "layout_version": "emerald"
@@ -9594,7 +9594,7 @@
       "width": 14,
       "height": 19,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_HgssTemple",
+      "secondary_tileset": "gTileset_HgssTheater",
       "border_filepath": "data/layouts/EcruteakCity_DanceTheater/border.bin",
       "blockdata_filepath": "data/layouts/EcruteakCity_DanceTheater/map.bin",
       "layout_version": "emerald"
@@ -9602,10 +9602,10 @@
     {
       "id": "LAYOUT_OLIVINECITY_GYM",
       "name": "OlivineCity_Gym_Layout",
-      "width": 10,
-      "height": 8,
+      "width": 11,
+      "height": 12,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_WesternInteriors",
+      "secondary_tileset": "gTileset_HgssOlivineGym",
       "border_filepath": "data/layouts/OlivineCity_Gym/border.bin",
       "blockdata_filepath": "data/layouts/OlivineCity_Gym/map.bin",
       "layout_version": "emerald"
@@ -9613,10 +9613,10 @@
     {
       "id": "LAYOUT_OLIVINECITY_GYM_ARENA",
       "name": "OlivineCity_Gym_Arena_Layout",
-      "width": 14,
-      "height": 18,
+      "width": 11,
+      "height": 17,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_WesternInteriors",
+      "secondary_tileset": "gTileset_HgssOlivineGym",
       "border_filepath": "data/layouts/OlivineCity_Gym_Arena/border.bin",
       "blockdata_filepath": "data/layouts/OlivineCity_Gym_Arena/map.bin",
       "layout_version": "emerald"
@@ -10561,7 +10561,7 @@
       "name": "JohtoRoute40_Layout",
       "width": 32,
       "height": 48,
-      "primary_tileset": "gTileset_General",
+      "primary_tileset": "gTileset_HgssOlivineCoastBuffer",
       "secondary_tileset": "gTileset_WesternCity",
       "border_filepath": "data/layouts/JohtoRoute40/border.bin",
       "blockdata_filepath": "data/layouts/JohtoRoute40/map.bin",
@@ -10804,7 +10804,7 @@
       "width": 17,
       "height": 21,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_PokemonCenter",
+      "secondary_tileset": "gTileset_HgssCenterReception",
       "border_filepath": "data/layouts/EcruteakCity_PokemonCenter_1F/border.bin",
       "blockdata_filepath": "data/layouts/EcruteakCity_PokemonCenter_1F/map.bin",
       "layout_version": "emerald"
@@ -10813,9 +10813,9 @@
       "id": "LAYOUT_HGSS_ECRUTEAKCITY_POKEMONCENTER_B1F",
       "name": "EcruteakCity_PokemonCenter_B1F_Layout",
       "width": 17,
-      "height": 12,
+      "height": 14,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_PokemonCenter",
+      "secondary_tileset": "gTileset_HgssCenterBasement",
       "border_filepath": "data/layouts/EcruteakCity_PokemonCenter_B1F/border.bin",
       "blockdata_filepath": "data/layouts/EcruteakCity_PokemonCenter_B1F/map.bin",
       "layout_version": "emerald"
@@ -10826,7 +10826,7 @@
       "width": 14,
       "height": 13,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_Shop",
+      "secondary_tileset": "gTileset_HgssMart",
       "border_filepath": "data/layouts/EcruteakCity_Mart/border.bin",
       "blockdata_filepath": "data/layouts/EcruteakCity_Mart/map.bin",
       "layout_version": "emerald"
@@ -10837,7 +10837,7 @@
       "width": 12,
       "height": 12,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_HgssTemple",
+      "secondary_tileset": "gTileset_HgssGateInterior",
       "border_filepath": "data/layouts/EcruteakCity_WestGate/border.bin",
       "blockdata_filepath": "data/layouts/EcruteakCity_WestGate/map.bin",
       "layout_version": "emerald"
@@ -10848,7 +10848,7 @@
       "width": 12,
       "height": 12,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_HgssTemple",
+      "secondary_tileset": "gTileset_HgssGateInterior",
       "border_filepath": "data/layouts/EcruteakCity_EastGate/border.bin",
       "blockdata_filepath": "data/layouts/EcruteakCity_EastGate/map.bin",
       "layout_version": "emerald"
@@ -10928,6 +10928,127 @@
       "secondary_tileset": "gTileset_HgssTemple",
       "border_filepath": "data/layouts/VioletCity_EastGate/border.bin",
       "blockdata_filepath": "data/layouts/VioletCity_EastGate/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_HGSS_OLIVINECITY_FISHINGHOUSE",
+      "name": "OlivineCity_FishingHouse_Layout",
+      "width": 11,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_HgssOlivineHome",
+      "border_filepath": "data/layouts/OlivineCity_FishingHouse/border.bin",
+      "blockdata_filepath": "data/layouts/OlivineCity_FishingHouse/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_HGSS_OLIVINECITY_TRADEHOUSE",
+      "name": "OlivineCity_TradeHouse_Layout",
+      "width": 11,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_HgssOlivineHome",
+      "border_filepath": "data/layouts/OlivineCity_TradeHouse/border.bin",
+      "blockdata_filepath": "data/layouts/OlivineCity_TradeHouse/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_HGSS_OLIVINECITY_SEALHOUSE",
+      "name": "OlivineCity_SealHouse_Layout",
+      "width": 11,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_HgssOlivineHome",
+      "border_filepath": "data/layouts/OlivineCity_SealHouse/border.bin",
+      "blockdata_filepath": "data/layouts/OlivineCity_SealHouse/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_HGSS_OLIVINECITY_CAFE",
+      "name": "OlivineCity_Cafe_Layout",
+      "width": 14,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_HgssOlivineHome",
+      "border_filepath": "data/layouts/OlivineCity_Cafe/border.bin",
+      "blockdata_filepath": "data/layouts/OlivineCity_Cafe/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_HGSS_OLIVINECITY_POKEMONCENTER_B1F",
+      "name": "OlivineCity_PokemonCenter_B1F_Layout",
+      "width": 17,
+      "height": 14,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_HgssCenterBasement",
+      "border_filepath": "data/layouts/OlivineCity_PokemonCenter_B1F/border.bin",
+      "blockdata_filepath": "data/layouts/OlivineCity_PokemonCenter_B1F/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_HGSS_OLIVINECITY_MART",
+      "name": "OlivineCity_Mart_Layout",
+      "width": 14,
+      "height": 13,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_HgssMart",
+      "border_filepath": "data/layouts/OlivineCity_Mart/border.bin",
+      "blockdata_filepath": "data/layouts/OlivineCity_Mart/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_OLIVINE_CITY_LIGHTHOUSE_BALCONY",
+      "name": "OlivineCity_Lighthouse_Balcony_Layout",
+      "width": 17,
+      "height": 17,
+      "primary_tileset": "gTileset_HgssOlivineLandmarkOutdoor",
+      "secondary_tileset": "gTileset_HgssOlivineLandmarks",
+      "border_filepath": "data/layouts/OlivineCity_Lighthouse_Balcony/border.bin",
+      "blockdata_filepath": "data/layouts/OlivineCity_Lighthouse_Balcony/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_OLIVINE_CITY_LIGHTHOUSE_ELEVATOR",
+      "name": "OlivineCity_Lighthouse_Elevator_Layout",
+      "width": 8,
+      "height": 8,
+      "primary_tileset": "gTileset_HgssOlivineLandmarkIndoor",
+      "secondary_tileset": "gTileset_HgssOlivineLandmarks",
+      "border_filepath": "data/layouts/OlivineCity_Lighthouse_Elevator/border.bin",
+      "blockdata_filepath": "data/layouts/OlivineCity_Lighthouse_Elevator/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_OLIVINE_CITY_PORT_TERMINAL",
+      "name": "OlivineCity_PortTerminal_Layout",
+      "width": 15,
+      "height": 13,
+      "primary_tileset": "gTileset_HgssOlivineLandmarkIndoor",
+      "secondary_tileset": "gTileset_HgssOlivineLandmarks",
+      "border_filepath": "data/layouts/OlivineCity_PortTerminal/border.bin",
+      "blockdata_filepath": "data/layouts/OlivineCity_PortTerminal/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_OLIVINE_CITY_PORT_QUAY",
+      "name": "OlivineCity_PortQuay_Layout",
+      "width": 40,
+      "height": 27,
+      "primary_tileset": "gTileset_HgssOlivineLandmarkOutdoor",
+      "secondary_tileset": "gTileset_HgssOlivineLandmarks",
+      "border_filepath": "data/layouts/OlivineCity_PortQuay/border.bin",
+      "blockdata_filepath": "data/layouts/OlivineCity_PortQuay/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_HGSS_OLIVINECITY_POKEMONCENTER_1F",
+      "name": "OlivineCity_PokemonCenter_1F_Layout",
+      "width": 17,
+      "height": 21,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_HgssCenterReception",
+      "border_filepath": "data/layouts/OlivineCity_PokemonCenter_1F/border.bin",
+      "blockdata_filepath": "data/layouts/OlivineCity_PokemonCenter_1F/map.bin",
       "layout_version": "emerald"
     }
   ]

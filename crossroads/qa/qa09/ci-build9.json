@@ -1,0 +1,14 @@
+{
+  "run_id": 43003947966,
+  "feature_source_commit": "5664fecee4337c5bdd442583e24cc91c09c0a0cd",
+  "ci_checkout": "2b589fe28af8038eaaf6f06ed7cd0ed59e8b7595",
+  "source_tree": "d5077301f902cf41b49030f527c62899351468bd",
+  "feature_and_ci_trees_equal": true,
+  "emerald_build_and_regressions": "PASS",
+  "artifact_id": 13848145837,
+  "artifact_zip_sha256": "e0291a503f6e1c5a86e38d74c6c98ecc24088b7b92146bd6dc58abb1f80a7a85",
+  "ci_rom_sha256": "e0eb7c19323ea551dc66eeb7e4cfff107530e77bd0a4167fddbd43721a9bb2e1",
+  "same_binary_as_local_emulator_verified": false,
+  "zip_crc_and_manifest_rom_sha": "PASS",
+  "note": "The actual CI PR-merge checkout has the exact feature tree. Its separately compiled ROM differs from the locally emulator-tested binary. Never relabel either checksum or silently substitute the CI ROM."
+}

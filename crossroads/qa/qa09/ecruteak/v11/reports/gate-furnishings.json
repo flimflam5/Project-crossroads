@@ -1,0 +1,429 @@
+{
+  "rom_sha256": "df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4",
+  "source_revision": "489c404346f572aefb6856b3dd48a9b364a08ceb",
+  "method": "Actual normal controller input on copied battery; no map/warp/player-coordinate writes. Two real camera positions cover complete upper/lower plants. Expected pixels include engine NORMAL-layer BG3 tile0x3014, not a black-canvas approximation.",
+  "results": [
+    {
+      "case": "EcruteakCity_WestGate actual complete four-plants/window/counters/floor pixels",
+      "result": "PASS",
+      "native_pixels_matched": 3072,
+      "records": [
+        {
+          "kind": "plant",
+          "source_cell": [
+            2,
+            2
+          ],
+          "camera_player": [
+            6,
+            6
+          ],
+          "screen_top_left": [
+            48,
+            8
+          ],
+          "pixels_matched": 256
+        },
+        {
+          "kind": "plant",
+          "source_cell": [
+            2,
+            3
+          ],
+          "camera_player": [
+            6,
+            6
+          ],
+          "screen_top_left": [
+            48,
+            24
+          ],
+          "pixels_matched": 256
+        },
+        {
+          "kind": "plant",
+          "source_cell": [
+            10,
+            2
+          ],
+          "camera_player": [
+            6,
+            6
+          ],
+          "screen_top_left": [
+            176,
+            8
+          ],
+          "pixels_matched": 256
+        },
+        {
+          "kind": "plant",
+          "source_cell": [
+            10,
+            3
+          ],
+          "camera_player": [
+            6,
+            6
+          ],
+          "screen_top_left": [
+            176,
+            24
+          ],
+          "pixels_matched": 256
+        },
+        {
+          "kind": "window",
+          "source_cell": [
+            5,
+            2
+          ],
+          "camera_player": [
+            6,
+            6
+          ],
+          "screen_top_left": [
+            96,
+            8
+          ],
+          "pixels_matched": 256
+        },
+        {
+          "kind": "upper-counter",
+          "source_cell": [
+            4,
+            4
+          ],
+          "camera_player": [
+            6,
+            6
+          ],
+          "screen_top_left": [
+            80,
+            40
+          ],
+          "pixels_matched": 256
+        },
+        {
+          "kind": "plant",
+          "source_cell": [
+            2,
+            10
+          ],
+          "camera_player": [
+            6,
+            7
+          ],
+          "screen_top_left": [
+            48,
+            120
+          ],
+          "pixels_matched": 256
+        },
+        {
+          "kind": "plant",
+          "source_cell": [
+            2,
+            11
+          ],
+          "camera_player": [
+            6,
+            7
+          ],
+          "screen_top_left": [
+            48,
+            136
+          ],
+          "pixels_matched": 256
+        },
+        {
+          "kind": "plant",
+          "source_cell": [
+            10,
+            10
+          ],
+          "camera_player": [
+            6,
+            7
+          ],
+          "screen_top_left": [
+            176,
+            120
+          ],
+          "pixels_matched": 256
+        },
+        {
+          "kind": "plant",
+          "source_cell": [
+            10,
+            11
+          ],
+          "camera_player": [
+            6,
+            7
+          ],
+          "screen_top_left": [
+            176,
+            136
+          ],
+          "pixels_matched": 256
+        },
+        {
+          "kind": "floor",
+          "source_cell": [
+            4,
+            7
+          ],
+          "camera_player": [
+            6,
+            7
+          ],
+          "screen_top_left": [
+            80,
+            72
+          ],
+          "pixels_matched": 256
+        },
+        {
+          "kind": "lower-counter",
+          "source_cell": [
+            4,
+            9
+          ],
+          "camera_player": [
+            6,
+            7
+          ],
+          "screen_top_left": [
+            80,
+            104
+          ],
+          "pixels_matched": 256
+        }
+      ]
+    },
+    {
+      "case": "EcruteakCity_WestGate normal left-to-right floor movement",
+      "start": [
+        3,
+        7
+      ],
+      "end": [
+        8,
+        7
+      ],
+      "result": "PASS"
+    },
+    {
+      "case": "EcruteakCity_EastGate actual complete four-plants/window/counters/floor pixels",
+      "result": "PASS",
+      "native_pixels_matched": 3072,
+      "records": [
+        {
+          "kind": "plant",
+          "source_cell": [
+            2,
+            2
+          ],
+          "camera_player": [
+            6,
+            6
+          ],
+          "screen_top_left": [
+            48,
+            8
+          ],
+          "pixels_matched": 256
+        },
+        {
+          "kind": "plant",
+          "source_cell": [
+            2,
+            3
+          ],
+          "camera_player": [
+            6,
+            6
+          ],
+          "screen_top_left": [
+            48,
+            24
+          ],
+          "pixels_matched": 256
+        },
+        {
+          "kind": "plant",
+          "source_cell": [
+            10,
+            2
+          ],
+          "camera_player": [
+            6,
+            6
+          ],
+          "screen_top_left": [
+            176,
+            8
+          ],
+          "pixels_matched": 256
+        },
+        {
+          "kind": "plant",
+          "source_cell": [
+            10,
+            3
+          ],
+          "camera_player": [
+            6,
+            6
+          ],
+          "screen_top_left": [
+            176,
+            24
+          ],
+          "pixels_matched": 256
+        },
+        {
+          "kind": "window",
+          "source_cell": [
+            5,
+            2
+          ],
+          "camera_player": [
+            6,
+            6
+          ],
+          "screen_top_left": [
+            96,
+            8
+          ],
+          "pixels_matched": 256
+        },
+        {
+          "kind": "upper-counter",
+          "source_cell": [
+            4,
+            4
+          ],
+          "camera_player": [
+            6,
+            6
+          ],
+          "screen_top_left": [
+            80,
+            40
+          ],
+          "pixels_matched": 256
+        },
+        {
+          "kind": "plant",
+          "source_cell": [
+            2,
+            10
+          ],
+          "camera_player": [
+            6,
+            7
+          ],
+          "screen_top_left": [
+            48,
+            120
+          ],
+          "pixels_matched": 256
+        },
+        {
+          "kind": "plant",
+          "source_cell": [
+            2,
+            11
+          ],
+          "camera_player": [
+            6,
+            7
+          ],
+          "screen_top_left": [
+            48,
+            136
+          ],
+          "pixels_matched": 256
+        },
+        {
+          "kind": "plant",
+          "source_cell": [
+            10,
+            10
+          ],
+          "camera_player": [
+            6,
+            7
+          ],
+          "screen_top_left": [
+            176,
+            120
+          ],
+          "pixels_matched": 256
+        },
+        {
+          "kind": "plant",
+          "source_cell": [
+            10,
+            11
+          ],
+          "camera_player": [
+            6,
+            7
+          ],
+          "screen_top_left": [
+            176,
+            136
+          ],
+          "pixels_matched": 256
+        },
+        {
+          "kind": "floor",
+          "source_cell": [
+            4,
+            7
+          ],
+          "camera_player": [
+            6,
+            7
+          ],
+          "screen_top_left": [
+            80,
+            72
+          ],
+          "pixels_matched": 256
+        },
+        {
+          "kind": "lower-counter",
+          "source_cell": [
+            4,
+            9
+          ],
+          "camera_player": [
+            6,
+            7
+          ],
+          "screen_top_left": [
+            80,
+            104
+          ],
+          "pixels_matched": 256
+        }
+      ]
+    },
+    {
+      "case": "EcruteakCity_EastGate normal left-to-right floor movement",
+      "start": [
+        3,
+        7
+      ],
+      "end": [
+        8,
+        7
+      ],
+      "result": "PASS"
+    }
+  ]
+}

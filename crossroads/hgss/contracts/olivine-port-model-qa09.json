@@ -1,0 +1,410 @@
+{
+  "source_commit": "3f935d5e8600c5a280b9172b555edb35ca52b6c0",
+  "source_city_events": "crossroads/hgss/canonical_events/johto-outdoor-geometry.json",
+  "source_terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a",
+  "source_model": 167,
+  "source_model_absolute_anchor": [
+    23.5,
+    58
+  ],
+  "source_model_bbox": [
+    16,
+    54,
+    27,
+    60
+  ],
+  "meaning": "Obsolete DS port body after the documented south-facing GBA port orientation adaptation. Existing active door/forecourt/boardwalk/public inspection-pier tiles excluded; no historic walking coordinate was blocked here.",
+  "allowed_blocked_to_sea": [
+    {
+      "x": 19,
+      "y": 54,
+      "before_hex": "0x475",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 20,
+      "y": 54,
+      "before_hex": "0x471",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 21,
+      "y": 54,
+      "before_hex": "0x471",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 16,
+      "y": 55,
+      "before_hex": "0x471",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 17,
+      "y": 55,
+      "before_hex": "0x479",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 18,
+      "y": 55,
+      "before_hex": "0x479",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 19,
+      "y": 55,
+      "before_hex": "0x471",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 20,
+      "y": 55,
+      "before_hex": "0x471",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 21,
+      "y": 55,
+      "before_hex": "0x471",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 22,
+      "y": 55,
+      "before_hex": "0x471",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 23,
+      "y": 55,
+      "before_hex": "0x471",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 24,
+      "y": 55,
+      "before_hex": "0x471",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 25,
+      "y": 55,
+      "before_hex": "0x471",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 26,
+      "y": 55,
+      "before_hex": "0x471",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 27,
+      "y": 55,
+      "before_hex": "0x476",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 16,
+      "y": 56,
+      "before_hex": "0x476",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 19,
+      "y": 56,
+      "before_hex": "0x475",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 20,
+      "y": 56,
+      "before_hex": "0x471",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 21,
+      "y": 56,
+      "before_hex": "0x471",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 22,
+      "y": 56,
+      "before_hex": "0x471",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 23,
+      "y": 56,
+      "before_hex": "0x471",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 24,
+      "y": 56,
+      "before_hex": "0x471",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 25,
+      "y": 56,
+      "before_hex": "0x471",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 26,
+      "y": 56,
+      "before_hex": "0x471",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 27,
+      "y": 56,
+      "before_hex": "0x476",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 16,
+      "y": 57,
+      "before_hex": "0x476",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 19,
+      "y": 57,
+      "before_hex": "0x475",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 20,
+      "y": 57,
+      "before_hex": "0x471",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 21,
+      "y": 57,
+      "before_hex": "0x471",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 22,
+      "y": 57,
+      "before_hex": "0x471",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 23,
+      "y": 57,
+      "before_hex": "0x471",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 24,
+      "y": 57,
+      "before_hex": "0x471",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 25,
+      "y": 57,
+      "before_hex": "0x471",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 26,
+      "y": 57,
+      "before_hex": "0x471",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 27,
+      "y": 57,
+      "before_hex": "0x476",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 16,
+      "y": 58,
+      "before_hex": "0x476",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 19,
+      "y": 58,
+      "before_hex": "0x475",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 20,
+      "y": 58,
+      "before_hex": "0x471",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 21,
+      "y": 58,
+      "before_hex": "0x471",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 22,
+      "y": 58,
+      "before_hex": "0x471",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 23,
+      "y": 58,
+      "before_hex": "0x471",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 24,
+      "y": 58,
+      "before_hex": "0x471",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 25,
+      "y": 58,
+      "before_hex": "0x471",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 26,
+      "y": 58,
+      "before_hex": "0x471",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 27,
+      "y": 58,
+      "before_hex": "0x476",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 16,
+      "y": 59,
+      "before_hex": "0x476",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 19,
+      "y": 59,
+      "before_hex": "0x475",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 20,
+      "y": 59,
+      "before_hex": "0x471",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 21,
+      "y": 59,
+      "before_hex": "0x471",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 22,
+      "y": 59,
+      "before_hex": "0x471",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 23,
+      "y": 59,
+      "before_hex": "0x471",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 24,
+      "y": 59,
+      "before_hex": "0x471",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 25,
+      "y": 59,
+      "before_hex": "0x471",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 26,
+      "y": 59,
+      "before_hex": "0x471",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 27,
+      "y": 59,
+      "before_hex": "0x476",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 16,
+      "y": 60,
+      "before_hex": "0x476",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 19,
+      "y": 60,
+      "before_hex": "0x479",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 20,
+      "y": 60,
+      "before_hex": "0x479",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 21,
+      "y": 60,
+      "before_hex": "0x471",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 22,
+      "y": 60,
+      "before_hex": "0x479",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 23,
+      "y": 60,
+      "before_hex": "0x479",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 24,
+      "y": 60,
+      "before_hex": "0x479",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 25,
+      "y": 60,
+      "before_hex": "0x471",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 26,
+      "y": 60,
+      "before_hex": "0x47c",
+      "after_hex": "0x1170"
+    },
+    {
+      "x": 27,
+      "y": 60,
+      "before_hex": "0x479",
+      "after_hex": "0x1170"
+    }
+  ],
+  "count": 65
+}

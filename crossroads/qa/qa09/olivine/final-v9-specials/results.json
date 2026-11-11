@@ -1,0 +1,118 @@
+{
+  "source_save_sha256": "b03ff1ef488fbd25de016e828483bc3001787b84e450a45eaa0ac12a11de30ab",
+  "source_save_unchanged": true,
+  "rom_sha256": "d5abac0deabc7d592eba302122b3d15c08501947f0f601eda7b5026da9ac6772",
+  "source_revision": "5664fecee4337c5bdd442583e24cc91c09c0a0cd",
+  "source_dirty": true,
+  "setup": "Read-only copied battery; cold Continue; normal controller travel. Only disclosed RAM encounter suppression and opt-in survey desk; no map/warp/position writes. Same-ROM trial snapshots.",
+  "results": [],
+  "special_journeys": [
+    {
+      "action": "native elevator",
+      "panel_destination": "OlivineCity_Lighthouse_1F",
+      "exit_leaf": 0,
+      "arrival": [
+        8,
+        4
+      ],
+      "walk_away": [
+        9,
+        5
+      ],
+      "result": "PASS"
+    },
+    {
+      "action": "native elevator",
+      "panel_destination": "OlivineCity_Lighthouse_1F",
+      "exit_leaf": 1,
+      "arrival": [
+        8,
+        4
+      ],
+      "walk_away": [
+        9,
+        5
+      ],
+      "result": "PASS"
+    },
+    {
+      "action": "native elevator",
+      "panel_destination": "OlivineCity_Lighthouse_6F",
+      "exit_leaf": 0,
+      "arrival": [
+        8,
+        4
+      ],
+      "walk_away": [
+        9,
+        5
+      ],
+      "result": "PASS"
+    },
+    {
+      "action": "native elevator",
+      "panel_destination": "OlivineCity_Lighthouse_6F",
+      "exit_leaf": 1,
+      "arrival": [
+        8,
+        4
+      ],
+      "walk_away": [
+        9,
+        5
+      ],
+      "result": "PASS"
+    },
+    {
+      "action": "4F window, balcony, south3F, west4F,5F,6F,elevator and city return",
+      "arrival": [
+        14,
+        9
+      ],
+      "returned_map": "OlivineCity",
+      "result": "PASS"
+    },
+    {
+      "action": "Port north sea/overhang/body collision",
+      "column": 23,
+      "surfable_overhang": [
+        23,
+        47
+      ],
+      "blocked_body": [
+        23,
+        48
+      ],
+      "normal_surf_and_disembark": true,
+      "result": "PASS"
+    },
+    {
+      "action": "Port north sea/overhang/body collision",
+      "column": 24,
+      "surfable_overhang": [
+        24,
+        47
+      ],
+      "blocked_body": [
+        24,
+        48
+      ],
+      "normal_surf_and_disembark": true,
+      "result": "PASS"
+    },
+    {
+      "action": "port exit, dry boardwalk to main promenade and right-leaf return",
+      "result": "PASS"
+    },
+    {
+      "action": "balcony-west-inner-rail",
+      "normal_controller_and_A": true,
+      "result": "PASS"
+    },
+    {
+      "action": "balcony-north-left-rail",
+      "normal_controller_and_A": true,
+      "result": "PASS"
+    }
+  ]
+}
