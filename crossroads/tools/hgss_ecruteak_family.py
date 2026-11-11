@@ -1,7 +1,6 @@
 """Share only gate primary graphics; preserve original route/farm resources."""
 import json,re,struct
 from pathlib import Path
-from PIL import Image
 from hgss_ecruteak_terrain import neutral_metadata,neutral_graphics
 R=Path(__file__).resolve().parents[2]
 NEIGHBORS={'JohtoRoute37','JohtoRoute38','JohtoRoute42'}
@@ -30,6 +29,7 @@ def route_data(n,data,w,h):
   a=json.loads((R/'crossroads/hgss/art/native-manifest.json').read_text())['specs']['gate'];stamp_gate(t,w,h,(0,12),a,source_x=4)
  return struct.pack('<'+str(w*h)+'H',*t)
 def generate(check=False):
+ from PIL import Image
  def write(path,b):
   if isinstance(b,str):b=b.encode()
   p=R/path
