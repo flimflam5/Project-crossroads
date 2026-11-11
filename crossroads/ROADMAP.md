@@ -1,3 +1,12 @@
+# Active QA09 — Ecruteak and Olivine only
+
+See [two-city scope and current verification](hgss/CITIES_QA09.md) and
+[hgss/ACTIVE_COMPLETION.md](hgss/ACTIVE_COMPLETION.md). Canonical Olivine and
+source-correct Ecruteak interiors are implemented; BUILD5 tests exposed a port
+return trap now being repaired before final testing. No owner acceptance or
+100% claim while final port/rail/art work and delivery-ROM QA remain. Older
+entries below are historical and do not authorize expansion elsewhere.
+
 # QA08 B2 — tested Ecruteak gate checkpoint
 
 See [B2 scope, tests and remaining requirements](hgss/ECRUTEAK_QA08_B2.md).

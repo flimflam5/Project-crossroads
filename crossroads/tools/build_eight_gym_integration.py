@@ -8,7 +8,7 @@ aliases without renumbering maps/layouts/heals. No story, teams or badge flags.
 import argparse,copy,json,re,struct,hashlib
 from pathlib import Path
 R=Path(__file__).resolve().parents[2];A=R/'crossroads/art/eight_gyms_v1';B=A/'baseline';BASE=json.loads((B/'contracts.json').read_text());PLANS=R/'crossroads/art/eight_gyms_v1/integration.json'
-SOURCES={'gTileset_HgssVioletPrimary':('primary','hgss_violet','InitTilesetAnim_General'),'gTileset_HgssVioletSecondary':('secondary','hgss_violet','NULL'),'gTileset_General':('primary','general','InitTilesetAnim_General'),'gTileset_WesternCity':('secondary','western_city','InitTilesetAnim_Slateport'),'gTileset_HgssEcruteakPrimary':('primary','hgss_ecruteak','InitTilesetAnim_General'),'gTileset_HgssEcruteakSecondary':('secondary','hgss_ecruteak','NULL')}
+SOURCES={'gTileset_HgssOlivinePrimary':('primary','hgss_olivine','InitTilesetAnim_General'),'gTileset_HgssOlivineSecondary':('secondary','hgss_olivine','NULL'),'gTileset_HgssVioletPrimary':('primary','hgss_violet','InitTilesetAnim_General'),'gTileset_HgssVioletSecondary':('secondary','hgss_violet','NULL'),'gTileset_General':('primary','general','InitTilesetAnim_General'),'gTileset_WesternCity':('secondary','western_city','InitTilesetAnim_Slateport'),'gTileset_HgssEcruteakPrimary':('primary','hgss_ecruteak','InitTilesetAnim_General'),'gTileset_HgssEcruteakSecondary':('secondary','hgss_ecruteak','NULL')}
 CODES={'EcruteakCity':'ecruteak','OlivineCity':'olivine','VioletCity':'violet','AzaleaTown':'azalea','GoldenrodCity':'goldenrod','CianwoodCity':'cianwood','MahoganyTown':'mahogany','BlackthornCity':'blackthorn'}
 def load(p):return json.loads((R/p).read_text())
 def source_contract(name):
@@ -111,7 +111,7 @@ def generate(check=False):
    elif any(v in protected for v in pixels.get(key,[])):target=next(v for v in pixels[key] if v in protected);allocated[key]=target
    else:
     target=next((v for v in free_tiles if v not in protected),None);assert target is not None,(n,'Graphics capacity');allocated[key]=target;dest=sheets[target//512];j=target%512;dest.paste(im,(j%16*8,j//16*8))
-   if n=='EcruteakCity':
+   if n in ['EcruteakCity','OlivineCity']:
     for flags,mirrored in [(0x400,im.transpose(Image.Transpose.FLIP_LEFT_RIGHT)),(0x800,im.transpose(Image.Transpose.FLIP_TOP_BOTTOM)),(0xc00,im.transpose(Image.Transpose.FLIP_LEFT_RIGHT).transpose(Image.Transpose.FLIP_TOP_BOTTOM))]:allocated.setdefault(mirrored.tobytes(),target^flags)
    protected.add(target&1023);tile_mapping[id]=target
   metas[1]+=[0]*(4096-len(metas[1]));attrs[1]+=[0]*(512-len(attrs[1]));stamp=[]

@@ -494,3 +494,38 @@ const u16 gMetatiles_HgssEcruteakGateBuffer[] = INCBIN_U16("data/tilesets/primar
 const u16 gMetatileAttributes_HgssEcruteakGateBuffer[] = INCBIN_U16("data/tilesets/primary/hgss_ecruteak_gate_buffer/metatile_attributes.bin");
 #endif
 // END ECRUTEAK GATE BUFFER
+
+
+
+
+
+
+
+// BEGIN OLIVINE LANDMARK INTERIORS
+#if !IS_FRLG
+const u16 gMetatiles_HgssOlivineLandmarks[] = INCBIN_U16("data/tilesets/secondary/hgss_olivine_landmarks/metatiles.bin");
+const u16 gMetatileAttributes_HgssOlivineLandmarks[] = INCBIN_U16("data/tilesets/secondary/hgss_olivine_landmarks/metatile_attributes.bin");
+const u16 gMetatiles_HgssOlivineLandmarkOutdoor[] = INCBIN_U16("data/tilesets/primary/hgss_olivine_landmark_general/metatiles.bin");
+const u16 gMetatileAttributes_HgssOlivineLandmarkOutdoor[] = INCBIN_U16("data/tilesets/primary/hgss_olivine_landmark_general/metatile_attributes.bin");
+#endif
+// END OLIVINE LANDMARK INTERIORS
+
+
+
+// BEGIN HGSS OLIVINE EXTERIORS
+#if !IS_FRLG
+const u16 gMetatiles_HgssOlivinePrimary[] = INCBIN_U16("data/tilesets/primary/hgss_olivine/metatiles.bin");
+const u16 gMetatileAttributes_HgssOlivinePrimary[] = INCBIN_U16("data/tilesets/primary/hgss_olivine/metatile_attributes.bin");
+const u16 gMetatiles_HgssOlivineSecondary[] = INCBIN_U16("data/tilesets/secondary/hgss_olivine/metatiles.bin");
+const u16 gMetatileAttributes_HgssOlivineSecondary[] = INCBIN_U16("data/tilesets/secondary/hgss_olivine/metatile_attributes.bin");
+#endif
+// END HGSS OLIVINE EXTERIORS
+
+// BEGIN HGSS OLIVINE ROOMS
+#if !IS_FRLG
+const u16 gMetatiles_HgssOlivineHome[] = INCBIN_U16("data/tilesets/secondary/hgss_olivine_home/metatiles.bin");
+const u16 gMetatileAttributes_HgssOlivineHome[] = INCBIN_U16("data/tilesets/secondary/hgss_olivine_home/metatile_attributes.bin");
+const u16 gMetatiles_HgssOlivineGym[] = INCBIN_U16("data/tilesets/secondary/hgss_olivine_gym/metatiles.bin");
+const u16 gMetatileAttributes_HgssOlivineGym[] = INCBIN_U16("data/tilesets/secondary/hgss_olivine_gym/metatile_attributes.bin");
+#endif
+// END HGSS OLIVINE ROOMS

@@ -4,7 +4,7 @@
 Replaces exact old Ecruteak layout/coordinate expectations only; this is NOT a
 visual reference-match test or a claim that the missing Trail/interiors are done.
 """
-import json,struct,hashlib
+import json,struct,hashlib,subprocess
 from pathlib import Path
 from collections import deque
 from hgss_connection_buffer import repair
@@ -55,10 +55,17 @@ def validate():
  reviewed|=validate_rooms()|validate_services()|validate_gates();reviewed_layouts={load(f'data/maps/{n}/map.json')['layout'] for n in reviewed}
  from validate_hgss_violet import validate as validate_violet
  reviewed|=validate_violet();reviewed_layouts|={load(f'data/maps/{n}/map.json')['layout'] for n in reviewed}
+ from hgss_olivine_validation import active as olivine_active,validate_olivine_graph
+ olivine=olivine_active()
+ if olivine:
+  # New Olivine room/landmark geometry is validated by exact source stair and
+  # dynamic-lift contracts plus every-public-tile escape, not a broad skip.
+  reviewed|=validate_olivine_graph()|{'OlivineCity'}
+  reviewed_layouts|={load(f'data/maps/{n}/map.json')['layout'] for n in reviewed if n!='OlivineCity'}
  baseline=load('crossroads/hgss/contracts/save-contracts.json');groups=load('data/maps/map_groups.json');layouts=load('data/layouts/layouts.json');heals=load('src/data/heal_locations.json')
  assert groups['group_order']==baseline['groups']['group_order']
  for key,old in baseline['groups'].items():
-  if key=='gMapGroup_CrossroadsJohtoExpansion':assert groups[key][:len(old)]==old and groups[key][len(old):]==['EcruteakCity_BarrierStation','EcruteakCity_BarrierCorridor','BellchimeTrail','EcruteakCity_BellTower_10F','EcruteakCity_BellTower_Roof','EcruteakCity_DowsingHouse','EcruteakCity_PokemonCenter_B1F','EcruteakCity_WestGate','EcruteakCity_EastGate','VioletCity_PokemonCenter_B1F','VioletCity_WestGate','VioletCity_EastGate']
+  if key=='gMapGroup_CrossroadsJohtoExpansion':assert groups[key][:len(old)]==old and groups[key][len(old):]==['EcruteakCity_BarrierStation','EcruteakCity_BarrierCorridor','BellchimeTrail','EcruteakCity_BellTower_10F','EcruteakCity_BellTower_Roof','EcruteakCity_DowsingHouse','EcruteakCity_PokemonCenter_B1F','EcruteakCity_WestGate','EcruteakCity_EastGate','VioletCity_PokemonCenter_B1F','VioletCity_WestGate','VioletCity_EastGate']+(['OlivineCity_FishingHouse','OlivineCity_TradeHouse','OlivineCity_SealHouse','OlivineCity_Cafe','OlivineCity_PokemonCenter_B1F','OlivineCity_Lighthouse_Balcony','OlivineCity_Lighthouse_Elevator','OlivineCity_PortTerminal','OlivineCity_PortQuay'] if olivine else [])
   else:assert groups[key]==old,('Map IDs reordered',key)
  assert [l['id'] for l in layouts['layouts'][:len(baseline['layouts']['layouts'])]]==[l['id'] for l in baseline['layouts']['layouts']]
  for old,new in zip(baseline['layouts']['layouts'],layouts['layouts']):
@@ -67,15 +74,27 @@ def validate():
    expected=old.copy();name=next((n for n in CODES if load(f'data/maps/{n}/map.json')['layout']==old['id']),None)
    if name:relocate_layout(name,expected)
    if old['id'] in ['LAYOUT_JOHTO_ROUTE37','LAYOUT_JOHTO_ROUTE38','LAYOUT_JOHTO_ROUTE42']:expected.update(primary_tileset='gTileset_HgssEcruteakGateBuffer',secondary_tileset='gTileset_WesternCity')
+   if olivine and old['id']=='LAYOUT_OLIVINE_CITY':expected.update(width=64,height=64)
+   if olivine and old['id'] in ['LAYOUT_JOHTO_ROUTE39','LAYOUT_JOHTO_ROUTE40']:expected.update(primary_tileset='gTileset_HgssEcruteakBuffer')
    assert expected==new,('Unrelated layout change',old['id'])
   else:assert new['width']==64 and new['height']==64 and new['primary_tileset']=='gTileset_BlGymEcruteakPrimary' and new['secondary_tileset']=='gTileset_BlGymEcruteakSecondary'
  for old,new in zip(baseline['heals']['heal_locations'],heals['heal_locations']):
   assert old['id']==new['id']
   if old['id']=='HEAL_LOCATION_ECRUTEAK_CITY':assert dict(old,x=45,y=56,respawn_x=8,respawn_y=13)==new
   elif old['id']=='HEAL_LOCATION_VIOLET_CITY':assert dict(old,x=49,y=56,respawn_x=8,respawn_y=13)==new
+  elif olivine and old['id']=='HEAL_LOCATION_OLIVINE_CITY':assert dict(old,x=16,y=34,respawn_x=8,respawn_y=13)==new
   else:assert old==new
  for n,digest in baseline['map_metadata_hashes'].items():
   if n in reviewed:continue
+  if olivine and n in ['JohtoRoute39','JohtoRoute40']:
+   # Normalize only the two exact connection offsets; even connection ordering
+   # is put back to the delivered order before the historical whole-file hash.
+   old=json.loads(subprocess.check_output(['git','show','fd151242458efe5759b18650f35a5e5b2fa47e45:data/maps/'+n+'/map.json'],cwd=R))
+   actual=load(f'data/maps/{n}/map.json');expected=[dict(c,offset=(-12 if n=='JohtoRoute39' else -10)) if c['map']=='MAP_OLIVINE_CITY' else c for c in old['connections']]
+   assert sorted(actual['connections'],key=lambda c:c['direction'])==sorted(expected,key=lambda c:c['direction']),('Only source-aligned Olivine connection may change',n)
+   actual['connections']=old['connections']
+   assert hashlib.sha256((json.dumps(actual,indent=2)+'\n').encode()).hexdigest()==digest,('Unrelated route event change',n)
+   continue
   if n not in ['EcruteakCity','JohtoRoute37','JohtoRoute38','JohtoRoute42','EcruteakCity_BellTower']:assert hashlib.sha256((json.dumps(load(f'data/maps/{n}/map.json'),indent=2)+'\n').encode()).hexdigest()==digest,('Unexpected events change',n)
 
  for name,direction,offset in [('JohtoRoute37','up',-25),('JohtoRoute38','right',-25),('JohtoRoute42','left',-33)]:
@@ -102,6 +121,25 @@ def validate():
  normalized['warp_events'][1]['dest_map']=old_city['warp_events'][1]['dest_map'];normalized['warp_events'][1]['dest_warp_id']=old_city['warp_events'][1]['dest_warp_id']
  assert normalized==old_city,'No story/event/gameplay rewrites in city reconstruction'
  ls={l['id']:l for l in layouts['layouts']}
+ if olivine:
+  # Bounded scrolling strips and the five-row western land aperture are the
+  # only route tile edits in this city pass. Pin all remaining route bytes to
+  # the independently delivered QA08 B2 commit.
+  for n in ['JohtoRoute39','JohtoRoute40']:
+   l=ls[load(f'data/maps/{n}/map.json')['layout']];w,h=l['width'],l['height'];data=subprocess.check_output(['git','show','fd151242458efe5759b18650f35a5e5b2fa47e45:'+l['blockdata_filepath']],cwd=R);tiles=list(struct.unpack('<'+str(w*h)+'H',data))
+   if n=='JohtoRoute39':
+    # The canonical five-wide city roadx21..25 maps tox9..13 at offset12.
+    # Widen only the final seven-row buffer; preserve approved grass/encounters.
+    for y in range(h-7,h):
+     for x in range(9,14):tiles[y*w+x]=0x31ff
+   if n=='JohtoRoute40':
+    for y in range(24,29):
+     for x in range(w-3,w):tiles[y*w+x]=0x3001
+   for y in range(h):
+    for x in range(w):
+     i=y*w+x
+     if (n=='JohtoRoute39' and y>=h-7 or n=='JohtoRoute40' and x>=w-7) and tiles[i]&1023==0x202:tiles[i]=(tiles[i]&~1023)|0x1ff
+   assert (R/l['blockdata_filepath']).read_bytes()==struct.pack('<'+str(w*h)+'H',*tiles),('Unrelated route terrain/collision edit',n)
  for n in ['JohtoRoute38','JohtoRoute37','JohtoRoute42']:
   old=(R/f'crossroads/hgss/contracts/{n}-0.9.1.bin').read_bytes();m=load(f'data/maps/{n}/map.json');l=ls[m['layout']]
   from hgss_ecruteak_family import route_data

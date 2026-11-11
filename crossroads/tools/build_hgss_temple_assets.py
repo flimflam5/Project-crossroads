@@ -78,6 +78,31 @@ for name,behavior in [('warp',0x61),('exit',0x65),('jump_east',0x38),('jump_west
  else:
   base=specs['wood']['start']-512;start=512+len(attrs);words.extend(words[base*8:base*8+8]);attrs.append(0x1000|behavior);specs[name]=dict(start=start,width=1,height=1)
 base=specs['stone']['start']-512;specs['stone_warp']=dict(start=512+len(attrs),width=1,height=1);words.extend(words[base*8:base*8+8]);attrs.append(0x1061)
+# HGSS Theater model56 occupies one source grid cell. The old32px table
+# adaptation doubled it and overlapped the eastern wall. Append a16px native
+# conversion after every historical metatile so all old IDs/graphics stay fixed.
+bench=converted['prayer_table'].resize((16,16),Image.Resampling.NEAREST)
+add('theater_bench',bench)
+if not args.check:bench.save(A/'theater_bench.png',bits=4,transparency=0)
+# Source house model20 is a kitchen sink/stove, not a bookcase. Convert the
+# existing native GBA kitchen module into this room's fixed palette. Only new
+# graphics/metatiles append; no historical temple resources are reassigned.
+native_dirs=[R/'data/tilesets/primary/building',R/'data/tilesets/secondary/brendans_mays_house']
+native_sheets=[Image.open(d/'tiles.png') for d in native_dirs]
+native_metas=[struct.unpack('<'+str((d/'metatiles.bin').stat().st_size//2)+'H',(d/'metatiles.bin').read_bytes()) for d in native_dirs]
+native_pals=[[tuple(map(int,line.split())) for line in (native_dirs[int(i>=6)]/f'palettes/{i:02}.pal').read_text().splitlines()[3:]] for i in range(16)]
+kitchen=Image.new('RGBA',(32,32))
+for n,(X,Y) in zip([0x231,0x232,0x239,0x23a],[(0,0),(16,0),(0,16),(16,16)]):
+ for j,v in enumerate(native_metas[1][(n-512)*8:(n-511)*8]):
+  k=v&1023;i=k%512;im=native_sheets[k>=512].crop((i%16*8,i//16*8,i%16*8+8,i//16*8+8))
+  if v&0x400:im=im.transpose(Image.Transpose.FLIP_LEFT_RIGHT)
+  if v&0x800:im=im.transpose(Image.Transpose.FLIP_TOP_BOTTOM)
+  rgba=Image.new('RGBA',(8,8));rgba.putdata([native_pals[v>>12][c]+(255,) if c else (0,0,0,0) for c in im.tobytes()]);kitchen.alpha_composite(rgba,(X+j%2*8,Y+(j%4)//2*8))
+indexed=kitchen.convert('RGB').quantize(palette=ref,dither=Image.Dither.NONE);values=bytearray(indexed.tobytes());alpha=kitchen.getchannel('A').tobytes()
+for i in range(len(values)):values[i]=0 if alpha[i]<128 else values[i] or 1
+indexed=Image.frombytes('P',kitchen.size,bytes(values));indexed.putpalette(palette);add('house_kitchen',indexed)
+window=converted['house_wall'].crop((16,0,48,32));add('house_window',window)
+if not args.check:indexed.save(A/'house_kitchen.png',bits=4,transparency=0);window.save(A/'house_window.png',bits=4,transparency=0)
 assert len(attrs)<=512,('Temple metatile capacity',len(attrs))
 def write(p,b):
  if isinstance(b,str):b=b.encode()

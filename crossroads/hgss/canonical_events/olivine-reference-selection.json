@@ -1,0 +1,92 @@
+[
+  {
+    "header": "MAP_OLIVINE_LIGHTHOUSE_1F",
+    "matrix": "map_matrix_0047_D27R0101",
+    "event": "112_D27R0101"
+  },
+  {
+    "header": "MAP_OLIVINE_GYM",
+    "matrix": "map_matrix_0091_T26GYM0101",
+    "event": "134_T26GYM0101"
+  },
+  {
+    "header": "MAP_OLIVINE_LIGHTHOUSE_2F",
+    "matrix": "map_matrix_0048_D27R0102",
+    "event": "206_D27R0102"
+  },
+  {
+    "header": "MAP_OLIVINE_LIGHTHOUSE_EXTERIOR",
+    "matrix": "map_matrix_0049_D27R0103",
+    "event": "207_D27R0103"
+  },
+  {
+    "header": "MAP_OLIVINE_LIGHTHOUSE_3F",
+    "matrix": "map_matrix_0050_D27R0104",
+    "event": "208_D27R0104"
+  },
+  {
+    "header": "MAP_OLIVINE_LIGHTHOUSE_4F",
+    "matrix": "map_matrix_0051_D27R0105",
+    "event": "209_D27R0105"
+  },
+  {
+    "header": "MAP_OLIVINE_LIGHTHOUSE_5F",
+    "matrix": "map_matrix_0052_D27R0106",
+    "event": "210_D27R0106"
+  },
+  {
+    "header": "MAP_OLIVINE_LIGHTHOUSE_LIGHT_ROOM",
+    "matrix": "map_matrix_0131_D27R0107",
+    "event": "211_D27R0107"
+  },
+  {
+    "header": "MAP_OLIVINE_POKECENTER_1F",
+    "matrix": "map_matrix_0073_T21PC0101",
+    "event": "212_T26PC0101"
+  },
+  {
+    "header": "MAP_OLIVINE_POKEMART",
+    "matrix": "map_matrix_0104_T21FS0101",
+    "event": "213_T26FS0101"
+  },
+  {
+    "header": "MAP_OLIVINE_NORTH_HOUSE",
+    "matrix": "map_matrix_0097_T21R0301",
+    "event": "214_T26R0301"
+  },
+  {
+    "header": "MAP_OLIVINE_NORTHEAST_HOUSE",
+    "matrix": "map_matrix_0097_T21R0301",
+    "event": "215_T26R0501"
+  },
+  {
+    "header": "MAP_OLIVINE_NORTHWEST_HOUSE",
+    "matrix": "map_matrix_0097_T21R0301",
+    "event": "216_T26R0601"
+  },
+  {
+    "header": "MAP_OLIVINE_CAFE",
+    "matrix": "map_matrix_0136_T26R0701",
+    "event": "217_T26R0701"
+  },
+  {
+    "header": "MAP_OLIVINE_POKECENTER_B1F",
+    "matrix": "map_matrix_0077_T27PC0105",
+    "event": "324_T26PC0102"
+  },
+  {
+    "header": "MAP_OLIVINE_LIGHTHOUSE_ELEVATOR",
+    "matrix": "map_matrix_0262_D31R0202",
+    "event": "401_D27R0108"
+  },
+  {
+    "header": "MAP_SS_AQUA_OLIVINE_PORT_INTERIOR",
+    "matrix": "map_matrix_0137_P01R0101",
+    "event": "226_P01R0101"
+  },
+  {
+    "header": "MAP_SS_AQUA_OLIVINE_PORT_EXTERIOR",
+    "matrix": "map_matrix_0178_P01R0102",
+    "event": "301_P01R0102"
+  }
+]

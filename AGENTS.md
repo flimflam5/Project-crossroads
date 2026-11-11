@@ -178,3 +178,15 @@ office as documented Olivine additions. Append IDs only, preserve saves and all
 accepted systems. Record separate source/build/checksum checkpoints for the two
 cities, controller recordings, building checklists and remaining reference gaps.
 The owner still decides visual acceptance; do not call an unverified city100%.
+
+## Current QA09 two-city completion
+
+Owner requests finished Ecruteak and Olivine only. Branch
+feature/olivine-ecruteak-completion-qa09 preserves QA08 and its uncommittedart.
+Read hgss/CITIES_QA09.md and ACTIVE_COMPLETION.md for exactcurrentbuild/tests.
+Olivine generators are assets -> rooms -> landmarks -> city -> ownerGyms;
+network --through west --check must pass. Original shared Center/Mart layouts
+remain untouched; Olivine uses appendedprivate IDs. Six officeceilingcollisionbits
+are explicit exceptions. Do notreset/recreate/expandothermaps. Everyvisibleleaf
+requires normal controllerbothway/lateral/arrival checks; staticgraphsarenot
+playtests. Keep everyoldsave/map/layout/heal identity and approved systems.

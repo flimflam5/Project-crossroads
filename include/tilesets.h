@@ -101,4 +101,27 @@ extern const struct Tileset gTileset_HgssEcruteakBuffer;
 extern const struct Tileset gTileset_HgssEcruteakGateBuffer;
 #endif
 // END ECRUTEAK GATE BUFFER
+
+
+
+// BEGIN OLIVINE LANDMARK INTERIORS
+#if !IS_FRLG
+extern const struct Tileset gTileset_HgssOlivineLandmarks;
+extern const struct Tileset gTileset_HgssOlivineLandmarkIndoor;
+extern const struct Tileset gTileset_HgssOlivineLandmarkOutdoor;
+#endif
+// END OLIVINE LANDMARK INTERIORS
+
+// BEGIN HGSS OLIVINE EXTERIORS
+#if !IS_FRLG
+extern const struct Tileset gTileset_HgssOlivinePrimary;
+extern const struct Tileset gTileset_HgssOlivineSecondary;
+#endif
+// END HGSS OLIVINE EXTERIORS
+// BEGIN HGSS OLIVINE ROOMS
+#if !IS_FRLG
+extern const struct Tileset gTileset_HgssOlivineHome;
+extern const struct Tileset gTileset_HgssOlivineGym;
+#endif
+// END HGSS OLIVINE ROOMS
 #endif //GUARD_tilesets_H

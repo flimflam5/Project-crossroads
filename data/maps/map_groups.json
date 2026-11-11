@@ -1326,6 +1326,15 @@
     "EcruteakCity_EastGate",
     "VioletCity_PokemonCenter_B1F",
     "VioletCity_WestGate",
-    "VioletCity_EastGate"
+    "VioletCity_EastGate",
+    "OlivineCity_FishingHouse",
+    "OlivineCity_TradeHouse",
+    "OlivineCity_SealHouse",
+    "OlivineCity_Cafe",
+    "OlivineCity_PokemonCenter_B1F",
+    "OlivineCity_Lighthouse_Balcony",
+    "OlivineCity_Lighthouse_Elevator",
+    "OlivineCity_PortTerminal",
+    "OlivineCity_PortQuay"
   ]
 }

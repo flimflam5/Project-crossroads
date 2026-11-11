@@ -8,10 +8,12 @@ from build_route39_layout import generate
 root = Path(__file__).resolve().parents[2]
 def load(path):
     return json.loads((root / path).read_text())
+hgss=(root/'crossroads/hgss/authoring/OlivineCity.json').exists()
+offset=12 if hgss else 16
 city = load('data/maps/OlivineCity/map.json')
 route = load('data/maps/JohtoRoute39/map.json')
-assert dict(map='MAP_JOHTO_ROUTE39', offset=16, direction='up') in city['connections']
-assert route['connections'] == [dict(map='MAP_OLIVINE_CITY', offset=-16, direction='down'), dict(map='MAP_JOHTO_ROUTE38', offset=0, direction='up')]
+assert dict(map='MAP_JOHTO_ROUTE39', offset=offset, direction='up') in city['connections']
+assert route['connections'] == [dict(map='MAP_OLIVINE_CITY', offset=-offset, direction='down'), dict(map='MAP_JOHTO_ROUTE38', offset=0, direction='up')]
 groups = load('data/maps/map_groups.json')['gMapGroup_CrossroadsOlivine']
 assert groups[:8] == ['OlivineCity', 'OlivineCity_Residence', 'OlivineCity_NeighborHouse', 'OlivineCity_Gym', 'OlivineCity_PokemonCenter_1F', 'OlivineCity_Mart', 'OlivineCity_SilphOffice', 'OlivineCity_HarborOffice']
 assert groups[8] == 'JohtoRoute39', 'Append map IDs without changing saved locations'
@@ -35,9 +37,9 @@ assert (12, 4) in seen
 for event in route['object_events'] + route['bg_events']:
     x,y = event['x'], event['y']
     assert any((x+dx,y+dy) in seen for dx,dy in [(1,0),(-1,0),(0,1),(0,-1)])
-city_tiles = struct.unpack('<2304H', (root / 'data/layouts/OlivineCity/map.bin').read_bytes())
-for x in range(11,14):
-    assert tiles[47*24+x] == city_tiles[x+16] == 0x3202
+city_tiles = struct.unpack('<'+str(64*64 if hgss else 48*48)+'H', (root / 'data/layouts/OlivineCity/map.bin').read_bytes())
+for x in range(9 if hgss else 11,14):
+    assert tiles[47*24+x] == city_tiles[x+offset] == (0x31ff if hgss else 0x3202)
 assert route['region'] == 'REGION_HOENN'  # Emerald target filter
 assert route['region_map_section'] == 'MAPSEC_JOHTO_ROUTE_39'
 assert 'data/maps/JohtoRoute39/scripts.inc' in (root / 'data/event_scripts.s').read_text()

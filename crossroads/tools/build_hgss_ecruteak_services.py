@@ -48,7 +48,7 @@ def generate(check=False):
   reviews.append(dict(name=n,source_header=header,source=FACTS[header]['source'],dimensions=[w,h],adaptations=adapt,visual_qa='pending',runtime_qa='pending'))
  def warp(x,y,dst,index):return dict(x=x,y=y,elevation=0,dest_map=dst,dest_warp_id=str(index))
  # Native GBA Center module: sample existing accepted layout, never edit it.
- original=ls['LAYOUT_OLIVINE_POKEMON_CENTER_1F'];b=(R/original['blockdata_filepath']).read_bytes();stock=struct.unpack('<126H',b)
+ b=(R/'crossroads/hgss/contracts/olivine-center-stock-qa08.bin').read_bytes();stock=struct.unpack('<126H',b)
  n='EcruteakCity_PokemonCenter_1F';w,h=17,21;m,t,perms=native(n,'MAP_ECRUTEAK_POKECENTER_1F','gTileset_PokemonCenter',w,h,0x3202)
  def put(x,y,v):t[y*w+x]=v
  # Two-level DS reception adapted to a connected flat GBA service deck.
@@ -74,6 +74,9 @@ def generate(check=False):
  for yy in (17,18):
   for xx in (13,14,15):put(xx,yy,0x3202)
  put(8,19,0x3203);put(9,19,0x3204);put(14,17,0x3289)
+ # Source model23 denotes potted plants: the rear-east landing and the pair
+ # beside the lower waiting area. Their ground bases block, leaves overhang.
+ for x,y in [(15,3),(14,14),(15,14)]:put(x,y,0x60a);put(x,y+1,0x612)
  for yy in range(8,13):
   for xx in range(3,13):
    if t[yy*w+xx]==0x601:t[yy*w+xx]=0x621

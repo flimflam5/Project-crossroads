@@ -1,0 +1,1286 @@
+{
+  "baseline_revision": "fd151242458efe5759b18650f35a5e5b2fa47e45",
+  "notes": "Independent physical threshold coordinates for QA09. Prior Ecruteak groups retained; all intended Olivine facade/room leaves listed. No automatic fallback to a neighbouring doorway. Source Gym alias and split hallway are deliberate GBA adaptations. Port-quay main/side and lighthouse balcony leaves now included; native dynamic elevator separately requires all4panel/exit combinations.",
+  "groups": [
+    {
+      "city": "ecruteak",
+      "label": "theater",
+      "outside": {
+        "map": "EcruteakCity",
+        "segments": [
+          [
+            44,
+            45
+          ],
+          [
+            45,
+            45
+          ]
+        ],
+        "anchor": [
+          41,
+          46
+        ]
+      },
+      "inside": {
+        "map": "EcruteakCity_DanceTheater",
+        "segments": [
+          [
+            7,
+            17
+          ],
+          [
+            8,
+            17
+          ]
+        ],
+        "anchor": [
+          7,
+          15
+        ]
+      }
+    },
+    {
+      "city": "ecruteak",
+      "label": "barrier",
+      "outside": {
+        "map": "EcruteakCity",
+        "segments": [
+          [
+            39,
+            25
+          ],
+          [
+            40,
+            25
+          ]
+        ],
+        "anchor": [
+          39,
+          28
+        ]
+      },
+      "inside": {
+        "map": "EcruteakCity_BarrierStation",
+        "segments": [
+          [
+            9,
+            11
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "anchor": [
+          9,
+          9
+        ]
+      }
+    },
+    {
+      "city": "ecruteak",
+      "label": "gym",
+      "outside": {
+        "map": "EcruteakCity",
+        "segments": [
+          [
+            24,
+            55
+          ],
+          [
+            25,
+            55
+          ]
+        ],
+        "anchor": [
+          24,
+          58
+        ]
+      },
+      "inside": {
+        "map": "EcruteakCity_Gym",
+        "segments": [
+          [
+            10,
+            21
+          ],
+          [
+            11,
+            21
+          ]
+        ],
+        "anchor": [
+          10,
+          19
+        ]
+      }
+    },
+    {
+      "city": "ecruteak",
+      "label": "southwest-house",
+      "outside": {
+        "map": "EcruteakCity",
+        "segments": [
+          [
+            23,
+            45
+          ]
+        ],
+        "anchor": [
+          23,
+          47
+        ]
+      },
+      "inside": {
+        "map": "EcruteakCity_Residence",
+        "segments": [
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            8
+          ]
+        ],
+        "anchor": [
+          4,
+          7
+        ]
+      }
+    },
+    {
+      "city": "ecruteak",
+      "label": "dowsing-house",
+      "outside": {
+        "map": "EcruteakCity",
+        "segments": [
+          [
+            34,
+            55
+          ]
+        ],
+        "anchor": [
+          34,
+          57
+        ]
+      },
+      "inside": {
+        "map": "EcruteakCity_DowsingHouse",
+        "segments": [
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            8
+          ]
+        ],
+        "anchor": [
+          4,
+          7
+        ]
+      }
+    },
+    {
+      "city": "ecruteak",
+      "label": "center",
+      "outside": {
+        "map": "EcruteakCity",
+        "segments": [
+          [
+            45,
+            55
+          ]
+        ],
+        "anchor": [
+          45,
+          57
+        ]
+      },
+      "inside": {
+        "map": "EcruteakCity_PokemonCenter_1F",
+        "segments": [
+          [
+            8,
+            19
+          ],
+          [
+            9,
+            19
+          ]
+        ],
+        "anchor": [
+          8,
+          17
+        ]
+      }
+    },
+    {
+      "city": "ecruteak",
+      "label": "mart",
+      "outside": {
+        "map": "EcruteakCity",
+        "segments": [
+          [
+            53,
+            45
+          ]
+        ],
+        "anchor": [
+          53,
+          47
+        ]
+      },
+      "inside": {
+        "map": "EcruteakCity_Mart",
+        "segments": [
+          [
+            4,
+            11
+          ],
+          [
+            5,
+            11
+          ]
+        ],
+        "anchor": [
+          4,
+          9
+        ]
+      }
+    },
+    {
+      "city": "ecruteak",
+      "label": "burned-tower",
+      "outside": {
+        "map": "EcruteakCity",
+        "segments": [
+          [
+            24,
+            21
+          ]
+        ],
+        "anchor": [
+          24,
+          24
+        ]
+      },
+      "inside": {
+        "map": "EcruteakCity_BurnedTower",
+        "segments": [
+          [
+            11,
+            22
+          ],
+          [
+            12,
+            22
+          ]
+        ],
+        "anchor": [
+          11,
+          20
+        ]
+      }
+    },
+    {
+      "city": "ecruteak",
+      "label": "west-city-gate",
+      "outside": {
+        "map": "EcruteakCity",
+        "segments": [
+          [
+            6,
+            37
+          ],
+          [
+            6,
+            38
+          ],
+          [
+            6,
+            39
+          ]
+        ],
+        "anchor": [
+          8,
+          38
+        ],
+        "press": [
+          -1,
+          0
+        ],
+        "arrivals": [
+          [
+            7,
+            37
+          ],
+          [
+            7,
+            38
+          ],
+          [
+            7,
+            39
+          ]
+        ]
+      },
+      "inside": {
+        "map": "EcruteakCity_WestGate",
+        "segments": [
+          [
+            10,
+            6
+          ],
+          [
+            10,
+            7
+          ],
+          [
+            10,
+            8
+          ]
+        ],
+        "anchor": [
+          8,
+          7
+        ],
+        "press": [
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "city": "ecruteak",
+      "label": "west-route-gate",
+      "outside": {
+        "map": "JohtoRoute38",
+        "segments": [
+          [
+            63,
+            12
+          ],
+          [
+            63,
+            13
+          ],
+          [
+            63,
+            14
+          ]
+        ],
+        "anchor": [
+          61,
+          13
+        ],
+        "press": [
+          1,
+          0
+        ],
+        "arrivals": [
+          [
+            62,
+            12
+          ],
+          [
+            62,
+            13
+          ],
+          [
+            62,
+            14
+          ]
+        ]
+      },
+      "inside": {
+        "map": "EcruteakCity_WestGate",
+        "segments": [
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ]
+        ],
+        "anchor": [
+          3,
+          7
+        ],
+        "press": [
+          -1,
+          0
+        ]
+      }
+    },
+    {
+      "city": "ecruteak",
+      "label": "east-city-gate",
+      "outside": {
+        "map": "EcruteakCity",
+        "segments": [
+          [
+            63,
+            46
+          ],
+          [
+            63,
+            47
+          ],
+          [
+            63,
+            48
+          ]
+        ],
+        "anchor": [
+          61,
+          47
+        ],
+        "press": [
+          1,
+          0
+        ],
+        "arrivals": [
+          [
+            59,
+            46
+          ],
+          [
+            59,
+            47
+          ],
+          [
+            59,
+            48
+          ]
+        ]
+      },
+      "inside": {
+        "map": "EcruteakCity_EastGate",
+        "segments": [
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ]
+        ],
+        "anchor": [
+          3,
+          7
+        ],
+        "press": [
+          -1,
+          0
+        ]
+      }
+    },
+    {
+      "city": "ecruteak",
+      "label": "east-route-gate",
+      "outside": {
+        "map": "JohtoRoute42",
+        "segments": [
+          [
+            0,
+            13
+          ],
+          [
+            0,
+            14
+          ],
+          [
+            0,
+            15
+          ]
+        ],
+        "anchor": [
+          2,
+          14
+        ],
+        "press": [
+          -1,
+          0
+        ],
+        "arrivals": [
+          [
+            3,
+            13
+          ],
+          [
+            3,
+            14
+          ],
+          [
+            3,
+            15
+          ]
+        ]
+      },
+      "inside": {
+        "map": "EcruteakCity_EastGate",
+        "segments": [
+          [
+            10,
+            6
+          ],
+          [
+            10,
+            7
+          ],
+          [
+            10,
+            8
+          ]
+        ],
+        "anchor": [
+          8,
+          7
+        ],
+        "press": [
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "city": "ecruteak",
+      "label": "bell-tower",
+      "outside": {
+        "map": "BellchimeTrail",
+        "segments": [
+          [
+            37,
+            20
+          ]
+        ],
+        "anchor": [
+          37,
+          22
+        ]
+      },
+      "inside": {
+        "map": "EcruteakCity_BellTower",
+        "segments": [
+          [
+            11,
+            22
+          ],
+          [
+            12,
+            22
+          ]
+        ],
+        "anchor": [
+          11,
+          20
+        ]
+      }
+    },
+    {
+      "city": "ecruteak",
+      "label": "trail-station-return",
+      "outside": {
+        "map": "BellchimeTrail",
+        "segments": [
+          [
+            9,
+            14
+          ]
+        ],
+        "anchor": [
+          10,
+          15
+        ]
+      },
+      "inside": {
+        "map": "EcruteakCity_BarrierCorridor",
+        "segments": [
+          [
+            6,
+            3
+          ]
+        ],
+        "anchor": [
+          6,
+          5
+        ],
+        "press": [
+          0,
+          -1
+        ]
+      }
+    },
+    {
+      "city": "ecruteak",
+      "label": "station-corridor-stairs",
+      "outside": {
+        "map": "EcruteakCity_BarrierStation",
+        "segments": [
+          [
+            15,
+            3
+          ]
+        ],
+        "anchor": [
+          15,
+          6
+        ]
+      },
+      "inside": {
+        "map": "EcruteakCity_BarrierCorridor",
+        "segments": [
+          [
+            3,
+            19
+          ]
+        ],
+        "anchor": [
+          3,
+          17
+        ]
+      }
+    },
+    {
+      "city": "olivine",
+      "label": "olivine-joe-residence",
+      "outside": {
+        "map": "OlivineCity",
+        "segments": [
+          [
+            8,
+            23
+          ]
+        ],
+        "anchor": [
+          8,
+          25
+        ]
+      },
+      "inside": {
+        "map": "OlivineCity_Residence",
+        "segments": [
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            7
+          ]
+        ],
+        "anchor": [
+          3,
+          5
+        ]
+      }
+    },
+    {
+      "city": "olivine",
+      "label": "olivine-accepted-neighbour",
+      "outside": {
+        "map": "OlivineCity",
+        "segments": [
+          [
+            8,
+            28
+          ]
+        ],
+        "anchor": [
+          8,
+          30
+        ]
+      },
+      "inside": {
+        "map": "OlivineCity_NeighborHouse",
+        "segments": [
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            7
+          ]
+        ],
+        "anchor": [
+          3,
+          5
+        ]
+      }
+    },
+    {
+      "city": "olivine",
+      "label": "olivine-custom-gym",
+      "outside": {
+        "map": "OlivineCity",
+        "segments": [
+          [
+            13,
+            14
+          ],
+          [
+            14,
+            14
+          ]
+        ],
+        "anchor": [
+          13,
+          16
+        ]
+      },
+      "inside": {
+        "map": "OlivineCity_Gym",
+        "segments": [
+          [
+            6,
+            10
+          ],
+          [
+            7,
+            10
+          ]
+        ],
+        "anchor": [
+          6,
+          8
+        ]
+      }
+    },
+    {
+      "city": "olivine",
+      "label": "olivine-pokemon-center",
+      "outside": {
+        "map": "OlivineCity",
+        "segments": [
+          [
+            16,
+            33
+          ],
+          [
+            17,
+            33
+          ]
+        ],
+        "anchor": [
+          16,
+          35
+        ]
+      },
+      "inside": {
+        "map": "OlivineCity_PokemonCenter_1F",
+        "segments": [
+          [
+            8,
+            19
+          ],
+          [
+            9,
+            19
+          ]
+        ],
+        "anchor": [
+          8,
+          17
+        ]
+      }
+    },
+    {
+      "city": "olivine",
+      "label": "olivine-poke-mart",
+      "outside": {
+        "map": "OlivineCity",
+        "segments": [
+          [
+            29,
+            33
+          ]
+        ],
+        "anchor": [
+          29,
+          35
+        ]
+      },
+      "inside": {
+        "map": "OlivineCity_Mart",
+        "segments": [
+          [
+            4,
+            11
+          ],
+          [
+            5,
+            11
+          ]
+        ],
+        "anchor": [
+          4,
+          9
+        ]
+      }
+    },
+    {
+      "city": "olivine",
+      "label": "olivine-silph-office",
+      "outside": {
+        "map": "OlivineCity",
+        "segments": [
+          [
+            31,
+            40
+          ]
+        ],
+        "anchor": [
+          31,
+          42
+        ]
+      },
+      "inside": {
+        "map": "OlivineCity_SilphOffice",
+        "segments": [
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            7
+          ]
+        ],
+        "anchor": [
+          3,
+          5
+        ]
+      }
+    },
+    {
+      "city": "olivine",
+      "label": "olivine-harbor-office",
+      "outside": {
+        "map": "OlivineCity",
+        "segments": [
+          [
+            8,
+            40
+          ]
+        ],
+        "anchor": [
+          8,
+          42
+        ]
+      },
+      "inside": {
+        "map": "OlivineCity_HarborOffice",
+        "segments": [
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            7
+          ]
+        ],
+        "anchor": [
+          3,
+          5
+        ]
+      }
+    },
+    {
+      "city": "olivine",
+      "label": "olivine-lighthouse",
+      "outside": {
+        "map": "OlivineCity",
+        "segments": [
+          [
+            45,
+            39
+          ]
+        ],
+        "anchor": [
+          45,
+          41
+        ]
+      },
+      "inside": {
+        "map": "OlivineCity_Lighthouse_1F",
+        "segments": [
+          [
+            8,
+            17
+          ],
+          [
+            9,
+            17
+          ]
+        ],
+        "anchor": [
+          8,
+          15
+        ]
+      }
+    },
+    {
+      "city": "olivine",
+      "label": "olivine-fishing-house",
+      "outside": {
+        "map": "OlivineCity",
+        "segments": [
+          [
+            17,
+            23
+          ]
+        ],
+        "anchor": [
+          17,
+          25
+        ]
+      },
+      "inside": {
+        "map": "OlivineCity_FishingHouse",
+        "segments": [
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            8
+          ]
+        ],
+        "anchor": [
+          4,
+          7
+        ]
+      }
+    },
+    {
+      "city": "olivine",
+      "label": "olivine-trade-house",
+      "outside": {
+        "map": "OlivineCity",
+        "segments": [
+          [
+            31,
+            17
+          ]
+        ],
+        "anchor": [
+          31,
+          19
+        ]
+      },
+      "inside": {
+        "map": "OlivineCity_TradeHouse",
+        "segments": [
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            8
+          ]
+        ],
+        "anchor": [
+          4,
+          7
+        ]
+      }
+    },
+    {
+      "city": "olivine",
+      "label": "olivine-seal-house",
+      "outside": {
+        "map": "OlivineCity",
+        "segments": [
+          [
+            36,
+            17
+          ]
+        ],
+        "anchor": [
+          36,
+          19
+        ]
+      },
+      "inside": {
+        "map": "OlivineCity_SealHouse",
+        "segments": [
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            8
+          ]
+        ],
+        "anchor": [
+          4,
+          7
+        ]
+      }
+    },
+    {
+      "city": "olivine",
+      "label": "olivine-cafe",
+      "outside": {
+        "map": "OlivineCity",
+        "segments": [
+          [
+            9,
+            33
+          ]
+        ],
+        "anchor": [
+          9,
+          35
+        ]
+      },
+      "inside": {
+        "map": "OlivineCity_Cafe",
+        "segments": [
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            10
+          ]
+        ],
+        "anchor": [
+          5,
+          9
+        ]
+      }
+    },
+    {
+      "city": "olivine",
+      "label": "olivine-port-city-entrance",
+      "outside": {
+        "map": "OlivineCity",
+        "segments": [
+          [
+            23,
+            52
+          ],
+          [
+            24,
+            52
+          ]
+        ],
+        "anchor": [
+          23,
+          54
+        ]
+      },
+      "inside": {
+        "map": "OlivineCity_PortTerminal",
+        "segments": [
+          [
+            7,
+            2
+          ],
+          [
+            8,
+            2
+          ]
+        ],
+        "anchor": [
+          7,
+          4
+        ],
+        "press": [
+          0,
+          -1
+        ]
+      }
+    },
+    {
+      "city": "olivine",
+      "label": "olivine-gym-hallway",
+      "outside": {
+        "map": "OlivineCity_Gym",
+        "segments": [
+          [
+            5,
+            0
+          ],
+          [
+            6,
+            0
+          ],
+          [
+            7,
+            0
+          ]
+        ],
+        "anchor": [
+          6,
+          2
+        ]
+      },
+      "inside": {
+        "map": "OlivineCity_Gym_Arena",
+        "segments": [
+          [
+            5,
+            16
+          ],
+          [
+            6,
+            16
+          ],
+          [
+            7,
+            16
+          ]
+        ],
+        "anchor": [
+          6,
+          14
+        ]
+      }
+    },
+    {
+      "city": "olivine",
+      "label": "olivine-port-quay-main",
+      "outside": {
+        "map": "OlivineCity_PortQuay",
+        "segments": [
+          [
+            16,
+            15
+          ],
+          [
+            17,
+            15
+          ]
+        ],
+        "anchor": [
+          16,
+          17
+        ]
+      },
+      "inside": {
+        "map": "OlivineCity_PortTerminal",
+        "segments": [
+          [
+            7,
+            11
+          ],
+          [
+            8,
+            11
+          ]
+        ],
+        "anchor": [
+          7,
+          8
+        ]
+      }
+    },
+    {
+      "city": "olivine",
+      "label": "olivine-port-inspection-side",
+      "outside": {
+        "map": "OlivineCity_PortQuay",
+        "segments": [
+          [
+            11,
+            13
+          ],
+          [
+            11,
+            14
+          ]
+        ],
+        "anchor": [
+          10,
+          15
+        ],
+        "press": [
+          1,
+          0
+        ]
+      },
+      "inside": {
+        "map": "OlivineCity_PortTerminal",
+        "segments": [
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ]
+        ],
+        "anchor": [
+          2,
+          8
+        ],
+        "press": [
+          -1,
+          0
+        ]
+      }
+    },
+    {
+      "city": "olivine",
+      "label": "olivine-lighthouse-balcony",
+      "outside": {
+        "map": "OlivineCity_Lighthouse_Balcony",
+        "segments": [
+          [
+            8,
+            12
+          ],
+          [
+            9,
+            12
+          ]
+        ],
+        "anchor": [
+          8,
+          14
+        ]
+      },
+      "inside": {
+        "map": "OlivineCity_Lighthouse_3F",
+        "segments": [
+          [
+            8,
+            18
+          ],
+          [
+            9,
+            18
+          ]
+        ],
+        "anchor": [
+          8,
+          16
+        ]
+      }
+    }
+  ]
+}

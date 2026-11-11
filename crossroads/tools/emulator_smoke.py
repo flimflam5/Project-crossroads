@@ -51,6 +51,14 @@ for line in subprocess.check_output([shutil.which('arm-none-eabi-nm') or 'arm-no
         except ValueError:
             pass
 assert lib.emu_init(rom.encode())
+def failed_runtime(kind,error,trace):
+    # Preserve the exact failing emulator state/screenshots in ignored output;
+    # never write to an owner battery file or present a failed trial as PASS.
+    lib.emu_image(str(args.output/'failure.png').encode())
+    lib.emu_state(str(args.output/'failure.snapshot').encode(),0)
+    (args.output/'failure.rom.sha256').write_text(hashlib.sha256(args.rom.read_bytes()).hexdigest())
+    sys.__excepthook__(kind,error,trace)
+sys.excepthook=failed_runtime
 
 def read(a, w=4):
     return lib.emu_read(syms.get(a, a), w)
@@ -208,7 +216,9 @@ def walk(target, map_name='OlivineCity'):
             frames(16, k)
             frames(20)
         assert pos() == n, (old, n, pos())
-map_ids = {json.loads((root/f'data/maps/{n}/map.json').read_text())['id']: i for i,n in enumerate(json.loads((root/'data/maps/map_groups.json').read_text())['gMapGroup_CrossroadsOlivine'])}
+groups = json.loads((root/'data/maps/map_groups.json').read_text())
+map_locations = {json.loads((root/f'data/maps/{n}/map.json').read_text())['id']: (group,i) for group,key in [(75,'gMapGroup_CrossroadsOlivine'),(76,'gMapGroup_CrossroadsJohtoExpansion')] for i,n in enumerate(groups.get(key,[]))}
+map_names = {json.loads((root/f'data/maps/{n}/map.json').read_text())['id']: n for key in ['gMapGroup_CrossroadsOlivine','gMapGroup_CrossroadsJohtoExpansion'] for n in groups.get(key,[])}
 if args.first_loss_only:
     script('Crossroads_EventScript_VisitRescueCase')
     frames(180)
@@ -222,10 +232,10 @@ if args.first_loss_only:
     for _ in range(4):key(1);frames(90)
     sb=read('gSaveBlock1Ptr')
     assert (read(sb+0x1c,1),read(sb+0x1d,1))==(75,0)
-    walk((38,10));frames(16,64);frames(180)
-    walk((7,3),'OlivineCity_Gym')
+    walk((city['warp_events'][2]['x'],city['warp_events'][2]['y']+1));frames(16,64);frames(180)
+    walk((6,1),'OlivineCity_Gym')
     for _ in range(2):frames(16,64);frames(180)
-    walk((6,4),'OlivineCity_Gym_Arena');frames(1,64);frames(20)
+    walk((6,6),'OlivineCity_Gym_Arena');frames(1,64);frames(20)
     write(read('gPlayerPartyPtr')+86,1,2)
     key(1);frames(180);key(1);frames(120);key(1);frames(300)
     for _ in range(120):
@@ -263,7 +273,7 @@ for i, w in enumerate(city['warp_events']):
     frames(16, 64)
     frames(180)
     sb = read('gSaveBlock1Ptr')
-    assert read(sb + 4, 1) == 75 and read(sb + 5, 1) == map_ids[w['dest_map']], (i, pos(), read(sb + 5, 1))
+    assert (read(sb + 4,1),read(sb + 5,1)) == map_locations[w['dest_map']], (i,pos(),read(sb+4,1),read(sb+5,1))
     assert read(syms['gMain'] + 4) == syms['CB2_Overworld'] | 1
     verify_joe()
     print('Entered with Joe', w['dest_map'], flush=True)
@@ -285,19 +295,29 @@ for i, w in enumerate(city['warp_events']):
         assert read('sLockFieldControls',1)==0
         assert read(read('gPlayerPartyCountPtr'),1)==0
         assert read(read('gSaveBlock1Ptr')+0x139c+500,2)==0
-        walk((3,6), 'OlivineCity_Residence')
-        frames(16,128)
-        frames(20)
         print('Home rest before rescue preserves empty party and unchosen starter: PASS',flush=True)
-    frames(16, 128)
-    frames(180)
-    sb = read('gSaveBlock1Ptr')
+    # Every city facade points to a specific reciprocal interior leaf. Its
+    # actual position/orientation changed in the HGSS reconstruction. The port
+    # returns north; the homes/services return south. Do not assume all rooms
+    # still share the old8-row exit or only exist in mapgroup75.
+    inside_name=map_names[w['dest_map']]
+    inside=json.loads((root/f'data/maps/{inside_name}/map.json').read_text())
+    back=inside['warp_events'][int(w['dest_warp_id'])]
+    dy=-1 if inside_name=='OlivineCity_PortTerminal' else 1
+    walk((back['x'],back['y']-dy),inside_name)
+    for _ in range(3):
+        frames(16,64 if dy==-1 else 128);frames(180)
+        sb=read('gSaveBlock1Ptr')
+        if (read(sb+4,1),read(sb+5,1))==(75,0):break
     assert read(sb + 4, 1) == 75 and read(sb + 5, 1) == 0, (i, pos(), read(sb + 5, 1))
     verify_joe()
     print('Returned with Joe from', w['dest_map'], flush=True)
-walk((20, 42))
-walk((29, 42))
-print('Both piers reached on foot', flush=True)
+if (root/'crossroads/hgss/authoring/OlivineCity.json').exists():
+    walk((21,44));walk((25,44))
+    print('Both sides of the canonical waterfront promenade reached on foot',flush=True)
+else:
+    walk((20,42));walk((29,42))
+    print('Both foundation piers reached on foot',flush=True)
 
 # Cross every new seam on foot; inspect all city exits/lobbies and return.
 from western_johto_smoke import tour

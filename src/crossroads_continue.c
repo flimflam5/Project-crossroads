@@ -45,19 +45,28 @@ void Crossroads_EnsureAreaRespawn(void)
      && heal->mapNum == MAP_NUM(MAP_VIOLET_CITY)
      && heal->warpId == WARP_ID_NONE && heal->x == 35 && heal->y == 33)
         SetLastHealLocationWarp(HEAL_LOCATION_VIOLET_CITY);
+    if (heal->mapGroup == MAP_GROUP(MAP_OLIVINE_CITY)
+     && heal->mapNum == MAP_NUM(MAP_OLIVINE_CITY)
+     && heal->warpId == WARP_ID_NONE && heal->x == 11 && heal->y == 22)
+        SetLastHealLocationWarp(HEAL_LOCATION_OLIVINE_CITY);
 }
 
 static bool32 NeedsDryLanding(s16 x, s16 y)
 {
     const struct MapLayout *layout = gMapHeader.mapLayout;
     u32 i;
-    if (gSaveBlock1Ptr->location.mapGroup != MAP_GROUP(MAP_VIOLET_CITY)
-     || gSaveBlock1Ptr->location.mapNum != MAP_NUM(MAP_VIOLET_CITY)
+    bool32 reconstructedWater =
+        (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_VIOLET_CITY)
+         && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_VIOLET_CITY))
+     || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_OLIVINE_CITY)
+         && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_OLIVINE_CITY));
+    if (!reconstructedWater
      || x < 0 || y < 0 || x >= layout->width || y >= layout->height
      || (layout->map[y * layout->width + x] >> 12) != 1)
         return FALSE;
-    // An old walking save can now occupy the reference pond. Preserve actual
-    // Surf saves; only move a walking avatar to nearby dry ground on Continue.
+    // An old walking save can now occupy the reference pond or waterfront.
+    // Preserve actual Surf saves; only move a walking avatar to nearby dry
+    // ground on Continue.
     for (i = 0; i < OBJECT_EVENTS_COUNT; i++)
     {
         const struct ObjectEvent *event = &gSaveBlock1Ptr->objectEvents[i];

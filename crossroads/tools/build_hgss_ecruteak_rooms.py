@@ -22,7 +22,13 @@ def generate(check=False):
   existing=(R/f'data/maps/{name}/map.json').exists();m=load(f'data/maps/{name}/map.json') if existing else copy.deepcopy(load('data/maps/EcruteakCity_Residence/map.json'))
   if name=='EcruteakCity_DowsingHouse':m.update(name=name,id='MAP_ECRUTEAK_CITY_DOWSING_HOUSE',object_events=[],bg_events=[])
   if m['layout']=='LAYOUT_HOUSE_WITH_BED' or name=='EcruteakCity_DowsingHouse':m['layout']='LAYOUT_HGSS_'+name.upper()
-  room=project(header);w,h=room['width'],room['height'];tiles=room['tiles'];seen=room['walkable']
+  projection_facts=None
+  if header=='MAP_ECRUTEAK_DANCE_THEATER':
+   # The generic projector draws wide temple tables; this room instead owns
+   # its13 one-cell HGSS audience benches. Never draw both representations.
+   projection_facts=copy.deepcopy(FACTS)
+   for chunk in projection_facts[header]['chunks']:chunk['props']=[p for p in chunk['props'] if p['model']!=56]
+  room=project(header,facts=projection_facts);w,h=room['width'],room['height'];tiles=room['tiles'];seen=room['walkable']
   def stamp(part,x,y):
    a=ART[part]
    for yy in range(a['height']):
@@ -32,7 +38,7 @@ def generate(check=False):
   if 'HOUSE' in header:
    for y in (1,2):
     for x in range(1,10):tiles[y*w+x]=0x400|ART['house_wall']['start']+(y-1)*4+x%4
-   stamp('fridge',1,2);stamp('cabinet',2,2);stamp('television',8,2);stamp('dining_table',6,5)
+   stamp('house_window',4,1);stamp('fridge',1,2);stamp('house_kitchen',2,2);stamp('cabinet',8,2);stamp('dining_table',6,5)
    for x in (5,8):
     for y in (5,6):stamp('chair',x,y)
    if not m['object_events']:
@@ -48,11 +54,13 @@ def generate(check=False):
    # HGSS stage riser with two open stair aisles; no mandatory fight gate.
    for x in range(1,w-1):
     if (x,8) not in seen:tiles[8*w+x]=0x400|ART['stage']['start']+4+x%4
-   for x in [4,6,8,10,12]:
-    for y in [10,12,14]:
-     if x+1>=w-1:continue
-     stamp('prayer_table',x,y)
-     for xx in [x,x+1]:tiles[y*w+xx]|=0x400
+   # Read actual model56 positions: the upper center aisle deliberately has
+   # no benches at6,10 or8,10. A rectangular fill closed that aisle and also
+   # duplicated the generic projector's seats one row below.
+   for chunk in FACTS[header]['chunks']:
+    for prop in chunk['props']:
+     if prop['model']!=56:continue
+     x,y=int(prop['tile_x']),int(prop['tile_z']);stamp('theater_bench',x,y);tiles[y*w+x]=0x400|ART['theater_bench']['start']
    m['object_events'][0].update(x=10,y=9)
    while len(m['object_events'])<6:
     o=copy.deepcopy(m['object_events'][1]);o.pop('local_id',None);m['object_events'].append(o)

@@ -75,6 +75,8 @@ def main():
   if n=='JohtoRoute32':l['primary_tileset']='gTileset_HgssVioletRoutePrimary'
   from hgss_ecruteak_family import relocate_layout as family_layout
   family_layout(n,l)
+  from hgss_olivine_connections import layout as olivine_layout
+  olivine_layout(n,l)
   if lid not in bylayout:layouts['layouts'].append(l);bylayout[lid]=l
   elif bylayout[lid]!=l:
    # Only newly authored layouts pass here; their numeric IDs remain fixed.
@@ -182,6 +184,7 @@ def main():
  # Border graph, with reciprocal offsets and matching edge corridors.
  for a,d,b in EDGES:
   if a not in maps or b not in maps:continue
+  if (a=='OlivineCity' or b=='OlivineCity') and (R/'crossroads/hgss/authoring/OlivineCity.json').exists():continue
   if a=='VioletCity' or b=='VioletCity':continue # Canonical gate/road author owns these endpoints.
   aw,ah=sizes[a];bw,bh=sizes[b];horizontal=d in ['left','right'];anchor=39 if a=='EcruteakCity' and d=='down' else 47 if a=='EcruteakCity' and d=='right' else (aw//2 if not horizontal else ah//2)
   offset=anchor-(bw//2 if not horizontal else bh//2)
@@ -200,7 +203,7 @@ def main():
  if 'JohtoRoute40' in maps:
   label='Johto_OlivineSeaSign'
   if not any(e['script']==label for e in maps['OlivineCity']['bg_events']):sign(maps['OlivineCity'],8,25,label)
-  rect('OlivineCity',8,25,1,1,0x403)
+  if not (R/'crossroads/hgss/authoring/OlivineCity.json').exists():rect('OlivineCity',8,25,1,1,0x403)
   say(label,'ROUTE 40. Western sea passage. South: WHIRL ISLANDS and CIANWOOD.','SIGN')
  # City buildings: distinct services, Gym, residence and workshop.
  services=[]
@@ -289,9 +292,11 @@ def main():
  from build_eight_gym_integration import patch_events,overlay,interior_overlay,relocate_layout
  for n,m in maps.items():
   patch_neighbor(n,m)
+  from hgss_olivine_connections import patch as olivine_events,tiles as olivine_tiles
+  olivine_events(n,m)
   patch_events(n,m)
   relocate_layout(n,bylayout[m['layout']])
-  if n=='EcruteakCity' or (n in meta and meta[n]['kind']=='hgss'):continue # Dedicated HGSS authoring
+  if n in ['EcruteakCity','OlivineCity'] or (n in meta and meta[n]['kind']=='hgss'):continue # Dedicated HGSS authoring
   if n=='CianwoodCity':rect(n,sizes[n][0]-3,sizes[n][1]//2-1,3,3,0x1170)
   if n not in existing and meta[n]['outdoor']:
    for e in m['bg_events']:rect(n,e['x'],e['y'],1,1,0x403)
@@ -307,7 +312,7 @@ def main():
   path=bylayout[m['layout']]['blockdata_filepath']
   from visual_repairs import repair
   from hgss_ecruteak_family import route_data
-  write(path,route_data(n,neighbor_tiles(n,interior_overlay(n,overlay(n,repair(n,struct.pack('<'+str(len(tiles[n]))+'H',*tiles[n]),*sizes[n]),*sizes[n]),*sizes[n]),*sizes[n]),*sizes[n]))
+  write(path,olivine_tiles(n,route_data(n,neighbor_tiles(n,interior_overlay(n,overlay(n,repair(n,struct.pack('<'+str(len(tiles[n]))+'H',*tiles[n]),*sizes[n]),*sizes[n]),*sizes[n]),*sizes[n]),*sizes[n]),*sizes[n]))
  groups['gMapGroup_CrossroadsOlivine']=names[:127]
  if len(names)>127:
   groups['gMapGroup_CrossroadsJohtoExpansion']=names[127:]
@@ -353,6 +358,9 @@ def main():
  from build_eight_gym_integration import generate as generate_gyms
  from build_hgss_violet import generate as generate_violet
  generate_violet(args.check)
+ if (R/'crossroads/hgss/authoring/OlivineCity.json').exists():
+  from build_hgss_olivine import generate as generate_olivine
+  generate_olivine(args.check)
  generate_gyms(args.check)
  print('Johto cluster',args.through,':',len(names),'maps registered;',len(services),'new Centers; IDs preserved')
 if __name__=='__main__':main()

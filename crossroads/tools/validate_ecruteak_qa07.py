@@ -47,10 +47,18 @@ def rendered(primary,secondary,n,baseline=False):
 
 
 def validate():
-    assert load('data/maps/map_groups.json')==BASE['groups'],'Map IDs changed'
+    groups=load('data/maps/map_groups.json')
+    for key,values in BASE['groups'].items():
+        if key=='gMapGroup_CrossroadsJohtoExpansion':
+            assert groups[key][:len(values)]==values,'Existing map IDs changed'
+            assert groups[key][len(values):]==['OlivineCity_FishingHouse','OlivineCity_TradeHouse','OlivineCity_SealHouse','OlivineCity_Cafe','OlivineCity_PokemonCenter_B1F','OlivineCity_Lighthouse_Balcony','OlivineCity_Lighthouse_Elevator','OlivineCity_PortTerminal','OlivineCity_PortQuay'],'Unexpected appended map IDs'
+        else:assert groups[key]==values,'Map group/order changed'
     ls=load('data/layouts/layouts.json')['layouts']
-    assert [l['id'] for l in ls]==BASE['all_layout_ids'],'Layout IDs changed'
-    assert load('src/data/heal_locations.json')==BASE['heals'],'Heal/save IDs changed'
+    assert [l['id'] for l in ls[:len(BASE['all_layout_ids'])]]==BASE['all_layout_ids'],'Existing layout IDs changed'
+    assert len({l['id'] for l in ls})==len(ls),'Duplicate layout ID'
+    expected_heals=json.loads(json.dumps(BASE['heals']))
+    next(h for h in expected_heals['heal_locations'] if h['id']=='HEAL_LOCATION_OLIVINE_CITY').update(x=16,y=34,respawn_x=8,respawn_y=13)
+    assert load('src/data/heal_locations.json')==expected_heals,'Heal/save IDs changed beyond exact Olivine arrival'
     layouts={l['id']:l for l in ls}
     for n,m in BASE['maps'].items():
         expected=json.loads(json.dumps(m))
@@ -95,6 +103,17 @@ def validate():
                 art=load('crossroads/hgss/art/temple/manifest.json')['specs']
                 for e in m['warp_events']:
                     for delta in [-1,1]:expected_raw[(e['y']+delta)*12+e['x']]=0x3000|art['stone_warp']['start']
+            for contract in (R/'crossroads/hgss/contracts').glob('*-furniture-qa09.json'):
+                c=json.loads(contract.read_text())
+                for change in c.get('maps',[]):
+                    if change['map']!=n:continue
+                    assert c['source_commit']=='fd151242458efe5759b18650f35a5e5b2fa47e45'
+                    for d in change['changes']:
+                        i=d['y']*layouts[m['layout']]['width']+d['x'];assert expected_raw[i]==d['before'];expected_raw[i]=d['after']
+            if n=='EcruteakCity_DanceTheater':
+                c=load('crossroads/hgss/contracts/theater-seating-qa09.json');assert c['source_commit']=='fd151242458efe5759b18650f35a5e5b2fa47e45'
+                for d in c['changes']:
+                    i=d['y']*layouts[m['layout']]['width']+d['x'];assert expected_raw[i]==d['before'];expected_raw[i]=d['after']
             assert words((R/layouts[m['layout']]['blockdata_filepath']).read_bytes())==tuple(expected_raw),(n,'Unrelated interior/floor changed')
     gm=words((R/'data/tilesets/primary/general/metatiles.bin').read_bytes())
     ga=words((R/'data/tilesets/primary/general/metatile_attributes.bin').read_bytes())

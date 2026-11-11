@@ -1,0 +1,58 @@
+[
+  {
+    "area": "Glitter Lighthouse all six floors and balcony",
+    "source_url": "https://www.pokebip.com/page/jeuxvideo/pokemon_coeur_or_heartgold_ame_argent_soulsilver/guide_complet_johto_kanto/phare",
+    "image_url": "https://www.pokebip.com/pages/jeux-video/pokemon-heartgold-soulsilver/guide-complet-johto-kanto/images/map/phare.png",
+    "sha256": "e37da3bd795c7fbc041ad593daad89fd3400bfabfc85afc096989537e627283f",
+    "inspected": true,
+    "features": [
+      "teal upper floorboards",
+      "white masonry/round upper footprint",
+      "first-floor visitor seats and planters",
+      "native stairs and two-stop elevator",
+      "fourth-floor eastern window to exterior balcony and southern third-floor return"
+    ],
+    "adaptations": [
+      "native original GBA motifs replace DS models",
+      "single flat projection replaces round3D room view",
+      "existing mechanical beacon actor preserved; no imported Ampharos/Jasmine story"
+    ]
+  },
+  {
+    "area": "Olivine Port terminal",
+    "source_url": "https://pokewave.net/juegos/heartgold-soulsilver/guia/s-s-aqua",
+    "image_url": "https://pokewave.net/assets/images/walkthrough/heartgold-soulsilver/1ff0f1d7-382.png",
+    "sha256": "594bd152a637c9097eaf4be886fbd2c07e5b21a35940172f343fd8ba82697dec",
+    "inspected": true,
+    "features": [
+      "tan plank floor",
+      "central blue rectangular rug",
+      "two white tables with yellow stools",
+      "aqua U-shaped waiting benches",
+      "rear life rings",
+      "paired red south threshold"
+    ],
+    "adaptations": [
+      "new original native-palette props; no screenshot pixels extracted",
+      "no source NPC story/rewards or departure gates"
+    ]
+  },
+  {
+    "area": "Olivine Port quay",
+    "source_url": "https://pokewave.net/juegos/heartgold-soulsilver/guia/s-s-aqua",
+    "image_url": "https://pokewave.net/assets/images/walkthrough/heartgold-soulsilver/f1119212-383.png",
+    "sha256": "2c45b023b96c070f1990728e315c1f83c498e29bbe91bf636007cbf037c651fd",
+    "inspected": true,
+    "features": [
+      "gray paved quay",
+      "pale masonry perimeter",
+      "orange mooring bollards",
+      "ship gangway"
+    ],
+    "adaptations": [
+      "source gangway is bounded; sailing/ship outside current map pass",
+      "source side inspection pier connected by terminal passage",
+      "existing Black Ledger harbor-office travel retained separately"
+    ]
+  }
+]

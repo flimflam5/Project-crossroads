@@ -1,3 +1,28 @@
+# Current frozen QA09 BUILD7 verification
+
+Branchfeature/olivine-ecruteak-completion-qa09. Read CITIES_QA09.md.
+Allknown24Olivine/27Ecruteakmapmodels/interiors/doors areimplemented. BUILD7
+compiledandROM/ELF/GAMEMAPSareFROZENwhilefinaltestsrun. SHA0734501b031d05156a28e685dc1c2748153cb065222bd67b0d2e7cea47fefbca.
+Do not regenerate/build/swap binaries until running emulator agents finish.
+Tests/logs usebuild/qa09-*-v7 and/tmp/qa09-*-v7.log. Sources foroldV5/V6failed
+portapproach/bodycases areretained separately; notdeliveryPASS. V7specialtest
+changedonlystaleBalconywalkaway13,9→sourcepublic14,10; actualwindowarrival
+14,9and4nativeelevatorcaseassertionsremainstrict. Finaltestsummary/evidence/
+commit/artifactpackaging/pushPRstillrequired. No newregion/mastermerge.
+
+# Current two-city completion — QA09
+
+Read CITIES_QA09.md first. Branchfeature/olivine-ecruteak-completion-qa09.
+The workspace recovered intact and remote fda32b7ed0 was fast-forwarded safely.
+Olivine canonical64x64 exterior, three homes/cafe/services/Gym/lighthouse/port
+are integrated; nine maps append; legacyIDs/saves/accepted additions preserved.
+BUILD5/controller results are diagnostic, not final acceptance. Root is fixing
+its port return trap with an east boardwalk. Landmarks agent is finishing port
+rear facade/ship scenery, cool masonry art and balcony rails before BUILD6.
+Full door/landmark/starters/save regressions must run on the actual final ROM.
+No new expansion or master merge. Do not discard uncommitted work or overwrite
+new source with QA08; older notes below are history, not instructions to restart.
+
 # Workspace recovery required — QA08
 
 Read [QA08_INTERRUPTION_CHECKPOINT.md](QA08_INTERRUPTION_CHECKPOINT.md) first.

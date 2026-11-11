@@ -1,0 +1,182 @@
+{
+  "scope": "Olivine lighthouse six floors, exterior balcony, elevator, port terminal and quay; does not certify owner acceptance",
+  "reference_manifest": "olivine-landmark-visual-references.json",
+  "source_facts": "canonical_events/olivine-interior-geometry.json",
+  "native_art": "Original generated GBA props and marine models; screenshots are reference only, not texture sources",
+  "models": [
+    {
+      "source_model": 167,
+      "area": "OlivineCity_PortQuay",
+      "meaning": "rear port terminal",
+      "source_anchor": [
+        16.5,
+        13.0
+      ],
+      "native_origin": [
+        11,
+        10
+      ],
+      "native_tiles": [
+        12,
+        6
+      ],
+      "entrances": [
+        [
+          16,
+          15
+        ],
+        [
+          17,
+          15
+        ],
+        [
+          11,
+          13
+        ],
+        [
+          11,
+          14
+        ]
+      ],
+      "status": "authored, awaiting delivery-ROM gameplay and owner review"
+    },
+    {
+      "source_model": 168,
+      "area": "OlivineCity_PortQuay",
+      "meaning": "docked S.S. Aqua scenery",
+      "source_anchor": [
+        27.5,
+        19.0
+      ],
+      "native_origin": [
+        21,
+        15
+      ],
+      "native_tiles": [
+        16,
+        5
+      ],
+      "adaptation": "Repeated new mid-deck panels fit native graphics capacity; boarding mouth retains canonical source position",
+      "status": "visible vessel, sailing/ship interiors outside this city pass"
+    },
+    {
+      "source_model": 119,
+      "area": "OlivineCity_PortQuay",
+      "meaning": "two sailboats",
+      "source_anchors": [
+        [
+          9.30896,
+          3
+        ],
+        [
+          23.30894,
+          3
+        ]
+      ],
+      "native_origins": [
+        [
+          8,
+          1
+        ],
+        [
+          22,
+          1
+        ]
+      ],
+      "native_tiles": [
+        3,
+        3
+      ],
+      "adaptation": "Tile-grid rounding of perspective prop anchor"
+    },
+    {
+      "source_model": 23,
+      "area": "OlivineCity_Lighthouse_1F",
+      "meaning": "six potted visitor-deck plants",
+      "native_origins": [
+        [
+          6,
+          7
+        ],
+        [
+          10,
+          7
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          6,
+          13
+        ],
+        [
+          10,
+          13
+        ]
+      ],
+      "native_tiles": [
+        1,
+        2
+      ],
+      "status": "actual original green fern and terracotta pot; no brown post stand-in"
+    },
+    {
+      "source_model": 63,
+      "area": "OlivineCity_Lighthouse_1F",
+      "meaning": "elevator",
+      "native_thresholds": [
+        [
+          8,
+          4
+        ],
+        [
+          9,
+          4
+        ]
+      ],
+      "status": "paired actual blue-glass panels; native dynamic warp two-stop service"
+    },
+    {
+      "source_model": 124,
+      "area": "OlivineCity_Lighthouse_6F",
+      "meaning": "elevator upper landing",
+      "native_thresholds": [
+        [
+          8,
+          4
+        ],
+        [
+          9,
+          4
+        ]
+      ],
+      "status": "same panels, actual light-room and ground-floor controls"
+    },
+    {
+      "area": "OlivineCity_Lighthouse_6F",
+      "meaning": "lantern room",
+      "status": "source circular footprint, purple native floor, preserved existing mechanical beacon actor; no HGSS plot event imported"
+    }
+  ],
+  "adaptations": [
+    "Source room origins and six historical map/layout IDs retained; visible stair/door aliases append",
+    "Olivine quay crops unused east source ocean to40x27 native tiles; actual model inventory and all terminal return paths retained",
+    "Source4F eastern window is intentional one-way drop to the balcony, then source southern3F/westernstairs return",
+    "Rear port and ship use original compatible GBA art with flat layer/collision footprints, not DS polygons",
+    "Source maritime walls have cool gray/blue window palette; floorboards remain teal except purple lantern room and tan port",
+    "Four additional solid native stool cells match actual port screenshot; remaining source walking plan and every open threshold are audited",
+    "Private unused primary glyph/metatile slots store new models; shared resources, engine limits and save structures stay unchanged"
+  ],
+  "testing": {
+    "isolated_generator": "generate then exact check PASS",
+    "isolated_resource_validator": "full image dimensions, all glyph bounds, native source primary/secondary preservation, exact derived lift panels PASS",
+    "static_native_views": "all authored maritime maps rendered/inspected before delivery build; these are not emulator screenshots",
+    "actual_delivery_rom_gameplay": "PENDING coordinated root build",
+    "owner_delta_visual_acceptance": "PENDING"
+  }
+}

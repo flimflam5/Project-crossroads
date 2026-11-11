@@ -30,9 +30,20 @@ def signature(p,s,n,old):
   parts.append(tuple(pals[v>>12][c] if c else None for c in tile.tobytes()))
  return ats[n>=512][n%512],tuple(parts)
 def validate():
- assert js('data/maps/map_groups.json')==js('data/maps/map_groups.json',True)
- assert js('src/data/heal_locations.json')==js('src/data/heal_locations.json',True)
- oldls=js('data/layouts/layouts.json',True)['layouts'];ls=js('data/layouts/layouts.json')['layouts'];assert [l['id'] for l in ls]==[l['id'] for l in oldls]
+ groups=js('data/maps/map_groups.json');oldgroups=js('data/maps/map_groups.json',True)
+ assert groups['group_order']==oldgroups['group_order']
+ for name in oldgroups['group_order']:assert groups[name][:len(oldgroups[name])]==oldgroups[name],('Existing map IDs shifted',name)
+ # QA09 appends Olivine interiors and relocates only its canonical Center.
+ # Every Ecruteak/other heal entry remains byte-for-byte equivalent as data.
+ heals=js('src/data/heal_locations.json');oldheals=js('src/data/heal_locations.json',True)
+ assert set(heals)==set(oldheals)
+ current=heals['heal_locations'];previous=oldheals['heal_locations']
+ assert [h['id'] for h in current]==[h['id'] for h in previous]
+ for before,after in zip(previous,current):
+  if before['id']=='HEAL_LOCATION_OLIVINE_CITY' and after!=before:
+   wanted=dict(before,x=16,y=34,respawn_x=8,respawn_y=13);assert after==wanted,('Unexpected Olivine heal migration',after)
+  else:assert after==before,('Unrelated heal metadata changed',before['id'])
+ oldls=js('data/layouts/layouts.json',True)['layouts'];ls=js('data/layouts/layouts.json')['layouts'];assert [l['id'] for l in ls[:len(oldls)]]==[l['id'] for l in oldls]
  byid={l['id']:l for l in ls};oldbyid={l['id']:l for l in oldls};count=0;gatecells=0
  spec=js('crossroads/hgss/art/native-manifest.json')['specs']['gate']
  for n in ['EcruteakCity','JohtoRoute37','JohtoRoute38','JohtoRoute42']:

@@ -7,6 +7,7 @@ R=Path(__file__).resolve().parents[2]
 ap=argparse.ArgumentParser();ap.add_argument('--built',action='store_true');a=ap.parse_args()
 def load(p):return json.loads((R/p).read_text())
 from hgss_gate_arrivals import arrivals
+from hgss_olivine_validation import active as olivine_active,dynamic_pair,dynamic_destinations,extra_edges,validate_olivine_graph
 arrival_only=arrivals()
 groups=load('data/maps/map_groups.json');base=groups['gMapGroup_CrossroadsOlivine'];west=groups.get('gMapGroup_CrossroadsJohtoExpansion',[]);names=base+west;locations={n:(75,i) for i,n in enumerate(base)}|{n:(76,i) for i,n in enumerate(west)};manifest=load('crossroads/johto/manifest.json')
 for preserved,digest in manifest.get('preserved_sources',{}).items():
@@ -32,8 +33,9 @@ for n,m in maps.items():
  for e in m['object_events']+m['bg_events']:
   assert 0<=e['x']<w and 0<=e['y']<h,(n,e)
   assert re.search(r'^'+re.escape(e['script'])+r'::?',scripts,re.M),(n,e['script'])
- for e in m['warp_events']:
+ for index,e in enumerate(m['warp_events']):
   assert 0<=e['x']<w and 0<=e['y']<h
+  if dynamic_pair(n,index,e,maps,ids):continue # Narrowly pinned native lift; every other reciprocal check remains.
   dst=ids[e['dest_map']];num=int(e['dest_warp_id']);assert 0<=num<len(maps[dst]['warp_events'])
   assert maps[dst]['warp_events'][num]['dest_map']==m['id'],('Unpaired warp',n,e)
  for c in m['connections'] or []:
@@ -85,16 +87,17 @@ from hgss_gate_validation import validate_gates
 reviewed|=validate_rooms()|validate_services()|validate_gates()
 from validate_hgss_violet import validate as validate_violet
 reviewed|=validate_violet()
+reviewed|=validate_olivine_graph()
 def behavior(n,x,y):
  w,h=sizes[n]
  if not(0<=x<w and 0<=y<h):return None
  t=raw[n][y*w+x]&1023;l=layouts[maps[n]['layout']]
  return lookup[l['primary_tileset'] if t<512 else l['secondary_tileset']][t%512]&255
 # Traversal graph includes the explicitly labeled session-only survey Surf mode.
-start=('OlivineCity',12,13);q=deque([start]);seen={start}
+start=('OlivineCity',16,34) if olivine_active() else ('OlivineCity',12,13);q=deque([start]);seen={start}
 while q:
  n,x,y=q.popleft();w,h=sizes[n];m=maps[n]
- moves=[]
+ moves=extra_edges(n,x,y)
  for dx,dy,d in [(1,0,'right'),(-1,0,'left'),(0,1,'down'),(0,-1,'up')]:
   step=next_position(x,y,dx,dy,lambda a,b:behavior(n,a,b))
   if step is None:continue
@@ -111,7 +114,10 @@ while q:
  for index,e in enumerate(m['warp_events']):
   if (n,index) in arrival_only:continue
   if (x,y)==(e['x'],e['y']):
-   dst=ids[e['dest_map']];back=maps[dst]['warp_events'][int(e['dest_warp_id'])];moves.append((dst,back['x'],back['y']))
+   dynamic=dynamic_destinations(n,e,maps)
+   if dynamic is not None:moves.extend((dst,back['x'],back['y']) for dst,back in dynamic)
+   else:
+    dst=ids[e['dest_map']];back=maps[dst]['warp_events'][int(e['dest_warp_id'])];moves.append((dst,back['x'],back['y']))
  for dst,xx,yy in moves:
   dw,dh=sizes[dst];p=(dst,xx,yy)
   if not(0<=xx<dw and 0<=yy<dh) or p in seen or (xx,yy) in actors[dst]:continue

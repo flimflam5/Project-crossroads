@@ -1613,7 +1613,7 @@ const struct Tileset gTileset_BlGymOlivineSecondary = {
  .isCompressed=TRUE, .isSecondary=TRUE,
  .tiles=gTilesetTiles_BlGymOlivineSecondary, .palettes=gTilesetPalettes_BlGymOlivineSecondary,
  .metatiles=gMetatiles_BlGymOlivineSecondary, .metatileAttributes=gMetatileAttributes_BlGymOlivineSecondary,
- .callback=InitTilesetAnim_Slateport,
+ .callback=NULL,
 };
 const struct Tileset gTileset_BlGymVioletPrimary = {
  .isCompressed=TRUE, .isSecondary=FALSE,
@@ -1726,3 +1726,33 @@ const struct Tileset gTileset_HgssEcruteakGateBuffer = {
 };
 #endif
 // END ECRUTEAK GATE BUFFER
+
+
+
+
+
+
+
+// BEGIN OLIVINE LANDMARK INTERIORS
+#if !IS_FRLG
+const struct Tileset gTileset_HgssOlivineLandmarks = { .isCompressed=TRUE, .isSecondary=TRUE, .tiles=gTilesetTiles_HgssOlivineLandmarks, .palettes=gTilesetPalettes_HgssOlivineLandmarks, .metatiles=gMetatiles_HgssOlivineLandmarks, .metatileAttributes=gMetatileAttributes_HgssOlivineLandmarks, .callback=NULL };
+const struct Tileset gTileset_HgssOlivineLandmarkIndoor = { .isCompressed=TRUE, .isSecondary=FALSE, .tiles=gTilesetTiles_HgssOlivineLandmarkIndoor, .palettes=gTilesetPalettes_InsideBuilding, .metatiles=gMetatiles_InsideBuilding, .metatileAttributes=gMetatileAttributes_InsideBuilding, .callback=NULL };
+const struct Tileset gTileset_HgssOlivineLandmarkOutdoor = { .isCompressed=TRUE, .isSecondary=FALSE, .tiles=gTilesetTiles_HgssOlivineLandmarkOutdoor, .palettes=gTilesetPalettes_General, .metatiles=gMetatiles_HgssOlivineLandmarkOutdoor, .metatileAttributes=gMetatileAttributes_HgssOlivineLandmarkOutdoor, .callback=InitTilesetAnim_General };
+#endif
+// END OLIVINE LANDMARK INTERIORS
+
+
+
+// BEGIN HGSS OLIVINE EXTERIORS
+#if !IS_FRLG
+const struct Tileset gTileset_HgssOlivinePrimary = { .isCompressed=TRUE, .isSecondary=FALSE, .tiles=gTilesetTiles_HgssOlivinePrimary, .palettes=gTilesetPalettes_HgssOlivinePrimary, .metatiles=gMetatiles_HgssOlivinePrimary, .metatileAttributes=gMetatileAttributes_HgssOlivinePrimary, .callback=InitTilesetAnim_General };
+const struct Tileset gTileset_HgssOlivineSecondary = { .isCompressed=TRUE, .isSecondary=TRUE, .tiles=gTilesetTiles_HgssOlivineSecondary, .palettes=gTilesetPalettes_HgssOlivineSecondary, .metatiles=gMetatiles_HgssOlivineSecondary, .metatileAttributes=gMetatileAttributes_HgssOlivineSecondary, .callback=NULL };
+#endif
+// END HGSS OLIVINE EXTERIORS
+
+// BEGIN HGSS OLIVINE ROOMS
+#if !IS_FRLG
+const struct Tileset gTileset_HgssOlivineHome = {.isCompressed=TRUE,.isSecondary=TRUE,.tiles=gTilesetTiles_HgssOlivineHome,.palettes=gTilesetPalettes_HgssOlivineHome,.metatiles=gMetatiles_HgssOlivineHome,.metatileAttributes=gMetatileAttributes_HgssOlivineHome,.callback=NULL};
+const struct Tileset gTileset_HgssOlivineGym = {.isCompressed=TRUE,.isSecondary=TRUE,.tiles=gTilesetTiles_HgssOlivineGym,.palettes=gTilesetPalettes_HgssOlivineGym,.metatiles=gMetatiles_HgssOlivineGym,.metatileAttributes=gMetatileAttributes_HgssOlivineGym,.callback=NULL};
+#endif
+// END HGSS OLIVINE ROOMS
