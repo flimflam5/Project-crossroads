@@ -56,10 +56,38 @@ def validate():
         expected=json.loads(json.dumps(m))
         if n=='EcruteakCity':
             expected['bg_events'] += [dict(type='sign',x=x,y=y,elevation=0,player_facing_dir='BG_EVENT_PLAYER_FACING_ANY',script='Hgss_PrivateResidence') for x,y in [(23,36),(35,36),(54,55)]]
-        assert load(f'data/maps/{n}/map.json')==expected,(n,'QA06 events/entrance coordinates changed beyond exact three appended private-door labels')
+            # QA08 owner-authorized paired leaves. Explicit migration, not a
+            # blanket allowance for event changes or a new mutable baseline.
+            expected['warp_events'][1]['dest_warp_id']='2'
+            expected['warp_events'][3]['dest_warp_id']='1'
+            alias=dict(expected['warp_events'][3],x=44,y=45,dest_warp_id='0')
+            expected['warp_events'].append(alias)
+            for start in [9,12]:
+                for j,index in enumerate([2,0,3]):expected['warp_events'][start+j]['dest_warp_id']=str(index)
+            for direction in ['West','East']:
+                es=[e for e in expected['coord_events'] if e['script']=='Hgss_'+direction+'CityGateEnter']
+                for j,e in enumerate(es):e['script']+=str(j)
+        elif n=='EcruteakCity_BarrierStation':
+            expected['warp_events'][0]['dest_warp_id']='7'
+            expected['warp_events'].append(dict(x=10,y=11,elevation=0,dest_map='MAP_ECRUTEAK_CITY',dest_warp_id='1'))
+        elif n=='EcruteakCity_DanceTheater':
+            expected['warp_events'][0]['dest_warp_id']='16'
+        elif n in ('EcruteakCity_WestGate','EcruteakCity_EastGate'):
+            for e in m['warp_events']:
+                for delta in [-1,1]:
+                    expected['warp_events'].append(dict(e,x=e['x'],y=e['y']+delta,dest_warp_id=str(int(e['dest_warp_id'])+delta)))
+        assert load(f'data/maps/{n}/map.json')==expected,(n,'Events differ beyond exact QA07/QA08 authorized migration')
         assert layouts[m['layout']]==BASE['layouts'][m['layout']],(n,'QA06 dimensions/IDs changed')
         if n!='EcruteakCity':
-            assert (R/layouts[m['layout']]['blockdata_filepath']).read_bytes()==bytes.fromhex(BASE['raw_maps'][n]),(n,'Unrelated interior/floor changed')
+            expected_raw=list(words(bytes.fromhex(BASE['raw_maps'][n])))
+            if n=='EcruteakCity_BarrierStation':
+                art=load('crossroads/hgss/art/temple/manifest.json')['specs']
+                expected_raw[11*20+10]=art['exit']['start']
+            elif n in ('EcruteakCity_WestGate','EcruteakCity_EastGate'):
+                art=load('crossroads/hgss/art/temple/manifest.json')['specs']
+                for e in m['warp_events']:
+                    for delta in [-1,1]:expected_raw[(e['y']+delta)*12+e['x']]=0x3000|art['stone_warp']['start']
+            assert words((R/layouts[m['layout']]['blockdata_filepath']).read_bytes())==tuple(expected_raw),(n,'Unrelated interior/floor changed')
     gm=words((R/'data/tilesets/primary/general/metatiles.bin').read_bytes())
     ga=words((R/'data/tilesets/primary/general/metatile_attributes.bin').read_bytes())
     expected,ea=neutral_metadata(gm,ga)
@@ -97,7 +125,7 @@ def validate():
         a=specs[kind]
         for yy in range(a['height']-2,a['height']):
             for xx in range(a['width']):
-                door=opened and yy==a['door_y'] and (xx==a['door_x'] or kind=='barrier' and xx==a['door_x']-1)
+                door=opened and yy==a['door_y'] and (xx==a['door_x'] or kind in ('barrier','theater') and xx==a['door_x']-1)
                 assert bool(raw[(y+yy)*64+x+xx]&0xc00)!=door,('Wall/door ground footprint',kind,x+xx,y+yy,door)
     # Static art is unchanged, including custom Gym pixels. Only the broken road
     # buffer (flowers with arrow behavior) may become the documented neutral brick.
@@ -105,7 +133,9 @@ def validate():
     for n,primary,secondary in [('EcruteakCity','bl_gym_ecruteak','bl_gym_ecruteak'),('BellchimeTrail','hgss_bell','hgss_bell')]:
         m=BASE['maps'][n];l=layouts[m['layout']];before=words(bytes.fromhex(BASE['raw_maps'][n]));after=words((R/l['blockdata_filepath']).read_bytes());ats=resource(primary,secondary)[2]
         for i,(a,b) in enumerate(zip(before,after)):
-            assert a&0xfc00==b&0xfc00,(n,'Collision/elevation changed',i)
+            if n=='EcruteakCity' and i==45*64+44:
+                assert a&0xfc00==0x400 and b&0xfc00==0x3000,'Theater left threshold is not open'
+            else:assert a&0xfc00==b&0xfc00,(n,'Collision/elevation changed',i)
             an,bn=a&1023,b&1023
             if bn==PAVING:
                 x,y=i%l['width'],i//l['width'];assert n=='EcruteakCity' and an==0x24 and (x<7 or x>=57 or y>=57),(n,'Undocumented road change',x,y)
@@ -129,8 +159,12 @@ def validate_recordings(folder,baseline=None):
     assert all(not r['arrow']['visible'] and r['arrow_visible_samples']==0 for r in result['records'])
     general=R/'data/tilesets/primary/general';metas=words((general/'metatiles.bin').read_bytes());sheet=Image.open(general/'tiles.png')
     palette=[tuple(((int(v)>>3)<<3)|((int(v)>>3)>>2) for v in row.split()) for row in (general/'palettes/02.pal').read_text().splitlines()[3:]]
-    def compare(path):
+    def compare(path,active_palette=None):
         shot=Image.open(path).convert('RGB');assert shot.size==(240,160)
+        colors=palette
+        if active_palette is not None:
+            assert len(active_palette)==16 and any(active_palette)
+            colors=[tuple(((c<<3)|(c>>2)) for c in [v&31,(v>>5)&31,(v>>10)&31]) for v in active_palette]
         matched=total=0
         for half,n in enumerate([0x1d4,0x1d5]):
             for y in range(16):
@@ -141,9 +175,10 @@ def validate_recordings(folder,baseline=None):
                     if ref&0x800:yy=7-yy
                     c=sheet.getpixel((i%16*8+xx,i//16*8+yy))
                     if not 1<=c<=4:continue
-                    total+=1;matched+=int(shot.getpixel((112+half*16+x,72+y))==palette[c])
+                    total+=1;matched+=int(shot.getpixel((112+half*16+x,72+y))==colors[c])
         return matched,total
-    after=compare(folder/'canopy-entry.png');assert after[0]==after[1],('Joe still drawn over leaf foreground',after)
+    canopy=next(r for r in result['records'] if r['label']=='canopy-entry')
+    after=compare(folder/'canopy-entry.png',canopy.get('tree_palette_rgb555'));assert after[0]==after[1],('Joe still drawn over leaf foreground',after)
     report=dict(native_size=[240,160],after_leaf_pixels_matched=after[0],after_leaf_pixels_total=after[1],rom_sha256=result['rom_sha256'])
     if baseline:
         baseline=Path(baseline);before=json.loads((baseline/'reproduction.json').read_text());assert before['rom_sha256']==BASE['rom_sha256']

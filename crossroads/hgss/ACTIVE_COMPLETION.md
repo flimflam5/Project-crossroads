@@ -1,3 +1,17 @@
+# QA08 active continuation
+
+Branch feature/ecruteak-olivine-doorways-qa08, from8d13bd62ec. Latest owner scope
+is Ecruteak then Olivine only. Read ECRUTEAK_QA08.md and the city building inventory.
+Both visible Theater/Barrier leaves and all gate aisle rows are repaired; exact
+source/artifact identity is in build-info. Full city acceptance is still open.
+Next: identify green-roof report; complete gate exterior/reference comparison;
+then reconstruct Olivine canonical buildings/floors/port while preserving four
+accepted Black Ledger additions and all stable IDs. Original Olivine geometry
+reference files are cached in /workspace/scratch/hgss-reference/olivine-*.json;
+original generated facade studies are in /workspace/generated_images. They are
+not integrated and must not be described as playable new content. No resets,
+engine upgrades, master merge or expansion elsewhere.
+
 # Ecruteak QA07 current checkpoint
 
 Owner scope is Ecruteak only. The active review is ECRUTEAK_QA07.md with per-map

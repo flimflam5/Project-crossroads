@@ -56,11 +56,14 @@ def generate(check=False,variant="city"):
   indexed=Image.frombytes('P',im.size,bytes(values));indexed.putpalette(pals[bank]);write(A/(name+'-native.png'),b'') if False else None
   if not check:indexed.save(A/(name+'-native.png'),bits=4)
   w,h=size[0]//16,size[1]//16;start=512+len(attrs)
+  # The Theater and Barrier have two visible door leaves. Both are real
+  # thresholds; metadata/collision must not turn the left leaf into a wall.
+  doors=[(door,h-1)]+([(door-1,h-1)] if name in ('barrier','theater') else [])
   for y in range(h):
    for x in range(w):
     top=[alloc(indexed.crop((x*16+dx,y*16+dy,x*16+dx+8,y*16+dy+8)),bank) for dx,dy in [(0,0),(8,0),(0,8),(8,8)]]
-    words.extend(under+top);attrs.append((0x1000 if y>=h-2 else 0)|(0x60 if ((x,y)==(door,h-1) or name=='barrier' and (x,y)==(door-1,h-1)) else 0x61 if name=='trail_station' and (x,y)==(door,h-2) else 0))
-  specs[name]=dict(start=start,width=w,height=h,door_x=door,door_y=h-1,palette=bank,solid_footprint=[[x,y] for y in range(h) for x in range(w) if y>0 and (y>=h-2 or 0<x<w-1) and (x,y)!=(door,h-1)],walkable_overhang=[[x,y] for y in range(h) for x in range(w) if y==0 or (y<h-2 and x in (0,w-1))])
+    words.extend(under+top);attrs.append((0x1000 if y>=h-2 else 0)|(0x60 if (x,y) in doors else 0x61 if name=='trail_station' and (x,y)==(door,h-2) else 0))
+  specs[name]=dict(start=start,width=w,height=h,door_x=door,door_y=h-1,door_cells=[list(p) for p in doors],palette=bank,solid_footprint=[[x,y] for y in range(h) for x in range(w) if y>0 and (y>=h-2 or 0<x<w-1) and (x,y) not in doors],walkable_overhang=[[x,y] for y in range(h) for x in range(w) if y==0 or (y<h-2 and x in (0,w-1))])
  # Original General canopy pixels are in the bottom layer, so simply choosing
  # NORMAL does not put leaves over Joe. Duplicate only leaf colors (1..4 in the
  # General tree palette) into the foreground. Grass/shadow colors stay below;

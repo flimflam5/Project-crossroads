@@ -124,7 +124,7 @@
         "y": 25,
         "elevation": 0,
         "dest_map": "MAP_ECRUTEAK_CITY_BARRIER_STATION",
-        "dest_warp_id": "0"
+        "dest_warp_id": "2"
       },
       {
         "x": 23,
@@ -138,7 +138,7 @@
         "y": 45,
         "elevation": 0,
         "dest_map": "MAP_ECRUTEAK_CITY_DANCE_THEATER",
-        "dest_warp_id": "0"
+        "dest_warp_id": "1"
       },
       {
         "x": 24,
@@ -180,7 +180,7 @@
         "y": 37,
         "elevation": 0,
         "dest_map": "MAP_ECRUTEAK_CITY_WEST_GATE",
-        "dest_warp_id": "0"
+        "dest_warp_id": "2"
       },
       {
         "x": 0,
@@ -194,14 +194,14 @@
         "y": 39,
         "elevation": 0,
         "dest_map": "MAP_ECRUTEAK_CITY_WEST_GATE",
-        "dest_warp_id": "0"
+        "dest_warp_id": "3"
       },
       {
         "x": 63,
         "y": 46,
         "elevation": 0,
         "dest_map": "MAP_ECRUTEAK_CITY_EAST_GATE",
-        "dest_warp_id": "0"
+        "dest_warp_id": "2"
       },
       {
         "x": 63,
@@ -215,7 +215,7 @@
         "y": 48,
         "elevation": 0,
         "dest_map": "MAP_ECRUTEAK_CITY_EAST_GATE",
-        "dest_warp_id": "0"
+        "dest_warp_id": "3"
       },
       {
         "x": 25,
@@ -223,6 +223,13 @@
         "elevation": 0,
         "dest_map": "MAP_ECRUTEAK_CITY_GYM",
         "dest_warp_id": "1"
+      },
+      {
+        "x": 44,
+        "y": 45,
+        "elevation": 0,
+        "dest_map": "MAP_ECRUTEAK_CITY_DANCE_THEATER",
+        "dest_warp_id": "0"
       }
     ],
     "coord_events": [
@@ -233,7 +240,7 @@
         "elevation": 0,
         "var": "VAR_TEMP_0",
         "var_value": "0",
-        "script": "Hgss_WestCityGateEnter"
+        "script": "Hgss_WestCityGateEnter0"
       },
       {
         "type": "trigger",
@@ -242,7 +249,7 @@
         "elevation": 0,
         "var": "VAR_TEMP_0",
         "var_value": "0",
-        "script": "Hgss_WestCityGateEnter"
+        "script": "Hgss_WestCityGateEnter1"
       },
       {
         "type": "trigger",
@@ -251,7 +258,7 @@
         "elevation": 0,
         "var": "VAR_TEMP_0",
         "var_value": "0",
-        "script": "Hgss_WestCityGateEnter"
+        "script": "Hgss_WestCityGateEnter2"
       },
       {
         "type": "trigger",
@@ -260,7 +267,7 @@
         "elevation": 0,
         "var": "VAR_TEMP_0",
         "var_value": "0",
-        "script": "Hgss_EastCityGateEnter"
+        "script": "Hgss_EastCityGateEnter0"
       },
       {
         "type": "trigger",
@@ -269,7 +276,7 @@
         "elevation": 0,
         "var": "VAR_TEMP_0",
         "var_value": "0",
-        "script": "Hgss_EastCityGateEnter"
+        "script": "Hgss_EastCityGateEnter1"
       },
       {
         "type": "trigger",
@@ -278,7 +285,7 @@
         "elevation": 0,
         "var": "VAR_TEMP_0",
         "var_value": "0",
-        "script": "Hgss_EastCityGateEnter"
+        "script": "Hgss_EastCityGateEnter2"
       }
     ],
     "bg_events": [

@@ -81,6 +81,7 @@ jobs:
           python3 crossroads/tools/build_hgss_ecruteak_assets.py --variant bell --check
           python3 crossroads/tools/hgss_ecruteak_terrain.py --check
           python3 crossroads/tools/validate_ecruteak_qa07.py
+          python3 crossroads/tools/validate_city_doorways.py
           python3 crossroads/tools/build_hgss_violet_assets.py --check
           python3 crossroads/tools/build_hgss_violet.py --check
           python3 crossroads/tools/validate_hgss_violet.py
@@ -111,7 +112,7 @@ jobs:
       - name: Upload playable Emerald ROM
         uses: actions/upload-artifact@v4
         with:
-          name: black-ledger-ecruteak-qa07-${{ github.sha }}
+          name: black-ledger-cities-qa08-${{ github.sha }}
           path: |
             pokeemerald.gba
             build-info.json
@@ -130,6 +131,10 @@ jobs:
             crossroads/RELEASE_HGSS_QA05.md
             crossroads/RELEASE_HGSS_QA06.md
             crossroads/RELEASE_ECRUTEAK_QA07.md
+            crossroads/hgss/ECRUTEAK_QA08.md
+            crossroads/hgss/CITY_BUILDING_INVENTORY_QA08.json
+            crossroads/hgss/doorways-qa08.json
+            crossroads/qa/qa08
             crossroads/hgss/ECRUTEAK_QA07.md
             crossroads/hgss/ECRUTEAK_QA07_TOPOLOGY.md
             crossroads/hgss/ecruteak-qa07-checklist.json

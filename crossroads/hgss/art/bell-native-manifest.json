@@ -6,6 +6,12 @@
       "height": 19,
       "door_x": 3,
       "door_y": 18,
+      "door_cells": [
+        [
+          3,
+          18
+        ]
+      ],
       "palette": 8,
       "solid_footprint": [
         [
@@ -546,6 +552,12 @@
       "height": 5,
       "door_x": 8,
       "door_y": 4,
+      "door_cells": [
+        [
+          8,
+          4
+        ]
+      ],
       "palette": 7,
       "solid_footprint": [
         [

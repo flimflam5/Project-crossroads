@@ -1,3 +1,12 @@
+# QA08 current order
+
+Ecruteak doorway repair checkpoint, remaining Ecruteak reference/exterior issues,
+then Olivine canonical buildings/interiors/lighthouse/port. Preserve all accepted
+Black Ledger additions and designs. Do not expand elsewhere. See
+[hgss/ECRUTEAK_QA08.md](hgss/ECRUTEAK_QA08.md). No new story, rewards, badges,
+trainers or encounters. Owner visual acceptance remains separate from compilation
+and automated controller tests.
+
 # Current priority — Ecruteak owner review
 
 Stop regional expansion. Complete repairs/QA of the existing27-map Ecruteak scope,

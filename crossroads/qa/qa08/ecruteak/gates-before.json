@@ -1,0 +1,1223 @@
+{
+  "rom_sha256": "62067235f5bf358e66e4edbaae66daf0252d543787837b3aca3e1cae28fb898d",
+  "source_revision": "8d13bd62ecaa3fa73ef4b1870cbb44cb369eeba6",
+  "setup": "Copied battery; cold Continue, controller travel; RAM encounter suppression and opt-in survey desk only; no map/warp/position writes",
+  "results": [
+    {
+      "label": "west-city-gate-outside-0-front",
+      "source": "EcruteakCity",
+      "segment": [
+        0,
+        37
+      ],
+      "expected_destination": "EcruteakCity_WestGate",
+      "result": "PASS",
+      "arrival": [
+        10,
+        7
+      ],
+      "walk_away": [
+        10,
+        8
+      ]
+    },
+    {
+      "label": "west-city-gate-outside-0-left",
+      "source": "EcruteakCity",
+      "segment": [
+        0,
+        37
+      ],
+      "expected_destination": "EcruteakCity_WestGate",
+      "result": "inaccessible approach",
+      "position": [
+        2,
+        38
+      ]
+    },
+    {
+      "label": "west-city-gate-outside-0-right",
+      "source": "EcruteakCity",
+      "segment": [
+        0,
+        37
+      ],
+      "expected_destination": "EcruteakCity_WestGate",
+      "result": "PASS",
+      "arrival": [
+        10,
+        7
+      ],
+      "walk_away": [
+        10,
+        8
+      ]
+    },
+    {
+      "label": "west-city-gate-outside-1-front",
+      "source": "EcruteakCity",
+      "segment": [
+        0,
+        38
+      ],
+      "expected_destination": "EcruteakCity_WestGate",
+      "result": "PASS",
+      "arrival": [
+        10,
+        7
+      ],
+      "walk_away": [
+        10,
+        8
+      ]
+    },
+    {
+      "label": "west-city-gate-outside-1-left",
+      "source": "EcruteakCity",
+      "segment": [
+        0,
+        38
+      ],
+      "expected_destination": "EcruteakCity_WestGate",
+      "result": "PASS",
+      "arrival": [
+        10,
+        7
+      ],
+      "walk_away": [
+        10,
+        8
+      ]
+    },
+    {
+      "label": "west-city-gate-outside-1-right",
+      "source": "EcruteakCity",
+      "segment": [
+        0,
+        38
+      ],
+      "expected_destination": "EcruteakCity_WestGate",
+      "result": "PASS",
+      "arrival": [
+        10,
+        7
+      ],
+      "walk_away": [
+        10,
+        8
+      ]
+    },
+    {
+      "label": "west-city-gate-outside-2-front",
+      "source": "EcruteakCity",
+      "segment": [
+        0,
+        39
+      ],
+      "expected_destination": "EcruteakCity_WestGate",
+      "result": "PASS",
+      "arrival": [
+        10,
+        7
+      ],
+      "walk_away": [
+        10,
+        8
+      ]
+    },
+    {
+      "label": "west-city-gate-outside-2-left",
+      "source": "EcruteakCity",
+      "segment": [
+        0,
+        39
+      ],
+      "expected_destination": "EcruteakCity_WestGate",
+      "result": "PASS",
+      "arrival": [
+        10,
+        7
+      ],
+      "walk_away": [
+        10,
+        8
+      ]
+    },
+    {
+      "label": "west-city-gate-outside-2-right",
+      "source": "EcruteakCity",
+      "segment": [
+        0,
+        39
+      ],
+      "expected_destination": "EcruteakCity_WestGate",
+      "result": "inaccessible approach",
+      "position": [
+        2,
+        38
+      ]
+    },
+    {
+      "label": "west-city-gate-inside-0-front",
+      "source": "EcruteakCity_WestGate",
+      "segment": [
+        10,
+        6
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "FAIL",
+      "error": "('Segment did not warp', 'EcruteakCity_WestGate', (10, 6))",
+      "actual_map": "EcruteakCity_WestGate",
+      "position": [
+        10,
+        6
+      ]
+    },
+    {
+      "label": "west-city-gate-inside-0-left",
+      "source": "EcruteakCity_WestGate",
+      "segment": [
+        10,
+        6
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "FAIL",
+      "error": "('Segment did not warp', 'EcruteakCity_WestGate', (10, 6))",
+      "actual_map": "EcruteakCity_WestGate",
+      "position": [
+        10,
+        6
+      ]
+    },
+    {
+      "label": "west-city-gate-inside-0-right",
+      "source": "EcruteakCity_WestGate",
+      "segment": [
+        10,
+        6
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "FAIL",
+      "error": "('Segment did not warp', 'EcruteakCity_WestGate', (10, 6))",
+      "actual_map": "EcruteakCity_WestGate",
+      "position": [
+        10,
+        6
+      ]
+    },
+    {
+      "label": "west-city-gate-inside-1-front",
+      "source": "EcruteakCity_WestGate",
+      "segment": [
+        10,
+        7
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "PASS",
+      "arrival": [
+        0,
+        38
+      ],
+      "walk_away": [
+        1,
+        38
+      ]
+    },
+    {
+      "label": "west-city-gate-inside-1-left",
+      "source": "EcruteakCity_WestGate",
+      "segment": [
+        10,
+        7
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "PASS",
+      "arrival": [
+        0,
+        38
+      ],
+      "walk_away": [
+        1,
+        38
+      ]
+    },
+    {
+      "label": "west-city-gate-inside-1-right",
+      "source": "EcruteakCity_WestGate",
+      "segment": [
+        10,
+        7
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "PASS",
+      "arrival": [
+        0,
+        38
+      ],
+      "walk_away": [
+        1,
+        38
+      ]
+    },
+    {
+      "label": "west-city-gate-inside-2-front",
+      "source": "EcruteakCity_WestGate",
+      "segment": [
+        10,
+        8
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "FAIL",
+      "error": "('Segment did not warp', 'EcruteakCity_WestGate', (10, 8))",
+      "actual_map": "EcruteakCity_WestGate",
+      "position": [
+        10,
+        8
+      ]
+    },
+    {
+      "label": "west-city-gate-inside-2-left",
+      "source": "EcruteakCity_WestGate",
+      "segment": [
+        10,
+        8
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "FAIL",
+      "error": "('Segment did not warp', 'EcruteakCity_WestGate', (10, 8))",
+      "actual_map": "EcruteakCity_WestGate",
+      "position": [
+        10,
+        8
+      ]
+    },
+    {
+      "label": "west-city-gate-inside-2-right",
+      "source": "EcruteakCity_WestGate",
+      "segment": [
+        10,
+        8
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "FAIL",
+      "error": "('Segment did not warp', 'EcruteakCity_WestGate', (10, 8))",
+      "actual_map": "EcruteakCity_WestGate",
+      "position": [
+        10,
+        8
+      ]
+    },
+    {
+      "label": "west-route-gate-outside-0-front",
+      "source": "JohtoRoute38",
+      "segment": [
+        63,
+        12
+      ],
+      "expected_destination": "EcruteakCity_WestGate",
+      "result": "PASS",
+      "arrival": [
+        1,
+        7
+      ],
+      "walk_away": [
+        1,
+        8
+      ]
+    },
+    {
+      "label": "west-route-gate-outside-0-left",
+      "source": "JohtoRoute38",
+      "segment": [
+        63,
+        12
+      ],
+      "expected_destination": "EcruteakCity_WestGate",
+      "result": "PASS",
+      "arrival": [
+        1,
+        7
+      ],
+      "walk_away": [
+        1,
+        8
+      ]
+    },
+    {
+      "label": "west-route-gate-outside-0-right",
+      "source": "JohtoRoute38",
+      "segment": [
+        63,
+        12
+      ],
+      "expected_destination": "EcruteakCity_WestGate",
+      "result": "inaccessible approach",
+      "position": [
+        61,
+        13
+      ]
+    },
+    {
+      "label": "west-route-gate-outside-1-front",
+      "source": "JohtoRoute38",
+      "segment": [
+        63,
+        13
+      ],
+      "expected_destination": "EcruteakCity_WestGate",
+      "result": "PASS",
+      "arrival": [
+        1,
+        7
+      ],
+      "walk_away": [
+        1,
+        8
+      ]
+    },
+    {
+      "label": "west-route-gate-outside-1-left",
+      "source": "JohtoRoute38",
+      "segment": [
+        63,
+        13
+      ],
+      "expected_destination": "EcruteakCity_WestGate",
+      "result": "PASS",
+      "arrival": [
+        1,
+        7
+      ],
+      "walk_away": [
+        1,
+        8
+      ]
+    },
+    {
+      "label": "west-route-gate-outside-1-right",
+      "source": "JohtoRoute38",
+      "segment": [
+        63,
+        13
+      ],
+      "expected_destination": "EcruteakCity_WestGate",
+      "result": "PASS",
+      "arrival": [
+        1,
+        7
+      ],
+      "walk_away": [
+        1,
+        8
+      ]
+    },
+    {
+      "label": "west-route-gate-outside-2-front",
+      "source": "JohtoRoute38",
+      "segment": [
+        63,
+        14
+      ],
+      "expected_destination": "EcruteakCity_WestGate",
+      "result": "PASS",
+      "arrival": [
+        1,
+        7
+      ],
+      "walk_away": [
+        1,
+        8
+      ]
+    },
+    {
+      "label": "west-route-gate-outside-2-left",
+      "source": "JohtoRoute38",
+      "segment": [
+        63,
+        14
+      ],
+      "expected_destination": "EcruteakCity_WestGate",
+      "result": "inaccessible approach",
+      "position": [
+        61,
+        13
+      ]
+    },
+    {
+      "label": "west-route-gate-outside-2-right",
+      "source": "JohtoRoute38",
+      "segment": [
+        63,
+        14
+      ],
+      "expected_destination": "EcruteakCity_WestGate",
+      "result": "PASS",
+      "arrival": [
+        1,
+        7
+      ],
+      "walk_away": [
+        1,
+        8
+      ]
+    },
+    {
+      "label": "west-route-gate-inside-0-front",
+      "source": "EcruteakCity_WestGate",
+      "segment": [
+        1,
+        6
+      ],
+      "expected_destination": "JohtoRoute38",
+      "result": "FAIL",
+      "error": "('Segment did not warp', 'EcruteakCity_WestGate', (1, 6))",
+      "actual_map": "EcruteakCity_WestGate",
+      "position": [
+        1,
+        6
+      ]
+    },
+    {
+      "label": "west-route-gate-inside-0-left",
+      "source": "EcruteakCity_WestGate",
+      "segment": [
+        1,
+        6
+      ],
+      "expected_destination": "JohtoRoute38",
+      "result": "FAIL",
+      "error": "('Segment did not warp', 'EcruteakCity_WestGate', (1, 6))",
+      "actual_map": "EcruteakCity_WestGate",
+      "position": [
+        1,
+        6
+      ]
+    },
+    {
+      "label": "west-route-gate-inside-0-right",
+      "source": "EcruteakCity_WestGate",
+      "segment": [
+        1,
+        6
+      ],
+      "expected_destination": "JohtoRoute38",
+      "result": "FAIL",
+      "error": "('Segment did not warp', 'EcruteakCity_WestGate', (1, 6))",
+      "actual_map": "EcruteakCity_WestGate",
+      "position": [
+        1,
+        6
+      ]
+    },
+    {
+      "label": "west-route-gate-inside-1-front",
+      "source": "EcruteakCity_WestGate",
+      "segment": [
+        1,
+        7
+      ],
+      "expected_destination": "JohtoRoute38",
+      "result": "PASS",
+      "arrival": [
+        63,
+        13
+      ],
+      "walk_away": [
+        62,
+        13
+      ]
+    },
+    {
+      "label": "west-route-gate-inside-1-left",
+      "source": "EcruteakCity_WestGate",
+      "segment": [
+        1,
+        7
+      ],
+      "expected_destination": "JohtoRoute38",
+      "result": "PASS",
+      "arrival": [
+        63,
+        13
+      ],
+      "walk_away": [
+        62,
+        13
+      ]
+    },
+    {
+      "label": "west-route-gate-inside-1-right",
+      "source": "EcruteakCity_WestGate",
+      "segment": [
+        1,
+        7
+      ],
+      "expected_destination": "JohtoRoute38",
+      "result": "PASS",
+      "arrival": [
+        63,
+        13
+      ],
+      "walk_away": [
+        62,
+        13
+      ]
+    },
+    {
+      "label": "west-route-gate-inside-2-front",
+      "source": "EcruteakCity_WestGate",
+      "segment": [
+        1,
+        8
+      ],
+      "expected_destination": "JohtoRoute38",
+      "result": "FAIL",
+      "error": "('Segment did not warp', 'EcruteakCity_WestGate', (1, 8))",
+      "actual_map": "EcruteakCity_WestGate",
+      "position": [
+        1,
+        8
+      ]
+    },
+    {
+      "label": "west-route-gate-inside-2-left",
+      "source": "EcruteakCity_WestGate",
+      "segment": [
+        1,
+        8
+      ],
+      "expected_destination": "JohtoRoute38",
+      "result": "FAIL",
+      "error": "('Segment did not warp', 'EcruteakCity_WestGate', (1, 8))",
+      "actual_map": "EcruteakCity_WestGate",
+      "position": [
+        1,
+        8
+      ]
+    },
+    {
+      "label": "west-route-gate-inside-2-right",
+      "source": "EcruteakCity_WestGate",
+      "segment": [
+        1,
+        8
+      ],
+      "expected_destination": "JohtoRoute38",
+      "result": "FAIL",
+      "error": "('Segment did not warp', 'EcruteakCity_WestGate', (1, 8))",
+      "actual_map": "EcruteakCity_WestGate",
+      "position": [
+        1,
+        8
+      ]
+    },
+    {
+      "label": "east-city-gate-outside-0-front",
+      "source": "EcruteakCity",
+      "segment": [
+        63,
+        46
+      ],
+      "expected_destination": "EcruteakCity_EastGate",
+      "result": "PASS",
+      "arrival": [
+        1,
+        7
+      ],
+      "walk_away": [
+        1,
+        8
+      ]
+    },
+    {
+      "label": "east-city-gate-outside-0-left",
+      "source": "EcruteakCity",
+      "segment": [
+        63,
+        46
+      ],
+      "expected_destination": "EcruteakCity_EastGate",
+      "result": "PASS",
+      "arrival": [
+        1,
+        7
+      ],
+      "walk_away": [
+        1,
+        8
+      ]
+    },
+    {
+      "label": "east-city-gate-outside-0-right",
+      "source": "EcruteakCity",
+      "segment": [
+        63,
+        46
+      ],
+      "expected_destination": "EcruteakCity_EastGate",
+      "result": "inaccessible approach",
+      "position": [
+        61,
+        47
+      ]
+    },
+    {
+      "label": "east-city-gate-outside-1-front",
+      "source": "EcruteakCity",
+      "segment": [
+        63,
+        47
+      ],
+      "expected_destination": "EcruteakCity_EastGate",
+      "result": "PASS",
+      "arrival": [
+        1,
+        7
+      ],
+      "walk_away": [
+        1,
+        8
+      ]
+    },
+    {
+      "label": "east-city-gate-outside-1-left",
+      "source": "EcruteakCity",
+      "segment": [
+        63,
+        47
+      ],
+      "expected_destination": "EcruteakCity_EastGate",
+      "result": "PASS",
+      "arrival": [
+        1,
+        7
+      ],
+      "walk_away": [
+        1,
+        8
+      ]
+    },
+    {
+      "label": "east-city-gate-outside-1-right",
+      "source": "EcruteakCity",
+      "segment": [
+        63,
+        47
+      ],
+      "expected_destination": "EcruteakCity_EastGate",
+      "result": "PASS",
+      "arrival": [
+        1,
+        7
+      ],
+      "walk_away": [
+        1,
+        8
+      ]
+    },
+    {
+      "label": "east-city-gate-outside-2-front",
+      "source": "EcruteakCity",
+      "segment": [
+        63,
+        48
+      ],
+      "expected_destination": "EcruteakCity_EastGate",
+      "result": "PASS",
+      "arrival": [
+        1,
+        7
+      ],
+      "walk_away": [
+        1,
+        8
+      ]
+    },
+    {
+      "label": "east-city-gate-outside-2-left",
+      "source": "EcruteakCity",
+      "segment": [
+        63,
+        48
+      ],
+      "expected_destination": "EcruteakCity_EastGate",
+      "result": "inaccessible approach",
+      "position": [
+        61,
+        47
+      ]
+    },
+    {
+      "label": "east-city-gate-outside-2-right",
+      "source": "EcruteakCity",
+      "segment": [
+        63,
+        48
+      ],
+      "expected_destination": "EcruteakCity_EastGate",
+      "result": "PASS",
+      "arrival": [
+        1,
+        7
+      ],
+      "walk_away": [
+        1,
+        8
+      ]
+    },
+    {
+      "label": "east-city-gate-inside-0-front",
+      "source": "EcruteakCity_EastGate",
+      "segment": [
+        1,
+        6
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "FAIL",
+      "error": "('Segment did not warp', 'EcruteakCity_EastGate', (1, 6))",
+      "actual_map": "EcruteakCity_EastGate",
+      "position": [
+        1,
+        6
+      ]
+    },
+    {
+      "label": "east-city-gate-inside-0-left",
+      "source": "EcruteakCity_EastGate",
+      "segment": [
+        1,
+        6
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "FAIL",
+      "error": "('Segment did not warp', 'EcruteakCity_EastGate', (1, 6))",
+      "actual_map": "EcruteakCity_EastGate",
+      "position": [
+        1,
+        6
+      ]
+    },
+    {
+      "label": "east-city-gate-inside-0-right",
+      "source": "EcruteakCity_EastGate",
+      "segment": [
+        1,
+        6
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "FAIL",
+      "error": "('Segment did not warp', 'EcruteakCity_EastGate', (1, 6))",
+      "actual_map": "EcruteakCity_EastGate",
+      "position": [
+        1,
+        6
+      ]
+    },
+    {
+      "label": "east-city-gate-inside-1-front",
+      "source": "EcruteakCity_EastGate",
+      "segment": [
+        1,
+        7
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "PASS",
+      "arrival": [
+        63,
+        47
+      ],
+      "walk_away": [
+        62,
+        47
+      ]
+    },
+    {
+      "label": "east-city-gate-inside-1-left",
+      "source": "EcruteakCity_EastGate",
+      "segment": [
+        1,
+        7
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "PASS",
+      "arrival": [
+        63,
+        47
+      ],
+      "walk_away": [
+        62,
+        47
+      ]
+    },
+    {
+      "label": "east-city-gate-inside-1-right",
+      "source": "EcruteakCity_EastGate",
+      "segment": [
+        1,
+        7
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "PASS",
+      "arrival": [
+        63,
+        47
+      ],
+      "walk_away": [
+        62,
+        47
+      ]
+    },
+    {
+      "label": "east-city-gate-inside-2-front",
+      "source": "EcruteakCity_EastGate",
+      "segment": [
+        1,
+        8
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "FAIL",
+      "error": "('Segment did not warp', 'EcruteakCity_EastGate', (1, 8))",
+      "actual_map": "EcruteakCity_EastGate",
+      "position": [
+        1,
+        8
+      ]
+    },
+    {
+      "label": "east-city-gate-inside-2-left",
+      "source": "EcruteakCity_EastGate",
+      "segment": [
+        1,
+        8
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "FAIL",
+      "error": "('Segment did not warp', 'EcruteakCity_EastGate', (1, 8))",
+      "actual_map": "EcruteakCity_EastGate",
+      "position": [
+        1,
+        8
+      ]
+    },
+    {
+      "label": "east-city-gate-inside-2-right",
+      "source": "EcruteakCity_EastGate",
+      "segment": [
+        1,
+        8
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "FAIL",
+      "error": "('Segment did not warp', 'EcruteakCity_EastGate', (1, 8))",
+      "actual_map": "EcruteakCity_EastGate",
+      "position": [
+        1,
+        8
+      ]
+    },
+    {
+      "label": "east-route-gate-outside-0-front",
+      "source": "JohtoRoute42",
+      "segment": [
+        0,
+        13
+      ],
+      "expected_destination": "EcruteakCity_EastGate",
+      "result": "PASS",
+      "arrival": [
+        10,
+        7
+      ],
+      "walk_away": [
+        10,
+        8
+      ]
+    },
+    {
+      "label": "east-route-gate-outside-0-left",
+      "source": "JohtoRoute42",
+      "segment": [
+        0,
+        13
+      ],
+      "expected_destination": "EcruteakCity_EastGate",
+      "result": "inaccessible approach",
+      "position": [
+        2,
+        14
+      ]
+    },
+    {
+      "label": "east-route-gate-outside-0-right",
+      "source": "JohtoRoute42",
+      "segment": [
+        0,
+        13
+      ],
+      "expected_destination": "EcruteakCity_EastGate",
+      "result": "PASS",
+      "arrival": [
+        10,
+        7
+      ],
+      "walk_away": [
+        10,
+        8
+      ]
+    },
+    {
+      "label": "east-route-gate-outside-1-front",
+      "source": "JohtoRoute42",
+      "segment": [
+        0,
+        14
+      ],
+      "expected_destination": "EcruteakCity_EastGate",
+      "result": "PASS",
+      "arrival": [
+        10,
+        7
+      ],
+      "walk_away": [
+        10,
+        8
+      ]
+    },
+    {
+      "label": "east-route-gate-outside-1-left",
+      "source": "JohtoRoute42",
+      "segment": [
+        0,
+        14
+      ],
+      "expected_destination": "EcruteakCity_EastGate",
+      "result": "PASS",
+      "arrival": [
+        10,
+        7
+      ],
+      "walk_away": [
+        10,
+        8
+      ]
+    },
+    {
+      "label": "east-route-gate-outside-1-right",
+      "source": "JohtoRoute42",
+      "segment": [
+        0,
+        14
+      ],
+      "expected_destination": "EcruteakCity_EastGate",
+      "result": "PASS",
+      "arrival": [
+        10,
+        7
+      ],
+      "walk_away": [
+        10,
+        8
+      ]
+    },
+    {
+      "label": "east-route-gate-outside-2-front",
+      "source": "JohtoRoute42",
+      "segment": [
+        0,
+        15
+      ],
+      "expected_destination": "EcruteakCity_EastGate",
+      "result": "PASS",
+      "arrival": [
+        10,
+        7
+      ],
+      "walk_away": [
+        10,
+        8
+      ]
+    },
+    {
+      "label": "east-route-gate-outside-2-left",
+      "source": "JohtoRoute42",
+      "segment": [
+        0,
+        15
+      ],
+      "expected_destination": "EcruteakCity_EastGate",
+      "result": "PASS",
+      "arrival": [
+        10,
+        7
+      ],
+      "walk_away": [
+        10,
+        8
+      ]
+    },
+    {
+      "label": "east-route-gate-outside-2-right",
+      "source": "JohtoRoute42",
+      "segment": [
+        0,
+        15
+      ],
+      "expected_destination": "EcruteakCity_EastGate",
+      "result": "inaccessible approach",
+      "position": [
+        2,
+        14
+      ]
+    },
+    {
+      "label": "east-route-gate-inside-0-front",
+      "source": "EcruteakCity_EastGate",
+      "segment": [
+        10,
+        6
+      ],
+      "expected_destination": "JohtoRoute42",
+      "result": "FAIL",
+      "error": "('Segment did not warp', 'EcruteakCity_EastGate', (10, 6))",
+      "actual_map": "EcruteakCity_EastGate",
+      "position": [
+        10,
+        6
+      ]
+    },
+    {
+      "label": "east-route-gate-inside-0-left",
+      "source": "EcruteakCity_EastGate",
+      "segment": [
+        10,
+        6
+      ],
+      "expected_destination": "JohtoRoute42",
+      "result": "FAIL",
+      "error": "('Segment did not warp', 'EcruteakCity_EastGate', (10, 6))",
+      "actual_map": "EcruteakCity_EastGate",
+      "position": [
+        10,
+        6
+      ]
+    },
+    {
+      "label": "east-route-gate-inside-0-right",
+      "source": "EcruteakCity_EastGate",
+      "segment": [
+        10,
+        6
+      ],
+      "expected_destination": "JohtoRoute42",
+      "result": "FAIL",
+      "error": "('Segment did not warp', 'EcruteakCity_EastGate', (10, 6))",
+      "actual_map": "EcruteakCity_EastGate",
+      "position": [
+        10,
+        6
+      ]
+    },
+    {
+      "label": "east-route-gate-inside-1-front",
+      "source": "EcruteakCity_EastGate",
+      "segment": [
+        10,
+        7
+      ],
+      "expected_destination": "JohtoRoute42",
+      "result": "PASS",
+      "arrival": [
+        0,
+        14
+      ],
+      "walk_away": [
+        1,
+        14
+      ]
+    },
+    {
+      "label": "east-route-gate-inside-1-left",
+      "source": "EcruteakCity_EastGate",
+      "segment": [
+        10,
+        7
+      ],
+      "expected_destination": "JohtoRoute42",
+      "result": "PASS",
+      "arrival": [
+        0,
+        14
+      ],
+      "walk_away": [
+        1,
+        14
+      ]
+    },
+    {
+      "label": "east-route-gate-inside-1-right",
+      "source": "EcruteakCity_EastGate",
+      "segment": [
+        10,
+        7
+      ],
+      "expected_destination": "JohtoRoute42",
+      "result": "PASS",
+      "arrival": [
+        0,
+        14
+      ],
+      "walk_away": [
+        1,
+        14
+      ]
+    },
+    {
+      "label": "east-route-gate-inside-2-front",
+      "source": "EcruteakCity_EastGate",
+      "segment": [
+        10,
+        8
+      ],
+      "expected_destination": "JohtoRoute42",
+      "result": "FAIL",
+      "error": "('Segment did not warp', 'EcruteakCity_EastGate', (10, 8))",
+      "actual_map": "EcruteakCity_EastGate",
+      "position": [
+        10,
+        8
+      ]
+    },
+    {
+      "label": "east-route-gate-inside-2-left",
+      "source": "EcruteakCity_EastGate",
+      "segment": [
+        10,
+        8
+      ],
+      "expected_destination": "JohtoRoute42",
+      "result": "FAIL",
+      "error": "('Segment did not warp', 'EcruteakCity_EastGate', (10, 8))",
+      "actual_map": "EcruteakCity_EastGate",
+      "position": [
+        10,
+        8
+      ]
+    },
+    {
+      "label": "east-route-gate-inside-2-right",
+      "source": "EcruteakCity_EastGate",
+      "segment": [
+        10,
+        8
+      ],
+      "expected_destination": "JohtoRoute42",
+      "result": "FAIL",
+      "error": "('Segment did not warp', 'EcruteakCity_EastGate', (10, 8))",
+      "actual_map": "EcruteakCity_EastGate",
+      "position": [
+        10,
+        8
+      ]
+    }
+  ]
+}

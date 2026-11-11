@@ -6,6 +6,12 @@
       "height": 6,
       "door_x": 3,
       "door_y": 5,
+      "door_cells": [
+        [
+          3,
+          5
+        ]
+      ],
       "palette": 6,
       "solid_footprint": [
         [
@@ -182,6 +188,12 @@
       "height": 4,
       "door_x": 3,
       "door_y": 3,
+      "door_cells": [
+        [
+          3,
+          3
+        ]
+      ],
       "palette": 7,
       "solid_footprint": [
         [
@@ -270,6 +282,16 @@
       "height": 5,
       "door_x": 7,
       "door_y": 4,
+      "door_cells": [
+        [
+          7,
+          4
+        ],
+        [
+          6,
+          4
+        ]
+      ],
       "palette": 7,
       "solid_footprint": [
         [
@@ -401,10 +423,6 @@
           4
         ],
         [
-          6,
-          4
-        ],
-        [
           8,
           4
         ],
@@ -478,6 +496,12 @@
       "height": 7,
       "door_x": 3,
       "door_y": 6,
+      "door_cells": [
+        [
+          3,
+          6
+        ]
+      ],
       "palette": 8,
       "solid_footprint": [
         [
@@ -654,6 +678,16 @@
       "height": 5,
       "door_x": 3,
       "door_y": 4,
+      "door_cells": [
+        [
+          3,
+          4
+        ],
+        [
+          2,
+          4
+        ]
+      ],
       "palette": 9,
       "solid_footprint": [
         [
@@ -721,10 +755,6 @@
           4
         ],
         [
-          2,
-          4
-        ],
-        [
           4,
           4
         ],
@@ -782,6 +812,12 @@
       "height": 5,
       "door_x": 2,
       "door_y": 4,
+      "door_cells": [
+        [
+          2,
+          4
+        ]
+      ],
       "palette": 10,
       "solid_footprint": [
         [
@@ -890,6 +926,12 @@
       "height": 4,
       "door_x": 1,
       "door_y": 3,
+      "door_cells": [
+        [
+          1,
+          3
+        ]
+      ],
       "palette": 11,
       "solid_footprint": [
         [

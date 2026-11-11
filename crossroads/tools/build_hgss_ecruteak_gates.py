@@ -41,12 +41,28 @@ def generate(check=False):
      source_index=next(i for i,e in enumerate(FACTS[header]['warps']) if (e['header']=='MAP_ECRUTEAK')==is_city)
      outer['warp_events'].append(dict(x=cx if is_city else rx,y=Y if is_city else Y-connection['offset'],elevation=0,dest_map=mid,dest_warp_id=str(source_index)))
    else:start=previous[0][0];assert len(previous)==3
+   source_index=next(i for i,e in enumerate(FACTS[header]['warps']) if (e['header']=='MAP_ECRUTEAK')==is_city)
+   # The visible horizontal aisle is three cells high. Keep canonical center
+   # indices0/1 and append upper/lower exit aliases2..5. Match each road row.
+   door_indices=[2+source_index*2,source_index,3+source_index*2]
+   for j,index in enumerate(door_indices):outer['warp_events'][start+j]['dest_warp_id']=str(index)
    endpoints['city' if is_city else 'route']=start+1
    label='Hgss_'+direction+('City' if is_city else 'Route')+'GateEnter';source_index=next(i for i,e in enumerate(FACTS[header]['warps']) if (e['header']=='MAP_ECRUTEAK')==is_city)
    old=[e for e in outer['coord_events'] if e['script']!=label];old += [dict(type='trigger',x=e['x'],y=e['y'],elevation=0,var='VAR_TEMP_0',var_value='0',script=label) for e in outer['warp_events'][start:start+3]];outer['coord_events']=old
-   scripts.append(f'{label}::\n    lockall\n    warp {mid}, {source_index}\n    waitstate\n    releaseall\n    end\n')
+   # Each coordinate script selects its own row; no collapse onto the middle.
+   old=[e for e in outer['coord_events'] if not e['script'].startswith(label)]
+   for j,index in enumerate(door_indices):
+    row_label=label+str(j);event=outer['warp_events'][start+j]
+    old.append(dict(type='trigger',x=event['x'],y=event['y'],elevation=0,var='VAR_TEMP_0',var_value='0',script=row_label))
+    scripts.append(f'{row_label}::\n    lockall\n    warp {mid}, {index}\n    waitstate\n    releaseall\n    end\n')
+   outer['coord_events']=old
   for e in FACTS[header]['warps']:
    is_city=e['header']=='MAP_ECRUTEAK';m['warp_events'].append(dict(x=e['x'],y=e['z'],elevation=0,dest_map=city['id'] if is_city else route['id'],dest_warp_id=str(endpoints['city' if is_city else 'route'])));t[e['z']*w+e['x']]=0x3000|ART['stone_warp']['start']
+  for i,e in enumerate(FACTS[header]['warps']):
+   is_city=e['header']=='MAP_ECRUTEAK';center=endpoints['city' if is_city else 'route']
+   for delta in [-1,1]:
+    m['warp_events'].append(dict(x=e['x'],y=e['z']+delta,elevation=0,dest_map=city['id'] if is_city else route['id'],dest_warp_id=str(center+delta)))
+    t[(e['z']+delta)*w+e['x']]=0x3000|ART['stone_warp']['start']
   text='West: ROUTE 38.\\nEast: ECRUTEAK CITY.' if direction=='West' else 'West: ECRUTEAK CITY.\\nEast: ROUTE 42.'
   scripts.append(f'Hgss_{direction}GateGuide::\n    msgbox Hgss_{direction}GateText, MSGBOX_NPC\n    end\nHgss_{direction}GateText:\n    .string "{text}$"\n')
   l=dict(id=m['layout'],name=name+'_Layout',width=w,height=h,primary_tileset='gTileset_Building',secondary_tileset='gTileset_HgssTemple',border_filepath=f'data/layouts/{name}/border.bin',blockdata_filepath=f'data/layouts/{name}/map.bin',layout_version='emerald')

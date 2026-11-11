@@ -1,3 +1,14 @@
+# QA08 current checkpoint — Ecruteak door repairs, Olivine authorized next
+
+Latest owner scope is Ecruteak then Olivine only, superseding the older pause.
+Recovered8d13bd62ec/QA07 A1. Reproduced/fixed Theater left leaf, Barrier right exit
+and upper/lower rows of both gatehouse aisles; historical indices/art/saves remain.
+See [QA08 source/tests/Delta checklist](hgss/ECRUTEAK_QA08.md),
+[building inventory](hgss/CITY_BUILDING_INVENTORY_QA08.json) and native qa/qa08.
+This is a repair checkpoint; green-roof identification, interior raster comparison,
+full gate exterior fidelity and owner acceptance remain open. Olivine canonical
+reconstruction is not delivered by this checkpoint. No expansion elsewhere.
+
 # Ecruteak QA07 — current owner review checkpoint
 
 Regional expansion is paused by owner instruction. Continue only Ecruteak until

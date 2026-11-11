@@ -15,6 +15,21 @@ def load(p):
   from build_eight_gym_integration import normalize_map
   value=normalize_map(p.split('/')[2],value)
   if p=='data/maps/EcruteakCity/map.json':
+   # Exact QA08 repair is tested before projecting to the historical contract.
+   assert len(value['warp_events'])==17
+   assert value['warp_events'][16]==dict(value['warp_events'][3],x=44,dest_warp_id='0')
+   assert value['warp_events'][1]['dest_warp_id']=='2'
+   assert value['warp_events'][3]['dest_warp_id']=='1'
+   value['warp_events'].pop(16)
+   value['warp_events'][1]['dest_warp_id']='0'
+   value['warp_events'][3]['dest_warp_id']='0'
+   for start in [9,12]:
+    assert [e['dest_warp_id'] for e in value['warp_events'][start:start+3]]==['2','0','3']
+    for e in value['warp_events'][start:start+3]:e['dest_warp_id']='0'
+   for direction in ['West','East']:
+    prefix='Hgss_'+direction+'CityGateEnter';es=[e for e in value['coord_events'] if e['script'].startswith(prefix)]
+    assert [e['script'] for e in es]==[prefix+str(j) for j in range(3)]
+    for e in es:e['script']=prefix
    # QA07 has a live authored base, including QA06's appended paired Gym door.
    # Validate the exact alias before projecting to this older 15-warp contract.
    assert value['warp_events'][15]==dict(value['warp_events'][4],x=25,dest_warp_id='1')

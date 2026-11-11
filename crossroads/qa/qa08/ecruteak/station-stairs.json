@@ -1,0 +1,207 @@
+{
+  "rom_sha256": "6aa3501c58f626a396179a2570a7d526fa0facd00311770e869c5a302fa6d23f",
+  "source_revision": "8d13bd62ecaa3fa73ef4b1870cbb44cb369eeba6",
+  "setup": "Copied battery; cold Continue, controller travel; RAM encounter suppression and opt-in survey desk only; no map/warp/position writes",
+  "results": [
+    {
+      "label": "trail-station-return-outside-0-front",
+      "source": "BellchimeTrail",
+      "segment": [
+        9,
+        14
+      ],
+      "expected_destination": "EcruteakCity_BarrierCorridor",
+      "result": "PASS",
+      "arrival": [
+        6,
+        3
+      ],
+      "walk_away": [
+        6,
+        4
+      ]
+    },
+    {
+      "label": "trail-station-return-outside-0-left",
+      "source": "BellchimeTrail",
+      "segment": [
+        9,
+        14
+      ],
+      "expected_destination": "EcruteakCity_BarrierCorridor",
+      "result": "PASS",
+      "arrival": [
+        6,
+        3
+      ],
+      "walk_away": [
+        6,
+        4
+      ]
+    },
+    {
+      "label": "trail-station-return-outside-0-right",
+      "source": "BellchimeTrail",
+      "segment": [
+        9,
+        14
+      ],
+      "expected_destination": "EcruteakCity_BarrierCorridor",
+      "result": "inaccessible approach",
+      "position": [
+        10,
+        15
+      ]
+    },
+    {
+      "label": "trail-station-return-inside-0-front",
+      "source": "EcruteakCity_BarrierCorridor",
+      "segment": [
+        6,
+        3
+      ],
+      "expected_destination": "BellchimeTrail",
+      "result": "PASS",
+      "arrival": [
+        9,
+        15
+      ],
+      "walk_away": [
+        10,
+        15
+      ]
+    },
+    {
+      "label": "trail-station-return-inside-0-left",
+      "source": "EcruteakCity_BarrierCorridor",
+      "segment": [
+        6,
+        3
+      ],
+      "expected_destination": "BellchimeTrail",
+      "result": "inaccessible approach",
+      "position": [
+        6,
+        5
+      ]
+    },
+    {
+      "label": "trail-station-return-inside-0-right",
+      "source": "EcruteakCity_BarrierCorridor",
+      "segment": [
+        6,
+        3
+      ],
+      "expected_destination": "BellchimeTrail",
+      "result": "PASS",
+      "arrival": [
+        9,
+        15
+      ],
+      "walk_away": [
+        10,
+        15
+      ]
+    },
+    {
+      "label": "station-corridor-stairs-outside-0-front",
+      "source": "EcruteakCity_BarrierStation",
+      "segment": [
+        15,
+        3
+      ],
+      "expected_destination": "EcruteakCity_BarrierCorridor",
+      "result": "PASS",
+      "arrival": [
+        3,
+        19
+      ],
+      "walk_away": [
+        3,
+        20
+      ]
+    },
+    {
+      "label": "station-corridor-stairs-outside-0-left",
+      "source": "EcruteakCity_BarrierStation",
+      "segment": [
+        15,
+        3
+      ],
+      "expected_destination": "EcruteakCity_BarrierCorridor",
+      "result": "inaccessible approach",
+      "position": [
+        15,
+        6
+      ]
+    },
+    {
+      "label": "station-corridor-stairs-outside-0-right",
+      "source": "EcruteakCity_BarrierStation",
+      "segment": [
+        15,
+        3
+      ],
+      "expected_destination": "EcruteakCity_BarrierCorridor",
+      "result": "PASS",
+      "arrival": [
+        3,
+        19
+      ],
+      "walk_away": [
+        3,
+        20
+      ]
+    },
+    {
+      "label": "station-corridor-stairs-inside-0-front",
+      "source": "EcruteakCity_BarrierCorridor",
+      "segment": [
+        3,
+        19
+      ],
+      "expected_destination": "EcruteakCity_BarrierStation",
+      "result": "PASS",
+      "arrival": [
+        15,
+        3
+      ],
+      "walk_away": [
+        15,
+        4
+      ]
+    },
+    {
+      "label": "station-corridor-stairs-inside-0-left",
+      "source": "EcruteakCity_BarrierCorridor",
+      "segment": [
+        3,
+        19
+      ],
+      "expected_destination": "EcruteakCity_BarrierStation",
+      "result": "inaccessible approach",
+      "position": [
+        3,
+        17
+      ]
+    },
+    {
+      "label": "station-corridor-stairs-inside-0-right",
+      "source": "EcruteakCity_BarrierCorridor",
+      "segment": [
+        3,
+        19
+      ],
+      "expected_destination": "EcruteakCity_BarrierStation",
+      "result": "PASS",
+      "arrival": [
+        15,
+        3
+      ],
+      "walk_away": [
+        15,
+        4
+      ]
+    }
+  ]
+}

@@ -67,7 +67,7 @@
       "y": 13,
       "elevation": 0,
       "dest_map": "MAP_ECRUTEAK_CITY_EAST_GATE",
-      "dest_warp_id": "1"
+      "dest_warp_id": "4"
     },
     {
       "x": 0,
@@ -81,7 +81,7 @@
       "y": 15,
       "elevation": 0,
       "dest_map": "MAP_ECRUTEAK_CITY_EAST_GATE",
-      "dest_warp_id": "1"
+      "dest_warp_id": "5"
     }
   ],
   "coord_events": [
@@ -92,7 +92,7 @@
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "Hgss_EastRouteGateEnter"
+      "script": "Hgss_EastRouteGateEnter0"
     },
     {
       "type": "trigger",
@@ -101,7 +101,7 @@
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "Hgss_EastRouteGateEnter"
+      "script": "Hgss_EastRouteGateEnter1"
     },
     {
       "type": "trigger",
@@ -110,7 +110,7 @@
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "Hgss_EastRouteGateEnter"
+      "script": "Hgss_EastRouteGateEnter2"
     }
   ],
   "bg_events": [

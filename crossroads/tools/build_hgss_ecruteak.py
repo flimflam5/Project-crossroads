@@ -29,7 +29,7 @@ def city_data(with_gym=True):
   a=specs[kind]
   for yy in range(a['height']):
    for xx in range(a['width']):
-    door=(xx,yy)==(a['door_x'],a['door_y']) or kind=='barrier' and (xx,yy)==(a['door_x']-1,a['door_y'])
+    door=[xx,yy] in a['door_cells']
     blocked=([xx,yy] in a['solid_footprint'] and not door) or (kind=='barrier' and not door) or (door and not open_door)
     t[(y+yy)*w+x+xx]=a['start']+yy*a['width']+xx+(0x400 if blocked else 0x3000)
  # Absolute HGSS event coordinates translated by(-352,-128). This preserves
@@ -97,9 +97,16 @@ def generate(check=False):
  for e,(x,y) in zip(m['warp_events'],positions):e.update(x=x,y=y)
  # Both visible leaves of the station doorway enter the same room. Append the
  # alias so all existing warp indices and return destinations remain stable.
- alias=dict(m['warp_events'][1],x=39,y=25)
+ alias=dict(m['warp_events'][1],x=39,y=25,dest_warp_id='0')
  if len(m['warp_events'])==7:m['warp_events'].append(alias)
  else:assert len(m['warp_events'])>=8;m['warp_events'][7]=alias
+ # Append missing Theater leaf; preserve every historical event index.
+ m['warp_events'][3]['dest_warp_id']='1'
+ m['warp_events'][1]['dest_warp_id']='2'
+ alias=dict(m['warp_events'][3],x=44,y=45,dest_warp_id='0')
+ matches=[i for i,e in enumerate(m['warp_events']) if e['dest_map']==alias['dest_map'] and e['x']==44 and e['y']==45]
+ if matches:assert matches==[16];m['warp_events'][16]=alias
+ else:assert len(m['warp_events'])==16;m['warp_events'].append(alias)
  # Sign/NPC identities and scripts remain stable; only their physical placements
  # follow the new town. Bell sign currently explicitly labels an unfinished approach.
  signpos=[(26,25),(42,26),(25,46),(43,46),(26,56),(43,56),(55,46),(8,37),(61,49),(39,61),(36,45)]

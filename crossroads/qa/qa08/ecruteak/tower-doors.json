@@ -1,0 +1,331 @@
+{
+  "rom_sha256": "6aa3501c58f626a396179a2570a7d526fa0facd00311770e869c5a302fa6d23f",
+  "source_revision": "8d13bd62ecaa3fa73ef4b1870cbb44cb369eeba6",
+  "setup": "Copied battery; cold Continue, controller travel; RAM encounter suppression and opt-in survey desk only; no map/warp/position writes",
+  "results": [
+    {
+      "label": "burned-tower-outside-0-front",
+      "source": "EcruteakCity",
+      "segment": [
+        24,
+        21
+      ],
+      "expected_destination": "EcruteakCity_BurnedTower",
+      "result": "PASS",
+      "arrival": [
+        11,
+        22
+      ],
+      "walk_away": [
+        11,
+        21
+      ]
+    },
+    {
+      "label": "burned-tower-outside-0-left",
+      "source": "EcruteakCity",
+      "segment": [
+        24,
+        21
+      ],
+      "expected_destination": "EcruteakCity_BurnedTower",
+      "result": "PASS",
+      "arrival": [
+        11,
+        22
+      ],
+      "walk_away": [
+        11,
+        21
+      ]
+    },
+    {
+      "label": "burned-tower-outside-0-right",
+      "source": "EcruteakCity",
+      "segment": [
+        24,
+        21
+      ],
+      "expected_destination": "EcruteakCity_BurnedTower",
+      "result": "PASS",
+      "arrival": [
+        11,
+        22
+      ],
+      "walk_away": [
+        11,
+        21
+      ]
+    },
+    {
+      "label": "burned-tower-inside-0-front",
+      "source": "EcruteakCity_BurnedTower",
+      "segment": [
+        11,
+        22
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "PASS",
+      "arrival": [
+        24,
+        22
+      ],
+      "walk_away": [
+        24,
+        23
+      ]
+    },
+    {
+      "label": "burned-tower-inside-0-left",
+      "source": "EcruteakCity_BurnedTower",
+      "segment": [
+        11,
+        22
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "PASS",
+      "arrival": [
+        24,
+        22
+      ],
+      "walk_away": [
+        24,
+        23
+      ]
+    },
+    {
+      "label": "burned-tower-inside-0-right",
+      "source": "EcruteakCity_BurnedTower",
+      "segment": [
+        11,
+        22
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "PASS",
+      "arrival": [
+        24,
+        22
+      ],
+      "walk_away": [
+        24,
+        23
+      ]
+    },
+    {
+      "label": "burned-tower-inside-1-front",
+      "source": "EcruteakCity_BurnedTower",
+      "segment": [
+        12,
+        22
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "PASS",
+      "arrival": [
+        24,
+        22
+      ],
+      "walk_away": [
+        24,
+        23
+      ]
+    },
+    {
+      "label": "burned-tower-inside-1-left",
+      "source": "EcruteakCity_BurnedTower",
+      "segment": [
+        12,
+        22
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "PASS",
+      "arrival": [
+        24,
+        22
+      ],
+      "walk_away": [
+        24,
+        23
+      ]
+    },
+    {
+      "label": "burned-tower-inside-1-right",
+      "source": "EcruteakCity_BurnedTower",
+      "segment": [
+        12,
+        22
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "PASS",
+      "arrival": [
+        24,
+        22
+      ],
+      "walk_away": [
+        24,
+        23
+      ]
+    },
+    {
+      "label": "bell-tower-outside-0-front",
+      "source": "BellchimeTrail",
+      "segment": [
+        37,
+        20
+      ],
+      "expected_destination": "EcruteakCity_BellTower",
+      "result": "PASS",
+      "arrival": [
+        11,
+        22
+      ],
+      "walk_away": [
+        11,
+        21
+      ]
+    },
+    {
+      "label": "bell-tower-outside-0-left",
+      "source": "BellchimeTrail",
+      "segment": [
+        37,
+        20
+      ],
+      "expected_destination": "EcruteakCity_BellTower",
+      "result": "PASS",
+      "arrival": [
+        11,
+        22
+      ],
+      "walk_away": [
+        11,
+        21
+      ]
+    },
+    {
+      "label": "bell-tower-outside-0-right",
+      "source": "BellchimeTrail",
+      "segment": [
+        37,
+        20
+      ],
+      "expected_destination": "EcruteakCity_BellTower",
+      "result": "PASS",
+      "arrival": [
+        11,
+        22
+      ],
+      "walk_away": [
+        11,
+        21
+      ]
+    },
+    {
+      "label": "bell-tower-inside-0-front",
+      "source": "EcruteakCity_BellTower",
+      "segment": [
+        11,
+        22
+      ],
+      "expected_destination": "BellchimeTrail",
+      "result": "PASS",
+      "arrival": [
+        37,
+        21
+      ],
+      "walk_away": [
+        37,
+        22
+      ]
+    },
+    {
+      "label": "bell-tower-inside-0-left",
+      "source": "EcruteakCity_BellTower",
+      "segment": [
+        11,
+        22
+      ],
+      "expected_destination": "BellchimeTrail",
+      "result": "PASS",
+      "arrival": [
+        37,
+        21
+      ],
+      "walk_away": [
+        37,
+        22
+      ]
+    },
+    {
+      "label": "bell-tower-inside-0-right",
+      "source": "EcruteakCity_BellTower",
+      "segment": [
+        11,
+        22
+      ],
+      "expected_destination": "BellchimeTrail",
+      "result": "PASS",
+      "arrival": [
+        37,
+        21
+      ],
+      "walk_away": [
+        37,
+        22
+      ]
+    },
+    {
+      "label": "bell-tower-inside-1-front",
+      "source": "EcruteakCity_BellTower",
+      "segment": [
+        12,
+        22
+      ],
+      "expected_destination": "BellchimeTrail",
+      "result": "PASS",
+      "arrival": [
+        37,
+        21
+      ],
+      "walk_away": [
+        37,
+        22
+      ]
+    },
+    {
+      "label": "bell-tower-inside-1-left",
+      "source": "EcruteakCity_BellTower",
+      "segment": [
+        12,
+        22
+      ],
+      "expected_destination": "BellchimeTrail",
+      "result": "PASS",
+      "arrival": [
+        37,
+        21
+      ],
+      "walk_away": [
+        37,
+        22
+      ]
+    },
+    {
+      "label": "bell-tower-inside-1-right",
+      "source": "EcruteakCity_BellTower",
+      "segment": [
+        12,
+        22
+      ],
+      "expected_destination": "BellchimeTrail",
+      "result": "PASS",
+      "arrival": [
+        37,
+        21
+      ],
+      "walk_away": [
+        37,
+        22
+      ]
+    }
+  ]
+}
