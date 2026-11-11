@@ -1,0 +1,24 @@
+{
+  "rom_sha256": "11ff9e15387d431c6bfb3b6f7b9642a922c80d7988be578aeedc93adc11d3632",
+  "setup": "Original read-only battery copied. Normal menu saves and cold boots. Second fixture alone seeds obsolete player XY6,40 in private RAM; no map/warp/flag/party writes.",
+  "records": [
+    {
+      "label": "outside-gate-normal-save",
+      "result": "PASS",
+      "position": [
+        7,
+        38
+      ],
+      "party_and_starter": "exactly retained"
+    },
+    {
+      "label": "old-gate-wall-coordinate-fixture",
+      "result": "PASS",
+      "position": [
+        7,
+        40
+      ],
+      "party_and_starter": "exactly retained"
+    }
+  ]
+}

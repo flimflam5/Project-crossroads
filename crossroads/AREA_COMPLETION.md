@@ -1,3 +1,22 @@
+# QA08 B2 — tested Ecruteak gate checkpoint
+
+See [B2 scope, tests and remaining requirements](hgss/ECRUTEAK_QA08_B2.md).
+Full-width green gates now have clear outside arrivals; all161 executable doorway
+approaches and the27-map/308-transition tour pass on the B2 bytes. Immutable
+route-seam/art/ID checks pass. Owner visual review and full interior raster
+comparisons remain open. Olivine is authorized next; no expansion elsewhere.
+
+# QA08 building-by-building review
+
+Latest authority is [Ecruteak QA08](hgss/ECRUTEAK_QA08.md) and
+[CITY_BUILDING_INVENTORY_QA08.json](hgss/CITY_BUILDING_INVENTORY_QA08.json).
+The earlier all-door claims did not independently test every open segment. QA08
+reproduces and repairs ten missing thresholds across Theater, Station and gates.
+Separate segment trials, full landmark traversal and service/save regressions run
+on the delivery ROM. Closed canonical facades, GBA deviations, missing references
+and owner review are explicit. Neither city is declared100%. Olivine is now
+authorized after Ecruteak; no other expansion is authorized in this pass.
+
 # Ecruteak QA07 completion review
 
 Use [the27-map checklist](hgss/ECRUTEAK_QA07.md) and its machine-readable

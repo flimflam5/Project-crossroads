@@ -1,3 +1,20 @@
+# QA08 B2 — tested Ecruteak gate checkpoint
+
+See [B2 scope, tests and remaining requirements](hgss/ECRUTEAK_QA08_B2.md).
+Full-width green gates now have clear outside arrivals; all161 executable doorway
+approaches and the27-map/308-transition tour pass on the B2 bytes. Immutable
+route-seam/art/ID checks pass. Owner visual review and full interior raster
+comparisons remain open. Olivine is authorized next; no expansion elsewhere.
+
+# QA08 current order
+
+Ecruteak doorway repair checkpoint, remaining Ecruteak reference/exterior issues,
+then Olivine canonical buildings/interiors/lighthouse/port. Preserve all accepted
+Black Ledger additions and designs. Do not expand elsewhere. See
+[hgss/ECRUTEAK_QA08.md](hgss/ECRUTEAK_QA08.md). No new story, rewards, badges,
+trainers or encounters. Owner visual acceptance remains separate from compilation
+and automated controller tests.
+
 # Current priority — Ecruteak owner review
 
 Stop regional expansion. Complete repairs/QA of the existing27-map Ecruteak scope,

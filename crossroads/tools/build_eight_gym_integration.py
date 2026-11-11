@@ -85,6 +85,7 @@ def generate(check=False):
   dirs=[R/'data/tilesets'/SOURCES[l[k]][0]/SOURCES[l[k]][1] for k in ['primary_tileset','secondary_tileset']]
   metas=[list(struct.unpack('<'+str((p/'metatiles.bin').stat().st_size//2)+'H',(p/'metatiles.bin').read_bytes())) for p in dirs];attrs=[list(struct.unpack('<'+str((p/'metatile_attributes.bin').stat().st_size//2)+'H',(p/'metatile_attributes.bin').read_bytes())) for p in dirs];sheets=[Image.open(p/'tiles.png').copy() for p in dirs]
   primary_ids={v&1023 for v in pre if v&1023<512};secondary_ids={v&1023 for v in pre if v&1023>=512}
+  primary_ids.update(c.get('shared_primary_ids',[]));secondary_ids.update(c.get('shared_secondary_ids',[]))
   # Preserve every neighbor cell potentially decoded in the seven-tile buffer.
   for conn in old['connections'] or []:
    other=ids[conn['map']];m=allmaps[other];ol=ls[m['layout']];ow,oh=ol['width'],ol['height'];b=(B/(other+'.bin')).read_bytes() if other in CODES else (R/ol['blockdata_filepath']).read_bytes();tt=struct.unpack('<'+str(ow*oh)+'H',b)
@@ -96,7 +97,7 @@ def generate(check=False):
      if id<512:primary_ids.add(id)
      elif ol['secondary_tileset']==l['secondary_tileset'] or other not in CODES and l['secondary_tileset']=='gTileset_WesternCity' and ol['secondary_tileset']=='gTileset_WesternCity':secondary_ids.add(id)
   refs=[v for id in primary_ids for v in metas[0][id*8:id*8+8]]+[v for id in secondary_ids for v in metas[1][(id-512)*8:(id-511)*8]]
-  protected={v&1023 for v in refs}|set(range(432,512))
+  protected={v&1023 for v in refs}|set(range(432,512))|set(c.get('shared_primary_graphics',[]))
   if SOURCES[l['secondary_tileset']][2]=='InitTilesetAnim_Slateport':protected|=set(range(512+224,512+228))
   banks={v>>12 for v in refs if any(sheets[(v&1023)//512].crop((((v&1023)%512)%16*8,((v&1023)%512)//16*8,((v&1023)%512)%16*8+8,((v&1023)%512)//16*8+8)).tobytes())};bank=next((i for i in range(6,13) if i not in banks),None);assert bank is not None,(n,'No palette slot',banks)
   free_meta=[i for i in range(512,1024) if i not in secondary_ids];assert len(free_meta)>=56
@@ -110,7 +111,9 @@ def generate(check=False):
    elif any(v in protected for v in pixels.get(key,[])):target=next(v for v in pixels[key] if v in protected);allocated[key]=target
    else:
     target=next((v for v in free_tiles if v not in protected),None);assert target is not None,(n,'Graphics capacity');allocated[key]=target;dest=sheets[target//512];j=target%512;dest.paste(im,(j%16*8,j//16*8))
-   protected.add(target);tile_mapping[id]=target
+   if n=='EcruteakCity':
+    for flags,mirrored in [(0x400,im.transpose(Image.Transpose.FLIP_LEFT_RIGHT)),(0x800,im.transpose(Image.Transpose.FLIP_TOP_BOTTOM)),(0xc00,im.transpose(Image.Transpose.FLIP_LEFT_RIGHT).transpose(Image.Transpose.FLIP_TOP_BOTTOM))]:allocated.setdefault(mirrored.tobytes(),target^flags)
+   protected.add(target&1023);tile_mapping[id]=target
   metas[1]+=[0]*(4096-len(metas[1]));attrs[1]+=[0]*(512-len(attrs[1]));stamp=[]
   for i,dest_id in enumerate(gym_meta):
    X,Y=origin[0]+i%8,origin[1]+i//8;oldvalue=baseline[Y*w+X];old_id=oldvalue&1023
@@ -118,7 +121,7 @@ def generate(check=False):
    # not become the new roof's ground plane.
    if old_id>=512 or oldvalue&0xc00:old_id=background&1023
    if oldfoot[0]<=X<oldfoot[0]+7 and oldfoot[1]<=Y<oldfoot[1]+6:old_id=background&1023
-   under=metas[old_id>=512][(old_id%512)*8:(old_id%512)*8+4];top=[tile_mapping[v&1023]|(v&0xc00)|(bank<<12) for v in asset_metas[i*8+4:i*8+8]];metas[1][(dest_id-512)*8:(dest_id-511)*8]=under+top;attrs[1][dest_id-512]=asset_attrs[i]
+   under=metas[old_id>=512][(old_id%512)*8:(old_id%512)*8+4];top=[(tile_mapping[v&1023]&1023)|((tile_mapping[v&1023]^v)&0xc00)|(bank<<12) for v in asset_metas[i*8+4:i*8+8]];metas[1][(dest_id-512)*8:(dest_id-511)*8]=under+top;attrs[1][dest_id-512]=asset_attrs[i]
    empty=all(not any(source.crop((((v&1023)-512)%16*8,((v&1023)-512)//16*8,((v&1023)-512)%16*8+8,((v&1023)-512)//16*8+8)).tobytes()) for v in asset_metas[i*8+4:i*8+8])
    stamp.append(None if empty else (asset_stamp[i]&~1023)|dest_id)
   # Own every resource explicitly. Shared General/Western/HGSS files stay intact.
@@ -140,7 +143,7 @@ def generate(check=False):
   inside['warp_events'][1]['dest_warp_id']=str(alias_index)
   if len(c['interior']['warp_events'])==1:
    il=ls[inside['layout']];ib=(R/il['blockdata_filepath']).read_bytes();it=list(struct.unpack('<'+str(il['width']*il['height'])+'H',ib));entry=inside['warp_events'][1];it[entry['y']*il['width']+entry['x']]=0x209;write(il['blockdata_filepath'],struct.pack('<'+str(len(it))+'H',*it))
-  plan=dict(code=code,origin=origin,doors=[list(door),[door[0]+1,door[1]]],old_footprint=oldfoot,background=background,stamp=stamp,metatile_ids=gym_meta,tile_mapping=tile_mapping,palette=bank,source_sha256=hashlib.sha256((gym/'building.png').read_bytes()).hexdigest(),exterior_warps=[index,alias_index],interior=inside['name'],legacy_primary_ids=sorted(primary_ids),legacy_secondary_ids=sorted(secondary_ids),allocated_new_tiles=len(allocated),adaptations=['Owner-provided custom Black Ledger Gym, not literal HGSS art']+(['Entrance one tile east for border clearance; old warp ID retained'] if dx else []))
+  plan=dict(code=code,origin=origin,doors=[list(door),[door[0]+1,door[1]]],old_footprint=oldfoot,background=background,stamp=stamp,metatile_ids=gym_meta,tile_mapping=tile_mapping,palette=bank,source_sha256=hashlib.sha256((gym/'building.png').read_bytes()).hexdigest(),exterior_warps=[index,alias_index],interior=inside['name'],legacy_primary_ids=sorted(primary_ids),legacy_secondary_ids=sorted(secondary_ids),allocated_new_tiles=len({v&1023 for v in allocated.values()}),adaptations=['Owner-provided custom Black Ledger Gym, not literal HGSS art']+(['Entrance one tile east for border clearance; old warp ID retained'] if dx else []))
   plans[n]=plan;relocate_layout(n,ls[l['id']]);js(f'data/maps/{n}/map.json',current);js(f'data/maps/{inside["name"]}/map.json',inside)
  # Commit resource plan before authoring data; overlay reads exactly this mapping.
  js('crossroads/art/eight_gyms_v1/integration.json',dict(version=1,baseline=BASE['source_commit'],cities=plans))

@@ -15,6 +15,29 @@ def load(p):
   from build_eight_gym_integration import normalize_map
   value=normalize_map(p.split('/')[2],value)
   if p=='data/maps/EcruteakCity/map.json':
+   # Exact QA08 repair is tested before projecting to the historical contract.
+   assert len(value['warp_events'])==23
+   anchors=[]
+   for ax,ys,mid in [(7,range(37,40),'MAP_ECRUTEAK_CITY_WEST_GATE'),(59,range(46,49),'MAP_ECRUTEAK_CITY_EAST_GATE')]:
+    anchors.extend(dict(x=ax,y=y,elevation=0,dest_map=mid,dest_warp_id=str(index)) for y,index in zip(ys,[2,0,3]))
+   assert value['warp_events'][17:]==anchors;del value['warp_events'][17:]
+   assert value['warp_events'][16]==dict(value['warp_events'][3],x=44,dest_warp_id='0')
+   assert value['warp_events'][1]['dest_warp_id']=='2'
+   assert value['warp_events'][3]['dest_warp_id']=='1'
+   value['warp_events'].pop(16)
+   value['warp_events'][1]['dest_warp_id']='0'
+   value['warp_events'][3]['dest_warp_id']='0'
+   for start in [9,12]:
+    assert [e['dest_warp_id'] for e in value['warp_events'][start:start+3]]==['2','0','3']
+    for e in value['warp_events'][start:start+3]:e['dest_warp_id']='0'
+   assert {e['x'] for e in value['warp_events'][9:12]}=={6}
+   for e in value['warp_events'][9:12]:e['x']=0
+   for direction in ['West','East']:
+    prefix='Hgss_'+direction+'CityGateEnter';es=[e for e in value['coord_events'] if e['script'].startswith(prefix)]
+    assert [e['script'] for e in es]==[prefix+str(j) for j in range(3)]
+    for e in es:
+     e['script']=prefix
+     if direction=='West':assert e['x']==6;e['x']=0
    # QA07 has a live authored base, including QA06's appended paired Gym door.
    # Validate the exact alias before projecting to this older 15-warp contract.
    assert value['warp_events'][15]==dict(value['warp_events'][4],x=25,dest_warp_id='1')
@@ -43,7 +66,7 @@ def validate():
   if old['id']!='LAYOUT_ECRUTEAK_CITY':
    expected=old.copy();name=next((n for n in CODES if load(f'data/maps/{n}/map.json')['layout']==old['id']),None)
    if name:relocate_layout(name,expected)
-   if old['id'] in ['LAYOUT_JOHTO_ROUTE37','LAYOUT_JOHTO_ROUTE38','LAYOUT_JOHTO_ROUTE42']:expected['primary_tileset']='gTileset_HgssEcruteakBuffer'
+   if old['id'] in ['LAYOUT_JOHTO_ROUTE37','LAYOUT_JOHTO_ROUTE38','LAYOUT_JOHTO_ROUTE42']:expected.update(primary_tileset='gTileset_HgssEcruteakGateBuffer',secondary_tileset='gTileset_WesternCity')
    assert expected==new,('Unrelated layout change',old['id'])
   else:assert new['width']==64 and new['height']==64 and new['primary_tileset']=='gTileset_BlGymEcruteakPrimary' and new['secondary_tileset']=='gTileset_BlGymEcruteakSecondary'
  for old,new in zip(baseline['heals']['heal_locations'],heals['heal_locations']):
@@ -81,7 +104,8 @@ def validate():
  ls={l['id']:l for l in layouts['layouts']}
  for n in ['JohtoRoute38','JohtoRoute37','JohtoRoute42']:
   old=(R/f'crossroads/hgss/contracts/{n}-0.9.1.bin').read_bytes();m=load(f'data/maps/{n}/map.json');l=ls[m['layout']]
-  assert (R/l['blockdata_filepath']).read_bytes()==repair(n,old,l['width'],l['height']),('Only compatible terrain buffer edits are allowed',n)
+  from hgss_ecruteak_family import route_data
+  assert (R/l['blockdata_filepath']).read_bytes()==route_data(n,repair(n,old,l['width'],l['height']),l['width'],l['height']),('Only explicit shared-resource remapping/east gate footprint allowed',n)
  m=load('data/maps/EcruteakCity/map.json');assert len(m['warp_events'])==15
  expected=[('MAP_ECRUTEAK_CITY_BURNED_TOWER',24,21),('MAP_ECRUTEAK_CITY_BARRIER_STATION',40,25),('MAP_ECRUTEAK_CITY_RESIDENCE',23,45),('MAP_ECRUTEAK_CITY_DANCE_THEATER',45,45),('MAP_ECRUTEAK_CITY_GYM',24,55),('MAP_ECRUTEAK_CITY_POKEMON_CENTER_1F',45,55),('MAP_ECRUTEAK_CITY_MART',53,45)]
  for e,(dest,x,y) in zip(m['warp_events'],expected):assert (e['dest_map'],e['x'],e['y'])==(dest,x,y)

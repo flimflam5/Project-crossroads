@@ -13,7 +13,7 @@ def record(label,steps,expected_final=None):
  for n,k in steps:
   while n:
    q=min(n,4);frames(q,k);n-=q;lib.emu_image(str(folder/f'{i:04}.png').encode());i+=1;visible+=int(arrow()['visible'])
- lib.emu_image(str(out/(label+'.png')).encode());subprocess.run(['ffmpeg','-y','-loglevel','error','-framerate','15','-i',str(folder/'%04d.png'),'-pix_fmt','yuv420p',str(out/(label+'.mp4'))],check=True);rows.append(dict(label=label,map=current(),position=pos(),arrow=arrow(),arrow_visible_samples=visible))
+ lib.emu_image(str(out/(label+'.png')).encode());subprocess.run(['ffmpeg','-y','-loglevel','error','-framerate','15','-i',str(folder/'%04d.png'),'-pix_fmt','yuv420p',str(out/(label+'.mp4'))],check=True);rows.append(dict(label=label,map=current(),position=pos(),arrow=arrow(),arrow_visible_samples=visible,tree_palette_rgb555=[read(0x05000040+i*2,2) for i in range(16)]))
  if a.expect_fixed:
   assert not visible,('Unintended walking arrow',label,visible)
   expected={'ordinary-paving-south':(40,61),'canopy-entry':(26,42),'trunk-from-north':(26,42),'trunk-west':(25,43),'trunk-east':(28,43),'trunk-south':(26,44),'house-west-gutter':(20,43),'house-west-base':(19,44),'house-front-wall':(22,46),'station-front-wall':(37,26)}
@@ -26,7 +26,9 @@ for label,point,k in [('house-west-gutter',(19,43),16),('house-west-base',(19,44
  if d['path'](current(),point) is not None:walk(point);record(label,[(32,k),(40,0)])
 # Independent expected targets come from the ground-plane facade contract, not
 # from enumerating cells that happen already to have a collision bit set.
-for label,point in [('dowsing-wall',(32,56)),('theater-wall',(44,46)),('center-wall',(44,56)),('mart-wall',(52,46)),('burned-wall',(23,22)),('custom-gym-wall',(23,56)),('northwest-private-wall',(22,37)),('north-private-wall',(34,37)),('southeast-private-wall',(53,56))]:
+# QA08 opens Theater44,45 as the missing left door leaf. Probe the actual
+# right wall46,45 instead; the new doorway smoke separately requires44,45 entry.
+for label,point in [('dowsing-wall',(32,56)),('theater-wall',(46,46)),('center-wall',(44,56)),('mart-wall',(52,46)),('burned-wall',(23,22)),('custom-gym-wall',(23,56)),('northwest-private-wall',(22,37)),('north-private-wall',(34,37)),('southeast-private-wall',(53,56))]:
  assert d['path'](current(),point) is not None,('Unreachable facade approach',label,point)
  walk(point);record(label,[(32,64),(40,0)],point)
 # Probe both trunk cells of all six freestanding trees from every accessible side.

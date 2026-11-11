@@ -1,0 +1,116 @@
+{
+  "rom_sha256": "11ff9e15387d431c6bfb3b6f7b9642a922c80d7988be578aeedc93adc11d3632",
+  "setup": "Copied old battery, cold Continue and controller travel; no map/warp/position RAM writes; RAM-only survey desk/encounter suppression from shared harness",
+  "records": [
+    {
+      "label": "west-front-wall-side",
+      "map": "EcruteakCity",
+      "approach": [
+        7,
+        40
+      ],
+      "button": 32,
+      "result": "blocked by solid wall through controller input",
+      "arrow_visible_samples": 0
+    },
+    {
+      "label": "east-front-wall-left",
+      "map": "EcruteakCity",
+      "approach": [
+        60,
+        52
+      ],
+      "button": 64,
+      "result": "blocked by solid wall through controller input",
+      "arrow_visible_samples": 0
+    },
+    {
+      "label": "east-front-wall-right",
+      "map": "EcruteakCity",
+      "approach": [
+        61,
+        52
+      ],
+      "button": 64,
+      "result": "blocked by solid wall through controller input",
+      "arrow_visible_samples": 0
+    },
+    {
+      "label": "east-rear-wall-left",
+      "map": "EcruteakCity",
+      "approach": [
+        60,
+        44
+      ],
+      "button": 128,
+      "result": "blocked by solid wall through controller input",
+      "arrow_visible_samples": 0
+    },
+    {
+      "label": "east-rear-wall-right",
+      "map": "EcruteakCity",
+      "approach": [
+        61,
+        44
+      ],
+      "button": 128,
+      "result": "blocked by solid wall through controller input",
+      "arrow_visible_samples": 0
+    },
+    {
+      "label": "east-front-wall-from-tunnel",
+      "map": "EcruteakCity",
+      "approach": [
+        61,
+        48
+      ],
+      "button": 128,
+      "result": "blocked by solid wall through controller input",
+      "arrow_visible_samples": 0
+    },
+    {
+      "label": "east-road-wall-12",
+      "map": "JohtoRoute42",
+      "approach": [
+        3,
+        12
+      ],
+      "button": 32,
+      "result": "blocked by solid wall through controller input",
+      "arrow_visible_samples": 0
+    },
+    {
+      "label": "east-road-wall-16",
+      "map": "JohtoRoute42",
+      "approach": [
+        3,
+        16
+      ],
+      "button": 32,
+      "result": "blocked by solid wall through controller input",
+      "arrow_visible_samples": 0
+    },
+    {
+      "label": "east-road-wall-17",
+      "map": "JohtoRoute42",
+      "approach": [
+        3,
+        17
+      ],
+      "button": 32,
+      "result": "blocked by solid wall through controller input",
+      "arrow_visible_samples": 0
+    },
+    {
+      "label": "east-road-wall-18",
+      "map": "JohtoRoute42",
+      "approach": [
+        3,
+        18
+      ],
+      "button": 32,
+      "result": "blocked by solid wall through controller input",
+      "arrow_visible_samples": 0
+    }
+  ]
+}

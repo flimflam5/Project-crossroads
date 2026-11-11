@@ -1716,3 +1716,13 @@ const struct Tileset gTileset_HgssEcruteakBuffer = {
 };
 #endif
 // END ECRUTEAK NEUTRAL BUFFER
+
+// BEGIN ECRUTEAK GATE BUFFER
+#if !IS_FRLG
+const struct Tileset gTileset_HgssEcruteakGateBuffer = {
+ .isCompressed=TRUE,.isSecondary=FALSE,.tiles=gTilesetTiles_HgssEcruteakGateBuffer,
+ .palettes=gTilesetPalettes_General,.metatiles=gMetatiles_HgssEcruteakGateBuffer,
+ .metatileAttributes=gMetatileAttributes_HgssEcruteakGateBuffer,.callback=InitTilesetAnim_General,
+};
+#endif
+// END ECRUTEAK GATE BUFFER

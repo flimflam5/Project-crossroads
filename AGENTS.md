@@ -164,3 +164,17 @@ Do not move to another area until the owner reviews Ecruteak. Closed canonical
 private facades/unsupported DS online services must be explained, not mislabeled
 as unexplained placeholders. Checklist and exact resume state: crossroads/hgss/
 ECRUTEAK_QA07.md when created. Other-region expansion notes above are superseded.
+
+## Latest owner priority — Ecruteak then Olivine / QA08
+
+Continue QA07 A1 without replacing accepted exteriors or custom Gyms. The owner
+now explicitly authorizes Olivine after Ecruteak; do not expand elsewhere. Audit
+every visible doorway segment in both directions, including side approaches and
+walking away after arrival. Never mask a missing segment by blocking half an
+opening or adding a locked-door message. Verify canonical closed facades against
+HGSS references. Complete each city's intended buildings, furnished interiors,
+services and landmark floors; preserve Joe's residence, Silph office and harbor
+office as documented Olivine additions. Append IDs only, preserve saves and all
+accepted systems. Record separate source/build/checksum checkpoints for the two
+cities, controller recordings, building checklists and remaining reference gaps.
+The owner still decides visual acceptance; do not call an unverified city100%.

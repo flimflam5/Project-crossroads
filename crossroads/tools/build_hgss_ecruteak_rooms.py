@@ -59,6 +59,7 @@ def generate(check=False):
    for i,o in enumerate(m['object_events'][1:6]):o.update(x=2+i*2,y=6,graphics_id='OBJ_EVENT_GFX_ECRUTEAK_PERFORMER')
   door=FACTS[header]['warps'][0];outside=2 if name=='EcruteakCity_Residence' else 3 if name=='EcruteakCity_DanceTheater' else 8
   m['warp_events']=[dict(x=door['x']+i,y=door['z'],elevation=0,dest_map=city['id'],dest_warp_id=str(outside)) for i in range(2)]
+  if name=='EcruteakCity_DanceTheater':m['warp_events'][0]['dest_warp_id']='16'
   for e in m['warp_events']:tiles[e['y']*w+e['x']]=ART['exit']['start']
   for o in m['object_events']:assert not tiles[o['y']*w+o['x']]&0xc00,(name,'Actor in furniture',o)
   l=dict(id=m['layout'],name=name+'_Layout',width=w,height=h,primary_tileset='gTileset_Building',secondary_tileset='gTileset_HgssTemple',border_filepath=f'data/layouts/{name}/border.bin',blockdata_filepath=f'data/layouts/{name}/map.bin',layout_version='emerald')

@@ -1,0 +1,936 @@
+{
+  "baseline_revision": "8d13bd62ecaa3fa73ef4b1870cbb44cb369eeba6",
+  "notes": "Explicit visible thresholds. Expanded during the per-building audit; not a city completion claim.",
+  "groups": [
+    {
+      "city": "ecruteak",
+      "label": "theater",
+      "outside": {
+        "map": "EcruteakCity",
+        "segments": [
+          [
+            44,
+            45
+          ],
+          [
+            45,
+            45
+          ]
+        ],
+        "anchor": [
+          41,
+          46
+        ]
+      },
+      "inside": {
+        "map": "EcruteakCity_DanceTheater",
+        "segments": [
+          [
+            7,
+            17
+          ],
+          [
+            8,
+            17
+          ]
+        ],
+        "anchor": [
+          7,
+          15
+        ]
+      }
+    },
+    {
+      "city": "ecruteak",
+      "label": "barrier",
+      "outside": {
+        "map": "EcruteakCity",
+        "segments": [
+          [
+            39,
+            25
+          ],
+          [
+            40,
+            25
+          ]
+        ],
+        "anchor": [
+          39,
+          28
+        ]
+      },
+      "inside": {
+        "map": "EcruteakCity_BarrierStation",
+        "segments": [
+          [
+            9,
+            11
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "anchor": [
+          9,
+          9
+        ]
+      }
+    },
+    {
+      "city": "ecruteak",
+      "label": "gym",
+      "outside": {
+        "map": "EcruteakCity",
+        "segments": [
+          [
+            24,
+            55
+          ],
+          [
+            25,
+            55
+          ]
+        ],
+        "anchor": [
+          24,
+          58
+        ]
+      },
+      "inside": {
+        "map": "EcruteakCity_Gym",
+        "segments": [
+          [
+            10,
+            21
+          ],
+          [
+            11,
+            21
+          ]
+        ],
+        "anchor": [
+          10,
+          19
+        ]
+      }
+    },
+    {
+      "city": "ecruteak",
+      "label": "southwest-house",
+      "outside": {
+        "map": "EcruteakCity",
+        "segments": [
+          [
+            23,
+            45
+          ]
+        ],
+        "anchor": [
+          23,
+          47
+        ]
+      },
+      "inside": {
+        "map": "EcruteakCity_Residence",
+        "segments": [
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            8
+          ]
+        ],
+        "anchor": [
+          4,
+          7
+        ]
+      }
+    },
+    {
+      "city": "ecruteak",
+      "label": "dowsing-house",
+      "outside": {
+        "map": "EcruteakCity",
+        "segments": [
+          [
+            34,
+            55
+          ]
+        ],
+        "anchor": [
+          34,
+          57
+        ]
+      },
+      "inside": {
+        "map": "EcruteakCity_DowsingHouse",
+        "segments": [
+          [
+            4,
+            8
+          ],
+          [
+            5,
+            8
+          ]
+        ],
+        "anchor": [
+          4,
+          7
+        ]
+      }
+    },
+    {
+      "city": "ecruteak",
+      "label": "center",
+      "outside": {
+        "map": "EcruteakCity",
+        "segments": [
+          [
+            45,
+            55
+          ]
+        ],
+        "anchor": [
+          45,
+          57
+        ]
+      },
+      "inside": {
+        "map": "EcruteakCity_PokemonCenter_1F",
+        "segments": [
+          [
+            8,
+            19
+          ],
+          [
+            9,
+            19
+          ]
+        ],
+        "anchor": [
+          8,
+          17
+        ]
+      }
+    },
+    {
+      "city": "ecruteak",
+      "label": "mart",
+      "outside": {
+        "map": "EcruteakCity",
+        "segments": [
+          [
+            53,
+            45
+          ]
+        ],
+        "anchor": [
+          53,
+          47
+        ]
+      },
+      "inside": {
+        "map": "EcruteakCity_Mart",
+        "segments": [
+          [
+            4,
+            11
+          ],
+          [
+            5,
+            11
+          ]
+        ],
+        "anchor": [
+          4,
+          9
+        ]
+      }
+    },
+    {
+      "city": "ecruteak",
+      "label": "burned-tower",
+      "outside": {
+        "map": "EcruteakCity",
+        "segments": [
+          [
+            24,
+            21
+          ]
+        ],
+        "anchor": [
+          24,
+          24
+        ]
+      },
+      "inside": {
+        "map": "EcruteakCity_BurnedTower",
+        "segments": [
+          [
+            11,
+            22
+          ],
+          [
+            12,
+            22
+          ]
+        ],
+        "anchor": [
+          11,
+          20
+        ]
+      }
+    },
+    {
+      "city": "ecruteak",
+      "label": "west-city-gate",
+      "outside": {
+        "map": "EcruteakCity",
+        "segments": [
+          [
+            6,
+            37
+          ],
+          [
+            6,
+            38
+          ],
+          [
+            6,
+            39
+          ]
+        ],
+        "anchor": [
+          8,
+          38
+        ],
+        "press": [
+          -1,
+          0
+        ],
+        "arrivals": [
+          [
+            7,
+            37
+          ],
+          [
+            7,
+            38
+          ],
+          [
+            7,
+            39
+          ]
+        ]
+      },
+      "inside": {
+        "map": "EcruteakCity_WestGate",
+        "segments": [
+          [
+            10,
+            6
+          ],
+          [
+            10,
+            7
+          ],
+          [
+            10,
+            8
+          ]
+        ],
+        "anchor": [
+          8,
+          7
+        ],
+        "press": [
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "city": "ecruteak",
+      "label": "west-route-gate",
+      "outside": {
+        "map": "JohtoRoute38",
+        "segments": [
+          [
+            63,
+            12
+          ],
+          [
+            63,
+            13
+          ],
+          [
+            63,
+            14
+          ]
+        ],
+        "anchor": [
+          61,
+          13
+        ],
+        "press": [
+          1,
+          0
+        ],
+        "arrivals": [
+          [
+            62,
+            12
+          ],
+          [
+            62,
+            13
+          ],
+          [
+            62,
+            14
+          ]
+        ]
+      },
+      "inside": {
+        "map": "EcruteakCity_WestGate",
+        "segments": [
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ]
+        ],
+        "anchor": [
+          3,
+          7
+        ],
+        "press": [
+          -1,
+          0
+        ]
+      }
+    },
+    {
+      "city": "ecruteak",
+      "label": "east-city-gate",
+      "outside": {
+        "map": "EcruteakCity",
+        "segments": [
+          [
+            63,
+            46
+          ],
+          [
+            63,
+            47
+          ],
+          [
+            63,
+            48
+          ]
+        ],
+        "anchor": [
+          61,
+          47
+        ],
+        "press": [
+          1,
+          0
+        ],
+        "arrivals": [
+          [
+            59,
+            46
+          ],
+          [
+            59,
+            47
+          ],
+          [
+            59,
+            48
+          ]
+        ]
+      },
+      "inside": {
+        "map": "EcruteakCity_EastGate",
+        "segments": [
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            1,
+            8
+          ]
+        ],
+        "anchor": [
+          3,
+          7
+        ],
+        "press": [
+          -1,
+          0
+        ]
+      }
+    },
+    {
+      "city": "ecruteak",
+      "label": "east-route-gate",
+      "outside": {
+        "map": "JohtoRoute42",
+        "segments": [
+          [
+            0,
+            13
+          ],
+          [
+            0,
+            14
+          ],
+          [
+            0,
+            15
+          ]
+        ],
+        "anchor": [
+          2,
+          14
+        ],
+        "press": [
+          -1,
+          0
+        ],
+        "arrivals": [
+          [
+            3,
+            13
+          ],
+          [
+            3,
+            14
+          ],
+          [
+            3,
+            15
+          ]
+        ]
+      },
+      "inside": {
+        "map": "EcruteakCity_EastGate",
+        "segments": [
+          [
+            10,
+            6
+          ],
+          [
+            10,
+            7
+          ],
+          [
+            10,
+            8
+          ]
+        ],
+        "anchor": [
+          8,
+          7
+        ],
+        "press": [
+          1,
+          0
+        ]
+      }
+    },
+    {
+      "city": "olivine",
+      "label": "olivine-residence",
+      "outside": {
+        "map": "OlivineCity",
+        "segments": [
+          [
+            11,
+            9
+          ]
+        ],
+        "anchor": [
+          11,
+          12
+        ]
+      },
+      "inside": {
+        "map": "OlivineCity_Residence",
+        "segments": [
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            7
+          ]
+        ],
+        "anchor": [
+          3,
+          5
+        ]
+      }
+    },
+    {
+      "city": "olivine",
+      "label": "olivine-neighbor",
+      "outside": {
+        "map": "OlivineCity",
+        "segments": [
+          [
+            21,
+            9
+          ]
+        ],
+        "anchor": [
+          21,
+          12
+        ]
+      },
+      "inside": {
+        "map": "OlivineCity_NeighborHouse",
+        "segments": [
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            7
+          ]
+        ],
+        "anchor": [
+          3,
+          5
+        ]
+      }
+    },
+    {
+      "city": "olivine",
+      "label": "olivine-gym",
+      "outside": {
+        "map": "OlivineCity",
+        "segments": [
+          [
+            38,
+            9
+          ],
+          [
+            39,
+            9
+          ]
+        ],
+        "anchor": [
+          38,
+          12
+        ]
+      },
+      "inside": {
+        "map": "OlivineCity_Gym",
+        "segments": [
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            7
+          ]
+        ],
+        "anchor": [
+          3,
+          5
+        ]
+      }
+    },
+    {
+      "city": "olivine",
+      "label": "olivine-center",
+      "outside": {
+        "map": "OlivineCity",
+        "segments": [
+          [
+            11,
+            21
+          ]
+        ],
+        "anchor": [
+          11,
+          24
+        ]
+      },
+      "inside": {
+        "map": "OlivineCity_PokemonCenter_1F",
+        "segments": [
+          [
+            7,
+            8
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "anchor": [
+          7,
+          6
+        ]
+      }
+    },
+    {
+      "city": "olivine",
+      "label": "olivine-mart",
+      "outside": {
+        "map": "OlivineCity",
+        "segments": [
+          [
+            22,
+            21
+          ]
+        ],
+        "anchor": [
+          22,
+          24
+        ]
+      },
+      "inside": {
+        "map": "OlivineCity_Mart",
+        "segments": [
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            7
+          ]
+        ],
+        "anchor": [
+          3,
+          5
+        ]
+      }
+    },
+    {
+      "city": "olivine",
+      "label": "olivine-silph",
+      "outside": {
+        "map": "OlivineCity",
+        "segments": [
+          [
+            37,
+            21
+          ]
+        ],
+        "anchor": [
+          37,
+          24
+        ]
+      },
+      "inside": {
+        "map": "OlivineCity_SilphOffice",
+        "segments": [
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            7
+          ]
+        ],
+        "anchor": [
+          3,
+          5
+        ]
+      }
+    },
+    {
+      "city": "olivine",
+      "label": "olivine-harbor",
+      "outside": {
+        "map": "OlivineCity",
+        "segments": [
+          [
+            12,
+            32
+          ]
+        ],
+        "anchor": [
+          12,
+          35
+        ]
+      },
+      "inside": {
+        "map": "OlivineCity_HarborOffice",
+        "segments": [
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            7
+          ]
+        ],
+        "anchor": [
+          3,
+          5
+        ]
+      }
+    },
+    {
+      "city": "olivine",
+      "label": "olivine-lighthouse",
+      "outside": {
+        "map": "OlivineCity",
+        "segments": [
+          [
+            39,
+            32
+          ]
+        ],
+        "anchor": [
+          39,
+          35
+        ]
+      },
+      "inside": {
+        "map": "OlivineCity_Lighthouse_1F",
+        "segments": [
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            7
+          ]
+        ],
+        "anchor": [
+          3,
+          5
+        ]
+      }
+    },
+    {
+      "city": "ecruteak",
+      "label": "bell-tower",
+      "outside": {
+        "map": "BellchimeTrail",
+        "segments": [
+          [
+            37,
+            20
+          ]
+        ],
+        "anchor": [
+          37,
+          22
+        ]
+      },
+      "inside": {
+        "map": "EcruteakCity_BellTower",
+        "segments": [
+          [
+            11,
+            22
+          ],
+          [
+            12,
+            22
+          ]
+        ],
+        "anchor": [
+          11,
+          20
+        ]
+      }
+    },
+    {
+      "city": "ecruteak",
+      "label": "trail-station-return",
+      "outside": {
+        "map": "BellchimeTrail",
+        "segments": [
+          [
+            9,
+            14
+          ]
+        ],
+        "anchor": [
+          10,
+          15
+        ]
+      },
+      "inside": {
+        "map": "EcruteakCity_BarrierCorridor",
+        "segments": [
+          [
+            6,
+            3
+          ]
+        ],
+        "anchor": [
+          6,
+          5
+        ],
+        "press": [
+          0,
+          -1
+        ]
+      }
+    },
+    {
+      "city": "ecruteak",
+      "label": "station-corridor-stairs",
+      "outside": {
+        "map": "EcruteakCity_BarrierStation",
+        "segments": [
+          [
+            15,
+            3
+          ]
+        ],
+        "anchor": [
+          15,
+          6
+        ]
+      },
+      "inside": {
+        "map": "EcruteakCity_BarrierCorridor",
+        "segments": [
+          [
+            3,
+            19
+          ]
+        ],
+        "anchor": [
+          3,
+          17
+        ]
+      }
+    }
+  ]
+}

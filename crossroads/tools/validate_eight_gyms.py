@@ -46,7 +46,10 @@ def validate():
    x,y=cell%8,cell//8;words=ms[1][(id-512)*8:(id-511)*8]
    assert at[1][id-512]>>12==(1 if y>=5 else 0)
    for j,v in enumerate(words[4:]):
-    tile=v&1023;k=tile%512;actual=newres[0][tile>=512].crop((k%16*8,k//16*8,k%16*8+8,k//16*8+8)).tobytes();expected=asset.crop((x*16+j%2*8,y*16+j//2*8,x*16+j%2*8+8,y*16+j//2*8+8)).tobytes();assert actual==expected,(n,'Owner Gym pixels changed',cell,j)
+    tile=v&1023;k=tile%512;actual=newres[0][tile>=512].crop((k%16*8,k//16*8,k%16*8+8,k//16*8+8))
+    if v&0x400:actual=actual.transpose(Image.Transpose.FLIP_LEFT_RIGHT)
+    if v&0x800:actual=actual.transpose(Image.Transpose.FLIP_TOP_BOTTOM)
+    expected=asset.crop((x*16+j%2*8,y*16+j//2*8,x*16+j%2*8+8,y*16+j//2*8+8)).tobytes();assert actual.tobytes()==expected,(n,'Owner Gym pixels changed',cell,j)
   count+=len(used)
  print('Eight owner asset checksums/pixel identity, all non-Gym pixels/collision/events, stable IDs and reciprocal two-door pairs: PASS',count,'legacy metatiles')
  return set(plans)

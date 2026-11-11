@@ -44,7 +44,8 @@ def decorate(name,data,w,h):
         for yy in range(24,27):t[yy*w+6]=0x3202
         t[25*w+8]=0x403
     from visual_repairs import repair
-    return repair(name,struct.pack('<'+str(len(t))+'H',*t),w,h)
+    from hgss_ecruteak_family import route_data
+    return route_data(name,repair(name,struct.pack('<'+str(len(t))+'H',*t),w,h),w,h)
 
 
 def rooms():

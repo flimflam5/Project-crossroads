@@ -9,13 +9,22 @@ def validate_gates():
  for r in reviews:
   n=r['name'];names.add(n);m=load(f'data/maps/{n}/map.json');route=load(f'data/maps/{r["route"]}/map.json');direction='West' if 'West' in n else 'East';c=next(c for c in city['connections'] if c['direction']==('left' if direction=='West' else 'right'));cl=ls[city['layout']];rl=ls[route['layout']]
   for i,e in enumerate(facts[r['source_header']]['warps']):
-   actual=m['warp_events'][i];assert (actual['x'],actual['y'])==(e['x'],e['z']);outer=city if e['header']=='MAP_ECRUTEAK' else route;key='city' if outer is city else 'route';indices=r[key+'_alias_indices'];assert actual['dest_map']==outer['id'] and int(actual['dest_warp_id'])==indices[1]
-   label='Hgss_'+direction+('City' if key=='city' else 'Route')+'GateEnter';triggers=[e for e in outer['coord_events'] if e['script']==label];assert len(triggers)==3
-   yy=list(range(37,40) if direction=='West' else range(46,49));expected=[(0 if direction=='West' else 63,y) if outer is city else (rl['width']-1 if direction=='West' else 0,y-c['offset']) for y in yy]
-   for j,point in zip(indices,expected):
-    event=outer['warp_events'][j];assert (event['x'],event['y'])==point and event['dest_map']==m['id'] and int(event['dest_warp_id'])==i
+   actual=m['warp_events'][i];assert (actual['x'],actual['y'])==(e['x'],e['z']);outer=city if e['header']=='MAP_ECRUTEAK' else route;key='city' if outer is city else 'route';indices=r[key+'_alias_indices'];arrivals=r[key+'_arrival_indices'];assert actual['dest_map']==outer['id'] and int(actual['dest_warp_id'])==arrivals[1]
+   label='Hgss_'+direction+('City' if key=='city' else 'Route')+'GateEnter';triggers=[e for e in outer['coord_events'] if e['script'].startswith(label)];assert len(triggers)==3
+   yy=list(range(37,40) if direction=='West' else range(46,49));expected=[(6 if direction=='West' else 63,y) if outer is city else (rl['width']-1 if direction=='West' else 0,y-c['offset']) for y in yy]
+   door_indices=[2+i*2,i,3+i*2]
+   for j,point,door_index in zip(indices,expected,door_indices):
+    event=outer['warp_events'][j];assert (event['x'],event['y'])==point and event['dest_map']==m['id'] and int(event['dest_warp_id'])==door_index
+    row=expected.index(point);back=m['warp_events'][door_index];assert back==dict(x=e['x'],y=e['z']+row-1,elevation=0,dest_map=outer['id'],dest_warp_id=str(arrivals[row]))
+    anchor=outer['warp_events'][arrivals[row]];ax=(7 if direction=='West' else 59) if outer is city else (rl['width']-2 if direction=='West' else 3)
+    assert anchor==dict(x=ax,y=point[1],elevation=0,dest_map=m['id'],dest_warp_id=str(door_index))
+    assert not any(q['x']==anchor['x'] and q['y']==anchor['y'] for q in outer['coord_events']),'Arrival must not re-enter the gate'
+    trigger=next(t for t in triggers if (t['x'],t['y'])==point)
+    assert trigger['script']==label+str(expected.index(point))
+    assert f"{trigger['script']}::\n    lockall\n    warp {m['id']}, {door_index}\n" in (R/'crossroads/scripts/hgss_gates.inc').read_text()
    assert {(e['x'],e['y']) for e in triggers}==set(expected)
    assert all(e['var']=='VAR_TEMP_0' and e['var_value']=='0' for e in triggers)
+  assert len(m['warp_events'])==6,'Missing visible gate aisle segment'
   l=ls[m['layout']];w,h=l['width'],l['height'];assert [w,h]==r['dimensions'];t=struct.unpack('<'+str(w*h)+'H',(R/l['blockdata_filepath']).read_bytes());actors={(e['x'],e['y']) for e in m['object_events']};public={(x,y) for y in range(h) for x in range(w) if not t[y*w+x]&0xc00 and (x,y) not in actors};seed={(e['x'],e['y']) for e in m['warp_events']};seen=set(seed);q=deque(seen)
   while q:
    x,y=q.popleft()

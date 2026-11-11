@@ -1,0 +1,1447 @@
+{
+  "rom_sha256": "1553ad2872e5e0b4a5c5d9fe78d47b73d8f7a541ce294e897db20ded8a6e21c3",
+  "source_revision": "8d13bd62ecaa3fa73ef4b1870cbb44cb369eeba6",
+  "setup": "Copied battery; cold Continue, controller travel; RAM encounter suppression and opt-in survey desk only; no map/warp/position writes",
+  "results": [
+    {
+      "label": "theater-outside-0-front",
+      "source": "EcruteakCity",
+      "segment": [
+        44,
+        45
+      ],
+      "expected_destination": "EcruteakCity_DanceTheater",
+      "result": "FAIL",
+      "error": "('Segment did not warp', 'EcruteakCity', (44, 46))",
+      "actual_map": "EcruteakCity",
+      "position": [
+        44,
+        46
+      ]
+    },
+    {
+      "label": "theater-outside-0-left",
+      "source": "EcruteakCity",
+      "segment": [
+        44,
+        45
+      ],
+      "expected_destination": "EcruteakCity_DanceTheater",
+      "result": "inaccessible approach",
+      "position": [
+        41,
+        46
+      ]
+    },
+    {
+      "label": "theater-outside-0-right",
+      "source": "EcruteakCity",
+      "segment": [
+        44,
+        45
+      ],
+      "expected_destination": "EcruteakCity_DanceTheater",
+      "result": "FAIL",
+      "error": "('Segment did not warp', 'EcruteakCity', (44, 46))",
+      "actual_map": "EcruteakCity",
+      "position": [
+        44,
+        46
+      ]
+    },
+    {
+      "label": "theater-outside-1-front",
+      "source": "EcruteakCity",
+      "segment": [
+        45,
+        45
+      ],
+      "expected_destination": "EcruteakCity_DanceTheater",
+      "result": "PASS",
+      "arrival": [
+        7,
+        17
+      ],
+      "walk_away": [
+        7,
+        16
+      ]
+    },
+    {
+      "label": "theater-outside-1-left",
+      "source": "EcruteakCity",
+      "segment": [
+        45,
+        45
+      ],
+      "expected_destination": "EcruteakCity_DanceTheater",
+      "result": "PASS",
+      "arrival": [
+        7,
+        17
+      ],
+      "walk_away": [
+        7,
+        16
+      ]
+    },
+    {
+      "label": "theater-outside-1-right",
+      "source": "EcruteakCity",
+      "segment": [
+        45,
+        45
+      ],
+      "expected_destination": "EcruteakCity_DanceTheater",
+      "result": "PASS",
+      "arrival": [
+        7,
+        17
+      ],
+      "walk_away": [
+        7,
+        16
+      ]
+    },
+    {
+      "label": "theater-inside-0-front",
+      "source": "EcruteakCity_DanceTheater",
+      "segment": [
+        7,
+        17
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "PASS",
+      "arrival": [
+        45,
+        46
+      ],
+      "walk_away": [
+        45,
+        47
+      ]
+    },
+    {
+      "label": "theater-inside-0-left",
+      "source": "EcruteakCity_DanceTheater",
+      "segment": [
+        7,
+        17
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "PASS",
+      "arrival": [
+        45,
+        46
+      ],
+      "walk_away": [
+        45,
+        47
+      ]
+    },
+    {
+      "label": "theater-inside-0-right",
+      "source": "EcruteakCity_DanceTheater",
+      "segment": [
+        7,
+        17
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "PASS",
+      "arrival": [
+        45,
+        46
+      ],
+      "walk_away": [
+        45,
+        47
+      ]
+    },
+    {
+      "label": "theater-inside-1-front",
+      "source": "EcruteakCity_DanceTheater",
+      "segment": [
+        8,
+        17
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "PASS",
+      "arrival": [
+        45,
+        46
+      ],
+      "walk_away": [
+        45,
+        47
+      ]
+    },
+    {
+      "label": "theater-inside-1-left",
+      "source": "EcruteakCity_DanceTheater",
+      "segment": [
+        8,
+        17
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "PASS",
+      "arrival": [
+        45,
+        46
+      ],
+      "walk_away": [
+        45,
+        47
+      ]
+    },
+    {
+      "label": "theater-inside-1-right",
+      "source": "EcruteakCity_DanceTheater",
+      "segment": [
+        8,
+        17
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "PASS",
+      "arrival": [
+        45,
+        46
+      ],
+      "walk_away": [
+        45,
+        47
+      ]
+    },
+    {
+      "label": "barrier-outside-0-front",
+      "source": "EcruteakCity",
+      "segment": [
+        39,
+        25
+      ],
+      "expected_destination": "EcruteakCity_BarrierStation",
+      "result": "PASS",
+      "arrival": [
+        9,
+        11
+      ],
+      "walk_away": [
+        9,
+        10
+      ]
+    },
+    {
+      "label": "barrier-outside-0-left",
+      "source": "EcruteakCity",
+      "segment": [
+        39,
+        25
+      ],
+      "expected_destination": "EcruteakCity_BarrierStation",
+      "result": "PASS",
+      "arrival": [
+        9,
+        11
+      ],
+      "walk_away": [
+        9,
+        10
+      ]
+    },
+    {
+      "label": "barrier-outside-0-right",
+      "source": "EcruteakCity",
+      "segment": [
+        39,
+        25
+      ],
+      "expected_destination": "EcruteakCity_BarrierStation",
+      "result": "PASS",
+      "arrival": [
+        9,
+        11
+      ],
+      "walk_away": [
+        9,
+        10
+      ]
+    },
+    {
+      "label": "barrier-outside-1-front",
+      "source": "EcruteakCity",
+      "segment": [
+        40,
+        25
+      ],
+      "expected_destination": "EcruteakCity_BarrierStation",
+      "result": "PASS",
+      "arrival": [
+        9,
+        11
+      ],
+      "walk_away": [
+        9,
+        10
+      ]
+    },
+    {
+      "label": "barrier-outside-1-left",
+      "source": "EcruteakCity",
+      "segment": [
+        40,
+        25
+      ],
+      "expected_destination": "EcruteakCity_BarrierStation",
+      "result": "PASS",
+      "arrival": [
+        9,
+        11
+      ],
+      "walk_away": [
+        9,
+        10
+      ]
+    },
+    {
+      "label": "barrier-outside-1-right",
+      "source": "EcruteakCity",
+      "segment": [
+        40,
+        25
+      ],
+      "expected_destination": "EcruteakCity_BarrierStation",
+      "result": "PASS",
+      "arrival": [
+        9,
+        11
+      ],
+      "walk_away": [
+        9,
+        10
+      ]
+    },
+    {
+      "label": "barrier-inside-0-front",
+      "source": "EcruteakCity_BarrierStation",
+      "segment": [
+        9,
+        11
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "PASS",
+      "arrival": [
+        40,
+        26
+      ],
+      "walk_away": [
+        40,
+        27
+      ]
+    },
+    {
+      "label": "barrier-inside-0-left",
+      "source": "EcruteakCity_BarrierStation",
+      "segment": [
+        9,
+        11
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "PASS",
+      "arrival": [
+        40,
+        26
+      ],
+      "walk_away": [
+        40,
+        27
+      ]
+    },
+    {
+      "label": "barrier-inside-0-right",
+      "source": "EcruteakCity_BarrierStation",
+      "segment": [
+        9,
+        11
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "PASS",
+      "arrival": [
+        40,
+        26
+      ],
+      "walk_away": [
+        40,
+        27
+      ]
+    },
+    {
+      "label": "barrier-inside-1-front",
+      "source": "EcruteakCity_BarrierStation",
+      "segment": [
+        10,
+        11
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "FAIL",
+      "error": "('Segment did not warp', 'EcruteakCity_BarrierStation', (10, 11))",
+      "actual_map": "EcruteakCity_BarrierStation",
+      "position": [
+        10,
+        11
+      ]
+    },
+    {
+      "label": "barrier-inside-1-left",
+      "source": "EcruteakCity_BarrierStation",
+      "segment": [
+        10,
+        11
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "FAIL",
+      "error": "('Segment did not warp', 'EcruteakCity_BarrierStation', (10, 11))",
+      "actual_map": "EcruteakCity_BarrierStation",
+      "position": [
+        10,
+        11
+      ]
+    },
+    {
+      "label": "barrier-inside-1-right",
+      "source": "EcruteakCity_BarrierStation",
+      "segment": [
+        10,
+        11
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "FAIL",
+      "error": "('Segment did not warp', 'EcruteakCity_BarrierStation', (10, 11))",
+      "actual_map": "EcruteakCity_BarrierStation",
+      "position": [
+        10,
+        11
+      ]
+    },
+    {
+      "label": "gym-outside-0-front",
+      "source": "EcruteakCity",
+      "segment": [
+        24,
+        55
+      ],
+      "expected_destination": "EcruteakCity_Gym",
+      "result": "PASS",
+      "arrival": [
+        10,
+        21
+      ],
+      "walk_away": [
+        10,
+        20
+      ]
+    },
+    {
+      "label": "gym-outside-0-left",
+      "source": "EcruteakCity",
+      "segment": [
+        24,
+        55
+      ],
+      "expected_destination": "EcruteakCity_Gym",
+      "result": "PASS",
+      "arrival": [
+        10,
+        21
+      ],
+      "walk_away": [
+        10,
+        20
+      ]
+    },
+    {
+      "label": "gym-outside-0-right",
+      "source": "EcruteakCity",
+      "segment": [
+        24,
+        55
+      ],
+      "expected_destination": "EcruteakCity_Gym",
+      "result": "PASS",
+      "arrival": [
+        10,
+        21
+      ],
+      "walk_away": [
+        10,
+        20
+      ]
+    },
+    {
+      "label": "gym-outside-1-front",
+      "source": "EcruteakCity",
+      "segment": [
+        25,
+        55
+      ],
+      "expected_destination": "EcruteakCity_Gym",
+      "result": "PASS",
+      "arrival": [
+        11,
+        21
+      ],
+      "walk_away": [
+        11,
+        20
+      ]
+    },
+    {
+      "label": "gym-outside-1-left",
+      "source": "EcruteakCity",
+      "segment": [
+        25,
+        55
+      ],
+      "expected_destination": "EcruteakCity_Gym",
+      "result": "PASS",
+      "arrival": [
+        11,
+        21
+      ],
+      "walk_away": [
+        11,
+        20
+      ]
+    },
+    {
+      "label": "gym-outside-1-right",
+      "source": "EcruteakCity",
+      "segment": [
+        25,
+        55
+      ],
+      "expected_destination": "EcruteakCity_Gym",
+      "result": "inaccessible approach",
+      "position": [
+        24,
+        58
+      ]
+    },
+    {
+      "label": "gym-inside-0-front",
+      "source": "EcruteakCity_Gym",
+      "segment": [
+        10,
+        21
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "PASS",
+      "arrival": [
+        24,
+        56
+      ],
+      "walk_away": [
+        24,
+        57
+      ]
+    },
+    {
+      "label": "gym-inside-0-left",
+      "source": "EcruteakCity_Gym",
+      "segment": [
+        10,
+        21
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "PASS",
+      "arrival": [
+        24,
+        56
+      ],
+      "walk_away": [
+        24,
+        57
+      ]
+    },
+    {
+      "label": "gym-inside-0-right",
+      "source": "EcruteakCity_Gym",
+      "segment": [
+        10,
+        21
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "PASS",
+      "arrival": [
+        24,
+        56
+      ],
+      "walk_away": [
+        24,
+        57
+      ]
+    },
+    {
+      "label": "gym-inside-1-front",
+      "source": "EcruteakCity_Gym",
+      "segment": [
+        11,
+        21
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "PASS",
+      "arrival": [
+        25,
+        56
+      ],
+      "walk_away": [
+        25,
+        57
+      ]
+    },
+    {
+      "label": "gym-inside-1-left",
+      "source": "EcruteakCity_Gym",
+      "segment": [
+        11,
+        21
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "PASS",
+      "arrival": [
+        25,
+        56
+      ],
+      "walk_away": [
+        25,
+        57
+      ]
+    },
+    {
+      "label": "gym-inside-1-right",
+      "source": "EcruteakCity_Gym",
+      "segment": [
+        11,
+        21
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "PASS",
+      "arrival": [
+        25,
+        56
+      ],
+      "walk_away": [
+        25,
+        57
+      ]
+    },
+    {
+      "label": "southwest-house-outside-0-front",
+      "source": "EcruteakCity",
+      "segment": [
+        23,
+        45
+      ],
+      "expected_destination": "EcruteakCity_Residence",
+      "result": "PASS",
+      "arrival": [
+        4,
+        8
+      ],
+      "walk_away": [
+        4,
+        7
+      ]
+    },
+    {
+      "label": "southwest-house-outside-0-left",
+      "source": "EcruteakCity",
+      "segment": [
+        23,
+        45
+      ],
+      "expected_destination": "EcruteakCity_Residence",
+      "result": "PASS",
+      "arrival": [
+        4,
+        8
+      ],
+      "walk_away": [
+        4,
+        7
+      ]
+    },
+    {
+      "label": "southwest-house-outside-0-right",
+      "source": "EcruteakCity",
+      "segment": [
+        23,
+        45
+      ],
+      "expected_destination": "EcruteakCity_Residence",
+      "result": "PASS",
+      "arrival": [
+        4,
+        8
+      ],
+      "walk_away": [
+        4,
+        7
+      ]
+    },
+    {
+      "label": "southwest-house-inside-0-front",
+      "source": "EcruteakCity_Residence",
+      "segment": [
+        4,
+        8
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "PASS",
+      "arrival": [
+        23,
+        46
+      ],
+      "walk_away": [
+        23,
+        47
+      ]
+    },
+    {
+      "label": "southwest-house-inside-0-left",
+      "source": "EcruteakCity_Residence",
+      "segment": [
+        4,
+        8
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "PASS",
+      "arrival": [
+        23,
+        46
+      ],
+      "walk_away": [
+        23,
+        47
+      ]
+    },
+    {
+      "label": "southwest-house-inside-0-right",
+      "source": "EcruteakCity_Residence",
+      "segment": [
+        4,
+        8
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "PASS",
+      "arrival": [
+        23,
+        46
+      ],
+      "walk_away": [
+        23,
+        47
+      ]
+    },
+    {
+      "label": "southwest-house-inside-1-front",
+      "source": "EcruteakCity_Residence",
+      "segment": [
+        5,
+        8
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "PASS",
+      "arrival": [
+        23,
+        46
+      ],
+      "walk_away": [
+        23,
+        47
+      ]
+    },
+    {
+      "label": "southwest-house-inside-1-left",
+      "source": "EcruteakCity_Residence",
+      "segment": [
+        5,
+        8
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "PASS",
+      "arrival": [
+        23,
+        46
+      ],
+      "walk_away": [
+        23,
+        47
+      ]
+    },
+    {
+      "label": "southwest-house-inside-1-right",
+      "source": "EcruteakCity_Residence",
+      "segment": [
+        5,
+        8
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "PASS",
+      "arrival": [
+        23,
+        46
+      ],
+      "walk_away": [
+        23,
+        47
+      ]
+    },
+    {
+      "label": "dowsing-house-outside-0-front",
+      "source": "EcruteakCity",
+      "segment": [
+        34,
+        55
+      ],
+      "expected_destination": "EcruteakCity_DowsingHouse",
+      "result": "PASS",
+      "arrival": [
+        4,
+        8
+      ],
+      "walk_away": [
+        4,
+        7
+      ]
+    },
+    {
+      "label": "dowsing-house-outside-0-left",
+      "source": "EcruteakCity",
+      "segment": [
+        34,
+        55
+      ],
+      "expected_destination": "EcruteakCity_DowsingHouse",
+      "result": "PASS",
+      "arrival": [
+        4,
+        8
+      ],
+      "walk_away": [
+        4,
+        7
+      ]
+    },
+    {
+      "label": "dowsing-house-outside-0-right",
+      "source": "EcruteakCity",
+      "segment": [
+        34,
+        55
+      ],
+      "expected_destination": "EcruteakCity_DowsingHouse",
+      "result": "PASS",
+      "arrival": [
+        4,
+        8
+      ],
+      "walk_away": [
+        4,
+        7
+      ]
+    },
+    {
+      "label": "dowsing-house-inside-0-front",
+      "source": "EcruteakCity_DowsingHouse",
+      "segment": [
+        4,
+        8
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "PASS",
+      "arrival": [
+        34,
+        56
+      ],
+      "walk_away": [
+        34,
+        57
+      ]
+    },
+    {
+      "label": "dowsing-house-inside-0-left",
+      "source": "EcruteakCity_DowsingHouse",
+      "segment": [
+        4,
+        8
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "PASS",
+      "arrival": [
+        34,
+        56
+      ],
+      "walk_away": [
+        34,
+        57
+      ]
+    },
+    {
+      "label": "dowsing-house-inside-0-right",
+      "source": "EcruteakCity_DowsingHouse",
+      "segment": [
+        4,
+        8
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "PASS",
+      "arrival": [
+        34,
+        56
+      ],
+      "walk_away": [
+        34,
+        57
+      ]
+    },
+    {
+      "label": "dowsing-house-inside-1-front",
+      "source": "EcruteakCity_DowsingHouse",
+      "segment": [
+        5,
+        8
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "PASS",
+      "arrival": [
+        34,
+        56
+      ],
+      "walk_away": [
+        34,
+        57
+      ]
+    },
+    {
+      "label": "dowsing-house-inside-1-left",
+      "source": "EcruteakCity_DowsingHouse",
+      "segment": [
+        5,
+        8
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "PASS",
+      "arrival": [
+        34,
+        56
+      ],
+      "walk_away": [
+        34,
+        57
+      ]
+    },
+    {
+      "label": "dowsing-house-inside-1-right",
+      "source": "EcruteakCity_DowsingHouse",
+      "segment": [
+        5,
+        8
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "PASS",
+      "arrival": [
+        34,
+        56
+      ],
+      "walk_away": [
+        34,
+        57
+      ]
+    },
+    {
+      "label": "center-outside-0-front",
+      "source": "EcruteakCity",
+      "segment": [
+        45,
+        55
+      ],
+      "expected_destination": "EcruteakCity_PokemonCenter_1F",
+      "result": "PASS",
+      "arrival": [
+        8,
+        19
+      ],
+      "walk_away": [
+        8,
+        18
+      ]
+    },
+    {
+      "label": "center-outside-0-left",
+      "source": "EcruteakCity",
+      "segment": [
+        45,
+        55
+      ],
+      "expected_destination": "EcruteakCity_PokemonCenter_1F",
+      "result": "PASS",
+      "arrival": [
+        8,
+        19
+      ],
+      "walk_away": [
+        8,
+        18
+      ]
+    },
+    {
+      "label": "center-outside-0-right",
+      "source": "EcruteakCity",
+      "segment": [
+        45,
+        55
+      ],
+      "expected_destination": "EcruteakCity_PokemonCenter_1F",
+      "result": "PASS",
+      "arrival": [
+        8,
+        19
+      ],
+      "walk_away": [
+        8,
+        18
+      ]
+    },
+    {
+      "label": "center-inside-0-front",
+      "source": "EcruteakCity_PokemonCenter_1F",
+      "segment": [
+        8,
+        19
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "PASS",
+      "arrival": [
+        45,
+        56
+      ],
+      "walk_away": [
+        45,
+        57
+      ]
+    },
+    {
+      "label": "center-inside-0-left",
+      "source": "EcruteakCity_PokemonCenter_1F",
+      "segment": [
+        8,
+        19
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "PASS",
+      "arrival": [
+        45,
+        56
+      ],
+      "walk_away": [
+        45,
+        57
+      ]
+    },
+    {
+      "label": "center-inside-0-right",
+      "source": "EcruteakCity_PokemonCenter_1F",
+      "segment": [
+        8,
+        19
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "PASS",
+      "arrival": [
+        45,
+        56
+      ],
+      "walk_away": [
+        45,
+        57
+      ]
+    },
+    {
+      "label": "center-inside-1-front",
+      "source": "EcruteakCity_PokemonCenter_1F",
+      "segment": [
+        9,
+        19
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "PASS",
+      "arrival": [
+        45,
+        56
+      ],
+      "walk_away": [
+        45,
+        57
+      ]
+    },
+    {
+      "label": "center-inside-1-left",
+      "source": "EcruteakCity_PokemonCenter_1F",
+      "segment": [
+        9,
+        19
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "PASS",
+      "arrival": [
+        45,
+        56
+      ],
+      "walk_away": [
+        45,
+        57
+      ]
+    },
+    {
+      "label": "center-inside-1-right",
+      "source": "EcruteakCity_PokemonCenter_1F",
+      "segment": [
+        9,
+        19
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "PASS",
+      "arrival": [
+        45,
+        56
+      ],
+      "walk_away": [
+        45,
+        57
+      ]
+    },
+    {
+      "label": "mart-outside-0-front",
+      "source": "EcruteakCity",
+      "segment": [
+        53,
+        45
+      ],
+      "expected_destination": "EcruteakCity_Mart",
+      "result": "PASS",
+      "arrival": [
+        4,
+        11
+      ],
+      "walk_away": [
+        4,
+        10
+      ]
+    },
+    {
+      "label": "mart-outside-0-left",
+      "source": "EcruteakCity",
+      "segment": [
+        53,
+        45
+      ],
+      "expected_destination": "EcruteakCity_Mart",
+      "result": "PASS",
+      "arrival": [
+        4,
+        11
+      ],
+      "walk_away": [
+        4,
+        10
+      ]
+    },
+    {
+      "label": "mart-outside-0-right",
+      "source": "EcruteakCity",
+      "segment": [
+        53,
+        45
+      ],
+      "expected_destination": "EcruteakCity_Mart",
+      "result": "PASS",
+      "arrival": [
+        4,
+        11
+      ],
+      "walk_away": [
+        4,
+        10
+      ]
+    },
+    {
+      "label": "mart-inside-0-front",
+      "source": "EcruteakCity_Mart",
+      "segment": [
+        4,
+        11
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "PASS",
+      "arrival": [
+        53,
+        46
+      ],
+      "walk_away": [
+        53,
+        47
+      ]
+    },
+    {
+      "label": "mart-inside-0-left",
+      "source": "EcruteakCity_Mart",
+      "segment": [
+        4,
+        11
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "PASS",
+      "arrival": [
+        53,
+        46
+      ],
+      "walk_away": [
+        53,
+        47
+      ]
+    },
+    {
+      "label": "mart-inside-0-right",
+      "source": "EcruteakCity_Mart",
+      "segment": [
+        4,
+        11
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "PASS",
+      "arrival": [
+        53,
+        46
+      ],
+      "walk_away": [
+        53,
+        47
+      ]
+    },
+    {
+      "label": "mart-inside-1-front",
+      "source": "EcruteakCity_Mart",
+      "segment": [
+        5,
+        11
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "PASS",
+      "arrival": [
+        53,
+        46
+      ],
+      "walk_away": [
+        53,
+        47
+      ]
+    },
+    {
+      "label": "mart-inside-1-left",
+      "source": "EcruteakCity_Mart",
+      "segment": [
+        5,
+        11
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "PASS",
+      "arrival": [
+        53,
+        46
+      ],
+      "walk_away": [
+        53,
+        47
+      ]
+    },
+    {
+      "label": "mart-inside-1-right",
+      "source": "EcruteakCity_Mart",
+      "segment": [
+        5,
+        11
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "PASS",
+      "arrival": [
+        53,
+        46
+      ],
+      "walk_away": [
+        53,
+        47
+      ]
+    },
+    {
+      "label": "burned-tower-outside-0-front",
+      "source": "EcruteakCity",
+      "segment": [
+        24,
+        21
+      ],
+      "expected_destination": "EcruteakCity_BurnedTower",
+      "result": "PASS",
+      "arrival": [
+        11,
+        22
+      ],
+      "walk_away": [
+        11,
+        21
+      ]
+    },
+    {
+      "label": "burned-tower-outside-0-left",
+      "source": "EcruteakCity",
+      "segment": [
+        24,
+        21
+      ],
+      "expected_destination": "EcruteakCity_BurnedTower",
+      "result": "PASS",
+      "arrival": [
+        11,
+        22
+      ],
+      "walk_away": [
+        11,
+        21
+      ]
+    },
+    {
+      "label": "burned-tower-outside-0-right",
+      "source": "EcruteakCity",
+      "segment": [
+        24,
+        21
+      ],
+      "expected_destination": "EcruteakCity_BurnedTower",
+      "result": "PASS",
+      "arrival": [
+        11,
+        22
+      ],
+      "walk_away": [
+        11,
+        21
+      ]
+    },
+    {
+      "label": "burned-tower-inside-0-front",
+      "source": "EcruteakCity_BurnedTower",
+      "segment": [
+        11,
+        22
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "PASS",
+      "arrival": [
+        24,
+        22
+      ],
+      "walk_away": [
+        24,
+        23
+      ]
+    },
+    {
+      "label": "burned-tower-inside-0-left",
+      "source": "EcruteakCity_BurnedTower",
+      "segment": [
+        11,
+        22
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "PASS",
+      "arrival": [
+        24,
+        22
+      ],
+      "walk_away": [
+        24,
+        23
+      ]
+    },
+    {
+      "label": "burned-tower-inside-0-right",
+      "source": "EcruteakCity_BurnedTower",
+      "segment": [
+        11,
+        22
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "PASS",
+      "arrival": [
+        24,
+        22
+      ],
+      "walk_away": [
+        24,
+        23
+      ]
+    },
+    {
+      "label": "burned-tower-inside-1-front",
+      "source": "EcruteakCity_BurnedTower",
+      "segment": [
+        12,
+        22
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "PASS",
+      "arrival": [
+        24,
+        22
+      ],
+      "walk_away": [
+        24,
+        23
+      ]
+    },
+    {
+      "label": "burned-tower-inside-1-left",
+      "source": "EcruteakCity_BurnedTower",
+      "segment": [
+        12,
+        22
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "PASS",
+      "arrival": [
+        24,
+        22
+      ],
+      "walk_away": [
+        24,
+        23
+      ]
+    },
+    {
+      "label": "burned-tower-inside-1-right",
+      "source": "EcruteakCity_BurnedTower",
+      "segment": [
+        12,
+        22
+      ],
+      "expected_destination": "EcruteakCity",
+      "result": "PASS",
+      "arrival": [
+        24,
+        22
+      ],
+      "walk_away": [
+        24,
+        23
+      ]
+    }
+  ]
+}

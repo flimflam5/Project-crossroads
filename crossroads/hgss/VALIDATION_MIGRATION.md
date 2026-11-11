@@ -121,3 +121,50 @@ remain identical. This completes the earlier C build guards at the script layer.
 The next strict CI step exposed the existing Joe graphics validator's separate
 historical enum input690485c997. Shallow CI now fetches that exact commit as well
 as QA06, preserving both comparisons instead of relaxing the enum assertion.
+
+## QA08 visible doorway segments
+
+The owner requires every visible opening segment, rather than a round trip that
+can silently choose its working half. city_doorway_smoke.py uses an independently
+specified threshold manifest, restores exact-ROM trial states, requires the named
+segment and checks walking away after arrival. Inaccessible side landings are
+explicit skips; front approaches must exist. No fallback segment satisfies a case.
+
+The immutable QA06 validator now permits only these additional exact deltas:
+Theater leaf44,45 opens with unchanged pixels and appended city warp16; its paired
+interior return destination changes. Station exit10,11 gains the same exit graphic
+as9,11 and appended warp2; staircase1 remains stable. Gate floor edge cells at
+x1/10,y6/8 gain step warp behavior with unchanged stone artwork; aliases2–5 and
+the exact matching road row scripts/destinations are independently required.
+All other metadata, raw interiors, exterior pixels, map/layout/heal IDs and shared
+graphics remain pinned. Historical projection verifies these deltas before undoing
+only them for older contracts. The Theater wall probe moves to46,45 because44,45
+is the newly required doorway; a separate positive entry regression covers44,45.
+
+Neutral gate portals still require exact coordinate/temporary-variable/script
+destination agreement. Their label regex changes only to require row suffix0/1/2,
+not to permit arbitrary inert warps. Native animated doors use behavior0x69 and
+can have a solid closed leaf; open thresholds0x60/ladder0x61 must be unblocked.
+
+The423-pixel canopy assertion remains exact. It now records the actual hardware
+tree palette during the capture, so night tint does not incorrectly compare with
+daytime source RGB. Geometry/mask colors still come from immutable General art;
+Joe over any expected leaf pixel still fails. No tolerance or pixel is removed.
+
+## QA08 B2 gate model and arrivals
+
+A separate immutable d3ab461912 comparison now pins8,699 city/route cells and all
+six neighbouring viewport strips outside the98 declared gate cells/three sign
+cells. All49 new shared primary gate metatiles must match decoded pixels and
+attributes on both sides. Route secondary resources, IDs/heals, unchanged cells
+and all eight owner Gym pixels remain exact. The Gym pixel decoder now honours
+hardware H/V flips; it still compares every displayed pixel without tolerance.
+
+Twelve appended return-only landing anchors are explicitly enumerated. They must
+be ordinary walkable floor, free of entry scripts, with the exact active entrance
+and paired gate exit. Connectivity tools omit only these non-trigger anchors as
+active doors; every other inert warp remains an error. Controller tests require
+correct outside coordinates and a real walk-away after every exit. The west
+entrance is restored to the canonical source x6 while existing warp IDs remain.
+Historical projections accept only these exact changes, then retain all earlier
+assertions. Sign relocation is three explicit cell differences, not a broad mask.

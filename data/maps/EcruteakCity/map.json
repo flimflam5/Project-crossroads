@@ -123,7 +123,7 @@
       "y": 25,
       "elevation": 0,
       "dest_map": "MAP_ECRUTEAK_CITY_BARRIER_STATION",
-      "dest_warp_id": "0"
+      "dest_warp_id": "2"
     },
     {
       "x": 23,
@@ -137,7 +137,7 @@
       "y": 45,
       "elevation": 0,
       "dest_map": "MAP_ECRUTEAK_CITY_DANCE_THEATER",
-      "dest_warp_id": "0"
+      "dest_warp_id": "1"
     },
     {
       "x": 24,
@@ -175,32 +175,32 @@
       "dest_warp_id": "0"
     },
     {
-      "x": 0,
+      "x": 6,
       "y": 37,
       "elevation": 0,
       "dest_map": "MAP_ECRUTEAK_CITY_WEST_GATE",
-      "dest_warp_id": "0"
+      "dest_warp_id": "2"
     },
     {
-      "x": 0,
+      "x": 6,
       "y": 38,
       "elevation": 0,
       "dest_map": "MAP_ECRUTEAK_CITY_WEST_GATE",
       "dest_warp_id": "0"
     },
     {
-      "x": 0,
+      "x": 6,
       "y": 39,
       "elevation": 0,
       "dest_map": "MAP_ECRUTEAK_CITY_WEST_GATE",
-      "dest_warp_id": "0"
+      "dest_warp_id": "3"
     },
     {
       "x": 63,
       "y": 46,
       "elevation": 0,
       "dest_map": "MAP_ECRUTEAK_CITY_EAST_GATE",
-      "dest_warp_id": "0"
+      "dest_warp_id": "2"
     },
     {
       "x": 63,
@@ -214,7 +214,7 @@
       "y": 48,
       "elevation": 0,
       "dest_map": "MAP_ECRUTEAK_CITY_EAST_GATE",
-      "dest_warp_id": "0"
+      "dest_warp_id": "3"
     },
     {
       "x": 25,
@@ -222,35 +222,84 @@
       "elevation": 0,
       "dest_map": "MAP_ECRUTEAK_CITY_GYM",
       "dest_warp_id": "1"
+    },
+    {
+      "x": 44,
+      "y": 45,
+      "elevation": 0,
+      "dest_map": "MAP_ECRUTEAK_CITY_DANCE_THEATER",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 7,
+      "y": 37,
+      "elevation": 0,
+      "dest_map": "MAP_ECRUTEAK_CITY_WEST_GATE",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 7,
+      "y": 38,
+      "elevation": 0,
+      "dest_map": "MAP_ECRUTEAK_CITY_WEST_GATE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 7,
+      "y": 39,
+      "elevation": 0,
+      "dest_map": "MAP_ECRUTEAK_CITY_WEST_GATE",
+      "dest_warp_id": "3"
+    },
+    {
+      "x": 59,
+      "y": 46,
+      "elevation": 0,
+      "dest_map": "MAP_ECRUTEAK_CITY_EAST_GATE",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 59,
+      "y": 47,
+      "elevation": 0,
+      "dest_map": "MAP_ECRUTEAK_CITY_EAST_GATE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 59,
+      "y": 48,
+      "elevation": 0,
+      "dest_map": "MAP_ECRUTEAK_CITY_EAST_GATE",
+      "dest_warp_id": "3"
     }
   ],
   "coord_events": [
     {
       "type": "trigger",
-      "x": 0,
+      "x": 6,
       "y": 37,
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "Hgss_WestCityGateEnter"
+      "script": "Hgss_WestCityGateEnter0"
     },
     {
       "type": "trigger",
-      "x": 0,
+      "x": 6,
       "y": 38,
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "Hgss_WestCityGateEnter"
+      "script": "Hgss_WestCityGateEnter1"
     },
     {
       "type": "trigger",
-      "x": 0,
+      "x": 6,
       "y": 39,
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "Hgss_WestCityGateEnter"
+      "script": "Hgss_WestCityGateEnter2"
     },
     {
       "type": "trigger",
@@ -259,7 +308,7 @@
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "Hgss_EastCityGateEnter"
+      "script": "Hgss_EastCityGateEnter0"
     },
     {
       "type": "trigger",
@@ -268,7 +317,7 @@
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "Hgss_EastCityGateEnter"
+      "script": "Hgss_EastCityGateEnter1"
     },
     {
       "type": "trigger",
@@ -277,7 +326,7 @@
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "Hgss_EastCityGateEnter"
+      "script": "Hgss_EastCityGateEnter2"
     }
   ],
   "bg_events": [
@@ -339,16 +388,16 @@
     },
     {
       "type": "sign",
-      "x": 8,
-      "y": 37,
+      "x": 9,
+      "y": 40,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Ecruteak_WestSign"
     },
     {
       "type": "sign",
-      "x": 61,
-      "y": 49,
+      "x": 59,
+      "y": 52,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Ecruteak_EastBoundary"

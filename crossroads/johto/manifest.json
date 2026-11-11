@@ -356,7 +356,7 @@
           "y": 12,
           "elevation": 0,
           "dest_map": "MAP_ECRUTEAK_CITY_WEST_GATE",
-          "dest_warp_id": "1"
+          "dest_warp_id": "4"
         },
         {
           "x": 63,
@@ -370,7 +370,28 @@
           "y": 14,
           "elevation": 0,
           "dest_map": "MAP_ECRUTEAK_CITY_WEST_GATE",
+          "dest_warp_id": "5"
+        },
+        {
+          "x": 62,
+          "y": 12,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_WEST_GATE",
+          "dest_warp_id": "4"
+        },
+        {
+          "x": 62,
+          "y": 13,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_WEST_GATE",
           "dest_warp_id": "1"
+        },
+        {
+          "x": 62,
+          "y": 14,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_WEST_GATE",
+          "dest_warp_id": "5"
         }
       ],
       "services": "",
@@ -414,7 +435,7 @@
           "y": 25,
           "elevation": 0,
           "dest_map": "MAP_ECRUTEAK_CITY_BARRIER_STATION",
-          "dest_warp_id": "0"
+          "dest_warp_id": "2"
         },
         {
           "x": 23,
@@ -428,7 +449,7 @@
           "y": 45,
           "elevation": 0,
           "dest_map": "MAP_ECRUTEAK_CITY_DANCE_THEATER",
-          "dest_warp_id": "0"
+          "dest_warp_id": "1"
         },
         {
           "x": 24,
@@ -466,32 +487,32 @@
           "dest_warp_id": "0"
         },
         {
-          "x": 0,
+          "x": 6,
           "y": 37,
           "elevation": 0,
           "dest_map": "MAP_ECRUTEAK_CITY_WEST_GATE",
-          "dest_warp_id": "0"
+          "dest_warp_id": "2"
         },
         {
-          "x": 0,
+          "x": 6,
           "y": 38,
           "elevation": 0,
           "dest_map": "MAP_ECRUTEAK_CITY_WEST_GATE",
           "dest_warp_id": "0"
         },
         {
-          "x": 0,
+          "x": 6,
           "y": 39,
           "elevation": 0,
           "dest_map": "MAP_ECRUTEAK_CITY_WEST_GATE",
-          "dest_warp_id": "0"
+          "dest_warp_id": "3"
         },
         {
           "x": 63,
           "y": 46,
           "elevation": 0,
           "dest_map": "MAP_ECRUTEAK_CITY_EAST_GATE",
-          "dest_warp_id": "0"
+          "dest_warp_id": "2"
         },
         {
           "x": 63,
@@ -505,7 +526,7 @@
           "y": 48,
           "elevation": 0,
           "dest_map": "MAP_ECRUTEAK_CITY_EAST_GATE",
-          "dest_warp_id": "0"
+          "dest_warp_id": "3"
         },
         {
           "x": 25,
@@ -513,6 +534,55 @@
           "elevation": 0,
           "dest_map": "MAP_ECRUTEAK_CITY_GYM",
           "dest_warp_id": "1"
+        },
+        {
+          "x": 44,
+          "y": 45,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_DANCE_THEATER",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 7,
+          "y": 37,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_WEST_GATE",
+          "dest_warp_id": "2"
+        },
+        {
+          "x": 7,
+          "y": 38,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_WEST_GATE",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 7,
+          "y": 39,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_WEST_GATE",
+          "dest_warp_id": "3"
+        },
+        {
+          "x": 59,
+          "y": 46,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_EAST_GATE",
+          "dest_warp_id": "2"
+        },
+        {
+          "x": 59,
+          "y": 47,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_EAST_GATE",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 59,
+          "y": 48,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_EAST_GATE",
+          "dest_warp_id": "3"
         }
       ],
       "services": "",
@@ -638,7 +708,7 @@
           "y": 17,
           "elevation": 0,
           "dest_map": "MAP_ECRUTEAK_CITY",
-          "dest_warp_id": "3"
+          "dest_warp_id": "16"
         },
         {
           "x": 8,
@@ -4503,7 +4573,7 @@
           "y": 13,
           "elevation": 0,
           "dest_map": "MAP_ECRUTEAK_CITY_EAST_GATE",
-          "dest_warp_id": "1"
+          "dest_warp_id": "4"
         },
         {
           "x": 0,
@@ -4517,7 +4587,28 @@
           "y": 15,
           "elevation": 0,
           "dest_map": "MAP_ECRUTEAK_CITY_EAST_GATE",
+          "dest_warp_id": "5"
+        },
+        {
+          "x": 3,
+          "y": 13,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_EAST_GATE",
+          "dest_warp_id": "4"
+        },
+        {
+          "x": 3,
+          "y": 14,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_EAST_GATE",
           "dest_warp_id": "1"
+        },
+        {
+          "x": 3,
+          "y": 15,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY_EAST_GATE",
+          "dest_warp_id": "5"
         }
       ]
     },
@@ -5934,7 +6025,7 @@
           "y": 11,
           "elevation": 0,
           "dest_map": "MAP_ECRUTEAK_CITY",
-          "dest_warp_id": "1"
+          "dest_warp_id": "7"
         },
         {
           "x": 15,
@@ -5942,6 +6033,13 @@
           "elevation": 0,
           "dest_map": "MAP_ECRUTEAK_CITY_BARRIER_CORRIDOR",
           "dest_warp_id": "0"
+        },
+        {
+          "x": 10,
+          "y": 11,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY",
+          "dest_warp_id": "1"
         }
       ],
       "coverage": "structural/build/runtime checks recorded separately; no owner QA yet"
@@ -6144,14 +6242,42 @@
           "y": 7,
           "elevation": 0,
           "dest_map": "MAP_ECRUTEAK_CITY",
-          "dest_warp_id": "10"
+          "dest_warp_id": "18"
         },
         {
           "x": 1,
           "y": 7,
           "elevation": 0,
           "dest_map": "MAP_JOHTO_ROUTE38",
-          "dest_warp_id": "1"
+          "dest_warp_id": "4"
+        },
+        {
+          "x": 10,
+          "y": 6,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY",
+          "dest_warp_id": "17"
+        },
+        {
+          "x": 10,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY",
+          "dest_warp_id": "19"
+        },
+        {
+          "x": 1,
+          "y": 6,
+          "elevation": 0,
+          "dest_map": "MAP_JOHTO_ROUTE38",
+          "dest_warp_id": "3"
+        },
+        {
+          "x": 1,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_JOHTO_ROUTE38",
+          "dest_warp_id": "5"
         }
       ],
       "coverage": "structural/build/runtime checks recorded separately; no owner QA yet"
@@ -6175,14 +6301,42 @@
           "y": 7,
           "elevation": 0,
           "dest_map": "MAP_ECRUTEAK_CITY",
-          "dest_warp_id": "13"
+          "dest_warp_id": "21"
         },
         {
           "x": 10,
           "y": 7,
           "elevation": 0,
           "dest_map": "MAP_JOHTO_ROUTE42",
-          "dest_warp_id": "4"
+          "dest_warp_id": "7"
+        },
+        {
+          "x": 1,
+          "y": 6,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY",
+          "dest_warp_id": "20"
+        },
+        {
+          "x": 1,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_ECRUTEAK_CITY",
+          "dest_warp_id": "22"
+        },
+        {
+          "x": 10,
+          "y": 6,
+          "elevation": 0,
+          "dest_map": "MAP_JOHTO_ROUTE42",
+          "dest_warp_id": "6"
+        },
+        {
+          "x": 10,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_JOHTO_ROUTE42",
+          "dest_warp_id": "8"
         }
       ],
       "coverage": "structural/build/runtime checks recorded separately; no owner QA yet"

@@ -1,0 +1,72 @@
+Project Crossroads narrative and staged script checks: PASS
+Linked starter rescue, duplication guard and success-only persistence: PASS
+Only live starter grant is in Olivine; legacy room is a travel bridge: PASS
+Generated Emerald map headers and non-null Olivine map pointers: PASS
+Olivine map registration, reciprocal warps, NPC placement, pedestrian access and respawn data: PASS
+Office interactions/exit behaviors, starter coordinates, legacy escape paths and nonpersistent home rest: PASS
+Route 39 reciprocal connections, stable map IDs, reachable signs/NPC and city seam: PASS
+Western Johto connected pedestrian graph, all doors/interactions, reciprocal exits, IDs and Center respawn: PASS
+Eight owner asset checksums/pixel identity, all non-Gym pixels/collision/events, stable IDs and reciprocal two-door pairs: PASS 807 legacy metatiles
+HGSS tower contracts, canonical stair/pad graph, directed jumps and escape from every public tile: PASS 2430 tiles
+Canonical Ecruteak houses/theater, preserved actors/IDs, furnished room access, performance lanes and every-tile escape: PASS 3
+HGSS Center/Mart/Gym reference paths, accepted service/practice scripts, safe floor and scripted fall coverage: PASS 556 public tiles
+Canonical west/east gate endpoints, all six aliases per road, temporary coordinate portals and safe floor: PASS
+Canonical Violet door/stair coordinates, retained map/save IDs, exact neighbor changes and every-tile escape: PASS 3068 tiles in 13 maps
+HGSS Ecruteak stable IDs, reciprocal target positions, safe entire ground component, preserved animation slots and compatible buffers: PASS. Reference/visual completion is NOT asserted.
+QA07 immutable QA06 IDs/events/interiors, static exterior pixels, semantic trunks/walls/doors, leaf foreground and neutral road behavior: PASS 6111 unchanged cells; 289 corrected road cells
+HGSS tower contracts, canonical stair/pad graph, directed jumps and escape from every public tile: PASS 2430 tiles
+Canonical Ecruteak houses/theater, preserved actors/IDs, furnished room access, performance lanes and every-tile escape: PASS 3
+HGSS Center/Mart/Gym reference paths, accepted service/practice scripts, safe floor and scripted fall coverage: PASS 556 public tiles
+Canonical west/east gate endpoints, all six aliases per road, temporary coordinate portals and safe floor: PASS
+Canonical Violet door/stair coordinates, retained map/save IDs, exact neighbor changes and every-tile escape: PASS 3068 tiles in 13 maps
+Johto valid IDs, whole tile/warp/border graph, interaction access, services and safe respawns: PASS {'maps': 161, 'reachable_tiles': 71266, 'warps': 391, 'connections': 66, 'centers': 10, 'mode': 'structural survey-water-enabled graph; not emulator playtesting'}
+Explicit QA kit: one guarded level100 flyer, shoes only, no badge/starter changes: PASS
+HGSS tower contracts, canonical stair/pad graph, directed jumps and escape from every public tile: PASS 2430 tiles
+Canonical Ecruteak houses/theater, preserved actors/IDs, furnished room access, performance lanes and every-tile escape: PASS 3
+HGSS Center/Mart/Gym reference paths, accepted service/practice scripts, safe floor and scripted fall coverage: PASS 556 public tiles
+Canonical west/east gate endpoints, all six aliases per road, temporary coordinate portals and safe floor: PASS
+All landmark/farm/Gym doors, indoor access, original graphics, tile limits, approved roster and unchanged flag space: PASS
+Eight owner asset checksums/pixel identity, all non-Gym pixels/collision/events, stable IDs and reciprocal two-door pairs: PASS 807 legacy metatiles
+HGSS tower contracts, canonical stair/pad graph, directed jumps and escape from every public tile: PASS 2430 tiles
+Canonical Ecruteak houses/theater, preserved actors/IDs, furnished room access, performance lanes and every-tile escape: PASS 3
+HGSS Center/Mart/Gym reference paths, accepted service/practice scripts, safe floor and scripted fall coverage: PASS 556 public tiles
+Canonical west/east gate endpoints, all six aliases per road, temporary coordinate portals and safe floor: PASS
+Canonical Violet door/stair coordinates, retained map/save IDs, exact neighbor changes and every-tile escape: PASS 3068 tiles in 13 maps
+HGSS Ecruteak stable IDs, reciprocal target positions, safe entire ground component, preserved animation slots and compatible buffers: PASS. Reference/visual completion is NOT asserted.
+Visual repair scope, stable map/save contracts, complete benches, layers/door behavior: PASS. Owner visual QA remains pending.
+Joe source frames, transparency, shared palette, exact repack, 4-direction animations and playable wiring: PASS
+Joe spin animations preserve finite completion and 4-direction rotation: PASS
+Joe palette appended without shifting existing ordinals; trainer assets and references: PASS
+Joe action palette/frame bounds, authored east timing, both saved genders and unchanged graphics enum: PASS
+Pre-title accepted-art conversion, palette isolation, tilemap and VRAM bounds: PASS
+Pre-title branding, skip/fade cleanup, preserved save initialization and isolated assets: PASS
+Title music source/hash, PCM limits, appended song ID and actual title wiring: PASS
+Allocating gym after 1 tiles
+Allocating house after 154 tiles
+Allocating barrier after 218 tiles
+Allocating burned after 380 tiles
+Allocating theater after 537 tiles
+Allocating center after 654 tiles
+Allocating mart after 748 tiles
+HGSS-directed Ecruteak facades: 819 of 885 available graphics tiles; 240 metatiles. Visual acceptance pending.
+Allocating bell after 1 tiles
+Allocating trail_station after 510 tiles
+HGSS-directed Ecruteak facades: 718 of 885 available graphics tiles; 194 metatiles. Visual acceptance pending.
+Projected 13 canonical tower floors; missing10F/roof appended. Visual/runtime review required.
+Canonical house/theater rooms generated; source rewards/story omitted; runtime/visual review required.
+HGSS service footprints/Gym bridge generated; no DS online/story/badge implementation claimed.
+HGSS west/east gatehouses and road-width reciprocal portals registered; no existing IDs removed.
+Station/corridor/Bellchime Trail registered; existing Bell floor IDs/stairs retained. Full visual reference review pending.
+HGSS-directed Ecruteak city generated; owner visual acceptance remains separate.
+Eight owner Gym exteriors fitted into private city resources; all legacy IDs retained.
+Olivine layout reproducibility: PASS
+Johto atlas: 53 labeled nodes, player positions for 161 maps
+HGSS-directed Ecruteak city generated; owner visual acceptance remains separate.
+Projected 13 canonical tower floors; missing10F/roof appended. Visual/runtime review required.
+Canonical house/theater rooms generated; source rewards/story omitted; runtime/visual review required.
+HGSS service footprints/Gym bridge generated; no DS online/story/badge implementation claimed.
+HGSS west/east gatehouses and road-width reciprocal portals registered; no existing IDs removed.
+Station/corridor/Bellchime Trail registered; existing Bell floor IDs/stairs retained. Full visual reference review pending.
+Canonical Violet ground/doors and twelve interior/gate/floor maps generated; runtime/visual QA required.
+Eight owner Gym exteriors fitted into private city resources; all legacy IDs retained.
+Johto cluster west : 161 maps registered; 7 new Centers; IDs preserved
