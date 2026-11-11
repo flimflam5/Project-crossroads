@@ -38,7 +38,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Fetch immutable visual and player enum baselines
-        run: git fetch --no-tags --depth=1 origin 9cd6a73717c1bfd124967b7e485740aa5b25d651 690485c9971965af7d1a9134d1ba81f148b880b2 d3ab461912c51270b84d2eb8d9d7b3ee7a255717 fd151242458efe5759b18650f35a5e5b2fa47e45 3f935d5e8600c5a280b9172b555edb35ca52b6c0 5664fecee4337c5bdd442583e24cc91c09c0a0cd
+        run: git fetch --no-tags --depth=1 origin 9cd6a73717c1bfd124967b7e485740aa5b25d651 690485c9971965af7d1a9134d1ba81f148b880b2 d3ab461912c51270b84d2eb8d9d7b3ee7a255717 fd151242458efe5759b18650f35a5e5b2fa47e45 3f935d5e8600c5a280b9172b555edb35ca52b6c0 5664fecee4337c5bdd442583e24cc91c09c0a0cd 7d92f79357b744dddb706bba121d7bd5e6fc4254
 
       - name: Install binutils
         run: |
@@ -88,6 +88,7 @@ jobs:
           python3 crossroads/tools/validate_hgss_violet.py
           python3 crossroads/tools/validate_violet_service_preservation.py
           python3 crossroads/tools/validate_city_graphics_limits.py
+          python3 crossroads/tools/validate_city_ground_layers.py
           python3 crossroads/tools/validate_tileset_registration.py
           python3 crossroads/tools/check_mapjson_outputs.py
           python3 crossroads/tools/validate_black_ledger_intro.py
@@ -119,6 +120,7 @@ jobs:
           python3 crossroads/tools/validate_theater_audience.py
           python3 crossroads/tools/build_hgss_gate_interior_assets.py --check
           python3 crossroads/tools/validate_gate_interior_art.py
+          python3 crossroads/tools/validate_gate_ground_layers.py
           python3 crossroads/tools/build_hgss_center_basement_assets.py --check
           python3 crossroads/tools/validate_center_basement.py
           python3 crossroads/tools/build_hgss_mart_assets.py --check

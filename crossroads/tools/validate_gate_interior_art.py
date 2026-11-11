@@ -13,6 +13,9 @@ def validate(screenshot=None):
  for p in c['changes']:
   i=p['y']*12+p['x'];assert expected[i]==p['before'];expected[i]=p['after'];changed.add(i)
  oldrender,oldattr=renderer('hgss_temple',True);newrender,newattr=renderer('hgss_gate_interior')
+ layer=load('crossroads/hgss/contracts/gate-ground-layers-qa10.json');assert layer['source_commit']=='7d92f79357b744dddb706bba121d7bd5e6fc4254'
+ for d in layer['raw_changes']:
+  i=d['y']*12+d['x'];assert expected[i]==d['before'];expected[i]=d['after'];changed.add(i)
  for name in c['maps']:
   m=load(f'data/maps/{name}/map.json');assert m==json.loads(data(f'data/maps/{name}/map.json',True)),(name,'Events/actors/warps changed')
   old=next(l for l in before_layouts if l['id']==m['layout']);new=next(l for l in after_layouts if l['id']==m['layout']);assert new==dict(old,secondary_tileset='gTileset_HgssGateInterior'),(name,'Unexpected layout change')
@@ -45,6 +48,8 @@ def validate(screenshot=None):
     if ImageChops.difference(frame.crop((x,y,x+16,y+32)),plant).getbbox()is None:hits.append([x,y])
   assert len(hits)>=2,('Expected at least two fully visible compiled gate plants',hits)
   result.update(native_size=[240,160],compiled_complete_plant_matches=hits,matched_plant_pixels=512*len(hits));Path(screenshot).with_suffix('.gate-pixels.json').write_text(json.dumps(result,indent=2)+'\n')
+ from validate_gate_ground_layers import validate as validate_layers
+ validate_layers()
  print('Gate art exact reviewed cells; both144-cell physics/layers, six alias behaviors, four source plants and shared Temple preserved: PASS')
  if screenshot:print('Native compiled gate plant pixels: PASS',len(hits),'complete plants')
  return result

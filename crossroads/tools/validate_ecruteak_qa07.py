@@ -168,6 +168,11 @@ def validate():
                 assert expected_raw==gate_contract['before_words']
                 for d in gate_contract['changes']:
                     i=d['y']*layouts[m['layout']]['width']+d['x'];assert expected_raw[i]==d['before'];expected_raw[i]=d['after']
+                # Four north-plant drawing variants select the correct wall
+                # underlay; every physical bit/attribute remains pinned to7d92.
+                c=load('crossroads/hgss/contracts/gate-ground-layers-qa10.json');assert c['source_commit']=='7d92f79357b744dddb706bba121d7bd5e6fc4254'
+                for d in c['raw_changes']:
+                    i=d['y']*layouts[m['layout']]['width']+d['x'];assert expected_raw[i]==d['before'];expected_raw[i]=d['after']
             if n==basement_contract['map']:
                 assert basement_contract['source_commit']=='3f935d5e8600c5a280b9172b555edb35ca52b6c0'
                 for d in basement_contract['changes']:

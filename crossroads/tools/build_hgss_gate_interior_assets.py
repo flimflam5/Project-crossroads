@@ -7,6 +7,7 @@ with the V7 collision, elevation and metatile behavior/layer attributes retained
 import argparse,io,json,struct
 from pathlib import Path
 from tileset_registration import upsert
+from hgss_gate_ground_layers import apply_layer_fixes
 from PIL import Image,ImageDraw
 R=Path(__file__).resolve().parents[2];D=R/'data/tilesets/secondary/hgss_gate_interior';A=R/'crossroads/hgss/art/gate-interior'
 BASE='3f935d5e8600c5a280b9172b555edb35ca52b6c0'
@@ -72,7 +73,8 @@ def build(check=False,preview=None):
   placements.append(dict(x=x,y=y,kind=kind,source_tile=[dx,dy],metatile=newids[key],before=before[y*12+x],after=before[y*12+x]&0xfc00|newids[key]))
  assert len(attrs)<=512
  assert [{k:p[k]for k in ('x','y','before','after')}for p in placements]==contract['changes'],'Exact reviewed gate-art contract differs'
- manifest=dict(source_commit=BASE,tiles=cursor,metatiles=len(attrs),retained_temple_metatiles=used,placements=placements,plant_bases=[[2,3],[10,3],[2,11],[10,11]],source='Original indexed GBA artwork after actual final HGSS Gate inside raster; same matrix0070 and areaData63 as Ecruteak gates, no reference pixels imported',reference_url='https://archives.bulbagarden.net/media/upload/2/2f/Gate_inside_HGSS.png')
+ layer_details=apply_layer_fixes(words,attrs,placements,pack,art)
+ manifest=dict(source_commit=BASE,tiles=cursor,metatiles=len(attrs),retained_temple_metatiles=used,placements=placements,layer_fixes=layer_details['raw_changes'],layer_details=layer_details,plant_bases=[[2,3],[10,3],[2,11],[10,11]],source='Original indexed GBA artwork after actual final HGSS Gate inside raster; same matrix0070 and areaData63 as Ecruteak gates, no reference pixels imported',reference_url='https://archives.bulbagarden.net/media/upload/2/2f/Gate_inside_HGSS.png')
  if preview:
   im=Image.new('RGB',(192,192));
   for p in placements:
@@ -88,6 +90,10 @@ def build(check=False,preview=None):
  for i in range(16):
   b=(temple/f'palettes/{i:02}.pal').read_bytes()
   if i==7:b=('JASC-PAL\n0100\n16\n'+'\n'.join(' '.join(map(str,c))for c in COLORS)+'\n').replace('\n','\r\n').encode()
+  if i==8:
+   # A nonzero palette index is required: index0 remains transparent. This
+   # unused private bank stays within the actual engine's loaded range6–12.
+   rows=b.decode().splitlines();assert rows[:3]==['JASC-PAL','0100','16'];rows[4]='0 0 0';b=('\r\n'.join(rows)+'\r\n').encode()
   write(D/f'palettes/{i:02}.pal',b)
  write(A/'manifest.json',json.dumps(manifest,indent=2)+'\n')
  for n,im in art.items():b=io.BytesIO();im.save(b,format='PNG',bits=4,transparency=0);write(A/(n+'.png'),b.getvalue())

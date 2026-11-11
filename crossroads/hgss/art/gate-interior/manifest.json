@@ -1,7 +1,7 @@
 {
   "source_commit": "3f935d5e8600c5a280b9172b555edb35ca52b6c0",
-  "tiles": 140,
-  "metatiles": 432,
+  "tiles": 142,
+  "metatiles": 436,
   "retained_temple_metatiles": [
     512,
     515,
@@ -1348,6 +1348,117 @@
       "after": 1939
     }
   ],
+  "layer_fixes": [
+    {
+      "x": 2,
+      "y": 2,
+      "before": 1930,
+      "after": 1968
+    },
+    {
+      "x": 10,
+      "y": 2,
+      "before": 1930,
+      "after": 1969
+    },
+    {
+      "x": 2,
+      "y": 3,
+      "before": 1939,
+      "after": 1970
+    },
+    {
+      "x": 10,
+      "y": 3,
+      "before": 1939,
+      "after": 1971
+    }
+  ],
+  "layer_details": {
+    "raw_changes": [
+      {
+        "x": 2,
+        "y": 2,
+        "before": 1930,
+        "after": 1968
+      },
+      {
+        "x": 10,
+        "y": 2,
+        "before": 1930,
+        "after": 1969
+      },
+      {
+        "x": 2,
+        "y": 3,
+        "before": 1939,
+        "after": 1970
+      },
+      {
+        "x": 10,
+        "y": 3,
+        "before": 1939,
+        "after": 1971
+      }
+    ],
+    "render_fix_metatile_ids": [
+      904,
+      906,
+      915,
+      924,
+      937,
+      938
+    ],
+    "appended_metatile_ids": [
+      944,
+      945,
+      946,
+      947
+    ],
+    "north_plant_underlays": [
+      {
+        "x": 2,
+        "y": 2,
+        "source_wall_tile": [
+          1,
+          0
+        ],
+        "metatile": 944
+      },
+      {
+        "x": 10,
+        "y": 2,
+        "source_wall_tile": [
+          9,
+          0
+        ],
+        "metatile": 945
+      },
+      {
+        "x": 2,
+        "y": 3,
+        "source_wall_tile": [
+          1,
+          1
+        ],
+        "metatile": 946
+      },
+      {
+        "x": 10,
+        "y": 3,
+        "source_wall_tile": [
+          9,
+          1
+        ],
+        "metatile": 947
+      }
+    ],
+    "black_palette_bank": 8,
+    "black_palette_index": 1,
+    "black_glyph_word": 33420,
+    "preserved_existing_attribute_count": 432,
+    "source_note": "Flat floors and black void on opaque ground; original plant overlays over opaque corresponding floor/wall. Counter/side/wall drawings are already opaque and remain unchanged."
+  },
   "plant_bases": [
     [
       2,

@@ -1,0 +1,344 @@
+{
+  "source_commit": "7d92f79357b744dddb706bba121d7bd5e6fc4254",
+  "maps": [
+    "EcruteakCity_WestGate",
+    "EcruteakCity_EastGate"
+  ],
+  "reason": "Actual controller BUILD10 reproduced debugmagenta plus hidden Joe at ordinaryfloor2/10,9; correct drawing surfaces rather than changing collision",
+  "raw_changes": [
+    {
+      "x": 2,
+      "y": 2,
+      "before": 1930,
+      "after": 1968
+    },
+    {
+      "x": 10,
+      "y": 2,
+      "before": 1930,
+      "after": 1969
+    },
+    {
+      "x": 2,
+      "y": 3,
+      "before": 1939,
+      "after": 1970
+    },
+    {
+      "x": 10,
+      "y": 3,
+      "before": 1939,
+      "after": 1971
+    }
+  ],
+  "metatile_changes": [
+    {
+      "metatile": 904,
+      "before_words": [
+        25088,
+        25088,
+        25088,
+        25088,
+        29184,
+        29184,
+        29184,
+        29184
+      ],
+      "after_words": [
+        33420,
+        33420,
+        33420,
+        33420,
+        25088,
+        25088,
+        25088,
+        25088
+      ]
+    },
+    {
+      "metatile": 906,
+      "before_words": [
+        25088,
+        25088,
+        25088,
+        25088,
+        29263,
+        29264,
+        29265,
+        29266
+      ],
+      "after_words": [
+        29301,
+        29302,
+        29303,
+        29304,
+        29263,
+        29264,
+        29265,
+        29266
+      ]
+    },
+    {
+      "metatile": 915,
+      "before_words": [
+        25088,
+        25088,
+        25088,
+        25088,
+        29282,
+        29283,
+        29284,
+        29285
+      ],
+      "after_words": [
+        29301,
+        29302,
+        29303,
+        29304,
+        29282,
+        29283,
+        29284,
+        29285
+      ]
+    },
+    {
+      "metatile": 924,
+      "before_words": [
+        25088,
+        25088,
+        25088,
+        25088,
+        29301,
+        29302,
+        29303,
+        29304
+      ],
+      "after_words": [
+        29301,
+        29302,
+        29303,
+        29304,
+        25088,
+        25088,
+        25088,
+        25088
+      ]
+    },
+    {
+      "metatile": 937,
+      "before_words": [
+        25088,
+        25088,
+        25088,
+        25088,
+        29301,
+        29302,
+        29303,
+        29304
+      ],
+      "after_words": [
+        29301,
+        29302,
+        29303,
+        29304,
+        25088,
+        25088,
+        25088,
+        25088
+      ]
+    },
+    {
+      "metatile": 938,
+      "before_words": [
+        25088,
+        25088,
+        25088,
+        25088,
+        29301,
+        29302,
+        29303,
+        29304
+      ],
+      "after_words": [
+        29301,
+        29302,
+        29303,
+        29304,
+        25088,
+        25088,
+        25088,
+        25088
+      ]
+    }
+  ],
+  "appended_metatiles": [
+    {
+      "metatile": 944,
+      "words": [
+        29259,
+        29268,
+        29261,
+        29277,
+        29263,
+        29264,
+        29265,
+        29266
+      ],
+      "attribute": 0
+    },
+    {
+      "metatile": 945,
+      "words": [
+        29259,
+        29260,
+        29261,
+        29262,
+        29263,
+        29264,
+        29265,
+        29266
+      ],
+      "attribute": 0
+    },
+    {
+      "metatile": 946,
+      "words": [
+        29261,
+        29325,
+        29280,
+        29281,
+        29282,
+        29283,
+        29284,
+        29285
+      ],
+      "attribute": 4096
+    },
+    {
+      "metatile": 947,
+      "words": [
+        29261,
+        29262,
+        29280,
+        29281,
+        29282,
+        29283,
+        29284,
+        29285
+      ],
+      "attribute": 4096
+    }
+  ],
+  "pixel_changes": [
+    {
+      "x": 2,
+      "y": 1,
+      "before_metatile": 904,
+      "after_metatile": 904,
+      "before_rgba_sha256": "5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+      "after_rgba_sha256": "9503245a0161a939de15c2414db2d336e761822fa6cff8136e4148f58f1f782e"
+    },
+    {
+      "x": 10,
+      "y": 1,
+      "before_metatile": 904,
+      "after_metatile": 904,
+      "before_rgba_sha256": "5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+      "after_rgba_sha256": "9503245a0161a939de15c2414db2d336e761822fa6cff8136e4148f58f1f782e"
+    },
+    {
+      "x": 2,
+      "y": 2,
+      "before_metatile": 906,
+      "after_metatile": 944,
+      "before_rgba_sha256": "66209f4a82d83fd9a7438453ac0903925422a6245f6d0541e6e2528de269562d",
+      "after_rgba_sha256": "3030b7309d856f4577ddee4e5a4aefc432f9c48e989b650ebb692ee6b2a48a88"
+    },
+    {
+      "x": 10,
+      "y": 2,
+      "before_metatile": 906,
+      "after_metatile": 945,
+      "before_rgba_sha256": "66209f4a82d83fd9a7438453ac0903925422a6245f6d0541e6e2528de269562d",
+      "after_rgba_sha256": "d9955bcd550270407d9531117e116d1c5b30fdbe20874cb89877fed501d83575"
+    },
+    {
+      "x": 2,
+      "y": 3,
+      "before_metatile": 915,
+      "after_metatile": 946,
+      "before_rgba_sha256": "780f5027d1deb0ad149d4806038b4b67da167d61e4ef766a146e80f786c035e6",
+      "after_rgba_sha256": "6e0526d3c7fe4ddf131ac9ec2ec34f5f15ba742ca6330831d3b493cdf08ce0b4"
+    },
+    {
+      "x": 10,
+      "y": 3,
+      "before_metatile": 915,
+      "after_metatile": 947,
+      "before_rgba_sha256": "780f5027d1deb0ad149d4806038b4b67da167d61e4ef766a146e80f786c035e6",
+      "after_rgba_sha256": "25b20e9bba22baa7972b1cf18bb22146ea6894637bc6e9834fd270c57fe200ec"
+    },
+    {
+      "x": 2,
+      "y": 10,
+      "before_metatile": 906,
+      "after_metatile": 906,
+      "before_rgba_sha256": "66209f4a82d83fd9a7438453ac0903925422a6245f6d0541e6e2528de269562d",
+      "after_rgba_sha256": "7a0189faeae8cb34592353e757afc26242cfa78d9cbb573766f1a080a770f810"
+    },
+    {
+      "x": 10,
+      "y": 10,
+      "before_metatile": 906,
+      "after_metatile": 906,
+      "before_rgba_sha256": "66209f4a82d83fd9a7438453ac0903925422a6245f6d0541e6e2528de269562d",
+      "after_rgba_sha256": "7a0189faeae8cb34592353e757afc26242cfa78d9cbb573766f1a080a770f810"
+    },
+    {
+      "x": 2,
+      "y": 11,
+      "before_metatile": 915,
+      "after_metatile": 915,
+      "before_rgba_sha256": "780f5027d1deb0ad149d4806038b4b67da167d61e4ef766a146e80f786c035e6",
+      "after_rgba_sha256": "7b2ed6c0b8ca4261165d45f305af7bfc6390e00a9511907124d933af496803b0"
+    },
+    {
+      "x": 10,
+      "y": 11,
+      "before_metatile": 915,
+      "after_metatile": 915,
+      "before_rgba_sha256": "780f5027d1deb0ad149d4806038b4b67da167d61e4ef766a146e80f786c035e6",
+      "after_rgba_sha256": "7b2ed6c0b8ca4261165d45f305af7bfc6390e00a9511907124d933af496803b0"
+    }
+  ],
+  "physical_changes": 0,
+  "exact_art_id_change_positions": [
+    [
+      2,
+      2
+    ],
+    [
+      10,
+      2
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      10,
+      3
+    ]
+  ],
+  "preserved_old_glyph_prefix": 140,
+  "new_opaque_black_palette": {
+    "bank": 8,
+    "index": 1,
+    "rgb": [
+      0,
+      0,
+      0
+    ]
+  },
+  "before_rom_sha256": "3bec0fedbb481cc051c38d719499b584e9a4c219e42b66bef298f6aa0c5ec7a9"
+}
