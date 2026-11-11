@@ -1,3 +1,16 @@
+# Current QA08 B2 continuation
+
+Read ECRUTEAK_QA08_B2.md. Branch feature/ecruteak-olivine-doorways-qa08.
+A1 d3ab461912 is delivered and retained; B2 gate exterior/outside-arrival repair
+has passed exact-ROM controller tests. Do not revert to the rejected full route
+secondary swap: routes keep WesternCity plus gate-only primary. Reproduce using
+asset city -> city generator -> western layouts -> network --through west.
+Next work: canonical Olivine buildings/interiors/lighthouse/port and old-save
+migration while preserving four accepted additions and all stable IDs. Source
+references are cached in /workspace/scratch/hgss-reference. The new original
+Olivine facade studies in /workspace/generated_images are not integrated yet.
+Unmatched green-roof report and complete raster comparisons remain open.
+
 # QA08 active continuation
 
 Branch feature/ecruteak-olivine-doorways-qa08, from8d13bd62ec. Latest owner scope

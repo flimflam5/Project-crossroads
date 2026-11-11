@@ -55,9 +55,13 @@ for group in manifest['groups']:
      if current()==n and pos()==(x,y):record(16,k);record(180)
      assert current()==other,('Segment did not warp',current(),pos())
      arrival=pos();frames(40)
+     outer=group['outside']
+     if side=='inside' and 'arrivals' in outer:assert arrival==tuple(outer['arrivals'][i]),('Wrong outside landing',arrival,outer['arrivals'][i])
      # Walk away from the actual arrival, not a RAM/coordinate relocation.
      candidates=[(arrival[0],arrival[1]+v) for v in [1,-1]]+[(arrival[0]+v,arrival[1]) for v in [-1,1]]
-     target=next((c for c in candidates if d['safe'](other,c) and c not in {(e['x'],e['y']) for e in d['maps'][other]['warp_events']} and d['path'](other,c) is not None),None)
+     if side=='inside' and 'arrivals' in outer:
+      vx,vy=outer['press'];candidates.insert(0,(arrival[0]-vx,arrival[1]-vy))
+     target=next((c for c in candidates if d['safe'](other,c) and c not in d['active_warps'](other) and d['path'](other,c) is not None),None)
      assert target is not None,('No safe walk-away',other,arrival)
      walk(target);record(24)
      row.update(result='PASS',arrival=arrival,walk_away=pos())

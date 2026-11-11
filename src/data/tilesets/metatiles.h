@@ -487,3 +487,10 @@ const u16 gMetatiles_HgssEcruteakBuffer[] = INCBIN_U16("data/tilesets/primary/hg
 const u16 gMetatileAttributes_HgssEcruteakBuffer[] = INCBIN_U16("data/tilesets/primary/hgss_ecruteak_buffer/metatile_attributes.bin");
 #endif
 // END ECRUTEAK NEUTRAL BUFFER
+
+// BEGIN ECRUTEAK GATE BUFFER
+#if !IS_FRLG
+const u16 gMetatiles_HgssEcruteakGateBuffer[] = INCBIN_U16("data/tilesets/primary/hgss_ecruteak_gate_buffer/metatiles.bin");
+const u16 gMetatileAttributes_HgssEcruteakGateBuffer[] = INCBIN_U16("data/tilesets/primary/hgss_ecruteak_gate_buffer/metatile_attributes.bin");
+#endif
+// END ECRUTEAK GATE BUFFER

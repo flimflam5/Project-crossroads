@@ -1,3 +1,11 @@
+# QA08 B2 — tested Ecruteak gate checkpoint
+
+See [B2 scope, tests and remaining requirements](hgss/ECRUTEAK_QA08_B2.md).
+Full-width green gates now have clear outside arrivals; all161 executable doorway
+approaches and the27-map/308-transition tour pass on the B2 bytes. Immutable
+route-seam/art/ID checks pass. Owner visual review and full interior raster
+comparisons remain open. Olivine is authorized next; no expansion elsewhere.
+
 # QA08 building-by-building review
 
 Latest authority is [Ecruteak QA08](hgss/ECRUTEAK_QA08.md) and

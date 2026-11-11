@@ -38,7 +38,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Fetch immutable visual and player enum baselines
-        run: git fetch --no-tags --depth=1 origin 9cd6a73717c1bfd124967b7e485740aa5b25d651 690485c9971965af7d1a9134d1ba81f148b880b2
+        run: git fetch --no-tags --depth=1 origin 9cd6a73717c1bfd124967b7e485740aa5b25d651 690485c9971965af7d1a9134d1ba81f148b880b2 d3ab461912c51270b84d2eb8d9d7b3ee7a255717
 
       - name: Install binutils
         run: |
@@ -82,6 +82,7 @@ jobs:
           python3 crossroads/tools/hgss_ecruteak_terrain.py --check
           python3 crossroads/tools/validate_ecruteak_qa07.py
           python3 crossroads/tools/validate_city_doorways.py
+          python3 crossroads/tools/validate_ecruteak_family.py
           python3 crossroads/tools/build_hgss_violet_assets.py --check
           python3 crossroads/tools/build_hgss_violet.py --check
           python3 crossroads/tools/validate_hgss_violet.py

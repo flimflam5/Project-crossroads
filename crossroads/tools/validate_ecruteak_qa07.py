@@ -56,6 +56,8 @@ def validate():
         expected=json.loads(json.dumps(m))
         if n=='EcruteakCity':
             expected['bg_events'] += [dict(type='sign',x=x,y=y,elevation=0,player_facing_dir='BG_EVENT_PLAYER_FACING_ANY',script='Hgss_PrivateResidence') for x,y in [(23,36),(35,36),(54,55)]]
+            expected['bg_events'][8].update(x=59,y=52) # Outside the completed east facade.
+            expected['bg_events'][7].update(x=9,y=40) # Clear the upper west exit's outward step.
             # QA08 owner-authorized paired leaves. Explicit migration, not a
             # blanket allowance for event changes or a new mutable baseline.
             expected['warp_events'][1]['dest_warp_id']='2'
@@ -64,16 +66,22 @@ def validate():
             expected['warp_events'].append(alias)
             for start in [9,12]:
                 for j,index in enumerate([2,0,3]):expected['warp_events'][start+j]['dest_warp_id']=str(index)
+            for e in expected['warp_events'][9:12]:e['x']=6
+            for ax,ys,mid in [(7,range(37,40),'MAP_ECRUTEAK_CITY_WEST_GATE'),(59,range(46,49),'MAP_ECRUTEAK_CITY_EAST_GATE')]:
+                for y,index in zip(ys,[2,0,3]):expected['warp_events'].append(dict(x=ax,y=y,elevation=0,dest_map=mid,dest_warp_id=str(index)))
             for direction in ['West','East']:
                 es=[e for e in expected['coord_events'] if e['script']=='Hgss_'+direction+'CityGateEnter']
-                for j,e in enumerate(es):e['script']+=str(j)
+                for j,e in enumerate(es):
+                    e['script']+=str(j)
+                    if direction=='West':e['x']=6
         elif n=='EcruteakCity_BarrierStation':
             expected['warp_events'][0]['dest_warp_id']='7'
             expected['warp_events'].append(dict(x=10,y=11,elevation=0,dest_map='MAP_ECRUTEAK_CITY',dest_warp_id='1'))
         elif n=='EcruteakCity_DanceTheater':
             expected['warp_events'][0]['dest_warp_id']='16'
         elif n in ('EcruteakCity_WestGate','EcruteakCity_EastGate'):
-            for e in m['warp_events']:
+            for e,index in zip(expected['warp_events'],[18,4] if n.endswith('WestGate') else [21,7]):e['dest_warp_id']=str(index)
+            for e in list(expected['warp_events']):
                 for delta in [-1,1]:
                     expected['warp_events'].append(dict(e,x=e['x'],y=e['y']+delta,dest_warp_id=str(int(e['dest_warp_id'])+delta)))
         assert load(f'data/maps/{n}/map.json')==expected,(n,'Events differ beyond exact QA07/QA08 authorized migration')
@@ -133,6 +141,16 @@ def validate():
     for n,primary,secondary in [('EcruteakCity','bl_gym_ecruteak','bl_gym_ecruteak'),('BellchimeTrail','hgss_bell','hgss_bell')]:
         m=BASE['maps'][n];l=layouts[m['layout']];before=words(bytes.fromhex(BASE['raw_maps'][n]));after=words((R/l['blockdata_filepath']).read_bytes());ats=resource(primary,secondary)[2]
         for i,(a,b) in enumerate(zip(before,after)):
+            x,y=i%l['width'],i//l['width']
+            # Source-backed gate models: west returns to canonical x6, east
+            # model crosses the unchanged Route42 seam. Other art stays exact.
+            gate=(0,36) if n=='EcruteakCity' and 0<=x<7 and 36<=y<43 else (60,45) if n=='EcruteakCity' and 60<=x<64 and 45<=y<52 else None
+            if gate:
+                dx,dy=x-gate[0],y-gate[1];spec=specs['gate'];wanted=spec['start']+dy*7+dx+(0x3000 if 1<=dy<=3 else 0x400)
+                assert b==wanted,('Gate physical roof/tunnel/front wall contract',x,y)
+                continue
+            if n=='EcruteakCity' and (x,y) in {(59,52),(9,40)}:assert b==0x403;continue
+            if n=='EcruteakCity' and (x,y)==(8,37):assert b==0x3000|specs['paving'];continue
             if n=='EcruteakCity' and i==45*64+44:
                 assert a&0xfc00==0x400 and b&0xfc00==0x3000,'Theater left threshold is not open'
             else:assert a&0xfc00==b&0xfc00,(n,'Collision/elevation changed',i)

@@ -150,3 +150,21 @@ The423-pixel canopy assertion remains exact. It now records the actual hardware
 tree palette during the capture, so night tint does not incorrectly compare with
 daytime source RGB. Geometry/mask colors still come from immutable General art;
 Joe over any expected leaf pixel still fails. No tolerance or pixel is removed.
+
+## QA08 B2 gate model and arrivals
+
+A separate immutable d3ab461912 comparison now pins8,699 city/route cells and all
+six neighbouring viewport strips outside the98 declared gate cells/three sign
+cells. All49 new shared primary gate metatiles must match decoded pixels and
+attributes on both sides. Route secondary resources, IDs/heals, unchanged cells
+and all eight owner Gym pixels remain exact. The Gym pixel decoder now honours
+hardware H/V flips; it still compares every displayed pixel without tolerance.
+
+Twelve appended return-only landing anchors are explicitly enumerated. They must
+be ordinary walkable floor, free of entry scripts, with the exact active entrance
+and paired gate exit. Connectivity tools omit only these non-trigger anchors as
+active doors; every other inert warp remains an error. Controller tests require
+correct outside coordinates and a real walk-away after every exit. The west
+entrance is restored to the canonical source x6 while existing warp IDs remain.
+Historical projections accept only these exact changes, then retain all earlier
+assertions. Sign relocation is three explicit cell differences, not a broad mask.

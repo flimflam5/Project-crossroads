@@ -604,7 +604,9 @@
       "remaining": "See ECRUTEAK_QA07.md: unmatched current green-roof report, visual acceptance and explicit reference/art limitations",
       "qa08_controller_visited": true,
       "qa08_native_view": "crossroads/qa/qa08/ecruteak/EcruteakCity.png",
-      "qa08_visual_acceptance": "owner pending"
+      "qa08_visual_acceptance": "owner pending",
+      "qa08_b2_native_view": "crossroads/qa/qa08/ecruteak-b2/EcruteakCity.png",
+      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending"
     },
     {
       "name": "EcruteakCity_BurnedTower",
@@ -667,7 +669,9 @@
       },
       "qa08_controller_visited": true,
       "qa08_native_view": "crossroads/qa/qa08/ecruteak/EcruteakCity_BurnedTower.png",
-      "qa08_visual_acceptance": "owner pending"
+      "qa08_visual_acceptance": "owner pending",
+      "qa08_b2_native_view": "crossroads/qa/qa08/ecruteak-b2/EcruteakCity_BurnedTower.png",
+      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending"
     },
     {
       "name": "EcruteakCity_BellTower",
@@ -737,7 +741,9 @@
       },
       "qa08_controller_visited": true,
       "qa08_native_view": "crossroads/qa/qa08/ecruteak/EcruteakCity_BellTower.png",
-      "qa08_visual_acceptance": "owner pending"
+      "qa08_visual_acceptance": "owner pending",
+      "qa08_b2_native_view": "crossroads/qa/qa08/ecruteak-b2/EcruteakCity_BellTower.png",
+      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending"
     },
     {
       "name": "EcruteakCity_Residence",
@@ -794,7 +800,9 @@
       },
       "qa08_controller_visited": true,
       "qa08_native_view": "crossroads/qa/qa08/ecruteak/EcruteakCity_Residence.png",
-      "qa08_visual_acceptance": "owner pending"
+      "qa08_visual_acceptance": "owner pending",
+      "qa08_b2_native_view": "crossroads/qa/qa08/ecruteak-b2/EcruteakCity_Residence.png",
+      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending"
     },
     {
       "name": "EcruteakCity_DanceTheater",
@@ -855,7 +863,9 @@
       },
       "qa08_controller_visited": true,
       "qa08_native_view": "crossroads/qa/qa08/ecruteak/EcruteakCity_DanceTheater.png",
-      "qa08_visual_acceptance": "owner pending"
+      "qa08_visual_acceptance": "owner pending",
+      "qa08_b2_native_view": "crossroads/qa/qa08/ecruteak-b2/EcruteakCity_DanceTheater.png",
+      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending"
     },
     {
       "name": "EcruteakCity_Gym",
@@ -920,7 +930,9 @@
       },
       "qa08_controller_visited": true,
       "qa08_native_view": "crossroads/qa/qa08/ecruteak/EcruteakCity_Gym.png",
-      "qa08_visual_acceptance": "owner pending"
+      "qa08_visual_acceptance": "owner pending",
+      "qa08_b2_native_view": "crossroads/qa/qa08/ecruteak-b2/EcruteakCity_Gym.png",
+      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending"
     },
     {
       "name": "EcruteakCity_PokemonCenter_1F",
@@ -987,7 +999,9 @@
       },
       "qa08_controller_visited": true,
       "qa08_native_view": "crossroads/qa/qa08/ecruteak/EcruteakCity_PokemonCenter_1F.png",
-      "qa08_visual_acceptance": "owner pending"
+      "qa08_visual_acceptance": "owner pending",
+      "qa08_b2_native_view": "crossroads/qa/qa08/ecruteak-b2/EcruteakCity_PokemonCenter_1F.png",
+      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending"
     },
     {
       "name": "EcruteakCity_Mart",
@@ -1044,7 +1058,9 @@
       },
       "qa08_controller_visited": true,
       "qa08_native_view": "crossroads/qa/qa08/ecruteak/EcruteakCity_Mart.png",
-      "qa08_visual_acceptance": "owner pending"
+      "qa08_visual_acceptance": "owner pending",
+      "qa08_b2_native_view": "crossroads/qa/qa08/ecruteak-b2/EcruteakCity_Mart.png",
+      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending"
     },
     {
       "name": "EcruteakCity_BellTower_2F",
@@ -1105,7 +1121,9 @@
       },
       "qa08_controller_visited": true,
       "qa08_native_view": "crossroads/qa/qa08/ecruteak/EcruteakCity_BellTower_2F.png",
-      "qa08_visual_acceptance": "owner pending"
+      "qa08_visual_acceptance": "owner pending",
+      "qa08_b2_native_view": "crossroads/qa/qa08/ecruteak-b2/EcruteakCity_BellTower_2F.png",
+      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending"
     },
     {
       "name": "EcruteakCity_BellTower_3F",
@@ -1168,7 +1186,9 @@
       },
       "qa08_controller_visited": true,
       "qa08_native_view": "crossroads/qa/qa08/ecruteak/EcruteakCity_BellTower_3F.png",
-      "qa08_visual_acceptance": "owner pending"
+      "qa08_visual_acceptance": "owner pending",
+      "qa08_b2_native_view": "crossroads/qa/qa08/ecruteak-b2/EcruteakCity_BellTower_3F.png",
+      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending"
     },
     {
       "name": "EcruteakCity_BellTower_4F",
@@ -1257,7 +1277,9 @@
       },
       "qa08_controller_visited": true,
       "qa08_native_view": "crossroads/qa/qa08/ecruteak/EcruteakCity_BellTower_4F.png",
-      "qa08_visual_acceptance": "owner pending"
+      "qa08_visual_acceptance": "owner pending",
+      "qa08_b2_native_view": "crossroads/qa/qa08/ecruteak-b2/EcruteakCity_BellTower_4F.png",
+      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending"
     },
     {
       "name": "EcruteakCity_BellTower_5F",
@@ -1332,7 +1354,9 @@
       },
       "qa08_controller_visited": true,
       "qa08_native_view": "crossroads/qa/qa08/ecruteak/EcruteakCity_BellTower_5F.png",
-      "qa08_visual_acceptance": "owner pending"
+      "qa08_visual_acceptance": "owner pending",
+      "qa08_b2_native_view": "crossroads/qa/qa08/ecruteak-b2/EcruteakCity_BellTower_5F.png",
+      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending"
     },
     {
       "name": "EcruteakCity_BellTower_6F",
@@ -1393,7 +1417,9 @@
       },
       "qa08_controller_visited": true,
       "qa08_native_view": "crossroads/qa/qa08/ecruteak/EcruteakCity_BellTower_6F.png",
-      "qa08_visual_acceptance": "owner pending"
+      "qa08_visual_acceptance": "owner pending",
+      "qa08_b2_native_view": "crossroads/qa/qa08/ecruteak-b2/EcruteakCity_BellTower_6F.png",
+      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending"
     },
     {
       "name": "EcruteakCity_BellTower_7F",
@@ -1468,7 +1494,9 @@
       },
       "qa08_controller_visited": true,
       "qa08_native_view": "crossroads/qa/qa08/ecruteak/EcruteakCity_BellTower_7F.png",
-      "qa08_visual_acceptance": "owner pending"
+      "qa08_visual_acceptance": "owner pending",
+      "qa08_b2_native_view": "crossroads/qa/qa08/ecruteak-b2/EcruteakCity_BellTower_7F.png",
+      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending"
     },
     {
       "name": "EcruteakCity_BellTower_8F",
@@ -1550,7 +1578,9 @@
       },
       "qa08_controller_visited": true,
       "qa08_native_view": "crossroads/qa/qa08/ecruteak/EcruteakCity_BellTower_8F.png",
-      "qa08_visual_acceptance": "owner pending"
+      "qa08_visual_acceptance": "owner pending",
+      "qa08_b2_native_view": "crossroads/qa/qa08/ecruteak-b2/EcruteakCity_BellTower_8F.png",
+      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending"
     },
     {
       "name": "EcruteakCity_BellTower_9F",
@@ -1648,7 +1678,9 @@
       },
       "qa08_controller_visited": true,
       "qa08_native_view": "crossroads/qa/qa08/ecruteak/EcruteakCity_BellTower_9F.png",
-      "qa08_visual_acceptance": "owner pending"
+      "qa08_visual_acceptance": "owner pending",
+      "qa08_b2_native_view": "crossroads/qa/qa08/ecruteak-b2/EcruteakCity_BellTower_9F.png",
+      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending"
     },
     {
       "name": "EcruteakCity_BurnedTower_B1F",
@@ -1704,7 +1736,9 @@
       },
       "qa08_controller_visited": true,
       "qa08_native_view": "crossroads/qa/qa08/ecruteak/EcruteakCity_BurnedTower_B1F.png",
-      "qa08_visual_acceptance": "owner pending"
+      "qa08_visual_acceptance": "owner pending",
+      "qa08_b2_native_view": "crossroads/qa/qa08/ecruteak-b2/EcruteakCity_BurnedTower_B1F.png",
+      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending"
     },
     {
       "name": "EcruteakCity_Gym_Arena",
@@ -1756,7 +1790,9 @@
       },
       "qa08_controller_visited": true,
       "qa08_native_view": "crossroads/qa/qa08/ecruteak/EcruteakCity_Gym_Arena.png",
-      "qa08_visual_acceptance": "owner pending"
+      "qa08_visual_acceptance": "owner pending",
+      "qa08_b2_native_view": "crossroads/qa/qa08/ecruteak-b2/EcruteakCity_Gym_Arena.png",
+      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending"
     },
     {
       "name": "EcruteakCity_BarrierStation",
@@ -1817,7 +1853,9 @@
       },
       "qa08_controller_visited": true,
       "qa08_native_view": "crossroads/qa/qa08/ecruteak/EcruteakCity_BarrierStation.png",
-      "qa08_visual_acceptance": "owner pending"
+      "qa08_visual_acceptance": "owner pending",
+      "qa08_b2_native_view": "crossroads/qa/qa08/ecruteak-b2/EcruteakCity_BarrierStation.png",
+      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending"
     },
     {
       "name": "EcruteakCity_BarrierCorridor",
@@ -1867,7 +1905,9 @@
       },
       "qa08_controller_visited": true,
       "qa08_native_view": "crossroads/qa/qa08/ecruteak/EcruteakCity_BarrierCorridor.png",
-      "qa08_visual_acceptance": "owner pending"
+      "qa08_visual_acceptance": "owner pending",
+      "qa08_b2_native_view": "crossroads/qa/qa08/ecruteak-b2/EcruteakCity_BarrierCorridor.png",
+      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending"
     },
     {
       "name": "BellchimeTrail",
@@ -1920,7 +1960,9 @@
       },
       "qa08_controller_visited": true,
       "qa08_native_view": "crossroads/qa/qa08/ecruteak/BellchimeTrail.png",
-      "qa08_visual_acceptance": "owner pending"
+      "qa08_visual_acceptance": "owner pending",
+      "qa08_b2_native_view": "crossroads/qa/qa08/ecruteak-b2/BellchimeTrail.png",
+      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending"
     },
     {
       "name": "EcruteakCity_BellTower_10F",
@@ -1981,7 +2023,9 @@
       },
       "qa08_controller_visited": true,
       "qa08_native_view": "crossroads/qa/qa08/ecruteak/EcruteakCity_BellTower_10F.png",
-      "qa08_visual_acceptance": "owner pending"
+      "qa08_visual_acceptance": "owner pending",
+      "qa08_b2_native_view": "crossroads/qa/qa08/ecruteak-b2/EcruteakCity_BellTower_10F.png",
+      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending"
     },
     {
       "name": "EcruteakCity_BellTower_Roof",
@@ -2028,7 +2072,9 @@
       },
       "qa08_controller_visited": true,
       "qa08_native_view": "crossroads/qa/qa08/ecruteak/EcruteakCity_BellTower_Roof.png",
-      "qa08_visual_acceptance": "owner pending"
+      "qa08_visual_acceptance": "owner pending",
+      "qa08_b2_native_view": "crossroads/qa/qa08/ecruteak-b2/EcruteakCity_BellTower_Roof.png",
+      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending"
     },
     {
       "name": "EcruteakCity_DowsingHouse",
@@ -2085,7 +2131,9 @@
       },
       "qa08_controller_visited": true,
       "qa08_native_view": "crossroads/qa/qa08/ecruteak/EcruteakCity_DowsingHouse.png",
-      "qa08_visual_acceptance": "owner pending"
+      "qa08_visual_acceptance": "owner pending",
+      "qa08_b2_native_view": "crossroads/qa/qa08/ecruteak-b2/EcruteakCity_DowsingHouse.png",
+      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending"
     },
     {
       "name": "EcruteakCity_PokemonCenter_B1F",
@@ -2135,7 +2183,9 @@
       },
       "qa08_controller_visited": true,
       "qa08_native_view": "crossroads/qa/qa08/ecruteak/EcruteakCity_PokemonCenter_B1F.png",
-      "qa08_visual_acceptance": "owner pending"
+      "qa08_visual_acceptance": "owner pending",
+      "qa08_b2_native_view": "crossroads/qa/qa08/ecruteak-b2/EcruteakCity_PokemonCenter_B1F.png",
+      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending"
     },
     {
       "name": "EcruteakCity_WestGate",
@@ -2200,9 +2250,9 @@
       "reference_header": "MAP_ROUTE_38_ECRUTEAK_GATEHOUSE",
       "reference_geometry": "checked against pinned HGSS facts; supported by existing exact geometry validators",
       "adaptations": [
-        "GBA flat gatehouse/pillars instead of DS models",
-        "Three road-width aliases; canonical center entrance retained",
-        "Existing border metadata retained; safe horizontal coordinate portals use original shared-buffer paving"
+        "Original flat green-roof gate; source center entrance and three-row horizontal tunnel",
+        "Twelve append-only outside arrivals; front walls and roof ridge solid",
+        "Gate-only shared primary buffer preserves original neighbouring secondary graphics"
       ],
       "native_screenshot": "../qa/ecruteak-qa07/city-tour/EcruteakCity_WestGate.png",
       "native_view_inspected": true,
@@ -2219,7 +2269,9 @@
       },
       "qa08_controller_visited": true,
       "qa08_native_view": "crossroads/qa/qa08/ecruteak/EcruteakCity_WestGate.png",
-      "qa08_visual_acceptance": "owner pending"
+      "qa08_visual_acceptance": "owner pending",
+      "qa08_b2_native_view": "crossroads/qa/qa08/ecruteak-b2/EcruteakCity_WestGate.png",
+      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending"
     },
     {
       "name": "EcruteakCity_EastGate",
@@ -2284,9 +2336,9 @@
       "reference_header": "MAP_ROUTE_42_ECRUTEAK_GATEHOUSE",
       "reference_geometry": "checked against pinned HGSS facts; supported by existing exact geometry validators",
       "adaptations": [
-        "GBA flat gatehouse/pillars instead of DS models",
-        "Three road-width aliases; canonical center entrance retained",
-        "Existing border metadata retained; safe horizontal coordinate portals use original shared-buffer paving"
+        "Original flat green-roof gate; source center entrance and three-row horizontal tunnel",
+        "Twelve append-only outside arrivals; front walls and roof ridge solid",
+        "Gate-only shared primary buffer preserves original neighbouring secondary graphics"
       ],
       "native_screenshot": "../qa/ecruteak-qa07/city-tour/EcruteakCity_EastGate.png",
       "native_view_inspected": true,
@@ -2303,7 +2355,9 @@
       },
       "qa08_controller_visited": true,
       "qa08_native_view": "crossroads/qa/qa08/ecruteak/EcruteakCity_EastGate.png",
-      "qa08_visual_acceptance": "owner pending"
+      "qa08_visual_acceptance": "owner pending",
+      "qa08_b2_native_view": "crossroads/qa/qa08/ecruteak-b2/EcruteakCity_EastGate.png",
+      "qa08_b2_controller": "PASS, see tour-coverage.json; owner visual review pending"
     }
   ],
   "olivine_buildings": [
@@ -2396,10 +2450,9 @@
     }
   ],
   "remaining": [
-    "Unmatched owner green-roof report",
-    "Separate complete native HGSS house/Theater/service raster comparison",
-    "Ecruteak gate full facade/location adaptation versus exact HGSS",
     "Owner visual acceptance",
-    "Olivine canonical reconstruction, floors, port and original-location fit"
+    "Unmatched original green-roof report",
+    "Complete separate HGSS interior raster comparison",
+    "Olivine canonical reconstruction in progress"
   ]
 }

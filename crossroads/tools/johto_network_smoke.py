@@ -53,6 +53,8 @@ choice=read(sb()+0x1590,2);partycount=read(read('gPlayerPartyCountPtr'),1)
 # Resolve real native behaviors, including directional Bell Tower ramps.
 import re
 from johto_movement import next_position
+from hgss_gate_arrivals import arrivals,gate_connections
+arrival_only=arrivals();gate_borders=gate_connections()
 headers=(R/'src/data/tilesets/headers.h').read_text();met=(R/'src/data/tilesets/metatiles.h').read_text();attrfiles=dict(re.findall(r'const u16 (gMetatileAttributes_\w+)\[\] = INCBIN_U16\("([^" ]+)"\)',met));attrs={}
 for tileset_key,body in re.findall(r'const struct Tileset (gTileset_\w+)\s*=\s*\{([^}]+)\}',headers,re.S):
  m=re.search(r'\.metatileAttributes\s*=\s*(\w+)',body)
@@ -67,7 +69,7 @@ def safe(n,p):
  x,y=p;w,h=size[n]
  return p not in fall_cells.get(n,set()) and 0<=x<w and 0<=y<h and raw[n][y*w+x]&0xc00==0 and raw[n][y*w+x]>>12 in (1,3) and (raw[n][y*w+x]&1023)!=0x38d and not any((o['x'],o['y'])==p for o in maps[n]['object_events'])
 def local_path(n,start,target):
- blocked={(e['x'],e['y']) for e in maps[n]['warp_events']} - {start,target};q=deque([start]);prev={start:None}
+ blocked={(e['x'],e['y']) for i,e in enumerate(maps[n]['warp_events']) if (n,i) not in arrival_only} - {start,target};q=deque([start]);prev={start:None}
  while q:
   x,y=q.popleft()
   if (x,y)==target:break
@@ -79,6 +81,7 @@ def local_path(n,start,target):
  while prev[v] is not None:route.append(v);v=prev[v]
  return list(reversed(route))
 def path(n,target):return local_path(n,pos(),target)
+def active_warps(n):return {(e['x'],e['y']) for i,e in enumerate(maps[n]['warp_events']) if (n,i) not in arrival_only}
 def walk(target):
  global water_entries
  n=current();route=path(n,target);assert route is not None,(n,pos(),'No foot path',target)
@@ -98,11 +101,11 @@ def walk(target):
    if pos()==old:frames(8 if surfing else 16,k);frames(20)
   assert current()==n and pos()==to,(n,old,to,current(),pos())
 def warp(index):
- n=current();e=maps[n]['warp_events'][index];x,y=e['x'],e['y'];w,h=size[n]
+ n=current();index=arrival_only.get((n,index),index);e=maps[n]['warp_events'][index];x,y=e['x'],e['y'];w,h=size[n]
  approaches=[((x,y+1),64),((x-1,y),16),((x+1,y),32),((x,y-1),128)]
  if y==h-1 or behavior(n,x,y)==0x65:approaches=[((x,y-1),128)]+approaches[:-1]
  for target,k in approaches:
-  if (target==pos() or target not in {(v['x'],v['y']) for v in maps[n]['warp_events']}) and path(n,target) is not None:walk(target);break
+  if (target==pos() or target not in active_warps(n)) and path(n,target) is not None:walk(target);break
  else:raise AssertionError((n,'No warp approach',e,pos()))
  for _ in range(3):
   frames(16,k);frames(180)
@@ -111,6 +114,7 @@ def warp(index):
  return n,current()
 def border(c):
  n=current();dst=ids[c['map']];w,h=size[n];dw,dh=size[dst];d=c['direction'];candidates=[]
+ if (n,dst) in gate_borders:go(dst);return n,current() # Actual gate-room journey, not an inert seam crossing.
  for t in range(w if d in ['up','down'] else h):
   old=(t,0) if d=='up' else (t,h-1) if d=='down' else (0,t) if d=='left' else (w-1,t)
   new=(t-c['offset'],dh-1) if d=='up' else (t-c['offset'],0) if d=='down' else (dw-1,t-c['offset']) if d=='left' else (0,t-c['offset'])
@@ -130,12 +134,14 @@ def ports(n,start):
  if key in route_cache:return route_cache[key]
  result=[];w,h=size[n]
  for i,e in enumerate(maps[n]['warp_events']):
+  if (n,i) in arrival_only:continue
   x,y=e['x'],e['y'];approaches=[(x,y+1),(x-1,y),(x+1,y),(x,y-1)]
-  if any((p==start or p not in {(v['x'],v['y']) for v in maps[n]['warp_events']}) and safe(n,p) and local_path(n,start,p) is not None for p in approaches):
+  if any((p==start or p not in active_warps(n)) and safe(n,p) and local_path(n,start,p) is not None for p in approaches):
    other=ids[e['dest_map']];back=maps[other]['warp_events'][int(e['dest_warp_id'])]
    result.append((('warp',i),(other,(back['x'],back['y']))))
  for c in maps[n]['connections'] or []:
   other=ids[c['map']];dw,dh=size[other];d=c['direction']
+  if (n,other) in gate_borders:continue
   for t in range(w if d in ['up','down'] else h):
    old=(t,0) if d=='up' else (t,h-1) if d=='down' else (0,t) if d=='left' else (w-1,t)
    new=(t-c['offset'],dh-1) if d=='up' else (t-c['offset'],0) if d=='down' else (dw-1,t-c['offset']) if d=='left' else (0,t-c['offset'])
@@ -189,6 +195,7 @@ for n in targets:
   print('Nurse healing/local respawn:',n,'PASS',flush=True)
  if args.all_edges:
   for index,e in enumerate(maps[n]['warp_events']):
+   if (n,index) in arrival_only:continue
    other=ids[e['dest_map']];back=int(e['dest_warp_id']);ident=tuple(sorted([(n,index),(other,back)]))
    if ident in tested_edges:continue
    go(n,index);a,b=warp(index);transitions.append([a,b,'warp']);a,b=warp(back);transitions.append([a,b,'warp'])

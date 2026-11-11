@@ -73,7 +73,8 @@ def main():
   from build_eight_gym_integration import relocate_layout
   relocate_layout(n,l)
   if n=='JohtoRoute32':l['primary_tileset']='gTileset_HgssVioletRoutePrimary'
-  if n in ['JohtoRoute37','JohtoRoute38','JohtoRoute42']:l['primary_tileset']='gTileset_HgssEcruteakBuffer'
+  from hgss_ecruteak_family import relocate_layout as family_layout
+  family_layout(n,l)
   if lid not in bylayout:layouts['layouts'].append(l);bylayout[lid]=l
   elif bylayout[lid]!=l:
    # Only newly authored layouts pass here; their numeric IDs remain fixed.
@@ -305,7 +306,8 @@ def main():
   if n not in existing and meta[n]['kind']=='service':continue
   path=bylayout[m['layout']]['blockdata_filepath']
   from visual_repairs import repair
-  write(path,neighbor_tiles(n,interior_overlay(n,overlay(n,repair(n,struct.pack('<'+str(len(tiles[n]))+'H',*tiles[n]),*sizes[n]),*sizes[n]),*sizes[n]),*sizes[n]))
+  from hgss_ecruteak_family import route_data
+  write(path,route_data(n,neighbor_tiles(n,interior_overlay(n,overlay(n,repair(n,struct.pack('<'+str(len(tiles[n]))+'H',*tiles[n]),*sizes[n]),*sizes[n]),*sizes[n]),*sizes[n]),*sizes[n]))
  groups['gMapGroup_CrossroadsOlivine']=names[:127]
  if len(names)>127:
   groups['gMapGroup_CrossroadsJohtoExpansion']=names[127:]

@@ -1,0 +1,2 @@
+QA07 immutable QA06 IDs/events/interiors, static exterior pixels, semantic trunks/walls/doors, leaf foreground and neutral road behavior: PASS 6072 unchanged cells; 248 corrected road cells
+Recorded normal walking: no unintended arrow samples; actual native leaf occlusion matches original static tree: (423, 423) PASS

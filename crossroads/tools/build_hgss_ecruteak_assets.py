@@ -10,7 +10,7 @@ from PIL import Image
 from hgss_ecruteak_terrain import PAVING,neutral_metadata,neutral_graphics
 R=Path(__file__).resolve().parents[2]
 A=R/'crossroads/hgss/art';P=R/'data/tilesets/primary/hgss_ecruteak';S=R/'data/tilesets/secondary/hgss_ecruteak'
-SPECS=[('gym','a',(0,0,740,724),(112,96),6,3),('house','a',(750,0,1250,724),(80,64),7,3),('barrier','a',(1280,0,2172,724),(160,80),7,7),('burned','b',(0,0,565,724),(96,112),8,3),('theater','b',(565,0,1175,724),(96,80),9,3),('center','b',(1180,0,1665,724),(80,80),10,2),('mart','b',(1670,0,2172,724),(80,64),11,1)]
+SPECS=[('gate','gate',(0,0,1536,1024),(112,112),2,3),('house','a',(750,0,1250,724),(80,64),7,3),('barrier','a',(1280,0,2172,724),(160,80),7,7),('burned','b',(0,0,565,724),(96,112),8,3),('theater','b',(565,0,1175,724),(96,80),9,3),('center','b',(1180,0,1665,724),(80,80),10,2),('mart','b',(1670,0,2172,724),(80,64),11,1)]
 # Every primary terrain metatile used by the authored city/trail. Animation slots
 #432..511 are reserved even when not currently referenced, preventing live corruption.
 TERRAIN=[0,1,3,4,13,0xc6,0x24,0x15,0x19,0x71,0x75,0x7c,0x7d,0xa7,0x170,0x1d4,0x1d5,0x1dc,0x1dd,0x1e4,0x1e5,PAVING]
@@ -24,12 +24,16 @@ def generate(check=False,variant="city"):
   if p.suffix=='.pal':b=b.replace(b'\r\n',b'\n').replace(b'\n',b'\r\n')
   if check:assert p.read_bytes()==b,('Regenerate',str(p))
   elif not p.exists() or p.read_bytes()!=b:p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(b)
- general=R/'data/tilesets/primary/general';gm,ga=neutral_metadata(struct.unpack('<4096H',(general/'metatiles.bin').read_bytes()),struct.unpack('<512H',(general/'metatile_attributes.bin').read_bytes()));reserved=set(range(432,512))|{v&1023 for n in TERRAIN for v in gm[n*8:n*8+8]}
+ general=R/'data/tilesets/primary/general';gm,ga=neutral_metadata(struct.unpack('<4096H',(general/'metatiles.bin').read_bytes()),struct.unpack('<512H',(general/'metatile_attributes.bin').read_bytes()))
+ from hgss_ecruteak_family import route_primary_ids,route_primary_graphics,GATE_PRIMARY
+ family_ids=route_primary_ids()-set(range(GATE_PRIMARY,GATE_PRIMARY+49)) if variant=='city' else set()
+ reserved=set(range(432,512))|{v&1023 for n in set(TERRAIN)|family_ids for v in gm[n*8:n*8+8]}|(route_primary_graphics() if variant=='city' else set())
  free=[n for n in range(1024) if n>=512 or n not in reserved];primary=neutral_graphics();secondary=Image.new('P',(128,256));secondary.putpalette(primary.getpalette())
  images={}
  for name,src,box,size,bank,door in spec_list:
-  im=Image.open(A/('bell-tower-source.png' if src=='tower' else 'trail-station-source.png' if src=='trail' else f'ecruteak-facades-{src}.png')).convert('RGBA').crop(box);alpha=im.getchannel('A').point(lambda x:255 if x>=180 else 0);im.putalpha(alpha);im=im.crop(alpha.getbbox());im=im.resize(size,Image.Resampling.NEAREST);images[name]=im
+  im=Image.open(A/('gate-facade-source.png' if src=='gate' else 'bell-tower-source.png' if src=='tower' else 'trail-station-source.png' if src=='trail' else f'ecruteak-facades-{src}.png')).convert('RGBA').crop(box);alpha=im.getchannel('A').point(lambda x:255 if x>=(250 if src=='gate' else 180) else 0);im.putalpha(alpha);im=im.crop(alpha.getbbox());im=im.resize(size,Image.Resampling.NEAREST);images[name]=im
  pals={}
+ for bank in [2,4]:pals[bank]=[v for line in (general/f'palettes/{bank:02}.pal').read_text().splitlines()[3:] for v in map(int,line.split())]
  for bank in range(6,12):
   ims=[images[n] for n,src,box,size,b,d in spec_list if b==bank]
   if not ims:continue
@@ -45,6 +49,9 @@ def generate(check=False,variant="city"):
   if key not in unique:
    assert cursor<len(free),('Graphics capacity',cursor,len(free));n=free[cursor];cursor+=1;unique[key]=n
    sheet=primary if n<512 else secondary;i=n%512;sheet.paste(tile,(i%16*8,i//16*8))
+   # Hardware H/V flips save graphics slots without changing a single displayed
+   # pixel. Palette and metatile identities are independent of this packing.
+   for flags,im in [(0x400,tile.transpose(Image.Transpose.FLIP_LEFT_RIGHT)),(0x800,tile.transpose(Image.Transpose.FLIP_TOP_BOTTOM)),(0xc00,tile.transpose(Image.Transpose.FLIP_LEFT_RIGHT).transpose(Image.Transpose.FLIP_TOP_BOTTOM))]:unique.setdefault(im.tobytes(),n|flags)
   return unique[key]|(bank<<12)
  under=list(gm[8:12]);empty=alloc(Image.new('P',(8,8)),6)
  for name,src,box,size,bank,door in spec_list:
@@ -54,16 +61,33 @@ def generate(check=False,variant="city"):
    if alpha[i]<128:values[i]=0
    elif not values[i]:values[i]=1
   indexed=Image.frombytes('P',im.size,bytes(values));indexed.putpalette(pals[bank]);write(A/(name+'-native.png'),b'') if False else None
-  if not check:indexed.save(A/(name+'-native.png'),bits=4)
+  gate_layers={2:indexed}
+  if name=='gate':
+   ref4=Image.new('P',(1,1));ref4.putpalette(pals[4]+[0]*720);q=im.convert('RGB').quantize(palette=ref4,dither=Image.Dither.NONE);vals=bytearray(q.tobytes())
+   for i,v in enumerate(vals):vals[i]=0 if alpha[i]<128 else v or 1
+   q=Image.frombytes('P',im.size,bytes(vals));q.putpalette(pals[4]);gate_layers[4]=q
+   preview=indexed.convert('RGBA');preview.paste(q.convert('RGBA').crop((0,64,im.width,im.height)),(0,64))
+   if not check:preview.save(A/(name+'-native.png'))
+  elif not check:indexed.save(A/(name+'-native.png'),bits=4)
   w,h=size[0]//16,size[1]//16;start=512+len(attrs)
+  gate_preview=Image.new('RGBA',size) if name=='gate' else None
   # The Theater and Barrier have two visible door leaves. Both are real
   # thresholds; metadata/collision must not turn the left leaf into a wall.
-  doors=[(door,h-1)]+([(door-1,h-1)] if name in ('barrier','theater') else [])
+  doors=[] if name=='gate' else [(door,h-1)]+([(door-1,h-1)] if name in ('barrier','theater') else [])
   for y in range(h):
    for x in range(w):
-    top=[alloc(indexed.crop((x*16+dx,y*16+dy,x*16+dx+8,y*16+dy+8)),bank) for dx,dy in [(0,0),(8,0),(0,8),(8,8)]]
-    words.extend(under+top);attrs.append((0x1000 if y>=h-2 else 0)|(0x60 if (x,y) in doors else 0x61 if name=='trail_station' and (x,y)==(door,h-2) else 0))
+    draw=gate_layers[4 if y>=4 else 2] if name=='gate' else indexed;drawbank=(4 if y>=4 else 2) if name=='gate' else bank
+    # A tileable center preserves the new gate silhouette while fitting the
+    # hardware pool alongside the immutable owner Gym. Existing facades are
+    # never resampled/repeated by this conversion rule.
+    source_x=3 if name=='gate' and (1<x<5 if y<4 else 0<x<6) else x
+    top=[alloc(draw.crop((source_x*16+dx,y*16+dy,source_x*16+dx+8,y*16+dy+8)),drawbank) for dx,dy in [(0,0),(8,0),(0,8),(8,8)]]
+    if gate_preview is not None:
+     patch=draw.crop((source_x*16,y*16,source_x*16+16,y*16+16));patch.info['transparency']=0;gate_preview.paste(patch.convert('RGBA'),(x*16,y*16))
+    ground=list(gm[PAVING*8:PAVING*8+4]) if name=='gate' else under
+    words.extend(ground+top);attrs.append((0x1000 if (y>=4 if name=='gate' else y>=h-2) else 0)|(0x60 if (x,y) in doors else 0x61 if name=='trail_station' and (x,y)==(door,h-2) else 0))
   specs[name]=dict(start=start,width=w,height=h,door_x=door,door_y=h-1,door_cells=[list(p) for p in doors],palette=bank,solid_footprint=[[x,y] for y in range(h) for x in range(w) if y>0 and (y>=h-2 or 0<x<w-1) and (x,y) not in doors],walkable_overhang=[[x,y] for y in range(h) for x in range(w) if y==0 or (y<h-2 and x in (0,w-1))])
+  if gate_preview is not None and not check:gate_preview.save(A/'gate-native.png')
  # Original General canopy pixels are in the bottom layer, so simply choosing
  # NORMAL does not put leaves over Joe. Duplicate only leaf colors (1..4 in the
  # General tree palette) into the foreground. Grass/shadow colors stay below;
@@ -95,6 +119,12 @@ def generate(check=False,variant="city"):
  specs['earth']=512+len(attrs);words.extend([soilref]*4+[empty]*4);attrs.append(0x1000)
  assert len(attrs)<=512
  specs['leaf_ground']=512+len(attrs);words.extend([(v&0xfff)|(5<<12) for v in gm[8:16]]);attrs.append(0x1000)
+ if variant=='city':
+  # Only the gate uses a previously unused PRIMARY metatile range. Its graphics
+  # also fit below512, so routes retain their original WesternCity secondary.
+  s=specs['gate'];old=s['start']-512;gm[GATE_PRIMARY*8:(GATE_PRIMARY+49)*8]=words[old*8:(old+49)*8];ga[GATE_PRIMARY:GATE_PRIMARY+49]=attrs[old:old+49]
+  assert max(v&1023 for v in gm[GATE_PRIMARY*8:(GATE_PRIMARY+49)*8])<432
+  s['secondary_start']=s['start'];s['start']=GATE_PRIMARY
  for path,im in [(primary_dir/'tiles.png',primary),(secondary_dir/'tiles.png',secondary)]:
   if not check:path.parent.mkdir(parents=True,exist_ok=True);im.save(path,bits=4)
  for i in range(16):

@@ -50,7 +50,8 @@ def city_data(with_gym=True):
  # behavior is still pending; the surrounding visual terrain is not final.
  rect(18,17,12,12,0x471);rect(19,17,10,11,pave);rect(23,21,3,9,pave)
  positions=canonical_positions()
- for kind,(dx,dy) in zip(['burned','barrier','house','theater','gym','center','mart'],positions):
+ for kind,(dx,dy) in zip(['burned','barrier','house','theater',None,'center','mart'],positions):
+  if kind is None:continue # The approved owner Gym is overlaid by its own packer.
   asset=specs[kind];building(kind,dx-asset['door_x'],dy-asset['door_y'])
  rect(44,28,10,5,0x1170);rect(49,33,5,2,0x1170)
  for x,y,opened in houses:
@@ -61,7 +62,7 @@ def city_data(with_gym=True):
  rect(0,37,18,3,pave);rect(60,46,4,3,pave);rect(38,59,3,5,pave)
  # Legacy Black Ledger shuttle arrival must remain safe.
  rect(26,27,1,1,pave)
- for x,y in [(26,25),(42,26),(25,46),(43,46),(26,56),(43,56),(55,46),(8,37),(61,49),(39,61),(36,45)]:rect(x,y,1,1,0x403)
+ for x,y in [(26,25),(42,26),(25,46),(43,46),(26,56),(43,56),(55,46),(9,40),(59,52),(39,61),(36,45)]:rect(x,y,1,1,0x403)
  # The map perimeter is solid except the three documented road apertures.
  # Do not expose the full neighboring map width as an accidental crossing.
  for x in range(w):
@@ -73,6 +74,10 @@ def city_data(with_gym=True):
  from hgss_connection_buffer import repair
  from build_eight_gym_integration import overlay
  data=repair('EcruteakCity',struct.pack('<'+str(w*h)+'H',*t),w,h,specs)
+ from hgss_ecruteak_family import stamp_gate
+ t=list(struct.unpack('<'+str(w*h)+'H',data))
+ stamp_gate(t,w,h,(0,36),specs['gate']);stamp_gate(t,w,h,(60,45),specs['gate'])
+ data=struct.pack('<'+str(w*h)+'H',*t)
  return overlay('EcruteakCity',data,w,h) if with_gym else data
 
 def generate(check=False):
@@ -87,10 +92,13 @@ def generate(check=False):
  def js(p,v):write(p,json.dumps(v,indent=2)+'\n')
  from hgss_ecruteak_terrain import generate as neutral,NEIGHBORS
  neutral(check)
+ from hgss_ecruteak_family import generate as gate_buffer
+ gate_buffer(check)
  layouts=json.loads((R/'data/layouts/layouts.json').read_text());l=next(l for l in layouts['layouts'] if l['id']=='LAYOUT_ECRUTEAK_CITY');l.update(width=64,height=64,primary_tileset='gTileset_HgssEcruteakPrimary',secondary_tileset='gTileset_HgssEcruteakSecondary')
  for route in NEIGHBORS:
   layout=json.loads((R/f'data/maps/{route}/map.json').read_text())['layout']
-  next(v for v in layouts['layouts'] if v['id']==layout)['primary_tileset']='gTileset_HgssEcruteakBuffer'
+  from hgss_ecruteak_family import relocate_layout as family_layout
+  family_layout(route,next(v for v in layouts['layouts'] if v['id']==layout))
  from build_eight_gym_integration import relocate_layout
  relocate_layout('EcruteakCity',l);js('data/layouts/layouts.json',layouts)
  m=json.loads((R/'data/maps/EcruteakCity/map.json').read_text());positions=canonical_positions()
@@ -109,7 +117,7 @@ def generate(check=False):
  else:assert len(m['warp_events'])==16;m['warp_events'].append(alias)
  # Sign/NPC identities and scripts remain stable; only their physical placements
  # follow the new town. Bell sign currently explicitly labels an unfinished approach.
- signpos=[(26,25),(42,26),(25,46),(43,46),(26,56),(43,56),(55,46),(8,37),(61,49),(39,61),(36,45)]
+ signpos=[(26,25),(42,26),(25,46),(43,46),(26,56),(43,56),(55,46),(9,40),(59,52),(39,61),(36,45)]
  for e,(x,y) in zip(m['bg_events'],signpos):e.update(x=x,y=y)
  # HGSS has only two enterable homes here. Explain the three preserved closed
  # facades through interaction instead of leaving their visible doors ambiguous.
@@ -137,7 +145,8 @@ def generate(check=False):
  inside=json.loads((R/'data/maps/EcruteakCity_Gym/map.json').read_text())
  il=next(v for v in layouts['layouts'] if v['id']==inside['layout'])
  write('crossroads/hgss/authoring/EcruteakCity_Gym.bin',(R/il['blockdata_filepath']).read_bytes())
- js('crossroads/hgss/authoring/EcruteakCity.json',dict(map=m,layout=source_layout,gym_warp=4,gym_alias=15,interior=inside,raw_path=raw_path))
+ from hgss_ecruteak_family import route_primary_ids,route_primary_graphics
+ js('crossroads/hgss/authoring/EcruteakCity.json',dict(map=m,layout=source_layout,gym_warp=4,gym_alias=15,interior=inside,raw_path=raw_path,shared_primary_ids=sorted(route_primary_ids()),shared_primary_graphics=sorted(route_primary_graphics())))
  write('data/layouts/EcruteakCity/map.bin',city_data());print('HGSS-directed Ecruteak city generated; owner visual acceptance remains separate.')
 if __name__=='__main__':
  p=argparse.ArgumentParser();p.add_argument('--check',action='store_true');generate(p.parse_args().check)

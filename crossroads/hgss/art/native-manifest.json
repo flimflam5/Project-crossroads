@@ -1,18 +1,13 @@
 {
   "specs": {
-    "gym": {
-      "start": 512,
+    "gate": {
+      "start": 256,
       "width": 7,
-      "height": 6,
+      "height": 7,
       "door_x": 3,
-      "door_y": 5,
-      "door_cells": [
-        [
-          3,
-          5
-        ]
-      ],
-      "palette": 6,
+      "door_y": 6,
+      "door_cells": [],
+      "palette": 2,
       "solid_footprint": [
         [
           1,
@@ -75,10 +70,6 @@
           3
         ],
         [
-          0,
-          4
-        ],
-        [
           1,
           4
         ],
@@ -99,10 +90,6 @@
           4
         ],
         [
-          6,
-          4
-        ],
-        [
           0,
           5
         ],
@@ -112,6 +99,10 @@
         ],
         [
           2,
+          5
+        ],
+        [
+          3,
           5
         ],
         [
@@ -125,6 +116,34 @@
         [
           6,
           5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          6
         ]
       ],
       "walkable_overhang": [
@@ -179,11 +198,20 @@
         [
           6,
           3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          6,
+          4
         ]
-      ]
+      ],
+      "secondary_start": 512
     },
     "house": {
-      "start": 554,
+      "start": 561,
       "width": 5,
       "height": 4,
       "door_x": 3,
@@ -277,7 +305,7 @@
       ]
     },
     "barrier": {
-      "start": 574,
+      "start": 581,
       "width": 10,
       "height": 5,
       "door_x": 7,
@@ -491,7 +519,7 @@
       ]
     },
     "burned": {
-      "start": 624,
+      "start": 631,
       "width": 6,
       "height": 7,
       "door_x": 3,
@@ -673,7 +701,7 @@
       ]
     },
     "theater": {
-      "start": 666,
+      "start": 673,
       "width": 6,
       "height": 5,
       "door_x": 3,
@@ -807,7 +835,7 @@
       ]
     },
     "center": {
-      "start": 696,
+      "start": 703,
       "width": 5,
       "height": 5,
       "door_x": 2,
@@ -921,7 +949,7 @@
       ]
     },
     "mart": {
-      "start": 721,
+      "start": 728,
       "width": 5,
       "height": 4,
       "door_x": 1,
@@ -1015,18 +1043,18 @@
       ]
     },
     "tree": {
-      "start": 741,
+      "start": 748,
       "width": 2,
       "height": 2
     },
     "autumn_tree": {
-      "start": 745,
+      "start": 752,
       "width": 2,
       "height": 2
     },
-    "paving": 749,
-    "earth": 750,
-    "leaf_ground": 751
+    "paving": 756,
+    "earth": 757,
+    "leaf_ground": 758
   },
   "terrain": [
     0,
@@ -1070,7 +1098,16 @@
     33,
     34,
     35,
+    40,
     41,
+    43,
+    56,
+    57,
+    59,
+    76,
+    77,
+    92,
+    93,
     98,
     99,
     100,
@@ -1083,10 +1120,15 @@
     131,
     132,
     139,
+    146,
+    147,
+    151,
     152,
     153,
     154,
     155,
+    160,
+    161,
     176,
     177,
     192,
@@ -1193,6 +1235,6 @@
     510,
     511
   ],
-  "allocated_tiles": 819,
-  "available_tiles": 885
+  "allocated_tiles": 738,
+  "available_tiles": 871
 }

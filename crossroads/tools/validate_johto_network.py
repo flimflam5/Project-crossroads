@@ -6,6 +6,8 @@ from pathlib import Path
 R=Path(__file__).resolve().parents[2]
 ap=argparse.ArgumentParser();ap.add_argument('--built',action='store_true');a=ap.parse_args()
 def load(p):return json.loads((R/p).read_text())
+from hgss_gate_arrivals import arrivals
+arrival_only=arrivals()
 groups=load('data/maps/map_groups.json');base=groups['gMapGroup_CrossroadsOlivine'];west=groups.get('gMapGroup_CrossroadsJohtoExpansion',[]);names=base+west;locations={n:(75,i) for i,n in enumerate(base)}|{n:(76,i) for i,n in enumerate(west)};manifest=load('crossroads/johto/manifest.json')
 for preserved,digest in manifest.get('preserved_sources',{}).items():
  assert hashlib.sha256((R/preserved).read_bytes()).hexdigest()==digest,('Accepted source changed',preserved)
@@ -46,6 +48,11 @@ for n,m in maps.items():
   at=lookup[l['primary_tileset'] if t<512 else l['secondary_tileset']]
   assert t-(512 if t>=512 else 0)<len(at),('Metatile out of bounds',n,e,t)
   if at[t-(512 if t>=512 else 0)]&255==0:
+   if (n,m['warp_events'].index(e)) in arrival_only:
+    entry=m['warp_events'][arrival_only[(n,m['warp_events'].index(e))]]
+    assert entry['dest_map']==e['dest_map'] and entry['dest_warp_id']==e['dest_warp_id']
+    assert raw[n][e['y']*w+e['x']]&0xc00==0 and not any(q['x']==e['x'] and q['y']==e['y'] for q in m['coord_events'])
+    continue # Independently required return-only landing, not an entry door.
    # A neutral road portal is driven by an exact coordinate script, not a door
    # metatile. Require the actual script to warp to this same destination/index;
    # blank ordinary doors or stairs still fail. Canonical gate geometry and all
@@ -101,7 +108,8 @@ while q:
    elif d=='left':xx,yy=dw-1,yy-c['offset']
    else:xx,yy=0,yy-c['offset']
   moves.append((dst,xx,yy))
- for e in m['warp_events']:
+ for index,e in enumerate(m['warp_events']):
+  if (n,index) in arrival_only:continue
   if (x,y)==(e['x'],e['y']):
    dst=ids[e['dest_map']];back=maps[dst]['warp_events'][int(e['dest_warp_id'])];moves.append((dst,back['x'],back['y']))
  for dst,xx,yy in moves:
