@@ -54,7 +54,7 @@ choice=read(sb()+0x1590,2);partycount=read(read('gPlayerPartyCountPtr'),1)
 import re
 from johto_movement import next_position
 from hgss_gate_arrivals import arrivals,gate_connections
-arrival_only=arrivals();gate_borders=gate_connections();warp_trials=[]
+arrival_only=arrivals();gate_borders=gate_connections();warp_trials=[];dry_only=False
 # These are actual scripted traversal actions, not debugger teleports. The
 # dynamic elevator destination is read from the engine immediately before exit.
 LIFT='OlivineCity_Lighthouse_Elevator'
@@ -79,7 +79,7 @@ fall_cells={r['name']:{tuple(p) for p in r.get('fall_tiles',[])} for r in json.l
 if window_enabled:fall_cells.setdefault(WINDOW,set()).add((16,9))
 def safe(n,p):
  x,y=p;w,h=size[n]
- return p not in fall_cells.get(n,set()) and 0<=x<w and 0<=y<h and raw[n][y*w+x]&0xc00==0 and raw[n][y*w+x]>>12 in (1,3) and (raw[n][y*w+x]&1023)!=0x38d and not any((o['x'],o['y'])==p for o in maps[n]['object_events'])
+ return p not in fall_cells.get(n,set()) and 0<=x<w and 0<=y<h and (not dry_only or raw[n][y*w+x]>>12==3) and raw[n][y*w+x]&0xc00==0 and raw[n][y*w+x]>>12 in (1,3) and (raw[n][y*w+x]&1023)!=0x38d and not any((o['x'],o['y'])==p for o in maps[n]['object_events'])
 def local_path(n,start,target):
  blocked={(e['x'],e['y']) for i,e in enumerate(maps[n]['warp_events']) if (n,i) not in arrival_only} - {start,target};q=deque([start]);prev={start:None}
  while q:
@@ -203,16 +203,23 @@ def go(dst,target_warp=None):
 plans=json.loads((R/'crossroads/johto/manifest.json').read_text())['planned'];targets=[p['name'] for p in plans if p['name'] in names and (not args.cluster or p['cluster']==args.cluster)]
 if args.targets is not None:
  targets=[n for n in args.targets.split(',') if n];assert all(n in names for n in targets)
-# Use the actual desk UI; prove the assistance does not alter saved flag bytes.
-go('OlivineCity_HarborOffice');walk((1,6))
-flags=bytes(read(sb()+0x1270+i,1) for i in range(300))
-frames(1,64);frames(20);key(1);frames(180)
-for _ in range(8):
- if not read('sLockFieldControls',1):break
- key(1);frames(180)
+# The desk toggles access. A same-ROM resumed snapshot can already contain
+# the RAM-only session flag, so interacting again would disable it. Cold boot
+# still must enable access through the real UI, never a debugger flag write.
+access_before=read('sJohtoTestAccess',1);assert access_before in [0,1]
+if access_before==0:
+ go('OlivineCity_HarborOffice');walk((1,6))
+ flags=bytes(read(sb()+0x1270+i,1) for i in range(300))
+ frames(1,64);frames(20);key(1);frames(180)
+ for _ in range(8):
+  if not read('sLockFieldControls',1):break
+  key(1);frames(180)
+ assert bytes(read(sb()+0x1270+i,1) for i in range(300))==flags
+ print('Actual survey desk enables RAM-only water access without changing saved flags: PASS',flush=True)
+else:
+ assert args.resume is not None,'Cold Continue must not inherit session-only Survey access'
+ print('Exact-ROM resumed snapshot retains already-enabled Survey session; no second toggle: PASS',flush=True)
 assert read('sJohtoTestAccess',1)==1
-assert bytes(read(sb()+0x1270+i,1) for i in range(300))==flags
-print('Actual survey desk enables RAM-only water access without changing saved flags: PASS',flush=True)
 for n in targets:
  go(n);visited.add(n)
  if maps[n]['map_type'] in ['MAP_TYPE_CITY','MAP_TYPE_ROUTE'] and safe(n,(size[n][0]//2,size[n][1]//2)):

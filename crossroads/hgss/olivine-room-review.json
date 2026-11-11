@@ -102,7 +102,7 @@
       21
     ],
     "adaptations": [
-      "Actual HGSS matrix identical to Ecruteak service room; pinned tested native adaptation",
+      "Actual HGSS matrix identical to Ecruteak service room; clone current dedicated source-backed adaptation after its generator, retaining immutable generic templates",
       "Olivine nurse ID/shop stock/scripts preserved; native PC/counter/escalators",
       "Raised DS reception flattened; communication desks explicitly offline"
     ],
@@ -121,10 +121,10 @@
     },
     "dimensions": [
       17,
-      12
+      14
     ],
     "adaptations": [
-      "Actual HGSS matrix identical to Ecruteak service room; pinned tested native adaptation",
+      "Actual HGSS matrix identical to Ecruteak service room; clone current dedicated source-backed adaptation after its generator, retaining immutable generic templates",
       "Olivine nurse ID/shop stock/scripts preserved; native PC/counter/escalators",
       "Raised DS reception flattened; communication desks explicitly offline"
     ],
@@ -146,7 +146,7 @@
       13
     ],
     "adaptations": [
-      "Actual HGSS matrix identical to Ecruteak service room; pinned tested native adaptation",
+      "Actual HGSS matrix identical to Ecruteak service room; clone current dedicated source-backed adaptation after its generator, retaining immutable generic templates",
       "Olivine nurse ID/shop stock/scripts preserved; native PC/counter/escalators",
       "Raised DS reception flattened; communication desks explicitly offline"
     ],

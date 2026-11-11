@@ -1,109 +1,127 @@
-# Olivine completion review — QA09
+# Olivine QA09 completion review
 
-This inventory distinguishes **registered implementation**, reference matching,
-technical adaptation and actual delivery verification. It does not certify100%.
-Final source revision, ROM SHA256, final controller tests and owner Delta visual
-acceptance remain pending. V5 is diagnostic evidence only.
+All **nine canonical enterable buildings**, **four preserved Black Ledger additions**
+and **24 native city/interior/landmark maps** are registered. This checklist separates
+implemented content, actual source comparison, automated checks, controller-driven
+mGBA and owner Delta acceptance. **Final frozen V8 verification is pending.**
+V7's actual tests are a diagnostic checkpoint; source previews are not playtests.
 
-The inspected current inventory has **all nine canonical enterable city buildings**,
-**four preserved Black Ledger additions** and **24 native city/interior/landmark maps**.
-The authoritative source manifest is [OLIVINE_COMPLETION_QA09.json](OLIVINE_COMPLETION_QA09.json).
+The detailed inventory is [OLIVINE_COMPLETION_QA09.json](OLIVINE_COMPLETION_QA09.json).
+Exact final source revision/ROM checksum must be filled from the actual delivery
+artifact after final source generation/build/testing. Neither compilation nor
+connectivity alone certifies visual quality, and no blanket100% claim is made here.
 
-## Buildings and intended interiors
+## Building and interior checklist
 
-| Building | Classification | Registered interiors | Final verification |
+| Building | Classification | Intended native interiors | Verification |
 | --- | --- | --- | --- |
-| Gym | HGSS canonical enterable building | Gym, Gym_Arena | PENDING final delivery/Delta |
-| Pokemon Center | HGSS canonical enterable building | PokemonCenter_1F, PokemonCenter_B1F | PENDING final delivery/Delta |
-| Poke Mart | HGSS canonical enterable building | Mart | PENDING final delivery/Delta |
-| Glitter Lighthouse | HGSS canonical enterable building | Lighthouse_1F, Lighthouse_2F, Lighthouse_3F, Lighthouse_4F, Lighthouse_5F, Lighthouse_6F, Lighthouse_Balcony, Lighthouse_Elevator | PENDING final delivery/Delta |
-| Fishing house | HGSS canonical enterable building | FishingHouse | PENDING final delivery/Delta |
-| Trade house | HGSS canonical enterable building | TradeHouse | PENDING final delivery/Delta |
-| Seal house | HGSS canonical enterable building | SealHouse | PENDING final delivery/Delta |
-| Cafe | HGSS canonical enterable building | Cafe | PENDING final delivery/Delta |
-| Port terminal | HGSS canonical enterable building | PortTerminal, PortQuay | PENDING final delivery/Delta |
-| Joe Mercer residence | deliberate Black Ledger addition | Residence | PENDING final delivery/Delta |
-| Accepted neighbour residence | deliberate Black Ledger addition | NeighborHouse | PENDING final delivery/Delta |
-| Silph subsidiary office | deliberate Black Ledger addition | SilphOffice | PENDING final delivery/Delta |
-| Harbor Office | deliberate Black Ledger addition | HarborOffice | PENDING final delivery/Delta |
+| Gym | HGSS canonical enterable building | Gym, Gym_Arena | Registered; V7 visited; finalV8/Delta pending |
+| Pokemon Center | HGSS canonical enterable building | PokemonCenter_1F, PokemonCenter_B1F | Registered; V7 visited; finalV8/Delta pending |
+| Poke Mart | HGSS canonical enterable building | Mart | Registered; V7 visited; finalV8/Delta pending |
+| Glitter Lighthouse | HGSS canonical enterable building | Lighthouse_1F, Lighthouse_2F, Lighthouse_3F, Lighthouse_4F, Lighthouse_5F, Lighthouse_6F, Lighthouse_Balcony, Lighthouse_Elevator | Registered; V7 visited; finalV8/Delta pending |
+| Fishing house | HGSS canonical enterable building | FishingHouse | Registered; V7 visited; finalV8/Delta pending |
+| Trade house | HGSS canonical enterable building | TradeHouse | Registered; V7 visited; finalV8/Delta pending |
+| Seal house | HGSS canonical enterable building | SealHouse | Registered; V7 visited; finalV8/Delta pending |
+| Cafe | HGSS canonical enterable building | Cafe | Registered; V7 visited; finalV8/Delta pending |
+| Port terminal | HGSS canonical enterable building | PortTerminal, PortQuay | Registered; V7 visited; finalV8/Delta pending |
+| Joe Mercer residence | deliberate Black Ledger addition | Residence | Registered; V7 visited; finalV8/Delta pending |
+| Accepted neighbour residence | deliberate Black Ledger addition | NeighborHouse | Registered; V7 visited; finalV8/Delta pending |
+| Silph subsidiary office | deliberate Black Ledger addition | SilphOffice | Registered; V7 visited; finalV8/Delta pending |
+| Harbor Office | deliberate Black Ledger addition | HarborOffice | Registered; V7 visited; finalV8/Delta pending |
 
-## Reference matching and deliberate adaptations
+## Reference-backed content and deliberate adaptations
 
-Canonical building entrances and relative geography come from actual HGSS city
-mosaic and pinned map/event/prop facts. Three native homes use the actual shared
-0097 house matrix and inspected trade-house screenshot. The cafe's actual raster
-was also inspected: cream/checkered floor, communal table, right bar/staff area,
-two rear windows and kitchen have native counterparts. Center/Mart common source
-matrices exactly match the already tested GBA service adaptation; Olivine gets
-private layouts while all historical shared service modules remain untouched.
-The long Gym hall spans its two existing native map IDs; the approved owner Gym
-art deliberately supersedes literal HGSS exterior art. Raised DS reception and
-3D perspective are adapted to native GBA layers. DS online desks are offline.
+Canonical entrance spacing and relative city geography come from the actual HGSS
+mosaic and pinned event/matrix/prop/permission facts. The three homes share actual
+0097: kitchen/fridge, rear window/bookcase/plant, table and seats. The actual0136
+cafe raster supports its cream/checkered floor, two windows, NW/SW plants, communal
+table and L-counter. Pale-blue home walls and cream cafe window/walls replace the
+inaccurate red-curtained timber motif. A visible one-cell staff aisle prevents a
+GBA-only closed floor pocket; the counter remains solid and supports real talk.
 
-Joe's residence, neighbour home, Silph subsidiary and Harbor Office are retained
-as separate Black Ledger locations. Canonical homes are not silently repurposed
-or deleted. Forest infill/commercial plots and the shifted western parasol fit
-these additions. The GBA south-facing terminal requires a bounded east boardwalk
-back to the city, retaining the northern covered approach. The cafe's visible
-one-cell staff aisle avoids an inaccessible dry-floor pocket; its counter stays
-solid and supports actual native over-counter interaction.
+The Center's source raised rear deck is flattened for native GBA service systems.
+The source-backed17x14 basement retains the entire public y12 waiting row, plants,
+table, ten stools and terminal. Its private blue graphics replace the old mirror
+stand-in. Dedicated current Ecruteak service output is copied because the source
+matrices are exactly identical; old generic Center/Mart templates for other cities
+remain unchanged. Olivine's own nurse, heal ID, scripts, stock, doors and map IDs
+remain. The tall silver/salmon Gym spans its two stable native maps; the approved
+owner Steel Gym facade remains a deliberate Black Ledger exterior exception.
 
-All six lighthouse floor IDs remain. The source fourth-floor window, exterior
-balcony, isolated southern3F branch and western stair route are recorded as one
-intentional traversal chain, with actual two-stop native lift behavior. Final
-controller evidence must verify the chain and every visible stair/door segment.
-The terminal and quay are separate maps with reciprocal main/side doors. S.S. Aqua
-sailing, ship interiors and other-region arrivals remain explicitly outside this
-map pass; accepted Harbor Office travel is preserved separately.
+Lighthouse floors retain the actual branched geometry:4F east window→balcony→south3F
+and western stairs→upper floors. Native lift controls serve1F and6F without new
+saved progress. Both visible lift panels and exits work. Source1F/2F plants, purple
+light room and substantial circular mechanical lens housing are represented;
+the existing beacon actor/scripts remain. Flat native rails/masonry replace
+perspective models. The source map123 cylinder is a flat body around the U-shaped
+balcony. Its sea is far below: every source-blocked water-adjacent edge is railed.
+Off-public DS elevator machinery is documented as a cropped model, not a hidden room.
 
-## Work still assigned before final build
+Port furniture matches its actual screenshot: tan planks, blue rug, white tables,
+all eight yellow stools, aqua waiting seats and life rings. The quay includes the
+rear terminal with all four doorway segments, docked blue/white ferry and both
+sailboats. Original GBA art and repeated hull/window panels fit the hardware;
+unused eastern ocean is cropped to40x27 while preserving actual public paths.
+S.S. Aqua sailing/ship interiors/other-region arrivals are **outside this city pass**.
+Its boarding boundary is explicit; accepted Harbor Office travel remains separate.
 
-- Source city moored sailboats and pennant arches are being added to the exterior.
-- Landmark pass is correcting the port rear facade/ship scenery, gray maritime
-  walls, balcony rail and actual lift-door graphics; source plant/floor identity
-  review remains part of that pass.
-- Small source home/cafe potted plants require final fixture review; the widened
-  GBA bookcase currently absorbs the home plant corner, and the cafe raster has
-  NW/SW pots not yet separately depicted in the audited output. Parent notified.
-- Final source/build/checksum, full generation/static checks, normal controller
-  doorway/traversal/collision/service/whiteout/save tests and native evidence.
-- Owner Delta review and final visual acceptance.
+Joe's home, accepted neighbour home, Silph subsidiary and Harbor Office are
+retained additions, not substitutes for canonical homes. City material corrections
+include20 source-backed white fence cells,12 timber terrace-table cells, deck and
+parasols, gray offshore boulders and preserved genuine cliff.65 obsolete source
+model167 body cells now show actual sea. The south-facing GBA port keeps its north
+covered approach and bounded east boardwalk. Full visible door leaves have matching
+metadata/warps; port returns land outside on clear dry forecourt anchors.
 
-These entries must be updated against the final generated outputs and delivery
-binary. They are not permission to silently leave known work unimplemented.
-Story gates, badges, reward/trade distribution, Seal Case and curated new
-encounters remain deferred by the owner's design boundary, not invented here.
+## Actual verification and final gate
 
-## Per-map register
+V7 ROM: `0734501b031d05156a28e685dc1c2748153cb065222bd67b0d2e7cea47fefbca`.
+These are controller-driven mGBA tests, not owner manual Delta acceptance:
 
-| Map | Stable map identity (group,map) | Layout | Classification | Final verification |
-| --- | --- | --- | --- | --- |
-| OlivineCity | `MAP_OLIVINE_CITY` (75,0) | `LAYOUT_OLIVINE_CITY` | HGSS geometry / GBA adaptation | PENDING |
-| OlivineCity_Residence | `MAP_OLIVINE_CITY_RESIDENCE` (75,1) | `LAYOUT_HOUSE_WITH_BED` | Black Ledger addition | PENDING |
-| OlivineCity_NeighborHouse | `MAP_OLIVINE_CITY_NEIGHBOR_HOUSE` (75,2) | `LAYOUT_HOUSE_WITH_BED` | Black Ledger addition | PENDING |
-| OlivineCity_Gym | `MAP_OLIVINE_CITY_GYM` (75,3) | `LAYOUT_OLIVINECITY_GYM` | HGSS geometry / GBA adaptation | PENDING |
-| OlivineCity_PokemonCenter_1F | `MAP_OLIVINE_CITY_POKEMON_CENTER_1F` (75,4) | `LAYOUT_HGSS_OLIVINECITY_POKEMONCENTER_1F` | HGSS geometry / GBA adaptation | PENDING |
-| OlivineCity_Mart | `MAP_OLIVINE_CITY_MART` (75,5) | `LAYOUT_HGSS_OLIVINECITY_MART` | HGSS geometry / GBA adaptation | PENDING |
-| OlivineCity_SilphOffice | `MAP_OLIVINE_CITY_SILPH_OFFICE` (75,6) | `LAYOUT_OLIVINE_SILPH_OFFICE` | Black Ledger addition | PENDING |
-| OlivineCity_HarborOffice | `MAP_OLIVINE_CITY_HARBOR_OFFICE` (75,7) | `LAYOUT_OLIVINE_HARBOR_OFFICE` | Black Ledger addition | PENDING |
-| OlivineCity_Lighthouse_1F | `MAP_OLIVINECITY_LIGHTHOUSE_1F` (75,18) | `LAYOUT_OLIVINECITY_LIGHTHOUSE_1F` | HGSS geometry / GBA adaptation | PENDING |
-| OlivineCity_Lighthouse_2F | `MAP_OLIVINECITY_LIGHTHOUSE_2F` (75,19) | `LAYOUT_OLIVINECITY_LIGHTHOUSE_2F` | HGSS geometry / GBA adaptation | PENDING |
-| OlivineCity_Lighthouse_3F | `MAP_OLIVINECITY_LIGHTHOUSE_3F` (75,20) | `LAYOUT_OLIVINECITY_LIGHTHOUSE_3F` | HGSS geometry / GBA adaptation | PENDING |
-| OlivineCity_Lighthouse_4F | `MAP_OLIVINECITY_LIGHTHOUSE_4F` (75,21) | `LAYOUT_OLIVINECITY_LIGHTHOUSE_4F` | HGSS geometry / GBA adaptation | PENDING |
-| OlivineCity_Lighthouse_5F | `MAP_OLIVINECITY_LIGHTHOUSE_5F` (75,22) | `LAYOUT_OLIVINECITY_LIGHTHOUSE_5F` | HGSS geometry / GBA adaptation | PENDING |
-| OlivineCity_Lighthouse_6F | `MAP_OLIVINECITY_LIGHTHOUSE_6F` (75,23) | `LAYOUT_OLIVINECITY_LIGHTHOUSE_6F` | HGSS geometry / GBA adaptation | PENDING |
-| OlivineCity_Gym_Arena | `MAP_OLIVINECITY_GYM_ARENA` (75,33) | `LAYOUT_OLIVINECITY_GYM_ARENA` | HGSS geometry / GBA adaptation | PENDING |
-| OlivineCity_FishingHouse | `MAP_HGSS_OLIVINECITY_FISHINGHOUSE` (76,34) | `LAYOUT_HGSS_OLIVINECITY_FISHINGHOUSE` | HGSS geometry / GBA adaptation | PENDING |
-| OlivineCity_TradeHouse | `MAP_HGSS_OLIVINECITY_TRADEHOUSE` (76,35) | `LAYOUT_HGSS_OLIVINECITY_TRADEHOUSE` | HGSS geometry / GBA adaptation | PENDING |
-| OlivineCity_SealHouse | `MAP_HGSS_OLIVINECITY_SEALHOUSE` (76,36) | `LAYOUT_HGSS_OLIVINECITY_SEALHOUSE` | HGSS geometry / GBA adaptation | PENDING |
-| OlivineCity_Cafe | `MAP_HGSS_OLIVINECITY_CAFE` (76,37) | `LAYOUT_HGSS_OLIVINECITY_CAFE` | HGSS geometry / GBA adaptation | PENDING |
-| OlivineCity_PokemonCenter_B1F | `MAP_HGSS_OLIVINECITY_POKEMONCENTER_B1F` (76,38) | `LAYOUT_HGSS_OLIVINECITY_POKEMONCENTER_B1F` | HGSS geometry / GBA adaptation | PENDING |
-| OlivineCity_Lighthouse_Balcony | `MAP_OLIVINE_CITY_LIGHTHOUSE_BALCONY` (76,39) | `LAYOUT_OLIVINE_CITY_LIGHTHOUSE_BALCONY` | HGSS geometry / GBA adaptation | PENDING |
-| OlivineCity_Lighthouse_Elevator | `MAP_OLIVINE_CITY_LIGHTHOUSE_ELEVATOR` (76,40) | `LAYOUT_OLIVINE_CITY_LIGHTHOUSE_ELEVATOR` | HGSS geometry / GBA adaptation | PENDING |
-| OlivineCity_PortTerminal | `MAP_OLIVINE_CITY_PORT_TERMINAL` (76,41) | `LAYOUT_OLIVINE_CITY_PORT_TERMINAL` | HGSS geometry / GBA adaptation | PENDING |
-| OlivineCity_PortQuay | `MAP_OLIVINE_CITY_PORT_QUAY` (76,42) | `LAYOUT_OLIVINE_CITY_PORT_QUAY` | HGSS geometry / GBA adaptation | PENDING |
+- All24 Olivine target maps visited; approach/transit included39 maps,182 transitions,
+  53 explicit round-trip pairs and174 warp trials.
+-27 service records passed, including real shop/heal/PC/office/home interactions
+  and an actual Jasmine practice loss with local nurse/whiteout.
+-21 Save/cold Continue records passed with exact party/boxes/bag/flags/starter
+  integrity; source battery copies remained unchanged. Obsolete-coordinate
+  migration fixtures are separately disclosed; no original private save is overwritten.
+- Four elevator panel/exit combinations and six special journeys passed: source
+  window return chain, both port sea/overhang/body cases, dry boardwalk/rightleaf
+  return and both high-balcony rail/no-Surf attempts.
 
-Each JSON map record includes exact native doors/warps/connections, source header
-and blob provenance, source prop model counts, object/service inventory and
-adaptations. No record marks final emulator or owner acceptance passed before
-those tests run on the actual uniquely identified delivery ROM.
+V8 changes to source props, palettes, lower Center floor and city materials require
+fresh frozen-ROM builds and applicable controller reruns. The final artifact must
+identify its exact source and SHA256. New Game/title/Continue, Joe/actions/starters,
+services/battles and old-save compatibility must retain their regression coverage.
+Owner Delta visual acceptance is still required. Source story, badges, rewards,
+trades/Seal Case, new encounters and DS online functions remain expressly deferred.
+
+## Evidence and remaining reference limits
+
+- [Reference/build gallery](../qa/qa09/olivine-review/comparisons.html): actual
+  published HGSS references with URL/SHA/dimensions; V7 native240x160 frames;
+  corrected V8 authored layout previews clearly labelled STATIC, not gameplay.
+- [Every landmark source prop instance](olivine-landmark-prop-coverage.json):42
+  source instances each map to a native counterpart/footprint or precise adaptation;
+  unhandled source instance count0 does not itself prove gameplay or visual approval.
+- [Landmark reference index](olivine-landmark-visual-references.json) and
+  [room source/design review](OLIVINE_ROOM_DESIGN_QA09.md).
+
+The lighthouse source reference is an annotated published multi-floor composition,
+not a raw DS-native screenshot. House/cafe reference publication scales differ
+from native game resolution. No fake pixel1:1 comparison is asserted. The lift
+cabin has source geometry/functional evidence but lacks a separately verified
+full native HGSS cabin screenshot. The four Black Ledger additions have no HGSS
+counterpart. These limits are explicit instead of inventing reference details.
+
+## Delta final review
+
+Back up/export your normal save. Import the uniquely named final ROM and a COPY of
+the normal battery if Delta treats it as another game. Use Continue, not an older
+emulator state. Enter each visible leaf independently and walk away after every
+arrival. Visit all nine canonical buildings and four additions; use the shop,
+heal/PC/home/office/harbor functions. Walk every lighthouse stair and window branch,
+choose both lift floors and exits, cross the port's main/side doors and dry boardwalk,
+and test water/roof/body separation. Circle trees/building bases/boundaries and
+check no arrows on ordinary ground. Save, reset to title, Continue and verify party,
+starter, inventory and location. Final visual acceptance remains yours.

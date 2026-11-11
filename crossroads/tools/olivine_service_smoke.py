@@ -22,12 +22,20 @@ def item_count(item):
  secret=read(read('gSaveBlock2Ptr')+0xac,4)&0xffff
  return sum(read(sb()+0x562+i*4,2)^secret for i in range(186) if read(sb()+0x560+i*4,2)==item)
 def money():return read(sb()+0x490)^read(read('gSaveBlock2Ptr')+0xac)
-def interact(event,label):
+def text(label):
+ address=syms[label];b=bytearray()
+ for i in range(768):
+  value=read(address+i,1);b.append(value)
+  if value==255:return bytes(b)
+ raise AssertionError(('Unterminated text buffer',label))
+def interact(event,label,expected_text=None):
  n=current();x,y=event['x'],event['y'];candidates=[((x,y+1),64),((x-1,y),16),((x+1,y),32),((x,y-1),128)]
  for point,button in candidates:
   if d['path'](n,point) is not None:break
  else:raise AssertionError((n,'No usable interaction approach',event))
- talk(point,button);assert read('sLockFieldControls',1),(n,label,'Interaction did not open');image(label);close();assert current()==n and pos()==point and not read('sLockFieldControls',1)
+ talk(point,button);assert read('sLockFieldControls',1),(n,label,'Interaction did not open')
+ if expected_text:assert text('gStringVar4')==text(expected_text),(n,label,'Wrong actual displayed message')
+ image(label);close();assert current()==n and pos()==point and not read('sLockFieldControls',1)
  records.append(dict(label=label,map=n,target=[x,y],approach=point,result='controller interaction, message, control return PASS'))
 # Normal water rules for every service trip; no Surf-assisted path hides a door.
 go('OlivineCity_HarborOffice');talk((1,6))
@@ -53,6 +61,19 @@ for _ in range(8):
 assert task('Task_HandleMultichoiceInput'),'Native PC menu was not reached';image('center-pc-menu');key(2);frames(240);close()
 assert party()==before_party and memory(read('gPokemonStoragePtr'),0x83d0)==before_boxes
 records.append(dict(label='center-pc-menu',result='actual power/menu/cancel, exact party/box bytes PASS'))
+# All six receptionists must work from the normal customer-side front, never a
+# convenient side route. The old zero-behavior counter blocked every front A.
+for n,xs,staff_y in [('OlivineCity_PokemonCenter_1F',[2,6,11],2),('OlivineCity_PokemonCenter_B1F',[4,8,12],4)]:
+ go(n)
+ for x in xs:
+  assert d['behavior'](n,x,staff_y+1)==0x80,(n,x,'Counter front lacks native MB_COUNTER')
+  point=(x,staff_y+2);talk(point,64);assert read('sLockFieldControls',1),(n,x,'Front A did not reach staff')
+  expected_id=next(i+1 for i,e in enumerate(d['maps'][n]['object_events']) if (e['x'],e['y'])==(x,staff_y))
+  assert read('gSpecialVar_LastTalked',2)==expected_id,(n,x,'Wrong staff local ID')
+  assert text('gStringVar4')==text('Hgss_CommunicationText'),(n,x,'Wrong actual receptionist message')
+  image(n+'-front-desk-'+str(x));close();assert current()==n and pos()==point and not read('sLockFieldControls',1)
+  records.append(dict(label=n+'-front-desk-'+str(x),map=n,staff=[x,staff_y],approach=point,actual_staff_local_id=expected_id,result='front A across native counter, exact actual text/local ID, control return PASS'))
+go('OlivineCity_PokemonCenter_1F');interact(d['maps'][current()]['object_events'][1],'center-visitor')
 # Actual original-stock purchase. No test money or item grants are used.
 go('OlivineCity_Mart');talk((4,6),32)
 for _ in range(3):
@@ -64,6 +85,7 @@ key(1);frames(300);key(1);frames(300);key(1);frames(300)
 assert money()==before_money-200 and item_count(1)==before_balls+1,('Purchase balance/item mismatch',before_money,money(),before_balls,item_count(1));image('mart-purchase')
 for _ in range(8):key(2);frames(180)
 close();assert current()=='OlivineCity_Mart' and not read('sLockFieldControls',1);records.append(dict(label='mart-purchase',result='real one Poke Ball purchase at200, decoded balance and quantity PASS',money_before=before_money,money_after=money(),quantity_before=before_balls,quantity_after=item_count(1)))
+interact(d['maps'][current()]['object_events'][1],'mart-visitor')
 # Joe's accepted rest interaction must never replace the selected Center.
 go('OlivineCity_Residence');m=d['maps'][current()];rest=next(e for e in m['bg_events'] if e['script']=='Olivine_HomeRest');walk((0,5));p0=read('gPlayerPartyPtr');write(p0+86,1,2);heal=memory(sb()+0x1c,8)
 talk((0,5),64);key(128);key(1);frames(180);assert read('sLockFieldControls',1)==0 and read(read('gPlayerPartyPtr')+86,2)==1,'Declining rest healed or locked controls';image('home-rest-declined')
@@ -89,6 +111,20 @@ for n in ['OlivineCity_SilphOffice','OlivineCity_HarborOffice']:
  for e in d['maps'][n]['bg_events']:interact(e,e['script'])
  for e in d['maps'][n]['object_events']:
   if e['script'] not in ['Crossroads_EventScript_ChooseStarter','Johto_TestDesk']:interact(e,n+'-'+e['script'])
+# Every maritime caretaker/visitor/beacon and actual wayfinding sign is used,
+# including the source-isolated southern3F reached by the real balcony chain.
+for n in ['OlivineCity_Lighthouse_'+str(i)+'F' for i in range(1,7)]+['OlivineCity_Lighthouse_Balcony','OlivineCity_PortTerminal','OlivineCity_PortQuay']:
+ if n=='OlivineCity_Lighthouse_3F':go(n,5)
+ elif n=='OlivineCity_Lighthouse_4F':go(n,0) # Source eastern component holds the public floor plaque.
+ else:go(n)
+ for index,e in enumerate(d['maps'][n]['object_events']):
+  script=e['script'];expected=script+'_Text' if script.startswith('Area_') else script+'Text'
+  interact(e,n+'-ambient-'+str(index+1),expected)
+ for index,e in enumerate(d['maps'][n]['bg_events']):
+  script=e['script'];expected=script+'_Text' if script=='Area_LighthouseView' else script+'Text'
+  interact(e,n+'-wayfinding-'+str(index+1),expected)
+go('OlivineCity_NeighborHouse')
+for index,e in enumerate(d['maps'][current()]['object_events']):interact(e,'accepted-neighbor-'+str(index+1))
 if not a.skip_battle:
  # Revisit the nurse to make local whiteout unambiguous, then lose an existing
  # optional Jasmine practice battle.1HP is a fixture, not difficulty evidence.

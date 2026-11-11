@@ -83,11 +83,27 @@ def generate(check=False):
    for v in pm[(source_id-512)*8+4:(source_id-512)*8+8]:
     i=(v&1023)-512;top.append(tile_alloc(ps.crop((i%16*8,i//16*8,i%16*8+8,i//16*8+8)))|(v&0xc00)|0x8000)
    home_words.extend(ground+top);home_attrs.append(pa[source_id-512])
+ # Actual0097 homes use pale-blue walls; the0136 cafe uses cream plaster
+ # and plain cool window panes. Only private foreground palette words differ;
+ # every collision, furniture pixel/glyph, room/door coordinate and ID remains.
+ for name in ['house_wall','house_window']:
+  a=home_art[name];rows=[home_words[(a['start']-512+i)*8:(a['start']-512+i+1)*8] for i in range(a['width']*a['height'])]
+  home_art['cafe_'+name]=dict(a,start=512+len(home_attrs))
+  for i,row in enumerate(rows):
+   home_words.extend(row[:4]+[(v&0xfff)|0xa000 for v in row[4:]]);home_attrs.append(home_attrs[a['start']-512+i])
+   j=(a['start']-512+i)*8;home_words[j+4:j+8]=[(v&0xfff)|0x9000 for v in row[4:]]
  home_root='data/tilesets/secondary/hgss_olivine_home';Path(R/home_root).mkdir(parents=True,exist_ok=True)
  if check:assert Image.open(R/home_root/'tiles.png').tobytes()==home_sheet.tobytes()
  else:home_sheet.save(R/home_root/'tiles.png',bits=4)
  write(home_root+'/metatiles.bin',struct.pack('<'+str(len(home_words))+'H',*home_words));write(home_root+'/metatile_attributes.bin',struct.pack('<'+str(len(home_attrs))+'H',*home_attrs))
- for i in range(16):write(home_root+f'/palettes/{i:02}.pal',(pc/'palettes/06.pal').read_bytes() if i==7 else (pc/'palettes/08.pal').read_bytes() if i==8 else (td/f'palettes/{i:02}.pal').read_bytes())
+ wall_palettes={
+ 9:[[0,0,0],[228,235,239],[193,209,219],[162,184,200],[120,149,170],[80,111,135],[45,67,87],[144,150,151],[83,95,101],[52,60,66],[104,142,114],[154,181,139],[71,107,91],[179,199,213],[109,139,161],[229,235,226]],
+ 10:[[0,0,0],[244,240,222],[225,216,190],[194,181,151],[158,145,116],[116,104,82],[78,70,57],[144,150,151],[83,95,101],[52,60,66],[104,142,114],[154,181,139],[71,107,91],[216,221,215],[139,159,161],[239,230,205]]}
+ for i in range(16):
+  b=(pc/'palettes/06.pal').read_bytes() if i==7 else (pc/'palettes/08.pal').read_bytes() if i==8 else (td/f'palettes/{i:02}.pal').read_bytes()
+  if i in wall_palettes:b='JASC-PAL\n0100\n16\n'+'\n'.join(' '.join(map(str,c)) for c in wall_palettes[i])+'\n'
+  write(home_root+f'/palettes/{i:02}.pal',b)
+
  # New original, reference-directed silver/salmon/hexagonal gym components.
  artdir=R/'crossroads/hgss/art/olivine-rooms';src=Image.open(artdir/'gym-source.png').convert('RGBA');pal=[0,0,0]+[v for c in [(239,237,234),(211,211,214),(177,176,183),(139,141,152),(99,103,117),(65,64,76),(193,143,130),(225,175,155),(237,202,169),(154,112,107),(90,88,102),(223,197,87),(253,230,141),(119,117,134),(43,42,54)] for v in c];ref=Image.new('P',(1,1));ref.putpalette(pal+[0]*720);gym_sheet=Image.new('P',(128,256));gym_sheet.putpalette(pal);gw=[];ga=[];gs={};gcache={};gc=0
  def alloc(im):
@@ -144,7 +160,7 @@ def generate(check=False):
   else:layouts['layouts'].append(l);ls[l['id']]=l
   assert len(t)==w*h
   for o in m['object_events']:assert not t[o['y']*w+o['x']]&0xc00,(n,'blocked actor',o)
-  border=0x601 if secondary=='gTileset_PokemonCenter' else 0x401 if secondary=='gTileset_Shop' else 0x400|(gs['void']['start'] if secondary=='gTileset_HgssOlivineGym' else home_art['void']['start'])
+  border=0x601 if 'POKECENTER' in header else 0x401 if 'POKEMART' in header else 0x400|(gs['void']['start'] if secondary=='gTileset_HgssOlivineGym' else home_art['void']['start'])
   write(l['blockdata_filepath'],struct.pack('<'+str(w*h)+'H',*t));write(l['border_filepath'],struct.pack('<4H',*([border]*4)));js(f'data/maps/{n}/map.json',m);allmaps[n]=m
   reviews.append(dict(name=n,source_header=header,source=facts[header]['source'],dimensions=[w,h],adaptations=adapt,runtime='requires delivery-ROM controller tests',owner_visual_acceptance='pending'))
  for header,n,outside in TARGETS:
@@ -155,8 +171,9 @@ def generate(check=False):
     for xx in range(a['width']):
      X,Y=x+xx,y+yy
      if 0<=X<w and 0<=Y<h:t[Y*w+X]=(0x400 if solid is True or solid is None and (X,Y) not in seen else 0x3000)|a['start']+yy*a['width']+xx
+  wall=home_art['cafe_house_wall' if n.endswith('_Cafe') else 'house_wall']
   for y in (1,2):
-   for x in range(1,w-1):t[y*w+x]=0x400|home_art['house_wall']['start']+(y-1)*4+x%4
+   for x in range(1,w-1):t[y*w+x]=0x400|wall['start']+(y-1)*4+x%4
   if n.endswith('House'):
    stamp('fridge',1,2,True);stamp('house_kitchen',2,2,True);stamp('house_window',5,1,True);stamp('cabinet',7,2,True);stamp('house_plant',9,2,True);stamp('dining_table',6,5,True)
    for x in [5,8]:
@@ -180,7 +197,7 @@ def generate(check=False):
    # Closed cells next to public floor form the actual room perimeter.
   for y in range(3,h-1):
    for x in range(1,w-1):
-    if t[y*w+x]&1023==home_art['void']['start'] and any((x+dx,y+dy) in seen for dx,dy in [(1,0),(-1,0),(0,1),(0,-1)]):t[y*w+x]=0x400|home_art['house_wall']['start']+4+x%4
+    if t[y*w+x]&1023==home_art['void']['start'] and any((x+dx,y+dy) in seen for dx,dy in [(1,0),(-1,0),(0,1),(0,-1)]):t[y*w+x]=0x400|wall['start']+4+x%4
   d=facts[header]['warps'][0];m['warp_events']=[warp(d['x']+i,d['z'],city['id'],outside) for i in range(2)]
   for e in m['warp_events']:t[e['y']*w+e['x']]=home_art['exit']['start']
   save(m,t,w,h,'gTileset_HgssOlivineHome',header,['HGSS room extent/table/counter footprints in native GBA furnishings; cafe12,8 adds one visible staff escape aisle','Source rewards/trades/Seal Case and plot actors are deferred by owner scope','Paired interior exit leaves both work; exterior house/cafe has its canonical single door'])
@@ -188,7 +205,15 @@ def generate(check=False):
  stock=load('crossroads/hgss/contracts/olivine-common-services-qa08.json');ef=load('crossroads/hgss/canonical_events/ecruteak-interior-geometry.json')
  for suffix,header,esrc in [('PokemonCenter_1F','MAP_OLIVINE_POKECENTER_1F','EcruteakCity_PokemonCenter_1F'),('PokemonCenter_B1F','MAP_OLIVINE_POKECENTER_B1F','EcruteakCity_PokemonCenter_B1F'),('Mart','MAP_OLIVINE_POKEMART','EcruteakCity_Mart')]:
   other=header.replace('OLIVINE','ECRUTEAK');assert facts[header]['chunks']==ef[other]['chunks'],'Service matrix no longer identical; individual redesign required'
-  n='OlivineCity_'+suffix;c=stock[esrc];srcmap=c['map'];old=load(f'data/maps/{n}/map.json') if (R/f'data/maps/{n}/map.json').exists() else newmap(n);m=copy.deepcopy(srcmap);m.update(name=n,id=old['id'],layout='LAYOUT_HGSS_'+n.upper(),region_map_section='MAPSEC_OLIVINE_CITY');w,h=c['layout']['width'],c['layout']['height'];t=list(struct.unpack('<'+str(w*h)+'H',bytes.fromhex(c['raw_hex'])))
+  n='OlivineCity_'+suffix
+  # Both cities share these exact HGSS source matrices. Clone only the current
+  # dedicated Ecruteak implementation after its generator runs, so source-backed
+  # basement/merchandise fixes and private palettes cannot remain stale here.
+  # The historical shared templates above remain immutable for other cities.
+  srcmap=load(f'data/maps/{esrc}/map.json');live_layout=ls[srcmap['layout']]
+  if suffix=='PokemonCenter_B1F':assert (live_layout['width'],live_layout['height'],live_layout['secondary_tileset'])==(17,14,'gTileset_HgssCenterBasement'),'Generate updated Ecruteak services/basement assets before Olivine rooms'
+  c=dict(map=srcmap,layout=live_layout,raw_hex=(R/live_layout['blockdata_filepath']).read_bytes().hex())
+  old=load(f'data/maps/{n}/map.json') if (R/f'data/maps/{n}/map.json').exists() else newmap(n);m=copy.deepcopy(srcmap);m.update(name=n,id=old['id'],layout='LAYOUT_HGSS_'+n.upper(),region_map_section='MAPSEC_OLIVINE_CITY');w,h=c['layout']['width'],c['layout']['height'];t=list(struct.unpack('<'+str(w*h)+'H',bytes.fromhex(c['raw_hex'])))
   if suffix=='PokemonCenter_1F':
    m['object_events'][0].update(script='Olivine_Nurse',local_id='LOCALID_OLIVINE_NURSE');m['object_events'][1]['script']='Olivine_CenterVisitor';m['warp_events']=[warp(8,19,city['id'],3),warp(9,19,city['id'],14),warp(14,17,mid('OlivineCity_PokemonCenter_B1F'),0)]
    # Model23 source plants: upper right wall and the paired lower pots.
@@ -196,7 +221,7 @@ def generate(check=False):
   elif suffix=='PokemonCenter_B1F':m['warp_events']=[warp(14,10,'MAP_OLIVINE_CITY_POKEMON_CENTER_1F',2)]
   else:
    m['object_events'][0].update(script='Olivine_Clerk',local_id='LOCALID_SLATEPORT_MART_CLERK');m['object_events'][1]['script']='Olivine_MartVisitor';m['object_events'][2]['script']='Olivine_Clerk';m['warp_events']=[warp(4,11,city['id'],4),warp(5,11,city['id'],4)]
-  save(m,t,w,h,c['layout']['secondary_tileset'],header,['Actual HGSS matrix identical to Ecruteak service room; pinned tested native adaptation','Olivine nurse ID/shop stock/scripts preserved; native PC/counter/escalators','Raised DS reception flattened; communication desks explicitly offline'])
+  save(m,t,w,h,c['layout']['secondary_tileset'],header,['Actual HGSS matrix identical to Ecruteak service room; clone current dedicated source-backed adaptation after its generator, retaining immutable generic templates','Olivine nurse ID/shop stock/scripts preserved; native PC/counter/escalators','Raised DS reception flattened; communication desks explicitly offline'])
  # The long HGSS steel hall is split at sourcey17 over the two stable native IDs.
  p=project('MAP_OLIVINE_GYM',facts=facts,bounds=(11,29));seen=p['walkable'];whole=[]
  for y in range(29):

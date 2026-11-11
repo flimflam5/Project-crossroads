@@ -1,0 +1,469 @@
+{
+  "source_commit": "3f935d5e8600c5a280b9172b555edb35ca52b6c0",
+  "map": "EcruteakCity_PokemonCenter_B1F",
+  "layout_id": "LAYOUT_HGSS_ECRUTEAKCITY_POKEMONCENTER_B1F",
+  "before_dimensions": [
+    17,
+    12
+  ],
+  "after_dimensions": [
+    17,
+    14
+  ],
+  "before_secondary": "gTileset_PokemonCenter",
+  "after_secondary": "gTileset_HgssCenterBasement",
+  "changes": [
+    {
+      "x": 5,
+      "y": 1,
+      "before": 1569,
+      "after": 1776
+    },
+    {
+      "x": 9,
+      "y": 1,
+      "before": 1569,
+      "after": 1776
+    },
+    {
+      "x": 5,
+      "y": 2,
+      "before": 1538,
+      "after": 1777
+    },
+    {
+      "x": 9,
+      "y": 2,
+      "before": 1538,
+      "after": 1777
+    },
+    {
+      "x": 3,
+      "y": 3,
+      "before": 1538,
+      "after": 1778
+    },
+    {
+      "x": 5,
+      "y": 3,
+      "before": 1538,
+      "after": 1780
+    },
+    {
+      "x": 7,
+      "y": 3,
+      "before": 1538,
+      "after": 1778
+    },
+    {
+      "x": 9,
+      "y": 3,
+      "before": 1538,
+      "after": 1780
+    },
+    {
+      "x": 11,
+      "y": 3,
+      "before": 1538,
+      "after": 1778
+    },
+    {
+      "x": 13,
+      "y": 3,
+      "before": 1538,
+      "after": 1780
+    },
+    {
+      "x": 3,
+      "y": 4,
+      "before": 1538,
+      "after": 1781
+    },
+    {
+      "x": 5,
+      "y": 4,
+      "before": 1538,
+      "after": 1783
+    },
+    {
+      "x": 7,
+      "y": 4,
+      "before": 1538,
+      "after": 1781
+    },
+    {
+      "x": 9,
+      "y": 4,
+      "before": 1538,
+      "after": 1783
+    },
+    {
+      "x": 11,
+      "y": 4,
+      "before": 1538,
+      "after": 1781
+    },
+    {
+      "x": 13,
+      "y": 4,
+      "before": 1538,
+      "after": 1783
+    },
+    {
+      "x": 15,
+      "y": 4,
+      "before": 1538,
+      "after": 1774
+    },
+    {
+      "x": 3,
+      "y": 5,
+      "before": 1569,
+      "after": 1784
+    },
+    {
+      "x": 4,
+      "y": 5,
+      "before": 1569,
+      "after": 1785
+    },
+    {
+      "x": 5,
+      "y": 5,
+      "before": 1569,
+      "after": 1786
+    },
+    {
+      "x": 7,
+      "y": 5,
+      "before": 1569,
+      "after": 1784
+    },
+    {
+      "x": 8,
+      "y": 5,
+      "before": 1569,
+      "after": 1785
+    },
+    {
+      "x": 9,
+      "y": 5,
+      "before": 1569,
+      "after": 1786
+    },
+    {
+      "x": 11,
+      "y": 5,
+      "before": 1569,
+      "after": 1784
+    },
+    {
+      "x": 12,
+      "y": 5,
+      "before": 1569,
+      "after": 1785
+    },
+    {
+      "x": 13,
+      "y": 5,
+      "before": 1569,
+      "after": 1786
+    },
+    {
+      "x": 15,
+      "y": 5,
+      "before": 1537,
+      "after": 1775
+    },
+    {
+      "x": 2,
+      "y": 7,
+      "before": 12802,
+      "after": 1773
+    },
+    {
+      "x": 3,
+      "y": 7,
+      "before": 12802,
+      "after": 1772
+    },
+    {
+      "x": 2,
+      "y": 8,
+      "before": 1597,
+      "after": 1768
+    },
+    {
+      "x": 3,
+      "y": 8,
+      "before": 1598,
+      "after": 1769
+    },
+    {
+      "x": 4,
+      "y": 8,
+      "before": 12802,
+      "after": 1772
+    },
+    {
+      "x": 2,
+      "y": 9,
+      "before": 1605,
+      "after": 1770
+    },
+    {
+      "x": 3,
+      "y": 9,
+      "before": 1606,
+      "after": 1771
+    },
+    {
+      "x": 4,
+      "y": 9,
+      "before": 12802,
+      "after": 1773
+    },
+    {
+      "x": 4,
+      "y": 11,
+      "before": 1537,
+      "after": 1546
+    },
+    {
+      "x": 12,
+      "y": 11,
+      "before": 1537,
+      "after": 1546
+    }
+  ],
+  "appended_words": [
+    1537,
+    1537,
+    12802,
+    12802,
+    1554,
+    1772,
+    1773,
+    1772,
+    12802,
+    1772,
+    1773,
+    1772,
+    1554,
+    12802,
+    12802,
+    1537,
+    1537,
+    1537,
+    1537,
+    1537,
+    1537,
+    1537,
+    1537,
+    1537,
+    1537,
+    1537,
+    1537,
+    1537,
+    1537,
+    1537,
+    1537,
+    1537,
+    1537,
+    1537
+  ],
+  "new_bg_events": [
+    {
+      "type": "sign",
+      "x": 15,
+      "y": 5,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Hgss_CommunicationDesk"
+    }
+  ],
+  "source_model_mapping": [
+    {
+      "model": 23,
+      "source": [
+        12.5,
+        12.5
+      ]
+    },
+    {
+      "model": 23,
+      "source": [
+        4.5,
+        12.5
+      ]
+    },
+    {
+      "model": 57,
+      "source": [
+        10.5,
+        12.5
+      ]
+    },
+    {
+      "model": 57,
+      "source": [
+        6.5,
+        12.5
+      ]
+    },
+    {
+      "model": 58,
+      "source": [
+        9.5,
+        12.5
+      ]
+    },
+    {
+      "model": 58,
+      "source": [
+        7.5,
+        12.5
+      ]
+    },
+    {
+      "model": 42,
+      "source": [
+        3.0,
+        9.0
+      ]
+    },
+    {
+      "model": 58,
+      "source": [
+        4.5625,
+        8.5
+      ]
+    },
+    {
+      "model": 57,
+      "source": [
+        4.5625,
+        9.5
+      ]
+    },
+    {
+      "model": 58,
+      "source": [
+        3.5,
+        7.375
+      ]
+    },
+    {
+      "model": 57,
+      "source": [
+        2.5,
+        7.375
+      ]
+    },
+    {
+      "model": 110,
+      "source": [
+        8.375,
+        5.625
+      ]
+    },
+    {
+      "model": 110,
+      "source": [
+        12.5,
+        5.625
+      ]
+    },
+    {
+      "model": 110,
+      "source": [
+        4.375,
+        5.625
+      ]
+    },
+    {
+      "model": 4,
+      "source": [
+        13.5,
+        10.5
+      ]
+    },
+    {
+      "model": 109,
+      "source": [
+        9.5,
+        2.5
+      ]
+    },
+    {
+      "model": 12,
+      "source": [
+        15.0,
+        10.5
+      ]
+    },
+    {
+      "model": 58,
+      "source": [
+        5.5,
+        12.5
+      ]
+    },
+    {
+      "model": 58,
+      "source": [
+        11.5,
+        12.5
+      ]
+    },
+    {
+      "model": 109,
+      "source": [
+        5.5,
+        2.5
+      ]
+    },
+    {
+      "model": 33,
+      "source": [
+        15.3125,
+        5.375
+      ]
+    },
+    {
+      "model": 41,
+      "source": [
+        4.875,
+        5.5
+      ]
+    },
+    {
+      "model": 41,
+      "source": [
+        8.875,
+        5.5
+      ]
+    }
+  ],
+  "rationale": "Source floor and waiting row y12 were cropped; restore original table/stools,2plants,communicationterminal and private cool palette. Same IDs/stairs/actors/old coordinate space;4newsourcechairs change explicit furniture ground footprints.",
+  "counter_behavior_cells": [
+    {
+      "x": 4,
+      "y": 5,
+      "before_attribute": 4096,
+      "after_attribute": 4224
+    },
+    {
+      "x": 8,
+      "y": 5,
+      "before_attribute": 4096,
+      "after_attribute": 4224
+    },
+    {
+      "x": 12,
+      "y": 5,
+      "before_attribute": 4096,
+      "after_attribute": 4224
+    }
+  ]
+}

@@ -75,6 +75,83 @@ east-side boardwalk repair must pass the same assertion and real return journey.
 The post-build Olivine validator also compares all24 compiled map blockdata
 symbols against authored outputs, detecting stale layouts after regeneration.
 
-These are test definitions and migration reasons, not a claim that a particular
-ROM has passed. Actual command results, native recordings and owner Delta review
-belong in the delivery report. A build or graph traversal alone is not visual QA.
+The definitions above accompany the actual delivery results and native recordings.
+Compilation, structural checks, controller-driven gameplay and owner Delta review
+are reported separately.
+
+## Verified frozen Build7
+
+Actual ROM SHA256:
+`0734501b031d05156a28e685dc1c2748153cb065222bd67b0d2e7cea47fefbca`.
+
+- 21 actual Save/cold Continue cases passed, including all nine appended maps,
+  isolated southern3F and top6F sections, both actual panel-selected cabin floors,
+  Center/home/Surf and the disclosed migration/safety fixtures. All eleven new
+  map/component cases also walked away, exited and returned after Continue.
+- 27 actual service checks passed: nurse/local heal metadata, native PC/cancel,
+  real200-money Poke Ball purchase and quantity increment, rest decline/accept,
+  all three canonical houses, Café counter/visitors, five new signs, accepted
+  office interactions and Jasmine855 practice loss/local full-heal arrival8,13.
+- 204 normal controller wall/trunk bumps passed across all thirteen buildings
+  and three free trees, with zero inaccessible approach skips. Three native
+  recordings and intentional canopy-overlap screenshots are retained.
+- All 24 compiled ROM map blocks match authored outputs; all73 accepted exterior
+  metatiles match immutable per-layer RGB555/attributes/collision/elevation.
+- Global validation passed170 maps/451 warps/66 connections. Olivine's directed
+  graph passed2092 public interior tiles across23 interiors.
+
+Public selected native PNG/MP4 evidence and complete JSON reports are in
+[`crossroads/qa/qa09/olivine`](../qa/qa09/olivine/README.md). The separately
+identified V6 port clipping recording is retained as failure baseline footage,
+with its own checksum. Both source batteries remained hash-identical.
+The Save runner corrected an unsupported dynamic-warp planner target and resumed
+its exact-ROM private failure snapshot, retaining the first14 completed assertion
+lines in an explicitly labelled prefix report; the original and continuation
+logs explain this. The service driver corrected an obsolete bed approach to its
+actual foot tile0,5; its full27 checks then passed without changing game data.
+
+These are automated controller-driven mGBA results. Owner Delta/visual acceptance
+is separate and is not asserted here. The final source revision is supplied by
+the root delivery build-info; no source commit is invented before that commit.
+
+The legacy visual-repair manifest still hashes unrelated maps exactly. Only the
+new source-validated Olivine maps and exact two connection buffers replace those
+old hashes; the independent immutable facade, ID, source topology and buffer
+checks all run first. Legacy area completion's undirected one-room flood cannot
+model the HGSS window branch or native dynamic elevator. Those specific rooms
+now use the stronger source-directed, every-public-tile escape validator; all
+other legacy room, tile, roster, graphics, flag and border assertions remain.
+
+## Visual corrections pending after this checkpoint
+
+V7 is a regression baseline, not the final polished city. Its identified exterior
+material defects are incorrect old table-shaped cliff graphics, the northwest
+fence, parasol ground underlay, timber terrace treatment and gray offshore rocks.
+The independent source-prop audit additionally found two missing lighthouse2F
+planters (source model23 at11.5,12.5 and15.5,12.5) and inadequate6F beacon housing
+(source model122 at8.5,6.5). These require actual artwork/generator corrections;
+they are not immutable GBA limitations. The source floor mosaic and native V7
+frames were inspected before reporting them. Fresh same-ROM regression and
+visual checks are required after the replacement build is frozen.
+
+## Common Mart source-prop correction
+
+The complete source-prop review found the same missing fixtures in both native
+Mart modules: three potted plants, the eastern wall rack, and the southern glass
+display with four stools. `mart-props-qa09.json` pins sixteen exact visual cells
+to immutable V7 source `3f935d5e8600c5a280b9172b555edb35ca52b6c0`. A private
+Shop clone retains every one of the 289 old metatile layer/RGB555/attribute
+signatures. Original GBA plant silhouettes and new original native-scale glass/rack/
+stool art replace those specific missing or wrong fixtures. New props share the
+sole free loaded bank12: the native plant colors are explicitly quantized into
+that palette. Emerald loads only background banks0–12; the validator rejects
+bank13 references despite the hardware's larger capacity. Shared resources,
+room dimensions, service scripts, actors, door aliases and IDs remain unchanged.
+
+The four new stool bases explicitly gain collision to keep the native furniture
+solid; all other collision and elevation bits remain exact. HGSS permissions at
+those four prop places are walkable: source model collision/sitting behavior has
+not been verified, so the solid native stool treatment is an explicit GBA
+interpretation, not a claim of demonstrated DS behavior. Both rooms retain an
+escape route from every public tile. Fresh final-ROM prop movement recordings
+and purchasing/service checks are required after generation and compilation.

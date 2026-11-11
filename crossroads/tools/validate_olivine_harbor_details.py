@@ -23,7 +23,7 @@ for ox,oy in [(13,45),(30,45)]:
     assert bool(v&0xc00)==(y>=3),'Only the visible hull blocks Surf; mast/sail overhang stays traversable'
     assert bool(at&0x1000)==(y>=3),'Sail is foreground; hull is covered plane'
    elif y==0:
-    assert v>>12==3 and not v&0xc00 and at&255==0;assert ground==western[16:20],'Quay paving retained beneath the mast'
+    assert v>>12==3 and not v&0xc00 and at&255==0;deck=art['deck']['metatiles'][0];assert ground==metas[(deck-512)*8:(deck-512)*8+4],'Actual timber terrace retained beneath the mast'
    else:assert v&0xc00,'Actual quay seawall remains solid'
 a=art['pennant_arch'];assert (a['width'],a['height'])==(7,3)
 for ox,oy in [(20,7),(7,16),(20,28)]:

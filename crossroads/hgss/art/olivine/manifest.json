@@ -1,15 +1,63 @@
 {
   "specs": {
+    "deck": {
+      "width": 1,
+      "height": 1,
+      "metatiles": [
+        512
+      ],
+      "palette": 12
+    },
+    "fence_h": {
+      "width": 1,
+      "height": 1,
+      "metatiles": [
+        256
+      ],
+      "palette": 3
+    },
+    "fence_v": {
+      "width": 1,
+      "height": 1,
+      "metatiles": [
+        257
+      ],
+      "palette": 3
+    },
+    "fence_corner": {
+      "width": 1,
+      "height": 1,
+      "metatiles": [
+        258
+      ],
+      "palette": 3
+    },
+    "sea_boulder": {
+      "width": 1,
+      "height": 1,
+      "metatiles": [
+        513
+      ],
+      "palette": 12
+    },
+    "quay_fence": {
+      "width": 1,
+      "height": 1,
+      "metatiles": [
+        515
+      ],
+      "palette": 12
+    },
     "parasol": {
       "width": 2,
       "height": 3,
       "metatiles": [
-        512,
-        513,
-        515,
         516,
         517,
-        518
+        518,
+        519,
+        520,
+        521
       ],
       "door_x": -1,
       "door_y": 2,
@@ -30,9 +78,6 @@
       "width": 4,
       "height": 4,
       "metatiles": [
-        519,
-        520,
-        521,
         522,
         523,
         524,
@@ -45,7 +90,10 @@
         531,
         532,
         533,
-        534
+        534,
+        535,
+        536,
+        537
       ],
       "door_x": 1,
       "door_y": 3,
@@ -99,9 +147,6 @@
       "width": 4,
       "height": 4,
       "metatiles": [
-        535,
-        536,
-        537,
         538,
         539,
         540,
@@ -114,7 +159,10 @@
         547,
         548,
         549,
-        550
+        550,
+        551,
+        552,
+        553
       ],
       "door_x": 1,
       "door_y": 3,
@@ -168,9 +216,6 @@
       "width": 7,
       "height": 9,
       "metatiles": [
-        551,
-        552,
-        553,
         554,
         555,
         556,
@@ -230,7 +275,10 @@
         629,
         630,
         631,
-        632
+        632,
+        633,
+        634,
+        635
       ],
       "door_x": 3,
       "door_y": 8,
@@ -420,9 +468,6 @@
       "width": 8,
       "height": 6,
       "metatiles": [
-        633,
-        634,
-        635,
         636,
         637,
         638,
@@ -467,7 +512,10 @@
         677,
         678,
         679,
-        680
+        680,
+        681,
+        682,
+        683
       ],
       "door_x": 3,
       "door_y": 5,
@@ -617,9 +665,6 @@
       "width": 6,
       "height": 5,
       "metatiles": [
-        681,
-        682,
-        683,
         684,
         685,
         686,
@@ -646,7 +691,10 @@
         710,
         711,
         715,
-        716
+        716,
+        717,
+        718,
+        719
       ],
       "door_x": 2,
       "door_y": 4,
@@ -740,9 +788,6 @@
       "width": 5,
       "height": 4,
       "metatiles": [
-        717,
-        718,
-        719,
         723,
         725,
         726,
@@ -759,7 +804,10 @@
         738,
         739,
         740,
-        741
+        741,
+        742,
+        743,
+        744
       ],
       "door_x": 1,
       "door_y": 3,
@@ -825,9 +873,6 @@
       "width": 6,
       "height": 5,
       "metatiles": [
-        742,
-        743,
-        744,
         745,
         746,
         747,
@@ -854,7 +899,10 @@
         768,
         769,
         770,
-        771
+        771,
+        772,
+        773,
+        774
       ],
       "door_x": -1,
       "door_y": 4,
@@ -911,27 +959,30 @@
       ],
       "palette": 11,
       "shore_variants": {
-        "113:6": 827,
-        "113:7": 828,
-        "113:8": 829,
-        "113:9": 830,
-        "113:10": 831,
-        "113:11": 832,
-        "124:6": 833,
-        "124:7": 834,
-        "124:8": 835,
-        "124:9": 836,
-        "124:10": 837,
-        "124:11": 838
+        "113:6": 830,
+        "113:7": 831,
+        "113:8": 832,
+        "113:9": 833,
+        "113:10": 834,
+        "113:11": 835,
+        "124:6": 836,
+        "124:7": 837,
+        "124:8": 838,
+        "124:9": 839,
+        "124:10": 840,
+        "124:11": 841,
+        "515:6": 842,
+        "515:7": 843,
+        "515:8": 844,
+        "515:9": 845,
+        "515:10": 846,
+        "515:11": 847
       }
     },
     "pennant_arch": {
       "width": 7,
       "height": 3,
       "metatiles": [
-        772,
-        773,
-        774,
         775,
         776,
         777,
@@ -949,7 +1000,10 @@
         789,
         790,
         791,
-        792
+        792,
+        793,
+        794,
+        795
       ],
       "door_x": -1,
       "door_y": 2,
@@ -970,9 +1024,6 @@
       "width": 6,
       "height": 5,
       "metatiles": [
-        793,
-        794,
-        795,
         796,
         797,
         798,
@@ -999,7 +1050,10 @@
         821,
         824,
         825,
-        826
+        826,
+        827,
+        828,
+        829
       ],
       "door_x": -1,
       "door_y": 4,
@@ -1060,10 +1114,10 @@
       "width": 2,
       "height": 2,
       "metatiles": [
-        839,
-        840,
-        841,
-        842
+        848,
+        849,
+        850,
+        851
       ]
     }
   },
@@ -1134,12 +1188,14 @@
     822,
     823
   ],
-  "facade_graphics": 657,
-  "remaining_graphics": 144,
+  "facade_graphics": 680,
+  "remaining_graphics": 121,
   "provenance": "Original generated HGSS-directed facades; no HGSS textures imported",
   "source_sha256": {
+    "city-materials-source.png": "1bccbd366b17f36133ba7090c8e11757bce16ef914c3d4bef95bf651331fef30",
     "facades-source.png": "1be91f6a0cec379dba5a6d02080e9efbfda6533d091b1c3a6d4ac7744d2fe9c1",
     "harbor-decor-source.png": "4355a91901d292c235b47f14b6781c94b820808f19ed46af8842b44ced8381d4",
+    "lighthouse-housing-source.png": "56a7c8d143489f5737710714553ee67708168c7401740cd0abf0e7861df93e3a",
     "lighthouse-planter-source.png": "de2c5896eed283571963fbdacca9efadb5f73be3a2c570455b38548f6dacd594",
     "parasol-source.png": "67569f7ac81173907e07420ce63493e87e6a745fb040204bd7a91fceed5523ea",
     "port-furniture-source.png": "5700c5f25d31c78010f8d342e017f2296969b52ffbbf0607b4a295a30f11d456",

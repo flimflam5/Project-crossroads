@@ -6,7 +6,7 @@ from PIL import Image,ImageDraw
 R=Path(__file__).resolve().parents[2]
 p=argparse.ArgumentParser();p.add_argument('--output',default='build/qa09-olivine-room-review');a=p.parse_args();out=R/a.output;out.mkdir(parents=True,exist_ok=True)
 ls={x['id']:x for x in json.loads((R/'data/layouts/layouts.json').read_text())['layouts']};names=[v['name'] for v in json.loads((R/'crossroads/hgss/olivine-room-review.json').read_text())]
-paths={'gTileset_HgssOlivineHome':'hgss_olivine_home','gTileset_HgssOlivineGym':'hgss_olivine_gym','gTileset_PokemonCenter':'pokemon_center','gTileset_Shop':'shop'}
+paths={'gTileset_HgssOlivineHome':'hgss_olivine_home','gTileset_HgssOlivineGym':'hgss_olivine_gym','gTileset_PokemonCenter':'pokemon_center','gTileset_Shop':'shop','gTileset_HgssCenterBasement':'hgss_center_basement','gTileset_HgssCenterReception':'hgss_center_reception','gTileset_HgssMart':'hgss_mart'}
 for n in names:
  m=json.loads((R/f'data/maps/{n}/map.json').read_text());l=ls[m['layout']];w,h=l['width'],l['height'];p1=R/'data/tilesets/primary/building';p2=R/'data/tilesets/secondary'/paths[l['secondary_tileset']];sheets=[Image.open(d/'tiles.png') for d in [p1,p2]];metas=[];pals=[]
  for d in [p1,p2]:

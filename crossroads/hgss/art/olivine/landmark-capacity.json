@@ -1,8 +1,8 @@
 {
-  "primary_graphics": 335,
-  "primary_free": 85,
-  "secondary_metatiles": 501,
-  "secondary_free": 11,
+  "primary_graphics": 370,
+  "primary_free": 50,
+  "secondary_metatiles": 510,
+  "secondary_free": 2,
   "rear_terminal_primary_ids": [
     256,
     327

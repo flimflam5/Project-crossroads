@@ -75,7 +75,11 @@ def validate():
    if name:relocate_layout(name,expected)
    if old['id'] in ['LAYOUT_JOHTO_ROUTE37','LAYOUT_JOHTO_ROUTE38','LAYOUT_JOHTO_ROUTE42']:expected.update(primary_tileset='gTileset_HgssEcruteakGateBuffer',secondary_tileset='gTileset_WesternCity')
    if olivine and old['id']=='LAYOUT_OLIVINE_CITY':expected.update(width=64,height=64)
-   if olivine and old['id'] in ['LAYOUT_JOHTO_ROUTE39','LAYOUT_JOHTO_ROUTE40']:expected.update(primary_tileset='gTileset_HgssEcruteakBuffer')
+   if olivine and old['id'] in ['LAYOUT_JOHTO_ROUTE39','LAYOUT_JOHTO_ROUTE40']:
+    # Only Route40 shares the new three primary fence cells with Olivine.
+    # validate_olivine_materials independently pins every other clone meta/
+    # glyph/palette and the complete immutable Route40 terrain/events.
+    expected.update(primary_tileset='gTileset_HgssOlivineCoastBuffer' if old['id']=='LAYOUT_JOHTO_ROUTE40' else 'gTileset_HgssEcruteakBuffer')
    assert expected==new,('Unrelated layout change',old['id'])
   else:assert new['width']==64 and new['height']==64 and new['primary_tileset']=='gTileset_BlGymEcruteakPrimary' and new['secondary_tileset']=='gTileset_BlGymEcruteakSecondary'
  for old,new in zip(baseline['heals']['heal_locations'],heals['heal_locations']):

@@ -47,6 +47,24 @@ def rendered(primary,secondary,n,baseline=False):
 
 
 def validate():
+    # Private source-backed stage art is authorized only by the exact immutable
+    # V7 delta. Its independent validator preserves all room physics, all other
+    # visible cells, actors/warps and every shared Temple resource byte.
+    stage_contract=load('crossroads/hgss/contracts/theater-stage-qa09.json')
+    from validate_theater_stage import validate as validate_stage
+    validate_stage()
+    gate_contract=load('crossroads/hgss/contracts/gate-interior-art-qa09.json')
+    from validate_gate_interior_art import validate as validate_gate_art
+    validate_gate_art()
+    basement_contract=load('crossroads/hgss/contracts/center-basement-qa09.json')
+    reception_contract=load('crossroads/hgss/contracts/center-reception-qa09.json')
+    from validate_center_basement import validate as validate_basement
+    validate_basement()
+    mart_contract=load('crossroads/hgss/contracts/mart-props-qa09.json')
+    from validate_hgss_mart_props import validate as validate_mart
+    validate_mart()
+    from hgss_ecruteak_tower_details import validate as validate_details,HEADERS as detail_headers,patch as detail_patch,SYMBOL as detail_symbol
+    validate_details();detail_maps={n:h for h,n in detail_headers.items()}
     groups=load('data/maps/map_groups.json')
     for key,values in BASE['groups'].items():
         if key=='gMapGroup_CrossroadsJohtoExpansion':
@@ -87,13 +105,35 @@ def validate():
             expected['warp_events'].append(dict(x=10,y=11,elevation=0,dest_map='MAP_ECRUTEAK_CITY',dest_warp_id='1'))
         elif n=='EcruteakCity_DanceTheater':
             expected['warp_events'][0]['dest_warp_id']='16'
+        elif n=='EcruteakCity_PokemonCenter_B1F':
+            expected['bg_events']=basement_contract['new_bg_events']
         elif n in ('EcruteakCity_WestGate','EcruteakCity_EastGate'):
             for e,index in zip(expected['warp_events'],[18,4] if n.endswith('WestGate') else [21,7]):e['dest_warp_id']=str(index)
             for e in list(expected['warp_events']):
                 for delta in [-1,1]:
                     expected['warp_events'].append(dict(e,x=e['x'],y=e['y']+delta,dest_warp_id=str(int(e['dest_warp_id'])+delta)))
         assert load(f'data/maps/{n}/map.json')==expected,(n,'Events differ beyond exact QA07/QA08 authorized migration')
-        assert layouts[m['layout']]==BASE['layouts'][m['layout']],(n,'QA06 dimensions/IDs changed')
+        expected_layout=dict(BASE['layouts'][m['layout']])
+        if n=='EcruteakCity_DanceTheater':
+            assert expected_layout['secondary_tileset']==stage_contract['before_secondary']
+            expected_layout['secondary_tileset']=stage_contract['after_secondary']
+        if n in gate_contract['maps']:
+            assert expected_layout['secondary_tileset']==gate_contract['before_secondary']
+            expected_layout['secondary_tileset']=gate_contract['after_secondary']
+        if n==basement_contract['map']:
+            assert [expected_layout['width'],expected_layout['height']]==basement_contract['before_dimensions']
+            assert expected_layout['secondary_tileset']==basement_contract['before_secondary']
+            expected_layout.update(height=basement_contract['after_dimensions'][1],secondary_tileset=basement_contract['after_secondary'])
+        if n in mart_contract['maps']:
+            assert expected_layout['secondary_tileset']==mart_contract['before_secondary']
+            expected_layout['secondary_tileset']=mart_contract['after_secondary']
+        if n==reception_contract['map']:
+            assert expected_layout['secondary_tileset']==reception_contract['before_secondary']
+            expected_layout['secondary_tileset']=reception_contract['after_secondary']
+        if n in detail_maps:
+            assert expected_layout['secondary_tileset']=='gTileset_HgssTemple'
+            expected_layout['secondary_tileset']=detail_symbol
+        assert layouts[m['layout']]==expected_layout,(n,'QA06 dimensions/IDs changed beyond exact Theater secondary')
         if n!='EcruteakCity':
             expected_raw=list(words(bytes.fromhex(BASE['raw_maps'][n])))
             if n=='EcruteakCity_BarrierStation':
@@ -113,6 +153,30 @@ def validate():
             if n=='EcruteakCity_DanceTheater':
                 c=load('crossroads/hgss/contracts/theater-seating-qa09.json');assert c['source_commit']=='fd151242458efe5759b18650f35a5e5b2fa47e45'
                 for d in c['changes']:
+                    i=d['y']*layouts[m['layout']]['width']+d['x'];assert expected_raw[i]==d['before'];expected_raw[i]=d['after']
+                assert stage_contract['source_commit']=='3f935d5e8600c5a280b9172b555edb35ca52b6c0'
+                for d in stage_contract['changes']:
+                    i=d['y']*layouts[m['layout']]['width']+d['x'];assert expected_raw[i]==d['before'];expected_raw[i]=d['after']
+            if n in gate_contract['maps']:
+                assert gate_contract['source_commit']=='3f935d5e8600c5a280b9172b555edb35ca52b6c0'
+                assert expected_raw==gate_contract['before_words']
+                for d in gate_contract['changes']:
+                    i=d['y']*layouts[m['layout']]['width']+d['x'];assert expected_raw[i]==d['before'];expected_raw[i]=d['after']
+            if n==basement_contract['map']:
+                assert basement_contract['source_commit']=='3f935d5e8600c5a280b9172b555edb35ca52b6c0'
+                for d in basement_contract['changes']:
+                    i=d['y']*layouts[m['layout']]['width']+d['x'];assert expected_raw[i]==d['before'];expected_raw[i]=d['after']
+                expected_raw+=basement_contract['appended_words']
+            if n in mart_contract['maps']:
+                assert mart_contract['source_commit']=='3f935d5e8600c5a280b9172b555edb35ca52b6c0'
+                assert expected_raw==mart_contract['before_words']
+                for d in mart_contract['changes']:
+                    i=d['y']*layouts[m['layout']]['width']+d['x'];assert expected_raw[i]==d['before'];expected_raw[i]=d['after']
+            if n in detail_maps:
+                expected_raw=detail_patch(detail_maps[n],expected_raw,expected_layout['width'],expected_layout['height'])
+            if n==reception_contract['map']:
+                assert reception_contract['source_commit']=='3f935d5e8600c5a280b9172b555edb35ca52b6c0'
+                for d in reception_contract['changes']:
                     i=d['y']*layouts[m['layout']]['width']+d['x'];assert expected_raw[i]==d['before'];expected_raw[i]=d['after']
             assert words((R/layouts[m['layout']]['blockdata_filepath']).read_bytes())==tuple(expected_raw),(n,'Unrelated interior/floor changed')
     gm=words((R/'data/tilesets/primary/general/metatiles.bin').read_bytes())

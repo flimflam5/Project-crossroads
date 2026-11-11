@@ -1,0 +1,1371 @@
+{
+  "source_commit": "3f935d5e8600c5a280b9172b555edb35ca52b6c0",
+  "tiles": 140,
+  "metatiles": 432,
+  "retained_temple_metatiles": [
+    512,
+    515,
+    533,
+    534,
+    535,
+    536,
+    537,
+    538,
+    539,
+    540,
+    742,
+    743,
+    744,
+    770,
+    771,
+    772,
+    773,
+    782,
+    783,
+    784,
+    785,
+    894
+  ],
+  "placements": [
+    {
+      "x": 2,
+      "y": 1,
+      "kind": "void",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 904,
+      "before": 1766,
+      "after": 1928
+    },
+    {
+      "x": 10,
+      "y": 1,
+      "kind": "void",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 904,
+      "before": 1766,
+      "after": 1928
+    },
+    {
+      "x": 1,
+      "y": 2,
+      "kind": "wall",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 905,
+      "before": 1558,
+      "after": 1929
+    },
+    {
+      "x": 2,
+      "y": 2,
+      "kind": "plant",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 906,
+      "before": 1767,
+      "after": 1930
+    },
+    {
+      "x": 3,
+      "y": 2,
+      "kind": "wall",
+      "source_tile": [
+        2,
+        0
+      ],
+      "metatile": 907,
+      "before": 1560,
+      "after": 1931
+    },
+    {
+      "x": 4,
+      "y": 2,
+      "kind": "wall",
+      "source_tile": [
+        3,
+        0
+      ],
+      "metatile": 908,
+      "before": 1557,
+      "after": 1932
+    },
+    {
+      "x": 5,
+      "y": 2,
+      "kind": "wall",
+      "source_tile": [
+        4,
+        0
+      ],
+      "metatile": 909,
+      "before": 1558,
+      "after": 1933
+    },
+    {
+      "x": 6,
+      "y": 2,
+      "kind": "wall",
+      "source_tile": [
+        5,
+        0
+      ],
+      "metatile": 910,
+      "before": 1559,
+      "after": 1934
+    },
+    {
+      "x": 7,
+      "y": 2,
+      "kind": "wall",
+      "source_tile": [
+        6,
+        0
+      ],
+      "metatile": 911,
+      "before": 1560,
+      "after": 1935
+    },
+    {
+      "x": 8,
+      "y": 2,
+      "kind": "wall",
+      "source_tile": [
+        7,
+        0
+      ],
+      "metatile": 912,
+      "before": 1557,
+      "after": 1936
+    },
+    {
+      "x": 9,
+      "y": 2,
+      "kind": "wall",
+      "source_tile": [
+        8,
+        0
+      ],
+      "metatile": 913,
+      "before": 1558,
+      "after": 1937
+    },
+    {
+      "x": 10,
+      "y": 2,
+      "kind": "plant",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 906,
+      "before": 1767,
+      "after": 1930
+    },
+    {
+      "x": 1,
+      "y": 3,
+      "kind": "wall",
+      "source_tile": [
+        0,
+        1
+      ],
+      "metatile": 914,
+      "before": 1562,
+      "after": 1938
+    },
+    {
+      "x": 2,
+      "y": 3,
+      "kind": "plant",
+      "source_tile": [
+        0,
+        1
+      ],
+      "metatile": 915,
+      "before": 1768,
+      "after": 1939
+    },
+    {
+      "x": 3,
+      "y": 3,
+      "kind": "wall",
+      "source_tile": [
+        2,
+        1
+      ],
+      "metatile": 916,
+      "before": 1564,
+      "after": 1940
+    },
+    {
+      "x": 4,
+      "y": 3,
+      "kind": "wall",
+      "source_tile": [
+        3,
+        1
+      ],
+      "metatile": 917,
+      "before": 1561,
+      "after": 1941
+    },
+    {
+      "x": 5,
+      "y": 3,
+      "kind": "wall",
+      "source_tile": [
+        4,
+        1
+      ],
+      "metatile": 918,
+      "before": 1562,
+      "after": 1942
+    },
+    {
+      "x": 6,
+      "y": 3,
+      "kind": "wall",
+      "source_tile": [
+        5,
+        1
+      ],
+      "metatile": 919,
+      "before": 1563,
+      "after": 1943
+    },
+    {
+      "x": 7,
+      "y": 3,
+      "kind": "wall",
+      "source_tile": [
+        6,
+        1
+      ],
+      "metatile": 920,
+      "before": 1564,
+      "after": 1944
+    },
+    {
+      "x": 8,
+      "y": 3,
+      "kind": "wall",
+      "source_tile": [
+        7,
+        1
+      ],
+      "metatile": 921,
+      "before": 1561,
+      "after": 1945
+    },
+    {
+      "x": 9,
+      "y": 3,
+      "kind": "wall",
+      "source_tile": [
+        8,
+        1
+      ],
+      "metatile": 922,
+      "before": 1562,
+      "after": 1946
+    },
+    {
+      "x": 10,
+      "y": 3,
+      "kind": "plant",
+      "source_tile": [
+        0,
+        1
+      ],
+      "metatile": 915,
+      "before": 1768,
+      "after": 1939
+    },
+    {
+      "x": 0,
+      "y": 4,
+      "kind": "side",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 923,
+      "before": 1806,
+      "after": 1947
+    },
+    {
+      "x": 1,
+      "y": 4,
+      "kind": "floor",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 924,
+      "before": 12803,
+      "after": 13212
+    },
+    {
+      "x": 2,
+      "y": 4,
+      "kind": "floor",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 924,
+      "before": 12803,
+      "after": 13212
+    },
+    {
+      "x": 3,
+      "y": 4,
+      "kind": "counter",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 925,
+      "before": 1806,
+      "after": 1949
+    },
+    {
+      "x": 4,
+      "y": 4,
+      "kind": "counter",
+      "source_tile": [
+        1,
+        0
+      ],
+      "metatile": 926,
+      "before": 1536,
+      "after": 1950
+    },
+    {
+      "x": 5,
+      "y": 4,
+      "kind": "counter",
+      "source_tile": [
+        2,
+        0
+      ],
+      "metatile": 927,
+      "before": 1536,
+      "after": 1951
+    },
+    {
+      "x": 6,
+      "y": 4,
+      "kind": "counter",
+      "source_tile": [
+        3,
+        0
+      ],
+      "metatile": 928,
+      "before": 1536,
+      "after": 1952
+    },
+    {
+      "x": 7,
+      "y": 4,
+      "kind": "counter",
+      "source_tile": [
+        4,
+        0
+      ],
+      "metatile": 929,
+      "before": 1536,
+      "after": 1953
+    },
+    {
+      "x": 8,
+      "y": 4,
+      "kind": "counter",
+      "source_tile": [
+        5,
+        0
+      ],
+      "metatile": 930,
+      "before": 1806,
+      "after": 1954
+    },
+    {
+      "x": 9,
+      "y": 4,
+      "kind": "floor",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 924,
+      "before": 12803,
+      "after": 13212
+    },
+    {
+      "x": 10,
+      "y": 4,
+      "kind": "floor",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 924,
+      "before": 12803,
+      "after": 13212
+    },
+    {
+      "x": 11,
+      "y": 4,
+      "kind": "side",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 923,
+      "before": 1806,
+      "after": 1947
+    },
+    {
+      "x": 0,
+      "y": 5,
+      "kind": "side",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 923,
+      "before": 1807,
+      "after": 1947
+    },
+    {
+      "x": 1,
+      "y": 5,
+      "kind": "floor",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 924,
+      "before": 12803,
+      "after": 13212
+    },
+    {
+      "x": 2,
+      "y": 5,
+      "kind": "floor",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 924,
+      "before": 12803,
+      "after": 13212
+    },
+    {
+      "x": 3,
+      "y": 5,
+      "kind": "counter",
+      "source_tile": [
+        0,
+        1
+      ],
+      "metatile": 931,
+      "before": 1797,
+      "after": 1955
+    },
+    {
+      "x": 4,
+      "y": 5,
+      "kind": "counter",
+      "source_tile": [
+        1,
+        1
+      ],
+      "metatile": 932,
+      "before": 1794,
+      "after": 1956
+    },
+    {
+      "x": 5,
+      "y": 5,
+      "kind": "counter",
+      "source_tile": [
+        2,
+        1
+      ],
+      "metatile": 933,
+      "before": 1795,
+      "after": 1957
+    },
+    {
+      "x": 6,
+      "y": 5,
+      "kind": "counter",
+      "source_tile": [
+        3,
+        1
+      ],
+      "metatile": 934,
+      "before": 1796,
+      "after": 1958
+    },
+    {
+      "x": 7,
+      "y": 5,
+      "kind": "counter",
+      "source_tile": [
+        4,
+        1
+      ],
+      "metatile": 935,
+      "before": 1797,
+      "after": 1959
+    },
+    {
+      "x": 8,
+      "y": 5,
+      "kind": "counter",
+      "source_tile": [
+        5,
+        1
+      ],
+      "metatile": 936,
+      "before": 1794,
+      "after": 1960
+    },
+    {
+      "x": 9,
+      "y": 5,
+      "kind": "floor",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 924,
+      "before": 12803,
+      "after": 13212
+    },
+    {
+      "x": 10,
+      "y": 5,
+      "kind": "floor",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 924,
+      "before": 12803,
+      "after": 13212
+    },
+    {
+      "x": 11,
+      "y": 5,
+      "kind": "side",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 923,
+      "before": 1807,
+      "after": 1947
+    },
+    {
+      "x": 0,
+      "y": 6,
+      "kind": "floor",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 937,
+      "before": 1808,
+      "after": 1961
+    },
+    {
+      "x": 1,
+      "y": 6,
+      "kind": "floor",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 938,
+      "before": 13182,
+      "after": 13226
+    },
+    {
+      "x": 2,
+      "y": 6,
+      "kind": "floor",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 924,
+      "before": 12803,
+      "after": 13212
+    },
+    {
+      "x": 3,
+      "y": 6,
+      "kind": "floor",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 924,
+      "before": 12803,
+      "after": 13212
+    },
+    {
+      "x": 4,
+      "y": 6,
+      "kind": "floor",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 924,
+      "before": 12803,
+      "after": 13212
+    },
+    {
+      "x": 5,
+      "y": 6,
+      "kind": "floor",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 924,
+      "before": 12803,
+      "after": 13212
+    },
+    {
+      "x": 6,
+      "y": 6,
+      "kind": "floor",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 924,
+      "before": 12803,
+      "after": 13212
+    },
+    {
+      "x": 7,
+      "y": 6,
+      "kind": "floor",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 924,
+      "before": 12803,
+      "after": 13212
+    },
+    {
+      "x": 8,
+      "y": 6,
+      "kind": "floor",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 924,
+      "before": 12803,
+      "after": 13212
+    },
+    {
+      "x": 9,
+      "y": 6,
+      "kind": "floor",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 924,
+      "before": 12803,
+      "after": 13212
+    },
+    {
+      "x": 10,
+      "y": 6,
+      "kind": "floor",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 938,
+      "before": 13182,
+      "after": 13226
+    },
+    {
+      "x": 11,
+      "y": 6,
+      "kind": "floor",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 937,
+      "before": 1808,
+      "after": 1961
+    },
+    {
+      "x": 0,
+      "y": 7,
+      "kind": "floor",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 924,
+      "before": 1809,
+      "after": 1948
+    },
+    {
+      "x": 1,
+      "y": 7,
+      "kind": "floor",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 938,
+      "before": 13182,
+      "after": 13226
+    },
+    {
+      "x": 2,
+      "y": 7,
+      "kind": "floor",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 924,
+      "before": 12803,
+      "after": 13212
+    },
+    {
+      "x": 3,
+      "y": 7,
+      "kind": "floor",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 924,
+      "before": 12803,
+      "after": 13212
+    },
+    {
+      "x": 4,
+      "y": 7,
+      "kind": "floor",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 924,
+      "before": 12803,
+      "after": 13212
+    },
+    {
+      "x": 5,
+      "y": 7,
+      "kind": "floor",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 924,
+      "before": 12803,
+      "after": 13212
+    },
+    {
+      "x": 6,
+      "y": 7,
+      "kind": "floor",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 924,
+      "before": 12803,
+      "after": 13212
+    },
+    {
+      "x": 7,
+      "y": 7,
+      "kind": "floor",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 924,
+      "before": 12803,
+      "after": 13212
+    },
+    {
+      "x": 8,
+      "y": 7,
+      "kind": "floor",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 924,
+      "before": 12803,
+      "after": 13212
+    },
+    {
+      "x": 9,
+      "y": 7,
+      "kind": "floor",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 924,
+      "before": 12803,
+      "after": 13212
+    },
+    {
+      "x": 10,
+      "y": 7,
+      "kind": "floor",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 938,
+      "before": 13182,
+      "after": 13226
+    },
+    {
+      "x": 11,
+      "y": 7,
+      "kind": "floor",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 924,
+      "before": 1809,
+      "after": 1948
+    },
+    {
+      "x": 0,
+      "y": 8,
+      "kind": "floor",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 937,
+      "before": 1806,
+      "after": 1961
+    },
+    {
+      "x": 1,
+      "y": 8,
+      "kind": "floor",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 938,
+      "before": 13182,
+      "after": 13226
+    },
+    {
+      "x": 2,
+      "y": 8,
+      "kind": "floor",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 924,
+      "before": 12803,
+      "after": 13212
+    },
+    {
+      "x": 3,
+      "y": 8,
+      "kind": "floor",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 924,
+      "before": 12803,
+      "after": 13212
+    },
+    {
+      "x": 4,
+      "y": 8,
+      "kind": "floor",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 924,
+      "before": 12803,
+      "after": 13212
+    },
+    {
+      "x": 5,
+      "y": 8,
+      "kind": "floor",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 924,
+      "before": 12803,
+      "after": 13212
+    },
+    {
+      "x": 6,
+      "y": 8,
+      "kind": "floor",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 924,
+      "before": 12803,
+      "after": 13212
+    },
+    {
+      "x": 7,
+      "y": 8,
+      "kind": "floor",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 924,
+      "before": 12803,
+      "after": 13212
+    },
+    {
+      "x": 8,
+      "y": 8,
+      "kind": "floor",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 924,
+      "before": 12803,
+      "after": 13212
+    },
+    {
+      "x": 9,
+      "y": 8,
+      "kind": "floor",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 924,
+      "before": 12803,
+      "after": 13212
+    },
+    {
+      "x": 10,
+      "y": 8,
+      "kind": "floor",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 938,
+      "before": 13182,
+      "after": 13226
+    },
+    {
+      "x": 11,
+      "y": 8,
+      "kind": "floor",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 937,
+      "before": 1806,
+      "after": 1961
+    },
+    {
+      "x": 0,
+      "y": 9,
+      "kind": "side",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 923,
+      "before": 1807,
+      "after": 1947
+    },
+    {
+      "x": 1,
+      "y": 9,
+      "kind": "floor",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 924,
+      "before": 12803,
+      "after": 13212
+    },
+    {
+      "x": 2,
+      "y": 9,
+      "kind": "floor",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 937,
+      "before": 13030,
+      "after": 13225
+    },
+    {
+      "x": 3,
+      "y": 9,
+      "kind": "counter",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 939,
+      "before": 1797,
+      "after": 1963
+    },
+    {
+      "x": 4,
+      "y": 9,
+      "kind": "counter",
+      "source_tile": [
+        1,
+        0
+      ],
+      "metatile": 926,
+      "before": 1794,
+      "after": 1950
+    },
+    {
+      "x": 5,
+      "y": 9,
+      "kind": "counter",
+      "source_tile": [
+        2,
+        0
+      ],
+      "metatile": 927,
+      "before": 1795,
+      "after": 1951
+    },
+    {
+      "x": 6,
+      "y": 9,
+      "kind": "counter",
+      "source_tile": [
+        3,
+        0
+      ],
+      "metatile": 928,
+      "before": 1796,
+      "after": 1952
+    },
+    {
+      "x": 7,
+      "y": 9,
+      "kind": "counter",
+      "source_tile": [
+        4,
+        0
+      ],
+      "metatile": 929,
+      "before": 1797,
+      "after": 1953
+    },
+    {
+      "x": 8,
+      "y": 9,
+      "kind": "counter",
+      "source_tile": [
+        5,
+        0
+      ],
+      "metatile": 940,
+      "before": 1794,
+      "after": 1964
+    },
+    {
+      "x": 9,
+      "y": 9,
+      "kind": "floor",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 924,
+      "before": 12803,
+      "after": 13212
+    },
+    {
+      "x": 10,
+      "y": 9,
+      "kind": "floor",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 937,
+      "before": 13030,
+      "after": 13225
+    },
+    {
+      "x": 11,
+      "y": 9,
+      "kind": "side",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 923,
+      "before": 1807,
+      "after": 1947
+    },
+    {
+      "x": 0,
+      "y": 10,
+      "kind": "side",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 923,
+      "before": 1808,
+      "after": 1947
+    },
+    {
+      "x": 1,
+      "y": 10,
+      "kind": "floor",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 924,
+      "before": 12803,
+      "after": 13212
+    },
+    {
+      "x": 2,
+      "y": 10,
+      "kind": "plant",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 906,
+      "before": 13031,
+      "after": 13194
+    },
+    {
+      "x": 3,
+      "y": 10,
+      "kind": "counter",
+      "source_tile": [
+        0,
+        1
+      ],
+      "metatile": 941,
+      "before": 1808,
+      "after": 1965
+    },
+    {
+      "x": 4,
+      "y": 10,
+      "kind": "counter",
+      "source_tile": [
+        1,
+        1
+      ],
+      "metatile": 932,
+      "before": 1536,
+      "after": 1956
+    },
+    {
+      "x": 5,
+      "y": 10,
+      "kind": "counter",
+      "source_tile": [
+        2,
+        1
+      ],
+      "metatile": 933,
+      "before": 1536,
+      "after": 1957
+    },
+    {
+      "x": 6,
+      "y": 10,
+      "kind": "counter",
+      "source_tile": [
+        3,
+        1
+      ],
+      "metatile": 934,
+      "before": 1536,
+      "after": 1958
+    },
+    {
+      "x": 7,
+      "y": 10,
+      "kind": "counter",
+      "source_tile": [
+        4,
+        1
+      ],
+      "metatile": 935,
+      "before": 1536,
+      "after": 1959
+    },
+    {
+      "x": 8,
+      "y": 10,
+      "kind": "counter",
+      "source_tile": [
+        5,
+        1
+      ],
+      "metatile": 942,
+      "before": 1808,
+      "after": 1966
+    },
+    {
+      "x": 9,
+      "y": 10,
+      "kind": "floor",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 924,
+      "before": 12803,
+      "after": 13212
+    },
+    {
+      "x": 10,
+      "y": 10,
+      "kind": "plant",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 906,
+      "before": 13031,
+      "after": 13194
+    },
+    {
+      "x": 11,
+      "y": 10,
+      "kind": "side",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 923,
+      "before": 1808,
+      "after": 1947
+    },
+    {
+      "x": 1,
+      "y": 11,
+      "kind": "side",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 943,
+      "before": 1795,
+      "after": 1967
+    },
+    {
+      "x": 2,
+      "y": 11,
+      "kind": "plant",
+      "source_tile": [
+        0,
+        1
+      ],
+      "metatile": 915,
+      "before": 1768,
+      "after": 1939
+    },
+    {
+      "x": 9,
+      "y": 11,
+      "kind": "side",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 943,
+      "before": 1795,
+      "after": 1967
+    },
+    {
+      "x": 10,
+      "y": 11,
+      "kind": "plant",
+      "source_tile": [
+        0,
+        1
+      ],
+      "metatile": 915,
+      "before": 1768,
+      "after": 1939
+    }
+  ],
+  "plant_bases": [
+    [
+      2,
+      3
+    ],
+    [
+      10,
+      3
+    ],
+    [
+      2,
+      11
+    ],
+    [
+      10,
+      11
+    ]
+  ],
+  "source": "Original indexed GBA artwork after actual final HGSS Gate inside raster; same matrix0070 and areaData63 as Ecruteak gates, no reference pixels imported",
+  "reference_url": "https://archives.bulbagarden.net/media/upload/2/2f/Gate_inside_HGSS.png"
+}

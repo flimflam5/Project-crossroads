@@ -518,6 +518,8 @@ const u16 gMetatiles_HgssOlivinePrimary[] = INCBIN_U16("data/tilesets/primary/hg
 const u16 gMetatileAttributes_HgssOlivinePrimary[] = INCBIN_U16("data/tilesets/primary/hgss_olivine/metatile_attributes.bin");
 const u16 gMetatiles_HgssOlivineSecondary[] = INCBIN_U16("data/tilesets/secondary/hgss_olivine/metatiles.bin");
 const u16 gMetatileAttributes_HgssOlivineSecondary[] = INCBIN_U16("data/tilesets/secondary/hgss_olivine/metatile_attributes.bin");
+const u16 gMetatiles_HgssOlivineCoastBuffer[] = INCBIN_U16("data/tilesets/primary/hgss_olivine_coast_buffer/metatiles.bin");
+const u16 gMetatileAttributes_HgssOlivineCoastBuffer[] = INCBIN_U16("data/tilesets/primary/hgss_olivine_coast_buffer/metatile_attributes.bin");
 #endif
 // END HGSS OLIVINE EXTERIORS
 
@@ -529,3 +531,45 @@ const u16 gMetatiles_HgssOlivineGym[] = INCBIN_U16("data/tilesets/secondary/hgss
 const u16 gMetatileAttributes_HgssOlivineGym[] = INCBIN_U16("data/tilesets/secondary/hgss_olivine_gym/metatile_attributes.bin");
 #endif
 // END HGSS OLIVINE ROOMS
+
+// BEGIN ECRUTEAK THEATER STAGE
+#if !IS_FRLG
+const u16 gMetatiles_HgssTheater[] = INCBIN_U16("data/tilesets/secondary/hgss_theater/metatiles.bin");
+const u16 gMetatileAttributes_HgssTheater[] = INCBIN_U16("data/tilesets/secondary/hgss_theater/metatile_attributes.bin");
+#endif
+// END ECRUTEAK THEATER STAGE
+
+// BEGIN ECRUTEAK GATE INTERIOR ART
+#if !IS_FRLG
+const u16 gMetatiles_HgssGateInterior[] = INCBIN_U16("data/tilesets/secondary/hgss_gate_interior/metatiles.bin");
+const u16 gMetatileAttributes_HgssGateInterior[] = INCBIN_U16("data/tilesets/secondary/hgss_gate_interior/metatile_attributes.bin");
+#endif
+// END ECRUTEAK GATE INTERIOR ART
+
+// BEGIN HGSS CENTER BASEMENT
+#if !IS_FRLG
+const u16 gMetatiles_HgssCenterBasement[] = INCBIN_U16("data/tilesets/secondary/hgss_center_basement/metatiles.bin");
+const u16 gMetatileAttributes_HgssCenterBasement[] = INCBIN_U16("data/tilesets/secondary/hgss_center_basement/metatile_attributes.bin");
+#endif
+// END HGSS CENTER BASEMENT
+
+// BEGIN HGSS COMMON MART PROPS
+#if !IS_FRLG
+const u16 gMetatiles_HgssMart[] = INCBIN_U16("data/tilesets/secondary/hgss_mart/metatiles.bin");
+const u16 gMetatileAttributes_HgssMart[] = INCBIN_U16("data/tilesets/secondary/hgss_mart/metatile_attributes.bin");
+#endif
+// END HGSS COMMON MART PROPS
+
+// BEGIN ECRUTEAK TOWER DETAILS
+#if !IS_FRLG
+const u16 gMetatiles_HgssEcruteakTowerDetails[] = INCBIN_U16("data/tilesets/secondary/hgss_ecruteak_tower_details/metatiles.bin");
+const u16 gMetatileAttributes_HgssEcruteakTowerDetails[] = INCBIN_U16("data/tilesets/secondary/hgss_ecruteak_tower_details/metatile_attributes.bin");
+#endif
+// END ECRUTEAK TOWER DETAILS
+
+// BEGIN HGSS CENTER RECEPTION
+#if !IS_FRLG
+const u16 gMetatiles_HgssCenterReception[] = INCBIN_U16("data/tilesets/secondary/hgss_center_reception/metatiles.bin");
+const u16 gMetatileAttributes_HgssCenterReception[] = INCBIN_U16("data/tilesets/secondary/hgss_center_reception/metatile_attributes.bin");
+#endif
+// END HGSS CENTER RECEPTION

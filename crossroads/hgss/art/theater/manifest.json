@@ -1,0 +1,49 @@
+{
+  "specs": {
+    "stage_backdrop": {
+      "start": 904,
+      "width": 12,
+      "height": 2
+    },
+    "stage_rope": {
+      "start": 928,
+      "width": 1,
+      "height": 1
+    }
+  },
+  "tiles": 137,
+  "metatiles": 417,
+  "retained_temple_metatiles": [
+    512,
+    513,
+    516,
+    533,
+    534,
+    535,
+    536,
+    537,
+    538,
+    539,
+    540,
+    545,
+    546,
+    547,
+    548,
+    558,
+    559,
+    560,
+    561,
+    562,
+    563,
+    564,
+    565,
+    888,
+    895
+  ],
+  "palette_bank": 7,
+  "source": "Original indexed GBA pixel drawing guided by inspected final HGSS Theater screenshots; no source image pixels imported",
+  "reference_urls": [
+    "https://www.pokepedia.fr/images/f/f6/Salle_de_Danse_Rosalia_HGSS.png",
+    "https://www.pokebip.com/pages/jeux-video/pokemon-heartgold-soulsilver/soluce-du-jeu/images/figure83.png"
+  ]
+}

@@ -1747,6 +1747,7 @@ const struct Tileset gTileset_HgssOlivineLandmarkOutdoor = { .isCompressed=TRUE,
 #if !IS_FRLG
 const struct Tileset gTileset_HgssOlivinePrimary = { .isCompressed=TRUE, .isSecondary=FALSE, .tiles=gTilesetTiles_HgssOlivinePrimary, .palettes=gTilesetPalettes_HgssOlivinePrimary, .metatiles=gMetatiles_HgssOlivinePrimary, .metatileAttributes=gMetatileAttributes_HgssOlivinePrimary, .callback=InitTilesetAnim_General };
 const struct Tileset gTileset_HgssOlivineSecondary = { .isCompressed=TRUE, .isSecondary=TRUE, .tiles=gTilesetTiles_HgssOlivineSecondary, .palettes=gTilesetPalettes_HgssOlivineSecondary, .metatiles=gMetatiles_HgssOlivineSecondary, .metatileAttributes=gMetatileAttributes_HgssOlivineSecondary, .callback=NULL };
+const struct Tileset gTileset_HgssOlivineCoastBuffer = {.isCompressed=TRUE,.isSecondary=FALSE,.tiles=gTilesetTiles_HgssOlivineCoastBuffer,.palettes=gTilesetPalettes_General,.metatiles=gMetatiles_HgssOlivineCoastBuffer,.metatileAttributes=gMetatileAttributes_HgssOlivineCoastBuffer,.callback=InitTilesetAnim_General};
 #endif
 // END HGSS OLIVINE EXTERIORS
 
@@ -1756,3 +1757,39 @@ const struct Tileset gTileset_HgssOlivineHome = {.isCompressed=TRUE,.isSecondary
 const struct Tileset gTileset_HgssOlivineGym = {.isCompressed=TRUE,.isSecondary=TRUE,.tiles=gTilesetTiles_HgssOlivineGym,.palettes=gTilesetPalettes_HgssOlivineGym,.metatiles=gMetatiles_HgssOlivineGym,.metatileAttributes=gMetatileAttributes_HgssOlivineGym,.callback=NULL};
 #endif
 // END HGSS OLIVINE ROOMS
+
+// BEGIN ECRUTEAK THEATER STAGE
+#if !IS_FRLG
+const struct Tileset gTileset_HgssTheater = { .isCompressed=TRUE, .isSecondary=TRUE, .tiles=gTilesetTiles_HgssTheater, .palettes=gTilesetPalettes_HgssTheater, .metatiles=gMetatiles_HgssTheater, .metatileAttributes=gMetatileAttributes_HgssTheater, .callback=NULL };
+#endif
+// END ECRUTEAK THEATER STAGE
+
+// BEGIN ECRUTEAK GATE INTERIOR ART
+#if !IS_FRLG
+const struct Tileset gTileset_HgssGateInterior = { .isCompressed=TRUE,.isSecondary=TRUE,.tiles=gTilesetTiles_HgssGateInterior,.palettes=gTilesetPalettes_HgssGateInterior,.metatiles=gMetatiles_HgssGateInterior,.metatileAttributes=gMetatileAttributes_HgssGateInterior,.callback=NULL };
+#endif
+// END ECRUTEAK GATE INTERIOR ART
+
+// BEGIN HGSS CENTER BASEMENT
+#if !IS_FRLG
+const struct Tileset gTileset_HgssCenterBasement = {.isCompressed=TRUE,.isSecondary=TRUE,.tiles=gTilesetTiles_HgssCenterBasement,.palettes=gTilesetPalettes_HgssCenterBasement,.metatiles=gMetatiles_HgssCenterBasement,.metatileAttributes=gMetatileAttributes_HgssCenterBasement,.callback=NULL};
+#endif
+// END HGSS CENTER BASEMENT
+
+// BEGIN HGSS COMMON MART PROPS
+#if !IS_FRLG
+const struct Tileset gTileset_HgssMart = { .isCompressed=TRUE,.isSecondary=TRUE,.tiles=gTilesetTiles_HgssMart,.palettes=gTilesetPalettes_HgssMart,.metatiles=gMetatiles_HgssMart,.metatileAttributes=gMetatileAttributes_HgssMart,.callback=NULL };
+#endif
+// END HGSS COMMON MART PROPS
+
+// BEGIN ECRUTEAK TOWER DETAILS
+#if !IS_FRLG
+const struct Tileset gTileset_HgssEcruteakTowerDetails = { .isCompressed=TRUE, .isSecondary=TRUE, .tiles=gTilesetTiles_HgssEcruteakTowerDetails, .palettes=gTilesetPalettes_HgssEcruteakTowerDetails, .metatiles=gMetatiles_HgssEcruteakTowerDetails, .metatileAttributes=gMetatileAttributes_HgssEcruteakTowerDetails, .callback=NULL };
+#endif
+// END ECRUTEAK TOWER DETAILS
+
+// BEGIN HGSS CENTER RECEPTION
+#if !IS_FRLG
+const struct Tileset gTileset_HgssCenterReception = {.isCompressed=TRUE,.isSecondary=TRUE,.tiles=gTilesetTiles_HgssCenterReception,.palettes=gTilesetPalettes_HgssCenterReception,.metatiles=gMetatiles_HgssCenterReception,.metatileAttributes=gMetatileAttributes_HgssCenterReception,.callback=NULL};
+#endif
+// END HGSS CENTER RECEPTION

@@ -1,0 +1,424 @@
+{
+  "source_commit": "3f935d5e8600c5a280b9172b555edb35ca52b6c0",
+  "map": "EcruteakCity_DanceTheater",
+  "layout_id": "LAYOUT_ECRUTEAKCITY_DANCETHEATER",
+  "before_secondary": "gTileset_HgssTemple",
+  "after_secondary": "gTileset_HgssTheater",
+  "changes": [
+    {
+      "x": 1,
+      "y": 3,
+      "before": 1558,
+      "after": 1928
+    },
+    {
+      "x": 2,
+      "y": 3,
+      "before": 1559,
+      "after": 1929
+    },
+    {
+      "x": 3,
+      "y": 3,
+      "before": 1560,
+      "after": 1930
+    },
+    {
+      "x": 4,
+      "y": 3,
+      "before": 1557,
+      "after": 1931
+    },
+    {
+      "x": 5,
+      "y": 3,
+      "before": 1558,
+      "after": 1932
+    },
+    {
+      "x": 6,
+      "y": 3,
+      "before": 1559,
+      "after": 1933
+    },
+    {
+      "x": 7,
+      "y": 3,
+      "before": 1560,
+      "after": 1934
+    },
+    {
+      "x": 8,
+      "y": 3,
+      "before": 1557,
+      "after": 1935
+    },
+    {
+      "x": 9,
+      "y": 3,
+      "before": 1558,
+      "after": 1936
+    },
+    {
+      "x": 10,
+      "y": 3,
+      "before": 1559,
+      "after": 1937
+    },
+    {
+      "x": 11,
+      "y": 3,
+      "before": 1560,
+      "after": 1938
+    },
+    {
+      "x": 12,
+      "y": 3,
+      "before": 1557,
+      "after": 1939
+    },
+    {
+      "x": 1,
+      "y": 4,
+      "before": 1562,
+      "after": 1940
+    },
+    {
+      "x": 2,
+      "y": 4,
+      "before": 1563,
+      "after": 1941
+    },
+    {
+      "x": 3,
+      "y": 4,
+      "before": 1564,
+      "after": 1942
+    },
+    {
+      "x": 4,
+      "y": 4,
+      "before": 1561,
+      "after": 1943
+    },
+    {
+      "x": 5,
+      "y": 4,
+      "before": 1562,
+      "after": 1944
+    },
+    {
+      "x": 6,
+      "y": 4,
+      "before": 1563,
+      "after": 1945
+    },
+    {
+      "x": 7,
+      "y": 4,
+      "before": 1564,
+      "after": 1946
+    },
+    {
+      "x": 8,
+      "y": 4,
+      "before": 1561,
+      "after": 1947
+    },
+    {
+      "x": 9,
+      "y": 4,
+      "before": 1562,
+      "after": 1948
+    },
+    {
+      "x": 10,
+      "y": 4,
+      "before": 1563,
+      "after": 1949
+    },
+    {
+      "x": 11,
+      "y": 4,
+      "before": 1564,
+      "after": 1950
+    },
+    {
+      "x": 12,
+      "y": 4,
+      "before": 1561,
+      "after": 1951
+    },
+    {
+      "x": 1,
+      "y": 5,
+      "before": 12804,
+      "after": 12801
+    },
+    {
+      "x": 2,
+      "y": 5,
+      "before": 12804,
+      "after": 12801
+    },
+    {
+      "x": 3,
+      "y": 5,
+      "before": 12804,
+      "after": 12801
+    },
+    {
+      "x": 4,
+      "y": 5,
+      "before": 12804,
+      "after": 12801
+    },
+    {
+      "x": 5,
+      "y": 5,
+      "before": 12804,
+      "after": 12801
+    },
+    {
+      "x": 6,
+      "y": 5,
+      "before": 12804,
+      "after": 12801
+    },
+    {
+      "x": 7,
+      "y": 5,
+      "before": 12804,
+      "after": 12801
+    },
+    {
+      "x": 8,
+      "y": 5,
+      "before": 12804,
+      "after": 12801
+    },
+    {
+      "x": 9,
+      "y": 5,
+      "before": 12804,
+      "after": 12801
+    },
+    {
+      "x": 10,
+      "y": 5,
+      "before": 12804,
+      "after": 12801
+    },
+    {
+      "x": 11,
+      "y": 5,
+      "before": 12804,
+      "after": 12801
+    },
+    {
+      "x": 12,
+      "y": 5,
+      "before": 12804,
+      "after": 12801
+    },
+    {
+      "x": 1,
+      "y": 6,
+      "before": 12804,
+      "after": 12801
+    },
+    {
+      "x": 2,
+      "y": 6,
+      "before": 12804,
+      "after": 12801
+    },
+    {
+      "x": 3,
+      "y": 6,
+      "before": 12804,
+      "after": 12801
+    },
+    {
+      "x": 4,
+      "y": 6,
+      "before": 12804,
+      "after": 12801
+    },
+    {
+      "x": 5,
+      "y": 6,
+      "before": 12804,
+      "after": 12801
+    },
+    {
+      "x": 6,
+      "y": 6,
+      "before": 12804,
+      "after": 12801
+    },
+    {
+      "x": 7,
+      "y": 6,
+      "before": 12804,
+      "after": 12801
+    },
+    {
+      "x": 8,
+      "y": 6,
+      "before": 12804,
+      "after": 12801
+    },
+    {
+      "x": 9,
+      "y": 6,
+      "before": 12804,
+      "after": 12801
+    },
+    {
+      "x": 10,
+      "y": 6,
+      "before": 12804,
+      "after": 12801
+    },
+    {
+      "x": 11,
+      "y": 6,
+      "before": 12804,
+      "after": 12801
+    },
+    {
+      "x": 12,
+      "y": 6,
+      "before": 12804,
+      "after": 12801
+    },
+    {
+      "x": 1,
+      "y": 7,
+      "before": 12804,
+      "after": 12801
+    },
+    {
+      "x": 2,
+      "y": 7,
+      "before": 12804,
+      "after": 12801
+    },
+    {
+      "x": 3,
+      "y": 7,
+      "before": 12804,
+      "after": 12801
+    },
+    {
+      "x": 4,
+      "y": 7,
+      "before": 12804,
+      "after": 12801
+    },
+    {
+      "x": 5,
+      "y": 7,
+      "before": 12804,
+      "after": 12801
+    },
+    {
+      "x": 6,
+      "y": 7,
+      "before": 12804,
+      "after": 12801
+    },
+    {
+      "x": 7,
+      "y": 7,
+      "before": 12804,
+      "after": 12801
+    },
+    {
+      "x": 8,
+      "y": 7,
+      "before": 12804,
+      "after": 12801
+    },
+    {
+      "x": 9,
+      "y": 7,
+      "before": 12804,
+      "after": 12801
+    },
+    {
+      "x": 10,
+      "y": 7,
+      "before": 12804,
+      "after": 12801
+    },
+    {
+      "x": 11,
+      "y": 7,
+      "before": 12804,
+      "after": 12801
+    },
+    {
+      "x": 12,
+      "y": 7,
+      "before": 12804,
+      "after": 12801
+    },
+    {
+      "x": 2,
+      "y": 8,
+      "before": 1571,
+      "after": 1952
+    },
+    {
+      "x": 4,
+      "y": 8,
+      "before": 1569,
+      "after": 1952
+    },
+    {
+      "x": 5,
+      "y": 8,
+      "before": 1570,
+      "after": 1952
+    },
+    {
+      "x": 6,
+      "y": 8,
+      "before": 1571,
+      "after": 1952
+    },
+    {
+      "x": 7,
+      "y": 8,
+      "before": 1572,
+      "after": 1952
+    },
+    {
+      "x": 8,
+      "y": 8,
+      "before": 1569,
+      "after": 1952
+    },
+    {
+      "x": 9,
+      "y": 8,
+      "before": 1570,
+      "after": 1952
+    },
+    {
+      "x": 10,
+      "y": 8,
+      "before": 1571,
+      "after": 1952
+    },
+    {
+      "x": 12,
+      "y": 8,
+      "before": 1569,
+      "after": 1952
+    }
+  ],
+  "rationale": "Original native gold stage crest, red lanterns, timber floor and cream rope rail from inspected final HGSS gameplay references. Collision/elevation/behavior, actors/scripts/warps and every other visible cell stay exact."
+}

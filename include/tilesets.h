@@ -116,6 +116,7 @@ extern const struct Tileset gTileset_HgssOlivineLandmarkOutdoor;
 #if !IS_FRLG
 extern const struct Tileset gTileset_HgssOlivinePrimary;
 extern const struct Tileset gTileset_HgssOlivineSecondary;
+extern const struct Tileset gTileset_HgssOlivineCoastBuffer;
 #endif
 // END HGSS OLIVINE EXTERIORS
 // BEGIN HGSS OLIVINE ROOMS
@@ -124,4 +125,34 @@ extern const struct Tileset gTileset_HgssOlivineHome;
 extern const struct Tileset gTileset_HgssOlivineGym;
 #endif
 // END HGSS OLIVINE ROOMS
+// BEGIN ECRUTEAK THEATER STAGE
+#if !IS_FRLG
+extern const struct Tileset gTileset_HgssTheater;
+#endif
+// END ECRUTEAK THEATER STAGE
+// BEGIN ECRUTEAK GATE INTERIOR ART
+#if !IS_FRLG
+extern const struct Tileset gTileset_HgssGateInterior;
+#endif
+// END ECRUTEAK GATE INTERIOR ART
+// BEGIN HGSS CENTER BASEMENT
+#if !IS_FRLG
+extern const struct Tileset gTileset_HgssCenterBasement;
+#endif
+// END HGSS CENTER BASEMENT
+// BEGIN HGSS COMMON MART PROPS
+#if !IS_FRLG
+extern const struct Tileset gTileset_HgssMart;
+#endif
+// END HGSS COMMON MART PROPS
+// BEGIN HGSS CENTER RECEPTION
+#if !IS_FRLG
+extern const struct Tileset gTileset_HgssCenterReception;
+#endif
+// END HGSS CENTER RECEPTION
+// BEGIN ECRUTEAK TOWER DETAILS
+#if !IS_FRLG
+extern const struct Tileset gTileset_HgssEcruteakTowerDetails;
+#endif
+// END ECRUTEAK TOWER DETAILS
 #endif //GUARD_tilesets_H

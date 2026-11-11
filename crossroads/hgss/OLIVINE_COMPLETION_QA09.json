@@ -1,15 +1,15 @@
 {
-  "version": "qa09-olivine-completion-review",
+  "version": "qa09-olivine-completion-review-v8-pending",
   "scope": "Olivine City only, including canonical buildings, services, lighthouse/port maps and four preserved Black Ledger additions",
   "source_revision": null,
   "rom_sha256": null,
-  "identity_status": "PENDING final delivery build; do not substitute V5 diagnostic identity",
+  "identity_status": "Final V8 source/build/test identity pending; V7 controller evidence is a separate diagnostic checkpoint",
   "canonical_enterable_buildings_expected": 9,
   "canonical_enterable_buildings_registered": 9,
   "native_maps_expected": 24,
   "native_maps_registered": 24,
   "all_intended_buildings_present": true,
-  "completion_claim": "NOT100%; final delivery testing and owner visual acceptance pending",
+  "completion_claim": "City content/source corrections implemented; final exact-ROM testing and owner visual acceptance still pending",
   "review_authority": [
     "Actual HGSS city mosaic",
     "Pinned pret source geometry/prop/permission/warp facts",
@@ -22,7 +22,11 @@
     "cafe_sha256": "eae47433799fbd97549e8e58df5b47f057bbd608fada5161243b1d1175bbc647",
     "rooms": "canonical_events/olivine-interior-geometry.json",
     "outdoor": "canonical_events/johto-outdoor-geometry.json#MAP_OLIVINE",
-    "room_review": "OLIVINE_ROOM_DESIGN_QA09.md"
+    "room_review": "OLIVINE_ROOM_DESIGN_QA09.md",
+    "landmark_visual_index": "olivine-landmark-visual-references.json",
+    "landmark_instance_coverage": "olivine-landmark-prop-coverage.json",
+    "comparison_gallery": "../qa/qa09/olivine-review/comparisons.html",
+    "comparison_scale_note": "Published HGSS source dimensions recorded separately from native240x160 GBA frames; no pixel1:1 equivalence asserted"
   },
   "completion_criteria": {
     "build_and_source_identity": "Fresh final ROM/commit/checksum, no uncommitted game-source ambiguity",
@@ -36,15 +40,14 @@
     "visual_acceptance": "Owner Delta review required; compilation/connectivity alone never substitutes"
   },
   "known_work_assigned_before_final_build": [
-    "City source implemented and static preview inspected: two moored sailboats, three pennant arches, native water/solid hull footprints and sea boundary; final delivery runtime review pending",
-    "Landmark source implemented: rear port facade/docked ship scenery, gray maritime walls, balcony rail, derived visible lift mouths, source1F plants and6F floor identity; final delivery regeneration/controller proof pending",
-    "Room source implemented: actual0097 bookcase/plant position and0136 cafe plants/L-counter; private native palettes and independent footprint assertions; final delivery regeneration/controller proof pending",
-    "Port source repair prepared: upper glass/body solid, two actual lower door leaves open, native water/Surf eaves instead of grass islands; normal exit-arrival proof and final delivery tests pending",
-    "Final delivery generation/build/regression/controller/capture evidence and exact source/ROM identities"
+    "Final source/build checksum and generator/static regressions on frozen V8",
+    "Final exact-V8 normal-controller doors/landmarks/services/collision/old-save/normalSaveContinue regressions after source art/material corrections",
+    "Refresh native screenshots/movement clips on frozen V8; preserve V7 diagnostic and V6 clipping baseline separately",
+    "Owner Delta visual acceptance; do not call current-source previews an accepted playable release"
   ],
   "unfinished_transport_separate": [
-    "S.S. Aqua sailing/ship interior/other-region arrival is outside this approved two-city map pass; source quay boundary is explicit and safe",
-    "Accepted Harbor Office travel bridges remain functional and distinct from canonical S.S. Aqua sailing"
+    "S.S. Aqua sailing, ship interiors and other-region arrival are outside this approved two-city map pass. Docked ship/port scenery and safe boarding boundary are implemented; this is not a claim of missing city buildings being complete",
+    "Accepted Harbor Office travel services remain functional, separate from canonical S.S. Aqua sailing"
   ],
   "deferred_story_and_rewards": [
     "No new main-story events, badge gates/progression/rewards, source trades/Seal Case or curated encounters",
@@ -84,7 +87,8 @@
         "OlivineCity_Gym_Arena"
       ],
       "all_intended_maps_registered": true,
-      "pending_until_final_delivery": true
+      "pending_until_final_delivery": true,
+      "v7_controller_checkpoint": "All named interiors visited; see diagnostic tour/services and final V8 requirements"
     },
     {
       "building": "Pokemon Center",
@@ -119,7 +123,8 @@
         "OlivineCity_PokemonCenter_B1F"
       ],
       "all_intended_maps_registered": true,
-      "pending_until_final_delivery": true
+      "pending_until_final_delivery": true,
+      "v7_controller_checkpoint": "All named interiors visited; see diagnostic tour/services and final V8 requirements"
     },
     {
       "building": "Poke Mart",
@@ -145,7 +150,8 @@
         "OlivineCity_Mart"
       ],
       "all_intended_maps_registered": true,
-      "pending_until_final_delivery": true
+      "pending_until_final_delivery": true,
+      "v7_controller_checkpoint": "All named interiors visited; see diagnostic tour/services and final V8 requirements"
     },
     {
       "building": "Glitter Lighthouse",
@@ -178,7 +184,8 @@
         "OlivineCity_Lighthouse_Elevator"
       ],
       "all_intended_maps_registered": true,
-      "pending_until_final_delivery": true
+      "pending_until_final_delivery": true,
+      "v7_controller_checkpoint": "All named interiors visited; see diagnostic tour/services and final V8 requirements"
     },
     {
       "building": "Fishing house",
@@ -204,7 +211,8 @@
         "OlivineCity_FishingHouse"
       ],
       "all_intended_maps_registered": true,
-      "pending_until_final_delivery": true
+      "pending_until_final_delivery": true,
+      "v7_controller_checkpoint": "All named interiors visited; see diagnostic tour/services and final V8 requirements"
     },
     {
       "building": "Trade house",
@@ -230,7 +238,8 @@
         "OlivineCity_TradeHouse"
       ],
       "all_intended_maps_registered": true,
-      "pending_until_final_delivery": true
+      "pending_until_final_delivery": true,
+      "v7_controller_checkpoint": "All named interiors visited; see diagnostic tour/services and final V8 requirements"
     },
     {
       "building": "Seal house",
@@ -256,7 +265,8 @@
         "OlivineCity_SealHouse"
       ],
       "all_intended_maps_registered": true,
-      "pending_until_final_delivery": true
+      "pending_until_final_delivery": true,
+      "v7_controller_checkpoint": "All named interiors visited; see diagnostic tour/services and final V8 requirements"
     },
     {
       "building": "Cafe",
@@ -282,7 +292,8 @@
         "OlivineCity_Cafe"
       ],
       "all_intended_maps_registered": true,
-      "pending_until_final_delivery": true
+      "pending_until_final_delivery": true,
+      "v7_controller_checkpoint": "All named interiors visited; see diagnostic tour/services and final V8 requirements"
     },
     {
       "building": "Port terminal",
@@ -317,7 +328,8 @@
         "OlivineCity_PortQuay"
       ],
       "all_intended_maps_registered": true,
-      "pending_until_final_delivery": true
+      "pending_until_final_delivery": true,
+      "v7_controller_checkpoint": "All named interiors visited; see diagnostic tour/services and final V8 requirements"
     },
     {
       "building": "Joe Mercer residence",
@@ -336,7 +348,8 @@
         "OlivineCity_Residence"
       ],
       "all_intended_maps_registered": true,
-      "pending_until_final_delivery": true
+      "pending_until_final_delivery": true,
+      "v7_controller_checkpoint": "All named interiors visited; see diagnostic tour/services and final V8 requirements"
     },
     {
       "building": "Accepted neighbour residence",
@@ -355,7 +368,8 @@
         "OlivineCity_NeighborHouse"
       ],
       "all_intended_maps_registered": true,
-      "pending_until_final_delivery": true
+      "pending_until_final_delivery": true,
+      "v7_controller_checkpoint": "All named interiors visited; see diagnostic tour/services and final V8 requirements"
     },
     {
       "building": "Silph subsidiary office",
@@ -374,7 +388,8 @@
         "OlivineCity_SilphOffice"
       ],
       "all_intended_maps_registered": true,
-      "pending_until_final_delivery": true
+      "pending_until_final_delivery": true,
+      "v7_controller_checkpoint": "All named interiors visited; see diagnostic tour/services and final V8 requirements"
     },
     {
       "building": "Harbor Office",
@@ -393,7 +408,8 @@
         "OlivineCity_HarborOffice"
       ],
       "all_intended_maps_registered": true,
-      "pending_until_final_delivery": true
+      "pending_until_final_delivery": true,
+      "v7_controller_checkpoint": "All named interiors visited; see diagnostic tour/services and final V8 requirements"
     }
   ],
   "maps": [
@@ -627,7 +643,7 @@
       ],
       "visible_doorway_segments": [
         {
-          "doorway_group": "unnamed",
+          "doorway_group": "olivine-joe-residence",
           "side": "outside",
           "segments": [
             [
@@ -643,7 +659,7 @@
           ]
         },
         {
-          "doorway_group": "unnamed",
+          "doorway_group": "olivine-accepted-neighbour",
           "side": "outside",
           "segments": [
             [
@@ -659,7 +675,7 @@
           ]
         },
         {
-          "doorway_group": "unnamed",
+          "doorway_group": "olivine-custom-gym",
           "side": "outside",
           "segments": [
             [
@@ -683,7 +699,7 @@
           ]
         },
         {
-          "doorway_group": "unnamed",
+          "doorway_group": "olivine-pokemon-center",
           "side": "outside",
           "segments": [
             [
@@ -707,7 +723,7 @@
           ]
         },
         {
-          "doorway_group": "unnamed",
+          "doorway_group": "olivine-poke-mart",
           "side": "outside",
           "segments": [
             [
@@ -723,7 +739,7 @@
           ]
         },
         {
-          "doorway_group": "unnamed",
+          "doorway_group": "olivine-silph-office",
           "side": "outside",
           "segments": [
             [
@@ -739,7 +755,7 @@
           ]
         },
         {
-          "doorway_group": "unnamed",
+          "doorway_group": "olivine-harbor-office",
           "side": "outside",
           "segments": [
             [
@@ -755,7 +771,7 @@
           ]
         },
         {
-          "doorway_group": "unnamed",
+          "doorway_group": "olivine-lighthouse",
           "side": "outside",
           "segments": [
             [
@@ -771,7 +787,7 @@
           ]
         },
         {
-          "doorway_group": "unnamed",
+          "doorway_group": "olivine-fishing-house",
           "side": "outside",
           "segments": [
             [
@@ -787,7 +803,7 @@
           ]
         },
         {
-          "doorway_group": "unnamed",
+          "doorway_group": "olivine-trade-house",
           "side": "outside",
           "segments": [
             [
@@ -803,7 +819,7 @@
           ]
         },
         {
-          "doorway_group": "unnamed",
+          "doorway_group": "olivine-seal-house",
           "side": "outside",
           "segments": [
             [
@@ -819,7 +835,7 @@
           ]
         },
         {
-          "doorway_group": "unnamed",
+          "doorway_group": "olivine-cafe",
           "side": "outside",
           "segments": [
             [
@@ -835,7 +851,7 @@
           ]
         },
         {
-          "doorway_group": "unnamed",
+          "doorway_group": "olivine-port-city-entrance",
           "side": "outside",
           "segments": [
             [
@@ -914,11 +930,11 @@
         "Three terrace parasols retained, western parasol shifted to fit Harbor Office",
         "Source elevations/perspective flattened into collision-safe native terrain"
       ],
-      "static_visual_review": "Nine common/home/service/Gym room renders inspected by rooms agent; city reference/overview inspected; landmark revisions being reviewed separately",
+      "static_visual_review": "Native V7 entry frame inspected; corrected full authored static layouts inspected where available; source render is not a playtest",
       "verification": {
-        "automated_checks": "PENDING final source/build identity; source semantic/registration/118 visible-segment checks passed before final V6 changes",
-        "emulator_gameplay": "PENDING final delivery ROM; V5 diagnostic runs are provisional, not final acceptance",
-        "save_continue": "PENDING final delivery ROM; use copies of battery saves, never an older emulator state",
+        "automated_checks": "Source semantic/generator/resource checks; final frozen V8 checks pending",
+        "emulator_gameplay": "V7 all24 targets visited; final V8 after material/art/source-prop corrections pending",
+        "save_continue": "V7 applicable coldContinue/privatefixture coverage passed; final V8 rerun pending",
         "owner_delta_visual_acceptance": "PENDING"
       },
       "pending_until_final_delivery": true
@@ -964,7 +980,7 @@
       "native_connections": null,
       "visible_doorway_segments": [
         {
-          "doorway_group": "unnamed",
+          "doorway_group": "olivine-joe-residence",
           "side": "inside",
           "segments": [
             [
@@ -1004,11 +1020,11 @@
         "Accepted original Black Ledger location outside the nine HGSS canonical buildings",
         "Existing interior script/party/starter/travel/rest contracts preserved; no claim of an HGSS counterpart"
       ],
-      "static_visual_review": "Accepted original interior preserved; final delivery controller capture still required",
+      "static_visual_review": "Native V7 entry frame inspected; corrected full authored static layouts inspected where available; source render is not a playtest",
       "verification": {
-        "automated_checks": "PENDING final source/build identity; source semantic/registration/118 visible-segment checks passed before final V6 changes",
-        "emulator_gameplay": "PENDING final delivery ROM; V5 diagnostic runs are provisional, not final acceptance",
-        "save_continue": "PENDING final delivery ROM; use copies of battery saves, never an older emulator state",
+        "automated_checks": "Source semantic/generator/resource checks; final frozen V8 checks pending",
+        "emulator_gameplay": "V7 all24 targets visited; final V8 after material/art/source-prop corrections pending",
+        "save_continue": "V7 applicable coldContinue/privatefixture coverage passed; final V8 rerun pending",
         "owner_delta_visual_acceptance": "PENDING"
       },
       "pending_until_final_delivery": true
@@ -1054,7 +1070,7 @@
       "native_connections": null,
       "visible_doorway_segments": [
         {
-          "doorway_group": "unnamed",
+          "doorway_group": "olivine-accepted-neighbour",
           "side": "inside",
           "segments": [
             [
@@ -1093,11 +1109,11 @@
         "Accepted original Black Ledger location outside the nine HGSS canonical buildings",
         "Existing interior script/party/starter/travel/rest contracts preserved; no claim of an HGSS counterpart"
       ],
-      "static_visual_review": "Accepted original interior preserved; final delivery controller capture still required",
+      "static_visual_review": "Native V7 entry frame inspected; corrected full authored static layouts inspected where available; source render is not a playtest",
       "verification": {
-        "automated_checks": "PENDING final source/build identity; source semantic/registration/118 visible-segment checks passed before final V6 changes",
-        "emulator_gameplay": "PENDING final delivery ROM; V5 diagnostic runs are provisional, not final acceptance",
-        "save_continue": "PENDING final delivery ROM; use copies of battery saves, never an older emulator state",
+        "automated_checks": "Source semantic/generator/resource checks; final frozen V8 checks pending",
+        "emulator_gameplay": "V7 all24 targets visited; final V8 after material/art/source-prop corrections pending",
+        "save_continue": "V7 applicable coldContinue/privatefixture coverage passed; final V8 rerun pending",
         "owner_delta_visual_acceptance": "PENDING"
       },
       "pending_until_final_delivery": true
@@ -1182,7 +1198,7 @@
       "native_connections": null,
       "visible_doorway_segments": [
         {
-          "doorway_group": "unnamed",
+          "doorway_group": "olivine-custom-gym",
           "side": "inside",
           "segments": [
             [
@@ -1206,7 +1222,7 @@
           ]
         },
         {
-          "doorway_group": "unnamed",
+          "doorway_group": "olivine-gym-hallway",
           "side": "outside",
           "segments": [
             [
@@ -1256,11 +1272,11 @@
         "Sourcey17 split across two stable map IDs; all three corridor segments reciprocal",
         "Accepted Jasmine/apprentice optional practice scripts retained, no rewards/badges/gates"
       ],
-      "static_visual_review": "Nine common/home/service/Gym room renders inspected by rooms agent; city reference/overview inspected; landmark revisions being reviewed separately",
+      "static_visual_review": "Native V7 entry frame inspected; corrected full authored static layouts inspected where available; source render is not a playtest",
       "verification": {
-        "automated_checks": "PENDING final source/build identity; source semantic/registration/118 visible-segment checks passed before final V6 changes",
-        "emulator_gameplay": "PENDING final delivery ROM; V5 diagnostic runs are provisional, not final acceptance",
-        "save_continue": "PENDING final delivery ROM; use copies of battery saves, never an older emulator state",
+        "automated_checks": "Source semantic/generator/resource checks; final frozen V8 checks pending",
+        "emulator_gameplay": "V7 all24 targets visited; final V8 after material/art/source-prop corrections pending",
+        "save_continue": "V7 applicable coldContinue/privatefixture coverage passed; final V8 rerun pending",
         "owner_delta_visual_acceptance": "PENDING"
       },
       "pending_until_final_delivery": true
@@ -1279,7 +1295,7 @@
       ],
       "layout_file": "data/layouts/OlivineCity_PokemonCenter_1F/map.bin",
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_PokemonCenter",
+      "secondary_tileset": "gTileset_HgssCenterReception",
       "classification": [
         "HGSS reference geometry",
         "native GBA visual adaptation"
@@ -1349,7 +1365,7 @@
       "native_connections": null,
       "visible_doorway_segments": [
         {
-          "doorway_group": "unnamed",
+          "doorway_group": "olivine-pokemon-center",
           "side": "inside",
           "segments": [
             [
@@ -1416,11 +1432,11 @@
         "Olivine nurse ID/shop stock/scripts preserved; native PC/counter/escalators",
         "Raised DS reception flattened; communication desks explicitly offline"
       ],
-      "static_visual_review": "Nine common/home/service/Gym room renders inspected by rooms agent; city reference/overview inspected; landmark revisions being reviewed separately",
+      "static_visual_review": "Native V7 entry frame inspected; corrected full authored static layouts inspected where available; source render is not a playtest",
       "verification": {
-        "automated_checks": "PENDING final source/build identity; source semantic/registration/118 visible-segment checks passed before final V6 changes",
-        "emulator_gameplay": "PENDING final delivery ROM; V5 diagnostic runs are provisional, not final acceptance",
-        "save_continue": "PENDING final delivery ROM; use copies of battery saves, never an older emulator state",
+        "automated_checks": "Source semantic/generator/resource checks; final frozen V8 checks pending",
+        "emulator_gameplay": "V7 all24 targets visited; final V8 after material/art/source-prop corrections pending",
+        "save_continue": "V7 applicable coldContinue/privatefixture coverage passed; final V8 rerun pending",
         "owner_delta_visual_acceptance": "PENDING"
       },
       "pending_until_final_delivery": true
@@ -1439,7 +1455,7 @@
       ],
       "layout_file": "data/layouts/OlivineCity_Mart/map.bin",
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_Shop",
+      "secondary_tileset": "gTileset_HgssMart",
       "classification": [
         "HGSS reference geometry",
         "native GBA visual adaptation"
@@ -1494,7 +1510,7 @@
       "native_connections": null,
       "visible_doorway_segments": [
         {
-          "doorway_group": "unnamed",
+          "doorway_group": "olivine-poke-mart",
           "side": "inside",
           "segments": [
             [
@@ -1546,11 +1562,11 @@
         "Olivine nurse ID/shop stock/scripts preserved; native PC/counter/escalators",
         "Raised DS reception flattened; communication desks explicitly offline"
       ],
-      "static_visual_review": "Nine common/home/service/Gym room renders inspected by rooms agent; city reference/overview inspected; landmark revisions being reviewed separately",
+      "static_visual_review": "Native V7 entry frame inspected; corrected full authored static layouts inspected where available; source render is not a playtest",
       "verification": {
-        "automated_checks": "PENDING final source/build identity; source semantic/registration/118 visible-segment checks passed before final V6 changes",
-        "emulator_gameplay": "PENDING final delivery ROM; V5 diagnostic runs are provisional, not final acceptance",
-        "save_continue": "PENDING final delivery ROM; use copies of battery saves, never an older emulator state",
+        "automated_checks": "Source semantic/generator/resource checks; final frozen V8 checks pending",
+        "emulator_gameplay": "V7 all24 targets visited; final V8 after material/art/source-prop corrections pending",
+        "save_continue": "V7 applicable coldContinue/privatefixture coverage passed; final V8 rerun pending",
         "owner_delta_visual_acceptance": "PENDING"
       },
       "pending_until_final_delivery": true
@@ -1596,7 +1612,7 @@
       "native_connections": null,
       "visible_doorway_segments": [
         {
-          "doorway_group": "unnamed",
+          "doorway_group": "olivine-silph-office",
           "side": "inside",
           "segments": [
             [
@@ -1642,11 +1658,11 @@
         "Accepted original Black Ledger location outside the nine HGSS canonical buildings",
         "Existing interior script/party/starter/travel/rest contracts preserved; no claim of an HGSS counterpart"
       ],
-      "static_visual_review": "Accepted original interior preserved; final delivery controller capture still required",
+      "static_visual_review": "Native V7 entry frame inspected; corrected full authored static layouts inspected where available; source render is not a playtest",
       "verification": {
-        "automated_checks": "PENDING final source/build identity; source semantic/registration/118 visible-segment checks passed before final V6 changes",
-        "emulator_gameplay": "PENDING final delivery ROM; V5 diagnostic runs are provisional, not final acceptance",
-        "save_continue": "PENDING final delivery ROM; use copies of battery saves, never an older emulator state",
+        "automated_checks": "Source semantic/generator/resource checks; final frozen V8 checks pending",
+        "emulator_gameplay": "V7 all24 targets visited; final V8 after material/art/source-prop corrections pending",
+        "save_continue": "V7 applicable coldContinue/privatefixture coverage passed; final V8 rerun pending",
         "owner_delta_visual_acceptance": "PENDING"
       },
       "pending_until_final_delivery": true
@@ -1692,7 +1708,7 @@
       "native_connections": null,
       "visible_doorway_segments": [
         {
-          "doorway_group": "unnamed",
+          "doorway_group": "olivine-harbor-office",
           "side": "inside",
           "segments": [
             [
@@ -1738,11 +1754,11 @@
         "Accepted original Black Ledger location outside the nine HGSS canonical buildings",
         "Existing interior script/party/starter/travel/rest contracts preserved; no claim of an HGSS counterpart"
       ],
-      "static_visual_review": "Accepted original interior preserved; final delivery controller capture still required",
+      "static_visual_review": "Native V7 entry frame inspected; corrected full authored static layouts inspected where available; source render is not a playtest",
       "verification": {
-        "automated_checks": "PENDING final source/build identity; source semantic/registration/118 visible-segment checks passed before final V6 changes",
-        "emulator_gameplay": "PENDING final delivery ROM; V5 diagnostic runs are provisional, not final acceptance",
-        "save_continue": "PENDING final delivery ROM; use copies of battery saves, never an older emulator state",
+        "automated_checks": "Source semantic/generator/resource checks; final frozen V8 checks pending",
+        "emulator_gameplay": "V7 all24 targets visited; final V8 after material/art/source-prop corrections pending",
+        "save_continue": "V7 applicable coldContinue/privatefixture coverage passed; final V8 rerun pending",
         "owner_delta_visual_acceptance": "PENDING"
       },
       "pending_until_final_delivery": true
@@ -1843,7 +1859,7 @@
       "native_connections": null,
       "visible_doorway_segments": [
         {
-          "doorway_group": "unnamed",
+          "doorway_group": "olivine-lighthouse",
           "side": "inside",
           "segments": [
             [
@@ -1883,14 +1899,15 @@
         "No source trainer/story/reward flags imported",
         "Wide GBA door/stair aliases append without removing historical warp indices"
       ],
-      "static_visual_review": "Nine common/home/service/Gym room renders inspected by rooms agent; city reference/overview inspected; landmark revisions being reviewed separately",
+      "static_visual_review": "Native V7 entry frame inspected; corrected full authored static layouts inspected where available; source render is not a playtest",
       "verification": {
-        "automated_checks": "PENDING final source/build identity; source semantic/registration/118 visible-segment checks passed before final V6 changes",
-        "emulator_gameplay": "PENDING final delivery ROM; V5 diagnostic runs are provisional, not final acceptance",
-        "save_continue": "PENDING final delivery ROM; use copies of battery saves, never an older emulator state",
+        "automated_checks": "Source semantic/generator/resource checks; final frozen V8 checks pending",
+        "emulator_gameplay": "V7 all24 targets visited; final V8 after material/art/source-prop corrections pending",
+        "save_continue": "V7 applicable coldContinue/privatefixture coverage passed; final V8 rerun pending",
         "owner_delta_visual_acceptance": "PENDING"
       },
-      "pending_until_final_delivery": true
+      "pending_until_final_delivery": true,
+      "source_prop_coverage": "olivine-landmark-prop-coverage.json#OlivineCity_Lighthouse_1F"
     },
     {
       "name": "OlivineCity_Lighthouse_2F",
@@ -1981,14 +1998,15 @@
         "No source trainer/story/reward flags imported",
         "Wide GBA door/stair aliases append without removing historical warp indices"
       ],
-      "static_visual_review": "Nine common/home/service/Gym room renders inspected by rooms agent; city reference/overview inspected; landmark revisions being reviewed separately",
+      "static_visual_review": "Native V7 entry frame inspected; corrected full authored static layouts inspected where available; source render is not a playtest",
       "verification": {
-        "automated_checks": "PENDING final source/build identity; source semantic/registration/118 visible-segment checks passed before final V6 changes",
-        "emulator_gameplay": "PENDING final delivery ROM; V5 diagnostic runs are provisional, not final acceptance",
-        "save_continue": "PENDING final delivery ROM; use copies of battery saves, never an older emulator state",
+        "automated_checks": "Source semantic/generator/resource checks; final frozen V8 checks pending",
+        "emulator_gameplay": "V7 all24 targets visited; final V8 after material/art/source-prop corrections pending",
+        "save_continue": "V7 applicable coldContinue/privatefixture coverage passed; final V8 rerun pending",
         "owner_delta_visual_acceptance": "PENDING"
       },
-      "pending_until_final_delivery": true
+      "pending_until_final_delivery": true,
+      "source_prop_coverage": "olivine-landmark-prop-coverage.json#OlivineCity_Lighthouse_2F"
     },
     {
       "name": "OlivineCity_Lighthouse_3F",
@@ -2121,7 +2139,7 @@
       "native_connections": null,
       "visible_doorway_segments": [
         {
-          "doorway_group": "unnamed",
+          "doorway_group": "olivine-lighthouse-balcony",
           "side": "inside",
           "segments": [
             [
@@ -2161,14 +2179,15 @@
         "No source trainer/story/reward flags imported",
         "Wide GBA door/stair aliases append without removing historical warp indices"
       ],
-      "static_visual_review": "Nine common/home/service/Gym room renders inspected by rooms agent; city reference/overview inspected; landmark revisions being reviewed separately",
+      "static_visual_review": "Native V7 entry frame inspected; corrected full authored static layouts inspected where available; source render is not a playtest",
       "verification": {
-        "automated_checks": "PENDING final source/build identity; source semantic/registration/118 visible-segment checks passed before final V6 changes",
-        "emulator_gameplay": "PENDING final delivery ROM; V5 diagnostic runs are provisional, not final acceptance",
-        "save_continue": "PENDING final delivery ROM; use copies of battery saves, never an older emulator state",
+        "automated_checks": "Source semantic/generator/resource checks; final frozen V8 checks pending",
+        "emulator_gameplay": "V7 all24 targets visited; final V8 after material/art/source-prop corrections pending",
+        "save_continue": "V7 applicable coldContinue/privatefixture coverage passed; final V8 rerun pending",
         "owner_delta_visual_acceptance": "PENDING"
       },
-      "pending_until_final_delivery": true
+      "pending_until_final_delivery": true,
+      "source_prop_coverage": "olivine-landmark-prop-coverage.json#OlivineCity_Lighthouse_3F"
     },
     {
       "name": "OlivineCity_Lighthouse_4F",
@@ -2273,14 +2292,15 @@
         "No source trainer/story/reward flags imported",
         "Wide GBA door/stair aliases append without removing historical warp indices"
       ],
-      "static_visual_review": "Nine common/home/service/Gym room renders inspected by rooms agent; city reference/overview inspected; landmark revisions being reviewed separately",
+      "static_visual_review": "Native V7 entry frame inspected; corrected full authored static layouts inspected where available; source render is not a playtest",
       "verification": {
-        "automated_checks": "PENDING final source/build identity; source semantic/registration/118 visible-segment checks passed before final V6 changes",
-        "emulator_gameplay": "PENDING final delivery ROM; V5 diagnostic runs are provisional, not final acceptance",
-        "save_continue": "PENDING final delivery ROM; use copies of battery saves, never an older emulator state",
+        "automated_checks": "Source semantic/generator/resource checks; final frozen V8 checks pending",
+        "emulator_gameplay": "V7 all24 targets visited; final V8 after material/art/source-prop corrections pending",
+        "save_continue": "V7 applicable coldContinue/privatefixture coverage passed; final V8 rerun pending",
         "owner_delta_visual_acceptance": "PENDING"
       },
-      "pending_until_final_delivery": true
+      "pending_until_final_delivery": true,
+      "source_prop_coverage": "olivine-landmark-prop-coverage.json#OlivineCity_Lighthouse_4F"
     },
     {
       "name": "OlivineCity_Lighthouse_5F",
@@ -2370,14 +2390,15 @@
         "No source trainer/story/reward flags imported",
         "Wide GBA door/stair aliases append without removing historical warp indices"
       ],
-      "static_visual_review": "Nine common/home/service/Gym room renders inspected by rooms agent; city reference/overview inspected; landmark revisions being reviewed separately",
+      "static_visual_review": "Native V7 entry frame inspected; corrected full authored static layouts inspected where available; source render is not a playtest",
       "verification": {
-        "automated_checks": "PENDING final source/build identity; source semantic/registration/118 visible-segment checks passed before final V6 changes",
-        "emulator_gameplay": "PENDING final delivery ROM; V5 diagnostic runs are provisional, not final acceptance",
-        "save_continue": "PENDING final delivery ROM; use copies of battery saves, never an older emulator state",
+        "automated_checks": "Source semantic/generator/resource checks; final frozen V8 checks pending",
+        "emulator_gameplay": "V7 all24 targets visited; final V8 after material/art/source-prop corrections pending",
+        "save_continue": "V7 applicable coldContinue/privatefixture coverage passed; final V8 rerun pending",
         "owner_delta_visual_acceptance": "PENDING"
       },
-      "pending_until_final_delivery": true
+      "pending_until_final_delivery": true,
+      "source_prop_coverage": "olivine-landmark-prop-coverage.json#OlivineCity_Lighthouse_5F"
     },
     {
       "name": "OlivineCity_Lighthouse_6F",
@@ -2473,14 +2494,15 @@
         "No source trainer/story/reward flags imported",
         "Wide GBA door/stair aliases append without removing historical warp indices"
       ],
-      "static_visual_review": "Nine common/home/service/Gym room renders inspected by rooms agent; city reference/overview inspected; landmark revisions being reviewed separately",
+      "static_visual_review": "Native V7 entry frame inspected; corrected full authored static layouts inspected where available; source render is not a playtest",
       "verification": {
-        "automated_checks": "PENDING final source/build identity; source semantic/registration/118 visible-segment checks passed before final V6 changes",
-        "emulator_gameplay": "PENDING final delivery ROM; V5 diagnostic runs are provisional, not final acceptance",
-        "save_continue": "PENDING final delivery ROM; use copies of battery saves, never an older emulator state",
+        "automated_checks": "Source semantic/generator/resource checks; final frozen V8 checks pending",
+        "emulator_gameplay": "V7 all24 targets visited; final V8 after material/art/source-prop corrections pending",
+        "save_continue": "V7 applicable coldContinue/privatefixture coverage passed; final V8 rerun pending",
         "owner_delta_visual_acceptance": "PENDING"
       },
-      "pending_until_final_delivery": true
+      "pending_until_final_delivery": true,
+      "source_prop_coverage": "olivine-landmark-prop-coverage.json#OlivineCity_Lighthouse_6F"
     },
     {
       "name": "OlivineCity_Gym_Arena",
@@ -2548,7 +2570,7 @@
       "native_connections": null,
       "visible_doorway_segments": [
         {
-          "doorway_group": "unnamed",
+          "doorway_group": "olivine-gym-hallway",
           "side": "inside",
           "segments": [
             [
@@ -2604,11 +2626,11 @@
         "Sourcey17 split across two stable map IDs; all three corridor segments reciprocal",
         "Accepted Jasmine/apprentice optional practice scripts retained, no rewards/badges/gates"
       ],
-      "static_visual_review": "Nine common/home/service/Gym room renders inspected by rooms agent; city reference/overview inspected; landmark revisions being reviewed separately",
+      "static_visual_review": "Native V7 entry frame inspected; corrected full authored static layouts inspected where available; source render is not a playtest",
       "verification": {
-        "automated_checks": "PENDING final source/build identity; source semantic/registration/118 visible-segment checks passed before final V6 changes",
-        "emulator_gameplay": "PENDING final delivery ROM; V5 diagnostic runs are provisional, not final acceptance",
-        "save_continue": "PENDING final delivery ROM; use copies of battery saves, never an older emulator state",
+        "automated_checks": "Source semantic/generator/resource checks; final frozen V8 checks pending",
+        "emulator_gameplay": "V7 all24 targets visited; final V8 after material/art/source-prop corrections pending",
+        "save_continue": "V7 applicable coldContinue/privatefixture coverage passed; final V8 rerun pending",
         "owner_delta_visual_acceptance": "PENDING"
       },
       "pending_until_final_delivery": true
@@ -2678,7 +2700,7 @@
       "native_connections": null,
       "visible_doorway_segments": [
         {
-          "doorway_group": "unnamed",
+          "doorway_group": "olivine-fishing-house",
           "side": "inside",
           "segments": [
             [
@@ -2720,11 +2742,11 @@
         "Actual shared0097 house matrix and trade-house screenshot support all three homes; native fridge/kitchen/window/bookcase/dining furniture",
         "Source household actor positions/count retained; source rewards/trades/Seal Case are outside this map pass"
       ],
-      "static_visual_review": "Nine common/home/service/Gym room renders inspected by rooms agent; city reference/overview inspected; landmark revisions being reviewed separately",
+      "static_visual_review": "Native V7 entry frame inspected; corrected full authored static layouts inspected where available; source render is not a playtest",
       "verification": {
-        "automated_checks": "PENDING final source/build identity; source semantic/registration/118 visible-segment checks passed before final V6 changes",
-        "emulator_gameplay": "PENDING final delivery ROM; V5 diagnostic runs are provisional, not final acceptance",
-        "save_continue": "PENDING final delivery ROM; use copies of battery saves, never an older emulator state",
+        "automated_checks": "Source semantic/generator/resource checks; final frozen V8 checks pending",
+        "emulator_gameplay": "V7 all24 targets visited; final V8 after material/art/source-prop corrections pending",
+        "save_continue": "V7 applicable coldContinue/privatefixture coverage passed; final V8 rerun pending",
         "owner_delta_visual_acceptance": "PENDING"
       },
       "pending_until_final_delivery": true,
@@ -2797,7 +2819,7 @@
       "native_connections": null,
       "visible_doorway_segments": [
         {
-          "doorway_group": "unnamed",
+          "doorway_group": "olivine-trade-house",
           "side": "inside",
           "segments": [
             [
@@ -2839,11 +2861,11 @@
         "Actual shared0097 house matrix and trade-house screenshot support all three homes; native fridge/kitchen/window/bookcase/dining furniture",
         "Source household actor positions/count retained; source rewards/trades/Seal Case are outside this map pass"
       ],
-      "static_visual_review": "Nine common/home/service/Gym room renders inspected by rooms agent; city reference/overview inspected; landmark revisions being reviewed separately",
+      "static_visual_review": "Native V7 entry frame inspected; corrected full authored static layouts inspected where available; source render is not a playtest",
       "verification": {
-        "automated_checks": "PENDING final source/build identity; source semantic/registration/118 visible-segment checks passed before final V6 changes",
-        "emulator_gameplay": "PENDING final delivery ROM; V5 diagnostic runs are provisional, not final acceptance",
-        "save_continue": "PENDING final delivery ROM; use copies of battery saves, never an older emulator state",
+        "automated_checks": "Source semantic/generator/resource checks; final frozen V8 checks pending",
+        "emulator_gameplay": "V7 all24 targets visited; final V8 after material/art/source-prop corrections pending",
+        "save_continue": "V7 applicable coldContinue/privatefixture coverage passed; final V8 rerun pending",
         "owner_delta_visual_acceptance": "PENDING"
       },
       "pending_until_final_delivery": true,
@@ -2916,7 +2938,7 @@
       "native_connections": null,
       "visible_doorway_segments": [
         {
-          "doorway_group": "unnamed",
+          "doorway_group": "olivine-seal-house",
           "side": "inside",
           "segments": [
             [
@@ -2970,11 +2992,11 @@
         "Actual shared0097 house matrix and trade-house screenshot support all three homes; native fridge/kitchen/window/bookcase/dining furniture",
         "Source household actor positions/count retained; source rewards/trades/Seal Case are outside this map pass"
       ],
-      "static_visual_review": "Nine common/home/service/Gym room renders inspected by rooms agent; city reference/overview inspected; landmark revisions being reviewed separately",
+      "static_visual_review": "Native V7 entry frame inspected; corrected full authored static layouts inspected where available; source render is not a playtest",
       "verification": {
-        "automated_checks": "PENDING final source/build identity; source semantic/registration/118 visible-segment checks passed before final V6 changes",
-        "emulator_gameplay": "PENDING final delivery ROM; V5 diagnostic runs are provisional, not final acceptance",
-        "save_continue": "PENDING final delivery ROM; use copies of battery saves, never an older emulator state",
+        "automated_checks": "Source semantic/generator/resource checks; final frozen V8 checks pending",
+        "emulator_gameplay": "V7 all24 targets visited; final V8 after material/art/source-prop corrections pending",
+        "save_continue": "V7 applicable coldContinue/privatefixture coverage passed; final V8 rerun pending",
         "owner_delta_visual_acceptance": "PENDING"
       },
       "pending_until_final_delivery": true,
@@ -3042,7 +3064,7 @@
       "native_connections": null,
       "visible_doorway_segments": [
         {
-          "doorway_group": "unnamed",
+          "doorway_group": "olivine-cafe",
           "side": "inside",
           "segments": [
             [
@@ -3098,11 +3120,11 @@
         "Actual cafe screenshot obtained and inspected: cream/checkered floor, left communal table, right serving counter, two rear windows and staff kitchen",
         "Native source12,8 is an explicitly visible service escape aisle; solid counter retains MB_COUNTER"
       ],
-      "static_visual_review": "Nine common/home/service/Gym room renders inspected by rooms agent; city reference/overview inspected; landmark revisions being reviewed separately",
+      "static_visual_review": "Native V7 entry frame inspected; corrected full authored static layouts inspected where available; source render is not a playtest",
       "verification": {
-        "automated_checks": "PENDING final source/build identity; source semantic/registration/118 visible-segment checks passed before final V6 changes",
-        "emulator_gameplay": "PENDING final delivery ROM; V5 diagnostic runs are provisional, not final acceptance",
-        "save_continue": "PENDING final delivery ROM; use copies of battery saves, never an older emulator state",
+        "automated_checks": "Source semantic/generator/resource checks; final frozen V8 checks pending",
+        "emulator_gameplay": "V7 all24 targets visited; final V8 after material/art/source-prop corrections pending",
+        "save_continue": "V7 applicable coldContinue/privatefixture coverage passed; final V8 rerun pending",
         "owner_delta_visual_acceptance": "PENDING"
       },
       "pending_until_final_delivery": true,
@@ -3120,11 +3142,11 @@
       "layout_id": "LAYOUT_HGSS_OLIVINECITY_POKEMONCENTER_B1F",
       "dimensions": [
         17,
-        12
+        14
       ],
       "layout_file": "data/layouts/OlivineCity_PokemonCenter_B1F/map.bin",
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_PokemonCenter",
+      "secondary_tileset": "gTileset_HgssCenterBasement",
       "classification": [
         "HGSS reference geometry",
         "native GBA visual adaptation"
@@ -3198,14 +3220,22 @@
         "Olivine nurse ID/shop stock/scripts preserved; native PC/counter/escalators",
         "Raised DS reception flattened; communication desks explicitly offline"
       ],
-      "static_visual_review": "Nine common/home/service/Gym room renders inspected by rooms agent; city reference/overview inspected; landmark revisions being reviewed separately",
+      "static_visual_review": "Native V7 entry frame inspected; corrected full authored static layouts inspected where available; source render is not a playtest",
       "verification": {
-        "automated_checks": "PENDING final source/build identity; source semantic/registration/118 visible-segment checks passed before final V6 changes",
-        "emulator_gameplay": "PENDING final delivery ROM; V5 diagnostic runs are provisional, not final acceptance",
-        "save_continue": "PENDING final delivery ROM; use copies of battery saves, never an older emulator state",
+        "automated_checks": "Source semantic/generator/resource checks; final frozen V8 checks pending",
+        "emulator_gameplay": "V7 all24 targets visited; final V8 after material/art/source-prop corrections pending",
+        "save_continue": "V7 applicable coldContinue/privatefixture coverage passed; final V8 rerun pending",
         "owner_delta_visual_acceptance": "PENDING"
       },
-      "pending_until_final_delivery": true
+      "pending_until_final_delivery": true,
+      "queued_source_target": {
+        "dimensions": [
+          17,
+          14
+        ],
+        "secondary": "gTileset_HgssCenterBasement",
+        "content": "full source public y12, glass table, ten stools, two plants and terminal"
+      }
     },
     {
       "name": "OlivineCity_Lighthouse_Balcony",
@@ -3265,7 +3295,7 @@
       "native_connections": null,
       "visible_doorway_segments": [
         {
-          "doorway_group": "unnamed",
+          "doorway_group": "olivine-lighthouse-balcony",
           "side": "outside",
           "segments": [
             [
@@ -3298,14 +3328,15 @@
         "No source trainer/story/reward flags imported",
         "Wide GBA door/stair aliases append without removing historical warp indices"
       ],
-      "static_visual_review": "Nine common/home/service/Gym room renders inspected by rooms agent; city reference/overview inspected; landmark revisions being reviewed separately",
+      "static_visual_review": "Native V7 entry frame inspected; corrected full authored static layouts inspected where available; source render is not a playtest",
       "verification": {
-        "automated_checks": "PENDING final source/build identity; source semantic/registration/118 visible-segment checks passed before final V6 changes",
-        "emulator_gameplay": "PENDING final delivery ROM; V5 diagnostic runs are provisional, not final acceptance",
-        "save_continue": "PENDING final delivery ROM; use copies of battery saves, never an older emulator state",
+        "automated_checks": "Source semantic/generator/resource checks; final frozen V8 checks pending",
+        "emulator_gameplay": "V7 all24 targets visited; final V8 after material/art/source-prop corrections pending",
+        "save_continue": "V7 applicable coldContinue/privatefixture coverage passed; final V8 rerun pending",
         "owner_delta_visual_acceptance": "PENDING"
       },
-      "pending_until_final_delivery": true
+      "pending_until_final_delivery": true,
+      "source_prop_coverage": "olivine-landmark-prop-coverage.json#OlivineCity_Lighthouse_Balcony"
     },
     {
       "name": "OlivineCity_Lighthouse_Elevator",
@@ -3374,14 +3405,15 @@
         "No source trainer/story/reward flags imported",
         "Wide GBA door/stair aliases append without removing historical warp indices"
       ],
-      "static_visual_review": "Nine common/home/service/Gym room renders inspected by rooms agent; city reference/overview inspected; landmark revisions being reviewed separately",
+      "static_visual_review": "Native V7 entry frame inspected; corrected full authored static layouts inspected where available; source render is not a playtest",
       "verification": {
-        "automated_checks": "PENDING final source/build identity; source semantic/registration/118 visible-segment checks passed before final V6 changes",
-        "emulator_gameplay": "PENDING final delivery ROM; V5 diagnostic runs are provisional, not final acceptance",
-        "save_continue": "PENDING final delivery ROM; use copies of battery saves, never an older emulator state",
+        "automated_checks": "Source semantic/generator/resource checks; final frozen V8 checks pending",
+        "emulator_gameplay": "V7 all24 targets visited; final V8 after material/art/source-prop corrections pending",
+        "save_continue": "V7 applicable coldContinue/privatefixture coverage passed; final V8 rerun pending",
         "owner_delta_visual_acceptance": "PENDING"
       },
-      "pending_until_final_delivery": true
+      "pending_until_final_delivery": true,
+      "source_prop_coverage": "olivine-landmark-prop-coverage.json#OlivineCity_Lighthouse_Elevator"
     },
     {
       "name": "OlivineCity_PortTerminal",
@@ -3485,7 +3517,7 @@
       "native_connections": null,
       "visible_doorway_segments": [
         {
-          "doorway_group": "unnamed",
+          "doorway_group": "olivine-port-city-entrance",
           "side": "inside",
           "segments": [
             [
@@ -3509,7 +3541,7 @@
           ]
         },
         {
-          "doorway_group": "unnamed",
+          "doorway_group": "olivine-port-quay-main",
           "side": "inside",
           "segments": [
             [
@@ -3533,7 +3565,7 @@
           ]
         },
         {
-          "doorway_group": "unnamed",
+          "doorway_group": "olivine-port-inspection-side",
           "side": "inside",
           "segments": [
             [
@@ -3580,14 +3612,15 @@
         "No source trainer/story/reward flags imported",
         "Wide GBA door/stair aliases append without removing historical warp indices"
       ],
-      "static_visual_review": "Nine common/home/service/Gym room renders inspected by rooms agent; city reference/overview inspected; landmark revisions being reviewed separately",
+      "static_visual_review": "Native V7 entry frame inspected; corrected full authored static layouts inspected where available; source render is not a playtest",
       "verification": {
-        "automated_checks": "PENDING final source/build identity; source semantic/registration/118 visible-segment checks passed before final V6 changes",
-        "emulator_gameplay": "PENDING final delivery ROM; V5 diagnostic runs are provisional, not final acceptance",
-        "save_continue": "PENDING final delivery ROM; use copies of battery saves, never an older emulator state",
+        "automated_checks": "Source semantic/generator/resource checks; final frozen V8 checks pending",
+        "emulator_gameplay": "V7 all24 targets visited; final V8 after material/art/source-prop corrections pending",
+        "save_continue": "V7 applicable coldContinue/privatefixture coverage passed; final V8 rerun pending",
         "owner_delta_visual_acceptance": "PENDING"
       },
-      "pending_until_final_delivery": true
+      "pending_until_final_delivery": true,
+      "source_prop_coverage": "olivine-landmark-prop-coverage.json#OlivineCity_PortTerminal"
     },
     {
       "name": "OlivineCity_PortQuay",
@@ -3598,7 +3631,7 @@
       "map_number": 42,
       "layout_id": "LAYOUT_OLIVINE_CITY_PORT_QUAY",
       "dimensions": [
-        32,
+        40,
         27
       ],
       "layout_file": "data/layouts/OlivineCity_PortQuay/map.bin",
@@ -3677,7 +3710,7 @@
       "native_connections": null,
       "visible_doorway_segments": [
         {
-          "doorway_group": "unnamed",
+          "doorway_group": "olivine-port-quay-main",
           "side": "outside",
           "segments": [
             [
@@ -3701,7 +3734,7 @@
           ]
         },
         {
-          "doorway_group": "unnamed",
+          "doorway_group": "olivine-port-inspection-side",
           "side": "outside",
           "segments": [
             [
@@ -3742,14 +3775,67 @@
         "No source trainer/story/reward flags imported",
         "Wide GBA door/stair aliases append without removing historical warp indices"
       ],
-      "static_visual_review": "Nine common/home/service/Gym room renders inspected by rooms agent; city reference/overview inspected; landmark revisions being reviewed separately",
+      "static_visual_review": "Native V7 entry frame inspected; corrected full authored static layouts inspected where available; source render is not a playtest",
       "verification": {
-        "automated_checks": "PENDING final source/build identity; source semantic/registration/118 visible-segment checks passed before final V6 changes",
-        "emulator_gameplay": "PENDING final delivery ROM; V5 diagnostic runs are provisional, not final acceptance",
-        "save_continue": "PENDING final delivery ROM; use copies of battery saves, never an older emulator state",
+        "automated_checks": "Source semantic/generator/resource checks; final frozen V8 checks pending",
+        "emulator_gameplay": "V7 all24 targets visited; final V8 after material/art/source-prop corrections pending",
+        "save_continue": "V7 applicable coldContinue/privatefixture coverage passed; final V8 rerun pending",
         "owner_delta_visual_acceptance": "PENDING"
       },
-      "pending_until_final_delivery": true
+      "pending_until_final_delivery": true,
+      "source_prop_coverage": "olivine-landmark-prop-coverage.json#OlivineCity_PortQuay"
     }
-  ]
+  ],
+  "implemented_source_corrections": [
+    "All nine canonical enterable buildings, four preserved Black Ledger additions and24 city/interior/landmark maps registered; canonical homes not repurposed",
+    "V7 port roof/body defect fixed: two actual lower door leaves work, solid body blocks23/24,48; genuine sea/overhang remains surfable23/24,47; returns land on dry forecourt and bounded east boardwalk",
+    "V8 city material contract:20 surviving source-backed white fence cells;12 relocated terrace table cells on actual timber; corrected deck/parasols/gray offshore rocks; genuine cliff retained;65 pinned obsolete source model167 body cells restored to sea",
+    "Actual rear port facade model167, docked ferry168 and both sailboats119 rendered; all four rear terminal doorway segments operative; sailing separately outside city scope",
+    "Full lighthouse branch/window/balcony/two-stop lift, all eight source planters across1F/2F, circular mechanical lantern housing, purple light room, cool masonry and safe high-balcony rails",
+    "All eight source terminal stool instances, white tables, aqua waiting seats, central blue rug/life rings and tan flooring represented; seated solid NPC owns its chair tile",
+    "Actual0097 home rear-right plants/bookcase/kitchen/table and pale-blue wall/window palette;0136 cafe actual two plants, L-counter, table, staff aisle and cream wall/windows",
+    "Common Center B1F corrected to17x14 including source public y12 waiting row, ten stools, glass table, two footer plants, terminal and private blue palette; current dedicated Ecruteak service output cloned without changing old generic city templates",
+    "Current dedicated Center1F/private reception/emblem and Mart/private source furnishings cloned after their generators; Olivine nurse/warps/scripts/stock/heal identity preserved"
+  ],
+  "verification_checkpoints": {
+    "v7_diagnostic": {
+      "rom_sha256": "0734501b031d05156a28e685dc1c2748153cb065222bd67b0d2e7cea47fefbca",
+      "source_revision": "3f935d5e8600c5a280b9172b555edb35ca52b6c0",
+      "classification": "controller-driven mGBA, not owner manual Delta QA; distinct from finalV8",
+      "tour": {
+        "scope": "all24 Olivine target maps plus transit approach maps",
+        "visited_total_including_approach": 39,
+        "transitions": 182,
+        "explicit_roundtrip_pairs": 53,
+        "individual_warp_trials": 174,
+        "evidence": "build/qa09-olivine-tour-v7/coverage.json"
+      },
+      "services": {
+        "records": 27,
+        "result": "PASS including actual heal/PC/shop/office/home interactions and Jasmine loss/localwhiteout",
+        "evidence": "build/qa09-olivine-services-v7/results.json"
+      },
+      "save_continue": {
+        "records": 21,
+        "result": "PASS copied old/current batteries, private obsolete-coordinate fixtures, selected elevator target persistence and exact party/box/bag/flags/starter preservation",
+        "evidence": "build/qa09-olivine-saves-v7/results.json"
+      },
+      "lift": {
+        "cases": 4,
+        "result": "PASS both chosen floors \u00d7 both exit leaves",
+        "evidence": "build/qa09-special-v7/elevator-completed.json"
+      },
+      "special_journeys": {
+        "cases": 6,
+        "result": "PASS window\u2192balcony\u2192weststairs\u2192top\u2192liftreturn, both port sea/overhang/body cases, boardwalk/rightleaf return and both balcony no-Surf rails",
+        "evidence": "build/qa09-special-v7-dry/doorway-results.json"
+      }
+    },
+    "v8_final_delivery": {
+      "status": "PENDING exact frozen source/ROM verification; do not inherit V7 results as a finalV8 pass"
+    },
+    "owner_delta": {
+      "status": "PENDING visual acceptance"
+    }
+  }
 }

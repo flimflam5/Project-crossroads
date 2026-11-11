@@ -1,0 +1,51 @@
+{
+  "specs": {
+    "waiting_table": {
+      "start": 744,
+      "width": 2,
+      "height": 2
+    },
+    "yellow_stool": {
+      "start": 748,
+      "width": 1,
+      "height": 1
+    },
+    "blue_stool": {
+      "start": 749,
+      "width": 1,
+      "height": 1
+    },
+    "communication_terminal": {
+      "start": 750,
+      "width": 1,
+      "height": 2
+    },
+    "communication_back_panel": {
+      "start": 752,
+      "width": 1,
+      "height": 2
+    },
+    "communication_booth": {
+      "start": 754,
+      "width": 3,
+      "height": 3
+    }
+  },
+  "tiles": 86,
+  "metatiles": 251,
+  "retained_native_metatiles": [
+    513,
+    514,
+    522,
+    523,
+    530,
+    545,
+    573,
+    574,
+    581,
+    582,
+    673
+  ],
+  "palette_adaptation": "Private cool-blue wall/floor/counter palette based on actual HGSS basement; shared native Center palettes unchanged",
+  "source": "Original native GBA furniture, no HGSS pixels copied"
+}

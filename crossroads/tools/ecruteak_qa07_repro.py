@@ -2,8 +2,8 @@
 """Normal controller reproduction on the exact QA06 baseline; no map/warp writes."""
 import argparse,runpy,sys,json,hashlib,subprocess
 from pathlib import Path
-p=argparse.ArgumentParser();p.add_argument('--save',required=True);p.add_argument('--output',default='build/qa07-baseline');p.add_argument('--library',default='/tmp/johto-bridge.so');p.add_argument('--expect-fixed',action='store_true');p.add_argument('--resume',help='Optional private snapshot; shared harness requires exact ROM SHA256');a=p.parse_args();out=Path(a.output);out.mkdir(parents=True,exist_ok=True)
-sys.argv=['johto_network_smoke.py','--save',a.save,'--library',a.library,'--output',str(out),'--targets','']+(['--resume',a.resume]if a.resume else []);d=runpy.run_path('crossroads/tools/johto_network_smoke.py');go,walk,read,frames,current,pos,lib,syms=[d[n]for n in ['go','walk','read','frames','current','pos','lib','syms']]
+p=argparse.ArgumentParser();p.add_argument('--save',required=True);p.add_argument('--output',default='build/qa07-baseline');p.add_argument('--library',default='/tmp/johto-bridge.so');p.add_argument('--expect-fixed',action='store_true');a=p.parse_args();out=Path(a.output);out.mkdir(parents=True,exist_ok=True)
+sys.argv=['johto_network_smoke.py','--save',a.save,'--library',a.library,'--output',str(out),'--targets',''];d=runpy.run_path('crossroads/tools/johto_network_smoke.py');go,walk,read,frames,current,pos,lib,syms=[d[n]for n in ['go','walk','read','frames','current','pos','lib','syms']]
 go('EcruteakCity');rows=[]
 def obj():return syms['gObjectEvents']+read(syms['gPlayerAvatar']+5,1)*36
 def arrow():
@@ -44,4 +44,4 @@ for x,y in [(26,33),(38,33),(26,42),(29,52),(49,52),(58,42)]:
   assert not arrow()['visible']
   tree_probes.append(dict(tree=[x,y],approach=point,button=k,result='blocked through controller input'))
 (out/'semantic-tree-probes.json').write_text(json.dumps(tree_probes,indent=2)+'\n')
-(out/'reproduction.json').write_text(json.dumps(dict(rom_sha256=hashlib.sha256(Path('pokeemerald.gba').read_bytes()).hexdigest(),records=rows,setup=('Exact-ROM SHA-checked private snapshot from prior cold-Continue controller tour'if a.resume else 'Copied old battery; normal Continue')+' and controller travel. Existing harness uses temporary encounter suppression and actual survey desk, no map/warp writes.'),indent=2)+'\n');print(json.dumps(rows,indent=2),flush=True)
+(out/'reproduction.json').write_text(json.dumps(dict(rom_sha256=hashlib.sha256(Path('pokeemerald.gba').read_bytes()).hexdigest(),records=rows,setup='Copied old battery; normal Continue'+' and controller travel. Existing harness uses temporary encounter suppression and actual survey desk, no map/warp writes.'),indent=2)+'\n');print(json.dumps(rows,indent=2),flush=True)

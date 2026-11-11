@@ -55,6 +55,10 @@ def city_data(with_gym=True):
  rect(28,45,2,10,0x3202);rect(22,53,8,2,0x3202)
  rect(29,18,10,2,0x3001);rect(34,20,3,9,0x3202);rect(29,28,8,1,0x3202)
  rect(34,28,4,14,0x3202);rect(38,40,12,3,0x3202)
+ # Paint source-specific fence/deck/breakwater materials before the four
+ # accepted Black Ledger buildings and all props overwrite their real footprints.
+ from hgss_olivine_materials import paint
+ paint(t,w,h,perms,spec)
  # Four accepted original interiors survive as small infill plots. Canonical
  # homes are not repurposed as Joe's home or deleted to fit the office.
  source=struct.unpack('<2400H',(R/'data/layouts/SlateportCity/map.bin').read_bytes())

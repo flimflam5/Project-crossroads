@@ -6,17 +6,27 @@
     "sha256": "e37da3bd795c7fbc041ad593daad89fd3400bfabfc85afc096989537e627283f",
     "inspected": true,
     "features": [
-      "teal upper floorboards",
-      "white masonry/round upper footprint",
-      "first-floor visitor seats and planters",
+      "teal floorboards and cool masonry/round upper footprint",
+      "six1F plants, two2F plants and visitor seats",
+      "purple6F light room with large circular housing",
       "native stairs and two-stop elevator",
-      "fourth-floor eastern window to exterior balcony and southern third-floor return"
+      "4F eastern window drop to balcony and southern3F return"
     ],
     "adaptations": [
-      "native original GBA motifs replace DS models",
-      "single flat projection replaces round3D room view",
-      "existing mechanical beacon actor preserved; no imported Ampharos/Jasmine story"
-    ]
+      "original native GBA motifs replace DS models; no screenshot pixels extracted",
+      "flat metatiles represent perspective floor/wall/model geometry",
+      "new circular lantern housing surrounds preserved existing mechanical beacon actor; no imported Ampharos/Jasmine story",
+      "stair/door aliases expand visible mouths while preserving historical IDs and source positions",
+      "Balcony uses repeated native windowed masonry to represent the source plainer cylindrical shell; this is a chosen art simplification, not a forced hardware constraint",
+      "Circular6F lantern housing is compressed to3x3 metatiles around the preserved beacon actor; source DS optical pedestal is larger"
+    ],
+    "published_dimensions": [
+      900,
+      668
+    ],
+    "reference_scale": "Annotated published multi-floor guide composition, not raw native DS frames",
+    "compiled_gameplay_checkpoint": "V7 diagnostic controller traversal and native screenshots verified; final V8 changes await fresh compiled-ROM evidence",
+    "owner_visual_acceptance": "PENDING"
   },
   {
     "area": "Olivine Port terminal",
@@ -35,7 +45,14 @@
     "adaptations": [
       "new original native-palette props; no screenshot pixels extracted",
       "no source NPC story/rewards or departure gates"
-    ]
+    ],
+    "published_dimensions": [
+      256,
+      192
+    ],
+    "reference_scale": "Published native DS screenshot256x192; GBA frame240x160 uses different camera and projection",
+    "compiled_gameplay_checkpoint": "V7 diagnostic controller traversal and native screenshots verified; final V8 changes await fresh compiled-ROM evidence",
+    "owner_visual_acceptance": "PENDING"
   },
   {
     "area": "Olivine Port quay",
@@ -44,15 +61,25 @@
     "sha256": "2c45b023b96c070f1990728e315c1f83c498e29bbe91bf636007cbf037c651fd",
     "inspected": true,
     "features": [
-      "gray paved quay",
-      "pale masonry perimeter",
-      "orange mooring bollards",
-      "ship gangway"
+      "gray paved quay and pale perimeter visible in actual reference",
+      "orange mooring bollards, ship flank and gangway visible in actual reference"
     ],
     "adaptations": [
-      "source gangway is bounded; sailing/ship outside current map pass",
-      "source side inspection pier connected by terminal passage",
-      "existing Black Ledger harbor-office travel retained separately"
-    ]
+      "Ship artwork is original GBA art from actual reference direction; boarding remains bounded because ship interiors/sailing/other-region destinations are outside city scope",
+      "Actual source side inspection pier connected through terminal; east unused ocean cropped to40x27",
+      "Existing Black Ledger Harbor Office travel retained separately"
+    ],
+    "published_dimensions": [
+      256,
+      192
+    ],
+    "reference_scale": "Published native DS screenshot256x192; GBA frame240x160 uses different camera and projection",
+    "compiled_gameplay_checkpoint": "V7 diagnostic controller traversal and native screenshots verified; final V8 changes await fresh compiled-ROM evidence",
+    "owner_visual_acceptance": "PENDING",
+    "canonical_geometry_supported_features": [
+      "rear port facade model167 position and all four source-compatible doorway segments",
+      "docked model168 S.S. Aqua position and source model119 sailboat anchors; not all are visible in the cited cropped quay screenshot"
+    ],
+    "missing_visual_reference": "A full reverse view showing complete quay facade and both sailboats is not verified; layout/model placement derives from canonical source facts, not from this cropped screenshot"
   }
 ]

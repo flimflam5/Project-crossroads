@@ -1,6 +1,12 @@
 # Ecruteak QA09 reference and completion review
 
-This independently reviews the27-map Ecruteak scope against actual HGSS sources.
+This reviews all 27 Ecruteak maps against actual HGSS sources.
+
+**Current delivery candidate: V8 source implemented; combined build and fresh
+controller/visual tests pending.** V7 tests below belong only to ROM
+`0734501b031d05156a28e685dc1c2748153cb065222bd67b0d2e7cea47fefbca`.
+Later fidelity corrections must pass on their own final ROM. Owner acceptance
+remains pending.
 The accepted exterior, custom Ghost Gym, stable IDs and B2 doorway fixes remain.
 This document does not grant owner acceptance or turn unverified work into100%.
 
@@ -106,18 +112,20 @@ historical resource IDs and pixels are unchanged. Exact migration contracts list
 53 Theater cells,12 cells in each house and6 Center cells. Tests must require
 those precise deltas and retain all unrelated immutable assertions.
 
-The final combined QA09 ROM still needs the root agent's fresh build and actual
-controller tests of these changed rooms. This review agent did not build or run
-an emulator. Native B2 frames are historical evidence, not new QA09 captures.
+The final combined QA09 ROM has now passed the fresh controller checks below.
+Native B2 and BUILD5 frames remain historical evidence; final delivery tests and
+new captures are separately identified by the BUILD7 ROM checksum.
 
-Separate complete actual HGSS raster references for Theater and route gate interiors remain unavailable. The candidate PeakD Theater image could not be
-downloaded (403); an Archives image with a similar name was inspected and rejected
-because it depicts the anime. Modified ROM-hack maps, GenerationII interiors and
-prerelease images were not substituted as authoritative final HGSS references.
-The source matrix/permission/prop/warp facts for these rooms remain available and
-checked. These gaps and the original unmatched green-roof phone report must stay
-explicit, alongside owner Delta visual acceptance. No missing canonical accessible
-Ecruteak destination was found; this is not a claim of pixel-identical HGSS art.
+Further targeted reference searches found actual final HGSS Theater stage
+screenshots on Pokébip/Poképédia and the complete common HGSS road-gate interior
+on Bulbagarden Archives. The common gate matches Ecruteak's matrix0070,
+areaData63 and moveModel15, independently checked in the original headers.
+The whole audience-room Theater mosaic is still unavailable; its 13 seats and
+walkable geometry remain pinned to actual source model/permission coordinates.
+Anime, prerelease and modified ROM-hack images were rejected as game authority.
+The original phone green-roof position remains unmatched; independently tested
+gate/door/wall cases are identified by their actual coordinates rather than
+claimed as an exact historical screenshot reproduction.
 
 ## Controller checkpoint after BUILD5
 
@@ -151,3 +159,114 @@ The same BUILD5 ROM subsequently passed the full27-map controller tour:
 healing/local respawn and retained starter/party. All27 fresh native frames were
 inspected. Coverage/screenshots: build/qa09-ecruteak-tour-v5. Later final binaries
 remain separate and must carry their own actual test identity.
+
+
+## Historical controller checkpoint: BUILD7
+
+The last tested V7 Emerald ROM is SHA256
+`0734501b031d05156a28e685dc1c2748153cb065222bd67b0d2e7cea47fefbca`.
+The root agent built this binary successfully. This review agent ran the following
+mGBA controller tests on that frozen ROM; none of these tests was a static
+connectivity simulation:
+
+- Full 27-map city/interior/landmark tour: 308 executed transitions, 73 explicit
+  round-trip pairs and 296 warp trials. Bell Tower floors, warp pads, Burned
+  Tower stairs, both road gates, Station/corridor and Trail were traversed.
+- Detailed gameplay: all five Theater performers return correctly; Mart Buy and
+  a real 200-money Poké Ball purchase work; the PC menu returns without changing
+  party or box data; nurse healing and the local respawn work. Both Gym falls
+  return safely, and an actual Morty practice loss returns to the local Center.
+- Normal in-game Save followed by a fresh core/title/Continue passes in both a
+  house and the Center. A separate old shared-layout save fixture also passes
+  normal save/cold Continue. The original copied battery was not modified.
+- Furniture: 26 controller trials pass, including each of the 13 source benches,
+  the open front aisle, both kitchens/bookcases and the three reachable Center
+  plant faces. Six native-resolution movement MP4s accompany before/after PNGs.
+- Ground/clipping: 19 recorded normal-controller cases, 36 tree-trunk approaches
+  and zero stray-arrow samples. All 423 expected foreground-leaf pixels match.
+  The immutable QA07 checks still pass; the precise approved furniture deltas
+  are applied without relaxing other source assertions.
+
+Evidence directories are `build/qa09-ecruteak-tour-v7`,
+`build/qa09-ecruteak-details-v7`, `build/qa09-ecruteak-furniture-v7` and
+`build/qa09-ecruteak-ground-v7`. All 27 final native 240×160 tour frames were
+visually inspected, along with focused Theater, house and canopy frames. The
+controller harness uses copied normal battery data, temporary RAM-only survey
+access and encounter suppression. Detailed healing/loss tests explicitly set a
+copied party member to 1 HP; the legacy-layout test deliberately injects that
+fixture layout ID. These are disclosed fixtures, not owner-save testing.
+
+An attempted warm-snapshot shortcut failed its survey-access precondition before
+any focused trial: the saved RAM flag was already on and the survey interaction
+turned it off. Its logs remain in the `*-v7-resume-fixture` directories. The
+shortcut was removed, and the final focused tests above passed from a fresh cold
+Continue. No collision or map assertion was removed to obtain a pass.
+
+These are successful automated controller gameplay tests and a native-frame
+review. They do not grant the owner's Delta acceptance, establish a pixel-exact
+HGSS claim, supply the still-missing complete Theater audience raster, or identify
+the original unmatched green-roof phone position. No new unresolved Ecruteak
+gameplay defect was found in these final tests. Other agents' doorway/field-action
+checks and the final delivery manifest provide their own exact-ROM evidence.
+
+
+## V8 fidelity corrections discovered by the full reference audit
+
+These source changes are **not covered by the earlier V7 passes**:
+
+- Theater: actual stage captures revealed a missing gold crest/red lantern
+  backdrop, wooden stage floor and front rope. Original GBA drawings now use a
+  private secondary pool. Exactly 69 stage cells change visually; all 266 room
+  physics cells and all 197 other visible cells remain exact against immutable
+  source commit `3f935d5e8600c5a280b9172b555edb35ca52b6c0`. The 13 source benches,
+  performers, show, entrances and IDs remain.
+- Road gates: actual common HGSS art revealed four missing potted plants and
+  incorrect generic temple walls/counters. Both interiors now use source-position
+  plants, blue-gray counters, a window wall and diamond flooring. Exact migration
+  contracts retain all gate physics, actors, aliases and accepted exterior art.
+- Center 1F: the actual reference is warm yellow/cream, so the warm palette is
+  retained. A private original green floor emblem and blue rear service panels
+  restore recognizable source details without changing movement or services. The
+  emblem is flattened onto the exact native floor and stored only in bottom
+  glyphs, with a blank top layer so it cannot mask Joe.
+  The source emblem is adapted to an 80×64 GBA floor composition, centered on
+  the nurse/door axis; this is an art projection, not a newly invented feature.
+- Center B1F: source row12 had been incorrectly cropped by h12. The same map and
+  layout IDs now have h14, retaining all previous positions and the escalator.
+  The restored row contains two source plants and six stools; the left waiting
+  area has its actual glass table/four stools, and the right communication
+  terminal, two rear blue panels and three distinct blue reception booths are present.
+  Booth side/front cells keep their old collision and layer attributes; staff
+  center/head floor remains unchanged. A private cool-blue palette
+  matches the actual basement. Four new stool footprints become solid as an
+  explicit GBA furniture choice, not a claimed measurement of HGSS runtime
+  model collision. Shared Center assets stay unchanged.
+- Mart: three source plants, the southern glass display/stools and eastern wall
+  rack are now individually represented in private native artwork. Accepted
+  stock, services, doorway aliases and save identities remain.
+
+All Center source instances, including composite reception modules and explicit
+DS network-service adaptations, are listed in
+[ecruteak-service-prop-coverage-qa09.json](ecruteak-service-prop-coverage-qa09.json).
+The independent region audit checks public source extents rather than relying
+on one arrival screenshot. No ordinary accessible house or tower floor is being
+replaced with an offline-service explanation: that adaptation applies only to
+DS communications functions.
+
+Public V7 regression evidence is curated under
+[../qa/qa09/ecruteak/v7](../qa/qa09/ecruteak/v7/README.md): all27 native viewports,
+25 movement clips, service screenshots and sanitized controller results. It
+contains no ROM, battery saves or emulator snapshots. Static full-map renders
+are labelled static, not emulator screenshots. Documentary source references
+retain published resolution, URLs and SHA256 values; their pixels are never ROM
+assets. Fresh V8 evidence must accompany the final combined delivery.
+
+
+The final service audit also found that front communications desks used ordinary
+behavior0 instead of native `MB_COUNTER`. A distance-two static accessibility
+check had not proved front interaction. Six precise private counter centers now
+use behavior0x80: 1F(2/6/11,3), B1F(4/8/12,5). Their collision, elevation, layer
+and pixels remain unchanged. The final controller suite must press A at each
+normal front approach, verify the actual receptionist selected and return control;
+this correction is not counted as tested until that suite runs on the delivery
+ROM. Other metatile behaviors remain under exact regression contracts.

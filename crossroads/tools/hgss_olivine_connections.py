@@ -1,10 +1,13 @@
 """Bounded shared-primary buffers at the two existing Olivine connections."""
-import struct
+import struct,json
 from pathlib import Path
 R=Path(__file__).resolve().parents[2]
 def active():return (R/'crossroads/hgss/authoring/OlivineCity.json').exists()
 def layout(name,l):
- if active() and name in ['JohtoRoute39','JohtoRoute40']:l['primary_tileset']='gTileset_HgssEcruteakBuffer'
+ if active() and name in ['JohtoRoute39','JohtoRoute40']:
+  material=R/'crossroads/hgss/art/olivine/manifest.json'
+  coast=name=='JohtoRoute40' and material.exists() and 'fence_h' in json.loads(material.read_text())['specs']
+  l['primary_tileset']='gTileset_HgssOlivineCoastBuffer' if coast else 'gTileset_HgssEcruteakBuffer'
  return l
 def patch(name,m):
  if not active():return m

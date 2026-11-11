@@ -38,7 +38,7 @@
           14
         ]
       ],
-      "status": "authored, awaiting delivery-ROM gameplay and owner review"
+      "status": "V7 controller and native overview verified; final V8 exact-ROM rerun pending"
     },
     {
       "source_model": 168,
@@ -160,7 +160,46 @@
     {
       "area": "OlivineCity_Lighthouse_6F",
       "meaning": "lantern room",
-      "status": "source circular footprint, purple native floor, preserved existing mechanical beacon actor; no HGSS plot event imported"
+      "status": "Original substantial circular mechanical lantern housing, purple native floor and preserved actor8,6; final V8 compiled view pending",
+      "source_model": 122,
+      "native_origin": [
+        7,
+        5
+      ],
+      "native_tiles": [
+        3,
+        3
+      ]
+    },
+    {
+      "source_model": 23,
+      "area": "OlivineCity_Lighthouse_2F",
+      "meaning": "two source upper-deck planters",
+      "source_anchors": [
+        [
+          11.5,
+          12.5
+        ],
+        [
+          15.5,
+          12.5
+        ]
+      ],
+      "native_origins": [
+        [
+          11,
+          11
+        ],
+        [
+          15,
+          11
+        ]
+      ],
+      "native_tiles": [
+        1,
+        2
+      ],
+      "status": "Original green fern/terracotta pots, source blocked footprints preserved; final V8 view pending"
     }
   ],
   "adaptations": [
@@ -169,14 +208,20 @@
     "Source4F eastern window is intentional one-way drop to the balcony, then source southern3F/westernstairs return",
     "Rear port and ship use original compatible GBA art with flat layer/collision footprints, not DS polygons",
     "Source maritime walls have cool gray/blue window palette; floorboards remain teal except purple lantern room and tan port",
-    "Four additional solid native stool cells match actual port screenshot; remaining source walking plan and every open threshold are audited",
-    "Private unused primary glyph/metatile slots store new models; shared resources, engine limits and save structures stay unchanged"
+    "Private unused primary glyph/metatile slots store new models; shared resources, engine limits and save structures stay unchanged",
+    "All eight actual source-model54 port stools represented at source anchors; one tile stays unblocked underneath seated solid ambient NPC so the actor owns collision",
+    "All eight actual source-model54 port stools represented at source anchors; one tile stays unblocked underneath seated solid ambient NPC so the actor owns collision",
+    "Balcony wall uses repeated native windowed masonry rather than literal plain cylindrical DS wall; chosen art adaptation, owner visual review pending",
+    "Circular6F lantern housing compresses the larger DS optical pedestal to3x3 native metatiles; no pixel1:1 visual claim"
   ],
   "testing": {
     "isolated_generator": "generate then exact check PASS",
     "isolated_resource_validator": "full image dimensions, all glyph bounds, native source primary/secondary preservation, exact derived lift panels PASS",
     "static_native_views": "all authored maritime maps rendered/inspected before delivery build; these are not emulator screenshots",
     "actual_delivery_rom_gameplay": "PENDING coordinated root build",
-    "owner_delta_visual_acceptance": "PENDING"
-  }
+    "owner_delta_visual_acceptance": "PENDING",
+    "v7_diagnostic_gameplay": "PASS24-map normal-controller tour182 transitions/174 warp trials, services27, saves21, four lift cases and six special journeys; distinct earlier ROM0734501b..."
+  },
+  "per_source_instance_coverage": "olivine-landmark-prop-coverage.json (42 instances; source furniture distinct from story actors)",
+  "independent_source_instance_audit": "42/42 source record keys/model IDs/anchors independently checked;41 represented/adapted instances plus1 explicitly off-room source machine cropped"
 }

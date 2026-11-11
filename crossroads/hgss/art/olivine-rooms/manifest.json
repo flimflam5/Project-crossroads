@@ -104,6 +104,16 @@
       "start": 576,
       "width": 1,
       "height": 2
+    },
+    "cafe_house_wall": {
+      "start": 578,
+      "width": 4,
+      "height": 2
+    },
+    "cafe_house_window": {
+      "start": 586,
+      "width": 2,
+      "height": 2
     }
   },
   "gym": {

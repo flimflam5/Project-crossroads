@@ -34,5 +34,44 @@
     "local_cache": "/workspace/scratch/hgss-reference/Common_Center_B1F_HGSS.png",
     "use": "Reference inspection only; not game graphics",
     "visually_inspected": true
+  },
+  {
+    "label": "Actual HGSS Theater stage screenshot (Pokebip)",
+    "page": "https://www.pokebip.com/page/jeux-video/pokemon-heartgold-soulsilver/soluce-du-jeu/partie9",
+    "image_url": "https://www.pokebip.com/pages/jeux-video/pokemon-heartgold-soulsilver/soluce-du-jeu/images/figure83.png",
+    "sha256": "1ca25fe43d58c758da64a538373d2a489bf604c616e4422018901f71033bfa9d",
+    "local_cache": "/workspace/scratch/hgss-reference/Theater_actual_HGSS_Pokebip.png",
+    "published_dimensions": [
+      256,
+      192
+    ],
+    "use": "Reference inspection only; never used as ROM graphics",
+    "visually_inspected": true
+  },
+  {
+    "label": "Actual HGSS Theater stage screenshot (Pokepedia)",
+    "page": "https://www.pokepedia.fr/Fichier:Salle_de_Danse_Rosalia_HGSS.png",
+    "image_url": "https://www.pokepedia.fr/images/f/f6/Salle_de_Danse_Rosalia_HGSS.png",
+    "sha256": "deecbfa87bcb6437a3365e1a51362926163cd06b9d8126f59a48b4f19500dbc7",
+    "local_cache": "/workspace/scratch/hgss-reference/Theater_actual_HGSS_Pokepedia.png",
+    "published_dimensions": [
+      204,
+      152
+    ],
+    "use": "Reference inspection only; never used as ROM graphics",
+    "visually_inspected": true
+  },
+  {
+    "label": "Actual HGSS common gate interior; same matrix0070/areaData63 as Ecruteak gates",
+    "page": "https://archives.bulbagarden.net/wiki/File:Gate_inside_HGSS.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/2/2f/Gate_inside_HGSS.png",
+    "sha256": "93e12044f2ef26bb726e13207db919c577f18a4e0e533d17c6c02efc9cad6b33",
+    "local_cache": "/workspace/scratch/hgss-reference/Gate_inside_HGSS.png",
+    "published_dimensions": [
+      214,
+      180
+    ],
+    "use": "Reference inspection only; never used as ROM graphics",
+    "visually_inspected": true
   }
 ]

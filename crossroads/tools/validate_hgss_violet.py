@@ -11,6 +11,8 @@ from johto_movement import next_position
 from build_hgss_violet import OWNED,NEW,patch_neighbor,neighbor_tiles
 R=Path(__file__).resolve().parents[2]
 def validate():
+ from validate_violet_service_preservation import validate as preserved_services
+ preserved_services()
  def load(p):return json.loads((R/p).read_text())
  contract=load('crossroads/hgss/contracts/violet-qa06.json');ls={l['id']:l for l in load('data/layouts/layouts.json')['layouts']};groups=load('data/maps/map_groups.json')
  for key,old in contract['groups'].items():

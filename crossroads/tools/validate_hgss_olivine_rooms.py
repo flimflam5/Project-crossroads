@@ -14,6 +14,11 @@ for c in js('crossroads/hgss/contracts/olivine-common-services-qa08.json')['_sha
 oldmaps={n:json.loads(subprocess.check_output(['git','show','fd15124245:data/maps/'+n+'/map.json'],cwd=R,text=True)) for n in ['OlivineCity_PokemonCenter_1F','OlivineCity_Mart','OlivineCity_Gym','OlivineCity_Gym_Arena']}
 for n,m in oldmaps.items():assert js(f'data/maps/{n}/map.json')['id']==m['id']
 objects={};maps={};tiles={};attrs={}
+# Resolve actual engine attribute pointers, including private Center/Mart aliases.
+headers=(R/'src/data/tilesets/headers.h').read_text();meta_header=(R/'src/data/tilesets/metatiles.h').read_text();attr_files=dict(re.findall(r'const u16 (gMetatileAttributes_\w+)\[\] = INCBIN_U16\("([^" ]+)"\)',meta_header));attr_symbols={}
+for sym,body in re.findall(r'const struct Tileset (gTileset_\w+)\s*=\s*\{([^}]+)\}',headers,re.S):
+ a=re.search(r'\.metatileAttributes\s*=\s*(\w+)',body)
+ if a:attr_symbols[sym]=a[1]
 for r in review:
  n=r['name'];m=js(f'data/maps/{n}/map.json');maps[n]=m;l=ls[m['layout']];w,h=l['width'],l['height'];b=(R/l['blockdata_filepath']).read_bytes();assert len(b)==w*h*2;t=struct.unpack('<'+str(w*h)+'H',b);tiles[n]=(t,w,h)
  assert m['region']=='REGION_HOENN' and m['region_map_section']=='MAPSEC_OLIVINE_CITY';assert not m['coord_events'],'No new story/irreversible triggers in room content'
@@ -22,7 +27,7 @@ for r in review:
   x,y=e['x'],e['y'];assert 0<=x<w and 0<=y<h and not t[y*w+x]&0xc00,(n,'Blocked actor',e);assert re.search(r'^'+re.escape(e['script'])+r'::',all_scripts,re.M),(n,'Unlinked ambient/service script',e)
  for e in m['warp_events']:
   x,y=e['x'],e['y'];assert 0<=x<w and 0<=y<h and not t[y*w+x]&0xc00,(n,'Blocked threshold',e)
- sec={'gTileset_HgssOlivineHome':'hgss_olivine_home','gTileset_HgssOlivineGym':'hgss_olivine_gym','gTileset_PokemonCenter':'pokemon_center','gTileset_Shop':'shop'}[l['secondary_tileset']];p=R/'data/tilesets/secondary'/sec/'metatile_attributes.bin';b=p.read_bytes();attrs[n]=struct.unpack('<'+str(len(b)//2)+'H',b)
+ assert l['secondary_tileset'] in attr_symbols and attr_symbols[l['secondary_tileset']] in attr_files,(n,'Unresolved actual tileset attribute pointer');p=R/attr_files[attr_symbols[l['secondary_tileset']]];b=p.read_bytes();attrs[n]=struct.unpack('<'+str(len(b)//2)+'H',b)
  # Ordinary public flooring must never gain a warp arrow or slide behavior.
  active={(e['x'],e['y']) for e in m['warp_events']}
  for y in range(h):
@@ -67,6 +72,15 @@ t,w,h=tiles[center['name']]
 for x,y in [(15,3),(14,14),(15,14)]:assert t[y*w+x]==0x60a and t[(y+1)*w+x]==0x612
 assert center['warp_events'][2]['dest_map']==maps['OlivineCity_PokemonCenter_B1F']['id']
 assert maps['OlivineCity_PokemonCenter_B1F']['warp_events'][0]['dest_warp_id']=='2'
+basement=maps['OlivineCity_PokemonCenter_B1F'];t,w,h=tiles[basement['name']];assert (w,h)==(17,14) and ls[basement['layout']]['secondary_tileset']=='gTileset_HgssCenterBasement','Retain actual public source y12 floor in private basement'
+for x in (4,12):assert (t[11*w+x],t[12*w+x])==(0x60a,0x612),'Actual source basement plants'
+ba=js('crossroads/hgss/art/center-basement/manifest.json')['specs']
+for part,x,y in [('waiting_table',2,8),('communication_terminal',15,4)]+[('yellow_stool',x,y) for x,y in [(4,8),(3,7),(5,12),(7,12),(9,12),(11,12)]]+[('blue_stool',x,y) for x,y in [(4,9),(2,7),(6,12),(10,12)]]:
+ a=ba[part]
+ for dy in range(a['height']):
+  for dx in range(a['width']):assert t[(y+dy)*w+x+dx]==0x400|a['start']+dy*a['width']+dx,('Source-backed native basement fixture',part,x+dx,y+dy)
+assert not t[12*w+8]&0xc00,'Public bottom waiting-row clearance remains open'
+
 heal=next(v for v in js('src/data/heal_locations.json')['heal_locations'] if v['id']=='HEAL_LOCATION_OLIVINE_CITY');assert (heal['respawn_x'],heal['respawn_y'],heal['respawn_npc'])==(8,13,'LOCALID_OLIVINE_NURSE')
 mart=maps['OlivineCity_Mart'];assert mart['object_events'][0]['script']=='Olivine_Clerk' and mart['object_events'][1]['script']=='Olivine_MartVisitor'
 # All three pieces of the long hallway remain live in both directions.

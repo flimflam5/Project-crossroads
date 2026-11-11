@@ -1,0 +1,939 @@
+{
+  "scope": "Explicit source-instance audit; composite native counters represent multiple DS meshes. Story actors/rewards omitted by design.",
+  "status": "Source implemented; final combined V8 ROM/emulator confirmation pending",
+  "maps": [
+    {
+      "map": "EcruteakCity_PokemonCenter_1F",
+      "source_header": "MAP_ECRUTEAK_POKECENTER_1F",
+      "source": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0073_T21PC0101.bin",
+        "matrix_blob_sha": "993607934cd67d543de7bcdc4c42b0c01af3adcc",
+        "events": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/eventdata/zone_event/078_T27PC0101.json",
+        "events_blob_sha": "9d6657c7b305f945b5841189449fd5b29977fff5",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "dimensions": [
+        17,
+        21
+      ],
+      "source_instances": [
+        {
+          "source_model": 108,
+          "source_position": [
+            7.5,
+            2.5
+          ],
+          "role": "Rear communications doorway/panel",
+          "native_footprint": [
+            [
+              7,
+              0
+            ],
+            [
+              7,
+              1
+            ]
+          ],
+          "verification": "Blue portal height compressed into rear wall; DS Union service is an explicitly offline desk, not a phantom working warp"
+        },
+        {
+          "source_model": 108,
+          "source_position": [
+            12.5,
+            2.5
+          ],
+          "role": "Rear communications doorway/panel",
+          "native_footprint": [
+            [
+              12,
+              0
+            ],
+            [
+              12,
+              1
+            ]
+          ],
+          "verification": "Blue portal height compressed into rear wall; DS Union service is an explicitly offline desk, not a phantom working warp"
+        },
+        {
+          "source_model": 33,
+          "source_position": [
+            11.375,
+            12.375
+          ],
+          "role": "Party/box PC",
+          "native_footprint": [
+            [
+              12,
+              10
+            ],
+            [
+              12,
+              11
+            ]
+          ],
+          "verification": "Preserved native PC, tested menu and party/box integrity"
+        },
+        {
+          "source_model": 35,
+          "source_position": [
+            10.5,
+            10.5
+          ],
+          "role": "Nurse/healing-counter equipment",
+          "native_footprint": [
+            [
+              5,
+              9
+            ],
+            [
+              10,
+              13
+            ]
+          ],
+          "verification": "Preserved native six-by-five service module and nurse8,11; machinery merges into functioning native healing module"
+        },
+        {
+          "source_model": 36,
+          "source_position": [
+            7.125,
+            10.375
+          ],
+          "role": "Nurse/healing-counter equipment",
+          "native_footprint": [
+            [
+              5,
+              9
+            ],
+            [
+              10,
+              13
+            ]
+          ],
+          "verification": "Preserved native six-by-five service module and nurse8,11; machinery merges into functioning native healing module"
+        },
+        {
+          "source_model": 37,
+          "source_position": [
+            8.5,
+            10.042587280273438
+          ],
+          "role": "Nurse/healing-counter equipment",
+          "native_footprint": [
+            [
+              5,
+              9
+            ],
+            [
+              10,
+              13
+            ]
+          ],
+          "verification": "Preserved native six-by-five service module and nurse8,11; machinery merges into functioning native healing module"
+        },
+        {
+          "source_model": 15,
+          "source_position": [
+            4.625,
+            8.75
+          ],
+          "role": "Left stairs to raised reception",
+          "native_footprint": [
+            [
+              1,
+              7
+            ],
+            [
+              2,
+              14
+            ]
+          ],
+          "verification": "DS upper deck flattened; clear left passage preserves service access without a height transition, separated from nurse enclosure Normal front A interaction uses an exact private MB_COUNTER variant; all six actual NPC interactions are required by the final controller suite."
+        },
+        {
+          "source_model": 14,
+          "source_position": [
+            15.0,
+            17.5
+          ],
+          "role": "Basement escalator or railing",
+          "native_footprint": [
+            [
+              14,
+              17
+            ]
+          ],
+          "verification": "Native animated stairs/clear landing and reciprocal B1F route"
+        },
+        {
+          "source_model": 23,
+          "source_position": [
+            15.5,
+            15.5
+          ],
+          "role": "Potted plant",
+          "native_footprint": [
+            [
+              15,
+              14
+            ],
+            [
+              15,
+              15
+            ]
+          ],
+          "verification": "All three source plants have exact native tile-pair assertions"
+        },
+        {
+          "source_model": 23,
+          "source_position": [
+            14.375,
+            15.5
+          ],
+          "role": "Potted plant",
+          "native_footprint": [
+            [
+              14,
+              14
+            ],
+            [
+              14,
+              15
+            ]
+          ],
+          "verification": "All three source plants have exact native tile-pair assertions"
+        },
+        {
+          "source_model": 23,
+          "source_position": [
+            15.5,
+            4.5
+          ],
+          "role": "Potted plant",
+          "native_footprint": [
+            [
+              15,
+              3
+            ],
+            [
+              15,
+              4
+            ]
+          ],
+          "verification": "All three source plants have exact native tile-pair assertions"
+        },
+        {
+          "source_model": 41,
+          "source_position": [
+            6.875,
+            5.5
+          ],
+          "role": "Rear communications-reception desk component",
+          "native_footprint": [
+            [
+              5,
+              3
+            ],
+            [
+              6,
+              3
+            ],
+            [
+              7,
+              3
+            ]
+          ],
+          "verification": "Composite native counter/receptionist merges DS mesh pieces; raised deck flattening is explicit. No independent potted floor object discarded. Normal front A interaction uses an exact private MB_COUNTER variant; all six actual NPC interactions are required by the final controller suite."
+        },
+        {
+          "source_model": 41,
+          "source_position": [
+            11.875,
+            5.5
+          ],
+          "role": "Rear communications-reception desk component",
+          "native_footprint": [
+            [
+              10,
+              3
+            ],
+            [
+              11,
+              3
+            ],
+            [
+              12,
+              3
+            ]
+          ],
+          "verification": "Composite native counter/receptionist merges DS mesh pieces; raised deck flattening is explicit. No independent potted floor object discarded. Normal front A interaction uses an exact private MB_COUNTER variant; all six actual NPC interactions are required by the final controller suite."
+        },
+        {
+          "source_model": 40,
+          "source_position": [
+            3.75,
+            5.25
+          ],
+          "role": "Rear communications-reception desk component",
+          "native_footprint": [
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              3
+            ]
+          ],
+          "verification": "Composite native counter/receptionist merges DS mesh pieces; raised deck flattening is explicit. No independent potted floor object discarded. Normal front A interaction uses an exact private MB_COUNTER variant; all six actual NPC interactions are required by the final controller suite."
+        },
+        {
+          "source_model": 40,
+          "source_position": [
+            10.0,
+            5.25
+          ],
+          "role": "Rear communications-reception desk component",
+          "native_footprint": [
+            [
+              10,
+              3
+            ],
+            [
+              11,
+              3
+            ],
+            [
+              12,
+              3
+            ]
+          ],
+          "verification": "Composite native counter/receptionist merges DS mesh pieces; raised deck flattening is explicit. No independent potted floor object discarded. Normal front A interaction uses an exact private MB_COUNTER variant; all six actual NPC interactions are required by the final controller suite."
+        },
+        {
+          "source_model": 1,
+          "source_position": [
+            8.5,
+            19.5
+          ],
+          "role": "Main exit",
+          "native_footprint": [
+            [
+              8,
+              19
+            ],
+            [
+              9,
+              19
+            ]
+          ],
+          "verification": "Both leaves retained and controller tested bidirectionally"
+        },
+        {
+          "source_model": 4,
+          "source_position": [
+            13.5,
+            17.5
+          ],
+          "role": "Basement escalator or railing",
+          "native_footprint": [
+            [
+              14,
+              17
+            ]
+          ],
+          "verification": "Native animated stairs/clear landing and reciprocal B1F route"
+        },
+        {
+          "source_model": 110,
+          "source_position": [
+            2.5,
+            5.625
+          ],
+          "role": "Rear communications-reception desk component",
+          "native_footprint": [
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              3
+            ]
+          ],
+          "verification": "Composite native counter/receptionist merges DS mesh pieces; raised deck flattening is explicit. No independent potted floor object discarded. Normal front A interaction uses an exact private MB_COUNTER variant; all six actual NPC interactions are required by the final controller suite."
+        },
+        {
+          "source_model": 110,
+          "source_position": [
+            6.375,
+            5.625
+          ],
+          "role": "Rear communications-reception desk component",
+          "native_footprint": [
+            [
+              5,
+              3
+            ],
+            [
+              6,
+              3
+            ],
+            [
+              7,
+              3
+            ]
+          ],
+          "verification": "Composite native counter/receptionist merges DS mesh pieces; raised deck flattening is explicit. No independent potted floor object discarded. Normal front A interaction uses an exact private MB_COUNTER variant; all six actual NPC interactions are required by the final controller suite."
+        },
+        {
+          "source_model": 110,
+          "source_position": [
+            11.375,
+            5.625
+          ],
+          "role": "Rear communications-reception desk component",
+          "native_footprint": [
+            [
+              10,
+              3
+            ],
+            [
+              11,
+              3
+            ],
+            [
+              12,
+              3
+            ]
+          ],
+          "verification": "Composite native counter/receptionist merges DS mesh pieces; raised deck flattening is explicit. No independent potted floor object discarded. Normal front A interaction uses an exact private MB_COUNTER variant; all six actual NPC interactions are required by the final controller suite."
+        }
+      ],
+      "unhandled_source_instances": 0
+    },
+    {
+      "map": "EcruteakCity_PokemonCenter_B1F",
+      "source_header": "MAP_ECRUTEAK_POKECENTER_B1F",
+      "source": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0077_T27PC0105.bin",
+        "matrix_blob_sha": "0c7f359a1e6d95db32ee52ef57a566bac1589119",
+        "events": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/eventdata/zone_event/127_T27PC0105.json",
+        "events_blob_sha": "c92af4e279062748f1a8519d244804dc35998f88",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "dimensions": [
+        17,
+        14
+      ],
+      "source_instances": [
+        {
+          "source_model": 23,
+          "source_position": [
+            12.5,
+            12.5
+          ],
+          "role": "Lower waiting plant",
+          "native_footprint": [
+            [
+              12,
+              11
+            ],
+            [
+              12,
+              12
+            ]
+          ],
+          "verification": "Exact source base and native plant pair checked individually"
+        },
+        {
+          "source_model": 23,
+          "source_position": [
+            4.5,
+            12.5
+          ],
+          "role": "Lower waiting plant",
+          "native_footprint": [
+            [
+              4,
+              11
+            ],
+            [
+              4,
+              12
+            ]
+          ],
+          "verification": "Exact source base and native plant pair checked individually"
+        },
+        {
+          "source_model": 57,
+          "source_position": [
+            10.5,
+            12.5
+          ],
+          "role": "Blue stool",
+          "native_footprint": [
+            [
+              10,
+              12
+            ]
+          ],
+          "verification": "Each source instance checked. Four newly occupied old-floor cells become solid as an explicit GBA furniture choice, not a measured HGSS runtime claim."
+        },
+        {
+          "source_model": 57,
+          "source_position": [
+            6.5,
+            12.5
+          ],
+          "role": "Blue stool",
+          "native_footprint": [
+            [
+              6,
+              12
+            ]
+          ],
+          "verification": "Each source instance checked. Four newly occupied old-floor cells become solid as an explicit GBA furniture choice, not a measured HGSS runtime claim."
+        },
+        {
+          "source_model": 58,
+          "source_position": [
+            9.5,
+            12.5
+          ],
+          "role": "Yellow stool",
+          "native_footprint": [
+            [
+              9,
+              12
+            ]
+          ],
+          "verification": "Each source instance checked. Four newly occupied old-floor cells become solid as an explicit GBA furniture choice, not a measured HGSS runtime claim."
+        },
+        {
+          "source_model": 58,
+          "source_position": [
+            7.5,
+            12.5
+          ],
+          "role": "Yellow stool",
+          "native_footprint": [
+            [
+              7,
+              12
+            ]
+          ],
+          "verification": "Each source instance checked. Four newly occupied old-floor cells become solid as an explicit GBA furniture choice, not a measured HGSS runtime claim."
+        },
+        {
+          "source_model": 42,
+          "source_position": [
+            3.0,
+            9.0
+          ],
+          "role": "Glass waiting table",
+          "native_footprint": [
+            [
+              2,
+              8
+            ],
+            [
+              3,
+              8
+            ],
+            [
+              2,
+              9
+            ],
+            [
+              3,
+              9
+            ]
+          ],
+          "verification": "Original table replaces false mirror stand-in; exact four-cell check"
+        },
+        {
+          "source_model": 58,
+          "source_position": [
+            4.5625,
+            8.5
+          ],
+          "role": "Yellow stool",
+          "native_footprint": [
+            [
+              4,
+              8
+            ]
+          ],
+          "verification": "Each source instance checked. Four newly occupied old-floor cells become solid as an explicit GBA furniture choice, not a measured HGSS runtime claim."
+        },
+        {
+          "source_model": 57,
+          "source_position": [
+            4.5625,
+            9.5
+          ],
+          "role": "Blue stool",
+          "native_footprint": [
+            [
+              4,
+              9
+            ]
+          ],
+          "verification": "Each source instance checked. Four newly occupied old-floor cells become solid as an explicit GBA furniture choice, not a measured HGSS runtime claim."
+        },
+        {
+          "source_model": 58,
+          "source_position": [
+            3.5,
+            7.375
+          ],
+          "role": "Yellow stool",
+          "native_footprint": [
+            [
+              3,
+              7
+            ]
+          ],
+          "verification": "Each source instance checked. Four newly occupied old-floor cells become solid as an explicit GBA furniture choice, not a measured HGSS runtime claim."
+        },
+        {
+          "source_model": 57,
+          "source_position": [
+            2.5,
+            7.375
+          ],
+          "role": "Blue stool",
+          "native_footprint": [
+            [
+              2,
+              7
+            ]
+          ],
+          "verification": "Each source instance checked. Four newly occupied old-floor cells become solid as an explicit GBA furniture choice, not a measured HGSS runtime claim."
+        },
+        {
+          "source_model": 110,
+          "source_position": [
+            8.375,
+            5.625
+          ],
+          "role": "Reception counter",
+          "native_footprint": [
+            [
+              7,
+              3
+            ],
+            [
+              9,
+              3
+            ],
+            [
+              7,
+              4
+            ],
+            [
+              9,
+              4
+            ],
+            [
+              7,
+              5
+            ],
+            [
+              8,
+              5
+            ],
+            [
+              9,
+              5
+            ]
+          ],
+          "verification": "Original private blue U-counter body makes all three source booths recognizable; side/front cells retain exact old collision/layers, staff center/head floor remains unchanged. Separate DS counter accessory meshes merge into the matching booth. Normal front A interaction uses an exact private MB_COUNTER variant; all six actual NPC interactions are required by the final controller suite."
+        },
+        {
+          "source_model": 110,
+          "source_position": [
+            12.5,
+            5.625
+          ],
+          "role": "Reception counter",
+          "native_footprint": [
+            [
+              11,
+              3
+            ],
+            [
+              13,
+              3
+            ],
+            [
+              11,
+              4
+            ],
+            [
+              13,
+              4
+            ],
+            [
+              11,
+              5
+            ],
+            [
+              12,
+              5
+            ],
+            [
+              13,
+              5
+            ]
+          ],
+          "verification": "Original private blue U-counter body makes all three source booths recognizable; side/front cells retain exact old collision/layers, staff center/head floor remains unchanged. Separate DS counter accessory meshes merge into the matching booth. Normal front A interaction uses an exact private MB_COUNTER variant; all six actual NPC interactions are required by the final controller suite."
+        },
+        {
+          "source_model": 110,
+          "source_position": [
+            4.375,
+            5.625
+          ],
+          "role": "Reception counter",
+          "native_footprint": [
+            [
+              3,
+              3
+            ],
+            [
+              5,
+              3
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              5,
+              4
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              5,
+              5
+            ]
+          ],
+          "verification": "Original private blue U-counter body makes all three source booths recognizable; side/front cells retain exact old collision/layers, staff center/head floor remains unchanged. Separate DS counter accessory meshes merge into the matching booth. Normal front A interaction uses an exact private MB_COUNTER variant; all six actual NPC interactions are required by the final controller suite."
+        },
+        {
+          "source_model": 4,
+          "source_position": [
+            13.5,
+            10.5
+          ],
+          "role": "Escalator or side railing",
+          "native_footprint": [
+            [
+              14,
+              10
+            ]
+          ],
+          "verification": "Existing animated native escalator and landing; DS railing compressed into native stair art"
+        },
+        {
+          "source_model": 109,
+          "source_position": [
+            9.5,
+            2.5
+          ],
+          "role": "Rear communications panel",
+          "native_footprint": [
+            [
+              9,
+              1
+            ],
+            [
+              9,
+              2
+            ]
+          ],
+          "verification": "Original closed blue panel; source B1F has no normal outbound warp for these DS network rooms"
+        },
+        {
+          "source_model": 12,
+          "source_position": [
+            15.0,
+            10.5
+          ],
+          "role": "Escalator or side railing",
+          "native_footprint": [
+            [
+              14,
+              10
+            ]
+          ],
+          "verification": "Existing animated native escalator and landing; DS railing compressed into native stair art"
+        },
+        {
+          "source_model": 58,
+          "source_position": [
+            5.5,
+            12.5
+          ],
+          "role": "Yellow stool",
+          "native_footprint": [
+            [
+              5,
+              12
+            ]
+          ],
+          "verification": "Each source instance checked. Four newly occupied old-floor cells become solid as an explicit GBA furniture choice, not a measured HGSS runtime claim."
+        },
+        {
+          "source_model": 58,
+          "source_position": [
+            11.5,
+            12.5
+          ],
+          "role": "Yellow stool",
+          "native_footprint": [
+            [
+              11,
+              12
+            ]
+          ],
+          "verification": "Each source instance checked. Four newly occupied old-floor cells become solid as an explicit GBA furniture choice, not a measured HGSS runtime claim."
+        },
+        {
+          "source_model": 109,
+          "source_position": [
+            5.5,
+            2.5
+          ],
+          "role": "Rear communications panel",
+          "native_footprint": [
+            [
+              5,
+              1
+            ],
+            [
+              5,
+              2
+            ]
+          ],
+          "verification": "Original closed blue panel; source B1F has no normal outbound warp for these DS network rooms"
+        },
+        {
+          "source_model": 33,
+          "source_position": [
+            15.3125,
+            5.375
+          ],
+          "role": "Communication terminal",
+          "native_footprint": [
+            [
+              15,
+              4
+            ],
+            [
+              15,
+              5
+            ]
+          ],
+          "verification": "Original gray/blue terminal; existing offline service dialogue, no DS network claim"
+        },
+        {
+          "source_model": 41,
+          "source_position": [
+            4.875,
+            5.5
+          ],
+          "role": "Reception-counter accessory",
+          "native_footprint": [
+            [
+              3,
+              3
+            ],
+            [
+              5,
+              3
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              5,
+              4
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              5,
+              5
+            ]
+          ],
+          "verification": "Original private blue U-counter body makes all three source booths recognizable; side/front cells retain exact old collision/layers, staff center/head floor remains unchanged. Separate DS counter accessory meshes merge into the matching booth. Normal front A interaction uses an exact private MB_COUNTER variant; all six actual NPC interactions are required by the final controller suite."
+        },
+        {
+          "source_model": 41,
+          "source_position": [
+            8.875,
+            5.5
+          ],
+          "role": "Reception-counter accessory",
+          "native_footprint": [
+            [
+              7,
+              3
+            ],
+            [
+              9,
+              3
+            ],
+            [
+              7,
+              4
+            ],
+            [
+              9,
+              4
+            ],
+            [
+              7,
+              5
+            ],
+            [
+              8,
+              5
+            ],
+            [
+              9,
+              5
+            ]
+          ],
+          "verification": "Original private blue U-counter body makes all three source booths recognizable; side/front cells retain exact old collision/layers, staff center/head floor remains unchanged. Separate DS counter accessory meshes merge into the matching booth. Normal front A interaction uses an exact private MB_COUNTER variant; all six actual NPC interactions are required by the final controller suite."
+        }
+      ],
+      "unhandled_source_instances": 0
+    }
+  ]
+}

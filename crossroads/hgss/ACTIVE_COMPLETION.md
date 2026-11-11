@@ -1,27 +1,40 @@
-# Current frozen QA09 BUILD7 verification
+# Active QA09 final city review — source corrections pending
 
-Branchfeature/olivine-ecruteak-completion-qa09. Read CITIES_QA09.md.
-Allknown24Olivine/27Ecruteakmapmodels/interiors/doors areimplemented. BUILD7
-compiledandROM/ELF/GAMEMAPSareFROZENwhilefinaltestsrun. SHA0734501b031d05156a28e685dc1c2748153cb065222bd67b0d2e7cea47fefbca.
-Do not regenerate/build/swap binaries until running emulator agents finish.
-Tests/logs usebuild/qa09-*-v7 and/tmp/qa09-*-v7.log. Sources foroldV5/V6failed
-portapproach/bodycases areretained separately; notdeliveryPASS. V7specialtest
-changedonlystaleBalconywalkaway13,9→sourcepublic14,10; actualwindowarrival
-14,9and4nativeelevatorcaseassertionsremainstrict. Finaltestsummary/evidence/
-commit/artifactpackaging/pushPRstillrequired. No newregion/mastermerge.
+Branch `feature/olivine-ecruteak-completion-qa09`, committed source checkpoint
+`3f935d5e8600c5a280b9172b555edb35ca52b6c0`. Scope is Ecruteak and Olivine only.
+Read `CITIES_QA09.md` and the individual city review/checklists. No expansion,
+master merge, history reset or engine/save-format change is authorized.
 
-# Current two-city completion — QA09
+BUILD7 is still the current binary, SHA256
+`0734501b031d05156a28e685dc1c2748153cb065222bd67b0d2e7cea47fefbca`.
+All its final gameplay suites passed: 51 city/interior maps; 118 doorway segments;
+329 executed front/lateral approaches; landmarks, services, starter regressions,
+collision and Save/cold Continue. Twenty-five physically unavailable lateral
+approaches are disclosed, not counted as passes. Owner acceptance remains separate.
+The distinct Ecruteak E1 checkpoint is archived locally with exact source/hash.
 
-Read CITIES_QA09.md first. Branchfeature/olivine-ecruteak-completion-qa09.
-The workspace recovered intact and remote fda32b7ed0 was fast-forwarded safely.
-Olivine canonical64x64 exterior, three homes/cafe/services/Gym/lighthouse/port
-are integrated; nine maps append; legacyIDs/saves/accepted additions preserved.
-BUILD5/controller results are diagnostic, not final acceptance. Root is fixing
-its port return trap with an east boardwalk. Landmarks agent is finishing port
-rear facade/ship scenery, cool masonry art and balcony rails before BUILD6.
-Full door/landmark/starters/save regressions must run on the actual final ROM.
-No new expansion or master merge. Do not discard uncommitted work or overwrite
-new source with QA08; older notes below are history, not instructions to restart.
+The visual audit independently found additional fixable reference mismatches.
+They are NOT hardware limitations or silently accepted placeholders. Source-only
+work is underway before a coordinated BUILD8:
+
+- `olivine_interiors` owns exterior materials: obsolete source table footprints,
+  white fences, timber promenade/railing/parasol underlays, gray offshore rocks.
+  A narrow compatible Route40 primary buffer preserves seam decoding.
+- `olivine_landmarks` owns canonical home/cafe wall finishes, lighthouse2F plants,
+  source-backed beacon dais and remaining landmark prop audit.
+- `ecruteak_finish_audit` owns a private Theater gold crest/red lantern stage,
+  actual raster references and narrow immutable visual-delta contracts.
+- Root owns sequential shared generation, final build/static validation and tour.
+  `doorway_runtime` and `olivine_compatibility` own fresh final-byte runtime suites.
+
+Do not run shared generators/build while an owner is preparing source. After
+source readiness, root runs generators sequentially; then freeze ROM/ELF/map data
+for all emulator processes. Test evidence from V7 must never be relabelled V8.
+Do not export private saves, snapshots, ROMs or memory dumps into source control.
+Public evidence goes to `crossroads/qa/qa09`. Final source commit, docs, PR16,
+CI/artifact/checksums and owner Delta checklist are still required.
+
+Older entries below are historical checkpoints, not authority to undo QA09.
 
 # Workspace recovery required — QA08
 

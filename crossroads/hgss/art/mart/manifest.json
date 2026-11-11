@@ -1,0 +1,205 @@
+{
+  "source_commit": "3f935d5e8600c5a280b9172b555edb35ca52b6c0",
+  "native_shop_metatiles": 289,
+  "metatiles": 305,
+  "graphics": 326,
+  "placements": [
+    {
+      "x": 12,
+      "y": 2,
+      "kind": "plant",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 801,
+      "attribute": 0
+    },
+    {
+      "x": 12,
+      "y": 3,
+      "kind": "plant",
+      "source_tile": [
+        0,
+        1
+      ],
+      "metatile": 802,
+      "attribute": 4096
+    },
+    {
+      "x": 12,
+      "y": 6,
+      "kind": "rack",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 803,
+      "attribute": 4096
+    },
+    {
+      "x": 12,
+      "y": 7,
+      "kind": "rack",
+      "source_tile": [
+        0,
+        1
+      ],
+      "metatile": 804,
+      "attribute": 4096
+    },
+    {
+      "x": 7,
+      "y": 9,
+      "kind": "stool",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 805,
+      "attribute": 4096
+    },
+    {
+      "x": 8,
+      "y": 9,
+      "kind": "glass",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 806,
+      "attribute": 4096
+    },
+    {
+      "x": 9,
+      "y": 9,
+      "kind": "glass",
+      "source_tile": [
+        1,
+        0
+      ],
+      "metatile": 807,
+      "attribute": 4096
+    },
+    {
+      "x": 10,
+      "y": 9,
+      "kind": "stool",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 808,
+      "attribute": 4096
+    },
+    {
+      "x": 1,
+      "y": 10,
+      "kind": "plant",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 809,
+      "attribute": 0
+    },
+    {
+      "x": 7,
+      "y": 10,
+      "kind": "stool",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 810,
+      "attribute": 4096
+    },
+    {
+      "x": 8,
+      "y": 10,
+      "kind": "glass",
+      "source_tile": [
+        0,
+        1
+      ],
+      "metatile": 811,
+      "attribute": 4096
+    },
+    {
+      "x": 9,
+      "y": 10,
+      "kind": "glass",
+      "source_tile": [
+        1,
+        1
+      ],
+      "metatile": 812,
+      "attribute": 4096
+    },
+    {
+      "x": 10,
+      "y": 10,
+      "kind": "stool",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 813,
+      "attribute": 4096
+    },
+    {
+      "x": 12,
+      "y": 10,
+      "kind": "plant",
+      "source_tile": [
+        0,
+        0
+      ],
+      "metatile": 814,
+      "attribute": 0
+    },
+    {
+      "x": 1,
+      "y": 11,
+      "kind": "plant",
+      "source_tile": [
+        0,
+        1
+      ],
+      "metatile": 815,
+      "attribute": 4096
+    },
+    {
+      "x": 12,
+      "y": 11,
+      "kind": "plant",
+      "source_tile": [
+        0,
+        1
+      ],
+      "metatile": 816,
+      "attribute": 4096
+    }
+  ],
+  "palette_bank": 12,
+  "plant_palette_remap": [
+    0,
+    2,
+    3,
+    4,
+    5,
+    10,
+    10,
+    14,
+    10,
+    13,
+    4,
+    3,
+    4,
+    1,
+    10,
+    15
+  ],
+  "source": "Actual HGSS common Mart matrix0104 props/raster; native GBA Center plant silhouettes quantized into the same sole free loaded bank12 as original glass display, rack and stools. No reference pixels imported.",
+  "raster_reference": "https://archives.bulbagarden.net/media/upload/0/08/Pok%C3%A9_Mart_interior_HGSS.png"
+}

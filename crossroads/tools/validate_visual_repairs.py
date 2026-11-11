@@ -15,6 +15,10 @@ if hgss:
  from build_hgss_violet import OWNED
  reconstructed|=OWNED|{'JohtoRoute31','JohtoRoute32','JohtoRoute36'} # Independent canonical/escape/route contracts run above.
  for path in ['interior-review.json','room-review.json','service-review.json','gate-review.json']:reconstructed|={r['name'] for r in json.loads((R/'crossroads/hgss'/path).read_text())}
+if (R/'crossroads/hgss/authoring/OlivineCity.json').exists():
+ from validate_hgss_olivine import validate as validate_olivine
+ from hgss_olivine_validation import validate_olivine_graph
+ validate_olivine();reconstructed|=validate_olivine_graph()|{'OlivineCity','JohtoRoute39','JohtoRoute40'} # Exact source/append-only/bounded-buffer checks run above; other old hashes remain required.
 for p,h in report['unchanged_contracts'].items():
  if p not in replaced:assert sha(p)==h,('Changed preserved contract',p)
 layouts={l['id']:l for l in json.loads((R/'data/layouts/layouts.json').read_text())['layouts']};changed=[]

@@ -47,13 +47,14 @@ def generate(check=False):
    if len(m['object_events'])==1:
     child=copy.deepcopy(m['object_events'][0]);child.update(x=8,y=5,graphics_id='OBJ_EVENT_GFX_BOY_1',script='Hgss_HouseChild');child.pop('local_id',None);m['object_events'].append(child)
   else:
+   stage_art=load('crossroads/hgss/art/theater/manifest.json')['specs']
    for y in (3,4):
-    for x in range(1,w-1):tiles[y*w+x]=0x400|ART['house_wall']['start']+(y-3)*4+x%4
+    for x in range(1,w-1):tiles[y*w+x]=0x400|stage_art['stage_backdrop']['start']+(y-3)*12+x-1
    for y in range(5,8):
-    for x in range(1,w-1):tiles[y*w+x]=0x3000|ART['tatami']['start']
+    for x in range(1,w-1):tiles[y*w+x]=0x3000|ART['wood']['start']
    # HGSS stage riser with two open stair aisles; no mandatory fight gate.
    for x in range(1,w-1):
-    if (x,8) not in seen:tiles[8*w+x]=0x400|ART['stage']['start']+4+x%4
+    if (x,8) not in seen:tiles[8*w+x]=0x400|stage_art['stage_rope']['start']
    # Read actual model56 positions: the upper center aisle deliberately has
    # no benches at6,10 or8,10. A rectangular fill closed that aisle and also
    # duplicated the generic projector's seats one row below.
@@ -70,7 +71,7 @@ def generate(check=False):
   if name=='EcruteakCity_DanceTheater':m['warp_events'][0]['dest_warp_id']='16'
   for e in m['warp_events']:tiles[e['y']*w+e['x']]=ART['exit']['start']
   for o in m['object_events']:assert not tiles[o['y']*w+o['x']]&0xc00,(name,'Actor in furniture',o)
-  l=dict(id=m['layout'],name=name+'_Layout',width=w,height=h,primary_tileset='gTileset_Building',secondary_tileset='gTileset_HgssTemple',border_filepath=f'data/layouts/{name}/border.bin',blockdata_filepath=f'data/layouts/{name}/map.bin',layout_version='emerald')
+  l=dict(id=m['layout'],name=name+'_Layout',width=w,height=h,primary_tileset='gTileset_Building',secondary_tileset='gTileset_HgssTheater' if name=='EcruteakCity_DanceTheater' else 'gTileset_HgssTemple',border_filepath=f'data/layouts/{name}/border.bin',blockdata_filepath=f'data/layouts/{name}/map.bin',layout_version='emerald')
   if l['id'] in ls:ls[l['id']].clear();ls[l['id']].update(l)
   else:layouts['layouts'].append(l);ls[l['id']]=l
   write(l['blockdata_filepath'],struct.pack('<'+str(w*h)+'H',*tiles));write(l['border_filepath'],struct.pack('<4H',*([0x600]*4)));js(f'data/maps/{name}/map.json',m)

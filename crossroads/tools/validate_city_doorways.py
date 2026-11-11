@@ -16,6 +16,8 @@ manifest='crossroads/hgss/doorways-qa09.json' if (R/'crossroads/hgss/authoring/O
 for group in load(manifest)['groups']:
  for side in ['outside','inside']:
   src=group[side];n=src['map'];m=maps[n];other=group['inside' if side=='outside' else 'outside']['map'];l=ls[m['layout']];w,h=l['width'],l['height'];raw=struct.unpack('<'+str(w*h)+'H',(R/l['blockdata_filepath']).read_bytes())
+  ax,ay=src['anchor'];assert 0<=ax<w and 0<=ay<h and not raw[ay*w+ax]&0xc00 and raw[ay*w+ax]>>12==3,(n,'Staging anchor is not dry public floor',src['anchor'])
+  assert not any(o['x']==ax and o['y']==ay for o in m['object_events']),(n,'Staging anchor is occupied by an NPC',src['anchor'])
   for x,y in src['segments']:
    events=[e for e in m['warp_events'] if (e['x'],e['y'])==(x,y)]
    assert len(events)==1,(n,'Visible threshold missing or duplicated',x,y)

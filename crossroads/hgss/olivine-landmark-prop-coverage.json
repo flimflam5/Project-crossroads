@@ -1,0 +1,1285 @@
+{
+  "authority": "Every source prop instance in all ten maritime maps; source actors/story/rewards are separate scope",
+  "reference_visual_index": "olivine-landmark-visual-references.json",
+  "source_instance_count": 42,
+  "handled_source_instances": 42,
+  "unhandled_source_instances": [],
+  "records": [
+    {
+      "source_header": "MAP_OLIVINE_LIGHTHOUSE_1F",
+      "native_map": "OlivineCity_Lighthouse_1F",
+      "chunk": 0,
+      "source_instance": 0,
+      "model": 1,
+      "source_anchor": [
+        8.5,
+        17.5
+      ],
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0047_D27R0101.bin",
+        "matrix_blob_sha": "eb950e0ad409f48f13d29139bcf672378e474a7c",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/112_D27R0101.json",
+        "events_blob_sha": "380f6c22b55f61b350fc13d754e13bad3de6318b",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "classification": "rendered GBA adaptation",
+      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "source_story_actor": false,
+      "native_counterpart": "Visible paired native threshold with independently operative leaves",
+      "native_thresholds": [
+        [
+          8,
+          17
+        ],
+        [
+          9,
+          17
+        ]
+      ],
+      "adaptation": "The original source exit anchor is retained; the extra native visible leaf is a reciprocal alias"
+    },
+    {
+      "source_header": "MAP_OLIVINE_LIGHTHOUSE_1F",
+      "native_map": "OlivineCity_Lighthouse_1F",
+      "chunk": 0,
+      "source_instance": 1,
+      "model": 23,
+      "source_anchor": [
+        6.5,
+        14.5
+      ],
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0047_D27R0101.bin",
+        "matrix_blob_sha": "eb950e0ad409f48f13d29139bcf672378e474a7c",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/112_D27R0101.json",
+        "events_blob_sha": "380f6c22b55f61b350fc13d754e13bad3de6318b",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "classification": "rendered GBA adaptation",
+      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "source_story_actor": false,
+      "native_counterpart": "Original native green fern/terracotta planter",
+      "native_footprint": [
+        6,
+        13,
+        1,
+        2
+      ],
+      "adaptation": "Perspective source root rounded to its two-cell native top/base; source blocked footprint retained"
+    },
+    {
+      "source_header": "MAP_OLIVINE_LIGHTHOUSE_1F",
+      "native_map": "OlivineCity_Lighthouse_1F",
+      "chunk": 0,
+      "source_instance": 2,
+      "model": 23,
+      "source_anchor": [
+        10.5,
+        14.5
+      ],
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0047_D27R0101.bin",
+        "matrix_blob_sha": "eb950e0ad409f48f13d29139bcf672378e474a7c",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/112_D27R0101.json",
+        "events_blob_sha": "380f6c22b55f61b350fc13d754e13bad3de6318b",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "classification": "rendered GBA adaptation",
+      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "source_story_actor": false,
+      "native_counterpart": "Original native green fern/terracotta planter",
+      "native_footprint": [
+        10,
+        13,
+        1,
+        2
+      ],
+      "adaptation": "Perspective source root rounded to its two-cell native top/base; source blocked footprint retained"
+    },
+    {
+      "source_header": "MAP_OLIVINE_LIGHTHOUSE_1F",
+      "native_map": "OlivineCity_Lighthouse_1F",
+      "chunk": 0,
+      "source_instance": 3,
+      "model": 23,
+      "source_anchor": [
+        10.5,
+        11.5
+      ],
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0047_D27R0101.bin",
+        "matrix_blob_sha": "eb950e0ad409f48f13d29139bcf672378e474a7c",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/112_D27R0101.json",
+        "events_blob_sha": "380f6c22b55f61b350fc13d754e13bad3de6318b",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "classification": "rendered GBA adaptation",
+      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "source_story_actor": false,
+      "native_counterpart": "Original native green fern/terracotta planter",
+      "native_footprint": [
+        10,
+        10,
+        1,
+        2
+      ],
+      "adaptation": "Perspective source root rounded to its two-cell native top/base; source blocked footprint retained"
+    },
+    {
+      "source_header": "MAP_OLIVINE_LIGHTHOUSE_1F",
+      "native_map": "OlivineCity_Lighthouse_1F",
+      "chunk": 0,
+      "source_instance": 4,
+      "model": 23,
+      "source_anchor": [
+        6.5,
+        11.5
+      ],
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0047_D27R0101.bin",
+        "matrix_blob_sha": "eb950e0ad409f48f13d29139bcf672378e474a7c",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/112_D27R0101.json",
+        "events_blob_sha": "380f6c22b55f61b350fc13d754e13bad3de6318b",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "classification": "rendered GBA adaptation",
+      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "source_story_actor": false,
+      "native_counterpart": "Original native green fern/terracotta planter",
+      "native_footprint": [
+        6,
+        10,
+        1,
+        2
+      ],
+      "adaptation": "Perspective source root rounded to its two-cell native top/base; source blocked footprint retained"
+    },
+    {
+      "source_header": "MAP_OLIVINE_LIGHTHOUSE_1F",
+      "native_map": "OlivineCity_Lighthouse_1F",
+      "chunk": 0,
+      "source_instance": 5,
+      "model": 23,
+      "source_anchor": [
+        6.5,
+        8.5
+      ],
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0047_D27R0101.bin",
+        "matrix_blob_sha": "eb950e0ad409f48f13d29139bcf672378e474a7c",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/112_D27R0101.json",
+        "events_blob_sha": "380f6c22b55f61b350fc13d754e13bad3de6318b",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "classification": "rendered GBA adaptation",
+      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "source_story_actor": false,
+      "native_counterpart": "Original native green fern/terracotta planter",
+      "native_footprint": [
+        6,
+        7,
+        1,
+        2
+      ],
+      "adaptation": "Perspective source root rounded to its two-cell native top/base; source blocked footprint retained"
+    },
+    {
+      "source_header": "MAP_OLIVINE_LIGHTHOUSE_1F",
+      "native_map": "OlivineCity_Lighthouse_1F",
+      "chunk": 0,
+      "source_instance": 6,
+      "model": 23,
+      "source_anchor": [
+        10.5,
+        8.5
+      ],
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0047_D27R0101.bin",
+        "matrix_blob_sha": "eb950e0ad409f48f13d29139bcf672378e474a7c",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/112_D27R0101.json",
+        "events_blob_sha": "380f6c22b55f61b350fc13d754e13bad3de6318b",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "classification": "rendered GBA adaptation",
+      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "source_story_actor": false,
+      "native_counterpart": "Original native green fern/terracotta planter",
+      "native_footprint": [
+        10,
+        7,
+        1,
+        2
+      ],
+      "adaptation": "Perspective source root rounded to its two-cell native top/base; source blocked footprint retained"
+    },
+    {
+      "source_header": "MAP_OLIVINE_LIGHTHOUSE_1F",
+      "native_map": "OlivineCity_Lighthouse_1F",
+      "chunk": 0,
+      "source_instance": 7,
+      "model": 4,
+      "source_anchor": [
+        2.5,
+        3.5
+      ],
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0047_D27R0101.bin",
+        "matrix_blob_sha": "eb950e0ad409f48f13d29139bcf672378e474a7c",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/112_D27R0101.json",
+        "events_blob_sha": "380f6c22b55f61b350fc13d754e13bad3de6318b",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "classification": "rendered GBA adaptation",
+      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "source_story_actor": false,
+      "native_counterpart": "Two-cell native stair/ladder at actual source landing",
+      "native_footprint": [
+        2,
+        2,
+        1,
+        2
+      ],
+      "adaptation": "Flat vertical GBA ladder replaces depth of DS staircase; every actual source stair landing and tall open segment remains operative"
+    },
+    {
+      "source_header": "MAP_OLIVINE_LIGHTHOUSE_1F",
+      "native_map": "OlivineCity_Lighthouse_1F",
+      "chunk": 0,
+      "source_instance": 8,
+      "model": 63,
+      "source_anchor": [
+        8.5,
+        4.5
+      ],
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0047_D27R0101.bin",
+        "matrix_blob_sha": "eb950e0ad409f48f13d29139bcf672378e474a7c",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/112_D27R0101.json",
+        "events_blob_sha": "380f6c22b55f61b350fc13d754e13bad3de6318b",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "classification": "rendered GBA adaptation",
+      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "source_story_actor": false,
+      "native_counterpart": "Two actual blue-glass lift panels, native two-stop dynamic-warp cabin",
+      "native_thresholds": [
+        [
+          8,
+          4
+        ],
+        [
+          9,
+          4
+        ]
+      ],
+      "adaptation": "Extra visible GBA leaf appends; no new save/progress variables; ground/light-room panel actions tested separately"
+    },
+    {
+      "source_header": "MAP_OLIVINE_LIGHTHOUSE_2F",
+      "native_map": "OlivineCity_Lighthouse_2F",
+      "chunk": 0,
+      "source_instance": 0,
+      "model": 145,
+      "source_anchor": [
+        13.5,
+        6.5
+      ],
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0048_D27R0102.bin",
+        "matrix_blob_sha": "66764818b798d61ae5d9b870986328849686e03b",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/206_D27R0102.json",
+        "events_blob_sha": "49fcae8af2473b2583ac3beb704c4c6304382c04",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "classification": "rendered GBA adaptation",
+      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "source_story_actor": false,
+      "native_counterpart": "Two-cell native stair/ladder at actual source landing",
+      "native_footprint": [
+        13,
+        5,
+        1,
+        2
+      ],
+      "adaptation": "Flat vertical GBA ladder replaces depth of DS staircase; every actual source stair landing and tall open segment remains operative"
+    },
+    {
+      "source_header": "MAP_OLIVINE_LIGHTHOUSE_2F",
+      "native_map": "OlivineCity_Lighthouse_2F",
+      "chunk": 0,
+      "source_instance": 1,
+      "model": 4,
+      "source_anchor": [
+        5.5,
+        3.5
+      ],
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0048_D27R0102.bin",
+        "matrix_blob_sha": "66764818b798d61ae5d9b870986328849686e03b",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/206_D27R0102.json",
+        "events_blob_sha": "49fcae8af2473b2583ac3beb704c4c6304382c04",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "classification": "rendered GBA adaptation",
+      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "source_story_actor": false,
+      "native_counterpart": "Two-cell native stair/ladder at actual source landing",
+      "native_footprint": [
+        5,
+        2,
+        1,
+        2
+      ],
+      "adaptation": "Flat vertical GBA ladder replaces depth of DS staircase; every actual source stair landing and tall open segment remains operative"
+    },
+    {
+      "source_header": "MAP_OLIVINE_LIGHTHOUSE_2F",
+      "native_map": "OlivineCity_Lighthouse_2F",
+      "chunk": 0,
+      "source_instance": 2,
+      "model": 23,
+      "source_anchor": [
+        11.5,
+        12.5
+      ],
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0048_D27R0102.bin",
+        "matrix_blob_sha": "66764818b798d61ae5d9b870986328849686e03b",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/206_D27R0102.json",
+        "events_blob_sha": "49fcae8af2473b2583ac3beb704c4c6304382c04",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "classification": "rendered GBA adaptation",
+      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "source_story_actor": false,
+      "native_counterpart": "Original native green fern/terracotta planter",
+      "native_footprint": [
+        11,
+        11,
+        1,
+        2
+      ],
+      "adaptation": "Perspective source root rounded to its two-cell native top/base; source blocked footprint retained"
+    },
+    {
+      "source_header": "MAP_OLIVINE_LIGHTHOUSE_2F",
+      "native_map": "OlivineCity_Lighthouse_2F",
+      "chunk": 0,
+      "source_instance": 3,
+      "model": 23,
+      "source_anchor": [
+        15.5,
+        12.5
+      ],
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0048_D27R0102.bin",
+        "matrix_blob_sha": "66764818b798d61ae5d9b870986328849686e03b",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/206_D27R0102.json",
+        "events_blob_sha": "49fcae8af2473b2583ac3beb704c4c6304382c04",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "classification": "rendered GBA adaptation",
+      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "source_story_actor": false,
+      "native_counterpart": "Original native green fern/terracotta planter",
+      "native_footprint": [
+        15,
+        11,
+        1,
+        2
+      ],
+      "adaptation": "Perspective source root rounded to its two-cell native top/base; source blocked footprint retained"
+    },
+    {
+      "source_header": "MAP_OLIVINE_LIGHTHOUSE_3F",
+      "native_map": "OlivineCity_Lighthouse_3F",
+      "chunk": 0,
+      "source_instance": 0,
+      "model": 1,
+      "source_anchor": [
+        8.5,
+        18.25
+      ],
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0050_D27R0104.bin",
+        "matrix_blob_sha": "a654df56553acb73e364d438d993ee02c43c84fb",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/208_D27R0104.json",
+        "events_blob_sha": "8b670eb56a5f2ff10022fb19a18a0ae3d9329d9f",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "classification": "rendered GBA adaptation",
+      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "source_story_actor": false,
+      "native_counterpart": "Visible paired native threshold with independently operative leaves",
+      "native_thresholds": [
+        [
+          8,
+          18
+        ],
+        [
+          9,
+          18
+        ]
+      ],
+      "adaptation": "The original source exit anchor is retained; the extra native visible leaf is a reciprocal alias"
+    },
+    {
+      "source_header": "MAP_OLIVINE_LIGHTHOUSE_3F",
+      "native_map": "OlivineCity_Lighthouse_3F",
+      "chunk": 0,
+      "source_instance": 1,
+      "model": 15,
+      "source_anchor": [
+        11.0,
+        12.8125
+      ],
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0050_D27R0104.bin",
+        "matrix_blob_sha": "a654df56553acb73e364d438d993ee02c43c84fb",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/208_D27R0104.json",
+        "events_blob_sha": "8b670eb56a5f2ff10022fb19a18a0ae3d9329d9f",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "classification": "rendered GBA adaptation",
+      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "source_story_actor": false,
+      "native_counterpart": "Raised horizontal stone/metal barrier along source southern shaft face",
+      "native_footprint": [
+        10,
+        12,
+        6,
+        1
+      ],
+      "adaptation": "Source raster shows a raised horizontal ledge/beam; flat railing retains the closed source footprint. Model numeral is retained without inventing a story function"
+    },
+    {
+      "source_header": "MAP_OLIVINE_LIGHTHOUSE_3F",
+      "native_map": "OlivineCity_Lighthouse_3F",
+      "chunk": 0,
+      "source_instance": 2,
+      "model": 145,
+      "source_anchor": [
+        6.5,
+        7.5
+      ],
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0050_D27R0104.bin",
+        "matrix_blob_sha": "a654df56553acb73e364d438d993ee02c43c84fb",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/208_D27R0104.json",
+        "events_blob_sha": "8b670eb56a5f2ff10022fb19a18a0ae3d9329d9f",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "classification": "rendered GBA adaptation",
+      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "source_story_actor": false,
+      "native_counterpart": "Two-cell native stair/ladder at actual source landing",
+      "native_footprint": [
+        6,
+        6,
+        1,
+        2
+      ],
+      "adaptation": "Flat vertical GBA ladder replaces depth of DS staircase; every actual source stair landing and tall open segment remains operative"
+    },
+    {
+      "source_header": "MAP_OLIVINE_LIGHTHOUSE_3F",
+      "native_map": "OlivineCity_Lighthouse_3F",
+      "chunk": 0,
+      "source_instance": 3,
+      "model": 145,
+      "source_anchor": [
+        10.5,
+        7.5
+      ],
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0050_D27R0104.bin",
+        "matrix_blob_sha": "a654df56553acb73e364d438d993ee02c43c84fb",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/208_D27R0104.json",
+        "events_blob_sha": "8b670eb56a5f2ff10022fb19a18a0ae3d9329d9f",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "classification": "rendered GBA adaptation",
+      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "source_story_actor": false,
+      "native_counterpart": "Two-cell native stair/ladder at actual source landing",
+      "native_footprint": [
+        10,
+        6,
+        1,
+        2
+      ],
+      "adaptation": "Flat vertical GBA ladder replaces depth of DS staircase; every actual source stair landing and tall open segment remains operative"
+    },
+    {
+      "source_header": "MAP_OLIVINE_LIGHTHOUSE_3F",
+      "native_map": "OlivineCity_Lighthouse_3F",
+      "chunk": 0,
+      "source_instance": 4,
+      "model": 144,
+      "source_anchor": [
+        13.5,
+        7.5
+      ],
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0050_D27R0104.bin",
+        "matrix_blob_sha": "a654df56553acb73e364d438d993ee02c43c84fb",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/208_D27R0104.json",
+        "events_blob_sha": "8b670eb56a5f2ff10022fb19a18a0ae3d9329d9f",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "classification": "rendered GBA adaptation",
+      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "source_story_actor": false,
+      "native_counterpart": "Two-cell native stair/ladder at actual source landing",
+      "native_footprint": [
+        13,
+        6,
+        1,
+        2
+      ],
+      "adaptation": "Flat vertical GBA ladder replaces depth of DS staircase; every actual source stair landing and tall open segment remains operative"
+    },
+    {
+      "source_header": "MAP_OLIVINE_LIGHTHOUSE_4F",
+      "native_map": "OlivineCity_Lighthouse_4F",
+      "chunk": 0,
+      "source_instance": 0,
+      "model": 144,
+      "source_anchor": [
+        6.5,
+        7.5
+      ],
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0051_D27R0105.bin",
+        "matrix_blob_sha": "c19fa47a8e187560b7a351148fca9862e1ce4715",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/209_D27R0105.json",
+        "events_blob_sha": "732883dad10255ff73c33ee6d78097b5902570e1",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "classification": "rendered GBA adaptation",
+      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "source_story_actor": false,
+      "native_counterpart": "Two-cell native stair/ladder at actual source landing",
+      "native_footprint": [
+        6,
+        6,
+        1,
+        2
+      ],
+      "adaptation": "Flat vertical GBA ladder replaces depth of DS staircase; every actual source stair landing and tall open segment remains operative"
+    },
+    {
+      "source_header": "MAP_OLIVINE_LIGHTHOUSE_4F",
+      "native_map": "OlivineCity_Lighthouse_4F",
+      "chunk": 0,
+      "source_instance": 1,
+      "model": 144,
+      "source_anchor": [
+        10.5,
+        7.5
+      ],
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0051_D27R0105.bin",
+        "matrix_blob_sha": "c19fa47a8e187560b7a351148fca9862e1ce4715",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/209_D27R0105.json",
+        "events_blob_sha": "732883dad10255ff73c33ee6d78097b5902570e1",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "classification": "rendered GBA adaptation",
+      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "source_story_actor": false,
+      "native_counterpart": "Two-cell native stair/ladder at actual source landing",
+      "native_footprint": [
+        10,
+        6,
+        1,
+        2
+      ],
+      "adaptation": "Flat vertical GBA ladder replaces depth of DS staircase; every actual source stair landing and tall open segment remains operative"
+    },
+    {
+      "source_header": "MAP_OLIVINE_LIGHTHOUSE_4F",
+      "native_map": "OlivineCity_Lighthouse_4F",
+      "chunk": 0,
+      "source_instance": 2,
+      "model": 145,
+      "source_anchor": [
+        3.5,
+        5.5
+      ],
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0051_D27R0105.bin",
+        "matrix_blob_sha": "c19fa47a8e187560b7a351148fca9862e1ce4715",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/209_D27R0105.json",
+        "events_blob_sha": "732883dad10255ff73c33ee6d78097b5902570e1",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "classification": "rendered GBA adaptation",
+      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "source_story_actor": false,
+      "native_counterpart": "Two-cell native stair/ladder at actual source landing",
+      "native_footprint": [
+        3,
+        4,
+        1,
+        2
+      ],
+      "adaptation": "Flat vertical GBA ladder replaces depth of DS staircase; every actual source stair landing and tall open segment remains operative"
+    },
+    {
+      "source_header": "MAP_OLIVINE_LIGHTHOUSE_5F",
+      "native_map": "OlivineCity_Lighthouse_5F",
+      "chunk": 0,
+      "source_instance": 0,
+      "model": 145,
+      "source_anchor": [
+        10.5,
+        10.5
+      ],
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0052_D27R0106.bin",
+        "matrix_blob_sha": "c9c7113684985af9405df9fd4fca0b697e8da11b",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/210_D27R0106.json",
+        "events_blob_sha": "58595be5dd77623ab9e3986c15b0a0dd667c9133",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "classification": "rendered GBA adaptation",
+      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "source_story_actor": false,
+      "native_counterpart": "Two-cell native stair/ladder at actual source landing",
+      "native_footprint": [
+        10,
+        9,
+        1,
+        2
+      ],
+      "adaptation": "Flat vertical GBA ladder replaces depth of DS staircase; every actual source stair landing and tall open segment remains operative"
+    },
+    {
+      "source_header": "MAP_OLIVINE_LIGHTHOUSE_5F",
+      "native_map": "OlivineCity_Lighthouse_5F",
+      "chunk": 0,
+      "source_instance": 1,
+      "model": 144,
+      "source_anchor": [
+        4.5,
+        5.5
+      ],
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0052_D27R0106.bin",
+        "matrix_blob_sha": "c9c7113684985af9405df9fd4fca0b697e8da11b",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/210_D27R0106.json",
+        "events_blob_sha": "58595be5dd77623ab9e3986c15b0a0dd667c9133",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "classification": "rendered GBA adaptation",
+      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "source_story_actor": false,
+      "native_counterpart": "Two-cell native stair/ladder at actual source landing",
+      "native_footprint": [
+        4,
+        4,
+        1,
+        2
+      ],
+      "adaptation": "Flat vertical GBA ladder replaces depth of DS staircase; every actual source stair landing and tall open segment remains operative"
+    },
+    {
+      "source_header": "MAP_OLIVINE_LIGHTHOUSE_LIGHT_ROOM",
+      "native_map": "OlivineCity_Lighthouse_6F",
+      "chunk": 0,
+      "source_instance": 0,
+      "model": 122,
+      "source_anchor": [
+        8.5,
+        6.5
+      ],
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0131_D27R0107.bin",
+        "matrix_blob_sha": "21cde54d10af49aaba89b85fef06404f9cbf64ab",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/211_D27R0107.json",
+        "events_blob_sha": "f13bdcd507edd8a1532d26aad72a318afffa4f11",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "classification": "rendered GBA adaptation",
+      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "source_story_actor": false,
+      "native_counterpart": "Original substantial circular silver/blue lens housing with preserved mechanical beacon actor at8,6",
+      "native_footprint": [
+        7,
+        5,
+        3,
+        3
+      ],
+      "adaptation": "Flat3x3 ring substitutes DS perspective optical enclosure; source collision retained, upper ring is an overhang, solid actor owns center"
+    },
+    {
+      "source_header": "MAP_OLIVINE_LIGHTHOUSE_LIGHT_ROOM",
+      "native_map": "OlivineCity_Lighthouse_6F",
+      "chunk": 0,
+      "source_instance": 1,
+      "model": 124,
+      "source_anchor": [
+        8.5,
+        4.5
+      ],
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0131_D27R0107.bin",
+        "matrix_blob_sha": "21cde54d10af49aaba89b85fef06404f9cbf64ab",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/211_D27R0107.json",
+        "events_blob_sha": "f13bdcd507edd8a1532d26aad72a318afffa4f11",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "classification": "rendered GBA adaptation",
+      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "source_story_actor": false,
+      "native_counterpart": "Two actual blue-glass lift panels, native two-stop dynamic-warp cabin",
+      "native_thresholds": [
+        [
+          8,
+          4
+        ],
+        [
+          9,
+          4
+        ]
+      ],
+      "adaptation": "Extra visible GBA leaf appends; no new save/progress variables; ground/light-room panel actions tested separately"
+    },
+    {
+      "source_header": "MAP_OLIVINE_LIGHTHOUSE_EXTERIOR",
+      "native_map": "OlivineCity_Lighthouse_Balcony",
+      "chunk": 0,
+      "source_instance": 0,
+      "model": 123,
+      "source_anchor": [
+        8.5,
+        -4.0
+      ],
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0049_D27R0103.bin",
+        "matrix_blob_sha": "f34a8d28acae8540ef803bbe3dd9b669f279c2d2",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/207_D27R0103.json",
+        "events_blob_sha": "bff57c361552a5590690ab654815e6636fd79ba0",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "classification": "rendered GBA adaptation",
+      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "source_story_actor": false,
+      "native_counterpart": "Masonry lighthouse body framed by the source exterior balcony",
+      "native_footprint": [
+        4,
+        0,
+        9,
+        13
+      ],
+      "adaptation": "Very tall DS cylinder extends beyond source northern camera bounds; native flat fa\u00e7ade replaces its visible lower body while preserving U-shaped side paths, south door and rail boundaries"
+    },
+    {
+      "source_header": "MAP_OLIVINE_LIGHTHOUSE_ELEVATOR",
+      "native_map": "OlivineCity_Lighthouse_Elevator",
+      "chunk": 0,
+      "source_instance": 0,
+      "model": 1,
+      "source_anchor": [
+        3.5,
+        6.5625
+      ],
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0262_D31R0202.bin",
+        "matrix_blob_sha": "858d9b78c8d8f53b70b9e908803d8f700d03a4d4",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/401_D27R0108.json",
+        "events_blob_sha": "d3b79cfd50b193f73703aa62d06373384fea27ed",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "classification": "rendered GBA adaptation",
+      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "source_story_actor": false,
+      "native_counterpart": "Visible paired native threshold with independently operative leaves",
+      "native_thresholds": [
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "adaptation": "The original source exit anchor is retained; the extra native visible leaf is a reciprocal alias"
+    },
+    {
+      "source_header": "MAP_OLIVINE_LIGHTHOUSE_ELEVATOR",
+      "native_map": "OlivineCity_Lighthouse_Elevator",
+      "chunk": 0,
+      "source_instance": 1,
+      "model": 208,
+      "source_anchor": [
+        16.0,
+        15.875
+      ],
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0262_D31R0202.bin",
+        "matrix_blob_sha": "858d9b78c8d8f53b70b9e908803d8f700d03a4d4",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/401_D27R0108.json",
+        "events_blob_sha": "d3b79cfd50b193f73703aa62d06373384fea27ed",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "classification": "off-room source model cropped; public cabin adapted",
+      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "source_story_actor": false,
+      "native_counterpart": "Existing native cabin/door/panel movement system",
+      "native_footprint": null,
+      "adaptation": "Source prop anchor16,15.875 lies outside source public cabin atx1..5,y3..6. Native isolated8x8 cabin reproduces accessible floor, door and lift selection; off-room DS machinery is outside cropped native camera, not a missing accessible room"
+    },
+    {
+      "source_header": "MAP_SS_AQUA_OLIVINE_PORT_INTERIOR",
+      "native_map": "OlivineCity_PortTerminal",
+      "chunk": 0,
+      "source_instance": 0,
+      "model": 54,
+      "source_anchor": [
+        2.5,
+        4.5
+      ],
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0137_P01R0101.bin",
+        "matrix_blob_sha": "c13328f3da21d5d407aecc231b014c10a3cef234",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/226_P01R0101.json",
+        "events_blob_sha": "e8ca8d2df2c74f5e3378ef47fb77908e6804be79",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "classification": "rendered GBA adaptation",
+      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "source_story_actor": false,
+      "native_counterpart": "Original native yellow stool; seated solid NPC owns its chair tile if occupied",
+      "native_footprint": [
+        2,
+        4,
+        1,
+        1
+      ],
+      "adaptation": "All eight actual source chair anchors retained around the two terminal tables, not arbitrary stand-ins"
+    },
+    {
+      "source_header": "MAP_SS_AQUA_OLIVINE_PORT_INTERIOR",
+      "native_map": "OlivineCity_PortTerminal",
+      "chunk": 0,
+      "source_instance": 1,
+      "model": 54,
+      "source_anchor": [
+        2.5,
+        5.5
+      ],
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0137_P01R0101.bin",
+        "matrix_blob_sha": "c13328f3da21d5d407aecc231b014c10a3cef234",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/226_P01R0101.json",
+        "events_blob_sha": "e8ca8d2df2c74f5e3378ef47fb77908e6804be79",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "classification": "rendered GBA adaptation",
+      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "source_story_actor": false,
+      "native_counterpart": "Original native yellow stool; seated solid NPC owns its chair tile if occupied",
+      "native_footprint": [
+        2,
+        5,
+        1,
+        1
+      ],
+      "adaptation": "All eight actual source chair anchors retained around the two terminal tables, not arbitrary stand-ins"
+    },
+    {
+      "source_header": "MAP_SS_AQUA_OLIVINE_PORT_INTERIOR",
+      "native_map": "OlivineCity_PortTerminal",
+      "chunk": 0,
+      "source_instance": 2,
+      "model": 54,
+      "source_anchor": [
+        4.5,
+        4.5
+      ],
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0137_P01R0101.bin",
+        "matrix_blob_sha": "c13328f3da21d5d407aecc231b014c10a3cef234",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/226_P01R0101.json",
+        "events_blob_sha": "e8ca8d2df2c74f5e3378ef47fb77908e6804be79",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "classification": "rendered GBA adaptation",
+      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "source_story_actor": false,
+      "native_counterpart": "Original native yellow stool; seated solid NPC owns its chair tile if occupied",
+      "native_footprint": [
+        4,
+        4,
+        1,
+        1
+      ],
+      "adaptation": "All eight actual source chair anchors retained around the two terminal tables, not arbitrary stand-ins"
+    },
+    {
+      "source_header": "MAP_SS_AQUA_OLIVINE_PORT_INTERIOR",
+      "native_map": "OlivineCity_PortTerminal",
+      "chunk": 0,
+      "source_instance": 3,
+      "model": 54,
+      "source_anchor": [
+        4.5,
+        5.5
+      ],
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0137_P01R0101.bin",
+        "matrix_blob_sha": "c13328f3da21d5d407aecc231b014c10a3cef234",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/226_P01R0101.json",
+        "events_blob_sha": "e8ca8d2df2c74f5e3378ef47fb77908e6804be79",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "classification": "rendered GBA adaptation",
+      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "source_story_actor": false,
+      "native_counterpart": "Original native yellow stool; seated solid NPC owns its chair tile if occupied",
+      "native_footprint": [
+        4,
+        5,
+        1,
+        1
+      ],
+      "adaptation": "All eight actual source chair anchors retained around the two terminal tables, not arbitrary stand-ins"
+    },
+    {
+      "source_header": "MAP_SS_AQUA_OLIVINE_PORT_INTERIOR",
+      "native_map": "OlivineCity_PortTerminal",
+      "chunk": 0,
+      "source_instance": 4,
+      "model": 54,
+      "source_anchor": [
+        11.5,
+        4.5
+      ],
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0137_P01R0101.bin",
+        "matrix_blob_sha": "c13328f3da21d5d407aecc231b014c10a3cef234",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/226_P01R0101.json",
+        "events_blob_sha": "e8ca8d2df2c74f5e3378ef47fb77908e6804be79",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "classification": "rendered GBA adaptation",
+      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "source_story_actor": false,
+      "native_counterpart": "Original native yellow stool; seated solid NPC owns its chair tile if occupied",
+      "native_footprint": [
+        11,
+        4,
+        1,
+        1
+      ],
+      "adaptation": "All eight actual source chair anchors retained around the two terminal tables, not arbitrary stand-ins"
+    },
+    {
+      "source_header": "MAP_SS_AQUA_OLIVINE_PORT_INTERIOR",
+      "native_map": "OlivineCity_PortTerminal",
+      "chunk": 0,
+      "source_instance": 5,
+      "model": 54,
+      "source_anchor": [
+        12.5,
+        4.5
+      ],
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0137_P01R0101.bin",
+        "matrix_blob_sha": "c13328f3da21d5d407aecc231b014c10a3cef234",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/226_P01R0101.json",
+        "events_blob_sha": "e8ca8d2df2c74f5e3378ef47fb77908e6804be79",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "classification": "rendered GBA adaptation",
+      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "source_story_actor": false,
+      "native_counterpart": "Original native yellow stool; seated solid NPC owns its chair tile if occupied",
+      "native_footprint": [
+        12,
+        4,
+        1,
+        1
+      ],
+      "adaptation": "All eight actual source chair anchors retained around the two terminal tables, not arbitrary stand-ins"
+    },
+    {
+      "source_header": "MAP_SS_AQUA_OLIVINE_PORT_INTERIOR",
+      "native_map": "OlivineCity_PortTerminal",
+      "chunk": 0,
+      "source_instance": 6,
+      "model": 54,
+      "source_anchor": [
+        12.5,
+        7.5
+      ],
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0137_P01R0101.bin",
+        "matrix_blob_sha": "c13328f3da21d5d407aecc231b014c10a3cef234",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/226_P01R0101.json",
+        "events_blob_sha": "e8ca8d2df2c74f5e3378ef47fb77908e6804be79",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "classification": "rendered GBA adaptation",
+      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "source_story_actor": false,
+      "native_counterpart": "Original native yellow stool; seated solid NPC owns its chair tile if occupied",
+      "native_footprint": [
+        12,
+        7,
+        1,
+        1
+      ],
+      "adaptation": "All eight actual source chair anchors retained around the two terminal tables, not arbitrary stand-ins"
+    },
+    {
+      "source_header": "MAP_SS_AQUA_OLIVINE_PORT_INTERIOR",
+      "native_map": "OlivineCity_PortTerminal",
+      "chunk": 0,
+      "source_instance": 7,
+      "model": 54,
+      "source_anchor": [
+        11.5,
+        7.5
+      ],
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0137_P01R0101.bin",
+        "matrix_blob_sha": "c13328f3da21d5d407aecc231b014c10a3cef234",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/226_P01R0101.json",
+        "events_blob_sha": "e8ca8d2df2c74f5e3378ef47fb77908e6804be79",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "classification": "rendered GBA adaptation",
+      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "source_story_actor": false,
+      "native_counterpart": "Original native yellow stool; seated solid NPC owns its chair tile if occupied",
+      "native_footprint": [
+        11,
+        7,
+        1,
+        1
+      ],
+      "adaptation": "All eight actual source chair anchors retained around the two terminal tables, not arbitrary stand-ins"
+    },
+    {
+      "source_header": "MAP_SS_AQUA_OLIVINE_PORT_INTERIOR",
+      "native_map": "OlivineCity_PortTerminal",
+      "chunk": 0,
+      "source_instance": 8,
+      "model": 1,
+      "source_anchor": [
+        7.5,
+        11.5
+      ],
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0137_P01R0101.bin",
+        "matrix_blob_sha": "c13328f3da21d5d407aecc231b014c10a3cef234",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/226_P01R0101.json",
+        "events_blob_sha": "e8ca8d2df2c74f5e3378ef47fb77908e6804be79",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "classification": "rendered GBA adaptation",
+      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "source_story_actor": false,
+      "native_counterpart": "Visible paired native threshold with independently operative leaves",
+      "native_thresholds": [
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          11
+        ]
+      ],
+      "adaptation": "The original source exit anchor is retained; the extra native visible leaf is a reciprocal alias"
+    },
+    {
+      "source_header": "MAP_SS_AQUA_OLIVINE_PORT_INTERIOR",
+      "native_map": "OlivineCity_PortTerminal",
+      "chunk": 0,
+      "source_instance": 9,
+      "model": 2,
+      "source_anchor": [
+        1.0,
+        7.5
+      ],
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0137_P01R0101.bin",
+        "matrix_blob_sha": "c13328f3da21d5d407aecc231b014c10a3cef234",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/226_P01R0101.json",
+        "events_blob_sha": "e8ca8d2df2c74f5e3378ef47fb77908e6804be79",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "classification": "rendered GBA adaptation",
+      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "source_story_actor": false,
+      "native_counterpart": "Visible two-cell side inspection-pier doorway",
+      "native_thresholds": [
+        [
+          1,
+          7
+        ],
+        [
+          1,
+          8
+        ]
+      ],
+      "adaptation": "Two-row native opening, each row operative in both directions"
+    },
+    {
+      "source_header": "MAP_SS_AQUA_OLIVINE_PORT_EXTERIOR",
+      "native_map": "OlivineCity_PortQuay",
+      "chunk": 0,
+      "source_instance": 0,
+      "model": 168,
+      "source_anchor": [
+        27.5,
+        19.0
+      ],
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0178_P01R0102.bin",
+        "matrix_blob_sha": "a25137d22b2b83e4909fd90cbb51d537865e8812",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/301_P01R0102.json",
+        "events_blob_sha": "bf461d512f991780e110b4a4f23bcc89ca9dbe12",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "classification": "rendered GBA adaptation",
+      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "source_story_actor": false,
+      "native_counterpart": "Original docked blue/white S.S. Aqua sprite and gangway",
+      "native_footprint": [
+        21,
+        15,
+        16,
+        5
+      ],
+      "adaptation": "Tileable mid-deck panels fit GBA graphics while preserving funnel/bow/stern/hatch silhouette. Source boarding boundary27,20 is visibly bounded; sailing/ship interiors/other-region arrival remain outside approved city pass"
+    },
+    {
+      "source_header": "MAP_SS_AQUA_OLIVINE_PORT_EXTERIOR",
+      "native_map": "OlivineCity_PortQuay",
+      "chunk": 0,
+      "source_instance": 1,
+      "model": 119,
+      "source_anchor": [
+        9.3089599609375,
+        3.0
+      ],
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0178_P01R0102.bin",
+        "matrix_blob_sha": "a25137d22b2b83e4909fd90cbb51d537865e8812",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/301_P01R0102.json",
+        "events_blob_sha": "bf461d512f991780e110b4a4f23bcc89ca9dbe12",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "classification": "rendered GBA adaptation",
+      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "source_story_actor": false,
+      "native_counterpart": "Original small blue/cream sailboat",
+      "native_footprint": [
+        8,
+        1,
+        3,
+        3
+      ],
+      "adaptation": "Half-cell rounding of source3D prop anchor onto native16px tile grid"
+    },
+    {
+      "source_header": "MAP_SS_AQUA_OLIVINE_PORT_EXTERIOR",
+      "native_map": "OlivineCity_PortQuay",
+      "chunk": 0,
+      "source_instance": 2,
+      "model": 119,
+      "source_anchor": [
+        23.308944702148438,
+        3.0
+      ],
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0178_P01R0102.bin",
+        "matrix_blob_sha": "a25137d22b2b83e4909fd90cbb51d537865e8812",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/301_P01R0102.json",
+        "events_blob_sha": "bf461d512f991780e110b4a4f23bcc89ca9dbe12",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "classification": "rendered GBA adaptation",
+      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "source_story_actor": false,
+      "native_counterpart": "Original small blue/cream sailboat",
+      "native_footprint": [
+        22,
+        1,
+        3,
+        3
+      ],
+      "adaptation": "Half-cell rounding of source3D prop anchor onto native16px tile grid"
+    },
+    {
+      "source_header": "MAP_SS_AQUA_OLIVINE_PORT_EXTERIOR",
+      "native_map": "OlivineCity_PortQuay",
+      "chunk": 0,
+      "source_instance": 3,
+      "model": 167,
+      "source_anchor": [
+        16.5,
+        13.0
+      ],
+      "source_provenance": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0178_P01R0102.bin",
+        "matrix_blob_sha": "a25137d22b2b83e4909fd90cbb51d537865e8812",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/301_P01R0102.json",
+        "events_blob_sha": "bf461d512f991780e110b4a4f23bcc89ca9dbe12",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "classification": "rendered GBA adaptation",
+      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "source_story_actor": false,
+      "native_counterpart": "Original rear blue-roof port terminal with four visible working doorway segments",
+      "native_footprint": [
+        11,
+        10,
+        12,
+        6
+      ],
+      "native_thresholds": [
+        [
+          16,
+          15
+        ],
+        [
+          17,
+          15
+        ],
+        [
+          11,
+          13
+        ],
+        [
+          11,
+          14
+        ]
+      ],
+      "adaptation": "Repeated native window/roof modules fit the wide facade without stretching actual door leaves; GBA aliases preserve source entrance axes"
+    }
+  ],
+  "non_prop_source_furnishing": [
+    {
+      "area": "Lighthouse1F",
+      "counterpart": "Eight native wall seating cells",
+      "basis": "actual floor raster and blocked source bench footprints"
+    },
+    {
+      "area": "PortTerminal",
+      "counterpart": "Two white tables, aqua south waiting-seat lanes, rear life rings and central blue rug",
+      "basis": "actual source permissions plus inspected terminal raster; model54 separately covers all eight stools"
+    }
+  ],
+  "acceptance": "PENDING final ROM gameplay and owner Delta visual acceptance; source coverage is not a playtest",
+  "classification_counts": {
+    "off-room source model cropped; public cabin adapted": 1,
+    "rendered GBA adaptation": 41
+  }
+}

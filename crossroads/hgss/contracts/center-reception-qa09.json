@@ -1,0 +1,192 @@
+{
+  "source_commit": "3f935d5e8600c5a280b9172b555edb35ca52b6c0",
+  "map": "EcruteakCity_PokemonCenter_1F",
+  "layout_id": "LAYOUT_HGSS_ECRUTEAKCITY_POKEMONCENTER_1F",
+  "before_secondary": "gTileset_PokemonCenter",
+  "after_secondary": "gTileset_HgssCenterReception",
+  "changes": [
+    {
+      "x": 7,
+      "y": 0,
+      "before": 1547,
+      "after": 1768
+    },
+    {
+      "x": 12,
+      "y": 0,
+      "before": 1547,
+      "after": 1768
+    },
+    {
+      "x": 7,
+      "y": 1,
+      "before": 1569,
+      "after": 1769
+    },
+    {
+      "x": 12,
+      "y": 1,
+      "before": 1569,
+      "after": 1769
+    },
+    {
+      "x": 2,
+      "y": 3,
+      "before": 1569,
+      "after": 1790
+    },
+    {
+      "x": 6,
+      "y": 3,
+      "before": 1569,
+      "after": 1790
+    },
+    {
+      "x": 11,
+      "y": 3,
+      "before": 1569,
+      "after": 1790
+    },
+    {
+      "x": 6,
+      "y": 14,
+      "before": 12802,
+      "after": 13034
+    },
+    {
+      "x": 7,
+      "y": 14,
+      "before": 12802,
+      "after": 13035
+    },
+    {
+      "x": 8,
+      "y": 14,
+      "before": 12802,
+      "after": 13036
+    },
+    {
+      "x": 9,
+      "y": 14,
+      "before": 12802,
+      "after": 13037
+    },
+    {
+      "x": 10,
+      "y": 14,
+      "before": 12802,
+      "after": 13038
+    },
+    {
+      "x": 6,
+      "y": 15,
+      "before": 12802,
+      "after": 13039
+    },
+    {
+      "x": 7,
+      "y": 15,
+      "before": 12802,
+      "after": 13040
+    },
+    {
+      "x": 8,
+      "y": 15,
+      "before": 12802,
+      "after": 13041
+    },
+    {
+      "x": 9,
+      "y": 15,
+      "before": 12802,
+      "after": 13042
+    },
+    {
+      "x": 10,
+      "y": 15,
+      "before": 12802,
+      "after": 13043
+    },
+    {
+      "x": 6,
+      "y": 16,
+      "before": 12802,
+      "after": 13044
+    },
+    {
+      "x": 7,
+      "y": 16,
+      "before": 12802,
+      "after": 13045
+    },
+    {
+      "x": 8,
+      "y": 16,
+      "before": 12802,
+      "after": 13046
+    },
+    {
+      "x": 9,
+      "y": 16,
+      "before": 12802,
+      "after": 13047
+    },
+    {
+      "x": 10,
+      "y": 16,
+      "before": 12802,
+      "after": 13048
+    },
+    {
+      "x": 6,
+      "y": 17,
+      "before": 12802,
+      "after": 13049
+    },
+    {
+      "x": 7,
+      "y": 17,
+      "before": 12802,
+      "after": 13050
+    },
+    {
+      "x": 8,
+      "y": 17,
+      "before": 12802,
+      "after": 13051
+    },
+    {
+      "x": 9,
+      "y": 17,
+      "before": 12802,
+      "after": 13052
+    },
+    {
+      "x": 10,
+      "y": 17,
+      "before": 12802,
+      "after": 13053
+    }
+  ],
+  "rationale": "Original green floor emblem centered on canonical door/nurse axis and two blue rear DS service panels. ActualHGSS1Fwarm palette retained. All dimensions/IDs/actors/warps/collision/elevation/behavior and every other rendered pixel stay exact.",
+  "counter_behavior_cells": [
+    {
+      "x": 2,
+      "y": 3,
+      "before_attribute": 4096,
+      "after_attribute": 4224
+    },
+    {
+      "x": 6,
+      "y": 3,
+      "before_attribute": 4096,
+      "after_attribute": 4224
+    },
+    {
+      "x": 11,
+      "y": 3,
+      "before_attribute": 4096,
+      "after_attribute": 4224
+    }
+  ]
+}

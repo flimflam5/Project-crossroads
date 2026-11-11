@@ -42,6 +42,6 @@ for i in range(180):
 assert seen,'Registered rod did not enter Joe fishing state'
 for _ in range(8):key(2);frames(60)
 assert graphics()==0x3f06,'Fishing must return to Joe Surf'
-d['go']('OlivineCity');d['walk']((12,13));assert graphics()==250
+d['go']('OlivineCity');d['walk']((24,36));assert graphics()==250
 print('Registered rod casting Joe pixels, return to Surf, disembark to Joe walking: PASS',flush=True)
 (out/'coverage.json').write_text(json.dumps(dict(actual=['Mach Bike mount/dismount','Acro Bike mount/wheelie/dismount','Surf four directions','fishing while Surfing','disembark'],gear_fixture='Private emulator RAM only',not_normally_activated=['Dive','watering','decorating','VS Seeker']),indent=2)+'\n')

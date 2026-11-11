@@ -7,7 +7,7 @@ Encounter suppression and opt-in survey Surf are disclosed by the shared harness
 """
 import argparse,hashlib,json,runpy,shutil,subprocess,sys
 from pathlib import Path
-p=argparse.ArgumentParser();p.add_argument('--save',required=True);p.add_argument('--library',default='/tmp/johto-bridge.so');p.add_argument('--output',required=True);p.add_argument('--city',choices=['olivine','ecruteak','both'],default='olivine');p.add_argument('--filter',default='');p.add_argument('--special-only',action='store_true');p.add_argument('--doors-only',action='store_true');p.add_argument('--skip-elevator',action='store_true',help='Resume remaining special cases only after four panel/leaf checks are already recorded on the exact same ROM');a=p.parse_args()
+p=argparse.ArgumentParser();p.add_argument('--save',required=True);p.add_argument('--library',default='/tmp/johto-bridge.so');p.add_argument('--output',required=True);p.add_argument('--city',choices=['olivine','ecruteak','both'],default='olivine');p.add_argument('--filter',default='');p.add_argument('--start-label',help='Resume with this named group after completed earlier groups were recorded on the identical ROM');p.add_argument('--special-only',action='store_true');p.add_argument('--doors-only',action='store_true');p.add_argument('--skip-elevator',action='store_true',help='Resume remaining special cases only after four panel/leaf checks are already recorded on the exact same ROM');a=p.parse_args()
 R=Path(__file__).resolve().parents[2];out=Path(a.output);out.mkdir(parents=True,exist_ok=True)
 source_save=Path(a.save).resolve();save_hash=hashlib.sha256(source_save.read_bytes()).hexdigest();trial_save=out/'input-copy.sav'
 assert source_save!=trial_save.resolve(),'Output copy must differ from original source save'
@@ -15,6 +15,8 @@ shutil.copyfile(source_save,trial_save)
 sys.argv=['johto_network_smoke.py','--save',str(trial_save),'--library',a.library,'--output',str(out),'--targets',''];d=runpy.run_path(str(Path(__file__).with_name('johto_network_smoke.py')))
 go,walk,frames,current,pos,lib=[d[k] for k in ['go','walk','frames','current','pos','lib']]
 manifest=json.loads((R/'crossroads/hgss/doorways-qa09.json').read_text());results=[];special=[]
+# Pedestrian doors/return journeys must never be satisfied with Survey Surf.
+walk.__globals__['dry_only']=True;d['route_cache'].clear()
 BUTTON={(0,-1):64,(0,1):128,(-1,0):32,(1,0):16}
 def capture(label,action):
  # runpy returns a dictionary copy; patch the functions' real shared globals.
@@ -30,8 +32,12 @@ def capture(label,action):
 def clip(folder,label):
  subprocess.run(['ffmpeg','-y','-loglevel','error','-framerate','15','-i',str(folder/'%04d.png'),'-pix_fmt','yuv420p',str(out/(label+'.mp4'))],check=True)
 if not a.special_only:
+ started=not a.start_label
  for group in manifest['groups']:
   if a.city!='both' and group['city']!=a.city or a.filter and a.filter not in group['label']:continue
+  if not started:
+   if group['label']!=a.start_label:continue
+   started=True
   for side in ['outside','inside']:
    source=group[side];n=source['map'];other=group['inside' if side=='outside' else 'outside']['map'];first=tuple(source['segments'][0]);entry=next(i for i,e in enumerate(d['maps'][n]['warp_events']) if (e['x'],e['y'])==first);go(n,entry);anchor=tuple(source['anchor']);anchor_route=d['path'](n,anchor);assert anchor_route is not None and all(d['raw'][n][q[1]*d['size'][n][0]+q[0]]>>12==3 for q in anchor_route),('Door anchor lacks a dry path',n,anchor);walk(anchor);state=out/'trial.snapshot';assert lib.emu_state(str(state).encode(),0)
    for i,cell in enumerate(source['segments']):
@@ -93,15 +99,17 @@ if not a.doors_only and a.city in ['olivine','both'] and not a.filter:
    frames(32,128);frames(30);assert current()=='OlivineCity' and pos()==(x,46),('Walked directly off dry pier onto sea',current(),pos())
    # Survey access was explicitly enabled at the actual Harbor Office desk.
    # walk performs native A/YES Surf interaction, never a player-state write.
+   walk.__globals__['dry_only']=False
    walk((x,47));assert d['read']('gPlayerAvatar',1)&8 and pos()==(x,47),('Real sea under roof lost native Surf access',current(),pos())
    frames(48,128);frames(40);assert current()=='OlivineCity' and pos()==(x,47),('Surfed through port solid roof/body',current(),pos())
    walk((x,46));assert not d['read']('gPlayerAvatar',1)&8 and pos()==(x,46),'Native Surf disembark did not restore walking'
+   walk.__globals__['dry_only']=True
   capture(f'port-north-body-column-{x}',north_body);lib.emu_image(str(out/(f'port-north-body-column-{x}.png')).encode());special.append(dict(action='Port north sea/overhang/body collision',column=x,surfable_overhang=[x,47],blocked_body=[x,48],normal_surf_and_disembark=True,result='PASS'))
  # An open door is not dependable if its outdoor arrival is a trapped apron.
  # Walk away to the main promenade, return around the outside of the facade,
  # then enter the other leaf; never cross an active door to fake the detour.
  def port_return():
-  d['warp'](0);assert current()=='OlivineCity';walk((24,45));frames(60);walk((24,53));d['warp'](15);assert current()=='OlivineCity_PortTerminal'
+  before=walk.__globals__['water_entries'];d['warp'](0);assert current()=='OlivineCity';walk((24,45));frames(60);walk((24,53));d['warp'](15);assert current()=='OlivineCity_PortTerminal';assert walk.__globals__['water_entries']==before,'Pedestrian boardwalk journey used Surf'
  go('OlivineCity_PortTerminal',0);capture('port-forecourt-boardwalk-return',port_return);special.append(dict(action='port exit, dry boardwalk to main promenade and right-leaf return',result='PASS'))
  # The lighthouse balcony overlooks sea; it is not a shore Surf entrance.
  # Try the native A interaction after pushing at each formerly open edge.

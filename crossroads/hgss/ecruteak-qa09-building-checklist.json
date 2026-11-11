@@ -6,7 +6,7 @@
       "map": "EcruteakCity",
       "source_header": "MAP_ECRUTEAK",
       "source_provenance": {},
-      "reference_geometry": "Existing source-derived native projection verified by dedicated validators; final QA09 rerun required",
+      "reference_geometry": "Existing source-derived native projection verified by dedicated validators; final QA09 source and controller checks pass",
       "raster_reference": [
         {
           "cache": "/workspace/scratch/hgss-reference/Ecruteak_City_HGSS.png",
@@ -16,7 +16,7 @@
       ],
       "native_B2_frame_inspected": true,
       "native_B2_controller_roundtrips": "PASS, historical exact B2 evidence in qa/qa08/ecruteak-b2",
-      "final_delivery_controller_tests": "PENDING root final build tests",
+      "final_delivery_controller_tests": "PENDING V8 exact-ROM rerun",
       "owner_visual_acceptance": "PENDING",
       "gba_adaptations": [
         "DS perspective/height projected into stable64x64 GBA city; original accepted facade art retained",
@@ -26,7 +26,10 @@
       ],
       "unfinished": [],
       "native_BUILD5_frame_inspected": true,
-      "BUILD5_controller_roundtrips": "PASS on c2f30ef04d3890e9ac947ee1f6f28a04b7e6e2d08c1a7f5e77a68fc7c697f658;27maps/308transitions/73pairs/296warptrials"
+      "BUILD5_controller_roundtrips": "PASS on c2f30ef04d3890e9ac947ee1f6f28a04b7e6e2d08c1a7f5e77a68fc7c697f658;27maps/308transitions/73pairs/296warptrials",
+      "native_BUILD7_frame_inspected": true,
+      "native_BUILD7_frame": "build/qa09-ecruteak-tour-v7/EcruteakCity.png",
+      "V7_controller_tests": "PASS on 0734501b031d05156a28e685dc1c2748153cb065222bd67b0d2e7cea47fefbca; exact-ROM 27-map tour and applicable detailed/furniture/ground checks"
     },
     {
       "map": "EcruteakCity_BurnedTower",
@@ -38,7 +41,7 @@
         "events_blob_sha": "7a51dbca1dd77c7beff42225bce21b67f3229223",
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
-      "reference_geometry": "Existing source-derived native projection verified by dedicated validators; final QA09 rerun required",
+      "reference_geometry": "Existing source-derived native projection verified by dedicated validators; final QA09 source and controller checks pass",
       "raster_reference": [
         {
           "cache": "/workspace/scratch/hgss-reference/Burned_Tower_1F_HGSS.png",
@@ -48,7 +51,7 @@
       ],
       "native_B2_frame_inspected": true,
       "native_B2_controller_roundtrips": "PASS, historical exact B2 evidence in qa/qa08/ecruteak-b2",
-      "final_delivery_controller_tests": "PENDING root final build tests",
+      "final_delivery_controller_tests": "PENDING V8 exact-ROM rerun",
       "owner_visual_acceptance": "PENDING",
       "gba_adaptations": [
         "Original GBA-compatible temple art, no HGSS graphics copied",
@@ -57,7 +60,10 @@
       ],
       "unfinished": [],
       "native_BUILD5_frame_inspected": true,
-      "BUILD5_controller_roundtrips": "PASS on c2f30ef04d3890e9ac947ee1f6f28a04b7e6e2d08c1a7f5e77a68fc7c697f658;27maps/308transitions/73pairs/296warptrials"
+      "BUILD5_controller_roundtrips": "PASS on c2f30ef04d3890e9ac947ee1f6f28a04b7e6e2d08c1a7f5e77a68fc7c697f658;27maps/308transitions/73pairs/296warptrials",
+      "native_BUILD7_frame_inspected": true,
+      "native_BUILD7_frame": "build/qa09-ecruteak-tour-v7/EcruteakCity_BurnedTower.png",
+      "V7_controller_tests": "PASS on 0734501b031d05156a28e685dc1c2748153cb065222bd67b0d2e7cea47fefbca; exact-ROM 27-map tour and applicable detailed/furniture/ground checks"
     },
     {
       "map": "EcruteakCity_BellTower",
@@ -69,7 +75,7 @@
         "events_blob_sha": "60d939ff7e0c4094d9f4d6a4918404790a54d60b",
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
-      "reference_geometry": "Existing source-derived native projection verified by dedicated validators; final QA09 rerun required",
+      "reference_geometry": "Existing source-derived native projection verified by dedicated validators; final QA09 source and controller checks pass",
       "raster_reference": [
         {
           "cache": "/workspace/scratch/hgss-reference/Bell_Tower_1F_HGSS.png",
@@ -79,7 +85,7 @@
       ],
       "native_B2_frame_inspected": true,
       "native_B2_controller_roundtrips": "PASS, historical exact B2 evidence in qa/qa08/ecruteak-b2",
-      "final_delivery_controller_tests": "PENDING root final build tests",
+      "final_delivery_controller_tests": "PENDING V8 exact-ROM rerun",
       "owner_visual_acceptance": "PENDING",
       "gba_adaptations": [
         "Original GBA-compatible temple art, no HGSS graphics copied",
@@ -88,7 +94,10 @@
       ],
       "unfinished": [],
       "native_BUILD5_frame_inspected": true,
-      "BUILD5_controller_roundtrips": "PASS on c2f30ef04d3890e9ac947ee1f6f28a04b7e6e2d08c1a7f5e77a68fc7c697f658;27maps/308transitions/73pairs/296warptrials"
+      "BUILD5_controller_roundtrips": "PASS on c2f30ef04d3890e9ac947ee1f6f28a04b7e6e2d08c1a7f5e77a68fc7c697f658;27maps/308transitions/73pairs/296warptrials",
+      "native_BUILD7_frame_inspected": true,
+      "native_BUILD7_frame": "build/qa09-ecruteak-tour-v7/EcruteakCity_BellTower.png",
+      "V7_controller_tests": "PASS on 0734501b031d05156a28e685dc1c2748153cb065222bd67b0d2e7cea47fefbca; exact-ROM 27-map tour and applicable detailed/furniture/ground checks"
     },
     {
       "map": "EcruteakCity_Residence",
@@ -100,7 +109,7 @@
         "events_blob_sha": "b16449398a38d8043722c1d3e7789ff0e88e95fc",
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
-      "reference_geometry": "Existing source-derived native projection verified by dedicated validators; final QA09 rerun required",
+      "reference_geometry": "Existing source-derived native projection verified by dedicated validators; final QA09 source and controller checks pass",
       "raster_reference": [
         {
           "cache": "/workspace/scratch/hgss-reference/Common_Ecruteak_house_matrix0066_HGSS.jpg",
@@ -110,7 +119,7 @@
       ],
       "native_B2_frame_inspected": true,
       "native_B2_controller_roundtrips": "PASS, historical exact B2 evidence in qa/qa08/ecruteak-b2",
-      "final_delivery_controller_tests": "PENDING root final build tests",
+      "final_delivery_controller_tests": "PENDING V8 exact-ROM rerun",
       "owner_visual_acceptance": "PENDING",
       "gba_adaptations": [
         "GBA furniture/flat room instead of DS models",
@@ -120,7 +129,10 @@
       "unfinished": [],
       "qa09_correction": "Replace wrong TV/bookcase kitchen substitute with source stove/sink, centered rear window and real rear-right bookcase",
       "native_BUILD5_frame_inspected": true,
-      "BUILD5_controller_roundtrips": "PASS on c2f30ef04d3890e9ac947ee1f6f28a04b7e6e2d08c1a7f5e77a68fc7c697f658;27maps/308transitions/73pairs/296warptrials"
+      "BUILD5_controller_roundtrips": "PASS on c2f30ef04d3890e9ac947ee1f6f28a04b7e6e2d08c1a7f5e77a68fc7c697f658;27maps/308transitions/73pairs/296warptrials",
+      "native_BUILD7_frame_inspected": true,
+      "native_BUILD7_frame": "build/qa09-ecruteak-tour-v7/EcruteakCity_Residence.png",
+      "V7_controller_tests": "PASS on 0734501b031d05156a28e685dc1c2748153cb065222bd67b0d2e7cea47fefbca; exact-ROM 27-map tour and applicable detailed/furniture/ground checks"
     },
     {
       "map": "EcruteakCity_DanceTheater",
@@ -132,11 +144,22 @@
         "events_blob_sha": "0b2030a8cad9289157b09513a21ad86289984f47",
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
-      "reference_geometry": "Existing source-derived native projection verified by dedicated validators; final QA09 rerun required",
-      "raster_reference": [],
+      "reference_geometry": "Existing source-derived native projection verified by dedicated validators; final QA09 source and controller checks pass",
+      "raster_reference": [
+        {
+          "cache": "/workspace/scratch/hgss-reference/Theater_actual_HGSS_Pokebip.png",
+          "sha256": "1ca25fe43d58c758da64a538373d2a489bf604c616e4422018901f71033bfa9d",
+          "visually_inspected": true
+        },
+        {
+          "cache": "/workspace/scratch/hgss-reference/Theater_actual_HGSS_Pokepedia.png",
+          "sha256": "deecbfa87bcb6437a3365e1a51362926163cd06b9d8126f59a48b4f19500dbc7",
+          "visually_inspected": true
+        }
+      ],
       "native_B2_frame_inspected": true,
       "native_B2_controller_roundtrips": "PASS, historical exact B2 evidence in qa/qa08/ecruteak-b2",
-      "final_delivery_controller_tests": "PENDING root final build tests",
+      "final_delivery_controller_tests": "PENDING V8 exact-ROM rerun",
       "owner_visual_acceptance": "PENDING",
       "gba_adaptations": [
         "GBA furniture/flat room instead of DS models",
@@ -144,11 +167,14 @@
         "Legacy paired exit retained"
       ],
       "unfinished": [
-        "Separate complete HGSS raster not acquired; source matrix/props/warps/terrain facts are available"
+        "Full audience-area raster still unavailable; seating/source geometry is independently pinned. Fresh V8 gameplay and owner visual acceptance pending."
       ],
-      "qa09_correction": "Exactly13 native one-cell bench props; remove duplicate lower rows and restore source front aisle",
+      "qa09_correction": "Exactly13 source seats; original gold crest/red lantern/timber stage/cream rope from actual stage captures; private pool preserves all other cell pixels and physics",
       "native_BUILD5_frame_inspected": true,
-      "BUILD5_controller_roundtrips": "PASS on c2f30ef04d3890e9ac947ee1f6f28a04b7e6e2d08c1a7f5e77a68fc7c697f658;27maps/308transitions/73pairs/296warptrials"
+      "BUILD5_controller_roundtrips": "PASS on c2f30ef04d3890e9ac947ee1f6f28a04b7e6e2d08c1a7f5e77a68fc7c697f658;27maps/308transitions/73pairs/296warptrials",
+      "native_BUILD7_frame_inspected": true,
+      "native_BUILD7_frame": "build/qa09-ecruteak-tour-v7/EcruteakCity_DanceTheater.png",
+      "V7_controller_tests": "PASS on 0734501b031d05156a28e685dc1c2748153cb065222bd67b0d2e7cea47fefbca; exact-ROM 27-map tour and applicable detailed/furniture/ground checks"
     },
     {
       "map": "EcruteakCity_Gym",
@@ -160,7 +186,7 @@
         "events_blob_sha": "5cac2d015c6848cc83dca86c5d477224eae860cc",
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
-      "reference_geometry": "Existing source-derived native projection verified by dedicated validators; final QA09 rerun required",
+      "reference_geometry": "Existing source-derived native projection verified by dedicated validators; final QA09 source and controller checks pass",
       "raster_reference": [
         {
           "cache": "/workspace/scratch/hgss-reference/Ecruteak_Gym_HGSS.png",
@@ -170,7 +196,7 @@
       ],
       "native_B2_frame_inspected": true,
       "native_B2_controller_roundtrips": "PASS, historical exact B2 evidence in qa/qa08/ecruteak-b2",
-      "final_delivery_controller_tests": "PENDING root final build tests",
+      "final_delivery_controller_tests": "PENDING V8 exact-ROM rerun",
       "owner_visual_acceptance": "PENDING",
       "gba_adaptations": [
         "Tall DS room split at source chunk seam into existing two GBA map IDs",
@@ -179,7 +205,10 @@
       ],
       "unfinished": [],
       "native_BUILD5_frame_inspected": true,
-      "BUILD5_controller_roundtrips": "PASS on c2f30ef04d3890e9ac947ee1f6f28a04b7e6e2d08c1a7f5e77a68fc7c697f658;27maps/308transitions/73pairs/296warptrials"
+      "BUILD5_controller_roundtrips": "PASS on c2f30ef04d3890e9ac947ee1f6f28a04b7e6e2d08c1a7f5e77a68fc7c697f658;27maps/308transitions/73pairs/296warptrials",
+      "native_BUILD7_frame_inspected": true,
+      "native_BUILD7_frame": "build/qa09-ecruteak-tour-v7/EcruteakCity_Gym.png",
+      "V7_controller_tests": "PASS on 0734501b031d05156a28e685dc1c2748153cb065222bd67b0d2e7cea47fefbca; exact-ROM 27-map tour and applicable detailed/furniture/ground checks"
     },
     {
       "map": "EcruteakCity_PokemonCenter_1F",
@@ -191,7 +220,7 @@
         "events_blob_sha": "9d6657c7b305f945b5841189449fd5b29977fff5",
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
-      "reference_geometry": "Existing source-derived native projection verified by dedicated validators; final QA09 rerun required",
+      "reference_geometry": "Existing source-derived native projection verified by dedicated validators; final QA09 source and controller checks pass",
       "raster_reference": [
         {
           "cache": "/workspace/scratch/hgss-reference/Ecruteak_common_Center_inside_HGSS.png",
@@ -201,17 +230,22 @@
       ],
       "native_B2_frame_inspected": true,
       "native_B2_controller_roundtrips": "PASS, historical exact B2 evidence in qa/qa08/ecruteak-b2",
-      "final_delivery_controller_tests": "PENDING root final build tests",
+      "final_delivery_controller_tests": "PENDING V8 exact-ROM rerun",
       "owner_visual_acceptance": "PENDING",
       "gba_adaptations": [
         "Native GBA heal/counter/PC tiles at HGSS service positions",
         "DS elevated rear reception flattened; unavailable DS online entrance is a labeled service desk, not a broken warp",
         "Existing nurse/heal ID/local ID preserved; shared Olivine layout unchanged"
       ],
-      "unfinished": [],
-      "qa09_correction": "Restore source3 model23 potted plants at15,4 and14/15,15",
+      "unfinished": [
+        "Fresh V8 native emblem pixels/service/save checks and owner visual acceptance pending."
+      ],
+      "qa09_correction": "Actual warm reference palette retained; original greenfloor emblem/two rear blue panels in private pool; allotherpixelsandphysics unchanged",
       "native_BUILD5_frame_inspected": true,
-      "BUILD5_controller_roundtrips": "PASS on c2f30ef04d3890e9ac947ee1f6f28a04b7e6e2d08c1a7f5e77a68fc7c697f658;27maps/308transitions/73pairs/296warptrials"
+      "BUILD5_controller_roundtrips": "PASS on c2f30ef04d3890e9ac947ee1f6f28a04b7e6e2d08c1a7f5e77a68fc7c697f658;27maps/308transitions/73pairs/296warptrials",
+      "native_BUILD7_frame_inspected": true,
+      "native_BUILD7_frame": "build/qa09-ecruteak-tour-v7/EcruteakCity_PokemonCenter_1F.png",
+      "V7_controller_tests": "PASS on 0734501b031d05156a28e685dc1c2748153cb065222bd67b0d2e7cea47fefbca; exact-ROM 27-map tour and applicable detailed/furniture/ground checks"
     },
     {
       "map": "EcruteakCity_Mart",
@@ -223,7 +257,7 @@
         "events_blob_sha": "b67d9ef439e710849ef6d07f65fc62d97ad437aa",
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
-      "reference_geometry": "Existing source-derived native projection verified by dedicated validators; final QA09 rerun required",
+      "reference_geometry": "Existing source-derived native projection verified by dedicated validators; final QA09 source and controller checks pass",
       "raster_reference": [
         {
           "cache": "/workspace/scratch/hgss-reference/Common_Mart_interior_HGSS.png",
@@ -233,15 +267,21 @@
       ],
       "native_B2_frame_inspected": true,
       "native_B2_controller_roundtrips": "PASS, historical exact B2 evidence in qa/qa08/ecruteak-b2",
-      "final_delivery_controller_tests": "PENDING root final build tests",
+      "final_delivery_controller_tests": "PENDING V8 exact-ROM rerun",
       "owner_visual_acceptance": "PENDING",
       "gba_adaptations": [
         "Native GBA shelf/counter tiles replace DS furniture; accepted shop inventory unchanged",
         "DS story delivery actors omitted"
       ],
-      "unfinished": [],
+      "unfinished": [
+        "Fresh V8 service/furniture checks and owner visual acceptance pending."
+      ],
       "native_BUILD5_frame_inspected": true,
-      "BUILD5_controller_roundtrips": "PASS on c2f30ef04d3890e9ac947ee1f6f28a04b7e6e2d08c1a7f5e77a68fc7c697f658;27maps/308transitions/73pairs/296warptrials"
+      "BUILD5_controller_roundtrips": "PASS on c2f30ef04d3890e9ac947ee1f6f28a04b7e6e2d08c1a7f5e77a68fc7c697f658;27maps/308transitions/73pairs/296warptrials",
+      "native_BUILD7_frame_inspected": true,
+      "native_BUILD7_frame": "build/qa09-ecruteak-tour-v7/EcruteakCity_Mart.png",
+      "V7_controller_tests": "PASS on 0734501b031d05156a28e685dc1c2748153cb065222bd67b0d2e7cea47fefbca; exact-ROM 27-map tour and applicable detailed/furniture/ground checks",
+      "qa09_correction": "Source3plants,southern glass display/stools,rightwallrack inprivateShop pool; source-instance coverage and exact migrations"
     },
     {
       "map": "EcruteakCity_BellTower_2F",
@@ -253,7 +293,7 @@
         "events_blob_sha": "21d636fa7a8e0d4bfaf955ca04b58d7860551214",
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
-      "reference_geometry": "Existing source-derived native projection verified by dedicated validators; final QA09 rerun required",
+      "reference_geometry": "Existing source-derived native projection verified by dedicated validators; final QA09 source and controller checks pass",
       "raster_reference": [
         {
           "cache": "/workspace/scratch/hgss-reference/Bell_Tower_2F_HGSS.png",
@@ -263,7 +303,7 @@
       ],
       "native_B2_frame_inspected": true,
       "native_B2_controller_roundtrips": "PASS, historical exact B2 evidence in qa/qa08/ecruteak-b2",
-      "final_delivery_controller_tests": "PENDING root final build tests",
+      "final_delivery_controller_tests": "PENDING V8 exact-ROM rerun",
       "owner_visual_acceptance": "PENDING",
       "gba_adaptations": [
         "Original GBA-compatible temple art, no HGSS graphics copied",
@@ -272,7 +312,10 @@
       ],
       "unfinished": [],
       "native_BUILD5_frame_inspected": true,
-      "BUILD5_controller_roundtrips": "PASS on c2f30ef04d3890e9ac947ee1f6f28a04b7e6e2d08c1a7f5e77a68fc7c697f658;27maps/308transitions/73pairs/296warptrials"
+      "BUILD5_controller_roundtrips": "PASS on c2f30ef04d3890e9ac947ee1f6f28a04b7e6e2d08c1a7f5e77a68fc7c697f658;27maps/308transitions/73pairs/296warptrials",
+      "native_BUILD7_frame_inspected": true,
+      "native_BUILD7_frame": "build/qa09-ecruteak-tour-v7/EcruteakCity_BellTower_2F.png",
+      "V7_controller_tests": "PASS on 0734501b031d05156a28e685dc1c2748153cb065222bd67b0d2e7cea47fefbca; exact-ROM 27-map tour and applicable detailed/furniture/ground checks"
     },
     {
       "map": "EcruteakCity_BellTower_3F",
@@ -284,7 +327,7 @@
         "events_blob_sha": "7a73ea73e69dc005dca45c3e7bde568c1dbca98c",
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
-      "reference_geometry": "Existing source-derived native projection verified by dedicated validators; final QA09 rerun required",
+      "reference_geometry": "Existing source-derived native projection verified by dedicated validators; final QA09 source and controller checks pass",
       "raster_reference": [
         {
           "cache": "/workspace/scratch/hgss-reference/Bell_Tower_3F_HGSS.png",
@@ -294,7 +337,7 @@
       ],
       "native_B2_frame_inspected": true,
       "native_B2_controller_roundtrips": "PASS, historical exact B2 evidence in qa/qa08/ecruteak-b2",
-      "final_delivery_controller_tests": "PENDING root final build tests",
+      "final_delivery_controller_tests": "PENDING V8 exact-ROM rerun",
       "owner_visual_acceptance": "PENDING",
       "gba_adaptations": [
         "Original GBA-compatible temple art, no HGSS graphics copied",
@@ -303,7 +346,10 @@
       ],
       "unfinished": [],
       "native_BUILD5_frame_inspected": true,
-      "BUILD5_controller_roundtrips": "PASS on c2f30ef04d3890e9ac947ee1f6f28a04b7e6e2d08c1a7f5e77a68fc7c697f658;27maps/308transitions/73pairs/296warptrials"
+      "BUILD5_controller_roundtrips": "PASS on c2f30ef04d3890e9ac947ee1f6f28a04b7e6e2d08c1a7f5e77a68fc7c697f658;27maps/308transitions/73pairs/296warptrials",
+      "native_BUILD7_frame_inspected": true,
+      "native_BUILD7_frame": "build/qa09-ecruteak-tour-v7/EcruteakCity_BellTower_3F.png",
+      "V7_controller_tests": "PASS on 0734501b031d05156a28e685dc1c2748153cb065222bd67b0d2e7cea47fefbca; exact-ROM 27-map tour and applicable detailed/furniture/ground checks"
     },
     {
       "map": "EcruteakCity_BellTower_4F",
@@ -315,7 +361,7 @@
         "events_blob_sha": "0951bccf59eccc1da5bf045f5cb73dd96d0cbdf1",
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
-      "reference_geometry": "Existing source-derived native projection verified by dedicated validators; final QA09 rerun required",
+      "reference_geometry": "Existing source-derived native projection verified by dedicated validators; final QA09 source and controller checks pass",
       "raster_reference": [
         {
           "cache": "/workspace/scratch/hgss-reference/Bell_Tower_4F_HGSS.png",
@@ -325,7 +371,7 @@
       ],
       "native_B2_frame_inspected": true,
       "native_B2_controller_roundtrips": "PASS, historical exact B2 evidence in qa/qa08/ecruteak-b2",
-      "final_delivery_controller_tests": "PENDING root final build tests",
+      "final_delivery_controller_tests": "PENDING V8 exact-ROM rerun",
       "owner_visual_acceptance": "PENDING",
       "gba_adaptations": [
         "Original GBA-compatible temple art, no HGSS graphics copied",
@@ -334,7 +380,10 @@
       ],
       "unfinished": [],
       "native_BUILD5_frame_inspected": true,
-      "BUILD5_controller_roundtrips": "PASS on c2f30ef04d3890e9ac947ee1f6f28a04b7e6e2d08c1a7f5e77a68fc7c697f658;27maps/308transitions/73pairs/296warptrials"
+      "BUILD5_controller_roundtrips": "PASS on c2f30ef04d3890e9ac947ee1f6f28a04b7e6e2d08c1a7f5e77a68fc7c697f658;27maps/308transitions/73pairs/296warptrials",
+      "native_BUILD7_frame_inspected": true,
+      "native_BUILD7_frame": "build/qa09-ecruteak-tour-v7/EcruteakCity_BellTower_4F.png",
+      "V7_controller_tests": "PASS on 0734501b031d05156a28e685dc1c2748153cb065222bd67b0d2e7cea47fefbca; exact-ROM 27-map tour and applicable detailed/furniture/ground checks"
     },
     {
       "map": "EcruteakCity_BellTower_5F",
@@ -346,7 +395,7 @@
         "events_blob_sha": "9d92599e66fb909108e11db1828fbb89a703cca7",
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
-      "reference_geometry": "Existing source-derived native projection verified by dedicated validators; final QA09 rerun required",
+      "reference_geometry": "Existing source-derived native projection verified by dedicated validators; final QA09 source and controller checks pass",
       "raster_reference": [
         {
           "cache": "/workspace/scratch/hgss-reference/Bell_Tower_5F_HGSS.png",
@@ -356,7 +405,7 @@
       ],
       "native_B2_frame_inspected": true,
       "native_B2_controller_roundtrips": "PASS, historical exact B2 evidence in qa/qa08/ecruteak-b2",
-      "final_delivery_controller_tests": "PENDING root final build tests",
+      "final_delivery_controller_tests": "PENDING V8 exact-ROM rerun",
       "owner_visual_acceptance": "PENDING",
       "gba_adaptations": [
         "Original GBA-compatible temple art, no HGSS graphics copied",
@@ -365,7 +414,10 @@
       ],
       "unfinished": [],
       "native_BUILD5_frame_inspected": true,
-      "BUILD5_controller_roundtrips": "PASS on c2f30ef04d3890e9ac947ee1f6f28a04b7e6e2d08c1a7f5e77a68fc7c697f658;27maps/308transitions/73pairs/296warptrials"
+      "BUILD5_controller_roundtrips": "PASS on c2f30ef04d3890e9ac947ee1f6f28a04b7e6e2d08c1a7f5e77a68fc7c697f658;27maps/308transitions/73pairs/296warptrials",
+      "native_BUILD7_frame_inspected": true,
+      "native_BUILD7_frame": "build/qa09-ecruteak-tour-v7/EcruteakCity_BellTower_5F.png",
+      "V7_controller_tests": "PASS on 0734501b031d05156a28e685dc1c2748153cb065222bd67b0d2e7cea47fefbca; exact-ROM 27-map tour and applicable detailed/furniture/ground checks"
     },
     {
       "map": "EcruteakCity_BellTower_6F",
@@ -377,7 +429,7 @@
         "events_blob_sha": "1b9c09cf83c9c854a22191208898491defba768e",
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
-      "reference_geometry": "Existing source-derived native projection verified by dedicated validators; final QA09 rerun required",
+      "reference_geometry": "Existing source-derived native projection verified by dedicated validators; final QA09 source and controller checks pass",
       "raster_reference": [
         {
           "cache": "/workspace/scratch/hgss-reference/Bell_Tower_6F_HGSS.png",
@@ -387,7 +439,7 @@
       ],
       "native_B2_frame_inspected": true,
       "native_B2_controller_roundtrips": "PASS, historical exact B2 evidence in qa/qa08/ecruteak-b2",
-      "final_delivery_controller_tests": "PENDING root final build tests",
+      "final_delivery_controller_tests": "PENDING V8 exact-ROM rerun",
       "owner_visual_acceptance": "PENDING",
       "gba_adaptations": [
         "Original GBA-compatible temple art, no HGSS graphics copied",
@@ -396,7 +448,10 @@
       ],
       "unfinished": [],
       "native_BUILD5_frame_inspected": true,
-      "BUILD5_controller_roundtrips": "PASS on c2f30ef04d3890e9ac947ee1f6f28a04b7e6e2d08c1a7f5e77a68fc7c697f658;27maps/308transitions/73pairs/296warptrials"
+      "BUILD5_controller_roundtrips": "PASS on c2f30ef04d3890e9ac947ee1f6f28a04b7e6e2d08c1a7f5e77a68fc7c697f658;27maps/308transitions/73pairs/296warptrials",
+      "native_BUILD7_frame_inspected": true,
+      "native_BUILD7_frame": "build/qa09-ecruteak-tour-v7/EcruteakCity_BellTower_6F.png",
+      "V7_controller_tests": "PASS on 0734501b031d05156a28e685dc1c2748153cb065222bd67b0d2e7cea47fefbca; exact-ROM 27-map tour and applicable detailed/furniture/ground checks"
     },
     {
       "map": "EcruteakCity_BellTower_7F",
@@ -408,7 +463,7 @@
         "events_blob_sha": "2c09c71a6b9c13225ca004957c4055326e0b8818",
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
-      "reference_geometry": "Existing source-derived native projection verified by dedicated validators; final QA09 rerun required",
+      "reference_geometry": "Existing source-derived native projection verified by dedicated validators; final QA09 source and controller checks pass",
       "raster_reference": [
         {
           "cache": "/workspace/scratch/hgss-reference/Bell_Tower_7F_HGSS.png",
@@ -418,7 +473,7 @@
       ],
       "native_B2_frame_inspected": true,
       "native_B2_controller_roundtrips": "PASS, historical exact B2 evidence in qa/qa08/ecruteak-b2",
-      "final_delivery_controller_tests": "PENDING root final build tests",
+      "final_delivery_controller_tests": "PENDING V8 exact-ROM rerun",
       "owner_visual_acceptance": "PENDING",
       "gba_adaptations": [
         "Original GBA-compatible temple art, no HGSS graphics copied",
@@ -427,7 +482,10 @@
       ],
       "unfinished": [],
       "native_BUILD5_frame_inspected": true,
-      "BUILD5_controller_roundtrips": "PASS on c2f30ef04d3890e9ac947ee1f6f28a04b7e6e2d08c1a7f5e77a68fc7c697f658;27maps/308transitions/73pairs/296warptrials"
+      "BUILD5_controller_roundtrips": "PASS on c2f30ef04d3890e9ac947ee1f6f28a04b7e6e2d08c1a7f5e77a68fc7c697f658;27maps/308transitions/73pairs/296warptrials",
+      "native_BUILD7_frame_inspected": true,
+      "native_BUILD7_frame": "build/qa09-ecruteak-tour-v7/EcruteakCity_BellTower_7F.png",
+      "V7_controller_tests": "PASS on 0734501b031d05156a28e685dc1c2748153cb065222bd67b0d2e7cea47fefbca; exact-ROM 27-map tour and applicable detailed/furniture/ground checks"
     },
     {
       "map": "EcruteakCity_BellTower_8F",
@@ -439,7 +497,7 @@
         "events_blob_sha": "80785f113ab1956f4f403477c962edc050d193b7",
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
-      "reference_geometry": "Existing source-derived native projection verified by dedicated validators; final QA09 rerun required",
+      "reference_geometry": "Existing source-derived native projection verified by dedicated validators; final QA09 source and controller checks pass",
       "raster_reference": [
         {
           "cache": "/workspace/scratch/hgss-reference/Bell_Tower_8F_HGSS.png",
@@ -449,7 +507,7 @@
       ],
       "native_B2_frame_inspected": true,
       "native_B2_controller_roundtrips": "PASS, historical exact B2 evidence in qa/qa08/ecruteak-b2",
-      "final_delivery_controller_tests": "PENDING root final build tests",
+      "final_delivery_controller_tests": "PENDING V8 exact-ROM rerun",
       "owner_visual_acceptance": "PENDING",
       "gba_adaptations": [
         "Original GBA-compatible temple art, no HGSS graphics copied",
@@ -458,7 +516,10 @@
       ],
       "unfinished": [],
       "native_BUILD5_frame_inspected": true,
-      "BUILD5_controller_roundtrips": "PASS on c2f30ef04d3890e9ac947ee1f6f28a04b7e6e2d08c1a7f5e77a68fc7c697f658;27maps/308transitions/73pairs/296warptrials"
+      "BUILD5_controller_roundtrips": "PASS on c2f30ef04d3890e9ac947ee1f6f28a04b7e6e2d08c1a7f5e77a68fc7c697f658;27maps/308transitions/73pairs/296warptrials",
+      "native_BUILD7_frame_inspected": true,
+      "native_BUILD7_frame": "build/qa09-ecruteak-tour-v7/EcruteakCity_BellTower_8F.png",
+      "V7_controller_tests": "PASS on 0734501b031d05156a28e685dc1c2748153cb065222bd67b0d2e7cea47fefbca; exact-ROM 27-map tour and applicable detailed/furniture/ground checks"
     },
     {
       "map": "EcruteakCity_BellTower_9F",
@@ -470,7 +531,7 @@
         "events_blob_sha": "6e8edfbaed1d61a95f8796322286e278a34e6dda",
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
-      "reference_geometry": "Existing source-derived native projection verified by dedicated validators; final QA09 rerun required",
+      "reference_geometry": "Existing source-derived native projection verified by dedicated validators; final QA09 source and controller checks pass",
       "raster_reference": [
         {
           "cache": "/workspace/scratch/hgss-reference/Bell_Tower_9F_HGSS.png",
@@ -480,7 +541,7 @@
       ],
       "native_B2_frame_inspected": true,
       "native_B2_controller_roundtrips": "PASS, historical exact B2 evidence in qa/qa08/ecruteak-b2",
-      "final_delivery_controller_tests": "PENDING root final build tests",
+      "final_delivery_controller_tests": "PENDING V8 exact-ROM rerun",
       "owner_visual_acceptance": "PENDING",
       "gba_adaptations": [
         "Original GBA-compatible temple art, no HGSS graphics copied",
@@ -489,7 +550,10 @@
       ],
       "unfinished": [],
       "native_BUILD5_frame_inspected": true,
-      "BUILD5_controller_roundtrips": "PASS on c2f30ef04d3890e9ac947ee1f6f28a04b7e6e2d08c1a7f5e77a68fc7c697f658;27maps/308transitions/73pairs/296warptrials"
+      "BUILD5_controller_roundtrips": "PASS on c2f30ef04d3890e9ac947ee1f6f28a04b7e6e2d08c1a7f5e77a68fc7c697f658;27maps/308transitions/73pairs/296warptrials",
+      "native_BUILD7_frame_inspected": true,
+      "native_BUILD7_frame": "build/qa09-ecruteak-tour-v7/EcruteakCity_BellTower_9F.png",
+      "V7_controller_tests": "PASS on 0734501b031d05156a28e685dc1c2748153cb065222bd67b0d2e7cea47fefbca; exact-ROM 27-map tour and applicable detailed/furniture/ground checks"
     },
     {
       "map": "EcruteakCity_BurnedTower_B1F",
@@ -501,7 +565,7 @@
         "events_blob_sha": "150ac6c065b07b37e792c938509c13d80a9acf71",
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
-      "reference_geometry": "Existing source-derived native projection verified by dedicated validators; final QA09 rerun required",
+      "reference_geometry": "Existing source-derived native projection verified by dedicated validators; final QA09 source and controller checks pass",
       "raster_reference": [
         {
           "cache": "/workspace/scratch/hgss-reference/Burned_Tower_B1F_HGSS.png",
@@ -511,7 +575,7 @@
       ],
       "native_B2_frame_inspected": true,
       "native_B2_controller_roundtrips": "PASS, historical exact B2 evidence in qa/qa08/ecruteak-b2",
-      "final_delivery_controller_tests": "PENDING root final build tests",
+      "final_delivery_controller_tests": "PENDING V8 exact-ROM rerun",
       "owner_visual_acceptance": "PENDING",
       "gba_adaptations": [
         "Original GBA-compatible temple art, no HGSS graphics copied",
@@ -520,7 +584,10 @@
       ],
       "unfinished": [],
       "native_BUILD5_frame_inspected": true,
-      "BUILD5_controller_roundtrips": "PASS on c2f30ef04d3890e9ac947ee1f6f28a04b7e6e2d08c1a7f5e77a68fc7c697f658;27maps/308transitions/73pairs/296warptrials"
+      "BUILD5_controller_roundtrips": "PASS on c2f30ef04d3890e9ac947ee1f6f28a04b7e6e2d08c1a7f5e77a68fc7c697f658;27maps/308transitions/73pairs/296warptrials",
+      "native_BUILD7_frame_inspected": true,
+      "native_BUILD7_frame": "build/qa09-ecruteak-tour-v7/EcruteakCity_BurnedTower_B1F.png",
+      "V7_controller_tests": "PASS on 0734501b031d05156a28e685dc1c2748153cb065222bd67b0d2e7cea47fefbca; exact-ROM 27-map tour and applicable detailed/furniture/ground checks"
     },
     {
       "map": "EcruteakCity_Gym_Arena",
@@ -532,7 +599,7 @@
         "events_blob_sha": "5cac2d015c6848cc83dca86c5d477224eae860cc",
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
-      "reference_geometry": "Existing source-derived native projection verified by dedicated validators; final QA09 rerun required",
+      "reference_geometry": "Existing source-derived native projection verified by dedicated validators; final QA09 source and controller checks pass",
       "raster_reference": [
         {
           "cache": "/workspace/scratch/hgss-reference/Ecruteak_Gym_HGSS.png",
@@ -542,7 +609,7 @@
       ],
       "native_B2_frame_inspected": true,
       "native_B2_controller_roundtrips": "PASS, historical exact B2 evidence in qa/qa08/ecruteak-b2",
-      "final_delivery_controller_tests": "PENDING root final build tests",
+      "final_delivery_controller_tests": "PENDING V8 exact-ROM rerun",
       "owner_visual_acceptance": "PENDING",
       "gba_adaptations": [
         "Tall DS room split at source chunk seam into existing two GBA map IDs",
@@ -551,7 +618,10 @@
       ],
       "unfinished": [],
       "native_BUILD5_frame_inspected": true,
-      "BUILD5_controller_roundtrips": "PASS on c2f30ef04d3890e9ac947ee1f6f28a04b7e6e2d08c1a7f5e77a68fc7c697f658;27maps/308transitions/73pairs/296warptrials"
+      "BUILD5_controller_roundtrips": "PASS on c2f30ef04d3890e9ac947ee1f6f28a04b7e6e2d08c1a7f5e77a68fc7c697f658;27maps/308transitions/73pairs/296warptrials",
+      "native_BUILD7_frame_inspected": true,
+      "native_BUILD7_frame": "build/qa09-ecruteak-tour-v7/EcruteakCity_Gym_Arena.png",
+      "V7_controller_tests": "PASS on 0734501b031d05156a28e685dc1c2748153cb065222bd67b0d2e7cea47fefbca; exact-ROM 27-map tour and applicable detailed/furniture/ground checks"
     },
     {
       "map": "EcruteakCity_BarrierStation",
@@ -563,7 +633,7 @@
         "events_blob_sha": "988739734eb9fd992340bb6e670c31edc4585b5a",
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
-      "reference_geometry": "Existing source-derived native projection verified by dedicated validators; final QA09 rerun required",
+      "reference_geometry": "Existing source-derived native projection verified by dedicated validators; final QA09 source and controller checks pass",
       "raster_reference": [
         {
           "cache": "/workspace/scratch/hgss-reference/Bellchime_Trail_gate_1F_HGSS.png",
@@ -573,12 +643,15 @@
       ],
       "native_B2_frame_inspected": true,
       "native_B2_controller_roundtrips": "PASS, historical exact B2 evidence in qa/qa08/ecruteak-b2",
-      "final_delivery_controller_tests": "PENDING root final build tests",
+      "final_delivery_controller_tests": "PENDING V8 exact-ROM rerun",
       "owner_visual_acceptance": "PENDING",
       "gba_adaptations": [],
       "unfinished": [],
       "native_BUILD5_frame_inspected": true,
-      "BUILD5_controller_roundtrips": "PASS on c2f30ef04d3890e9ac947ee1f6f28a04b7e6e2d08c1a7f5e77a68fc7c697f658;27maps/308transitions/73pairs/296warptrials"
+      "BUILD5_controller_roundtrips": "PASS on c2f30ef04d3890e9ac947ee1f6f28a04b7e6e2d08c1a7f5e77a68fc7c697f658;27maps/308transitions/73pairs/296warptrials",
+      "native_BUILD7_frame_inspected": true,
+      "native_BUILD7_frame": "build/qa09-ecruteak-tour-v7/EcruteakCity_BarrierStation.png",
+      "V7_controller_tests": "PASS on 0734501b031d05156a28e685dc1c2748153cb065222bd67b0d2e7cea47fefbca; exact-ROM 27-map tour and applicable detailed/furniture/ground checks"
     },
     {
       "map": "EcruteakCity_BarrierCorridor",
@@ -590,7 +663,7 @@
         "events_blob_sha": "60a63c4741521edb873a2d50e59f252293771080",
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
-      "reference_geometry": "Existing source-derived native projection verified by dedicated validators; final QA09 rerun required",
+      "reference_geometry": "Existing source-derived native projection verified by dedicated validators; final QA09 source and controller checks pass",
       "raster_reference": [
         {
           "cache": "/workspace/scratch/hgss-reference/Bellchime_Trail_gate_B1F_HGSS.png",
@@ -600,12 +673,15 @@
       ],
       "native_B2_frame_inspected": true,
       "native_B2_controller_roundtrips": "PASS, historical exact B2 evidence in qa/qa08/ecruteak-b2",
-      "final_delivery_controller_tests": "PENDING root final build tests",
+      "final_delivery_controller_tests": "PENDING V8 exact-ROM rerun",
       "owner_visual_acceptance": "PENDING",
       "gba_adaptations": [],
       "unfinished": [],
       "native_BUILD5_frame_inspected": true,
-      "BUILD5_controller_roundtrips": "PASS on c2f30ef04d3890e9ac947ee1f6f28a04b7e6e2d08c1a7f5e77a68fc7c697f658;27maps/308transitions/73pairs/296warptrials"
+      "BUILD5_controller_roundtrips": "PASS on c2f30ef04d3890e9ac947ee1f6f28a04b7e6e2d08c1a7f5e77a68fc7c697f658;27maps/308transitions/73pairs/296warptrials",
+      "native_BUILD7_frame_inspected": true,
+      "native_BUILD7_frame": "build/qa09-ecruteak-tour-v7/EcruteakCity_BarrierCorridor.png",
+      "V7_controller_tests": "PASS on 0734501b031d05156a28e685dc1c2748153cb065222bd67b0d2e7cea47fefbca; exact-ROM 27-map tour and applicable detailed/furniture/ground checks"
     },
     {
       "map": "BellchimeTrail",
@@ -617,7 +693,7 @@
         "events_blob_sha": "a72175ab87840ecd2f28db6cad7073ee3a229c08",
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
-      "reference_geometry": "Existing source-derived native projection verified by dedicated validators; final QA09 rerun required",
+      "reference_geometry": "Existing source-derived native projection verified by dedicated validators; final QA09 source and controller checks pass",
       "raster_reference": [
         {
           "cache": "/workspace/scratch/hgss-reference/Bellchime_Trail_HGSS.png",
@@ -627,7 +703,7 @@
       ],
       "native_B2_frame_inspected": true,
       "native_B2_controller_roundtrips": "PASS, historical exact B2 evidence in qa/qa08/ecruteak-b2",
-      "final_delivery_controller_tests": "PENDING root final build tests",
+      "final_delivery_controller_tests": "PENDING V8 exact-ROM rerun",
       "owner_visual_acceptance": "PENDING",
       "gba_adaptations": [
         "Canonical source footprint translated four cells south to fit the tall2D tower; source connections retained",
@@ -635,7 +711,10 @@
       ],
       "unfinished": [],
       "native_BUILD5_frame_inspected": true,
-      "BUILD5_controller_roundtrips": "PASS on c2f30ef04d3890e9ac947ee1f6f28a04b7e6e2d08c1a7f5e77a68fc7c697f658;27maps/308transitions/73pairs/296warptrials"
+      "BUILD5_controller_roundtrips": "PASS on c2f30ef04d3890e9ac947ee1f6f28a04b7e6e2d08c1a7f5e77a68fc7c697f658;27maps/308transitions/73pairs/296warptrials",
+      "native_BUILD7_frame_inspected": true,
+      "native_BUILD7_frame": "build/qa09-ecruteak-tour-v7/BellchimeTrail.png",
+      "V7_controller_tests": "PASS on 0734501b031d05156a28e685dc1c2748153cb065222bd67b0d2e7cea47fefbca; exact-ROM 27-map tour and applicable detailed/furniture/ground checks"
     },
     {
       "map": "EcruteakCity_BellTower_10F",
@@ -647,7 +726,7 @@
         "events_blob_sha": "81ba9f8e39ab39966ca940d98fd591fa16566788",
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
-      "reference_geometry": "Existing source-derived native projection verified by dedicated validators; final QA09 rerun required",
+      "reference_geometry": "Existing source-derived native projection verified by dedicated validators; final QA09 source and controller checks pass",
       "raster_reference": [
         {
           "cache": "/workspace/scratch/hgss-reference/Bell_Tower_10F_HGSS.png",
@@ -657,7 +736,7 @@
       ],
       "native_B2_frame_inspected": true,
       "native_B2_controller_roundtrips": "PASS, historical exact B2 evidence in qa/qa08/ecruteak-b2",
-      "final_delivery_controller_tests": "PENDING root final build tests",
+      "final_delivery_controller_tests": "PENDING V8 exact-ROM rerun",
       "owner_visual_acceptance": "PENDING",
       "gba_adaptations": [
         "Original GBA-compatible temple art, no HGSS graphics copied",
@@ -666,7 +745,10 @@
       ],
       "unfinished": [],
       "native_BUILD5_frame_inspected": true,
-      "BUILD5_controller_roundtrips": "PASS on c2f30ef04d3890e9ac947ee1f6f28a04b7e6e2d08c1a7f5e77a68fc7c697f658;27maps/308transitions/73pairs/296warptrials"
+      "BUILD5_controller_roundtrips": "PASS on c2f30ef04d3890e9ac947ee1f6f28a04b7e6e2d08c1a7f5e77a68fc7c697f658;27maps/308transitions/73pairs/296warptrials",
+      "native_BUILD7_frame_inspected": true,
+      "native_BUILD7_frame": "build/qa09-ecruteak-tour-v7/EcruteakCity_BellTower_10F.png",
+      "V7_controller_tests": "PASS on 0734501b031d05156a28e685dc1c2748153cb065222bd67b0d2e7cea47fefbca; exact-ROM 27-map tour and applicable detailed/furniture/ground checks"
     },
     {
       "map": "EcruteakCity_BellTower_Roof",
@@ -678,7 +760,7 @@
         "events_blob_sha": "40698806058b4b5407aea708de384b3376313fd2",
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
-      "reference_geometry": "Existing source-derived native projection verified by dedicated validators; final QA09 rerun required",
+      "reference_geometry": "Existing source-derived native projection verified by dedicated validators; final QA09 source and controller checks pass",
       "raster_reference": [
         {
           "cache": "/workspace/scratch/hgss-reference/Bell_Tower_Summit_HGSS.png",
@@ -688,7 +770,7 @@
       ],
       "native_B2_frame_inspected": true,
       "native_B2_controller_roundtrips": "PASS, historical exact B2 evidence in qa/qa08/ecruteak-b2",
-      "final_delivery_controller_tests": "PENDING root final build tests",
+      "final_delivery_controller_tests": "PENDING V8 exact-ROM rerun",
       "owner_visual_acceptance": "PENDING",
       "gba_adaptations": [
         "Original GBA-compatible temple art, no HGSS graphics copied",
@@ -697,7 +779,10 @@
       ],
       "unfinished": [],
       "native_BUILD5_frame_inspected": true,
-      "BUILD5_controller_roundtrips": "PASS on c2f30ef04d3890e9ac947ee1f6f28a04b7e6e2d08c1a7f5e77a68fc7c697f658;27maps/308transitions/73pairs/296warptrials"
+      "BUILD5_controller_roundtrips": "PASS on c2f30ef04d3890e9ac947ee1f6f28a04b7e6e2d08c1a7f5e77a68fc7c697f658;27maps/308transitions/73pairs/296warptrials",
+      "native_BUILD7_frame_inspected": true,
+      "native_BUILD7_frame": "build/qa09-ecruteak-tour-v7/EcruteakCity_BellTower_Roof.png",
+      "V7_controller_tests": "PASS on 0734501b031d05156a28e685dc1c2748153cb065222bd67b0d2e7cea47fefbca; exact-ROM 27-map tour and applicable detailed/furniture/ground checks"
     },
     {
       "map": "EcruteakCity_DowsingHouse",
@@ -709,7 +794,7 @@
         "events_blob_sha": "8cbe81325f3caed794bd06e20588ede2096fb6ac",
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
-      "reference_geometry": "Existing source-derived native projection verified by dedicated validators; final QA09 rerun required",
+      "reference_geometry": "Existing source-derived native projection verified by dedicated validators; final QA09 source and controller checks pass",
       "raster_reference": [
         {
           "cache": "/workspace/scratch/hgss-reference/Common_Ecruteak_house_matrix0066_HGSS.jpg",
@@ -719,7 +804,7 @@
       ],
       "native_B2_frame_inspected": true,
       "native_B2_controller_roundtrips": "PASS, historical exact B2 evidence in qa/qa08/ecruteak-b2",
-      "final_delivery_controller_tests": "PENDING root final build tests",
+      "final_delivery_controller_tests": "PENDING V8 exact-ROM rerun",
       "owner_visual_acceptance": "PENDING",
       "gba_adaptations": [
         "GBA furniture/flat room instead of DS models",
@@ -729,7 +814,10 @@
       "unfinished": [],
       "qa09_correction": "Replace wrong TV/bookcase kitchen substitute with source stove/sink, centered rear window and real rear-right bookcase",
       "native_BUILD5_frame_inspected": true,
-      "BUILD5_controller_roundtrips": "PASS on c2f30ef04d3890e9ac947ee1f6f28a04b7e6e2d08c1a7f5e77a68fc7c697f658;27maps/308transitions/73pairs/296warptrials"
+      "BUILD5_controller_roundtrips": "PASS on c2f30ef04d3890e9ac947ee1f6f28a04b7e6e2d08c1a7f5e77a68fc7c697f658;27maps/308transitions/73pairs/296warptrials",
+      "native_BUILD7_frame_inspected": true,
+      "native_BUILD7_frame": "build/qa09-ecruteak-tour-v7/EcruteakCity_DowsingHouse.png",
+      "V7_controller_tests": "PASS on 0734501b031d05156a28e685dc1c2748153cb065222bd67b0d2e7cea47fefbca; exact-ROM 27-map tour and applicable detailed/furniture/ground checks"
     },
     {
       "map": "EcruteakCity_PokemonCenter_B1F",
@@ -741,7 +829,7 @@
         "events_blob_sha": "c92af4e279062748f1a8519d244804dc35998f88",
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
-      "reference_geometry": "Existing source-derived native projection verified by dedicated validators; final QA09 rerun required",
+      "reference_geometry": "Existing source-derived native projection verified by dedicated validators; final QA09 source and controller checks pass",
       "raster_reference": [
         {
           "cache": "/workspace/scratch/hgss-reference/Common_Center_B1F_HGSS.png",
@@ -751,16 +839,22 @@
       ],
       "native_B2_frame_inspected": true,
       "native_B2_controller_roundtrips": "PASS, historical exact B2 evidence in qa/qa08/ecruteak-b2",
-      "final_delivery_controller_tests": "PENDING root final build tests",
+      "final_delivery_controller_tests": "PENDING V8 exact-ROM rerun",
       "owner_visual_acceptance": "PENDING",
       "gba_adaptations": [
         "Wi-Fi desks are ambient offline reception; no internet functionality claimed",
         "Native GBA stairs retain canonical source coordinate",
         "Sourcebluebasementfloor/counters useexistingwarmGBAservicepalette; differentfloorlogo, flatteneddesks; no claimpixelidentical"
       ],
-      "unfinished": [],
+      "unfinished": [
+        "Fresh V8 traversal/furniture/save checks and owner visual acceptance pending."
+      ],
       "native_BUILD5_frame_inspected": true,
-      "BUILD5_controller_roundtrips": "PASS on c2f30ef04d3890e9ac947ee1f6f28a04b7e6e2d08c1a7f5e77a68fc7c697f658;27maps/308transitions/73pairs/296warptrials"
+      "BUILD5_controller_roundtrips": "PASS on c2f30ef04d3890e9ac947ee1f6f28a04b7e6e2d08c1a7f5e77a68fc7c697f658;27maps/308transitions/73pairs/296warptrials",
+      "native_BUILD7_frame_inspected": true,
+      "native_BUILD7_frame": "build/qa09-ecruteak-tour-v7/EcruteakCity_PokemonCenter_B1F.png",
+      "V7_controller_tests": "PASS on 0734501b031d05156a28e685dc1c2748153cb065222bd67b0d2e7cea47fefbca; exact-ROM 27-map tour and applicable detailed/furniture/ground checks",
+      "qa09_correction": "h14 restores actual source row12;2plants,10stools,glass table,terminal,2rearblue panels,privatecoolpalette; oldIDs/stairs/actors kept"
     },
     {
       "map": "EcruteakCity_WestGate",
@@ -772,11 +866,17 @@
         "events_blob_sha": "24e849f612995791b6a16746b7810d33d7e11ab4",
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
-      "reference_geometry": "Existing source-derived native projection verified by dedicated validators; final QA09 rerun required",
-      "raster_reference": [],
+      "reference_geometry": "Existing source-derived native projection verified by dedicated validators; final QA09 source and controller checks pass",
+      "raster_reference": [
+        {
+          "cache": "/workspace/scratch/hgss-reference/Gate_inside_HGSS.png",
+          "sha256": "93e12044f2ef26bb726e13207db919c577f18a4e0e533d17c6c02efc9cad6b33",
+          "visually_inspected": true
+        }
+      ],
       "native_B2_frame_inspected": true,
       "native_B2_controller_roundtrips": "PASS, historical exact B2 evidence in qa/qa08/ecruteak-b2",
-      "final_delivery_controller_tests": "PENDING root final build tests",
+      "final_delivery_controller_tests": "PENDING V8 exact-ROM rerun",
       "owner_visual_acceptance": "PENDING",
       "gba_adaptations": [
         "Original flat green-roof gate; source center entrance and three-row horizontal tunnel",
@@ -784,10 +884,14 @@
         "Gate-only shared primary buffer preserves original neighbouring secondary graphics"
       ],
       "unfinished": [
-        "Separate complete HGSS raster not acquired; source matrix/props/warps/terrain facts are available"
+        "Fresh V8 controller/pixel review and owner visual acceptance pending."
       ],
       "native_BUILD5_frame_inspected": true,
-      "BUILD5_controller_roundtrips": "PASS on c2f30ef04d3890e9ac947ee1f6f28a04b7e6e2d08c1a7f5e77a68fc7c697f658;27maps/308transitions/73pairs/296warptrials"
+      "BUILD5_controller_roundtrips": "PASS on c2f30ef04d3890e9ac947ee1f6f28a04b7e6e2d08c1a7f5e77a68fc7c697f658;27maps/308transitions/73pairs/296warptrials",
+      "native_BUILD7_frame_inspected": true,
+      "native_BUILD7_frame": "build/qa09-ecruteak-tour-v7/EcruteakCity_WestGate.png",
+      "V7_controller_tests": "PASS on 0734501b031d05156a28e685dc1c2748153cb065222bd67b0d2e7cea47fefbca; exact-ROM 27-map tour and applicable detailed/furniture/ground checks",
+      "qa09_correction": "Four source plants, blue-gray counters, window wall and diamond floor replace generic temple stand-ins in private pool; exact geometry/events/aliases preserved"
     },
     {
       "map": "EcruteakCity_EastGate",
@@ -799,11 +903,17 @@
         "events_blob_sha": "c57eec3bb433d285cb5094f6fcea87ff94823a29",
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
-      "reference_geometry": "Existing source-derived native projection verified by dedicated validators; final QA09 rerun required",
-      "raster_reference": [],
+      "reference_geometry": "Existing source-derived native projection verified by dedicated validators; final QA09 source and controller checks pass",
+      "raster_reference": [
+        {
+          "cache": "/workspace/scratch/hgss-reference/Gate_inside_HGSS.png",
+          "sha256": "93e12044f2ef26bb726e13207db919c577f18a4e0e533d17c6c02efc9cad6b33",
+          "visually_inspected": true
+        }
+      ],
       "native_B2_frame_inspected": true,
       "native_B2_controller_roundtrips": "PASS, historical exact B2 evidence in qa/qa08/ecruteak-b2",
-      "final_delivery_controller_tests": "PENDING root final build tests",
+      "final_delivery_controller_tests": "PENDING V8 exact-ROM rerun",
       "owner_visual_acceptance": "PENDING",
       "gba_adaptations": [
         "Original flat green-roof gate; source center entrance and three-row horizontal tunnel",
@@ -811,10 +921,27 @@
         "Gate-only shared primary buffer preserves original neighbouring secondary graphics"
       ],
       "unfinished": [
-        "Separate complete HGSS raster not acquired; source matrix/props/warps/terrain facts are available"
+        "Fresh V8 controller/pixel review and owner visual acceptance pending."
       ],
       "native_BUILD5_frame_inspected": true,
-      "BUILD5_controller_roundtrips": "PASS on c2f30ef04d3890e9ac947ee1f6f28a04b7e6e2d08c1a7f5e77a68fc7c697f658;27maps/308transitions/73pairs/296warptrials"
+      "BUILD5_controller_roundtrips": "PASS on c2f30ef04d3890e9ac947ee1f6f28a04b7e6e2d08c1a7f5e77a68fc7c697f658;27maps/308transitions/73pairs/296warptrials",
+      "native_BUILD7_frame_inspected": true,
+      "native_BUILD7_frame": "build/qa09-ecruteak-tour-v7/EcruteakCity_EastGate.png",
+      "V7_controller_tests": "PASS on 0734501b031d05156a28e685dc1c2748153cb065222bd67b0d2e7cea47fefbca; exact-ROM 27-map tour and applicable detailed/furniture/ground checks",
+      "qa09_correction": "Four source plants, blue-gray counters, window wall and diamond floor replace generic temple stand-ins in private pool; exact geometry/events/aliases preserved"
     }
-  ]
+  ],
+  "delivery_candidate_status": "V8 SOURCE IMPLEMENTED; fresh combined ROM build/controller/visual checks pending. V7 results below are historical and do not certify subsequent art/furniture changes.",
+  "last_verified_rom_sha256": "0734501b031d05156a28e685dc1c2748153cb065222bd67b0d2e7cea47fefbca",
+  "last_verified_evidence": {
+    "tour": "build/qa09-ecruteak-tour-v7",
+    "details": "build/qa09-ecruteak-details-v7",
+    "furniture": "build/qa09-ecruteak-furniture-v7",
+    "ground": "build/qa09-ecruteak-ground-v7",
+    "controller_results": "PASS: 27 targets, 308 transitions, 73 round-trip pairs, 296 warp trials; detailed services/save/Continue/practice-whiteout; 26 furniture trials; 19 ground clips/36 trunk approaches/0 stray arrows; 423 of 423 foreground leaf pixels",
+    "save_fixture": "Copied historical normal battery; source SHA256 b03ff1ef488fbd25de016e828483bc3001787b84e450a45eaa0ac12a11de30ab remained unchanged. Not the owner's latest private Delta save.",
+    "fixture_limits": "Temporary RAM-only survey access/encounter suppression; details test uses disclosed 1 HP and old shared-layout fixtures. No player/map/warp position writes during movement trials.",
+    "owner_delta_acceptance": "PENDING"
+  },
+  "final_delivery_controller_tests": "PENDING V8 exact-ROM rerun"
 }

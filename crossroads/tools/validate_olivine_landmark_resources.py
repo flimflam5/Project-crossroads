@@ -16,7 +16,7 @@ assert secondary.size==(128,256),('Maritime secondary image overwritten/truncate
 assert secondary.mode=='P' and secondary.getextrema()[1]<=15
 def words(p):b=p.read_bytes();return struct.unpack('<'+str(len(b)//2)+'H',b)
 metas=words(dest/'metatiles.bin');attrs=words(dest/'metatile_attributes.bin');old=words(base/'metatiles.bin')
-assert len(metas)==len(attrs)*8 and len(attrs)==len(old)//8+109 and len(attrs)<=512
+assert len(metas)==len(attrs)*8 and len(attrs)==len(old)//8+118 and len(attrs)<=512
 def tile(im,n):return im.crop((n%16*8,n//16*8,n%16*8+8,n//16*8+8)).tobytes()
 assert secondary.tobytes()==original.tobytes(),'Original temple glyphs were overwritten by private maritime art'
 for i,v in enumerate(old):assert metas[i]&0xfff==v&0xfff,('Original glyph/flip reference changed rather than colour adaptation',i)

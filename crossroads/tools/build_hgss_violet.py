@@ -163,18 +163,14 @@ def generate(check=False):
  m['object_events']=m['object_events'][:5];m['warp_events']=[warp(6,11,c['id'],5),warp(7,11,c['id'],8)];m['bg_events']=[];m['coord_events']=[]
  for e in m['warp_events']:data[e['y']*w+e['x']]=ART['exit']['start']
  save(m,data,w,h,ROOM_HEADERS[n])
- # Dedicated native service rooms preserve the existing nurse/clerk scripts and
- # local IDs. No reward/trade/online source scripts are imported.
- for n,base_name,header,city_index in [('VioletCity_PokemonCenter_1F','EcruteakCity_PokemonCenter_1F','MAP_VIOLET_POKECENTER_1F',0),('VioletCity_Mart','EcruteakCity_Mart','MAP_VIOLET_POKEMART',1)]:
-  m=load(f'data/maps/{n}/map.json');base=load(f'data/maps/{base_name}/map.json');bl=ls[base['layout']];w,h=bl['width'],bl['height'];data=list(struct.unpack('<'+str(w*h)+'H',(R/bl['blockdata_filepath']).read_bytes()));actors=copy.deepcopy(base['object_events'])
-  for old,new in zip(m['object_events'],actors):new['script']=old['script'];new['local_id']=old.get('local_id',new.get('local_id'))
-  for o in actors:
-   if o.get('local_id') is None:o.pop('local_id',None)
-  m['object_events']=actors;m['warp_events']=copy.deepcopy(base['warp_events'])
-  for e in m['warp_events'][:2]:e.update(dest_map=c['id'],dest_warp_id=str(city_index))
-  if n.endswith('PokemonCenter_1F'):m['warp_events'][2].update(dest_map='MAP_VIOLET_CITY_POKEMON_CENTER_B1F',dest_warp_id='0')
-  m['coord_events']=[];m['bg_events']=copy.deepcopy(base['bg_events']);save(m,data,w,h,header,secondary=bl['secondary_tileset'],dedicated=True)
- n='VioletCity_PokemonCenter_B1F';base=load('data/maps/EcruteakCity_PokemonCenter_B1F/map.json');m=copy.deepcopy(base);m.update(name=n,id='MAP_VIOLET_CITY_POKEMON_CENTER_B1F',region_map_section='MAPSEC_VIOLET_CITY');m['warp_events'][0].update(dest_map=maps['VioletCity_PokemonCenter_1F']['id'],dest_warp_id='2');bl=ls[base['layout']];data=list(struct.unpack('<204H',(R/bl['blockdata_filepath']).read_bytes()));save(m,data,17,12,'MAP_VIOLET_POKECENTER_B1F',secondary=bl['secondary_tileset'],dedicated=True)
+ # These existing Violet rooms are outside the two-city completion scope.
+ # Immutable snapshots prevent live Ecruteak changes leaking into this city.
+ for frozen in load('crossroads/hgss/contracts/violet-services-qa09.json')['rooms']:
+  m=copy.deepcopy(frozen['map']);l=frozen['layout'];w,h=l['width'],l['height']
+  data=list(struct.unpack('<'+str(w*h)+'H',bytes.fromhex(frozen['raw_hex'])))
+  save(m,data,w,h,frozen['source_header'],secondary=l['secondary_tileset'],primary=l['primary_tileset'],dedicated=True)
+  assert ls[l['id']]==l,('Frozen Violet service layout changed',m['name'])
+  assert (R/l['border_filepath']).read_bytes()==bytes.fromhex(frozen['border_hex'])
  # Source Gym maze/lift platform flattened to fixed GBA access. No trainer roster,
  # Falkner badge award or mandatory battle is invented for this map pass.
  n='VioletCity_Gym';m=load(f'data/maps/{n}/map.json');f=facts['MAP_VIOLET_GYM']['chunks'][0]['permissions'];ox,oy,w,h=7,2,18,28;data=[0x600]*(w*h)

@@ -40,7 +40,7 @@ def generate(check=False):
  # Source HGSS maritime walls are pale masonry with cool window accents, not
  # Ecruteak's red-curtained timber panels. Recolour only wall foreground words;
  # floor references, other furniture, map cells and collision stay identical.
- for part in ['house_wall','house_wall_stone']:
+ for part in ['house_wall','house_wall_stone','rail_h_stone','rail_v_stone']:
   a=ART[part]
   for n in range(a['start'],a['start']+a['width']*a['height']):
    for j in range(4,8):
@@ -133,6 +133,13 @@ def generate(check=False):
  for y in range(2):plant_ids.append(add_meta([0x7201]*4+[0x6000|glyph(planter.crop((dx,y*16+dy,dx+8,y*16+dy+8))) for dx,dy in [(0,0),(8,0),(0,8),(8,8)]]))
  output=io.BytesIO();planter.save(output,format='PNG',bits=4);write('crossroads/hgss/art/olivine/lighthouse-planter-native.png',output.getvalue())
  purple_floor=add_meta([0xc201]*8);purple_warp=add_meta([0xc201]*8,0x61)
+ housing_source=Image.open(R/'crossroads/hgss/art/olivine/lighthouse-housing-source.png');housing=quant(housing_source,bluepal,(48,48));housing_ids=[]
+ for y in range(3):
+  for x in range(3):
+   top=[0x8000|glyph(housing.crop((x*16+dx,y*16+dy,x*16+dx+8,y*16+dy+8))) for dx,dy in [(0,0),(8,0),(0,8),(8,8)]];n=add_meta([0xc201]*4+top);housing_ids.append(n)
+   if y==0:attributes[n-512]=0 # upper rim is a foreground overhang, source5th row remains walkable
+ output=io.BytesIO();housing.save(output,format='PNG',bits=4);write('crossroads/hgss/art/olivine/lighthouse-housing-native.png',output.getvalue())
+
  assert len(attributes)<=512,('Maritime secondary metatile capacity',len(attributes))
  capacity=dict(primary_graphics=len({v&1023 for v in glyphs.values()}),primary_free=len(free),secondary_metatiles=len(attributes),secondary_free=512-len(attributes),rear_terminal_primary_ids=[0x100,0x147],source_secondary_glyphs='unchanged exact original image')
  write('crossroads/hgss/art/olivine/landmark-capacity.json',json.dumps(capacity,indent=2)+'\n')
@@ -239,12 +246,22 @@ def generate(check=False):
     for x,y in [(3,8),(3,9),(13,8),(13,9),(3,13),(3,14),(13,13),(13,14)]:t[y*w+x]=0x400|ART['chair']['start']
     for x,y in [(6,7),(10,7),(6,10),(10,10),(6,13),(10,13)]:
      for j in range(2):t[(y+j)*w+x]=0x400|plant_ids[j]
+   if n==LH[1]:
+    for x,y in [(11,11),(15,11)]:
+     for j in range(2):t[(y+j)*w+x]=0x400|plant_ids[j]
+   if n==LH[2]:
+    # Source model15 is the horizontal raised barrier/beam visible across the
+    # south-facing closed shaft. Native stone railing preserves its footprint.
+    for x in range(10,16):t[12*w+x]=(t[12*w+x]&0xfc00)|ART['rail_h_stone']['start']+x%4
    if n==LH[5]:
     for x,y in seen:
      if 0<=x<w and 0<=y<h:t[y*w+x]=0x3000|purple_floor
-    for y in range(6,8):
-     for x in range(7,10):
-      if (x,y) not in seen:t[y*w+x]=0x400|ART['stone']['start']
+    # Source model122 is a substantial circular lantern housing, not a small
+    # lamp on a blank rock. Preserve source collision and the existing beacon
+    # actor at8,6; its upper ring naturally overlaps the walkable northern row.
+    for yy in range(3):
+     for xx in range(3):
+      q=(5+yy)*w+7+xx;t[q]=(t[q]&0xfc00)|housing_ids[yy*3+xx]
   elif n==PORT:
    # Actual HGSS image: tan plank floor, central blue rug, white/yellow dining
    # places and aqua waiting seats forming the source's south U-shaped lanes.
@@ -257,7 +274,11 @@ def generate(check=False):
     for x in range(1,w-1):
      if (x,y) not in seen:t[y*w+x]=0x400|ART['house_wall_stone']['start']+(y%2)*4+x%4
    furniture_stamp('narrow_table',3,4);furniture_stamp('table',11,5)
-   for x,y in [(4,4),(4,5),(10,5),(10,6)]:furniture_stamp('stool',x,y)
+   # Every source model54 stool is represented, including both sides of the
+   # left table and north/south seats of the right table.
+   for chunk in facts[HEADERS[n]]['chunks']:
+    for p in chunk['props']:
+     if p['model']==54:furniture_stamp('stool',int(p['tile_x']),int(p['tile_z']))
    for x in [4,5,6,8,9,10]:furniture_stamp('bench',x,9)
    for x in [4,10]:furniture_stamp('corner',x,10)
    for x in [4,10]:furniture_stamp('ring',x,1)
@@ -329,10 +350,14 @@ def generate(check=False):
   for x,y in ([(8,17),(9,17)] if n==LH[0] else [(3,6),(4,6)] if n==LIFT else [(7,11),(8,11)] if n==PORT else []):t[y*w+x]=ART['exit']['start']
   for o in m['object_events']:
    x,y=o['x'],o['y']
+   if n==PORT and (x,y) in {(int(p['tile_x']),int(p['tile_z'])) for chunk in facts[HEADERS[n]]['chunks'] for p in chunk['props'] if p['model']==54}:
+    # A seated solid NPC owns its chair tile; do not strand it in map-wall
+    # collision. Chair pixels remain visible underneath the actor.
+    t[y*w+x]=0x3000|(t[y*w+x]&1023)
    if n==LH[5] and o['graphics_id']=='OBJ_EVENT_GFX_AREA_LANTERN':
     # The solid object owns this footprint, just like native heal-machine NPCs.
     # A second map-wall flag strands the saved object and fails object spawning.
-    t[y*w+x]=0x3000|ART['stone']['start']
+    t[y*w+x]=0x3000|(t[y*w+x]&1023)
    assert 0<=x<w and 0<=y<h and t[y*w+x]&0xc00==0,(n,'Actor intersects source furniture',o)
   lid=m['layout'];out=n in [BAL,QUAY];l=dict(id=lid,name=ls[lid]['name'] if lid in ls else n+'_Layout',width=w,height=h,primary_tileset='gTileset_HgssOlivineLandmarkOutdoor' if out else 'gTileset_HgssOlivineLandmarkIndoor',secondary_tileset='gTileset_HgssOlivineLandmarks',border_filepath=f'data/layouts/{n}/border.bin',blockdata_filepath=f'data/layouts/{n}/map.bin',layout_version='emerald')
   if lid in ls:ls[lid].clear();ls[lid].update(l)
