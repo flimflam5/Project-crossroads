@@ -1,0 +1,426 @@
+{
+  "rom_sha256": "0734501b031d05156a28e685dc1c2748153cb065222bd67b0d2e7cea47fefbca",
+  "status": "V7 evidence; subsequent art/furniture fixes need a fresh V8 build and tests",
+  "files": [
+    {
+      "file": "README.md",
+      "bytes": 4311,
+      "sha256": "97c3c385ed0fff423e8fd38e618c5dfe40b10d701c42536e533ff2480810d0a3"
+    },
+    {
+      "file": "movement/EcruteakCity_DowsingHouse-furniture-8.mp4",
+      "bytes": 6785,
+      "sha256": "e659c39c7ff8b1085bf426e66cf8b38722db2a9868897dcd2a64bb56553fc75e"
+    },
+    {
+      "file": "movement/EcruteakCity_Residence-furniture-8.mp4",
+      "bytes": 6803,
+      "sha256": "2be8a496ef6c04d9e6e94403f0a8b2ab029a89ec11e53ba4ac2628d0a2cfefdf"
+    },
+    {
+      "file": "movement/bench-12-10-south.mp4",
+      "bytes": 7497,
+      "sha256": "73de60aafe7a9c21aec9f0245de63203c4fea05b232419b5025344e68f17aca1"
+    },
+    {
+      "file": "movement/burned-wall.mp4",
+      "bytes": 14710,
+      "sha256": "ca20ea5336df12305eca6f381cf001ab81fc0bb2e1a7a69d8ddd03db42a7fb70"
+    },
+    {
+      "file": "movement/canopy-entry.mp4",
+      "bytes": 8844,
+      "sha256": "fc71046b7de45dfd9405637a408cee2f950fcad24072a3232f954b645bf8cf64"
+    },
+    {
+      "file": "movement/center-plant-15-14-north.mp4",
+      "bytes": 8242,
+      "sha256": "98209b9fbba63f8f2b98f97471ca624d2db354cbb38991f2373c11505a4a26c2"
+    },
+    {
+      "file": "movement/center-wall.mp4",
+      "bytes": 10939,
+      "sha256": "644136d1b8be023100c3d7e761c9ee33477cd398bd8bc2f85b3f40990c8bf808"
+    },
+    {
+      "file": "movement/custom-gym-wall.mp4",
+      "bytes": 13443,
+      "sha256": "e6e276689a20c96119eff306e24074668112728e27a1a9a62dd34d9687e66797"
+    },
+    {
+      "file": "movement/dowsing-wall.mp4",
+      "bytes": 12168,
+      "sha256": "d6f97e7f7a5a0cc51d6919a276aae2a314b4d4fe6c3e4827e7b1c0e23970085b"
+    },
+    {
+      "file": "movement/house-front-wall.mp4",
+      "bytes": 11566,
+      "sha256": "720937e0568f9bc139129cc9056bc2ddf5364ee813c644d0a5283e52f2cfa5b3"
+    },
+    {
+      "file": "movement/house-west-base.mp4",
+      "bytes": 13539,
+      "sha256": "515c641e1fb909536ba7c8a90085982f479b200817441c7facb76f006f7cd06c"
+    },
+    {
+      "file": "movement/house-west-gutter.mp4",
+      "bytes": 14429,
+      "sha256": "de2e43956143a78cff8a18d08e7372aac72bab8930c95143486c1b2223c332a6"
+    },
+    {
+      "file": "movement/mart-wall.mp4",
+      "bytes": 10254,
+      "sha256": "3d766c423f7eed6c3a1d8822eed694cbdd8278a78c0823e38026b4c3ff42f632"
+    },
+    {
+      "file": "movement/north-private-wall.mp4",
+      "bytes": 10321,
+      "sha256": "5ea837b69a7c5d7e594fd0917880816c0eaec300a725fdfe06576909b3844fc2"
+    },
+    {
+      "file": "movement/northwest-private-wall.mp4",
+      "bytes": 11127,
+      "sha256": "5f9f1d252a7acac9195ac1c36e985ea2a8fc86493002bd5d8f8c83112c6a690e"
+    },
+    {
+      "file": "movement/ordinary-paving-south.mp4",
+      "bytes": 20672,
+      "sha256": "6a0820754e4452e953109dfd42cc032942e72d43540cd6b0f67e617c66c9f98b"
+    },
+    {
+      "file": "movement/southeast-private-wall.mp4",
+      "bytes": 10952,
+      "sha256": "bac399ef289b262ca672170114c74ecc82cc05379a3fd3de18af431da4c9bb39"
+    },
+    {
+      "file": "movement/station-front-wall.mp4",
+      "bytes": 15035,
+      "sha256": "ff53d93df05ed41fd7e466f71deee79a32d729c908d5ddf56ef321fbe34b997f"
+    },
+    {
+      "file": "movement/theater-front-aisle-east.mp4",
+      "bytes": 12451,
+      "sha256": "caf26d6dd8df4ab4453bbe2e7cf455027bef0217571712583470a149baf489e6"
+    },
+    {
+      "file": "movement/theater-front-aisle.mp4",
+      "bytes": 13748,
+      "sha256": "6e9c949e50ccabe60370fbe5f876c9aa68da94369361e9ea6732865efc6026d3"
+    },
+    {
+      "file": "movement/theater-wall.mp4",
+      "bytes": 10751,
+      "sha256": "f693bea6009aef62fe7c3198ce80b6ddfe055f3081965d0331167328ea56666f"
+    },
+    {
+      "file": "movement/trunk-east.mp4",
+      "bytes": 8940,
+      "sha256": "5ad5ba1e0695b7db88a02b0800e7d69d5fac69ba83108d6fe0e5f85692197631"
+    },
+    {
+      "file": "movement/trunk-from-north.mp4",
+      "bytes": 8209,
+      "sha256": "d1cba2fe275d774c3f88620c268c884078e5546cc654b2688eb14a8e546b0f8b"
+    },
+    {
+      "file": "movement/trunk-south.mp4",
+      "bytes": 9213,
+      "sha256": "1d233a8eb0caa92368d253d5850c533d07b65e4e57107c06686db03364c4cb97"
+    },
+    {
+      "file": "movement/trunk-west.mp4",
+      "bytes": 9043,
+      "sha256": "f507d9ea3e2f88970f27f40dc9e5f751d826f2bd7830105624e018903fb6d5c0"
+    },
+    {
+      "file": "native-views/BellchimeTrail.png",
+      "bytes": 14832,
+      "sha256": "91f43c313c16317226ec6a79bf68ed39f748a21e3b7b6724de51d4ba43f3df90"
+    },
+    {
+      "file": "native-views/EcruteakCity.png",
+      "bytes": 6919,
+      "sha256": "b3890b909c3c85508e503a0c72c44f026d5409431e7b4f3814cd4cc257244603"
+    },
+    {
+      "file": "native-views/EcruteakCity_BarrierCorridor.png",
+      "bytes": 3633,
+      "sha256": "91ec29762f80df504c216965b66815ed5137106c80186f2a651a68a023f8780b"
+    },
+    {
+      "file": "native-views/EcruteakCity_BarrierStation.png",
+      "bytes": 2410,
+      "sha256": "bff5ff621e6c6978b7c6239abb22865b7782d1cb07fa50826fe526f802d1e868"
+    },
+    {
+      "file": "native-views/EcruteakCity_BellTower.png",
+      "bytes": 3352,
+      "sha256": "13cef3165fa468c8f83cc311bc4c26fab4b930b65b8b1c12312a7bf4dfb39285"
+    },
+    {
+      "file": "native-views/EcruteakCity_BellTower_10F.png",
+      "bytes": 5964,
+      "sha256": "1dca0b955a0eadc1d9e5fb2950f7ee5f84c25ba6c2e13a913769daa1c14aa1bb"
+    },
+    {
+      "file": "native-views/EcruteakCity_BellTower_2F.png",
+      "bytes": 5968,
+      "sha256": "77110b224805845df7fb3c193c20c43f1954f26e6a30fb1d0850b5e0df4c8861"
+    },
+    {
+      "file": "native-views/EcruteakCity_BellTower_3F.png",
+      "bytes": 4863,
+      "sha256": "b8a833e5b5232a845ab3ea1c803a77cfe1ddbb44237317b84e999ace982d897b"
+    },
+    {
+      "file": "native-views/EcruteakCity_BellTower_4F.png",
+      "bytes": 6239,
+      "sha256": "26f8e7164216aa6f8797d1ac9ff43e3f2b7bdaebb0a16b500532b06d61aa1b2e"
+    },
+    {
+      "file": "native-views/EcruteakCity_BellTower_5F.png",
+      "bytes": 5220,
+      "sha256": "1dfba3e037d351db44a234ed318b879e8050b7caa10c9dc0df84a220bb0d77de"
+    },
+    {
+      "file": "native-views/EcruteakCity_BellTower_6F.png",
+      "bytes": 5016,
+      "sha256": "f9715062194f7c0cb01012807b66f8bcb7954eac3c6815fd9bbee7001b804f12"
+    },
+    {
+      "file": "native-views/EcruteakCity_BellTower_7F.png",
+      "bytes": 5843,
+      "sha256": "acebdc24c53120c7d8ded09d1da228f68806f2f7530d791bc9958299eb8c5b6d"
+    },
+    {
+      "file": "native-views/EcruteakCity_BellTower_8F.png",
+      "bytes": 4570,
+      "sha256": "8a43cdf186606e2045b4ea154c040dae14a28adafb9ff91c4a3054661ed1b6bd"
+    },
+    {
+      "file": "native-views/EcruteakCity_BellTower_9F.png",
+      "bytes": 5921,
+      "sha256": "faa0d2cded4752dad66bc199cac9450a860b7a6289460733dbbe88f8010eb971"
+    },
+    {
+      "file": "native-views/EcruteakCity_BellTower_Roof.png",
+      "bytes": 4814,
+      "sha256": "e9049128d4fef238fba3c28a7f605986f775b0efce39ad9acdcd1069c977541a"
+    },
+    {
+      "file": "native-views/EcruteakCity_BurnedTower.png",
+      "bytes": 3344,
+      "sha256": "e96952a066b9541a7e6e284f60b852785d320005d76cd1ecb2a2f17d48448cc2"
+    },
+    {
+      "file": "native-views/EcruteakCity_BurnedTower_B1F.png",
+      "bytes": 6353,
+      "sha256": "4c4b57cb674272e141443799231afc8216a663c6debb84c8f2ad0fdfd8eb9cfd"
+    },
+    {
+      "file": "native-views/EcruteakCity_DanceTheater.png",
+      "bytes": 2723,
+      "sha256": "d24dd73e9bb854e53cd8a9d94d9249b8fac2909e6dc839820b12182727215ba0"
+    },
+    {
+      "file": "native-views/EcruteakCity_DowsingHouse.png",
+      "bytes": 4380,
+      "sha256": "34af748d73cbf9db24ff0755ddb9f90ecce9043329e8c71d1b4fe149cdcdfd07"
+    },
+    {
+      "file": "native-views/EcruteakCity_EastGate.png",
+      "bytes": 5809,
+      "sha256": "016d5c72a87ee9848c077036a54d1ee88b0aeacc21a18be7252b281f9ba8a644"
+    },
+    {
+      "file": "native-views/EcruteakCity_Gym.png",
+      "bytes": 2201,
+      "sha256": "dc3a2208fe8e092898936ba050afb61dc7881834aad5a016bbd8ff6a0472fa7d"
+    },
+    {
+      "file": "native-views/EcruteakCity_Gym_Arena.png",
+      "bytes": 1487,
+      "sha256": "32bded34610ad405dd199ef571d06ab0993542a31d63ca562eaf596264d9674b"
+    },
+    {
+      "file": "native-views/EcruteakCity_Mart.png",
+      "bytes": 3360,
+      "sha256": "628b270df80838612b8ad382f322c3f6c3b7b960a0e210ad45f36b96ab2b522f"
+    },
+    {
+      "file": "native-views/EcruteakCity_PokemonCenter_1F.png",
+      "bytes": 2725,
+      "sha256": "940583e6efef7c26eb28217aa33a2a25f05f8c6fe6ec68150cb11ed7abb346e1"
+    },
+    {
+      "file": "native-views/EcruteakCity_PokemonCenter_B1F.png",
+      "bytes": 1387,
+      "sha256": "ca5f69aad68d9af6e0208a5bdb9323d690ce295f640ec5c4ceb593be95921e39"
+    },
+    {
+      "file": "native-views/EcruteakCity_Residence.png",
+      "bytes": 4426,
+      "sha256": "b44e1fc98ae11a60f3ea97976611fb512f7e555d3a6e4fdcd70a078b13fef3fd"
+    },
+    {
+      "file": "native-views/EcruteakCity_WestGate.png",
+      "bytes": 5776,
+      "sha256": "d2a709a85ee321ff2a52523319dce94c6d4252b01dbb52cbf6adf113574bc273"
+    },
+    {
+      "file": "references/Bellchime_Trail_gate_1F_HGSS.png",
+      "bytes": 162502,
+      "sha256": "f1e1432884d7b1253422444bb51c817c9e2fa8089138e15a081e134bb87a226b"
+    },
+    {
+      "file": "references/Common_Ecruteak_house_matrix0066_HGSS.jpg",
+      "bytes": 71371,
+      "sha256": "6ededf93058319e51ff9283faa80c7782d209aba9713a78a0d87426b4b8e6d4b"
+    },
+    {
+      "file": "references/Ecruteak_City_HGSS.png",
+      "bytes": 183428,
+      "sha256": "91e0dd8e59ad7894298e503b1ae40c643976c0ed99bb575083d1dcae664fd5c1"
+    },
+    {
+      "file": "references/Gate_inside_HGSS.png",
+      "bytes": 8154,
+      "sha256": "93e12044f2ef26bb726e13207db919c577f18a4e0e533d17c6c02efc9cad6b33"
+    },
+    {
+      "file": "references/Theater_actual_HGSS_Pokebip.png",
+      "bytes": 13180,
+      "sha256": "1ca25fe43d58c758da64a538373d2a489bf604c616e4422018901f71033bfa9d"
+    },
+    {
+      "file": "references/provenance.json",
+      "bytes": 1924,
+      "sha256": "b4cdb51f6b1150407817d43b23e9877ece4a5471142190926280d7460875afb9"
+    },
+    {
+      "file": "reports/controller-results.json",
+      "bytes": 115260,
+      "sha256": "e8c65546b715184a0b66186e99f3320411f8ae3a8a81b78246954686871b978e"
+    },
+    {
+      "file": "services/autumn-trail.png",
+      "bytes": 5088,
+      "sha256": "de11ad07743fd8edf9cf7de219c62d7f61d3ebc481e7ed636084c5f69ff2d938"
+    },
+    {
+      "file": "services/center-basement.png",
+      "bytes": 2848,
+      "sha256": "ad038fe04b69f0522d3d1ae5617d33004424d444879fcbdece8df164d605dc41"
+    },
+    {
+      "file": "services/center-interior.png",
+      "bytes": 5831,
+      "sha256": "08dde791213ebf93e493ad40438e0c71aadd8634e0c6ee0f0e7330b0f0b22cee"
+    },
+    {
+      "file": "services/center-pc-menu.png",
+      "bytes": 5296,
+      "sha256": "c63e4f3557805fd8589d88365c60611e7672636da7b1b4d5a08dc461c562a908"
+    },
+    {
+      "file": "services/center-plant-15-14-north.png",
+      "bytes": 4396,
+      "sha256": "631da270f11f47d1651a49d6fa138bc6069ed4468df6eb27c5281b68d7b53814"
+    },
+    {
+      "file": "services/ecruteak-whiteout.png",
+      "bytes": 5536,
+      "sha256": "5688e9d4816f2c727bba62a0244b522b1fb0317ce9f953b627af932b3283b5b8"
+    },
+    {
+      "file": "services/five-performer-show.png",
+      "bytes": 5795,
+      "sha256": "42458c2eaefccd09d09cc2e4fb3bee3b232ee0742c7b4515e6389374e6b480b0"
+    },
+    {
+      "file": "services/mart-interior.png",
+      "bytes": 5280,
+      "sha256": "e4d100c0e5198fd4d0f70979b0ecee9a75e66586526bb76881e8dae7f7ca4587"
+    },
+    {
+      "file": "services/mart-purchase.png",
+      "bytes": 5818,
+      "sha256": "0980df0b18898d80ec9f6960e177b6f979a72d8090f41e1d2e7217259868c6bf"
+    },
+    {
+      "file": "services/morty-battle.png",
+      "bytes": 2980,
+      "sha256": "0af2eab4aab05f472bbe193903a5a243bf126d186eabca7ccd0993427cc183b5"
+    },
+    {
+      "file": "services/nurse-healed.png",
+      "bytes": 5715,
+      "sha256": "445e0a4773c83f7998181cb2a57a9f042ee0cc515c0b4b1e4cbed9385bc50249"
+    },
+    {
+      "file": "services/second-house.png",
+      "bytes": 5968,
+      "sha256": "83b3a7c49254ce8dbca8a7287241da56a02d66dd40d1174f29a255e3ff8c3344"
+    },
+    {
+      "file": "services/southwest-house.png",
+      "bytes": 6008,
+      "sha256": "bb4ee7d5be4acce4107fbe133f845af0f93eb98c580065187fdec7f40be2c9d0"
+    },
+    {
+      "file": "services/theater-front-aisle-before.png",
+      "bytes": 5500,
+      "sha256": "ee66e2a22558c3984e0b6d61e4e335a909b8a30679c439b0f3050854628af870"
+    },
+    {
+      "file": "services/theater-front-aisle.png",
+      "bytes": 5301,
+      "sha256": "f181a8696c0426143db610e4707dcde4253508c441abe14dc418f562f7b5f075"
+    },
+    {
+      "file": "services/tower-summit.png",
+      "bytes": 4814,
+      "sha256": "e9049128d4fef238fba3c28a7f605986f775b0efce39ad9acdcd1069c977541a"
+    },
+    {
+      "file": "static-layouts/EcruteakCity.png",
+      "bytes": 141123,
+      "sha256": "e2e8e1232724d34b9b5077f9cac800736efdfb7bb75074c630e7f4a4cb74f44f"
+    },
+    {
+      "file": "static-layouts/EcruteakCity_BarrierStation.png",
+      "bytes": 5699,
+      "sha256": "d8567681262887121921ed54d988535a11d991863886ad6cbd940a5257535f6d"
+    },
+    {
+      "file": "static-layouts/EcruteakCity_DanceTheater.png",
+      "bytes": 5994,
+      "sha256": "23081ab34beca2ace9008531ebc0545f6059b311dc562b3913a2400de0a27f40"
+    },
+    {
+      "file": "static-layouts/EcruteakCity_PokemonCenter_1F.png",
+      "bytes": 6377,
+      "sha256": "3d6483e03237b26170d9584b1bfa65cc720b1a9211a221f9786661201185f820"
+    },
+    {
+      "file": "static-layouts/EcruteakCity_PokemonCenter_B1F.png",
+      "bytes": 2102,
+      "sha256": "be0614c2bc4e6caeb2d02509e3ccc3eae085da816cbadcba46c6b63fd66c2781"
+    },
+    {
+      "file": "static-layouts/EcruteakCity_Residence.png",
+      "bytes": 4231,
+      "sha256": "44d69561f9123dec8baa34430a821e987ae78da2d47dbfbcd79231da334bce18"
+    },
+    {
+      "file": "static-layouts/EcruteakCity_WestGate.png",
+      "bytes": 5163,
+      "sha256": "674ebcc823d194bf5e2f69b1323b8846007b8a0db1d9adbceb50fd01c77ece48"
+    },
+    {
+      "file": "static-layouts/all27-static-contact.png",
+      "bytes": 380748,
+      "sha256": "4031e21c7b78d842847f5456a477f0929d4d669ba4a90a62f63915fae200f61b"
+    }
+  ]
+}

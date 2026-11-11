@@ -1,15 +1,15 @@
 {
-  "version": "qa09-olivine-completion-review-v8-pending",
+  "version": "qa09-olivine-b11-emulator-verified",
   "scope": "Olivine City only, including canonical buildings, services, lighthouse/port maps and four preserved Black Ledger additions",
-  "source_revision": null,
-  "rom_sha256": null,
-  "identity_status": "Final V8 source/build/test identity pending; V7 controller evidence is a separate diagnostic checkpoint",
+  "source_revision": "489c404346f572aefb6856b3dd48a9b364a08ceb",
+  "rom_sha256": "df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4",
+  "identity_status": "Frozen BUILD11 source and actual delivery-byte identity verified; all final runtime reports refer to this checksum",
   "canonical_enterable_buildings_expected": 9,
   "canonical_enterable_buildings_registered": 9,
   "native_maps_expected": 24,
   "native_maps_registered": 24,
   "all_intended_buildings_present": true,
-  "completion_claim": "City content/source corrections implemented; final exact-ROM testing and owner visual acceptance still pending",
+  "completion_claim": "All intended Olivine physical city/interior/landmark content in this approved scope is implemented, compiled, source checked and final-ROM controller verified. No known functional defect remains in the exercised scope. Owner Delta visual acceptance is pending; no100% owner-acceptance or pixel-identity claim.",
   "review_authority": [
     "Actual HGSS city mosaic",
     "Pinned pret source geometry/prop/permission/warp facts",
@@ -26,7 +26,9 @@
     "landmark_visual_index": "olivine-landmark-visual-references.json",
     "landmark_instance_coverage": "olivine-landmark-prop-coverage.json",
     "comparison_gallery": "../qa/qa09/olivine-review/comparisons.html",
-    "comparison_scale_note": "Published HGSS source dimensions recorded separately from native240x160 GBA frames; no pixel1:1 equivalence asserted"
+    "comparison_scale_note": "Published HGSS source dimensions recorded separately from native240x160 GBA frames; no pixel1:1 equivalence asserted",
+    "historical_b9_native_screenshots": "../qa/qa09/olivine-tour-v9/manifest.json",
+    "current_b11_native_screenshots": "../qa/qa09/olivine-review/native-b11-manifest.json"
   },
   "completion_criteria": {
     "build_and_source_identity": "Fresh final ROM/commit/checksum, no uncommitted game-source ambiguity",
@@ -39,12 +41,7 @@
     "compatibility": "Copies of old/current saves preserve party/boxes/bag/money/flags/starter, native Save/cold Continue, Joe actions, title/music and existing routes/encounters",
     "visual_acceptance": "Owner Delta review required; compilation/connectivity alone never substitutes"
   },
-  "known_work_assigned_before_final_build": [
-    "Final source/build checksum and generator/static regressions on frozen V8",
-    "Final exact-V8 normal-controller doors/landmarks/services/collision/old-save/normalSaveContinue regressions after source art/material corrections",
-    "Refresh native screenshots/movement clips on frozen V8; preserve V7 diagnostic and V6 clipping baseline separately",
-    "Owner Delta visual acceptance; do not call current-source previews an accepted playable release"
-  ],
+  "known_work_assigned_before_final_build": [],
   "unfinished_transport_separate": [
     "S.S. Aqua sailing, ship interiors and other-region arrival are outside this approved two-city map pass. Docked ship/port scenery and safe boarding boundary are implemented; this is not a claim of missing city buildings being complete",
     "Accepted Harbor Office travel services remain functional, separate from canonical S.S. Aqua sailing"
@@ -87,8 +84,12 @@
         "OlivineCity_Gym_Arena"
       ],
       "all_intended_maps_registered": true,
-      "pending_until_final_delivery": true,
-      "v7_controller_checkpoint": "All named interiors visited; see diagnostic tour/services and final V8 requirements"
+      "pending_until_final_delivery": false,
+      "pending_owner_delta_visual_review": true,
+      "reference_basis": "Actual HGSS corridor/arena geometry and inspected Gym raster; approved custom Steel facade",
+      "implemented_content": "Enterable corridor/arena, optional accepted Jasmine practice battle",
+      "closed_or_deferred_services": "Permanent badges/progression/rewards deferred",
+      "current_b11_verification": "PASS current B11 named interiors visited, all applicable doorway segments/returns and listed services/collision/save coverage; owner visual review pending"
     },
     {
       "building": "Pokemon Center",
@@ -123,8 +124,12 @@
         "OlivineCity_PokemonCenter_B1F"
       ],
       "all_intended_maps_registered": true,
-      "pending_until_final_delivery": true,
-      "v7_controller_checkpoint": "All named interiors visited; see diagnostic tour/services and final V8 requirements"
+      "pending_until_final_delivery": false,
+      "pending_owner_delta_visual_review": true,
+      "reference_basis": "Actual identical common HGSS matrices/raster and source prop inventory",
+      "implemented_content": "Healing, PC, reception and17x14 basement with three booths/furniture",
+      "closed_or_deferred_services": "DS communication functionality unsupported/offline; closed blue desk panels are not missing open doorways",
+      "current_b11_verification": "PASS current B11 named interiors visited, all applicable doorway segments/returns and listed services/collision/save coverage; owner visual review pending"
     },
     {
       "building": "Poke Mart",
@@ -150,8 +155,12 @@
         "OlivineCity_Mart"
       ],
       "all_intended_maps_registered": true,
-      "pending_until_final_delivery": true,
-      "v7_controller_checkpoint": "All named interiors visited; see diagnostic tour/services and final V8 requirements"
+      "pending_until_final_delivery": false,
+      "pending_owner_delta_visual_review": true,
+      "reference_basis": "Actual common HGSS matrix/raster; fixtures retain source anchors",
+      "implemented_content": "Native shop, stock and purchase flow; source shelves/table/seats/plants",
+      "closed_or_deferred_services": "No new stock/progression decisions",
+      "current_b11_verification": "PASS current B11 named interiors visited, all applicable doorway segments/returns and listed services/collision/save coverage; owner visual review pending"
     },
     {
       "building": "Glitter Lighthouse",
@@ -184,8 +193,12 @@
         "OlivineCity_Lighthouse_Elevator"
       ],
       "all_intended_maps_registered": true,
-      "pending_until_final_delivery": true,
-      "v7_controller_checkpoint": "All named interiors visited; see diagnostic tour/services and final V8 requirements"
+      "pending_until_final_delivery": false,
+      "pending_owner_delta_visual_review": true,
+      "reference_basis": "Actual six-floor/balcony source geometry and annotated raster; every maritime prop accounted",
+      "implemented_content": "Six floors, intentional4F window/balcony branch, paired two-stop lift, preserved beacon",
+      "closed_or_deferred_services": "No imported Jasmine/Ampharos plot; separate cabin full raster unavailable",
+      "current_b11_verification": "PASS current B11 named interiors visited, all applicable doorway segments/returns and listed services/collision/save coverage; owner visual review pending"
     },
     {
       "building": "Fishing house",
@@ -211,8 +224,12 @@
         "OlivineCity_FishingHouse"
       ],
       "all_intended_maps_registered": true,
-      "pending_until_final_delivery": true,
-      "v7_controller_checkpoint": "All named interiors visited; see diagnostic tour/services and final V8 requirements"
+      "pending_until_final_delivery": false,
+      "pending_owner_delta_visual_review": true,
+      "reference_basis": "Actual0097 shared house matrix and inspected house raster",
+      "implemented_content": "Canonical furnished house and resident dialogue",
+      "closed_or_deferred_services": "Old Rod reward not added during this no-new-rewards map pass",
+      "current_b11_verification": "PASS current B11 named interiors visited, all applicable doorway segments/returns and listed services/collision/save coverage; owner visual review pending"
     },
     {
       "building": "Trade house",
@@ -238,8 +255,12 @@
         "OlivineCity_TradeHouse"
       ],
       "all_intended_maps_registered": true,
-      "pending_until_final_delivery": true,
-      "v7_controller_checkpoint": "All named interiors visited; see diagnostic tour/services and final V8 requirements"
+      "pending_until_final_delivery": false,
+      "pending_owner_delta_visual_review": true,
+      "reference_basis": "Actual0097 shared house matrix and inspected house raster",
+      "implemented_content": "Canonical furnished house and resident dialogue",
+      "closed_or_deferred_services": "Source trade/rewards deferred; dialogue is not a functional trade claim",
+      "current_b11_verification": "PASS current B11 named interiors visited, all applicable doorway segments/returns and listed services/collision/save coverage; owner visual review pending"
     },
     {
       "building": "Seal house",
@@ -265,8 +286,12 @@
         "OlivineCity_SealHouse"
       ],
       "all_intended_maps_registered": true,
-      "pending_until_final_delivery": true,
-      "v7_controller_checkpoint": "All named interiors visited; see diagnostic tour/services and final V8 requirements"
+      "pending_until_final_delivery": false,
+      "pending_owner_delta_visual_review": true,
+      "reference_basis": "Actual0097 shared house matrix and inspected house raster",
+      "implemented_content": "Canonical furnished house and resident dialogue",
+      "closed_or_deferred_services": "DS Seal Case/Seal feature unsupported and not claimed implemented",
+      "current_b11_verification": "PASS current B11 named interiors visited, all applicable doorway segments/returns and listed services/collision/save coverage; owner visual review pending"
     },
     {
       "building": "Cafe",
@@ -292,8 +317,12 @@
         "OlivineCity_Cafe"
       ],
       "all_intended_maps_registered": true,
-      "pending_until_final_delivery": true,
-      "v7_controller_checkpoint": "All named interiors visited; see diagnostic tour/services and final V8 requirements"
+      "pending_until_final_delivery": false,
+      "pending_owner_delta_visual_review": true,
+      "reference_basis": "Actual0136 matrix/raster; table, L-counter, windows and two plants",
+      "implemented_content": "Furnished public cafe with actual counter dialogue/access",
+      "closed_or_deferred_services": "One-cell staff aisle is a documented native safety adaptation",
+      "current_b11_verification": "PASS current B11 named interiors visited, all applicable doorway segments/returns and listed services/collision/save coverage; owner visual review pending"
     },
     {
       "building": "Port terminal",
@@ -328,8 +357,12 @@
         "OlivineCity_PortQuay"
       ],
       "all_intended_maps_registered": true,
-      "pending_until_final_delivery": true,
-      "v7_controller_checkpoint": "All named interiors visited; see diagnostic tour/services and final V8 requirements"
+      "pending_until_final_delivery": false,
+      "pending_owner_delta_visual_review": true,
+      "reference_basis": "Actual terminal raster plus canonical quay prop/warp facts; reverse full-view limitation explicit",
+      "implemented_content": "Furnished terminal, main/side leaves, quay, rear facade, docked ferry, boats and dry return",
+      "closed_or_deferred_services": "S.S.Aqua voyages/ship interiors/other-region arrival outside authorized city pass",
+      "current_b11_verification": "PASS current B11 named interiors visited, all applicable doorway segments/returns and listed services/collision/save coverage; owner visual review pending"
     },
     {
       "building": "Joe Mercer residence",
@@ -348,8 +381,12 @@
         "OlivineCity_Residence"
       ],
       "all_intended_maps_registered": true,
-      "pending_until_final_delivery": true,
-      "v7_controller_checkpoint": "All named interiors visited; see diagnostic tour/services and final V8 requirements"
+      "pending_until_final_delivery": false,
+      "pending_owner_delta_visual_review": true,
+      "reference_basis": "Preserved Black Ledger addition, no HGSS counterpart",
+      "implemented_content": "Accepted residence/rest/interaction and reciprocal door",
+      "closed_or_deferred_services": "Original location remains separate from canonical homes",
+      "current_b11_verification": "PASS current B11 named interiors visited, all applicable doorway segments/returns and listed services/collision/save coverage; owner visual review pending"
     },
     {
       "building": "Accepted neighbour residence",
@@ -368,8 +405,12 @@
         "OlivineCity_NeighborHouse"
       ],
       "all_intended_maps_registered": true,
-      "pending_until_final_delivery": true,
-      "v7_controller_checkpoint": "All named interiors visited; see diagnostic tour/services and final V8 requirements"
+      "pending_until_final_delivery": false,
+      "pending_owner_delta_visual_review": true,
+      "reference_basis": "Preserved Black Ledger addition, no HGSS counterpart",
+      "implemented_content": "Accepted furnished residence/dialogue and reciprocal door",
+      "closed_or_deferred_services": "Original location remains separate from canonical homes",
+      "current_b11_verification": "PASS current B11 named interiors visited, all applicable doorway segments/returns and listed services/collision/save coverage; owner visual review pending"
     },
     {
       "building": "Silph subsidiary office",
@@ -388,8 +429,12 @@
         "OlivineCity_SilphOffice"
       ],
       "all_intended_maps_registered": true,
-      "pending_until_final_delivery": true,
-      "v7_controller_checkpoint": "All named interiors visited; see diagnostic tour/services and final V8 requirements"
+      "pending_until_final_delivery": false,
+      "pending_owner_delta_visual_review": true,
+      "reference_basis": "Preserved Black Ledger addition, no HGSS counterpart",
+      "implemented_content": "Existing terminal, starter rescue/uniqueness/metadata and office interactions",
+      "closed_or_deferred_services": "Main prologue/story remains outside this map pass",
+      "current_b11_verification": "PASS current B11 named interiors visited, all applicable doorway segments/returns and listed services/collision/save coverage; owner visual review pending"
     },
     {
       "building": "Harbor Office",
@@ -408,8 +453,12 @@
         "OlivineCity_HarborOffice"
       ],
       "all_intended_maps_registered": true,
-      "pending_until_final_delivery": true,
-      "v7_controller_checkpoint": "All named interiors visited; see diagnostic tour/services and final V8 requirements"
+      "pending_until_final_delivery": false,
+      "pending_owner_delta_visual_review": true,
+      "reference_basis": "Preserved Black Ledger addition, no HGSS counterpart",
+      "implemented_content": "Accepted harbor/travel/dispatch interactions and reciprocal door",
+      "closed_or_deferred_services": "Existing approved travel is separate from deferred S.S.Aqua voyages",
+      "current_b11_verification": "PASS current B11 named interiors visited, all applicable doorway segments/returns and listed services/collision/save coverage; owner visual review pending"
     }
   ],
   "maps": [
@@ -930,14 +979,17 @@
         "Three terrace parasols retained, western parasol shifted to fit Harbor Office",
         "Source elevations/perspective flattened into collision-safe native terrain"
       ],
-      "static_visual_review": "Native V7 entry frame inspected; corrected full authored static layouts inspected where available; source render is not a playtest",
+      "static_visual_review": "All24 current full-layout static previews inspected; HGSS raster/geometry and chosen adaptations recorded; owner acceptance pending",
       "verification": {
-        "automated_checks": "Source semantic/generator/resource checks; final frozen V8 checks pending",
-        "emulator_gameplay": "V7 all24 targets visited; final V8 after material/art/source-prop corrections pending",
-        "save_continue": "V7 applicable coldContinue/privatefixture coverage passed; final V8 rerun pending",
+        "automated_checks": "PASS final source/generator/topology/semantic/resource/save-ID/build checks; engine palette bounds0\u201312 preserved",
+        "emulator_gameplay": "PASS current B11 controller tour plus applicable doorway/stair/landmark/service/collision tests; evidence scopes/exclusions recorded",
+        "save_continue": "PASS direct normal Save/coldContinue on exact B11",
         "owner_delta_visual_acceptance": "PENDING"
       },
-      "pending_until_final_delivery": true
+      "pending_until_final_delivery": false,
+      "pending_owner_delta_visual_review": true,
+      "historical_b9_native_frame": "crossroads/qa/qa09/olivine-tour-v9/OlivineCity.png",
+      "current_b11_native_frame": "crossroads/qa/qa09/olivine/final-v11-tour/OlivineCity.png"
     },
     {
       "name": "OlivineCity_Residence",
@@ -1020,14 +1072,17 @@
         "Accepted original Black Ledger location outside the nine HGSS canonical buildings",
         "Existing interior script/party/starter/travel/rest contracts preserved; no claim of an HGSS counterpart"
       ],
-      "static_visual_review": "Native V7 entry frame inspected; corrected full authored static layouts inspected where available; source render is not a playtest",
+      "static_visual_review": "All24 current full-layout static previews inspected; HGSS raster/geometry and chosen adaptations recorded; owner acceptance pending",
       "verification": {
-        "automated_checks": "Source semantic/generator/resource checks; final frozen V8 checks pending",
-        "emulator_gameplay": "V7 all24 targets visited; final V8 after material/art/source-prop corrections pending",
-        "save_continue": "V7 applicable coldContinue/privatefixture coverage passed; final V8 rerun pending",
+        "automated_checks": "PASS final source/generator/topology/semantic/resource/save-ID/build checks; engine palette bounds0\u201312 preserved",
+        "emulator_gameplay": "PASS current B11 controller tour plus applicable doorway/stair/landmark/service/collision tests; evidence scopes/exclusions recorded",
+        "save_continue": "PASS direct normal Save/coldContinue on exact B11",
         "owner_delta_visual_acceptance": "PENDING"
       },
-      "pending_until_final_delivery": true
+      "pending_until_final_delivery": false,
+      "pending_owner_delta_visual_review": true,
+      "historical_b9_native_frame": "crossroads/qa/qa09/olivine-tour-v9/OlivineCity_Residence.png",
+      "current_b11_native_frame": "crossroads/qa/qa09/olivine/final-v11-tour/OlivineCity_Residence.png"
     },
     {
       "name": "OlivineCity_NeighborHouse",
@@ -1109,14 +1164,17 @@
         "Accepted original Black Ledger location outside the nine HGSS canonical buildings",
         "Existing interior script/party/starter/travel/rest contracts preserved; no claim of an HGSS counterpart"
       ],
-      "static_visual_review": "Native V7 entry frame inspected; corrected full authored static layouts inspected where available; source render is not a playtest",
+      "static_visual_review": "All24 current full-layout static previews inspected; HGSS raster/geometry and chosen adaptations recorded; owner acceptance pending",
       "verification": {
-        "automated_checks": "Source semantic/generator/resource checks; final frozen V8 checks pending",
-        "emulator_gameplay": "V7 all24 targets visited; final V8 after material/art/source-prop corrections pending",
-        "save_continue": "V7 applicable coldContinue/privatefixture coverage passed; final V8 rerun pending",
+        "automated_checks": "PASS final source/generator/topology/semantic/resource/save-ID/build checks; engine palette bounds0\u201312 preserved",
+        "emulator_gameplay": "PASS current B11 controller tour plus applicable doorway/stair/landmark/service/collision tests; evidence scopes/exclusions recorded",
+        "save_continue": "Current B11 compatibility/save matrix PASS; no separate normal-save point on this particular map claimed",
         "owner_delta_visual_acceptance": "PENDING"
       },
-      "pending_until_final_delivery": true
+      "pending_until_final_delivery": false,
+      "pending_owner_delta_visual_review": true,
+      "historical_b9_native_frame": "crossroads/qa/qa09/olivine-tour-v9/OlivineCity_NeighborHouse.png",
+      "current_b11_native_frame": "crossroads/qa/qa09/olivine/final-v11-tour/OlivineCity_NeighborHouse.png"
     },
     {
       "name": "OlivineCity_Gym",
@@ -1272,14 +1330,17 @@
         "Sourcey17 split across two stable map IDs; all three corridor segments reciprocal",
         "Accepted Jasmine/apprentice optional practice scripts retained, no rewards/badges/gates"
       ],
-      "static_visual_review": "Native V7 entry frame inspected; corrected full authored static layouts inspected where available; source render is not a playtest",
+      "static_visual_review": "All24 current full-layout static previews inspected; HGSS raster/geometry and chosen adaptations recorded; owner acceptance pending",
       "verification": {
-        "automated_checks": "Source semantic/generator/resource checks; final frozen V8 checks pending",
-        "emulator_gameplay": "V7 all24 targets visited; final V8 after material/art/source-prop corrections pending",
-        "save_continue": "V7 applicable coldContinue/privatefixture coverage passed; final V8 rerun pending",
+        "automated_checks": "PASS final source/generator/topology/semantic/resource/save-ID/build checks; engine palette bounds0\u201312 preserved",
+        "emulator_gameplay": "PASS current B11 controller tour plus applicable doorway/stair/landmark/service/collision tests; evidence scopes/exclusions recorded",
+        "save_continue": "Current B11 compatibility/save matrix PASS; no separate normal-save point on this particular map claimed",
         "owner_delta_visual_acceptance": "PENDING"
       },
-      "pending_until_final_delivery": true
+      "pending_until_final_delivery": false,
+      "pending_owner_delta_visual_review": true,
+      "historical_b9_native_frame": "crossroads/qa/qa09/olivine-tour-v9/OlivineCity_Gym.png",
+      "current_b11_native_frame": "crossroads/qa/qa09/olivine/final-v11-tour/OlivineCity_Gym.png"
     },
     {
       "name": "OlivineCity_PokemonCenter_1F",
@@ -1432,14 +1493,17 @@
         "Olivine nurse ID/shop stock/scripts preserved; native PC/counter/escalators",
         "Raised DS reception flattened; communication desks explicitly offline"
       ],
-      "static_visual_review": "Native V7 entry frame inspected; corrected full authored static layouts inspected where available; source render is not a playtest",
+      "static_visual_review": "All24 current full-layout static previews inspected; HGSS raster/geometry and chosen adaptations recorded; owner acceptance pending",
       "verification": {
-        "automated_checks": "Source semantic/generator/resource checks; final frozen V8 checks pending",
-        "emulator_gameplay": "V7 all24 targets visited; final V8 after material/art/source-prop corrections pending",
-        "save_continue": "V7 applicable coldContinue/privatefixture coverage passed; final V8 rerun pending",
+        "automated_checks": "PASS final source/generator/topology/semantic/resource/save-ID/build checks; engine palette bounds0\u201312 preserved",
+        "emulator_gameplay": "PASS current B11 controller tour plus applicable doorway/stair/landmark/service/collision tests; evidence scopes/exclusions recorded",
+        "save_continue": "PASS direct normal Save/coldContinue on exact B11",
         "owner_delta_visual_acceptance": "PENDING"
       },
-      "pending_until_final_delivery": true
+      "pending_until_final_delivery": false,
+      "pending_owner_delta_visual_review": true,
+      "historical_b9_native_frame": "crossroads/qa/qa09/olivine-tour-v9/OlivineCity_PokemonCenter_1F.png",
+      "current_b11_native_frame": "crossroads/qa/qa09/olivine/final-v11-tour/OlivineCity_PokemonCenter_1F.png"
     },
     {
       "name": "OlivineCity_Mart",
@@ -1562,14 +1626,17 @@
         "Olivine nurse ID/shop stock/scripts preserved; native PC/counter/escalators",
         "Raised DS reception flattened; communication desks explicitly offline"
       ],
-      "static_visual_review": "Native V7 entry frame inspected; corrected full authored static layouts inspected where available; source render is not a playtest",
+      "static_visual_review": "All24 current full-layout static previews inspected; HGSS raster/geometry and chosen adaptations recorded; owner acceptance pending",
       "verification": {
-        "automated_checks": "Source semantic/generator/resource checks; final frozen V8 checks pending",
-        "emulator_gameplay": "V7 all24 targets visited; final V8 after material/art/source-prop corrections pending",
-        "save_continue": "V7 applicable coldContinue/privatefixture coverage passed; final V8 rerun pending",
+        "automated_checks": "PASS final source/generator/topology/semantic/resource/save-ID/build checks; engine palette bounds0\u201312 preserved",
+        "emulator_gameplay": "PASS current B11 controller tour plus applicable doorway/stair/landmark/service/collision tests; evidence scopes/exclusions recorded",
+        "save_continue": "Current B11 compatibility/save matrix PASS; no separate normal-save point on this particular map claimed",
         "owner_delta_visual_acceptance": "PENDING"
       },
-      "pending_until_final_delivery": true
+      "pending_until_final_delivery": false,
+      "pending_owner_delta_visual_review": true,
+      "historical_b9_native_frame": "crossroads/qa/qa09/olivine-tour-v9/OlivineCity_Mart.png",
+      "current_b11_native_frame": "crossroads/qa/qa09/olivine/final-v11-tour/OlivineCity_Mart.png"
     },
     {
       "name": "OlivineCity_SilphOffice",
@@ -1658,14 +1725,17 @@
         "Accepted original Black Ledger location outside the nine HGSS canonical buildings",
         "Existing interior script/party/starter/travel/rest contracts preserved; no claim of an HGSS counterpart"
       ],
-      "static_visual_review": "Native V7 entry frame inspected; corrected full authored static layouts inspected where available; source render is not a playtest",
+      "static_visual_review": "All24 current full-layout static previews inspected; HGSS raster/geometry and chosen adaptations recorded; owner acceptance pending",
       "verification": {
-        "automated_checks": "Source semantic/generator/resource checks; final frozen V8 checks pending",
-        "emulator_gameplay": "V7 all24 targets visited; final V8 after material/art/source-prop corrections pending",
-        "save_continue": "V7 applicable coldContinue/privatefixture coverage passed; final V8 rerun pending",
+        "automated_checks": "PASS final source/generator/topology/semantic/resource/save-ID/build checks; engine palette bounds0\u201312 preserved",
+        "emulator_gameplay": "PASS current B11 controller tour plus applicable doorway/stair/landmark/service/collision tests; evidence scopes/exclusions recorded",
+        "save_continue": "Current B11 compatibility/save matrix PASS; no separate normal-save point on this particular map claimed",
         "owner_delta_visual_acceptance": "PENDING"
       },
-      "pending_until_final_delivery": true
+      "pending_until_final_delivery": false,
+      "pending_owner_delta_visual_review": true,
+      "historical_b9_native_frame": "crossroads/qa/qa09/olivine-tour-v9/OlivineCity_SilphOffice.png",
+      "current_b11_native_frame": "crossroads/qa/qa09/olivine/final-v11-tour/OlivineCity_SilphOffice.png"
     },
     {
       "name": "OlivineCity_HarborOffice",
@@ -1754,14 +1824,17 @@
         "Accepted original Black Ledger location outside the nine HGSS canonical buildings",
         "Existing interior script/party/starter/travel/rest contracts preserved; no claim of an HGSS counterpart"
       ],
-      "static_visual_review": "Native V7 entry frame inspected; corrected full authored static layouts inspected where available; source render is not a playtest",
+      "static_visual_review": "All24 current full-layout static previews inspected; HGSS raster/geometry and chosen adaptations recorded; owner acceptance pending",
       "verification": {
-        "automated_checks": "Source semantic/generator/resource checks; final frozen V8 checks pending",
-        "emulator_gameplay": "V7 all24 targets visited; final V8 after material/art/source-prop corrections pending",
-        "save_continue": "V7 applicable coldContinue/privatefixture coverage passed; final V8 rerun pending",
+        "automated_checks": "PASS final source/generator/topology/semantic/resource/save-ID/build checks; engine palette bounds0\u201312 preserved",
+        "emulator_gameplay": "PASS current B11 controller tour plus applicable doorway/stair/landmark/service/collision tests; evidence scopes/exclusions recorded",
+        "save_continue": "Current B11 compatibility/save matrix PASS; no separate normal-save point on this particular map claimed",
         "owner_delta_visual_acceptance": "PENDING"
       },
-      "pending_until_final_delivery": true
+      "pending_until_final_delivery": false,
+      "pending_owner_delta_visual_review": true,
+      "historical_b9_native_frame": "crossroads/qa/qa09/olivine-tour-v9/OlivineCity_HarborOffice.png",
+      "current_b11_native_frame": "crossroads/qa/qa09/olivine/final-v11-tour/OlivineCity_HarborOffice.png"
     },
     {
       "name": "OlivineCity_Lighthouse_1F",
@@ -1899,15 +1972,18 @@
         "No source trainer/story/reward flags imported",
         "Wide GBA door/stair aliases append without removing historical warp indices"
       ],
-      "static_visual_review": "Native V7 entry frame inspected; corrected full authored static layouts inspected where available; source render is not a playtest",
+      "static_visual_review": "All24 current full-layout static previews inspected; HGSS raster/geometry and chosen adaptations recorded; owner acceptance pending",
       "verification": {
-        "automated_checks": "Source semantic/generator/resource checks; final frozen V8 checks pending",
-        "emulator_gameplay": "V7 all24 targets visited; final V8 after material/art/source-prop corrections pending",
-        "save_continue": "V7 applicable coldContinue/privatefixture coverage passed; final V8 rerun pending",
+        "automated_checks": "PASS final source/generator/topology/semantic/resource/save-ID/build checks; engine palette bounds0\u201312 preserved",
+        "emulator_gameplay": "PASS current B11 controller tour plus applicable doorway/stair/landmark/service/collision tests; evidence scopes/exclusions recorded",
+        "save_continue": "Current B11 compatibility/save matrix PASS; no separate normal-save point on this particular map claimed",
         "owner_delta_visual_acceptance": "PENDING"
       },
-      "pending_until_final_delivery": true,
-      "source_prop_coverage": "olivine-landmark-prop-coverage.json#OlivineCity_Lighthouse_1F"
+      "pending_until_final_delivery": false,
+      "source_prop_coverage": "olivine-landmark-prop-coverage.json#OlivineCity_Lighthouse_1F",
+      "pending_owner_delta_visual_review": true,
+      "historical_b9_native_frame": "crossroads/qa/qa09/olivine-tour-v9/OlivineCity_Lighthouse_1F.png",
+      "current_b11_native_frame": "crossroads/qa/qa09/olivine/final-v11-tour/OlivineCity_Lighthouse_1F.png"
     },
     {
       "name": "OlivineCity_Lighthouse_2F",
@@ -1998,15 +2074,18 @@
         "No source trainer/story/reward flags imported",
         "Wide GBA door/stair aliases append without removing historical warp indices"
       ],
-      "static_visual_review": "Native V7 entry frame inspected; corrected full authored static layouts inspected where available; source render is not a playtest",
+      "static_visual_review": "All24 current full-layout static previews inspected; HGSS raster/geometry and chosen adaptations recorded; owner acceptance pending",
       "verification": {
-        "automated_checks": "Source semantic/generator/resource checks; final frozen V8 checks pending",
-        "emulator_gameplay": "V7 all24 targets visited; final V8 after material/art/source-prop corrections pending",
-        "save_continue": "V7 applicable coldContinue/privatefixture coverage passed; final V8 rerun pending",
+        "automated_checks": "PASS final source/generator/topology/semantic/resource/save-ID/build checks; engine palette bounds0\u201312 preserved",
+        "emulator_gameplay": "PASS current B11 controller tour plus applicable doorway/stair/landmark/service/collision tests; evidence scopes/exclusions recorded",
+        "save_continue": "Current B11 compatibility/save matrix PASS; no separate normal-save point on this particular map claimed",
         "owner_delta_visual_acceptance": "PENDING"
       },
-      "pending_until_final_delivery": true,
-      "source_prop_coverage": "olivine-landmark-prop-coverage.json#OlivineCity_Lighthouse_2F"
+      "pending_until_final_delivery": false,
+      "source_prop_coverage": "olivine-landmark-prop-coverage.json#OlivineCity_Lighthouse_2F",
+      "pending_owner_delta_visual_review": true,
+      "historical_b9_native_frame": "crossroads/qa/qa09/olivine-tour-v9/OlivineCity_Lighthouse_2F.png",
+      "current_b11_native_frame": "crossroads/qa/qa09/olivine/final-v11-tour/OlivineCity_Lighthouse_2F.png"
     },
     {
       "name": "OlivineCity_Lighthouse_3F",
@@ -2179,15 +2258,18 @@
         "No source trainer/story/reward flags imported",
         "Wide GBA door/stair aliases append without removing historical warp indices"
       ],
-      "static_visual_review": "Native V7 entry frame inspected; corrected full authored static layouts inspected where available; source render is not a playtest",
+      "static_visual_review": "All24 current full-layout static previews inspected; HGSS raster/geometry and chosen adaptations recorded; owner acceptance pending",
       "verification": {
-        "automated_checks": "Source semantic/generator/resource checks; final frozen V8 checks pending",
-        "emulator_gameplay": "V7 all24 targets visited; final V8 after material/art/source-prop corrections pending",
-        "save_continue": "V7 applicable coldContinue/privatefixture coverage passed; final V8 rerun pending",
+        "automated_checks": "PASS final source/generator/topology/semantic/resource/save-ID/build checks; engine palette bounds0\u201312 preserved",
+        "emulator_gameplay": "PASS current B11 controller tour plus applicable doorway/stair/landmark/service/collision tests; evidence scopes/exclusions recorded",
+        "save_continue": "PASS direct normal Save/coldContinue on exact B11",
         "owner_delta_visual_acceptance": "PENDING"
       },
-      "pending_until_final_delivery": true,
-      "source_prop_coverage": "olivine-landmark-prop-coverage.json#OlivineCity_Lighthouse_3F"
+      "pending_until_final_delivery": false,
+      "source_prop_coverage": "olivine-landmark-prop-coverage.json#OlivineCity_Lighthouse_3F",
+      "pending_owner_delta_visual_review": true,
+      "historical_b9_native_frame": "crossroads/qa/qa09/olivine-tour-v9/OlivineCity_Lighthouse_3F.png",
+      "current_b11_native_frame": "crossroads/qa/qa09/olivine/final-v11-tour/OlivineCity_Lighthouse_3F.png"
     },
     {
       "name": "OlivineCity_Lighthouse_4F",
@@ -2292,15 +2374,18 @@
         "No source trainer/story/reward flags imported",
         "Wide GBA door/stair aliases append without removing historical warp indices"
       ],
-      "static_visual_review": "Native V7 entry frame inspected; corrected full authored static layouts inspected where available; source render is not a playtest",
+      "static_visual_review": "All24 current full-layout static previews inspected; HGSS raster/geometry and chosen adaptations recorded; owner acceptance pending",
       "verification": {
-        "automated_checks": "Source semantic/generator/resource checks; final frozen V8 checks pending",
-        "emulator_gameplay": "V7 all24 targets visited; final V8 after material/art/source-prop corrections pending",
-        "save_continue": "V7 applicable coldContinue/privatefixture coverage passed; final V8 rerun pending",
+        "automated_checks": "PASS final source/generator/topology/semantic/resource/save-ID/build checks; engine palette bounds0\u201312 preserved",
+        "emulator_gameplay": "PASS current B11 controller tour plus applicable doorway/stair/landmark/service/collision tests; evidence scopes/exclusions recorded",
+        "save_continue": "Current B11 compatibility/save matrix PASS; no separate normal-save point on this particular map claimed",
         "owner_delta_visual_acceptance": "PENDING"
       },
-      "pending_until_final_delivery": true,
-      "source_prop_coverage": "olivine-landmark-prop-coverage.json#OlivineCity_Lighthouse_4F"
+      "pending_until_final_delivery": false,
+      "source_prop_coverage": "olivine-landmark-prop-coverage.json#OlivineCity_Lighthouse_4F",
+      "pending_owner_delta_visual_review": true,
+      "historical_b9_native_frame": "crossroads/qa/qa09/olivine-tour-v9/OlivineCity_Lighthouse_4F.png",
+      "current_b11_native_frame": "crossroads/qa/qa09/olivine/final-v11-tour/OlivineCity_Lighthouse_4F.png"
     },
     {
       "name": "OlivineCity_Lighthouse_5F",
@@ -2390,15 +2475,18 @@
         "No source trainer/story/reward flags imported",
         "Wide GBA door/stair aliases append without removing historical warp indices"
       ],
-      "static_visual_review": "Native V7 entry frame inspected; corrected full authored static layouts inspected where available; source render is not a playtest",
+      "static_visual_review": "All24 current full-layout static previews inspected; HGSS raster/geometry and chosen adaptations recorded; owner acceptance pending",
       "verification": {
-        "automated_checks": "Source semantic/generator/resource checks; final frozen V8 checks pending",
-        "emulator_gameplay": "V7 all24 targets visited; final V8 after material/art/source-prop corrections pending",
-        "save_continue": "V7 applicable coldContinue/privatefixture coverage passed; final V8 rerun pending",
+        "automated_checks": "PASS final source/generator/topology/semantic/resource/save-ID/build checks; engine palette bounds0\u201312 preserved",
+        "emulator_gameplay": "PASS current B11 controller tour plus applicable doorway/stair/landmark/service/collision tests; evidence scopes/exclusions recorded",
+        "save_continue": "Current B11 compatibility/save matrix PASS; no separate normal-save point on this particular map claimed",
         "owner_delta_visual_acceptance": "PENDING"
       },
-      "pending_until_final_delivery": true,
-      "source_prop_coverage": "olivine-landmark-prop-coverage.json#OlivineCity_Lighthouse_5F"
+      "pending_until_final_delivery": false,
+      "source_prop_coverage": "olivine-landmark-prop-coverage.json#OlivineCity_Lighthouse_5F",
+      "pending_owner_delta_visual_review": true,
+      "historical_b9_native_frame": "crossroads/qa/qa09/olivine-tour-v9/OlivineCity_Lighthouse_5F.png",
+      "current_b11_native_frame": "crossroads/qa/qa09/olivine/final-v11-tour/OlivineCity_Lighthouse_5F.png"
     },
     {
       "name": "OlivineCity_Lighthouse_6F",
@@ -2494,15 +2582,18 @@
         "No source trainer/story/reward flags imported",
         "Wide GBA door/stair aliases append without removing historical warp indices"
       ],
-      "static_visual_review": "Native V7 entry frame inspected; corrected full authored static layouts inspected where available; source render is not a playtest",
+      "static_visual_review": "All24 current full-layout static previews inspected; HGSS raster/geometry and chosen adaptations recorded; owner acceptance pending",
       "verification": {
-        "automated_checks": "Source semantic/generator/resource checks; final frozen V8 checks pending",
-        "emulator_gameplay": "V7 all24 targets visited; final V8 after material/art/source-prop corrections pending",
-        "save_continue": "V7 applicable coldContinue/privatefixture coverage passed; final V8 rerun pending",
+        "automated_checks": "PASS final source/generator/topology/semantic/resource/save-ID/build checks; engine palette bounds0\u201312 preserved",
+        "emulator_gameplay": "PASS current B11 controller tour plus applicable doorway/stair/landmark/service/collision tests; evidence scopes/exclusions recorded",
+        "save_continue": "PASS direct normal Save/coldContinue on exact B11",
         "owner_delta_visual_acceptance": "PENDING"
       },
-      "pending_until_final_delivery": true,
-      "source_prop_coverage": "olivine-landmark-prop-coverage.json#OlivineCity_Lighthouse_6F"
+      "pending_until_final_delivery": false,
+      "source_prop_coverage": "olivine-landmark-prop-coverage.json#OlivineCity_Lighthouse_6F",
+      "pending_owner_delta_visual_review": true,
+      "historical_b9_native_frame": "crossroads/qa/qa09/olivine-tour-v9/OlivineCity_Lighthouse_6F.png",
+      "current_b11_native_frame": "crossroads/qa/qa09/olivine/final-v11-tour/OlivineCity_Lighthouse_6F.png"
     },
     {
       "name": "OlivineCity_Gym_Arena",
@@ -2626,14 +2717,17 @@
         "Sourcey17 split across two stable map IDs; all three corridor segments reciprocal",
         "Accepted Jasmine/apprentice optional practice scripts retained, no rewards/badges/gates"
       ],
-      "static_visual_review": "Native V7 entry frame inspected; corrected full authored static layouts inspected where available; source render is not a playtest",
+      "static_visual_review": "All24 current full-layout static previews inspected; HGSS raster/geometry and chosen adaptations recorded; owner acceptance pending",
       "verification": {
-        "automated_checks": "Source semantic/generator/resource checks; final frozen V8 checks pending",
-        "emulator_gameplay": "V7 all24 targets visited; final V8 after material/art/source-prop corrections pending",
-        "save_continue": "V7 applicable coldContinue/privatefixture coverage passed; final V8 rerun pending",
+        "automated_checks": "PASS final source/generator/topology/semantic/resource/save-ID/build checks; engine palette bounds0\u201312 preserved",
+        "emulator_gameplay": "PASS current B11 controller tour plus applicable doorway/stair/landmark/service/collision tests; evidence scopes/exclusions recorded",
+        "save_continue": "Current B11 compatibility/save matrix PASS; no separate normal-save point on this particular map claimed",
         "owner_delta_visual_acceptance": "PENDING"
       },
-      "pending_until_final_delivery": true
+      "pending_until_final_delivery": false,
+      "pending_owner_delta_visual_review": true,
+      "historical_b9_native_frame": "crossroads/qa/qa09/olivine-tour-v9/OlivineCity_Gym_Arena.png",
+      "current_b11_native_frame": "crossroads/qa/qa09/olivine/final-v11-tour/OlivineCity_Gym_Arena.png"
     },
     {
       "name": "OlivineCity_FishingHouse",
@@ -2742,17 +2836,20 @@
         "Actual shared0097 house matrix and trade-house screenshot support all three homes; native fridge/kitchen/window/bookcase/dining furniture",
         "Source household actor positions/count retained; source rewards/trades/Seal Case are outside this map pass"
       ],
-      "static_visual_review": "Native V7 entry frame inspected; corrected full authored static layouts inspected where available; source render is not a playtest",
+      "static_visual_review": "All24 current full-layout static previews inspected; HGSS raster/geometry and chosen adaptations recorded; owner acceptance pending",
       "verification": {
-        "automated_checks": "Source semantic/generator/resource checks; final frozen V8 checks pending",
-        "emulator_gameplay": "V7 all24 targets visited; final V8 after material/art/source-prop corrections pending",
-        "save_continue": "V7 applicable coldContinue/privatefixture coverage passed; final V8 rerun pending",
+        "automated_checks": "PASS final source/generator/topology/semantic/resource/save-ID/build checks; engine palette bounds0\u201312 preserved",
+        "emulator_gameplay": "PASS current B11 controller tour plus applicable doorway/stair/landmark/service/collision tests; evidence scopes/exclusions recorded",
+        "save_continue": "PASS direct normal Save/coldContinue on exact B11",
         "owner_delta_visual_acceptance": "PENDING"
       },
-      "pending_until_final_delivery": true,
+      "pending_until_final_delivery": false,
       "open_fixture_review": [
         "Source model23 plant beside rear bookcase lacks a distinct glyph in audited output; parent notified before final freeze, requires correction or explicit accepted art compression"
-      ]
+      ],
+      "pending_owner_delta_visual_review": true,
+      "historical_b9_native_frame": "crossroads/qa/qa09/olivine-tour-v9/OlivineCity_FishingHouse.png",
+      "current_b11_native_frame": "crossroads/qa/qa09/olivine/final-v11-tour/OlivineCity_FishingHouse.png"
     },
     {
       "name": "OlivineCity_TradeHouse",
@@ -2861,17 +2958,20 @@
         "Actual shared0097 house matrix and trade-house screenshot support all three homes; native fridge/kitchen/window/bookcase/dining furniture",
         "Source household actor positions/count retained; source rewards/trades/Seal Case are outside this map pass"
       ],
-      "static_visual_review": "Native V7 entry frame inspected; corrected full authored static layouts inspected where available; source render is not a playtest",
+      "static_visual_review": "All24 current full-layout static previews inspected; HGSS raster/geometry and chosen adaptations recorded; owner acceptance pending",
       "verification": {
-        "automated_checks": "Source semantic/generator/resource checks; final frozen V8 checks pending",
-        "emulator_gameplay": "V7 all24 targets visited; final V8 after material/art/source-prop corrections pending",
-        "save_continue": "V7 applicable coldContinue/privatefixture coverage passed; final V8 rerun pending",
+        "automated_checks": "PASS final source/generator/topology/semantic/resource/save-ID/build checks; engine palette bounds0\u201312 preserved",
+        "emulator_gameplay": "PASS current B11 controller tour plus applicable doorway/stair/landmark/service/collision tests; evidence scopes/exclusions recorded",
+        "save_continue": "PASS direct normal Save/coldContinue on exact B11",
         "owner_delta_visual_acceptance": "PENDING"
       },
-      "pending_until_final_delivery": true,
+      "pending_until_final_delivery": false,
       "open_fixture_review": [
         "Source model23 plant beside rear bookcase lacks a distinct glyph in audited output; parent notified before final freeze, requires correction or explicit accepted art compression"
-      ]
+      ],
+      "pending_owner_delta_visual_review": true,
+      "historical_b9_native_frame": "crossroads/qa/qa09/olivine-tour-v9/OlivineCity_TradeHouse.png",
+      "current_b11_native_frame": "crossroads/qa/qa09/olivine/final-v11-tour/OlivineCity_TradeHouse.png"
     },
     {
       "name": "OlivineCity_SealHouse",
@@ -2992,17 +3092,20 @@
         "Actual shared0097 house matrix and trade-house screenshot support all three homes; native fridge/kitchen/window/bookcase/dining furniture",
         "Source household actor positions/count retained; source rewards/trades/Seal Case are outside this map pass"
       ],
-      "static_visual_review": "Native V7 entry frame inspected; corrected full authored static layouts inspected where available; source render is not a playtest",
+      "static_visual_review": "All24 current full-layout static previews inspected; HGSS raster/geometry and chosen adaptations recorded; owner acceptance pending",
       "verification": {
-        "automated_checks": "Source semantic/generator/resource checks; final frozen V8 checks pending",
-        "emulator_gameplay": "V7 all24 targets visited; final V8 after material/art/source-prop corrections pending",
-        "save_continue": "V7 applicable coldContinue/privatefixture coverage passed; final V8 rerun pending",
+        "automated_checks": "PASS final source/generator/topology/semantic/resource/save-ID/build checks; engine palette bounds0\u201312 preserved",
+        "emulator_gameplay": "PASS current B11 controller tour plus applicable doorway/stair/landmark/service/collision tests; evidence scopes/exclusions recorded",
+        "save_continue": "PASS direct normal Save/coldContinue on exact B11",
         "owner_delta_visual_acceptance": "PENDING"
       },
-      "pending_until_final_delivery": true,
+      "pending_until_final_delivery": false,
       "open_fixture_review": [
         "Source model23 plant beside rear bookcase lacks a distinct glyph in audited output; parent notified before final freeze, requires correction or explicit accepted art compression"
-      ]
+      ],
+      "pending_owner_delta_visual_review": true,
+      "historical_b9_native_frame": "crossroads/qa/qa09/olivine-tour-v9/OlivineCity_SealHouse.png",
+      "current_b11_native_frame": "crossroads/qa/qa09/olivine/final-v11-tour/OlivineCity_SealHouse.png"
     },
     {
       "name": "OlivineCity_Cafe",
@@ -3120,17 +3223,20 @@
         "Actual cafe screenshot obtained and inspected: cream/checkered floor, left communal table, right serving counter, two rear windows and staff kitchen",
         "Native source12,8 is an explicitly visible service escape aisle; solid counter retains MB_COUNTER"
       ],
-      "static_visual_review": "Native V7 entry frame inspected; corrected full authored static layouts inspected where available; source render is not a playtest",
+      "static_visual_review": "All24 current full-layout static previews inspected; HGSS raster/geometry and chosen adaptations recorded; owner acceptance pending",
       "verification": {
-        "automated_checks": "Source semantic/generator/resource checks; final frozen V8 checks pending",
-        "emulator_gameplay": "V7 all24 targets visited; final V8 after material/art/source-prop corrections pending",
-        "save_continue": "V7 applicable coldContinue/privatefixture coverage passed; final V8 rerun pending",
+        "automated_checks": "PASS final source/generator/topology/semantic/resource/save-ID/build checks; engine palette bounds0\u201312 preserved",
+        "emulator_gameplay": "PASS current B11 controller tour plus applicable doorway/stair/landmark/service/collision tests; evidence scopes/exclusions recorded",
+        "save_continue": "PASS direct normal Save/coldContinue on exact B11",
         "owner_delta_visual_acceptance": "PENDING"
       },
-      "pending_until_final_delivery": true,
+      "pending_until_final_delivery": false,
       "open_fixture_review": [
         "Actual raster/model23 NW/SW potted plants absent from audited output; parent notified before final freeze"
-      ]
+      ],
+      "pending_owner_delta_visual_review": true,
+      "historical_b9_native_frame": "crossroads/qa/qa09/olivine-tour-v9/OlivineCity_Cafe.png",
+      "current_b11_native_frame": "crossroads/qa/qa09/olivine/final-v11-tour/OlivineCity_Cafe.png"
     },
     {
       "name": "OlivineCity_PokemonCenter_B1F",
@@ -3220,14 +3326,14 @@
         "Olivine nurse ID/shop stock/scripts preserved; native PC/counter/escalators",
         "Raised DS reception flattened; communication desks explicitly offline"
       ],
-      "static_visual_review": "Native V7 entry frame inspected; corrected full authored static layouts inspected where available; source render is not a playtest",
+      "static_visual_review": "All24 current full-layout static previews inspected; HGSS raster/geometry and chosen adaptations recorded; owner acceptance pending",
       "verification": {
-        "automated_checks": "Source semantic/generator/resource checks; final frozen V8 checks pending",
-        "emulator_gameplay": "V7 all24 targets visited; final V8 after material/art/source-prop corrections pending",
-        "save_continue": "V7 applicable coldContinue/privatefixture coverage passed; final V8 rerun pending",
+        "automated_checks": "PASS final source/generator/topology/semantic/resource/save-ID/build checks; engine palette bounds0\u201312 preserved",
+        "emulator_gameplay": "PASS current B11 controller tour plus applicable doorway/stair/landmark/service/collision tests; evidence scopes/exclusions recorded",
+        "save_continue": "PASS direct normal Save/coldContinue on exact B11",
         "owner_delta_visual_acceptance": "PENDING"
       },
-      "pending_until_final_delivery": true,
+      "pending_until_final_delivery": false,
       "queued_source_target": {
         "dimensions": [
           17,
@@ -3235,7 +3341,10 @@
         ],
         "secondary": "gTileset_HgssCenterBasement",
         "content": "full source public y12, glass table, ten stools, two plants and terminal"
-      }
+      },
+      "pending_owner_delta_visual_review": true,
+      "historical_b9_native_frame": "crossroads/qa/qa09/olivine-tour-v9/OlivineCity_PokemonCenter_B1F.png",
+      "current_b11_native_frame": "crossroads/qa/qa09/olivine/final-v11-tour/OlivineCity_PokemonCenter_B1F.png"
     },
     {
       "name": "OlivineCity_Lighthouse_Balcony",
@@ -3328,15 +3437,18 @@
         "No source trainer/story/reward flags imported",
         "Wide GBA door/stair aliases append without removing historical warp indices"
       ],
-      "static_visual_review": "Native V7 entry frame inspected; corrected full authored static layouts inspected where available; source render is not a playtest",
+      "static_visual_review": "All24 current full-layout static previews inspected; HGSS raster/geometry and chosen adaptations recorded; owner acceptance pending",
       "verification": {
-        "automated_checks": "Source semantic/generator/resource checks; final frozen V8 checks pending",
-        "emulator_gameplay": "V7 all24 targets visited; final V8 after material/art/source-prop corrections pending",
-        "save_continue": "V7 applicable coldContinue/privatefixture coverage passed; final V8 rerun pending",
+        "automated_checks": "PASS final source/generator/topology/semantic/resource/save-ID/build checks; engine palette bounds0\u201312 preserved",
+        "emulator_gameplay": "PASS current B11 controller tour plus applicable doorway/stair/landmark/service/collision tests; evidence scopes/exclusions recorded",
+        "save_continue": "PASS direct normal Save/coldContinue on exact B11",
         "owner_delta_visual_acceptance": "PENDING"
       },
-      "pending_until_final_delivery": true,
-      "source_prop_coverage": "olivine-landmark-prop-coverage.json#OlivineCity_Lighthouse_Balcony"
+      "pending_until_final_delivery": false,
+      "source_prop_coverage": "olivine-landmark-prop-coverage.json#OlivineCity_Lighthouse_Balcony",
+      "pending_owner_delta_visual_review": true,
+      "historical_b9_native_frame": "crossroads/qa/qa09/olivine-tour-v9/OlivineCity_Lighthouse_Balcony.png",
+      "current_b11_native_frame": "crossroads/qa/qa09/olivine/final-v11-tour/OlivineCity_Lighthouse_Balcony.png"
     },
     {
       "name": "OlivineCity_Lighthouse_Elevator",
@@ -3405,15 +3517,18 @@
         "No source trainer/story/reward flags imported",
         "Wide GBA door/stair aliases append without removing historical warp indices"
       ],
-      "static_visual_review": "Native V7 entry frame inspected; corrected full authored static layouts inspected where available; source render is not a playtest",
+      "static_visual_review": "All24 current full-layout static previews inspected; HGSS raster/geometry and chosen adaptations recorded; owner acceptance pending",
       "verification": {
-        "automated_checks": "Source semantic/generator/resource checks; final frozen V8 checks pending",
-        "emulator_gameplay": "V7 all24 targets visited; final V8 after material/art/source-prop corrections pending",
-        "save_continue": "V7 applicable coldContinue/privatefixture coverage passed; final V8 rerun pending",
+        "automated_checks": "PASS final source/generator/topology/semantic/resource/save-ID/build checks; engine palette bounds0\u201312 preserved",
+        "emulator_gameplay": "PASS current B11 controller tour plus applicable doorway/stair/landmark/service/collision tests; evidence scopes/exclusions recorded",
+        "save_continue": "PASS direct normal Save/coldContinue on exact B11",
         "owner_delta_visual_acceptance": "PENDING"
       },
-      "pending_until_final_delivery": true,
-      "source_prop_coverage": "olivine-landmark-prop-coverage.json#OlivineCity_Lighthouse_Elevator"
+      "pending_until_final_delivery": false,
+      "source_prop_coverage": "olivine-landmark-prop-coverage.json#OlivineCity_Lighthouse_Elevator",
+      "pending_owner_delta_visual_review": true,
+      "historical_b9_native_frame": "crossroads/qa/qa09/olivine-tour-v9/OlivineCity_Lighthouse_Elevator.png",
+      "current_b11_native_frame": "crossroads/qa/qa09/olivine/final-v11-tour/OlivineCity_Lighthouse_Elevator.png"
     },
     {
       "name": "OlivineCity_PortTerminal",
@@ -3612,15 +3727,18 @@
         "No source trainer/story/reward flags imported",
         "Wide GBA door/stair aliases append without removing historical warp indices"
       ],
-      "static_visual_review": "Native V7 entry frame inspected; corrected full authored static layouts inspected where available; source render is not a playtest",
+      "static_visual_review": "All24 current full-layout static previews inspected; HGSS raster/geometry and chosen adaptations recorded; owner acceptance pending",
       "verification": {
-        "automated_checks": "Source semantic/generator/resource checks; final frozen V8 checks pending",
-        "emulator_gameplay": "V7 all24 targets visited; final V8 after material/art/source-prop corrections pending",
-        "save_continue": "V7 applicable coldContinue/privatefixture coverage passed; final V8 rerun pending",
+        "automated_checks": "PASS final source/generator/topology/semantic/resource/save-ID/build checks; engine palette bounds0\u201312 preserved",
+        "emulator_gameplay": "PASS current B11 controller tour plus applicable doorway/stair/landmark/service/collision tests; evidence scopes/exclusions recorded",
+        "save_continue": "PASS direct normal Save/coldContinue on exact B11",
         "owner_delta_visual_acceptance": "PENDING"
       },
-      "pending_until_final_delivery": true,
-      "source_prop_coverage": "olivine-landmark-prop-coverage.json#OlivineCity_PortTerminal"
+      "pending_until_final_delivery": false,
+      "source_prop_coverage": "olivine-landmark-prop-coverage.json#OlivineCity_PortTerminal",
+      "pending_owner_delta_visual_review": true,
+      "historical_b9_native_frame": "crossroads/qa/qa09/olivine-tour-v9/OlivineCity_PortTerminal.png",
+      "current_b11_native_frame": "crossroads/qa/qa09/olivine/final-v11-tour/OlivineCity_PortTerminal.png"
     },
     {
       "name": "OlivineCity_PortQuay",
@@ -3775,15 +3893,18 @@
         "No source trainer/story/reward flags imported",
         "Wide GBA door/stair aliases append without removing historical warp indices"
       ],
-      "static_visual_review": "Native V7 entry frame inspected; corrected full authored static layouts inspected where available; source render is not a playtest",
+      "static_visual_review": "All24 current full-layout static previews inspected; HGSS raster/geometry and chosen adaptations recorded; owner acceptance pending",
       "verification": {
-        "automated_checks": "Source semantic/generator/resource checks; final frozen V8 checks pending",
-        "emulator_gameplay": "V7 all24 targets visited; final V8 after material/art/source-prop corrections pending",
-        "save_continue": "V7 applicable coldContinue/privatefixture coverage passed; final V8 rerun pending",
+        "automated_checks": "PASS final source/generator/topology/semantic/resource/save-ID/build checks; engine palette bounds0\u201312 preserved",
+        "emulator_gameplay": "PASS current B11 controller tour plus applicable doorway/stair/landmark/service/collision tests; evidence scopes/exclusions recorded",
+        "save_continue": "PASS direct normal Save/coldContinue on exact B11",
         "owner_delta_visual_acceptance": "PENDING"
       },
-      "pending_until_final_delivery": true,
-      "source_prop_coverage": "olivine-landmark-prop-coverage.json#OlivineCity_PortQuay"
+      "pending_until_final_delivery": false,
+      "source_prop_coverage": "olivine-landmark-prop-coverage.json#OlivineCity_PortQuay",
+      "pending_owner_delta_visual_review": true,
+      "historical_b9_native_frame": "crossroads/qa/qa09/olivine-tour-v9/OlivineCity_PortQuay.png",
+      "current_b11_native_frame": "crossroads/qa/qa09/olivine/final-v11-tour/OlivineCity_PortQuay.png"
     }
   ],
   "implemented_source_corrections": [
@@ -3798,7 +3919,7 @@
     "Current dedicated Center1F/private reception/emblem and Mart/private source furnishings cloned after their generators; Olivine nurse/warps/scripts/stock/heal identity preserved"
   ],
   "verification_checkpoints": {
-    "v7_diagnostic": {
+    "v7_diagnostic_historical": {
       "rom_sha256": "0734501b031d05156a28e685dc1c2748153cb065222bd67b0d2e7cea47fefbca",
       "source_revision": "3f935d5e8600c5a280b9172b555edb35ca52b6c0",
       "classification": "controller-driven mGBA, not owner manual Delta QA; distinct from finalV8",
@@ -3831,11 +3952,258 @@
         "evidence": "build/qa09-special-v7-dry/doorway-results.json"
       }
     },
-    "v8_final_delivery": {
-      "status": "PENDING exact frozen source/ROM verification; do not inherit V7 results as a finalV8 pass"
-    },
     "owner_delta": {
-      "status": "PENDING visual acceptance"
+      "status": "PENDING owner playtest/visual acceptance"
+    },
+    "b9_emulator_checkpoint_historical": {
+      "status": "HISTORICAL BUILD9 actual emulator checkpoint; not the current B11 delivery",
+      "source_revision": "5664fecee4337c5bdd442583e24cc91c09c0a0cd",
+      "rom_sha256": "d5abac0deabc7d592eba302122b3d15c08501947f0f601eda7b5026da9ac6772",
+      "classification": "Scripted controller-driven mGBA gameplay on copies of a normal battery; not owner manual Delta QA",
+      "setup": "Normal title/Continue and actual survey-desk UI. No map/warp/player coordinate writes during traversal. Survey assistance and test-only encounter suppression disclosed; labelled legacy-location and HP/status fixtures are separate from normal gameplay tests. Original source batteries unchanged.",
+      "tour": {
+        "target_maps": 24,
+        "visited_including_transit": 39,
+        "transitions": 180,
+        "roundtrip_pairs": 53,
+        "warp_trials": 173,
+        "actual_survey_surf_entries": 5,
+        "evidence": "crossroads/qa/qa09/olivine-tour-v9/coverage.json",
+        "native_frames": "crossroads/qa/qa09/olivine-tour-v9/manifest.json"
+      },
+      "doors": {
+        "pass_count": 168,
+        "front_segments": 60,
+        "unavailable_lateral_approaches": 12,
+        "note": "All60 doorway segments have passing direct/front trials.12 lateral starting positions are physically unavailable, explicitly reported rather than silently counted as passes. Walking away after arrival is checked.",
+        "evidence": "crossroads/qa/qa09/olivine/final-v9-doorways/results.json"
+      },
+      "landmark_specials": {
+        "pass_count": 10,
+        "evidence": "crossroads/qa/qa09/olivine/final-v9-specials/results.json",
+        "scope": "Four native elevator floor/exit combinations;4Fwindow\u2192balcony\u2192south3F\u2192westernstairs\u2192top\u2192lift return; both port sea/overhang/body cases; dry boardwalk return; both balcony no-Surf rails"
+      },
+      "services": {
+        "pass_count": 51,
+        "evidence": "crossroads/qa/qa09/olivine/final-v9-services/results.json",
+        "scope": "Actual heal/PC/shop purchase/office/home/harbor/neighbour/cafe/landmark actors/signs/wayfinding and front communication desks; Jasmine practice battle and local whiteout"
+      },
+      "save_continue": {
+        "pass_count": 25,
+        "evidence": "crossroads/qa/qa09/olivine/final-v9-saves/results.json",
+        "source_battery_unchanged": true,
+        "scope": "Normal save/reset/coldContinue at listed representative maps, both selected lift destinations, copied old-save compatibility and explicitly labelled obsolete-coordinate/cached-layout/stool/sea-safety fixtures; exact party/boxes/bag/money/flags/starter preservation",
+        "direct_normal_save_maps": [
+          "OlivineCity",
+          "OlivineCity_Cafe",
+          "OlivineCity_FishingHouse",
+          "OlivineCity_Lighthouse_3F",
+          "OlivineCity_Lighthouse_6F",
+          "OlivineCity_Lighthouse_Balcony",
+          "OlivineCity_Lighthouse_Elevator",
+          "OlivineCity_PokemonCenter_1F",
+          "OlivineCity_PokemonCenter_B1F",
+          "OlivineCity_PortQuay",
+          "OlivineCity_PortTerminal",
+          "OlivineCity_Residence",
+          "OlivineCity_SealHouse",
+          "OlivineCity_TradeHouse"
+        ],
+        "note": "This matrix does not claim a separate save point at every one of24 maps."
+      },
+      "collision": {
+        "normal_controller_bumps": 204,
+        "skipped_approaches": 0,
+        "buildings": 13,
+        "intentional_canopy_overlap_cases": 3,
+        "evidence": "crossroads/qa/qa09/olivine/final-v9-collision/results.json"
+      },
+      "mart_props": {
+        "pass_count": 40,
+        "skipped_approaches": 0,
+        "scope": "Both cities, shelves/display racks/table/stools/plants",
+        "evidence": "crossroads/qa/qa09/olivine/final-v9-mart-props/results.json"
+      },
+      "front_counter_interactions": {
+        "pass_count": 6,
+        "scope": "Actual front-facing A interaction receives exact intended messages and returns control after formerly broken counter behavior",
+        "evidence": "crossroads/qa/qa09/olivine/final-v9-counters/results.json"
+      },
+      "city_materials": {
+        "dry_walks": 12,
+        "normal_controller_bumps": 43,
+        "white_fence_cells": 20,
+        "unavailable_fence_sides": 37,
+        "parasols": 3,
+        "surf_rock_groups": 4,
+        "evidence": "crossroads/qa/qa09/olivine-materials/results.json",
+        "scope": "Corrected timber/table paths, white fences, parasol bases/overhangs, gray offshore boulders, obsolete Port-model sea restoration and dry return; unreachable fence sides excluded explicitly"
+      },
+      "native_visual_review": {
+        "frames": 24,
+        "native_resolution": [
+          240,
+          160
+        ],
+        "contact_sheet": "crossroads/qa/qa09/olivine-tour-v9/contact-sheet.png",
+        "result": "Actual final1x contact sheet inspected; full static layouts supplement entry viewpoints. Owner review still required."
+      },
+      "resource_usage": {
+        "rom_file_bytes": 33554432,
+        "rom_payload_bytes": 30260764,
+        "rom_payload_headroom_bytes": 3293668,
+        "ewram_used_bytes": 226448,
+        "iwram_used_bytes": 28392
+      }
+    },
+    "current_b11_delivery": {
+      "status": "PASS all seven final B11 serial suites, all60 Olivine doorway fronts/168 accessible approaches, ten lighthouse/port specials and shared player regressions; owner Delta visual acceptance remains pending",
+      "source_revision": "489c404346f572aefb6856b3dd48a9b364a08ceb",
+      "rom_sha256": "df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4",
+      "classification": "Actual controller-driven mGBA on copied normal saves; distinct from source checks and owner Delta acceptance",
+      "owner_delta_visual_acceptance": "PENDING",
+      "tour": {
+        "status": "PASS",
+        "evidence": "crossroads/qa/qa09/olivine/final-v11-tour/results.json",
+        "target_maps": 24,
+        "visited_including_transit": 39,
+        "transitions": 180,
+        "roundtrip_pairs": 53,
+        "warp_trials": 173,
+        "actual_survey_surf_entries": 5,
+        "native_frames_checked": 24,
+        "debug_ff00ff_pixels": 0,
+        "source_battery_unchanged": true
+      },
+      "native_frames": "crossroads/qa/qa09/olivine-review/native-b11-manifest.json",
+      "native_visual_review": {
+        "status": "Actual final B11 native24-frame1x contact sheet inspected with source full layouts; owner visual acceptance remains pending",
+        "manifest": "crossroads/qa/qa09/olivine-review/native-b11-manifest.json",
+        "contact_sheet": "crossroads/qa/qa09/olivine-review/native-b11-contact-sheet.png"
+      },
+      "save_continue": {
+        "status": "PASS",
+        "evidence": "crossroads/qa/qa09/olivine/final-v11-saves/results.json",
+        "cases": 25,
+        "source_battery_unchanged": true,
+        "normal_save_maps": [
+          "OlivineCity",
+          "OlivineCity_Cafe",
+          "OlivineCity_FishingHouse",
+          "OlivineCity_Lighthouse_3F",
+          "OlivineCity_Lighthouse_6F",
+          "OlivineCity_Lighthouse_Balcony",
+          "OlivineCity_Lighthouse_Elevator",
+          "OlivineCity_PokemonCenter_1F",
+          "OlivineCity_PokemonCenter_B1F",
+          "OlivineCity_PortQuay",
+          "OlivineCity_PortTerminal",
+          "OlivineCity_Residence",
+          "OlivineCity_SealHouse",
+          "OlivineCity_TradeHouse"
+        ],
+        "scope": "All nine appended maps, split3F/6F, both actual panel-selected lift exits, Surf and four explicit immutable-V7 stool migrations; exact party/boxes/inventory/flags preservation",
+        "note": "Representative matrix, not an independent normal-save point on every map."
+      },
+      "lane_completion": "crossroads/qa/qa09/olivine/final-v11-lane/completed.json",
+      "doors": {
+        "status": "PASS",
+        "evidence": "crossroads/qa/qa09/doorways/v11/results.json",
+        "olive_segments": 60,
+        "olive_approach_passes": 168,
+        "olive_unavailable_laterals": 12,
+        "both_city_segments": 118,
+        "both_city_approach_passes": 329,
+        "both_city_unavailable_laterals": 25,
+        "failures": 0,
+        "note": "All required direct/front segments were executed. Physically unavailable lateral starting positions are explicit exclusions, not passes; actual arrival/walk-away checked."
+      },
+      "landmark_specials": {
+        "status": "PASS",
+        "evidence": "crossroads/qa/qa09/doorways/v11/results.json",
+        "cases": 10,
+        "scope": "Four native lift floor/leaf cases;4Fwindow\u2192balcony\u2192south3F\u2192westernstairs\u2192top\u2192liftreturn; both Port sea/overhang/body cases; dry boardwalk return; two high-balcony no-Surf rail cases"
+      },
+      "services": {
+        "status": "PASS",
+        "evidence": "crossroads/qa/qa09/olivine/final-v11-services/results.json",
+        "cases": 51,
+        "source_battery_unchanged": true,
+        "scope": "Actual heal/PC/purchase/rest/office/harbor/cafe/neighbour dialogue, all six front communication desks with exact text/LastTalked, maritime actors/plaques/view/port signs and Jasmine practice loss/local respawn"
+      },
+      "collision": {
+        "status": "PASS",
+        "evidence": "crossroads/qa/qa09/olivine/final-v11-collision/results.json",
+        "normal_controller_bumps": 204,
+        "buildings": 13,
+        "tree_cases": 3,
+        "inaccessible_skips": 0
+      },
+      "mart_props": {
+        "status": "PASS",
+        "evidence": "crossroads/qa/qa09/olivine/final-v11-mart-props/results.json",
+        "cases": 40,
+        "both_cities": true,
+        "inaccessible_skips": 0
+      },
+      "city_materials": {
+        "status": "PASS",
+        "evidence": "crossroads/qa/qa09/olivine/final-v11-materials/results.json",
+        "semantic_cases": 59,
+        "dry_deck_walks": 12,
+        "fence_bumps": 43,
+        "surf_boulder_groups": 4,
+        "native_clips": 18,
+        "unavailable_fence_approaches": 37,
+        "final_dry_return": [
+          16,
+          34
+        ],
+        "scope": "Source white fences/deck/table paths, gray offshore rock groups, normal parasol overlap/base movement, restored Port sea and dry return;37 inaccessible fence sides explicitly excluded."
+      },
+      "front_counter_interactions": {
+        "status": "PASS",
+        "evidence": "crossroads/qa/qa09/olivine/final-v11-counters/results.json",
+        "cases": 6,
+        "scope": "Actual front-facing A, exact intended text/LastTalked and control return; native recordings supplied"
+      },
+      "shared_player_regressions": {
+        "status": "PASS",
+        "evidence": "crossroads/qa/qa09/doorways/v11/results.json",
+        "scope": [
+          "All three actual starter rescues, met origin/level, duplicate guards, 16 facade visits/returns and Joe walking VRAM",
+          "Fresh player actual Jasmine loss, local heal respawn and Joe/party integrity",
+          "Actual native Fly to ten destinations, cancellation, Joe field-pose VRAM, normal postflight Save/cold title Continue and exact party/position",
+          "Mach/Acro bike mount/dismount/wheelie, Surf in four directions, rod casting/return/disembark with actual Joe VRAM",
+          "Exact-ROM resumed Survey session retained without toggling off; cold boot still enables through actual UI"
+        ]
+      }
     }
-  }
+  },
+  "known_functional_defects_in_tested_scope": [],
+  "remaining_review": [
+    "Owner Delta old-save/visual playtest and final approval"
+  ],
+  "resource_usage": {
+    "rom_file_bytes": 33554432,
+    "rom_payload_bytes": 30261028,
+    "rom_payload_headroom_bytes": 3293404,
+    "ewram_used_bytes": 226448,
+    "iwram_used_bytes": 28392,
+    "measurement_source": "Root actual BUILD11 build report; padded binary checksum independently verified",
+    "source_revision": "489c404346f572aefb6856b3dd48a9b364a08ceb",
+    "rom_sha256": "df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4"
+  },
+  "owner_visual_acceptance": "PENDING",
+  "final_runtime_completion_status": "PASS current B11; owner Delta visual acceptance pending",
+  "source_static_provenance": {
+    "status": "All24 recorded static source layout hashes still match current frozen BUILD11 layouts",
+    "static_manifest": "../qa/qa09/olivine-review/authored-static-v8/manifest.json",
+    "gameplay_separate": "Historical B9 frames and source-preview identity are retained; no final B11 runtime pass inferred"
+  },
+  "reference_comparison_limits": [
+    "Separate full native lighthouse lift-cabin raster unavailable; source geometry/functional evidence present",
+    "Complete reverse-quay raster unavailable; source model/warp facts support placement",
+    "Different DS/GBA perspective and chosen original native art adaptations preclude a literal pixel1:1 claim"
+  ]
 }

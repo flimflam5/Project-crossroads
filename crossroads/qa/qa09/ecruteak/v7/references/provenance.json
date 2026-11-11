@@ -1,0 +1,52 @@
+[
+  {
+    "file": "references/Theater_actual_HGSS_Pokebip.png",
+    "source_url": "https://www.pokebip.com/pages/jeux-video/pokemon-heartgold-soulsilver/soluce-du-jeu/images/figure83.png",
+    "sha256": "1ca25fe43d58c758da64a538373d2a489bf604c616e4422018901f71033bfa9d",
+    "published_dimensions": [
+      256,
+      192
+    ],
+    "transformation": "None; documentary reference only, never ROM asset"
+  },
+  {
+    "file": "references/Common_Ecruteak_house_matrix0066_HGSS.jpg",
+    "source_url": "https://static.guidestrats.com/images/11/1377/04-pokemon-hgss-man-will-give-you-the-apricorn-box.jpg",
+    "sha256": "6ededf93058319e51ff9283faa80c7782d209aba9713a78a0d87426b4b8e6d4b",
+    "published_dimensions": [
+      750,
+      558
+    ],
+    "transformation": "None; documentary reference only, never ROM asset"
+  },
+  {
+    "file": "references/Gate_inside_HGSS.png",
+    "source_url": "https://archives.bulbagarden.net/media/upload/2/2f/Gate_inside_HGSS.png",
+    "sha256": "93e12044f2ef26bb726e13207db919c577f18a4e0e533d17c6c02efc9cad6b33",
+    "published_dimensions": [
+      214,
+      180
+    ],
+    "transformation": "None; documentary reference only, never ROM asset"
+  },
+  {
+    "file": "references/Ecruteak_City_HGSS.png",
+    "source_url": "https://archives.bulbagarden.net/wiki/File:Ecruteak_City_HGSS.png",
+    "sha256": "91e0dd8e59ad7894298e503b1ae40c643976c0ed99bb575083d1dcae664fd5c1",
+    "published_dimensions": [
+      1032,
+      785
+    ],
+    "transformation": "None; documentary reference only, never ROM asset"
+  },
+  {
+    "file": "references/Bellchime_Trail_gate_1F_HGSS.png",
+    "source_url": "https://archives.bulbagarden.net/wiki/File:Bellchime_Trail_gate_1F_HGSS.png",
+    "sha256": "f1e1432884d7b1253422444bb51c817c9e2fa8089138e15a081e134bb87a226b",
+    "published_dimensions": [
+      676,
+      403
+    ],
+    "transformation": "None; documentary reference only, never ROM asset"
+  }
+]

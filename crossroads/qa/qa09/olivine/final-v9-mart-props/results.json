@@ -1,0 +1,535 @@
+{
+  "rom_sha256": "d5abac0deabc7d592eba302122b3d15c08501947f0f601eda7b5026da9ac6772",
+  "source_battery_sha256": "b03ff1ef488fbd25de016e828483bc3001787b84e450a45eaa0ac12a11de30ab",
+  "source_battery_unchanged": true,
+  "setup": "Copied normal battery/cold title Continue; actual public desk disables survey. Normal dry controller travel only. No map/warp/position/progress/party/bag writes; shared harness discloses temporary random-encounter suppression.",
+  "records": [
+    {
+      "map": "EcruteakCity_Mart",
+      "label": "northeast-plant",
+      "approach": [
+        11,
+        3
+      ],
+      "base": [
+        12,
+        3
+      ],
+      "result": "normal controller bump blocked"
+    },
+    {
+      "map": "EcruteakCity_Mart",
+      "label": "northeast-plant",
+      "approach": [
+        12,
+        4
+      ],
+      "base": [
+        12,
+        3
+      ],
+      "result": "normal controller bump blocked"
+    },
+    {
+      "map": "EcruteakCity_Mart",
+      "label": "southwest-plant",
+      "approach": [
+        2,
+        11
+      ],
+      "base": [
+        1,
+        11
+      ],
+      "result": "normal controller bump blocked"
+    },
+    {
+      "map": "EcruteakCity_Mart",
+      "label": "southeast-plant",
+      "approach": [
+        11,
+        11
+      ],
+      "base": [
+        12,
+        11
+      ],
+      "result": "normal controller bump blocked"
+    },
+    {
+      "map": "EcruteakCity_Mart",
+      "label": "east-rack",
+      "approach": [
+        11,
+        6
+      ],
+      "base": [
+        12,
+        6
+      ],
+      "result": "normal controller bump blocked"
+    },
+    {
+      "map": "EcruteakCity_Mart",
+      "label": "east-rack",
+      "approach": [
+        12,
+        5
+      ],
+      "base": [
+        12,
+        6
+      ],
+      "result": "normal controller bump blocked"
+    },
+    {
+      "map": "EcruteakCity_Mart",
+      "label": "east-rack",
+      "approach": [
+        11,
+        7
+      ],
+      "base": [
+        12,
+        7
+      ],
+      "result": "normal controller bump blocked"
+    },
+    {
+      "map": "EcruteakCity_Mart",
+      "label": "east-rack",
+      "approach": [
+        12,
+        8
+      ],
+      "base": [
+        12,
+        7
+      ],
+      "result": "normal controller bump blocked"
+    },
+    {
+      "map": "EcruteakCity_Mart",
+      "label": "glass-display",
+      "approach": [
+        8,
+        8
+      ],
+      "base": [
+        8,
+        9
+      ],
+      "result": "normal controller bump blocked"
+    },
+    {
+      "map": "EcruteakCity_Mart",
+      "label": "glass-display",
+      "approach": [
+        8,
+        11
+      ],
+      "base": [
+        8,
+        10
+      ],
+      "result": "normal controller bump blocked"
+    },
+    {
+      "map": "EcruteakCity_Mart",
+      "label": "glass-display",
+      "approach": [
+        9,
+        8
+      ],
+      "base": [
+        9,
+        9
+      ],
+      "result": "normal controller bump blocked"
+    },
+    {
+      "map": "EcruteakCity_Mart",
+      "label": "glass-display",
+      "approach": [
+        9,
+        11
+      ],
+      "base": [
+        9,
+        10
+      ],
+      "result": "normal controller bump blocked"
+    },
+    {
+      "map": "EcruteakCity_Mart",
+      "label": "stool-northwest",
+      "approach": [
+        6,
+        9
+      ],
+      "base": [
+        7,
+        9
+      ],
+      "result": "normal controller bump blocked"
+    },
+    {
+      "map": "EcruteakCity_Mart",
+      "label": "stool-northwest",
+      "approach": [
+        7,
+        8
+      ],
+      "base": [
+        7,
+        9
+      ],
+      "result": "normal controller bump blocked"
+    },
+    {
+      "map": "EcruteakCity_Mart",
+      "label": "stool-southwest",
+      "approach": [
+        6,
+        10
+      ],
+      "base": [
+        7,
+        10
+      ],
+      "result": "normal controller bump blocked"
+    },
+    {
+      "map": "EcruteakCity_Mart",
+      "label": "stool-southwest",
+      "approach": [
+        7,
+        11
+      ],
+      "base": [
+        7,
+        10
+      ],
+      "result": "normal controller bump blocked"
+    },
+    {
+      "map": "EcruteakCity_Mart",
+      "label": "stool-northeast",
+      "approach": [
+        11,
+        9
+      ],
+      "base": [
+        10,
+        9
+      ],
+      "result": "normal controller bump blocked"
+    },
+    {
+      "map": "EcruteakCity_Mart",
+      "label": "stool-northeast",
+      "approach": [
+        10,
+        8
+      ],
+      "base": [
+        10,
+        9
+      ],
+      "result": "normal controller bump blocked"
+    },
+    {
+      "map": "EcruteakCity_Mart",
+      "label": "stool-southeast",
+      "approach": [
+        11,
+        10
+      ],
+      "base": [
+        10,
+        10
+      ],
+      "result": "normal controller bump blocked"
+    },
+    {
+      "map": "EcruteakCity_Mart",
+      "label": "stool-southeast",
+      "approach": [
+        10,
+        11
+      ],
+      "base": [
+        10,
+        10
+      ],
+      "result": "normal controller bump blocked"
+    },
+    {
+      "map": "OlivineCity_Mart",
+      "label": "northeast-plant",
+      "approach": [
+        11,
+        3
+      ],
+      "base": [
+        12,
+        3
+      ],
+      "result": "normal controller bump blocked"
+    },
+    {
+      "map": "OlivineCity_Mart",
+      "label": "northeast-plant",
+      "approach": [
+        12,
+        4
+      ],
+      "base": [
+        12,
+        3
+      ],
+      "result": "normal controller bump blocked"
+    },
+    {
+      "map": "OlivineCity_Mart",
+      "label": "southwest-plant",
+      "approach": [
+        2,
+        11
+      ],
+      "base": [
+        1,
+        11
+      ],
+      "result": "normal controller bump blocked"
+    },
+    {
+      "map": "OlivineCity_Mart",
+      "label": "southeast-plant",
+      "approach": [
+        11,
+        11
+      ],
+      "base": [
+        12,
+        11
+      ],
+      "result": "normal controller bump blocked"
+    },
+    {
+      "map": "OlivineCity_Mart",
+      "label": "east-rack",
+      "approach": [
+        11,
+        6
+      ],
+      "base": [
+        12,
+        6
+      ],
+      "result": "normal controller bump blocked"
+    },
+    {
+      "map": "OlivineCity_Mart",
+      "label": "east-rack",
+      "approach": [
+        12,
+        5
+      ],
+      "base": [
+        12,
+        6
+      ],
+      "result": "normal controller bump blocked"
+    },
+    {
+      "map": "OlivineCity_Mart",
+      "label": "east-rack",
+      "approach": [
+        11,
+        7
+      ],
+      "base": [
+        12,
+        7
+      ],
+      "result": "normal controller bump blocked"
+    },
+    {
+      "map": "OlivineCity_Mart",
+      "label": "east-rack",
+      "approach": [
+        12,
+        8
+      ],
+      "base": [
+        12,
+        7
+      ],
+      "result": "normal controller bump blocked"
+    },
+    {
+      "map": "OlivineCity_Mart",
+      "label": "glass-display",
+      "approach": [
+        8,
+        8
+      ],
+      "base": [
+        8,
+        9
+      ],
+      "result": "normal controller bump blocked"
+    },
+    {
+      "map": "OlivineCity_Mart",
+      "label": "glass-display",
+      "approach": [
+        8,
+        11
+      ],
+      "base": [
+        8,
+        10
+      ],
+      "result": "normal controller bump blocked"
+    },
+    {
+      "map": "OlivineCity_Mart",
+      "label": "glass-display",
+      "approach": [
+        9,
+        8
+      ],
+      "base": [
+        9,
+        9
+      ],
+      "result": "normal controller bump blocked"
+    },
+    {
+      "map": "OlivineCity_Mart",
+      "label": "glass-display",
+      "approach": [
+        9,
+        11
+      ],
+      "base": [
+        9,
+        10
+      ],
+      "result": "normal controller bump blocked"
+    },
+    {
+      "map": "OlivineCity_Mart",
+      "label": "stool-northwest",
+      "approach": [
+        6,
+        9
+      ],
+      "base": [
+        7,
+        9
+      ],
+      "result": "normal controller bump blocked"
+    },
+    {
+      "map": "OlivineCity_Mart",
+      "label": "stool-northwest",
+      "approach": [
+        7,
+        8
+      ],
+      "base": [
+        7,
+        9
+      ],
+      "result": "normal controller bump blocked"
+    },
+    {
+      "map": "OlivineCity_Mart",
+      "label": "stool-southwest",
+      "approach": [
+        6,
+        10
+      ],
+      "base": [
+        7,
+        10
+      ],
+      "result": "normal controller bump blocked"
+    },
+    {
+      "map": "OlivineCity_Mart",
+      "label": "stool-southwest",
+      "approach": [
+        7,
+        11
+      ],
+      "base": [
+        7,
+        10
+      ],
+      "result": "normal controller bump blocked"
+    },
+    {
+      "map": "OlivineCity_Mart",
+      "label": "stool-northeast",
+      "approach": [
+        11,
+        9
+      ],
+      "base": [
+        10,
+        9
+      ],
+      "result": "normal controller bump blocked"
+    },
+    {
+      "map": "OlivineCity_Mart",
+      "label": "stool-northeast",
+      "approach": [
+        10,
+        8
+      ],
+      "base": [
+        10,
+        9
+      ],
+      "result": "normal controller bump blocked"
+    },
+    {
+      "map": "OlivineCity_Mart",
+      "label": "stool-southeast",
+      "approach": [
+        11,
+        10
+      ],
+      "base": [
+        10,
+        10
+      ],
+      "result": "normal controller bump blocked"
+    },
+    {
+      "map": "OlivineCity_Mart",
+      "label": "stool-southeast",
+      "approach": [
+        10,
+        11
+      ],
+      "base": [
+        10,
+        10
+      ],
+      "result": "normal controller bump blocked"
+    }
+  ],
+  "skipped_inaccessible_approaches": [],
+  "recordings": [
+    "EcruteakCity_Mart-northeast-plant",
+    "EcruteakCity_Mart-stool-northwest",
+    "OlivineCity_Mart-northeast-plant",
+    "OlivineCity_Mart-stool-northwest"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "source_commit": "3f935d5e8600c5a280b9172b555edb35ca52b6c0",
+  "authorized_changed_cells": 69,
+  "audience_authorized_pixel_cells": 95,
+  "unchanged_visible_cells": 102,
+  "collision_elevation_behavior_unchanged_cells": 266,
+  "shared_temple_unchanged": true,
+  "native_size": [
+    240,
+    160
+  ],
+  "compiled_backdrop_pixels_matched": 6144,
+  "backdrop_top_left": [
+    16,
+    24
+  ]
+}

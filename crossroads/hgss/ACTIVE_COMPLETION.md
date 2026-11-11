@@ -1,110 +1,75 @@
-# Active QA09 final city review — source corrections pending
+# QA09 final two-city checkpoint — implementation and verification complete
 
-Branch `feature/olivine-ecruteak-completion-qa09`, committed source checkpoint
-`3f935d5e8600c5a280b9172b555edb35ca52b6c0`. Scope is Ecruteak and Olivine only.
-Read `CITIES_QA09.md` and the individual city review/checklists. No expansion,
-master merge, history reset or engine/save-format change is authorized.
+Owner scope: Ecruteak and Olivine only. Preserve the accepted exteriors/Gyms,
+map/layout/heal/save identities, Joe, title/V5 music, starters/met/uniqueness,
+approved encounters/practice battles and existing travel. No master merge,
+reset/force push, engine upgrade, new regions/story/rewards/badges.
 
-BUILD7 is still the current binary, SHA256
-`0734501b031d05156a28e685dc1c2748153cb065222bd67b0d2e7cea47fefbca`.
-All its final gameplay suites passed: 51 city/interior maps; 118 doorway segments;
-329 executed front/lateral approaches; landmarks, services, starter regressions,
-collision and Save/cold Continue. Twenty-five physically unavailable lateral
-approaches are disclosed, not counted as passes. Owner acceptance remains separate.
-The distinct Ecruteak E1 checkpoint is archived locally with exact source/hash.
+Branch `feature/olivine-ecruteak-completion-qa09`; game-source checkpoint
+`489c404346f572aefb6856b3dd48a9b364a08ceb` is pushed; draft PR16 targets QA08
+`fda32b7ed0c68251ffa594d8496495854d3ff26e`, not master. Final documentation/evidence
+commit is identified by Git and the delivery build-info.json.
 
-The visual audit independently found additional fixable reference mismatches.
-They are NOT hardware limitations or silently accepted placeholders. Source-only
-work is underway before a coordinated BUILD8:
+## Frozen final binary and actual results
 
-- `olivine_interiors` owns exterior materials: obsolete source table footprints,
-  white fences, timber promenade/railing/parasol underlays, gray offshore rocks.
-  A narrow compatible Route40 primary buffer preserves seam decoding.
-- `olivine_landmarks` owns canonical home/cafe wall finishes, lighthouse2F plants,
-  source-backed beacon dais and remaining landmark prop audit.
-- `ecruteak_finish_audit` owns a private Theater gold crest/red lantern stage,
-  actual raster references and narrow immutable visual-delta contracts.
-- Root owns sequential shared generation, final build/static validation and tour.
-  `doorway_runtime` and `olivine_compatibility` own fresh final-byte runtime suites.
+BUILD11 ROM SHA256:
+`df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4`.
+Payload30,261,028bytes; EWRAM226,448; IWRAM28,392. Log `/tmp/qa09-build11.log`.
+All60 actual local CI commands PASS. All21 fresh serial stages PASS; all emulator
+lanes have ended. Ecruteak27maps/308transitions; Olivine24maps/180transitions.
+All118 front segments/329 executable doorway approaches PASS;25 lateral starts
+physically unavailable. Full services/landmarks/collision/furniture/field actions,
+all3 starters, actual practice whiteouts and Save/cold Continue pass. Final full
+source ground checks cover27,062 map+border cells; all51 native frames are zero
+magenta and visually reviewed. See `qa/qa09/verification-summary.json` and each
+city's building checklist, not historical intermediate results.
 
-Do not run shared generators/build while an owner is preparing source. After
-source readiness, root runs generators sequentially; then freeze ROM/ELF/map data
-for all emulator processes. Test evidence from V7 must never be relabelled V8.
-Do not export private saves, snapshots, ROMs or memory dumps into source control.
-Public evidence goes to `crossroads/qa/qa09`. Final source commit, docs, PR16,
-CI/artifact/checksums and owner Delta checklist are still required.
+Original battery remains
+`b03ff1ef488fbd25de016e828483bc3001787b84e450a45eaa0ac12a11de30ab`.
+Only copies/disclosed fixtures were tested. The owner's newest private Delta
+battery was not supplied. No ROM/battery/state/dump belongs in Git.
 
-Older entries below are historical checkpoints, not authority to undo QA09.
+## Changes since the historical checkpoints
 
-# Workspace recovery required — QA08
+Source3f935d5e: canonical Olivine reconstruction and Ecruteak source interiors.
+Source5664fece: furnished/source-backed city finish, safe furniture/service fronts,
+private palette/resource/registration fixes and preserved old service templates.
+Source7d92f793: actual HGSS Theater green audience floor/purple cushions, exact
+physics/geometry preserved. Source489c4043: gate floor/void/plant underlayer fix.
 
-Read [QA08_INTERRUPTION_CHECKPOINT.md](QA08_INTERRUPTION_CHECKPOINT.md) first.
-Ecruteak B2 fd15124245 is pushed and its exact local ROM/controller evidence
-retained. A later source-only f83 import fix passes both story-check jobs.
-Olivine facade conversion/source references were written locally but remain
-UNCOMMITTED and unintegrated. The workspace became unavailable before city/room
-implementation; inspect and preserve all surviving files before fast-forwarding.
-No new Olivine ROM or completion claim exists. Routine Olivine work remains
-authorized once execution access returns. No reset/merge/expansion elsewhere.
+B10 normal movement actually reproduced600 magenta pixels and hidden Joe on
+ordinary gate floors. B11 after-tests show zero magenta and192/192 or165/165
+Joe pixels visible. Four appended north-plant art IDs preserve every original
+attribute/event/alias/physics/save identity. Independent global source/frame
+checks reject the historical bad frame as a negative control. B9/B10 tour/probe
+passes alone did not constitute visual quality; retain their diagnostic evidence.
 
-# Current QA08 B2 continuation
+Olivine historical O1 source5664/ROMd5ab is archived as a distinct checkpoint;
+its Olivine work passed but its Ecruteak gates share the later-found defect.
+Ecruteak E2 / current combined E2-O1 uses the final df69 bytes, retesting both
+cities. Never distribute an old B9/B10/CI binary as the final tested build.
+Current CI run43015464700 successfully built Emerald/60 regressions and a real
+artifact; its synthetic merge tree equals489, but ROMe535 differs from localdf69.
+`qa/qa09/ci-build11.json` records this explicitly. Local runtime results apply
+only to df69, not that other binary.
 
-Read ECRUTEAK_QA08_B2.md. Branch feature/ecruteak-olivine-doorways-qa08.
-A1 d3ab461912 is delivered and retained; B2 gate exterior/outside-arrival repair
-has passed exact-ROM controller tests. Do not revert to the rejected full route
-secondary swap: routes keep WesternCity plus gate-only primary. Reproduce using
-asset city -> city generator -> western layouts -> network --through west.
-Next work: canonical Olivine buildings/interiors/lighthouse/port and old-save
-migration while preserving four accepted additions and all stable IDs. Source
-references are cached in /workspace/scratch/hgss-reference. The new original
-Olivine facade studies in /workspace/generated_images are not integrated yet.
-Unmatched green-roof report and complete raster comparisons remain open.
+## Final delivery / next step
 
-# QA08 active continuation
+Local delivery names are `BlackLedger-Cities-QA09-E2-O1.zip`, the matching
+evidence ZIP and directGBA in /workspace. The package build-info and PR16 record
+the exact delivery-source/ROM checksum. Before recreating anything, inspect those
+existing files and their Delivery.json/SHA256 reports. Final packaging requires
+a clean documentation/evidence commit, identical-byte rebuild and verified ZIP
+CRC/embedded hash. PR16 remains draft/unmerged; the next owner step is Delta QA.
 
-Branch feature/ecruteak-olivine-doorways-qa08, from8d13bd62ec. Latest owner scope
-is Ecruteak then Olivine only. Read ECRUTEAK_QA08.md and the city building inventory.
-Both visible Theater/Barrier leaves and all gate aisle rows are repaired; exact
-source/artifact identity is in build-info. Full city acceptance is still open.
-Next: identify green-roof report; complete gate exterior/reference comparison;
-then reconstruct Olivine canonical buildings/floors/port while preserving four
-accepted Black Ledger additions and all stable IDs. Original Olivine geometry
-reference files are cached in /workspace/scratch/hgss-reference/olivine-*.json;
-original generated facade studies are in /workspace/generated_images. They are
-not integrated and must not be described as playable new content. No resets,
-engine upgrades, master merge or expansion elsewhere.
-
-# Ecruteak QA07 current checkpoint
-
-Owner scope is Ecruteak only. The active review is ECRUTEAK_QA07.md with per-map
-JSON and native qa/ecruteak-qa07 evidence. Reproduced arrows/leaf overlap repaired;
-all27 maps/63 round-trip edge pairs checked in an actual Emerald build/mGBA.
-Owner visual acceptance and the unmatched current green-roof report remain open.
-Do not call the city accepted or resume regional expansion. Older QA05 notes below
-remain historical evidence of preserved work.
-
-# Ecruteak QA05 checkpoint
-
-Branch feature/hgss-ecruteak-reconstruction-01. QA04 exterior preserved; Joe field
-state checkpoint fe201d2174 precedes the Ecruteak floor/service reconstruction.
-Gameplay/evidence checkpoint: a9d0a5fdc3.
-Current deliverable scope/tests/known limitations are in ECRUTEAK_QA05.md and
-../RELEASE_HGSS_QA05.md. Source commit/checksum are in the artifact build-info.json.
-
-Implemented: two furnished houses, Theater/five-performer show, dedicated
-Center/Mart/basement, optional-practice Gym bridge with safe returns, both regional
-gatehouses, reference-backed station/corridor, canonical autumn Trail floor,
-Bell1–10F/roof and Burned1F/B1F. Appended six map IDs after QA04; old IDs/save format
-remain. Native stairs and whiteout arrivals were fixed after actual emulator failures.
-
-Verification: build PASS; structural/generator/build-inclusion checks PASS; actual
-27-map/246-transition tour,509 exterior collision probes, five-performer show,
-healing/bridge falls/Morty loss/local respawn, normal Save/cold Continue and copied
-stale-layout migration PASS. Fly/Surf/bikes/fishing and three starter choices pass.
-Native evidence/logs are in ../qa/hgss-qa05/. They do not assert owner visual acceptance.
-
-Next: owner Delta QA and reported fixes. Do not expand geography or replace the
-exterior as an incidental cleanup. See JOE_FIELD_AUDIT.md for unavailable/unplayed
-states and reused animation poses. DS online/candle story gates/rewards remain
-explicit adaptations/omissions, not secretly implemented content. Broader HGSS
-Johto and the original prologue remain unfinished. No merge to master is authorized.
+The two-city physical map/interior scope has no known reproduced functional
+defect after this pass. Owner Delta/visual acceptance is still PENDING; do not
+expand elsewhere before that review. Remaining comparison limits are the Theater
+south margin, complete reverse-quay and separate lift-cabin raster views; actual
+source geometry/props and traversal are verified. Flat GBA projection, custom
+Gyms and original Black Ledger additions are explicit adaptations. DS online
+services, S.S.Aqua voyages/ship interiors/other-region arrivals and unapproved
+story/trades/rewards/Seal Case/badges remain separate scope boundaries, never
+invented during this map pass. Inactive Dive/watering/decor/VSSeeker/contest/link
+states were source-audited, not normally activated here. See CITIES_QA09.md,
+RELEASE_CITIES_QA09.md and both city inventories for the practical review.

@@ -1,0 +1,11 @@
+Normal old battery-save Continue: EcruteakCity_BellTower_9F (7, 3) PASS
+Actual survey desk enables RAM-only water access without changing saved flags: PASS
+Actual controller visits/return, healing and retained starter/party: PASS 0 target maps 18 transitions
+Actual B1F terminal A dialogue and returned controls PASS
+/tmp/qa09-ecruteak-gates-v11-runner.py:31: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  walk(point);frames(30);p=out/(direction.lower()+'-gate-'+str(point[1])+'.png');lib.emu_image(str(p).encode());frame=Image.open(p).convert('RGB');assert frame.size==(240,160);assert not any(c==(255,0,255)for c in frame.getdata()),'Debug magenta in compiledgate';raw=q['raw'][name];panx=signed(read('sHorizontalCameraPan',2));pany=signed(read('sVerticalCameraPan',2))+8
+EcruteakCity_WestGate all3072 compiled pixels and normal walking PASS
+/tmp/qa09-ecruteak-gates-v11-runner.py:31: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  walk(point);frames(30);p=out/(direction.lower()+'-gate-'+str(point[1])+'.png');lib.emu_image(str(p).encode());frame=Image.open(p).convert('RGB');assert frame.size==(240,160);assert not any(c==(255,0,255)for c in frame.getdata()),'Debug magenta in compiledgate';raw=q['raw'][name];panx=signed(read('sHorizontalCameraPan',2));pany=signed(read('sVerticalCameraPan',2))+8
+EcruteakCity_EastGate all3072 compiled pixels and normal walking PASS
+Both gate supplemental suites PASS on exact final V11 ROM

@@ -1,0 +1,11 @@
+{
+  "classification": "STATIC native metatile source render, not emulator gameplay",
+  "game_source_revision_compared": "5664fecee4337c5bdd442583e24cc91c09c0a0cd",
+  "image": "EcruteakCity_DanceTheater.png",
+  "dimensions": [
+    224,
+    304
+  ],
+  "sha256": "4bff204a8aba7e9537a2f566b3d5e2012f3816538f25db34a74df09e3522f649",
+  "reference_manifest": "../../../hgss/ecruteak-theater-reference-followup.json"
+}

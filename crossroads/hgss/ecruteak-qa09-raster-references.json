@@ -73,5 +73,28 @@
     ],
     "use": "Reference inspection only; never used as ROM graphics",
     "visually_inspected": true
+  },
+  {
+    "label": "Actual HGSS Theater stage and complete13-seat audience view (WikiDex)",
+    "page": "https://www.wikidex.net/wiki/Teatro_de_Danza",
+    "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/0/09/latest/20100424181308/Teatro_de_Danza_HGSS.jpg",
+    "sha256": "05a655b8cc52f311c8660a1fb4dfeee3eeae5cf7e253a4651ae02e53b013421e",
+    "published_dimensions": [
+      256,
+      192
+    ],
+    "format": "JPEG",
+    "local_cache": "/workspace/scratch/hgss-reference/Theater_HGSS_wikidex.jpg",
+    "use": "Reference inspection only; no game graphics extracted",
+    "visually_inspected": true,
+    "shows_all_13_audience_seats": true,
+    "shows_stage_and_both_side_stairs": true,
+    "shows_south_exit": false,
+    "scope_note": "Published native-sized file with a cropped scene/black margins; it is not a whole-floor mosaic including the southern threshold",
+    "comparison": "Same13 model56 seating positions:3front +5middle +5rear; native GBA raised-stage/two-side-aisle plan agrees. Source/native south exit is supported by event/permission facts and runtime, not visible in this crop.",
+    "deliberate_art_deviations": [
+      "Original flat GBA stage/rope/lantern/cushion drawings replace DS perspective architecture; source colors,13 anchors and public geometry retained"
+    ],
+    "current_implementation": "BUILD10/11 replaces the earlier red benches/wooden audience with13 original purple cushions and light-green checkerfloor; brown stage retained. Earlier red/wood substitutions are historical, not current adaptations."
   }
 ]

@@ -1,3 +1,32 @@
+# QA09 gate ground-layer repair
+
+Normal metatiles draw bottom on BG2 below Joe and top on BG1 above him; their
+BG3 filler is not a safe transparent ground. Opaque floor art must be on the
+bottom layer. Private gate floor/void/plant underlays now follow that rule;
+four append-only north-plant variants retain the correct wall backgrounds.
+All old movement/behavior/layer attributes and map/save identities remain.
+`validate_city_ground_layers.py` independently resolves actual C resource and
+palette aliases, composes hardware RGB555 and rejects debug magenta/missing
+public ground across51 maps including borders. Actual controller BEFORE/AFTER
+and sprite-pixel visibility checks supplement that source validation. New art
+passes512-glyph native bounds and palette banks0–12 without engine expansion.
+
+# QA09 private city resources and compatibility
+
+See hgss/CITIES_QA09.md and hgss/OLIVINE_VALIDATION_QA09.md. Shared engine/save
+constants are unchanged. New private Theater, gate, Center reception/basement,
+Mart and tower resources fit native512-glyph/metatile pools. Only palette banks
+0–12 are loaded by maps; the independent actual-pointer validator checks all51
+city maps. A single bank12 holds new Mart props without altering native Shop art.
+Source model collision is classified by reference masks, not treated as cliffs.
+
+Center basements extend to14 rows retaining the same IDs/old coordinates; exact
+new furniture collision and normal Continue relocation are tested. Six front
+reception counters use exact private MB_COUNTER variants. New layout/heal/map
+IDs remain append-only. Other cities use pinned templates; Violet service maps
+are exact3f935 snapshots to prevent live Ecruteak clones. Generated externs are
+siblings inside the header guard; source-only repair leaves binary data intact.
+
 # Ecruteak QA07 terrain and preservation
 
 General0x24 has south-arrow-warp behavior: never use it for ordinary city seam

@@ -1,0 +1,5476 @@
+{
+  "checkpoint": "V7 regression checkpoint BEFORE subsequent Theater/gate/service-fidelity corrections; V8 delivery tests pending",
+  "rom_sha256": "0734501b031d05156a28e685dc1c2748153cb065222bd67b0d2e7cea47fefbca",
+  "game_source_checkpoint": "3f935d5e8600c5a280b9172b555edb35ca52b6c0",
+  "emulator": "mGBA through controller-input harness; actual game frames/state reads, no position/warp writes",
+  "fixture": "Copy of historical normal battery. Temporary RAM-only survey/encounter control. Details suite sets copied HP to1 and separately injects a stale shared-layout fixture. No private saves/snapshots/ROM included.",
+  "owner_delta_review": "Pending for new combined delivery",
+  "tour": {
+    "targets": [
+      "EcruteakCity",
+      "EcruteakCity_BurnedTower",
+      "EcruteakCity_BellTower",
+      "EcruteakCity_Residence",
+      "EcruteakCity_DanceTheater",
+      "EcruteakCity_Gym",
+      "EcruteakCity_PokemonCenter_1F",
+      "EcruteakCity_Mart",
+      "EcruteakCity_BellTower_2F",
+      "EcruteakCity_BellTower_3F",
+      "EcruteakCity_BellTower_4F",
+      "EcruteakCity_BellTower_5F",
+      "EcruteakCity_BellTower_6F",
+      "EcruteakCity_BellTower_7F",
+      "EcruteakCity_BellTower_8F",
+      "EcruteakCity_BellTower_9F",
+      "EcruteakCity_BurnedTower_B1F",
+      "EcruteakCity_Gym_Arena",
+      "EcruteakCity_BarrierStation",
+      "EcruteakCity_BarrierCorridor",
+      "BellchimeTrail",
+      "EcruteakCity_BellTower_10F",
+      "EcruteakCity_BellTower_Roof",
+      "EcruteakCity_DowsingHouse",
+      "EcruteakCity_PokemonCenter_B1F",
+      "EcruteakCity_WestGate",
+      "EcruteakCity_EastGate"
+    ],
+    "transitions": 308,
+    "roundtrip_pairs": 73,
+    "warp_trials": [
+      {
+        "source": "EcruteakCity_BellTower_9F",
+        "source_warp": 1,
+        "threshold": [
+          16,
+          3
+        ],
+        "expected_map": "EcruteakCity_BellTower_8F",
+        "actual_map": "EcruteakCity_BellTower_8F",
+        "arrival": [
+          3,
+          16
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_8F",
+        "source_warp": 0,
+        "threshold": [
+          3,
+          8
+        ],
+        "expected_map": "EcruteakCity_BellTower_7F",
+        "actual_map": "EcruteakCity_BellTower_7F",
+        "arrival": [
+          11,
+          22
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_7F",
+        "source_warp": 0,
+        "threshold": [
+          2,
+          15
+        ],
+        "expected_map": "EcruteakCity_BellTower_6F",
+        "actual_map": "EcruteakCity_BellTower_6F",
+        "arrival": [
+          2,
+          15
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_6F",
+        "source_warp": 0,
+        "threshold": [
+          9,
+          21
+        ],
+        "expected_map": "EcruteakCity_BellTower_5F",
+        "actual_map": "EcruteakCity_BellTower_5F",
+        "arrival": [
+          9,
+          21
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_5F",
+        "source_warp": 2,
+        "threshold": [
+          2,
+          21
+        ],
+        "expected_map": "EcruteakCity_BellTower_4F",
+        "actual_map": "EcruteakCity_BellTower_4F",
+        "arrival": [
+          2,
+          21
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_4F",
+        "source_warp": 0,
+        "threshold": [
+          20,
+          4
+        ],
+        "expected_map": "EcruteakCity_BellTower_3F",
+        "actual_map": "EcruteakCity_BellTower_3F",
+        "arrival": [
+          20,
+          4
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_3F",
+        "source_warp": 0,
+        "threshold": [
+          11,
+          21
+        ],
+        "expected_map": "EcruteakCity_BellTower_2F",
+        "actual_map": "EcruteakCity_BellTower_2F",
+        "arrival": [
+          11,
+          21
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_2F",
+        "source_warp": 0,
+        "threshold": [
+          5,
+          4
+        ],
+        "expected_map": "EcruteakCity_BellTower",
+        "actual_map": "EcruteakCity_BellTower",
+        "arrival": [
+          5,
+          4
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower",
+        "source_warp": 0,
+        "threshold": [
+          11,
+          22
+        ],
+        "expected_map": "BellchimeTrail",
+        "actual_map": "BellchimeTrail",
+        "arrival": [
+          37,
+          21
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "BellchimeTrail",
+        "source_warp": 0,
+        "threshold": [
+          9,
+          14
+        ],
+        "expected_map": "EcruteakCity_BarrierCorridor",
+        "actual_map": "EcruteakCity_BarrierCorridor",
+        "arrival": [
+          6,
+          3
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BarrierCorridor",
+        "source_warp": 0,
+        "threshold": [
+          3,
+          19
+        ],
+        "expected_map": "EcruteakCity_BarrierStation",
+        "actual_map": "EcruteakCity_BarrierStation",
+        "arrival": [
+          15,
+          3
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BarrierStation",
+        "source_warp": 0,
+        "threshold": [
+          9,
+          11
+        ],
+        "expected_map": "EcruteakCity",
+        "actual_map": "EcruteakCity",
+        "arrival": [
+          39,
+          26
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity",
+        "source_warp": 9,
+        "threshold": [
+          6,
+          37
+        ],
+        "expected_map": "EcruteakCity_WestGate",
+        "actual_map": "EcruteakCity_WestGate",
+        "arrival": [
+          10,
+          6
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_WestGate",
+        "source_warp": 1,
+        "threshold": [
+          1,
+          7
+        ],
+        "expected_map": "JohtoRoute38",
+        "actual_map": "JohtoRoute38",
+        "arrival": [
+          62,
+          13
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "OlivineCity",
+        "source_warp": 6,
+        "threshold": [
+          8,
+          40
+        ],
+        "expected_map": "OlivineCity_HarborOffice",
+        "actual_map": "OlivineCity_HarborOffice",
+        "arrival": [
+          3,
+          7
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "OlivineCity_HarborOffice",
+        "source_warp": 0,
+        "threshold": [
+          3,
+          7
+        ],
+        "expected_map": "OlivineCity",
+        "actual_map": "OlivineCity",
+        "arrival": [
+          8,
+          41
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "JohtoRoute38",
+        "source_warp": 0,
+        "threshold": [
+          63,
+          12
+        ],
+        "expected_map": "EcruteakCity_WestGate",
+        "actual_map": "EcruteakCity_WestGate",
+        "arrival": [
+          1,
+          6
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_WestGate",
+        "source_warp": 0,
+        "threshold": [
+          10,
+          7
+        ],
+        "expected_map": "EcruteakCity",
+        "actual_map": "EcruteakCity",
+        "arrival": [
+          7,
+          38
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity",
+        "source_warp": 0,
+        "threshold": [
+          24,
+          21
+        ],
+        "expected_map": "EcruteakCity_BurnedTower",
+        "actual_map": "EcruteakCity_BurnedTower",
+        "arrival": [
+          11,
+          22
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BurnedTower",
+        "source_warp": 0,
+        "threshold": [
+          11,
+          22
+        ],
+        "expected_map": "EcruteakCity",
+        "actual_map": "EcruteakCity",
+        "arrival": [
+          24,
+          22
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity",
+        "source_warp": 1,
+        "threshold": [
+          40,
+          25
+        ],
+        "expected_map": "EcruteakCity_BarrierStation",
+        "actual_map": "EcruteakCity_BarrierStation",
+        "arrival": [
+          10,
+          11
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BarrierStation",
+        "source_warp": 2,
+        "threshold": [
+          10,
+          11
+        ],
+        "expected_map": "EcruteakCity",
+        "actual_map": "EcruteakCity",
+        "arrival": [
+          40,
+          26
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity",
+        "source_warp": 2,
+        "threshold": [
+          23,
+          45
+        ],
+        "expected_map": "EcruteakCity_Residence",
+        "actual_map": "EcruteakCity_Residence",
+        "arrival": [
+          4,
+          8
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_Residence",
+        "source_warp": 0,
+        "threshold": [
+          4,
+          8
+        ],
+        "expected_map": "EcruteakCity",
+        "actual_map": "EcruteakCity",
+        "arrival": [
+          23,
+          46
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity",
+        "source_warp": 3,
+        "threshold": [
+          45,
+          45
+        ],
+        "expected_map": "EcruteakCity_DanceTheater",
+        "actual_map": "EcruteakCity_DanceTheater",
+        "arrival": [
+          8,
+          17
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_DanceTheater",
+        "source_warp": 1,
+        "threshold": [
+          8,
+          17
+        ],
+        "expected_map": "EcruteakCity",
+        "actual_map": "EcruteakCity",
+        "arrival": [
+          45,
+          46
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity",
+        "source_warp": 4,
+        "threshold": [
+          24,
+          55
+        ],
+        "expected_map": "EcruteakCity_Gym",
+        "actual_map": "EcruteakCity_Gym",
+        "arrival": [
+          10,
+          21
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_Gym",
+        "source_warp": 0,
+        "threshold": [
+          10,
+          21
+        ],
+        "expected_map": "EcruteakCity",
+        "actual_map": "EcruteakCity",
+        "arrival": [
+          24,
+          56
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity",
+        "source_warp": 5,
+        "threshold": [
+          45,
+          55
+        ],
+        "expected_map": "EcruteakCity_PokemonCenter_1F",
+        "actual_map": "EcruteakCity_PokemonCenter_1F",
+        "arrival": [
+          8,
+          19
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_PokemonCenter_1F",
+        "source_warp": 0,
+        "threshold": [
+          8,
+          19
+        ],
+        "expected_map": "EcruteakCity",
+        "actual_map": "EcruteakCity",
+        "arrival": [
+          45,
+          56
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity",
+        "source_warp": 6,
+        "threshold": [
+          53,
+          45
+        ],
+        "expected_map": "EcruteakCity_Mart",
+        "actual_map": "EcruteakCity_Mart",
+        "arrival": [
+          4,
+          11
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_Mart",
+        "source_warp": 0,
+        "threshold": [
+          4,
+          11
+        ],
+        "expected_map": "EcruteakCity",
+        "actual_map": "EcruteakCity",
+        "arrival": [
+          53,
+          46
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity",
+        "source_warp": 7,
+        "threshold": [
+          39,
+          25
+        ],
+        "expected_map": "EcruteakCity_BarrierStation",
+        "actual_map": "EcruteakCity_BarrierStation",
+        "arrival": [
+          9,
+          11
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BarrierStation",
+        "source_warp": 0,
+        "threshold": [
+          9,
+          11
+        ],
+        "expected_map": "EcruteakCity",
+        "actual_map": "EcruteakCity",
+        "arrival": [
+          39,
+          26
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity",
+        "source_warp": 8,
+        "threshold": [
+          34,
+          55
+        ],
+        "expected_map": "EcruteakCity_DowsingHouse",
+        "actual_map": "EcruteakCity_DowsingHouse",
+        "arrival": [
+          4,
+          8
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_DowsingHouse",
+        "source_warp": 0,
+        "threshold": [
+          4,
+          8
+        ],
+        "expected_map": "EcruteakCity",
+        "actual_map": "EcruteakCity",
+        "arrival": [
+          34,
+          56
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity",
+        "source_warp": 9,
+        "threshold": [
+          6,
+          37
+        ],
+        "expected_map": "EcruteakCity_WestGate",
+        "actual_map": "EcruteakCity_WestGate",
+        "arrival": [
+          10,
+          6
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_WestGate",
+        "source_warp": 2,
+        "threshold": [
+          10,
+          6
+        ],
+        "expected_map": "EcruteakCity",
+        "actual_map": "EcruteakCity",
+        "arrival": [
+          7,
+          37
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity",
+        "source_warp": 10,
+        "threshold": [
+          6,
+          38
+        ],
+        "expected_map": "EcruteakCity_WestGate",
+        "actual_map": "EcruteakCity_WestGate",
+        "arrival": [
+          10,
+          7
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_WestGate",
+        "source_warp": 0,
+        "threshold": [
+          10,
+          7
+        ],
+        "expected_map": "EcruteakCity",
+        "actual_map": "EcruteakCity",
+        "arrival": [
+          7,
+          38
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity",
+        "source_warp": 11,
+        "threshold": [
+          6,
+          39
+        ],
+        "expected_map": "EcruteakCity_WestGate",
+        "actual_map": "EcruteakCity_WestGate",
+        "arrival": [
+          10,
+          8
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_WestGate",
+        "source_warp": 3,
+        "threshold": [
+          10,
+          8
+        ],
+        "expected_map": "EcruteakCity",
+        "actual_map": "EcruteakCity",
+        "arrival": [
+          7,
+          39
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity",
+        "source_warp": 12,
+        "threshold": [
+          63,
+          46
+        ],
+        "expected_map": "EcruteakCity_EastGate",
+        "actual_map": "EcruteakCity_EastGate",
+        "arrival": [
+          1,
+          6
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_EastGate",
+        "source_warp": 2,
+        "threshold": [
+          1,
+          6
+        ],
+        "expected_map": "EcruteakCity",
+        "actual_map": "EcruteakCity",
+        "arrival": [
+          59,
+          46
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity",
+        "source_warp": 13,
+        "threshold": [
+          63,
+          47
+        ],
+        "expected_map": "EcruteakCity_EastGate",
+        "actual_map": "EcruteakCity_EastGate",
+        "arrival": [
+          1,
+          7
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_EastGate",
+        "source_warp": 0,
+        "threshold": [
+          1,
+          7
+        ],
+        "expected_map": "EcruteakCity",
+        "actual_map": "EcruteakCity",
+        "arrival": [
+          59,
+          47
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity",
+        "source_warp": 14,
+        "threshold": [
+          63,
+          48
+        ],
+        "expected_map": "EcruteakCity_EastGate",
+        "actual_map": "EcruteakCity_EastGate",
+        "arrival": [
+          1,
+          8
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_EastGate",
+        "source_warp": 3,
+        "threshold": [
+          1,
+          8
+        ],
+        "expected_map": "EcruteakCity",
+        "actual_map": "EcruteakCity",
+        "arrival": [
+          59,
+          48
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity",
+        "source_warp": 15,
+        "threshold": [
+          25,
+          55
+        ],
+        "expected_map": "EcruteakCity_Gym",
+        "actual_map": "EcruteakCity_Gym",
+        "arrival": [
+          11,
+          21
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_Gym",
+        "source_warp": 1,
+        "threshold": [
+          11,
+          21
+        ],
+        "expected_map": "EcruteakCity",
+        "actual_map": "EcruteakCity",
+        "arrival": [
+          25,
+          56
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity",
+        "source_warp": 16,
+        "threshold": [
+          44,
+          45
+        ],
+        "expected_map": "EcruteakCity_DanceTheater",
+        "actual_map": "EcruteakCity_DanceTheater",
+        "arrival": [
+          7,
+          17
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_DanceTheater",
+        "source_warp": 0,
+        "threshold": [
+          7,
+          17
+        ],
+        "expected_map": "EcruteakCity",
+        "actual_map": "EcruteakCity",
+        "arrival": [
+          44,
+          46
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity",
+        "source_warp": 9,
+        "threshold": [
+          6,
+          37
+        ],
+        "expected_map": "EcruteakCity_WestGate",
+        "actual_map": "EcruteakCity_WestGate",
+        "arrival": [
+          10,
+          6
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_WestGate",
+        "source_warp": 1,
+        "threshold": [
+          1,
+          7
+        ],
+        "expected_map": "JohtoRoute38",
+        "actual_map": "JohtoRoute38",
+        "arrival": [
+          62,
+          13
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "JohtoRoute38",
+        "source_warp": 0,
+        "threshold": [
+          63,
+          12
+        ],
+        "expected_map": "EcruteakCity_WestGate",
+        "actual_map": "EcruteakCity_WestGate",
+        "arrival": [
+          1,
+          6
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_WestGate",
+        "source_warp": 0,
+        "threshold": [
+          10,
+          7
+        ],
+        "expected_map": "EcruteakCity",
+        "actual_map": "EcruteakCity",
+        "arrival": [
+          7,
+          38
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity",
+        "source_warp": 12,
+        "threshold": [
+          63,
+          46
+        ],
+        "expected_map": "EcruteakCity_EastGate",
+        "actual_map": "EcruteakCity_EastGate",
+        "arrival": [
+          1,
+          6
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_EastGate",
+        "source_warp": 1,
+        "threshold": [
+          10,
+          7
+        ],
+        "expected_map": "JohtoRoute42",
+        "actual_map": "JohtoRoute42",
+        "arrival": [
+          3,
+          14
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "JohtoRoute42",
+        "source_warp": 3,
+        "threshold": [
+          0,
+          13
+        ],
+        "expected_map": "EcruteakCity_EastGate",
+        "actual_map": "EcruteakCity_EastGate",
+        "arrival": [
+          10,
+          6
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_EastGate",
+        "source_warp": 0,
+        "threshold": [
+          1,
+          7
+        ],
+        "expected_map": "EcruteakCity",
+        "actual_map": "EcruteakCity",
+        "arrival": [
+          59,
+          47
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity",
+        "source_warp": 0,
+        "threshold": [
+          24,
+          21
+        ],
+        "expected_map": "EcruteakCity_BurnedTower",
+        "actual_map": "EcruteakCity_BurnedTower",
+        "arrival": [
+          11,
+          22
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BurnedTower",
+        "source_warp": 1,
+        "threshold": [
+          12,
+          22
+        ],
+        "expected_map": "EcruteakCity",
+        "actual_map": "EcruteakCity",
+        "arrival": [
+          24,
+          22
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity",
+        "source_warp": 0,
+        "threshold": [
+          24,
+          21
+        ],
+        "expected_map": "EcruteakCity_BurnedTower",
+        "actual_map": "EcruteakCity_BurnedTower",
+        "arrival": [
+          11,
+          22
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BurnedTower",
+        "source_warp": 2,
+        "threshold": [
+          18,
+          12
+        ],
+        "expected_map": "EcruteakCity_BurnedTower_B1F",
+        "actual_map": "EcruteakCity_BurnedTower_B1F",
+        "arrival": [
+          19,
+          12
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BurnedTower_B1F",
+        "source_warp": 0,
+        "threshold": [
+          19,
+          12
+        ],
+        "expected_map": "EcruteakCity_BurnedTower",
+        "actual_map": "EcruteakCity_BurnedTower",
+        "arrival": [
+          18,
+          12
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BurnedTower",
+        "source_warp": 0,
+        "threshold": [
+          11,
+          22
+        ],
+        "expected_map": "EcruteakCity",
+        "actual_map": "EcruteakCity",
+        "arrival": [
+          24,
+          22
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity",
+        "source_warp": 1,
+        "threshold": [
+          40,
+          25
+        ],
+        "expected_map": "EcruteakCity_BarrierStation",
+        "actual_map": "EcruteakCity_BarrierStation",
+        "arrival": [
+          10,
+          11
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BarrierStation",
+        "source_warp": 1,
+        "threshold": [
+          15,
+          3
+        ],
+        "expected_map": "EcruteakCity_BarrierCorridor",
+        "actual_map": "EcruteakCity_BarrierCorridor",
+        "arrival": [
+          3,
+          19
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BarrierCorridor",
+        "source_warp": 1,
+        "threshold": [
+          6,
+          3
+        ],
+        "expected_map": "BellchimeTrail",
+        "actual_map": "BellchimeTrail",
+        "arrival": [
+          9,
+          15
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "BellchimeTrail",
+        "source_warp": 1,
+        "threshold": [
+          37,
+          20
+        ],
+        "expected_map": "EcruteakCity_BellTower",
+        "actual_map": "EcruteakCity_BellTower",
+        "arrival": [
+          11,
+          22
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower",
+        "source_warp": 0,
+        "threshold": [
+          11,
+          22
+        ],
+        "expected_map": "BellchimeTrail",
+        "actual_map": "BellchimeTrail",
+        "arrival": [
+          37,
+          21
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "BellchimeTrail",
+        "source_warp": 1,
+        "threshold": [
+          37,
+          20
+        ],
+        "expected_map": "EcruteakCity_BellTower",
+        "actual_map": "EcruteakCity_BellTower",
+        "arrival": [
+          11,
+          22
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower",
+        "source_warp": 1,
+        "threshold": [
+          12,
+          22
+        ],
+        "expected_map": "BellchimeTrail",
+        "actual_map": "BellchimeTrail",
+        "arrival": [
+          37,
+          21
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "BellchimeTrail",
+        "source_warp": 1,
+        "threshold": [
+          37,
+          20
+        ],
+        "expected_map": "EcruteakCity_BellTower",
+        "actual_map": "EcruteakCity_BellTower",
+        "arrival": [
+          11,
+          22
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower",
+        "source_warp": 2,
+        "threshold": [
+          5,
+          4
+        ],
+        "expected_map": "EcruteakCity_BellTower_2F",
+        "actual_map": "EcruteakCity_BellTower_2F",
+        "arrival": [
+          5,
+          4
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_2F",
+        "source_warp": 0,
+        "threshold": [
+          5,
+          4
+        ],
+        "expected_map": "EcruteakCity_BellTower",
+        "actual_map": "EcruteakCity_BellTower",
+        "arrival": [
+          5,
+          4
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower",
+        "source_warp": 3,
+        "threshold": [
+          5,
+          3
+        ],
+        "expected_map": "EcruteakCity_BellTower_2F",
+        "actual_map": "EcruteakCity_BellTower_2F",
+        "arrival": [
+          5,
+          4
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_2F",
+        "source_warp": 0,
+        "threshold": [
+          5,
+          4
+        ],
+        "expected_map": "EcruteakCity_BellTower",
+        "actual_map": "EcruteakCity_BellTower",
+        "arrival": [
+          5,
+          4
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower",
+        "source_warp": 0,
+        "threshold": [
+          11,
+          22
+        ],
+        "expected_map": "BellchimeTrail",
+        "actual_map": "BellchimeTrail",
+        "arrival": [
+          37,
+          21
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "BellchimeTrail",
+        "source_warp": 0,
+        "threshold": [
+          9,
+          14
+        ],
+        "expected_map": "EcruteakCity_BarrierCorridor",
+        "actual_map": "EcruteakCity_BarrierCorridor",
+        "arrival": [
+          6,
+          3
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BarrierCorridor",
+        "source_warp": 0,
+        "threshold": [
+          3,
+          19
+        ],
+        "expected_map": "EcruteakCity_BarrierStation",
+        "actual_map": "EcruteakCity_BarrierStation",
+        "arrival": [
+          15,
+          3
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BarrierStation",
+        "source_warp": 0,
+        "threshold": [
+          9,
+          11
+        ],
+        "expected_map": "EcruteakCity",
+        "actual_map": "EcruteakCity",
+        "arrival": [
+          39,
+          26
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity",
+        "source_warp": 2,
+        "threshold": [
+          23,
+          45
+        ],
+        "expected_map": "EcruteakCity_Residence",
+        "actual_map": "EcruteakCity_Residence",
+        "arrival": [
+          4,
+          8
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_Residence",
+        "source_warp": 1,
+        "threshold": [
+          5,
+          8
+        ],
+        "expected_map": "EcruteakCity",
+        "actual_map": "EcruteakCity",
+        "arrival": [
+          23,
+          46
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity",
+        "source_warp": 2,
+        "threshold": [
+          23,
+          45
+        ],
+        "expected_map": "EcruteakCity_Residence",
+        "actual_map": "EcruteakCity_Residence",
+        "arrival": [
+          4,
+          8
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_Residence",
+        "source_warp": 0,
+        "threshold": [
+          4,
+          8
+        ],
+        "expected_map": "EcruteakCity",
+        "actual_map": "EcruteakCity",
+        "arrival": [
+          23,
+          46
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity",
+        "source_warp": 3,
+        "threshold": [
+          45,
+          45
+        ],
+        "expected_map": "EcruteakCity_DanceTheater",
+        "actual_map": "EcruteakCity_DanceTheater",
+        "arrival": [
+          8,
+          17
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_DanceTheater",
+        "source_warp": 0,
+        "threshold": [
+          7,
+          17
+        ],
+        "expected_map": "EcruteakCity",
+        "actual_map": "EcruteakCity",
+        "arrival": [
+          44,
+          46
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity",
+        "source_warp": 4,
+        "threshold": [
+          24,
+          55
+        ],
+        "expected_map": "EcruteakCity_Gym",
+        "actual_map": "EcruteakCity_Gym",
+        "arrival": [
+          10,
+          21
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_Gym",
+        "source_warp": 2,
+        "threshold": [
+          13,
+          0
+        ],
+        "expected_map": "EcruteakCity_Gym_Arena",
+        "actual_map": "EcruteakCity_Gym_Arena",
+        "arrival": [
+          13,
+          26
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_Gym_Arena",
+        "source_warp": 0,
+        "threshold": [
+          13,
+          26
+        ],
+        "expected_map": "EcruteakCity_Gym",
+        "actual_map": "EcruteakCity_Gym",
+        "arrival": [
+          13,
+          0
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_Gym",
+        "source_warp": 0,
+        "threshold": [
+          10,
+          21
+        ],
+        "expected_map": "EcruteakCity",
+        "actual_map": "EcruteakCity",
+        "arrival": [
+          24,
+          56
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity",
+        "source_warp": 5,
+        "threshold": [
+          45,
+          55
+        ],
+        "expected_map": "EcruteakCity_PokemonCenter_1F",
+        "actual_map": "EcruteakCity_PokemonCenter_1F",
+        "arrival": [
+          8,
+          19
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_PokemonCenter_1F",
+        "source_warp": 1,
+        "threshold": [
+          9,
+          19
+        ],
+        "expected_map": "EcruteakCity",
+        "actual_map": "EcruteakCity",
+        "arrival": [
+          45,
+          56
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity",
+        "source_warp": 5,
+        "threshold": [
+          45,
+          55
+        ],
+        "expected_map": "EcruteakCity_PokemonCenter_1F",
+        "actual_map": "EcruteakCity_PokemonCenter_1F",
+        "arrival": [
+          8,
+          19
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_PokemonCenter_1F",
+        "source_warp": 2,
+        "threshold": [
+          14,
+          17
+        ],
+        "expected_map": "EcruteakCity_PokemonCenter_B1F",
+        "actual_map": "EcruteakCity_PokemonCenter_B1F",
+        "arrival": [
+          15,
+          10
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_PokemonCenter_B1F",
+        "source_warp": 0,
+        "threshold": [
+          14,
+          10
+        ],
+        "expected_map": "EcruteakCity_PokemonCenter_1F",
+        "actual_map": "EcruteakCity_PokemonCenter_1F",
+        "arrival": [
+          15,
+          17
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_PokemonCenter_1F",
+        "source_warp": 0,
+        "threshold": [
+          8,
+          19
+        ],
+        "expected_map": "EcruteakCity",
+        "actual_map": "EcruteakCity",
+        "arrival": [
+          45,
+          56
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity",
+        "source_warp": 6,
+        "threshold": [
+          53,
+          45
+        ],
+        "expected_map": "EcruteakCity_Mart",
+        "actual_map": "EcruteakCity_Mart",
+        "arrival": [
+          4,
+          11
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_Mart",
+        "source_warp": 1,
+        "threshold": [
+          5,
+          11
+        ],
+        "expected_map": "EcruteakCity",
+        "actual_map": "EcruteakCity",
+        "arrival": [
+          53,
+          46
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity",
+        "source_warp": 6,
+        "threshold": [
+          53,
+          45
+        ],
+        "expected_map": "EcruteakCity_Mart",
+        "actual_map": "EcruteakCity_Mart",
+        "arrival": [
+          4,
+          11
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_Mart",
+        "source_warp": 0,
+        "threshold": [
+          4,
+          11
+        ],
+        "expected_map": "EcruteakCity",
+        "actual_map": "EcruteakCity",
+        "arrival": [
+          53,
+          46
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity",
+        "source_warp": 1,
+        "threshold": [
+          40,
+          25
+        ],
+        "expected_map": "EcruteakCity_BarrierStation",
+        "actual_map": "EcruteakCity_BarrierStation",
+        "arrival": [
+          10,
+          11
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BarrierStation",
+        "source_warp": 1,
+        "threshold": [
+          15,
+          3
+        ],
+        "expected_map": "EcruteakCity_BarrierCorridor",
+        "actual_map": "EcruteakCity_BarrierCorridor",
+        "arrival": [
+          3,
+          19
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BarrierCorridor",
+        "source_warp": 1,
+        "threshold": [
+          6,
+          3
+        ],
+        "expected_map": "BellchimeTrail",
+        "actual_map": "BellchimeTrail",
+        "arrival": [
+          9,
+          15
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "BellchimeTrail",
+        "source_warp": 1,
+        "threshold": [
+          37,
+          20
+        ],
+        "expected_map": "EcruteakCity_BellTower",
+        "actual_map": "EcruteakCity_BellTower",
+        "arrival": [
+          11,
+          22
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower",
+        "source_warp": 2,
+        "threshold": [
+          5,
+          4
+        ],
+        "expected_map": "EcruteakCity_BellTower_2F",
+        "actual_map": "EcruteakCity_BellTower_2F",
+        "arrival": [
+          5,
+          4
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_2F",
+        "source_warp": 1,
+        "threshold": [
+          11,
+          21
+        ],
+        "expected_map": "EcruteakCity_BellTower_3F",
+        "actual_map": "EcruteakCity_BellTower_3F",
+        "arrival": [
+          11,
+          21
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_3F",
+        "source_warp": 0,
+        "threshold": [
+          11,
+          21
+        ],
+        "expected_map": "EcruteakCity_BellTower_2F",
+        "actual_map": "EcruteakCity_BellTower_2F",
+        "arrival": [
+          11,
+          21
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_2F",
+        "source_warp": 2,
+        "threshold": [
+          11,
+          20
+        ],
+        "expected_map": "EcruteakCity_BellTower_3F",
+        "actual_map": "EcruteakCity_BellTower_3F",
+        "arrival": [
+          11,
+          21
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_3F",
+        "source_warp": 0,
+        "threshold": [
+          11,
+          21
+        ],
+        "expected_map": "EcruteakCity_BellTower_2F",
+        "actual_map": "EcruteakCity_BellTower_2F",
+        "arrival": [
+          11,
+          21
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_2F",
+        "source_warp": 1,
+        "threshold": [
+          11,
+          21
+        ],
+        "expected_map": "EcruteakCity_BellTower_3F",
+        "actual_map": "EcruteakCity_BellTower_3F",
+        "arrival": [
+          11,
+          21
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_3F",
+        "source_warp": 1,
+        "threshold": [
+          20,
+          4
+        ],
+        "expected_map": "EcruteakCity_BellTower_4F",
+        "actual_map": "EcruteakCity_BellTower_4F",
+        "arrival": [
+          20,
+          4
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_4F",
+        "source_warp": 0,
+        "threshold": [
+          20,
+          4
+        ],
+        "expected_map": "EcruteakCity_BellTower_3F",
+        "actual_map": "EcruteakCity_BellTower_3F",
+        "arrival": [
+          20,
+          4
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_3F",
+        "source_warp": 2,
+        "threshold": [
+          20,
+          3
+        ],
+        "expected_map": "EcruteakCity_BellTower_4F",
+        "actual_map": "EcruteakCity_BellTower_4F",
+        "arrival": [
+          20,
+          4
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_4F",
+        "source_warp": 0,
+        "threshold": [
+          20,
+          4
+        ],
+        "expected_map": "EcruteakCity_BellTower_3F",
+        "actual_map": "EcruteakCity_BellTower_3F",
+        "arrival": [
+          20,
+          4
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_3F",
+        "source_warp": 1,
+        "threshold": [
+          20,
+          4
+        ],
+        "expected_map": "EcruteakCity_BellTower_4F",
+        "actual_map": "EcruteakCity_BellTower_4F",
+        "arrival": [
+          20,
+          4
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_4F",
+        "source_warp": 1,
+        "threshold": [
+          2,
+          4
+        ],
+        "expected_map": "EcruteakCity_BellTower_5F",
+        "actual_map": "EcruteakCity_BellTower_5F",
+        "arrival": [
+          2,
+          4
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_5F",
+        "source_warp": 0,
+        "threshold": [
+          2,
+          4
+        ],
+        "expected_map": "EcruteakCity_BellTower_4F",
+        "actual_map": "EcruteakCity_BellTower_4F",
+        "arrival": [
+          2,
+          4
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_4F",
+        "source_warp": 2,
+        "threshold": [
+          2,
+          3
+        ],
+        "expected_map": "EcruteakCity_BellTower_5F",
+        "actual_map": "EcruteakCity_BellTower_5F",
+        "arrival": [
+          2,
+          4
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_5F",
+        "source_warp": 0,
+        "threshold": [
+          2,
+          4
+        ],
+        "expected_map": "EcruteakCity_BellTower_4F",
+        "actual_map": "EcruteakCity_BellTower_4F",
+        "arrival": [
+          2,
+          4
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_4F",
+        "source_warp": 3,
+        "threshold": [
+          2,
+          21
+        ],
+        "expected_map": "EcruteakCity_BellTower_5F",
+        "actual_map": "EcruteakCity_BellTower_5F",
+        "arrival": [
+          2,
+          21
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_5F",
+        "source_warp": 2,
+        "threshold": [
+          2,
+          21
+        ],
+        "expected_map": "EcruteakCity_BellTower_4F",
+        "actual_map": "EcruteakCity_BellTower_4F",
+        "arrival": [
+          2,
+          21
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_4F",
+        "source_warp": 4,
+        "threshold": [
+          2,
+          20
+        ],
+        "expected_map": "EcruteakCity_BellTower_5F",
+        "actual_map": "EcruteakCity_BellTower_5F",
+        "arrival": [
+          2,
+          21
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_5F",
+        "source_warp": 2,
+        "threshold": [
+          2,
+          21
+        ],
+        "expected_map": "EcruteakCity_BellTower_4F",
+        "actual_map": "EcruteakCity_BellTower_4F",
+        "arrival": [
+          2,
+          21
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_4F",
+        "source_warp": 5,
+        "threshold": [
+          20,
+          21
+        ],
+        "expected_map": "EcruteakCity_BellTower_5F",
+        "actual_map": "EcruteakCity_BellTower_5F",
+        "arrival": [
+          20,
+          21
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_5F",
+        "source_warp": 3,
+        "threshold": [
+          20,
+          21
+        ],
+        "expected_map": "EcruteakCity_BellTower_4F",
+        "actual_map": "EcruteakCity_BellTower_4F",
+        "arrival": [
+          20,
+          21
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_4F",
+        "source_warp": 6,
+        "threshold": [
+          20,
+          20
+        ],
+        "expected_map": "EcruteakCity_BellTower_5F",
+        "actual_map": "EcruteakCity_BellTower_5F",
+        "arrival": [
+          20,
+          21
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_5F",
+        "source_warp": 3,
+        "threshold": [
+          20,
+          21
+        ],
+        "expected_map": "EcruteakCity_BellTower_4F",
+        "actual_map": "EcruteakCity_BellTower_4F",
+        "arrival": [
+          20,
+          21
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_4F",
+        "source_warp": 1,
+        "threshold": [
+          2,
+          4
+        ],
+        "expected_map": "EcruteakCity_BellTower_5F",
+        "actual_map": "EcruteakCity_BellTower_5F",
+        "arrival": [
+          2,
+          4
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_5F",
+        "source_warp": 1,
+        "threshold": [
+          9,
+          21
+        ],
+        "expected_map": "EcruteakCity_BellTower_6F",
+        "actual_map": "EcruteakCity_BellTower_6F",
+        "arrival": [
+          9,
+          21
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_6F",
+        "source_warp": 0,
+        "threshold": [
+          9,
+          21
+        ],
+        "expected_map": "EcruteakCity_BellTower_5F",
+        "actual_map": "EcruteakCity_BellTower_5F",
+        "arrival": [
+          9,
+          21
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_5F",
+        "source_warp": 4,
+        "threshold": [
+          9,
+          20
+        ],
+        "expected_map": "EcruteakCity_BellTower_6F",
+        "actual_map": "EcruteakCity_BellTower_6F",
+        "arrival": [
+          9,
+          21
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_6F",
+        "source_warp": 0,
+        "threshold": [
+          9,
+          21
+        ],
+        "expected_map": "EcruteakCity_BellTower_5F",
+        "actual_map": "EcruteakCity_BellTower_5F",
+        "arrival": [
+          9,
+          21
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_5F",
+        "source_warp": 1,
+        "threshold": [
+          9,
+          21
+        ],
+        "expected_map": "EcruteakCity_BellTower_6F",
+        "actual_map": "EcruteakCity_BellTower_6F",
+        "arrival": [
+          9,
+          21
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_6F",
+        "source_warp": 1,
+        "threshold": [
+          2,
+          15
+        ],
+        "expected_map": "EcruteakCity_BellTower_7F",
+        "actual_map": "EcruteakCity_BellTower_7F",
+        "arrival": [
+          2,
+          15
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_7F",
+        "source_warp": 0,
+        "threshold": [
+          2,
+          15
+        ],
+        "expected_map": "EcruteakCity_BellTower_6F",
+        "actual_map": "EcruteakCity_BellTower_6F",
+        "arrival": [
+          2,
+          15
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_6F",
+        "source_warp": 2,
+        "threshold": [
+          2,
+          14
+        ],
+        "expected_map": "EcruteakCity_BellTower_7F",
+        "actual_map": "EcruteakCity_BellTower_7F",
+        "arrival": [
+          2,
+          15
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_7F",
+        "source_warp": 0,
+        "threshold": [
+          2,
+          15
+        ],
+        "expected_map": "EcruteakCity_BellTower_6F",
+        "actual_map": "EcruteakCity_BellTower_6F",
+        "arrival": [
+          2,
+          15
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_6F",
+        "source_warp": 1,
+        "threshold": [
+          2,
+          15
+        ],
+        "expected_map": "EcruteakCity_BellTower_7F",
+        "actual_map": "EcruteakCity_BellTower_7F",
+        "arrival": [
+          2,
+          15
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_7F",
+        "source_warp": 1,
+        "threshold": [
+          11,
+          22
+        ],
+        "expected_map": "EcruteakCity_BellTower_8F",
+        "actual_map": "EcruteakCity_BellTower_8F",
+        "arrival": [
+          3,
+          8
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_8F",
+        "source_warp": 0,
+        "threshold": [
+          3,
+          8
+        ],
+        "expected_map": "EcruteakCity_BellTower_7F",
+        "actual_map": "EcruteakCity_BellTower_7F",
+        "arrival": [
+          11,
+          22
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_7F",
+        "source_warp": 4,
+        "threshold": [
+          5,
+          6
+        ],
+        "expected_map": "EcruteakCity_BellTower_7F",
+        "actual_map": "EcruteakCity_BellTower_7F",
+        "arrival": [
+          14,
+          12
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_7F",
+        "source_warp": 2,
+        "threshold": [
+          8,
+          12
+        ],
+        "expected_map": "EcruteakCity_BellTower_9F",
+        "actual_map": "EcruteakCity_BellTower_9F",
+        "arrival": [
+          20,
+          11
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_9F",
+        "source_warp": 3,
+        "threshold": [
+          20,
+          11
+        ],
+        "expected_map": "EcruteakCity_BellTower_7F",
+        "actual_map": "EcruteakCity_BellTower_7F",
+        "arrival": [
+          8,
+          12
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_7F",
+        "source_warp": 3,
+        "threshold": [
+          14,
+          12
+        ],
+        "expected_map": "EcruteakCity_BellTower_7F",
+        "actual_map": "EcruteakCity_BellTower_7F",
+        "arrival": [
+          5,
+          6
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_7F",
+        "source_warp": 4,
+        "threshold": [
+          5,
+          6
+        ],
+        "expected_map": "EcruteakCity_BellTower_7F",
+        "actual_map": "EcruteakCity_BellTower_7F",
+        "arrival": [
+          14,
+          12
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_7F",
+        "source_warp": 2,
+        "threshold": [
+          8,
+          12
+        ],
+        "expected_map": "EcruteakCity_BellTower_9F",
+        "actual_map": "EcruteakCity_BellTower_9F",
+        "arrival": [
+          20,
+          11
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_9F",
+        "source_warp": 4,
+        "threshold": [
+          6,
+          19
+        ],
+        "expected_map": "EcruteakCity_BellTower_8F",
+        "actual_map": "EcruteakCity_BellTower_8F",
+        "arrival": [
+          20,
+          20
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_8F",
+        "source_warp": 5,
+        "threshold": [
+          20,
+          20
+        ],
+        "expected_map": "EcruteakCity_BellTower_9F",
+        "actual_map": "EcruteakCity_BellTower_9F",
+        "arrival": [
+          6,
+          19
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_9F",
+        "source_warp": 3,
+        "threshold": [
+          20,
+          11
+        ],
+        "expected_map": "EcruteakCity_BellTower_7F",
+        "actual_map": "EcruteakCity_BellTower_7F",
+        "arrival": [
+          8,
+          12
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_7F",
+        "source_warp": 3,
+        "threshold": [
+          14,
+          12
+        ],
+        "expected_map": "EcruteakCity_BellTower_7F",
+        "actual_map": "EcruteakCity_BellTower_7F",
+        "arrival": [
+          5,
+          6
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_7F",
+        "source_warp": 1,
+        "threshold": [
+          11,
+          22
+        ],
+        "expected_map": "EcruteakCity_BellTower_8F",
+        "actual_map": "EcruteakCity_BellTower_8F",
+        "arrival": [
+          3,
+          8
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_8F",
+        "source_warp": 1,
+        "threshold": [
+          3,
+          16
+        ],
+        "expected_map": "EcruteakCity_BellTower_9F",
+        "actual_map": "EcruteakCity_BellTower_9F",
+        "arrival": [
+          16,
+          3
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_9F",
+        "source_warp": 1,
+        "threshold": [
+          16,
+          3
+        ],
+        "expected_map": "EcruteakCity_BellTower_8F",
+        "actual_map": "EcruteakCity_BellTower_8F",
+        "arrival": [
+          3,
+          16
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_8F",
+        "source_warp": 1,
+        "threshold": [
+          3,
+          16
+        ],
+        "expected_map": "EcruteakCity_BellTower_9F",
+        "actual_map": "EcruteakCity_BellTower_9F",
+        "arrival": [
+          16,
+          3
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_9F",
+        "source_warp": 0,
+        "threshold": [
+          2,
+          8
+        ],
+        "expected_map": "EcruteakCity_BellTower_8F",
+        "actual_map": "EcruteakCity_BellTower_8F",
+        "arrival": [
+          19,
+          13
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_8F",
+        "source_warp": 2,
+        "threshold": [
+          12,
+          5
+        ],
+        "expected_map": "EcruteakCity_BellTower_9F",
+        "actual_map": "EcruteakCity_BellTower_9F",
+        "arrival": [
+          14,
+          11
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_9F",
+        "source_warp": 2,
+        "threshold": [
+          14,
+          11
+        ],
+        "expected_map": "EcruteakCity_BellTower_8F",
+        "actual_map": "EcruteakCity_BellTower_8F",
+        "arrival": [
+          12,
+          5
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_8F",
+        "source_warp": 4,
+        "threshold": [
+          19,
+          13
+        ],
+        "expected_map": "EcruteakCity_BellTower_9F",
+        "actual_map": "EcruteakCity_BellTower_9F",
+        "arrival": [
+          2,
+          8
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_9F",
+        "source_warp": 1,
+        "threshold": [
+          16,
+          3
+        ],
+        "expected_map": "EcruteakCity_BellTower_8F",
+        "actual_map": "EcruteakCity_BellTower_8F",
+        "arrival": [
+          3,
+          16
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_8F",
+        "source_warp": 0,
+        "threshold": [
+          3,
+          8
+        ],
+        "expected_map": "EcruteakCity_BellTower_7F",
+        "actual_map": "EcruteakCity_BellTower_7F",
+        "arrival": [
+          11,
+          22
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_7F",
+        "source_warp": 4,
+        "threshold": [
+          5,
+          6
+        ],
+        "expected_map": "EcruteakCity_BellTower_7F",
+        "actual_map": "EcruteakCity_BellTower_7F",
+        "arrival": [
+          14,
+          12
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_7F",
+        "source_warp": 2,
+        "threshold": [
+          8,
+          12
+        ],
+        "expected_map": "EcruteakCity_BellTower_9F",
+        "actual_map": "EcruteakCity_BellTower_9F",
+        "arrival": [
+          20,
+          11
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_9F",
+        "source_warp": 5,
+        "threshold": [
+          10,
+          21
+        ],
+        "expected_map": "EcruteakCity_BellTower_8F",
+        "actual_map": "EcruteakCity_BellTower_8F",
+        "arrival": [
+          7,
+          14
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_8F",
+        "source_warp": 3,
+        "threshold": [
+          7,
+          14
+        ],
+        "expected_map": "EcruteakCity_BellTower_9F",
+        "actual_map": "EcruteakCity_BellTower_9F",
+        "arrival": [
+          10,
+          21
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_9F",
+        "source_warp": 5,
+        "threshold": [
+          10,
+          21
+        ],
+        "expected_map": "EcruteakCity_BellTower_8F",
+        "actual_map": "EcruteakCity_BellTower_8F",
+        "arrival": [
+          7,
+          14
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_8F",
+        "source_warp": 3,
+        "threshold": [
+          7,
+          14
+        ],
+        "expected_map": "EcruteakCity_BellTower_9F",
+        "actual_map": "EcruteakCity_BellTower_9F",
+        "arrival": [
+          10,
+          21
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_9F",
+        "source_warp": 3,
+        "threshold": [
+          20,
+          11
+        ],
+        "expected_map": "EcruteakCity_BellTower_7F",
+        "actual_map": "EcruteakCity_BellTower_7F",
+        "arrival": [
+          8,
+          12
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_7F",
+        "source_warp": 3,
+        "threshold": [
+          14,
+          12
+        ],
+        "expected_map": "EcruteakCity_BellTower_7F",
+        "actual_map": "EcruteakCity_BellTower_7F",
+        "arrival": [
+          5,
+          6
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_7F",
+        "source_warp": 1,
+        "threshold": [
+          11,
+          22
+        ],
+        "expected_map": "EcruteakCity_BellTower_8F",
+        "actual_map": "EcruteakCity_BellTower_8F",
+        "arrival": [
+          3,
+          8
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_8F",
+        "source_warp": 1,
+        "threshold": [
+          3,
+          16
+        ],
+        "expected_map": "EcruteakCity_BellTower_9F",
+        "actual_map": "EcruteakCity_BellTower_9F",
+        "arrival": [
+          16,
+          3
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_9F",
+        "source_warp": 0,
+        "threshold": [
+          2,
+          8
+        ],
+        "expected_map": "EcruteakCity_BellTower_8F",
+        "actual_map": "EcruteakCity_BellTower_8F",
+        "arrival": [
+          19,
+          13
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_8F",
+        "source_warp": 4,
+        "threshold": [
+          19,
+          13
+        ],
+        "expected_map": "EcruteakCity_BellTower_9F",
+        "actual_map": "EcruteakCity_BellTower_9F",
+        "arrival": [
+          2,
+          8
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_9F",
+        "source_warp": 0,
+        "threshold": [
+          2,
+          8
+        ],
+        "expected_map": "EcruteakCity_BellTower_8F",
+        "actual_map": "EcruteakCity_BellTower_8F",
+        "arrival": [
+          19,
+          13
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_8F",
+        "source_warp": 4,
+        "threshold": [
+          19,
+          13
+        ],
+        "expected_map": "EcruteakCity_BellTower_9F",
+        "actual_map": "EcruteakCity_BellTower_9F",
+        "arrival": [
+          2,
+          8
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_9F",
+        "source_warp": 1,
+        "threshold": [
+          16,
+          3
+        ],
+        "expected_map": "EcruteakCity_BellTower_8F",
+        "actual_map": "EcruteakCity_BellTower_8F",
+        "arrival": [
+          3,
+          16
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_8F",
+        "source_warp": 0,
+        "threshold": [
+          3,
+          8
+        ],
+        "expected_map": "EcruteakCity_BellTower_7F",
+        "actual_map": "EcruteakCity_BellTower_7F",
+        "arrival": [
+          11,
+          22
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_7F",
+        "source_warp": 4,
+        "threshold": [
+          5,
+          6
+        ],
+        "expected_map": "EcruteakCity_BellTower_7F",
+        "actual_map": "EcruteakCity_BellTower_7F",
+        "arrival": [
+          14,
+          12
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_7F",
+        "source_warp": 2,
+        "threshold": [
+          8,
+          12
+        ],
+        "expected_map": "EcruteakCity_BellTower_9F",
+        "actual_map": "EcruteakCity_BellTower_9F",
+        "arrival": [
+          20,
+          11
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_9F",
+        "source_warp": 4,
+        "threshold": [
+          6,
+          19
+        ],
+        "expected_map": "EcruteakCity_BellTower_8F",
+        "actual_map": "EcruteakCity_BellTower_8F",
+        "arrival": [
+          20,
+          20
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_8F",
+        "source_warp": 5,
+        "threshold": [
+          20,
+          20
+        ],
+        "expected_map": "EcruteakCity_BellTower_9F",
+        "actual_map": "EcruteakCity_BellTower_9F",
+        "arrival": [
+          6,
+          19
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_9F",
+        "source_warp": 4,
+        "threshold": [
+          6,
+          19
+        ],
+        "expected_map": "EcruteakCity_BellTower_8F",
+        "actual_map": "EcruteakCity_BellTower_8F",
+        "arrival": [
+          20,
+          20
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_8F",
+        "source_warp": 5,
+        "threshold": [
+          20,
+          20
+        ],
+        "expected_map": "EcruteakCity_BellTower_9F",
+        "actual_map": "EcruteakCity_BellTower_9F",
+        "arrival": [
+          6,
+          19
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_9F",
+        "source_warp": 3,
+        "threshold": [
+          20,
+          11
+        ],
+        "expected_map": "EcruteakCity_BellTower_7F",
+        "actual_map": "EcruteakCity_BellTower_7F",
+        "arrival": [
+          8,
+          12
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_7F",
+        "source_warp": 3,
+        "threshold": [
+          14,
+          12
+        ],
+        "expected_map": "EcruteakCity_BellTower_7F",
+        "actual_map": "EcruteakCity_BellTower_7F",
+        "arrival": [
+          5,
+          6
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_7F",
+        "source_warp": 1,
+        "threshold": [
+          11,
+          22
+        ],
+        "expected_map": "EcruteakCity_BellTower_8F",
+        "actual_map": "EcruteakCity_BellTower_8F",
+        "arrival": [
+          3,
+          8
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_8F",
+        "source_warp": 1,
+        "threshold": [
+          3,
+          16
+        ],
+        "expected_map": "EcruteakCity_BellTower_9F",
+        "actual_map": "EcruteakCity_BellTower_9F",
+        "arrival": [
+          16,
+          3
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_9F",
+        "source_warp": 0,
+        "threshold": [
+          2,
+          8
+        ],
+        "expected_map": "EcruteakCity_BellTower_8F",
+        "actual_map": "EcruteakCity_BellTower_8F",
+        "arrival": [
+          19,
+          13
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_8F",
+        "source_warp": 2,
+        "threshold": [
+          12,
+          5
+        ],
+        "expected_map": "EcruteakCity_BellTower_9F",
+        "actual_map": "EcruteakCity_BellTower_9F",
+        "arrival": [
+          14,
+          11
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_9F",
+        "source_warp": 6,
+        "threshold": [
+          8,
+          13
+        ],
+        "expected_map": "EcruteakCity_BellTower_10F",
+        "actual_map": "EcruteakCity_BellTower_10F",
+        "arrival": [
+          7,
+          13
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_10F",
+        "source_warp": 0,
+        "threshold": [
+          7,
+          13
+        ],
+        "expected_map": "EcruteakCity_BellTower_9F",
+        "actual_map": "EcruteakCity_BellTower_9F",
+        "arrival": [
+          8,
+          13
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_9F",
+        "source_warp": 7,
+        "threshold": [
+          8,
+          12
+        ],
+        "expected_map": "EcruteakCity_BellTower_10F",
+        "actual_map": "EcruteakCity_BellTower_10F",
+        "arrival": [
+          7,
+          13
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_10F",
+        "source_warp": 0,
+        "threshold": [
+          7,
+          13
+        ],
+        "expected_map": "EcruteakCity_BellTower_9F",
+        "actual_map": "EcruteakCity_BellTower_9F",
+        "arrival": [
+          8,
+          13
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_9F",
+        "source_warp": 2,
+        "threshold": [
+          14,
+          11
+        ],
+        "expected_map": "EcruteakCity_BellTower_8F",
+        "actual_map": "EcruteakCity_BellTower_8F",
+        "arrival": [
+          12,
+          5
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_8F",
+        "source_warp": 4,
+        "threshold": [
+          19,
+          13
+        ],
+        "expected_map": "EcruteakCity_BellTower_9F",
+        "actual_map": "EcruteakCity_BellTower_9F",
+        "arrival": [
+          2,
+          8
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_9F",
+        "source_warp": 1,
+        "threshold": [
+          16,
+          3
+        ],
+        "expected_map": "EcruteakCity_BellTower_8F",
+        "actual_map": "EcruteakCity_BellTower_8F",
+        "arrival": [
+          3,
+          16
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_8F",
+        "source_warp": 0,
+        "threshold": [
+          3,
+          8
+        ],
+        "expected_map": "EcruteakCity_BellTower_7F",
+        "actual_map": "EcruteakCity_BellTower_7F",
+        "arrival": [
+          11,
+          22
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_7F",
+        "source_warp": 0,
+        "threshold": [
+          2,
+          15
+        ],
+        "expected_map": "EcruteakCity_BellTower_6F",
+        "actual_map": "EcruteakCity_BellTower_6F",
+        "arrival": [
+          2,
+          15
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_6F",
+        "source_warp": 0,
+        "threshold": [
+          9,
+          21
+        ],
+        "expected_map": "EcruteakCity_BellTower_5F",
+        "actual_map": "EcruteakCity_BellTower_5F",
+        "arrival": [
+          9,
+          21
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_5F",
+        "source_warp": 2,
+        "threshold": [
+          2,
+          21
+        ],
+        "expected_map": "EcruteakCity_BellTower_4F",
+        "actual_map": "EcruteakCity_BellTower_4F",
+        "arrival": [
+          2,
+          21
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_4F",
+        "source_warp": 0,
+        "threshold": [
+          20,
+          4
+        ],
+        "expected_map": "EcruteakCity_BellTower_3F",
+        "actual_map": "EcruteakCity_BellTower_3F",
+        "arrival": [
+          20,
+          4
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_3F",
+        "source_warp": 0,
+        "threshold": [
+          11,
+          21
+        ],
+        "expected_map": "EcruteakCity_BellTower_2F",
+        "actual_map": "EcruteakCity_BellTower_2F",
+        "arrival": [
+          11,
+          21
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_2F",
+        "source_warp": 0,
+        "threshold": [
+          5,
+          4
+        ],
+        "expected_map": "EcruteakCity_BellTower",
+        "actual_map": "EcruteakCity_BellTower",
+        "arrival": [
+          5,
+          4
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower",
+        "source_warp": 0,
+        "threshold": [
+          11,
+          22
+        ],
+        "expected_map": "BellchimeTrail",
+        "actual_map": "BellchimeTrail",
+        "arrival": [
+          37,
+          21
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "BellchimeTrail",
+        "source_warp": 0,
+        "threshold": [
+          9,
+          14
+        ],
+        "expected_map": "EcruteakCity_BarrierCorridor",
+        "actual_map": "EcruteakCity_BarrierCorridor",
+        "arrival": [
+          6,
+          3
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BarrierCorridor",
+        "source_warp": 0,
+        "threshold": [
+          3,
+          19
+        ],
+        "expected_map": "EcruteakCity_BarrierStation",
+        "actual_map": "EcruteakCity_BarrierStation",
+        "arrival": [
+          15,
+          3
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BarrierStation",
+        "source_warp": 0,
+        "threshold": [
+          9,
+          11
+        ],
+        "expected_map": "EcruteakCity",
+        "actual_map": "EcruteakCity",
+        "arrival": [
+          39,
+          26
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity",
+        "source_warp": 0,
+        "threshold": [
+          24,
+          21
+        ],
+        "expected_map": "EcruteakCity_BurnedTower",
+        "actual_map": "EcruteakCity_BurnedTower",
+        "arrival": [
+          11,
+          22
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BurnedTower",
+        "source_warp": 2,
+        "threshold": [
+          18,
+          12
+        ],
+        "expected_map": "EcruteakCity_BurnedTower_B1F",
+        "actual_map": "EcruteakCity_BurnedTower_B1F",
+        "arrival": [
+          19,
+          12
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BurnedTower_B1F",
+        "source_warp": 1,
+        "threshold": [
+          19,
+          11
+        ],
+        "expected_map": "EcruteakCity_BurnedTower",
+        "actual_map": "EcruteakCity_BurnedTower",
+        "arrival": [
+          18,
+          12
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BurnedTower",
+        "source_warp": 2,
+        "threshold": [
+          18,
+          12
+        ],
+        "expected_map": "EcruteakCity_BurnedTower_B1F",
+        "actual_map": "EcruteakCity_BurnedTower_B1F",
+        "arrival": [
+          19,
+          12
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BurnedTower_B1F",
+        "source_warp": 0,
+        "threshold": [
+          19,
+          12
+        ],
+        "expected_map": "EcruteakCity_BurnedTower",
+        "actual_map": "EcruteakCity_BurnedTower",
+        "arrival": [
+          18,
+          12
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BurnedTower",
+        "source_warp": 0,
+        "threshold": [
+          11,
+          22
+        ],
+        "expected_map": "EcruteakCity",
+        "actual_map": "EcruteakCity",
+        "arrival": [
+          24,
+          22
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity",
+        "source_warp": 4,
+        "threshold": [
+          24,
+          55
+        ],
+        "expected_map": "EcruteakCity_Gym",
+        "actual_map": "EcruteakCity_Gym",
+        "arrival": [
+          10,
+          21
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_Gym",
+        "source_warp": 2,
+        "threshold": [
+          13,
+          0
+        ],
+        "expected_map": "EcruteakCity_Gym_Arena",
+        "actual_map": "EcruteakCity_Gym_Arena",
+        "arrival": [
+          13,
+          26
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_Gym_Arena",
+        "source_warp": 0,
+        "threshold": [
+          13,
+          26
+        ],
+        "expected_map": "EcruteakCity_Gym",
+        "actual_map": "EcruteakCity_Gym",
+        "arrival": [
+          13,
+          0
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_Gym",
+        "source_warp": 0,
+        "threshold": [
+          10,
+          21
+        ],
+        "expected_map": "EcruteakCity",
+        "actual_map": "EcruteakCity",
+        "arrival": [
+          24,
+          56
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity",
+        "source_warp": 1,
+        "threshold": [
+          40,
+          25
+        ],
+        "expected_map": "EcruteakCity_BarrierStation",
+        "actual_map": "EcruteakCity_BarrierStation",
+        "arrival": [
+          10,
+          11
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BarrierStation",
+        "source_warp": 1,
+        "threshold": [
+          15,
+          3
+        ],
+        "expected_map": "EcruteakCity_BarrierCorridor",
+        "actual_map": "EcruteakCity_BarrierCorridor",
+        "arrival": [
+          3,
+          19
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BarrierCorridor",
+        "source_warp": 0,
+        "threshold": [
+          3,
+          19
+        ],
+        "expected_map": "EcruteakCity_BarrierStation",
+        "actual_map": "EcruteakCity_BarrierStation",
+        "arrival": [
+          15,
+          3
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BarrierStation",
+        "source_warp": 1,
+        "threshold": [
+          15,
+          3
+        ],
+        "expected_map": "EcruteakCity_BarrierCorridor",
+        "actual_map": "EcruteakCity_BarrierCorridor",
+        "arrival": [
+          3,
+          19
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BarrierCorridor",
+        "source_warp": 1,
+        "threshold": [
+          6,
+          3
+        ],
+        "expected_map": "BellchimeTrail",
+        "actual_map": "BellchimeTrail",
+        "arrival": [
+          9,
+          15
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "BellchimeTrail",
+        "source_warp": 0,
+        "threshold": [
+          9,
+          14
+        ],
+        "expected_map": "EcruteakCity_BarrierCorridor",
+        "actual_map": "EcruteakCity_BarrierCorridor",
+        "arrival": [
+          6,
+          3
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BarrierCorridor",
+        "source_warp": 1,
+        "threshold": [
+          6,
+          3
+        ],
+        "expected_map": "BellchimeTrail",
+        "actual_map": "BellchimeTrail",
+        "arrival": [
+          9,
+          15
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "BellchimeTrail",
+        "source_warp": 1,
+        "threshold": [
+          37,
+          20
+        ],
+        "expected_map": "EcruteakCity_BellTower",
+        "actual_map": "EcruteakCity_BellTower",
+        "arrival": [
+          11,
+          22
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower",
+        "source_warp": 2,
+        "threshold": [
+          5,
+          4
+        ],
+        "expected_map": "EcruteakCity_BellTower_2F",
+        "actual_map": "EcruteakCity_BellTower_2F",
+        "arrival": [
+          5,
+          4
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_2F",
+        "source_warp": 1,
+        "threshold": [
+          11,
+          21
+        ],
+        "expected_map": "EcruteakCity_BellTower_3F",
+        "actual_map": "EcruteakCity_BellTower_3F",
+        "arrival": [
+          11,
+          21
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_3F",
+        "source_warp": 1,
+        "threshold": [
+          20,
+          4
+        ],
+        "expected_map": "EcruteakCity_BellTower_4F",
+        "actual_map": "EcruteakCity_BellTower_4F",
+        "arrival": [
+          20,
+          4
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_4F",
+        "source_warp": 1,
+        "threshold": [
+          2,
+          4
+        ],
+        "expected_map": "EcruteakCity_BellTower_5F",
+        "actual_map": "EcruteakCity_BellTower_5F",
+        "arrival": [
+          2,
+          4
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_5F",
+        "source_warp": 1,
+        "threshold": [
+          9,
+          21
+        ],
+        "expected_map": "EcruteakCity_BellTower_6F",
+        "actual_map": "EcruteakCity_BellTower_6F",
+        "arrival": [
+          9,
+          21
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_6F",
+        "source_warp": 1,
+        "threshold": [
+          2,
+          15
+        ],
+        "expected_map": "EcruteakCity_BellTower_7F",
+        "actual_map": "EcruteakCity_BellTower_7F",
+        "arrival": [
+          2,
+          15
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_7F",
+        "source_warp": 1,
+        "threshold": [
+          11,
+          22
+        ],
+        "expected_map": "EcruteakCity_BellTower_8F",
+        "actual_map": "EcruteakCity_BellTower_8F",
+        "arrival": [
+          3,
+          8
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_8F",
+        "source_warp": 1,
+        "threshold": [
+          3,
+          16
+        ],
+        "expected_map": "EcruteakCity_BellTower_9F",
+        "actual_map": "EcruteakCity_BellTower_9F",
+        "arrival": [
+          16,
+          3
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_9F",
+        "source_warp": 0,
+        "threshold": [
+          2,
+          8
+        ],
+        "expected_map": "EcruteakCity_BellTower_8F",
+        "actual_map": "EcruteakCity_BellTower_8F",
+        "arrival": [
+          19,
+          13
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_8F",
+        "source_warp": 2,
+        "threshold": [
+          12,
+          5
+        ],
+        "expected_map": "EcruteakCity_BellTower_9F",
+        "actual_map": "EcruteakCity_BellTower_9F",
+        "arrival": [
+          14,
+          11
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_9F",
+        "source_warp": 6,
+        "threshold": [
+          8,
+          13
+        ],
+        "expected_map": "EcruteakCity_BellTower_10F",
+        "actual_map": "EcruteakCity_BellTower_10F",
+        "arrival": [
+          7,
+          13
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_10F",
+        "source_warp": 1,
+        "threshold": [
+          11,
+          21
+        ],
+        "expected_map": "EcruteakCity_BellTower_Roof",
+        "actual_map": "EcruteakCity_BellTower_Roof",
+        "arrival": [
+          15,
+          24
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_Roof",
+        "source_warp": 0,
+        "threshold": [
+          15,
+          24
+        ],
+        "expected_map": "EcruteakCity_BellTower_10F",
+        "actual_map": "EcruteakCity_BellTower_10F",
+        "arrival": [
+          11,
+          21
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_10F",
+        "source_warp": 2,
+        "threshold": [
+          11,
+          20
+        ],
+        "expected_map": "EcruteakCity_BellTower_Roof",
+        "actual_map": "EcruteakCity_BellTower_Roof",
+        "arrival": [
+          15,
+          24
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_Roof",
+        "source_warp": 0,
+        "threshold": [
+          15,
+          24
+        ],
+        "expected_map": "EcruteakCity_BellTower_10F",
+        "actual_map": "EcruteakCity_BellTower_10F",
+        "arrival": [
+          11,
+          21
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_10F",
+        "source_warp": 1,
+        "threshold": [
+          11,
+          21
+        ],
+        "expected_map": "EcruteakCity_BellTower_Roof",
+        "actual_map": "EcruteakCity_BellTower_Roof",
+        "arrival": [
+          15,
+          24
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_Roof",
+        "source_warp": 0,
+        "threshold": [
+          15,
+          24
+        ],
+        "expected_map": "EcruteakCity_BellTower_10F",
+        "actual_map": "EcruteakCity_BellTower_10F",
+        "arrival": [
+          11,
+          21
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_10F",
+        "source_warp": 0,
+        "threshold": [
+          7,
+          13
+        ],
+        "expected_map": "EcruteakCity_BellTower_9F",
+        "actual_map": "EcruteakCity_BellTower_9F",
+        "arrival": [
+          8,
+          13
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_9F",
+        "source_warp": 2,
+        "threshold": [
+          14,
+          11
+        ],
+        "expected_map": "EcruteakCity_BellTower_8F",
+        "actual_map": "EcruteakCity_BellTower_8F",
+        "arrival": [
+          12,
+          5
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_8F",
+        "source_warp": 4,
+        "threshold": [
+          19,
+          13
+        ],
+        "expected_map": "EcruteakCity_BellTower_9F",
+        "actual_map": "EcruteakCity_BellTower_9F",
+        "arrival": [
+          2,
+          8
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_9F",
+        "source_warp": 1,
+        "threshold": [
+          16,
+          3
+        ],
+        "expected_map": "EcruteakCity_BellTower_8F",
+        "actual_map": "EcruteakCity_BellTower_8F",
+        "arrival": [
+          3,
+          16
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_8F",
+        "source_warp": 0,
+        "threshold": [
+          3,
+          8
+        ],
+        "expected_map": "EcruteakCity_BellTower_7F",
+        "actual_map": "EcruteakCity_BellTower_7F",
+        "arrival": [
+          11,
+          22
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_7F",
+        "source_warp": 0,
+        "threshold": [
+          2,
+          15
+        ],
+        "expected_map": "EcruteakCity_BellTower_6F",
+        "actual_map": "EcruteakCity_BellTower_6F",
+        "arrival": [
+          2,
+          15
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_6F",
+        "source_warp": 0,
+        "threshold": [
+          9,
+          21
+        ],
+        "expected_map": "EcruteakCity_BellTower_5F",
+        "actual_map": "EcruteakCity_BellTower_5F",
+        "arrival": [
+          9,
+          21
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_5F",
+        "source_warp": 2,
+        "threshold": [
+          2,
+          21
+        ],
+        "expected_map": "EcruteakCity_BellTower_4F",
+        "actual_map": "EcruteakCity_BellTower_4F",
+        "arrival": [
+          2,
+          21
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_4F",
+        "source_warp": 0,
+        "threshold": [
+          20,
+          4
+        ],
+        "expected_map": "EcruteakCity_BellTower_3F",
+        "actual_map": "EcruteakCity_BellTower_3F",
+        "arrival": [
+          20,
+          4
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_3F",
+        "source_warp": 0,
+        "threshold": [
+          11,
+          21
+        ],
+        "expected_map": "EcruteakCity_BellTower_2F",
+        "actual_map": "EcruteakCity_BellTower_2F",
+        "arrival": [
+          11,
+          21
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower_2F",
+        "source_warp": 0,
+        "threshold": [
+          5,
+          4
+        ],
+        "expected_map": "EcruteakCity_BellTower",
+        "actual_map": "EcruteakCity_BellTower",
+        "arrival": [
+          5,
+          4
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BellTower",
+        "source_warp": 0,
+        "threshold": [
+          11,
+          22
+        ],
+        "expected_map": "BellchimeTrail",
+        "actual_map": "BellchimeTrail",
+        "arrival": [
+          37,
+          21
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "BellchimeTrail",
+        "source_warp": 0,
+        "threshold": [
+          9,
+          14
+        ],
+        "expected_map": "EcruteakCity_BarrierCorridor",
+        "actual_map": "EcruteakCity_BarrierCorridor",
+        "arrival": [
+          6,
+          3
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BarrierCorridor",
+        "source_warp": 0,
+        "threshold": [
+          3,
+          19
+        ],
+        "expected_map": "EcruteakCity_BarrierStation",
+        "actual_map": "EcruteakCity_BarrierStation",
+        "arrival": [
+          15,
+          3
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_BarrierStation",
+        "source_warp": 0,
+        "threshold": [
+          9,
+          11
+        ],
+        "expected_map": "EcruteakCity",
+        "actual_map": "EcruteakCity",
+        "arrival": [
+          39,
+          26
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity",
+        "source_warp": 8,
+        "threshold": [
+          34,
+          55
+        ],
+        "expected_map": "EcruteakCity_DowsingHouse",
+        "actual_map": "EcruteakCity_DowsingHouse",
+        "arrival": [
+          4,
+          8
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_DowsingHouse",
+        "source_warp": 1,
+        "threshold": [
+          5,
+          8
+        ],
+        "expected_map": "EcruteakCity",
+        "actual_map": "EcruteakCity",
+        "arrival": [
+          34,
+          56
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity",
+        "source_warp": 8,
+        "threshold": [
+          34,
+          55
+        ],
+        "expected_map": "EcruteakCity_DowsingHouse",
+        "actual_map": "EcruteakCity_DowsingHouse",
+        "arrival": [
+          4,
+          8
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_DowsingHouse",
+        "source_warp": 0,
+        "threshold": [
+          4,
+          8
+        ],
+        "expected_map": "EcruteakCity",
+        "actual_map": "EcruteakCity",
+        "arrival": [
+          34,
+          56
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity",
+        "source_warp": 5,
+        "threshold": [
+          45,
+          55
+        ],
+        "expected_map": "EcruteakCity_PokemonCenter_1F",
+        "actual_map": "EcruteakCity_PokemonCenter_1F",
+        "arrival": [
+          8,
+          19
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_PokemonCenter_1F",
+        "source_warp": 2,
+        "threshold": [
+          14,
+          17
+        ],
+        "expected_map": "EcruteakCity_PokemonCenter_B1F",
+        "actual_map": "EcruteakCity_PokemonCenter_B1F",
+        "arrival": [
+          15,
+          10
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_PokemonCenter_B1F",
+        "source_warp": 0,
+        "threshold": [
+          14,
+          10
+        ],
+        "expected_map": "EcruteakCity_PokemonCenter_1F",
+        "actual_map": "EcruteakCity_PokemonCenter_1F",
+        "arrival": [
+          15,
+          17
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_PokemonCenter_1F",
+        "source_warp": 0,
+        "threshold": [
+          8,
+          19
+        ],
+        "expected_map": "EcruteakCity",
+        "actual_map": "EcruteakCity",
+        "arrival": [
+          45,
+          56
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity",
+        "source_warp": 9,
+        "threshold": [
+          6,
+          37
+        ],
+        "expected_map": "EcruteakCity_WestGate",
+        "actual_map": "EcruteakCity_WestGate",
+        "arrival": [
+          10,
+          6
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_WestGate",
+        "source_warp": 0,
+        "threshold": [
+          10,
+          7
+        ],
+        "expected_map": "EcruteakCity",
+        "actual_map": "EcruteakCity",
+        "arrival": [
+          7,
+          38
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity",
+        "source_warp": 10,
+        "threshold": [
+          6,
+          38
+        ],
+        "expected_map": "EcruteakCity_WestGate",
+        "actual_map": "EcruteakCity_WestGate",
+        "arrival": [
+          10,
+          7
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_WestGate",
+        "source_warp": 1,
+        "threshold": [
+          1,
+          7
+        ],
+        "expected_map": "JohtoRoute38",
+        "actual_map": "JohtoRoute38",
+        "arrival": [
+          62,
+          13
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "JohtoRoute38",
+        "source_warp": 1,
+        "threshold": [
+          63,
+          13
+        ],
+        "expected_map": "EcruteakCity_WestGate",
+        "actual_map": "EcruteakCity_WestGate",
+        "arrival": [
+          1,
+          7
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_WestGate",
+        "source_warp": 2,
+        "threshold": [
+          10,
+          6
+        ],
+        "expected_map": "EcruteakCity",
+        "actual_map": "EcruteakCity",
+        "arrival": [
+          7,
+          37
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity",
+        "source_warp": 9,
+        "threshold": [
+          6,
+          37
+        ],
+        "expected_map": "EcruteakCity_WestGate",
+        "actual_map": "EcruteakCity_WestGate",
+        "arrival": [
+          10,
+          6
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_WestGate",
+        "source_warp": 3,
+        "threshold": [
+          10,
+          8
+        ],
+        "expected_map": "EcruteakCity",
+        "actual_map": "EcruteakCity",
+        "arrival": [
+          7,
+          39
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity",
+        "source_warp": 11,
+        "threshold": [
+          6,
+          39
+        ],
+        "expected_map": "EcruteakCity_WestGate",
+        "actual_map": "EcruteakCity_WestGate",
+        "arrival": [
+          10,
+          8
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_WestGate",
+        "source_warp": 4,
+        "threshold": [
+          1,
+          6
+        ],
+        "expected_map": "JohtoRoute38",
+        "actual_map": "JohtoRoute38",
+        "arrival": [
+          62,
+          12
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "JohtoRoute38",
+        "source_warp": 0,
+        "threshold": [
+          63,
+          12
+        ],
+        "expected_map": "EcruteakCity_WestGate",
+        "actual_map": "EcruteakCity_WestGate",
+        "arrival": [
+          1,
+          6
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_WestGate",
+        "source_warp": 5,
+        "threshold": [
+          1,
+          8
+        ],
+        "expected_map": "JohtoRoute38",
+        "actual_map": "JohtoRoute38",
+        "arrival": [
+          62,
+          14
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "JohtoRoute38",
+        "source_warp": 2,
+        "threshold": [
+          63,
+          14
+        ],
+        "expected_map": "EcruteakCity_WestGate",
+        "actual_map": "EcruteakCity_WestGate",
+        "arrival": [
+          1,
+          8
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_WestGate",
+        "source_warp": 0,
+        "threshold": [
+          10,
+          7
+        ],
+        "expected_map": "EcruteakCity",
+        "actual_map": "EcruteakCity",
+        "arrival": [
+          7,
+          38
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity",
+        "source_warp": 12,
+        "threshold": [
+          63,
+          46
+        ],
+        "expected_map": "EcruteakCity_EastGate",
+        "actual_map": "EcruteakCity_EastGate",
+        "arrival": [
+          1,
+          6
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_EastGate",
+        "source_warp": 0,
+        "threshold": [
+          1,
+          7
+        ],
+        "expected_map": "EcruteakCity",
+        "actual_map": "EcruteakCity",
+        "arrival": [
+          59,
+          47
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity",
+        "source_warp": 13,
+        "threshold": [
+          63,
+          47
+        ],
+        "expected_map": "EcruteakCity_EastGate",
+        "actual_map": "EcruteakCity_EastGate",
+        "arrival": [
+          1,
+          7
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_EastGate",
+        "source_warp": 1,
+        "threshold": [
+          10,
+          7
+        ],
+        "expected_map": "JohtoRoute42",
+        "actual_map": "JohtoRoute42",
+        "arrival": [
+          3,
+          14
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "JohtoRoute42",
+        "source_warp": 4,
+        "threshold": [
+          0,
+          14
+        ],
+        "expected_map": "EcruteakCity_EastGate",
+        "actual_map": "EcruteakCity_EastGate",
+        "arrival": [
+          10,
+          7
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_EastGate",
+        "source_warp": 2,
+        "threshold": [
+          1,
+          6
+        ],
+        "expected_map": "EcruteakCity",
+        "actual_map": "EcruteakCity",
+        "arrival": [
+          59,
+          46
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity",
+        "source_warp": 12,
+        "threshold": [
+          63,
+          46
+        ],
+        "expected_map": "EcruteakCity_EastGate",
+        "actual_map": "EcruteakCity_EastGate",
+        "arrival": [
+          1,
+          6
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_EastGate",
+        "source_warp": 3,
+        "threshold": [
+          1,
+          8
+        ],
+        "expected_map": "EcruteakCity",
+        "actual_map": "EcruteakCity",
+        "arrival": [
+          59,
+          48
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity",
+        "source_warp": 14,
+        "threshold": [
+          63,
+          48
+        ],
+        "expected_map": "EcruteakCity_EastGate",
+        "actual_map": "EcruteakCity_EastGate",
+        "arrival": [
+          1,
+          8
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_EastGate",
+        "source_warp": 4,
+        "threshold": [
+          10,
+          6
+        ],
+        "expected_map": "JohtoRoute42",
+        "actual_map": "JohtoRoute42",
+        "arrival": [
+          3,
+          13
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "JohtoRoute42",
+        "source_warp": 3,
+        "threshold": [
+          0,
+          13
+        ],
+        "expected_map": "EcruteakCity_EastGate",
+        "actual_map": "EcruteakCity_EastGate",
+        "arrival": [
+          10,
+          6
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_EastGate",
+        "source_warp": 5,
+        "threshold": [
+          10,
+          8
+        ],
+        "expected_map": "JohtoRoute42",
+        "actual_map": "JohtoRoute42",
+        "arrival": [
+          3,
+          15
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "JohtoRoute42",
+        "source_warp": 5,
+        "threshold": [
+          0,
+          15
+        ],
+        "expected_map": "EcruteakCity_EastGate",
+        "actual_map": "EcruteakCity_EastGate",
+        "arrival": [
+          10,
+          8
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_EastGate",
+        "source_warp": 0,
+        "threshold": [
+          1,
+          7
+        ],
+        "expected_map": "EcruteakCity",
+        "actual_map": "EcruteakCity",
+        "arrival": [
+          59,
+          47
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity",
+        "source_warp": 9,
+        "threshold": [
+          6,
+          37
+        ],
+        "expected_map": "EcruteakCity_WestGate",
+        "actual_map": "EcruteakCity_WestGate",
+        "arrival": [
+          10,
+          6
+        ],
+        "result": "PASS"
+      },
+      {
+        "source": "EcruteakCity_WestGate",
+        "source_warp": 1,
+        "threshold": [
+          1,
+          7
+        ],
+        "expected_map": "JohtoRoute38",
+        "actual_map": "JohtoRoute38",
+        "arrival": [
+          62,
+          13
+        ],
+        "result": "PASS"
+      }
+    ]
+  },
+  "furniture": [
+    {
+      "label": "theater-front-aisle",
+      "map": "EcruteakCity_DanceTheater",
+      "approach": [
+        8,
+        9
+      ],
+      "button": 128,
+      "expected": [
+        8,
+        10
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "theater-front-aisle-east",
+      "map": "EcruteakCity_DanceTheater",
+      "approach": [
+        8,
+        10
+      ],
+      "button": 16,
+      "expected": [
+        9,
+        10
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "bench-4-10-south",
+      "map": "EcruteakCity_DanceTheater",
+      "approach": [
+        4,
+        11
+      ],
+      "button": 64,
+      "expected": [
+        4,
+        11
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "bench-4-12-south",
+      "map": "EcruteakCity_DanceTheater",
+      "approach": [
+        4,
+        13
+      ],
+      "button": 64,
+      "expected": [
+        4,
+        13
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "bench-4-14-south",
+      "map": "EcruteakCity_DanceTheater",
+      "approach": [
+        4,
+        15
+      ],
+      "button": 64,
+      "expected": [
+        4,
+        15
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "bench-6-12-south",
+      "map": "EcruteakCity_DanceTheater",
+      "approach": [
+        6,
+        13
+      ],
+      "button": 64,
+      "expected": [
+        6,
+        13
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "bench-6-14-south",
+      "map": "EcruteakCity_DanceTheater",
+      "approach": [
+        6,
+        15
+      ],
+      "button": 64,
+      "expected": [
+        6,
+        15
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "bench-8-12-south",
+      "map": "EcruteakCity_DanceTheater",
+      "approach": [
+        8,
+        13
+      ],
+      "button": 64,
+      "expected": [
+        8,
+        13
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "bench-8-14-south",
+      "map": "EcruteakCity_DanceTheater",
+      "approach": [
+        8,
+        15
+      ],
+      "button": 64,
+      "expected": [
+        8,
+        15
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "bench-10-10-south",
+      "map": "EcruteakCity_DanceTheater",
+      "approach": [
+        10,
+        11
+      ],
+      "button": 64,
+      "expected": [
+        10,
+        11
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "bench-10-12-south",
+      "map": "EcruteakCity_DanceTheater",
+      "approach": [
+        10,
+        13
+      ],
+      "button": 64,
+      "expected": [
+        10,
+        13
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "bench-10-14-south",
+      "map": "EcruteakCity_DanceTheater",
+      "approach": [
+        10,
+        15
+      ],
+      "button": 64,
+      "expected": [
+        10,
+        15
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "bench-12-10-south",
+      "map": "EcruteakCity_DanceTheater",
+      "approach": [
+        12,
+        11
+      ],
+      "button": 64,
+      "expected": [
+        12,
+        11
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "bench-12-12-south",
+      "map": "EcruteakCity_DanceTheater",
+      "approach": [
+        12,
+        13
+      ],
+      "button": 64,
+      "expected": [
+        12,
+        13
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "bench-12-14-south",
+      "map": "EcruteakCity_DanceTheater",
+      "approach": [
+        12,
+        15
+      ],
+      "button": 64,
+      "expected": [
+        12,
+        15
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "EcruteakCity_Residence-furniture-2",
+      "map": "EcruteakCity_Residence",
+      "approach": [
+        2,
+        4
+      ],
+      "button": 64,
+      "expected": [
+        2,
+        4
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "EcruteakCity_Residence-furniture-3",
+      "map": "EcruteakCity_Residence",
+      "approach": [
+        3,
+        4
+      ],
+      "button": 64,
+      "expected": [
+        3,
+        4
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "EcruteakCity_Residence-furniture-8",
+      "map": "EcruteakCity_Residence",
+      "approach": [
+        8,
+        4
+      ],
+      "button": 64,
+      "expected": [
+        8,
+        4
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "EcruteakCity_Residence-furniture-9",
+      "map": "EcruteakCity_Residence",
+      "approach": [
+        9,
+        4
+      ],
+      "button": 64,
+      "expected": [
+        9,
+        4
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "EcruteakCity_DowsingHouse-furniture-2",
+      "map": "EcruteakCity_DowsingHouse",
+      "approach": [
+        2,
+        4
+      ],
+      "button": 64,
+      "expected": [
+        2,
+        4
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "EcruteakCity_DowsingHouse-furniture-3",
+      "map": "EcruteakCity_DowsingHouse",
+      "approach": [
+        3,
+        4
+      ],
+      "button": 64,
+      "expected": [
+        3,
+        4
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "EcruteakCity_DowsingHouse-furniture-8",
+      "map": "EcruteakCity_DowsingHouse",
+      "approach": [
+        8,
+        4
+      ],
+      "button": 64,
+      "expected": [
+        8,
+        4
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "EcruteakCity_DowsingHouse-furniture-9",
+      "map": "EcruteakCity_DowsingHouse",
+      "approach": [
+        9,
+        4
+      ],
+      "button": 64,
+      "expected": [
+        9,
+        4
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "center-plant-15-4",
+      "map": "EcruteakCity_PokemonCenter_1F",
+      "approach": [
+        15,
+        5
+      ],
+      "button": 64,
+      "expected": [
+        15,
+        5
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "center-plant-14-15-west",
+      "map": "EcruteakCity_PokemonCenter_1F",
+      "approach": [
+        13,
+        15
+      ],
+      "button": 16,
+      "expected": [
+        13,
+        15
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "center-plant-15-14-north",
+      "map": "EcruteakCity_PokemonCenter_1F",
+      "approach": [
+        15,
+        13
+      ],
+      "button": 128,
+      "expected": [
+        15,
+        13
+      ],
+      "result": "PASS"
+    }
+  ],
+  "ground": [
+    {
+      "label": "ordinary-paving-south",
+      "map": "EcruteakCity",
+      "position": [
+        40,
+        61
+      ],
+      "stray_arrow_samples": 0
+    },
+    {
+      "label": "canopy-entry",
+      "map": "EcruteakCity",
+      "position": [
+        26,
+        42
+      ],
+      "stray_arrow_samples": 0
+    },
+    {
+      "label": "trunk-from-north",
+      "map": "EcruteakCity",
+      "position": [
+        26,
+        42
+      ],
+      "stray_arrow_samples": 0
+    },
+    {
+      "label": "trunk-west",
+      "map": "EcruteakCity",
+      "position": [
+        25,
+        43
+      ],
+      "stray_arrow_samples": 0
+    },
+    {
+      "label": "trunk-east",
+      "map": "EcruteakCity",
+      "position": [
+        28,
+        43
+      ],
+      "stray_arrow_samples": 0
+    },
+    {
+      "label": "trunk-south",
+      "map": "EcruteakCity",
+      "position": [
+        26,
+        44
+      ],
+      "stray_arrow_samples": 0
+    },
+    {
+      "label": "house-west-gutter",
+      "map": "EcruteakCity",
+      "position": [
+        20,
+        43
+      ],
+      "stray_arrow_samples": 0
+    },
+    {
+      "label": "house-west-base",
+      "map": "EcruteakCity",
+      "position": [
+        19,
+        44
+      ],
+      "stray_arrow_samples": 0
+    },
+    {
+      "label": "house-front-wall",
+      "map": "EcruteakCity",
+      "position": [
+        22,
+        46
+      ],
+      "stray_arrow_samples": 0
+    },
+    {
+      "label": "station-front-wall",
+      "map": "EcruteakCity",
+      "position": [
+        37,
+        26
+      ],
+      "stray_arrow_samples": 0
+    },
+    {
+      "label": "dowsing-wall",
+      "map": "EcruteakCity",
+      "position": [
+        32,
+        56
+      ],
+      "stray_arrow_samples": 0
+    },
+    {
+      "label": "theater-wall",
+      "map": "EcruteakCity",
+      "position": [
+        46,
+        46
+      ],
+      "stray_arrow_samples": 0
+    },
+    {
+      "label": "center-wall",
+      "map": "EcruteakCity",
+      "position": [
+        44,
+        56
+      ],
+      "stray_arrow_samples": 0
+    },
+    {
+      "label": "mart-wall",
+      "map": "EcruteakCity",
+      "position": [
+        52,
+        46
+      ],
+      "stray_arrow_samples": 0
+    },
+    {
+      "label": "burned-wall",
+      "map": "EcruteakCity",
+      "position": [
+        23,
+        22
+      ],
+      "stray_arrow_samples": 0
+    },
+    {
+      "label": "custom-gym-wall",
+      "map": "EcruteakCity",
+      "position": [
+        23,
+        56
+      ],
+      "stray_arrow_samples": 0
+    },
+    {
+      "label": "northwest-private-wall",
+      "map": "EcruteakCity",
+      "position": [
+        22,
+        37
+      ],
+      "stray_arrow_samples": 0
+    },
+    {
+      "label": "north-private-wall",
+      "map": "EcruteakCity",
+      "position": [
+        34,
+        37
+      ],
+      "stray_arrow_samples": 0
+    },
+    {
+      "label": "southeast-private-wall",
+      "map": "EcruteakCity",
+      "position": [
+        53,
+        56
+      ],
+      "stray_arrow_samples": 0
+    }
+  ],
+  "tree_approaches": [
+    {
+      "tree": [
+        26,
+        33
+      ],
+      "approach": [
+        25,
+        34
+      ],
+      "button": 16,
+      "result": "blocked through controller input"
+    },
+    {
+      "tree": [
+        26,
+        33
+      ],
+      "approach": [
+        28,
+        34
+      ],
+      "button": 32,
+      "result": "blocked through controller input"
+    },
+    {
+      "tree": [
+        26,
+        33
+      ],
+      "approach": [
+        26,
+        33
+      ],
+      "button": 128,
+      "result": "blocked through controller input"
+    },
+    {
+      "tree": [
+        26,
+        33
+      ],
+      "approach": [
+        27,
+        33
+      ],
+      "button": 128,
+      "result": "blocked through controller input"
+    },
+    {
+      "tree": [
+        26,
+        33
+      ],
+      "approach": [
+        26,
+        35
+      ],
+      "button": 64,
+      "result": "blocked through controller input"
+    },
+    {
+      "tree": [
+        26,
+        33
+      ],
+      "approach": [
+        27,
+        35
+      ],
+      "button": 64,
+      "result": "blocked through controller input"
+    },
+    {
+      "tree": [
+        38,
+        33
+      ],
+      "approach": [
+        37,
+        34
+      ],
+      "button": 16,
+      "result": "blocked through controller input"
+    },
+    {
+      "tree": [
+        38,
+        33
+      ],
+      "approach": [
+        40,
+        34
+      ],
+      "button": 32,
+      "result": "blocked through controller input"
+    },
+    {
+      "tree": [
+        38,
+        33
+      ],
+      "approach": [
+        38,
+        33
+      ],
+      "button": 128,
+      "result": "blocked through controller input"
+    },
+    {
+      "tree": [
+        38,
+        33
+      ],
+      "approach": [
+        39,
+        33
+      ],
+      "button": 128,
+      "result": "blocked through controller input"
+    },
+    {
+      "tree": [
+        38,
+        33
+      ],
+      "approach": [
+        38,
+        35
+      ],
+      "button": 64,
+      "result": "blocked through controller input"
+    },
+    {
+      "tree": [
+        38,
+        33
+      ],
+      "approach": [
+        39,
+        35
+      ],
+      "button": 64,
+      "result": "blocked through controller input"
+    },
+    {
+      "tree": [
+        26,
+        42
+      ],
+      "approach": [
+        25,
+        43
+      ],
+      "button": 16,
+      "result": "blocked through controller input"
+    },
+    {
+      "tree": [
+        26,
+        42
+      ],
+      "approach": [
+        28,
+        43
+      ],
+      "button": 32,
+      "result": "blocked through controller input"
+    },
+    {
+      "tree": [
+        26,
+        42
+      ],
+      "approach": [
+        26,
+        42
+      ],
+      "button": 128,
+      "result": "blocked through controller input"
+    },
+    {
+      "tree": [
+        26,
+        42
+      ],
+      "approach": [
+        27,
+        42
+      ],
+      "button": 128,
+      "result": "blocked through controller input"
+    },
+    {
+      "tree": [
+        26,
+        42
+      ],
+      "approach": [
+        26,
+        44
+      ],
+      "button": 64,
+      "result": "blocked through controller input"
+    },
+    {
+      "tree": [
+        26,
+        42
+      ],
+      "approach": [
+        27,
+        44
+      ],
+      "button": 64,
+      "result": "blocked through controller input"
+    },
+    {
+      "tree": [
+        29,
+        52
+      ],
+      "approach": [
+        28,
+        53
+      ],
+      "button": 16,
+      "result": "blocked through controller input"
+    },
+    {
+      "tree": [
+        29,
+        52
+      ],
+      "approach": [
+        31,
+        53
+      ],
+      "button": 32,
+      "result": "blocked through controller input"
+    },
+    {
+      "tree": [
+        29,
+        52
+      ],
+      "approach": [
+        29,
+        52
+      ],
+      "button": 128,
+      "result": "blocked through controller input"
+    },
+    {
+      "tree": [
+        29,
+        52
+      ],
+      "approach": [
+        30,
+        52
+      ],
+      "button": 128,
+      "result": "blocked through controller input"
+    },
+    {
+      "tree": [
+        29,
+        52
+      ],
+      "approach": [
+        29,
+        54
+      ],
+      "button": 64,
+      "result": "blocked through controller input"
+    },
+    {
+      "tree": [
+        29,
+        52
+      ],
+      "approach": [
+        30,
+        54
+      ],
+      "button": 64,
+      "result": "blocked through controller input"
+    },
+    {
+      "tree": [
+        49,
+        52
+      ],
+      "approach": [
+        48,
+        53
+      ],
+      "button": 16,
+      "result": "blocked through controller input"
+    },
+    {
+      "tree": [
+        49,
+        52
+      ],
+      "approach": [
+        51,
+        53
+      ],
+      "button": 32,
+      "result": "blocked through controller input"
+    },
+    {
+      "tree": [
+        49,
+        52
+      ],
+      "approach": [
+        49,
+        52
+      ],
+      "button": 128,
+      "result": "blocked through controller input"
+    },
+    {
+      "tree": [
+        49,
+        52
+      ],
+      "approach": [
+        50,
+        52
+      ],
+      "button": 128,
+      "result": "blocked through controller input"
+    },
+    {
+      "tree": [
+        49,
+        52
+      ],
+      "approach": [
+        49,
+        54
+      ],
+      "button": 64,
+      "result": "blocked through controller input"
+    },
+    {
+      "tree": [
+        49,
+        52
+      ],
+      "approach": [
+        50,
+        54
+      ],
+      "button": 64,
+      "result": "blocked through controller input"
+    },
+    {
+      "tree": [
+        58,
+        42
+      ],
+      "approach": [
+        57,
+        43
+      ],
+      "button": 16,
+      "result": "blocked through controller input"
+    },
+    {
+      "tree": [
+        58,
+        42
+      ],
+      "approach": [
+        60,
+        43
+      ],
+      "button": 32,
+      "result": "blocked through controller input"
+    },
+    {
+      "tree": [
+        58,
+        42
+      ],
+      "approach": [
+        58,
+        42
+      ],
+      "button": 128,
+      "result": "blocked through controller input"
+    },
+    {
+      "tree": [
+        58,
+        42
+      ],
+      "approach": [
+        59,
+        42
+      ],
+      "button": 128,
+      "result": "blocked through controller input"
+    },
+    {
+      "tree": [
+        58,
+        42
+      ],
+      "approach": [
+        58,
+        44
+      ],
+      "button": 64,
+      "result": "blocked through controller input"
+    },
+    {
+      "tree": [
+        58,
+        42
+      ],
+      "approach": [
+        59,
+        44
+      ],
+      "button": 64,
+      "result": "blocked through controller input"
+    }
+  ],
+  "foreground_pixels": {
+    "native_size": [
+      240,
+      160
+    ],
+    "after_leaf_pixels_matched": 423,
+    "after_leaf_pixels_total": 423,
+    "rom_sha256": "0734501b031d05156a28e685dc1c2748153cb065222bd67b0d2e7cea47fefbca"
+  },
+  "details": {
+    "five_performer_show": "PASS",
+    "mart_purchase_200": "PASS",
+    "pc_menu_party_box_unchanged": "PASS",
+    "nurse_healing": "PASS",
+    "house_normal_save_cold_continue": "PASS",
+    "center_normal_save_cold_continue": "PASS",
+    "old_shared_layout_save_fixture": "PASS",
+    "gym_fall_returns": "PASS",
+    "actual_morty_practice_loss_local_respawn": "PASS"
+  }
+}

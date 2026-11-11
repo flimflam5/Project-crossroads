@@ -1,11 +1,26 @@
-# Active QA09 — Ecruteak and Olivine only
+# QA09 — Ecruteak and Olivine city completion
 
-See [two-city scope and current verification](hgss/CITIES_QA09.md) and
-[hgss/ACTIVE_COMPLETION.md](hgss/ACTIVE_COMPLETION.md). Canonical Olivine and
-source-correct Ecruteak interiors are implemented; BUILD5 tests exposed a port
-return trap now being repaired before final testing. No owner acceptance or
-100% claim while final port/rail/art work and delivery-ROM QA remain. Older
-entries below are historical and do not authorize expansion elsewhere.
+Both cities' approved map/interior scope is implemented and verified on the
+final BUILD11 bytes. Game source `489c404346f572aefb6856b3dd48a9b364a08ceb` is
+pushed on `feature/olivine-ecruteak-completion-qa09`, draft PR16. Real Emerald
+build, all60 local CI commands and all21 final serial test stages pass. ROM:
+`df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4`.
+All51 maps/27,062 map+border cells and51 actual native frames pass independent
+ground-layer checks. Scripted mGBA gameplay covers both complete city tours,
+all118 door fronts/329 executable approaches, services, landmarks, collisions,
+old-save fixtures/normal Continue, starters and Joe actions. No known reproduced
+functional defect remains in the exercised scope. **Owner Delta/visual review
+is still required.** This is separate from compilation and automated gameplay.
+
+See [scope/references/results](hgss/CITIES_QA09.md), both per-building checklists,
+[exact combined evidence](qa/qa09/verification-summary.json) and
+[release/Delta procedure](RELEASE_CITIES_QA09.md). Final delivery source and checksum
+are in the artifact's build-info.json; source489 is the game-code checkpoint.
+
+Only these two cities are in scope. Existing designs, saves/IDs, Joe, title/music,
+starters and approved encounters/practice battles remain. No region expansion,
+engine upgrade, story/reward/badge progression or master merge. Older entries
+below are historical checkpoints, not instructions to undo QA09.
 
 # QA08 B2 — tested Ecruteak gate checkpoint
 

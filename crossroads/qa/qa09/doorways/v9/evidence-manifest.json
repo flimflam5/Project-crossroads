@@ -1,0 +1,378 @@
+{
+  "source_commit": "5664fecee4337c5bdd442583e24cc91c09c0a0cd",
+  "rom_sha256": "d5abac0deabc7d592eba302122b3d15c08501947f0f601eda7b5026da9ac6772",
+  "files": [
+    {
+      "file": "port-north-body-column-23.mp4",
+      "caption": "Actual native Surf into the thin sea overhang stops at the solid body; normal disembark. Independent column23.",
+      "sha256": "4e03d8cbb72f22a18dfb78afd462c34824444d74eb224e5377289c4cf7ddae1b",
+      "bytes": 215631
+    },
+    {
+      "file": "port-north-body-column-24.mp4",
+      "caption": "Independent column24: real sea/Surf remains valid, solid body remains impassable.",
+      "sha256": "8f90f408c54c6089b70d3749948388bd608bb722ffb1e6ff7b724ab9cd2abaa9",
+      "bytes": 216020
+    },
+    {
+      "file": "port-forecourt-boardwalk-return.mp4",
+      "caption": "Exit terminal, walk to the main promenade and return via a dry boardwalk, then use the right leaf. No Survey Surf shortcut.",
+      "sha256": "30b30d61e80b9e8cbf59d230f4d09dba4bc74af3313b50cbb8e33a50e3f224c8",
+      "bytes": 399945
+    },
+    {
+      "file": "window-drop.mp4",
+      "caption": "Actual4F window drop to the exact balcony landing. The full stair/top/elevator return is separately asserted.",
+      "sha256": "77c16d8b752d47e67afbbcb77eabbba4538f51923c41347ebe4d96a86ca82ae1",
+      "bytes": 55826
+    },
+    {
+      "file": "balcony-west-inner-rail.mp4",
+      "caption": "Push right and press A at inner balcony rail: no falling movement or illegitimate Surf.",
+      "sha256": "94efb7eaf6ee8ef529e08a9dafa15291512876903efe21b720faeba3316ee659",
+      "bytes": 83642
+    },
+    {
+      "file": "balcony-north-left-rail.mp4",
+      "caption": "Independent northern balcony boundary push/A check.",
+      "sha256": "2d231109a3e4fe0e472be56687913fd00ca1574805849a107e5efbac12bc5d13",
+      "bytes": 126338
+    },
+    {
+      "file": "OlivineCity_Lighthouse_1F-lift-0.mp4",
+      "caption": "Real1F panel selection and left native dynamic-warp exit.",
+      "sha256": "cb18af72e6c6191c69feccab0dc0b58679c19d2ec0704d69300d951a3db017f6",
+      "bytes": 44069
+    },
+    {
+      "file": "OlivineCity_Lighthouse_1F-lift-1.mp4",
+      "caption": "Independent right elevator leaf to1F.",
+      "sha256": "d52f59695379b1f988d6b649ffcbffaf0b00dd2d02e4334e2d92b58517e534d5",
+      "bytes": 45028
+    },
+    {
+      "file": "OlivineCity_Lighthouse_6F-lift-0.mp4",
+      "caption": "Real6F panel selection and left exit.",
+      "sha256": "93a694195539d1e15fd8746af822b595aed10acb64038337723d3bc480175c08",
+      "bytes": 47528
+    },
+    {
+      "file": "OlivineCity_Lighthouse_6F-lift-1.mp4",
+      "caption": "Independent right elevator leaf to6F.",
+      "sha256": "a585c622772a3cec6d1f0eb1173281657065dd80ba366e5c29e243ba9720f4a5",
+      "bytes": 46127
+    },
+    {
+      "file": "port-north-body-column-23.png",
+      "caption": "Native240x160 frame after the named passing controller case.",
+      "sha256": "67d656fd5a33830772f6ea844a5ee07f43b67f6091312c5af3f32e0e6f8c6a71",
+      "bytes": 8534
+    },
+    {
+      "file": "port-north-body-column-24.png",
+      "caption": "Native240x160 frame after the named passing controller case.",
+      "sha256": "f1fe56b7ea185a5bce5fbd15c87603057d834cb97daff38d2794422c5c8c6483",
+      "bytes": 8120
+    },
+    {
+      "file": "window-balcony-arrival.png",
+      "caption": "Native240x160 frame after the named passing controller case.",
+      "sha256": "898d13cb92b74fc6f48469fef0cee208eb633cbb3d1cdca7dc4677bb81b5ebb1",
+      "bytes": 3784
+    },
+    {
+      "file": "balcony-west-inner-rail.png",
+      "caption": "Native240x160 frame after the named passing controller case.",
+      "sha256": "6093e28a5b88cb49631b0c747dfe042b45e9adc698db010f8ab1447ff18ee456",
+      "bytes": 4022
+    },
+    {
+      "file": "balcony-north-left-rail.png",
+      "caption": "Native240x160 frame after the named passing controller case.",
+      "sha256": "489f20002eabb9a01be73ed9ae2c77726a60972e8e4ae52048d2e12fd1451cd4",
+      "bytes": 3876
+    },
+    {
+      "file": "theater-outside-0-front.mp4",
+      "caption": "Exact named Ecruteak doorway segment, native arrival and actual dry walk-away. No neighbouring-leaf fallback.",
+      "sha256": "68f345f9432edb37abf6bdf3d131de3ee2414d817359b20dbfacec107a5aa21b",
+      "bytes": 24643
+    },
+    {
+      "file": "theater-outside-1-front.mp4",
+      "caption": "Exact named Ecruteak doorway segment, native arrival and actual dry walk-away. No neighbouring-leaf fallback.",
+      "sha256": "7882ef404068562a8f8e74b740cbab0d5d17e1fc8f3123fbddb11577b51a3f7f",
+      "bytes": 22889
+    },
+    {
+      "file": "theater-inside-0-front.mp4",
+      "caption": "Exact named Ecruteak doorway segment, native arrival and actual dry walk-away. No neighbouring-leaf fallback.",
+      "sha256": "cacfb4a75db12f7ad058fce86bc72a07e822a330cd1501fa863e3698291f5083",
+      "bytes": 37434
+    },
+    {
+      "file": "theater-inside-1-front.mp4",
+      "caption": "Exact named Ecruteak doorway segment, native arrival and actual dry walk-away. No neighbouring-leaf fallback.",
+      "sha256": "9ab122bef73ff086751e08017f9e6c7a9b9c1cadb1be101cbb37231f3e0a19f7",
+      "bytes": 36149
+    },
+    {
+      "file": "west-city-gate-outside-0-front.mp4",
+      "caption": "Exact named Ecruteak doorway segment, native arrival and actual dry walk-away. No neighbouring-leaf fallback.",
+      "sha256": "6a70400cf17b7cdefe8e5e7809a5fa9ddfde41e9860ce1a90e9cac45cb8c40da",
+      "bytes": 32203
+    },
+    {
+      "file": "west-city-gate-outside-2-front.mp4",
+      "caption": "Exact named Ecruteak doorway segment, native arrival and actual dry walk-away. No neighbouring-leaf fallback.",
+      "sha256": "81cfc2c765da7857095b0f46ad5615571d870b566493f87c6f0635bc5d33d1e2",
+      "bytes": 29972
+    },
+    {
+      "file": "east-city-gate-outside-0-front.mp4",
+      "caption": "Exact named Ecruteak doorway segment, native arrival and actual dry walk-away. No neighbouring-leaf fallback.",
+      "sha256": "b9b3ee09776e88ca80c6aae85985447e92b6f673bf5650b0d373fb13acc9eab7",
+      "bytes": 26391
+    },
+    {
+      "file": "east-city-gate-outside-2-front.mp4",
+      "caption": "Exact named Ecruteak doorway segment, native arrival and actual dry walk-away. No neighbouring-leaf fallback.",
+      "sha256": "6f2536693fab1f49722a84305ec2094cebf74950abdffe8b2accc9839e91fe52",
+      "bytes": 24077
+    },
+    {
+      "file": "olivine-pokemon-center-outside-0-front.mp4",
+      "caption": "Independent visible Olivine door/aisle leaf, exact native arrival and dry walk-away.",
+      "sha256": "34db5437296c8c2b221a06a7401a3189160a6953b192ba3b33df78c79a947689",
+      "bytes": 25473
+    },
+    {
+      "file": "olivine-pokemon-center-outside-1-front.mp4",
+      "caption": "Independent visible Olivine door/aisle leaf, exact native arrival and dry walk-away.",
+      "sha256": "6a67ad5d5a4b0e1eeb2e893ee52c9a1cf6d7d709448bdccda4374ab9d4b88a18",
+      "bytes": 24460
+    },
+    {
+      "file": "olivine-pokemon-center-inside-0-front.mp4",
+      "caption": "Independent visible Olivine door/aisle leaf, exact native arrival and dry walk-away.",
+      "sha256": "050b5b533e841e37b40f256015e504ca71507113672e5462ead9a16f7c22a47e",
+      "bytes": 39792
+    },
+    {
+      "file": "olivine-pokemon-center-inside-1-front.mp4",
+      "caption": "Independent visible Olivine door/aisle leaf, exact native arrival and dry walk-away.",
+      "sha256": "b56abf9e43ce18036ad96b9d2ca3cd47bc08513996045957b551c6ace1dca57c",
+      "bytes": 38130
+    },
+    {
+      "file": "olivine-port-city-entrance-outside-0-front.mp4",
+      "caption": "Independent visible Olivine door/aisle leaf, exact native arrival and dry walk-away.",
+      "sha256": "1b7be86fa64966161341fb73285086cd24f5ba06af8f78d6ff0a9e5691aa821f",
+      "bytes": 37645
+    },
+    {
+      "file": "olivine-port-city-entrance-outside-1-front.mp4",
+      "caption": "Independent visible Olivine door/aisle leaf, exact native arrival and dry walk-away.",
+      "sha256": "5fb14e2e5c15ee907da6babf94c74f02fd4b8870fb2c716dd97b7fe2581f47c5",
+      "bytes": 32945
+    },
+    {
+      "file": "olivine-port-city-entrance-inside-0-front.mp4",
+      "caption": "Independent visible Olivine door/aisle leaf, exact native arrival and dry walk-away.",
+      "sha256": "4b052bd4db8dca6e2aafba0de5cd79fba8fe5b602421ace5bc3edc96193f9328",
+      "bytes": 60746
+    },
+    {
+      "file": "olivine-port-city-entrance-inside-1-front.mp4",
+      "caption": "Independent visible Olivine door/aisle leaf, exact native arrival and dry walk-away.",
+      "sha256": "53cbe444422c358d55413bdfd395f8a2f04c0c0ced6b7b210db3792a35f4175f",
+      "bytes": 61390
+    },
+    {
+      "file": "olivine-gym-hallway-outside-0-front.mp4",
+      "caption": "Independent visible Olivine door/aisle leaf, exact native arrival and dry walk-away.",
+      "sha256": "5a12a392effea305cd2357c46c1c7243ac1e691b5ebd4b32d952cdfa32f255fd",
+      "bytes": 22452
+    },
+    {
+      "file": "olivine-gym-hallway-outside-2-front.mp4",
+      "caption": "Independent visible Olivine door/aisle leaf, exact native arrival and dry walk-away.",
+      "sha256": "a45ae31611b679d7a20163d58ce5ecfa25214571127800a20b2499bf1eedcab9",
+      "bytes": 22411
+    },
+    {
+      "file": "olivine-harbor-office-inside-0-front.mp4",
+      "caption": "Independent visible Olivine door/aisle leaf, exact native arrival and dry walk-away.",
+      "sha256": "abac796b469f81152a59ae176831c875797b45be36592fe27c6634c50e65a625",
+      "bytes": 40665
+    },
+    {
+      "file": "olivine-harbor-office-inside-1-front.mp4",
+      "caption": "Independent visible Olivine door/aisle leaf, exact native arrival and dry walk-away.",
+      "sha256": "e4734e629c1ddd4387f3f16c5019ab9e6298ae86847451ae37971f87ae3d72dd",
+      "bytes": 40614
+    },
+    {
+      "file": "olivine-port-inspection-side-outside-1-front.mp4",
+      "caption": "Independent visible Olivine door/aisle leaf, exact native arrival and dry walk-away.",
+      "sha256": "5251605b91cd9e69fec921e02c60a9ac845d1873e2d708d182c05991c6b2afe1",
+      "bytes": 39079
+    },
+    {
+      "file": "olivine-lighthouse-balcony-outside-1-front.mp4",
+      "caption": "Independent visible Olivine door/aisle leaf, exact native arrival and dry walk-away.",
+      "sha256": "434527a3868c4eb4b5743caf5c73e903f15f9ec5abd8f1d1d8a2a7cd87205456",
+      "bytes": 18111
+    },
+    {
+      "file": "live-starter-605.png",
+      "caption": "Actual rescue choice, exact met origin/level and uniqueness verified on the engine.",
+      "sha256": "78710fbd2005d26d403cb49919a9384638b8ce546320834c2502f2aa14d8d9a9",
+      "bytes": 4729
+    },
+    {
+      "file": "live-starter-273.png",
+      "caption": "Actual rescue choice, exact met origin/level and uniqueness verified on the engine.",
+      "sha256": "78710fbd2005d26d403cb49919a9384638b8ce546320834c2502f2aa14d8d9a9",
+      "bytes": 4729
+    },
+    {
+      "file": "live-starter-568.png",
+      "caption": "Actual rescue choice, exact met origin/level and uniqueness verified on the engine.",
+      "sha256": "78710fbd2005d26d403cb49919a9384638b8ce546320834c2502f2aa14d8d9a9",
+      "bytes": 4729
+    },
+    {
+      "file": "joe-north.png",
+      "caption": "Actual Joe directional sprite VRAM matches the supplied art; saved gender retained.",
+      "sha256": "f8142b723030dccff9d6ddb24e0cb420793f82f8647ec3b6cdb6c30e23f83202",
+      "bytes": 6371
+    },
+    {
+      "file": "joe-south.png",
+      "caption": "Actual Joe directional sprite VRAM matches the supplied art; saved gender retained.",
+      "sha256": "851f797f639e5a7855372f41b7eb03df21eb4a8a4dfb856cedd667b2593c1a10",
+      "bytes": 6446
+    },
+    {
+      "file": "joe-east.png",
+      "caption": "Actual Joe directional sprite VRAM matches the supplied art; saved gender retained.",
+      "sha256": "e63e2e96301aeb21bb67d775b9c2bac06485270b91711a426cd95f6a197c9e97",
+      "bytes": 6398
+    },
+    {
+      "file": "joe-west.png",
+      "caption": "Actual Joe directional sprite VRAM matches the supplied art; saved gender retained.",
+      "sha256": "f6b80b4ec03a0decf2494074953172fbed2b5979ea0c287f42ce3eb7adf9c397",
+      "bytes": 6413
+    },
+    {
+      "file": "jasmine-loss-local-respawn.png",
+      "caption": "Fresh player actual Jasmine practice loss \u2192 Olivine Center, healed party and Joe retained.",
+      "sha256": "3ddae1c7f7a451a607f8582dfd6e650121c29df283300be85d6d30c173099531",
+      "bytes": 6463
+    },
+    {
+      "file": "joe-native-fly.mp4",
+      "caption": "Frame-by-frame native Fly departure with actual Joe field-pose ID and exact VRAM check.",
+      "sha256": "ce89f771b33e33f82ee59c91403c0b0a4a0da6592e3751847e40e6ecbd4c3486",
+      "bytes": 72101
+    },
+    {
+      "file": "fly-joe-fly-pose.png",
+      "caption": "Actual Fly UI/Joe pose/destination; all10 destinations, cancellation and postflight normal Save/cold Continue passed.",
+      "sha256": "e08de51d418b525696b994846359497a1fa928b8f4ec7b9933f7b2fdbc940a28",
+      "bytes": 5625
+    },
+    {
+      "file": "fly-fly-selection.png",
+      "caption": "Actual Fly UI/Joe pose/destination; all10 destinations, cancellation and postflight normal Save/cold Continue passed.",
+      "sha256": "896d66edec57685cc578aa8699be3913c7511153d7f76332be48ee24592fa1a8",
+      "bytes": 2272
+    },
+    {
+      "file": "fly-OlivineCity.png",
+      "caption": "Actual Fly UI/Joe pose/destination; all10 destinations, cancellation and postflight normal Save/cold Continue passed.",
+      "sha256": "28f63cccd6ab73604e96f48aa380976f41e296433684d6c541aade9f6e8e10c9",
+      "bytes": 6529
+    },
+    {
+      "file": "fly-EcruteakCity.png",
+      "caption": "Actual Fly UI/Joe pose/destination; all10 destinations, cancellation and postflight normal Save/cold Continue passed.",
+      "sha256": "59fdbcc6632454bd0f2e04d4782e221bb06eb6c3db73fca5650575a0f1b92ce8",
+      "bytes": 6866
+    },
+    {
+      "file": "joe-mach_bike.png",
+      "caption": "Actual Joe field-state graphics ID and VRAM checked in the native engine. Bike/rod gear is a disclosed private RAM fixture.",
+      "sha256": "b1df741bc154d278d3176e309e89ce14fc4913f1336eedf7e8bd303c35bcabb8",
+      "bytes": 3985
+    },
+    {
+      "file": "joe-acro_bike.png",
+      "caption": "Actual Joe field-state graphics ID and VRAM checked in the native engine. Bike/rod gear is a disclosed private RAM fixture.",
+      "sha256": "b1df741bc154d278d3176e309e89ce14fc4913f1336eedf7e8bd303c35bcabb8",
+      "bytes": 3985
+    },
+    {
+      "file": "joe-acro-wheelie.png",
+      "caption": "Actual Joe field-state graphics ID and VRAM checked in the native engine. Bike/rod gear is a disclosed private RAM fixture.",
+      "sha256": "b1df741bc154d278d3176e309e89ce14fc4913f1336eedf7e8bd303c35bcabb8",
+      "bytes": 3985
+    },
+    {
+      "file": "joe-surf-north.png",
+      "caption": "Actual Joe field-state graphics ID and VRAM checked in the native engine. Bike/rod gear is a disclosed private RAM fixture.",
+      "sha256": "5402c84639fe14e3ca55dd30e45e4333664b4acac7b677a0b105c7817fb5b78b",
+      "bytes": 3895
+    },
+    {
+      "file": "joe-surf-south.png",
+      "caption": "Actual Joe field-state graphics ID and VRAM checked in the native engine. Bike/rod gear is a disclosed private RAM fixture.",
+      "sha256": "29efae5427548c64102680ae79ed39c686a197ed12ded6135175f69f063fd9ca",
+      "bytes": 3855
+    },
+    {
+      "file": "joe-surf-west.png",
+      "caption": "Actual Joe field-state graphics ID and VRAM checked in the native engine. Bike/rod gear is a disclosed private RAM fixture.",
+      "sha256": "9737cd41c0f9b712d40e8c550b57c9cc1d3ef4d89ea9c700c5210409a1e554e5",
+      "bytes": 4079
+    },
+    {
+      "file": "joe-surf-east.png",
+      "caption": "Actual Joe field-state graphics ID and VRAM checked in the native engine. Bike/rod gear is a disclosed private RAM fixture.",
+      "sha256": "621b36471be58b34b5e9d92d38beea323b8342e39ae1a14cf6c5b3012a62df3d",
+      "bytes": 3930
+    },
+    {
+      "file": "joe-fishing.png",
+      "caption": "Actual Joe field-state graphics ID and VRAM checked in the native engine. Bike/rod gear is a disclosed private RAM fixture.",
+      "sha256": "4c194c0912230b3af24cb8d86636fa96b4a6e8dcd409dc49c94e19062ec1dcc3",
+      "bytes": 3804
+    },
+    {
+      "file": "shoes-walking.png",
+      "caption": "Paired32-frame normal input trials from the same normally reached road position; B-running moves farther and both show Joe VRAM.",
+      "sha256": "ac50b5804d25b75d76590999c5087bd2ec0ed4a29ad3239e23c460d4261c8ce3",
+      "bytes": 4273
+    },
+    {
+      "file": "shoes-running.png",
+      "caption": "Paired32-frame normal input trials from the same normally reached road position; B-running moves farther and both show Joe VRAM.",
+      "sha256": "f3e1b4ed8ba63b3cc2f9ec75d74f872953910d2c30cfacfc7613c10d55e39844",
+      "bytes": 3860
+    },
+    {
+      "file": "shoes-walking.mp4",
+      "caption": "Paired32-frame normal input trials from the same normally reached road position; B-running moves farther and both show Joe VRAM.",
+      "sha256": "0da84188ae0725b1409bab78b8586e2ebf7ba33279790787f34519ce3f5f9586",
+      "bytes": 14502
+    },
+    {
+      "file": "shoes-running.mp4",
+      "caption": "Paired32-frame normal input trials from the same normally reached road position; B-running moves farther and both show Joe VRAM.",
+      "sha256": "309114a64a0ce42b973d497ea7434b870b5c4f9a622a24c52e24b3f096ac2234",
+      "bytes": 13831
+    }
+  ]
+}

@@ -1,0 +1,214 @@
+{
+  "maps": 51,
+  "checked_cells": 27062,
+  "failures": [],
+  "native_frames": [
+    {
+      "path": "build/qa09-ecruteak-tour-v11/EcruteakCity.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-ecruteak-tour-v11/EcruteakCity_BurnedTower.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-ecruteak-tour-v11/EcruteakCity_BellTower.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-ecruteak-tour-v11/EcruteakCity_Residence.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-ecruteak-tour-v11/EcruteakCity_DanceTheater.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-ecruteak-tour-v11/EcruteakCity_Gym.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-ecruteak-tour-v11/EcruteakCity_PokemonCenter_1F.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-ecruteak-tour-v11/EcruteakCity_Mart.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-ecruteak-tour-v11/EcruteakCity_BellTower_2F.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-ecruteak-tour-v11/EcruteakCity_BellTower_3F.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-ecruteak-tour-v11/EcruteakCity_BellTower_4F.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-ecruteak-tour-v11/EcruteakCity_BellTower_5F.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-ecruteak-tour-v11/EcruteakCity_BellTower_6F.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-ecruteak-tour-v11/EcruteakCity_BellTower_7F.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-ecruteak-tour-v11/EcruteakCity_BellTower_8F.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-ecruteak-tour-v11/EcruteakCity_BellTower_9F.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-ecruteak-tour-v11/EcruteakCity_BurnedTower_B1F.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-ecruteak-tour-v11/EcruteakCity_Gym_Arena.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-ecruteak-tour-v11/EcruteakCity_BarrierStation.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-ecruteak-tour-v11/EcruteakCity_BarrierCorridor.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-ecruteak-tour-v11/BellchimeTrail.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-ecruteak-tour-v11/EcruteakCity_BellTower_10F.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-ecruteak-tour-v11/EcruteakCity_BellTower_Roof.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-ecruteak-tour-v11/EcruteakCity_DowsingHouse.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-ecruteak-tour-v11/EcruteakCity_PokemonCenter_B1F.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-ecruteak-tour-v11/EcruteakCity_WestGate.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-ecruteak-tour-v11/EcruteakCity_EastGate.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-olivine-tour-v11/OlivineCity.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-olivine-tour-v11/OlivineCity_Cafe.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-olivine-tour-v11/OlivineCity_FishingHouse.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-olivine-tour-v11/OlivineCity_Gym.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-olivine-tour-v11/OlivineCity_Gym_Arena.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-olivine-tour-v11/OlivineCity_HarborOffice.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-olivine-tour-v11/OlivineCity_Lighthouse_1F.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-olivine-tour-v11/OlivineCity_Lighthouse_2F.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-olivine-tour-v11/OlivineCity_Lighthouse_3F.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-olivine-tour-v11/OlivineCity_Lighthouse_4F.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-olivine-tour-v11/OlivineCity_Lighthouse_5F.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-olivine-tour-v11/OlivineCity_Lighthouse_6F.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-olivine-tour-v11/OlivineCity_Lighthouse_Balcony.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-olivine-tour-v11/OlivineCity_Lighthouse_Elevator.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-olivine-tour-v11/OlivineCity_Mart.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-olivine-tour-v11/OlivineCity_NeighborHouse.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-olivine-tour-v11/OlivineCity_PokemonCenter_1F.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-olivine-tour-v11/OlivineCity_PokemonCenter_B1F.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-olivine-tour-v11/OlivineCity_PortQuay.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-olivine-tour-v11/OlivineCity_PortTerminal.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-olivine-tour-v11/OlivineCity_Residence.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-olivine-tour-v11/OlivineCity_SealHouse.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-olivine-tour-v11/OlivineCity_SilphOffice.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-olivine-tour-v11/OlivineCity_TradeHouse.png",
+      "magenta_pixels": 0
+    }
+  ],
+  "game_source_checkpoint": "489c404346f572aefb6856b3dd48a9b364a08ceb",
+  "rom_sha256": "df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4",
+  "purpose": "Independent full-city compiled-frame negative debug-magenta check, supplementing human visual review and normal controller tests."
+}

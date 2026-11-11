@@ -34,7 +34,7 @@ record instead of a blanket claim of exact HGSS art.
 
 Ecruteak's correction pass includes13 source-position Theater benches/aisle,
 source0066 home kitchens/windows/bookcases, Center plants, private gold-crest/red-
-lantern Theater stage, four source plants and blue-gray furnishing in each gate,
+lantern Theater stage with source-green audience floor and purple cushions, four source plants and blue-gray furnishing in each gate,
 restored Center basement lower waiting row/furniture, source Mart displays/plants/
 stools/rack, Bell5/6/7 wall lamps and the visible Burned Tower collapsed shaft.
 The full27-map source-public-floor audit found only the B1F crop; its height14
@@ -73,20 +73,60 @@ to its old per-layer pixels/attributes/collision/elevation.
 
 ## Verification states
 
-Source visual corrections are undergoing final coordinated generation/build.
-Final delivery checksum and fresh emulator results will replace this paragraph
-before delivery. Historical Build7/EcruteakE1 uses source `3f935d5e86`, ROM SHA256
-`0734501b031d05156a28e685dc1c2748153cb065222bd67b0d2e7cea47fefbca`.
-Its passed gameplay evidence is retained, explicitly labelled historical; it is
-not a substitute for testing the corrected final bytes.
+Final game-source checkpoint `489c404346f572aefb6856b3dd48a9b364a08ceb` is pushed
+on the feature branch; PR16 remains draft. Emerald BUILD11 compiles with
+payload30,261,028bytes, EWRAM226,448 and IWRAM28,392. No engine limit or save
+structure change. All60 actual local CI commands pass, including compiled map
+inclusion, exact immutable preservation, generator/resource bounds and independent
+ground-layer checks across51maps/27,062map+border cells. Exact frozen ROM:
+`df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4`.
 
-Independent validators preserve immutable baselines with named, exact deltas for
-the intentional changes. B1F additions, model-collision fixes and private art
-packing have positive source/pixel/behavior checks. Existing assertions are not
-removed to obtain a pass. See [validation changes](OLIVINE_VALIDATION_QA09.md).
+The gate-layer defect was actually reproduced on historical BUILD10: transparent
+underlayers exposed600 debug-magenta pixels in a settled view and ordinary floor
+foregrounds hid171/192 or147/165 opaque Joe pixels. The focused final BUILD11
+normal-movement AFTER tests show zero magenta and all192/192 or165/165 Joe pixels.
+Four appended plant variants and corrected private floor/void underlays preserve
+all movement/elevation/behavior attributes, events, aliases and IDs. The checker
+also rejects the historical bad frame as a deliberate negative control.
 
-Owner Delta/visual acceptance remains a separate state. No full-game or whole-
-Johto completion claim is made. Source/build/test status cannot grant acceptance.
+All21 final serial test stages passed on those exact bytes. Scripted normal-
+controller mGBA gameplay covered all51 maps,488 city-tour transitions and every
+visible door:118 required front segments,329 executed approach/arrival/walk-away
+passes and25 physically unavailable lateral starts explicitly excluded. There
+were no doorway failures. Ecruteak additionally passed43 furniture cases,19
+normal-ground recordings,36 trunk approaches, six real service counters, four
+normal Save/cold Continue cases, Theater show, both Gym falls and Morty whiteout.
+Olivine passed25 save/compatibility cases,51 service cases,204 city collision
+bumps,40 both-Mart prop bumps,59 material cases and six counter conversations.
+Ten lighthouse/port special journeys, all three starter choices/met/uniqueness,
+Jasmine whiteout, ten Fly destinations/cancel, Joe's bikes/Surf/fishing/Fly/run
+and normal postflight Save/Continue passed. Original batteries are unchanged.
+All51 unaltered native tour frames are free of debug magenta and were visually
+reviewed; source/layout/compiled-pixel checks supplement rather than replace
+movement and owner visual review.
+
+Exact results, fixture disclosure and native evidence:
+[combined report](../qa/qa09/verification-summary.json),
+[Ecruteak](../qa/qa09/ecruteak/v11/README.md),
+[Olivine](OLIVINE_VALIDATION_QA09.md),
+[doors/player states](../qa/qa09/doorways/v11/README.md).
+No known reproduced functional defect remains in the exercised two-city scope.
+Historical source5664/BUILD9 and source7d92/BUILD10 remain separate: neither is
+relabelled finalBUILD11. Both had the gate visual defect now repaired.
+
+The Theater audience's actual reference confirms the green checker floor and
+purple cushions. Its corrected private artwork preserves all266physics/actors/
+doors; stage/public geometry stays unchanged. The southern doorway/margins lack
+a complete native raster view; pinned source facts and actual movement cover
+their geometry. This remaining reference limitation is explicit.
+
+Independent validators retain immutable baselines with named, exact deltas for
+intentional changes. Source/pixel/behavior checks were added, not weakened. See
+[validation changes](OLIVINE_VALIDATION_QA09.md) and the public60-command ledger
+at [automated checks](../qa/qa09/automated-checks-v11.json).
+
+Owner Delta/visual acceptance is separate. No full-game or whole-Johto completion
+claim is made. Source/build/test status cannot grant that acceptance.
 
 ## Delta instructions
 

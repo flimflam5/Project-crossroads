@@ -23,7 +23,7 @@
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
       "classification": "rendered GBA adaptation",
-      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "delivery_verification": "Current B11 containing map/door/landmark traversal and applicable service/collision tests PASS; source instance placement checked independently; no claim of a dedicated gameplay close-up for every decorative model",
       "source_story_actor": false,
       "native_counterpart": "Visible paired native threshold with independently operative leaves",
       "native_thresholds": [
@@ -36,7 +36,8 @@
           17
         ]
       ],
-      "adaptation": "The original source exit anchor is retained; the extra native visible leaf is a reciprocal alias"
+      "adaptation": "The original source exit anchor is retained; the extra native visible leaf is a reciprocal alias",
+      "historical_b9_controller_verification": "PASS finalB9 controller tour/doors/landmark journeys and inspected native frames; source prop placement separately checked"
     },
     {
       "source_header": "MAP_OLIVINE_LIGHTHOUSE_1F",
@@ -56,7 +57,7 @@
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
       "classification": "rendered GBA adaptation",
-      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "delivery_verification": "Current B11 containing map/door/landmark traversal and applicable service/collision tests PASS; source instance placement checked independently; no claim of a dedicated gameplay close-up for every decorative model",
       "source_story_actor": false,
       "native_counterpart": "Original native green fern/terracotta planter",
       "native_footprint": [
@@ -65,7 +66,8 @@
         1,
         2
       ],
-      "adaptation": "Perspective source root rounded to its two-cell native top/base; source blocked footprint retained"
+      "adaptation": "Perspective source root rounded to its two-cell native top/base; source blocked footprint retained",
+      "historical_b9_controller_verification": "PASS finalB9 controller tour/doors/landmark journeys and inspected native frames; source prop placement separately checked"
     },
     {
       "source_header": "MAP_OLIVINE_LIGHTHOUSE_1F",
@@ -85,7 +87,7 @@
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
       "classification": "rendered GBA adaptation",
-      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "delivery_verification": "Current B11 containing map/door/landmark traversal and applicable service/collision tests PASS; source instance placement checked independently; no claim of a dedicated gameplay close-up for every decorative model",
       "source_story_actor": false,
       "native_counterpart": "Original native green fern/terracotta planter",
       "native_footprint": [
@@ -94,7 +96,8 @@
         1,
         2
       ],
-      "adaptation": "Perspective source root rounded to its two-cell native top/base; source blocked footprint retained"
+      "adaptation": "Perspective source root rounded to its two-cell native top/base; source blocked footprint retained",
+      "historical_b9_controller_verification": "PASS finalB9 controller tour/doors/landmark journeys and inspected native frames; source prop placement separately checked"
     },
     {
       "source_header": "MAP_OLIVINE_LIGHTHOUSE_1F",
@@ -114,7 +117,7 @@
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
       "classification": "rendered GBA adaptation",
-      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "delivery_verification": "Current B11 containing map/door/landmark traversal and applicable service/collision tests PASS; source instance placement checked independently; no claim of a dedicated gameplay close-up for every decorative model",
       "source_story_actor": false,
       "native_counterpart": "Original native green fern/terracotta planter",
       "native_footprint": [
@@ -123,7 +126,8 @@
         1,
         2
       ],
-      "adaptation": "Perspective source root rounded to its two-cell native top/base; source blocked footprint retained"
+      "adaptation": "Perspective source root rounded to its two-cell native top/base; source blocked footprint retained",
+      "historical_b9_controller_verification": "PASS finalB9 controller tour/doors/landmark journeys and inspected native frames; source prop placement separately checked"
     },
     {
       "source_header": "MAP_OLIVINE_LIGHTHOUSE_1F",
@@ -143,7 +147,7 @@
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
       "classification": "rendered GBA adaptation",
-      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "delivery_verification": "Current B11 containing map/door/landmark traversal and applicable service/collision tests PASS; source instance placement checked independently; no claim of a dedicated gameplay close-up for every decorative model",
       "source_story_actor": false,
       "native_counterpart": "Original native green fern/terracotta planter",
       "native_footprint": [
@@ -152,7 +156,8 @@
         1,
         2
       ],
-      "adaptation": "Perspective source root rounded to its two-cell native top/base; source blocked footprint retained"
+      "adaptation": "Perspective source root rounded to its two-cell native top/base; source blocked footprint retained",
+      "historical_b9_controller_verification": "PASS finalB9 controller tour/doors/landmark journeys and inspected native frames; source prop placement separately checked"
     },
     {
       "source_header": "MAP_OLIVINE_LIGHTHOUSE_1F",
@@ -172,7 +177,7 @@
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
       "classification": "rendered GBA adaptation",
-      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "delivery_verification": "Current B11 containing map/door/landmark traversal and applicable service/collision tests PASS; source instance placement checked independently; no claim of a dedicated gameplay close-up for every decorative model",
       "source_story_actor": false,
       "native_counterpart": "Original native green fern/terracotta planter",
       "native_footprint": [
@@ -181,7 +186,8 @@
         1,
         2
       ],
-      "adaptation": "Perspective source root rounded to its two-cell native top/base; source blocked footprint retained"
+      "adaptation": "Perspective source root rounded to its two-cell native top/base; source blocked footprint retained",
+      "historical_b9_controller_verification": "PASS finalB9 controller tour/doors/landmark journeys and inspected native frames; source prop placement separately checked"
     },
     {
       "source_header": "MAP_OLIVINE_LIGHTHOUSE_1F",
@@ -201,7 +207,7 @@
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
       "classification": "rendered GBA adaptation",
-      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "delivery_verification": "Current B11 containing map/door/landmark traversal and applicable service/collision tests PASS; source instance placement checked independently; no claim of a dedicated gameplay close-up for every decorative model",
       "source_story_actor": false,
       "native_counterpart": "Original native green fern/terracotta planter",
       "native_footprint": [
@@ -210,7 +216,8 @@
         1,
         2
       ],
-      "adaptation": "Perspective source root rounded to its two-cell native top/base; source blocked footprint retained"
+      "adaptation": "Perspective source root rounded to its two-cell native top/base; source blocked footprint retained",
+      "historical_b9_controller_verification": "PASS finalB9 controller tour/doors/landmark journeys and inspected native frames; source prop placement separately checked"
     },
     {
       "source_header": "MAP_OLIVINE_LIGHTHOUSE_1F",
@@ -230,7 +237,7 @@
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
       "classification": "rendered GBA adaptation",
-      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "delivery_verification": "Current B11 containing map/door/landmark traversal and applicable service/collision tests PASS; source instance placement checked independently; no claim of a dedicated gameplay close-up for every decorative model",
       "source_story_actor": false,
       "native_counterpart": "Two-cell native stair/ladder at actual source landing",
       "native_footprint": [
@@ -239,7 +246,8 @@
         1,
         2
       ],
-      "adaptation": "Flat vertical GBA ladder replaces depth of DS staircase; every actual source stair landing and tall open segment remains operative"
+      "adaptation": "Flat vertical GBA ladder replaces depth of DS staircase; every actual source stair landing and tall open segment remains operative",
+      "historical_b9_controller_verification": "PASS finalB9 controller tour/doors/landmark journeys and inspected native frames; source prop placement separately checked"
     },
     {
       "source_header": "MAP_OLIVINE_LIGHTHOUSE_1F",
@@ -259,7 +267,7 @@
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
       "classification": "rendered GBA adaptation",
-      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "delivery_verification": "Current B11 containing map/door/landmark traversal and applicable service/collision tests PASS; source instance placement checked independently; no claim of a dedicated gameplay close-up for every decorative model",
       "source_story_actor": false,
       "native_counterpart": "Two actual blue-glass lift panels, native two-stop dynamic-warp cabin",
       "native_thresholds": [
@@ -272,7 +280,8 @@
           4
         ]
       ],
-      "adaptation": "Extra visible GBA leaf appends; no new save/progress variables; ground/light-room panel actions tested separately"
+      "adaptation": "Extra visible GBA leaf appends; no new save/progress variables; ground/light-room panel actions tested separately",
+      "historical_b9_controller_verification": "PASS finalB9 controller tour/doors/landmark journeys and inspected native frames; source prop placement separately checked"
     },
     {
       "source_header": "MAP_OLIVINE_LIGHTHOUSE_2F",
@@ -292,7 +301,7 @@
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
       "classification": "rendered GBA adaptation",
-      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "delivery_verification": "Current B11 containing map/door/landmark traversal and applicable service/collision tests PASS; source instance placement checked independently; no claim of a dedicated gameplay close-up for every decorative model",
       "source_story_actor": false,
       "native_counterpart": "Two-cell native stair/ladder at actual source landing",
       "native_footprint": [
@@ -301,7 +310,8 @@
         1,
         2
       ],
-      "adaptation": "Flat vertical GBA ladder replaces depth of DS staircase; every actual source stair landing and tall open segment remains operative"
+      "adaptation": "Flat vertical GBA ladder replaces depth of DS staircase; every actual source stair landing and tall open segment remains operative",
+      "historical_b9_controller_verification": "PASS finalB9 controller tour/doors/landmark journeys and inspected native frames; source prop placement separately checked"
     },
     {
       "source_header": "MAP_OLIVINE_LIGHTHOUSE_2F",
@@ -321,7 +331,7 @@
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
       "classification": "rendered GBA adaptation",
-      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "delivery_verification": "Current B11 containing map/door/landmark traversal and applicable service/collision tests PASS; source instance placement checked independently; no claim of a dedicated gameplay close-up for every decorative model",
       "source_story_actor": false,
       "native_counterpart": "Two-cell native stair/ladder at actual source landing",
       "native_footprint": [
@@ -330,7 +340,8 @@
         1,
         2
       ],
-      "adaptation": "Flat vertical GBA ladder replaces depth of DS staircase; every actual source stair landing and tall open segment remains operative"
+      "adaptation": "Flat vertical GBA ladder replaces depth of DS staircase; every actual source stair landing and tall open segment remains operative",
+      "historical_b9_controller_verification": "PASS finalB9 controller tour/doors/landmark journeys and inspected native frames; source prop placement separately checked"
     },
     {
       "source_header": "MAP_OLIVINE_LIGHTHOUSE_2F",
@@ -350,7 +361,7 @@
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
       "classification": "rendered GBA adaptation",
-      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "delivery_verification": "Current B11 containing map/door/landmark traversal and applicable service/collision tests PASS; source instance placement checked independently; no claim of a dedicated gameplay close-up for every decorative model",
       "source_story_actor": false,
       "native_counterpart": "Original native green fern/terracotta planter",
       "native_footprint": [
@@ -359,7 +370,8 @@
         1,
         2
       ],
-      "adaptation": "Perspective source root rounded to its two-cell native top/base; source blocked footprint retained"
+      "adaptation": "Perspective source root rounded to its two-cell native top/base; source blocked footprint retained",
+      "historical_b9_controller_verification": "PASS finalB9 controller tour/doors/landmark journeys and inspected native frames; source prop placement separately checked"
     },
     {
       "source_header": "MAP_OLIVINE_LIGHTHOUSE_2F",
@@ -379,7 +391,7 @@
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
       "classification": "rendered GBA adaptation",
-      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "delivery_verification": "Current B11 containing map/door/landmark traversal and applicable service/collision tests PASS; source instance placement checked independently; no claim of a dedicated gameplay close-up for every decorative model",
       "source_story_actor": false,
       "native_counterpart": "Original native green fern/terracotta planter",
       "native_footprint": [
@@ -388,7 +400,8 @@
         1,
         2
       ],
-      "adaptation": "Perspective source root rounded to its two-cell native top/base; source blocked footprint retained"
+      "adaptation": "Perspective source root rounded to its two-cell native top/base; source blocked footprint retained",
+      "historical_b9_controller_verification": "PASS finalB9 controller tour/doors/landmark journeys and inspected native frames; source prop placement separately checked"
     },
     {
       "source_header": "MAP_OLIVINE_LIGHTHOUSE_3F",
@@ -408,7 +421,7 @@
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
       "classification": "rendered GBA adaptation",
-      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "delivery_verification": "Current B11 containing map/door/landmark traversal and applicable service/collision tests PASS; source instance placement checked independently; no claim of a dedicated gameplay close-up for every decorative model",
       "source_story_actor": false,
       "native_counterpart": "Visible paired native threshold with independently operative leaves",
       "native_thresholds": [
@@ -421,7 +434,8 @@
           18
         ]
       ],
-      "adaptation": "The original source exit anchor is retained; the extra native visible leaf is a reciprocal alias"
+      "adaptation": "The original source exit anchor is retained; the extra native visible leaf is a reciprocal alias",
+      "historical_b9_controller_verification": "PASS finalB9 controller tour/doors/landmark journeys and inspected native frames; source prop placement separately checked"
     },
     {
       "source_header": "MAP_OLIVINE_LIGHTHOUSE_3F",
@@ -441,7 +455,7 @@
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
       "classification": "rendered GBA adaptation",
-      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "delivery_verification": "Current B11 containing map/door/landmark traversal and applicable service/collision tests PASS; source instance placement checked independently; no claim of a dedicated gameplay close-up for every decorative model",
       "source_story_actor": false,
       "native_counterpart": "Raised horizontal stone/metal barrier along source southern shaft face",
       "native_footprint": [
@@ -450,7 +464,8 @@
         6,
         1
       ],
-      "adaptation": "Source raster shows a raised horizontal ledge/beam; flat railing retains the closed source footprint. Model numeral is retained without inventing a story function"
+      "adaptation": "Source raster shows a raised horizontal ledge/beam; flat railing retains the closed source footprint. Model numeral is retained without inventing a story function",
+      "historical_b9_controller_verification": "PASS finalB9 controller tour/doors/landmark journeys and inspected native frames; source prop placement separately checked"
     },
     {
       "source_header": "MAP_OLIVINE_LIGHTHOUSE_3F",
@@ -470,7 +485,7 @@
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
       "classification": "rendered GBA adaptation",
-      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "delivery_verification": "Current B11 containing map/door/landmark traversal and applicable service/collision tests PASS; source instance placement checked independently; no claim of a dedicated gameplay close-up for every decorative model",
       "source_story_actor": false,
       "native_counterpart": "Two-cell native stair/ladder at actual source landing",
       "native_footprint": [
@@ -479,7 +494,8 @@
         1,
         2
       ],
-      "adaptation": "Flat vertical GBA ladder replaces depth of DS staircase; every actual source stair landing and tall open segment remains operative"
+      "adaptation": "Flat vertical GBA ladder replaces depth of DS staircase; every actual source stair landing and tall open segment remains operative",
+      "historical_b9_controller_verification": "PASS finalB9 controller tour/doors/landmark journeys and inspected native frames; source prop placement separately checked"
     },
     {
       "source_header": "MAP_OLIVINE_LIGHTHOUSE_3F",
@@ -499,7 +515,7 @@
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
       "classification": "rendered GBA adaptation",
-      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "delivery_verification": "Current B11 containing map/door/landmark traversal and applicable service/collision tests PASS; source instance placement checked independently; no claim of a dedicated gameplay close-up for every decorative model",
       "source_story_actor": false,
       "native_counterpart": "Two-cell native stair/ladder at actual source landing",
       "native_footprint": [
@@ -508,7 +524,8 @@
         1,
         2
       ],
-      "adaptation": "Flat vertical GBA ladder replaces depth of DS staircase; every actual source stair landing and tall open segment remains operative"
+      "adaptation": "Flat vertical GBA ladder replaces depth of DS staircase; every actual source stair landing and tall open segment remains operative",
+      "historical_b9_controller_verification": "PASS finalB9 controller tour/doors/landmark journeys and inspected native frames; source prop placement separately checked"
     },
     {
       "source_header": "MAP_OLIVINE_LIGHTHOUSE_3F",
@@ -528,7 +545,7 @@
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
       "classification": "rendered GBA adaptation",
-      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "delivery_verification": "Current B11 containing map/door/landmark traversal and applicable service/collision tests PASS; source instance placement checked independently; no claim of a dedicated gameplay close-up for every decorative model",
       "source_story_actor": false,
       "native_counterpart": "Two-cell native stair/ladder at actual source landing",
       "native_footprint": [
@@ -537,7 +554,8 @@
         1,
         2
       ],
-      "adaptation": "Flat vertical GBA ladder replaces depth of DS staircase; every actual source stair landing and tall open segment remains operative"
+      "adaptation": "Flat vertical GBA ladder replaces depth of DS staircase; every actual source stair landing and tall open segment remains operative",
+      "historical_b9_controller_verification": "PASS finalB9 controller tour/doors/landmark journeys and inspected native frames; source prop placement separately checked"
     },
     {
       "source_header": "MAP_OLIVINE_LIGHTHOUSE_4F",
@@ -557,7 +575,7 @@
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
       "classification": "rendered GBA adaptation",
-      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "delivery_verification": "Current B11 containing map/door/landmark traversal and applicable service/collision tests PASS; source instance placement checked independently; no claim of a dedicated gameplay close-up for every decorative model",
       "source_story_actor": false,
       "native_counterpart": "Two-cell native stair/ladder at actual source landing",
       "native_footprint": [
@@ -566,7 +584,8 @@
         1,
         2
       ],
-      "adaptation": "Flat vertical GBA ladder replaces depth of DS staircase; every actual source stair landing and tall open segment remains operative"
+      "adaptation": "Flat vertical GBA ladder replaces depth of DS staircase; every actual source stair landing and tall open segment remains operative",
+      "historical_b9_controller_verification": "PASS finalB9 controller tour/doors/landmark journeys and inspected native frames; source prop placement separately checked"
     },
     {
       "source_header": "MAP_OLIVINE_LIGHTHOUSE_4F",
@@ -586,7 +605,7 @@
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
       "classification": "rendered GBA adaptation",
-      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "delivery_verification": "Current B11 containing map/door/landmark traversal and applicable service/collision tests PASS; source instance placement checked independently; no claim of a dedicated gameplay close-up for every decorative model",
       "source_story_actor": false,
       "native_counterpart": "Two-cell native stair/ladder at actual source landing",
       "native_footprint": [
@@ -595,7 +614,8 @@
         1,
         2
       ],
-      "adaptation": "Flat vertical GBA ladder replaces depth of DS staircase; every actual source stair landing and tall open segment remains operative"
+      "adaptation": "Flat vertical GBA ladder replaces depth of DS staircase; every actual source stair landing and tall open segment remains operative",
+      "historical_b9_controller_verification": "PASS finalB9 controller tour/doors/landmark journeys and inspected native frames; source prop placement separately checked"
     },
     {
       "source_header": "MAP_OLIVINE_LIGHTHOUSE_4F",
@@ -615,7 +635,7 @@
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
       "classification": "rendered GBA adaptation",
-      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "delivery_verification": "Current B11 containing map/door/landmark traversal and applicable service/collision tests PASS; source instance placement checked independently; no claim of a dedicated gameplay close-up for every decorative model",
       "source_story_actor": false,
       "native_counterpart": "Two-cell native stair/ladder at actual source landing",
       "native_footprint": [
@@ -624,7 +644,8 @@
         1,
         2
       ],
-      "adaptation": "Flat vertical GBA ladder replaces depth of DS staircase; every actual source stair landing and tall open segment remains operative"
+      "adaptation": "Flat vertical GBA ladder replaces depth of DS staircase; every actual source stair landing and tall open segment remains operative",
+      "historical_b9_controller_verification": "PASS finalB9 controller tour/doors/landmark journeys and inspected native frames; source prop placement separately checked"
     },
     {
       "source_header": "MAP_OLIVINE_LIGHTHOUSE_5F",
@@ -644,7 +665,7 @@
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
       "classification": "rendered GBA adaptation",
-      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "delivery_verification": "Current B11 containing map/door/landmark traversal and applicable service/collision tests PASS; source instance placement checked independently; no claim of a dedicated gameplay close-up for every decorative model",
       "source_story_actor": false,
       "native_counterpart": "Two-cell native stair/ladder at actual source landing",
       "native_footprint": [
@@ -653,7 +674,8 @@
         1,
         2
       ],
-      "adaptation": "Flat vertical GBA ladder replaces depth of DS staircase; every actual source stair landing and tall open segment remains operative"
+      "adaptation": "Flat vertical GBA ladder replaces depth of DS staircase; every actual source stair landing and tall open segment remains operative",
+      "historical_b9_controller_verification": "PASS finalB9 controller tour/doors/landmark journeys and inspected native frames; source prop placement separately checked"
     },
     {
       "source_header": "MAP_OLIVINE_LIGHTHOUSE_5F",
@@ -673,7 +695,7 @@
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
       "classification": "rendered GBA adaptation",
-      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "delivery_verification": "Current B11 containing map/door/landmark traversal and applicable service/collision tests PASS; source instance placement checked independently; no claim of a dedicated gameplay close-up for every decorative model",
       "source_story_actor": false,
       "native_counterpart": "Two-cell native stair/ladder at actual source landing",
       "native_footprint": [
@@ -682,7 +704,8 @@
         1,
         2
       ],
-      "adaptation": "Flat vertical GBA ladder replaces depth of DS staircase; every actual source stair landing and tall open segment remains operative"
+      "adaptation": "Flat vertical GBA ladder replaces depth of DS staircase; every actual source stair landing and tall open segment remains operative",
+      "historical_b9_controller_verification": "PASS finalB9 controller tour/doors/landmark journeys and inspected native frames; source prop placement separately checked"
     },
     {
       "source_header": "MAP_OLIVINE_LIGHTHOUSE_LIGHT_ROOM",
@@ -702,7 +725,7 @@
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
       "classification": "rendered GBA adaptation",
-      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "delivery_verification": "Current B11 containing map/door/landmark traversal and applicable service/collision tests PASS; source instance placement checked independently; no claim of a dedicated gameplay close-up for every decorative model",
       "source_story_actor": false,
       "native_counterpart": "Original substantial circular silver/blue lens housing with preserved mechanical beacon actor at8,6",
       "native_footprint": [
@@ -711,7 +734,8 @@
         3,
         3
       ],
-      "adaptation": "Flat3x3 ring substitutes DS perspective optical enclosure; source collision retained, upper ring is an overhang, solid actor owns center"
+      "adaptation": "Flat3x3 ring substitutes DS perspective optical enclosure; source collision retained, upper ring is an overhang, solid actor owns center",
+      "historical_b9_controller_verification": "PASS finalB9 controller tour/doors/landmark journeys and inspected native frames; source prop placement separately checked"
     },
     {
       "source_header": "MAP_OLIVINE_LIGHTHOUSE_LIGHT_ROOM",
@@ -731,7 +755,7 @@
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
       "classification": "rendered GBA adaptation",
-      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "delivery_verification": "Current B11 containing map/door/landmark traversal and applicable service/collision tests PASS; source instance placement checked independently; no claim of a dedicated gameplay close-up for every decorative model",
       "source_story_actor": false,
       "native_counterpart": "Two actual blue-glass lift panels, native two-stop dynamic-warp cabin",
       "native_thresholds": [
@@ -744,7 +768,8 @@
           4
         ]
       ],
-      "adaptation": "Extra visible GBA leaf appends; no new save/progress variables; ground/light-room panel actions tested separately"
+      "adaptation": "Extra visible GBA leaf appends; no new save/progress variables; ground/light-room panel actions tested separately",
+      "historical_b9_controller_verification": "PASS finalB9 controller tour/doors/landmark journeys and inspected native frames; source prop placement separately checked"
     },
     {
       "source_header": "MAP_OLIVINE_LIGHTHOUSE_EXTERIOR",
@@ -764,7 +789,7 @@
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
       "classification": "rendered GBA adaptation",
-      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "delivery_verification": "Current B11 containing map/door/landmark traversal and applicable service/collision tests PASS; source instance placement checked independently; no claim of a dedicated gameplay close-up for every decorative model",
       "source_story_actor": false,
       "native_counterpart": "Masonry lighthouse body framed by the source exterior balcony",
       "native_footprint": [
@@ -773,7 +798,8 @@
         9,
         13
       ],
-      "adaptation": "Very tall DS cylinder extends beyond source northern camera bounds; native flat fa\u00e7ade replaces its visible lower body while preserving U-shaped side paths, south door and rail boundaries"
+      "adaptation": "Very tall DS cylinder extends beyond source northern camera bounds; native flat fa\u00e7ade replaces its visible lower body while preserving U-shaped side paths, south door and rail boundaries",
+      "historical_b9_controller_verification": "PASS finalB9 controller tour/doors/landmark journeys and inspected native frames; source prop placement separately checked"
     },
     {
       "source_header": "MAP_OLIVINE_LIGHTHOUSE_ELEVATOR",
@@ -793,7 +819,7 @@
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
       "classification": "rendered GBA adaptation",
-      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "delivery_verification": "Current B11 containing map/door/landmark traversal and applicable service/collision tests PASS; source instance placement checked independently; no claim of a dedicated gameplay close-up for every decorative model",
       "source_story_actor": false,
       "native_counterpart": "Visible paired native threshold with independently operative leaves",
       "native_thresholds": [
@@ -806,7 +832,8 @@
           6
         ]
       ],
-      "adaptation": "The original source exit anchor is retained; the extra native visible leaf is a reciprocal alias"
+      "adaptation": "The original source exit anchor is retained; the extra native visible leaf is a reciprocal alias",
+      "historical_b9_controller_verification": "PASS finalB9 controller tour/doors/landmark journeys and inspected native frames; source prop placement separately checked"
     },
     {
       "source_header": "MAP_OLIVINE_LIGHTHOUSE_ELEVATOR",
@@ -826,11 +853,12 @@
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
       "classification": "off-room source model cropped; public cabin adapted",
-      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "delivery_verification": "Current B11 containing map/door/landmark traversal and applicable service/collision tests PASS; source instance placement checked independently; no claim of a dedicated gameplay close-up for every decorative model",
       "source_story_actor": false,
       "native_counterpart": "Existing native cabin/door/panel movement system",
       "native_footprint": null,
-      "adaptation": "Source prop anchor16,15.875 lies outside source public cabin atx1..5,y3..6. Native isolated8x8 cabin reproduces accessible floor, door and lift selection; off-room DS machinery is outside cropped native camera, not a missing accessible room"
+      "adaptation": "Source prop anchor16,15.875 lies outside source public cabin atx1..5,y3..6. Native isolated8x8 cabin reproduces accessible floor, door and lift selection; off-room DS machinery is outside cropped native camera, not a missing accessible room",
+      "historical_b9_controller_verification": "PASS finalB9 controller tour/doors/landmark journeys and inspected native frames; source prop placement separately checked"
     },
     {
       "source_header": "MAP_SS_AQUA_OLIVINE_PORT_INTERIOR",
@@ -850,7 +878,7 @@
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
       "classification": "rendered GBA adaptation",
-      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "delivery_verification": "Current B11 containing map/door/landmark traversal and applicable service/collision tests PASS; source instance placement checked independently; no claim of a dedicated gameplay close-up for every decorative model",
       "source_story_actor": false,
       "native_counterpart": "Original native yellow stool; seated solid NPC owns its chair tile if occupied",
       "native_footprint": [
@@ -859,7 +887,8 @@
         1,
         1
       ],
-      "adaptation": "All eight actual source chair anchors retained around the two terminal tables, not arbitrary stand-ins"
+      "adaptation": "All eight actual source chair anchors retained around the two terminal tables, not arbitrary stand-ins",
+      "historical_b9_controller_verification": "PASS finalB9 controller tour/doors/landmark journeys and inspected native frames; source prop placement separately checked"
     },
     {
       "source_header": "MAP_SS_AQUA_OLIVINE_PORT_INTERIOR",
@@ -879,7 +908,7 @@
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
       "classification": "rendered GBA adaptation",
-      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "delivery_verification": "Current B11 containing map/door/landmark traversal and applicable service/collision tests PASS; source instance placement checked independently; no claim of a dedicated gameplay close-up for every decorative model",
       "source_story_actor": false,
       "native_counterpart": "Original native yellow stool; seated solid NPC owns its chair tile if occupied",
       "native_footprint": [
@@ -888,7 +917,8 @@
         1,
         1
       ],
-      "adaptation": "All eight actual source chair anchors retained around the two terminal tables, not arbitrary stand-ins"
+      "adaptation": "All eight actual source chair anchors retained around the two terminal tables, not arbitrary stand-ins",
+      "historical_b9_controller_verification": "PASS finalB9 controller tour/doors/landmark journeys and inspected native frames; source prop placement separately checked"
     },
     {
       "source_header": "MAP_SS_AQUA_OLIVINE_PORT_INTERIOR",
@@ -908,7 +938,7 @@
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
       "classification": "rendered GBA adaptation",
-      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "delivery_verification": "Current B11 containing map/door/landmark traversal and applicable service/collision tests PASS; source instance placement checked independently; no claim of a dedicated gameplay close-up for every decorative model",
       "source_story_actor": false,
       "native_counterpart": "Original native yellow stool; seated solid NPC owns its chair tile if occupied",
       "native_footprint": [
@@ -917,7 +947,8 @@
         1,
         1
       ],
-      "adaptation": "All eight actual source chair anchors retained around the two terminal tables, not arbitrary stand-ins"
+      "adaptation": "All eight actual source chair anchors retained around the two terminal tables, not arbitrary stand-ins",
+      "historical_b9_controller_verification": "PASS finalB9 controller tour/doors/landmark journeys and inspected native frames; source prop placement separately checked"
     },
     {
       "source_header": "MAP_SS_AQUA_OLIVINE_PORT_INTERIOR",
@@ -937,7 +968,7 @@
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
       "classification": "rendered GBA adaptation",
-      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "delivery_verification": "Current B11 containing map/door/landmark traversal and applicable service/collision tests PASS; source instance placement checked independently; no claim of a dedicated gameplay close-up for every decorative model",
       "source_story_actor": false,
       "native_counterpart": "Original native yellow stool; seated solid NPC owns its chair tile if occupied",
       "native_footprint": [
@@ -946,7 +977,8 @@
         1,
         1
       ],
-      "adaptation": "All eight actual source chair anchors retained around the two terminal tables, not arbitrary stand-ins"
+      "adaptation": "All eight actual source chair anchors retained around the two terminal tables, not arbitrary stand-ins",
+      "historical_b9_controller_verification": "PASS finalB9 controller tour/doors/landmark journeys and inspected native frames; source prop placement separately checked"
     },
     {
       "source_header": "MAP_SS_AQUA_OLIVINE_PORT_INTERIOR",
@@ -966,7 +998,7 @@
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
       "classification": "rendered GBA adaptation",
-      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "delivery_verification": "Current B11 containing map/door/landmark traversal and applicable service/collision tests PASS; source instance placement checked independently; no claim of a dedicated gameplay close-up for every decorative model",
       "source_story_actor": false,
       "native_counterpart": "Original native yellow stool; seated solid NPC owns its chair tile if occupied",
       "native_footprint": [
@@ -975,7 +1007,8 @@
         1,
         1
       ],
-      "adaptation": "All eight actual source chair anchors retained around the two terminal tables, not arbitrary stand-ins"
+      "adaptation": "All eight actual source chair anchors retained around the two terminal tables, not arbitrary stand-ins",
+      "historical_b9_controller_verification": "PASS finalB9 controller tour/doors/landmark journeys and inspected native frames; source prop placement separately checked"
     },
     {
       "source_header": "MAP_SS_AQUA_OLIVINE_PORT_INTERIOR",
@@ -995,7 +1028,7 @@
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
       "classification": "rendered GBA adaptation",
-      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "delivery_verification": "Current B11 containing map/door/landmark traversal and applicable service/collision tests PASS; source instance placement checked independently; no claim of a dedicated gameplay close-up for every decorative model",
       "source_story_actor": false,
       "native_counterpart": "Original native yellow stool; seated solid NPC owns its chair tile if occupied",
       "native_footprint": [
@@ -1004,7 +1037,8 @@
         1,
         1
       ],
-      "adaptation": "All eight actual source chair anchors retained around the two terminal tables, not arbitrary stand-ins"
+      "adaptation": "All eight actual source chair anchors retained around the two terminal tables, not arbitrary stand-ins",
+      "historical_b9_controller_verification": "PASS finalB9 controller tour/doors/landmark journeys and inspected native frames; source prop placement separately checked"
     },
     {
       "source_header": "MAP_SS_AQUA_OLIVINE_PORT_INTERIOR",
@@ -1024,7 +1058,7 @@
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
       "classification": "rendered GBA adaptation",
-      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "delivery_verification": "Current B11 containing map/door/landmark traversal and applicable service/collision tests PASS; source instance placement checked independently; no claim of a dedicated gameplay close-up for every decorative model",
       "source_story_actor": false,
       "native_counterpart": "Original native yellow stool; seated solid NPC owns its chair tile if occupied",
       "native_footprint": [
@@ -1033,7 +1067,8 @@
         1,
         1
       ],
-      "adaptation": "All eight actual source chair anchors retained around the two terminal tables, not arbitrary stand-ins"
+      "adaptation": "All eight actual source chair anchors retained around the two terminal tables, not arbitrary stand-ins",
+      "historical_b9_controller_verification": "PASS finalB9 controller tour/doors/landmark journeys and inspected native frames; source prop placement separately checked"
     },
     {
       "source_header": "MAP_SS_AQUA_OLIVINE_PORT_INTERIOR",
@@ -1053,7 +1088,7 @@
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
       "classification": "rendered GBA adaptation",
-      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "delivery_verification": "Current B11 containing map/door/landmark traversal and applicable service/collision tests PASS; source instance placement checked independently; no claim of a dedicated gameplay close-up for every decorative model",
       "source_story_actor": false,
       "native_counterpart": "Original native yellow stool; seated solid NPC owns its chair tile if occupied",
       "native_footprint": [
@@ -1062,7 +1097,8 @@
         1,
         1
       ],
-      "adaptation": "All eight actual source chair anchors retained around the two terminal tables, not arbitrary stand-ins"
+      "adaptation": "All eight actual source chair anchors retained around the two terminal tables, not arbitrary stand-ins",
+      "historical_b9_controller_verification": "PASS finalB9 controller tour/doors/landmark journeys and inspected native frames; source prop placement separately checked"
     },
     {
       "source_header": "MAP_SS_AQUA_OLIVINE_PORT_INTERIOR",
@@ -1082,7 +1118,7 @@
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
       "classification": "rendered GBA adaptation",
-      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "delivery_verification": "Current B11 containing map/door/landmark traversal and applicable service/collision tests PASS; source instance placement checked independently; no claim of a dedicated gameplay close-up for every decorative model",
       "source_story_actor": false,
       "native_counterpart": "Visible paired native threshold with independently operative leaves",
       "native_thresholds": [
@@ -1095,7 +1131,8 @@
           11
         ]
       ],
-      "adaptation": "The original source exit anchor is retained; the extra native visible leaf is a reciprocal alias"
+      "adaptation": "The original source exit anchor is retained; the extra native visible leaf is a reciprocal alias",
+      "historical_b9_controller_verification": "PASS finalB9 controller tour/doors/landmark journeys and inspected native frames; source prop placement separately checked"
     },
     {
       "source_header": "MAP_SS_AQUA_OLIVINE_PORT_INTERIOR",
@@ -1115,7 +1152,7 @@
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
       "classification": "rendered GBA adaptation",
-      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "delivery_verification": "Current B11 containing map/door/landmark traversal and applicable service/collision tests PASS; source instance placement checked independently; no claim of a dedicated gameplay close-up for every decorative model",
       "source_story_actor": false,
       "native_counterpart": "Visible two-cell side inspection-pier doorway",
       "native_thresholds": [
@@ -1128,7 +1165,8 @@
           8
         ]
       ],
-      "adaptation": "Two-row native opening, each row operative in both directions"
+      "adaptation": "Two-row native opening, each row operative in both directions",
+      "historical_b9_controller_verification": "PASS finalB9 controller tour/doors/landmark journeys and inspected native frames; source prop placement separately checked"
     },
     {
       "source_header": "MAP_SS_AQUA_OLIVINE_PORT_EXTERIOR",
@@ -1148,7 +1186,7 @@
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
       "classification": "rendered GBA adaptation",
-      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "delivery_verification": "Current B11 containing map/door/landmark traversal and applicable service/collision tests PASS; source instance placement checked independently; no claim of a dedicated gameplay close-up for every decorative model",
       "source_story_actor": false,
       "native_counterpart": "Original docked blue/white S.S. Aqua sprite and gangway",
       "native_footprint": [
@@ -1157,7 +1195,8 @@
         16,
         5
       ],
-      "adaptation": "Tileable mid-deck panels fit GBA graphics while preserving funnel/bow/stern/hatch silhouette. Source boarding boundary27,20 is visibly bounded; sailing/ship interiors/other-region arrival remain outside approved city pass"
+      "adaptation": "Tileable mid-deck panels fit GBA graphics while preserving funnel/bow/stern/hatch silhouette. Source boarding boundary27,20 is visibly bounded; sailing/ship interiors/other-region arrival remain outside approved city pass",
+      "historical_b9_controller_verification": "PASS finalB9 controller tour/doors/landmark journeys and inspected native frames; source prop placement separately checked"
     },
     {
       "source_header": "MAP_SS_AQUA_OLIVINE_PORT_EXTERIOR",
@@ -1177,7 +1216,7 @@
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
       "classification": "rendered GBA adaptation",
-      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "delivery_verification": "Current B11 containing map/door/landmark traversal and applicable service/collision tests PASS; source instance placement checked independently; no claim of a dedicated gameplay close-up for every decorative model",
       "source_story_actor": false,
       "native_counterpart": "Original small blue/cream sailboat",
       "native_footprint": [
@@ -1186,7 +1225,8 @@
         3,
         3
       ],
-      "adaptation": "Half-cell rounding of source3D prop anchor onto native16px tile grid"
+      "adaptation": "Half-cell rounding of source3D prop anchor onto native16px tile grid",
+      "historical_b9_controller_verification": "PASS finalB9 controller tour/doors/landmark journeys and inspected native frames; source prop placement separately checked"
     },
     {
       "source_header": "MAP_SS_AQUA_OLIVINE_PORT_EXTERIOR",
@@ -1206,7 +1246,7 @@
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
       "classification": "rendered GBA adaptation",
-      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "delivery_verification": "Current B11 containing map/door/landmark traversal and applicable service/collision tests PASS; source instance placement checked independently; no claim of a dedicated gameplay close-up for every decorative model",
       "source_story_actor": false,
       "native_counterpart": "Original small blue/cream sailboat",
       "native_footprint": [
@@ -1215,7 +1255,8 @@
         3,
         3
       ],
-      "adaptation": "Half-cell rounding of source3D prop anchor onto native16px tile grid"
+      "adaptation": "Half-cell rounding of source3D prop anchor onto native16px tile grid",
+      "historical_b9_controller_verification": "PASS finalB9 controller tour/doors/landmark journeys and inspected native frames; source prop placement separately checked"
     },
     {
       "source_header": "MAP_SS_AQUA_OLIVINE_PORT_EXTERIOR",
@@ -1235,7 +1276,7 @@
         "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
       },
       "classification": "rendered GBA adaptation",
-      "delivery_verification": "PENDING final V8 exact-ROM traversal/screenshots",
+      "delivery_verification": "Current B11 containing map/door/landmark traversal and applicable service/collision tests PASS; source instance placement checked independently; no claim of a dedicated gameplay close-up for every decorative model",
       "source_story_actor": false,
       "native_counterpart": "Original rear blue-roof port terminal with four visible working doorway segments",
       "native_footprint": [
@@ -1262,7 +1303,8 @@
           14
         ]
       ],
-      "adaptation": "Repeated native window/roof modules fit the wide facade without stretching actual door leaves; GBA aliases preserve source entrance axes"
+      "adaptation": "Repeated native window/roof modules fit the wide facade without stretching actual door leaves; GBA aliases preserve source entrance axes",
+      "historical_b9_controller_verification": "PASS finalB9 controller tour/doors/landmark journeys and inspected native frames; source prop placement separately checked"
     }
   ],
   "non_prop_source_furnishing": [
@@ -1277,9 +1319,15 @@
       "basis": "actual source permissions plus inspected terminal raster; model54 separately covers all eight stools"
     }
   ],
-  "acceptance": "PENDING final ROM gameplay and owner Delta visual acceptance; source coverage is not a playtest",
+  "acceptance": "Source placement/42-instance inventory verified; current B11 maritime controller coverage PASS; owner Delta visual acceptance PENDING",
   "classification_counts": {
     "off-room source model cropped; public cabin adapted": 1,
     "rendered GBA adaptation": 41
+  },
+  "source_revision": "489c404346f572aefb6856b3dd48a9b364a08ceb",
+  "rom_sha256": "df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4",
+  "historical_b9_identity": {
+    "source_revision": "5664fecee4337c5bdd442583e24cc91c09c0a0cd",
+    "rom_sha256": "d5abac0deabc7d592eba302122b3d15c08501947f0f601eda7b5026da9ac6772"
   }
 }

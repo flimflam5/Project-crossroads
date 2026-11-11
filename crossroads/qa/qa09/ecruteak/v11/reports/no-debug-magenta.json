@@ -1,0 +1,115 @@
+{
+  "maps": 51,
+  "checked_cells": 27062,
+  "failures": [],
+  "native_frames": [
+    {
+      "path": "build/qa09-ecruteak-tour-v11/EcruteakCity.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-ecruteak-tour-v11/EcruteakCity_BarrierCorridor.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-ecruteak-tour-v11/EcruteakCity_BarrierStation.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-ecruteak-tour-v11/EcruteakCity_BellTower.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-ecruteak-tour-v11/EcruteakCity_BellTower_10F.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-ecruteak-tour-v11/EcruteakCity_BellTower_2F.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-ecruteak-tour-v11/EcruteakCity_BellTower_3F.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-ecruteak-tour-v11/EcruteakCity_BellTower_4F.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-ecruteak-tour-v11/EcruteakCity_BellTower_5F.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-ecruteak-tour-v11/EcruteakCity_BellTower_6F.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-ecruteak-tour-v11/EcruteakCity_BellTower_7F.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-ecruteak-tour-v11/EcruteakCity_BellTower_8F.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-ecruteak-tour-v11/EcruteakCity_BellTower_9F.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-ecruteak-tour-v11/EcruteakCity_BellTower_Roof.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-ecruteak-tour-v11/EcruteakCity_BurnedTower.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-ecruteak-tour-v11/EcruteakCity_BurnedTower_B1F.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-ecruteak-tour-v11/EcruteakCity_DanceTheater.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-ecruteak-tour-v11/EcruteakCity_DowsingHouse.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-ecruteak-tour-v11/EcruteakCity_EastGate.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-ecruteak-tour-v11/EcruteakCity_Gym.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-ecruteak-tour-v11/EcruteakCity_Gym_Arena.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-ecruteak-tour-v11/EcruteakCity_Mart.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-ecruteak-tour-v11/EcruteakCity_PokemonCenter_1F.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-ecruteak-tour-v11/EcruteakCity_PokemonCenter_B1F.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-ecruteak-tour-v11/EcruteakCity_Residence.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-ecruteak-tour-v11/EcruteakCity_WestGate.png",
+      "magenta_pixels": 0
+    },
+    {
+      "path": "build/qa09-ecruteak-tour-v11/BellchimeTrail.png",
+      "magenta_pixels": 0
+    }
+  ]
+}

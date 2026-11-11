@@ -1,0 +1,434 @@
+[
+  {
+    "tree": [
+      26,
+      33
+    ],
+    "approach": [
+      25,
+      34
+    ],
+    "button": 16,
+    "result": "blocked through controller input"
+  },
+  {
+    "tree": [
+      26,
+      33
+    ],
+    "approach": [
+      28,
+      34
+    ],
+    "button": 32,
+    "result": "blocked through controller input"
+  },
+  {
+    "tree": [
+      26,
+      33
+    ],
+    "approach": [
+      26,
+      33
+    ],
+    "button": 128,
+    "result": "blocked through controller input"
+  },
+  {
+    "tree": [
+      26,
+      33
+    ],
+    "approach": [
+      27,
+      33
+    ],
+    "button": 128,
+    "result": "blocked through controller input"
+  },
+  {
+    "tree": [
+      26,
+      33
+    ],
+    "approach": [
+      26,
+      35
+    ],
+    "button": 64,
+    "result": "blocked through controller input"
+  },
+  {
+    "tree": [
+      26,
+      33
+    ],
+    "approach": [
+      27,
+      35
+    ],
+    "button": 64,
+    "result": "blocked through controller input"
+  },
+  {
+    "tree": [
+      38,
+      33
+    ],
+    "approach": [
+      37,
+      34
+    ],
+    "button": 16,
+    "result": "blocked through controller input"
+  },
+  {
+    "tree": [
+      38,
+      33
+    ],
+    "approach": [
+      40,
+      34
+    ],
+    "button": 32,
+    "result": "blocked through controller input"
+  },
+  {
+    "tree": [
+      38,
+      33
+    ],
+    "approach": [
+      38,
+      33
+    ],
+    "button": 128,
+    "result": "blocked through controller input"
+  },
+  {
+    "tree": [
+      38,
+      33
+    ],
+    "approach": [
+      39,
+      33
+    ],
+    "button": 128,
+    "result": "blocked through controller input"
+  },
+  {
+    "tree": [
+      38,
+      33
+    ],
+    "approach": [
+      38,
+      35
+    ],
+    "button": 64,
+    "result": "blocked through controller input"
+  },
+  {
+    "tree": [
+      38,
+      33
+    ],
+    "approach": [
+      39,
+      35
+    ],
+    "button": 64,
+    "result": "blocked through controller input"
+  },
+  {
+    "tree": [
+      26,
+      42
+    ],
+    "approach": [
+      25,
+      43
+    ],
+    "button": 16,
+    "result": "blocked through controller input"
+  },
+  {
+    "tree": [
+      26,
+      42
+    ],
+    "approach": [
+      28,
+      43
+    ],
+    "button": 32,
+    "result": "blocked through controller input"
+  },
+  {
+    "tree": [
+      26,
+      42
+    ],
+    "approach": [
+      26,
+      42
+    ],
+    "button": 128,
+    "result": "blocked through controller input"
+  },
+  {
+    "tree": [
+      26,
+      42
+    ],
+    "approach": [
+      27,
+      42
+    ],
+    "button": 128,
+    "result": "blocked through controller input"
+  },
+  {
+    "tree": [
+      26,
+      42
+    ],
+    "approach": [
+      26,
+      44
+    ],
+    "button": 64,
+    "result": "blocked through controller input"
+  },
+  {
+    "tree": [
+      26,
+      42
+    ],
+    "approach": [
+      27,
+      44
+    ],
+    "button": 64,
+    "result": "blocked through controller input"
+  },
+  {
+    "tree": [
+      29,
+      52
+    ],
+    "approach": [
+      28,
+      53
+    ],
+    "button": 16,
+    "result": "blocked through controller input"
+  },
+  {
+    "tree": [
+      29,
+      52
+    ],
+    "approach": [
+      31,
+      53
+    ],
+    "button": 32,
+    "result": "blocked through controller input"
+  },
+  {
+    "tree": [
+      29,
+      52
+    ],
+    "approach": [
+      29,
+      52
+    ],
+    "button": 128,
+    "result": "blocked through controller input"
+  },
+  {
+    "tree": [
+      29,
+      52
+    ],
+    "approach": [
+      30,
+      52
+    ],
+    "button": 128,
+    "result": "blocked through controller input"
+  },
+  {
+    "tree": [
+      29,
+      52
+    ],
+    "approach": [
+      29,
+      54
+    ],
+    "button": 64,
+    "result": "blocked through controller input"
+  },
+  {
+    "tree": [
+      29,
+      52
+    ],
+    "approach": [
+      30,
+      54
+    ],
+    "button": 64,
+    "result": "blocked through controller input"
+  },
+  {
+    "tree": [
+      49,
+      52
+    ],
+    "approach": [
+      48,
+      53
+    ],
+    "button": 16,
+    "result": "blocked through controller input"
+  },
+  {
+    "tree": [
+      49,
+      52
+    ],
+    "approach": [
+      51,
+      53
+    ],
+    "button": 32,
+    "result": "blocked through controller input"
+  },
+  {
+    "tree": [
+      49,
+      52
+    ],
+    "approach": [
+      49,
+      52
+    ],
+    "button": 128,
+    "result": "blocked through controller input"
+  },
+  {
+    "tree": [
+      49,
+      52
+    ],
+    "approach": [
+      50,
+      52
+    ],
+    "button": 128,
+    "result": "blocked through controller input"
+  },
+  {
+    "tree": [
+      49,
+      52
+    ],
+    "approach": [
+      49,
+      54
+    ],
+    "button": 64,
+    "result": "blocked through controller input"
+  },
+  {
+    "tree": [
+      49,
+      52
+    ],
+    "approach": [
+      50,
+      54
+    ],
+    "button": 64,
+    "result": "blocked through controller input"
+  },
+  {
+    "tree": [
+      58,
+      42
+    ],
+    "approach": [
+      57,
+      43
+    ],
+    "button": 16,
+    "result": "blocked through controller input"
+  },
+  {
+    "tree": [
+      58,
+      42
+    ],
+    "approach": [
+      60,
+      43
+    ],
+    "button": 32,
+    "result": "blocked through controller input"
+  },
+  {
+    "tree": [
+      58,
+      42
+    ],
+    "approach": [
+      58,
+      42
+    ],
+    "button": 128,
+    "result": "blocked through controller input"
+  },
+  {
+    "tree": [
+      58,
+      42
+    ],
+    "approach": [
+      59,
+      42
+    ],
+    "button": 128,
+    "result": "blocked through controller input"
+  },
+  {
+    "tree": [
+      58,
+      42
+    ],
+    "approach": [
+      58,
+      44
+    ],
+    "button": 64,
+    "result": "blocked through controller input"
+  },
+  {
+    "tree": [
+      58,
+      42
+    ],
+    "approach": [
+      59,
+      44
+    ],
+    "button": 64,
+    "result": "blocked through controller input"
+  }
+]

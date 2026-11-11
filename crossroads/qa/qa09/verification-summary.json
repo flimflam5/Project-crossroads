@@ -1,0 +1,314 @@
+{
+  "version": "black-ledger-cities-qa09-e2-o1",
+  "checkpoint": "Frozen BUILD11 final combined Ecruteak E2 / Olivine O1",
+  "source_commit": "489c404346f572aefb6856b3dd48a9b364a08ceb",
+  "rom_sha256": "df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4",
+  "rom_bytes": 33554432,
+  "payload_bytes": 30261028,
+  "ewram_bytes": 226448,
+  "iwram_bytes": 28392,
+  "compiled": true,
+  "local_ci_commands_passed": 60,
+  "final_runtime_passed": true,
+  "test_method": "Scripted normal-controller mGBA gameplay on exact delivery bytes using copied batteries; native screenshots and movement clips visually inspected. This is separate from owner Delta playtesting/acceptance.",
+  "serial_lanes": {
+    "ecruteak": [
+      {
+        "name": "tour",
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "crossroads/tools/johto_network_smoke.py",
+          "--save",
+          "build/area-delivery-sram/EcruteakCity_BellTower-save.state.sav",
+          "--library",
+          "/tmp/johto-bridge.so",
+          "--output",
+          "build/qa09-ecruteak-tour-v11",
+          "--targets",
+          "EcruteakCity,EcruteakCity_BurnedTower,EcruteakCity_BellTower,EcruteakCity_Residence,EcruteakCity_DanceTheater,EcruteakCity_Gym,EcruteakCity_PokemonCenter_1F,EcruteakCity_Mart,EcruteakCity_BellTower_2F,EcruteakCity_BellTower_3F,EcruteakCity_BellTower_4F,EcruteakCity_BellTower_5F,EcruteakCity_BellTower_6F,EcruteakCity_BellTower_7F,EcruteakCity_BellTower_8F,EcruteakCity_BellTower_9F,EcruteakCity_BurnedTower_B1F,EcruteakCity_Gym_Arena,EcruteakCity_BarrierStation,EcruteakCity_BarrierCorridor,BellchimeTrail,EcruteakCity_BellTower_10F,EcruteakCity_BellTower_Roof,EcruteakCity_DowsingHouse,EcruteakCity_PokemonCenter_B1F,EcruteakCity_WestGate,EcruteakCity_EastGate",
+          "--all-edges"
+        ],
+        "exit_code": 0,
+        "rom_sha256": "df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4"
+      },
+      {
+        "name": "details",
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "crossroads/tools/ecruteak_detail_smoke.py",
+          "--save",
+          "build/area-delivery-sram/EcruteakCity_BellTower-save.state.sav",
+          "--library",
+          "/tmp/johto-bridge.so",
+          "--output",
+          "build/qa09-ecruteak-details-v11"
+        ],
+        "exit_code": 0,
+        "rom_sha256": "df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4"
+      },
+      {
+        "name": "furniture",
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "crossroads/tools/ecruteak_furniture_smoke.py",
+          "--save",
+          "build/area-delivery-sram/EcruteakCity_BellTower-save.state.sav",
+          "--library",
+          "/tmp/johto-bridge.so",
+          "--output",
+          "build/qa09-ecruteak-furniture-v11"
+        ],
+        "exit_code": 0,
+        "rom_sha256": "df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4"
+      },
+      {
+        "name": "gates",
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "/tmp/qa09-ecruteak-gates-v11-runner.py"
+        ],
+        "exit_code": 0,
+        "rom_sha256": "df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4"
+      },
+      {
+        "name": "ground",
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "crossroads/tools/ecruteak_qa07_repro.py",
+          "--save",
+          "build/area-delivery-sram/EcruteakCity_BellTower-save.state.sav",
+          "--library",
+          "/tmp/johto-bridge.so",
+          "--output",
+          "build/qa09-ecruteak-ground-v11",
+          "--expect-fixed"
+        ],
+        "exit_code": 0,
+        "rom_sha256": "df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4"
+      },
+      {
+        "name": "pixels",
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "crossroads/tools/validate_ecruteak_qa07.py",
+          "--recordings",
+          "build/qa09-ecruteak-ground-v11"
+        ],
+        "exit_code": 0,
+        "rom_sha256": "df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4"
+      }
+    ],
+    "olivine": [
+      {
+        "suite": "olivine-tour",
+        "exit_code": 0,
+        "output": "build/qa09-olivine-tour-v11",
+        "log": "/tmp/qa09-olivine-tour-v11.log"
+      },
+      {
+        "suite": "olivine-saves",
+        "exit_code": 0,
+        "output": "build/qa09-olivine-saves-v11",
+        "log": "/tmp/qa09-olivine-saves-v11.log"
+      },
+      {
+        "suite": "olivine-services",
+        "exit_code": 0,
+        "output": "build/qa09-olivine-services-v11",
+        "log": "/tmp/qa09-olivine-services-v11.log"
+      },
+      {
+        "suite": "olivine-collision",
+        "exit_code": 0,
+        "output": "build/qa09-olivine-collision-v11",
+        "log": "/tmp/qa09-olivine-collision-v11.log"
+      },
+      {
+        "suite": "mart-props",
+        "exit_code": 0,
+        "output": "build/qa09-mart-props-v11",
+        "log": "/tmp/qa09-mart-props-v11.log"
+      },
+      {
+        "suite": "olivine-materials",
+        "exit_code": 0,
+        "output": "build/qa09-olivine-materials-v11",
+        "log": "/tmp/qa09-olivine-materials-v11.log"
+      },
+      {
+        "suite": "center-counter-after",
+        "exit_code": 0,
+        "output": "build/qa09-center-counter-after-v11",
+        "log": "/tmp/qa09-center-counter-after-v11.log"
+      }
+    ],
+    "shared_doorways_and_player": [
+      {
+        "job": "doors",
+        "exit_code": 0,
+        "seconds": 648.34,
+        "rom_sha256": "df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4",
+        "source": "489c404346f572aefb6856b3dd48a9b364a08ceb",
+        "log": "qa09-doors-v11.log",
+        "interrupted": false
+      },
+      {
+        "job": "special",
+        "exit_code": 0,
+        "seconds": 70.52,
+        "rom_sha256": "df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4",
+        "source": "489c404346f572aefb6856b3dd48a9b364a08ceb",
+        "log": "qa09-special-v11.log",
+        "interrupted": false
+      },
+      {
+        "job": "starters",
+        "exit_code": 0,
+        "seconds": 52.71,
+        "rom_sha256": "df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4",
+        "source": "489c404346f572aefb6856b3dd48a9b364a08ceb",
+        "log": "qa09-starters-v11.log",
+        "interrupted": false
+      },
+      {
+        "job": "first-loss",
+        "exit_code": 0,
+        "seconds": 12.29,
+        "rom_sha256": "df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4",
+        "source": "489c404346f572aefb6856b3dd48a9b364a08ceb",
+        "log": "qa09-first-loss-v11.log",
+        "interrupted": false
+      },
+      {
+        "job": "fly",
+        "exit_code": 0,
+        "seconds": 30.78,
+        "rom_sha256": "df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4",
+        "source": "489c404346f572aefb6856b3dd48a9b364a08ceb",
+        "log": "qa09-fly-v11.log",
+        "interrupted": false
+      },
+      {
+        "job": "joe",
+        "exit_code": 0,
+        "seconds": 32.82,
+        "rom_sha256": "df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4",
+        "source": "489c404346f572aefb6856b3dd48a9b364a08ceb",
+        "log": "qa09-joe-v11.log",
+        "interrupted": false
+      },
+      {
+        "job": "running",
+        "exit_code": 0,
+        "seconds": 25.68,
+        "rom_sha256": "df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4",
+        "source": "489c404346f572aefb6856b3dd48a9b364a08ceb",
+        "log": "qa09-running-v11.log",
+        "interrupted": false
+      },
+      {
+        "job": "survey-resume",
+        "exit_code": 0,
+        "seconds": 1.19,
+        "rom_sha256": "df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4",
+        "source": "489c404346f572aefb6856b3dd48a9b364a08ceb",
+        "log": "qa09-survey-resume-v11.log",
+        "interrupted": false
+      }
+    ]
+  },
+  "emulator": {
+    "city_maps": 51,
+    "ecruteak_maps": 27,
+    "ecruteak_transitions": 308,
+    "ecruteak_roundtrip_pairs": 73,
+    "ecruteak_warp_trials": 296,
+    "olivine_maps": 24,
+    "olivine_transitions": 180,
+    "olivine_roundtrip_pairs": 53,
+    "olivine_warp_trials": 173,
+    "doorway_segments_required_and_front_pass": 118,
+    "door_approaches_executed_pass": 329,
+    "door_lateral_physically_unavailable": 25,
+    "door_failures": 0,
+    "ecruteak_normal_save_cold_continue_cases": 4,
+    "olivine_save_compatibility_cases": 25,
+    "olivine_service_cases": 51,
+    "olivine_building_tree_bumps": 204,
+    "both_mart_prop_bumps": 40,
+    "front_counter_after_cases": 6,
+    "lighthouse_port_specials": 10,
+    "starter_choices": 3,
+    "fly_destinations": 10,
+    "ecruteak_furniture_cases": 43,
+    "theater_backdrop_pixels": 6144,
+    "theater_audience_pixels": 3584,
+    "center_emblem_pixels": 5120,
+    "emblem_joe_walk_cells": 20,
+    "ecruteak_gate_compiled_pixels_each": 3072,
+    "ecruteak_ground_cases": 19,
+    "ecruteak_trunk_approaches": 36,
+    "ecruteak_foreground_leaf_pixels": 423,
+    "gate_layer_cases": 8,
+    "all_native_tour_frames_magenta_free": 51,
+    "gate_normal_floor_joe_pixels_visible": [
+      192,
+      165
+    ],
+    "cleared_terrace_cells_walked": 12,
+    "white_fence_bumps": 43,
+    "white_fence_cells": 20,
+    "white_fence_sides_unavailable": 37,
+    "gray_rock_surf_bumps": 4,
+    "joe_actions": [
+      "walk",
+      "run",
+      "Mach Bike",
+      "Acro Bike/wheelie",
+      "Fly",
+      "Surf all four directions",
+      "fishing",
+      "disembark"
+    ],
+    "source_batteries_unchanged": true,
+    "olivine_material_cases": 59,
+    "olivine_material_recordings": 18
+  },
+  "evidence": {
+    "automated": "automated-checks-v11.json",
+    "compiled_frame_layers": "native-frame-ground-check-v11.json",
+    "gate_negative_control": "gate-negative-regression-v11.json",
+    "ecruteak": "ecruteak/v11/README.md",
+    "doors_and_actions": "doorways/v11/README.md",
+    "olivine": "../../hgss/OLIVINE_VALIDATION_QA09.md",
+    "ci_separate_binary": "ci-build11.json"
+  },
+  "source_battery_sha256": "b03ff1ef488fbd25de016e828483bc3001787b84e450a45eaa0ac12a11de30ab",
+  "manual_owner_delta_playtest": "PENDING",
+  "owner_visual_acceptance": "PENDING",
+  "known_reproduced_functional_defects_remaining": [],
+  "reference_limits": [
+    "Theater southern doorway/margins lack a complete raster view; source events/permissions and actual movement verify geometry.",
+    "Full separate lighthouse cabin and complete reverse-quay rasters unverified; actual source geometry/props verified.",
+    "DS projection/model height use documented original flat GBA adaptations; owner Gyms and Black Ledger additions are intentional."
+  ],
+  "not_claimed_tested": [
+    "Owners latest private Delta save was not supplied; historical copies and disclosed legacy fixtures were tested.",
+    "Inactive Dive/watering/decoration/VSSeeker/contest/link states were not normally activated in this two-city gameplay pass; source graphics audit is separate."
+  ],
+  "outside_scope": [
+    "Other-region sailing/ship interior/destination",
+    "DS online network services",
+    "Unapproved main-story, trades/rewards/Seal Case/badge progression",
+    "Further Johto reconstruction"
+  ],
+  "post_runtime_rebuild": {
+    "command": "make -j4 -O all",
+    "exit_code": 0,
+    "rom_sha256": "df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4",
+    "byte_identical_to_tested_rom": true,
+    "payload_bytes": 30261028,
+    "ewram_bytes": 226448,
+    "iwram_bytes": 28392
+  }
+}

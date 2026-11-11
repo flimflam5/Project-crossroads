@@ -1,0 +1,171 @@
+{
+  "rom_sha256": "3bec0fedbb481cc051c38d719499b584e9a4c219e42b66bef298f6aa0c5ec7a9",
+  "phase": "before reproduction",
+  "method": "Actual controller movement; Joe opaque pixels decoded independently from current hardware OAM/OBJ VRAM/palette, not assumed from tile collision",
+  "records": [
+    {
+      "case": "debug-magenta",
+      "map": "EcruteakCity_WestGate",
+      "position": [
+        6,
+        6
+      ],
+      "pixels": 600,
+      "result": "PASS"
+    },
+    {
+      "case": "debug-magenta",
+      "map": "EcruteakCity_WestGate",
+      "position": [
+        6,
+        7
+      ],
+      "pixels": 210,
+      "result": "PASS"
+    },
+    {
+      "case": "normal-floor-Joe-visibility",
+      "map": "EcruteakCity_WestGate",
+      "position": [
+        2,
+        9
+      ],
+      "control": {
+        "opaque_expected": 187,
+        "opaque_visible": 187,
+        "opaque_hidden": 0,
+        "screen_bounds": [
+          112,
+          56,
+          16,
+          32
+        ]
+      },
+      "arrival": {
+        "opaque_expected": 192,
+        "opaque_visible": 21,
+        "opaque_hidden": 171,
+        "screen_bounds": [
+          112,
+          56,
+          16,
+          32
+        ]
+      },
+      "result": "PASS"
+    },
+    {
+      "case": "normal-floor-Joe-visibility",
+      "map": "EcruteakCity_WestGate",
+      "position": [
+        10,
+        9
+      ],
+      "control": {
+        "opaque_expected": 192,
+        "opaque_visible": 192,
+        "opaque_hidden": 0,
+        "screen_bounds": [
+          112,
+          56,
+          16,
+          32
+        ]
+      },
+      "arrival": {
+        "opaque_expected": 165,
+        "opaque_visible": 18,
+        "opaque_hidden": 147,
+        "screen_bounds": [
+          112,
+          56,
+          16,
+          32
+        ]
+      },
+      "result": "PASS"
+    },
+    {
+      "case": "debug-magenta",
+      "map": "EcruteakCity_EastGate",
+      "position": [
+        6,
+        6
+      ],
+      "pixels": 600,
+      "result": "PASS"
+    },
+    {
+      "case": "debug-magenta",
+      "map": "EcruteakCity_EastGate",
+      "position": [
+        6,
+        7
+      ],
+      "pixels": 210,
+      "result": "PASS"
+    },
+    {
+      "case": "normal-floor-Joe-visibility",
+      "map": "EcruteakCity_EastGate",
+      "position": [
+        2,
+        9
+      ],
+      "control": {
+        "opaque_expected": 187,
+        "opaque_visible": 187,
+        "opaque_hidden": 0,
+        "screen_bounds": [
+          112,
+          56,
+          16,
+          32
+        ]
+      },
+      "arrival": {
+        "opaque_expected": 192,
+        "opaque_visible": 21,
+        "opaque_hidden": 171,
+        "screen_bounds": [
+          112,
+          56,
+          16,
+          32
+        ]
+      },
+      "result": "PASS"
+    },
+    {
+      "case": "normal-floor-Joe-visibility",
+      "map": "EcruteakCity_EastGate",
+      "position": [
+        10,
+        9
+      ],
+      "control": {
+        "opaque_expected": 192,
+        "opaque_visible": 192,
+        "opaque_hidden": 0,
+        "screen_bounds": [
+          112,
+          56,
+          16,
+          32
+        ]
+      },
+      "arrival": {
+        "opaque_expected": 165,
+        "opaque_visible": 18,
+        "opaque_hidden": 147,
+        "screen_bounds": [
+          112,
+          56,
+          16,
+          32
+        ]
+      },
+      "result": "PASS"
+    }
+  ]
+}

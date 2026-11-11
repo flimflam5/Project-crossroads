@@ -1,0 +1,608 @@
+{
+  "rom_sha256": "df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4",
+  "setup": "Copied normal battery/cold Continue; shared RAM-only encounter suppression/survey fixture. No player/map/warp/party writes in these movement trials.",
+  "records": [
+    {
+      "label": "theater-front-aisle",
+      "map": "EcruteakCity_DanceTheater",
+      "approach": [
+        8,
+        9
+      ],
+      "button": 128,
+      "expected": [
+        8,
+        10
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "theater-front-aisle-east",
+      "map": "EcruteakCity_DanceTheater",
+      "approach": [
+        8,
+        10
+      ],
+      "button": 16,
+      "expected": [
+        9,
+        10
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "bench-4-10-south",
+      "map": "EcruteakCity_DanceTheater",
+      "approach": [
+        4,
+        11
+      ],
+      "button": 64,
+      "expected": [
+        4,
+        11
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "bench-4-12-south",
+      "map": "EcruteakCity_DanceTheater",
+      "approach": [
+        4,
+        13
+      ],
+      "button": 64,
+      "expected": [
+        4,
+        13
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "bench-4-14-south",
+      "map": "EcruteakCity_DanceTheater",
+      "approach": [
+        4,
+        15
+      ],
+      "button": 64,
+      "expected": [
+        4,
+        15
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "bench-6-12-south",
+      "map": "EcruteakCity_DanceTheater",
+      "approach": [
+        6,
+        13
+      ],
+      "button": 64,
+      "expected": [
+        6,
+        13
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "bench-6-14-south",
+      "map": "EcruteakCity_DanceTheater",
+      "approach": [
+        6,
+        15
+      ],
+      "button": 64,
+      "expected": [
+        6,
+        15
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "bench-8-12-south",
+      "map": "EcruteakCity_DanceTheater",
+      "approach": [
+        8,
+        13
+      ],
+      "button": 64,
+      "expected": [
+        8,
+        13
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "bench-8-14-south",
+      "map": "EcruteakCity_DanceTheater",
+      "approach": [
+        8,
+        15
+      ],
+      "button": 64,
+      "expected": [
+        8,
+        15
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "bench-10-10-south",
+      "map": "EcruteakCity_DanceTheater",
+      "approach": [
+        10,
+        11
+      ],
+      "button": 64,
+      "expected": [
+        10,
+        11
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "bench-10-12-south",
+      "map": "EcruteakCity_DanceTheater",
+      "approach": [
+        10,
+        13
+      ],
+      "button": 64,
+      "expected": [
+        10,
+        13
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "bench-10-14-south",
+      "map": "EcruteakCity_DanceTheater",
+      "approach": [
+        10,
+        15
+      ],
+      "button": 64,
+      "expected": [
+        10,
+        15
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "bench-12-10-south",
+      "map": "EcruteakCity_DanceTheater",
+      "approach": [
+        12,
+        11
+      ],
+      "button": 64,
+      "expected": [
+        12,
+        11
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "bench-12-12-south",
+      "map": "EcruteakCity_DanceTheater",
+      "approach": [
+        12,
+        13
+      ],
+      "button": 64,
+      "expected": [
+        12,
+        13
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "bench-12-14-south",
+      "map": "EcruteakCity_DanceTheater",
+      "approach": [
+        12,
+        15
+      ],
+      "button": 64,
+      "expected": [
+        12,
+        15
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "EcruteakCity_Residence-furniture-2",
+      "map": "EcruteakCity_Residence",
+      "approach": [
+        2,
+        4
+      ],
+      "button": 64,
+      "expected": [
+        2,
+        4
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "EcruteakCity_Residence-furniture-3",
+      "map": "EcruteakCity_Residence",
+      "approach": [
+        3,
+        4
+      ],
+      "button": 64,
+      "expected": [
+        3,
+        4
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "EcruteakCity_Residence-furniture-8",
+      "map": "EcruteakCity_Residence",
+      "approach": [
+        8,
+        4
+      ],
+      "button": 64,
+      "expected": [
+        8,
+        4
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "EcruteakCity_Residence-furniture-9",
+      "map": "EcruteakCity_Residence",
+      "approach": [
+        9,
+        4
+      ],
+      "button": 64,
+      "expected": [
+        9,
+        4
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "EcruteakCity_DowsingHouse-furniture-2",
+      "map": "EcruteakCity_DowsingHouse",
+      "approach": [
+        2,
+        4
+      ],
+      "button": 64,
+      "expected": [
+        2,
+        4
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "EcruteakCity_DowsingHouse-furniture-3",
+      "map": "EcruteakCity_DowsingHouse",
+      "approach": [
+        3,
+        4
+      ],
+      "button": 64,
+      "expected": [
+        3,
+        4
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "EcruteakCity_DowsingHouse-furniture-8",
+      "map": "EcruteakCity_DowsingHouse",
+      "approach": [
+        8,
+        4
+      ],
+      "button": 64,
+      "expected": [
+        8,
+        4
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "EcruteakCity_DowsingHouse-furniture-9",
+      "map": "EcruteakCity_DowsingHouse",
+      "approach": [
+        9,
+        4
+      ],
+      "button": 64,
+      "expected": [
+        9,
+        4
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "center-plant-15-4",
+      "map": "EcruteakCity_PokemonCenter_1F",
+      "approach": [
+        15,
+        5
+      ],
+      "button": 64,
+      "expected": [
+        15,
+        5
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "center-plant-14-15-west",
+      "map": "EcruteakCity_PokemonCenter_1F",
+      "approach": [
+        13,
+        15
+      ],
+      "button": 16,
+      "expected": [
+        13,
+        15
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "center-plant-15-14-north",
+      "map": "EcruteakCity_PokemonCenter_1F",
+      "approach": [
+        15,
+        13
+      ],
+      "button": 128,
+      "expected": [
+        15,
+        13
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "basement-lower-stool-5",
+      "map": "EcruteakCity_PokemonCenter_B1F",
+      "approach": [
+        5,
+        11
+      ],
+      "button": 128,
+      "expected": [
+        5,
+        11
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "basement-lower-stool-6",
+      "map": "EcruteakCity_PokemonCenter_B1F",
+      "approach": [
+        6,
+        11
+      ],
+      "button": 128,
+      "expected": [
+        6,
+        11
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "basement-lower-stool-7",
+      "map": "EcruteakCity_PokemonCenter_B1F",
+      "approach": [
+        7,
+        11
+      ],
+      "button": 128,
+      "expected": [
+        7,
+        11
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "basement-lower-stool-9",
+      "map": "EcruteakCity_PokemonCenter_B1F",
+      "approach": [
+        9,
+        11
+      ],
+      "button": 128,
+      "expected": [
+        9,
+        11
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "basement-lower-stool-10",
+      "map": "EcruteakCity_PokemonCenter_B1F",
+      "approach": [
+        10,
+        11
+      ],
+      "button": 128,
+      "expected": [
+        10,
+        11
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "basement-lower-stool-11",
+      "map": "EcruteakCity_PokemonCenter_B1F",
+      "approach": [
+        11,
+        11
+      ],
+      "button": 128,
+      "expected": [
+        11,
+        11
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "basement-plant-west",
+      "map": "EcruteakCity_PokemonCenter_B1F",
+      "approach": [
+        3,
+        12
+      ],
+      "button": 16,
+      "expected": [
+        3,
+        12
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "basement-plant-east",
+      "map": "EcruteakCity_PokemonCenter_B1F",
+      "approach": [
+        13,
+        12
+      ],
+      "button": 32,
+      "expected": [
+        13,
+        12
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "basement-stool-2-7",
+      "map": "EcruteakCity_PokemonCenter_B1F",
+      "approach": [
+        2,
+        6
+      ],
+      "button": 128,
+      "expected": [
+        2,
+        6
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "basement-stool-3-7",
+      "map": "EcruteakCity_PokemonCenter_B1F",
+      "approach": [
+        3,
+        6
+      ],
+      "button": 128,
+      "expected": [
+        3,
+        6
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "basement-stool-4-8",
+      "map": "EcruteakCity_PokemonCenter_B1F",
+      "approach": [
+        5,
+        8
+      ],
+      "button": 32,
+      "expected": [
+        5,
+        8
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "basement-stool-4-9",
+      "map": "EcruteakCity_PokemonCenter_B1F",
+      "approach": [
+        5,
+        9
+      ],
+      "button": 32,
+      "expected": [
+        5,
+        9
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "basement-table-west-upper",
+      "map": "EcruteakCity_PokemonCenter_B1F",
+      "approach": [
+        1,
+        8
+      ],
+      "button": 16,
+      "expected": [
+        1,
+        8
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "basement-table-west-lower",
+      "map": "EcruteakCity_PokemonCenter_B1F",
+      "approach": [
+        1,
+        9
+      ],
+      "button": 16,
+      "expected": [
+        1,
+        9
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "basement-table-south-left",
+      "map": "EcruteakCity_PokemonCenter_B1F",
+      "approach": [
+        2,
+        10
+      ],
+      "button": 64,
+      "expected": [
+        2,
+        10
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "basement-table-south-right",
+      "map": "EcruteakCity_PokemonCenter_B1F",
+      "approach": [
+        3,
+        10
+      ],
+      "button": 64,
+      "expected": [
+        3,
+        10
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "basement-terminal",
+      "map": "EcruteakCity_PokemonCenter_B1F",
+      "approach": [
+        15,
+        6
+      ],
+      "button": 64,
+      "expected": [
+        15,
+        6
+      ],
+      "result": "PASS"
+    }
+  ]
+}

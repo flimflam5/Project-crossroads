@@ -1,3 +1,32 @@
+# QA09 final-byte verification and negative control
+
+Final candidate game source489c404346f572aefb6856b3dd48a9b364a08ceb uses
+ROMdf69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4.
+All60 actual CI commands and21 final serial test stages pass. Never
+replace ROM/ELF or regenerate maps while they run. Historical V9/V10 passes
+cannot be relabelled final V11. Every native tour frame must reject FF00FF in
+addition to source checks: matching a renderer that reproduces bad output is
+insufficient. The historical600-magenta gate frame remains a negative control
+that the new checker must reject. Normal movement must also keep all opaque
+Joe pixels visible on the affected floor cells. Final exact results and public
+native screenshots/recordings belong in qa/qa09/verification-summary.json.
+
+# QA09 final two-city testing
+
+Use RELEASE_CITIES_QA09.md and hgss/CITIES_QA09.md for the exact current ROM and
+per-building checklists. All tests use copies of normal battery saves through
+cold title/Continue; cross-build emulator states are not compatibility evidence.
+Source battery checksums must remain unchanged. Fixtures seed only disclosed
+legacy positions/cache/heal or HP/status in private test processes; field gear
+fixtures are separate. Distinguish authored renders, controller-driven emulator
+checks and owner Delta/visual acceptance. No owner QA09 verdict is recorded.
+
+Final evidence is under qa/qa09. Historical V7/diagnostic V8 evidence is labelled
+separately. Require actual delivery-byte tours/doors/ground/foreground, services,
+normal saves and legitimate old-floor-to-new-stool migration, all3 starters,
+Fly/Surf/Joe, and the native title/Continue. Final packaging must include source
+revision and ROM SHA, and verify that the archive's ROM has that same checksum.
+
 # Current Ecruteak QA07 testing
 
 Use [RELEASE_ECRUTEAK_QA07.md](RELEASE_ECRUTEAK_QA07.md) for Delta import/checklist,

@@ -1,0 +1,6 @@
+{
+  "rom_sha256": "d5abac0deabc7d592eba302122b3d15c08501947f0f601eda7b5026da9ac6772",
+  "source_battery_sha256": "b03ff1ef488fbd25de016e828483bc3001787b84e450a45eaa0ac12a11de30ab",
+  "source_battery_unchanged": true,
+  "method": "Fresh normal Continue, actual survey-desk UI, controller map visits/round trips. No map/player/warp coordinate writes."
+}

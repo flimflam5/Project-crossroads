@@ -1,0 +1,112 @@
+{
+  "scope": "Reference research only; no game/source changes",
+  "source_revision_compared": "5664fecee4337c5bdd442583e24cc91c09c0a0cd",
+  "reference": {
+    "label": "Actual HGSS Theater stage and complete13-seat audience view (WikiDex)",
+    "page": "https://www.wikidex.net/wiki/Teatro_de_Danza",
+    "image_url": "https://images.wikidexcdn.net/mwuploads/wikidex/0/09/latest/20100424181308/Teatro_de_Danza_HGSS.jpg",
+    "sha256": "05a655b8cc52f311c8660a1fb4dfeee3eeae5cf7e253a4651ae02e53b013421e",
+    "published_dimensions": [
+      256,
+      192
+    ],
+    "format": "JPEG",
+    "local_cache": "/workspace/scratch/hgss-reference/Theater_HGSS_wikidex.jpg",
+    "use": "Reference inspection only; no game graphics extracted",
+    "visually_inspected": true,
+    "shows_all_13_audience_seats": true,
+    "shows_stage_and_both_side_stairs": true,
+    "shows_south_exit": false,
+    "scope_note": "Published native-sized file with a cropped scene/black margins; it is not a whole-floor mosaic including the southern threshold",
+    "comparison": "Same13 model56 seating positions:3front +5middle +5rear; native GBA raised-stage/two-side-aisle plan agrees. Source/native south exit is supported by event/permission facts and runtime, not visible in this crop.",
+    "deliberate_art_deviations": [
+      "Original flat GBA furniture/stage/rope/lantern art instead of DS perspective; reference colors/anchors retained"
+    ]
+  },
+  "source_facts": "canonical_events/ecruteak-interior-geometry.json",
+  "source_provenance": {
+    "matrix": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/mapmatrix/map_matrix/map_matrix_0126_T27R0501.bin",
+    "matrix_blob_sha": "de428ca74c8c37b1b6436bb2773a6101aba5f614",
+    "events": "https://github.com/pret/pokeheartgold/blob/master/files/fielddata/eventdata/zone_event/083_T27R0501.json",
+    "events_blob_sha": "0b2030a8cad9289157b09513a21ad86289984f47",
+    "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+  },
+  "source_seating_rows": {
+    "10": [
+      4,
+      10,
+      12
+    ],
+    "12": [
+      4,
+      6,
+      8,
+      10,
+      12
+    ],
+    "14": [
+      4,
+      6,
+      8,
+      10,
+      12
+    ]
+  },
+  "native_map": "EcruteakCity_DanceTheater",
+  "native_layout": {
+    "width": 14,
+    "height": 19,
+    "stairs": "both source side approaches into north stage",
+    "exit_leaves": [
+      [
+        7,
+        17
+      ],
+      [
+        8,
+        17
+      ]
+    ],
+    "exit_note": "Actual source warp7,17 plus native visible second-leaf alias8,17; tested in both directions on delivery ROM. Original raster does not show the southern threshold."
+  },
+  "closed_reference_gap": "Full13-seat audience arrangement/style is now visibly corroborated by actual published HGSS raster, in addition to canonical prop/matrix/permission data.",
+  "remaining_reference_gap": "A single published whole-floor HGSS mosaic (or complementary published south-room view) showing the southern threshold, south margins and entire room at once was not found. Do not claim all floor pixels/door artwork were directly raster-compared.",
+  "searches": [
+    {
+      "site": "Serebii PokeEarth Ecruteak",
+      "result": "City24.png and Gym24-gym.png linked; no Theater full-room raster found"
+    },
+    {
+      "site": "Bulbagarden Archives",
+      "result": "MediaWiki file searches Theater/Theatre/Kimono/Dance with HGSS found no whole-room HGSS mosaic"
+    },
+    {
+      "site": "WikiDex",
+      "result": "Recovered actual256x192 stage/audience JPEG above"
+    },
+    {
+      "site": "Pokebip",
+      "result": "Guide Rosalia city/Gym references and existing stage crop; no complete Theater floor mosaic found"
+    },
+    {
+      "site": "Pokepedia",
+      "result": "Existing204x152 stage screenshot and item/dialogue captures; no complete floor mosaic found"
+    },
+    {
+      "site": "StrategyWiki",
+      "result": "HGSS guide text; named Ecruteak Dance Theater map asset found in search is Gold/Silver, rejected as wrong generation"
+    },
+    {
+      "site": "PokeWave",
+      "result": "Eight actual256x192 captures inspected by helper; stage/dialogue viewpoints, no south-room threshold"
+    },
+    {
+      "site": "PokeDream / Psypokes / Japanese guide searches",
+      "result": "City/Gym maps, stage captures, text or diagrams; no verified actual whole-room floor mosaic found"
+    }
+  ],
+  "acceptance": "Source-backed geography/controller verification and GBA art adaptations remain distinct from owner visual acceptance.",
+  "implementation_source_revision": "489c404346f572aefb6856b3dd48a9b364a08ceb",
+  "current_material_correction": "The historical source_revision_compared5664 used red benches/wooden audience. BUILD10/11 corrects that visible mismatch with13 purple cushions/light-green checkerfloor while preserving brownstage/allphysics/actors/IDs. Final exactROM native tests tracked in ECRUTEAK_FINAL_REVIEW.",
+  "material_correction_source_revision": "7d92f79357b744dddb706bba121d7bd5e6fc4254"
+}

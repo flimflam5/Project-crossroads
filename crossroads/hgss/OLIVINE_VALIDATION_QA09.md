@@ -155,3 +155,105 @@ not been verified, so the solid native stool treatment is an explicit GBA
 interpretation, not a claim of demonstrated DS behavior. Both rooms retain an
 escape route from every public tile. Fresh final-ROM prop movement recordings
 and purchasing/service checks are required after generation and compilation.
+
+## Historical frozen Build9 controller verification
+
+Actual game-source checkpoint:
+`5664fecee4337c5bdd442583e24cc91c09c0a0cd`.
+
+Actual ROM SHA256:
+`d5abac0deabc7d592eba302122b3d15c08501947f0f601eda7b5026da9ac6772`.
+
+Fresh final-ROM controller runs passed:
+
+- 25 Save/cold Continue cases, without resumes. The restored B1F lower floor is
+ tested at8,12 with actual walk-away/stairs out/return. All nine new maps,
+ isolated3F/6F, both selected cabin floors, actual Surf and disclosed legacy
+ guards pass with party, boxes, starter, decoded inventory and flags unchanged.
+ Four extra immutable-V7 public-floor fixtures test newly solid stools in both
+ Marts7,9 and both basements4,8; every case migrates safely and really exits/returns.
+- 51 service/ambient checks: actual nurse, native PC, real200-money purchase,
+ rest decline/accept, houses, café, signs, existing offices/neighbor, all six
+ front receptionists, lighthouse caretakers/visitors/beacon and every floor
+ plaque, balcony view, port desk/visitor/quay clerk and boarding boundary.
+ Jasmine855 practice loss returns to the local nurse8,13 with full heal.
+- 204 dry normal-controller wall/trunk bumps,13 buildings/3 trees, zero skips;
+ intentional canopy overlap remains. Three native movement recordings retained.
+- 40 native controller bumps against source Mart plants/rack/glass/stools across
+ both cities, zero skips. Both private modules render with loaded bank12, and
+ the northeast upper leaves retain the existing rear-window background.
+- Six separately recorded actual front-counter conversations pass exact expanded
+ text and control return, accompanying the full service run's actual LastTalked
+ local-ID checks. Before footage from Build8 reproduces all six failures; the
+ source repair adds only the exact native MB_COUNTER0x80 front variants.
+
+Both source batteries remain SHA256-identical
+`b03ff1ef488fbd25de016e828483bc3001787b84e450a45eaa0ac12a11de30ab`.
+Tests disclose private HP/status fixtures and temporary encounter suppression.
+Public reports, native PNGs, H264 movement recordings, file hashes and separate
+before baselines are in [QA09 Olivine evidence](../qa/qa09/olivine/README.md).
+No private battery/state or ROM is included there.
+
+The first extended-service run selected Lighthouse4F's western component while
+its floor plaque is in the independently reachable eastern component. That
+staging attempt remains in a separately labelled diagnostic folder/log. The
+normal-controller test now explicitly reaches warp0 through the real source
+stair/lift network and reruns all51 checks fresh. No game map changed, and no
+interaction, collision or source-topology assertion was removed to obtain a pass.
+
+The earlier V7 results above remain historical. Its material/prop omissions,
+unloaded Mart palette13 mistake in the intermediate source, northeast plant
+wall-underlay gap and previously nonfunctional front counters were corrected
+before these final tests. Literal DS-pixel identity and owner Delta/visual
+acceptance remain distinct from the verified source/GBA implementation.
+
+## Final delivery Build11 verification
+
+Source checkpoint: `489c404346f572aefb6856b3dd48a9b364a08ceb`.
+
+Actual locally tested ROM SHA256:
+`df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4`.
+
+All seven suites completed sequentially on these exact bytes, with fresh normal
+battery loads and no snapshots/resumes from previous builds:
+
+- 24-map all-edges Olivine tour:180 actual transitions,53 explicit round-trip
+ pairs,173 warp trials and5 actual native Surf entries. All24 native tour PNGs
+ were independently scanned: zero debug FF00FF pixels. Nurse/local respawn and
+ retained starter/party checks passed.
+- 25 actual Save/cold Continue cases passed, including the restored B1F8,12
+ lower floor and real stair exit/return, all nine appended maps, isolated3F/6F,
+ both panel-selected elevator floors, actual Surf and the disclosed legacy
+ fixtures. The four immutable-V7 old-floor-to-new-stool fixtures safely relocate
+ and actually exit/return. Exact party/box/starter/decoded inventory/flags persist.
+- 51 actual service/ambient checks passed, including all six customer-side front
+ conversations with native counter behavior, exact displayed message and actual
+ staff local ID; nurse, PC, real purchase, rest, residents, café, existing offices,
+ all lighthouse caretakers/visitors/beacon and floor plaques, balcony view, port
+ desk/visitor/quay clerk/boarding boundary, and actual Jasmine loss/local respawn.
+- 204 dry building/tree movement trials passed across13 buildings and3 free
+ trees, with zero inaccessible-approach skips and intentional canopy overlap.
+- 40 actual furniture bumps passed in both Marts, with zero skips.
+- 59 terrain/material cases passed, with18 native movement clips. The37 fence
+ approaches with no physical public route are explicitly listed as unavailable,
+ not passed. Dry deck/promenade/parasol/fence checks, actual native Surf against
+ offshore rocks, old-port sea traversal, southern boundary and dry return16,34
+ were exercised.
+- Six separately recorded front-counter conversations passed again on Build11;
+ these overlap the51 service checks and provide current-ROM after footage for
+ the separately identified Build8 no-message baseline.
+
+The original source battery AND fresh lane input copy remain
+SHA256 `b03ff1ef488fbd25de016e828483bc3001787b84e450a45eaa0ac12a11de30ab`.
+Only PNG/MP4/JSON evidence is exported; no private saves, states or ROMs. The
+[file manifest and current evidence](../qa/qa09/olivine/README.md) identify every
+artifact and keep superseded results separate. These local mGBA tests apply to
+the stated ROM, not a different GitHub CI binary built from the same source.
+
+Build10 was stopped after independent native Ecruteak review exposed real gate
+magenta and incorrect opaque foreground floor. Its completed Olivine tour is
+historical evidence; its interrupted Save suite and later unstarted phases are
+not promoted to passes. Build11's gate fix corrects the underlying private
+underlay/layer construction rather than hiding the debug marker or changing
+the engine. The final coordinated source/framebuffer review covers all51 city
+maps. Owner Delta/visual acceptance remains separate.

@@ -1,0 +1,307 @@
+{
+  "checkpoint": "V7",
+  "rom_sha256": "0734501b031d05156a28e685dc1c2748153cb065222bd67b0d2e7cea47fefbca",
+  "files": [
+    {
+      "file": "before-v6-port-walk-through-body.mp4",
+      "kind": "baseline V6",
+      "caption": "Reproduced normal walk through the port roof/body column; Joe disappears inside the building.",
+      "sha256": "8887f8aa2cab84c4deea2a0dcfe5ec33399a3a7affff41ca89fa4c0d2fbe197f",
+      "bytes": 50000
+    },
+    {
+      "file": "before-v6-port-body.png",
+      "kind": "baseline V6",
+      "caption": "Native frame of the reproduced pass-through at23,50.",
+      "sha256": "727f9cc94598b815c68e62bd8db91bd088b28f7440d2ac259fd1cad8f2028e25",
+      "bytes": 9074
+    },
+    {
+      "file": "before-v6-port-left-exit.png",
+      "kind": "baseline V6",
+      "caption": "Terminal north exit actually lands at city23,53; this was measured, not assumed.",
+      "sha256": "5d3f5407904f0b2e4b33c4c6f23cfd1d709f9bab79061a5d850bef8d120b85ee",
+      "bytes": 8924
+    },
+    {
+      "file": "after-v7-port-body-blocks.mp4",
+      "kind": "V7 controller pass",
+      "caption": "Native Surf into real sea under the thin overhang stops at the solid body, then disembarks normally.",
+      "sha256": "be22527cb97e552b019ae6d2e18094bd4b8677fb43bc3f8f3ed95bd4d7cfa9fb",
+      "bytes": 206379
+    },
+    {
+      "file": "after-v7-port-second-column-blocks.mp4",
+      "kind": "V7 controller pass",
+      "caption": "Independent second central column collision and normal Surf/disembark.",
+      "sha256": "e3db6e5a81d6784c02c53093b29967709cb36eaec8ab2a58cc7a93e07561687c",
+      "bytes": 209640
+    },
+    {
+      "file": "after-v7-port-body.png",
+      "kind": "V7 controller pass",
+      "caption": "Joe returned to dry ground after the solid body blocked movement.",
+      "sha256": "170066533631ae2edc0188ae662accca35e2d152a822b55ef3da6930104835ab",
+      "bytes": 8792
+    },
+    {
+      "file": "after-v7-port-dry-boardwalk-return.mp4",
+      "kind": "V7 controller pass",
+      "caption": "Exit terminal, walk to the main promenade and return around the facade on dry ground; enter the right leaf.",
+      "sha256": "88f184c60da52c3cb931cda0a6b5294b7f051810a943344568837228c8f17607",
+      "bytes": 299453
+    },
+    {
+      "file": "v7-lighthouse-window-to-balcony.mp4",
+      "kind": "V7 controller pass",
+      "caption": "Actual4F window drop to the exact balcony landing14,9.",
+      "sha256": "4f8ac68a1ab39fbdc0c975011c4cf9e91b5597759414ddcc9cb04cddcc20fd53",
+      "bytes": 53220
+    },
+    {
+      "file": "v7-lighthouse-balcony-arrival.png",
+      "kind": "V7 controller pass",
+      "caption": "Exact window arrival and a clear adjacent walk-away.",
+      "sha256": "50dace9bf5ed50c73fb3acd4fc6d6486651154f578385ed382d29f50a47f114c",
+      "bytes": 3808
+    },
+    {
+      "file": "v7-balcony-inner-rail-no-surf.mp4",
+      "kind": "V7 controller pass",
+      "caption": "Push at the inner rail and press A: no movement off the elevated balcony and no Surf.",
+      "sha256": "61e868bee94d16da4371d686de0bde88a2a0a04f94e342948347f5e440e8237e",
+      "bytes": 80452
+    },
+    {
+      "file": "v7-balcony-north-rail-no-surf.mp4",
+      "kind": "V7 controller pass",
+      "caption": "Independent northern railing push/A check.",
+      "sha256": "8abb81d05775da2b2315527ec126c28d23860f3e616ac1d567f258f5f9536615",
+      "bytes": 120392
+    },
+    {
+      "file": "v7-native-elevator-ground-left-exit.mp4",
+      "kind": "V7 controller pass",
+      "caption": "Real panel selection and native dynamic-warp exit to1F.",
+      "sha256": "cb18af72e6c6191c69feccab0dc0b58679c19d2ec0704d69300d951a3db017f6",
+      "bytes": 44069
+    },
+    {
+      "file": "v7-native-elevator-top-right-exit.mp4",
+      "kind": "V7 controller pass",
+      "caption": "Real top-floor selection and independent right exit leaf.",
+      "sha256": "d7692c2f1aebe817e14a64da1690d00c46fdee9ac685c2539515be340301bdec",
+      "bytes": 45697
+    },
+    {
+      "file": "v7-jasmine-first-loss-respawn.png",
+      "kind": "V7 controller pass",
+      "caption": "Real practice battle loss, local Center respawn, healed party and Joe retained.",
+      "sha256": "5688e9d4816f2c727bba62a0244b522b1fb0317ce9f953b627af932b3283b5b8",
+      "bytes": 5536
+    },
+    {
+      "file": "v7-live-starter-605.png",
+      "kind": "V7 controller pass",
+      "caption": "Live rescue choice; met location/level and duplication guards checked by the actual engine test.",
+      "sha256": "78710fbd2005d26d403cb49919a9384638b8ce546320834c2502f2aa14d8d9a9",
+      "bytes": 4729
+    },
+    {
+      "file": "v7-live-starter-273.png",
+      "kind": "V7 controller pass",
+      "caption": "Live rescue choice; met location/level and duplication guards checked by the actual engine test.",
+      "sha256": "78710fbd2005d26d403cb49919a9384638b8ce546320834c2502f2aa14d8d9a9",
+      "bytes": 4729
+    },
+    {
+      "file": "v7-live-starter-568.png",
+      "kind": "V7 controller pass",
+      "caption": "Live rescue choice; met location/level and duplication guards checked by the actual engine test.",
+      "sha256": "78710fbd2005d26d403cb49919a9384638b8ce546320834c2502f2aa14d8d9a9",
+      "bytes": 4729
+    },
+    {
+      "file": "v7-joe-north.png",
+      "kind": "V7 controller pass",
+      "caption": "Actual walking-sprite VRAM matches the supplied Joe artwork in this direction.",
+      "sha256": "49c14f8707eb2597d68ac5cde5d50f1eeec42bb45381f62458c279458884bfd8",
+      "bytes": 6196
+    },
+    {
+      "file": "v7-joe-south.png",
+      "kind": "V7 controller pass",
+      "caption": "Actual walking-sprite VRAM matches the supplied Joe artwork in this direction.",
+      "sha256": "c00f2d31fd62edf0141b51da12a082037c6efaa0a521ab0cbe2140edd5efde6c",
+      "bytes": 6273
+    },
+    {
+      "file": "v7-joe-east.png",
+      "kind": "V7 controller pass",
+      "caption": "Actual walking-sprite VRAM matches the supplied Joe artwork in this direction.",
+      "sha256": "9c40fdf3ddd79bb6b1c28f0d7736e9402012dba95bf22d2ff5d00bf3fd0e6f67",
+      "bytes": 6230
+    },
+    {
+      "file": "v7-joe-west.png",
+      "kind": "V7 controller pass",
+      "caption": "Actual walking-sprite VRAM matches the supplied Joe artwork in this direction.",
+      "sha256": "b968b8664d3babec7e7821e3f124e0c6d92c0a8bcb34c5b61b83623defcc9b88",
+      "bytes": 6256
+    },
+    {
+      "file": "v7-theater-outside-0-front.mp4",
+      "kind": "V7 controller pass",
+      "caption": "Exact named doorway segment, correct arrival and an actual walk-away; no fallback through a neighbouring leaf.",
+      "sha256": "f6e384779275b9bfa2b54bd6adf048e3318884b73f99bb631e8224047bd24321",
+      "bytes": 23909
+    },
+    {
+      "file": "v7-theater-outside-1-front.mp4",
+      "kind": "V7 controller pass",
+      "caption": "Exact named doorway segment, correct arrival and an actual walk-away; no fallback through a neighbouring leaf.",
+      "sha256": "66f24a04db6d0cffa9b6b02575786d15d8647b5de94312858d679e156c636dda",
+      "bytes": 22452
+    },
+    {
+      "file": "v7-theater-inside-0-front.mp4",
+      "kind": "V7 controller pass",
+      "caption": "Exact named doorway segment, correct arrival and an actual walk-away; no fallback through a neighbouring leaf.",
+      "sha256": "d739b52b3443c58012cafac477c15f60af3f8d6ba2e5969fcdd1dca13c26b26a",
+      "bytes": 34603
+    },
+    {
+      "file": "v7-theater-inside-1-front.mp4",
+      "kind": "V7 controller pass",
+      "caption": "Exact named doorway segment, correct arrival and an actual walk-away; no fallback through a neighbouring leaf.",
+      "sha256": "6ebb3cb1a7fb1719209e232e1aaf106093f892fc6432c5fba3613e4b0bc18d8a",
+      "bytes": 33396
+    },
+    {
+      "file": "v7-west-city-gate-outside-0-front.mp4",
+      "kind": "V7 controller pass",
+      "caption": "Exact named doorway segment, correct arrival and an actual walk-away; no fallback through a neighbouring leaf.",
+      "sha256": "482428bee10bd725ccd99698267f2473b501a4d8f200c91062dd6a4f39e04270",
+      "bytes": 30993
+    },
+    {
+      "file": "v7-west-city-gate-outside-2-front.mp4",
+      "kind": "V7 controller pass",
+      "caption": "Exact named doorway segment, correct arrival and an actual walk-away; no fallback through a neighbouring leaf.",
+      "sha256": "e81000924a55254f3843a464e130a87fbdde8a07aeebebbf5edbbf3f0d351b00",
+      "bytes": 29111
+    },
+    {
+      "file": "v7-east-city-gate-outside-0-front.mp4",
+      "kind": "V7 controller pass",
+      "caption": "Exact named doorway segment, correct arrival and an actual walk-away; no fallback through a neighbouring leaf.",
+      "sha256": "b6ec7911b2418bc53b0e4d3051cc3aaa873c0f227e25fef68c80db68fc9654bf",
+      "bytes": 25895
+    },
+    {
+      "file": "v7-east-city-gate-outside-2-front.mp4",
+      "kind": "V7 controller pass",
+      "caption": "Exact named doorway segment, correct arrival and an actual walk-away; no fallback through a neighbouring leaf.",
+      "sha256": "488d73d5df75a2eb767f108bb19ca3b4ae7108071f42cea72df5ab7d45c89d98",
+      "bytes": 24107
+    },
+    {
+      "file": "v7-olivine-pokemon-center-outside-0-front.mp4",
+      "kind": "V7 controller pass",
+      "caption": "Exact independent visible leaf and native return/walk-away during the dry-floor controller test.",
+      "sha256": "70c2cf390df1f563b1d333fab00cd5b527281d9da63d5d1cc207d5c83fac3d17",
+      "bytes": 24287
+    },
+    {
+      "file": "v7-olivine-pokemon-center-outside-1-front.mp4",
+      "kind": "V7 controller pass",
+      "caption": "Exact independent visible leaf and native return/walk-away during the dry-floor controller test.",
+      "sha256": "0449db740fd290095aec4b01c6fc3ff57cf74c6fe033e5ea3d312eadf7b30474",
+      "bytes": 23237
+    },
+    {
+      "file": "v7-olivine-pokemon-center-inside-0-front.mp4",
+      "kind": "V7 controller pass",
+      "caption": "Exact independent visible leaf and native return/walk-away during the dry-floor controller test.",
+      "sha256": "a74eb4c276250e837a7320482e3e66addeddae53559d4511161c682fa46eb91e",
+      "bytes": 35527
+    },
+    {
+      "file": "v7-olivine-pokemon-center-inside-1-front.mp4",
+      "kind": "V7 controller pass",
+      "caption": "Exact independent visible leaf and native return/walk-away during the dry-floor controller test.",
+      "sha256": "6232ff1c696a14be74b65ae5062d79203d24bd69d6e65ebabc40dd45eb83b597",
+      "bytes": 35241
+    },
+    {
+      "file": "v7-olivine-port-city-entrance-outside-0-front.mp4",
+      "kind": "V7 controller pass",
+      "caption": "Exact independent visible leaf and native return/walk-away during the dry-floor controller test.",
+      "sha256": "63a9c356fedc37f718ea9e7e499cb15dea987681a6072c40525cd947259f96b3",
+      "bytes": 34070
+    },
+    {
+      "file": "v7-olivine-port-city-entrance-outside-1-front.mp4",
+      "kind": "V7 controller pass",
+      "caption": "Exact independent visible leaf and native return/walk-away during the dry-floor controller test.",
+      "sha256": "aca3fd72bf77e119d46220000c8677bac9afd6c1527167e63645cc7de2f0853a",
+      "bytes": 29675
+    },
+    {
+      "file": "v7-olivine-port-city-entrance-inside-0-front.mp4",
+      "kind": "V7 controller pass",
+      "caption": "Exact independent visible leaf and native return/walk-away during the dry-floor controller test.",
+      "sha256": "3cafc443cd7cebe7f2bf5195e2c7799d6e8f74c0c7aaa2c274266161d5251b23",
+      "bytes": 50370
+    },
+    {
+      "file": "v7-olivine-port-city-entrance-inside-1-front.mp4",
+      "kind": "V7 controller pass",
+      "caption": "Exact independent visible leaf and native return/walk-away during the dry-floor controller test.",
+      "sha256": "005e907dfc82bd566672b7540c46e34c8f530feb7056ab463bd33564c3fe4a6b",
+      "bytes": 50032
+    },
+    {
+      "file": "v7-olivine-gym-hallway-outside-0-front.mp4",
+      "kind": "V7 controller pass",
+      "caption": "Exact independent visible leaf and native return/walk-away during the dry-floor controller test.",
+      "sha256": "5a12a392effea305cd2357c46c1c7243ac1e691b5ebd4b32d952cdfa32f255fd",
+      "bytes": 22452
+    },
+    {
+      "file": "v7-olivine-gym-hallway-outside-2-front.mp4",
+      "kind": "V7 controller pass",
+      "caption": "Exact independent visible leaf and native return/walk-away during the dry-floor controller test.",
+      "sha256": "a45ae31611b679d7a20163d58ce5ecfa25214571127800a20b2499bf1eedcab9",
+      "bytes": 22411
+    },
+    {
+      "file": "v7-olivine-harbor-office-inside-0-front.mp4",
+      "kind": "V7 controller pass",
+      "caption": "Exact independent visible leaf and native return/walk-away during the dry-floor controller test.",
+      "sha256": "bb691eed3a12aa4da96791dc00138ad4e4f7fcb2ec34dc2164976b5be23c1f6f",
+      "bytes": 40577
+    },
+    {
+      "file": "v7-olivine-harbor-office-inside-1-front.mp4",
+      "kind": "V7 controller pass",
+      "caption": "Exact independent visible leaf and native return/walk-away during the dry-floor controller test.",
+      "sha256": "14770d8e018caf80b7000f7311e4a4af27c8b32edf5dce1e63e50582e7e4d648",
+      "bytes": 40527
+    },
+    {
+      "file": "v7-olivine-port-inspection-side-outside-1-front.mp4",
+      "kind": "V7 controller pass",
+      "caption": "Exact independent visible leaf and native return/walk-away during the dry-floor controller test.",
+      "sha256": "fb353dc62e313dff6a70e04d04af26ae038ebf80833ba866ab041eb8e4381ac3",
+      "bytes": 36284
+    },
+    {
+      "file": "v7-olivine-lighthouse-balcony-outside-1-front.mp4",
+      "kind": "V7 controller pass",
+      "caption": "Exact independent visible leaf and native return/walk-away during the dry-floor controller test.",
+      "sha256": "5e4d427ab278e6acddad77890a5e6e39ea65f36bec27d0f8b25a3b883fd0e68a",
+      "bytes": 17050
+    }
+  ]
+}

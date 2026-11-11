@@ -38,7 +38,7 @@
           14
         ]
       ],
-      "status": "V7 controller and native overview verified; final V8 exact-ROM rerun pending"
+      "status": "Current B11 map/door/landmark controller coverage PASS; source placement/art reviewed; owner visual acceptance pending"
     },
     {
       "source_model": 168,
@@ -160,7 +160,7 @@
     {
       "area": "OlivineCity_Lighthouse_6F",
       "meaning": "lantern room",
-      "status": "Original substantial circular mechanical lantern housing, purple native floor and preserved actor8,6; final V8 compiled view pending",
+      "status": "Current B11 map/door/landmark controller coverage PASS; source placement/art reviewed; owner visual acceptance pending",
       "source_model": 122,
       "native_origin": [
         7,
@@ -199,7 +199,7 @@
         1,
         2
       ],
-      "status": "Original green fern/terracotta pots, source blocked footprints preserved; final V8 view pending"
+      "status": "Current B11 map/door/landmark controller coverage PASS; source placement/art reviewed; owner visual acceptance pending"
     }
   ],
   "adaptations": [
@@ -218,10 +218,18 @@
     "isolated_generator": "generate then exact check PASS",
     "isolated_resource_validator": "full image dimensions, all glyph bounds, native source primary/secondary preservation, exact derived lift panels PASS",
     "static_native_views": "all authored maritime maps rendered/inspected before delivery build; these are not emulator screenshots",
-    "actual_delivery_rom_gameplay": "PENDING coordinated root build",
+    "actual_delivery_rom_gameplay": "PASS current frozen B11 maritime maps in24-map tour,60 Olive doorway fronts/168 approaches,10 special journeys,51 services,25 Save/Continue cases and applicable collision/material tests; owner visual acceptance pending",
     "owner_delta_visual_acceptance": "PENDING",
-    "v7_diagnostic_gameplay": "PASS24-map normal-controller tour182 transitions/174 warp trials, services27, saves21, four lift cases and six special journeys; distinct earlier ROM0734501b..."
+    "v7_diagnostic_gameplay": "PASS24-map normal-controller tour182 transitions/174 warp trials, services27, saves21, four lift cases and six special journeys; distinct earlier ROM0734501b...",
+    "native_views": "Actual current B11 native24-frame1x sheet inspected alongside full static source layouts; entry screenshots do not expose every prop"
   },
   "per_source_instance_coverage": "olivine-landmark-prop-coverage.json (42 instances; source furniture distinct from story actors)",
-  "independent_source_instance_audit": "42/42 source record keys/model IDs/anchors independently checked;41 represented/adapted instances plus1 explicitly off-room source machine cropped"
+  "independent_source_instance_audit": "42/42 source record keys/model IDs/anchors independently checked;41 represented/adapted instances plus1 explicitly off-room source machine cropped",
+  "source_revision": "489c404346f572aefb6856b3dd48a9b364a08ceb",
+  "rom_sha256": "df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4",
+  "historical_b9_identity": {
+    "source_revision": "5664fecee4337c5bdd442583e24cc91c09c0a0cd",
+    "rom_sha256": "d5abac0deabc7d592eba302122b3d15c08501947f0f601eda7b5026da9ac6772",
+    "actual_gameplay": "PASS finalB9 tour/60doorsegments/10specials/51services/25saves; see OLIVINE_COMPLETION_QA09.json"
+  }
 }

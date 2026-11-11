@@ -1,0 +1,16 @@
+Normal old battery-save Continue: EcruteakCity_BellTower_9F (7, 3) PASS
+Actual survey desk enables RAM-only water access without changing saved flags: PASS
+Actual controller visits/return, healing and retained starter/party: PASS 0 target maps 18 transitions
+All three closed facade labels, ordinary front approach and control return: PASS
+All six communication staff: actual front-counter A dialogue, correct NPC and controls returned: PASS
+Actual optional performance: all five move and return, controls released: PASS
+Actual Mart Buy menu, original stock, one Poke Ball purchase and return: PASS
+Actual Center PC power/menu/cancel and unchanged box/party bytes: PASS
+Actual rebuilt Center nurse heals and keeps heal ID: PASS
+Normal Save/fresh-core Continue and exact position/party: center-normal-save PASS
+Normal Save/fresh-core Continue and exact position/party: restored-basement-floor-save PASS
+Restored B1F lower public row normal Save/Continue, walking away and reciprocal stairs: PASS
+Normal Save/fresh-core Continue and exact position/party: house-normal-save PASS
+Normal Save/fresh-core Continue and exact position/party: old-shared-layout-fixture PASS
+Actual stepping off both bridge halves returns safely to entrance: PASS
+Actual Morty practice loss -> rebuilt local Center, heal and correct nurse arrival: PASS

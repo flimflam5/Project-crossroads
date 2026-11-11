@@ -1,0 +1,21 @@
+{
+  "run_id": 43015464700,
+  "emerald_build_and_regressions": "PASS",
+  "other_build_docs_release_jobs": "PASS",
+  "battle_test_job_at_artifact_verification": "IN_PROGRESS",
+  "url": "https://github.com/flimflam5/Project-crossroads/actions/runs/43015464700",
+  "artifact_id": 13852472967,
+  "artifact_name": "black-ledger-cities-qa09-313f831ad0c1214cd1697688598c0799a4351cea",
+  "feature_source_commit": "489c404346f572aefb6856b3dd48a9b364a08ceb",
+  "ci_checkout_commit": "313f831ad0c1214cd1697688598c0799a4351cea",
+  "feature_and_ci_tree": "cb965105c9e68132399126370ee9d30de49ca790",
+  "synthetic_merge_tree_equals_feature_tree": true,
+  "zip_sha256": "0ac0907229395624100967db68fe96bc7058ce83c78f6b3a22c5e63c91606ad6",
+  "rom_sha256": "e5357147a69541cc16dfddd2dadbc27f85502c5cade2ebb618ff8eddd905ccae",
+  "compiler": "arm-none-eabi-gcc (15:14.2.rel1-1) 14.2.1 20241119",
+  "crc_and_embedded_rom_hash_verified": true,
+  "local_emulator_rom_sha256": "df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4",
+  "same_binary_as_local": false,
+  "emulator_results_apply_to_ci_binary": false,
+  "note": "Actual successful CI Emerald artifact verified separately; use the local final tested-byte delivery for owner QA. Same source, differing compilers/binaries are not interchangeable evidence."
+}

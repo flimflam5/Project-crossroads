@@ -1,0 +1,51 @@
+{
+  "source_commit": "489c404346f572aefb6856b3dd48a9b364a08ceb",
+  "rom_sha256": "df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4",
+  "elf_sha256": "4fd33669202493ee44b17a1afd46158203eb52c011df677d4186fd011d0a090a",
+  "source_battery_sha256": "b03ff1ef488fbd25de016e828483bc3001787b84e450a45eaa0ac12a11de30ab",
+  "source_battery_unchanged": true,
+  "suites": [
+    {
+      "suite": "olivine-tour",
+      "exit_code": 0,
+      "output": "build/qa09-olivine-tour-v11",
+      "log": "/tmp/qa09-olivine-tour-v11.log"
+    },
+    {
+      "suite": "olivine-saves",
+      "exit_code": 0,
+      "output": "build/qa09-olivine-saves-v11",
+      "log": "/tmp/qa09-olivine-saves-v11.log"
+    },
+    {
+      "suite": "olivine-services",
+      "exit_code": 0,
+      "output": "build/qa09-olivine-services-v11",
+      "log": "/tmp/qa09-olivine-services-v11.log"
+    },
+    {
+      "suite": "olivine-collision",
+      "exit_code": 0,
+      "output": "build/qa09-olivine-collision-v11",
+      "log": "/tmp/qa09-olivine-collision-v11.log"
+    },
+    {
+      "suite": "mart-props",
+      "exit_code": 0,
+      "output": "build/qa09-mart-props-v11",
+      "log": "/tmp/qa09-mart-props-v11.log"
+    },
+    {
+      "suite": "olivine-materials",
+      "exit_code": 0,
+      "output": "build/qa09-olivine-materials-v11",
+      "log": "/tmp/qa09-olivine-materials-v11.log"
+    },
+    {
+      "suite": "center-counter-after",
+      "exit_code": 0,
+      "output": "build/qa09-center-counter-after-v11",
+      "log": "/tmp/qa09-center-counter-after-v11.log"
+    }
+  ]
+}
