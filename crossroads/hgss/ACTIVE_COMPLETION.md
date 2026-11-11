@@ -1,3 +1,14 @@
+# Workspace recovery required — QA08
+
+Read [QA08_INTERRUPTION_CHECKPOINT.md](QA08_INTERRUPTION_CHECKPOINT.md) first.
+Ecruteak B2 fd15124245 is pushed and its exact local ROM/controller evidence
+retained. A later source-only f83 import fix passes both story-check jobs.
+Olivine facade conversion/source references were written locally but remain
+UNCOMMITTED and unintegrated. The workspace became unavailable before city/room
+implementation; inspect and preserve all surviving files before fast-forwarding.
+No new Olivine ROM or completion claim exists. Routine Olivine work remains
+authorized once execution access returns. No reset/merge/expansion elsewhere.
+
 # Current QA08 B2 continuation
 
 Read ECRUTEAK_QA08_B2.md. Branch feature/ecruteak-olivine-doorways-qa08.
