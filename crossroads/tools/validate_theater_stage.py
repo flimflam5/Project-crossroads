@@ -5,7 +5,7 @@ All source coordinates, movement bits, metatile behavior and non-stage visible
 pixels must match the actual 3f935 checkpoint. A packing change is not a license
 to alter other furniture. This complements the separate13-bench/source checks.
 """
-import argparse,functools,io,json,struct,subprocess
+import argparse,functools,hashlib,io,json,struct,subprocess
 from pathlib import Path
 from PIL import Image,ImageChops
 from build_hgss_theater_assets import COLORS
@@ -36,13 +36,20 @@ def validate(screenshot=None):
  before=list(words(data(l['blockdata_filepath'],True)));after=words(data(l['blockdata_filepath']));w,h=l['width'],l['height'];expected=before.copy();changed=set()
  for d in c['changes']:
   i=d['y']*w+d['x'];assert expected[i]==d['before'];expected[i]=d['after'];changed.add(i)
+ audience=load('crossroads/hgss/contracts/theater-audience-qa10.json')
+ assert audience['source_commit']=='5664fecee4337c5bdd442583e24cc91c09c0a0cd'
+ for d in audience['raw_changes']:
+  i=d['y']*w+d['x'];assert expected[i]==d['before'];expected[i]=d['after']
+ audience_pixels={d['y']*w+d['x']:d for d in audience['pixel_changes']}
  assert list(after)==expected,'Unexpected stage cell or unrelated room change'
  assert len(changed)==69
  oldrender,oldattr=renderer('hgss_temple',True);newrender,newattr=renderer('hgss_theater')
  for i,(a,b)in enumerate(zip(before,after)):
   assert a&0xfc00==b&0xfc00,('Theater collision/elevation changed',i%w,i//w)
   assert oldattr(a&1023)==newattr(b&1023),('Theater behavior/layer changed',i%w,i//w)
-  if i not in changed:assert oldrender(a&1023).tobytes()==newrender(b&1023).tobytes(),('Unrelated visible pixel changed',i%w,i//w)
+  if i not in changed:
+   if i in audience_pixels:assert hashlib.sha256(newrender(b&1023).tobytes()).hexdigest()==audience_pixels[i]['after_rgba_sha256'],('Audience pixels differ from exact independent contract',i%w,i//w)
+   else:assert oldrender(a&1023).tobytes()==newrender(b&1023).tobytes(),('Unrelated visible pixel changed',i%w,i//w)
  # Every shared byte stays immutable, independently of the new private pool.
  for path in ['tiles.png','metatiles.bin','metatile_attributes.bin']+[f'palettes/{i:02}.pal'for i in range(16)]:
   p='data/tilesets/secondary/hgss_temple/'+path;a,b=data(p),data(p,True)
@@ -52,7 +59,7 @@ def validate(screenshot=None):
   assert a==b,('Shared Temple changed',path)
  assert json.loads(data('data/maps/EcruteakCity_DanceTheater/map.json'))==json.loads(data('data/maps/EcruteakCity_DanceTheater/map.json',True)),'Actors/scripts/warps changed'
  manifest=load('crossroads/hgss/art/theater/manifest.json');assert manifest['tiles']<=512 and manifest['metatiles']<=512
- result=dict(source_commit=BASE,authorized_changed_cells=69,unchanged_visible_cells=len(before)-69,collision_elevation_behavior_unchanged_cells=len(before),shared_temple_unchanged=True)
+ result=dict(source_commit=BASE,authorized_changed_cells=69,audience_authorized_pixel_cells=95,unchanged_visible_cells=len(before)-69-95,collision_elevation_behavior_unchanged_cells=len(before),shared_temple_unchanged=True)
  if screenshot:
   frame=Image.open(screenshot).convert('RGB');assert frame.size==(240,160)
   a=manifest['specs']['stage_backdrop'];expected=Image.new('RGB',(192,32))
@@ -65,7 +72,9 @@ def validate(screenshot=None):
   assert len(matches)==1,('Compiled/native Theater backdrop does not match6144 expected pixels',matches)
   result.update(native_size=[240,160],compiled_backdrop_pixels_matched=6144,backdrop_top_left=matches[0])
   dest=Path(screenshot).with_suffix('.stage-pixels.json');dest.write_text(json.dumps(result,indent=2)+'\n')
- print('Theater stage exact69-cell art migration; all266 physics cells and197 other-cell pixels preserved; shared Temple unchanged: PASS')
+ from validate_theater_audience import validate as validate_audience
+ validate_audience()
+ print('Theater stage exact69-cell art migration plus95 explicitly contracted audience pixels;all266physics and remaining102cells preserved;shared Temple unchanged: PASS')
  if screenshot:print('Compiled native stage6144/6144 pixels, gold crest/red lanterns: PASS')
  return result
 if __name__=='__main__':

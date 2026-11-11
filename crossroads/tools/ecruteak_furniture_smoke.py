@@ -24,6 +24,8 @@ def trial(label,n,point,button,expected=None,record=False):
 go('EcruteakCity_DanceTheater');walk((7,6));frames(30)
 lib.emu_image(str(out/'theater-stage.png').encode())
 subprocess.run([sys.executable,str(Path(__file__).with_name('validate_theater_stage.py')),'--screenshot',str(out/'theater-stage.png')],check=True)
+walk((8,11));frames(30);lib.emu_image(str(out/'theater-audience.png').encode())
+subprocess.run([sys.executable,str(Path(__file__).with_name('validate_theater_audience.py')),'--screenshot',str(out/'theater-audience.png')],check=True)
 trial('theater-front-aisle','EcruteakCity_DanceTheater',(8,9),128,(8,10),True)
 trial('theater-front-aisle-east','EcruteakCity_DanceTheater',(8,10),16,(9,10),True)
 facts=json.loads(Path('crossroads/hgss/canonical_events/ecruteak-interior-geometry.json').read_text())['MAP_ECRUTEAK_DANCE_THEATER'];benches=sorted({(int(p['tile_x']),int(p['tile_z']))for c in facts['chunks']for p in c['props']if p['model']==56})

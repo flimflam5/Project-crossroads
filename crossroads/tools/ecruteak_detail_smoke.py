@@ -44,6 +44,9 @@ print('All three closed facade labels, ordinary front approach and control retur
 for name,centers,front_y,npc_y in [('EcruteakCity_PokemonCenter_1F',(2,6,11),4,2),('EcruteakCity_PokemonCenter_B1F',(4,8,12),6,4)]:
  go(name)
  for x in centers:
+  # Field objects outside the camera are intentionally not spawned. Reach the
+  # real front approach before reading the actual receptionist's local ID.
+  walk((x,front_y));frames(20)
   expected=next(read(syms['gObjectEvents']+j*36+8,1)for j in range(16)if read(syms['gObjectEvents']+j*36,1)&1 and(read(syms['gObjectEvents']+j*36+16,2)-7,read(syms['gObjectEvents']+j*36+18,2)-7)==(x,npc_y))
   talk((x,front_y));assert read('sLockFieldControls',1)and read('gSpecialVar_LastTalked',2)==expected,(name,x,'Front counter failed actual NPC dialogue')
   image(name+'-front-desk-'+str(x));close();assert current()==name and pos()==(x,front_y)and not read('sLockFieldControls',1)

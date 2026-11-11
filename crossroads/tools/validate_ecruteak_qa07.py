@@ -157,6 +157,12 @@ def validate():
                 assert stage_contract['source_commit']=='3f935d5e8600c5a280b9172b555edb35ca52b6c0'
                 for d in stage_contract['changes']:
                     i=d['y']*layouts[m['layout']]['width']+d['x'];assert expected_raw[i]==d['before'];expected_raw[i]=d['after']
+                # Actual final-HGSS audience material correction, after the
+                # exact seating and69stage-cell migrations above. Retain every
+                # before-value assertion; this is not a mutable new baseline.
+                c=load('crossroads/hgss/contracts/theater-audience-qa10.json');assert c['source_commit']=='5664fecee4337c5bdd442583e24cc91c09c0a0cd'
+                for d in c['raw_changes']:
+                    i=d['y']*layouts[m['layout']]['width']+d['x'];assert expected_raw[i]==d['before'];expected_raw[i]=d['after']
             if n in gate_contract['maps']:
                 assert gate_contract['source_commit']=='3f935d5e8600c5a280b9172b555edb35ca52b6c0'
                 assert expected_raw==gate_contract['before_words']

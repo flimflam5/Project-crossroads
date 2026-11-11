@@ -62,6 +62,13 @@ def generate(check=False):
     for prop in chunk['props']:
      if prop['model']!=56:continue
      x,y=int(prop['tile_x']),int(prop['tile_z']);stamp('theater_bench',x,y);tiles[y*w+x]=0x400|ART['theater_bench']['start']
+   # Actual final HGSS audience uses a green checker and purple floor
+   # cushions. The private seat drawing keeps its historical895 ID; replace
+   # only audience ground wood, leaving the brown raised stage/steps intact.
+   for y in range(9,h):
+    for x in range(w):
+     i=y*w+x
+     if tiles[i]&1023==ART['wood']['start']:tiles[i]=(tiles[i]&0xfc00)|stage_art['audience_floor']['start']
    m['object_events'][0].update(x=10,y=9)
    while len(m['object_events'])<6:
     o=copy.deepcopy(m['object_events'][1]);o.pop('local_id',None);m['object_events'].append(o)

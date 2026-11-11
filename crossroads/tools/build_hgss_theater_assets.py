@@ -2,13 +2,15 @@
 """Original GBA Theater stage art; inspected HGSS captures are references only.
 
 A private secondary repacks the 25 historical Temple metatiles used by this
-room. Their visible pixels/attributes/IDs stay fixed. No shared Temple graphics
-or engine capacity is changed. New backdrop and rope art append after them.
+room. IDs/attributes stay fixed; only its13 seat drawings become source-purple
+cushions. All other retained pixels stay fixed. No shared Temple graphics or
+engine capacity changes. New backdrop, rope and checker art append privately.
 """
 import argparse, functools, io, json, struct
 from pathlib import Path
 from tileset_registration import upsert
 from PIL import Image, ImageDraw
+from hgss_theater_audience_art import artwork as audience_artwork, COLORS as AUDIENCE_COLORS, PALETTE_BANK as AUDIENCE_BANK
 
 R=Path(__file__).resolve().parents[2]
 D=R/'data/tilesets/secondary/hgss_theater'
@@ -71,8 +73,19 @@ def build(check=False,preview=None):
             for x in range(im.width//16):
                 refs=[pack(im.crop((x*16+dx,y*16+dy,x*16+dx+8,y*16+dy+8)),7) for dx,dy in [(0,0),(8,0),(0,8),(8,8)]]
                 words.extend([0x6200]*4+refs);attrs.append(0x1000)
+    audience=audience_artwork()
+    for name,im in audience.items():
+        refs=[pack(im.crop((dx,dy,dx+8,dy+8)),AUDIENCE_BANK) for dx,dy in [(0,0),(8,0),(0,8),(8,8)]]
+        if name=='audience_floor':
+            specs[name]=dict(start=512+len(attrs),width=1,height=1)
+            words.extend(refs+[0]*4);attrs.append(oldattrs[513-512])
+        else:
+            # Keep the13 historical seat IDs/footprints, while replacing only
+            # this private drawing with the actual source's purple cushion.
+            specs[name]=dict(start=895,width=1,height=1)
+            words[(895-512)*8:(895-511)*8]=refs+[0]*4
     assert len(attrs)<=512
-    manifest=dict(specs=specs,tiles=cursor,metatiles=len(attrs),retained_temple_metatiles=USED,palette_bank=7,source='Original indexed GBA pixel drawing guided by inspected final HGSS Theater screenshots; no source image pixels imported',reference_urls=['https://www.pokepedia.fr/images/f/f6/Salle_de_Danse_Rosalia_HGSS.png','https://www.pokebip.com/pages/jeux-video/pokemon-heartgold-soulsilver/soluce-du-jeu/images/figure83.png'])
+    manifest=dict(specs=specs,tiles=cursor,metatiles=len(attrs),retained_temple_metatiles=USED,private_cushion_pixel_override=895,palette_bank=7,audience_palette_bank=AUDIENCE_BANK,source='Original indexed GBA pixel drawing guided by inspected final HGSS Theater screenshots; no source image pixels imported',reference_urls=['https://www.pokepedia.fr/images/f/f6/Salle_de_Danse_Rosalia_HGSS.png','https://www.pokebip.com/pages/jeux-video/pokemon-heartgold-soulsilver/soluce-du-jeu/images/figure83.png','https://images.wikidexcdn.net/mwuploads/wikidex/0/09/latest/20100424181308/Teatro_de_Danza_HGSS.jpg'])
     if preview:
         target=Path(preview);target.parent.mkdir(parents=True,exist_ok=True);rgb=Image.new('RGB',(192,64));rgb.paste(backdrop.convert('RGB'),(0,0))
         for x in range(12):rgb.paste(rope.convert('RGB'),(x*16,48))
@@ -87,9 +100,10 @@ def build(check=False,preview=None):
     for i in range(16):
         src=temple/f'palettes/{i:02}.pal';content=src.read_bytes()
         if i==7:content=('JASC-PAL\n0100\n16\n'+'\n'.join(' '.join(map(str,c)) for c in COLORS)+'\n').replace('\n','\r\n').encode()
+        if i==AUDIENCE_BANK:content=('JASC-PAL\n0100\n16\n'+'\n'.join(' '.join(map(str,c)) for c in AUDIENCE_COLORS)+'\n').replace('\n','\r\n').encode()
         write(D/f'palettes/{i:02}.pal',content)
     write(A/'manifest.json',json.dumps(manifest,indent=2)+'\n')
-    for n,im in [('stage_backdrop',backdrop),('stage_rope',rope)]:
+    for n,im in [('stage_backdrop',backdrop),('stage_rope',rope)]+list(audience.items()):
         b=io.BytesIO();im.save(b,format='PNG',bits=4,transparency=0);write(A/(n+'.png'),b.getvalue())
     begin='// BEGIN ECRUTEAK THEATER STAGE';end='// END ECRUTEAK THEATER STAGE'
     blocks={

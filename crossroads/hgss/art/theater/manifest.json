@@ -9,10 +9,20 @@
       "start": 928,
       "width": 1,
       "height": 1
+    },
+    "audience_floor": {
+      "start": 929,
+      "width": 1,
+      "height": 1
+    },
+    "audience_cushion": {
+      "start": 895,
+      "width": 1,
+      "height": 1
     }
   },
-  "tiles": 137,
-  "metatiles": 417,
+  "tiles": 143,
+  "metatiles": 418,
   "retained_temple_metatiles": [
     512,
     513,
@@ -40,10 +50,13 @@
     888,
     895
   ],
+  "private_cushion_pixel_override": 895,
   "palette_bank": 7,
+  "audience_palette_bank": 8,
   "source": "Original indexed GBA pixel drawing guided by inspected final HGSS Theater screenshots; no source image pixels imported",
   "reference_urls": [
     "https://www.pokepedia.fr/images/f/f6/Salle_de_Danse_Rosalia_HGSS.png",
-    "https://www.pokebip.com/pages/jeux-video/pokemon-heartgold-soulsilver/soluce-du-jeu/images/figure83.png"
+    "https://www.pokebip.com/pages/jeux-video/pokemon-heartgold-soulsilver/soluce-du-jeu/images/figure83.png",
+    "https://images.wikidexcdn.net/mwuploads/wikidex/0/09/latest/20100424181308/Teatro_de_Danza_HGSS.jpg"
   ]
 }

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Use a copied battery save to claim the explicit owner-requested QA kit."""
 import sys,runpy,struct,argparse
+from pathlib import Path
 p=argparse.ArgumentParser();p.add_argument('--save',required=True);p.add_argument('--library',default='/tmp/johto-bridge.so');p.add_argument('--output',default='build/qa03-kit');args=p.parse_args()
 sys.argv=['johto_network_smoke.py','--save',args.save,'--library',args.library,'--output',args.output,'--targets','']
 d=runpy.run_path('crossroads/tools/johto_network_smoke.py');globals().update({n:d[n] for n in ['read','write','sb','frames','key','go','walk','lib']})
@@ -31,5 +32,5 @@ expected=bytearray(oldflags)
 for f in [0x20,flag]:expected[f//8]|=1<<(f%8)
 assert bytes(read(sb()+0x1270+i,1) for i in range(300))==bytes(expected),'Only shoes and one-time gift flags may change'
 claim();assert read(countptr,1)==before+1
-lib.emu_image(b'build/qa03-kit/claimed.png')
+lib.emu_image(str(Path(args.output)/'claimed.png').encode())
 print('Actual R+talk/accept: Pidgeot species18, level100, Fly move19, running flag, original party/starter retained, repeat grant prevented: PASS',flush=True)
