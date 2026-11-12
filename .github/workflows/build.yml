@@ -19,8 +19,15 @@ on:
       - feature/johto-visual-collision-01
       - feature/hgss-johto-gym-integration-01
       - feature/ecruteak-dependability-qa07
+      - feature/qa10-download-delivery
   pull_request:
   workflow_dispatch:
+    inputs:
+      delivery_only:
+        description: Publish the exact verified QA10 downloads without rebuilding the game
+        type: boolean
+        required: false
+        default: false
 
 env:
   GAME_REVISION: 0
@@ -31,7 +38,7 @@ env:
 
 jobs:
   build-emerald:
-    if: github.actor != 'allcontributors[bot]'
+    if: github.actor != 'allcontributors[bot]' && !((github.event_name == 'workflow_dispatch' && inputs.delivery_only) || (github.event_name == 'push' && github.ref == 'refs/heads/feature/qa10-download-delivery'))
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -202,7 +209,7 @@ jobs:
           retention-days: 14
 
   build-firered:
-    if: github.actor != 'allcontributors[bot]'
+    if: github.actor != 'allcontributors[bot]' && !((github.event_name == 'workflow_dispatch' && inputs.delivery_only) || (github.event_name == 'push' && github.ref == 'refs/heads/feature/qa10-download-delivery'))
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -237,7 +244,7 @@ jobs:
         run: make firered -j$(nproc) -O
 
   build-leafgreen:
-    if: github.actor != 'allcontributors[bot]'
+    if: github.actor != 'allcontributors[bot]' && !((github.event_name == 'workflow_dispatch' && inputs.delivery_only) || (github.event_name == 'push' && github.ref == 'refs/heads/feature/qa10-download-delivery'))
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -272,7 +279,7 @@ jobs:
         run: make leafgreen -j$(nproc) -O
 
   release:
-    if: github.actor != 'allcontributors[bot]'
+    if: github.actor != 'allcontributors[bot]' && !((github.event_name == 'workflow_dispatch' && inputs.delivery_only) || (github.event_name == 'push' && github.ref == 'refs/heads/feature/qa10-download-delivery'))
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -309,7 +316,7 @@ jobs:
         run: make -j$(nproc) release
 
   test:
-    if: github.actor != 'allcontributors[bot]'
+    if: github.actor != 'allcontributors[bot]' && !((github.event_name == 'workflow_dispatch' && inputs.delivery_only) || (github.event_name == 'push' && github.ref == 'refs/heads/feature/qa10-download-delivery'))
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -351,7 +358,7 @@ jobs:
   # Gate job: satisfies the "build" branch protection rule.
   # Passes only when all parallel build/test jobs succeed.
   build:
-    if: github.actor != 'allcontributors[bot]'
+    if: github.actor != 'allcontributors[bot]' && !((github.event_name == 'workflow_dispatch' && inputs.delivery_only) || (github.event_name == 'push' && github.ref == 'refs/heads/feature/qa10-download-delivery'))
     runs-on: ubuntu-latest
     needs: [build-emerald, build-firered, build-leafgreen, release, test]
     steps:
@@ -359,7 +366,7 @@ jobs:
         run: echo "All builds and tests passed."
 
   docs_validate:
-    if: github.actor != 'allcontributors[bot]'
+    if: github.actor != 'allcontributors[bot]' && !((github.event_name == 'workflow_dispatch' && inputs.delivery_only) || (github.event_name == 'push' && github.ref == 'refs/heads/feature/qa10-download-delivery'))
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -369,9 +376,75 @@ jobs:
         run: .github/docs_validate/inclusive_summary.py
 
   allcontributors:
-    if: github.actor == 'allcontributors[bot]'
+    if: github.actor == 'allcontributors[bot]' && !((github.event_name == 'workflow_dispatch' && inputs.delivery_only) || (github.event_name == 'push' && github.ref == 'refs/heads/feature/qa10-download-delivery'))
     runs-on: ubuntu-latest
     needs: []
     steps:
       - name: Automatically pass for allcontributors
         run: echo "CI automatically passes for allcontributors" && exit 0
+
+
+  # Delivery is isolated from compilation: reproduce the already-tested ROM,
+  # verify every source/asset checksum, then use the hosted runner's own token.
+  qa10-delivery:
+    if: (github.event_name == 'workflow_dispatch' && inputs.delivery_only) || (github.event_name == 'push' && github.ref == 'refs/heads/feature/qa10-download-delivery')
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: write
+    concurrency:
+      group: qa10-olivine-aqua-a1-downloads
+      cancel-in-progress: false
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+    steps:
+      - name: Checkout delivery recipe
+        uses: actions/checkout@v4
+
+      - name: Fetch the immutable tested source
+        run: git fetch --no-tags --depth=1 origin 3138de89d9e57b816d3b7d03e727f04d69c2d168
+
+      - name: Download the immutable CI base artifact
+        run: |
+          mkdir -p build/qa10-download-recovery
+          gh api repos/flimflam5/Project-crossroads/actions/artifacts/13924772308/zip > build/qa10-download-recovery/base.zip
+
+      - name: Reproduce and verify the tested downloads
+        id: prepare_downloads
+        run: python3 crossroads/tools/prepare_qa10_downloads.py --base-archive build/qa10-download-recovery/base.zip --output build/qa10-downloads
+
+      - name: Publish or verify the stable QA prerelease assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          tag=qa10-olivine-aqua-a1
+          source_commit=3138de89d9e57b816d3b7d03e727f04d69c2d168
+          stem=BlackLedger-Olivine-Aqua-QA10-A1
+          asset_names=("$stem.gba" "$stem.zip" "$stem-Evidence.zip" "$stem-SHA256.txt" "$stem-Delivery.json")
+          if gh release view "$tag" --repo "$GH_REPO" >/dev/null 2>&1; then
+            # Never overwrite a release or silently replace a different build.
+            release_metadata=$(gh release view "$tag" --repo "$GH_REPO" --json isDraft,isPrerelease,targetCommitish)
+            python3 -c 'import json,sys; j=json.loads(sys.argv[1]); assert not j["isDraft"] and j["isPrerelease"] and j["targetCommitish"]==sys.argv[2], "Existing release identity differs; refusing replacement"' "$release_metadata" "$source_commit"
+            existing_dir=$(mktemp -d)
+            trap 'rm -rf "$existing_dir"' EXIT
+            gh release download "$tag" --repo "$GH_REPO" --dir "$existing_dir"
+            for name in "${asset_names[@]}"; do
+              cmp -- "build/qa10-downloads/$name" "$existing_dir/$name"
+            done
+            echo 'Existing QA prerelease assets match exactly; no changes made.'
+          else
+            assets=()
+            for name in "${asset_names[@]}"; do assets+=("build/qa10-downloads/$name"); done
+            gh release create "$tag" --repo "$GH_REPO" --target "$source_commit" --prerelease --latest=false --title "Black Ledger QA10 A1 - Delta review" --notes-file build/qa10-downloads/RELEASE.md "${assets[@]}"
+          fi
+          gh release view "$tag" --repo "$GH_REPO" --json url --jq .url
+
+      - name: Retain verified downloads as an Actions backup
+        if: always() && steps.prepare_downloads.outcome == 'success'
+        uses: actions/upload-artifact@v4
+        with:
+          name: black-ledger-qa10-exact-downloads-${{ github.sha }}
+          path: build/qa10-downloads/*
+          if-no-files-found: error
+          retention-days: 90
