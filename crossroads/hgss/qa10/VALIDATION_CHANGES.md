@@ -191,3 +191,25 @@ The strict assertion rejects the recorded Build2 attributes. The parent applies
 that narrow repair and produces a new frozen ROM. Actual before/after normal
 walking, both exits and Save/Continue require full current Joe sprite visibility
 and native-frame review; an attribute assertion alone is not a playtest.
+
+## Final Build3 preview ownership collision
+
+The first66-command Build3 run retained one failure: the landmark `--check`
+expected its48×48 quay sailboat preview at `sailboat-native.png`, but the later
+city facade generator had correctly written its different96×80 city sailboat
+projection to that same path. Neither failure nor filename implied corrupt game
+data; the two writers had mistakenly shared a review-only artifact name.
+
+The landmark preview now uses `quay-sailboat-native.png`. The original city
+`sailboat-native.png` remains unchanged, and the city generator's `--check` now
+also verifies that preview's dimensions/indexed pixels/palette, so the collision
+cannot silently recur. Both distinct previews are preserved. The new quay PNG
+was produced by executing only the existing pure quantization function in an
+isolated scope, followed by a targeted preview-file write; no map/resource/ROM
+output generation occurred while emulator lanes were active.
+
+Hashes of all11,030 map/layout/tileset/registration/ROM/ELF input files were
+unchanged. Both generator checks were re-executed and passed. The final effective
+66-command ledger retains the original failure and the exact replacement check
+results rather than deleting the diagnostic history. This fix changes preview
+ownership/checking only and requires no new gameplay claim.

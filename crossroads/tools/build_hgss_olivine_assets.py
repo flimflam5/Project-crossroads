@@ -110,6 +110,10 @@ def generate(check=False,measure=False):
     attrs[1][n%512]=(0x1000 if covered or name=='port' and ([x,y] in doors or [x,y] in canopy) else 0)|(0x15 if name=='sailboat' or port_eave else (0x61 if name=='port' else 0x60) if [x,y] in doors else 0)
   out[name]=dict(width=w,height=h,metatiles=ids,door_x=door,door_y=door_y,doors=doors,solid=([[0,h-1],[w-1,h-1]] if name=='pennant_arch' else [[x,y] for y in range(h-2,h) for x in range(w)] if name=='sailboat' else [[x,h-1] for x in range(w)] if name=='parasol' else [[x,y] for y in range(1,h) for x in range(w) if (y>=h-2 or x not in [0,w-1]) and [x,y] not in doors]),palette=bank)
   if name=='port':out[name].update(canopy=canopy,entry_direction='south',approach=[0,-1],design='North-entry visible portal below high canopy; closed south windows, no second false doorway')
+  if check and name=='sailboat':
+   # Detect any future preview ownership collision without changing game data.
+   actual=Image.open(A/'sailboat-native.png')
+   assert actual.mode=='P' and actual.size==q.size and actual.tobytes()==q.tobytes() and actual.getpalette()[:48]==q.getpalette()[:48], 'City sailboat-native preview overwritten by another projection'
   if not check and not measure:q.save(A/(name+'-native.png'),bits=4)
  # The sail extends over both quay paving and sea. Use separate underlays
  # without consuming any new glyphs: water keeps native water behavior/elevation.

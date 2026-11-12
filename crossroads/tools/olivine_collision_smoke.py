@@ -125,12 +125,17 @@ for inside_leaf,column in [(0,23),(3,24)]:
  g['frames']=landing_frames
  try:
   d['warp'](inside_leaf);landing_frames(30)
-  assert current()=='OlivineCity' and pos()==(column,51),(label,'Wrong north arrival',current(),pos())
+  # Native0x61 nonanimated/ladder portals keep the exact destination cell;
+  # unlike0x60/0x69 they do not perform an automatic exit step.
+  assert current()=='OlivineCity' and pos()==(column,52),(label,'Wrong exact nonanimated north arrival',current(),pos())
   object_id=read(syms['gPlayerAvatar']+5,1);facing=read(syms['gObjectEvents']+object_id*36+24,1)&15;assert facing==2,(label,'North exit must face the city',facing)
+  portal_image=out/(label+'-portal.png');lib.emu_image(str(portal_image).encode());portal_visibility=joe_pixels(Image.open(portal_image).convert('RGB'))
+  assert portal_visibility['opaque_expected']>0 and portal_visibility['opaque_hidden']==0,(label,'Portal/canopy hides Joe at exact arrival',portal_visibility)
+  walk((column,51));landing_frames(30)
   image=out/(label+'.png');lib.emu_image(str(image).encode());visibility=joe_pixels(Image.open(image).convert('RGB'))
   assert visibility['opaque_expected']>0 and visibility['opaque_hidden']==0,(label,'Canopy hides Joe on arrival',visibility)
   walk((column,50));landing_frames(24);assert not read('gPlayerAvatar',1)&8 and read('sJohtoTestAccess',1)==0
-  landing_visibility.append(dict(inside_leaf=inside_leaf,arrival=[column,51],facing=facing,actual_framebuffer=visibility,walk_away=pos(),result='PASS'))
+  landing_visibility.append(dict(inside_leaf=inside_leaf,arrival=[column,52],facing=facing,portal_framebuffer=portal_visibility,north_landing=[column,51],actual_framebuffer=visibility,walk_away=pos(),result='PASS'))
  finally:
   g['frames']=native
   if count[0]:subprocess.run(['ffmpeg','-y','-loglevel','error','-framerate','15','-i',str(folder/'%04d.png'),'-pix_fmt','yuv420p',str(out/(label+'.mp4'))],check=True);movies.append(label)

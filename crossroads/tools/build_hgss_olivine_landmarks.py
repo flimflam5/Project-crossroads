@@ -144,7 +144,10 @@ def generate(check=False):
      n=0x100+y*ww+x;general_meta[n*8:n*8+8]=water+top;general_attrs[n]=(0x1000 if y>=hh-2 else 0)|(0x61 if (x,y) in [(5,5),(6,5),(0,3),(0,4)] else 0);ids.append(n)
     else:ids.append(add_meta(water+top))
   scenes[name]=dict(width=ww,height=hh,metatiles=ids,visible=visible)
-  output=io.BytesIO();q.save(output,format='PNG',bits=4);write(f'crossroads/hgss/art/olivine/{name}-native.png',output.getvalue())
+  # The city facade builder owns its96x80 sailboat-native preview. This
+  # independent48x48 quay projection needs a distinct review-only filename.
+  preview='quay-sailboat' if name=='sailboat' else name
+  output=io.BytesIO();q.save(output,format='PNG',bits=4);write(f'crossroads/hgss/art/olivine/{preview}-native.png',output.getvalue())
  planter_source=Image.open(R/'crossroads/hgss/art/olivine/lighthouse-planter-source.png');templepal=[int(v) for line in (source/'palettes/06.pal').read_text().splitlines()[3:] for v in line.split()];planter=quant(planter_source,templepal,(16,32));plant_ids=[]
  for y in range(2):plant_ids.append(add_meta([0x7201]*4+[0x6000|glyph(planter.crop((dx,y*16+dy,dx+8,y*16+dy+8))) for dx,dy in [(0,0),(8,0),(0,8),(8,8)]]))
  output=io.BytesIO();planter.save(output,format='PNG',bits=4);write('crossroads/hgss/art/olivine/lighthouse-planter-native.png',output.getvalue())
