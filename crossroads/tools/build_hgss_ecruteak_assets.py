@@ -120,6 +120,9 @@ def generate(check=False,variant="city"):
  assert len(attrs)<=512
  specs['leaf_ground']=512+len(attrs);words.extend([(v&0xfff)|(5<<12) for v in gm[8:16]]);attrs.append(0x1000)
  if variant=='city':
+  from hgss_ecruteak_courtyard import assets as courtyard_assets
+  courtyard_assets(alloc,words,attrs,specs,empty)
+ if variant=='city':
   # Only the gate uses a previously unused PRIMARY metatile range. Its graphics
   # also fit below512, so routes retain their original WesternCity secondary.
   s=specs['gate'];old=s['start']-512;gm[GATE_PRIMARY*8:(GATE_PRIMARY+49)*8]=words[old*8:(old+49)*8];ga[GATE_PRIMARY:GATE_PRIMARY+49]=attrs[old:old+49]

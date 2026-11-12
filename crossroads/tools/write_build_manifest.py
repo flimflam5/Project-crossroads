@@ -16,7 +16,7 @@ except (OSError, subprocess.CalledProcessError):
     compiler = None
 dirty = bool(subprocess.check_output(['git', 'status', '--porcelain', '--untracked-files=no'], cwd=root))
 manifest = {
-    'version': 'black-ledger-cities-qa09-e2-o1',
+    'version': 'black-ledger-olivine-aqua-qa10-a1',
     'source_commit': sha,
     'source_tree': tree,
     'feature_source_commit': os.environ.get('FEATURE_SOURCE_COMMIT', sha),
@@ -26,11 +26,11 @@ manifest = {
     'rom_sha256': hashlib.sha256(rom.read_bytes()).hexdigest(),
     'rom_bytes': rom.stat().st_size,
     'ci_run_id': os.environ.get('GITHUB_RUN_ID'),
-    'summary': 'HGSS-directed Olivine city, canonical homes/cafe/services/Steel Gym, lighthouse stairs/balcony/native lift and port. Ecruteak source-correct furniture and full-width doors retained. Saves/IDs, owner Gyms, title/music/Joe/starters preserved.',
-    'known_limitations': 'See crossroads/hgss/CITIES_QA09.md and per-city inventories for scope, exact tests and reference adaptations. Owner visual acceptance remains required. Original green-roof report is not positively matched to its source binary. DS online communication, unapproved rewards/story/badges and travel to other regions are deferred; the SS Aqua ship boundary is safe and explicit. No expansion elsewhere.',
+    'summary': 'HGSS-referenced docked S.S. Aqua with eight cabins and seven native maps; coherent north-entry Olivine port, full-width gangway and returns; lighthouse carpets/furnishings/windows and lantern-room finish; canonical Ecruteak directory court. Stable IDs/saves, accepted additions/Gyms, title/music/Joe/starters preserved.',
+    'known_limitations': 'See crossroads/RELEASE_OLIVINE_AQUA_QA10.md and hgss/qa10 for actual per-location tests, reference comparisons and adaptations. Owner Delta/visual acceptance is pending. Physical docked ship exploration is separate from unimplemented voyages: no Vermilion destination, approved travel progression, first-trip quest or rewards are invented. DS online services and unapproved story/badges remain deferred. No regional expansion.',
     'testing': 'Compilation is not playtesting. Follow crossroads/TESTING.md.',
 }
-evidence = root / 'crossroads/qa/qa09/verification-summary.json'
+evidence = root / 'crossroads/qa/qa10/verification-summary.json'
 if evidence.exists():
     verified = json.loads(evidence.read_text())
     manifest['runtime_evidence'] = {

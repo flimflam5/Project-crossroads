@@ -35,7 +35,7 @@ def validate(built=False):
  for before_sign,after_sign in zip(previous_city['bg_events'],city['bg_events']):
   assert {k:v for k,v in after_sign.items() if k not in ['x','y']}=={k:v for k,v in before_sign.items() if k not in ['x','y']},'Accepted signs/scripts must retain identity'
  added_signs=city['bg_events'][len(previous_city['bg_events']):]
- assert {(e['x'],e['y']) for e in added_signs}=={(16,24),(30,18),(35,18),(8,34),(22,53)} and len(added_signs)==5,'Each new physical building sign needs its own interaction'
+ assert {(e['x'],e['y']) for e in added_signs}=={(16,24),(30,18),(35,18),(8,34),(22,50)} and len(added_signs)==5,'Each new physical building sign needs its own interaction'
  assert all(e['type']=='sign' and e['elevation']==0 and e['player_facing_dir']=='BG_EVENT_PLAYER_FACING_ANY' for e in added_signs)
  expected_legacy_doors=[(8,23),(8,28),(13,14),(16,33),(29,33),(31,40),(8,40),(45,39),(14,14)]
  assert len(city['warp_events'])==16
@@ -101,7 +101,14 @@ def validate(built=False):
    v=tt[b*w+a]
    if v&0xc00 or v>>12!=3:continue
    seen.add(n);q.append(n)
- for e in city['warp_events']:assert (e['x'],e['y']+1) in seen,('City threshold has no pedestrian front approach',e)
+ # QA10 changes only the two named Port leaves to the source north approach.
+ # Every other accepted building retains its south-facing front/arrival rule.
+ def city_front(index,e):
+  if index in (13,15):
+   assert (e['x'],e['y'])==((23,52)if index==13 else(24,52)) and e['dest_map']==maps['OlivineCity_PortTerminal']['id']
+   return(e['x'],e['y']-1)
+  return(e['x'],e['y']+1)
+ for i,e in enumerate(city['warp_events']):assert city_front(i,e)in seen,('City threshold has no pedestrian front approach',i,e)
  for e in city['object_events']+city['bg_events']:assert any((e['x']+dx,e['y']+dy) in seen for dx,dy in [(1,0),(-1,0),(0,1),(0,-1)]),('Unreachable city interaction',e)
  # A door leaf is an active transition, not a pedestrian path. Counting it
  # as ordinary floor concealed the first port forecourt's one-way trap: Joe
@@ -117,11 +124,12 @@ def validate(built=False):
    v=tt[b*w+a]
    if v&0xc00 or v>>12!=3:continue
    safe_return.add(point);todo.append(point)
- for e in city['warp_events']:
-  outside=(e['x'],e['y']+1)
+ for i,e in enumerate(city['warp_events']):
+  outside=city_front(i,e)
   assert outside in safe_return,('Outside door arrival trapped behind active thresholds/no dry return',e,outside)
  assert all((x,0) in seen for x in range(21,26)),'North road aperture incomplete'
- assert (23,53) in seen and (24,53) in seen,'Both south-facing GBA port leaves need pedestrian front approaches'
+ assert (23,51)in safe_return and(24,51)in safe_return,'Both north-facing Port leaves need independent dry approaches/returns'
+ assert next(e for e in added_signs if e['script']=='Hgss_OlivineSign_Port')['x']==22 and next(e for e in added_signs if e['script']=='Hgss_OlivineSign_Port')['y']==50,'Port plaque must remain beside the north approach, never buried inside the body'
  center=(R/'data/maps/OlivineCity_PokemonCenter_1F/scripts.inc').read_text();assert 'map_script MAP_SCRIPT_ON_RESUME, CableClub_OnResume' in center,'Preserve nurse initialization'
  assert 'givemon' not in (R/'crossroads/scripts/olivine.inc').read_text()
  if built:

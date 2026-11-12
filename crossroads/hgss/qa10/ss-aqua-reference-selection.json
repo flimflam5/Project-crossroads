@@ -1,0 +1,37 @@
+[
+  {
+    "header": "MAP_SS_AQUA_1F",
+    "matrix": "map_matrix_0171_P01R0301",
+    "event": "278_P01R0301"
+  },
+  {
+    "header": "MAP_SS_AQUA_CAPTAIN_ROOM",
+    "matrix": "map_matrix_0172_P01R0302",
+    "event": "279_P01R0302"
+  },
+  {
+    "header": "MAP_SS_AQUA_1F_SOUTHEAST_ROOMS",
+    "matrix": "map_matrix_0173_P01R0303",
+    "event": "280_P01R0303"
+  },
+  {
+    "header": "MAP_SS_AQUA_1F_SOUTHWEST_ROOMS",
+    "matrix": "map_matrix_0174_P01R0304",
+    "event": "281_P01R0304"
+  },
+  {
+    "header": "MAP_SS_AQUA_1F_NORTHEAST_ROOMS",
+    "matrix": "map_matrix_0175_P01R0305",
+    "event": "282_P01R0305"
+  },
+  {
+    "header": "MAP_SS_AQUA_1F_NORTHWEST_ROOMS",
+    "matrix": "map_matrix_0176_P01R0306",
+    "event": "299_P01R0306"
+  },
+  {
+    "header": "MAP_SS_AQUA_B1F",
+    "matrix": "map_matrix_0177_P01R0307",
+    "event": "300_P01R0307"
+  }
+]

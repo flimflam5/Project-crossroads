@@ -2075,3 +2075,11 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "crossroads/scripts/hgss_olivine_landmarks.inc"
 
 	.include "crossroads/scripts/hgss_olivine_city.inc"
+	.include "data/maps/SSAqua_1F/scripts.inc"
+	.include "data/maps/SSAqua_CaptainRoom/scripts.inc"
+	.include "data/maps/SSAqua_SoutheastCabins/scripts.inc"
+	.include "data/maps/SSAqua_SouthwestCabins/scripts.inc"
+	.include "data/maps/SSAqua_NortheastCabins/scripts.inc"
+	.include "data/maps/SSAqua_NorthwestCabins/scripts.inc"
+	.include "data/maps/SSAqua_B1F/scripts.inc"
+	.include "crossroads/scripts/ss_aqua.inc"

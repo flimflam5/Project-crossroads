@@ -33,7 +33,15 @@ def validate_olivine_graph():
  if not active():return set()
  from validate_hgss_olivine import validate
  validate()
- groups=load('data/maps/map_groups.json');names=[n for n in groups['gMapGroup_CrossroadsOlivine']+groups['gMapGroup_CrossroadsJohtoExpansion'] if n.startswith('OlivineCity') and n!='OlivineCity'];maps={n:load(f'data/maps/{n}/map.json') for n in names};ids={m['id']:n for n,m in maps.items()};ls={l['id']:l for l in load('data/layouts/layouts.json')['layouts']};facts=load('crossroads/hgss/canonical_events/olivine-interior-geometry.json')
+ # Validate the seven exact Aqua floors/components before extending this
+ # every-tile graph. This is not a generic exemption for disconnected rooms.
+ aqua_names=['SSAqua_1F','SSAqua_CaptainRoom','SSAqua_SoutheastCabins','SSAqua_SouthwestCabins','SSAqua_NortheastCabins','SSAqua_NorthwestCabins','SSAqua_B1F'] if (R/'data/maps/SSAqua_1F/map.json').exists() else []
+ if aqua_names:
+  from validate_ss_aqua import validate as validate_aqua
+  aqua_report=validate_aqua()
+  assert [row['map']for row in aqua_report['maps']]==aqua_names
+  assert aqua_report['component_graph']==dict(ship_components=12,every_component_boardable_and_returnable=True)
+ groups=load('data/maps/map_groups.json');names=[n for n in groups['gMapGroup_CrossroadsOlivine']+groups['gMapGroup_CrossroadsJohtoExpansion'] if(n.startswith('OlivineCity')and n!='OlivineCity')or n in aqua_names];maps={n:load(f'data/maps/{n}/map.json') for n in names};ids={m['id']:n for n,m in maps.items()};ls={l['id']:l for l in load('data/layouts/layouts.json')['layouts']};facts=load('crossroads/hgss/canonical_events/olivine-interior-geometry.json')
  source_headers={**{n:'MAP_OLIVINE_LIGHTHOUSE_'+(str(i)+'F' if i<6 else 'LIGHT_ROOM') for i,n in enumerate(LH,1)},BAL:'MAP_OLIVINE_LIGHTHOUSE_EXTERIOR',LIFT:'MAP_OLIVINE_LIGHTHOUSE_ELEVATOR',PORT:'MAP_SS_AQUA_OLIVINE_PORT_INTERIOR',QUAY:'MAP_SS_AQUA_OLIVINE_PORT_EXTERIOR'}
  source_mapping={LH[0]:{0:0,1:3,2:2},LH[1]:{0:0,1:1,2:2},LH[2]:{0:0,1:1,2:2,3:3,4:4,5:5},LH[3]:{0:0,1:3,2:1,3:2},LH[4]:{0:0,1:1,2:2},LH[5]:{0:0,1:1},BAL:{0:0},LIFT:{0:0},PORT:{0:0,1:1,2:2},QUAY:{0:0,2:1}}
  header_names={v:k for k,v in source_headers.items()}
@@ -100,6 +108,6 @@ def validate_olivine_graph():
    assert any((n,e['x']+dx,e['y']+dy) in forward for dx,dy in [(1,0),(-1,0),(0,1),(0,-1),(2,0),(-2,0),(0,2),(0,-2)]),('Unreachable Olivine interaction',n,e)
  assert nodes<=escapes,('Trapped Olivine public floor',sorted(nodes-escapes)[:24])
  assert (LH[3],16,9) in forward and (BAL,14,9) in escapes,'Source window/balcony return chain absent'
- print('HGSS Olivine exact landmark threshold graph, paired native lift, source window and every public tile escape: PASS',len(nodes),'tiles',len(names),'interior maps')
+ print('HGSS Olivine/Aqua exact threshold graph, paired lift, source window, all12ship components and every public tile escape: PASS',len(nodes),'tiles',len(names),'interior maps')
  return set(names)
 if __name__=='__main__':validate_olivine_graph()

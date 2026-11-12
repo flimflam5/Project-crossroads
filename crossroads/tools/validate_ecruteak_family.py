@@ -30,6 +30,9 @@ def signature(p,s,n,old):
   parts.append(tuple(pals[v>>12][c] if c else None for c in tile.tobytes()))
  return ats[n>=512][n%512],tuple(parts)
 def validate():
+ from validate_ecruteak_court_qa10 import validate as validate_court
+ validate_court()
+ court={(x,y) for y in range(42,47) for x in range(31,39)}-{(36,45)}
  groups=js('data/maps/map_groups.json');oldgroups=js('data/maps/map_groups.json',True)
  assert groups['group_order']==oldgroups['group_order']
  for name in oldgroups['group_order']:assert groups[name][:len(oldgroups[name])]==oldgroups[name],('Existing map IDs shifted',name)
@@ -61,6 +64,8 @@ def validate():
    if n=='EcruteakCity' and (x,y) in {(59,52),(9,40)}:assert b==0x403;continue # Existing signs, relocated outside door/wall footprints.
    if n=='EcruteakCity' and (x,y)==(8,37):assert b==0x3000|js('crossroads/hgss/art/native-manifest.json')['specs']['paving'];continue
    assert a&0xfc00==b&0xfc00,(n,'Unrelated collision/elevation changed',x,y)
+   if n=='EcruteakCity' and (x,y) in court:
+    continue # Exact authenticated39-cell art-only finish checked above.
    np,ns=('bl_gym_ecruteak','bl_gym_ecruteak') if n=='EcruteakCity' else ('hgss_ecruteak_gate_buffer','western_city')
    assert signature(op,os,a&1023,True)==signature(np,ns,b&1023,False),(n,'Accepted pixels/layers/behavior changed',x,y,hex(a),hex(b))
    count+=1

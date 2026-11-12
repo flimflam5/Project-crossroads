@@ -57,13 +57,27 @@
       "elevation": 0,
       "dest_map": "MAP_OLIVINE_CITY_PORT_TERMINAL",
       "dest_warp_id": "5"
+    },
+    {
+      "x": 27,
+      "y": 20,
+      "elevation": 0,
+      "dest_map": "MAP_SS_AQUA_1F",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 28,
+      "y": 20,
+      "elevation": 0,
+      "dest_map": "MAP_SS_AQUA_1F",
+      "dest_warp_id": "12"
     }
   ],
   "coord_events": [],
   "bg_events": [
     {
       "type": "sign",
-      "x": 27,
+      "x": 25,
       "y": 21,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",

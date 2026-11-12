@@ -1,0 +1,694 @@
+{
+  "baseline_revision": "285cfa4ebddcb390a8a5bde6116748cbb5eaba6b",
+  "notes": "Every visible two-leaf hatch and all five interior gangway leaves; asymmetric arrival lists are indexed by OPPOSITE incoming side. Right stair has two exposed approach rims, both source rows and both drawn columns.",
+  "groups": [
+    {
+      "city": "olivine",
+      "label": "aqua-gangway",
+      "outside": {
+        "map": "OlivineCity_PortQuay",
+        "segments": [
+          [
+            27,
+            20
+          ],
+          [
+            28,
+            20
+          ]
+        ],
+        "anchor": [
+          27,
+          23
+        ],
+        "press": [
+          0,
+          -1
+        ],
+        "expected_facing": 1,
+        "arrivals": [
+          [
+            27,
+            20
+          ],
+          [
+            28,
+            20
+          ],
+          [
+            27,
+            20
+          ],
+          [
+            27,
+            20
+          ],
+          [
+            28,
+            20
+          ]
+        ]
+      },
+      "inside": {
+        "map": "SSAqua_1F",
+        "segments": [
+          [
+            24,
+            19
+          ],
+          [
+            25,
+            19
+          ],
+          [
+            22,
+            19
+          ],
+          [
+            23,
+            19
+          ],
+          [
+            26,
+            19
+          ]
+        ],
+        "anchor": [
+          24,
+          18
+        ],
+        "press": [
+          0,
+          1
+        ],
+        "expected_facing": 2,
+        "arrivals": [
+          [
+            24,
+            19
+          ],
+          [
+            25,
+            19
+          ]
+        ]
+      }
+    },
+    {
+      "city": "olivine",
+      "label": "aqua-southwestcabins-0",
+      "outside": {
+        "map": "SSAqua_1F",
+        "segments": [
+          [
+            13,
+            14
+          ],
+          [
+            14,
+            14
+          ]
+        ],
+        "anchor": [
+          13,
+          12
+        ],
+        "press": [
+          0,
+          1
+        ],
+        "expected_facing": 2
+      },
+      "inside": {
+        "map": "SSAqua_SouthwestCabins",
+        "segments": [
+          [
+            9,
+            2
+          ],
+          [
+            10,
+            2
+          ]
+        ],
+        "anchor": [
+          9,
+          5
+        ],
+        "press": [
+          0,
+          -1
+        ],
+        "expected_facing": 1
+      }
+    },
+    {
+      "city": "olivine",
+      "label": "aqua-southwestcabins-1",
+      "outside": {
+        "map": "SSAqua_1F",
+        "segments": [
+          [
+            19,
+            14
+          ],
+          [
+            20,
+            14
+          ]
+        ],
+        "anchor": [
+          19,
+          12
+        ],
+        "press": [
+          0,
+          1
+        ],
+        "expected_facing": 2
+      },
+      "inside": {
+        "map": "SSAqua_SouthwestCabins",
+        "segments": [
+          [
+            23,
+            2
+          ],
+          [
+            24,
+            2
+          ]
+        ],
+        "anchor": [
+          23,
+          5
+        ],
+        "press": [
+          0,
+          -1
+        ],
+        "expected_facing": 1
+      }
+    },
+    {
+      "city": "olivine",
+      "label": "aqua-southeastcabins-0",
+      "outside": {
+        "map": "SSAqua_1F",
+        "segments": [
+          [
+            30,
+            14
+          ],
+          [
+            31,
+            14
+          ]
+        ],
+        "anchor": [
+          30,
+          12
+        ],
+        "press": [
+          0,
+          1
+        ],
+        "expected_facing": 2
+      },
+      "inside": {
+        "map": "SSAqua_SoutheastCabins",
+        "segments": [
+          [
+            9,
+            2
+          ],
+          [
+            10,
+            2
+          ]
+        ],
+        "anchor": [
+          9,
+          5
+        ],
+        "press": [
+          0,
+          -1
+        ],
+        "expected_facing": 1
+      }
+    },
+    {
+      "city": "olivine",
+      "label": "aqua-southeastcabins-1",
+      "outside": {
+        "map": "SSAqua_1F",
+        "segments": [
+          [
+            36,
+            14
+          ],
+          [
+            37,
+            14
+          ]
+        ],
+        "anchor": [
+          36,
+          12
+        ],
+        "press": [
+          0,
+          1
+        ],
+        "expected_facing": 2
+      },
+      "inside": {
+        "map": "SSAqua_SoutheastCabins",
+        "segments": [
+          [
+            23,
+            2
+          ],
+          [
+            24,
+            2
+          ]
+        ],
+        "anchor": [
+          23,
+          5
+        ],
+        "press": [
+          0,
+          -1
+        ],
+        "expected_facing": 1
+      }
+    },
+    {
+      "city": "olivine",
+      "label": "aqua-northwestcabins-0",
+      "outside": {
+        "map": "SSAqua_1F",
+        "segments": [
+          [
+            13,
+            8
+          ],
+          [
+            14,
+            8
+          ]
+        ],
+        "anchor": [
+          13,
+          10
+        ],
+        "press": [
+          0,
+          -1
+        ],
+        "expected_facing": 1
+      },
+      "inside": {
+        "map": "SSAqua_NorthwestCabins",
+        "segments": [
+          [
+            9,
+            11
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "anchor": [
+          9,
+          9
+        ],
+        "press": [
+          0,
+          1
+        ],
+        "expected_facing": 2
+      }
+    },
+    {
+      "city": "olivine",
+      "label": "aqua-northwestcabins-1",
+      "outside": {
+        "map": "SSAqua_1F",
+        "segments": [
+          [
+            19,
+            8
+          ],
+          [
+            20,
+            8
+          ]
+        ],
+        "anchor": [
+          19,
+          10
+        ],
+        "press": [
+          0,
+          -1
+        ],
+        "expected_facing": 1
+      },
+      "inside": {
+        "map": "SSAqua_NorthwestCabins",
+        "segments": [
+          [
+            23,
+            11
+          ],
+          [
+            24,
+            11
+          ]
+        ],
+        "anchor": [
+          23,
+          9
+        ],
+        "press": [
+          0,
+          1
+        ],
+        "expected_facing": 2
+      }
+    },
+    {
+      "city": "olivine",
+      "label": "aqua-northeastcabins-0",
+      "outside": {
+        "map": "SSAqua_1F",
+        "segments": [
+          [
+            30,
+            8
+          ],
+          [
+            31,
+            8
+          ]
+        ],
+        "anchor": [
+          30,
+          10
+        ],
+        "press": [
+          0,
+          -1
+        ],
+        "expected_facing": 1
+      },
+      "inside": {
+        "map": "SSAqua_NortheastCabins",
+        "segments": [
+          [
+            9,
+            11
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "anchor": [
+          9,
+          9
+        ],
+        "press": [
+          0,
+          1
+        ],
+        "expected_facing": 2
+      }
+    },
+    {
+      "city": "olivine",
+      "label": "aqua-northeastcabins-1",
+      "outside": {
+        "map": "SSAqua_1F",
+        "segments": [
+          [
+            36,
+            8
+          ],
+          [
+            37,
+            8
+          ]
+        ],
+        "anchor": [
+          36,
+          10
+        ],
+        "press": [
+          0,
+          -1
+        ],
+        "expected_facing": 1
+      },
+      "inside": {
+        "map": "SSAqua_NortheastCabins",
+        "segments": [
+          [
+            23,
+            11
+          ],
+          [
+            24,
+            11
+          ]
+        ],
+        "anchor": [
+          23,
+          9
+        ],
+        "press": [
+          0,
+          1
+        ],
+        "expected_facing": 2
+      }
+    },
+    {
+      "city": "olivine",
+      "label": "aqua-captainroom-0",
+      "outside": {
+        "map": "SSAqua_1F",
+        "segments": [
+          [
+            49,
+            15
+          ],
+          [
+            50,
+            15
+          ]
+        ],
+        "anchor": [
+          49,
+          17
+        ],
+        "press": [
+          0,
+          -1
+        ],
+        "expected_facing": 1
+      },
+      "inside": {
+        "map": "SSAqua_CaptainRoom",
+        "segments": [
+          [
+            9,
+            11
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "anchor": [
+          9,
+          9
+        ],
+        "press": [
+          0,
+          1
+        ],
+        "expected_facing": 2
+      }
+    },
+    {
+      "city": "olivine",
+      "label": "aqua-west-stairs",
+      "outside": {
+        "map": "SSAqua_1F",
+        "segments": [
+          [
+            24,
+            3
+          ],
+          [
+            25,
+            3
+          ]
+        ],
+        "anchor": [
+          24,
+          5
+        ],
+        "press": [
+          0,
+          -1
+        ],
+        "expected_facing": 1
+      },
+      "inside": {
+        "map": "SSAqua_B1F",
+        "segments": [
+          [
+            24,
+            3
+          ],
+          [
+            25,
+            3
+          ]
+        ],
+        "anchor": [
+          24,
+          5
+        ],
+        "press": [
+          0,
+          -1
+        ],
+        "expected_facing": 1
+      }
+    },
+    {
+      "city": "olivine",
+      "label": "aqua-right-stairs-north-rim",
+      "outside": {
+        "map": "SSAqua_1F",
+        "segments": [
+          [
+            42,
+            8
+          ],
+          [
+            43,
+            8
+          ]
+        ],
+        "anchor": [
+          42,
+          6
+        ],
+        "press": [
+          0,
+          1
+        ],
+        "expected_facing": 1,
+        "arrivals": [
+          [
+            42,
+            9
+          ],
+          [
+            43,
+            8
+          ]
+        ]
+      },
+      "inside": {
+        "map": "SSAqua_B1F",
+        "segments": [
+          [
+            42,
+            8
+          ],
+          [
+            43,
+            8
+          ]
+        ],
+        "anchor": [
+          42,
+          6
+        ],
+        "press": [
+          0,
+          1
+        ],
+        "expected_facing": 1,
+        "arrivals": [
+          [
+            42,
+            8
+          ],
+          [
+            43,
+            8
+          ]
+        ]
+      }
+    },
+    {
+      "city": "olivine",
+      "label": "aqua-right-stairs-south-rim",
+      "outside": {
+        "map": "SSAqua_1F",
+        "segments": [
+          [
+            42,
+            9
+          ],
+          [
+            43,
+            9
+          ]
+        ],
+        "anchor": [
+          42,
+          11
+        ],
+        "press": [
+          0,
+          -1
+        ],
+        "expected_facing": 2
+      },
+      "inside": {
+        "map": "SSAqua_B1F",
+        "segments": [
+          [
+            42,
+            9
+          ],
+          [
+            43,
+            9
+          ]
+        ],
+        "anchor": [
+          42,
+          11
+        ],
+        "press": [
+          0,
+          -1
+        ],
+        "expected_facing": 2
+      }
+    }
+  ]
+}

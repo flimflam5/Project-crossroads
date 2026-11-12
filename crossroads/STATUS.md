@@ -1,3 +1,17 @@
+# QA10 — owner visual corrections in progress
+
+Latest owner screenshots reopen visual/content work after QA09. Branch
+`feature/olivine-port-ship-qa10` preserves source285cfa4 and existing saves/additions.
+Seven docked S.S. Aqua maps/eightcabins, north-entry port/fullwidthgangway, source
+lighthouse surfaces/furniture and Ecruteak's canonical directorycourt art are
+implemented/generated. Build2 compiles; genuine old walking/Surf Continue tests pass, including an
+unchanged-water control. Native review caught two port-landing layer cells hiding
+Joe; correcting those before the final frozen build and full emulator lanes.
+Source/ID/physics/resource checks pass. No final QA10 release or owner visual pass
+is yet recorded. See hgss/ACTIVE_COMPLETION.md and hgss/qa10 for exact live state.
+Voyages/Vermilion/progression/quests/rewards remain separately unimplemented,
+not silently invented. Older QA09 completion notes below are superseded.
+
 # QA09 — Ecruteak and Olivine city completion
 
 Both cities' approved map/interior scope is implemented and verified on the

@@ -4,7 +4,7 @@
 HGSS collision flags identify obstruction, not whether it is a fence, table,
 cliff or boulder. Positive material/underlay checks supplement normal-play QA.
 """
-import json,struct,subprocess
+import json,struct,subprocess,hashlib
 from pathlib import Path
 from PIL import Image
 R=Path(__file__).resolve().parents[2];BASE='3f935d5e8600c5a280b9172b555edb35ca52b6c0'
@@ -24,11 +24,34 @@ for c in reference['cells']:
 assert anchors==[[23.5,58]] and port_contract['source_model_absolute_anchor']==[23.5,58]
 assert port_contract['source_terrain_blob_sha']==reference['source']['terrain_blob_sha']
 assert set(port)=={(x,y) for y in range(54,61) for x in range(16,28) if before[y*64+x]&0xc00 and permissions[x,y]==0x8000},'Only immutable formerly blocked cells in the documented source model bbox may open'
-for i,(a,b) in enumerate(zip(before,t)):
+# First retain the full immutable V7→QA09 material repair proof. QA10's
+# independently reviewed north-port physical migration is applied afterwards.
+qa09_bytes=subprocess.check_output(['git','show','285cfa4ebddcb390a8a5bde6116748cbb5eaba6b:data/layouts/OlivineCity/map.bin'],cwd=R)
+qa09=words(qa09_bytes)
+for i,(a,b) in enumerate(zip(before,qa09)):
  if (i%64,i//64) in port:
   q=port[i%64,i//64];assert a==int(q['before_hex'],16) and a&0xc00 and b==0x1170,('Exact obsolete Port167 body→sea repair',i%64,i//64);continue
  if (i%64,i//64) not in table:assert a&0xfc00==b&0xfc00,('Unrelated city collision/elevation changed',i%64,i//64,hex(a),hex(b))
  else:assert b&0xfc00==0x3000,('Relocated source table blocker must open',i%64,i//64)
+# Exact82-cell transition from the authenticated QA09 physical map. The
+# authored mask covers actual north-facing body/pier/retired-boardwalk changes
+# and the relocated plaque. It never exempts a whole arbitrary rectangle.
+contract_path=R/'crossroads/hgss/qa10/olivine-north-port-physics-contract.json'
+contract_bytes=contract_path.read_bytes()
+assert hashlib.sha256(contract_bytes).hexdigest()=='a45a84d77f40606d21168ca3c9a6e40589bffcf516376cc6f3389cb2f1d9e23a','Reviewed QA10 physics mask changed'
+contract=json.loads(contract_bytes)
+assert contract['baseline']=='285cfa4ebddcb390a8a5bde6116748cbb5eaba6b' and contract['physical_changed_cells']==82
+assert contract['raw_before_sha256']==hashlib.sha256(qa09_bytes).hexdigest()=='74cbcf16c294259e0ebbce0c541bd70cf061c5617654a802510411ac4d9fba6c'
+changes={(e['x'],e['y']):e for e in contract['changes']};assert len(changes)==82
+seen_changes=set()
+for i,(a,b)in enumerate(zip(qa09,t)):
+ point=i%64,i//64
+ if point in changes:
+  rec=changes[point];assert a==rec['before_word'] and a&0xfc00==rec['before_physics']
+  assert b&0xfc00==rec['after_physics'] and rec['before_physics']!=rec['after_physics'],('Exact north-port physics delta missing/changed',point,hex(a),hex(b))
+  seen_changes.add(point)
+ else:assert a&0xfc00==b&0xfc00,('Unrelated QA09 physical/elevation change',point,hex(a),hex(b))
+assert seen_changes==set(changes)
 primary=words((R/'data/tilesets/primary/bl_gym_olivine/metatiles.bin').read_bytes());secondary=words((R/'data/tilesets/secondary/bl_gym_olivine/metatiles.bin').read_bytes());coast=words((R/'data/tilesets/primary/hgss_olivine_coast_buffer/metatiles.bin').read_bytes());ca=words((R/'data/tilesets/primary/hgss_olivine_coast_buffer/metatile_attributes.bin').read_bytes())
 def row(n):return [primary,secondary][n//512][n%512*8:n%512*8+8]
 def at(x,y):return t[y*64+x]&1023
@@ -73,4 +96,4 @@ layouts={v['id']:v for v in js('data/layouts/layouts.json')['layouts']};route=js
 # Palette3 is shared General on each side; no copied secondary palette slots are
 # needed for the fence, and no engine palette capacity is expanded.
 for n in [0x100,0x101,0x102]:assert all(v>>12==3 for v in coast[n*8:n*8+8]),'Seam fence uses shared native gray palette'
-print('Olivine material classification,12relocated tables,',fences,'white fence cells, timber/parasols, gray breakwater and Route40 buffer: PASS; V7 physics preserved outside12 tables/65 obsolete Port cells')
+print('Olivine material classification,12relocated tables,',fences,'white fence cells, timber/parasols, gray breakwater and Route40 buffer: PASS; exact V7→QA09 12table/65model migration retained; exact82-cell QA09→QA10 north-port migration, all other physics unchanged')

@@ -155,4 +155,15 @@ extern const struct Tileset gTileset_HgssCenterReception;
 extern const struct Tileset gTileset_HgssEcruteakTowerDetails;
 #endif
 // END ECRUTEAK TOWER DETAILS
+// BEGIN HGSS OLIVINE LIGHTHOUSE VISUALS
+#if !IS_FRLG
+extern const struct Tileset gTileset_HgssOlivineLighthouse;
+#endif
+// END HGSS OLIVINE LIGHTHOUSE VISUALS
+// BEGIN HGSS SS AQUA
+#if !IS_FRLG
+extern const struct Tileset gTileset_HgssSSAquaPrimary;
+extern const struct Tileset gTileset_HgssSSAqua;
+#endif
+// END HGSS SS AQUA
 #endif //GUARD_tilesets_H

@@ -47,6 +47,12 @@ def rendered(primary,secondary,n,baseline=False):
 
 
 def validate():
+    # Owner's QA10 image identifies the canonical open directory court. Its
+    # exact39-cell art-only finish has an independent authenticated QA09 check;
+    # no other accepted exterior pixels gain a blanket exception.
+    from validate_ecruteak_court_qa10 import validate as validate_court
+    validate_court()
+    court={(x,y) for y in range(42,47) for x in range(31,39)}-{(36,45)}
     # Private source-backed stage art is authorized only by the exact immutable
     # V7 delta. Its independent validator preserves all room physics, all other
     # visible cells, actors/warps and every shared Temple resource byte.
@@ -69,7 +75,7 @@ def validate():
     for key,values in BASE['groups'].items():
         if key=='gMapGroup_CrossroadsJohtoExpansion':
             assert groups[key][:len(values)]==values,'Existing map IDs changed'
-            assert groups[key][len(values):]==['OlivineCity_FishingHouse','OlivineCity_TradeHouse','OlivineCity_SealHouse','OlivineCity_Cafe','OlivineCity_PokemonCenter_B1F','OlivineCity_Lighthouse_Balcony','OlivineCity_Lighthouse_Elevator','OlivineCity_PortTerminal','OlivineCity_PortQuay'],'Unexpected appended map IDs'
+            assert groups[key][len(values):]==['OlivineCity_FishingHouse','OlivineCity_TradeHouse','OlivineCity_SealHouse','OlivineCity_Cafe','OlivineCity_PokemonCenter_B1F','OlivineCity_Lighthouse_Balcony','OlivineCity_Lighthouse_Elevator','OlivineCity_PortTerminal','OlivineCity_PortQuay','SSAqua_1F','SSAqua_CaptainRoom','SSAqua_SoutheastCabins','SSAqua_SouthwestCabins','SSAqua_NortheastCabins','SSAqua_NorthwestCabins','SSAqua_B1F'],'Unexpected appended map IDs'
         else:assert groups[key]==values,'Map group/order changed'
     ls=load('data/layouts/layouts.json')['layouts']
     assert [l['id'] for l in ls[:len(BASE['all_layout_ids'])]]==BASE['all_layout_ids'],'Existing layout IDs changed'
@@ -245,6 +251,9 @@ def validate():
                 continue
             if n=='EcruteakCity' and (x,y) in {(59,52),(9,40)}:assert b==0x403;continue
             if n=='EcruteakCity' and (x,y)==(8,37):assert b==0x3000|specs['paving'];continue
+            if n=='EcruteakCity' and (x,y) in court:
+                assert a&0xfc00==b&0xfc00
+                continue  # Exact positive39-cell drawing/layer proof above.
             if n=='EcruteakCity' and i==45*64+44:
                 assert a&0xfc00==0x400 and b&0xfc00==0x3000,'Theater left threshold is not open'
             else:assert a&0xfc00==b&0xfc00,(n,'Collision/elevation changed',i)
@@ -256,7 +265,7 @@ def validate():
             assert ats[bn>=512][bn%512]&255 not in range(0x62,0x66),(n,'Ordinary terrain still has warp-arrow behavior',i)
             checked+=1
     assert changed>0
-    print('QA07 immutable QA06 IDs/events/interiors, static exterior pixels, semantic trunks/walls/doors, leaf foreground and neutral road behavior: PASS',checked,'unchanged cells;',changed,'corrected road cells')
+    print('QA07 immutable QA06 IDs/events/interiors, static exterior pixels, semantic trunks/walls/doors, leaf foreground and neutral road behavior: PASS',checked,'unchanged cells;',changed,'corrected road cells; exact39 courtyard art-only cells independently verified')
 
 
 def validate_recordings(folder,baseline=None):

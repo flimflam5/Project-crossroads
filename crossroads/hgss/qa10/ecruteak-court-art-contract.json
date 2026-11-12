@@ -1,0 +1,266 @@
+{
+  "baseline": "285cfa4ebddcb390a8a5bde6116748cbb5eaba6b",
+  "map": "EcruteakCity",
+  "layout_dimensions": [
+    64,
+    64
+  ],
+  "raw_sha256_before": "2b7b74952cd3efdde29ce8d6fc048d2424fcc8c7aade0512f98da17339f09d18",
+  "cells": [
+    {
+      "x": 31,
+      "y": 42,
+      "before": 13045,
+      "after": 13296
+    },
+    {
+      "x": 32,
+      "y": 42,
+      "before": 13045,
+      "after": 13297
+    },
+    {
+      "x": 33,
+      "y": 42,
+      "before": 13045,
+      "after": 13297
+    },
+    {
+      "x": 34,
+      "y": 42,
+      "before": 13045,
+      "after": 13297
+    },
+    {
+      "x": 35,
+      "y": 42,
+      "before": 13045,
+      "after": 13297
+    },
+    {
+      "x": 36,
+      "y": 42,
+      "before": 13045,
+      "after": 13297
+    },
+    {
+      "x": 37,
+      "y": 42,
+      "before": 13045,
+      "after": 13297
+    },
+    {
+      "x": 38,
+      "y": 42,
+      "before": 13045,
+      "after": 13298
+    },
+    {
+      "x": 31,
+      "y": 43,
+      "before": 13045,
+      "after": 13299
+    },
+    {
+      "x": 32,
+      "y": 43,
+      "before": 13045,
+      "after": 13300
+    },
+    {
+      "x": 33,
+      "y": 43,
+      "before": 13045,
+      "after": 13300
+    },
+    {
+      "x": 34,
+      "y": 43,
+      "before": 13045,
+      "after": 13300
+    },
+    {
+      "x": 35,
+      "y": 43,
+      "before": 13045,
+      "after": 13300
+    },
+    {
+      "x": 36,
+      "y": 43,
+      "before": 13045,
+      "after": 13300
+    },
+    {
+      "x": 37,
+      "y": 43,
+      "before": 13045,
+      "after": 13300
+    },
+    {
+      "x": 38,
+      "y": 43,
+      "before": 13045,
+      "after": 13301
+    },
+    {
+      "x": 31,
+      "y": 44,
+      "before": 13045,
+      "after": 13299
+    },
+    {
+      "x": 32,
+      "y": 44,
+      "before": 13045,
+      "after": 13300
+    },
+    {
+      "x": 33,
+      "y": 44,
+      "before": 13045,
+      "after": 13300
+    },
+    {
+      "x": 34,
+      "y": 44,
+      "before": 13045,
+      "after": 13300
+    },
+    {
+      "x": 35,
+      "y": 44,
+      "before": 13045,
+      "after": 13300
+    },
+    {
+      "x": 36,
+      "y": 44,
+      "before": 13045,
+      "after": 13300
+    },
+    {
+      "x": 37,
+      "y": 44,
+      "before": 13045,
+      "after": 13300
+    },
+    {
+      "x": 38,
+      "y": 44,
+      "before": 13045,
+      "after": 13301
+    },
+    {
+      "x": 31,
+      "y": 45,
+      "before": 13045,
+      "after": 13299
+    },
+    {
+      "x": 32,
+      "y": 45,
+      "before": 13045,
+      "after": 13300
+    },
+    {
+      "x": 33,
+      "y": 45,
+      "before": 13045,
+      "after": 13300
+    },
+    {
+      "x": 34,
+      "y": 45,
+      "before": 13045,
+      "after": 13300
+    },
+    {
+      "x": 35,
+      "y": 45,
+      "before": 13045,
+      "after": 13300
+    },
+    {
+      "x": 37,
+      "y": 45,
+      "before": 13045,
+      "after": 13300
+    },
+    {
+      "x": 38,
+      "y": 45,
+      "before": 13045,
+      "after": 13301
+    },
+    {
+      "x": 31,
+      "y": 46,
+      "before": 13045,
+      "after": 13302
+    },
+    {
+      "x": 32,
+      "y": 46,
+      "before": 13045,
+      "after": 13303
+    },
+    {
+      "x": 33,
+      "y": 46,
+      "before": 13045,
+      "after": 13303
+    },
+    {
+      "x": 34,
+      "y": 46,
+      "before": 13045,
+      "after": 13303
+    },
+    {
+      "x": 35,
+      "y": 46,
+      "before": 13045,
+      "after": 13303
+    },
+    {
+      "x": 36,
+      "y": 46,
+      "before": 13045,
+      "after": 13303
+    },
+    {
+      "x": 37,
+      "y": 46,
+      "before": 13045,
+      "after": 13303
+    },
+    {
+      "x": 38,
+      "y": 46,
+      "before": 13045,
+      "after": 13304
+    }
+  ],
+  "preserved_sign": [
+    36,
+    45
+  ],
+  "expected_old_metatile": 757,
+  "new_metatiles": [
+    1008,
+    1009,
+    1010,
+    1011,
+    1012,
+    1013,
+    1014,
+    1015,
+    1016
+  ],
+  "attributes_before_and_after": 4096,
+  "all_physics_bits_preserved": true,
+  "events_warps_ids_unchanged": true,
+  "every_raw_word_outside_cells_unchanged": true,
+  "reason": "Actual HGSS directory court is vacant; soil/curb replaces flat gray artwork without inventing a building."
+}

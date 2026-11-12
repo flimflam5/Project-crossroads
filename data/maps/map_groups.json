@@ -1335,6 +1335,13 @@
     "OlivineCity_Lighthouse_Balcony",
     "OlivineCity_Lighthouse_Elevator",
     "OlivineCity_PortTerminal",
-    "OlivineCity_PortQuay"
+    "OlivineCity_PortQuay",
+    "SSAqua_1F",
+    "SSAqua_CaptainRoom",
+    "SSAqua_SoutheastCabins",
+    "SSAqua_SouthwestCabins",
+    "SSAqua_NortheastCabins",
+    "SSAqua_NorthwestCabins",
+    "SSAqua_B1F"
   ]
 }

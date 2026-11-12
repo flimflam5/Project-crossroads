@@ -214,3 +214,19 @@ actual delivery bytes. Never replace a ROM/ELF while emulator processes use it.
 Only copied saves and explicit disclosed test fixtures; never commit batteries,
 private states, memory dumps or ROMs. Public evidence lives in `crossroads/qa/qa09`.
 Owner Delta/visual acceptance remains separate from automated gameplay.
+
+## Latest QA10 owner visual corrections
+
+Owner QA09 Delta screenshots show remaining visual/content work; prior automated
+passes are not visual acceptance. New branchfeature/olivine-port-ship-qa10,
+readACTIVE_COMPLETION andhgss/qa10. Docked physicalSS Aqua with7actualHGSS maps/
+8cabins is now explicitly authorized; no destination/shipvoyage/story/reward
+unlock is invented. Current photographed emptylot is EcruteakDirectory36,45,
+which actualHGSS also leaves vacant: improve soil/border, do not invent building.
+Northport entry must match passengerflow, fullvisibleopenings/facing bothways;
+keep allold IDs/saves/acceptedadditions. Private lighthouse art fixes actual
+reference surfaces/furniture without movement/event changes. New pointer/physics
+deltas require exact named positive regressions, not weakened old assertions.
+Only root generates sharedmaps/layouts/resources and builds. Freeze ROM/ELF/maps
+for runtime workers, use copies/genuineold-port fixtures, preserve originals.
+No completion claim before actual AFTERtest and ownervisualreview.

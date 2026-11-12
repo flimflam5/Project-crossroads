@@ -10,7 +10,18 @@ from pathlib import Path
 R=Path(__file__).resolve().parents[2]
 p=argparse.ArgumentParser();p.add_argument('--save',required=True);p.add_argument('--library',default='/tmp/johto-bridge.so');p.add_argument('--output',required=True);a=p.parse_args();out=Path(a.output);out.mkdir(parents=True,exist_ok=True);src=Path(a.save).resolve();original_hash=hashlib.sha256(src.read_bytes()).hexdigest();copy=out/'input-copy.sav';assert src!=copy.resolve();shutil.copyfile(src,copy)
 sys.argv=['johto_network_smoke.py','--save',str(copy),'--library',a.library,'--output',str(out),'--targets',''];d=runpy.run_path(str(R/'crossroads/tools/johto_network_smoke.py'))
-go,walk,frames,current,pos,read,lib,syms=[d[k] for k in ['go','walk','frames','current','pos','read','lib','syms']];g=walk.__globals__;g['dry_only']=True;g['route_cache'].clear();go('OlivineCity');assert not read('gPlayerAvatar',1)&8
+go,walk,frames,key,current,pos,read,lib,syms=[d[k] for k in ['go','walk','frames','key','current','pos','read','lib','syms']];g=walk.__globals__;g['dry_only']=True;g['route_cache'].clear()
+def survey(enabled):
+ assert read('sJohtoTestAccess',1)==int(not enabled)
+ go('OlivineCity_HarborOffice');walk((1,6))
+ flags=bytes(read(d['sb']()+0x1270+i,1) for i in range(300))
+ frames(1,64);frames(20);key(1);frames(180)
+ for _ in range(8):
+  if not read('sLockFieldControls',1):break
+  key(1);frames(180)
+ assert read('sJohtoTestAccess',1)==int(enabled)
+ assert bytes(read(d['sb']()+0x1270+i,1) for i in range(300))==flags
+survey(False);go('OlivineCity');assert not read('gPlayerAvatar',1)&8
 rows=[];clips=[];skips=[];buttons={(1,0):16,(-1,0):32,(0,-1):64,(0,1):128}
 def arrow_visible():
  obj=syms['gObjectEvents']+read(syms['gPlayerAvatar']+5,1)*36;sprite=read(obj+0x1b,1)
@@ -24,7 +35,7 @@ def capture(label,action,dry=True):
  try:
   action();record(20)
   assert current()=='OlivineCity'
-  if dry:assert not read('gPlayerAvatar',1)&8 and arrows[0]==0,(label,'Dry path used Surf or displayed an unexplained ground arrow',arrows[0])
+  if dry:assert not read('gPlayerAvatar',1)&8 and read('sJohtoTestAccess',1)==0 and arrows[0]==0,(label,'Dry path used Survey/Surf or displayed an unexplained ground arrow',arrows[0])
  finally:
   g['frames']=native
   if count[0]:subprocess.run(['ffmpeg','-y','-loglevel','error','-framerate','15','-i',str(folder/'%04d.png'),'-pix_fmt','yuv420p',str(out/(label+'.mp4'))],check=True)
@@ -60,7 +71,7 @@ for x,y in sorted(fences,key=lambda q:(q[1],q[0])):
   rows.append(dict(kind='white-fence',target=(x,y),approach=point,result='normal movement blocked'))
 assert fence_clips=={'garden-fence','outer-fence'}
 # Survey assistance only for real native Surf entry, not coordinate/flag setup.
-g['dry_only']=False;g['route_cache'].clear();assert read('sJohtoTestAccess',1)==1
+survey(True);g['dry_only']=False;g['route_cache'].clear();go('OlivineCity');assert current()=='OlivineCity' and read('sJohtoTestAccess',1)==1
 for label,target in [('east-rock-a',(58,20)),('east-rock-b',(59,24)),('east-rock-c',(55,26)),('east-rock-chain',(58,30))]:
  x,y=target;assert d['raw']['OlivineCity'][y*64+x]&0xc00
  candidates=[((x-dx,y-dy),buttons[dx,dy]) for dx,dy in [(1,0),(-1,0),(0,1),(0,-1)]]
@@ -68,13 +79,19 @@ for label,target in [('east-rock-a',(58,20)),('east-rock-b',(59,24)),('east-rock
  assert candidates,(label,'No actual water approach to specified source rock');point,button=candidates[0];walk(point);assert read('gPlayerAvatar',1)&8
  def bump(point=point,button=button):g['frames'](24,button);g['frames'](20);assert pos()==point and read('gPlayerAvatar',1)&8,('Surf entered solid gray boulder',point,pos())
  capture(label,bump,False);rows.append(dict(kind='gray-boulder',target=target,approach=point,result='actual Surf movement blocked'))
-# The obsolete model167 body is genuinely water, with no invisible grass land.
+# The southern old model cells outside the new north-entry body remain real
+# sea. Do not claim every old model cell is sea: the corrected terminal now
+# intentionally occupies53..56, including the former dry apron24,54.
+assert d['raw']['OlivineCity'][54*64+24]&0xc00,'Former south apron must be actual new solid terminal body'
 walk((24,57));assert read('gPlayerAvatar',1)&8
-capture('old-port-model-now-sea',lambda:[walk(q) for q in [(24,58),(25,58),(26,58)]],False)
+capture('south-of-terminal-native-sea',lambda:[walk(q) for q in [(24,58),(25,58),(26,58)]],False)
 walk((40,62));assert read('gPlayerAvatar',1)&8;point=pos()
 def sea_edge():g['frames'](32,128);assert pos()==point and current()=='OlivineCity'
 capture('southern-sea-boundary',sea_edge,False)
-walk((24,54));assert pos()==(24,54) and not read('gPlayerAvatar',1)&8;lib.emu_image(str(out/'returned-to-dry-port-forecourt.png').encode());g['dry_only']=True;g['route_cache'].clear();dry_walk((16,34))
+assert d['raw']['OlivineCity'][50*64+24]>>12==3 and not d['raw']['OlivineCity'][50*64+24]&0xc00
+assert (24,50) not in d['active_warps']('OlivineCity'),'North apron return must not cross an active threshold'
+walk((24,50));assert pos()==(24,50) and not read('gPlayerAvatar',1)&8;lib.emu_image(str(out/'returned-to-dry-north-port-forecourt.png').encode());g['dry_only']=True;g['route_cache'].clear();survey(False);go('OlivineCity');dry_walk((16,34))
 assert hashlib.sha256(src.read_bytes()).hexdigest()==original_hash,'Original source save changed'
-(out/'results.json').write_text(json.dumps(dict(rom_sha256=hashlib.sha256((R/'pokeemerald.gba').read_bytes()).hexdigest(),source_save_sha256_before=original_hash,source_save_sha256_after=hashlib.sha256(src.read_bytes()).hexdigest(),setup='Copied battery, normal title/Continue, real desk enables RAM-only survey Surf. Dry phases enforce dry paths and no Surf. Only shared test-RAM encounter suppression; no map/warp/player XY writes, no permanent grants.',cases=rows,unavailable_fence_approaches=skips,native_recordings=clips,final_dry_return=pos()),indent=2)+'\n')
+assert read('sJohtoTestAccess',1)==0 and not read('gPlayerAvatar',1)&8
+(out/'results.json').write_text(json.dumps(dict(rom_sha256=hashlib.sha256((R/'pokeemerald.gba').read_bytes()).hexdigest(),source_save_sha256_before=original_hash,source_save_sha256_after=hashlib.sha256(src.read_bytes()).hexdigest(),setup='Copied battery, normal title/Continue, actual desk OFF for dry phases then ON for native Surf and OFF after normal north-pier disembark. Saved flags remain exact across desk interactions.12 cleared table,43 fence and4 rock cases retained. Only shared test-RAM encounter suppression; no map/warp/player XY writes, no permanent grants.',cases=rows,unavailable_fence_approaches=skips,native_recordings=clips,former_south_apron_now_solid=[24,54],actual_dry_north_apron=[24,50],final_survey_access=read('sJohtoTestAccess',1),final_dry_return=pos()),indent=2)+'\n')
 print('Materials controller regression PASS:',len(rows),'semantic cases;',len(skips),'unavailable fence sides explicitly skipped;',len(clips),'native clips; actual Surf and dry return',flush=True)

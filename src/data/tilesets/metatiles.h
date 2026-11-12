@@ -573,3 +573,19 @@ const u16 gMetatiles_HgssCenterReception[] = INCBIN_U16("data/tilesets/secondary
 const u16 gMetatileAttributes_HgssCenterReception[] = INCBIN_U16("data/tilesets/secondary/hgss_center_reception/metatile_attributes.bin");
 #endif
 // END HGSS CENTER RECEPTION
+
+// BEGIN HGSS OLIVINE LIGHTHOUSE VISUALS
+#if !IS_FRLG
+const u16 gMetatiles_HgssOlivineLighthouse[] = INCBIN_U16("data/tilesets/secondary/hgss_olivine_lighthouse/metatiles.bin");
+const u16 gMetatileAttributes_HgssOlivineLighthouse[] = INCBIN_U16("data/tilesets/secondary/hgss_olivine_lighthouse/metatile_attributes.bin");
+#endif
+// END HGSS OLIVINE LIGHTHOUSE VISUALS
+
+// BEGIN HGSS SS AQUA
+#if !IS_FRLG
+const u16 gMetatiles_HgssSSAquaPrimary[] = INCBIN_U16("data/tilesets/primary/hgss_ss_aqua/metatiles.bin");
+const u16 gMetatileAttributes_HgssSSAquaPrimary[] = INCBIN_U16("data/tilesets/primary/hgss_ss_aqua/metatile_attributes.bin");
+const u16 gMetatiles_HgssSSAqua[] = INCBIN_U16("data/tilesets/secondary/hgss_ss_aqua/metatiles.bin");
+const u16 gMetatileAttributes_HgssSSAqua[] = INCBIN_U16("data/tilesets/secondary/hgss_ss_aqua/metatile_attributes.bin");
+#endif
+// END HGSS SS AQUA

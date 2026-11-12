@@ -71,6 +71,10 @@ def city_data(with_gym=True):
  for y in range(h):
   if y not in range(37,40):t[y*w]=0x4c6
   if y not in range(46,49):t[y*w+w-1]=0x4c6
+ # HGSS's central directory plot really is an open dirt court. Give its39
+ # public earth cells soil/curb artwork without inventing a house or event.
+ from hgss_ecruteak_courtyard import stamp as courtyard_stamp
+ courtyard_stamp(t,w,h,specs)
  from hgss_connection_buffer import repair
  from build_eight_gym_integration import overlay
  data=repair('EcruteakCity',struct.pack('<'+str(w*h)+'H',*t),w,h,specs)

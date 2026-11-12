@@ -511,6 +511,20 @@
         "elevation": 0,
         "dest_map": "MAP_OLIVINE_CITY_PORT_TERMINAL",
         "dest_warp_id": "5"
+      },
+      {
+        "x": 27,
+        "y": 20,
+        "elevation": 0,
+        "dest_map": "MAP_SS_AQUA_1F",
+        "dest_warp_id": "0"
+      },
+      {
+        "x": 28,
+        "y": 20,
+        "elevation": 0,
+        "dest_map": "MAP_SS_AQUA_1F",
+        "dest_warp_id": "12"
       }
     ],
     "source_warp_count": 3,
@@ -566,10 +580,20 @@
         20
       ],
       "native_sign": [
-        27,
+        25,
         21
       ],
-      "status": "S.S. Aqua sailing/ship outside this map pass; accepted Harbor Office travel retained separately"
+      "boarding_leaves": [
+        [
+          27,
+          20
+        ],
+        [
+          28,
+          20
+        ]
+      ],
+      "status": "Physical docked S.S. Aqua interiors and reciprocal Olivine return; departures, destination and story dependencies remain separately deferred. Accepted Harbor Office travel retained."
     }
   }
 ]

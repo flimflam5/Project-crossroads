@@ -1,0 +1,537 @@
+{
+  "version": "qa10-olivine-aqua-reference-audit",
+  "game_baseline": "285cfa4ebddcb390a8a5bde6116748cbb5eaba6b",
+  "reference_repository": "pret/pokeheartgold",
+  "reference_commit": "6bf138d6035aa6b43d6f8f4132a12df70f86dcec",
+  "terrain_archive_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a",
+  "terrain_archive_policy": "Existing public reference archive was inspected/extracted only. Raw archive/model geometry/textures and source scripts are not committed or integrated.",
+  "geometry_facts": "ss-aqua-geometry.json",
+  "selection": "ss-aqua-reference-selection.json",
+  "source_files": [
+    {
+      "path": "files/fielddata/mapmatrix/map_matrix/map_matrix_0171_P01R0301.bin",
+      "sha": "cd36735e800ea0cba3d62f4752ab8a0eb8dd200b",
+      "url": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0171_P01R0301.bin"
+    },
+    {
+      "path": "files/fielddata/mapmatrix/map_matrix/map_matrix_0172_P01R0302.bin",
+      "sha": "e888a134c4b18baa1ca04ba530e7773e137fb6e3",
+      "url": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0172_P01R0302.bin"
+    },
+    {
+      "path": "files/fielddata/mapmatrix/map_matrix/map_matrix_0173_P01R0303.bin",
+      "sha": "30c35ddfc9422526e85b7fdf10f9a0532372683c",
+      "url": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0173_P01R0303.bin"
+    },
+    {
+      "path": "files/fielddata/mapmatrix/map_matrix/map_matrix_0174_P01R0304.bin",
+      "sha": "daef35189c99221ab0ce59ccfce9fabdf74f0c06",
+      "url": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0174_P01R0304.bin"
+    },
+    {
+      "path": "files/fielddata/mapmatrix/map_matrix/map_matrix_0175_P01R0305.bin",
+      "sha": "b7294097fa57e04197b93bcef6eba2d21274b3b4",
+      "url": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0175_P01R0305.bin"
+    },
+    {
+      "path": "files/fielddata/mapmatrix/map_matrix/map_matrix_0176_P01R0306.bin",
+      "sha": "1602bda426637908bd87937cbad0cef4355ea97f",
+      "url": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0176_P01R0306.bin"
+    },
+    {
+      "path": "files/fielddata/mapmatrix/map_matrix/map_matrix_0177_P01R0307.bin",
+      "sha": "40cfd8c8243df1cd63bd30960e66319f57c8c0da",
+      "url": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0177_P01R0307.bin"
+    },
+    {
+      "path": "files/fielddata/eventdata/zone_event/278_P01R0301.json",
+      "sha": "1bc85b5ceb1f1a89d602424311f70832438ac034",
+      "url": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/278_P01R0301.json"
+    },
+    {
+      "path": "files/fielddata/eventdata/zone_event/279_P01R0302.json",
+      "sha": "6c7138df2adce0f618797e932e128022a7ef8b3e",
+      "url": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/279_P01R0302.json"
+    },
+    {
+      "path": "files/fielddata/eventdata/zone_event/280_P01R0303.json",
+      "sha": "c14e32bab3f0e4ade986835355875924601b698d",
+      "url": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/280_P01R0303.json"
+    },
+    {
+      "path": "files/fielddata/eventdata/zone_event/281_P01R0304.json",
+      "sha": "58857f9ad560c444e33afceb400977f970cdc79b",
+      "url": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/281_P01R0304.json"
+    },
+    {
+      "path": "files/fielddata/eventdata/zone_event/282_P01R0305.json",
+      "sha": "0b9bb977edc80b260febe6d6c931933213ac3df6",
+      "url": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/282_P01R0305.json"
+    },
+    {
+      "path": "files/fielddata/eventdata/zone_event/299_P01R0306.json",
+      "sha": "dbb33d5684ddc6321584ff68c37e56a9ee879df4",
+      "url": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/299_P01R0306.json"
+    },
+    {
+      "path": "files/fielddata/eventdata/zone_event/300_P01R0307.json",
+      "sha": "4355081fcf3ccaca5af4c54a6131b2e39ffe6643",
+      "url": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/300_P01R0307.json"
+    },
+    {
+      "path": "files/fielddata/script/scr_seq/scr_seq_0152_P01R0101.s",
+      "sha": "869663f29c9a5a3ce1e33e889b0d9cdd15f18f81",
+      "url": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/script/scr_seq/scr_seq_0152_P01R0101.s"
+    },
+    {
+      "path": "files/fielddata/script/scr_seq/scr_seq_0153_P01R0102.s",
+      "sha": "06912fd5eee5face74e597e5c7c4c70089cfdbff",
+      "url": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/script/scr_seq/scr_seq_0153_P01R0102.s"
+    },
+    {
+      "path": "files/fielddata/script/scr_seq/scr_seq_0156_P01R0301.s",
+      "sha": "c0d19dbec1db6a8b950467a6f88a2cf280bed308",
+      "url": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/script/scr_seq/scr_seq_0156_P01R0301.s"
+    },
+    {
+      "path": "files/fielddata/script/scr_seq/scr_seq_0157_P01R0302.s",
+      "sha": "fdf8dc606141ba80b4c5de79b73700fa1e90d09b",
+      "url": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/script/scr_seq/scr_seq_0157_P01R0302.s"
+    },
+    {
+      "path": "files/fielddata/script/scr_seq/scr_seq_0158_P01R0303.s",
+      "sha": "aed97df1f132d280df5fab08e0e022f9ff74b239",
+      "url": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/script/scr_seq/scr_seq_0158_P01R0303.s"
+    },
+    {
+      "path": "files/fielddata/script/scr_seq/scr_seq_0159_P01R0304.s",
+      "sha": "eaadbaddfa76f9e49f84177159632d53bab9aaa4",
+      "url": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/script/scr_seq/scr_seq_0159_P01R0304.s"
+    },
+    {
+      "path": "files/fielddata/script/scr_seq/scr_seq_0160_P01R0305.s",
+      "sha": "8fdefb419dc42e406478e3d8670e18e2987b83dc",
+      "url": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/script/scr_seq/scr_seq_0160_P01R0305.s"
+    },
+    {
+      "path": "files/fielddata/script/scr_seq/scr_seq_0161_P01R0306.s",
+      "sha": "3e95e0fbfef5c09e37eb8a55b89361fa1934dbb3",
+      "url": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/script/scr_seq/scr_seq_0161_P01R0306.s"
+    },
+    {
+      "path": "files/fielddata/script/scr_seq/scr_seq_0162_P01R0307.s",
+      "sha": "99071e3f8c065523e68806bf652ea232d6bb3272",
+      "url": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/script/scr_seq/scr_seq_0162_P01R0307.s"
+    },
+    {
+      "path": "files/msgdata/msg/msg_0255_P01R0101.json",
+      "sha": "d2a393e45778162d672071c3241bc41c7712be65",
+      "url": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/msgdata/msg/msg_0255_P01R0101.json"
+    },
+    {
+      "path": "files/msgdata/msg/msg_0256_P01R0102.json",
+      "sha": "3374fdacdc90a5f68f0e1eb1ef1101d81e353864",
+      "url": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/msgdata/msg/msg_0256_P01R0102.json"
+    },
+    {
+      "path": "files/msgdata/msg/msg_0259_P01R0301.json",
+      "sha": "3eb3d23f238cfebb85bd75ea1e80983f1cc02795",
+      "url": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/msgdata/msg/msg_0259_P01R0301.json"
+    },
+    {
+      "path": "files/msgdata/msg/msg_0260_P01R0302.json",
+      "sha": "20a2f76818de2d85efae082ebbb9bee807f97f46",
+      "url": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/msgdata/msg/msg_0260_P01R0302.json"
+    },
+    {
+      "path": "files/msgdata/msg/msg_0261_P01R0303.json",
+      "sha": "cdda419df3196ff0d1643aa977ba1668f6461b37",
+      "url": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/msgdata/msg/msg_0261_P01R0303.json"
+    },
+    {
+      "path": "files/msgdata/msg/msg_0262_P01R0306.json",
+      "sha": "7934f987852b1cb69067d6950a17b2281bb034b6",
+      "url": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/msgdata/msg/msg_0262_P01R0306.json"
+    },
+    {
+      "path": "files/msgdata/msg/msg_0263_P01R0307.json",
+      "sha": "2ba6c6d5badb03e41e1e288c8dd2dabe3f8f22f7",
+      "url": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/msgdata/msg/msg_0263_P01R0307.json"
+    }
+  ],
+  "maps": [
+    {
+      "header": "MAP_SS_AQUA_1F",
+      "matrix": "map_matrix_0171_P01R0301",
+      "event": "278_P01R0301",
+      "purpose": "Passenger corridor/lounge (four vertical benches plus north/south horizontal settees, six seating fixtures total) and separate east service/engine upper walkway; eight cabins, captain hatch and two B1F stairs",
+      "matrix_dimensions": [
+        2,
+        1
+      ],
+      "terrain_models": [
+        643,
+        644
+      ],
+      "source_prop_instances": 7,
+      "source_actor_instances": 4,
+      "source_warps": 13,
+      "raster_support": "Complete map mosaic plus selected native256x192 gameplay views",
+      "implementation_state": "Reference only; integration and gameplay verification tracked separately by root"
+    },
+    {
+      "header": "MAP_SS_AQUA_CAPTAIN_ROOM",
+      "matrix": "map_matrix_0172_P01R0302",
+      "event": "279_P01R0302",
+      "purpose": "Captain office/cabin with berth, chart desk, sofa, bookcase, kitchenette/fridge and windows",
+      "matrix_dimensions": [
+        1,
+        1
+      ],
+      "terrain_models": [
+        645
+      ],
+      "source_prop_instances": 4,
+      "source_actor_instances": 2,
+      "source_warps": 1,
+      "raster_support": "Complete map mosaic plus selected native256x192 gameplay views",
+      "implementation_state": "Reference only; integration and gameplay verification tracked separately by root"
+    },
+    {
+      "header": "MAP_SS_AQUA_1F_SOUTHEAST_ROOMS",
+      "matrix": "map_matrix_0173_P01R0303",
+      "event": "280_P01R0303",
+      "purpose": "Two independent cabins: left sleeping sailor room/red carpet; right player/rest cabin/mustard floor",
+      "matrix_dimensions": [
+        1,
+        1
+      ],
+      "terrain_models": [
+        646
+      ],
+      "source_prop_instances": 9,
+      "source_actor_instances": 3,
+      "source_warps": 2,
+      "raster_support": "Complete map mosaic plus selected native256x192 gameplay views",
+      "implementation_state": "Reference only; integration and gameplay verification tracked separately by root"
+    },
+    {
+      "header": "MAP_SS_AQUA_1F_SOUTHWEST_ROOMS",
+      "matrix": "map_matrix_0174_P01R0304",
+      "event": "281_P01R0304",
+      "purpose": "Two independent cabins: left blue carpet/berth/dining table; right gold carpet/dining table/bookcase",
+      "matrix_dimensions": [
+        1,
+        1
+      ],
+      "terrain_models": [
+        647
+      ],
+      "source_prop_instances": 7,
+      "source_actor_instances": 4,
+      "source_warps": 2,
+      "raster_support": "Complete map mosaic plus selected native256x192 gameplay views",
+      "implementation_state": "Reference only; integration and gameplay verification tracked separately by root"
+    },
+    {
+      "header": "MAP_SS_AQUA_1F_NORTHEAST_ROOMS",
+      "matrix": "map_matrix_0175_P01R0305",
+      "event": "282_P01R0305",
+      "purpose": "Two independent cabins: left red carpet/vertical twin berths/rear desks; right mustard floor/berth/dining table",
+      "matrix_dimensions": [
+        1,
+        1
+      ],
+      "terrain_models": [
+        648
+      ],
+      "source_prop_instances": 1,
+      "source_actor_instances": 4,
+      "source_warps": 2,
+      "raster_support": "Complete map mosaic plus selected native256x192 gameplay views",
+      "implementation_state": "Reference only; integration and gameplay verification tracked separately by root"
+    },
+    {
+      "header": "MAP_SS_AQUA_1F_NORTHWEST_ROOMS",
+      "matrix": "map_matrix_0176_P01R0306",
+      "event": "299_P01R0306",
+      "purpose": "Two independent cabins: left blue grandfather cabin/berth/dining table with two diagonal red stools; right gold twin-bed/yellow-sofa cabin",
+      "matrix_dimensions": [
+        1,
+        1
+      ],
+      "terrain_models": [
+        649
+      ],
+      "source_prop_instances": 0,
+      "source_actor_instances": 9,
+      "source_warps": 2,
+      "raster_support": "Complete map mosaic plus selected native256x192 gameplay views",
+      "implementation_state": "Reference only; integration and gameplay verification tracked separately by root"
+    },
+    {
+      "header": "MAP_SS_AQUA_B1F",
+      "matrix": "map_matrix_0177_P01R0307",
+      "event": "300_P01R0307",
+      "purpose": "Connected lower-deck perimeter corridor, six-bed crew quarters, six-chair galley, engine hazard bay and both 1F stairways",
+      "matrix_dimensions": [
+        2,
+        1
+      ],
+      "terrain_models": [
+        650,
+        651
+      ],
+      "source_prop_instances": 24,
+      "source_actor_instances": 12,
+      "source_warps": 3,
+      "raster_support": "Complete map mosaic plus selected native256x192 gameplay views",
+      "implementation_state": "Reference only; integration and gameplay verification tracked separately by root"
+    }
+  ],
+  "raster_source_pages": [
+    "https://pokewave.net/juegos/heartgold-soulsilver/guia/s-s-aqua",
+    "https://bulbapedia.bulbagarden.net/wiki/S.S._Aqua"
+  ],
+  "rasters": [
+    {
+      "url": "https://pokewave.net/assets/images/walkthrough/heartgold-soulsilver/39599d9f-385.png",
+      "sha256": "395da116dd0d54340a385c977e0505927c9f894a2c98ffe9a0c9636ca584b1cb",
+      "dimensions": [
+        256,
+        192
+      ],
+      "local_cache_name": "SS_Aqua_room_HGSS_reference_385.png",
+      "reference_use": "Documentary appearance/layout comparison only. Never imported as ROM textures."
+    },
+    {
+      "url": "https://pokewave.net/assets/images/walkthrough/heartgold-soulsilver/2109f8a5-386.png",
+      "sha256": "deeb4fc7edb93855d9024178a9377cc4b3e6a49b2fbed574e6451e6e10aa2fba",
+      "dimensions": [
+        256,
+        192
+      ],
+      "local_cache_name": "SS_Aqua_room_HGSS_reference_386.png",
+      "reference_use": "Documentary appearance/layout comparison only. Never imported as ROM textures."
+    },
+    {
+      "url": "https://pokewave.net/assets/images/walkthrough/heartgold-soulsilver/2641edb7-387.png",
+      "sha256": "a0f70a95f66f1a65468550745236703a244a45d948c0c1fcf56e41d17dc76018",
+      "dimensions": [
+        256,
+        192
+      ],
+      "local_cache_name": "SS_Aqua_room_HGSS_reference_387.png",
+      "reference_use": "Documentary appearance/layout comparison only. Never imported as ROM textures."
+    },
+    {
+      "url": "https://pokewave.net/assets/images/walkthrough/heartgold-soulsilver/166f27b0-388.png",
+      "sha256": "d90c309caaf25b23a40dd990c8fbc5996373ef1f1d78c990ef88da2fe97d6792",
+      "dimensions": [
+        256,
+        192
+      ],
+      "local_cache_name": "SS_Aqua_room_HGSS_reference_388.png",
+      "reference_use": "Documentary appearance/layout comparison only. Never imported as ROM textures."
+    },
+    {
+      "url": "https://pokewave.net/assets/images/walkthrough/heartgold-soulsilver/f7c74d9d-389.png",
+      "sha256": "ffc59ef8a4e588638c2c4f8673208baca427cf0582d38989ca4fdf816040b951",
+      "dimensions": [
+        256,
+        192
+      ],
+      "local_cache_name": "SS_Aqua_room_HGSS_reference_389.png",
+      "reference_use": "Documentary appearance/layout comparison only. Never imported as ROM textures."
+    },
+    {
+      "url": "https://pokewave.net/assets/images/walkthrough/heartgold-soulsilver/e9a10fa9-390.png",
+      "sha256": "c1ad7da249d4bbc0defc36c1c895a99d9723147590dce50db730b6ca0f8fb5fb",
+      "dimensions": [
+        256,
+        192
+      ],
+      "local_cache_name": "SS_Aqua_room_HGSS_reference_390.png",
+      "reference_use": "Documentary appearance/layout comparison only. Never imported as ROM textures."
+    },
+    {
+      "url": "https://pokewave.net/assets/images/walkthrough/heartgold-soulsilver/4dc2434d-391.png",
+      "sha256": "66d94a4f540d34808a743206c5bbe01cf2e78199ce577cd5e9c7f225ca03f329",
+      "dimensions": [
+        256,
+        192
+      ],
+      "local_cache_name": "SS_Aqua_room_HGSS_reference_391.png",
+      "reference_use": "Documentary appearance/layout comparison only. Never imported as ROM textures."
+    },
+    {
+      "url": "https://pokewave.net/assets/images/walkthrough/heartgold-soulsilver/ea3714c7-392.png",
+      "sha256": "da3908e37c3909fe1ca4e94aaf777aa61e675c08eb419d598b2ce3c6a9e912ff",
+      "dimensions": [
+        256,
+        192
+      ],
+      "local_cache_name": "SS_Aqua_room_HGSS_reference_392.png",
+      "reference_use": "Documentary appearance/layout comparison only. Never imported as ROM textures."
+    },
+    {
+      "url": "https://archives.bulbagarden.net/media/upload/7/76/SS_Aqua_1F_HGSS.png",
+      "sha256": "be6fde0af7cc33df9cc6e7350d9815e642e1b3684097f6bb69204deb6eae1252",
+      "dimensions": [
+        912,
+        288
+      ],
+      "local_cache_name": "SS_Aqua_1F_HGSS.png",
+      "reference_use": "Documentary appearance/layout comparison only. Never imported as ROM textures."
+    },
+    {
+      "url": "https://archives.bulbagarden.net/media/upload/2/2f/SS_Aqua_1F_Rooms_HGSS.png",
+      "sha256": "390021362dfebdea35b72f24c291c0c9dc0d1e1c5426b28604c1e0fef6684adf",
+      "dimensions": [
+        912,
+        384
+      ],
+      "local_cache_name": "SS_Aqua_1F_Rooms_HGSS.png",
+      "reference_use": "Documentary appearance/layout comparison only. Never imported as ROM textures."
+    },
+    {
+      "url": "https://archives.bulbagarden.net/media/upload/6/63/SS_Aqua_B1F_HGSS.png",
+      "sha256": "982c942acfc629555b754ef16dfce9b815b8ebb612fb8fbd549722b53bc9a265",
+      "dimensions": [
+        1056,
+        288
+      ],
+      "local_cache_name": "SS_Aqua_B1F_HGSS.png",
+      "reference_use": "Documentary appearance/layout comparison only. Never imported as ROM textures."
+    },
+    {
+      "url": "https://archives.bulbagarden.net/media/upload/d/da/SS_Aqua_Captain_Cabin_HGSS.png",
+      "sha256": "7b7b7b7723a2a041188446d0069367bbedbf0cc344e7ad5d163ba9a439119ac9",
+      "dimensions": [
+        224,
+        192
+      ],
+      "local_cache_name": "SS_Aqua_Captain_Cabin_HGSS.png",
+      "reference_use": "Documentary appearance/layout comparison only. Never imported as ROM textures."
+    },
+    {
+      "url": "https://archives.bulbagarden.net/media/upload/c/c8/SS_Aqua_HGSS.png",
+      "sha256": "a015d9b2cdfd200fdd9d7b80623a02110b6daa37fc507ef1510a7448adfeac9c",
+      "dimensions": [
+        256,
+        192
+      ],
+      "local_cache_name": "SS_Aqua_HGSS.png",
+      "reference_use": "Documentary appearance/layout comparison only. Never imported as ROM textures."
+    },
+    {
+      "url": "https://pokewave.net/assets/images/walkthrough/heartgold-soulsilver/14180c8a-379.png",
+      "sha256": "c6c56949fdd4d157716aa04237f92a7f9eb8b50674589b31331184a16214a4ea",
+      "local_cache_name": "SS_Aqua_port_HGSS_reference_1.png",
+      "dimensions": [
+        256,
+        192
+      ],
+      "reference_use": "Documentary appearance/layout comparison only. Never imported as ROM textures."
+    },
+    {
+      "url": "https://pokewave.net/assets/images/walkthrough/heartgold-soulsilver/92b07175-380.png",
+      "sha256": "d85d745d144750cf80119d8ffc05e323fa99c2122efd483db34a2bb7d18d950e",
+      "local_cache_name": "SS_Aqua_port_HGSS_reference_2.png",
+      "dimensions": [
+        256,
+        192
+      ],
+      "reference_use": "Documentary appearance/layout comparison only. Never imported as ROM textures."
+    },
+    {
+      "url": "https://pokewave.net/assets/images/walkthrough/heartgold-soulsilver/d8beaf5e-381.png",
+      "sha256": "a9fab472cb601db0412508a1ae7fcd10967e667dfdffe79171069add45ba386e",
+      "local_cache_name": "SS_Aqua_port_HGSS_reference_3.png",
+      "dimensions": [
+        256,
+        192
+      ],
+      "reference_use": "Documentary appearance/layout comparison only. Never imported as ROM textures."
+    },
+    {
+      "url": "https://pokewave.net/assets/images/walkthrough/heartgold-soulsilver/1ff0f1d7-382.png",
+      "sha256": "594bd152a637c9097eaf4be886fbd2c07e5b21a35940172f343fd8ba82697dec",
+      "local_cache_name": "SS_Aqua_port_HGSS_reference_4.png",
+      "dimensions": [
+        256,
+        192
+      ],
+      "reference_use": "Documentary appearance/layout comparison only. Never imported as ROM textures."
+    },
+    {
+      "url": "https://pokewave.net/assets/images/walkthrough/heartgold-soulsilver/f1119212-383.png",
+      "sha256": "2c45b023b96c070f1990728e315c1f83c498e29bbe91bf636007cbf037c651fd",
+      "local_cache_name": "SS_Aqua_port_HGSS_reference_5.png",
+      "dimensions": [
+        256,
+        192
+      ],
+      "reference_use": "Documentary appearance/layout comparison only. Never imported as ROM textures."
+    },
+    {
+      "url": "https://pokewave.net/assets/images/walkthrough/heartgold-soulsilver/6bc8ec08-384.png",
+      "sha256": "e1e14fc27c7f3d56023abee4d81caa46aecc46d98504bbf653b51e58400fa4ea",
+      "local_cache_name": "SS_Aqua_port_HGSS_reference_6.png",
+      "dimensions": [
+        256,
+        192
+      ],
+      "reference_use": "Documentary appearance/layout comparison only. Never imported as ROM textures."
+    },
+    {
+      "url": "https://pokewave.net/assets/images/walkthrough/heartgold-soulsilver/0c1b0029-393.png",
+      "sha256": "488e85ffd8dda3b04ce7c72d600b406243f7a127b92e882ec76af5c40f00b387",
+      "local_cache_name": "SS_Aqua_port_HGSS_reference_7.png",
+      "dimensions": [
+        256,
+        192
+      ],
+      "reference_use": "Documentary appearance/layout comparison only. Never imported as ROM textures."
+    },
+    {
+      "url": "https://pokewave.net/assets/images/walkthrough/heartgold-soulsilver/ec6e9bec-394.png",
+      "sha256": "b4f30fe773f811390c7145fe7b2c372e2d600635977ca4c02ee7727561a819e6",
+      "local_cache_name": "SS_Aqua_port_HGSS_reference_8.png",
+      "dimensions": [
+        256,
+        192
+      ],
+      "reference_use": "Documentary appearance/layout comparison only. Never imported as ROM textures."
+    }
+  ],
+  "physical_findings": [
+    "All seven ship source headers recovered: corridor, four paired cabin maps (eight physically separate cabins), captain room and lower deck.",
+    "DS terrain embeds beds, dining tables, sofas and cabinetry in some rooms; zero separate prop records is not an empty room.",
+    "Complete HGSS whole-map mosaics now establish all cabin and lower-deck furnishings; no generic room substitution is justified.",
+    "Source 1F has two voyage-dependent destination warps at the same saved x/z(24,19): anchor0 toOlivine, anchor12 toVermilion; source scripts move the appropriate warp to(27,20).",
+    "The ship interior geography can be opened at a dock in Olivine without implementing a voyage or importing HGSS story. Source scripted gates/rewards are not Black Ledger canon."
+  ],
+  "travel_dependencies_reference_only": [
+    "HGSS Olivine terminal checks FLAG_GAME_CLEAR and ITEM_S_S__TICKET. Before game clear its maintenance line is intentional source dialogue.",
+    "First trip sets VAR_BOAT_DIRECTION=1, clears FLAG_BOAT_ARRIVED, uses VAR_SCENE_SS_AQUA and crew/girl/grandfather scenes.",
+    "Repeat Olivine departures are Mondays/Fridays in source; other days return the no-sailing message.",
+    "First voyage reaches Vermilion after the sleeping sailor and missing granddaughter sequence; repeat trips use sleep/arrival state.",
+    "Captain plate gifts depend on Earth Badge and daily/trip flags; grandfather Metal Coat reward depends on source quest. None is authorized to become Black Ledger canon by copying scripts.",
+    "Vermilion port/destination and Black Ledger departure unlock/fare/schedule are not implemented/approved in this Olivine pass. Physical dockside visiting is distinct from travel."
+  ],
+  "empty_signed_lot_findings": {
+    "olivine_canonical_enterable_destinations": 9,
+    "existing_city_inventory": "All9 corresponding source warp destinations exist in QA09; original Black Ledger additions are separate.",
+    "city_directory_24_42": "Olivine terrace directory is a separate canonical sign, not the owner photograph; prior ambiguity resolved.",
+    "route40_frontier_gate": "Separate real adjacent canonical gap documented for future authorized route work; not the reported courtyard and not a reason to add a city building.",
+    "owner_screenshot_match": "Confirmed from newly supplied D187C84F photos1\u20132: Ecruteak City directory courtyard at36,45, west of the Dance Theater (source/native doors44/45,45). It is not an empty Olivine building lot.",
+    "new_evidence": "Actual pinned Ecruteak source background event36,45 plus Ecruteak City HGSS mosaic; root normal-controller QA10 directory proof reproduces the displayed sign and courtyard."
+  },
+  "remaining_visual_reference_limits": [
+    "Whole-map mosaics are published compositions, not identically framed240x160 native GBA views; projection/art adaptations must be documented.",
+    "Some small fixture semantics remain visually ambiguous (for example southeast cabin rear-right round gray/white fixture), so its appearance is evidenced without inventing a purpose.",
+    "Full reverse quay facade and complete same-camera port exterior coverage remain less complete than ship interior mosaic coverage."
+  ],
+  "verification_separation": "Reference extraction hashes passed; no game build or emulator was run by this reference audit. Root/implementation agents own source integration and final-ROM gameplay/visual validation."
+}
