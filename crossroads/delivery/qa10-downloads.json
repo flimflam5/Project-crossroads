@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "source_commit": "3138de89d9e57b816d3b7d03e727f04d69c2d168",
+  "source_tree": "a9b47ab46710daac6d5a2726c29786a0c77c997b",
+  "game_source_checkpoint": "cc643ffe711204f3ef38e34e7aa1eb8c9558720f",
+  "base_artifact_id": 13924772308,
+  "base_artifact_sha256": "958e2cebfe273b3f31cef544eba2a66a5a9dda2ab04a2b1e3c422eed1cddb31f",
+  "base_rom_sha256": "614e5d4946086b6255a55f647adb3e4401c5ba4af9541be6269ca05721759a72",
+  "tested_rom_sha256": "ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b",
+  "rom_bytes": 33554432,
+  "patch_sha256": "7f53e8a913ff98438b90d46958a93928acbd08e919767da8d28a8cb99b68bf3f",
+  "stem": "BlackLedger-Olivine-Aqua-QA10-A1",
+  "tag": "qa10-olivine-aqua-a1",
+  "build_info": {
+    "version": "black-ledger-olivine-aqua-qa10-a1",
+    "source_commit": "3138de89d9e57b816d3b7d03e727f04d69c2d168",
+    "source_tree": "a9b47ab46710daac6d5a2726c29786a0c77c997b",
+    "feature_source_commit": "3138de89d9e57b816d3b7d03e727f04d69c2d168",
+    "compiler": "arm-none-eabi-gcc (15:14.2.rel1-1) 14.2.1 20241119",
+    "dirty_tracked_sources": false,
+    "rom": "pokeemerald.gba",
+    "rom_sha256": "ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b",
+    "rom_bytes": 33554432,
+    "ci_run_id": null,
+    "summary": "HGSS-referenced docked S.S. Aqua with eight cabins and seven native maps; coherent north-entry Olivine port, full-width gangway and returns; lighthouse carpets/furnishings/windows and lantern-room finish; canonical Ecruteak directory court. Stable IDs/saves, accepted additions/Gyms, title/music/Joe/starters preserved.",
+    "known_limitations": "See crossroads/RELEASE_OLIVINE_AQUA_QA10.md and hgss/qa10 for actual per-location tests, reference comparisons and adaptations. Owner Delta/visual acceptance is pending. Physical docked ship exploration is separate from unimplemented voyages: no Vermilion destination, approved travel progression, first-trip quest or rewards are invented. DS online services and unapproved story/badges remain deferred. No regional expansion.",
+    "testing": "Compilation is not playtesting. Follow crossroads/TESTING.md.",
+    "runtime_evidence": {
+      "rom_sha256": "ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b",
+      "same_rom_as_this_artifact": true,
+      "note": "Same source can produce different binaries with different compilers. Emulator results apply only to their recorded ROM checksum."
+    },
+    "game_source_checkpoint": "cc643ffe711204f3ef38e34e7aa1eb8c9558720f",
+    "source_note": "Final HEAD includes documented tests and evidence. Runtime scope is copied exactly from verification-summary.json. Prior-stage results apply only to their individually recorded ROM checksums and test scopes.",
+    "local_runtime_verified": true,
+    "runtime_verification_scope": "All 18 scheduled phases completed for the final B5 delivery ROM ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b: 17 real mGBA suites (two migration/door, seven city/Aqua, eight accepted-function regressions), plus the independent audit of actual doorway records. A separate seven-case genuine-old-B4-save Continue pilot also passes. Every one of 45 doorway groups additionally passes the independent physical-facing audit. Static checks ran separately. Earlier candidates remain historical or diagnostic; B4 specifically failed 67 arrival-facing checks despite its older phase passes. No earlier result supplies a missing final-candidate phase. Scripted controller tests and native-frame inspection remain separate from owner Delta and visual acceptance.",
+    "ci_artifact_is_separate_binary": true,
+    "pull_request": "https://github.com/flimflam5/Project-crossroads/pull/17"
+  }
+}
