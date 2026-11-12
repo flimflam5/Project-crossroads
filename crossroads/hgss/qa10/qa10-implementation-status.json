@@ -1,0 +1,50 @@
+{
+  "baseline_source": "285cfa4ebddcb390a8a5bde6116748cbb5eaba6b",
+  "branch": "feature/olivine-port-ship-qa10",
+  "baseline_rom_sha256": "df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4",
+  "scope": [
+    "Docked physical seven-map S.S. Aqua with eight cabins",
+    "North-entry port and full-width boarding/returns",
+    "Source-referenced lighthouse floors/furniture",
+    "Canonical Ecruteak directory court texture, not invented building"
+  ],
+  "before_runtime": "COMPLETE; all processes ended, original battery unchanged",
+  "core_generation": "Complete: courtyard39art-onlycells, north-entryport+decksign22,50, all8ownerGyms; ECR754/871preGym, Olive677graphics/124freepreGym; packingPASS",
+  "new_ship_generation": "COMPLETE: seven append-only maps, eight cabins, 12 physical components; 411 glyphs/508 secondary metatiles",
+  "lighthouse_art_generation": "COMPLETE:7maps inclbalcony centrallygenerated; alloldphysical/event/ID/behavior contractsPASS",
+  "final_build": {
+    "candidate": "QA10-A1 B5: tested Delta review checkpoint",
+    "status": "BUILD PASS",
+    "game_source_commit": "cc643ffe711204f3ef38e34e7aa1eb8c9558720f",
+    "rom_sha256": "ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b",
+    "elf_sha256": "a950a6fd77e4320c3bb864c3b96e981a1da24cb63727f8151e2124c6577f90eb",
+    "rom_payload_bytes": 30322784,
+    "ewram_bytes": 226448,
+    "iwram_bytes": 28392
+  },
+  "final_runtime": "PASS:18 scheduled phases (17 actual mGBA suites plus independent all45 record postcheck) and seven genuine old-gate/control coldContinue cases on exact B5 ROM. Allinputbatteries unchanged. Owner Delta/visual review pending.",
+  "owner_visual_acceptance": "PENDING",
+  "sailing": "Not implemented: destination, travel/story requirements and rewards are separately deferred",
+  "ship_boarding_integration": "Root source implemented:2visiblehatch/gangwayleavesQuay4/5\u2192SSAqua1F0/12; no voyage",
+  "door_contract": "45groups/173fronts allPASS;519attempts=482strict destination/position/facing/walk-away PASS +37physicallyunavailable lateralstarts (35solid/2sea),0failure/missing. Independentall45PASS. All67historicalB4facefailures fixed.",
+  "new_ship_independent_validation": "PASS: literal source/model/door projection masks, all7maps and12components,15negative controls",
+  "source_checks": "All68 actual workflow commands PASS on B5 with original Route42 writer-order failure and exact successful recheck retained in /tmp/qa10-build5-static-final.json. Source writer-order fix committed ed375e9f38; game bytes unchanged.",
+  "unresolved_before_next_build": null,
+  "portal_layer_correction": "Onlytwo canopy attrs0000\u21921000, originalpixels/physics/warps retained. Actual B5 fullcomposedJoe192/192 atboth portals/landings, continuousnormalmovement recording andSaveContinuePASS.",
+  "runtime_source_checkpoint": "cc643ffe711204f3ef38e34e7aa1eb8c9558720f",
+  "test_checkpoint": "ed375e9f382cafc8f225136876778534ac111a17 (generator/docs successor; all compiledgameinputs equalcc)",
+  "b4_art_correction": "Central generation and independent built check PASS: exactly28 6F art cells; other6maps/old used aliases/glyphs/fullattributes/palettes preserved. Cyan body continuous, two black model corners filled. No physical/event/ID change.",
+  "b3_aqua_focused": "All7maps/12components, allNPC/signs, nativeberthNO/YES and12normalSaveContinues PASS; sourcebodybumps explicitlySKIPPED, notPASS. No additional visual defect found in all12centers+8furnishedcontexts.",
+  "b4_rejection": "All scripted original17 stages completed but independent all45 facing audit FAIL:415 correct+37inaccessible+67wrong. Explicitly rejected as final; preserved in historical proof.",
+  "b5_facing_repair": "Native OnWarp+OnReturn coordinate-guarded body25cells/6maps. No C/engineconstants/art/collision/warps/IDs/saveflags changed fromB4. All45groups explicit intended-facings fromindependentaudit. Allsixcompiledmapheaders/tables/scriptbytes verified, sourceinterpreter8188coordinatecasesPASS.",
+  "full_aqua_runtime": "PASS:7maps/12physicalcomponents,1169exactsourcewall/modelbodyapproaches,12nativeSave/coldContinues,14NPC/signs,2berthNO/YEShealthfixtures,8furnishingcontexts; realreturn; freshnative/HGSSreview20views.",
+  "city_runtime": "PASS:LH8maptour,199dry+24nativeSurf,59materials,6counters,LH12nativeSaveContinues+5window/liftjourneys+2continuous6Fcircuits,court39/fullJoe+4messages+SaveContinue.",
+  "accepted_functions_runtime": "PASS:8stages including51services,title/pretitle,all3starters/met/duplicates,actualJoe battleback+firstloss,Fly10/cancel/postflightSaveContinue,Surf4/fishing/disembark,bike-stateVRAM andrunning. Bike artwork remains an explicit visual limitation.",
+  "remaining_limits": [
+    "Owner Delta/visual acceptance pending; no100% or1:1 claim",
+    "Voyages/Vermilion/travel-story/rewards not implemented",
+    "GBA elevator chooser/decor deliberate adaptation; no independentHGSS cabin raster found",
+    "DS online/Seal functions, canonical trade/rod rewards deferred",
+    "Mounted-bike artwork and inheritedNewGameintro remain outside this map pass"
+  ]
+}

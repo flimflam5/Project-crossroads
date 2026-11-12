@@ -518,15 +518,15 @@
         683
       ],
       "door_x": 3,
-      "door_y": 5,
+      "door_y": 1,
       "doors": [
         [
           3,
-          5
+          1
         ],
         [
           4,
-          5
+          1
         ]
       ],
       "solid": [
@@ -539,14 +539,6 @@
           1
         ],
         [
-          3,
-          1
-        ],
-        [
-          4,
-          1
-        ],
-        [
           5,
           1
         ],
@@ -644,6 +636,14 @@
         ],
         [
           2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
           5
         ],
         [
@@ -659,7 +659,23 @@
           5
         ]
       ],
-      "palette": 11
+      "palette": 11,
+      "canopy": [
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "entry_direction": "south",
+      "approach": [
+        0,
+        -1
+      ],
+      "design": "North-entry visible portal below high canopy; closed south windows, no second false doorway"
     },
     "center": {
       "width": 6,
@@ -1119,6 +1135,20 @@
         850,
         851
       ]
+    },
+    "port_sign": {
+      "width": 1,
+      "height": 1,
+      "metatiles": [
+        1007
+      ],
+      "palette": 12,
+      "overlay_palettes": [
+        0,
+        1
+      ],
+      "native_sign_backing_pixels_removed": 46,
+      "source": "Unchanged native General sign foreground over timber deck; north apron22,50"
     }
   },
   "protected_primary_ids": [
@@ -1188,8 +1218,8 @@
     822,
     823
   ],
-  "facade_graphics": 680,
-  "remaining_graphics": 121,
+  "facade_graphics": 677,
+  "remaining_graphics": 124,
   "provenance": "Original generated HGSS-directed facades; no HGSS textures imported",
   "source_sha256": {
     "city-materials-source.png": "1bccbd366b17f36133ba7090c8e11757bce16ef914c3d4bef95bf651331fef30",
@@ -1199,6 +1229,7 @@
     "lighthouse-planter-source.png": "de2c5896eed283571963fbdacca9efadb5f73be3a2c570455b38548f6dacd594",
     "parasol-source.png": "67569f7ac81173907e07420ce63493e87e6a745fb040204bd7a91fceed5523ea",
     "port-furniture-source.png": "5700c5f25d31c78010f8d342e017f2296969b52ffbbf0607b4a295a30f11d456",
+    "port-north-entry-source.png": "a1e6f3e2bc04c5914728be4ca137c6eb39436ec1b900241fac48700ad54f1d95",
     "port-vessels-source.png": "56379c8657323378de64fe442927ff46855fd22a94b0a6611881744d930ce0c8",
     "services-source.png": "d84e5f3aa39bc68fb791f86b6476a3807501a350c74c0f3b191bfa1a10de68bd"
   }

@@ -1,0 +1,9 @@
+{
+  "rom_sha256": "af59dff1b06b99a9599c6f98b6fb6bd1e765cc52c0838a2dec5c79a6c1f88373",
+  "elf_sha256": "e484ec2b6b7ba97e50d60805ef42b3a1ebe16bbb5815d703f02665daeaed5944",
+  "source_at_start": "285cfa4ebddcb390a8a5bde6116748cbb5eaba6b",
+  "source_dirty_at_start": true,
+  "source_note": "Final code checkpoint to be recorded by root after frozen-game-input commit; exact ROM/ELF identity is checked before and after every phase.",
+  "original_battery_sha256": "b03ff1ef488fbd25de016e828483bc3001787b84e450a45eaa0ac12a11de30ab",
+  "copied_battery_sha256": "b03ff1ef488fbd25de016e828483bc3001787b84e450a45eaa0ac12a11de30ab"
+}

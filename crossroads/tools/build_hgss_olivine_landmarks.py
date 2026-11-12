@@ -75,7 +75,10 @@ def generate(check=False):
    for flags,flipped in [(0x400,im.transpose(Image.Transpose.FLIP_LEFT_RIGHT)),(0x800,im.transpose(Image.Transpose.FLIP_TOP_BOTTOM)),(0xc00,im.transpose(Image.Transpose.FLIP_LEFT_RIGHT).transpose(Image.Transpose.FLIP_TOP_BOTTOM))]:glyphs.setdefault(flipped.tobytes(),n|flags)
   return glyphs[key]
  # Both real lift panels are drawn and encoded at their derived indices.
- door=Image.open(R/'crossroads/hgss/art/olivine/port-native.png')
+ # City-facing access now opens toward the northern pier. The older south
+ # facade remains the correct rear-quay view and lift-panel art; do not sample
+ # either from the mutable city-facing conversion.
+ door=Image.open(R/'crossroads/hgss/art/olivine/port-south-native.png')
  for leaf,n in enumerate(lift_metas):
   top=[0x8000|glyph(door.crop((48+leaf*16+dx,80+dy,56+leaf*16+dx,88+dy))) for dx,dy in [(0,0),(8,0),(0,8),(8,8)]]
   metas[(n-512)*8:(n-511)*8]=[0x7201]*4+top
@@ -101,7 +104,7 @@ def generate(check=False):
   q=Image.frombytes('P',size,bytes(v));q.putpalette(palette);return q
  bluepal=[int(v) for line in (R/'data/tilesets/secondary/hgss_olivine/palettes/11.pal').read_text().splitlines()[3:] for v in line.split()]
  general_meta=list(struct.unpack('<4096H',(R/'data/tilesets/primary/general/metatiles.bin').read_bytes()));general_attrs=list(struct.unpack('<512H',(R/'data/tilesets/primary/general/metatile_attributes.bin').read_bytes()));water=general_meta[0x170*8:0x170*8+4];scenes={}
- rear_source=Image.open(R/'crossroads/hgss/art/olivine/port-native.png');rear=Image.new('P',(192,96));rear.putpalette(rear_source.getpalette())
+ rear_source=Image.open(R/'crossroads/hgss/art/olivine/port-south-native.png');rear=Image.new('P',(192,96));rear.putpalette(rear_source.getpalette())
  for y in range(6):
   for x,sx in enumerate([0,1,1,2,2,3,4,5,5,6,6,7]):rear.paste(rear_source.crop((sx*16,y*16,sx*16+16,y*16+16)),(x*16,y*16))
  for y,sy in [(3,4),(4,5)]:rear.paste(rear_source.crop((48,sy*16,64,sy*16+16)),(0,y*16))
@@ -119,6 +122,19 @@ def generate(check=False):
  for yy in range(5):
   for xx,sx in enumerate([0,1,2,3,4,5,6,7,7,7,7,7,8,9,10,11]):expanded_ship.paste(ship.crop((sx*16,yy*16,sx*16+16,yy*16+16)),(xx*16,yy*16))
  ship=expanded_ship
+ # The gangway's two actual leaves align with the visible hatch, not a sign
+ # placed across a single painted stair. Original native pixels use the
+ # existing blue palette; no HGSS texture is imported.
+ from PIL import ImageDraw
+ hatch=ImageDraw.Draw(ship)
+ def blue_index(rgb):
+  return min(range(1,16),key=lambda i:sum((bluepal[i*3+k]-rgb[k])**2 for k in range(3)))
+ ink=blue_index((24,40,64));frame=blue_index((211,223,226));steel=blue_index((124,148,163));plank=blue_index((181,193,195))
+ hatch.rectangle((96,48,127,79),fill=frame)
+ hatch.rectangle((99,50,124,64),fill=ink)
+ hatch.line((111,50,111,64),fill=steel)
+ hatch.rectangle((99,65,124,79),fill=plank)
+ for yy in [67,71,75,79]:hatch.line((99,yy,124,yy),fill=steel)
  for name,q,primary in [('rear_terminal',rear,True),('ferry',ship,False),('sailboat',sail,False)]:
   ids=[];visible=[];ww,hh=q.width//16,q.height//16
   for y in range(hh):
@@ -128,7 +144,10 @@ def generate(check=False):
      n=0x100+y*ww+x;general_meta[n*8:n*8+8]=water+top;general_attrs[n]=(0x1000 if y>=hh-2 else 0)|(0x61 if (x,y) in [(5,5),(6,5),(0,3),(0,4)] else 0);ids.append(n)
     else:ids.append(add_meta(water+top))
   scenes[name]=dict(width=ww,height=hh,metatiles=ids,visible=visible)
-  output=io.BytesIO();q.save(output,format='PNG',bits=4);write(f'crossroads/hgss/art/olivine/{name}-native.png',output.getvalue())
+  # The city facade builder owns its96x80 sailboat-native preview. This
+  # independent48x48 quay projection needs a distinct review-only filename.
+  preview='quay-sailboat' if name=='sailboat' else name
+  output=io.BytesIO();q.save(output,format='PNG',bits=4);write(f'crossroads/hgss/art/olivine/{preview}-native.png',output.getvalue())
  planter_source=Image.open(R/'crossroads/hgss/art/olivine/lighthouse-planter-source.png');templepal=[int(v) for line in (source/'palettes/06.pal').read_text().splitlines()[3:] for v in line.split()];planter=quant(planter_source,templepal,(16,32));plant_ids=[]
  for y in range(2):plant_ids.append(add_meta([0x7201]*4+[0x6000|glyph(planter.crop((dx,y*16+dy,dx+8,y*16+dy+8))) for dx,dy in [(0,0),(8,0),(0,8),(8,8)]]))
  output=io.BytesIO();planter.save(output,format='PNG',bits=4);write('crossroads/hgss/art/olivine/lighthouse-planter-native.png',output.getvalue())
@@ -139,6 +158,19 @@ def generate(check=False):
    top=[0x8000|glyph(housing.crop((x*16+dx,y*16+dy,x*16+dx+8,y*16+dy+8))) for dx,dy in [(0,0),(8,0),(0,8),(8,8)]];n=add_meta([0xc201]*4+top);housing_ids.append(n)
    if y==0:attributes[n-512]=0 # upper rim is a foreground overhang, source5th row remains walkable
  output=io.BytesIO();housing.save(output,format='PNG',bits=4);write('crossroads/hgss/art/olivine/lighthouse-housing-native.png',output.getvalue())
+
+ # Two appended ground-level step warps complete the physical gangway. Every
+ # pixel below Joe is opaque and its top layer is blank, avoiding the earlier
+ # gate foreground/garbage defect. All510 prior metatile ordinals survive.
+ gangway=[]
+ empty_glyph=0x8000|glyph(Image.new('P',(8,8)))
+ for leaf in range(2):
+  ramp=Image.new('P',(16,16),plank);ramp.putpalette(bluepal)
+  draw=ImageDraw.Draw(ramp)
+  for yy in [3,7,11,15]:draw.line((0,yy,15,yy),fill=steel)
+  draw.line((0 if leaf==0 else 15,0,0 if leaf==0 else 15,15),fill=frame,width=2)
+  bottom=[0x8000|glyph(ramp.crop((dx,dy,dx+8,dy+8))) for dx,dy in [(0,0),(8,0),(0,8),(8,8)]]
+  gangway.append(add_meta(bottom+[empty_glyph]*4,0x61))
 
  assert len(attributes)<=512,('Maritime secondary metatile capacity',len(attributes))
  capacity=dict(primary_graphics=len({v&1023 for v in glyphs.values()}),primary_free=len(free),secondary_metatiles=len(attributes),secondary_free=512-len(attributes),rear_terminal_primary_ids=[0x100,0x147],source_secondary_glyphs='unchanged exact original image')
@@ -309,7 +341,8 @@ def generate(check=False):
   BAL:[(8,12,LH[2],5),(9,12,LH[2],6)],
   LIFT:[(3,6,'MAP_DYNAMIC','WARP_ID_DYNAMIC'),(4,6,'MAP_DYNAMIC','WARP_ID_DYNAMIC')],
   PORT:[(7,2,'MAP_OLIVINE_CITY',13),(7,11,QUAY,0),(1,7,QUAY,1),(8,2,'MAP_OLIVINE_CITY',15),(8,11,QUAY,2),(1,8,QUAY,3)],
-  QUAY:[(16,15,PORT,1),(11,13,PORT,2),(17,15,PORT,4),(11,14,PORT,5)]}
+  QUAY:[(16,15,PORT,1),(11,13,PORT,2),(17,15,PORT,4),(11,14,PORT,5),
+        (27,20,'MAP_SS_AQUA_1F',0),(28,20,'MAP_SS_AQUA_1F',12)]}
  def actor(x,y,label,gfx='EXPERT_M'):
   return dict(graphics_id='OBJ_EVENT_GFX_'+gfx,x=x,y=y,elevation=3,movement_type='MOVEMENT_TYPE_FACE_DOWN',movement_range_x=0,movement_range_y=0,trainer_type='TRAINER_TYPE_NONE',trainer_sight_or_berry_tree_id='0',script=label,flag='0')
  # Existing actor identities/scripts are retained; only collision-safe positions
@@ -324,9 +357,13 @@ def generate(check=False):
   maps[n]['bg_events']=[dict(type='sign',x=x,y=y,elevation=0,player_facing_dir='BG_EVENT_PLAYER_FACING_ANY',script=f'Area_Floor_{n}')]
   rooms[n]['tiles'][y*rooms[n]['width']+x]=0x400|ART['panel']['start']
  maps[BAL]['bg_events']=[dict(type='sign',x=5,y=16,elevation=0,player_facing_dir='BG_EVENT_PLAYER_FACING_ANY',script='Area_LighthouseView')]
- maps[QUAY]['bg_events']=[dict(type='sign',x=27,y=21,elevation=0,player_facing_dir='BG_EVENT_PLAYER_FACING_ANY',script='Hgss_OlivineShipBoundary')]
- rooms[QUAY]['tiles'][21*rooms[QUAY]['width']+27]=0x400|ART['panel']['start']
- rooms[QUAY]['tiles'][20*rooms[QUAY]['width']+27]=0x400|ART['rail_h_stone']['start']+3
+ # Keep the sign off BOTH walkable boarding leaves. Its new position replaces
+ # an already-solid bollard, while the former sign/rail cells become real deck.
+ maps[QUAY]['bg_events']=[dict(type='sign',x=25,y=21,elevation=0,player_facing_dir='BG_EVENT_PLAYER_FACING_ANY',script='Hgss_OlivineShipBoundary')]
+ rooms[QUAY]['tiles'][21*rooms[QUAY]['width']+25]=0x400|ART['panel']['start']
+ for leaf,x in enumerate([27,28]):
+  rooms[QUAY]['tiles'][20*rooms[QUAY]['width']+x]=0x3000|gangway[leaf]
+  rooms[QUAY]['tiles'][21*rooms[QUAY]['width']+x]=0x3000|ART['stone']['start']
  rooms[BAL]['tiles'][16*17+5]=0x400|ART['panel']['start']
  maps[LH[3]]['coord_events']=[dict(type='trigger',x=16,y=9,elevation=0,var='VAR_TEMP_0',var_value='0',script='Hgss_OlivineWindowDrop')]
  # Close the void beyond the window; stepping on the marked window immediately
@@ -343,7 +380,7 @@ def generate(check=False):
    x,y=e['x'],e['y']
    if n==QUAY:t[y*w+x]=0x3000|(t[y*w+x]&1023) # native rear-façade doors carry real warp behavior
    elif n==LH[5] and i==0:t[y*w+x]=0x3000|purple_warp
-   elif n==PORT:t[y*w+x]=0x3000|port_warp
+   elif n==PORT:t[y*w+x]=0x3000|(lift_metas[x-7] if y==2 else port_warp)
    elif t[y*w+x]&1023 not in lift_metas:t[y*w+x]=warp_tile(t[y*w+x])
   # South-facing public thresholds use the native exit behavior and show every
   # open panel; interior north/side gates are step warps, not directional arrows.
@@ -359,7 +396,14 @@ def generate(check=False):
     # A second map-wall flag strands the saved object and fails object spawning.
     t[y*w+x]=0x3000|(t[y*w+x]&1023)
    assert 0<=x<w and 0<=y<h and t[y*w+x]&0xc00==0,(n,'Actor intersects source furniture',o)
-  lid=m['layout'];out=n in [BAL,QUAY];l=dict(id=lid,name=ls[lid]['name'] if lid in ls else n+'_Layout',width=w,height=h,primary_tileset='gTileset_HgssOlivineLandmarkOutdoor' if out else 'gTileset_HgssOlivineLandmarkIndoor',secondary_tileset='gTileset_HgssOlivineLandmarks',border_filepath=f'data/layouts/{n}/border.bin',blockdata_filepath=f'data/layouts/{n}/map.bin',layout_version='emerald')
+ # Actual HGSS floor mosaics reveal embedded rugs/tables that prop counts
+ # alone missed, including the balcony masonry. Apply their private art after
+ # thresholds/actor footprints are finalized, preserving every physical bit.
+ from build_hgss_olivine_lighthouse_art import patch as patch_lighthouse_art
+ lighthouse_secondary=patch_lighthouse_art(rooms,maps,check=check)
+ for n in LH+[BAL,LIFT,PORT,QUAY]:
+  m=maps[n];room=rooms[n];w,h=room['width'],room['height'];t=room['tiles']
+  lid=m['layout'];out=n in [BAL,QUAY];l=dict(id=lid,name=ls[lid]['name'] if lid in ls else n+'_Layout',width=w,height=h,primary_tileset='gTileset_HgssOlivineLandmarkOutdoor' if out else 'gTileset_HgssOlivineLandmarkIndoor',secondary_tileset=lighthouse_secondary if n in LH+[BAL] else 'gTileset_HgssOlivineLandmarks',border_filepath=f'data/layouts/{n}/border.bin',blockdata_filepath=f'data/layouts/{n}/map.bin',layout_version='emerald')
   if lid in ls:ls[lid].clear();ls[lid].update(l)
   else:layouts['layouts'].append(l);ls[lid]=l
   if n in NEW_IDS and n not in groups['gMapGroup_CrossroadsJohtoExpansion']:
@@ -372,7 +416,7 @@ def generate(check=False):
   else:code+='    .byte 0\n'
   write(f'data/maps/{n}/scripts.inc',code)
   review.append(dict(name=n,source_header=HEADERS[n],source=facts[HEADERS[n]]['source'],dimensions=[w,h],warps=m['warp_events'],source_warp_count=len(facts[HEADERS[n]]['warps']),adaptations=['Original native GBA props/palettes replace DS perspective models; source coordinate origin retained','No source trainer/story/reward flags imported','Wide GBA door/stair aliases append without removing historical warp indices'],runtime='PENDING actual delivery-ROM testing',visual='PENDING owner acceptance'))
- review.append(dict(window_drop=dict(map=LH[3],from_xy=[16,9],script='Hgss_OlivineWindowDrop',destination=BAL,arrival=[14,9],classification='intentional HGSS one-way drop; return via balcony door and western3F staircase'),dynamic_elevator=dict(map=LIFT,door_indices=[0,1],panels=[dict(x=2,y=2,target=LH[0],warp=3),dict(x=5,y=2,target=LH[5],warp=1)],state='existing native dynamicWarp only; no new permanent progress'),transport_boundary=dict(map=QUAY,source_ship_warp=[27,20],native_sign=[27,21],status='S.S. Aqua sailing/ship outside this map pass; accepted Harbor Office travel retained separately')))
+ review.append(dict(window_drop=dict(map=LH[3],from_xy=[16,9],script='Hgss_OlivineWindowDrop',destination=BAL,arrival=[14,9],classification='intentional HGSS one-way drop; return via balcony door and western3F staircase'),dynamic_elevator=dict(map=LIFT,door_indices=[0,1],panels=[dict(x=2,y=2,target=LH[0],warp=3),dict(x=5,y=2,target=LH[5],warp=1)],state='existing native dynamicWarp only; no new permanent progress'),transport_boundary=dict(map=QUAY,source_ship_warp=[27,20],native_sign=[25,21],boarding_leaves=[[27,20],[28,20]],status='Physical docked S.S. Aqua interiors and reciprocal Olivine return; departures, destination and story dependencies remain separately deferred. Accepted Harbor Office travel retained.')))
  js('crossroads/hgss/olivine-landmark-review.json',review);js('data/layouts/layouts.json',layouts);js('data/maps/map_groups.json',groups);js('crossroads/johto/manifest.json',manifest)
  inc=(R/'data/event_scripts.s').read_text()
  paths=[f'data/maps/{n}/scripts.inc' for n in LH+[BAL,LIFT,PORT,QUAY]]+['crossroads/scripts/hgss_olivine_landmarks.inc']
@@ -433,7 +477,7 @@ Hgss_OlivinePortDesk::
     msgbox Hgss_OlivinePortDeskText, MSGBOX_NPC
     end
 Hgss_OlivinePortDeskText:
-    .string "The quays are open to visitors.\\nThe HARBOR OFFICE handles travel.$"
+    .string "The S.S. AQUA is alongside.\\nThe gangway is open to visitors.\\pNo departure is scheduled.\\nLocal travel: HARBOR OFFICE.$"
 Hgss_OlivinePortVisitor::
     msgbox Hgss_OlivinePortVisitorText, MSGBOX_NPC
     end
@@ -443,7 +487,7 @@ Hgss_OlivineShipBoundary::
     msgbox Hgss_OlivineShipBoundaryText, MSGBOX_SIGN
     end
 Hgss_OlivineShipBoundaryText:
-    .string "S.S. AQUA BOARDING\\nPassenger sailings are not operating.$"
+    .string "S.S. AQUA - GANGWAY\\nBoard here. Return by this pier.\\pNo departure is scheduled.$"
 '''
 if __name__=='__main__':
  p=argparse.ArgumentParser();p.add_argument('--check',action='store_true');generate(p.parse_args().check)

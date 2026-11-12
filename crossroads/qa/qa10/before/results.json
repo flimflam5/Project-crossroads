@@ -1,0 +1,482 @@
+{
+  "phase": "BEFORE QA10; actual QA09 delivery",
+  "source_revision": "285cfa4ebddcb390a8a5bde6116748cbb5eaba6b",
+  "rom_sha256": "df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4",
+  "source_battery_sha256": "b03ff1ef488fbd25de016e828483bc3001787b84e450a45eaa0ac12a11de30ab",
+  "source_battery_unchanged": true,
+  "method": "Cold normal Continue from private copied battery; normal go/walk/A inputs. RAM encounter suppression only; actual Survey OFF. No XY/map/warp writes. Native240x160 images and H264 movement clips.",
+  "records": [
+    {
+      "case": "city-sign-Olivine_ResidenceSign",
+      "map": "OlivineCity",
+      "event": {
+        "type": "sign",
+        "x": 7,
+        "y": 24,
+        "elevation": 0,
+        "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+        "script": "Olivine_ResidenceSign"
+      },
+      "position": [
+        7,
+        25
+      ],
+      "facing": 2,
+      "result": "Normal controller sign/NPC message and control-return PASS"
+    },
+    {
+      "case": "city-sign-Olivine_NeighborSign",
+      "map": "OlivineCity",
+      "event": {
+        "type": "sign",
+        "x": 7,
+        "y": 29,
+        "elevation": 0,
+        "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+        "script": "Olivine_NeighborSign"
+      },
+      "position": [
+        7,
+        30
+      ],
+      "facing": 2,
+      "result": "Normal controller sign/NPC message and control-return PASS"
+    },
+    {
+      "case": "city-sign-Olivine_GymSign",
+      "map": "OlivineCity",
+      "event": {
+        "type": "sign",
+        "x": 9,
+        "y": 14,
+        "elevation": 0,
+        "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+        "script": "Olivine_GymSign"
+      },
+      "position": [
+        9,
+        15
+      ],
+      "facing": 2,
+      "result": "Normal controller sign/NPC message and control-return PASS"
+    },
+    {
+      "case": "city-sign-Olivine_CenterSign",
+      "map": "OlivineCity",
+      "event": {
+        "type": "sign",
+        "x": 14,
+        "y": 34,
+        "elevation": 0,
+        "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+        "script": "Olivine_CenterSign"
+      },
+      "position": [
+        14,
+        35
+      ],
+      "facing": 2,
+      "result": "Normal controller sign/NPC message and control-return PASS"
+    },
+    {
+      "case": "city-sign-Olivine_MartSign",
+      "map": "OlivineCity",
+      "event": {
+        "type": "sign",
+        "x": 27,
+        "y": 34,
+        "elevation": 0,
+        "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+        "script": "Olivine_MartSign"
+      },
+      "position": [
+        27,
+        35
+      ],
+      "facing": 2,
+      "result": "Normal controller sign/NPC message and control-return PASS"
+    },
+    {
+      "case": "city-sign-Olivine_OfficeSign",
+      "map": "OlivineCity",
+      "event": {
+        "type": "sign",
+        "x": 29,
+        "y": 41,
+        "elevation": 0,
+        "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+        "script": "Olivine_OfficeSign"
+      },
+      "position": [
+        29,
+        42
+      ],
+      "facing": 2,
+      "result": "Normal controller sign/NPC message and control-return PASS"
+    },
+    {
+      "case": "city-sign-Olivine_HarborSign",
+      "map": "OlivineCity",
+      "event": {
+        "type": "sign",
+        "x": 7,
+        "y": 41,
+        "elevation": 0,
+        "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+        "script": "Olivine_HarborSign"
+      },
+      "position": [
+        7,
+        42
+      ],
+      "facing": 2,
+      "result": "Normal controller sign/NPC message and control-return PASS"
+    },
+    {
+      "case": "city-sign-Olivine_LighthouseSign",
+      "map": "OlivineCity",
+      "event": {
+        "type": "sign",
+        "x": 46,
+        "y": 40,
+        "elevation": 0,
+        "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+        "script": "Olivine_LighthouseSign"
+      },
+      "position": [
+        46,
+        41
+      ],
+      "facing": 2,
+      "result": "Normal controller sign/NPC message and control-return PASS"
+    },
+    {
+      "case": "city-sign-Olivine_CityDirectory",
+      "map": "OlivineCity",
+      "event": {
+        "type": "sign",
+        "x": 24,
+        "y": 42,
+        "elevation": 0,
+        "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+        "script": "Olivine_CityDirectory"
+      },
+      "position": [
+        24,
+        43
+      ],
+      "facing": 2,
+      "result": "Normal controller sign/NPC message and control-return PASS"
+    },
+    {
+      "case": "city-sign-Olivine_NorthBoundary",
+      "map": "OlivineCity",
+      "event": {
+        "type": "sign",
+        "x": 28,
+        "y": 7,
+        "elevation": 0,
+        "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+        "script": "Olivine_NorthBoundary"
+      },
+      "position": [
+        27,
+        7
+      ],
+      "facing": 4,
+      "result": "Normal controller sign/NPC message and control-return PASS"
+    },
+    {
+      "case": "city-sign-Johto_OlivineSeaSign",
+      "map": "OlivineCity",
+      "event": {
+        "type": "sign",
+        "x": 7,
+        "y": 36,
+        "elevation": 0,
+        "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+        "script": "Johto_OlivineSeaSign"
+      },
+      "position": [
+        7,
+        37
+      ],
+      "facing": 2,
+      "result": "Normal controller sign/NPC message and control-return PASS"
+    },
+    {
+      "case": "city-sign-Hgss_OlivineSign_FishingHouse",
+      "map": "OlivineCity",
+      "event": {
+        "type": "sign",
+        "x": 16,
+        "y": 24,
+        "elevation": 0,
+        "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+        "script": "Hgss_OlivineSign_FishingHouse"
+      },
+      "position": [
+        16,
+        25
+      ],
+      "facing": 2,
+      "result": "Normal controller sign/NPC message and control-return PASS"
+    },
+    {
+      "case": "city-sign-Hgss_OlivineSign_TradeHouse",
+      "map": "OlivineCity",
+      "event": {
+        "type": "sign",
+        "x": 30,
+        "y": 18,
+        "elevation": 0,
+        "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+        "script": "Hgss_OlivineSign_TradeHouse"
+      },
+      "position": [
+        30,
+        19
+      ],
+      "facing": 2,
+      "result": "Normal controller sign/NPC message and control-return PASS"
+    },
+    {
+      "case": "city-sign-Hgss_OlivineSign_SealHouse",
+      "map": "OlivineCity",
+      "event": {
+        "type": "sign",
+        "x": 35,
+        "y": 18,
+        "elevation": 0,
+        "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+        "script": "Hgss_OlivineSign_SealHouse"
+      },
+      "position": [
+        35,
+        19
+      ],
+      "facing": 2,
+      "result": "Normal controller sign/NPC message and control-return PASS"
+    },
+    {
+      "case": "city-sign-Hgss_OlivineSign_Cafe",
+      "map": "OlivineCity",
+      "event": {
+        "type": "sign",
+        "x": 8,
+        "y": 34,
+        "elevation": 0,
+        "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+        "script": "Hgss_OlivineSign_Cafe"
+      },
+      "position": [
+        8,
+        35
+      ],
+      "facing": 2,
+      "result": "Normal controller sign/NPC message and control-return PASS"
+    },
+    {
+      "case": "city-sign-Hgss_OlivineSign_Port",
+      "map": "OlivineCity",
+      "event": {
+        "type": "sign",
+        "x": 22,
+        "y": 53,
+        "elevation": 0,
+        "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+        "script": "Hgss_OlivineSign_Port"
+      },
+      "position": [
+        22,
+        54
+      ],
+      "facing": 2,
+      "result": "Normal controller sign/NPC message and control-return PASS"
+    },
+    {
+      "case": "terminal-out-0",
+      "source": "OlivineCity_PortTerminal",
+      "leaf": [
+        7,
+        2
+      ],
+      "destination": "OlivineCity",
+      "arrival": [
+        23,
+        53
+      ],
+      "facing": 1,
+      "result": "PASS"
+    },
+    {
+      "case": "terminal-return-0",
+      "source": "OlivineCity",
+      "destination": "OlivineCity_PortTerminal",
+      "arrival": [
+        7,
+        2
+      ],
+      "facing": 2,
+      "result": "PASS"
+    },
+    {
+      "case": "terminal-out-1",
+      "source": "OlivineCity_PortTerminal",
+      "leaf": [
+        7,
+        11
+      ],
+      "destination": "OlivineCity_PortQuay",
+      "arrival": [
+        16,
+        15
+      ],
+      "facing": 1,
+      "result": "PASS"
+    },
+    {
+      "case": "terminal-return-1",
+      "source": "OlivineCity_PortQuay",
+      "destination": "OlivineCity_PortTerminal",
+      "arrival": [
+        7,
+        11
+      ],
+      "facing": 2,
+      "result": "PASS"
+    },
+    {
+      "case": "terminal-out-2",
+      "source": "OlivineCity_PortTerminal",
+      "leaf": [
+        1,
+        7
+      ],
+      "destination": "OlivineCity_PortQuay",
+      "arrival": [
+        11,
+        13
+      ],
+      "facing": 3,
+      "result": "PASS"
+    },
+    {
+      "case": "terminal-return-2",
+      "source": "OlivineCity_PortQuay",
+      "destination": "OlivineCity_PortTerminal",
+      "arrival": [
+        1,
+        7
+      ],
+      "facing": 4,
+      "result": "PASS"
+    },
+    {
+      "case": "terminal-out-3",
+      "source": "OlivineCity_PortTerminal",
+      "leaf": [
+        8,
+        2
+      ],
+      "destination": "OlivineCity",
+      "arrival": [
+        24,
+        53
+      ],
+      "facing": 1,
+      "result": "PASS"
+    },
+    {
+      "case": "terminal-return-3",
+      "source": "OlivineCity",
+      "destination": "OlivineCity_PortTerminal",
+      "arrival": [
+        8,
+        2
+      ],
+      "facing": 2,
+      "result": "PASS"
+    },
+    {
+      "case": "terminal-out-4",
+      "source": "OlivineCity_PortTerminal",
+      "leaf": [
+        8,
+        11
+      ],
+      "destination": "OlivineCity_PortQuay",
+      "arrival": [
+        17,
+        15
+      ],
+      "facing": 1,
+      "result": "PASS"
+    },
+    {
+      "case": "terminal-return-4",
+      "source": "OlivineCity_PortQuay",
+      "destination": "OlivineCity_PortTerminal",
+      "arrival": [
+        8,
+        11
+      ],
+      "facing": 2,
+      "result": "PASS"
+    },
+    {
+      "case": "terminal-out-5",
+      "source": "OlivineCity_PortTerminal",
+      "leaf": [
+        1,
+        8
+      ],
+      "destination": "OlivineCity_PortQuay",
+      "arrival": [
+        11,
+        14
+      ],
+      "facing": 2,
+      "result": "PASS"
+    },
+    {
+      "case": "terminal-return-5",
+      "source": "OlivineCity_PortQuay",
+      "destination": "OlivineCity_PortTerminal",
+      "arrival": [
+        1,
+        8
+      ],
+      "facing": 4,
+      "result": "PASS"
+    },
+    {
+      "case": "quay-ship-boarding-closed",
+      "map": "OlivineCity_PortQuay",
+      "event": {
+        "type": "sign",
+        "x": 27,
+        "y": 21,
+        "elevation": 0,
+        "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+        "script": "Hgss_OlivineShipBoundary"
+      },
+      "position": [
+        27,
+        22
+      ],
+      "facing": 2,
+      "result": "Normal controller sign/NPC message and control-return PASS"
+    },
+    {
+      "case": "gangway-baseline",
+      "position": [
+        27,
+        22
+      ],
+      "facing": 2,
+      "source_ship_warp_absent": true,
+      "result": "Recorded existing solid rail/no ship interior"
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "rom_sha256": "ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b",
+  "source_battery_sha256": "b03ff1ef488fbd25de016e828483bc3001787b84e450a45eaa0ac12a11de30ab",
+  "source_battery_unchanged": true,
+  "expected_defect_baseline": false,
+  "setup": "Normal copied battery/title Continue and controller travel; no map/warp/player position writes. Shared harness discloses temporary encounter suppression and survey assistance.",
+  "records": [
+    {
+      "map": "OlivineCity_PokemonCenter_1F",
+      "staff": [
+        2,
+        2
+      ],
+      "player": [
+        2,
+        4
+      ],
+      "counter": [
+        2,
+        3
+      ],
+      "message_received": true,
+      "result": "AFTER actual frontA exact message/control return PASS"
+    },
+    {
+      "map": "OlivineCity_PokemonCenter_1F",
+      "staff": [
+        6,
+        2
+      ],
+      "player": [
+        6,
+        4
+      ],
+      "counter": [
+        6,
+        3
+      ],
+      "message_received": true,
+      "result": "AFTER actual frontA exact message/control return PASS"
+    },
+    {
+      "map": "OlivineCity_PokemonCenter_1F",
+      "staff": [
+        11,
+        2
+      ],
+      "player": [
+        11,
+        4
+      ],
+      "counter": [
+        11,
+        3
+      ],
+      "message_received": true,
+      "result": "AFTER actual frontA exact message/control return PASS"
+    },
+    {
+      "map": "OlivineCity_PokemonCenter_B1F",
+      "staff": [
+        4,
+        4
+      ],
+      "player": [
+        4,
+        6
+      ],
+      "counter": [
+        4,
+        5
+      ],
+      "message_received": true,
+      "result": "AFTER actual frontA exact message/control return PASS"
+    },
+    {
+      "map": "OlivineCity_PokemonCenter_B1F",
+      "staff": [
+        8,
+        4
+      ],
+      "player": [
+        8,
+        6
+      ],
+      "counter": [
+        8,
+        5
+      ],
+      "message_received": true,
+      "result": "AFTER actual frontA exact message/control return PASS"
+    },
+    {
+      "map": "OlivineCity_PokemonCenter_B1F",
+      "staff": [
+        12,
+        4
+      ],
+      "player": [
+        12,
+        6
+      ],
+      "counter": [
+        12,
+        5
+      ],
+      "message_received": true,
+      "result": "AFTER actual frontA exact message/control return PASS"
+    }
+  ]
+}

@@ -1,0 +1,5314 @@
+{
+  "status": "B4 REJECTED AS FINAL: independent ALL45 intended-facing audit finds67 actual legacy failures. Defined old position/changed-facing assertions passed but were incomplete.",
+  "source_revision": "df8c4598d88c7770626be4621a5f39cf60dadb95",
+  "rom_sha256": "4fb28fe64fc44c0546462a935655346a61f13b644bc3040468146d136cd6d656",
+  "attempts": 519,
+  "positions_walkaway_pass": 482,
+  "physical_unavailable_laterals": 37,
+  "independent_facing_pass": 415,
+  "independent_facing_FAIL": 67,
+  "facing_records": [
+    {
+      "label": "theater-outside-0-front",
+      "destination": "EcruteakCity_DanceTheater",
+      "arrival": [
+        7,
+        17
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "theater-outside-0-lateral-positive",
+      "destination": "EcruteakCity_DanceTheater",
+      "arrival": [
+        7,
+        17
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "theater-outside-1-front",
+      "destination": "EcruteakCity_DanceTheater",
+      "arrival": [
+        8,
+        17
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "theater-outside-1-lateral-negative",
+      "destination": "EcruteakCity_DanceTheater",
+      "arrival": [
+        8,
+        17
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "theater-outside-1-lateral-positive",
+      "destination": "EcruteakCity_DanceTheater",
+      "arrival": [
+        8,
+        17
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "theater-inside-0-front",
+      "destination": "EcruteakCity",
+      "arrival": [
+        44,
+        46
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "theater-inside-0-lateral-negative",
+      "destination": "EcruteakCity",
+      "arrival": [
+        44,
+        46
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "theater-inside-0-lateral-positive",
+      "destination": "EcruteakCity",
+      "arrival": [
+        44,
+        46
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "theater-inside-1-front",
+      "destination": "EcruteakCity",
+      "arrival": [
+        45,
+        46
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "theater-inside-1-lateral-negative",
+      "destination": "EcruteakCity",
+      "arrival": [
+        45,
+        46
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "theater-inside-1-lateral-positive",
+      "destination": "EcruteakCity",
+      "arrival": [
+        45,
+        46
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "barrier-outside-0-front",
+      "destination": "EcruteakCity_BarrierStation",
+      "arrival": [
+        9,
+        11
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "barrier-outside-0-lateral-negative",
+      "destination": "EcruteakCity_BarrierStation",
+      "arrival": [
+        9,
+        11
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "barrier-outside-0-lateral-positive",
+      "destination": "EcruteakCity_BarrierStation",
+      "arrival": [
+        9,
+        11
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "barrier-outside-1-front",
+      "destination": "EcruteakCity_BarrierStation",
+      "arrival": [
+        10,
+        11
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "barrier-outside-1-lateral-negative",
+      "destination": "EcruteakCity_BarrierStation",
+      "arrival": [
+        10,
+        11
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "barrier-outside-1-lateral-positive",
+      "destination": "EcruteakCity_BarrierStation",
+      "arrival": [
+        10,
+        11
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "barrier-inside-0-front",
+      "destination": "EcruteakCity",
+      "arrival": [
+        39,
+        26
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "barrier-inside-0-lateral-negative",
+      "destination": "EcruteakCity",
+      "arrival": [
+        39,
+        26
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "barrier-inside-0-lateral-positive",
+      "destination": "EcruteakCity",
+      "arrival": [
+        39,
+        26
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "barrier-inside-1-front",
+      "destination": "EcruteakCity",
+      "arrival": [
+        40,
+        26
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "barrier-inside-1-lateral-negative",
+      "destination": "EcruteakCity",
+      "arrival": [
+        40,
+        26
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "barrier-inside-1-lateral-positive",
+      "destination": "EcruteakCity",
+      "arrival": [
+        40,
+        26
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "gym-outside-0-front",
+      "destination": "EcruteakCity_Gym",
+      "arrival": [
+        10,
+        21
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "gym-outside-0-lateral-negative",
+      "destination": "EcruteakCity_Gym",
+      "arrival": [
+        10,
+        21
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "gym-outside-0-lateral-positive",
+      "destination": "EcruteakCity_Gym",
+      "arrival": [
+        10,
+        21
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "gym-outside-1-front",
+      "destination": "EcruteakCity_Gym",
+      "arrival": [
+        11,
+        21
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "gym-outside-1-lateral-negative",
+      "destination": "EcruteakCity_Gym",
+      "arrival": [
+        11,
+        21
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "gym-inside-0-front",
+      "destination": "EcruteakCity",
+      "arrival": [
+        24,
+        56
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "gym-inside-0-lateral-negative",
+      "destination": "EcruteakCity",
+      "arrival": [
+        24,
+        56
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "gym-inside-0-lateral-positive",
+      "destination": "EcruteakCity",
+      "arrival": [
+        24,
+        56
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "gym-inside-1-front",
+      "destination": "EcruteakCity",
+      "arrival": [
+        25,
+        56
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "gym-inside-1-lateral-negative",
+      "destination": "EcruteakCity",
+      "arrival": [
+        25,
+        56
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "gym-inside-1-lateral-positive",
+      "destination": "EcruteakCity",
+      "arrival": [
+        25,
+        56
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "southwest-house-outside-0-front",
+      "destination": "EcruteakCity_Residence",
+      "arrival": [
+        4,
+        8
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "southwest-house-outside-0-lateral-negative",
+      "destination": "EcruteakCity_Residence",
+      "arrival": [
+        4,
+        8
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "southwest-house-outside-0-lateral-positive",
+      "destination": "EcruteakCity_Residence",
+      "arrival": [
+        4,
+        8
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "southwest-house-inside-0-front",
+      "destination": "EcruteakCity",
+      "arrival": [
+        23,
+        46
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "southwest-house-inside-0-lateral-negative",
+      "destination": "EcruteakCity",
+      "arrival": [
+        23,
+        46
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "southwest-house-inside-0-lateral-positive",
+      "destination": "EcruteakCity",
+      "arrival": [
+        23,
+        46
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "southwest-house-inside-1-front",
+      "destination": "EcruteakCity",
+      "arrival": [
+        23,
+        46
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "southwest-house-inside-1-lateral-negative",
+      "destination": "EcruteakCity",
+      "arrival": [
+        23,
+        46
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "southwest-house-inside-1-lateral-positive",
+      "destination": "EcruteakCity",
+      "arrival": [
+        23,
+        46
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "dowsing-house-outside-0-front",
+      "destination": "EcruteakCity_DowsingHouse",
+      "arrival": [
+        4,
+        8
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "dowsing-house-outside-0-lateral-negative",
+      "destination": "EcruteakCity_DowsingHouse",
+      "arrival": [
+        4,
+        8
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "dowsing-house-outside-0-lateral-positive",
+      "destination": "EcruteakCity_DowsingHouse",
+      "arrival": [
+        4,
+        8
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "dowsing-house-inside-0-front",
+      "destination": "EcruteakCity",
+      "arrival": [
+        34,
+        56
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "dowsing-house-inside-0-lateral-negative",
+      "destination": "EcruteakCity",
+      "arrival": [
+        34,
+        56
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "dowsing-house-inside-0-lateral-positive",
+      "destination": "EcruteakCity",
+      "arrival": [
+        34,
+        56
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "dowsing-house-inside-1-front",
+      "destination": "EcruteakCity",
+      "arrival": [
+        34,
+        56
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "dowsing-house-inside-1-lateral-negative",
+      "destination": "EcruteakCity",
+      "arrival": [
+        34,
+        56
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "dowsing-house-inside-1-lateral-positive",
+      "destination": "EcruteakCity",
+      "arrival": [
+        34,
+        56
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "center-outside-0-front",
+      "destination": "EcruteakCity_PokemonCenter_1F",
+      "arrival": [
+        8,
+        19
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "center-outside-0-lateral-negative",
+      "destination": "EcruteakCity_PokemonCenter_1F",
+      "arrival": [
+        8,
+        19
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "center-outside-0-lateral-positive",
+      "destination": "EcruteakCity_PokemonCenter_1F",
+      "arrival": [
+        8,
+        19
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "center-inside-0-front",
+      "destination": "EcruteakCity",
+      "arrival": [
+        45,
+        56
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "center-inside-0-lateral-negative",
+      "destination": "EcruteakCity",
+      "arrival": [
+        45,
+        56
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "center-inside-0-lateral-positive",
+      "destination": "EcruteakCity",
+      "arrival": [
+        45,
+        56
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "center-inside-1-front",
+      "destination": "EcruteakCity",
+      "arrival": [
+        45,
+        56
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "center-inside-1-lateral-negative",
+      "destination": "EcruteakCity",
+      "arrival": [
+        45,
+        56
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "center-inside-1-lateral-positive",
+      "destination": "EcruteakCity",
+      "arrival": [
+        45,
+        56
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "mart-outside-0-front",
+      "destination": "EcruteakCity_Mart",
+      "arrival": [
+        4,
+        11
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "mart-outside-0-lateral-negative",
+      "destination": "EcruteakCity_Mart",
+      "arrival": [
+        4,
+        11
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "mart-outside-0-lateral-positive",
+      "destination": "EcruteakCity_Mart",
+      "arrival": [
+        4,
+        11
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "mart-inside-0-front",
+      "destination": "EcruteakCity",
+      "arrival": [
+        53,
+        46
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "mart-inside-0-lateral-negative",
+      "destination": "EcruteakCity",
+      "arrival": [
+        53,
+        46
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "mart-inside-0-lateral-positive",
+      "destination": "EcruteakCity",
+      "arrival": [
+        53,
+        46
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "mart-inside-1-front",
+      "destination": "EcruteakCity",
+      "arrival": [
+        53,
+        46
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "mart-inside-1-lateral-negative",
+      "destination": "EcruteakCity",
+      "arrival": [
+        53,
+        46
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "mart-inside-1-lateral-positive",
+      "destination": "EcruteakCity",
+      "arrival": [
+        53,
+        46
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "burned-tower-outside-0-front",
+      "destination": "EcruteakCity_BurnedTower",
+      "arrival": [
+        11,
+        22
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "burned-tower-outside-0-lateral-negative",
+      "destination": "EcruteakCity_BurnedTower",
+      "arrival": [
+        11,
+        22
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "burned-tower-outside-0-lateral-positive",
+      "destination": "EcruteakCity_BurnedTower",
+      "arrival": [
+        11,
+        22
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "burned-tower-inside-0-front",
+      "destination": "EcruteakCity",
+      "arrival": [
+        24,
+        22
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "burned-tower-inside-0-lateral-negative",
+      "destination": "EcruteakCity",
+      "arrival": [
+        24,
+        22
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "burned-tower-inside-0-lateral-positive",
+      "destination": "EcruteakCity",
+      "arrival": [
+        24,
+        22
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "burned-tower-inside-1-front",
+      "destination": "EcruteakCity",
+      "arrival": [
+        24,
+        22
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "burned-tower-inside-1-lateral-negative",
+      "destination": "EcruteakCity",
+      "arrival": [
+        24,
+        22
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "burned-tower-inside-1-lateral-positive",
+      "destination": "EcruteakCity",
+      "arrival": [
+        24,
+        22
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "west-city-gate-outside-0-front",
+      "destination": "EcruteakCity_WestGate",
+      "arrival": [
+        10,
+        6
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 3,
+      "result": "FAIL"
+    },
+    {
+      "label": "west-city-gate-outside-0-lateral-negative",
+      "destination": "EcruteakCity_WestGate",
+      "arrival": [
+        10,
+        6
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 3,
+      "result": "FAIL"
+    },
+    {
+      "label": "west-city-gate-outside-1-front",
+      "destination": "EcruteakCity_WestGate",
+      "arrival": [
+        10,
+        7
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 3,
+      "result": "FAIL"
+    },
+    {
+      "label": "west-city-gate-outside-1-lateral-negative",
+      "destination": "EcruteakCity_WestGate",
+      "arrival": [
+        10,
+        7
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 3,
+      "result": "FAIL"
+    },
+    {
+      "label": "west-city-gate-outside-1-lateral-positive",
+      "destination": "EcruteakCity_WestGate",
+      "arrival": [
+        10,
+        7
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 3,
+      "result": "FAIL"
+    },
+    {
+      "label": "west-city-gate-outside-2-front",
+      "destination": "EcruteakCity_WestGate",
+      "arrival": [
+        10,
+        8
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 3,
+      "result": "FAIL"
+    },
+    {
+      "label": "west-city-gate-outside-2-lateral-negative",
+      "destination": "EcruteakCity_WestGate",
+      "arrival": [
+        10,
+        8
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 3,
+      "result": "FAIL"
+    },
+    {
+      "label": "west-city-gate-outside-2-lateral-positive",
+      "destination": "EcruteakCity_WestGate",
+      "arrival": [
+        10,
+        8
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 3,
+      "result": "FAIL"
+    },
+    {
+      "label": "west-city-gate-inside-0-front",
+      "destination": "EcruteakCity",
+      "arrival": [
+        7,
+        37
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 4,
+      "result": "FAIL"
+    },
+    {
+      "label": "west-city-gate-inside-0-lateral-negative",
+      "destination": "EcruteakCity",
+      "arrival": [
+        7,
+        37
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 4,
+      "result": "FAIL"
+    },
+    {
+      "label": "west-city-gate-inside-0-lateral-positive",
+      "destination": "EcruteakCity",
+      "arrival": [
+        7,
+        37
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 4,
+      "result": "FAIL"
+    },
+    {
+      "label": "west-city-gate-inside-1-front",
+      "destination": "EcruteakCity",
+      "arrival": [
+        7,
+        38
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 4,
+      "result": "FAIL"
+    },
+    {
+      "label": "west-city-gate-inside-1-lateral-negative",
+      "destination": "EcruteakCity",
+      "arrival": [
+        7,
+        38
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 4,
+      "result": "FAIL"
+    },
+    {
+      "label": "west-city-gate-inside-1-lateral-positive",
+      "destination": "EcruteakCity",
+      "arrival": [
+        7,
+        38
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 4,
+      "result": "FAIL"
+    },
+    {
+      "label": "west-city-gate-inside-2-front",
+      "destination": "EcruteakCity",
+      "arrival": [
+        7,
+        39
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 4,
+      "result": "FAIL"
+    },
+    {
+      "label": "west-city-gate-inside-2-lateral-negative",
+      "destination": "EcruteakCity",
+      "arrival": [
+        7,
+        39
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 4,
+      "result": "FAIL"
+    },
+    {
+      "label": "west-city-gate-inside-2-lateral-positive",
+      "destination": "EcruteakCity",
+      "arrival": [
+        7,
+        39
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 4,
+      "result": "FAIL"
+    },
+    {
+      "label": "west-route-gate-outside-0-front",
+      "destination": "EcruteakCity_WestGate",
+      "arrival": [
+        1,
+        6
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 4,
+      "result": "FAIL"
+    },
+    {
+      "label": "west-route-gate-outside-0-lateral-positive",
+      "destination": "EcruteakCity_WestGate",
+      "arrival": [
+        1,
+        6
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 4,
+      "result": "FAIL"
+    },
+    {
+      "label": "west-route-gate-outside-1-front",
+      "destination": "EcruteakCity_WestGate",
+      "arrival": [
+        1,
+        7
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 4,
+      "result": "FAIL"
+    },
+    {
+      "label": "west-route-gate-outside-1-lateral-negative",
+      "destination": "EcruteakCity_WestGate",
+      "arrival": [
+        1,
+        7
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 4,
+      "result": "FAIL"
+    },
+    {
+      "label": "west-route-gate-outside-1-lateral-positive",
+      "destination": "EcruteakCity_WestGate",
+      "arrival": [
+        1,
+        7
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 4,
+      "result": "FAIL"
+    },
+    {
+      "label": "west-route-gate-outside-2-front",
+      "destination": "EcruteakCity_WestGate",
+      "arrival": [
+        1,
+        8
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 4,
+      "result": "FAIL"
+    },
+    {
+      "label": "west-route-gate-outside-2-lateral-negative",
+      "destination": "EcruteakCity_WestGate",
+      "arrival": [
+        1,
+        8
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 4,
+      "result": "FAIL"
+    },
+    {
+      "label": "west-route-gate-inside-0-front",
+      "destination": "JohtoRoute38",
+      "arrival": [
+        62,
+        12
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 3,
+      "result": "FAIL"
+    },
+    {
+      "label": "west-route-gate-inside-0-lateral-negative",
+      "destination": "JohtoRoute38",
+      "arrival": [
+        62,
+        12
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 3,
+      "result": "FAIL"
+    },
+    {
+      "label": "west-route-gate-inside-0-lateral-positive",
+      "destination": "JohtoRoute38",
+      "arrival": [
+        62,
+        12
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 3,
+      "result": "FAIL"
+    },
+    {
+      "label": "west-route-gate-inside-1-front",
+      "destination": "JohtoRoute38",
+      "arrival": [
+        62,
+        13
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 3,
+      "result": "FAIL"
+    },
+    {
+      "label": "west-route-gate-inside-1-lateral-negative",
+      "destination": "JohtoRoute38",
+      "arrival": [
+        62,
+        13
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 3,
+      "result": "FAIL"
+    },
+    {
+      "label": "west-route-gate-inside-1-lateral-positive",
+      "destination": "JohtoRoute38",
+      "arrival": [
+        62,
+        13
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 3,
+      "result": "FAIL"
+    },
+    {
+      "label": "west-route-gate-inside-2-front",
+      "destination": "JohtoRoute38",
+      "arrival": [
+        62,
+        14
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 3,
+      "result": "FAIL"
+    },
+    {
+      "label": "west-route-gate-inside-2-lateral-negative",
+      "destination": "JohtoRoute38",
+      "arrival": [
+        62,
+        14
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 3,
+      "result": "FAIL"
+    },
+    {
+      "label": "west-route-gate-inside-2-lateral-positive",
+      "destination": "JohtoRoute38",
+      "arrival": [
+        62,
+        14
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 3,
+      "result": "FAIL"
+    },
+    {
+      "label": "east-city-gate-outside-0-front",
+      "destination": "EcruteakCity_EastGate",
+      "arrival": [
+        1,
+        6
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 4,
+      "result": "FAIL"
+    },
+    {
+      "label": "east-city-gate-outside-0-lateral-positive",
+      "destination": "EcruteakCity_EastGate",
+      "arrival": [
+        1,
+        6
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 4,
+      "result": "FAIL"
+    },
+    {
+      "label": "east-city-gate-outside-1-front",
+      "destination": "EcruteakCity_EastGate",
+      "arrival": [
+        1,
+        7
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 4,
+      "result": "FAIL"
+    },
+    {
+      "label": "east-city-gate-outside-1-lateral-negative",
+      "destination": "EcruteakCity_EastGate",
+      "arrival": [
+        1,
+        7
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 4,
+      "result": "FAIL"
+    },
+    {
+      "label": "east-city-gate-outside-1-lateral-positive",
+      "destination": "EcruteakCity_EastGate",
+      "arrival": [
+        1,
+        7
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 4,
+      "result": "FAIL"
+    },
+    {
+      "label": "east-city-gate-outside-2-front",
+      "destination": "EcruteakCity_EastGate",
+      "arrival": [
+        1,
+        8
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 4,
+      "result": "FAIL"
+    },
+    {
+      "label": "east-city-gate-outside-2-lateral-negative",
+      "destination": "EcruteakCity_EastGate",
+      "arrival": [
+        1,
+        8
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 4,
+      "result": "FAIL"
+    },
+    {
+      "label": "east-city-gate-inside-0-front",
+      "destination": "EcruteakCity",
+      "arrival": [
+        59,
+        46
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 3,
+      "result": "FAIL"
+    },
+    {
+      "label": "east-city-gate-inside-0-lateral-negative",
+      "destination": "EcruteakCity",
+      "arrival": [
+        59,
+        46
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 3,
+      "result": "FAIL"
+    },
+    {
+      "label": "east-city-gate-inside-0-lateral-positive",
+      "destination": "EcruteakCity",
+      "arrival": [
+        59,
+        46
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 3,
+      "result": "FAIL"
+    },
+    {
+      "label": "east-city-gate-inside-1-front",
+      "destination": "EcruteakCity",
+      "arrival": [
+        59,
+        47
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 3,
+      "result": "FAIL"
+    },
+    {
+      "label": "east-city-gate-inside-1-lateral-negative",
+      "destination": "EcruteakCity",
+      "arrival": [
+        59,
+        47
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 3,
+      "result": "FAIL"
+    },
+    {
+      "label": "east-city-gate-inside-1-lateral-positive",
+      "destination": "EcruteakCity",
+      "arrival": [
+        59,
+        47
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 3,
+      "result": "FAIL"
+    },
+    {
+      "label": "east-city-gate-inside-2-front",
+      "destination": "EcruteakCity",
+      "arrival": [
+        59,
+        48
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 3,
+      "result": "FAIL"
+    },
+    {
+      "label": "east-city-gate-inside-2-lateral-negative",
+      "destination": "EcruteakCity",
+      "arrival": [
+        59,
+        48
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 3,
+      "result": "FAIL"
+    },
+    {
+      "label": "east-city-gate-inside-2-lateral-positive",
+      "destination": "EcruteakCity",
+      "arrival": [
+        59,
+        48
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 3,
+      "result": "FAIL"
+    },
+    {
+      "label": "east-route-gate-outside-0-front",
+      "destination": "EcruteakCity_EastGate",
+      "arrival": [
+        10,
+        6
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 3,
+      "result": "FAIL"
+    },
+    {
+      "label": "east-route-gate-outside-0-lateral-negative",
+      "destination": "EcruteakCity_EastGate",
+      "arrival": [
+        10,
+        6
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 3,
+      "result": "FAIL"
+    },
+    {
+      "label": "east-route-gate-outside-1-front",
+      "destination": "EcruteakCity_EastGate",
+      "arrival": [
+        10,
+        7
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 3,
+      "result": "FAIL"
+    },
+    {
+      "label": "east-route-gate-outside-1-lateral-negative",
+      "destination": "EcruteakCity_EastGate",
+      "arrival": [
+        10,
+        7
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 3,
+      "result": "FAIL"
+    },
+    {
+      "label": "east-route-gate-outside-1-lateral-positive",
+      "destination": "EcruteakCity_EastGate",
+      "arrival": [
+        10,
+        7
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 3,
+      "result": "FAIL"
+    },
+    {
+      "label": "east-route-gate-outside-2-front",
+      "destination": "EcruteakCity_EastGate",
+      "arrival": [
+        10,
+        8
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 3,
+      "result": "FAIL"
+    },
+    {
+      "label": "east-route-gate-outside-2-lateral-positive",
+      "destination": "EcruteakCity_EastGate",
+      "arrival": [
+        10,
+        8
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 3,
+      "result": "FAIL"
+    },
+    {
+      "label": "east-route-gate-inside-0-front",
+      "destination": "JohtoRoute42",
+      "arrival": [
+        3,
+        13
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 4,
+      "result": "FAIL"
+    },
+    {
+      "label": "east-route-gate-inside-0-lateral-negative",
+      "destination": "JohtoRoute42",
+      "arrival": [
+        3,
+        13
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 4,
+      "result": "FAIL"
+    },
+    {
+      "label": "east-route-gate-inside-0-lateral-positive",
+      "destination": "JohtoRoute42",
+      "arrival": [
+        3,
+        13
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 4,
+      "result": "FAIL"
+    },
+    {
+      "label": "east-route-gate-inside-1-front",
+      "destination": "JohtoRoute42",
+      "arrival": [
+        3,
+        14
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 4,
+      "result": "FAIL"
+    },
+    {
+      "label": "east-route-gate-inside-1-lateral-negative",
+      "destination": "JohtoRoute42",
+      "arrival": [
+        3,
+        14
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 4,
+      "result": "FAIL"
+    },
+    {
+      "label": "east-route-gate-inside-1-lateral-positive",
+      "destination": "JohtoRoute42",
+      "arrival": [
+        3,
+        14
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 4,
+      "result": "FAIL"
+    },
+    {
+      "label": "east-route-gate-inside-2-front",
+      "destination": "JohtoRoute42",
+      "arrival": [
+        3,
+        15
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 4,
+      "result": "FAIL"
+    },
+    {
+      "label": "east-route-gate-inside-2-lateral-negative",
+      "destination": "JohtoRoute42",
+      "arrival": [
+        3,
+        15
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 4,
+      "result": "FAIL"
+    },
+    {
+      "label": "east-route-gate-inside-2-lateral-positive",
+      "destination": "JohtoRoute42",
+      "arrival": [
+        3,
+        15
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 4,
+      "result": "FAIL"
+    },
+    {
+      "label": "bell-tower-outside-0-front",
+      "destination": "EcruteakCity_BellTower",
+      "arrival": [
+        11,
+        22
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "bell-tower-outside-0-lateral-negative",
+      "destination": "EcruteakCity_BellTower",
+      "arrival": [
+        11,
+        22
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "bell-tower-outside-0-lateral-positive",
+      "destination": "EcruteakCity_BellTower",
+      "arrival": [
+        11,
+        22
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "bell-tower-inside-0-front",
+      "destination": "BellchimeTrail",
+      "arrival": [
+        37,
+        21
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "bell-tower-inside-0-lateral-negative",
+      "destination": "BellchimeTrail",
+      "arrival": [
+        37,
+        21
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "bell-tower-inside-0-lateral-positive",
+      "destination": "BellchimeTrail",
+      "arrival": [
+        37,
+        21
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "bell-tower-inside-1-front",
+      "destination": "BellchimeTrail",
+      "arrival": [
+        37,
+        21
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "bell-tower-inside-1-lateral-negative",
+      "destination": "BellchimeTrail",
+      "arrival": [
+        37,
+        21
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "bell-tower-inside-1-lateral-positive",
+      "destination": "BellchimeTrail",
+      "arrival": [
+        37,
+        21
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "trail-station-return-outside-0-front",
+      "destination": "EcruteakCity_BarrierCorridor",
+      "arrival": [
+        6,
+        3
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 1,
+      "result": "FAIL"
+    },
+    {
+      "label": "trail-station-return-outside-0-lateral-positive",
+      "destination": "EcruteakCity_BarrierCorridor",
+      "arrival": [
+        6,
+        3
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 1,
+      "result": "FAIL"
+    },
+    {
+      "label": "trail-station-return-inside-0-front",
+      "destination": "BellchimeTrail",
+      "arrival": [
+        9,
+        15
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "trail-station-return-inside-0-lateral-negative",
+      "destination": "BellchimeTrail",
+      "arrival": [
+        9,
+        15
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "station-corridor-stairs-outside-0-front",
+      "destination": "EcruteakCity_BarrierCorridor",
+      "arrival": [
+        3,
+        19
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "station-corridor-stairs-outside-0-lateral-negative",
+      "destination": "EcruteakCity_BarrierCorridor",
+      "arrival": [
+        3,
+        19
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "station-corridor-stairs-inside-0-front",
+      "destination": "EcruteakCity_BarrierStation",
+      "arrival": [
+        15,
+        3
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "station-corridor-stairs-inside-0-lateral-negative",
+      "destination": "EcruteakCity_BarrierStation",
+      "arrival": [
+        15,
+        3
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-joe-residence-outside-0-front",
+      "destination": "OlivineCity_Residence",
+      "arrival": [
+        3,
+        7
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-joe-residence-outside-0-lateral-positive",
+      "destination": "OlivineCity_Residence",
+      "arrival": [
+        3,
+        7
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-joe-residence-inside-0-front",
+      "destination": "OlivineCity",
+      "arrival": [
+        8,
+        24
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-joe-residence-inside-0-lateral-negative",
+      "destination": "OlivineCity",
+      "arrival": [
+        8,
+        24
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-joe-residence-inside-0-lateral-positive",
+      "destination": "OlivineCity",
+      "arrival": [
+        8,
+        24
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-joe-residence-inside-1-front",
+      "destination": "OlivineCity",
+      "arrival": [
+        8,
+        24
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-joe-residence-inside-1-lateral-negative",
+      "destination": "OlivineCity",
+      "arrival": [
+        8,
+        24
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-joe-residence-inside-1-lateral-positive",
+      "destination": "OlivineCity",
+      "arrival": [
+        8,
+        24
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-accepted-neighbour-outside-0-front",
+      "destination": "OlivineCity_NeighborHouse",
+      "arrival": [
+        3,
+        7
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-accepted-neighbour-outside-0-lateral-positive",
+      "destination": "OlivineCity_NeighborHouse",
+      "arrival": [
+        3,
+        7
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-accepted-neighbour-inside-0-front",
+      "destination": "OlivineCity",
+      "arrival": [
+        8,
+        29
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-accepted-neighbour-inside-0-lateral-negative",
+      "destination": "OlivineCity",
+      "arrival": [
+        8,
+        29
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-accepted-neighbour-inside-0-lateral-positive",
+      "destination": "OlivineCity",
+      "arrival": [
+        8,
+        29
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-accepted-neighbour-inside-1-front",
+      "destination": "OlivineCity",
+      "arrival": [
+        8,
+        29
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-accepted-neighbour-inside-1-lateral-negative",
+      "destination": "OlivineCity",
+      "arrival": [
+        8,
+        29
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-accepted-neighbour-inside-1-lateral-positive",
+      "destination": "OlivineCity",
+      "arrival": [
+        8,
+        29
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-custom-gym-outside-0-front",
+      "destination": "OlivineCity_Gym",
+      "arrival": [
+        6,
+        10
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-custom-gym-outside-0-lateral-negative",
+      "destination": "OlivineCity_Gym",
+      "arrival": [
+        6,
+        10
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-custom-gym-outside-0-lateral-positive",
+      "destination": "OlivineCity_Gym",
+      "arrival": [
+        6,
+        10
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-custom-gym-outside-1-front",
+      "destination": "OlivineCity_Gym",
+      "arrival": [
+        7,
+        10
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-custom-gym-outside-1-lateral-negative",
+      "destination": "OlivineCity_Gym",
+      "arrival": [
+        7,
+        10
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-custom-gym-outside-1-lateral-positive",
+      "destination": "OlivineCity_Gym",
+      "arrival": [
+        7,
+        10
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-custom-gym-inside-0-front",
+      "destination": "OlivineCity",
+      "arrival": [
+        13,
+        15
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-custom-gym-inside-0-lateral-negative",
+      "destination": "OlivineCity",
+      "arrival": [
+        13,
+        15
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-custom-gym-inside-0-lateral-positive",
+      "destination": "OlivineCity",
+      "arrival": [
+        13,
+        15
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-custom-gym-inside-1-front",
+      "destination": "OlivineCity",
+      "arrival": [
+        14,
+        15
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-custom-gym-inside-1-lateral-negative",
+      "destination": "OlivineCity",
+      "arrival": [
+        14,
+        15
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-custom-gym-inside-1-lateral-positive",
+      "destination": "OlivineCity",
+      "arrival": [
+        14,
+        15
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-pokemon-center-outside-0-front",
+      "destination": "OlivineCity_PokemonCenter_1F",
+      "arrival": [
+        8,
+        19
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-pokemon-center-outside-0-lateral-negative",
+      "destination": "OlivineCity_PokemonCenter_1F",
+      "arrival": [
+        8,
+        19
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-pokemon-center-outside-0-lateral-positive",
+      "destination": "OlivineCity_PokemonCenter_1F",
+      "arrival": [
+        8,
+        19
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-pokemon-center-outside-1-front",
+      "destination": "OlivineCity_PokemonCenter_1F",
+      "arrival": [
+        9,
+        19
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-pokemon-center-outside-1-lateral-negative",
+      "destination": "OlivineCity_PokemonCenter_1F",
+      "arrival": [
+        9,
+        19
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-pokemon-center-outside-1-lateral-positive",
+      "destination": "OlivineCity_PokemonCenter_1F",
+      "arrival": [
+        9,
+        19
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-pokemon-center-inside-0-front",
+      "destination": "OlivineCity",
+      "arrival": [
+        16,
+        34
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-pokemon-center-inside-0-lateral-negative",
+      "destination": "OlivineCity",
+      "arrival": [
+        16,
+        34
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-pokemon-center-inside-0-lateral-positive",
+      "destination": "OlivineCity",
+      "arrival": [
+        16,
+        34
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-pokemon-center-inside-1-front",
+      "destination": "OlivineCity",
+      "arrival": [
+        17,
+        34
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-pokemon-center-inside-1-lateral-negative",
+      "destination": "OlivineCity",
+      "arrival": [
+        17,
+        34
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-pokemon-center-inside-1-lateral-positive",
+      "destination": "OlivineCity",
+      "arrival": [
+        17,
+        34
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-poke-mart-outside-0-front",
+      "destination": "OlivineCity_Mart",
+      "arrival": [
+        4,
+        11
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-poke-mart-outside-0-lateral-negative",
+      "destination": "OlivineCity_Mart",
+      "arrival": [
+        4,
+        11
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-poke-mart-outside-0-lateral-positive",
+      "destination": "OlivineCity_Mart",
+      "arrival": [
+        4,
+        11
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-poke-mart-inside-0-front",
+      "destination": "OlivineCity",
+      "arrival": [
+        29,
+        34
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-poke-mart-inside-0-lateral-negative",
+      "destination": "OlivineCity",
+      "arrival": [
+        29,
+        34
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-poke-mart-inside-0-lateral-positive",
+      "destination": "OlivineCity",
+      "arrival": [
+        29,
+        34
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-poke-mart-inside-1-front",
+      "destination": "OlivineCity",
+      "arrival": [
+        29,
+        34
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-poke-mart-inside-1-lateral-negative",
+      "destination": "OlivineCity",
+      "arrival": [
+        29,
+        34
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-poke-mart-inside-1-lateral-positive",
+      "destination": "OlivineCity",
+      "arrival": [
+        29,
+        34
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-silph-office-outside-0-front",
+      "destination": "OlivineCity_SilphOffice",
+      "arrival": [
+        3,
+        7
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-silph-office-outside-0-lateral-negative",
+      "destination": "OlivineCity_SilphOffice",
+      "arrival": [
+        3,
+        7
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-silph-office-outside-0-lateral-positive",
+      "destination": "OlivineCity_SilphOffice",
+      "arrival": [
+        3,
+        7
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-silph-office-inside-0-front",
+      "destination": "OlivineCity",
+      "arrival": [
+        31,
+        41
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-silph-office-inside-0-lateral-negative",
+      "destination": "OlivineCity",
+      "arrival": [
+        31,
+        41
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-silph-office-inside-0-lateral-positive",
+      "destination": "OlivineCity",
+      "arrival": [
+        31,
+        41
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-silph-office-inside-1-front",
+      "destination": "OlivineCity",
+      "arrival": [
+        31,
+        41
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-silph-office-inside-1-lateral-negative",
+      "destination": "OlivineCity",
+      "arrival": [
+        31,
+        41
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-silph-office-inside-1-lateral-positive",
+      "destination": "OlivineCity",
+      "arrival": [
+        31,
+        41
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-harbor-office-outside-0-front",
+      "destination": "OlivineCity_HarborOffice",
+      "arrival": [
+        3,
+        7
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-harbor-office-outside-0-lateral-positive",
+      "destination": "OlivineCity_HarborOffice",
+      "arrival": [
+        3,
+        7
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-harbor-office-inside-0-front",
+      "destination": "OlivineCity",
+      "arrival": [
+        8,
+        41
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-harbor-office-inside-0-lateral-negative",
+      "destination": "OlivineCity",
+      "arrival": [
+        8,
+        41
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-harbor-office-inside-0-lateral-positive",
+      "destination": "OlivineCity",
+      "arrival": [
+        8,
+        41
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-harbor-office-inside-1-front",
+      "destination": "OlivineCity",
+      "arrival": [
+        8,
+        41
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-harbor-office-inside-1-lateral-negative",
+      "destination": "OlivineCity",
+      "arrival": [
+        8,
+        41
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-harbor-office-inside-1-lateral-positive",
+      "destination": "OlivineCity",
+      "arrival": [
+        8,
+        41
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-lighthouse-outside-0-front",
+      "destination": "OlivineCity_Lighthouse_1F",
+      "arrival": [
+        8,
+        17
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-lighthouse-outside-0-lateral-negative",
+      "destination": "OlivineCity_Lighthouse_1F",
+      "arrival": [
+        8,
+        17
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-lighthouse-inside-0-front",
+      "destination": "OlivineCity",
+      "arrival": [
+        45,
+        40
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-lighthouse-inside-0-lateral-negative",
+      "destination": "OlivineCity",
+      "arrival": [
+        45,
+        40
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-lighthouse-inside-0-lateral-positive",
+      "destination": "OlivineCity",
+      "arrival": [
+        45,
+        40
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-lighthouse-inside-1-front",
+      "destination": "OlivineCity",
+      "arrival": [
+        45,
+        40
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-lighthouse-inside-1-lateral-negative",
+      "destination": "OlivineCity",
+      "arrival": [
+        45,
+        40
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-lighthouse-inside-1-lateral-positive",
+      "destination": "OlivineCity",
+      "arrival": [
+        45,
+        40
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-fishing-house-outside-0-front",
+      "destination": "OlivineCity_FishingHouse",
+      "arrival": [
+        4,
+        8
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-fishing-house-outside-0-lateral-positive",
+      "destination": "OlivineCity_FishingHouse",
+      "arrival": [
+        4,
+        8
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-fishing-house-inside-0-front",
+      "destination": "OlivineCity",
+      "arrival": [
+        17,
+        24
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-fishing-house-inside-0-lateral-negative",
+      "destination": "OlivineCity",
+      "arrival": [
+        17,
+        24
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-fishing-house-inside-0-lateral-positive",
+      "destination": "OlivineCity",
+      "arrival": [
+        17,
+        24
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-fishing-house-inside-1-front",
+      "destination": "OlivineCity",
+      "arrival": [
+        17,
+        24
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-fishing-house-inside-1-lateral-negative",
+      "destination": "OlivineCity",
+      "arrival": [
+        17,
+        24
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-fishing-house-inside-1-lateral-positive",
+      "destination": "OlivineCity",
+      "arrival": [
+        17,
+        24
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-trade-house-outside-0-front",
+      "destination": "OlivineCity_TradeHouse",
+      "arrival": [
+        4,
+        8
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-trade-house-outside-0-lateral-positive",
+      "destination": "OlivineCity_TradeHouse",
+      "arrival": [
+        4,
+        8
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-trade-house-inside-0-front",
+      "destination": "OlivineCity",
+      "arrival": [
+        31,
+        18
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-trade-house-inside-0-lateral-negative",
+      "destination": "OlivineCity",
+      "arrival": [
+        31,
+        18
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-trade-house-inside-0-lateral-positive",
+      "destination": "OlivineCity",
+      "arrival": [
+        31,
+        18
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-trade-house-inside-1-front",
+      "destination": "OlivineCity",
+      "arrival": [
+        31,
+        18
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-trade-house-inside-1-lateral-negative",
+      "destination": "OlivineCity",
+      "arrival": [
+        31,
+        18
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-trade-house-inside-1-lateral-positive",
+      "destination": "OlivineCity",
+      "arrival": [
+        31,
+        18
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-seal-house-outside-0-front",
+      "destination": "OlivineCity_SealHouse",
+      "arrival": [
+        4,
+        8
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-seal-house-outside-0-lateral-positive",
+      "destination": "OlivineCity_SealHouse",
+      "arrival": [
+        4,
+        8
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-seal-house-inside-0-front",
+      "destination": "OlivineCity",
+      "arrival": [
+        36,
+        18
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-seal-house-inside-0-lateral-negative",
+      "destination": "OlivineCity",
+      "arrival": [
+        36,
+        18
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-seal-house-inside-0-lateral-positive",
+      "destination": "OlivineCity",
+      "arrival": [
+        36,
+        18
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-seal-house-inside-1-front",
+      "destination": "OlivineCity",
+      "arrival": [
+        36,
+        18
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-seal-house-inside-1-lateral-negative",
+      "destination": "OlivineCity",
+      "arrival": [
+        36,
+        18
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-seal-house-inside-1-lateral-positive",
+      "destination": "OlivineCity",
+      "arrival": [
+        36,
+        18
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-cafe-outside-0-front",
+      "destination": "OlivineCity_Cafe",
+      "arrival": [
+        5,
+        10
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-cafe-outside-0-lateral-positive",
+      "destination": "OlivineCity_Cafe",
+      "arrival": [
+        5,
+        10
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-cafe-inside-0-front",
+      "destination": "OlivineCity",
+      "arrival": [
+        9,
+        34
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-cafe-inside-0-lateral-negative",
+      "destination": "OlivineCity",
+      "arrival": [
+        9,
+        34
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-cafe-inside-0-lateral-positive",
+      "destination": "OlivineCity",
+      "arrival": [
+        9,
+        34
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-cafe-inside-1-front",
+      "destination": "OlivineCity",
+      "arrival": [
+        9,
+        34
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-cafe-inside-1-lateral-negative",
+      "destination": "OlivineCity",
+      "arrival": [
+        9,
+        34
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-cafe-inside-1-lateral-positive",
+      "destination": "OlivineCity",
+      "arrival": [
+        9,
+        34
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-port-city-entrance-outside-0-front",
+      "destination": "OlivineCity_PortTerminal",
+      "arrival": [
+        7,
+        2
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-port-city-entrance-outside-0-lateral-negative",
+      "destination": "OlivineCity_PortTerminal",
+      "arrival": [
+        7,
+        2
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-port-city-entrance-outside-1-front",
+      "destination": "OlivineCity_PortTerminal",
+      "arrival": [
+        8,
+        2
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-port-city-entrance-outside-1-lateral-positive",
+      "destination": "OlivineCity_PortTerminal",
+      "arrival": [
+        8,
+        2
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-port-city-entrance-inside-0-front",
+      "destination": "OlivineCity",
+      "arrival": [
+        23,
+        52
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-port-city-entrance-inside-0-lateral-negative",
+      "destination": "OlivineCity",
+      "arrival": [
+        23,
+        52
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-port-city-entrance-inside-0-lateral-positive",
+      "destination": "OlivineCity",
+      "arrival": [
+        23,
+        52
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-port-city-entrance-inside-1-front",
+      "destination": "OlivineCity",
+      "arrival": [
+        24,
+        52
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-port-city-entrance-inside-1-lateral-negative",
+      "destination": "OlivineCity",
+      "arrival": [
+        24,
+        52
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-port-city-entrance-inside-1-lateral-positive",
+      "destination": "OlivineCity",
+      "arrival": [
+        24,
+        52
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-gym-hallway-outside-0-front",
+      "destination": "OlivineCity_Gym_Arena",
+      "arrival": [
+        5,
+        16
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-gym-hallway-outside-0-lateral-positive",
+      "destination": "OlivineCity_Gym_Arena",
+      "arrival": [
+        5,
+        16
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-gym-hallway-outside-1-front",
+      "destination": "OlivineCity_Gym_Arena",
+      "arrival": [
+        6,
+        16
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-gym-hallway-outside-1-lateral-negative",
+      "destination": "OlivineCity_Gym_Arena",
+      "arrival": [
+        6,
+        16
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-gym-hallway-outside-1-lateral-positive",
+      "destination": "OlivineCity_Gym_Arena",
+      "arrival": [
+        6,
+        16
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-gym-hallway-outside-2-front",
+      "destination": "OlivineCity_Gym_Arena",
+      "arrival": [
+        7,
+        16
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-gym-hallway-outside-2-lateral-negative",
+      "destination": "OlivineCity_Gym_Arena",
+      "arrival": [
+        7,
+        16
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-gym-hallway-inside-0-front",
+      "destination": "OlivineCity_Gym",
+      "arrival": [
+        5,
+        0
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-gym-hallway-inside-0-lateral-negative",
+      "destination": "OlivineCity_Gym",
+      "arrival": [
+        5,
+        0
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-gym-hallway-inside-0-lateral-positive",
+      "destination": "OlivineCity_Gym",
+      "arrival": [
+        5,
+        0
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-gym-hallway-inside-1-front",
+      "destination": "OlivineCity_Gym",
+      "arrival": [
+        6,
+        0
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-gym-hallway-inside-1-lateral-negative",
+      "destination": "OlivineCity_Gym",
+      "arrival": [
+        6,
+        0
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-gym-hallway-inside-1-lateral-positive",
+      "destination": "OlivineCity_Gym",
+      "arrival": [
+        6,
+        0
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-gym-hallway-inside-2-front",
+      "destination": "OlivineCity_Gym",
+      "arrival": [
+        7,
+        0
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-gym-hallway-inside-2-lateral-negative",
+      "destination": "OlivineCity_Gym",
+      "arrival": [
+        7,
+        0
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-gym-hallway-inside-2-lateral-positive",
+      "destination": "OlivineCity_Gym",
+      "arrival": [
+        7,
+        0
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-port-quay-main-outside-0-front",
+      "destination": "OlivineCity_PortTerminal",
+      "arrival": [
+        7,
+        11
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-port-quay-main-outside-0-lateral-negative",
+      "destination": "OlivineCity_PortTerminal",
+      "arrival": [
+        7,
+        11
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-port-quay-main-outside-0-lateral-positive",
+      "destination": "OlivineCity_PortTerminal",
+      "arrival": [
+        7,
+        11
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-port-quay-main-outside-1-front",
+      "destination": "OlivineCity_PortTerminal",
+      "arrival": [
+        8,
+        11
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-port-quay-main-outside-1-lateral-negative",
+      "destination": "OlivineCity_PortTerminal",
+      "arrival": [
+        8,
+        11
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-port-quay-main-inside-0-front",
+      "destination": "OlivineCity_PortQuay",
+      "arrival": [
+        16,
+        15
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-port-quay-main-inside-0-lateral-negative",
+      "destination": "OlivineCity_PortQuay",
+      "arrival": [
+        16,
+        15
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-port-quay-main-inside-0-lateral-positive",
+      "destination": "OlivineCity_PortQuay",
+      "arrival": [
+        16,
+        15
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-port-quay-main-inside-1-front",
+      "destination": "OlivineCity_PortQuay",
+      "arrival": [
+        17,
+        15
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-port-quay-main-inside-1-lateral-negative",
+      "destination": "OlivineCity_PortQuay",
+      "arrival": [
+        17,
+        15
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-port-quay-main-inside-1-lateral-positive",
+      "destination": "OlivineCity_PortQuay",
+      "arrival": [
+        17,
+        15
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-port-inspection-side-outside-0-front",
+      "destination": "OlivineCity_PortTerminal",
+      "arrival": [
+        1,
+        7
+      ],
+      "actual_facing": 4,
+      "independent_intended_facing": 4,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-port-inspection-side-outside-0-lateral-negative",
+      "destination": "OlivineCity_PortTerminal",
+      "arrival": [
+        1,
+        7
+      ],
+      "actual_facing": 4,
+      "independent_intended_facing": 4,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-port-inspection-side-outside-0-lateral-positive",
+      "destination": "OlivineCity_PortTerminal",
+      "arrival": [
+        1,
+        7
+      ],
+      "actual_facing": 4,
+      "independent_intended_facing": 4,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-port-inspection-side-outside-1-front",
+      "destination": "OlivineCity_PortTerminal",
+      "arrival": [
+        1,
+        8
+      ],
+      "actual_facing": 4,
+      "independent_intended_facing": 4,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-port-inspection-side-outside-1-lateral-negative",
+      "destination": "OlivineCity_PortTerminal",
+      "arrival": [
+        1,
+        8
+      ],
+      "actual_facing": 4,
+      "independent_intended_facing": 4,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-port-inspection-side-outside-1-lateral-positive",
+      "destination": "OlivineCity_PortTerminal",
+      "arrival": [
+        1,
+        8
+      ],
+      "actual_facing": 4,
+      "independent_intended_facing": 4,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-port-inspection-side-inside-0-front",
+      "destination": "OlivineCity_PortQuay",
+      "arrival": [
+        11,
+        13
+      ],
+      "actual_facing": 3,
+      "independent_intended_facing": 3,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-port-inspection-side-inside-0-lateral-negative",
+      "destination": "OlivineCity_PortQuay",
+      "arrival": [
+        11,
+        13
+      ],
+      "actual_facing": 3,
+      "independent_intended_facing": 3,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-port-inspection-side-inside-0-lateral-positive",
+      "destination": "OlivineCity_PortQuay",
+      "arrival": [
+        11,
+        13
+      ],
+      "actual_facing": 3,
+      "independent_intended_facing": 3,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-port-inspection-side-inside-1-front",
+      "destination": "OlivineCity_PortQuay",
+      "arrival": [
+        11,
+        14
+      ],
+      "actual_facing": 3,
+      "independent_intended_facing": 3,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-port-inspection-side-inside-1-lateral-negative",
+      "destination": "OlivineCity_PortQuay",
+      "arrival": [
+        11,
+        14
+      ],
+      "actual_facing": 3,
+      "independent_intended_facing": 3,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-port-inspection-side-inside-1-lateral-positive",
+      "destination": "OlivineCity_PortQuay",
+      "arrival": [
+        11,
+        14
+      ],
+      "actual_facing": 3,
+      "independent_intended_facing": 3,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-lighthouse-balcony-outside-0-front",
+      "destination": "OlivineCity_Lighthouse_3F",
+      "arrival": [
+        8,
+        18
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-lighthouse-balcony-outside-0-lateral-negative",
+      "destination": "OlivineCity_Lighthouse_3F",
+      "arrival": [
+        8,
+        18
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-lighthouse-balcony-outside-0-lateral-positive",
+      "destination": "OlivineCity_Lighthouse_3F",
+      "arrival": [
+        8,
+        18
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-lighthouse-balcony-outside-1-front",
+      "destination": "OlivineCity_Lighthouse_3F",
+      "arrival": [
+        9,
+        18
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-lighthouse-balcony-outside-1-lateral-negative",
+      "destination": "OlivineCity_Lighthouse_3F",
+      "arrival": [
+        9,
+        18
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-lighthouse-balcony-outside-1-lateral-positive",
+      "destination": "OlivineCity_Lighthouse_3F",
+      "arrival": [
+        9,
+        18
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-lighthouse-balcony-inside-0-front",
+      "destination": "OlivineCity_Lighthouse_Balcony",
+      "arrival": [
+        8,
+        12
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-lighthouse-balcony-inside-0-lateral-negative",
+      "destination": "OlivineCity_Lighthouse_Balcony",
+      "arrival": [
+        8,
+        12
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-lighthouse-balcony-inside-0-lateral-positive",
+      "destination": "OlivineCity_Lighthouse_Balcony",
+      "arrival": [
+        8,
+        12
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-lighthouse-balcony-inside-1-front",
+      "destination": "OlivineCity_Lighthouse_Balcony",
+      "arrival": [
+        9,
+        12
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-lighthouse-balcony-inside-1-lateral-negative",
+      "destination": "OlivineCity_Lighthouse_Balcony",
+      "arrival": [
+        9,
+        12
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "olivine-lighthouse-balcony-inside-1-lateral-positive",
+      "destination": "OlivineCity_Lighthouse_Balcony",
+      "arrival": [
+        9,
+        12
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-gangway-outside-0-front",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        24,
+        19
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-gangway-outside-0-lateral-positive",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        24,
+        19
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-gangway-outside-1-front",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        25,
+        19
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-gangway-outside-1-lateral-negative",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        25,
+        19
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-gangway-inside-0-front",
+      "destination": "OlivineCity_PortQuay",
+      "arrival": [
+        27,
+        20
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-gangway-inside-0-lateral-negative",
+      "destination": "OlivineCity_PortQuay",
+      "arrival": [
+        27,
+        20
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-gangway-inside-0-lateral-positive",
+      "destination": "OlivineCity_PortQuay",
+      "arrival": [
+        27,
+        20
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-gangway-inside-1-front",
+      "destination": "OlivineCity_PortQuay",
+      "arrival": [
+        28,
+        20
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-gangway-inside-1-lateral-negative",
+      "destination": "OlivineCity_PortQuay",
+      "arrival": [
+        28,
+        20
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-gangway-inside-1-lateral-positive",
+      "destination": "OlivineCity_PortQuay",
+      "arrival": [
+        28,
+        20
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-gangway-inside-2-front",
+      "destination": "OlivineCity_PortQuay",
+      "arrival": [
+        27,
+        20
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-gangway-inside-2-lateral-negative",
+      "destination": "OlivineCity_PortQuay",
+      "arrival": [
+        27,
+        20
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-gangway-inside-3-front",
+      "destination": "OlivineCity_PortQuay",
+      "arrival": [
+        27,
+        20
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-gangway-inside-3-lateral-negative",
+      "destination": "OlivineCity_PortQuay",
+      "arrival": [
+        27,
+        20
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-gangway-inside-3-lateral-positive",
+      "destination": "OlivineCity_PortQuay",
+      "arrival": [
+        27,
+        20
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-gangway-inside-4-front",
+      "destination": "OlivineCity_PortQuay",
+      "arrival": [
+        28,
+        20
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-gangway-inside-4-lateral-positive",
+      "destination": "OlivineCity_PortQuay",
+      "arrival": [
+        28,
+        20
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-southwestcabins-0-outside-0-front",
+      "destination": "SSAqua_SouthwestCabins",
+      "arrival": [
+        9,
+        3
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-southwestcabins-0-outside-0-lateral-negative",
+      "destination": "SSAqua_SouthwestCabins",
+      "arrival": [
+        9,
+        3
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-southwestcabins-0-outside-0-lateral-positive",
+      "destination": "SSAqua_SouthwestCabins",
+      "arrival": [
+        9,
+        3
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-southwestcabins-0-outside-1-front",
+      "destination": "SSAqua_SouthwestCabins",
+      "arrival": [
+        10,
+        3
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-southwestcabins-0-outside-1-lateral-negative",
+      "destination": "SSAqua_SouthwestCabins",
+      "arrival": [
+        10,
+        3
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-southwestcabins-0-outside-1-lateral-positive",
+      "destination": "SSAqua_SouthwestCabins",
+      "arrival": [
+        10,
+        3
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-southwestcabins-0-inside-0-front",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        13,
+        14
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-southwestcabins-0-inside-0-lateral-negative",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        13,
+        14
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-southwestcabins-0-inside-0-lateral-positive",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        13,
+        14
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-southwestcabins-0-inside-1-front",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        14,
+        14
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-southwestcabins-0-inside-1-lateral-negative",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        14,
+        14
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-southwestcabins-0-inside-1-lateral-positive",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        14,
+        14
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-southwestcabins-1-outside-0-front",
+      "destination": "SSAqua_SouthwestCabins",
+      "arrival": [
+        23,
+        3
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-southwestcabins-1-outside-0-lateral-negative",
+      "destination": "SSAqua_SouthwestCabins",
+      "arrival": [
+        23,
+        3
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-southwestcabins-1-outside-0-lateral-positive",
+      "destination": "SSAqua_SouthwestCabins",
+      "arrival": [
+        23,
+        3
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-southwestcabins-1-outside-1-front",
+      "destination": "SSAqua_SouthwestCabins",
+      "arrival": [
+        24,
+        3
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-southwestcabins-1-outside-1-lateral-negative",
+      "destination": "SSAqua_SouthwestCabins",
+      "arrival": [
+        24,
+        3
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-southwestcabins-1-outside-1-lateral-positive",
+      "destination": "SSAqua_SouthwestCabins",
+      "arrival": [
+        24,
+        3
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-southwestcabins-1-inside-0-front",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        19,
+        14
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-southwestcabins-1-inside-0-lateral-negative",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        19,
+        14
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-southwestcabins-1-inside-0-lateral-positive",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        19,
+        14
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-southwestcabins-1-inside-1-front",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        20,
+        14
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-southwestcabins-1-inside-1-lateral-negative",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        20,
+        14
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-southwestcabins-1-inside-1-lateral-positive",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        20,
+        14
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-southeastcabins-0-outside-0-front",
+      "destination": "SSAqua_SoutheastCabins",
+      "arrival": [
+        9,
+        3
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-southeastcabins-0-outside-0-lateral-negative",
+      "destination": "SSAqua_SoutheastCabins",
+      "arrival": [
+        9,
+        3
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-southeastcabins-0-outside-0-lateral-positive",
+      "destination": "SSAqua_SoutheastCabins",
+      "arrival": [
+        9,
+        3
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-southeastcabins-0-outside-1-front",
+      "destination": "SSAqua_SoutheastCabins",
+      "arrival": [
+        10,
+        3
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-southeastcabins-0-outside-1-lateral-negative",
+      "destination": "SSAqua_SoutheastCabins",
+      "arrival": [
+        10,
+        3
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-southeastcabins-0-outside-1-lateral-positive",
+      "destination": "SSAqua_SoutheastCabins",
+      "arrival": [
+        10,
+        3
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-southeastcabins-0-inside-0-front",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        30,
+        14
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-southeastcabins-0-inside-0-lateral-negative",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        30,
+        14
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-southeastcabins-0-inside-0-lateral-positive",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        30,
+        14
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-southeastcabins-0-inside-1-front",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        31,
+        14
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-southeastcabins-0-inside-1-lateral-negative",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        31,
+        14
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-southeastcabins-0-inside-1-lateral-positive",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        31,
+        14
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-southeastcabins-1-outside-0-front",
+      "destination": "SSAqua_SoutheastCabins",
+      "arrival": [
+        23,
+        3
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-southeastcabins-1-outside-0-lateral-negative",
+      "destination": "SSAqua_SoutheastCabins",
+      "arrival": [
+        23,
+        3
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-southeastcabins-1-outside-0-lateral-positive",
+      "destination": "SSAqua_SoutheastCabins",
+      "arrival": [
+        23,
+        3
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-southeastcabins-1-outside-1-front",
+      "destination": "SSAqua_SoutheastCabins",
+      "arrival": [
+        24,
+        3
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-southeastcabins-1-outside-1-lateral-negative",
+      "destination": "SSAqua_SoutheastCabins",
+      "arrival": [
+        24,
+        3
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-southeastcabins-1-outside-1-lateral-positive",
+      "destination": "SSAqua_SoutheastCabins",
+      "arrival": [
+        24,
+        3
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-southeastcabins-1-inside-0-front",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        36,
+        14
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-southeastcabins-1-inside-0-lateral-negative",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        36,
+        14
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-southeastcabins-1-inside-0-lateral-positive",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        36,
+        14
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-southeastcabins-1-inside-1-front",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        37,
+        14
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-southeastcabins-1-inside-1-lateral-negative",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        37,
+        14
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-northwestcabins-0-outside-0-front",
+      "destination": "SSAqua_NorthwestCabins",
+      "arrival": [
+        9,
+        11
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-northwestcabins-0-outside-0-lateral-negative",
+      "destination": "SSAqua_NorthwestCabins",
+      "arrival": [
+        9,
+        11
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-northwestcabins-0-outside-0-lateral-positive",
+      "destination": "SSAqua_NorthwestCabins",
+      "arrival": [
+        9,
+        11
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-northwestcabins-0-outside-1-front",
+      "destination": "SSAqua_NorthwestCabins",
+      "arrival": [
+        10,
+        11
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-northwestcabins-0-outside-1-lateral-negative",
+      "destination": "SSAqua_NorthwestCabins",
+      "arrival": [
+        10,
+        11
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-northwestcabins-0-outside-1-lateral-positive",
+      "destination": "SSAqua_NorthwestCabins",
+      "arrival": [
+        10,
+        11
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-northwestcabins-0-inside-0-front",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        13,
+        9
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-northwestcabins-0-inside-0-lateral-negative",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        13,
+        9
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-northwestcabins-0-inside-0-lateral-positive",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        13,
+        9
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-northwestcabins-0-inside-1-front",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        14,
+        9
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-northwestcabins-0-inside-1-lateral-negative",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        14,
+        9
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-northwestcabins-0-inside-1-lateral-positive",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        14,
+        9
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-northwestcabins-1-outside-0-front",
+      "destination": "SSAqua_NorthwestCabins",
+      "arrival": [
+        23,
+        11
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-northwestcabins-1-outside-0-lateral-negative",
+      "destination": "SSAqua_NorthwestCabins",
+      "arrival": [
+        23,
+        11
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-northwestcabins-1-outside-0-lateral-positive",
+      "destination": "SSAqua_NorthwestCabins",
+      "arrival": [
+        23,
+        11
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-northwestcabins-1-outside-1-front",
+      "destination": "SSAqua_NorthwestCabins",
+      "arrival": [
+        24,
+        11
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-northwestcabins-1-outside-1-lateral-negative",
+      "destination": "SSAqua_NorthwestCabins",
+      "arrival": [
+        24,
+        11
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-northwestcabins-1-outside-1-lateral-positive",
+      "destination": "SSAqua_NorthwestCabins",
+      "arrival": [
+        24,
+        11
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-northwestcabins-1-inside-0-front",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        19,
+        9
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-northwestcabins-1-inside-0-lateral-negative",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        19,
+        9
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-northwestcabins-1-inside-0-lateral-positive",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        19,
+        9
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-northwestcabins-1-inside-1-front",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        20,
+        9
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-northwestcabins-1-inside-1-lateral-negative",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        20,
+        9
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-northwestcabins-1-inside-1-lateral-positive",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        20,
+        9
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-northeastcabins-0-outside-0-front",
+      "destination": "SSAqua_NortheastCabins",
+      "arrival": [
+        9,
+        11
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-northeastcabins-0-outside-0-lateral-negative",
+      "destination": "SSAqua_NortheastCabins",
+      "arrival": [
+        9,
+        11
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-northeastcabins-0-outside-0-lateral-positive",
+      "destination": "SSAqua_NortheastCabins",
+      "arrival": [
+        9,
+        11
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-northeastcabins-0-outside-1-front",
+      "destination": "SSAqua_NortheastCabins",
+      "arrival": [
+        10,
+        11
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-northeastcabins-0-outside-1-lateral-negative",
+      "destination": "SSAqua_NortheastCabins",
+      "arrival": [
+        10,
+        11
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-northeastcabins-0-outside-1-lateral-positive",
+      "destination": "SSAqua_NortheastCabins",
+      "arrival": [
+        10,
+        11
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-northeastcabins-0-inside-0-front",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        30,
+        9
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-northeastcabins-0-inside-0-lateral-negative",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        30,
+        9
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-northeastcabins-0-inside-0-lateral-positive",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        30,
+        9
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-northeastcabins-0-inside-1-front",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        31,
+        9
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-northeastcabins-0-inside-1-lateral-negative",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        31,
+        9
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-northeastcabins-0-inside-1-lateral-positive",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        31,
+        9
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-northeastcabins-1-outside-0-front",
+      "destination": "SSAqua_NortheastCabins",
+      "arrival": [
+        23,
+        11
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-northeastcabins-1-outside-0-lateral-negative",
+      "destination": "SSAqua_NortheastCabins",
+      "arrival": [
+        23,
+        11
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-northeastcabins-1-outside-0-lateral-positive",
+      "destination": "SSAqua_NortheastCabins",
+      "arrival": [
+        23,
+        11
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-northeastcabins-1-outside-1-front",
+      "destination": "SSAqua_NortheastCabins",
+      "arrival": [
+        24,
+        11
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-northeastcabins-1-outside-1-lateral-negative",
+      "destination": "SSAqua_NortheastCabins",
+      "arrival": [
+        24,
+        11
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-northeastcabins-1-outside-1-lateral-positive",
+      "destination": "SSAqua_NortheastCabins",
+      "arrival": [
+        24,
+        11
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-northeastcabins-1-inside-0-front",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        36,
+        9
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-northeastcabins-1-inside-0-lateral-negative",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        36,
+        9
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-northeastcabins-1-inside-0-lateral-positive",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        36,
+        9
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-northeastcabins-1-inside-1-front",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        37,
+        9
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-northeastcabins-1-inside-1-lateral-negative",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        37,
+        9
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-northeastcabins-1-inside-1-lateral-positive",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        37,
+        9
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-captainroom-0-outside-0-front",
+      "destination": "SSAqua_CaptainRoom",
+      "arrival": [
+        9,
+        11
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-captainroom-0-outside-0-lateral-negative",
+      "destination": "SSAqua_CaptainRoom",
+      "arrival": [
+        9,
+        11
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-captainroom-0-outside-0-lateral-positive",
+      "destination": "SSAqua_CaptainRoom",
+      "arrival": [
+        9,
+        11
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-captainroom-0-outside-1-front",
+      "destination": "SSAqua_CaptainRoom",
+      "arrival": [
+        10,
+        11
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-captainroom-0-outside-1-lateral-negative",
+      "destination": "SSAqua_CaptainRoom",
+      "arrival": [
+        10,
+        11
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-captainroom-0-outside-1-lateral-positive",
+      "destination": "SSAqua_CaptainRoom",
+      "arrival": [
+        10,
+        11
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-captainroom-0-inside-0-front",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        49,
+        16
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-captainroom-0-inside-0-lateral-negative",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        49,
+        16
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-captainroom-0-inside-0-lateral-positive",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        49,
+        16
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-captainroom-0-inside-1-front",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        50,
+        16
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-captainroom-0-inside-1-lateral-negative",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        50,
+        16
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-captainroom-0-inside-1-lateral-positive",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        50,
+        16
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-west-stairs-outside-0-front",
+      "destination": "SSAqua_B1F",
+      "arrival": [
+        24,
+        4
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-west-stairs-outside-0-lateral-positive",
+      "destination": "SSAqua_B1F",
+      "arrival": [
+        24,
+        4
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-west-stairs-outside-1-front",
+      "destination": "SSAqua_B1F",
+      "arrival": [
+        25,
+        4
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-west-stairs-outside-1-lateral-negative",
+      "destination": "SSAqua_B1F",
+      "arrival": [
+        25,
+        4
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-west-stairs-outside-1-lateral-positive",
+      "destination": "SSAqua_B1F",
+      "arrival": [
+        25,
+        4
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-west-stairs-inside-0-front",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        24,
+        4
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-west-stairs-inside-0-lateral-negative",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        24,
+        4
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-west-stairs-inside-0-lateral-positive",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        24,
+        4
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-west-stairs-inside-1-front",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        25,
+        4
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-west-stairs-inside-1-lateral-negative",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        25,
+        4
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-right-stairs-north-rim-outside-0-front",
+      "destination": "SSAqua_B1F",
+      "arrival": [
+        42,
+        8
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-right-stairs-north-rim-outside-0-lateral-negative",
+      "destination": "SSAqua_B1F",
+      "arrival": [
+        42,
+        8
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-right-stairs-north-rim-outside-0-lateral-positive",
+      "destination": "SSAqua_B1F",
+      "arrival": [
+        42,
+        8
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-right-stairs-north-rim-outside-1-front",
+      "destination": "SSAqua_B1F",
+      "arrival": [
+        43,
+        8
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-right-stairs-north-rim-outside-1-lateral-positive",
+      "destination": "SSAqua_B1F",
+      "arrival": [
+        43,
+        8
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-right-stairs-north-rim-inside-0-front",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        42,
+        9
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-right-stairs-north-rim-inside-0-lateral-negative",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        42,
+        9
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-right-stairs-north-rim-inside-0-lateral-positive",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        42,
+        9
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-right-stairs-north-rim-inside-1-front",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        43,
+        8
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-right-stairs-north-rim-inside-1-lateral-positive",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        43,
+        8
+      ],
+      "actual_facing": 1,
+      "independent_intended_facing": 1,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-right-stairs-south-rim-outside-0-front",
+      "destination": "SSAqua_B1F",
+      "arrival": [
+        42,
+        9
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-right-stairs-south-rim-outside-0-lateral-negative",
+      "destination": "SSAqua_B1F",
+      "arrival": [
+        42,
+        9
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-right-stairs-south-rim-outside-0-lateral-positive",
+      "destination": "SSAqua_B1F",
+      "arrival": [
+        42,
+        9
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-right-stairs-south-rim-outside-1-front",
+      "destination": "SSAqua_B1F",
+      "arrival": [
+        43,
+        9
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-right-stairs-south-rim-outside-1-lateral-negative",
+      "destination": "SSAqua_B1F",
+      "arrival": [
+        43,
+        9
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-right-stairs-south-rim-inside-0-front",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        42,
+        9
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-right-stairs-south-rim-inside-0-lateral-negative",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        42,
+        9
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-right-stairs-south-rim-inside-0-lateral-positive",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        42,
+        9
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-right-stairs-south-rim-inside-1-front",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        43,
+        9
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    },
+    {
+      "label": "aqua-right-stairs-south-rim-inside-1-lateral-negative",
+      "destination": "SSAqua_1F",
+      "arrival": [
+        43,
+        9
+      ],
+      "actual_facing": 2,
+      "independent_intended_facing": 2,
+      "result": "PASS"
+    }
+  ]
+}

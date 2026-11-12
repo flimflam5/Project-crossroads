@@ -1,0 +1,1379 @@
+{
+  "rom_sha256": "af59dff1b06b99a9599c6f98b6fb6bd1e765cc52c0838a2dec5c79a6c1f88373",
+  "source_revision": "521000c1977d40ed8ca6956859d337c898743f07",
+  "source_battery_sha256": "b03ff1ef488fbd25de016e828483bc3001787b84e450a45eaa0ac12a11de30ab",
+  "source_battery_unchanged": true,
+  "setup": "Copied normal battery; cold Continue, normal controller paths and real desk OFF. Save/Continue uses actual UI and private output batteries; exact party/boxes/decoded inventory/flags/starter checked. No player/map/warp/flag coordinate fixtures; only shared encounter suppression in test RAM.",
+  "views": [
+    {
+      "label": "court-31-42",
+      "map": "EcruteakCity",
+      "position": [
+        31,
+        42
+      ],
+      "facing": 1,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    },
+    {
+      "label": "court-32-42",
+      "map": "EcruteakCity",
+      "position": [
+        32,
+        42
+      ],
+      "facing": 4,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    },
+    {
+      "label": "court-33-42",
+      "map": "EcruteakCity",
+      "position": [
+        33,
+        42
+      ],
+      "facing": 4,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    },
+    {
+      "label": "court-34-42",
+      "map": "EcruteakCity",
+      "position": [
+        34,
+        42
+      ],
+      "facing": 4,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    },
+    {
+      "label": "court-35-42",
+      "map": "EcruteakCity",
+      "position": [
+        35,
+        42
+      ],
+      "facing": 4,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    },
+    {
+      "label": "court-36-42",
+      "map": "EcruteakCity",
+      "position": [
+        36,
+        42
+      ],
+      "facing": 4,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    },
+    {
+      "label": "court-37-42",
+      "map": "EcruteakCity",
+      "position": [
+        37,
+        42
+      ],
+      "facing": 4,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    },
+    {
+      "label": "court-38-42",
+      "map": "EcruteakCity",
+      "position": [
+        38,
+        42
+      ],
+      "facing": 4,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    },
+    {
+      "label": "court-38-43",
+      "map": "EcruteakCity",
+      "position": [
+        38,
+        43
+      ],
+      "facing": 1,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    },
+    {
+      "label": "court-37-43",
+      "map": "EcruteakCity",
+      "position": [
+        37,
+        43
+      ],
+      "facing": 3,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    },
+    {
+      "label": "court-36-43",
+      "map": "EcruteakCity",
+      "position": [
+        36,
+        43
+      ],
+      "facing": 3,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    },
+    {
+      "label": "court-35-43",
+      "map": "EcruteakCity",
+      "position": [
+        35,
+        43
+      ],
+      "facing": 3,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    },
+    {
+      "label": "court-34-43",
+      "map": "EcruteakCity",
+      "position": [
+        34,
+        43
+      ],
+      "facing": 3,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    },
+    {
+      "label": "court-33-43",
+      "map": "EcruteakCity",
+      "position": [
+        33,
+        43
+      ],
+      "facing": 3,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    },
+    {
+      "label": "court-32-43",
+      "map": "EcruteakCity",
+      "position": [
+        32,
+        43
+      ],
+      "facing": 3,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    },
+    {
+      "label": "court-31-43",
+      "map": "EcruteakCity",
+      "position": [
+        31,
+        43
+      ],
+      "facing": 3,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    },
+    {
+      "label": "court-31-44",
+      "map": "EcruteakCity",
+      "position": [
+        31,
+        44
+      ],
+      "facing": 1,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    },
+    {
+      "label": "court-32-44",
+      "map": "EcruteakCity",
+      "position": [
+        32,
+        44
+      ],
+      "facing": 4,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    },
+    {
+      "label": "court-33-44",
+      "map": "EcruteakCity",
+      "position": [
+        33,
+        44
+      ],
+      "facing": 4,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    },
+    {
+      "label": "court-34-44",
+      "map": "EcruteakCity",
+      "position": [
+        34,
+        44
+      ],
+      "facing": 4,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    },
+    {
+      "label": "court-35-44",
+      "map": "EcruteakCity",
+      "position": [
+        35,
+        44
+      ],
+      "facing": 4,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    },
+    {
+      "label": "court-36-44",
+      "map": "EcruteakCity",
+      "position": [
+        36,
+        44
+      ],
+      "facing": 4,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    },
+    {
+      "label": "court-37-44",
+      "map": "EcruteakCity",
+      "position": [
+        37,
+        44
+      ],
+      "facing": 4,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    },
+    {
+      "label": "court-38-44",
+      "map": "EcruteakCity",
+      "position": [
+        38,
+        44
+      ],
+      "facing": 4,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    },
+    {
+      "label": "court-38-45",
+      "map": "EcruteakCity",
+      "position": [
+        38,
+        45
+      ],
+      "facing": 1,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    },
+    {
+      "label": "court-37-45",
+      "map": "EcruteakCity",
+      "position": [
+        37,
+        45
+      ],
+      "facing": 3,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    },
+    {
+      "label": "court-35-45",
+      "map": "EcruteakCity",
+      "position": [
+        35,
+        45
+      ],
+      "facing": 2,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    },
+    {
+      "label": "court-34-45",
+      "map": "EcruteakCity",
+      "position": [
+        34,
+        45
+      ],
+      "facing": 3,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    },
+    {
+      "label": "court-33-45",
+      "map": "EcruteakCity",
+      "position": [
+        33,
+        45
+      ],
+      "facing": 3,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    },
+    {
+      "label": "court-32-45",
+      "map": "EcruteakCity",
+      "position": [
+        32,
+        45
+      ],
+      "facing": 3,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    },
+    {
+      "label": "court-31-45",
+      "map": "EcruteakCity",
+      "position": [
+        31,
+        45
+      ],
+      "facing": 3,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    },
+    {
+      "label": "court-31-46",
+      "map": "EcruteakCity",
+      "position": [
+        31,
+        46
+      ],
+      "facing": 1,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    },
+    {
+      "label": "court-32-46",
+      "map": "EcruteakCity",
+      "position": [
+        32,
+        46
+      ],
+      "facing": 4,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    },
+    {
+      "label": "court-33-46",
+      "map": "EcruteakCity",
+      "position": [
+        33,
+        46
+      ],
+      "facing": 4,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    },
+    {
+      "label": "court-34-46",
+      "map": "EcruteakCity",
+      "position": [
+        34,
+        46
+      ],
+      "facing": 4,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    },
+    {
+      "label": "court-35-46",
+      "map": "EcruteakCity",
+      "position": [
+        35,
+        46
+      ],
+      "facing": 4,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    },
+    {
+      "label": "court-36-46",
+      "map": "EcruteakCity",
+      "position": [
+        36,
+        46
+      ],
+      "facing": 4,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    },
+    {
+      "label": "court-37-46",
+      "map": "EcruteakCity",
+      "position": [
+        37,
+        46
+      ],
+      "facing": 4,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    },
+    {
+      "label": "court-38-46",
+      "map": "EcruteakCity",
+      "position": [
+        38,
+        46
+      ],
+      "facing": 4,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    },
+    {
+      "label": "court-directory-north-message",
+      "map": "EcruteakCity",
+      "position": [
+        36,
+        44
+      ],
+      "facing": 1,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    },
+    {
+      "label": "court-directory-south-message",
+      "map": "EcruteakCity",
+      "position": [
+        36,
+        46
+      ],
+      "facing": 2,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    },
+    {
+      "label": "court-directory-west-message",
+      "map": "EcruteakCity",
+      "position": [
+        35,
+        45
+      ],
+      "facing": 4,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    },
+    {
+      "label": "court-directory-east-message",
+      "map": "EcruteakCity",
+      "position": [
+        37,
+        45
+      ],
+      "facing": 3,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    },
+    {
+      "label": "court-after-normal-continue-walkaway",
+      "map": "EcruteakCity",
+      "position": [
+        34,
+        44
+      ],
+      "facing": 3,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    }
+  ],
+  "recordings": [
+    {
+      "label": "court-normal-controller-circuit",
+      "native_size": [
+        240,
+        160
+      ],
+      "frame_count": 939
+    }
+  ],
+  "normal_save_continue": [
+    {
+      "label": "court-normal-save",
+      "result": "PASS",
+      "before": [
+        "EcruteakCity",
+        [
+          35,
+          44
+        ]
+      ],
+      "after": [
+        "EcruteakCity",
+        [
+          35,
+          44
+        ]
+      ],
+      "legacy_fixture": false,
+      "exact_party_boxes_inventory_flags_starter": true
+    }
+  ],
+  "final_map": "EcruteakCity",
+  "final_position": [
+    34,
+    44
+  ],
+  "final_survey_access": 0,
+  "owner_delta_visual_acceptance": "PENDING",
+  "error": null,
+  "corrected_cells": [
+    {
+      "point": [
+        31,
+        42
+      ],
+      "visibility": {
+        "opaque_expected": 187,
+        "opaque_visible": 187,
+        "opaque_hidden": 0,
+        "screen_bounds": [
+          112,
+          56,
+          16,
+          32
+        ]
+      },
+      "result": "PASS"
+    },
+    {
+      "point": [
+        32,
+        42
+      ],
+      "visibility": {
+        "opaque_expected": 170,
+        "opaque_visible": 170,
+        "opaque_hidden": 0,
+        "screen_bounds": [
+          112,
+          56,
+          16,
+          32
+        ]
+      },
+      "result": "PASS"
+    },
+    {
+      "point": [
+        33,
+        42
+      ],
+      "visibility": {
+        "opaque_expected": 165,
+        "opaque_visible": 165,
+        "opaque_hidden": 0,
+        "screen_bounds": [
+          112,
+          56,
+          16,
+          32
+        ]
+      },
+      "result": "PASS"
+    },
+    {
+      "point": [
+        34,
+        42
+      ],
+      "visibility": {
+        "opaque_expected": 176,
+        "opaque_visible": 176,
+        "opaque_hidden": 0,
+        "screen_bounds": [
+          112,
+          56,
+          16,
+          32
+        ]
+      },
+      "result": "PASS"
+    },
+    {
+      "point": [
+        35,
+        42
+      ],
+      "visibility": {
+        "opaque_expected": 165,
+        "opaque_visible": 165,
+        "opaque_hidden": 0,
+        "screen_bounds": [
+          112,
+          56,
+          16,
+          32
+        ]
+      },
+      "result": "PASS"
+    },
+    {
+      "point": [
+        36,
+        42
+      ],
+      "visibility": {
+        "opaque_expected": 170,
+        "opaque_visible": 170,
+        "opaque_hidden": 0,
+        "screen_bounds": [
+          112,
+          56,
+          16,
+          32
+        ]
+      },
+      "result": "PASS"
+    },
+    {
+      "point": [
+        37,
+        42
+      ],
+      "visibility": {
+        "opaque_expected": 165,
+        "opaque_visible": 165,
+        "opaque_hidden": 0,
+        "screen_bounds": [
+          112,
+          56,
+          16,
+          32
+        ]
+      },
+      "result": "PASS"
+    },
+    {
+      "point": [
+        38,
+        42
+      ],
+      "visibility": {
+        "opaque_expected": 176,
+        "opaque_visible": 176,
+        "opaque_hidden": 0,
+        "screen_bounds": [
+          112,
+          56,
+          16,
+          32
+        ]
+      },
+      "result": "PASS"
+    },
+    {
+      "point": [
+        38,
+        43
+      ],
+      "visibility": {
+        "opaque_expected": 187,
+        "opaque_visible": 187,
+        "opaque_hidden": 0,
+        "screen_bounds": [
+          112,
+          56,
+          16,
+          32
+        ]
+      },
+      "result": "PASS"
+    },
+    {
+      "point": [
+        37,
+        43
+      ],
+      "visibility": {
+        "opaque_expected": 183,
+        "opaque_visible": 183,
+        "opaque_hidden": 0,
+        "screen_bounds": [
+          112,
+          56,
+          16,
+          32
+        ]
+      },
+      "result": "PASS"
+    },
+    {
+      "point": [
+        36,
+        43
+      ],
+      "visibility": {
+        "opaque_expected": 174,
+        "opaque_visible": 174,
+        "opaque_hidden": 0,
+        "screen_bounds": [
+          112,
+          56,
+          16,
+          32
+        ]
+      },
+      "result": "PASS"
+    },
+    {
+      "point": [
+        35,
+        43
+      ],
+      "visibility": {
+        "opaque_expected": 178,
+        "opaque_visible": 178,
+        "opaque_hidden": 0,
+        "screen_bounds": [
+          112,
+          56,
+          16,
+          32
+        ]
+      },
+      "result": "PASS"
+    },
+    {
+      "point": [
+        34,
+        43
+      ],
+      "visibility": {
+        "opaque_expected": 174,
+        "opaque_visible": 174,
+        "opaque_hidden": 0,
+        "screen_bounds": [
+          112,
+          56,
+          16,
+          32
+        ]
+      },
+      "result": "PASS"
+    },
+    {
+      "point": [
+        33,
+        43
+      ],
+      "visibility": {
+        "opaque_expected": 183,
+        "opaque_visible": 183,
+        "opaque_hidden": 0,
+        "screen_bounds": [
+          112,
+          56,
+          16,
+          32
+        ]
+      },
+      "result": "PASS"
+    },
+    {
+      "point": [
+        32,
+        43
+      ],
+      "visibility": {
+        "opaque_expected": 174,
+        "opaque_visible": 174,
+        "opaque_hidden": 0,
+        "screen_bounds": [
+          112,
+          56,
+          16,
+          32
+        ]
+      },
+      "result": "PASS"
+    },
+    {
+      "point": [
+        31,
+        43
+      ],
+      "visibility": {
+        "opaque_expected": 178,
+        "opaque_visible": 178,
+        "opaque_hidden": 0,
+        "screen_bounds": [
+          112,
+          56,
+          16,
+          32
+        ]
+      },
+      "result": "PASS"
+    },
+    {
+      "point": [
+        31,
+        44
+      ],
+      "visibility": {
+        "opaque_expected": 187,
+        "opaque_visible": 187,
+        "opaque_hidden": 0,
+        "screen_bounds": [
+          112,
+          56,
+          16,
+          32
+        ]
+      },
+      "result": "PASS"
+    },
+    {
+      "point": [
+        32,
+        44
+      ],
+      "visibility": {
+        "opaque_expected": 170,
+        "opaque_visible": 170,
+        "opaque_hidden": 0,
+        "screen_bounds": [
+          112,
+          56,
+          16,
+          32
+        ]
+      },
+      "result": "PASS"
+    },
+    {
+      "point": [
+        33,
+        44
+      ],
+      "visibility": {
+        "opaque_expected": 165,
+        "opaque_visible": 165,
+        "opaque_hidden": 0,
+        "screen_bounds": [
+          112,
+          56,
+          16,
+          32
+        ]
+      },
+      "result": "PASS"
+    },
+    {
+      "point": [
+        34,
+        44
+      ],
+      "visibility": {
+        "opaque_expected": 176,
+        "opaque_visible": 176,
+        "opaque_hidden": 0,
+        "screen_bounds": [
+          112,
+          56,
+          16,
+          32
+        ]
+      },
+      "result": "PASS"
+    },
+    {
+      "point": [
+        35,
+        44
+      ],
+      "visibility": {
+        "opaque_expected": 165,
+        "opaque_visible": 165,
+        "opaque_hidden": 0,
+        "screen_bounds": [
+          112,
+          56,
+          16,
+          32
+        ]
+      },
+      "result": "PASS"
+    },
+    {
+      "point": [
+        36,
+        44
+      ],
+      "visibility": {
+        "opaque_expected": 170,
+        "opaque_visible": 170,
+        "opaque_hidden": 0,
+        "screen_bounds": [
+          112,
+          56,
+          16,
+          32
+        ]
+      },
+      "result": "PASS"
+    },
+    {
+      "point": [
+        37,
+        44
+      ],
+      "visibility": {
+        "opaque_expected": 165,
+        "opaque_visible": 165,
+        "opaque_hidden": 0,
+        "screen_bounds": [
+          112,
+          56,
+          16,
+          32
+        ]
+      },
+      "result": "PASS"
+    },
+    {
+      "point": [
+        38,
+        44
+      ],
+      "visibility": {
+        "opaque_expected": 176,
+        "opaque_visible": 176,
+        "opaque_hidden": 0,
+        "screen_bounds": [
+          112,
+          56,
+          16,
+          32
+        ]
+      },
+      "result": "PASS"
+    },
+    {
+      "point": [
+        38,
+        45
+      ],
+      "visibility": {
+        "opaque_expected": 187,
+        "opaque_visible": 187,
+        "opaque_hidden": 0,
+        "screen_bounds": [
+          112,
+          56,
+          16,
+          32
+        ]
+      },
+      "result": "PASS"
+    },
+    {
+      "point": [
+        37,
+        45
+      ],
+      "visibility": {
+        "opaque_expected": 183,
+        "opaque_visible": 183,
+        "opaque_hidden": 0,
+        "screen_bounds": [
+          112,
+          56,
+          16,
+          32
+        ]
+      },
+      "result": "PASS"
+    },
+    {
+      "point": [
+        35,
+        45
+      ],
+      "visibility": {
+        "opaque_expected": 192,
+        "opaque_visible": 192,
+        "opaque_hidden": 0,
+        "screen_bounds": [
+          112,
+          56,
+          16,
+          32
+        ]
+      },
+      "result": "PASS"
+    },
+    {
+      "point": [
+        34,
+        45
+      ],
+      "visibility": {
+        "opaque_expected": 174,
+        "opaque_visible": 174,
+        "opaque_hidden": 0,
+        "screen_bounds": [
+          112,
+          56,
+          16,
+          32
+        ]
+      },
+      "result": "PASS"
+    },
+    {
+      "point": [
+        33,
+        45
+      ],
+      "visibility": {
+        "opaque_expected": 178,
+        "opaque_visible": 178,
+        "opaque_hidden": 0,
+        "screen_bounds": [
+          112,
+          56,
+          16,
+          32
+        ]
+      },
+      "result": "PASS"
+    },
+    {
+      "point": [
+        32,
+        45
+      ],
+      "visibility": {
+        "opaque_expected": 174,
+        "opaque_visible": 174,
+        "opaque_hidden": 0,
+        "screen_bounds": [
+          112,
+          56,
+          16,
+          32
+        ]
+      },
+      "result": "PASS"
+    },
+    {
+      "point": [
+        31,
+        45
+      ],
+      "visibility": {
+        "opaque_expected": 183,
+        "opaque_visible": 183,
+        "opaque_hidden": 0,
+        "screen_bounds": [
+          112,
+          56,
+          16,
+          32
+        ]
+      },
+      "result": "PASS"
+    },
+    {
+      "point": [
+        31,
+        46
+      ],
+      "visibility": {
+        "opaque_expected": 187,
+        "opaque_visible": 187,
+        "opaque_hidden": 0,
+        "screen_bounds": [
+          112,
+          56,
+          16,
+          32
+        ]
+      },
+      "result": "PASS"
+    },
+    {
+      "point": [
+        32,
+        46
+      ],
+      "visibility": {
+        "opaque_expected": 176,
+        "opaque_visible": 176,
+        "opaque_hidden": 0,
+        "screen_bounds": [
+          112,
+          56,
+          16,
+          32
+        ]
+      },
+      "result": "PASS"
+    },
+    {
+      "point": [
+        33,
+        46
+      ],
+      "visibility": {
+        "opaque_expected": 165,
+        "opaque_visible": 165,
+        "opaque_hidden": 0,
+        "screen_bounds": [
+          112,
+          56,
+          16,
+          32
+        ]
+      },
+      "result": "PASS"
+    },
+    {
+      "point": [
+        34,
+        46
+      ],
+      "visibility": {
+        "opaque_expected": 170,
+        "opaque_visible": 170,
+        "opaque_hidden": 0,
+        "screen_bounds": [
+          112,
+          56,
+          16,
+          32
+        ]
+      },
+      "result": "PASS"
+    },
+    {
+      "point": [
+        35,
+        46
+      ],
+      "visibility": {
+        "opaque_expected": 165,
+        "opaque_visible": 165,
+        "opaque_hidden": 0,
+        "screen_bounds": [
+          112,
+          56,
+          16,
+          32
+        ]
+      },
+      "result": "PASS"
+    },
+    {
+      "point": [
+        36,
+        46
+      ],
+      "visibility": {
+        "opaque_expected": 176,
+        "opaque_visible": 176,
+        "opaque_hidden": 0,
+        "screen_bounds": [
+          112,
+          56,
+          16,
+          32
+        ]
+      },
+      "result": "PASS"
+    },
+    {
+      "point": [
+        37,
+        46
+      ],
+      "visibility": {
+        "opaque_expected": 165,
+        "opaque_visible": 165,
+        "opaque_hidden": 0,
+        "screen_bounds": [
+          112,
+          56,
+          16,
+          32
+        ]
+      },
+      "result": "PASS"
+    },
+    {
+      "point": [
+        38,
+        46
+      ],
+      "visibility": {
+        "opaque_expected": 170,
+        "opaque_visible": 170,
+        "opaque_hidden": 0,
+        "screen_bounds": [
+          112,
+          56,
+          16,
+          32
+        ]
+      },
+      "result": "PASS"
+    }
+  ],
+  "directory_sides": [
+    "north",
+    "south",
+    "west",
+    "east"
+  ],
+  "actual_post_continue_walk_away": [
+    34,
+    44
+  ]
+}

@@ -1,0 +1,417 @@
+{
+  "baseline_source_commit": "285cfa4ebddcb390a8a5bde6116748cbb5eaba6b",
+  "game_sources": "Committed B5 game source cc643ffe711204f3ef38e34e7aa1eb8c9558720f; only delivery docs/evidence pending",
+  "rom_sha256_before": "ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b",
+  "commands": [
+    {
+      "command": "python3 crossroads/tools/build_johto_network.py --through west --check",
+      "exit_code": 1,
+      "seconds": 0.24,
+      "output": "Traceback (most recent call last):\n  File \"/workspace/Project-crossroads/crossroads/tools/build_johto_network.py\", line 372, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"/workspace/Project-crossroads/crossroads/tools/build_johto_network.py\", line 309, in main\n    write(f'data/maps/{n}/scripts.inc',f'{n}_MapScripts::\\n'+extra+'    .byte 0\\n')\n  File \"/workspace/Project-crossroads/crossroads/tools/build_johto_network.py\", line 31, in compare\n    assert (R/p).read_bytes()==b,('Regenerate',p)\n           ^^^^^^^^^^^^^^^^^^^^^\nAssertionError: ('Regenerate', 'data/maps/JohtoRoute42/scripts.inc')\n"
+    },
+    {
+      "command": "python3 crossroads/tools/validate_johto_network.py --built",
+      "exit_code": 0,
+      "seconds": 3.05,
+      "output": "Positive original-native Bell lamp fixtures and collapsed Burned shaft; exact prior raw outside 164 cells, all physics/events/IDs/old graphics retained: PASS 9 lamps, 155 shaft cells\nHGSS tower contracts, canonical stair/pad graph, directed jumps and escape from every public tile: PASS 2430 tiles\nCanonical Ecruteak houses/theater, preserved actors/IDs, furnished room access, performance lanes and every-tile escape: PASS 3\nHGSS Center/Mart/Gym reference paths, accepted service/practice scripts, safe floor and scripted fall coverage: PASS 551 public tiles\nCanonical west/east gate endpoints, all six aliases per road, temporary coordinate portals and safe floor: PASS\nUnrelated Violet services: exact immutable map/layout/actor/warp/room/border preservation PASS\nCanonical Violet door/stair coordinates, retained map/save IDs, exact neighbor changes and every-tile escape: PASS 3066 tiles in 13 maps\nAll four accepted Black Ledger exterior facades: exact immutable per-layer RGB555/attributes/collision/elevation PASS 73 metatiles\nHGSS Olivine stable IDs/heals, canonical buildings, preserved additions, per-segment reciprocity, dry returns avoiding active doorways, scripts and Emerald inclusion: PASS\nHGSS Olivine/Aqua exact threshold graph, paired lift, source window, all12ship components and every public tile escape: PASS 3968 tiles 30 interior maps\nJohto valid IDs, whole tile/warp/border graph, interaction access, services and safe respawns: PASS {'maps': 177, 'reachable_tiles': 75276, 'warps': 506, 'connections': 66, 'centers': 10, 'mode': 'structural survey-water-enabled graph; not emulator playtesting'}\nExplicit QA kit: one guarded level100 flyer, shoes only, no badge/starter changes: PASS\n"
+    },
+    {
+      "command": "python3 crossroads/tools/validate_visual_repairs.py",
+      "exit_code": 0,
+      "seconds": 6.74,
+      "output": "Eight owner asset checksums/pixel identity, all non-Gym pixels/collision/events, stable IDs and reciprocal two-door pairs: PASS 1077 legacy metatiles\nPositive original-native Bell lamp fixtures and collapsed Burned shaft; exact prior raw outside 164 cells, all physics/events/IDs/old graphics retained: PASS 9 lamps, 155 shaft cells\nHGSS tower contracts, canonical stair/pad graph, directed jumps and escape from every public tile: PASS 2430 tiles\nCanonical Ecruteak houses/theater, preserved actors/IDs, furnished room access, performance lanes and every-tile escape: PASS 3\nHGSS Center/Mart/Gym reference paths, accepted service/practice scripts, safe floor and scripted fall coverage: PASS 551 public tiles\nCanonical west/east gate endpoints, all six aliases per road, temporary coordinate portals and safe floor: PASS\nUnrelated Violet services: exact immutable map/layout/actor/warp/room/border preservation PASS\nCanonical Violet door/stair coordinates, retained map/save IDs, exact neighbor changes and every-tile escape: PASS 3066 tiles in 13 maps\nAll four accepted Black Ledger exterior facades: exact immutable per-layer RGB555/attributes/collision/elevation PASS 73 metatiles\nHGSS Olivine stable IDs/heals, canonical buildings, preserved additions, per-segment reciprocity, dry returns avoiding active doorways, scripts and Emerald inclusion: PASS\nHGSS Olivine/Aqua exact threshold graph, paired lift, source window, all12ship components and every public tile escape: PASS 3968 tiles 30 interior maps\nHGSS Ecruteak stable IDs, reciprocal target positions, safe entire ground component, preserved animation slots and compatible buffers: PASS. Reference/visual completion is NOT asserted.\nAll four accepted Black Ledger exterior facades: exact immutable per-layer RGB555/attributes/collision/elevation PASS 73 metatiles\nHGSS Olivine stable IDs/heals, canonical buildings, preserved additions, per-segment reciprocity, dry returns avoiding active doorways, scripts and Emerald inclusion: PASS\nAll four accepted Black Ledger exterior facades: exact immutable per-layer RGB555/attributes/collision/elevation PASS 73 metatiles\nHGSS Olivine stable IDs/heals, canonical buildings, preserved additions, per-segment reciprocity, dry returns avoiding active doorways, scripts and Emerald inclusion: PASS\nHGSS Olivine/Aqua exact threshold graph, paired lift, source window, all12ship components and every public tile escape: PASS 3968 tiles 30 interior maps\nVisual repair scope, stable map/save contracts, complete benches, layers/door behavior: PASS. Owner visual QA remains pending.\n"
+    },
+    {
+      "command": "python3 crossroads/tools/build_eight_gym_integration.py --check",
+      "exit_code": 0,
+      "seconds": 0.38,
+      "output": "Eight owner Gym exteriors fitted into private city resources; all legacy IDs retained.\n"
+    },
+    {
+      "command": "python3 crossroads/tools/validate_eight_gyms.py",
+      "exit_code": 0,
+      "seconds": 0.38,
+      "output": "Eight owner asset checksums/pixel identity, all non-Gym pixels/collision/events, stable IDs and reciprocal two-door pairs: PASS 1077 legacy metatiles\n"
+    },
+    {
+      "command": "python3 crossroads/tools/build_hgss_ecruteak_assets.py --check",
+      "exit_code": 0,
+      "seconds": 0.52,
+      "output": "Allocating gate after 1 tiles\nAllocating house after 78 tiles\nAllocating barrier after 142 tiles\nAllocating burned after 303 tiles\nAllocating theater after 460 tiles\nAllocating center after 576 tiles\nAllocating mart after 670 tiles\nHGSS-directed Ecruteak facades: 754 of 871 available graphics tiles; 505 metatiles. Visual acceptance pending.\n"
+    },
+    {
+      "command": "python3 crossroads/tools/build_hgss_ecruteak_assets.py --variant bell --check",
+      "exit_code": 0,
+      "seconds": 0.31,
+      "output": "Allocating bell after 1 tiles\nAllocating trail_station after 509 tiles\nHGSS-directed Ecruteak facades: 713 of 885 available graphics tiles; 194 metatiles. Visual acceptance pending.\n"
+    },
+    {
+      "command": "python3 crossroads/tools/hgss_ecruteak_terrain.py --check",
+      "exit_code": 0,
+      "seconds": 0.1,
+      "output": ""
+    },
+    {
+      "command": "python3 crossroads/tools/validate_ecruteak_qa07.py",
+      "exit_code": 0,
+      "seconds": 1.61,
+      "output": "Theater actual green checker/13purple cushions: exact82raw/95pixel-cell migration;171othercells+all266physics/actors/events/IDs/stage/common resources preserved: PASS\nTheater stage exact69-cell art migration plus95 explicitly contracted audience pixels;all266physics and remaining102cells preserved;shared Temple unchanged: PASS\nGate exact7d92 layer repair:50opaque-ground floors,8opaque plant underlays,2blackvoids;all144physics/attrs/aliases/events+oldglyphs/sharedTemple unchanged: PASS\nGate art exact reviewed cells; both144-cell physics/layers, six alias behaviors, four source plants and shared Temple preserved: PASS\nB1F14-row source floor/complete furnishings; exact37old+34new cells;1F24visual+3pixel-identical counter cells;333othercells pixel-exact; exactly6counter behaviors fixed; shared Center unchanged: PASS\nHGSS common Mart:3 actual plants/glass display/4 stools/right rack;16 exact art cells;all289 native Shop signatures;only4 source stool bases gain collision;events/services unchanged: PASS\nPositive original-native Bell lamp fixtures and collapsed Burned shaft; exact prior raw outside 164 cells, all physics/events/IDs/old graphics retained: PASS 9 lamps, 155 shaft cells\nQA07 immutable QA06 IDs/events/interiors, static exterior pixels, semantic trunks/walls/doors, leaf foreground and neutral road behavior: PASS 6033 unchanged cells; 248 corrected road cells; exact39 courtyard art-only cells independently verified\n"
+    },
+    {
+      "command": "python3 crossroads/tools/validate_city_doorways.py",
+      "exit_code": 0,
+      "seconds": 0.07,
+      "output": "Explicit city visible doorway segments, unblocked thresholds, native behavior/coordinate scripts and reciprocal arrivals: PASS 173 segments. Controller coverage is separate.\n"
+    },
+    {
+      "command": "python3 crossroads/tools/validate_ecruteak_family.py",
+      "exit_code": 0,
+      "seconds": 0.49,
+      "output": "All six adjacent-map scrolling strips preserve their original decoded pixels/attributes: 53 unique-per-view tiles; all49 gate cells decode identically on both sides: PASS\nImmutable QA08 A1 IDs/heals and exact per-layer pixels/attributes/collision outside98 gate cells: PASS 8660 preserved cells; no engine limits increased\n"
+    },
+    {
+      "command": "python3 crossroads/tools/build_hgss_violet_assets.py --check",
+      "exit_code": 0,
+      "seconds": 0.43,
+      "output": "Original Violet architecture: 745 graphics; 223 metatiles; no map-completion assertion.\n"
+    },
+    {
+      "command": "python3 crossroads/tools/build_hgss_violet.py --check",
+      "exit_code": 0,
+      "seconds": 0.27,
+      "output": "Canonical Violet ground/doors and twelve interior/gate/floor maps generated; runtime/visual QA required.\n"
+    },
+    {
+      "command": "python3 crossroads/tools/validate_hgss_violet.py",
+      "exit_code": 0,
+      "seconds": 0.17,
+      "output": "Unrelated Violet services: exact immutable map/layout/actor/warp/room/border preservation PASS\nCanonical Violet door/stair coordinates, retained map/save IDs, exact neighbor changes and every-tile escape: PASS 3066 tiles in 13 maps\n"
+    },
+    {
+      "command": "python3 crossroads/tools/validate_violet_service_preservation.py",
+      "exit_code": 0,
+      "seconds": 0.08,
+      "output": "Unrelated Violet services: exact immutable map/layout/actor/warp/room/border preservation PASS\n"
+    },
+    {
+      "command": "python3 crossroads/tools/validate_city_graphics_limits.py",
+      "exit_code": 0,
+      "seconds": 0.13,
+      "output": "Actual two-city tileset pointers, native4bpp bounds and loaded palette banks0\u201312: PASS 51 maps, 27062 cells\n"
+    },
+    {
+      "command": "python3 crossroads/tools/validate_city_ground_layers.py",
+      "exit_code": 0,
+      "seconds": 0.42,
+      "output": "Actual NORMAL/SPLIT ground and all51-map composed debug-magenta rejection: PASS 27062 cells; 0 native frames\n"
+    },
+    {
+      "command": "python3 crossroads/tools/validate_tileset_registration.py",
+      "exit_code": 0,
+      "seconds": 0.04,
+      "output": "Tileset registration: exact guard insertion, foreign-section preservation, idempotence and six guarded sibling externs: PASS\n"
+    },
+    {
+      "command": "python3 crossroads/tools/check_mapjson_outputs.py",
+      "exit_code": 0,
+      "seconds": 0.07,
+      "output": "Mapjson stable timestamps and genuine content updates: PASS\n"
+    },
+    {
+      "command": "python3 crossroads/tools/validate_black_ledger_intro.py",
+      "exit_code": 0,
+      "seconds": 0.27,
+      "output": "Pre-title accepted-art conversion, palette isolation, tilemap and VRAM bounds: PASS\nPre-title branding, skip/fade cleanup, preserved save initialization and isolated assets: PASS\n"
+    },
+    {
+      "command": "python3 crossroads/tools/validate_title_music.py",
+      "exit_code": 0,
+      "seconds": 0.06,
+      "output": "Title music source/hash, PCM limits, appended song ID and actual title wiring: PASS\n"
+    },
+    {
+      "command": "python3 crossroads/tools/validate_area_completion.py",
+      "exit_code": 0,
+      "seconds": 0.97,
+      "output": "Positive original-native Bell lamp fixtures and collapsed Burned shaft; exact prior raw outside 164 cells, all physics/events/IDs/old graphics retained: PASS 9 lamps, 155 shaft cells\nHGSS tower contracts, canonical stair/pad graph, directed jumps and escape from every public tile: PASS 2430 tiles\nCanonical Ecruteak houses/theater, preserved actors/IDs, furnished room access, performance lanes and every-tile escape: PASS 3\nHGSS Center/Mart/Gym reference paths, accepted service/practice scripts, safe floor and scripted fall coverage: PASS 551 public tiles\nCanonical west/east gate endpoints, all six aliases per road, temporary coordinate portals and safe floor: PASS\nAll four accepted Black Ledger exterior facades: exact immutable per-layer RGB555/attributes/collision/elevation PASS 73 metatiles\nHGSS Olivine stable IDs/heals, canonical buildings, preserved additions, per-segment reciprocity, dry returns avoiding active doorways, scripts and Emerald inclusion: PASS\nHGSS Olivine/Aqua exact threshold graph, paired lift, source window, all12ship components and every public tile escape: PASS 3968 tiles 30 interior maps\nAll landmark/farm/Gym doors, indoor access, original graphics, tile limits, approved roster and unchanged flag space: PASS\n"
+    },
+    {
+      "command": "python3 crossroads/tools/validate_opening.py",
+      "exit_code": 0,
+      "seconds": 0.1,
+      "output": "Project Crossroads narrative and staged script checks: PASS\nLinked starter rescue, duplication guard and success-only persistence: PASS\nOnly live starter grant is in Olivine; legacy room is a travel bridge: PASS\n"
+    },
+    {
+      "command": "python3 crossroads/tools/validate_joe_special_assets.py",
+      "exit_code": 0,
+      "seconds": 0.09,
+      "output": "Joe action palette/frame bounds, authored east timing, both saved genders and unchanged graphics enum: PASS\n"
+    },
+    {
+      "command": "python3 crossroads/tools/build_joe_special_assets.py --check",
+      "exit_code": 0,
+      "seconds": 0.23,
+      "output": "Joe special-state frame contracts/palette conversion: PASS\n"
+    },
+    {
+      "command": "python3 crossroads/tools/build_ecruteak_npc_assets.py --check",
+      "exit_code": 0,
+      "seconds": 0.15,
+      "output": "Ecruteak monk/performer16x32 palette and frame packing: PASS\n"
+    },
+    {
+      "command": "python3 crossroads/tools/build_hgss_temple_assets.py --check",
+      "exit_code": 0,
+      "seconds": 0.26,
+      "output": "Temple asset conversion: 507 tiles; 392 metatiles; PASS\n"
+    },
+    {
+      "command": "python3 crossroads/tools/validate_joe_assets.py",
+      "exit_code": 0,
+      "seconds": 0.08,
+      "output": "Joe source frames, transparency, shared palette, exact repack, 4-direction animations and playable wiring: PASS\nJoe spin animations preserve finite completion and 4-direction rotation: PASS\nJoe palette appended without shifting existing ordinals; trainer assets and references: PASS\n"
+    },
+    {
+      "command": "python3 crossroads/tools/validate_route39.py",
+      "exit_code": 0,
+      "seconds": 0.04,
+      "output": "Route 39 reciprocal connections, stable map IDs, reachable signs/NPC and city seam: PASS\n"
+    },
+    {
+      "command": "python3 crossroads/tools/validate_western_johto.py --built",
+      "exit_code": 0,
+      "seconds": 0.48,
+      "output": "Western Johto connected pedestrian graph, all doors/interactions, reciprocal exits, IDs and Center respawn: PASS\n"
+    },
+    {
+      "command": "python3 crossroads/tools/build_western_johto_layouts.py --check",
+      "exit_code": 0,
+      "seconds": 0.09,
+      "output": "Route 38 and Ecruteak layout reproducibility: PASS\n"
+    },
+    {
+      "command": "python3 crossroads/tools/build_black_ledger_title.py --check",
+      "exit_code": 0,
+      "seconds": 0.2,
+      "output": "Black Ledger native title palette, tilemap, VRAM bounds and provenance: PASS\n"
+    },
+    {
+      "command": "python3 crossroads/tools/build_route39_layout.py --check",
+      "exit_code": 0,
+      "seconds": 0.05,
+      "output": "Route 39 layout reproducibility: PASS\n"
+    },
+    {
+      "command": "python3 crossroads/tools/build_hgss_olivine_assets.py --check",
+      "exit_code": 0,
+      "seconds": 0.67,
+      "output": "Olivine original facade conversion 677 graphics; free 124 before owner Gym; native art review required\n"
+    },
+    {
+      "command": "python3 crossroads/tools/build_hgss_olivine_rooms.py --check",
+      "exit_code": 0,
+      "seconds": 0.22,
+      "output": "HGSS Olivine3homes/cafe, canonical services/basement and split steel Gym generated; runtime/visual acceptance pending\n"
+    },
+    {
+      "command": "python3 crossroads/tools/build_hgss_olivine_landmarks.py --check",
+      "exit_code": 0,
+      "seconds": 0.83,
+      "output": "HGSS lighthouse six floors/balcony/lift and port terminal/quay generated; delivery-ROM testing required\n"
+    },
+    {
+      "command": "python3 crossroads/tools/build_hgss_olivine.py --check",
+      "exit_code": 0,
+      "seconds": 0.12,
+      "output": "HGSS64x64 Olivine; canonical buildings + four documented original additions; owner review pending\n"
+    },
+    {
+      "command": "python3 crossroads/tools/validate_hgss_olivine_rooms.py",
+      "exit_code": 0,
+      "seconds": 0.08,
+      "output": "Olivine source-room dimensions/furniture/counter access, independent paired thresholds, nurse/PC/stairs, optional Gym corridor and stable IDs: PASS\n"
+    },
+    {
+      "command": "python3 crossroads/tools/validate_olivine_harbor_details.py",
+      "exit_code": 0,
+      "seconds": 0.04,
+      "output": "Canonical harbor sailboats/3street pennants: water/layer/hull/pole footprints, clear5-wide roads, no arrows and ocean boundary: PASS\n"
+    },
+    {
+      "command": "python3 crossroads/tools/validate_olivine_materials.py",
+      "exit_code": 0,
+      "seconds": 0.14,
+      "output": "Olivine material classification,12relocated tables, 20 white fence cells, timber/parasols, gray breakwater and Route40 buffer: PASS; exact V7\u2192QA09 12table/65model migration retained; exact82-cell QA09\u2192QA10 north-port migration, all other physics unchanged\n"
+    },
+    {
+      "command": "python3 crossroads/tools/validate_olivine_landmark_resources.py",
+      "exit_code": 0,
+      "seconds": 0.12,
+      "output": "Olivine maritime image dimensions,4bpp indices, all glyph bounds/palettes, preserved source glyphs and native primary aliases: PASS\n"
+    },
+    {
+      "command": "python3 crossroads/tools/validate_ecruteak_furniture.py",
+      "exit_code": 0,
+      "seconds": 0.11,
+      "output": "Ecruteak source kitchen/window/bookcases, three Center plants and append-only historical temple resources: PASS\n"
+    },
+    {
+      "command": "python3 crossroads/tools/validate_theater_seating.py",
+      "exit_code": 0,
+      "seconds": 0.05,
+      "output": "HGSS Theater13 exact one-cell bench anchors, no duplicated rows, open source front aisle and intact room bounds: PASS\n"
+    },
+    {
+      "command": "python3 crossroads/tools/build_hgss_theater_assets.py --check",
+      "exit_code": 0,
+      "seconds": 0.09,
+      "output": "Private Theater stage: 143 graphics; 418 metatiles; shared Temple unchanged\n"
+    },
+    {
+      "command": "python3 crossroads/tools/validate_theater_stage.py",
+      "exit_code": 0,
+      "seconds": 0.39,
+      "output": "Theater actual green checker/13purple cushions: exact82raw/95pixel-cell migration;171othercells+all266physics/actors/events/IDs/stage/common resources preserved: PASS\nTheater stage exact69-cell art migration plus95 explicitly contracted audience pixels;all266physics and remaining102cells preserved;shared Temple unchanged: PASS\n"
+    },
+    {
+      "command": "python3 crossroads/tools/validate_theater_audience.py",
+      "exit_code": 0,
+      "seconds": 0.31,
+      "output": "Theater actual green checker/13purple cushions: exact82raw/95pixel-cell migration;171othercells+all266physics/actors/events/IDs/stage/common resources preserved: PASS\n"
+    },
+    {
+      "command": "python3 crossroads/tools/build_hgss_gate_interior_assets.py --check",
+      "exit_code": 0,
+      "seconds": 0.1,
+      "output": "Private gate interior: 142 graphics; 436 metatiles; 110 art cells per gate; unchanged shared Temple\n"
+    },
+    {
+      "command": "python3 crossroads/tools/validate_gate_interior_art.py",
+      "exit_code": 0,
+      "seconds": 0.4,
+      "output": "Gate exact7d92 layer repair:50opaque-ground floors,8opaque plant underlays,2blackvoids;all144physics/attrs/aliases/events+oldglyphs/sharedTemple unchanged: PASS\nGate art exact reviewed cells; both144-cell physics/layers, six alias behaviors, four source plants and shared Temple preserved: PASS\n"
+    },
+    {
+      "command": "python3 crossroads/tools/validate_gate_ground_layers.py",
+      "exit_code": 0,
+      "seconds": 0.28,
+      "output": "Gate exact7d92 layer repair:50opaque-ground floors,8opaque plant underlays,2blackvoids;all144physics/attrs/aliases/events+oldglyphs/sharedTemple unchanged: PASS\n"
+    },
+    {
+      "command": "python3 crossroads/tools/build_hgss_center_basement_assets.py --check",
+      "exit_code": 0,
+      "seconds": 0.11,
+      "output": "Private cool Center basement: 86 graphics; 251 metatiles; shared Center unchanged\nPrivate cool Center basement: 129 graphics; 255 metatiles; shared Center unchanged\n"
+    },
+    {
+      "command": "python3 crossroads/tools/validate_center_basement.py",
+      "exit_code": 0,
+      "seconds": 0.31,
+      "output": "B1F14-row source floor/complete furnishings; exact37old+34new cells;1F24visual+3pixel-identical counter cells;333othercells pixel-exact; exactly6counter behaviors fixed; shared Center unchanged: PASS\n"
+    },
+    {
+      "command": "python3 crossroads/tools/build_hgss_mart_assets.py --check",
+      "exit_code": 0,
+      "seconds": 0.1,
+      "output": "Private HGSS common Mart: 326 graphics, 305 metatiles;16 exact prop-art cells; all native Shop pixels retained\n"
+    },
+    {
+      "command": "python3 crossroads/tools/validate_hgss_mart_props.py",
+      "exit_code": 0,
+      "seconds": 0.37,
+      "output": "HGSS common Mart:3 actual plants/glass display/4 stools/right rack;16 exact art cells;all289 native Shop signatures;only4 source stool bases gain collision;events/services unchanged: PASS\n"
+    },
+    {
+      "command": "python3 crossroads/tools/hgss_ecruteak_tower_details.py --check",
+      "exit_code": 0,
+      "seconds": 0.13,
+      "output": "Private Bell wall lamps/Burned collapsed opening: 4 new graphics; 396 metatiles; shared temple resources untouched\n"
+    },
+    {
+      "command": "python3 crossroads/tools/hgss_ecruteak_tower_details.py --validate",
+      "exit_code": 0,
+      "seconds": 0.26,
+      "output": "Positive original-native Bell lamp fixtures and collapsed Burned shaft; exact prior raw outside 164 cells, all physics/events/IDs/old graphics retained: PASS 9 lamps, 155 shaft cells\n"
+    },
+    {
+      "command": "python3 crossroads/tools/validate_hgss_olivine.py --built",
+      "exit_code": 0,
+      "seconds": 0.97,
+      "output": "All four accepted Black Ledger exterior facades: exact immutable per-layer RGB555/attributes/collision/elevation PASS 73 metatiles\nExact compiled delivery-ROM blockdata matches authored outputs: 24 Olivine maps PASS\nHGSS Olivine stable IDs/heals, canonical buildings, preserved additions, per-segment reciprocity, dry returns avoiding active doorways, scripts and Emerald inclusion: PASS\n"
+    },
+    {
+      "command": "python3 crossroads/tools/validate_olivine.py --built",
+      "exit_code": 0,
+      "seconds": 0.73,
+      "output": "All four accepted Black Ledger exterior facades: exact immutable per-layer RGB555/attributes/collision/elevation PASS 73 metatiles\nExact compiled delivery-ROM blockdata matches authored outputs: 24 Olivine maps PASS\nHGSS Olivine stable IDs/heals, canonical buildings, preserved additions, per-segment reciprocity, dry returns avoiding active doorways, scripts and Emerald inclusion: PASS\n"
+    },
+    {
+      "command": "python3 crossroads/tools/validate_olivine_interiors.py",
+      "exit_code": 0,
+      "seconds": 0.04,
+      "output": "Office interactions/exit behaviors, starter coordinates, legacy escape paths and nonpersistent home rest: PASS\n"
+    },
+    {
+      "command": "python3 crossroads/tools/build_olivine_interiors.py --check",
+      "exit_code": 0,
+      "seconds": 0.04,
+      "output": "Distinct Olivine offices: reproducible layouts and stable dimensions: PASS\n"
+    },
+    {
+      "command": "python3 crossroads/tools/build_olivine_layout.py --check",
+      "exit_code": 0,
+      "seconds": 0.12,
+      "output": "Olivine layout reproducibility: PASS\n"
+    },
+    {
+      "command": "python3 crossroads/tools/build_ss_aqua.py --check",
+      "exit_code": 0,
+      "seconds": 0.26,
+      "output": "Original private S.S.Aqua: 411 combined glyphs; 508 secondary metatiles; output /workspace/Project-crossroads\nS.S. Aqua seven source-shaped docked maps generated; voyages remain unimplemented and owner visual/runtime review required\n"
+    },
+    {
+      "command": "python3 crossroads/tools/build_qa10_doorways.py --check",
+      "exit_code": 0,
+      "seconds": 0.05,
+      "output": "QA10 preserved city + docked ship doorway inventory: 45 groups; controller/facing verification remains separate\n"
+    },
+    {
+      "command": "python3 crossroads/tools/validate_ss_aqua.py --self-test",
+      "exit_code": 0,
+      "seconds": 0.07,
+      "output": "QA10 source-map/ID negative controls: PASS\n"
+    },
+    {
+      "command": "python3 crossroads/tools/validate_ss_aqua.py --built",
+      "exit_code": 0,
+      "seconds": 0.91,
+      "output": "QA10 immutable save/ID/addition preservation, all7 source-shaped Aqua maps/exits/resources: PASS\n"
+    },
+    {
+      "command": "python3 crossroads/tools/validate_lighthouse_qa10.py --built",
+      "exit_code": 0,
+      "seconds": 0.93,
+      "output": "QA10 seven lighthouse maps: all interactions/physical cells/behaviors preserved; private native art bounds/layers PASS\n"
+    },
+    {
+      "command": "python3 crossroads/tools/validate_ecruteak_court_qa10.py",
+      "exit_code": 0,
+      "seconds": 0.17,
+      "output": "QA10 Ecruteak directory court: exact39-art-cell delta; all other cells/physics/events/IDs preserved; native layers PASS\n"
+    },
+    {
+      "command": "python3 crossroads/tools/build_qa10_arrival_facing.py --check",
+      "exit_code": 0,
+      "seconds": 0.05,
+      "output": "Native arrival-facing callback source: 6 maps; 25 landings; actual repaired-build tests pending\n"
+    },
+    {
+      "command": "python3 crossroads/tools/validate_qa10_arrival_facing_source.py --built",
+      "exit_code": 0,
+      "seconds": 0.86,
+      "output": "Independent native arrival-facing source checks:6 maps,25 exactcells, 8188 coordinate cases; allothergameinputs unchanged;45groups/173segments requireintendedfacing; actual6ROM callbacks verified; PASS\n"
+    }
+  ],
+  "rom_sha256_after": "ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b",
+  "passed": false
+}

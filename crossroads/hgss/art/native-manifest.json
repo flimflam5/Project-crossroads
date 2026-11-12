@@ -1054,7 +1054,25 @@
     },
     "paving": 756,
     "earth": 757,
-    "leaf_ground": 758
+    "leaf_ground": 758,
+    "courtyard_soil": {
+      "start": 1008,
+      "width": 3,
+      "height": 3,
+      "palette": 3,
+      "rectangle": [
+        31,
+        42,
+        8,
+        5
+      ],
+      "preserved_sign": [
+        36,
+        45
+      ],
+      "public_cells": 39,
+      "source": "HGSS Ecruteak central vacant directory court"
+    }
   },
   "terrain": [
     0,
@@ -1235,6 +1253,6 @@
     510,
     511
   ],
-  "allocated_tiles": 738,
+  "allocated_tiles": 754,
   "available_tiles": 871
 }

@@ -1,0 +1,3076 @@
+{
+  "rom_sha256": "ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b",
+  "source_battery_sha256": "b03ff1ef488fbd25de016e828483bc3001787b84e450a45eaa0ac12a11de30ab",
+  "source_battery_unchanged": true,
+  "setup": "Read-only copied battery; normal title/Continue and controller travel. Dry land-building/tree phase uses actual Survey OFF. Both actual port exits require full composed-frame Joe visibility at north landing before walk-away. Separate port-body phase restores native safe paths, enables Survey through the desk and enters actual native Surf. All four water-facing sides and8 rear bases checked; normal disembark and actual desk OFF restore dry play. No map/warp/player position/flag writes. Random encounters suppressed only in test RAM by shared harness.",
+  "buildings": [
+    "joe-home",
+    "neighbor-home",
+    "silph-office",
+    "harbor-office",
+    "fishing-house",
+    "trade-house",
+    "seal-house",
+    "cafe",
+    "center",
+    "mart",
+    "lighthouse",
+    "port",
+    "owner-gym"
+  ],
+  "normal_controller_bumps": [
+    {
+      "label": "harbor-office",
+      "approach": [
+        9,
+        41
+      ],
+      "solid": [
+        9,
+        40
+      ],
+      "button": 64,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "harbor-office",
+      "approach": [
+        10,
+        41
+      ],
+      "solid": [
+        10,
+        40
+      ],
+      "button": 64,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "harbor-office",
+      "approach": [
+        11,
+        40
+      ],
+      "solid": [
+        10,
+        40
+      ],
+      "button": 32,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "harbor-office",
+      "approach": [
+        11,
+        39
+      ],
+      "solid": [
+        10,
+        39
+      ],
+      "button": 32,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "harbor-office",
+      "approach": [
+        11,
+        38
+      ],
+      "solid": [
+        10,
+        38
+      ],
+      "button": 32,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "harbor-office",
+      "approach": [
+        10,
+        37
+      ],
+      "solid": [
+        10,
+        38
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "harbor-office",
+      "approach": [
+        9,
+        37
+      ],
+      "solid": [
+        9,
+        38
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "harbor-office",
+      "approach": [
+        8,
+        37
+      ],
+      "solid": [
+        8,
+        38
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "harbor-office",
+      "approach": [
+        7,
+        37
+      ],
+      "solid": [
+        7,
+        38
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "harbor-office",
+      "approach": [
+        6,
+        38
+      ],
+      "solid": [
+        7,
+        38
+      ],
+      "button": 16,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "harbor-office",
+      "approach": [
+        6,
+        39
+      ],
+      "solid": [
+        7,
+        39
+      ],
+      "button": 16,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "harbor-office",
+      "approach": [
+        6,
+        40
+      ],
+      "solid": [
+        7,
+        40
+      ],
+      "button": 16,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "cafe",
+      "approach": [
+        7,
+        33
+      ],
+      "solid": [
+        8,
+        33
+      ],
+      "button": 16,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "cafe",
+      "approach": [
+        7,
+        32
+      ],
+      "solid": [
+        8,
+        32
+      ],
+      "button": 16,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "cafe",
+      "approach": [
+        8,
+        31
+      ],
+      "solid": [
+        8,
+        32
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "cafe",
+      "approach": [
+        8,
+        31
+      ],
+      "solid": [
+        9,
+        31
+      ],
+      "button": 16,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "cafe",
+      "approach": [
+        9,
+        30
+      ],
+      "solid": [
+        9,
+        31
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "cafe",
+      "approach": [
+        10,
+        30
+      ],
+      "solid": [
+        10,
+        31
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "neighbor-home",
+      "approach": [
+        10,
+        29
+      ],
+      "solid": [
+        10,
+        28
+      ],
+      "button": 64,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "neighbor-home",
+      "approach": [
+        9,
+        29
+      ],
+      "solid": [
+        9,
+        28
+      ],
+      "button": 64,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "neighbor-home",
+      "approach": [
+        11,
+        28
+      ],
+      "solid": [
+        10,
+        28
+      ],
+      "button": 32,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "south-tree",
+      "approach": [
+        11,
+        28
+      ],
+      "solid": [
+        12,
+        28
+      ],
+      "button": 16,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "neighbor-home",
+      "approach": [
+        11,
+        27
+      ],
+      "solid": [
+        10,
+        27
+      ],
+      "button": 32,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "neighbor-home",
+      "approach": [
+        11,
+        26
+      ],
+      "solid": [
+        10,
+        26
+      ],
+      "button": 32,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "neighbor-home",
+      "approach": [
+        10,
+        25
+      ],
+      "solid": [
+        10,
+        26
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "joe-home",
+      "approach": [
+        10,
+        24
+      ],
+      "solid": [
+        10,
+        23
+      ],
+      "button": 64,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "joe-home",
+      "approach": [
+        9,
+        24
+      ],
+      "solid": [
+        9,
+        23
+      ],
+      "button": 64,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "neighbor-home",
+      "approach": [
+        9,
+        25
+      ],
+      "solid": [
+        9,
+        26
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "neighbor-home",
+      "approach": [
+        8,
+        25
+      ],
+      "solid": [
+        8,
+        26
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "neighbor-home",
+      "approach": [
+        7,
+        25
+      ],
+      "solid": [
+        7,
+        26
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "neighbor-home",
+      "approach": [
+        6,
+        26
+      ],
+      "solid": [
+        7,
+        26
+      ],
+      "button": 16,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "neighbor-home",
+      "approach": [
+        6,
+        27
+      ],
+      "solid": [
+        7,
+        27
+      ],
+      "button": 16,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "neighbor-home",
+      "approach": [
+        6,
+        28
+      ],
+      "solid": [
+        7,
+        28
+      ],
+      "button": 16,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "joe-home",
+      "approach": [
+        6,
+        23
+      ],
+      "solid": [
+        7,
+        23
+      ],
+      "button": 16,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "joe-home",
+      "approach": [
+        6,
+        22
+      ],
+      "solid": [
+        7,
+        22
+      ],
+      "button": 16,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "joe-home",
+      "approach": [
+        6,
+        21
+      ],
+      "solid": [
+        7,
+        21
+      ],
+      "button": 16,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "joe-home",
+      "approach": [
+        7,
+        20
+      ],
+      "solid": [
+        7,
+        21
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "joe-home",
+      "approach": [
+        8,
+        20
+      ],
+      "solid": [
+        8,
+        21
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "joe-home",
+      "approach": [
+        9,
+        20
+      ],
+      "solid": [
+        9,
+        21
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "joe-home",
+      "approach": [
+        10,
+        20
+      ],
+      "solid": [
+        10,
+        21
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "residence-tree",
+      "approach": [
+        11,
+        20
+      ],
+      "solid": [
+        12,
+        20
+      ],
+      "button": 16,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "joe-home",
+      "approach": [
+        11,
+        21
+      ],
+      "solid": [
+        10,
+        21
+      ],
+      "button": 32,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "joe-home",
+      "approach": [
+        11,
+        22
+      ],
+      "solid": [
+        10,
+        22
+      ],
+      "button": 32,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "joe-home",
+      "approach": [
+        11,
+        23
+      ],
+      "solid": [
+        10,
+        23
+      ],
+      "button": 32,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "residence-tree",
+      "approach": [
+        12,
+        21
+      ],
+      "solid": [
+        12,
+        20
+      ],
+      "button": 64,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "residence-tree",
+      "approach": [
+        12,
+        19
+      ],
+      "solid": [
+        12,
+        20
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "residence-tree",
+      "approach": [
+        13,
+        19
+      ],
+      "solid": [
+        13,
+        20
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "residence-tree",
+      "approach": [
+        14,
+        20
+      ],
+      "solid": [
+        13,
+        20
+      ],
+      "button": 32,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "fishing-house",
+      "approach": [
+        15,
+        22
+      ],
+      "solid": [
+        16,
+        22
+      ],
+      "button": 16,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "fishing-house",
+      "approach": [
+        15,
+        23
+      ],
+      "solid": [
+        16,
+        23
+      ],
+      "button": 16,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "fishing-house",
+      "approach": [
+        16,
+        21
+      ],
+      "solid": [
+        16,
+        22
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "fishing-house",
+      "approach": [
+        16,
+        21
+      ],
+      "solid": [
+        17,
+        21
+      ],
+      "button": 16,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "fishing-house",
+      "approach": [
+        17,
+        20
+      ],
+      "solid": [
+        17,
+        21
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "fishing-house",
+      "approach": [
+        18,
+        20
+      ],
+      "solid": [
+        18,
+        21
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "fishing-house",
+      "approach": [
+        19,
+        21
+      ],
+      "solid": [
+        18,
+        21
+      ],
+      "button": 32,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "fishing-house",
+      "approach": [
+        19,
+        21
+      ],
+      "solid": [
+        19,
+        22
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "fishing-house",
+      "approach": [
+        20,
+        22
+      ],
+      "solid": [
+        19,
+        22
+      ],
+      "button": 32,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "fishing-house",
+      "approach": [
+        20,
+        23
+      ],
+      "solid": [
+        19,
+        23
+      ],
+      "button": 32,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "fishing-house",
+      "approach": [
+        19,
+        24
+      ],
+      "solid": [
+        19,
+        23
+      ],
+      "button": 64,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "fishing-house",
+      "approach": [
+        18,
+        24
+      ],
+      "solid": [
+        18,
+        23
+      ],
+      "button": 64,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "center",
+      "approach": [
+        18,
+        29
+      ],
+      "solid": [
+        18,
+        30
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "center",
+      "approach": [
+        17,
+        29
+      ],
+      "solid": [
+        17,
+        30
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "center",
+      "approach": [
+        16,
+        29
+      ],
+      "solid": [
+        16,
+        30
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "center",
+      "approach": [
+        15,
+        29
+      ],
+      "solid": [
+        15,
+        30
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "center",
+      "approach": [
+        14,
+        30
+      ],
+      "solid": [
+        15,
+        30
+      ],
+      "button": 16,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "center",
+      "approach": [
+        14,
+        31
+      ],
+      "solid": [
+        14,
+        32
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "center",
+      "approach": [
+        14,
+        31
+      ],
+      "solid": [
+        15,
+        31
+      ],
+      "button": 16,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "center",
+      "approach": [
+        13,
+        32
+      ],
+      "solid": [
+        14,
+        32
+      ],
+      "button": 16,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "cafe",
+      "approach": [
+        12,
+        32
+      ],
+      "solid": [
+        11,
+        32
+      ],
+      "button": 32,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "cafe",
+      "approach": [
+        12,
+        33
+      ],
+      "solid": [
+        11,
+        33
+      ],
+      "button": 32,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "center",
+      "approach": [
+        13,
+        33
+      ],
+      "solid": [
+        14,
+        33
+      ],
+      "button": 16,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "cafe",
+      "approach": [
+        11,
+        34
+      ],
+      "solid": [
+        11,
+        33
+      ],
+      "button": 64,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "cafe",
+      "approach": [
+        10,
+        34
+      ],
+      "solid": [
+        10,
+        33
+      ],
+      "button": 64,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "cafe",
+      "approach": [
+        11,
+        31
+      ],
+      "solid": [
+        10,
+        31
+      ],
+      "button": 32,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "cafe",
+      "approach": [
+        11,
+        31
+      ],
+      "solid": [
+        11,
+        32
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "south-tree",
+      "approach": [
+        12,
+        29
+      ],
+      "solid": [
+        12,
+        28
+      ],
+      "button": 64,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "south-tree",
+      "approach": [
+        13,
+        29
+      ],
+      "solid": [
+        13,
+        28
+      ],
+      "button": 64,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "south-tree",
+      "approach": [
+        13,
+        27
+      ],
+      "solid": [
+        13,
+        28
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "south-tree",
+      "approach": [
+        12,
+        27
+      ],
+      "solid": [
+        12,
+        28
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "south-tree",
+      "approach": [
+        14,
+        28
+      ],
+      "solid": [
+        13,
+        28
+      ],
+      "button": 32,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "center",
+      "approach": [
+        15,
+        34
+      ],
+      "solid": [
+        15,
+        33
+      ],
+      "button": 64,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "center",
+      "approach": [
+        18,
+        34
+      ],
+      "solid": [
+        18,
+        33
+      ],
+      "button": 64,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "center",
+      "approach": [
+        19,
+        34
+      ],
+      "solid": [
+        19,
+        33
+      ],
+      "button": 64,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "center",
+      "approach": [
+        20,
+        33
+      ],
+      "solid": [
+        19,
+        33
+      ],
+      "button": 32,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "center",
+      "approach": [
+        20,
+        32
+      ],
+      "solid": [
+        19,
+        32
+      ],
+      "button": 32,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "center",
+      "approach": [
+        19,
+        31
+      ],
+      "solid": [
+        18,
+        31
+      ],
+      "button": 32,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "center",
+      "approach": [
+        19,
+        31
+      ],
+      "solid": [
+        19,
+        32
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "center",
+      "approach": [
+        19,
+        30
+      ],
+      "solid": [
+        18,
+        30
+      ],
+      "button": 32,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "mart",
+      "approach": [
+        27,
+        32
+      ],
+      "solid": [
+        28,
+        32
+      ],
+      "button": 16,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "mart",
+      "approach": [
+        27,
+        33
+      ],
+      "solid": [
+        28,
+        33
+      ],
+      "button": 16,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "mart",
+      "approach": [
+        28,
+        34
+      ],
+      "solid": [
+        28,
+        33
+      ],
+      "button": 64,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "mart",
+      "approach": [
+        30,
+        34
+      ],
+      "solid": [
+        30,
+        33
+      ],
+      "button": 64,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "mart",
+      "approach": [
+        31,
+        34
+      ],
+      "solid": [
+        31,
+        33
+      ],
+      "button": 64,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "mart",
+      "approach": [
+        32,
+        34
+      ],
+      "solid": [
+        32,
+        33
+      ],
+      "button": 64,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "mart",
+      "approach": [
+        33,
+        33
+      ],
+      "solid": [
+        32,
+        33
+      ],
+      "button": 32,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "mart",
+      "approach": [
+        33,
+        32
+      ],
+      "solid": [
+        32,
+        32
+      ],
+      "button": 32,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "mart",
+      "approach": [
+        32,
+        31
+      ],
+      "solid": [
+        31,
+        31
+      ],
+      "button": 32,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "mart",
+      "approach": [
+        32,
+        31
+      ],
+      "solid": [
+        32,
+        32
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "mart",
+      "approach": [
+        31,
+        30
+      ],
+      "solid": [
+        31,
+        31
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "mart",
+      "approach": [
+        30,
+        30
+      ],
+      "solid": [
+        30,
+        31
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "mart",
+      "approach": [
+        29,
+        30
+      ],
+      "solid": [
+        29,
+        31
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "mart",
+      "approach": [
+        28,
+        31
+      ],
+      "solid": [
+        28,
+        32
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "mart",
+      "approach": [
+        28,
+        31
+      ],
+      "solid": [
+        29,
+        31
+      ],
+      "button": 16,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "silph-office",
+      "approach": [
+        28,
+        37
+      ],
+      "solid": [
+        29,
+        37
+      ],
+      "button": 16,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "silph-office",
+      "approach": [
+        28,
+        38
+      ],
+      "solid": [
+        29,
+        38
+      ],
+      "button": 16,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "silph-office",
+      "approach": [
+        28,
+        39
+      ],
+      "solid": [
+        29,
+        39
+      ],
+      "button": 16,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "silph-office",
+      "approach": [
+        28,
+        40
+      ],
+      "solid": [
+        29,
+        40
+      ],
+      "button": 16,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "silph-office",
+      "approach": [
+        30,
+        41
+      ],
+      "solid": [
+        30,
+        40
+      ],
+      "button": 64,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "silph-office",
+      "approach": [
+        32,
+        41
+      ],
+      "solid": [
+        32,
+        40
+      ],
+      "button": 64,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "silph-office",
+      "approach": [
+        33,
+        41
+      ],
+      "solid": [
+        33,
+        40
+      ],
+      "button": 64,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "silph-office",
+      "approach": [
+        34,
+        40
+      ],
+      "solid": [
+        33,
+        40
+      ],
+      "button": 32,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "silph-office",
+      "approach": [
+        34,
+        39
+      ],
+      "solid": [
+        33,
+        39
+      ],
+      "button": 32,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "silph-office",
+      "approach": [
+        34,
+        38
+      ],
+      "solid": [
+        33,
+        38
+      ],
+      "button": 32,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "silph-office",
+      "approach": [
+        34,
+        37
+      ],
+      "solid": [
+        33,
+        37
+      ],
+      "button": 32,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "silph-office",
+      "approach": [
+        33,
+        36
+      ],
+      "solid": [
+        33,
+        37
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "silph-office",
+      "approach": [
+        32,
+        36
+      ],
+      "solid": [
+        32,
+        37
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "silph-office",
+      "approach": [
+        31,
+        36
+      ],
+      "solid": [
+        31,
+        37
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "silph-office",
+      "approach": [
+        30,
+        36
+      ],
+      "solid": [
+        30,
+        37
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "silph-office",
+      "approach": [
+        29,
+        36
+      ],
+      "solid": [
+        29,
+        37
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "lighthouse",
+      "approach": [
+        42,
+        36
+      ],
+      "solid": [
+        43,
+        36
+      ],
+      "button": 16,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "lighthouse",
+      "approach": [
+        42,
+        35
+      ],
+      "solid": [
+        43,
+        35
+      ],
+      "button": 16,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "lighthouse",
+      "approach": [
+        42,
+        34
+      ],
+      "solid": [
+        43,
+        34
+      ],
+      "button": 16,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "lighthouse",
+      "approach": [
+        42,
+        33
+      ],
+      "solid": [
+        43,
+        33
+      ],
+      "button": 16,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "lighthouse",
+      "approach": [
+        42,
+        32
+      ],
+      "solid": [
+        43,
+        32
+      ],
+      "button": 16,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "lighthouse",
+      "approach": [
+        43,
+        31
+      ],
+      "solid": [
+        43,
+        32
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "lighthouse",
+      "approach": [
+        44,
+        31
+      ],
+      "solid": [
+        44,
+        32
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "lighthouse",
+      "approach": [
+        45,
+        31
+      ],
+      "solid": [
+        45,
+        32
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "lighthouse",
+      "approach": [
+        46,
+        31
+      ],
+      "solid": [
+        46,
+        32
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "lighthouse",
+      "approach": [
+        47,
+        31
+      ],
+      "solid": [
+        47,
+        32
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "lighthouse",
+      "approach": [
+        48,
+        32
+      ],
+      "solid": [
+        47,
+        32
+      ],
+      "button": 32,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "lighthouse",
+      "approach": [
+        48,
+        33
+      ],
+      "solid": [
+        47,
+        33
+      ],
+      "button": 32,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "lighthouse",
+      "approach": [
+        48,
+        34
+      ],
+      "solid": [
+        47,
+        34
+      ],
+      "button": 32,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "lighthouse",
+      "approach": [
+        48,
+        35
+      ],
+      "solid": [
+        47,
+        35
+      ],
+      "button": 32,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "lighthouse",
+      "approach": [
+        48,
+        36
+      ],
+      "solid": [
+        47,
+        36
+      ],
+      "button": 32,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "lighthouse",
+      "approach": [
+        48,
+        37
+      ],
+      "solid": [
+        47,
+        37
+      ],
+      "button": 32,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "lighthouse",
+      "approach": [
+        48,
+        37
+      ],
+      "solid": [
+        48,
+        38
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "lighthouse",
+      "approach": [
+        49,
+        38
+      ],
+      "solid": [
+        48,
+        38
+      ],
+      "button": 32,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "lighthouse",
+      "approach": [
+        49,
+        39
+      ],
+      "solid": [
+        48,
+        39
+      ],
+      "button": 32,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "lighthouse",
+      "approach": [
+        48,
+        40
+      ],
+      "solid": [
+        48,
+        39
+      ],
+      "button": 64,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "lighthouse",
+      "approach": [
+        47,
+        40
+      ],
+      "solid": [
+        47,
+        39
+      ],
+      "button": 64,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "lighthouse",
+      "approach": [
+        44,
+        40
+      ],
+      "solid": [
+        44,
+        39
+      ],
+      "button": 64,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "lighthouse",
+      "approach": [
+        43,
+        40
+      ],
+      "solid": [
+        43,
+        39
+      ],
+      "button": 64,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "lighthouse",
+      "approach": [
+        42,
+        40
+      ],
+      "solid": [
+        42,
+        39
+      ],
+      "button": 64,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "lighthouse",
+      "approach": [
+        41,
+        39
+      ],
+      "solid": [
+        42,
+        39
+      ],
+      "button": 16,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "lighthouse",
+      "approach": [
+        41,
+        38
+      ],
+      "solid": [
+        42,
+        38
+      ],
+      "button": 16,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "lighthouse",
+      "approach": [
+        42,
+        37
+      ],
+      "solid": [
+        42,
+        38
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "lighthouse",
+      "approach": [
+        42,
+        37
+      ],
+      "solid": [
+        43,
+        37
+      ],
+      "button": 16,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "east-tree",
+      "approach": [
+        40,
+        19
+      ],
+      "solid": [
+        40,
+        20
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "east-tree",
+      "approach": [
+        39,
+        19
+      ],
+      "solid": [
+        39,
+        20
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "east-tree",
+      "approach": [
+        38,
+        20
+      ],
+      "solid": [
+        39,
+        20
+      ],
+      "button": 16,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "seal-house",
+      "approach": [
+        38,
+        18
+      ],
+      "solid": [
+        38,
+        17
+      ],
+      "button": 64,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "seal-house",
+      "approach": [
+        37,
+        18
+      ],
+      "solid": [
+        37,
+        17
+      ],
+      "button": 64,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "seal-house",
+      "approach": [
+        39,
+        17
+      ],
+      "solid": [
+        38,
+        17
+      ],
+      "button": 32,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "seal-house",
+      "approach": [
+        39,
+        16
+      ],
+      "solid": [
+        38,
+        16
+      ],
+      "button": 32,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "seal-house",
+      "approach": [
+        38,
+        15
+      ],
+      "solid": [
+        37,
+        15
+      ],
+      "button": 32,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "seal-house",
+      "approach": [
+        38,
+        15
+      ],
+      "solid": [
+        38,
+        16
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "seal-house",
+      "approach": [
+        37,
+        14
+      ],
+      "solid": [
+        37,
+        15
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "seal-house",
+      "approach": [
+        36,
+        14
+      ],
+      "solid": [
+        36,
+        15
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "seal-house",
+      "approach": [
+        35,
+        15
+      ],
+      "solid": [
+        35,
+        16
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "seal-house",
+      "approach": [
+        35,
+        15
+      ],
+      "solid": [
+        36,
+        15
+      ],
+      "button": 16,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "seal-house",
+      "approach": [
+        34,
+        16
+      ],
+      "solid": [
+        35,
+        16
+      ],
+      "button": 16,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "trade-house",
+      "approach": [
+        34,
+        16
+      ],
+      "solid": [
+        33,
+        16
+      ],
+      "button": 32,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "seal-house",
+      "approach": [
+        34,
+        17
+      ],
+      "solid": [
+        35,
+        17
+      ],
+      "button": 16,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "trade-house",
+      "approach": [
+        34,
+        17
+      ],
+      "solid": [
+        33,
+        17
+      ],
+      "button": 32,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "trade-house",
+      "approach": [
+        33,
+        18
+      ],
+      "solid": [
+        33,
+        17
+      ],
+      "button": 64,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "trade-house",
+      "approach": [
+        32,
+        18
+      ],
+      "solid": [
+        32,
+        17
+      ],
+      "button": 64,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "trade-house",
+      "approach": [
+        29,
+        17
+      ],
+      "solid": [
+        30,
+        17
+      ],
+      "button": 16,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "trade-house",
+      "approach": [
+        29,
+        16
+      ],
+      "solid": [
+        30,
+        16
+      ],
+      "button": 16,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "trade-house",
+      "approach": [
+        30,
+        15
+      ],
+      "solid": [
+        30,
+        16
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "trade-house",
+      "approach": [
+        30,
+        15
+      ],
+      "solid": [
+        31,
+        15
+      ],
+      "button": 16,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "trade-house",
+      "approach": [
+        31,
+        14
+      ],
+      "solid": [
+        31,
+        15
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "trade-house",
+      "approach": [
+        32,
+        14
+      ],
+      "solid": [
+        32,
+        15
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "trade-house",
+      "approach": [
+        33,
+        15
+      ],
+      "solid": [
+        32,
+        15
+      ],
+      "button": 32,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "trade-house",
+      "approach": [
+        33,
+        15
+      ],
+      "solid": [
+        33,
+        16
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "owner-gym",
+      "approach": [
+        16,
+        15
+      ],
+      "solid": [
+        16,
+        14
+      ],
+      "button": 64,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "owner-gym",
+      "approach": [
+        15,
+        15
+      ],
+      "solid": [
+        15,
+        14
+      ],
+      "button": 64,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "owner-gym",
+      "approach": [
+        12,
+        15
+      ],
+      "solid": [
+        12,
+        14
+      ],
+      "button": 64,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "owner-gym",
+      "approach": [
+        11,
+        15
+      ],
+      "solid": [
+        11,
+        14
+      ],
+      "button": 64,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "owner-gym",
+      "approach": [
+        10,
+        14
+      ],
+      "solid": [
+        11,
+        14
+      ],
+      "button": 16,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "owner-gym",
+      "approach": [
+        10,
+        13
+      ],
+      "solid": [
+        11,
+        13
+      ],
+      "button": 16,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "owner-gym",
+      "approach": [
+        11,
+        12
+      ],
+      "solid": [
+        11,
+        13
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "owner-gym",
+      "approach": [
+        12,
+        12
+      ],
+      "solid": [
+        12,
+        13
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "owner-gym",
+      "approach": [
+        13,
+        12
+      ],
+      "solid": [
+        13,
+        13
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "owner-gym",
+      "approach": [
+        14,
+        12
+      ],
+      "solid": [
+        14,
+        13
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "owner-gym",
+      "approach": [
+        15,
+        12
+      ],
+      "solid": [
+        15,
+        13
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "owner-gym",
+      "approach": [
+        16,
+        12
+      ],
+      "solid": [
+        16,
+        13
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "owner-gym",
+      "approach": [
+        16,
+        10
+      ],
+      "solid": [
+        17,
+        10
+      ],
+      "button": 16,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "owner-gym",
+      "approach": [
+        16,
+        9
+      ],
+      "solid": [
+        16,
+        8
+      ],
+      "button": 64,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "owner-gym",
+      "approach": [
+        15,
+        9
+      ],
+      "solid": [
+        15,
+        8
+      ],
+      "button": 64,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "owner-gym",
+      "approach": [
+        14,
+        9
+      ],
+      "solid": [
+        14,
+        8
+      ],
+      "button": 64,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "owner-gym",
+      "approach": [
+        13,
+        9
+      ],
+      "solid": [
+        13,
+        8
+      ],
+      "button": 64,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "owner-gym",
+      "approach": [
+        12,
+        9
+      ],
+      "solid": [
+        12,
+        8
+      ],
+      "button": 64,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "owner-gym",
+      "approach": [
+        11,
+        9
+      ],
+      "solid": [
+        11,
+        8
+      ],
+      "button": 64,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "owner-gym",
+      "approach": [
+        10,
+        9
+      ],
+      "solid": [
+        10,
+        8
+      ],
+      "button": 64,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "owner-gym",
+      "approach": [
+        17,
+        9
+      ],
+      "solid": [
+        17,
+        8
+      ],
+      "button": 64,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "owner-gym",
+      "approach": [
+        17,
+        9
+      ],
+      "solid": [
+        17,
+        10
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "owner-gym",
+      "approach": [
+        17,
+        11
+      ],
+      "solid": [
+        17,
+        10
+      ],
+      "button": 64,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "owner-gym",
+      "approach": [
+        17,
+        13
+      ],
+      "solid": [
+        16,
+        13
+      ],
+      "button": 32,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "owner-gym",
+      "approach": [
+        17,
+        14
+      ],
+      "solid": [
+        16,
+        14
+      ],
+      "button": 32,
+      "result": "normal controller movement blocked"
+    }
+  ],
+  "port_north_landing_visibility": [
+    {
+      "inside_leaf": 0,
+      "arrival": [
+        23,
+        52
+      ],
+      "facing": 2,
+      "portal_framebuffer": {
+        "opaque_expected": 192,
+        "opaque_visible": 192,
+        "opaque_hidden": 0
+      },
+      "north_landing": [
+        23,
+        51
+      ],
+      "actual_framebuffer": {
+        "opaque_expected": 192,
+        "opaque_visible": 192,
+        "opaque_hidden": 0
+      },
+      "walk_away": [
+        23,
+        50
+      ],
+      "result": "PASS"
+    },
+    {
+      "inside_leaf": 3,
+      "arrival": [
+        24,
+        52
+      ],
+      "facing": 2,
+      "portal_framebuffer": {
+        "opaque_expected": 192,
+        "opaque_visible": 192,
+        "opaque_hidden": 0
+      },
+      "north_landing": [
+        24,
+        51
+      ],
+      "actual_framebuffer": {
+        "opaque_expected": 192,
+        "opaque_visible": 192,
+        "opaque_hidden": 0
+      },
+      "walk_away": [
+        24,
+        50
+      ],
+      "result": "PASS"
+    }
+  ],
+  "port_actual_surf_bumps": [
+    {
+      "label": "port",
+      "mode": "actual native Surf with desk-enabled session access",
+      "side": "west",
+      "approach": [
+        20,
+        52
+      ],
+      "solid": [
+        21,
+        52
+      ],
+      "button": 16,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "port",
+      "mode": "actual native Surf with desk-enabled session access",
+      "side": "west",
+      "approach": [
+        20,
+        53
+      ],
+      "solid": [
+        21,
+        53
+      ],
+      "button": 16,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "port",
+      "mode": "actual native Surf with desk-enabled session access",
+      "side": "north",
+      "approach": [
+        20,
+        54
+      ],
+      "solid": [
+        20,
+        55
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "port",
+      "mode": "actual native Surf with desk-enabled session access",
+      "side": "west",
+      "approach": [
+        20,
+        54
+      ],
+      "solid": [
+        21,
+        54
+      ],
+      "button": 16,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "port",
+      "mode": "actual native Surf with desk-enabled session access",
+      "side": "west",
+      "approach": [
+        19,
+        55
+      ],
+      "solid": [
+        20,
+        55
+      ],
+      "button": 16,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "port",
+      "mode": "actual native Surf with desk-enabled session access",
+      "side": "west",
+      "approach": [
+        19,
+        56
+      ],
+      "solid": [
+        20,
+        56
+      ],
+      "button": 16,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "port",
+      "mode": "actual native Surf with desk-enabled session access",
+      "side": "south",
+      "approach": [
+        20,
+        57
+      ],
+      "solid": [
+        20,
+        56
+      ],
+      "button": 64,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "port",
+      "mode": "actual native Surf with desk-enabled session access",
+      "side": "south",
+      "approach": [
+        21,
+        57
+      ],
+      "solid": [
+        21,
+        56
+      ],
+      "button": 64,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "port",
+      "mode": "actual native Surf with desk-enabled session access",
+      "side": "south",
+      "approach": [
+        22,
+        57
+      ],
+      "solid": [
+        22,
+        56
+      ],
+      "button": 64,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "port",
+      "mode": "actual native Surf with desk-enabled session access",
+      "side": "south",
+      "approach": [
+        23,
+        57
+      ],
+      "solid": [
+        23,
+        56
+      ],
+      "button": 64,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "port",
+      "mode": "actual native Surf with desk-enabled session access",
+      "side": "south",
+      "approach": [
+        24,
+        57
+      ],
+      "solid": [
+        24,
+        56
+      ],
+      "button": 64,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "port",
+      "mode": "actual native Surf with desk-enabled session access",
+      "side": "south",
+      "approach": [
+        25,
+        57
+      ],
+      "solid": [
+        25,
+        56
+      ],
+      "button": 64,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "port",
+      "mode": "actual native Surf with desk-enabled session access",
+      "side": "south",
+      "approach": [
+        26,
+        57
+      ],
+      "solid": [
+        26,
+        56
+      ],
+      "button": 64,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "port",
+      "mode": "actual native Surf with desk-enabled session access",
+      "side": "south",
+      "approach": [
+        27,
+        57
+      ],
+      "solid": [
+        27,
+        56
+      ],
+      "button": 64,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "port",
+      "mode": "actual native Surf with desk-enabled session access",
+      "side": "east",
+      "approach": [
+        28,
+        56
+      ],
+      "solid": [
+        27,
+        56
+      ],
+      "button": 32,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "port",
+      "mode": "actual native Surf with desk-enabled session access",
+      "side": "east",
+      "approach": [
+        28,
+        55
+      ],
+      "solid": [
+        27,
+        55
+      ],
+      "button": 32,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "port",
+      "mode": "actual native Surf with desk-enabled session access",
+      "side": "east",
+      "approach": [
+        27,
+        54
+      ],
+      "solid": [
+        26,
+        54
+      ],
+      "button": 32,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "port",
+      "mode": "actual native Surf with desk-enabled session access",
+      "side": "north",
+      "approach": [
+        27,
+        54
+      ],
+      "solid": [
+        27,
+        55
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "port",
+      "mode": "actual native Surf with desk-enabled session access",
+      "side": "east",
+      "approach": [
+        27,
+        53
+      ],
+      "solid": [
+        26,
+        53
+      ],
+      "button": 32,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "port",
+      "mode": "actual native Surf with desk-enabled session access",
+      "side": "east",
+      "approach": [
+        27,
+        52
+      ],
+      "solid": [
+        26,
+        52
+      ],
+      "button": 32,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "port",
+      "mode": "actual native Surf with desk-enabled session access",
+      "side": "north",
+      "approach": [
+        26,
+        51
+      ],
+      "solid": [
+        26,
+        52
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "port",
+      "mode": "actual native Surf with desk-enabled session access",
+      "side": "north",
+      "approach": [
+        25,
+        51
+      ],
+      "solid": [
+        25,
+        52
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "port",
+      "mode": "actual native Surf with desk-enabled session access",
+      "side": "north",
+      "approach": [
+        22,
+        51
+      ],
+      "solid": [
+        22,
+        52
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    },
+    {
+      "label": "port",
+      "mode": "actual native Surf with desk-enabled session access",
+      "side": "north",
+      "approach": [
+        21,
+        51
+      ],
+      "solid": [
+        21,
+        52
+      ],
+      "button": 128,
+      "result": "normal controller movement blocked"
+    }
+  ],
+  "port_surf_recorded_sides": [
+    "east",
+    "north",
+    "south",
+    "west"
+  ],
+  "skipped_inaccessible_approaches": [],
+  "intentional_canopy_overlap": [
+    {
+      "label": "residence-tree",
+      "canopy": [
+        12,
+        19
+      ],
+      "result": "Walkable intentional foreground overhang"
+    },
+    {
+      "label": "south-tree",
+      "canopy": [
+        12,
+        27
+      ],
+      "result": "Walkable intentional foreground overhang"
+    },
+    {
+      "label": "east-tree",
+      "canopy": [
+        39,
+        19
+      ],
+      "result": "Walkable intentional foreground overhang"
+    }
+  ],
+  "native_movement_recordings": [
+    "residence-tree-wall-bump",
+    "fishing-house-wall-bump",
+    "silph-office-wall-bump",
+    "port-north-landing-23",
+    "port-north-landing-24",
+    "port-body-surf-west",
+    "port-body-surf-north",
+    "port-body-surf-south",
+    "port-body-surf-east"
+  ],
+  "final_dry_return": [
+    16,
+    34
+  ]
+}

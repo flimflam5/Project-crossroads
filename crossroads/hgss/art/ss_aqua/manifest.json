@@ -1,0 +1,1338 @@
+{
+  "specs": {
+    "floor_orange": {
+      "start": 512,
+      "width": 2,
+      "height": 2,
+      "palette_bank": 6,
+      "foreground_rows": []
+    },
+    "floor_officer": {
+      "start": 516,
+      "width": 1,
+      "height": 1,
+      "palette_bank": 6,
+      "foreground_rows": []
+    },
+    "floor_gold": {
+      "start": 517,
+      "width": 2,
+      "height": 2,
+      "palette_bank": 6,
+      "foreground_rows": []
+    },
+    "floor_red": {
+      "start": 521,
+      "width": 1,
+      "height": 1,
+      "palette_bank": 6,
+      "foreground_rows": []
+    },
+    "floor_blue": {
+      "start": 522,
+      "width": 1,
+      "height": 1,
+      "palette_bank": 7,
+      "foreground_rows": []
+    },
+    "floor_mustard": {
+      "start": 523,
+      "width": 1,
+      "height": 1,
+      "palette_bank": 6,
+      "foreground_rows": []
+    },
+    "floor_metal": {
+      "start": 524,
+      "width": 1,
+      "height": 1,
+      "palette_bank": 8,
+      "foreground_rows": []
+    },
+    "floor_green": {
+      "start": 525,
+      "width": 1,
+      "height": 1,
+      "palette_bank": 12,
+      "foreground_rows": []
+    },
+    "rug_green": {
+      "start": 526,
+      "width": 3,
+      "height": 3,
+      "palette_bank": 12,
+      "foreground_rows": []
+    },
+    "floor_crew": {
+      "start": 544,
+      "width": 1,
+      "height": 1,
+      "palette_bank": 12,
+      "foreground_rows": []
+    },
+    "floor_wood": {
+      "start": 545,
+      "width": 1,
+      "height": 1,
+      "palette_bank": 10,
+      "foreground_rows": []
+    },
+    "hazardfloor": {
+      "start": 546,
+      "width": 1,
+      "height": 1,
+      "palette_bank": 8,
+      "foreground_rows": []
+    },
+    "void": {
+      "start": 547,
+      "width": 1,
+      "height": 1,
+      "palette_bank": 9,
+      "foreground_rows": []
+    },
+    "wall_ship": {
+      "start": 548,
+      "width": 4,
+      "height": 2,
+      "palette_bank": 9,
+      "foreground_rows": []
+    },
+    "wall_cabin": {
+      "start": 556,
+      "width": 4,
+      "height": 2,
+      "palette_bank": 9,
+      "foreground_rows": []
+    },
+    "wall_metal": {
+      "start": 564,
+      "width": 4,
+      "height": 2,
+      "palette_bank": 8,
+      "foreground_rows": []
+    },
+    "porthole": {
+      "start": 572,
+      "width": 1,
+      "height": 2,
+      "palette_bank": 9,
+      "foreground_rows": []
+    },
+    "window": {
+      "start": 574,
+      "width": 1,
+      "height": 2,
+      "palette_bank": 9,
+      "foreground_rows": []
+    },
+    "painting": {
+      "start": 576,
+      "width": 1,
+      "height": 1,
+      "palette_bank": 9,
+      "foreground_rows": []
+    },
+    "clock": {
+      "start": 580,
+      "width": 1,
+      "height": 1,
+      "palette_bank": 8,
+      "foreground_rows": []
+    },
+    "bed_blue": {
+      "start": 582,
+      "width": 2,
+      "height": 3,
+      "palette_bank": 11,
+      "foreground_rows": [
+        0
+      ]
+    },
+    "bed_brown": {
+      "start": 612,
+      "width": 2,
+      "height": 3,
+      "palette_bank": 10,
+      "foreground_rows": [
+        0
+      ]
+    },
+    "sofa_yellow": {
+      "start": 618,
+      "width": 3,
+      "height": 2,
+      "palette_bank": 6,
+      "foreground_rows": [
+        0
+      ]
+    },
+    "sofa_orange": {
+      "start": 624,
+      "width": 2,
+      "height": 3,
+      "palette_bank": 10,
+      "foreground_rows": [
+        0
+      ]
+    },
+    "bench_blue": {
+      "start": 630,
+      "width": 3,
+      "height": 2,
+      "palette_bank": 11,
+      "foreground_rows": [
+        0
+      ]
+    },
+    "bench_vertical": {
+      "start": 642,
+      "width": 1,
+      "height": 3,
+      "palette_bank": 11,
+      "foreground_rows": [
+        0
+      ]
+    },
+    "sofa_vertical": {
+      "start": 648,
+      "width": 3,
+      "height": 4,
+      "palette_bank": 6,
+      "foreground_rows": [
+        0
+      ]
+    },
+    "table": {
+      "start": 660,
+      "width": 2,
+      "height": 2,
+      "palette_bank": 10,
+      "foreground_rows": [
+        0
+      ]
+    },
+    "table_wood": {
+      "start": 676,
+      "width": 2,
+      "height": 2,
+      "palette_bank": 10,
+      "foreground_rows": [
+        0
+      ]
+    },
+    "galley_table": {
+      "start": 680,
+      "width": 3,
+      "height": 5,
+      "palette_bank": 10,
+      "foreground_rows": [
+        0
+      ]
+    },
+    "table_wide": {
+      "start": 695,
+      "width": 4,
+      "height": 2,
+      "palette_bank": 10,
+      "foreground_rows": [
+        0
+      ]
+    },
+    "table_square": {
+      "start": 703,
+      "width": 3,
+      "height": 3,
+      "palette_bank": 10,
+      "foreground_rows": [
+        0
+      ]
+    },
+    "chair_red": {
+      "start": 712,
+      "width": 1,
+      "height": 1,
+      "palette_bank": 10,
+      "foreground_rows": []
+    },
+    "chair_green": {
+      "start": 714,
+      "width": 1,
+      "height": 1,
+      "palette_bank": 12,
+      "foreground_rows": []
+    },
+    "chair_yellow": {
+      "start": 715,
+      "width": 1,
+      "height": 1,
+      "palette_bank": 6,
+      "foreground_rows": []
+    },
+    "chair_orange": {
+      "start": 716,
+      "width": 1,
+      "height": 1,
+      "palette_bank": 10,
+      "foreground_rows": []
+    },
+    "cabinet": {
+      "start": 717,
+      "width": 2,
+      "height": 2,
+      "palette_bank": 10,
+      "foreground_rows": [
+        0
+      ]
+    },
+    "locker_crew": {
+      "start": 737,
+      "width": 2,
+      "height": 2,
+      "palette_bank": 8,
+      "foreground_rows": [
+        0
+      ]
+    },
+    "bin": {
+      "start": 741,
+      "width": 1,
+      "height": 1,
+      "palette_bank": 12,
+      "foreground_rows": []
+    },
+    "captain_desk": {
+      "start": 748,
+      "width": 3,
+      "height": 2,
+      "palette_bank": 10,
+      "foreground_rows": [
+        0
+      ]
+    },
+    "map_board": {
+      "start": 754,
+      "width": 2,
+      "height": 1,
+      "palette_bank": 10,
+      "foreground_rows": []
+    },
+    "desk_white": {
+      "start": 756,
+      "width": 3,
+      "height": 2,
+      "palette_bank": 8,
+      "foreground_rows": [
+        0
+      ]
+    },
+    "tv_counter": {
+      "start": 762,
+      "width": 5,
+      "height": 2,
+      "palette_bank": 8,
+      "foreground_rows": [
+        0
+      ]
+    },
+    "galley_sink": {
+      "start": 772,
+      "width": 2,
+      "height": 2,
+      "palette_bank": 8,
+      "foreground_rows": [
+        0
+      ]
+    },
+    "galley_stove": {
+      "start": 780,
+      "width": 2,
+      "height": 2,
+      "palette_bank": 8,
+      "foreground_rows": [
+        0
+      ]
+    },
+    "galley_counter": {
+      "start": 784,
+      "width": 2,
+      "height": 2,
+      "palette_bank": 8,
+      "foreground_rows": [
+        0
+      ]
+    },
+    "fridge": {
+      "start": 792,
+      "width": 1,
+      "height": 3,
+      "palette_bank": 8,
+      "foreground_rows": [
+        0
+      ]
+    },
+    "engine": {
+      "start": 798,
+      "width": 8,
+      "height": 6,
+      "palette_bank": 8,
+      "foreground_rows": [
+        0
+      ]
+    },
+    "machine_panel": {
+      "start": 846,
+      "width": 1,
+      "height": 1,
+      "palette_bank": 8,
+      "foreground_rows": []
+    },
+    "control_cabinet": {
+      "start": 847,
+      "width": 3,
+      "height": 3,
+      "palette_bank": 8,
+      "foreground_rows": [
+        0
+      ]
+    },
+    "engine_pipe": {
+      "start": 856,
+      "width": 1,
+      "height": 2,
+      "palette_bank": 8,
+      "foreground_rows": [
+        0
+      ]
+    },
+    "stairs_up": {
+      "start": 858,
+      "width": 2,
+      "height": 2,
+      "palette_bank": 8,
+      "foreground_rows": []
+    },
+    "stairs_down": {
+      "start": 866,
+      "width": 2,
+      "height": 2,
+      "palette_bank": 8,
+      "foreground_rows": []
+    },
+    "ladder": {
+      "start": 874,
+      "width": 1,
+      "height": 2,
+      "palette_bank": 8,
+      "foreground_rows": []
+    },
+    "door_ship": {
+      "start": 878,
+      "width": 2,
+      "height": 2,
+      "palette_bank": 9,
+      "foreground_rows": []
+    },
+    "life_ring": {
+      "start": 906,
+      "width": 2,
+      "height": 1,
+      "palette_bank": 9,
+      "foreground_rows": []
+    },
+    "hazard": {
+      "start": 546,
+      "width": 1,
+      "height": 1,
+      "palette_bank": 8,
+      "foreground_rows": []
+    },
+    "plant": {
+      "start": 1018,
+      "width": 1,
+      "height": 2,
+      "palette_bank": 10,
+      "foreground_rows": [
+        0
+      ]
+    }
+  },
+  "background_variants": {
+    "rug_green": {
+      "green": {
+        "start": 526,
+        "width": 3,
+        "height": 3,
+        "palette_bank": 12,
+        "foreground_rows": []
+      },
+      "blue": {
+        "start": 535,
+        "width": 3,
+        "height": 3,
+        "palette_bank": 12,
+        "foreground_rows": []
+      }
+    },
+    "painting": {
+      "blue": {
+        "start": 576,
+        "width": 1,
+        "height": 1,
+        "palette_bank": 9,
+        "foreground_rows": []
+      },
+      "gold": {
+        "start": 577,
+        "width": 1,
+        "height": 1,
+        "palette_bank": 9,
+        "foreground_rows": []
+      },
+      "red": {
+        "start": 578,
+        "width": 1,
+        "height": 1,
+        "palette_bank": 9,
+        "foreground_rows": []
+      },
+      "mustard": {
+        "start": 579,
+        "width": 1,
+        "height": 1,
+        "palette_bank": 9,
+        "foreground_rows": []
+      }
+    },
+    "clock": {
+      "metal": {
+        "start": 580,
+        "width": 1,
+        "height": 1,
+        "palette_bank": 8,
+        "foreground_rows": []
+      },
+      "crew": {
+        "start": 581,
+        "width": 1,
+        "height": 1,
+        "palette_bank": 8,
+        "foreground_rows": []
+      }
+    },
+    "bed_blue": {
+      "blue": {
+        "start": 582,
+        "width": 2,
+        "height": 3,
+        "palette_bank": 11,
+        "foreground_rows": [
+          0
+        ]
+      },
+      "gold": {
+        "start": 588,
+        "width": 2,
+        "height": 3,
+        "palette_bank": 11,
+        "foreground_rows": [
+          0
+        ]
+      },
+      "red": {
+        "start": 594,
+        "width": 2,
+        "height": 3,
+        "palette_bank": 11,
+        "foreground_rows": [
+          0
+        ]
+      },
+      "mustard": {
+        "start": 600,
+        "width": 2,
+        "height": 3,
+        "palette_bank": 11,
+        "foreground_rows": [
+          0
+        ]
+      },
+      "crew": {
+        "start": 606,
+        "width": 2,
+        "height": 3,
+        "palette_bank": 11,
+        "foreground_rows": [
+          0
+        ]
+      }
+    },
+    "bed_brown": {
+      "green": {
+        "start": 612,
+        "width": 2,
+        "height": 3,
+        "palette_bank": 10,
+        "foreground_rows": [
+          0
+        ]
+      }
+    },
+    "sofa_yellow": {
+      "gold": {
+        "start": 618,
+        "width": 3,
+        "height": 2,
+        "palette_bank": 6,
+        "foreground_rows": [
+          0
+        ]
+      }
+    },
+    "sofa_orange": {
+      "green": {
+        "start": 624,
+        "width": 2,
+        "height": 3,
+        "palette_bank": 10,
+        "foreground_rows": [
+          0
+        ]
+      }
+    },
+    "bench_blue": {
+      "orange": {
+        "start": 630,
+        "width": 3,
+        "height": 2,
+        "palette_bank": 11,
+        "foreground_rows": [
+          0
+        ]
+      },
+      "officer": {
+        "start": 636,
+        "width": 3,
+        "height": 2,
+        "palette_bank": 11,
+        "foreground_rows": [
+          0
+        ]
+      }
+    },
+    "bench_vertical": {
+      "orange": {
+        "start": 642,
+        "width": 1,
+        "height": 3,
+        "palette_bank": 11,
+        "foreground_rows": [
+          0
+        ]
+      },
+      "officer": {
+        "start": 645,
+        "width": 1,
+        "height": 3,
+        "palette_bank": 11,
+        "foreground_rows": [
+          0
+        ]
+      }
+    },
+    "sofa_vertical": {
+      "gold": {
+        "start": 648,
+        "width": 3,
+        "height": 4,
+        "palette_bank": 6,
+        "foreground_rows": [
+          0
+        ]
+      }
+    },
+    "table": {
+      "blue": {
+        "start": 660,
+        "width": 2,
+        "height": 2,
+        "palette_bank": 10,
+        "foreground_rows": [
+          0
+        ]
+      },
+      "gold": {
+        "start": 664,
+        "width": 2,
+        "height": 2,
+        "palette_bank": 10,
+        "foreground_rows": [
+          0
+        ]
+      },
+      "mustard": {
+        "start": 668,
+        "width": 2,
+        "height": 2,
+        "palette_bank": 10,
+        "foreground_rows": [
+          0
+        ]
+      },
+      "metal": {
+        "start": 672,
+        "width": 2,
+        "height": 2,
+        "palette_bank": 10,
+        "foreground_rows": [
+          0
+        ]
+      }
+    },
+    "table_wood": {
+      "gold": {
+        "start": 676,
+        "width": 2,
+        "height": 2,
+        "palette_bank": 10,
+        "foreground_rows": [
+          0
+        ]
+      }
+    },
+    "galley_table": {
+      "metal": {
+        "start": 680,
+        "width": 3,
+        "height": 5,
+        "palette_bank": 10,
+        "foreground_rows": [
+          0
+        ]
+      }
+    },
+    "table_wide": {
+      "blue": {
+        "start": 695,
+        "width": 4,
+        "height": 2,
+        "palette_bank": 10,
+        "foreground_rows": [
+          0
+        ]
+      }
+    },
+    "table_square": {
+      "mustard": {
+        "start": 703,
+        "width": 3,
+        "height": 3,
+        "palette_bank": 10,
+        "foreground_rows": [
+          0
+        ]
+      }
+    },
+    "chair_red": {
+      "blue": {
+        "start": 712,
+        "width": 1,
+        "height": 1,
+        "palette_bank": 10,
+        "foreground_rows": []
+      },
+      "green": {
+        "start": 713,
+        "width": 1,
+        "height": 1,
+        "palette_bank": 10,
+        "foreground_rows": []
+      }
+    },
+    "chair_green": {
+      "gold": {
+        "start": 714,
+        "width": 1,
+        "height": 1,
+        "palette_bank": 12,
+        "foreground_rows": []
+      }
+    },
+    "chair_yellow": {
+      "mustard": {
+        "start": 715,
+        "width": 1,
+        "height": 1,
+        "palette_bank": 6,
+        "foreground_rows": []
+      }
+    },
+    "chair_orange": {
+      "metal": {
+        "start": 716,
+        "width": 1,
+        "height": 1,
+        "palette_bank": 10,
+        "foreground_rows": []
+      }
+    },
+    "cabinet": {
+      "blue": {
+        "start": 717,
+        "width": 2,
+        "height": 2,
+        "palette_bank": 10,
+        "foreground_rows": [
+          0
+        ]
+      },
+      "gold": {
+        "start": 721,
+        "width": 2,
+        "height": 2,
+        "palette_bank": 10,
+        "foreground_rows": [
+          0
+        ]
+      },
+      "red": {
+        "start": 725,
+        "width": 2,
+        "height": 2,
+        "palette_bank": 10,
+        "foreground_rows": [
+          0
+        ]
+      },
+      "mustard": {
+        "start": 729,
+        "width": 2,
+        "height": 2,
+        "palette_bank": 10,
+        "foreground_rows": [
+          0
+        ]
+      },
+      "green": {
+        "start": 733,
+        "width": 2,
+        "height": 2,
+        "palette_bank": 10,
+        "foreground_rows": [
+          0
+        ]
+      }
+    },
+    "locker_crew": {
+      "crew": {
+        "start": 737,
+        "width": 2,
+        "height": 2,
+        "palette_bank": 8,
+        "foreground_rows": [
+          0
+        ]
+      }
+    },
+    "bin": {
+      "blue": {
+        "start": 741,
+        "width": 1,
+        "height": 1,
+        "palette_bank": 12,
+        "foreground_rows": []
+      },
+      "gold": {
+        "start": 742,
+        "width": 1,
+        "height": 1,
+        "palette_bank": 12,
+        "foreground_rows": []
+      },
+      "red": {
+        "start": 743,
+        "width": 1,
+        "height": 1,
+        "palette_bank": 12,
+        "foreground_rows": []
+      },
+      "mustard": {
+        "start": 744,
+        "width": 1,
+        "height": 1,
+        "palette_bank": 12,
+        "foreground_rows": []
+      },
+      "metal": {
+        "start": 745,
+        "width": 1,
+        "height": 1,
+        "palette_bank": 12,
+        "foreground_rows": []
+      },
+      "green": {
+        "start": 746,
+        "width": 1,
+        "height": 1,
+        "palette_bank": 12,
+        "foreground_rows": []
+      },
+      "crew": {
+        "start": 747,
+        "width": 1,
+        "height": 1,
+        "palette_bank": 12,
+        "foreground_rows": []
+      }
+    },
+    "captain_desk": {
+      "green": {
+        "start": 748,
+        "width": 3,
+        "height": 2,
+        "palette_bank": 10,
+        "foreground_rows": [
+          0
+        ]
+      }
+    },
+    "map_board": {
+      "green": {
+        "start": 754,
+        "width": 2,
+        "height": 1,
+        "palette_bank": 10,
+        "foreground_rows": []
+      }
+    },
+    "desk_white": {
+      "red": {
+        "start": 756,
+        "width": 3,
+        "height": 2,
+        "palette_bank": 8,
+        "foreground_rows": [
+          0
+        ]
+      }
+    },
+    "tv_counter": {
+      "red": {
+        "start": 762,
+        "width": 5,
+        "height": 2,
+        "palette_bank": 8,
+        "foreground_rows": [
+          0
+        ]
+      }
+    },
+    "galley_sink": {
+      "metal": {
+        "start": 772,
+        "width": 2,
+        "height": 2,
+        "palette_bank": 8,
+        "foreground_rows": [
+          0
+        ]
+      },
+      "mustard": {
+        "start": 776,
+        "width": 2,
+        "height": 2,
+        "palette_bank": 8,
+        "foreground_rows": [
+          0
+        ]
+      }
+    },
+    "galley_stove": {
+      "metal": {
+        "start": 780,
+        "width": 2,
+        "height": 2,
+        "palette_bank": 8,
+        "foreground_rows": [
+          0
+        ]
+      }
+    },
+    "galley_counter": {
+      "metal": {
+        "start": 784,
+        "width": 2,
+        "height": 2,
+        "palette_bank": 8,
+        "foreground_rows": [
+          0
+        ]
+      },
+      "green": {
+        "start": 788,
+        "width": 2,
+        "height": 2,
+        "palette_bank": 8,
+        "foreground_rows": [
+          0
+        ]
+      }
+    },
+    "fridge": {
+      "metal": {
+        "start": 792,
+        "width": 1,
+        "height": 3,
+        "palette_bank": 8,
+        "foreground_rows": [
+          0
+        ]
+      },
+      "green": {
+        "start": 795,
+        "width": 1,
+        "height": 3,
+        "palette_bank": 8,
+        "foreground_rows": [
+          0
+        ]
+      }
+    },
+    "engine": {
+      "metal": {
+        "start": 798,
+        "width": 8,
+        "height": 6,
+        "palette_bank": 8,
+        "foreground_rows": [
+          0
+        ]
+      }
+    },
+    "control_cabinet": {
+      "metal": {
+        "start": 847,
+        "width": 3,
+        "height": 3,
+        "palette_bank": 8,
+        "foreground_rows": [
+          0
+        ]
+      }
+    },
+    "engine_pipe": {
+      "metal": {
+        "start": 856,
+        "width": 1,
+        "height": 2,
+        "palette_bank": 8,
+        "foreground_rows": [
+          0
+        ]
+      }
+    },
+    "stairs_up": {
+      "wood": {
+        "start": 858,
+        "width": 2,
+        "height": 2,
+        "palette_bank": 8,
+        "foreground_rows": []
+      },
+      "metal": {
+        "start": 862,
+        "width": 2,
+        "height": 2,
+        "palette_bank": 8,
+        "foreground_rows": []
+      }
+    },
+    "stairs_down": {
+      "wood": {
+        "start": 866,
+        "width": 2,
+        "height": 2,
+        "palette_bank": 8,
+        "foreground_rows": []
+      },
+      "metal": {
+        "start": 870,
+        "width": 2,
+        "height": 2,
+        "palette_bank": 8,
+        "foreground_rows": []
+      }
+    },
+    "ladder": {
+      "metal": {
+        "start": 874,
+        "width": 1,
+        "height": 2,
+        "palette_bank": 8,
+        "foreground_rows": []
+      },
+      "mustard": {
+        "start": 876,
+        "width": 1,
+        "height": 2,
+        "palette_bank": 8,
+        "foreground_rows": []
+      }
+    },
+    "door_ship": {
+      "orange": {
+        "start": 878,
+        "width": 2,
+        "height": 2,
+        "palette_bank": 9,
+        "foreground_rows": []
+      },
+      "officer": {
+        "start": 882,
+        "width": 2,
+        "height": 2,
+        "palette_bank": 9,
+        "foreground_rows": []
+      },
+      "blue": {
+        "start": 886,
+        "width": 2,
+        "height": 2,
+        "palette_bank": 9,
+        "foreground_rows": []
+      },
+      "gold": {
+        "start": 890,
+        "width": 2,
+        "height": 2,
+        "palette_bank": 9,
+        "foreground_rows": []
+      },
+      "red": {
+        "start": 894,
+        "width": 2,
+        "height": 2,
+        "palette_bank": 9,
+        "foreground_rows": []
+      },
+      "mustard": {
+        "start": 898,
+        "width": 2,
+        "height": 2,
+        "palette_bank": 9,
+        "foreground_rows": []
+      },
+      "green": {
+        "start": 902,
+        "width": 2,
+        "height": 2,
+        "palette_bank": 9,
+        "foreground_rows": []
+      }
+    },
+    "life_ring": {
+      "orange": {
+        "start": 906,
+        "width": 2,
+        "height": 1,
+        "palette_bank": 9,
+        "foreground_rows": []
+      }
+    },
+    "plant": {
+      "orange": {
+        "start": 1018,
+        "width": 1,
+        "height": 2,
+        "palette_bank": 10,
+        "foreground_rows": [
+          0
+        ]
+      }
+    }
+  },
+  "warp_variants": {
+    "512": 908,
+    "513": 909,
+    "514": 910,
+    "515": 911,
+    "516": 912,
+    "517": 913,
+    "518": 914,
+    "519": 915,
+    "520": 916,
+    "521": 917,
+    "522": 918,
+    "523": 919,
+    "524": 920,
+    "525": 921,
+    "544": 922,
+    "545": 923,
+    "858": 924,
+    "859": 925,
+    "860": 926,
+    "861": 927,
+    "862": 928,
+    "863": 929,
+    "864": 930,
+    "865": 931,
+    "866": 932,
+    "867": 933,
+    "868": 934,
+    "869": 935,
+    "870": 936,
+    "871": 937,
+    "872": 938,
+    "873": 939,
+    "874": 940,
+    "875": 941,
+    "876": 942,
+    "877": 943,
+    "878": 944,
+    "879": 945,
+    "880": 946,
+    "881": 947,
+    "882": 948,
+    "883": 949,
+    "884": 950,
+    "885": 951,
+    "886": 952,
+    "887": 953,
+    "888": 954,
+    "889": 955,
+    "890": 956,
+    "891": 957,
+    "892": 958,
+    "893": 959,
+    "894": 960,
+    "895": 961,
+    "896": 962,
+    "897": 963,
+    "898": 964,
+    "899": 965,
+    "900": 966,
+    "901": 967,
+    "902": 968,
+    "903": 969,
+    "904": 970,
+    "905": 971
+  },
+  "south_facing_warp_variants": {
+    "512": 972,
+    "908": 972,
+    "513": 973,
+    "909": 973,
+    "514": 974,
+    "910": 974,
+    "515": 975,
+    "911": 975,
+    "516": 976,
+    "912": 976,
+    "517": 977,
+    "913": 977,
+    "518": 978,
+    "914": 978,
+    "519": 979,
+    "915": 979,
+    "520": 980,
+    "916": 980,
+    "521": 981,
+    "917": 981,
+    "522": 982,
+    "918": 982,
+    "523": 983,
+    "919": 983,
+    "524": 984,
+    "920": 984,
+    "525": 985,
+    "921": 985,
+    "544": 986,
+    "922": 986,
+    "545": 987,
+    "923": 987,
+    "858": 988,
+    "924": 988,
+    "859": 989,
+    "925": 989,
+    "860": 990,
+    "926": 990,
+    "861": 991,
+    "927": 991,
+    "862": 992,
+    "928": 992,
+    "863": 993,
+    "929": 993,
+    "864": 994,
+    "930": 994,
+    "865": 995,
+    "931": 995,
+    "866": 996,
+    "932": 996,
+    "867": 997,
+    "933": 997,
+    "868": 998,
+    "934": 998,
+    "869": 999,
+    "935": 999,
+    "870": 1000,
+    "936": 1000,
+    "871": 1001,
+    "937": 1001,
+    "872": 1002,
+    "938": 1002,
+    "873": 1003,
+    "939": 1003,
+    "880": 1004,
+    "946": 1004,
+    "881": 1005,
+    "947": 1005,
+    "884": 1006,
+    "950": 1006,
+    "885": 1007,
+    "951": 1007,
+    "888": 1008,
+    "954": 1008,
+    "889": 1009,
+    "955": 1009,
+    "892": 1010,
+    "958": 1010,
+    "893": 1011,
+    "959": 1011,
+    "896": 1012,
+    "962": 1012,
+    "897": 1013,
+    "963": 1013,
+    "900": 1014,
+    "966": 1014,
+    "901": 1015,
+    "967": 1015,
+    "904": 1016,
+    "970": 1016,
+    "905": 1017,
+    "971": 1017
+  },
+  "glyphs": 411,
+  "primary_glyphs": 411,
+  "secondary_glyphs": 0,
+  "metatiles": 508,
+  "primary_symbol": "gTileset_HgssSSAquaPrimary",
+  "secondary_symbol": "gTileset_HgssSSAqua",
+  "palette_banks": [
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "source": "Original hand-authored indexed GBA pixel motifs after actual HGSS S.S.Aqua full-map references; no reference pixels imported",
+  "reference_names": [
+    "SS_Aqua_1F_Rooms_HGSS.png",
+    "SS_Aqua_B1F_HGSS.png",
+    "SS_Aqua_Captain_Cabin_HGSS.png",
+    "SS_Aqua_1F_HGSS.png"
+  ],
+  "layer_rule": "Opaque ground beneath every fixture. Only named upper overhang rows draw above Joe; body rows use COVERED below him.",
+  "movement_contract": "This asset generator changes no collision, map ID, event, warp position or story state. Source-shaped map generator owns those."
+}

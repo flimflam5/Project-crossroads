@@ -1,0 +1,16 @@
+Normal old battery-save Continue: EcruteakCity_BellTower_9F (7, 3) PASS
+Actual survey desk enables RAM-only water access without changing saved flags: PASS
+Actual controller visits/return, healing and retained starter/party: PASS 0 target maps 18 transitions
+lighthouse-1F-component-0-normal-save PASS ('OlivineCity_Lighthouse_1F', (8, 12)) -> OlivineCity_Lighthouse_1F (8, 12)
+lighthouse-2F-component-0-normal-save PASS ('OlivineCity_Lighthouse_2F', (8, 13)) -> OlivineCity_Lighthouse_2F (8, 13)
+lighthouse-3F-component-0-normal-save PASS ('OlivineCity_Lighthouse_3F', (13, 8)) -> OlivineCity_Lighthouse_3F (13, 8)
+lighthouse-3F-component-5-normal-save PASS ('OlivineCity_Lighthouse_3F', (8, 16)) -> OlivineCity_Lighthouse_3F (8, 16)
+lighthouse-4F-component-0-normal-save PASS ('OlivineCity_Lighthouse_4F', (12, 9)) -> OlivineCity_Lighthouse_4F (12, 9)
+lighthouse-4F-component-3-normal-save PASS ('OlivineCity_Lighthouse_4F', (5, 8)) -> OlivineCity_Lighthouse_4F (5, 8)
+lighthouse-5F-component-0-normal-save PASS ('OlivineCity_Lighthouse_5F', (8, 13)) -> OlivineCity_Lighthouse_5F (8, 13)
+lighthouse-6F-component-0-normal-save PASS ('OlivineCity_Lighthouse_6F', (11, 13)) -> OlivineCity_Lighthouse_6F (11, 13)
+lighthouse-Balcony-component-0-normal-save PASS ('OlivineCity_Lighthouse_Balcony', (14, 9)) -> OlivineCity_Lighthouse_Balcony (14, 9)
+lighthouse-Elevator-component-None-normal-save PASS ('OlivineCity_Lighthouse_Elevator', (4, 4)) -> OlivineCity_Lighthouse_Elevator (4, 4)
+lighthouse-selected-OlivineCity_Lighthouse_1F-normal-save PASS ('OlivineCity_Lighthouse_Elevator', (2, 3)) -> OlivineCity_Lighthouse_Elevator (2, 3)
+lighthouse-selected-OlivineCity_Lighthouse_6F-normal-save PASS ('OlivineCity_Lighthouse_Elevator', (5, 3)) -> OlivineCity_Lighthouse_Elevator (5, 3)
+Lighthouse details PASS: 12 normal Save/cold Continue cases; 5 special journeys

@@ -1,0 +1,7422 @@
+{
+  "scope": "Seven physical docked HGSS S.S. Aqua maps; no voyages/plot imported",
+  "maps": [
+    {
+      "name": "SSAqua_1F",
+      "id": "MAP_SS_AQUA_1F",
+      "source_header": "MAP_SS_AQUA_1F",
+      "source": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0171_P01R0301.bin",
+        "matrix_blob_sha": "cd36735e800ea0cba3d62f4752ab8a0eb8dd200b",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/278_P01R0301.json",
+        "events_blob_sha": "1bc85b5ceb1f1a89d602424311f70832438ac034",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "crop_origin": [
+        0,
+        0
+      ],
+      "dimensions": [
+        57,
+        21
+      ],
+      "source_public_cells": 500,
+      "native_public_cells": 501,
+      "native_components": [
+        {
+          "cells": 342,
+          "doors": [
+            [
+              13,
+              8
+            ],
+            [
+              13,
+              14
+            ],
+            [
+              14,
+              8
+            ],
+            [
+              14,
+              14
+            ],
+            [
+              19,
+              8
+            ],
+            [
+              19,
+              14
+            ],
+            [
+              20,
+              8
+            ],
+            [
+              20,
+              14
+            ],
+            [
+              22,
+              19
+            ],
+            [
+              23,
+              19
+            ],
+            [
+              24,
+              3
+            ],
+            [
+              24,
+              19
+            ],
+            [
+              25,
+              3
+            ],
+            [
+              25,
+              19
+            ],
+            [
+              26,
+              19
+            ],
+            [
+              30,
+              8
+            ],
+            [
+              30,
+              14
+            ],
+            [
+              31,
+              8
+            ],
+            [
+              31,
+              14
+            ],
+            [
+              36,
+              8
+            ],
+            [
+              36,
+              14
+            ],
+            [
+              37,
+              8
+            ],
+            [
+              37,
+              14
+            ]
+          ]
+        },
+        {
+          "cells": 159,
+          "doors": [
+            [
+              42,
+              8
+            ],
+            [
+              42,
+              9
+            ],
+            [
+              43,
+              8
+            ],
+            [
+              43,
+              9
+            ],
+            [
+              49,
+              15
+            ],
+            [
+              50,
+              15
+            ]
+          ]
+        }
+      ],
+      "map_group": 76,
+      "map_num": 43,
+      "source_warps": [
+        {
+          "x": 24,
+          "z": 19,
+          "header": "MAP_SS_AQUA_OLIVINE_PORT_EXTERIOR",
+          "anchor": 1,
+          "y": 0
+        },
+        {
+          "x": 13,
+          "z": 14,
+          "header": "MAP_SS_AQUA_1F_SOUTHWEST_ROOMS",
+          "anchor": 0,
+          "y": 0
+        },
+        {
+          "x": 19,
+          "z": 14,
+          "header": "MAP_SS_AQUA_1F_SOUTHWEST_ROOMS",
+          "anchor": 1,
+          "y": 0
+        },
+        {
+          "x": 30,
+          "z": 14,
+          "header": "MAP_SS_AQUA_1F_SOUTHEAST_ROOMS",
+          "anchor": 0,
+          "y": 0
+        },
+        {
+          "x": 36,
+          "z": 14,
+          "header": "MAP_SS_AQUA_1F_SOUTHEAST_ROOMS",
+          "anchor": 1,
+          "y": 0
+        },
+        {
+          "x": 13,
+          "z": 8,
+          "header": "MAP_SS_AQUA_1F_NORTHWEST_ROOMS",
+          "anchor": 0,
+          "y": 0
+        },
+        {
+          "x": 19,
+          "z": 8,
+          "header": "MAP_SS_AQUA_1F_NORTHWEST_ROOMS",
+          "anchor": 1,
+          "y": 0
+        },
+        {
+          "x": 30,
+          "z": 8,
+          "header": "MAP_SS_AQUA_1F_NORTHEAST_ROOMS",
+          "anchor": 0,
+          "y": 0
+        },
+        {
+          "x": 36,
+          "z": 8,
+          "header": "MAP_SS_AQUA_1F_NORTHEAST_ROOMS",
+          "anchor": 1,
+          "y": 0
+        },
+        {
+          "x": 24,
+          "z": 3,
+          "header": "MAP_SS_AQUA_B1F",
+          "anchor": 0,
+          "y": 0
+        },
+        {
+          "x": 42,
+          "z": 9,
+          "header": "MAP_SS_AQUA_B1F",
+          "anchor": 1,
+          "y": 0
+        },
+        {
+          "x": 49,
+          "z": 15,
+          "header": "MAP_SS_AQUA_CAPTAIN_ROOM",
+          "anchor": 0,
+          "y": 0
+        },
+        {
+          "x": 24,
+          "z": 19,
+          "header": "MAP_SS_AQUA_VERMILION_PORT_EXTERIOR",
+          "anchor": 1,
+          "y": 0
+        }
+      ],
+      "native_warps": [
+        {
+          "x": 24,
+          "y": 19,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_PORT_QUAY",
+          "dest_warp_id": "4"
+        },
+        {
+          "x": 13,
+          "y": 14,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_SOUTHWEST_CABINS",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 19,
+          "y": 14,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_SOUTHWEST_CABINS",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 30,
+          "y": 14,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_SOUTHEAST_CABINS",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 36,
+          "y": 14,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_SOUTHEAST_CABINS",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 13,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_NORTHWEST_CABINS",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 19,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_NORTHWEST_CABINS",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 30,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_NORTHEAST_CABINS",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 36,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_NORTHEAST_CABINS",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 24,
+          "y": 3,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_B1F",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 42,
+          "y": 9,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_B1F",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 49,
+          "y": 15,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_CAPTAIN_ROOM",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 25,
+          "y": 19,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_PORT_QUAY",
+          "dest_warp_id": "5"
+        },
+        {
+          "x": 22,
+          "y": 19,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_PORT_QUAY",
+          "dest_warp_id": "4"
+        },
+        {
+          "x": 23,
+          "y": 19,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_PORT_QUAY",
+          "dest_warp_id": "4"
+        },
+        {
+          "x": 26,
+          "y": 19,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_PORT_QUAY",
+          "dest_warp_id": "5"
+        },
+        {
+          "x": 42,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_B1F",
+          "dest_warp_id": "2"
+        },
+        {
+          "x": 14,
+          "y": 14,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_SOUTHWEST_CABINS",
+          "dest_warp_id": "2"
+        },
+        {
+          "x": 20,
+          "y": 14,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_SOUTHWEST_CABINS",
+          "dest_warp_id": "3"
+        },
+        {
+          "x": 31,
+          "y": 14,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_SOUTHEAST_CABINS",
+          "dest_warp_id": "2"
+        },
+        {
+          "x": 37,
+          "y": 14,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_SOUTHEAST_CABINS",
+          "dest_warp_id": "3"
+        },
+        {
+          "x": 14,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_NORTHWEST_CABINS",
+          "dest_warp_id": "2"
+        },
+        {
+          "x": 20,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_NORTHWEST_CABINS",
+          "dest_warp_id": "3"
+        },
+        {
+          "x": 31,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_NORTHEAST_CABINS",
+          "dest_warp_id": "2"
+        },
+        {
+          "x": 37,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_NORTHEAST_CABINS",
+          "dest_warp_id": "3"
+        },
+        {
+          "x": 50,
+          "y": 15,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_CAPTAIN_ROOM",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 43,
+          "y": 9,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_B1F",
+          "dest_warp_id": "3"
+        },
+        {
+          "x": 43,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_B1F",
+          "dest_warp_id": "4"
+        },
+        {
+          "x": 25,
+          "y": 3,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_B1F",
+          "dest_warp_id": "5"
+        }
+      ],
+      "aliases": [
+        {
+          "native_index": 12,
+          "source_parent": 0,
+          "x": 25,
+          "y": 19,
+          "reason": "Every visible public gangway leaf / source right stair row operates"
+        },
+        {
+          "native_index": 13,
+          "source_parent": 0,
+          "x": 22,
+          "y": 19,
+          "reason": "Every visible public gangway leaf / source right stair row operates"
+        },
+        {
+          "native_index": 14,
+          "source_parent": 0,
+          "x": 23,
+          "y": 19,
+          "reason": "Every visible public gangway leaf / source right stair row operates"
+        },
+        {
+          "native_index": 15,
+          "source_parent": 0,
+          "x": 26,
+          "y": 19,
+          "reason": "Every visible public gangway leaf / source right stair row operates"
+        },
+        {
+          "native_index": 16,
+          "source_parent": 10,
+          "x": 42,
+          "y": 8,
+          "reason": "Every visible public gangway leaf / source right stair row operates"
+        },
+        {
+          "native_index": 17,
+          "source_parent": 1,
+          "x": 14,
+          "y": 14,
+          "reason": "Second visible native hatch/stair leaf; reciprocal destination preserved"
+        },
+        {
+          "native_index": 18,
+          "source_parent": 2,
+          "x": 20,
+          "y": 14,
+          "reason": "Second visible native hatch/stair leaf; reciprocal destination preserved"
+        },
+        {
+          "native_index": 19,
+          "source_parent": 3,
+          "x": 31,
+          "y": 14,
+          "reason": "Second visible native hatch/stair leaf; reciprocal destination preserved"
+        },
+        {
+          "native_index": 20,
+          "source_parent": 4,
+          "x": 37,
+          "y": 14,
+          "reason": "Second visible native hatch/stair leaf; reciprocal destination preserved"
+        },
+        {
+          "native_index": 21,
+          "source_parent": 5,
+          "x": 14,
+          "y": 8,
+          "reason": "Second visible native hatch/stair leaf; reciprocal destination preserved"
+        },
+        {
+          "native_index": 22,
+          "source_parent": 6,
+          "x": 20,
+          "y": 8,
+          "reason": "Second visible native hatch/stair leaf; reciprocal destination preserved"
+        },
+        {
+          "native_index": 23,
+          "source_parent": 7,
+          "x": 31,
+          "y": 8,
+          "reason": "Second visible native hatch/stair leaf; reciprocal destination preserved"
+        },
+        {
+          "native_index": 24,
+          "source_parent": 8,
+          "x": 37,
+          "y": 8,
+          "reason": "Second visible native hatch/stair leaf; reciprocal destination preserved"
+        },
+        {
+          "native_index": 25,
+          "source_parent": 11,
+          "x": 50,
+          "y": 15,
+          "reason": "Second visible native hatch/stair leaf; reciprocal destination preserved"
+        },
+        {
+          "native_index": 26,
+          "source_parent": 10,
+          "x": 43,
+          "y": 9,
+          "reason": "Second visible native hatch/stair leaf; reciprocal destination preserved"
+        },
+        {
+          "native_index": 27,
+          "source_parent": 10,
+          "x": 43,
+          "y": 8,
+          "reason": "Second visible native hatch/stair leaf; reciprocal destination preserved"
+        },
+        {
+          "native_index": 28,
+          "source_parent": 9,
+          "x": 25,
+          "y": 3,
+          "reason": "Second visible native hatch/stair leaf; reciprocal destination preserved"
+        }
+      ],
+      "collision_adaptations": [
+        {
+          "x": 43,
+          "y": 3,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "control_cabinet"
+        },
+        {
+          "x": 44,
+          "y": 3,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "control_cabinet"
+        },
+        {
+          "x": 49,
+          "y": 3,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "control_cabinet"
+        },
+        {
+          "x": 50,
+          "y": 3,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "control_cabinet"
+        },
+        {
+          "x": 14,
+          "y": 8,
+          "before_blocked": true,
+          "after_blocked": false,
+          "reason": "operable source doorway/stair/gangway"
+        },
+        {
+          "x": 20,
+          "y": 8,
+          "before_blocked": true,
+          "after_blocked": false,
+          "reason": "operable source doorway/stair/gangway"
+        },
+        {
+          "x": 31,
+          "y": 8,
+          "before_blocked": true,
+          "after_blocked": false,
+          "reason": "operable source doorway/stair/gangway"
+        },
+        {
+          "x": 37,
+          "y": 8,
+          "before_blocked": true,
+          "after_blocked": false,
+          "reason": "operable source doorway/stair/gangway"
+        },
+        {
+          "x": 50,
+          "y": 15,
+          "before_blocked": true,
+          "after_blocked": false,
+          "reason": "operable source doorway/stair/gangway"
+        }
+      ],
+      "fixtures": [
+        {
+          "kind": "bench_vertical",
+          "theme": "orange",
+          "anchor": [
+            3,
+            7
+          ],
+          "size": [
+            1,
+            3
+          ],
+          "solid_body_cells": [
+            [
+              3,
+              8
+            ],
+            [
+              3,
+              9
+            ]
+          ],
+          "overhang_rows": 1,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "bench_vertical",
+          "theme": "orange",
+          "anchor": [
+            5,
+            7
+          ],
+          "size": [
+            1,
+            3
+          ],
+          "solid_body_cells": [
+            [
+              5,
+              8
+            ],
+            [
+              5,
+              9
+            ]
+          ],
+          "overhang_rows": 1,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "bench_vertical",
+          "theme": "orange",
+          "anchor": [
+            3,
+            12
+          ],
+          "size": [
+            1,
+            3
+          ],
+          "solid_body_cells": [
+            [
+              3,
+              13
+            ],
+            [
+              3,
+              14
+            ]
+          ],
+          "overhang_rows": 1,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "bench_vertical",
+          "theme": "orange",
+          "anchor": [
+            5,
+            12
+          ],
+          "size": [
+            1,
+            3
+          ],
+          "solid_body_cells": [
+            [
+              5,
+              13
+            ],
+            [
+              5,
+              14
+            ]
+          ],
+          "overhang_rows": 1,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "bench_blue",
+          "theme": "orange",
+          "anchor": [
+            4,
+            3
+          ],
+          "size": [
+            3,
+            2
+          ],
+          "solid_body_cells": [
+            [
+              4,
+              4
+            ],
+            [
+              5,
+              4
+            ],
+            [
+              6,
+              4
+            ]
+          ],
+          "overhang_rows": 1,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "bench_blue",
+          "theme": "orange",
+          "anchor": [
+            4,
+            18
+          ],
+          "size": [
+            3,
+            2
+          ],
+          "solid_body_cells": [
+            [
+              4,
+              19
+            ],
+            [
+              5,
+              19
+            ],
+            [
+              6,
+              19
+            ]
+          ],
+          "overhang_rows": 1,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "plant",
+          "theme": "orange",
+          "anchor": [
+            1,
+            4
+          ],
+          "size": [
+            1,
+            2
+          ],
+          "solid_body_cells": [
+            [
+              1,
+              5
+            ]
+          ],
+          "overhang_rows": 1,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "plant",
+          "theme": "orange",
+          "anchor": [
+            1,
+            16
+          ],
+          "size": [
+            1,
+            2
+          ],
+          "solid_body_cells": [
+            [
+              1,
+              17
+            ]
+          ],
+          "overhang_rows": 1,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "porthole",
+          "theme": "orange",
+          "anchor": [
+            3,
+            1
+          ],
+          "size": [
+            1,
+            2
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "porthole",
+          "theme": "orange",
+          "anchor": [
+            5,
+            1
+          ],
+          "size": [
+            1,
+            2
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "porthole",
+          "theme": "orange",
+          "anchor": [
+            7,
+            1
+          ],
+          "size": [
+            1,
+            2
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "porthole",
+          "theme": "orange",
+          "anchor": [
+            24,
+            1
+          ],
+          "size": [
+            1,
+            2
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "porthole",
+          "theme": "orange",
+          "anchor": [
+            26,
+            1
+          ],
+          "size": [
+            1,
+            2
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "life_ring",
+          "theme": "orange",
+          "anchor": [
+            3,
+            2
+          ],
+          "size": [
+            2,
+            1
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "life_ring",
+          "theme": "orange",
+          "anchor": [
+            7,
+            2
+          ],
+          "size": [
+            2,
+            1
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "control_cabinet",
+          "theme": "metal",
+          "anchor": [
+            42,
+            1
+          ],
+          "size": [
+            3,
+            3
+          ],
+          "solid_body_cells": [
+            [
+              42,
+              2
+            ],
+            [
+              43,
+              2
+            ],
+            [
+              44,
+              2
+            ],
+            [
+              42,
+              3
+            ],
+            [
+              43,
+              3
+            ],
+            [
+              44,
+              3
+            ]
+          ],
+          "overhang_rows": 1,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "control_cabinet",
+          "theme": "metal",
+          "anchor": [
+            48,
+            1
+          ],
+          "size": [
+            3,
+            3
+          ],
+          "solid_body_cells": [
+            [
+              48,
+              2
+            ],
+            [
+              49,
+              2
+            ],
+            [
+              50,
+              2
+            ],
+            [
+              48,
+              3
+            ],
+            [
+              49,
+              3
+            ],
+            [
+              50,
+              3
+            ]
+          ],
+          "overhang_rows": 1,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "ladder",
+          "theme": "metal",
+          "anchor": [
+            41,
+            9
+          ],
+          "size": [
+            1,
+            2
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "door_ship",
+          "theme": "orange",
+          "anchor": [
+            13,
+            14
+          ],
+          "size": [
+            2,
+            1
+          ],
+          "source_art_rows": [
+            1
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "South-facing interior sill projection; avoids painting a tall opaque door on public floor"
+        },
+        {
+          "kind": "door_ship",
+          "theme": "orange",
+          "anchor": [
+            19,
+            14
+          ],
+          "size": [
+            2,
+            1
+          ],
+          "source_art_rows": [
+            1
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "South-facing interior sill projection; avoids painting a tall opaque door on public floor"
+        },
+        {
+          "kind": "door_ship",
+          "theme": "orange",
+          "anchor": [
+            30,
+            14
+          ],
+          "size": [
+            2,
+            1
+          ],
+          "source_art_rows": [
+            1
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "South-facing interior sill projection; avoids painting a tall opaque door on public floor"
+        },
+        {
+          "kind": "door_ship",
+          "theme": "orange",
+          "anchor": [
+            36,
+            14
+          ],
+          "size": [
+            2,
+            1
+          ],
+          "source_art_rows": [
+            1
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "South-facing interior sill projection; avoids painting a tall opaque door on public floor"
+        },
+        {
+          "kind": "door_ship",
+          "theme": "orange",
+          "anchor": [
+            13,
+            7
+          ],
+          "size": [
+            2,
+            2
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "door_ship",
+          "theme": "orange",
+          "anchor": [
+            19,
+            7
+          ],
+          "size": [
+            2,
+            2
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "door_ship",
+          "theme": "orange",
+          "anchor": [
+            30,
+            7
+          ],
+          "size": [
+            2,
+            2
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "door_ship",
+          "theme": "orange",
+          "anchor": [
+            36,
+            7
+          ],
+          "size": [
+            2,
+            2
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "stairs_down",
+          "theme": "metal",
+          "anchor": [
+            24,
+            2
+          ],
+          "size": [
+            2,
+            2
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "stairs_down",
+          "theme": "metal",
+          "anchor": [
+            42,
+            8
+          ],
+          "size": [
+            2,
+            2
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "door_ship",
+          "theme": "officer",
+          "anchor": [
+            49,
+            14
+          ],
+          "size": [
+            2,
+            2
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        }
+      ],
+      "props": [
+        {
+          "chunk": 0,
+          "instance": 0,
+          "model": 23,
+          "source_anchor": [
+            1.5,
+            17.5
+          ],
+          "source_world_anchor": [
+            1,
+            17
+          ],
+          "native_anchor": [
+            1,
+            16
+          ],
+          "render_kind": "plant",
+          "native_size": [
+            1,
+            2
+          ],
+          "projection": "Original GBA flat art follows complete-room raster; DS model origin/height is not its flat visual top-left",
+          "semantic_limit": null
+        },
+        {
+          "chunk": 0,
+          "instance": 1,
+          "model": 23,
+          "source_anchor": [
+            1.5,
+            5.5
+          ],
+          "source_world_anchor": [
+            1,
+            5
+          ],
+          "native_anchor": [
+            1,
+            4
+          ],
+          "render_kind": "plant",
+          "native_size": [
+            1,
+            2
+          ],
+          "projection": "Original GBA flat art follows complete-room raster; DS model origin/height is not its flat visual top-left",
+          "semantic_limit": null
+        },
+        {
+          "chunk": 0,
+          "instance": 2,
+          "model": 162,
+          "source_anchor": [
+            14.125,
+            8.246185302734375
+          ],
+          "source_world_anchor": [
+            14,
+            8
+          ],
+          "native_anchor": [
+            13,
+            7
+          ],
+          "render_kind": "door_ship",
+          "native_size": [
+            2,
+            2
+          ],
+          "projection": "Original GBA flat art follows complete-room raster; DS model origin/height is not its flat visual top-left",
+          "semantic_limit": null
+        },
+        {
+          "chunk": 0,
+          "instance": 3,
+          "model": 162,
+          "source_anchor": [
+            20.124984741210938,
+            8.246185302734375
+          ],
+          "source_world_anchor": [
+            20,
+            8
+          ],
+          "native_anchor": [
+            19,
+            7
+          ],
+          "render_kind": "door_ship",
+          "native_size": [
+            2,
+            2
+          ],
+          "projection": "Original GBA flat art follows complete-room raster; DS model origin/height is not its flat visual top-left",
+          "semantic_limit": null
+        },
+        {
+          "chunk": 0,
+          "instance": 4,
+          "model": 162,
+          "source_anchor": [
+            31.125,
+            8.246185302734375
+          ],
+          "source_world_anchor": [
+            31,
+            8
+          ],
+          "native_anchor": [
+            30,
+            7
+          ],
+          "render_kind": "door_ship",
+          "native_size": [
+            2,
+            2
+          ],
+          "projection": "Original GBA flat art follows complete-room raster; DS model origin/height is not its flat visual top-left",
+          "semantic_limit": null
+        },
+        {
+          "chunk": 1,
+          "instance": 0,
+          "model": 162,
+          "source_anchor": [
+            18.125,
+            15.246185302734375
+          ],
+          "source_world_anchor": [
+            50,
+            15
+          ],
+          "native_anchor": [
+            49,
+            14
+          ],
+          "render_kind": "door_ship",
+          "native_size": [
+            2,
+            2
+          ],
+          "projection": "Original GBA flat art follows complete-room raster; DS model origin/height is not its flat visual top-left",
+          "semantic_limit": null
+        },
+        {
+          "chunk": 1,
+          "instance": 1,
+          "model": 162,
+          "source_anchor": [
+            5.125,
+            8.371185302734375
+          ],
+          "source_world_anchor": [
+            37,
+            8
+          ],
+          "native_anchor": [
+            36,
+            7
+          ],
+          "render_kind": "door_ship",
+          "native_size": [
+            2,
+            2
+          ],
+          "projection": "Original GBA flat art follows complete-room raster; DS model origin/height is not its flat visual top-left",
+          "semantic_limit": null
+        }
+      ],
+      "actors": [
+        {
+          "graphics_id": "OBJ_EVENT_GFX_SAILOR",
+          "x": 25,
+          "y": 17,
+          "elevation": 3,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "SSAqua_GangwayCrew",
+          "flag": "0"
+        },
+        {
+          "graphics_id": "OBJ_EVENT_GFX_SAILOR",
+          "x": 7,
+          "y": 11,
+          "elevation": 3,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "SSAqua_LoungeCrew",
+          "flag": "0"
+        },
+        {
+          "graphics_id": "OBJ_EVENT_GFX_SAILOR",
+          "x": 52,
+          "y": 17,
+          "elevation": 3,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "SSAqua_OfficerCrew",
+          "flag": "0"
+        }
+      ],
+      "services": [],
+      "runtime": "PENDING exact delivery-ROM gameplay",
+      "owner_visual_acceptance": "PENDING"
+    },
+    {
+      "name": "SSAqua_CaptainRoom",
+      "id": "MAP_SS_AQUA_CAPTAIN_ROOM",
+      "source_header": "MAP_SS_AQUA_CAPTAIN_ROOM",
+      "source": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0172_P01R0302.bin",
+        "matrix_blob_sha": "e888a134c4b18baa1ca04ba530e7773e137fb6e3",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/279_P01R0302.json",
+        "events_blob_sha": "6c7138df2adce0f618797e932e128022a7ef8b3e",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "crop_origin": [
+        0,
+        0
+      ],
+      "dimensions": [
+        14,
+        13
+      ],
+      "source_public_cells": 89,
+      "native_public_cells": 86,
+      "native_components": [
+        {
+          "cells": 86,
+          "doors": [
+            [
+              9,
+              11
+            ],
+            [
+              10,
+              11
+            ]
+          ]
+        }
+      ],
+      "map_group": 76,
+      "map_num": 44,
+      "source_warps": [
+        {
+          "x": 9,
+          "z": 11,
+          "header": "MAP_SS_AQUA_1F",
+          "anchor": 11,
+          "y": 0
+        }
+      ],
+      "native_warps": [
+        {
+          "x": 9,
+          "y": 11,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_1F",
+          "dest_warp_id": "11"
+        },
+        {
+          "x": 10,
+          "y": 11,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_1F",
+          "dest_warp_id": "25"
+        }
+      ],
+      "aliases": [
+        {
+          "native_index": 1,
+          "source_parent": 0,
+          "x": 10,
+          "y": 11,
+          "reason": "Second visible native hatch/stair leaf; reciprocal destination preserved"
+        }
+      ],
+      "collision_adaptations": [
+        {
+          "x": 1,
+          "y": 4,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_brown"
+        },
+        {
+          "x": 2,
+          "y": 4,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_brown"
+        },
+        {
+          "x": 1,
+          "y": 5,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_brown"
+        }
+      ],
+      "fixtures": [
+        {
+          "kind": "captain_desk",
+          "theme": "green",
+          "anchor": [
+            8,
+            5
+          ],
+          "size": [
+            3,
+            2
+          ],
+          "solid_body_cells": [
+            [
+              8,
+              5
+            ],
+            [
+              9,
+              5
+            ],
+            [
+              10,
+              5
+            ],
+            [
+              8,
+              6
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              10,
+              6
+            ]
+          ],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "bed_brown",
+          "theme": "green",
+          "anchor": [
+            1,
+            3
+          ],
+          "size": [
+            2,
+            3
+          ],
+          "solid_body_cells": [
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              5
+            ]
+          ],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "cabinet",
+          "theme": "green",
+          "anchor": [
+            1,
+            1
+          ],
+          "size": [
+            2,
+            2
+          ],
+          "solid_body_cells": [
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "overhang_rows": 1,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "galley_counter",
+          "theme": "green",
+          "anchor": [
+            5,
+            1
+          ],
+          "size": [
+            2,
+            2
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "fridge",
+          "theme": "green",
+          "anchor": [
+            7,
+            1
+          ],
+          "size": [
+            1,
+            3
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "map_board",
+          "theme": "green",
+          "anchor": [
+            5,
+            1
+          ],
+          "size": [
+            2,
+            1
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "window",
+          "theme": "green",
+          "anchor": [
+            3,
+            1
+          ],
+          "size": [
+            1,
+            2
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "window",
+          "theme": "green",
+          "anchor": [
+            10,
+            1
+          ],
+          "size": [
+            1,
+            2
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "window",
+          "theme": "green",
+          "anchor": [
+            12,
+            1
+          ],
+          "size": [
+            1,
+            2
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "bin",
+          "theme": "green",
+          "anchor": [
+            8,
+            4
+          ],
+          "size": [
+            1,
+            1
+          ],
+          "solid_body_cells": [
+            [
+              8,
+              4
+            ]
+          ],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "sofa_orange",
+          "theme": "green",
+          "anchor": [
+            1,
+            9
+          ],
+          "size": [
+            2,
+            3
+          ],
+          "solid_body_cells": [
+            [
+              1,
+              9
+            ],
+            [
+              2,
+              9
+            ],
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              10
+            ],
+            [
+              1,
+              11
+            ],
+            [
+              2,
+              11
+            ]
+          ],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "door_ship",
+          "theme": "green",
+          "anchor": [
+            9,
+            11
+          ],
+          "size": [
+            2,
+            1
+          ],
+          "source_art_rows": [
+            1
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "South-facing interior sill projection; avoids painting a tall opaque door on public floor"
+        }
+      ],
+      "props": [
+        {
+          "chunk": 0,
+          "instance": 0,
+          "model": 22,
+          "source_anchor": [
+            8.5,
+            4.5
+          ],
+          "source_world_anchor": [
+            8,
+            4
+          ],
+          "native_anchor": [
+            8,
+            4
+          ],
+          "render_kind": "bin",
+          "native_size": [
+            1,
+            1
+          ],
+          "projection": "Original GBA flat art follows complete-room raster; DS model origin/height is not its flat visual top-left",
+          "semantic_limit": null
+        },
+        {
+          "chunk": 0,
+          "instance": 1,
+          "model": 21,
+          "source_anchor": [
+            7.5,
+            3.5
+          ],
+          "source_world_anchor": [
+            7,
+            3
+          ],
+          "native_anchor": [
+            7,
+            1
+          ],
+          "render_kind": "fridge",
+          "native_size": [
+            1,
+            3
+          ],
+          "projection": "Original GBA flat art follows complete-room raster; DS model origin/height is not its flat visual top-left",
+          "semantic_limit": null
+        },
+        {
+          "chunk": 0,
+          "instance": 2,
+          "model": 20,
+          "source_anchor": [
+            6.0,
+            3.5
+          ],
+          "source_world_anchor": [
+            6,
+            3
+          ],
+          "native_anchor": [
+            5,
+            1
+          ],
+          "render_kind": "galley_counter",
+          "native_size": [
+            2,
+            2
+          ],
+          "projection": "Original GBA flat art follows complete-room raster; DS model origin/height is not its flat visual top-left",
+          "semantic_limit": null
+        },
+        {
+          "chunk": 0,
+          "instance": 3,
+          "model": 65,
+          "source_anchor": [
+            1.5,
+            3.0
+          ],
+          "source_world_anchor": [
+            1,
+            3
+          ],
+          "native_anchor": [
+            1,
+            1
+          ],
+          "render_kind": "cabinet",
+          "native_size": [
+            2,
+            2
+          ],
+          "projection": "Original GBA flat art follows complete-room raster; DS model origin/height is not its flat visual top-left",
+          "semantic_limit": null
+        }
+      ],
+      "actors": [
+        {
+          "graphics_id": "OBJ_EVENT_GFX_SAILOR",
+          "x": 9,
+          "y": 4,
+          "elevation": 3,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "SSAqua_Captain",
+          "flag": "0"
+        }
+      ],
+      "services": [
+        {
+          "type": "sign",
+          "x": 9,
+          "y": 6,
+          "elevation": 0,
+          "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+          "script": "SSAqua_Chart"
+        }
+      ],
+      "runtime": "PENDING exact delivery-ROM gameplay",
+      "owner_visual_acceptance": "PENDING"
+    },
+    {
+      "name": "SSAqua_SoutheastCabins",
+      "id": "MAP_SS_AQUA_SOUTHEAST_CABINS",
+      "source_header": "MAP_SS_AQUA_1F_SOUTHEAST_ROOMS",
+      "source": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0173_P01R0303.bin",
+        "matrix_blob_sha": "30c35ddfc9422526e85b7fdf10f9a0532372683c",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/280_P01R0303.json",
+        "events_blob_sha": "c14e32bab3f0e4ade986835355875924601b698d",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "crop_origin": [
+        0,
+        0
+      ],
+      "dimensions": [
+        28,
+        13
+      ],
+      "source_public_cells": 187,
+      "native_public_cells": 173,
+      "native_components": [
+        {
+          "cells": 85,
+          "doors": [
+            [
+              9,
+              2
+            ],
+            [
+              10,
+              2
+            ]
+          ]
+        },
+        {
+          "cells": 88,
+          "doors": [
+            [
+              23,
+              2
+            ],
+            [
+              24,
+              2
+            ]
+          ]
+        }
+      ],
+      "map_group": 76,
+      "map_num": 45,
+      "source_warps": [
+        {
+          "x": 9,
+          "z": 2,
+          "header": "MAP_SS_AQUA_1F",
+          "anchor": 3,
+          "y": 0
+        },
+        {
+          "x": 23,
+          "z": 2,
+          "header": "MAP_SS_AQUA_1F",
+          "anchor": 4,
+          "y": 0
+        }
+      ],
+      "native_warps": [
+        {
+          "x": 9,
+          "y": 2,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_1F",
+          "dest_warp_id": "3"
+        },
+        {
+          "x": 23,
+          "y": 2,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_1F",
+          "dest_warp_id": "4"
+        },
+        {
+          "x": 10,
+          "y": 2,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_1F",
+          "dest_warp_id": "19"
+        },
+        {
+          "x": 24,
+          "y": 2,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_1F",
+          "dest_warp_id": "20"
+        }
+      ],
+      "aliases": [
+        {
+          "native_index": 2,
+          "source_parent": 0,
+          "x": 10,
+          "y": 2,
+          "reason": "Second visible native hatch/stair leaf; reciprocal destination preserved"
+        },
+        {
+          "native_index": 3,
+          "source_parent": 1,
+          "x": 24,
+          "y": 2,
+          "reason": "Second visible native hatch/stair leaf; reciprocal destination preserved"
+        }
+      ],
+      "collision_adaptations": [
+        {
+          "x": 10,
+          "y": 2,
+          "before_blocked": true,
+          "after_blocked": false,
+          "reason": "operable source doorway/stair/gangway"
+        },
+        {
+          "x": 24,
+          "y": 2,
+          "before_blocked": true,
+          "after_blocked": false,
+          "reason": "operable source doorway/stair/gangway"
+        },
+        {
+          "x": 25,
+          "y": 3,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "galley_sink"
+        },
+        {
+          "x": 15,
+          "y": 4,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        },
+        {
+          "x": 16,
+          "y": 4,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        },
+        {
+          "x": 15,
+          "y": 5,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        },
+        {
+          "x": 20,
+          "y": 7,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "chair_yellow"
+        },
+        {
+          "x": 24,
+          "y": 7,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "chair_yellow"
+        },
+        {
+          "x": 6,
+          "y": 9,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        },
+        {
+          "x": 10,
+          "y": 9,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        },
+        {
+          "x": 6,
+          "y": 10,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        },
+        {
+          "x": 7,
+          "y": 10,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        },
+        {
+          "x": 10,
+          "y": 10,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        },
+        {
+          "x": 11,
+          "y": 10,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        },
+        {
+          "x": 20,
+          "y": 10,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "chair_yellow"
+        },
+        {
+          "x": 24,
+          "y": 10,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "chair_yellow"
+        },
+        {
+          "x": 6,
+          "y": 11,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        },
+        {
+          "x": 10,
+          "y": 11,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        }
+      ],
+      "fixtures": [
+        {
+          "kind": "tv_counter",
+          "theme": "red",
+          "anchor": [
+            1,
+            3
+          ],
+          "size": [
+            6,
+            2
+          ],
+          "solid_body_cells": [
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              3
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              5,
+              3
+            ],
+            [
+              6,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              4
+            ],
+            [
+              5,
+              4
+            ],
+            [
+              6,
+              4
+            ]
+          ],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "bed_blue",
+          "theme": "red",
+          "anchor": [
+            6,
+            9
+          ],
+          "size": [
+            2,
+            3
+          ],
+          "solid_body_cells": [
+            [
+              6,
+              9
+            ],
+            [
+              7,
+              9
+            ],
+            [
+              6,
+              10
+            ],
+            [
+              7,
+              10
+            ],
+            [
+              6,
+              11
+            ],
+            [
+              7,
+              11
+            ]
+          ],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "bed_blue",
+          "theme": "red",
+          "anchor": [
+            10,
+            9
+          ],
+          "size": [
+            2,
+            3
+          ],
+          "solid_body_cells": [
+            [
+              10,
+              9
+            ],
+            [
+              11,
+              9
+            ],
+            [
+              10,
+              10
+            ],
+            [
+              11,
+              10
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              11,
+              11
+            ]
+          ],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "bin",
+          "theme": "red",
+          "anchor": [
+            1,
+            11
+          ],
+          "size": [
+            1,
+            1
+          ],
+          "solid_body_cells": [
+            [
+              1,
+              11
+            ]
+          ],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "painting",
+          "theme": "red",
+          "anchor": [
+            5,
+            1
+          ],
+          "size": [
+            1,
+            1
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "bed_blue",
+          "theme": "mustard",
+          "anchor": [
+            15,
+            3
+          ],
+          "size": [
+            2,
+            3
+          ],
+          "solid_body_cells": [
+            [
+              15,
+              3
+            ],
+            [
+              16,
+              3
+            ],
+            [
+              15,
+              4
+            ],
+            [
+              16,
+              4
+            ],
+            [
+              15,
+              5
+            ],
+            [
+              16,
+              5
+            ]
+          ],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "ladder",
+          "theme": "mustard",
+          "anchor": [
+            15,
+            1
+          ],
+          "size": [
+            1,
+            2
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "galley_sink",
+          "theme": "mustard",
+          "anchor": [
+            25,
+            2
+          ],
+          "size": [
+            2,
+            2
+          ],
+          "solid_body_cells": [
+            [
+              25,
+              2
+            ],
+            [
+              26,
+              2
+            ],
+            [
+              25,
+              3
+            ],
+            [
+              26,
+              3
+            ]
+          ],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "painting",
+          "theme": "mustard",
+          "anchor": [
+            18,
+            1
+          ],
+          "size": [
+            1,
+            1
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "bin",
+          "theme": "mustard",
+          "anchor": [
+            15,
+            11
+          ],
+          "size": [
+            1,
+            1
+          ],
+          "solid_body_cells": [
+            [
+              15,
+              11
+            ]
+          ],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "table_square",
+          "theme": "mustard",
+          "anchor": [
+            21,
+            7
+          ],
+          "size": [
+            3,
+            3
+          ],
+          "solid_body_cells": [
+            [
+              21,
+              7
+            ],
+            [
+              22,
+              7
+            ],
+            [
+              23,
+              7
+            ],
+            [
+              21,
+              8
+            ],
+            [
+              22,
+              8
+            ],
+            [
+              23,
+              8
+            ],
+            [
+              21,
+              9
+            ],
+            [
+              22,
+              9
+            ],
+            [
+              23,
+              9
+            ]
+          ],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "chair_yellow",
+          "theme": "mustard",
+          "anchor": [
+            20,
+            7
+          ],
+          "size": [
+            1,
+            1
+          ],
+          "solid_body_cells": [
+            [
+              20,
+              7
+            ]
+          ],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "chair_yellow",
+          "theme": "mustard",
+          "anchor": [
+            24,
+            7
+          ],
+          "size": [
+            1,
+            1
+          ],
+          "solid_body_cells": [
+            [
+              24,
+              7
+            ]
+          ],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "chair_yellow",
+          "theme": "mustard",
+          "anchor": [
+            20,
+            10
+          ],
+          "size": [
+            1,
+            1
+          ],
+          "solid_body_cells": [
+            [
+              20,
+              10
+            ]
+          ],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "chair_yellow",
+          "theme": "mustard",
+          "anchor": [
+            24,
+            10
+          ],
+          "size": [
+            1,
+            1
+          ],
+          "solid_body_cells": [
+            [
+              24,
+              10
+            ]
+          ],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "door_ship",
+          "theme": "red",
+          "anchor": [
+            9,
+            1
+          ],
+          "size": [
+            2,
+            2
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "door_ship",
+          "theme": "mustard",
+          "anchor": [
+            23,
+            1
+          ],
+          "size": [
+            2,
+            2
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        }
+      ],
+      "props": [
+        {
+          "chunk": 0,
+          "instance": 0,
+          "model": 22,
+          "source_anchor": [
+            15.5,
+            11.5
+          ],
+          "source_world_anchor": [
+            15,
+            11
+          ],
+          "native_anchor": [
+            15,
+            11
+          ],
+          "render_kind": "bin",
+          "native_size": [
+            1,
+            1
+          ],
+          "projection": "Original GBA flat art follows complete-room raster; DS model origin/height is not its flat visual top-left",
+          "semantic_limit": null
+        },
+        {
+          "chunk": 0,
+          "instance": 1,
+          "model": 22,
+          "source_anchor": [
+            1.5,
+            11.5
+          ],
+          "source_world_anchor": [
+            1,
+            11
+          ],
+          "native_anchor": [
+            1,
+            11
+          ],
+          "render_kind": "bin",
+          "native_size": [
+            1,
+            1
+          ],
+          "projection": "Original GBA flat art follows complete-room raster; DS model origin/height is not its flat visual top-left",
+          "semantic_limit": null
+        },
+        {
+          "chunk": 0,
+          "instance": 2,
+          "model": 138,
+          "source_anchor": [
+            26.5,
+            3.5
+          ],
+          "source_world_anchor": [
+            26,
+            3
+          ],
+          "native_anchor": [
+            25,
+            2
+          ],
+          "render_kind": "galley_sink",
+          "native_size": [
+            2,
+            2
+          ],
+          "projection": "Original GBA flat art follows complete-room raster; DS model origin/height is not its flat visual top-left",
+          "semantic_limit": "Model138 exact fixture purpose unverified; no new labelled function"
+        },
+        {
+          "chunk": 0,
+          "instance": 3,
+          "model": 17,
+          "source_anchor": [
+            16.5,
+            4.5
+          ],
+          "source_world_anchor": [
+            16,
+            4
+          ],
+          "native_anchor": [
+            15,
+            3
+          ],
+          "render_kind": "bed_blue",
+          "native_size": [
+            2,
+            3
+          ],
+          "projection": "Original GBA flat art follows complete-room raster; DS model origin/height is not its flat visual top-left",
+          "semantic_limit": null
+        },
+        {
+          "chunk": 0,
+          "instance": 4,
+          "model": 162,
+          "source_anchor": [
+            10.125,
+            2.246185302734375
+          ],
+          "source_world_anchor": [
+            10,
+            2
+          ],
+          "native_anchor": [
+            9,
+            1
+          ],
+          "render_kind": "door_ship",
+          "native_size": [
+            2,
+            2
+          ],
+          "projection": "Original GBA flat art follows complete-room raster; DS model origin/height is not its flat visual top-left",
+          "semantic_limit": null
+        },
+        {
+          "chunk": 0,
+          "instance": 5,
+          "model": 162,
+          "source_anchor": [
+            24.125,
+            2.246185302734375
+          ],
+          "source_world_anchor": [
+            24,
+            2
+          ],
+          "native_anchor": [
+            23,
+            1
+          ],
+          "render_kind": "door_ship",
+          "native_size": [
+            2,
+            2
+          ],
+          "projection": "Original GBA flat art follows complete-room raster; DS model origin/height is not its flat visual top-left",
+          "semantic_limit": null
+        },
+        {
+          "chunk": 0,
+          "instance": 6,
+          "model": 67,
+          "source_anchor": [
+            15.5,
+            3.0
+          ],
+          "source_world_anchor": [
+            15,
+            3
+          ],
+          "native_anchor": [
+            15,
+            1
+          ],
+          "render_kind": "ladder",
+          "native_size": [
+            1,
+            2
+          ],
+          "projection": "Original GBA flat art follows complete-room raster; DS model origin/height is not its flat visual top-left",
+          "semantic_limit": "Multiple wardrobe/ladders may share a compound native locker visual"
+        },
+        {
+          "chunk": 0,
+          "instance": 7,
+          "model": 60,
+          "source_anchor": [
+            18.5,
+            2.6875
+          ],
+          "source_world_anchor": [
+            18,
+            2
+          ],
+          "native_anchor": [
+            18,
+            1
+          ],
+          "render_kind": "painting",
+          "native_size": [
+            1,
+            1
+          ],
+          "projection": "Original GBA flat art follows complete-room raster; DS model origin/height is not its flat visual top-left",
+          "semantic_limit": null
+        },
+        {
+          "chunk": 0,
+          "instance": 8,
+          "model": 139,
+          "source_anchor": [
+            5.5,
+            2.4375
+          ],
+          "source_world_anchor": [
+            5,
+            2
+          ],
+          "native_anchor": [
+            5,
+            1
+          ],
+          "render_kind": "painting",
+          "native_size": [
+            1,
+            1
+          ],
+          "projection": "Original GBA flat art follows complete-room raster; DS model origin/height is not its flat visual top-left",
+          "semantic_limit": null
+        }
+      ],
+      "actors": [
+        {
+          "graphics_id": "OBJ_EVENT_GFX_SAILOR",
+          "x": 9,
+          "y": 7,
+          "elevation": 3,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "SSAqua_RestingCrew",
+          "flag": "0"
+        }
+      ],
+      "services": [
+        {
+          "type": "sign",
+          "x": 16,
+          "y": 4,
+          "elevation": 0,
+          "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+          "script": "SSAqua_Berth"
+        },
+        {
+          "type": "sign",
+          "x": 16,
+          "y": 5,
+          "elevation": 0,
+          "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+          "script": "SSAqua_Berth"
+        }
+      ],
+      "runtime": "PENDING exact delivery-ROM gameplay",
+      "owner_visual_acceptance": "PENDING"
+    },
+    {
+      "name": "SSAqua_SouthwestCabins",
+      "id": "MAP_SS_AQUA_SOUTHWEST_CABINS",
+      "source_header": "MAP_SS_AQUA_1F_SOUTHWEST_ROOMS",
+      "source": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0174_P01R0304.bin",
+        "matrix_blob_sha": "daef35189c99221ab0ce59ccfce9fabdf74f0c06",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/281_P01R0304.json",
+        "events_blob_sha": "58857f9ad560c444e33afceb400977f970cdc79b",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "crop_origin": [
+        0,
+        0
+      ],
+      "dimensions": [
+        28,
+        13
+      ],
+      "source_public_cells": 201,
+      "native_public_cells": 190,
+      "native_components": [
+        {
+          "cells": 98,
+          "doors": [
+            [
+              9,
+              2
+            ],
+            [
+              10,
+              2
+            ]
+          ]
+        },
+        {
+          "cells": 92,
+          "doors": [
+            [
+              23,
+              2
+            ],
+            [
+              24,
+              2
+            ]
+          ]
+        }
+      ],
+      "map_group": 76,
+      "map_num": 46,
+      "source_warps": [
+        {
+          "x": 9,
+          "z": 2,
+          "header": "MAP_SS_AQUA_1F",
+          "anchor": 1,
+          "y": 0
+        },
+        {
+          "x": 23,
+          "z": 2,
+          "header": "MAP_SS_AQUA_1F",
+          "anchor": 2,
+          "y": 0
+        }
+      ],
+      "native_warps": [
+        {
+          "x": 9,
+          "y": 2,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_1F",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 23,
+          "y": 2,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_1F",
+          "dest_warp_id": "2"
+        },
+        {
+          "x": 10,
+          "y": 2,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_1F",
+          "dest_warp_id": "17"
+        },
+        {
+          "x": 24,
+          "y": 2,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_1F",
+          "dest_warp_id": "18"
+        }
+      ],
+      "aliases": [
+        {
+          "native_index": 2,
+          "source_parent": 0,
+          "x": 10,
+          "y": 2,
+          "reason": "Second visible native hatch/stair leaf; reciprocal destination preserved"
+        },
+        {
+          "native_index": 3,
+          "source_parent": 1,
+          "x": 24,
+          "y": 2,
+          "reason": "Second visible native hatch/stair leaf; reciprocal destination preserved"
+        }
+      ],
+      "collision_adaptations": [
+        {
+          "x": 10,
+          "y": 2,
+          "before_blocked": true,
+          "after_blocked": false,
+          "reason": "operable source doorway/stair/gangway"
+        },
+        {
+          "x": 24,
+          "y": 2,
+          "before_blocked": true,
+          "after_blocked": false,
+          "reason": "operable source doorway/stair/gangway"
+        },
+        {
+          "x": 1,
+          "y": 3,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        },
+        {
+          "x": 1,
+          "y": 4,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        },
+        {
+          "x": 2,
+          "y": 4,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        },
+        {
+          "x": 1,
+          "y": 5,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        },
+        {
+          "x": 21,
+          "y": 6,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "chair_green"
+        },
+        {
+          "x": 24,
+          "y": 6,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "table_square"
+        },
+        {
+          "x": 25,
+          "y": 6,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "chair_green"
+        },
+        {
+          "x": 24,
+          "y": 7,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "table_square"
+        },
+        {
+          "x": 10,
+          "y": 8,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "chair_red"
+        },
+        {
+          "x": 24,
+          "y": 8,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "table_square"
+        },
+        {
+          "x": 7,
+          "y": 9,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "chair_red"
+        },
+        {
+          "x": 21,
+          "y": 9,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "chair_green"
+        },
+        {
+          "x": 25,
+          "y": 9,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "chair_green"
+        }
+      ],
+      "fixtures": [
+        {
+          "kind": "bed_blue",
+          "theme": "blue",
+          "anchor": [
+            1,
+            3
+          ],
+          "size": [
+            2,
+            3
+          ],
+          "solid_body_cells": [
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              5
+            ]
+          ],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "painting",
+          "theme": "blue",
+          "anchor": [
+            3,
+            1
+          ],
+          "size": [
+            1,
+            1
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "table",
+          "theme": "blue",
+          "anchor": [
+            8,
+            8
+          ],
+          "size": [
+            2,
+            2
+          ],
+          "solid_body_cells": [
+            [
+              8,
+              8
+            ],
+            [
+              9,
+              8
+            ],
+            [
+              8,
+              9
+            ],
+            [
+              9,
+              9
+            ]
+          ],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "chair_red",
+          "theme": "blue",
+          "anchor": [
+            7,
+            9
+          ],
+          "size": [
+            1,
+            1
+          ],
+          "solid_body_cells": [
+            [
+              7,
+              9
+            ]
+          ],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "chair_red",
+          "theme": "blue",
+          "anchor": [
+            10,
+            8
+          ],
+          "size": [
+            1,
+            1
+          ],
+          "solid_body_cells": [
+            [
+              10,
+              8
+            ]
+          ],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "cabinet",
+          "theme": "gold",
+          "anchor": [
+            15,
+            1
+          ],
+          "size": [
+            2,
+            2
+          ],
+          "solid_body_cells": [
+            [
+              15,
+              2
+            ],
+            [
+              16,
+              2
+            ]
+          ],
+          "overhang_rows": 1,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "bin",
+          "theme": "gold",
+          "anchor": [
+            16,
+            3
+          ],
+          "size": [
+            1,
+            1
+          ],
+          "solid_body_cells": [
+            [
+              16,
+              3
+            ]
+          ],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "painting",
+          "theme": "gold",
+          "anchor": [
+            19,
+            1
+          ],
+          "size": [
+            1,
+            1
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "bin",
+          "theme": "gold",
+          "anchor": [
+            15,
+            11
+          ],
+          "size": [
+            1,
+            1
+          ],
+          "solid_body_cells": [
+            [
+              15,
+              11
+            ]
+          ],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "table_square",
+          "theme": "mustard",
+          "anchor": [
+            22,
+            6
+          ],
+          "size": [
+            3,
+            3
+          ],
+          "solid_body_cells": [
+            [
+              22,
+              6
+            ],
+            [
+              23,
+              6
+            ],
+            [
+              24,
+              6
+            ],
+            [
+              22,
+              7
+            ],
+            [
+              23,
+              7
+            ],
+            [
+              24,
+              7
+            ],
+            [
+              22,
+              8
+            ],
+            [
+              23,
+              8
+            ],
+            [
+              24,
+              8
+            ]
+          ],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "chair_green",
+          "theme": "gold",
+          "anchor": [
+            21,
+            6
+          ],
+          "size": [
+            1,
+            1
+          ],
+          "solid_body_cells": [
+            [
+              21,
+              6
+            ]
+          ],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "chair_green",
+          "theme": "gold",
+          "anchor": [
+            25,
+            6
+          ],
+          "size": [
+            1,
+            1
+          ],
+          "solid_body_cells": [
+            [
+              25,
+              6
+            ]
+          ],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "chair_green",
+          "theme": "gold",
+          "anchor": [
+            21,
+            9
+          ],
+          "size": [
+            1,
+            1
+          ],
+          "solid_body_cells": [
+            [
+              21,
+              9
+            ]
+          ],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "chair_green",
+          "theme": "gold",
+          "anchor": [
+            25,
+            9
+          ],
+          "size": [
+            1,
+            1
+          ],
+          "solid_body_cells": [
+            [
+              25,
+              9
+            ]
+          ],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "door_ship",
+          "theme": "blue",
+          "anchor": [
+            9,
+            1
+          ],
+          "size": [
+            2,
+            2
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "door_ship",
+          "theme": "gold",
+          "anchor": [
+            23,
+            1
+          ],
+          "size": [
+            2,
+            2
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        }
+      ],
+      "props": [
+        {
+          "chunk": 0,
+          "instance": 0,
+          "model": 22,
+          "source_anchor": [
+            15.5,
+            11.5
+          ],
+          "source_world_anchor": [
+            15,
+            11
+          ],
+          "native_anchor": [
+            15,
+            11
+          ],
+          "render_kind": "bin",
+          "native_size": [
+            1,
+            1
+          ],
+          "projection": "Original GBA flat art follows complete-room raster; DS model origin/height is not its flat visual top-left",
+          "semantic_limit": null
+        },
+        {
+          "chunk": 0,
+          "instance": 1,
+          "model": 22,
+          "source_anchor": [
+            16.5,
+            3.5
+          ],
+          "source_world_anchor": [
+            16,
+            3
+          ],
+          "native_anchor": [
+            16,
+            3
+          ],
+          "render_kind": "bin",
+          "native_size": [
+            1,
+            1
+          ],
+          "projection": "Original GBA flat art follows complete-room raster; DS model origin/height is not its flat visual top-left",
+          "semantic_limit": null
+        },
+        {
+          "chunk": 0,
+          "instance": 2,
+          "model": 71,
+          "source_anchor": [
+            15.5,
+            3.5
+          ],
+          "source_world_anchor": [
+            15,
+            3
+          ],
+          "native_anchor": [
+            15,
+            1
+          ],
+          "render_kind": "cabinet",
+          "native_size": [
+            2,
+            2
+          ],
+          "projection": "Original GBA flat art follows complete-room raster; DS model origin/height is not its flat visual top-left",
+          "semantic_limit": null
+        },
+        {
+          "chunk": 0,
+          "instance": 3,
+          "model": 162,
+          "source_anchor": [
+            10.125,
+            2.246185302734375
+          ],
+          "source_world_anchor": [
+            10,
+            2
+          ],
+          "native_anchor": [
+            9,
+            1
+          ],
+          "render_kind": "door_ship",
+          "native_size": [
+            2,
+            2
+          ],
+          "projection": "Original GBA flat art follows complete-room raster; DS model origin/height is not its flat visual top-left",
+          "semantic_limit": null
+        },
+        {
+          "chunk": 0,
+          "instance": 4,
+          "model": 162,
+          "source_anchor": [
+            24.125,
+            2.246185302734375
+          ],
+          "source_world_anchor": [
+            24,
+            2
+          ],
+          "native_anchor": [
+            23,
+            1
+          ],
+          "render_kind": "door_ship",
+          "native_size": [
+            2,
+            2
+          ],
+          "projection": "Original GBA flat art follows complete-room raster; DS model origin/height is not its flat visual top-left",
+          "semantic_limit": null
+        },
+        {
+          "chunk": 0,
+          "instance": 5,
+          "model": 139,
+          "source_anchor": [
+            19.0,
+            2.9375
+          ],
+          "source_world_anchor": [
+            19,
+            2
+          ],
+          "native_anchor": [
+            19,
+            1
+          ],
+          "render_kind": "painting",
+          "native_size": [
+            1,
+            1
+          ],
+          "projection": "Original GBA flat art follows complete-room raster; DS model origin/height is not its flat visual top-left",
+          "semantic_limit": null
+        },
+        {
+          "chunk": 0,
+          "instance": 6,
+          "model": 60,
+          "source_anchor": [
+            3.5,
+            3.1875
+          ],
+          "source_world_anchor": [
+            3,
+            3
+          ],
+          "native_anchor": [
+            3,
+            1
+          ],
+          "render_kind": "painting",
+          "native_size": [
+            1,
+            1
+          ],
+          "projection": "Original GBA flat art follows complete-room raster; DS model origin/height is not its flat visual top-left",
+          "semantic_limit": null
+        }
+      ],
+      "actors": [
+        {
+          "graphics_id": "OBJ_EVENT_GFX_MAN_1",
+          "x": 5,
+          "y": 7,
+          "elevation": 3,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "SSAqua_CabinVisitor",
+          "flag": "0"
+        },
+        {
+          "graphics_id": "OBJ_EVENT_GFX_WOMAN_3",
+          "x": 25,
+          "y": 5,
+          "elevation": 3,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "SSAqua_DiningVisitor",
+          "flag": "0"
+        }
+      ],
+      "services": [],
+      "runtime": "PENDING exact delivery-ROM gameplay",
+      "owner_visual_acceptance": "PENDING"
+    },
+    {
+      "name": "SSAqua_NortheastCabins",
+      "id": "MAP_SS_AQUA_NORTHEAST_CABINS",
+      "source_header": "MAP_SS_AQUA_1F_NORTHEAST_ROOMS",
+      "source": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0175_P01R0305.bin",
+        "matrix_blob_sha": "b7294097fa57e04197b93bcef6eba2d21274b3b4",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/282_P01R0305.json",
+        "events_blob_sha": "0b9bb977edc80b260febe6d6c931933213ac3df6",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "crop_origin": [
+        0,
+        0
+      ],
+      "dimensions": [
+        28,
+        13
+      ],
+      "source_public_cells": 186,
+      "native_public_cells": 170,
+      "native_components": [
+        {
+          "cells": 84,
+          "doors": [
+            [
+              9,
+              11
+            ],
+            [
+              10,
+              11
+            ]
+          ]
+        },
+        {
+          "cells": 86,
+          "doors": [
+            [
+              23,
+              11
+            ],
+            [
+              24,
+              11
+            ]
+          ]
+        }
+      ],
+      "map_group": 76,
+      "map_num": 47,
+      "source_warps": [
+        {
+          "x": 9,
+          "z": 11,
+          "header": "MAP_SS_AQUA_1F",
+          "anchor": 7,
+          "y": 0
+        },
+        {
+          "x": 23,
+          "z": 11,
+          "header": "MAP_SS_AQUA_1F",
+          "anchor": 8,
+          "y": 0
+        }
+      ],
+      "native_warps": [
+        {
+          "x": 9,
+          "y": 11,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_1F",
+          "dest_warp_id": "7"
+        },
+        {
+          "x": 23,
+          "y": 11,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_1F",
+          "dest_warp_id": "8"
+        },
+        {
+          "x": 10,
+          "y": 11,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_1F",
+          "dest_warp_id": "23"
+        },
+        {
+          "x": 24,
+          "y": 11,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_1F",
+          "dest_warp_id": "24"
+        }
+      ],
+      "aliases": [
+        {
+          "native_index": 2,
+          "source_parent": 0,
+          "x": 10,
+          "y": 11,
+          "reason": "Second visible native hatch/stair leaf; reciprocal destination preserved"
+        },
+        {
+          "native_index": 3,
+          "source_parent": 1,
+          "x": 24,
+          "y": 11,
+          "reason": "Second visible native hatch/stair leaf; reciprocal destination preserved"
+        }
+      ],
+      "collision_adaptations": [
+        {
+          "x": 1,
+          "y": 6,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        },
+        {
+          "x": 19,
+          "y": 6,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "chair_yellow"
+        },
+        {
+          "x": 24,
+          "y": 6,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "chair_yellow"
+        },
+        {
+          "x": 1,
+          "y": 7,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        },
+        {
+          "x": 2,
+          "y": 7,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        },
+        {
+          "x": 1,
+          "y": 8,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        },
+        {
+          "x": 1,
+          "y": 9,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        },
+        {
+          "x": 15,
+          "y": 9,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        },
+        {
+          "x": 19,
+          "y": 9,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "chair_yellow"
+        },
+        {
+          "x": 24,
+          "y": 9,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "chair_yellow"
+        },
+        {
+          "x": 1,
+          "y": 10,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        },
+        {
+          "x": 2,
+          "y": 10,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        },
+        {
+          "x": 15,
+          "y": 10,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        },
+        {
+          "x": 16,
+          "y": 10,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        },
+        {
+          "x": 1,
+          "y": 11,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        },
+        {
+          "x": 15,
+          "y": 11,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        }
+      ],
+      "fixtures": [
+        {
+          "kind": "desk_white",
+          "theme": "red",
+          "anchor": [
+            1,
+            3
+          ],
+          "size": [
+            3,
+            2
+          ],
+          "solid_body_cells": [
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "desk_white",
+          "theme": "red",
+          "anchor": [
+            10,
+            3
+          ],
+          "size": [
+            3,
+            2
+          ],
+          "solid_body_cells": [
+            [
+              10,
+              3
+            ],
+            [
+              11,
+              3
+            ],
+            [
+              12,
+              3
+            ],
+            [
+              10,
+              4
+            ],
+            [
+              11,
+              4
+            ],
+            [
+              12,
+              4
+            ]
+          ],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "bed_blue",
+          "theme": "red",
+          "anchor": [
+            1,
+            6
+          ],
+          "size": [
+            2,
+            3
+          ],
+          "solid_body_cells": [
+            [
+              1,
+              6
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              1,
+              7
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              1,
+              8
+            ],
+            [
+              2,
+              8
+            ]
+          ],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "bed_blue",
+          "theme": "red",
+          "anchor": [
+            1,
+            9
+          ],
+          "size": [
+            2,
+            3
+          ],
+          "solid_body_cells": [
+            [
+              1,
+              9
+            ],
+            [
+              2,
+              9
+            ],
+            [
+              1,
+              10
+            ],
+            [
+              2,
+              10
+            ],
+            [
+              1,
+              11
+            ],
+            [
+              2,
+              11
+            ]
+          ],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "painting",
+          "theme": "red",
+          "anchor": [
+            5,
+            1
+          ],
+          "size": [
+            1,
+            1
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "porthole",
+          "theme": "red",
+          "anchor": [
+            3,
+            1
+          ],
+          "size": [
+            1,
+            2
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "porthole",
+          "theme": "red",
+          "anchor": [
+            9,
+            1
+          ],
+          "size": [
+            1,
+            2
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "porthole",
+          "theme": "mustard",
+          "anchor": [
+            16,
+            1
+          ],
+          "size": [
+            1,
+            2
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "porthole",
+          "theme": "mustard",
+          "anchor": [
+            21,
+            1
+          ],
+          "size": [
+            1,
+            2
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "porthole",
+          "theme": "mustard",
+          "anchor": [
+            25,
+            1
+          ],
+          "size": [
+            1,
+            2
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "bed_blue",
+          "theme": "mustard",
+          "anchor": [
+            15,
+            9
+          ],
+          "size": [
+            2,
+            3
+          ],
+          "solid_body_cells": [
+            [
+              15,
+              9
+            ],
+            [
+              16,
+              9
+            ],
+            [
+              15,
+              10
+            ],
+            [
+              16,
+              10
+            ],
+            [
+              15,
+              11
+            ],
+            [
+              16,
+              11
+            ]
+          ],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "table_square",
+          "theme": "mustard",
+          "anchor": [
+            20,
+            6
+          ],
+          "size": [
+            4,
+            3
+          ],
+          "solid_body_cells": [
+            [
+              20,
+              6
+            ],
+            [
+              21,
+              6
+            ],
+            [
+              22,
+              6
+            ],
+            [
+              23,
+              6
+            ],
+            [
+              20,
+              7
+            ],
+            [
+              21,
+              7
+            ],
+            [
+              22,
+              7
+            ],
+            [
+              23,
+              7
+            ],
+            [
+              20,
+              8
+            ],
+            [
+              21,
+              8
+            ],
+            [
+              22,
+              8
+            ],
+            [
+              23,
+              8
+            ]
+          ],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "chair_yellow",
+          "theme": "mustard",
+          "anchor": [
+            19,
+            6
+          ],
+          "size": [
+            1,
+            1
+          ],
+          "solid_body_cells": [
+            [
+              19,
+              6
+            ]
+          ],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "chair_yellow",
+          "theme": "mustard",
+          "anchor": [
+            24,
+            6
+          ],
+          "size": [
+            1,
+            1
+          ],
+          "solid_body_cells": [
+            [
+              24,
+              6
+            ]
+          ],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "chair_yellow",
+          "theme": "mustard",
+          "anchor": [
+            19,
+            9
+          ],
+          "size": [
+            1,
+            1
+          ],
+          "solid_body_cells": [
+            [
+              19,
+              9
+            ]
+          ],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "chair_yellow",
+          "theme": "mustard",
+          "anchor": [
+            24,
+            9
+          ],
+          "size": [
+            1,
+            1
+          ],
+          "solid_body_cells": [
+            [
+              24,
+              9
+            ]
+          ],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "door_ship",
+          "theme": "red",
+          "anchor": [
+            9,
+            11
+          ],
+          "size": [
+            2,
+            1
+          ],
+          "source_art_rows": [
+            1
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "South-facing interior sill projection; avoids painting a tall opaque door on public floor"
+        },
+        {
+          "kind": "door_ship",
+          "theme": "mustard",
+          "anchor": [
+            23,
+            11
+          ],
+          "size": [
+            2,
+            1
+          ],
+          "source_art_rows": [
+            1
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "South-facing interior sill projection; avoids painting a tall opaque door on public floor"
+        }
+      ],
+      "props": [
+        {
+          "chunk": 0,
+          "instance": 0,
+          "model": 60,
+          "source_anchor": [
+            5.5,
+            2.6875
+          ],
+          "source_world_anchor": [
+            5,
+            2
+          ],
+          "native_anchor": [
+            5,
+            1
+          ],
+          "render_kind": "painting",
+          "native_size": [
+            1,
+            1
+          ],
+          "projection": "Original GBA flat art follows complete-room raster; DS model origin/height is not its flat visual top-left",
+          "semantic_limit": null
+        }
+      ],
+      "actors": [
+        {
+          "graphics_id": "OBJ_EVENT_GFX_WOMAN_3",
+          "x": 9,
+          "y": 7,
+          "elevation": 3,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "SSAqua_CabinVisitor",
+          "flag": "0"
+        },
+        {
+          "graphics_id": "OBJ_EVENT_GFX_MAN_1",
+          "x": 25,
+          "y": 5,
+          "elevation": 3,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "SSAqua_DiningVisitor",
+          "flag": "0"
+        }
+      ],
+      "services": [],
+      "runtime": "PENDING exact delivery-ROM gameplay",
+      "owner_visual_acceptance": "PENDING"
+    },
+    {
+      "name": "SSAqua_NorthwestCabins",
+      "id": "MAP_SS_AQUA_NORTHWEST_CABINS",
+      "source_header": "MAP_SS_AQUA_1F_NORTHWEST_ROOMS",
+      "source": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0176_P01R0306.bin",
+        "matrix_blob_sha": "1602bda426637908bd87937cbad0cef4355ea97f",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/299_P01R0306.json",
+        "events_blob_sha": "dbb33d5684ddc6321584ff68c37e56a9ee879df4",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "crop_origin": [
+        0,
+        0
+      ],
+      "dimensions": [
+        28,
+        13
+      ],
+      "source_public_cells": 192,
+      "native_public_cells": 174,
+      "native_components": [
+        {
+          "cells": 92,
+          "doors": [
+            [
+              9,
+              11
+            ],
+            [
+              10,
+              11
+            ]
+          ]
+        },
+        {
+          "cells": 82,
+          "doors": [
+            [
+              23,
+              11
+            ],
+            [
+              24,
+              11
+            ]
+          ]
+        }
+      ],
+      "map_group": 76,
+      "map_num": 48,
+      "source_warps": [
+        {
+          "x": 9,
+          "z": 11,
+          "header": "MAP_SS_AQUA_1F",
+          "anchor": 5,
+          "y": 0
+        },
+        {
+          "x": 23,
+          "z": 11,
+          "header": "MAP_SS_AQUA_1F",
+          "anchor": 6,
+          "y": 0
+        }
+      ],
+      "native_warps": [
+        {
+          "x": 9,
+          "y": 11,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_1F",
+          "dest_warp_id": "5"
+        },
+        {
+          "x": 23,
+          "y": 11,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_1F",
+          "dest_warp_id": "6"
+        },
+        {
+          "x": 10,
+          "y": 11,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_1F",
+          "dest_warp_id": "21"
+        },
+        {
+          "x": 24,
+          "y": 11,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_1F",
+          "dest_warp_id": "22"
+        }
+      ],
+      "aliases": [
+        {
+          "native_index": 2,
+          "source_parent": 0,
+          "x": 10,
+          "y": 11,
+          "reason": "Second visible native hatch/stair leaf; reciprocal destination preserved"
+        },
+        {
+          "native_index": 3,
+          "source_parent": 1,
+          "x": 24,
+          "y": 11,
+          "reason": "Second visible native hatch/stair leaf; reciprocal destination preserved"
+        }
+      ],
+      "collision_adaptations": [
+        {
+          "x": 1,
+          "y": 3,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        },
+        {
+          "x": 1,
+          "y": 4,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        },
+        {
+          "x": 2,
+          "y": 4,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        },
+        {
+          "x": 19,
+          "y": 4,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        },
+        {
+          "x": 23,
+          "y": 4,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        },
+        {
+          "x": 1,
+          "y": 5,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        },
+        {
+          "x": 19,
+          "y": 5,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        },
+        {
+          "x": 20,
+          "y": 5,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        },
+        {
+          "x": 23,
+          "y": 5,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        },
+        {
+          "x": 24,
+          "y": 5,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        },
+        {
+          "x": 10,
+          "y": 6,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "chair_red"
+        },
+        {
+          "x": 19,
+          "y": 6,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        },
+        {
+          "x": 23,
+          "y": 6,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        },
+        {
+          "x": 5,
+          "y": 7,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "chair_red"
+        },
+        {
+          "x": 17,
+          "y": 7,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "sofa_vertical"
+        },
+        {
+          "x": 17,
+          "y": 8,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "sofa_vertical"
+        },
+        {
+          "x": 17,
+          "y": 9,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "sofa_vertical"
+        },
+        {
+          "x": 17,
+          "y": 10,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "sofa_vertical"
+        }
+      ],
+      "fixtures": [
+        {
+          "kind": "bed_blue",
+          "theme": "blue",
+          "anchor": [
+            1,
+            3
+          ],
+          "size": [
+            2,
+            3
+          ],
+          "solid_body_cells": [
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              5
+            ]
+          ],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "table_wide",
+          "theme": "blue",
+          "anchor": [
+            6,
+            6
+          ],
+          "size": [
+            4,
+            2
+          ],
+          "solid_body_cells": [
+            [
+              6,
+              6
+            ],
+            [
+              7,
+              6
+            ],
+            [
+              8,
+              6
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              6,
+              7
+            ],
+            [
+              7,
+              7
+            ],
+            [
+              8,
+              7
+            ],
+            [
+              9,
+              7
+            ]
+          ],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "chair_red",
+          "theme": "blue",
+          "anchor": [
+            5,
+            7
+          ],
+          "size": [
+            1,
+            1
+          ],
+          "solid_body_cells": [
+            [
+              5,
+              7
+            ]
+          ],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "chair_red",
+          "theme": "blue",
+          "anchor": [
+            10,
+            6
+          ],
+          "size": [
+            1,
+            1
+          ],
+          "solid_body_cells": [
+            [
+              10,
+              6
+            ]
+          ],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "porthole",
+          "theme": "blue",
+          "anchor": [
+            3,
+            1
+          ],
+          "size": [
+            1,
+            2
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "porthole",
+          "theme": "blue",
+          "anchor": [
+            7,
+            1
+          ],
+          "size": [
+            1,
+            2
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "porthole",
+          "theme": "blue",
+          "anchor": [
+            11,
+            1
+          ],
+          "size": [
+            1,
+            2
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "porthole",
+          "theme": "gold",
+          "anchor": [
+            17,
+            1
+          ],
+          "size": [
+            1,
+            2
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "porthole",
+          "theme": "gold",
+          "anchor": [
+            21,
+            1
+          ],
+          "size": [
+            1,
+            2
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "porthole",
+          "theme": "gold",
+          "anchor": [
+            25,
+            1
+          ],
+          "size": [
+            1,
+            2
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "bed_blue",
+          "theme": "gold",
+          "anchor": [
+            19,
+            4
+          ],
+          "size": [
+            2,
+            3
+          ],
+          "solid_body_cells": [
+            [
+              19,
+              4
+            ],
+            [
+              20,
+              4
+            ],
+            [
+              19,
+              5
+            ],
+            [
+              20,
+              5
+            ],
+            [
+              19,
+              6
+            ],
+            [
+              20,
+              6
+            ]
+          ],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "bed_blue",
+          "theme": "gold",
+          "anchor": [
+            23,
+            4
+          ],
+          "size": [
+            2,
+            3
+          ],
+          "solid_body_cells": [
+            [
+              23,
+              4
+            ],
+            [
+              24,
+              4
+            ],
+            [
+              23,
+              5
+            ],
+            [
+              24,
+              5
+            ],
+            [
+              23,
+              6
+            ],
+            [
+              24,
+              6
+            ]
+          ],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "sofa_vertical",
+          "theme": "gold",
+          "anchor": [
+            15,
+            7
+          ],
+          "size": [
+            3,
+            4
+          ],
+          "solid_body_cells": [
+            [
+              15,
+              7
+            ],
+            [
+              16,
+              7
+            ],
+            [
+              17,
+              7
+            ],
+            [
+              15,
+              8
+            ],
+            [
+              16,
+              8
+            ],
+            [
+              17,
+              8
+            ],
+            [
+              15,
+              9
+            ],
+            [
+              16,
+              9
+            ],
+            [
+              17,
+              9
+            ],
+            [
+              15,
+              10
+            ],
+            [
+              16,
+              10
+            ],
+            [
+              17,
+              10
+            ]
+          ],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "door_ship",
+          "theme": "blue",
+          "anchor": [
+            9,
+            11
+          ],
+          "size": [
+            2,
+            1
+          ],
+          "source_art_rows": [
+            1
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "South-facing interior sill projection; avoids painting a tall opaque door on public floor"
+        },
+        {
+          "kind": "door_ship",
+          "theme": "gold",
+          "anchor": [
+            23,
+            11
+          ],
+          "size": [
+            2,
+            1
+          ],
+          "source_art_rows": [
+            1
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "South-facing interior sill projection; avoids painting a tall opaque door on public floor"
+        }
+      ],
+      "props": [],
+      "actors": [
+        {
+          "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
+          "x": 10,
+          "y": 4,
+          "elevation": 3,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "SSAqua_CabinVisitor",
+          "flag": "0"
+        },
+        {
+          "graphics_id": "OBJ_EVENT_GFX_WOMAN_3",
+          "x": 25,
+          "y": 8,
+          "elevation": 3,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "SSAqua_TwinBerthVisitor",
+          "flag": "0"
+        }
+      ],
+      "services": [],
+      "runtime": "PENDING exact delivery-ROM gameplay",
+      "owner_visual_acceptance": "PENDING"
+    },
+    {
+      "name": "SSAqua_B1F",
+      "id": "MAP_SS_AQUA_B1F",
+      "source_header": "MAP_SS_AQUA_B1F",
+      "source": {
+        "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0177_P01R0307.bin",
+        "matrix_blob_sha": "40cfd8c8243df1cd63bd30960e66319f57c8c0da",
+        "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/300_P01R0307.json",
+        "events_blob_sha": "4355081fcf3ccaca5af4c54a6131b2e39ffe6643",
+        "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+      },
+      "crop_origin": [
+        0,
+        0
+      ],
+      "dimensions": [
+        57,
+        21
+      ],
+      "source_public_cells": 627,
+      "native_public_cells": 597,
+      "native_components": [
+        {
+          "cells": 597,
+          "doors": [
+            [
+              24,
+              3
+            ],
+            [
+              25,
+              3
+            ],
+            [
+              42,
+              8
+            ],
+            [
+              42,
+              9
+            ],
+            [
+              43,
+              8
+            ],
+            [
+              43,
+              9
+            ]
+          ]
+        }
+      ],
+      "map_group": 76,
+      "map_num": 49,
+      "source_warps": [
+        {
+          "x": 24,
+          "z": 3,
+          "header": "MAP_SS_AQUA_1F",
+          "anchor": 9,
+          "y": 0
+        },
+        {
+          "x": 42,
+          "z": 9,
+          "header": "MAP_SS_AQUA_1F",
+          "anchor": 10,
+          "y": 0
+        },
+        {
+          "x": 42,
+          "z": 8,
+          "header": "MAP_SS_AQUA_1F",
+          "anchor": 10,
+          "y": 0
+        }
+      ],
+      "native_warps": [
+        {
+          "x": 24,
+          "y": 3,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_1F",
+          "dest_warp_id": "9"
+        },
+        {
+          "x": 42,
+          "y": 9,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_1F",
+          "dest_warp_id": "10"
+        },
+        {
+          "x": 42,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_1F",
+          "dest_warp_id": "10"
+        },
+        {
+          "x": 43,
+          "y": 9,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_1F",
+          "dest_warp_id": "26"
+        },
+        {
+          "x": 43,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_1F",
+          "dest_warp_id": "27"
+        },
+        {
+          "x": 25,
+          "y": 3,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_1F",
+          "dest_warp_id": "28"
+        }
+      ],
+      "aliases": [
+        {
+          "native_index": 3,
+          "source_parent": 1,
+          "x": 43,
+          "y": 9,
+          "reason": "Second visible native hatch/stair leaf; reciprocal destination preserved"
+        },
+        {
+          "native_index": 4,
+          "source_parent": 2,
+          "x": 43,
+          "y": 8,
+          "reason": "Second visible native hatch/stair leaf; reciprocal destination preserved"
+        },
+        {
+          "native_index": 5,
+          "source_parent": 0,
+          "x": 25,
+          "y": 3,
+          "reason": "Second visible native hatch/stair leaf; reciprocal destination preserved"
+        }
+      ],
+      "collision_adaptations": [
+        {
+          "x": 25,
+          "y": 3,
+          "before_blocked": true,
+          "after_blocked": false,
+          "reason": "operable source doorway/stair/gangway"
+        },
+        {
+          "x": 54,
+          "y": 3,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "control_cabinet"
+        },
+        {
+          "x": 55,
+          "y": 3,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "control_cabinet"
+        },
+        {
+          "x": 9,
+          "y": 4,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        },
+        {
+          "x": 13,
+          "y": 4,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        },
+        {
+          "x": 17,
+          "y": 4,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        },
+        {
+          "x": 25,
+          "y": 4,
+          "before_blocked": true,
+          "after_blocked": false,
+          "reason": "Visible clearance for second west-stair leaf"
+        },
+        {
+          "x": 9,
+          "y": 5,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        },
+        {
+          "x": 10,
+          "y": 5,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        },
+        {
+          "x": 13,
+          "y": 5,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        },
+        {
+          "x": 14,
+          "y": 5,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        },
+        {
+          "x": 17,
+          "y": 5,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        },
+        {
+          "x": 18,
+          "y": 5,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        },
+        {
+          "x": 9,
+          "y": 6,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        },
+        {
+          "x": 13,
+          "y": 6,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        },
+        {
+          "x": 17,
+          "y": 6,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        },
+        {
+          "x": 31,
+          "y": 6,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "chair_orange"
+        },
+        {
+          "x": 35,
+          "y": 6,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "chair_orange"
+        },
+        {
+          "x": 9,
+          "y": 8,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        },
+        {
+          "x": 13,
+          "y": 8,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        },
+        {
+          "x": 17,
+          "y": 8,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        },
+        {
+          "x": 31,
+          "y": 8,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "chair_orange"
+        },
+        {
+          "x": 35,
+          "y": 8,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "chair_orange"
+        },
+        {
+          "x": 9,
+          "y": 9,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        },
+        {
+          "x": 10,
+          "y": 9,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        },
+        {
+          "x": 13,
+          "y": 9,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        },
+        {
+          "x": 14,
+          "y": 9,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        },
+        {
+          "x": 17,
+          "y": 9,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        },
+        {
+          "x": 18,
+          "y": 9,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        },
+        {
+          "x": 9,
+          "y": 10,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        },
+        {
+          "x": 13,
+          "y": 10,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        },
+        {
+          "x": 17,
+          "y": 10,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "bed_blue"
+        },
+        {
+          "x": 31,
+          "y": 10,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "chair_orange"
+        },
+        {
+          "x": 35,
+          "y": 10,
+          "before_blocked": false,
+          "after_blocked": true,
+          "reason": "chair_orange"
+        }
+      ],
+      "fixtures": [
+        {
+          "kind": "bed_blue",
+          "theme": "crew",
+          "anchor": [
+            9,
+            4
+          ],
+          "size": [
+            2,
+            3
+          ],
+          "solid_body_cells": [
+            [
+              9,
+              4
+            ],
+            [
+              10,
+              4
+            ],
+            [
+              9,
+              5
+            ],
+            [
+              10,
+              5
+            ],
+            [
+              9,
+              6
+            ],
+            [
+              10,
+              6
+            ]
+          ],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "bed_blue",
+          "theme": "crew",
+          "anchor": [
+            9,
+            8
+          ],
+          "size": [
+            2,
+            3
+          ],
+          "solid_body_cells": [
+            [
+              9,
+              8
+            ],
+            [
+              10,
+              8
+            ],
+            [
+              9,
+              9
+            ],
+            [
+              10,
+              9
+            ],
+            [
+              9,
+              10
+            ],
+            [
+              10,
+              10
+            ]
+          ],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "bed_blue",
+          "theme": "crew",
+          "anchor": [
+            13,
+            4
+          ],
+          "size": [
+            2,
+            3
+          ],
+          "solid_body_cells": [
+            [
+              13,
+              4
+            ],
+            [
+              14,
+              4
+            ],
+            [
+              13,
+              5
+            ],
+            [
+              14,
+              5
+            ],
+            [
+              13,
+              6
+            ],
+            [
+              14,
+              6
+            ]
+          ],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "bed_blue",
+          "theme": "crew",
+          "anchor": [
+            13,
+            8
+          ],
+          "size": [
+            2,
+            3
+          ],
+          "solid_body_cells": [
+            [
+              13,
+              8
+            ],
+            [
+              14,
+              8
+            ],
+            [
+              13,
+              9
+            ],
+            [
+              14,
+              9
+            ],
+            [
+              13,
+              10
+            ],
+            [
+              14,
+              10
+            ]
+          ],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "bed_blue",
+          "theme": "crew",
+          "anchor": [
+            17,
+            4
+          ],
+          "size": [
+            2,
+            3
+          ],
+          "solid_body_cells": [
+            [
+              17,
+              4
+            ],
+            [
+              18,
+              4
+            ],
+            [
+              17,
+              5
+            ],
+            [
+              18,
+              5
+            ],
+            [
+              17,
+              6
+            ],
+            [
+              18,
+              6
+            ]
+          ],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "bed_blue",
+          "theme": "crew",
+          "anchor": [
+            17,
+            8
+          ],
+          "size": [
+            2,
+            3
+          ],
+          "solid_body_cells": [
+            [
+              17,
+              8
+            ],
+            [
+              18,
+              8
+            ],
+            [
+              17,
+              9
+            ],
+            [
+              18,
+              9
+            ],
+            [
+              17,
+              10
+            ],
+            [
+              18,
+              10
+            ]
+          ],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "locker_crew",
+          "theme": "crew",
+          "anchor": [
+            9,
+            2
+          ],
+          "size": [
+            2,
+            2
+          ],
+          "solid_body_cells": [
+            [
+              9,
+              3
+            ],
+            [
+              10,
+              3
+            ]
+          ],
+          "overhang_rows": 1,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "locker_crew",
+          "theme": "crew",
+          "anchor": [
+            14,
+            2
+          ],
+          "size": [
+            2,
+            2
+          ],
+          "solid_body_cells": [
+            [
+              14,
+              3
+            ],
+            [
+              15,
+              3
+            ]
+          ],
+          "overhang_rows": 1,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "locker_crew",
+          "theme": "crew",
+          "anchor": [
+            19,
+            2
+          ],
+          "size": [
+            2,
+            2
+          ],
+          "solid_body_cells": [
+            [
+              19,
+              3
+            ],
+            [
+              20,
+              3
+            ]
+          ],
+          "overhang_rows": 1,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "ladder",
+          "theme": "metal",
+          "anchor": [
+            9,
+            1
+          ],
+          "size": [
+            1,
+            2
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "ladder",
+          "theme": "metal",
+          "anchor": [
+            19,
+            1
+          ],
+          "size": [
+            1,
+            2
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "bin",
+          "theme": "crew",
+          "anchor": [
+            8,
+            3
+          ],
+          "size": [
+            1,
+            1
+          ],
+          "solid_body_cells": [
+            [
+              8,
+              3
+            ]
+          ],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "clock",
+          "theme": "crew",
+          "anchor": [
+            17,
+            1
+          ],
+          "size": [
+            1,
+            1
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "clock",
+          "theme": "metal",
+          "anchor": [
+            33,
+            1
+          ],
+          "size": [
+            1,
+            1
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "fridge",
+          "theme": "metal",
+          "anchor": [
+            28,
+            2
+          ],
+          "size": [
+            1,
+            3
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "galley_stove",
+          "theme": "metal",
+          "anchor": [
+            32,
+            2
+          ],
+          "size": [
+            2,
+            2
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "galley_sink",
+          "theme": "metal",
+          "anchor": [
+            34,
+            2
+          ],
+          "size": [
+            2,
+            2
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "galley_counter",
+          "theme": "metal",
+          "anchor": [
+            36,
+            2
+          ],
+          "size": [
+            2,
+            2
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "galley_table",
+          "theme": "metal",
+          "anchor": [
+            32,
+            6
+          ],
+          "size": [
+            3,
+            5
+          ],
+          "solid_body_cells": [
+            [
+              32,
+              6
+            ],
+            [
+              33,
+              6
+            ],
+            [
+              34,
+              6
+            ],
+            [
+              32,
+              7
+            ],
+            [
+              33,
+              7
+            ],
+            [
+              34,
+              7
+            ],
+            [
+              32,
+              8
+            ],
+            [
+              33,
+              8
+            ],
+            [
+              34,
+              8
+            ],
+            [
+              32,
+              9
+            ],
+            [
+              33,
+              9
+            ],
+            [
+              34,
+              9
+            ],
+            [
+              32,
+              10
+            ],
+            [
+              33,
+              10
+            ],
+            [
+              34,
+              10
+            ]
+          ],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "chair_orange",
+          "theme": "metal",
+          "anchor": [
+            31,
+            6
+          ],
+          "size": [
+            1,
+            1
+          ],
+          "solid_body_cells": [
+            [
+              31,
+              6
+            ]
+          ],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "chair_orange",
+          "theme": "metal",
+          "anchor": [
+            31,
+            8
+          ],
+          "size": [
+            1,
+            1
+          ],
+          "solid_body_cells": [
+            [
+              31,
+              8
+            ]
+          ],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "chair_orange",
+          "theme": "metal",
+          "anchor": [
+            31,
+            10
+          ],
+          "size": [
+            1,
+            1
+          ],
+          "solid_body_cells": [
+            [
+              31,
+              10
+            ]
+          ],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "chair_orange",
+          "theme": "metal",
+          "anchor": [
+            35,
+            6
+          ],
+          "size": [
+            1,
+            1
+          ],
+          "solid_body_cells": [
+            [
+              35,
+              6
+            ]
+          ],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "chair_orange",
+          "theme": "metal",
+          "anchor": [
+            35,
+            8
+          ],
+          "size": [
+            1,
+            1
+          ],
+          "solid_body_cells": [
+            [
+              35,
+              8
+            ]
+          ],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "chair_orange",
+          "theme": "metal",
+          "anchor": [
+            35,
+            10
+          ],
+          "size": [
+            1,
+            1
+          ],
+          "solid_body_cells": [
+            [
+              35,
+              10
+            ]
+          ],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "machine_panel",
+          "theme": "metal",
+          "anchor": [
+            44,
+            6
+          ],
+          "size": [
+            9,
+            9
+          ],
+          "solid_body_cells": [
+            [
+              44,
+              6
+            ],
+            [
+              45,
+              6
+            ],
+            [
+              46,
+              6
+            ],
+            [
+              47,
+              6
+            ],
+            [
+              48,
+              6
+            ],
+            [
+              49,
+              6
+            ],
+            [
+              50,
+              6
+            ],
+            [
+              51,
+              6
+            ],
+            [
+              52,
+              6
+            ],
+            [
+              44,
+              7
+            ],
+            [
+              45,
+              7
+            ],
+            [
+              46,
+              7
+            ],
+            [
+              47,
+              7
+            ],
+            [
+              48,
+              7
+            ],
+            [
+              49,
+              7
+            ],
+            [
+              50,
+              7
+            ],
+            [
+              51,
+              7
+            ],
+            [
+              52,
+              7
+            ],
+            [
+              44,
+              8
+            ],
+            [
+              45,
+              8
+            ],
+            [
+              46,
+              8
+            ],
+            [
+              47,
+              8
+            ],
+            [
+              48,
+              8
+            ],
+            [
+              49,
+              8
+            ],
+            [
+              50,
+              8
+            ],
+            [
+              51,
+              8
+            ],
+            [
+              52,
+              8
+            ],
+            [
+              44,
+              9
+            ],
+            [
+              45,
+              9
+            ],
+            [
+              46,
+              9
+            ],
+            [
+              47,
+              9
+            ],
+            [
+              48,
+              9
+            ],
+            [
+              49,
+              9
+            ],
+            [
+              50,
+              9
+            ],
+            [
+              51,
+              9
+            ],
+            [
+              52,
+              9
+            ],
+            [
+              44,
+              10
+            ],
+            [
+              45,
+              10
+            ],
+            [
+              46,
+              10
+            ],
+            [
+              47,
+              10
+            ],
+            [
+              48,
+              10
+            ],
+            [
+              49,
+              10
+            ],
+            [
+              50,
+              10
+            ],
+            [
+              51,
+              10
+            ],
+            [
+              52,
+              10
+            ],
+            [
+              44,
+              11
+            ],
+            [
+              45,
+              11
+            ],
+            [
+              46,
+              11
+            ],
+            [
+              47,
+              11
+            ],
+            [
+              48,
+              11
+            ],
+            [
+              49,
+              11
+            ],
+            [
+              50,
+              11
+            ],
+            [
+              51,
+              11
+            ],
+            [
+              52,
+              11
+            ],
+            [
+              44,
+              12
+            ],
+            [
+              45,
+              12
+            ],
+            [
+              46,
+              12
+            ],
+            [
+              47,
+              12
+            ],
+            [
+              48,
+              12
+            ],
+            [
+              49,
+              12
+            ],
+            [
+              50,
+              12
+            ],
+            [
+              51,
+              12
+            ],
+            [
+              52,
+              12
+            ],
+            [
+              44,
+              13
+            ],
+            [
+              45,
+              13
+            ],
+            [
+              46,
+              13
+            ],
+            [
+              47,
+              13
+            ],
+            [
+              48,
+              13
+            ],
+            [
+              49,
+              13
+            ],
+            [
+              50,
+              13
+            ],
+            [
+              51,
+              13
+            ],
+            [
+              52,
+              13
+            ],
+            [
+              44,
+              14
+            ],
+            [
+              45,
+              14
+            ],
+            [
+              46,
+              14
+            ],
+            [
+              47,
+              14
+            ],
+            [
+              48,
+              14
+            ],
+            [
+              49,
+              14
+            ],
+            [
+              50,
+              14
+            ],
+            [
+              51,
+              14
+            ],
+            [
+              52,
+              14
+            ]
+          ],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "engine",
+          "theme": "metal",
+          "anchor": [
+            44,
+            7
+          ],
+          "size": [
+            8,
+            6
+          ],
+          "solid_body_cells": [
+            [
+              44,
+              7
+            ],
+            [
+              45,
+              7
+            ],
+            [
+              46,
+              7
+            ],
+            [
+              47,
+              7
+            ],
+            [
+              48,
+              7
+            ],
+            [
+              49,
+              7
+            ],
+            [
+              50,
+              7
+            ],
+            [
+              51,
+              7
+            ],
+            [
+              44,
+              8
+            ],
+            [
+              45,
+              8
+            ],
+            [
+              46,
+              8
+            ],
+            [
+              47,
+              8
+            ],
+            [
+              48,
+              8
+            ],
+            [
+              49,
+              8
+            ],
+            [
+              50,
+              8
+            ],
+            [
+              51,
+              8
+            ],
+            [
+              44,
+              9
+            ],
+            [
+              45,
+              9
+            ],
+            [
+              46,
+              9
+            ],
+            [
+              47,
+              9
+            ],
+            [
+              48,
+              9
+            ],
+            [
+              49,
+              9
+            ],
+            [
+              50,
+              9
+            ],
+            [
+              51,
+              9
+            ],
+            [
+              44,
+              10
+            ],
+            [
+              45,
+              10
+            ],
+            [
+              46,
+              10
+            ],
+            [
+              47,
+              10
+            ],
+            [
+              48,
+              10
+            ],
+            [
+              49,
+              10
+            ],
+            [
+              50,
+              10
+            ],
+            [
+              51,
+              10
+            ],
+            [
+              44,
+              11
+            ],
+            [
+              45,
+              11
+            ],
+            [
+              46,
+              11
+            ],
+            [
+              47,
+              11
+            ],
+            [
+              48,
+              11
+            ],
+            [
+              49,
+              11
+            ],
+            [
+              50,
+              11
+            ],
+            [
+              51,
+              11
+            ],
+            [
+              44,
+              12
+            ],
+            [
+              45,
+              12
+            ],
+            [
+              46,
+              12
+            ],
+            [
+              47,
+              12
+            ],
+            [
+              48,
+              12
+            ],
+            [
+              49,
+              12
+            ],
+            [
+              50,
+              12
+            ],
+            [
+              51,
+              12
+            ]
+          ],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "ladder",
+          "theme": "metal",
+          "anchor": [
+            42,
+            6
+          ],
+          "size": [
+            1,
+            2
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "control_cabinet",
+          "theme": "metal",
+          "anchor": [
+            54,
+            1
+          ],
+          "size": [
+            3,
+            3
+          ],
+          "solid_body_cells": [
+            [
+              54,
+              2
+            ],
+            [
+              55,
+              2
+            ],
+            [
+              56,
+              2
+            ],
+            [
+              54,
+              3
+            ],
+            [
+              55,
+              3
+            ],
+            [
+              56,
+              3
+            ]
+          ],
+          "overhang_rows": 1,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "engine_pipe",
+          "theme": "metal",
+          "anchor": [
+            54,
+            12
+          ],
+          "size": [
+            1,
+            2
+          ],
+          "solid_body_cells": [
+            [
+              54,
+              12
+            ],
+            [
+              54,
+              13
+            ]
+          ],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "stairs_up",
+          "theme": "wood",
+          "anchor": [
+            24,
+            2
+          ],
+          "size": [
+            2,
+            2
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        },
+        {
+          "kind": "stairs_up",
+          "theme": "metal",
+          "anchor": [
+            42,
+            8
+          ],
+          "size": [
+            2,
+            2
+          ],
+          "solid_body_cells": [],
+          "overhang_rows": 0,
+          "reference": "Actual complete HGSS room mosaic"
+        }
+      ],
+      "props": [
+        {
+          "chunk": 0,
+          "instance": 0,
+          "model": 53,
+          "source_anchor": [
+            31.5,
+            10.5
+          ],
+          "source_world_anchor": [
+            31,
+            10
+          ],
+          "native_anchor": [
+            31,
+            10
+          ],
+          "render_kind": "chair_orange",
+          "native_size": [
+            1,
+            1
+          ],
+          "projection": "Original GBA flat art follows complete-room raster; DS model origin/height is not its flat visual top-left",
+          "semantic_limit": null
+        },
+        {
+          "chunk": 0,
+          "instance": 1,
+          "model": 53,
+          "source_anchor": [
+            31.5,
+            8.5
+          ],
+          "source_world_anchor": [
+            31,
+            8
+          ],
+          "native_anchor": [
+            31,
+            8
+          ],
+          "render_kind": "chair_orange",
+          "native_size": [
+            1,
+            1
+          ],
+          "projection": "Original GBA flat art follows complete-room raster; DS model origin/height is not its flat visual top-left",
+          "semantic_limit": null
+        },
+        {
+          "chunk": 0,
+          "instance": 2,
+          "model": 53,
+          "source_anchor": [
+            31.5,
+            6.5
+          ],
+          "source_world_anchor": [
+            31,
+            6
+          ],
+          "native_anchor": [
+            31,
+            6
+          ],
+          "render_kind": "chair_orange",
+          "native_size": [
+            1,
+            1
+          ],
+          "projection": "Original GBA flat art follows complete-room raster; DS model origin/height is not its flat visual top-left",
+          "semantic_limit": null
+        },
+        {
+          "chunk": 0,
+          "instance": 3,
+          "model": 17,
+          "source_anchor": [
+            10.5,
+            9.5
+          ],
+          "source_world_anchor": [
+            10,
+            9
+          ],
+          "native_anchor": [
+            9,
+            8
+          ],
+          "render_kind": "bed_blue",
+          "native_size": [
+            2,
+            3
+          ],
+          "projection": "Original GBA flat art follows complete-room raster; DS model origin/height is not its flat visual top-left",
+          "semantic_limit": null
+        },
+        {
+          "chunk": 0,
+          "instance": 4,
+          "model": 17,
+          "source_anchor": [
+            14.5,
+            9.5
+          ],
+          "source_world_anchor": [
+            14,
+            9
+          ],
+          "native_anchor": [
+            13,
+            8
+          ],
+          "render_kind": "bed_blue",
+          "native_size": [
+            2,
+            3
+          ],
+          "projection": "Original GBA flat art follows complete-room raster; DS model origin/height is not its flat visual top-left",
+          "semantic_limit": null
+        },
+        {
+          "chunk": 0,
+          "instance": 5,
+          "model": 17,
+          "source_anchor": [
+            18.5,
+            9.5
+          ],
+          "source_world_anchor": [
+            18,
+            9
+          ],
+          "native_anchor": [
+            17,
+            8
+          ],
+          "render_kind": "bed_blue",
+          "native_size": [
+            2,
+            3
+          ],
+          "projection": "Original GBA flat art follows complete-room raster; DS model origin/height is not its flat visual top-left",
+          "semantic_limit": null
+        },
+        {
+          "chunk": 0,
+          "instance": 6,
+          "model": 17,
+          "source_anchor": [
+            18.5,
+            5.5
+          ],
+          "source_world_anchor": [
+            18,
+            5
+          ],
+          "native_anchor": [
+            17,
+            4
+          ],
+          "render_kind": "bed_blue",
+          "native_size": [
+            2,
+            3
+          ],
+          "projection": "Original GBA flat art follows complete-room raster; DS model origin/height is not its flat visual top-left",
+          "semantic_limit": null
+        },
+        {
+          "chunk": 0,
+          "instance": 7,
+          "model": 17,
+          "source_anchor": [
+            14.5,
+            5.5
+          ],
+          "source_world_anchor": [
+            14,
+            5
+          ],
+          "native_anchor": [
+            13,
+            4
+          ],
+          "render_kind": "bed_blue",
+          "native_size": [
+            2,
+            3
+          ],
+          "projection": "Original GBA flat art follows complete-room raster; DS model origin/height is not its flat visual top-left",
+          "semantic_limit": null
+        },
+        {
+          "chunk": 0,
+          "instance": 8,
+          "model": 17,
+          "source_anchor": [
+            10.5,
+            5.5
+          ],
+          "source_world_anchor": [
+            10,
+            5
+          ],
+          "native_anchor": [
+            9,
+            4
+          ],
+          "render_kind": "bed_blue",
+          "native_size": [
+            2,
+            3
+          ],
+          "projection": "Original GBA flat art follows complete-room raster; DS model origin/height is not its flat visual top-left",
+          "semantic_limit": null
+        },
+        {
+          "chunk": 0,
+          "instance": 9,
+          "model": 22,
+          "source_anchor": [
+            8.5,
+            3.5
+          ],
+          "source_world_anchor": [
+            8,
+            3
+          ],
+          "native_anchor": [
+            8,
+            3
+          ],
+          "render_kind": "bin",
+          "native_size": [
+            1,
+            1
+          ],
+          "projection": "Original GBA flat art follows complete-room raster; DS model origin/height is not its flat visual top-left",
+          "semantic_limit": null
+        },
+        {
+          "chunk": 0,
+          "instance": 10,
+          "model": 70,
+          "source_anchor": [
+            10.5,
+            3.5
+          ],
+          "source_world_anchor": [
+            10,
+            3
+          ],
+          "native_anchor": [
+            9,
+            2
+          ],
+          "render_kind": "locker_crew",
+          "native_size": [
+            2,
+            2
+          ],
+          "projection": "Original GBA flat art follows complete-room raster; DS model origin/height is not its flat visual top-left",
+          "semantic_limit": "Multiple wardrobe/ladders may share a compound native locker visual"
+        },
+        {
+          "chunk": 0,
+          "instance": 11,
+          "model": 70,
+          "source_anchor": [
+            20.5,
+            3.5
+          ],
+          "source_world_anchor": [
+            20,
+            3
+          ],
+          "native_anchor": [
+            19,
+            2
+          ],
+          "render_kind": "locker_crew",
+          "native_size": [
+            2,
+            2
+          ],
+          "projection": "Original GBA flat art follows complete-room raster; DS model origin/height is not its flat visual top-left",
+          "semantic_limit": "Multiple wardrobe/ladders may share a compound native locker visual"
+        },
+        {
+          "chunk": 0,
+          "instance": 12,
+          "model": 67,
+          "source_anchor": [
+            9.5,
+            3.5
+          ],
+          "source_world_anchor": [
+            9,
+            3
+          ],
+          "native_anchor": [
+            9,
+            1
+          ],
+          "render_kind": "ladder",
+          "native_size": [
+            1,
+            2
+          ],
+          "projection": "Original GBA flat art follows complete-room raster; DS model origin/height is not its flat visual top-left",
+          "semantic_limit": "Multiple wardrobe/ladders may share a compound native locker visual"
+        },
+        {
+          "chunk": 0,
+          "instance": 13,
+          "model": 67,
+          "source_anchor": [
+            19.5,
+            3.5
+          ],
+          "source_world_anchor": [
+            19,
+            3
+          ],
+          "native_anchor": [
+            19,
+            1
+          ],
+          "render_kind": "ladder",
+          "native_size": [
+            1,
+            2
+          ],
+          "projection": "Original GBA flat art follows complete-room raster; DS model origin/height is not its flat visual top-left",
+          "semantic_limit": "Multiple wardrobe/ladders may share a compound native locker visual"
+        },
+        {
+          "chunk": 0,
+          "instance": 14,
+          "model": 70,
+          "source_anchor": [
+            15.5,
+            3.5
+          ],
+          "source_world_anchor": [
+            15,
+            3
+          ],
+          "native_anchor": [
+            14,
+            2
+          ],
+          "render_kind": "locker_crew",
+          "native_size": [
+            2,
+            2
+          ],
+          "projection": "Original GBA flat art follows complete-room raster; DS model origin/height is not its flat visual top-left",
+          "semantic_limit": "Multiple wardrobe/ladders may share a compound native locker visual"
+        },
+        {
+          "chunk": 0,
+          "instance": 15,
+          "model": 70,
+          "source_anchor": [
+            14.5,
+            3.5
+          ],
+          "source_world_anchor": [
+            14,
+            3
+          ],
+          "native_anchor": [
+            14,
+            2
+          ],
+          "render_kind": "locker_crew",
+          "native_size": [
+            2,
+            2
+          ],
+          "projection": "Original GBA flat art follows complete-room raster; DS model origin/height is not its flat visual top-left",
+          "semantic_limit": "Multiple wardrobe/ladders may share a compound native locker visual"
+        },
+        {
+          "chunk": 0,
+          "instance": 16,
+          "model": 16,
+          "source_anchor": [
+            17.5,
+            3.1875
+          ],
+          "source_world_anchor": [
+            17,
+            3
+          ],
+          "native_anchor": [
+            17,
+            1
+          ],
+          "render_kind": "clock",
+          "native_size": [
+            1,
+            1
+          ],
+          "projection": "Original GBA flat art follows complete-room raster; DS model origin/height is not its flat visual top-left",
+          "semantic_limit": null
+        },
+        {
+          "chunk": 1,
+          "instance": 0,
+          "model": 53,
+          "source_anchor": [
+            3.5,
+            10.5
+          ],
+          "source_world_anchor": [
+            35,
+            10
+          ],
+          "native_anchor": [
+            35,
+            10
+          ],
+          "render_kind": "chair_orange",
+          "native_size": [
+            1,
+            1
+          ],
+          "projection": "Original GBA flat art follows complete-room raster; DS model origin/height is not its flat visual top-left",
+          "semantic_limit": null
+        },
+        {
+          "chunk": 1,
+          "instance": 1,
+          "model": 53,
+          "source_anchor": [
+            3.5,
+            8.5
+          ],
+          "source_world_anchor": [
+            35,
+            8
+          ],
+          "native_anchor": [
+            35,
+            8
+          ],
+          "render_kind": "chair_orange",
+          "native_size": [
+            1,
+            1
+          ],
+          "projection": "Original GBA flat art follows complete-room raster; DS model origin/height is not its flat visual top-left",
+          "semantic_limit": null
+        },
+        {
+          "chunk": 1,
+          "instance": 2,
+          "model": 53,
+          "source_anchor": [
+            3.5,
+            6.5
+          ],
+          "source_world_anchor": [
+            35,
+            6
+          ],
+          "native_anchor": [
+            35,
+            6
+          ],
+          "render_kind": "chair_orange",
+          "native_size": [
+            1,
+            1
+          ],
+          "projection": "Original GBA flat art follows complete-room raster; DS model origin/height is not its flat visual top-left",
+          "semantic_limit": null
+        },
+        {
+          "chunk": 1,
+          "instance": 3,
+          "model": 20,
+          "source_anchor": [
+            2.0,
+            3.5
+          ],
+          "source_world_anchor": [
+            34,
+            3
+          ],
+          "native_anchor": [
+            32,
+            2
+          ],
+          "render_kind": "galley_stove",
+          "native_size": [
+            2,
+            2
+          ],
+          "projection": "Original GBA flat art follows complete-room raster; DS model origin/height is not its flat visual top-left",
+          "semantic_limit": null
+        },
+        {
+          "chunk": 1,
+          "instance": 4,
+          "model": 20,
+          "source_anchor": [
+            4.0,
+            3.5
+          ],
+          "source_world_anchor": [
+            36,
+            3
+          ],
+          "native_anchor": [
+            34,
+            2
+          ],
+          "render_kind": "galley_sink",
+          "native_size": [
+            2,
+            2
+          ],
+          "projection": "Original GBA flat art follows complete-room raster; DS model origin/height is not its flat visual top-left",
+          "semantic_limit": null
+        },
+        {
+          "chunk": 1,
+          "instance": 5,
+          "model": 16,
+          "source_anchor": [
+            1.5,
+            3.1875
+          ],
+          "source_world_anchor": [
+            33,
+            3
+          ],
+          "native_anchor": [
+            33,
+            1
+          ],
+          "render_kind": "clock",
+          "native_size": [
+            1,
+            1
+          ],
+          "projection": "Original GBA flat art follows complete-room raster; DS model origin/height is not its flat visual top-left",
+          "semantic_limit": null
+        },
+        {
+          "chunk": 1,
+          "instance": 6,
+          "model": 164,
+          "source_anchor": [
+            22.5,
+            11.0
+          ],
+          "source_world_anchor": [
+            54,
+            11
+          ],
+          "native_anchor": [
+            44,
+            7
+          ],
+          "render_kind": "engine",
+          "native_size": [
+            8,
+            6
+          ],
+          "projection": "Original GBA flat art follows complete-room raster; DS model origin/height is not its flat visual top-left",
+          "semantic_limit": null
+        }
+      ],
+      "actors": [
+        {
+          "graphics_id": "OBJ_EVENT_GFX_SAILOR",
+          "x": 26,
+          "y": 13,
+          "elevation": 3,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "SSAqua_MaintenanceCrew",
+          "flag": "0"
+        },
+        {
+          "graphics_id": "OBJ_EVENT_GFX_SAILOR",
+          "x": 37,
+          "y": 17,
+          "elevation": 3,
+          "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+          "movement_range_x": 0,
+          "movement_range_y": 0,
+          "trainer_type": "TRAINER_TYPE_NONE",
+          "trainer_sight_or_berry_tree_id": "0",
+          "script": "SSAqua_EngineCrew",
+          "flag": "0"
+        }
+      ],
+      "services": [],
+      "runtime": "PENDING exact delivery-ROM gameplay",
+      "owner_visual_acceptance": "PENDING"
+    }
+  ],
+  "source_warp12": "HGSS conditional Vermilion duplicate of0 is intentionally inactive; native12 is an appended right gangway leaf, not travel",
+  "gangway": {
+    "quay_map": "OlivineCity_PortQuay",
+    "quay_warps": [
+      4,
+      5
+    ],
+    "ship_map": "SSAqua_1F",
+    "ship_warps": [
+      0,
+      12,
+      13,
+      14,
+      15
+    ],
+    "physical_projection": "Source five-tile inside corridor projects to two visible outside hatch leaves; deliberate GBA art decision, not hardware necessity"
+  }
+}

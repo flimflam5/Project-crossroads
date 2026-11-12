@@ -1,0 +1,13 @@
+Cold boot: branded cards in order, isolated text/harbor VRAM, silent pre-title and actual title handoff PASS
+Controller skip/held key/released Start: 0 A PASS
+Controller skip/held key/released Start: 0 B PASS
+Controller skip/held key/released Start: 0 START PASS
+Controller skip/held key/released Start: 1 A PASS
+Controller skip/held key/released Start: 1 B PASS
+Controller skip/held key/released Start: 1 START PASS
+Controller skip/held key/released Start: 2 A PASS
+Controller skip/held key/released Start: 2 B PASS
+Controller skip/held key/released Start: 2 START PASS
+Skip during initial palette fade: PASS
+Real soft reset during pre-title returns through branding and starts custom title music: PASS
+Owner appearance/pacing QA and combined battery-save Continue are separate checks.

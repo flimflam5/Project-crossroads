@@ -1,0 +1,795 @@
+{
+  "rom_sha256": "4fb28fe64fc44c0546462a935655346a61f13b644bc3040468146d136cd6d656",
+  "source_revision": "df8c4598d88c7770626be4621a5f39cf60dadb95",
+  "source_battery_sha256": "b03ff1ef488fbd25de016e828483bc3001787b84e450a45eaa0ac12a11de30ab",
+  "source_battery_unchanged": true,
+  "setup": "Copied normal battery; cold Continue, normal controller paths and real desk OFF. Save/Continue uses actual UI and private output batteries; exact party/boxes/decoded inventory/flags/starter checked. No player/map/warp/flag coordinate fixtures; only shared encounter suppression in test RAM.",
+  "views": [
+    {
+      "label": "lighthouse-1F-component-0-context",
+      "map": "OlivineCity_Lighthouse_1F",
+      "position": [
+        8,
+        12
+      ],
+      "facing": 2,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    },
+    {
+      "label": "lighthouse-2F-component-0-context",
+      "map": "OlivineCity_Lighthouse_2F",
+      "position": [
+        8,
+        13
+      ],
+      "facing": 4,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    },
+    {
+      "label": "lighthouse-3F-component-0-context",
+      "map": "OlivineCity_Lighthouse_3F",
+      "position": [
+        13,
+        8
+      ],
+      "facing": 1,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    },
+    {
+      "label": "lighthouse-3F-component-5-context",
+      "map": "OlivineCity_Lighthouse_3F",
+      "position": [
+        8,
+        16
+      ],
+      "facing": 2,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    },
+    {
+      "label": "lighthouse-4F-component-0-context",
+      "map": "OlivineCity_Lighthouse_4F",
+      "position": [
+        12,
+        9
+      ],
+      "facing": 1,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    },
+    {
+      "label": "lighthouse-4F-component-3-context",
+      "map": "OlivineCity_Lighthouse_4F",
+      "position": [
+        5,
+        8
+      ],
+      "facing": 1,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    },
+    {
+      "label": "lighthouse-5F-component-0-context",
+      "map": "OlivineCity_Lighthouse_5F",
+      "position": [
+        8,
+        13
+      ],
+      "facing": 4,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    },
+    {
+      "label": "lighthouse-6F-component-0-context",
+      "map": "OlivineCity_Lighthouse_6F",
+      "position": [
+        11,
+        13
+      ],
+      "facing": 3,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    },
+    {
+      "label": "lighthouse-Balcony-component-0-context",
+      "map": "OlivineCity_Lighthouse_Balcony",
+      "position": [
+        14,
+        9
+      ],
+      "facing": 2,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    },
+    {
+      "label": "lighthouse-Elevator-component-None-context",
+      "map": "OlivineCity_Lighthouse_Elevator",
+      "position": [
+        4,
+        4
+      ],
+      "facing": 2,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    },
+    {
+      "label": "lighthouse-6F-inner-stair-context",
+      "map": "OlivineCity_Lighthouse_6F",
+      "position": [
+        9,
+        11
+      ],
+      "facing": 4,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    },
+    {
+      "label": "lighthouse-6F-core-counterclockwise",
+      "map": "OlivineCity_Lighthouse_6F",
+      "position": [
+        12,
+        14
+      ],
+      "facing": 2,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    },
+    {
+      "label": "lighthouse-6F-core-clockwise",
+      "map": "OlivineCity_Lighthouse_6F",
+      "position": [
+        12,
+        14
+      ],
+      "facing": 1,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    },
+    {
+      "label": "lighthouse-window-balcony-arrival",
+      "map": "OlivineCity_Lighthouse_Balcony",
+      "position": [
+        14,
+        9
+      ],
+      "facing": 1,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    },
+    {
+      "label": "OlivineCity_Lighthouse_1F-lift-leaf-0",
+      "map": "OlivineCity_Lighthouse_1F",
+      "position": [
+        8,
+        4
+      ],
+      "facing": 1,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    },
+    {
+      "label": "OlivineCity_Lighthouse_1F-lift-leaf-1",
+      "map": "OlivineCity_Lighthouse_1F",
+      "position": [
+        8,
+        4
+      ],
+      "facing": 1,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    },
+    {
+      "label": "OlivineCity_Lighthouse_6F-lift-leaf-0",
+      "map": "OlivineCity_Lighthouse_6F",
+      "position": [
+        8,
+        4
+      ],
+      "facing": 1,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    },
+    {
+      "label": "OlivineCity_Lighthouse_6F-lift-leaf-1",
+      "map": "OlivineCity_Lighthouse_6F",
+      "position": [
+        8,
+        4
+      ],
+      "facing": 1,
+      "native_size": [
+        240,
+        160
+      ],
+      "debug_magenta": 0
+    }
+  ],
+  "recordings": [
+    {
+      "label": "lighthouse-6F-core-continuous-both-directions",
+      "native_size": [
+        240,
+        160
+      ],
+      "frame_count": 742
+    },
+    {
+      "label": "lighthouse-window-fall",
+      "native_size": [
+        240,
+        160
+      ],
+      "frame_count": 150
+    },
+    {
+      "label": "OlivineCity_Lighthouse_1F-lift-leaf-0",
+      "native_size": [
+        240,
+        160
+      ],
+      "frame_count": 366
+    },
+    {
+      "label": "OlivineCity_Lighthouse_1F-lift-leaf-1",
+      "native_size": [
+        240,
+        160
+      ],
+      "frame_count": 375
+    },
+    {
+      "label": "OlivineCity_Lighthouse_6F-lift-leaf-0",
+      "native_size": [
+        240,
+        160
+      ],
+      "frame_count": 384
+    },
+    {
+      "label": "OlivineCity_Lighthouse_6F-lift-leaf-1",
+      "native_size": [
+        240,
+        160
+      ],
+      "frame_count": 375
+    }
+  ],
+  "normal_save_continue": [
+    {
+      "label": "lighthouse-1F-component-0-normal-save",
+      "result": "PASS",
+      "before": [
+        "OlivineCity_Lighthouse_1F",
+        [
+          8,
+          12
+        ]
+      ],
+      "after": [
+        "OlivineCity_Lighthouse_1F",
+        [
+          8,
+          12
+        ]
+      ],
+      "legacy_fixture": false,
+      "exact_party_boxes_inventory_flags_starter": true,
+      "actual_walk_away": [
+        7,
+        12
+      ],
+      "actual_exit": "OlivineCity",
+      "actual_return_to_saved_point": true
+    },
+    {
+      "label": "lighthouse-2F-component-0-normal-save",
+      "result": "PASS",
+      "before": [
+        "OlivineCity_Lighthouse_2F",
+        [
+          8,
+          13
+        ]
+      ],
+      "after": [
+        "OlivineCity_Lighthouse_2F",
+        [
+          8,
+          13
+        ]
+      ],
+      "legacy_fixture": false,
+      "exact_party_boxes_inventory_flags_starter": true,
+      "actual_walk_away": [
+        7,
+        13
+      ],
+      "actual_exit": "OlivineCity_Lighthouse_1F",
+      "actual_return_to_saved_point": true
+    },
+    {
+      "label": "lighthouse-3F-component-0-normal-save",
+      "result": "PASS",
+      "before": [
+        "OlivineCity_Lighthouse_3F",
+        [
+          13,
+          8
+        ]
+      ],
+      "after": [
+        "OlivineCity_Lighthouse_3F",
+        [
+          13,
+          8
+        ]
+      ],
+      "legacy_fixture": false,
+      "exact_party_boxes_inventory_flags_starter": true,
+      "actual_walk_away": [
+        12,
+        8
+      ],
+      "actual_exit": "OlivineCity_Lighthouse_2F",
+      "actual_return_to_saved_point": true
+    },
+    {
+      "label": "lighthouse-3F-component-5-normal-save",
+      "result": "PASS",
+      "before": [
+        "OlivineCity_Lighthouse_3F",
+        [
+          8,
+          16
+        ]
+      ],
+      "after": [
+        "OlivineCity_Lighthouse_3F",
+        [
+          8,
+          16
+        ]
+      ],
+      "legacy_fixture": false,
+      "exact_party_boxes_inventory_flags_starter": true,
+      "actual_walk_away": [
+        7,
+        16
+      ],
+      "actual_exit": "OlivineCity_Lighthouse_Balcony",
+      "actual_return_to_saved_point": true
+    },
+    {
+      "label": "lighthouse-4F-component-0-normal-save",
+      "result": "PASS",
+      "before": [
+        "OlivineCity_Lighthouse_4F",
+        [
+          12,
+          9
+        ]
+      ],
+      "after": [
+        "OlivineCity_Lighthouse_4F",
+        [
+          12,
+          9
+        ]
+      ],
+      "legacy_fixture": false,
+      "exact_party_boxes_inventory_flags_starter": true,
+      "actual_walk_away": [
+        11,
+        9
+      ],
+      "actual_exit": "OlivineCity_Lighthouse_3F",
+      "actual_return_to_saved_point": true
+    },
+    {
+      "label": "lighthouse-4F-component-3-normal-save",
+      "result": "PASS",
+      "before": [
+        "OlivineCity_Lighthouse_4F",
+        [
+          5,
+          8
+        ]
+      ],
+      "after": [
+        "OlivineCity_Lighthouse_4F",
+        [
+          5,
+          8
+        ]
+      ],
+      "legacy_fixture": false,
+      "exact_party_boxes_inventory_flags_starter": true,
+      "actual_walk_away": [
+        4,
+        8
+      ],
+      "actual_exit": "OlivineCity_Lighthouse_3F",
+      "actual_return_to_saved_point": true
+    },
+    {
+      "label": "lighthouse-5F-component-0-normal-save",
+      "result": "PASS",
+      "before": [
+        "OlivineCity_Lighthouse_5F",
+        [
+          8,
+          13
+        ]
+      ],
+      "after": [
+        "OlivineCity_Lighthouse_5F",
+        [
+          8,
+          13
+        ]
+      ],
+      "legacy_fixture": false,
+      "exact_party_boxes_inventory_flags_starter": true,
+      "actual_walk_away": [
+        7,
+        13
+      ],
+      "actual_exit": "OlivineCity_Lighthouse_4F",
+      "actual_return_to_saved_point": true
+    },
+    {
+      "label": "lighthouse-6F-component-0-normal-save",
+      "result": "PASS",
+      "before": [
+        "OlivineCity_Lighthouse_6F",
+        [
+          11,
+          13
+        ]
+      ],
+      "after": [
+        "OlivineCity_Lighthouse_6F",
+        [
+          11,
+          13
+        ]
+      ],
+      "legacy_fixture": false,
+      "exact_party_boxes_inventory_flags_starter": true,
+      "actual_walk_away": [
+        12,
+        13
+      ],
+      "actual_exit": "OlivineCity_Lighthouse_5F",
+      "actual_return_to_saved_point": true
+    },
+    {
+      "label": "lighthouse-Balcony-component-0-normal-save",
+      "result": "PASS",
+      "before": [
+        "OlivineCity_Lighthouse_Balcony",
+        [
+          14,
+          9
+        ]
+      ],
+      "after": [
+        "OlivineCity_Lighthouse_Balcony",
+        [
+          14,
+          9
+        ]
+      ],
+      "legacy_fixture": false,
+      "exact_party_boxes_inventory_flags_starter": true,
+      "actual_walk_away": [
+        15,
+        9
+      ],
+      "actual_exit": "OlivineCity_Lighthouse_3F",
+      "actual_return_to_saved_point": true
+    },
+    {
+      "label": "lighthouse-Elevator-component-None-normal-save",
+      "result": "PASS",
+      "before": [
+        "OlivineCity_Lighthouse_Elevator",
+        [
+          4,
+          4
+        ]
+      ],
+      "after": [
+        "OlivineCity_Lighthouse_Elevator",
+        [
+          4,
+          4
+        ]
+      ],
+      "legacy_fixture": false,
+      "exact_party_boxes_inventory_flags_starter": true,
+      "actual_walk_away": [
+        3,
+        4
+      ],
+      "actual_exit": "OlivineCity_Lighthouse_6F",
+      "actual_return_to_saved_point": true
+    },
+    {
+      "label": "lighthouse-selected-OlivineCity_Lighthouse_1F-normal-save",
+      "result": "PASS",
+      "before": [
+        "OlivineCity_Lighthouse_Elevator",
+        [
+          2,
+          3
+        ]
+      ],
+      "after": [
+        "OlivineCity_Lighthouse_Elevator",
+        [
+          2,
+          3
+        ]
+      ],
+      "legacy_fixture": false,
+      "exact_party_boxes_inventory_flags_starter": true,
+      "selected_floor_retained": true,
+      "actual_exit": "OlivineCity_Lighthouse_1F"
+    },
+    {
+      "label": "lighthouse-selected-OlivineCity_Lighthouse_6F-normal-save",
+      "result": "PASS",
+      "before": [
+        "OlivineCity_Lighthouse_Elevator",
+        [
+          5,
+          3
+        ]
+      ],
+      "after": [
+        "OlivineCity_Lighthouse_Elevator",
+        [
+          5,
+          3
+        ]
+      ],
+      "legacy_fixture": false,
+      "exact_party_boxes_inventory_flags_starter": true,
+      "selected_floor_retained": true,
+      "actual_exit": "OlivineCity_Lighthouse_6F"
+    }
+  ],
+  "final_map": "OlivineCity",
+  "final_position": [
+    45,
+    40
+  ],
+  "final_survey_access": 0,
+  "owner_delta_visual_acceptance": "PENDING",
+  "error": null,
+  "journeys": [
+    {
+      "case": "4F window/balcony/southern3F/western4F/5F/6F/ground return",
+      "result": "PASS"
+    },
+    {
+      "case": "native lift",
+      "floor": "OlivineCity_Lighthouse_1F",
+      "exit_leaf": 0,
+      "arrival": [
+        8,
+        4
+      ],
+      "facing": 1,
+      "actual_walk_away": [
+        9,
+        5
+      ],
+      "result": "PASS"
+    },
+    {
+      "case": "native lift",
+      "floor": "OlivineCity_Lighthouse_1F",
+      "exit_leaf": 1,
+      "arrival": [
+        8,
+        4
+      ],
+      "facing": 1,
+      "actual_walk_away": [
+        9,
+        5
+      ],
+      "result": "PASS"
+    },
+    {
+      "case": "native lift",
+      "floor": "OlivineCity_Lighthouse_6F",
+      "exit_leaf": 0,
+      "arrival": [
+        8,
+        4
+      ],
+      "facing": 1,
+      "actual_walk_away": [
+        9,
+        5
+      ],
+      "result": "PASS"
+    },
+    {
+      "case": "native lift",
+      "floor": "OlivineCity_Lighthouse_6F",
+      "exit_leaf": 1,
+      "arrival": [
+        8,
+        4
+      ],
+      "facing": 1,
+      "actual_walk_away": [
+        9,
+        5
+      ],
+      "result": "PASS"
+    }
+  ],
+  "core_circuits": [
+    {
+      "direction": "counterclockwise",
+      "start": [
+        12,
+        14
+      ],
+      "anchors": [
+        [
+          13,
+          10
+        ],
+        [
+          12,
+          6
+        ],
+        [
+          10,
+          5
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          3,
+          10
+        ],
+        [
+          4,
+          14
+        ],
+        [
+          8,
+          15
+        ],
+        [
+          12,
+          14
+        ]
+      ],
+      "end": [
+        12,
+        14
+      ],
+      "normal_controller": true,
+      "result": "PASS"
+    },
+    {
+      "direction": "clockwise",
+      "start": [
+        12,
+        14
+      ],
+      "anchors": [
+        [
+          8,
+          15
+        ],
+        [
+          4,
+          14
+        ],
+        [
+          3,
+          10
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          10,
+          5
+        ],
+        [
+          12,
+          6
+        ],
+        [
+          13,
+          10
+        ],
+        [
+          12,
+          14
+        ]
+      ],
+      "end": [
+        12,
+        14
+      ],
+      "normal_controller": true,
+      "result": "PASS"
+    }
+  ]
+}

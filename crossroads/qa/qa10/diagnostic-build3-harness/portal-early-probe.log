@@ -1,0 +1,12 @@
+/workspace/Project-crossroads/crossroads/tools/olivine_port_save_migration_smoke.py:86: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  path=out/(label+'.png');assert lib.emu_image(str(path).encode());im=Image.open(path).convert('RGB');assert not any(v==(255,0,255)for v in im.getdata());visibility=joe_opacity(im);views.append(dict(label=label,position=list(pos()),opaque=visibility,result='PASS'))
+Traceback (most recent call last):
+  File "/workspace/Project-crossroads/crossroads/tools/olivine_port_save_migration_smoke.py", line 116, in <module>
+    if label=='actual-old-walking-city23-53':portal_views=portal_visibility()
+                                                          ^^^^^^^^^^^^^^^^^^^
+  File "/workspace/Project-crossroads/crossroads/tools/olivine_port_save_migration_smoke.py", line 91, in portal_visibility
+    move(128,(7 if x==23 else 8,3),terminal)
+  File "/workspace/Project-crossroads/crossroads/tools/olivine_port_save_migration_smoke.py", line 84, in move
+    recorded(16,button);recorded(240 if location!=current_location()else 40);assert current_location()==location and pos()==target,('Actual portal journey did not reach expected position/map',target,location,current_location(),pos())
+                                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('Actual portal journey did not reach expected position/map', (7, 3), (76, 41), (76, 41), (7, 2))

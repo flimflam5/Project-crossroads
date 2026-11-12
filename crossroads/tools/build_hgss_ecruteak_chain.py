@@ -6,6 +6,7 @@ conversion remains subject to detailed visual comparison; never claims full1:1.
 """
 import json,struct,argparse,copy
 from pathlib import Path
+from build_qa10_arrival_facing import render as arrival_facing_scripts
 R=Path(__file__).resolve().parents[2]
 AREAS=['EcruteakCity_BarrierStation','EcruteakCity_BarrierCorridor','BellchimeTrail']
 MID={AREAS[0]:'MAP_ECRUTEAK_CITY_BARRIER_STATION',AREAS[1]:'MAP_ECRUTEAK_CITY_BARRIER_CORRIDOR',AREAS[2]:'MAP_BELLCHIME_TRAIL'}
@@ -90,7 +91,7 @@ def generate(check=False):
    byid[LID[n]].clear();byid[LID[n]].update(l) # Author dimensions without renumbering IDs
   if n not in group:group.append(n)
   assert group.index(n)<127,'Reserved dynamic warp number127'
-  js(f'data/maps/{n}/map.json',maps[n]);write(f'data/maps/{n}/scripts.inc',f'{n}_MapScripts::\n    .byte 0\n');write(l['blockdata_filepath'],struct.pack('<'+str(w*h)+'H',*tiles[n]));write(l['border_filepath'],struct.pack('<4H',*([0x4c6 if outdoor else 0x400|ART['void']['start']]*4)))
+  js(f'data/maps/{n}/map.json',maps[n]);write(f'data/maps/{n}/scripts.inc',arrival_facing_scripts(n,f'{n}_MapScripts::\n    .byte 0\n'));write(l['blockdata_filepath'],struct.pack('<'+str(w*h)+'H',*tiles[n]));write(l['border_filepath'],struct.pack('<4H',*([0x4c6 if outdoor else 0x400|ART['void']['start']]*4)))
   if n not in plans:manifest['planned'].append(dict(name=n,kind='hgss',parent='EcruteakCity',cluster='west',status='implemented-reference-review-pending'))
  js('data/layouts/layouts.json',layouts);js('data/maps/map_groups.json',groups);js('crossroads/johto/manifest.json',manifest)
  city=load('data/maps/EcruteakCity/map.json');city['warp_events'][1].update(dest_map=MID[AREAS[0]],dest_warp_id='2');js('data/maps/EcruteakCity/map.json',city)

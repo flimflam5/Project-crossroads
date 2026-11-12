@@ -1,0 +1,180 @@
+{
+  "source_commit": "e7e2c085a5a61ef727d06f9f682af7d3a954cc06",
+  "rom_sha256": "af59dff1b06b99a9599c6f98b6fb6bd1e765cc52c0838a2dec5c79a6c1f88373",
+  "elf_sha256": "e484ec2b6b7ba97e50d60805ef42b3a1ebe16bbb5815d703f02665daeaed5944",
+  "source_battery_sha256": "b03ff1ef488fbd25de016e828483bc3001787b84e450a45eaa0ac12a11de30ab",
+  "all8_stages_passed": true,
+  "jobs": [
+    {
+      "job": "title",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/Project-crossroads/crossroads/tools/emulator_smoke.py",
+        "--library",
+        "/tmp/johto-bridge.so",
+        "--title-only",
+        "--output",
+        "/workspace/Project-crossroads/build/qa10-b3-regression-title"
+      ],
+      "exit_code": 0,
+      "seconds": 7.7,
+      "output": "build/qa10-b3-regression-title",
+      "log": "/tmp/qa10-b3-regression-title.log",
+      "rom_sha256": "af59dff1b06b99a9599c6f98b6fb6bd1e765cc52c0838a2dec5c79a6c1f88373",
+      "interrupted": false
+    },
+    {
+      "job": "pre-title",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/Project-crossroads/crossroads/tools/pre_title_smoke.py",
+        "--library",
+        "/tmp/johto-bridge.so",
+        "--output",
+        "/workspace/Project-crossroads/build/qa10-b3-regression-pre-title"
+      ],
+      "exit_code": 0,
+      "seconds": 7.21,
+      "output": "build/qa10-b3-regression-pre-title",
+      "log": "/tmp/qa10-b3-regression-pre-title.log",
+      "rom_sha256": "af59dff1b06b99a9599c6f98b6fb6bd1e765cc52c0838a2dec5c79a6c1f88373",
+      "interrupted": false
+    },
+    {
+      "job": "starters",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/Project-crossroads/crossroads/tools/emulator_smoke.py",
+        "--library",
+        "/tmp/johto-bridge.so",
+        "--starters-only",
+        "--output",
+        "/workspace/Project-crossroads/build/qa10-b3-regression-starters"
+      ],
+      "exit_code": 0,
+      "seconds": 93.77,
+      "output": "build/qa10-b3-regression-starters",
+      "log": "/tmp/qa10-b3-regression-starters.log",
+      "rom_sha256": "af59dff1b06b99a9599c6f98b6fb6bd1e765cc52c0838a2dec5c79a6c1f88373",
+      "interrupted": false
+    },
+    {
+      "job": "first-loss",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/Project-crossroads/crossroads/tools/joe_battle_graphics_smoke.py",
+        "--library",
+        "/tmp/johto-bridge.so",
+        "--output",
+        "/workspace/Project-crossroads/build/qa10-b3-regression-first-loss"
+      ],
+      "exit_code": 0,
+      "seconds": 9.3,
+      "output": "build/qa10-b3-regression-first-loss",
+      "log": "/tmp/qa10-b3-regression-first-loss.log",
+      "rom_sha256": "af59dff1b06b99a9599c6f98b6fb6bd1e765cc52c0838a2dec5c79a6c1f88373",
+      "interrupted": false
+    },
+    {
+      "job": "fly",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/Project-crossroads/crossroads/tools/johto_fly_smoke.py",
+        "--save",
+        "/workspace/Project-crossroads/build/qa10-b3-regression-lane/input-copy.sav",
+        "--library",
+        "/tmp/johto-bridge.so",
+        "--record",
+        "--output",
+        "/workspace/Project-crossroads/build/qa10-b3-regression-fly"
+      ],
+      "exit_code": 0,
+      "seconds": 33.16,
+      "output": "build/qa10-b3-regression-fly",
+      "log": "/tmp/qa10-b3-regression-fly.log",
+      "rom_sha256": "af59dff1b06b99a9599c6f98b6fb6bd1e765cc52c0838a2dec5c79a6c1f88373",
+      "interrupted": false
+    },
+    {
+      "job": "joe",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/Project-crossroads/crossroads/tools/joe_field_actions_smoke.py",
+        "--save",
+        "/workspace/Project-crossroads/build/qa10-b3-regression-lane/input-copy.sav",
+        "--library",
+        "/tmp/johto-bridge.so",
+        "--output",
+        "/workspace/Project-crossroads/build/qa10-b3-regression-joe"
+      ],
+      "exit_code": 0,
+      "seconds": 38.33,
+      "output": "build/qa10-b3-regression-joe",
+      "log": "/tmp/qa10-b3-regression-joe.log",
+      "rom_sha256": "af59dff1b06b99a9599c6f98b6fb6bd1e765cc52c0838a2dec5c79a6c1f88373",
+      "interrupted": false
+    },
+    {
+      "job": "running",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/Project-crossroads/crossroads/tools/joe_running_smoke.py",
+        "--save",
+        "/workspace/Project-crossroads/build/qa10-b3-regression-lane/input-copy.sav",
+        "--library",
+        "/tmp/johto-bridge.so",
+        "--output",
+        "/workspace/Project-crossroads/build/qa10-b3-regression-running"
+      ],
+      "exit_code": 0,
+      "seconds": 64.09,
+      "output": "build/qa10-b3-regression-running",
+      "log": "/tmp/qa10-b3-regression-running.log",
+      "rom_sha256": "af59dff1b06b99a9599c6f98b6fb6bd1e765cc52c0838a2dec5c79a6c1f88373",
+      "interrupted": false
+    },
+    {
+      "job": "services",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/Project-crossroads/crossroads/tools/olivine_service_smoke.py",
+        "--save",
+        "/workspace/Project-crossroads/build/qa10-b3-regression-lane/input-copy.sav",
+        "--library",
+        "/tmp/johto-bridge.so",
+        "--output",
+        "/workspace/Project-crossroads/build/qa10-b3-regression-services"
+      ],
+      "exit_code": 0,
+      "seconds": 322.99,
+      "output": "build/qa10-b3-regression-services",
+      "log": "/tmp/qa10-b3-regression-services.log",
+      "rom_sha256": "af59dff1b06b99a9599c6f98b6fb6bd1e765cc52c0838a2dec5c79a6c1f88373",
+      "interrupted": false
+    }
+  ],
+  "actual_counts": {
+    "title_pre_title": 2,
+    "starter_choices": 3,
+    "accepted_city_facade_leaves": 16,
+    "fly_destinations": 10,
+    "services": 51,
+    "first_loss_local_recovery": true,
+    "joe_trainer_back_actual_sprite_and_palette": true,
+    "running_walk_tiles": 2,
+    "running_B_tiles": 3
+  },
+  "source_batteries_unchanged": true,
+  "method": "Fresh B3 cores and copied batteries; normal input movement/dialogue with disclosed fresh-game setup, HP/status, gear and encounter-suppression fixtures. Observer adds no game-memory writes. No old-ROM states. Actual palette/VRAM proof and native screenshots inspected separately from owner visual acceptance.",
+  "inactive_or_unplayed": [
+    "Dive",
+    "watering",
+    "decoration camera",
+    "VS Seeker",
+    "contest local avatar",
+    "multi-emulator link",
+    "unused story Joe NPC scenes"
+  ],
+  "owner_delta_visual_acceptance": "PENDING",
+  "historical_diagnostic": "B2 title/pretitle/starters/first-loss/Fly passed; initial stale south-port test failed before exact north-approach correction; Joe interrupted and services/running unstarted. B2 results are not relabelled B3."
+}

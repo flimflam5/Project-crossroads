@@ -1,0 +1,11 @@
+{
+  "method": "Contact sheet only: unmodified actual native 240x160 game frames, arranged left/right by row. No rendered reconstructions.",
+  "row_order": [
+    "west-city-gate-inside-2-front",
+    "trail-station-return-outside-0-front",
+    "olivine-port-city-entrance-outside-0-front",
+    "olivine-port-quay-main-outside-0-front",
+    "aqua-gangway-outside-0-front",
+    "aqua-southeastcabins-0-outside-0-front"
+  ]
+}

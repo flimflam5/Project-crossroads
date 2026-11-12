@@ -1,0 +1,71 @@
+{
+  "rom_sha256": "73b82a53ec237f531877f31aabdb76bb5ba56691f9de85d60a868446e4fc9e3a",
+  "files": [
+    {
+      "path": "valid-old-surf-water-arrival.png",
+      "sha256": "591b12aa1f69a840297d015586490c7e90d9e6d8e0498920800853d0253c83d6",
+      "bytes": 7706
+    },
+    {
+      "path": "actual-old-walking-city23-53-candidate-arrival-before-safety-assert.png",
+      "sha256": "66f2c940ef0a2a0b370f11489c5f34f4d3960f554bb08e1de3f64fc7724b331e",
+      "bytes": 8273
+    },
+    {
+      "path": "actual-old-surf-city23-55-migrated-arrival.png",
+      "sha256": "5fc557742097625244e5a1313e9f002e7e4cb3a2eceaaf8defd5bd324bd976df",
+      "bytes": 8294
+    },
+    {
+      "path": "actual-old-surf-city23-55-new-cold-continue.png",
+      "sha256": "9940f8e22428a799364e3f6327847c65010b3535e80ac4a1c36003261029e73c",
+      "bytes": 7893
+    },
+    {
+      "path": "valid-old-surf-water-new-continue.png",
+      "sha256": "e3278ffa32d05090a16637cdf2cb4a70953f45ee9f2f9aed8841efead3f9d604",
+      "bytes": 7905
+    },
+    {
+      "path": "actual-old-surf-city23-55-candidate-arrival-before-safety-assert.png",
+      "sha256": "5fc557742097625244e5a1313e9f002e7e4cb3a2eceaaf8defd5bd324bd976df",
+      "bytes": 8294
+    },
+    {
+      "path": "actual-old-walking-city23-53-new-cold-continue.png",
+      "sha256": "9940f8e22428a799364e3f6327847c65010b3535e80ac4a1c36003261029e73c",
+      "bytes": 7893
+    },
+    {
+      "path": "actual-old-walking-city23-53-walk-away.png",
+      "sha256": "20dfa3fb460b52bddf5608cb7394001117694feaf4a34edc16c5f1b82d323273",
+      "bytes": 8708
+    },
+    {
+      "path": "actual-old-walking-city23-53-migrated-arrival.png",
+      "sha256": "66f2c940ef0a2a0b370f11489c5f34f4d3960f554bb08e1de3f64fc7724b331e",
+      "bytes": 8273
+    },
+    {
+      "path": "actual-old-surf-city23-55-walk-away.png",
+      "sha256": "d5e9767198d2da0eff3301b41c11c971f7f687b219d3c53d96c8b0c922356c50",
+      "bytes": 8784
+    },
+    {
+      "path": "actual-old-walking-city23-53-candidate-arrival.json",
+      "sha256": "3ba664a419d8c9329f710cb93c5cd06c10b4af941c43d16e67ce73b3e1acc67d",
+      "bytes": 347
+    },
+    {
+      "path": "actual-old-surf-city23-55-candidate-arrival.json",
+      "sha256": "95021ee4932b8ecc2fbb2efa11dbfabc7569ad320eeb7f411b03f8918f82185c",
+      "bytes": 344
+    },
+    {
+      "path": "results.json",
+      "sha256": "63e9f70a5c382eea0e9f167b871f7967f83a9ce68bbe7bf6a69bd51deeafbc1b",
+      "bytes": 2247
+    }
+  ],
+  "private_batteries_excluded": true
+}

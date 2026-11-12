@@ -1,0 +1,743 @@
+{
+  "rom_sha256": "af59dff1b06b99a9599c6f98b6fb6bd1e765cc52c0838a2dec5c79a6c1f88373",
+  "source_revision": "521000c1977d40ed8ca6956859d337c898743f07",
+  "dirty_tracked_sources": true,
+  "source_battery_sha256": "b03ff1ef488fbd25de016e828483bc3001787b84e450a45eaa0ac12a11de30ab",
+  "source_battery_unchanged": true,
+  "method": "Normal controller travel from copied battery. Source HGSS blocking facts independently SHA-pinned. Native screenshot inspection is separate from source tests and owner acceptance.",
+  "executed_collision_bumps": false,
+  "records": [
+    {
+      "case": "contextual-native-view",
+      "map": "SSAqua_1F",
+      "reference_area": "SSAqua_1F-west-lounge-benches",
+      "requested_near": [
+        7,
+        10
+      ],
+      "actual_position": [
+        7,
+        10
+      ],
+      "result": "Captured actual native context; visual acceptance separate"
+    },
+    {
+      "case": "contextual-native-view",
+      "map": "SSAqua_1F",
+      "reference_area": "SSAqua_1F-southern-settee-planter",
+      "requested_near": [
+        6,
+        17
+      ],
+      "actual_position": [
+        6,
+        17
+      ],
+      "result": "Captured actual native context; visual acceptance separate"
+    },
+    {
+      "case": "public-room-component",
+      "map": "SSAqua_1F",
+      "entry_warp": 0,
+      "component": 1,
+      "position": [
+        17,
+        11
+      ],
+      "floor_cells": 317,
+      "joe_visibility": {
+        "opaque_expected": 192,
+        "opaque_visible": 192
+      },
+      "result": "PASS"
+    },
+    {
+      "case": "normal-save-cold-continue",
+      "map": "SSAqua_1F",
+      "position": [
+        17,
+        11
+      ],
+      "exact_party_boxes_starter_flags_decoded_inventory": true,
+      "result": "PASS"
+    },
+    {
+      "case": "public-room-component",
+      "map": "SSAqua_1F",
+      "entry_warp": 10,
+      "component": 2,
+      "position": [
+        48,
+        17
+      ],
+      "floor_cells": 152,
+      "joe_visibility": {
+        "opaque_expected": 192,
+        "opaque_visible": 192
+      },
+      "result": "PASS"
+    },
+    {
+      "case": "normal-save-cold-continue",
+      "map": "SSAqua_1F",
+      "position": [
+        48,
+        17
+      ],
+      "exact_party_boxes_starter_flags_decoded_inventory": true,
+      "result": "PASS"
+    },
+    {
+      "case": "interaction",
+      "map": "SSAqua_1F",
+      "label": "SSAqua_1F-npc-1",
+      "target": [
+        25,
+        17
+      ],
+      "approach": [
+        25,
+        18
+      ],
+      "actual_npc_local_id": 1,
+      "result": "PASS"
+    },
+    {
+      "case": "interaction",
+      "map": "SSAqua_1F",
+      "label": "SSAqua_1F-npc-2",
+      "target": [
+        7,
+        11
+      ],
+      "approach": [
+        7,
+        12
+      ],
+      "actual_npc_local_id": 2,
+      "result": "PASS"
+    },
+    {
+      "case": "interaction",
+      "map": "SSAqua_1F",
+      "label": "SSAqua_1F-npc-3",
+      "target": [
+        52,
+        17
+      ],
+      "approach": [
+        52,
+        18
+      ],
+      "actual_npc_local_id": 3,
+      "result": "PASS"
+    },
+    {
+      "case": "public-room-component",
+      "map": "SSAqua_CaptainRoom",
+      "entry_warp": 0,
+      "component": 1,
+      "position": [
+        7,
+        7
+      ],
+      "floor_cells": 83,
+      "joe_visibility": {
+        "opaque_expected": 186,
+        "opaque_visible": 186
+      },
+      "result": "PASS"
+    },
+    {
+      "case": "normal-save-cold-continue",
+      "map": "SSAqua_CaptainRoom",
+      "position": [
+        7,
+        7
+      ],
+      "exact_party_boxes_starter_flags_decoded_inventory": true,
+      "result": "PASS"
+    },
+    {
+      "case": "interaction",
+      "map": "SSAqua_CaptainRoom",
+      "label": "SSAqua_CaptainRoom-npc-1",
+      "target": [
+        9,
+        4
+      ],
+      "approach": [
+        10,
+        4
+      ],
+      "actual_npc_local_id": 1,
+      "result": "PASS"
+    },
+    {
+      "case": "interaction",
+      "map": "SSAqua_CaptainRoom",
+      "label": "SSAqua_CaptainRoom-sign-1",
+      "target": [
+        9,
+        6
+      ],
+      "approach": [
+        9,
+        7
+      ],
+      "actual_npc_local_id": null,
+      "result": "PASS"
+    },
+    {
+      "case": "public-room-component",
+      "map": "SSAqua_SoutheastCabins",
+      "entry_warp": 0,
+      "component": 1,
+      "position": [
+        7,
+        7
+      ],
+      "floor_cells": 82,
+      "joe_visibility": {
+        "opaque_expected": 192,
+        "opaque_visible": 192
+      },
+      "result": "PASS"
+    },
+    {
+      "case": "normal-save-cold-continue",
+      "map": "SSAqua_SoutheastCabins",
+      "position": [
+        7,
+        7
+      ],
+      "exact_party_boxes_starter_flags_decoded_inventory": true,
+      "result": "PASS"
+    },
+    {
+      "case": "public-room-component",
+      "map": "SSAqua_SoutheastCabins",
+      "entry_warp": 1,
+      "component": 2,
+      "position": [
+        19,
+        8
+      ],
+      "floor_cells": 86,
+      "joe_visibility": {
+        "opaque_expected": 187,
+        "opaque_visible": 187
+      },
+      "result": "PASS"
+    },
+    {
+      "case": "normal-save-cold-continue",
+      "map": "SSAqua_SoutheastCabins",
+      "position": [
+        19,
+        8
+      ],
+      "exact_party_boxes_starter_flags_decoded_inventory": true,
+      "result": "PASS"
+    },
+    {
+      "case": "interaction",
+      "map": "SSAqua_SoutheastCabins",
+      "label": "SSAqua_SoutheastCabins-npc-1",
+      "target": [
+        9,
+        7
+      ],
+      "approach": [
+        9,
+        8
+      ],
+      "actual_npc_local_id": 1,
+      "result": "PASS"
+    },
+    {
+      "case": "berth-rest",
+      "label": "SSAqua_SoutheastCabins-sign-1",
+      "map": "SSAqua_SoutheastCabins",
+      "position": [
+        17,
+        4
+      ],
+      "fixture": "Private first-mon1HP/poison only, isolated by exact-ROM snapshot; no identity/item/coordinate/story writes",
+      "actual_native_task": "Task_HandleYesNoInput",
+      "actual_menu_pointer": "0x20310e0",
+      "NO_cursor_verified": 1,
+      "YES_cursor_verified": 0,
+      "decline_preserves_low_hp_and_poison": true,
+      "accept_all_party_full_hp_and_status_cured": true,
+      "source_battery_unchanged": true,
+      "result": "PASS"
+    },
+    {
+      "case": "berth-rest",
+      "label": "SSAqua_SoutheastCabins-sign-2",
+      "map": "SSAqua_SoutheastCabins",
+      "position": [
+        16,
+        6
+      ],
+      "fixture": "Private first-mon1HP/poison only, isolated by exact-ROM snapshot; no identity/item/coordinate/story writes",
+      "actual_native_task": "Task_HandleYesNoInput",
+      "actual_menu_pointer": "0x20310e0",
+      "NO_cursor_verified": 1,
+      "YES_cursor_verified": 0,
+      "decline_preserves_low_hp_and_poison": true,
+      "accept_all_party_full_hp_and_status_cured": true,
+      "source_battery_unchanged": true,
+      "result": "PASS"
+    },
+    {
+      "case": "public-room-component",
+      "map": "SSAqua_SouthwestCabins",
+      "entry_warp": 0,
+      "component": 1,
+      "position": [
+        7,
+        7
+      ],
+      "floor_cells": 95,
+      "joe_visibility": {
+        "opaque_expected": 192,
+        "opaque_visible": 192
+      },
+      "result": "PASS"
+    },
+    {
+      "case": "normal-save-cold-continue",
+      "map": "SSAqua_SouthwestCabins",
+      "position": [
+        7,
+        7
+      ],
+      "exact_party_boxes_starter_flags_decoded_inventory": true,
+      "result": "PASS"
+    },
+    {
+      "case": "public-room-component",
+      "map": "SSAqua_SouthwestCabins",
+      "entry_warp": 1,
+      "component": 2,
+      "position": [
+        20,
+        7
+      ],
+      "floor_cells": 89,
+      "joe_visibility": {
+        "opaque_expected": 187,
+        "opaque_visible": 187
+      },
+      "result": "PASS"
+    },
+    {
+      "case": "normal-save-cold-continue",
+      "map": "SSAqua_SouthwestCabins",
+      "position": [
+        20,
+        7
+      ],
+      "exact_party_boxes_starter_flags_decoded_inventory": true,
+      "result": "PASS"
+    },
+    {
+      "case": "interaction",
+      "map": "SSAqua_SouthwestCabins",
+      "label": "SSAqua_SouthwestCabins-npc-1",
+      "target": [
+        5,
+        7
+      ],
+      "approach": [
+        5,
+        8
+      ],
+      "actual_npc_local_id": 1,
+      "result": "PASS"
+    },
+    {
+      "case": "interaction",
+      "map": "SSAqua_SouthwestCabins",
+      "label": "SSAqua_SouthwestCabins-npc-2",
+      "target": [
+        25,
+        5
+      ],
+      "approach": [
+        24,
+        5
+      ],
+      "actual_npc_local_id": 2,
+      "result": "PASS"
+    },
+    {
+      "case": "public-room-component",
+      "map": "SSAqua_NortheastCabins",
+      "entry_warp": 0,
+      "component": 1,
+      "position": [
+        7,
+        7
+      ],
+      "floor_cells": 81,
+      "joe_visibility": {
+        "opaque_expected": 186,
+        "opaque_visible": 186
+      },
+      "result": "PASS"
+    },
+    {
+      "case": "normal-save-cold-continue",
+      "map": "SSAqua_NortheastCabins",
+      "position": [
+        7,
+        7
+      ],
+      "exact_party_boxes_starter_flags_decoded_inventory": true,
+      "result": "PASS"
+    },
+    {
+      "case": "public-room-component",
+      "map": "SSAqua_NortheastCabins",
+      "entry_warp": 1,
+      "component": 2,
+      "position": [
+        18,
+        7
+      ],
+      "floor_cells": 83,
+      "joe_visibility": {
+        "opaque_expected": 192,
+        "opaque_visible": 192
+      },
+      "result": "PASS"
+    },
+    {
+      "case": "normal-save-cold-continue",
+      "map": "SSAqua_NortheastCabins",
+      "position": [
+        18,
+        7
+      ],
+      "exact_party_boxes_starter_flags_decoded_inventory": true,
+      "result": "PASS"
+    },
+    {
+      "case": "interaction",
+      "map": "SSAqua_NortheastCabins",
+      "label": "SSAqua_NortheastCabins-npc-1",
+      "target": [
+        9,
+        7
+      ],
+      "approach": [
+        9,
+        8
+      ],
+      "actual_npc_local_id": 1,
+      "result": "PASS"
+    },
+    {
+      "case": "interaction",
+      "map": "SSAqua_NortheastCabins",
+      "label": "SSAqua_NortheastCabins-npc-2",
+      "target": [
+        25,
+        5
+      ],
+      "approach": [
+        25,
+        6
+      ],
+      "actual_npc_local_id": 2,
+      "result": "PASS"
+    },
+    {
+      "case": "public-room-component",
+      "map": "SSAqua_NorthwestCabins",
+      "entry_warp": 0,
+      "component": 1,
+      "position": [
+        7,
+        9
+      ],
+      "floor_cells": 89,
+      "joe_visibility": {
+        "opaque_expected": 183,
+        "opaque_visible": 183
+      },
+      "result": "PASS"
+    },
+    {
+      "case": "normal-save-cold-continue",
+      "map": "SSAqua_NorthwestCabins",
+      "position": [
+        7,
+        9
+      ],
+      "exact_party_boxes_starter_flags_decoded_inventory": true,
+      "result": "PASS"
+    },
+    {
+      "case": "public-room-component",
+      "map": "SSAqua_NorthwestCabins",
+      "entry_warp": 1,
+      "component": 2,
+      "position": [
+        21,
+        7
+      ],
+      "floor_cells": 79,
+      "joe_visibility": {
+        "opaque_expected": 186,
+        "opaque_visible": 186
+      },
+      "result": "PASS"
+    },
+    {
+      "case": "normal-save-cold-continue",
+      "map": "SSAqua_NorthwestCabins",
+      "position": [
+        21,
+        7
+      ],
+      "exact_party_boxes_starter_flags_decoded_inventory": true,
+      "result": "PASS"
+    },
+    {
+      "case": "interaction",
+      "map": "SSAqua_NorthwestCabins",
+      "label": "SSAqua_NorthwestCabins-npc-1",
+      "target": [
+        10,
+        4
+      ],
+      "approach": [
+        10,
+        5
+      ],
+      "actual_npc_local_id": 1,
+      "result": "PASS"
+    },
+    {
+      "case": "interaction",
+      "map": "SSAqua_NorthwestCabins",
+      "label": "SSAqua_NorthwestCabins-npc-2",
+      "target": [
+        25,
+        8
+      ],
+      "approach": [
+        25,
+        9
+      ],
+      "actual_npc_local_id": 2,
+      "result": "PASS"
+    },
+    {
+      "case": "contextual-native-view",
+      "map": "SSAqua_B1F",
+      "reference_area": "SSAqua_B1F-six-crew-berths",
+      "requested_near": [
+        13,
+        10
+      ],
+      "actual_position": [
+        12,
+        10
+      ],
+      "result": "Captured actual native context; visual acceptance separate"
+    },
+    {
+      "case": "contextual-native-view",
+      "map": "SSAqua_B1F",
+      "reference_area": "SSAqua_B1F-crew-upper-berths",
+      "requested_near": [
+        13,
+        5
+      ],
+      "actual_position": [
+        12,
+        5
+      ],
+      "result": "Captured actual native context; visual acceptance separate"
+    },
+    {
+      "case": "contextual-native-view",
+      "map": "SSAqua_B1F",
+      "reference_area": "SSAqua_B1F-galley-table-seats",
+      "requested_near": [
+        32,
+        12
+      ],
+      "actual_position": [
+        32,
+        12
+      ],
+      "result": "Captured actual native context; visual acceptance separate"
+    },
+    {
+      "case": "contextual-native-view",
+      "map": "SSAqua_B1F",
+      "reference_area": "SSAqua_B1F-galley-kitchen",
+      "requested_near": [
+        32,
+        5
+      ],
+      "actual_position": [
+        32,
+        5
+      ],
+      "result": "Captured actual native context; visual acceptance separate"
+    },
+    {
+      "case": "contextual-native-view",
+      "map": "SSAqua_B1F",
+      "reference_area": "SSAqua_B1F-engine-safety-edge",
+      "requested_near": [
+        45,
+        15
+      ],
+      "actual_position": [
+        45,
+        15
+      ],
+      "result": "Captured actual native context; visual acceptance separate"
+    },
+    {
+      "case": "contextual-native-view",
+      "map": "SSAqua_B1F",
+      "reference_area": "SSAqua_B1F-engine-upper-equipment",
+      "requested_near": [
+        45,
+        7
+      ],
+      "actual_position": [
+        43,
+        7
+      ],
+      "result": "Captured actual native context; visual acceptance separate"
+    },
+    {
+      "case": "public-room-component",
+      "map": "SSAqua_B1F",
+      "entry_warp": 0,
+      "component": 1,
+      "position": [
+        30,
+        11
+      ],
+      "floor_cells": 589,
+      "joe_visibility": {
+        "opaque_expected": 186,
+        "opaque_visible": 186
+      },
+      "result": "PASS"
+    },
+    {
+      "case": "normal-save-cold-continue",
+      "map": "SSAqua_B1F",
+      "position": [
+        30,
+        11
+      ],
+      "exact_party_boxes_starter_flags_decoded_inventory": true,
+      "result": "PASS"
+    },
+    {
+      "case": "interaction",
+      "map": "SSAqua_B1F",
+      "label": "SSAqua_B1F-npc-1",
+      "target": [
+        26,
+        13
+      ],
+      "approach": [
+        26,
+        14
+      ],
+      "actual_npc_local_id": 1,
+      "result": "PASS"
+    },
+    {
+      "case": "interaction",
+      "map": "SSAqua_B1F",
+      "label": "SSAqua_B1F-npc-2",
+      "target": [
+        37,
+        17
+      ],
+      "approach": [
+        37,
+        18
+      ],
+      "actual_npc_local_id": 2,
+      "result": "PASS"
+    },
+    {
+      "case": "whole-tour-party-integrity",
+      "all_identity_species_owner_met_moves_items_stats_status_flags_boxes_inventory_preserved": true,
+      "normal_walking_friendship_change": true,
+      "result": "PASS"
+    }
+  ],
+  "native_views": [
+    "SSAqua_1F-west-lounge-benches.png",
+    "SSAqua_1F-southern-settee-planter.png",
+    "SSAqua_1F-component-1.png",
+    "SSAqua_1F-component-1-cold-continue.png",
+    "SSAqua_1F-component-2.png",
+    "SSAqua_1F-component-2-cold-continue.png",
+    "SSAqua_1F-npc-1.png",
+    "SSAqua_1F-npc-2.png",
+    "SSAqua_1F-npc-3.png",
+    "SSAqua_CaptainRoom-component-1.png",
+    "SSAqua_CaptainRoom-component-1-cold-continue.png",
+    "SSAqua_CaptainRoom-npc-1.png",
+    "SSAqua_CaptainRoom-sign-1.png",
+    "SSAqua_SoutheastCabins-component-1.png",
+    "SSAqua_SoutheastCabins-component-1-cold-continue.png",
+    "SSAqua_SoutheastCabins-component-2.png",
+    "SSAqua_SoutheastCabins-component-2-cold-continue.png",
+    "SSAqua_SoutheastCabins-npc-1.png",
+    "SSAqua_SoutheastCabins-sign-1-decline-prompt.png",
+    "SSAqua_SoutheastCabins-sign-1-actual-NO-cursor.png",
+    "SSAqua_SoutheastCabins-sign-1-actual-YES-cursor.png",
+    "SSAqua_SoutheastCabins-sign-1-rested.png",
+    "SSAqua_SoutheastCabins-sign-2-decline-prompt.png",
+    "SSAqua_SoutheastCabins-sign-2-actual-NO-cursor.png",
+    "SSAqua_SoutheastCabins-sign-2-actual-YES-cursor.png",
+    "SSAqua_SoutheastCabins-sign-2-rested.png",
+    "SSAqua_SouthwestCabins-component-1.png",
+    "SSAqua_SouthwestCabins-component-1-cold-continue.png",
+    "SSAqua_SouthwestCabins-component-2.png",
+    "SSAqua_SouthwestCabins-component-2-cold-continue.png",
+    "SSAqua_SouthwestCabins-npc-1.png",
+    "SSAqua_SouthwestCabins-npc-2.png",
+    "SSAqua_NortheastCabins-component-1.png",
+    "SSAqua_NortheastCabins-component-1-cold-continue.png",
+    "SSAqua_NortheastCabins-component-2.png",
+    "SSAqua_NortheastCabins-component-2-cold-continue.png",
+    "SSAqua_NortheastCabins-npc-1.png",
+    "SSAqua_NortheastCabins-npc-2.png",
+    "SSAqua_NorthwestCabins-component-1.png",
+    "SSAqua_NorthwestCabins-component-1-cold-continue.png",
+    "SSAqua_NorthwestCabins-component-2.png",
+    "SSAqua_NorthwestCabins-component-2-cold-continue.png",
+    "SSAqua_NorthwestCabins-npc-1.png",
+    "SSAqua_NorthwestCabins-npc-2.png",
+    "SSAqua_B1F-six-crew-berths.png",
+    "SSAqua_B1F-crew-upper-berths.png",
+    "SSAqua_B1F-galley-table-seats.png",
+    "SSAqua_B1F-galley-kitchen.png",
+    "SSAqua_B1F-engine-safety-edge.png",
+    "SSAqua_B1F-engine-upper-equipment.png",
+    "SSAqua_B1F-component-1.png",
+    "SSAqua_B1F-component-1-cold-continue.png",
+    "SSAqua_B1F-npc-1.png",
+    "SSAqua_B1F-npc-2.png"
+  ]
+}

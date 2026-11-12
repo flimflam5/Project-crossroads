@@ -1,0 +1,370 @@
+{
+  "before": {
+    "source": "df8c4598d88c7770626be4621a5f39cf60dadb95",
+    "rom_sha256": "4fb28fe64fc44c0546462a935655346a61f13b644bc3040468146d136cd6d656"
+  },
+  "after": {
+    "source": "cc643ffe711204f3ef38e34e7aa1eb8c9558720f",
+    "rom_sha256": "ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b"
+  },
+  "scope": "Nine representative actual normal-controller front journeys, both directions for each of four horizontal gate links, plus Trail\u2192Corridor. Full519 independent facing audit is separate.",
+  "before_frame_method": "B4rawPNGs were cleaned after recording. PNGs are decoded at native240x160 from the last recorded pre-walk-away arrival frame(N-7), so H264colorcompression is disclosed. No artwork or player pixels are synthesized. B5PNGs are actual direct arrival screenshots.",
+  "pairs": [
+    {
+      "label": "west-city-gate-outside-0-front",
+      "destination": "EcruteakCity_WestGate",
+      "arrival": [
+        10,
+        6
+      ],
+      "before_actual_facing": 1,
+      "after_actual_facing": 3,
+      "independent_intended_facing": 3,
+      "before_png": "before/west-city-gate-outside-0-front.png",
+      "before_native_video_frame": 49,
+      "before_video": "before/west-city-gate-outside-0-front.mp4",
+      "after_png": "after/west-city-gate-outside-0-front.png",
+      "after_video": "after/west-city-gate-outside-0-front.mp4"
+    },
+    {
+      "label": "west-city-gate-inside-0-front",
+      "destination": "EcruteakCity",
+      "arrival": [
+        7,
+        37
+      ],
+      "before_actual_facing": 1,
+      "after_actual_facing": 4,
+      "independent_intended_facing": 4,
+      "before_png": "before/west-city-gate-inside-0-front.png",
+      "before_native_video_frame": 49,
+      "before_video": "before/west-city-gate-inside-0-front.mp4",
+      "after_png": "after/west-city-gate-inside-0-front.png",
+      "after_video": "after/west-city-gate-inside-0-front.mp4"
+    },
+    {
+      "label": "west-route-gate-outside-0-front",
+      "destination": "EcruteakCity_WestGate",
+      "arrival": [
+        1,
+        6
+      ],
+      "before_actual_facing": 1,
+      "after_actual_facing": 4,
+      "independent_intended_facing": 4,
+      "before_png": "before/west-route-gate-outside-0-front.png",
+      "before_native_video_frame": 49,
+      "before_video": "before/west-route-gate-outside-0-front.mp4",
+      "after_png": "after/west-route-gate-outside-0-front.png",
+      "after_video": "after/west-route-gate-outside-0-front.mp4"
+    },
+    {
+      "label": "west-route-gate-inside-0-front",
+      "destination": "JohtoRoute38",
+      "arrival": [
+        62,
+        12
+      ],
+      "before_actual_facing": 1,
+      "after_actual_facing": 3,
+      "independent_intended_facing": 3,
+      "before_png": "before/west-route-gate-inside-0-front.png",
+      "before_native_video_frame": 49,
+      "before_video": "before/west-route-gate-inside-0-front.mp4",
+      "after_png": "after/west-route-gate-inside-0-front.png",
+      "after_video": "after/west-route-gate-inside-0-front.mp4"
+    },
+    {
+      "label": "east-city-gate-outside-0-front",
+      "destination": "EcruteakCity_EastGate",
+      "arrival": [
+        1,
+        6
+      ],
+      "before_actual_facing": 1,
+      "after_actual_facing": 4,
+      "independent_intended_facing": 4,
+      "before_png": "before/east-city-gate-outside-0-front.png",
+      "before_native_video_frame": 49,
+      "before_video": "before/east-city-gate-outside-0-front.mp4",
+      "after_png": "after/east-city-gate-outside-0-front.png",
+      "after_video": "after/east-city-gate-outside-0-front.mp4"
+    },
+    {
+      "label": "east-city-gate-inside-0-front",
+      "destination": "EcruteakCity",
+      "arrival": [
+        59,
+        46
+      ],
+      "before_actual_facing": 1,
+      "after_actual_facing": 3,
+      "independent_intended_facing": 3,
+      "before_png": "before/east-city-gate-inside-0-front.png",
+      "before_native_video_frame": 49,
+      "before_video": "before/east-city-gate-inside-0-front.mp4",
+      "after_png": "after/east-city-gate-inside-0-front.png",
+      "after_video": "after/east-city-gate-inside-0-front.mp4"
+    },
+    {
+      "label": "east-route-gate-outside-0-front",
+      "destination": "EcruteakCity_EastGate",
+      "arrival": [
+        10,
+        6
+      ],
+      "before_actual_facing": 1,
+      "after_actual_facing": 3,
+      "independent_intended_facing": 3,
+      "before_png": "before/east-route-gate-outside-0-front.png",
+      "before_native_video_frame": 49,
+      "before_video": "before/east-route-gate-outside-0-front.mp4",
+      "after_png": "after/east-route-gate-outside-0-front.png",
+      "after_video": "after/east-route-gate-outside-0-front.mp4"
+    },
+    {
+      "label": "east-route-gate-inside-0-front",
+      "destination": "JohtoRoute42",
+      "arrival": [
+        3,
+        13
+      ],
+      "before_actual_facing": 1,
+      "after_actual_facing": 4,
+      "independent_intended_facing": 4,
+      "before_png": "before/east-route-gate-inside-0-front.png",
+      "before_native_video_frame": 49,
+      "before_video": "before/east-route-gate-inside-0-front.mp4",
+      "after_png": "after/east-route-gate-inside-0-front.png",
+      "after_video": "after/east-route-gate-inside-0-front.mp4"
+    },
+    {
+      "label": "trail-station-return-outside-0-front",
+      "destination": "EcruteakCity_BarrierCorridor",
+      "arrival": [
+        6,
+        3
+      ],
+      "before_actual_facing": 2,
+      "after_actual_facing": 1,
+      "independent_intended_facing": 1,
+      "before_png": "before/trail-station-return-outside-0-front.png",
+      "before_native_video_frame": 49,
+      "before_video": "before/trail-station-return-outside-0-front.mp4",
+      "after_png": "after/trail-station-return-outside-0-front.png",
+      "after_video": "after/trail-station-return-outside-0-front.mp4"
+    }
+  ],
+  "files": [
+    {
+      "path": "before/west-city-gate-outside-0-front.png",
+      "source": "/tmp/qa10-b5-facing-native-comparison/west-city-gate-outside-0-front-before.png",
+      "sha256": "b871a7e2515980bae15291905d5e365b662954a2749d691ded562b4eed89cf3d"
+    },
+    {
+      "path": "after/west-city-gate-outside-0-front.png",
+      "source": "/workspace/Project-crossroads/build/qa10-b5-doorways/west-city-gate-outside-0-front-actual-arrival.png",
+      "sha256": "b964b9f776910e043c8edd3bb1e8605c4db56b2251ecae6c2d742f99b833e3ad"
+    },
+    {
+      "path": "before/west-city-gate-outside-0-front.mp4",
+      "source": "/workspace/Project-crossroads/build/qa10-b4-doorways/west-city-gate-outside-0-front.mp4",
+      "sha256": "ba0e5f9d8953215d4cd9a7acb6b5f219096d548b607776a09465defc082a2da6"
+    },
+    {
+      "path": "after/west-city-gate-outside-0-front.mp4",
+      "source": "/workspace/Project-crossroads/build/qa10-b5-doorways/west-city-gate-outside-0-front.mp4",
+      "sha256": "89dd31d81b256861f099cc35163ba80aa31c22902d4b4626e92226a0c8e6294b"
+    },
+    {
+      "path": "before/west-city-gate-inside-0-front.png",
+      "source": "/tmp/qa10-b5-facing-native-comparison/west-city-gate-inside-0-front-before.png",
+      "sha256": "e068e781f7c6112cebd5c1061f137922532a49cd69838a4d39e006f5220e5345"
+    },
+    {
+      "path": "after/west-city-gate-inside-0-front.png",
+      "source": "/workspace/Project-crossroads/build/qa10-b5-doorways/west-city-gate-inside-0-front-actual-arrival.png",
+      "sha256": "469266d0847510f6862a1ef6018f842c57cc70b8a5455e7e39396328fb030c1c"
+    },
+    {
+      "path": "before/west-city-gate-inside-0-front.mp4",
+      "source": "/workspace/Project-crossroads/build/qa10-b4-doorways/west-city-gate-inside-0-front.mp4",
+      "sha256": "81585ba2690d738b5a5537f97525de6443e22229c567283c99c4e1c034597375"
+    },
+    {
+      "path": "after/west-city-gate-inside-0-front.mp4",
+      "source": "/workspace/Project-crossroads/build/qa10-b5-doorways/west-city-gate-inside-0-front.mp4",
+      "sha256": "8c41239dbc2ca0564dd584789a6741bc786eb4e873cbb84964f86402ec5c2f03"
+    },
+    {
+      "path": "before/west-route-gate-outside-0-front.png",
+      "source": "/tmp/qa10-b5-facing-native-comparison/west-route-gate-outside-0-front-before.png",
+      "sha256": "002ea1f19eb209a3506ae708ba0458bd74c2c590602df090b1b6edce8b83f5b9"
+    },
+    {
+      "path": "after/west-route-gate-outside-0-front.png",
+      "source": "/workspace/Project-crossroads/build/qa10-b5-doorways/west-route-gate-outside-0-front-actual-arrival.png",
+      "sha256": "26f23b6e74c5b6a764951e5d226d705e644b364b9d0adce6892d25965bc79543"
+    },
+    {
+      "path": "before/west-route-gate-outside-0-front.mp4",
+      "source": "/workspace/Project-crossroads/build/qa10-b4-doorways/west-route-gate-outside-0-front.mp4",
+      "sha256": "4d4c2a56cb994fe689886073e3a2c3a8506ad845e1d3e236d8567bbbc0dfd754"
+    },
+    {
+      "path": "after/west-route-gate-outside-0-front.mp4",
+      "source": "/workspace/Project-crossroads/build/qa10-b5-doorways/west-route-gate-outside-0-front.mp4",
+      "sha256": "5b45de809d817b071739dfff022ed2cb7e7c47d5b28199d97aea6bfa0966572b"
+    },
+    {
+      "path": "before/west-route-gate-inside-0-front.png",
+      "source": "/tmp/qa10-b5-facing-native-comparison/west-route-gate-inside-0-front-before.png",
+      "sha256": "c4b41e73cfd4518f860c13ee28520f8048bafb785357fb361386d132cdb3b343"
+    },
+    {
+      "path": "after/west-route-gate-inside-0-front.png",
+      "source": "/workspace/Project-crossroads/build/qa10-b5-doorways/west-route-gate-inside-0-front-actual-arrival.png",
+      "sha256": "a7a7c7e9e780114842a44711ed8b4d6156b53e1038ce6e1d6f7633efd965cdd5"
+    },
+    {
+      "path": "before/west-route-gate-inside-0-front.mp4",
+      "source": "/workspace/Project-crossroads/build/qa10-b4-doorways/west-route-gate-inside-0-front.mp4",
+      "sha256": "daf002501894346e57b8856f099cc544b33201bf9a09cfaaf8f39da4f476ab58"
+    },
+    {
+      "path": "after/west-route-gate-inside-0-front.mp4",
+      "source": "/workspace/Project-crossroads/build/qa10-b5-doorways/west-route-gate-inside-0-front.mp4",
+      "sha256": "8272b281d47a7eaab7fc1e368c64ee5ccdb05bdb67f09d24a992b7fce92b1c52"
+    },
+    {
+      "path": "before/east-city-gate-outside-0-front.png",
+      "source": "/tmp/qa10-b5-facing-native-comparison/east-city-gate-outside-0-front-before.png",
+      "sha256": "a2108d59138251232940290ea80b9f9649ac68899f96d7e17373b5f903f98aea"
+    },
+    {
+      "path": "after/east-city-gate-outside-0-front.png",
+      "source": "/workspace/Project-crossroads/build/qa10-b5-doorways/east-city-gate-outside-0-front-actual-arrival.png",
+      "sha256": "26f23b6e74c5b6a764951e5d226d705e644b364b9d0adce6892d25965bc79543"
+    },
+    {
+      "path": "before/east-city-gate-outside-0-front.mp4",
+      "source": "/workspace/Project-crossroads/build/qa10-b4-doorways/east-city-gate-outside-0-front.mp4",
+      "sha256": "7226edda748f8fffe26bdc0e76f089ca35f5532b9664722282baa3e7ba870be7"
+    },
+    {
+      "path": "after/east-city-gate-outside-0-front.mp4",
+      "source": "/workspace/Project-crossroads/build/qa10-b5-doorways/east-city-gate-outside-0-front.mp4",
+      "sha256": "dbb550643f3d8635f2daf1705a95afc5afc74ba67e5a491ce3fb185843e3e1e0"
+    },
+    {
+      "path": "before/east-city-gate-inside-0-front.png",
+      "source": "/tmp/qa10-b5-facing-native-comparison/east-city-gate-inside-0-front-before.png",
+      "sha256": "a602a2158105b215e8036073f4f4030f74c50a13feef883be3b0418d179cf135"
+    },
+    {
+      "path": "after/east-city-gate-inside-0-front.png",
+      "source": "/workspace/Project-crossroads/build/qa10-b5-doorways/east-city-gate-inside-0-front-actual-arrival.png",
+      "sha256": "4457370460550de1f8cd557a7d0795662e3284e52ed2c1b7b23869b50c48e09f"
+    },
+    {
+      "path": "before/east-city-gate-inside-0-front.mp4",
+      "source": "/workspace/Project-crossroads/build/qa10-b4-doorways/east-city-gate-inside-0-front.mp4",
+      "sha256": "de13681aafcc89fdb33631a70a781141bf66312bdfc21e186bd0cad0074632e2"
+    },
+    {
+      "path": "after/east-city-gate-inside-0-front.mp4",
+      "source": "/workspace/Project-crossroads/build/qa10-b5-doorways/east-city-gate-inside-0-front.mp4",
+      "sha256": "6604ef90d4aef5b7d14193d43d2026cd8ef72161d09990004307f6f010e46888"
+    },
+    {
+      "path": "before/east-route-gate-outside-0-front.png",
+      "source": "/tmp/qa10-b5-facing-native-comparison/east-route-gate-outside-0-front-before.png",
+      "sha256": "46ef64f380f6343836c21b3cae20ab9e06b18d5245c79ec9b296c10bd3e22a4b"
+    },
+    {
+      "path": "after/east-route-gate-outside-0-front.png",
+      "source": "/workspace/Project-crossroads/build/qa10-b5-doorways/east-route-gate-outside-0-front-actual-arrival.png",
+      "sha256": "b964b9f776910e043c8edd3bb1e8605c4db56b2251ecae6c2d742f99b833e3ad"
+    },
+    {
+      "path": "before/east-route-gate-outside-0-front.mp4",
+      "source": "/workspace/Project-crossroads/build/qa10-b4-doorways/east-route-gate-outside-0-front.mp4",
+      "sha256": "b516ccb841398cf92f408eb84290eeadbcf5230025a9deb87ec12247cdb1b1fb"
+    },
+    {
+      "path": "after/east-route-gate-outside-0-front.mp4",
+      "source": "/workspace/Project-crossroads/build/qa10-b5-doorways/east-route-gate-outside-0-front.mp4",
+      "sha256": "5652f369b1c8756531f39fad5c501018fa9f53c2e41850554f9a46c212c2cced"
+    },
+    {
+      "path": "before/east-route-gate-inside-0-front.png",
+      "source": "/tmp/qa10-b5-facing-native-comparison/east-route-gate-inside-0-front-before.png",
+      "sha256": "1c728878ab01888ae4c6498f4bc45d751b8efc60246ef02888adb2e40cc06de8"
+    },
+    {
+      "path": "after/east-route-gate-inside-0-front.png",
+      "source": "/workspace/Project-crossroads/build/qa10-b5-doorways/east-route-gate-inside-0-front-actual-arrival.png",
+      "sha256": "3d8f825f3a18a07312805ce962e15f5bd9f451c65c7b07bdc337bb95914c6451"
+    },
+    {
+      "path": "before/east-route-gate-inside-0-front.mp4",
+      "source": "/workspace/Project-crossroads/build/qa10-b4-doorways/east-route-gate-inside-0-front.mp4",
+      "sha256": "cf45de6252d24a04f32d72f83bf9af39820cbf2a41a252db5c2c80fc8b6b4ff5"
+    },
+    {
+      "path": "after/east-route-gate-inside-0-front.mp4",
+      "source": "/workspace/Project-crossroads/build/qa10-b5-doorways/east-route-gate-inside-0-front.mp4",
+      "sha256": "8e5b3fdf270cdeabc2d3d4eb41571eb5af0f7d82285ca67f1d8d71f3e8be740b"
+    },
+    {
+      "path": "before/trail-station-return-outside-0-front.png",
+      "source": "/tmp/qa10-b5-facing-native-comparison/trail-station-return-outside-0-front-before.png",
+      "sha256": "3973cb0702a3b60bee7ae566de5760cda3720fa12059779eeeb16d34feced6fe"
+    },
+    {
+      "path": "after/trail-station-return-outside-0-front.png",
+      "source": "/workspace/Project-crossroads/build/qa10-b5-doorways/trail-station-return-outside-0-front-actual-arrival.png",
+      "sha256": "47e2e52de6c571e4b21ae192b028f39b0ed944582bf87a81453d1b953639f08e"
+    },
+    {
+      "path": "before/trail-station-return-outside-0-front.mp4",
+      "source": "/workspace/Project-crossroads/build/qa10-b4-doorways/trail-station-return-outside-0-front.mp4",
+      "sha256": "f0549d41753691ff6c3efd241cf485c8c639c07314e6895b5cfce913e92ca8fa"
+    },
+    {
+      "path": "after/trail-station-return-outside-0-front.mp4",
+      "source": "/workspace/Project-crossroads/build/qa10-b5-doorways/trail-station-return-outside-0-front.mp4",
+      "sha256": "49b1941892820a3bd3783d71056f7c8c0987b28aeeefc525fb59180b31e2cb7f"
+    },
+    {
+      "path": "B4-failed-independent-facing-audit.json",
+      "source": "/workspace/Project-crossroads/build/qa10-b4-facing-audit-final.json",
+      "sha256": "29518e4a4e7315c665a06148a65b58133dbf4bf8cee250ea5df261c2b600ac67"
+    },
+    {
+      "path": "independent-facing-audit.json",
+      "source": "build/qa10-b5-facing-audit-final.json",
+      "sha256": "5e5f7f1ec9ef076c43f22cb37166e8333f758fce738d5add4fbfbbb1a41110d0"
+    },
+    {
+      "path": "independent-physical-facing-contract.json",
+      "source": "crossroads/hgss/qa10/doorway-intended-facing-b5.json",
+      "sha256": "164ec88f66e6ba110a88e9951b2193cd138e5c346eedb210e778cf2c6bda5ec0"
+    },
+    {
+      "path": "full-controller-doorway-results.json",
+      "source": "build/qa10-b5-doorways/doorway-results.json",
+      "sha256": "c71bbfd95b3c7c1647f680ae0770cba79d7ee01be206ec3eedb5f4937e02165b"
+    }
+  ],
+  "owner_visual_acceptance": "PENDING",
+  "full_independent_controller_facing_audit": {
+    "path": "independent-facing-audit.json",
+    "attempts": 519,
+    "executed_correct_facing": 482,
+    "physically_unavailable_lateral_approaches": 37,
+    "failures": 0,
+    "no_facing_pass_claimed_for_unavailable": true,
+    "actual_controller_records": "full-controller-doorway-results.json"
+  }
+}

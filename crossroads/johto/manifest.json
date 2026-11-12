@@ -6912,6 +6912,510 @@
           "elevation": 0,
           "dest_map": "MAP_OLIVINE_CITY_PORT_TERMINAL",
           "dest_warp_id": "5"
+        },
+        {
+          "x": 27,
+          "y": 20,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_1F",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 28,
+          "y": 20,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_1F",
+          "dest_warp_id": "12"
+        }
+      ],
+      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet"
+    },
+    {
+      "name": "SSAqua_1F",
+      "kind": "hgss",
+      "parent": "OlivineCity",
+      "cluster": "west",
+      "status": "implemented",
+      "map_group": 76,
+      "map_num": 43,
+      "display_name": "SSAqua_1F",
+      "role": "hgss",
+      "id": "MAP_SS_AQUA_1F",
+      "layout": "LAYOUT_SS_AQUA_1F",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 24,
+          "y": 19,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_PORT_QUAY",
+          "dest_warp_id": "4"
+        },
+        {
+          "x": 13,
+          "y": 14,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_SOUTHWEST_CABINS",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 19,
+          "y": 14,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_SOUTHWEST_CABINS",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 30,
+          "y": 14,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_SOUTHEAST_CABINS",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 36,
+          "y": 14,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_SOUTHEAST_CABINS",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 13,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_NORTHWEST_CABINS",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 19,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_NORTHWEST_CABINS",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 30,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_NORTHEAST_CABINS",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 36,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_NORTHEAST_CABINS",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 24,
+          "y": 3,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_B1F",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 42,
+          "y": 9,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_B1F",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 49,
+          "y": 15,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_CAPTAIN_ROOM",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 25,
+          "y": 19,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_PORT_QUAY",
+          "dest_warp_id": "5"
+        },
+        {
+          "x": 22,
+          "y": 19,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_PORT_QUAY",
+          "dest_warp_id": "4"
+        },
+        {
+          "x": 23,
+          "y": 19,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_PORT_QUAY",
+          "dest_warp_id": "4"
+        },
+        {
+          "x": 26,
+          "y": 19,
+          "elevation": 0,
+          "dest_map": "MAP_OLIVINE_CITY_PORT_QUAY",
+          "dest_warp_id": "5"
+        },
+        {
+          "x": 42,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_B1F",
+          "dest_warp_id": "2"
+        },
+        {
+          "x": 14,
+          "y": 14,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_SOUTHWEST_CABINS",
+          "dest_warp_id": "2"
+        },
+        {
+          "x": 20,
+          "y": 14,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_SOUTHWEST_CABINS",
+          "dest_warp_id": "3"
+        },
+        {
+          "x": 31,
+          "y": 14,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_SOUTHEAST_CABINS",
+          "dest_warp_id": "2"
+        },
+        {
+          "x": 37,
+          "y": 14,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_SOUTHEAST_CABINS",
+          "dest_warp_id": "3"
+        },
+        {
+          "x": 14,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_NORTHWEST_CABINS",
+          "dest_warp_id": "2"
+        },
+        {
+          "x": 20,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_NORTHWEST_CABINS",
+          "dest_warp_id": "3"
+        },
+        {
+          "x": 31,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_NORTHEAST_CABINS",
+          "dest_warp_id": "2"
+        },
+        {
+          "x": 37,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_NORTHEAST_CABINS",
+          "dest_warp_id": "3"
+        },
+        {
+          "x": 50,
+          "y": 15,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_CAPTAIN_ROOM",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 43,
+          "y": 9,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_B1F",
+          "dest_warp_id": "3"
+        },
+        {
+          "x": 43,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_B1F",
+          "dest_warp_id": "4"
+        },
+        {
+          "x": 25,
+          "y": 3,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_B1F",
+          "dest_warp_id": "5"
+        }
+      ],
+      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet"
+    },
+    {
+      "name": "SSAqua_CaptainRoom",
+      "kind": "hgss",
+      "parent": "OlivineCity",
+      "cluster": "west",
+      "status": "implemented",
+      "map_group": 76,
+      "map_num": 44,
+      "display_name": "SSAqua_CaptainRoom",
+      "role": "hgss",
+      "id": "MAP_SS_AQUA_CAPTAIN_ROOM",
+      "layout": "LAYOUT_SS_AQUA_CAPTAIN_ROOM",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 9,
+          "y": 11,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_1F",
+          "dest_warp_id": "11"
+        },
+        {
+          "x": 10,
+          "y": 11,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_1F",
+          "dest_warp_id": "25"
+        }
+      ],
+      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet"
+    },
+    {
+      "name": "SSAqua_SoutheastCabins",
+      "kind": "hgss",
+      "parent": "OlivineCity",
+      "cluster": "west",
+      "status": "implemented",
+      "map_group": 76,
+      "map_num": 45,
+      "display_name": "SSAqua_SoutheastCabins",
+      "role": "hgss",
+      "id": "MAP_SS_AQUA_SOUTHEAST_CABINS",
+      "layout": "LAYOUT_SS_AQUA_SOUTHEAST_CABINS",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 9,
+          "y": 2,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_1F",
+          "dest_warp_id": "3"
+        },
+        {
+          "x": 23,
+          "y": 2,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_1F",
+          "dest_warp_id": "4"
+        },
+        {
+          "x": 10,
+          "y": 2,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_1F",
+          "dest_warp_id": "19"
+        },
+        {
+          "x": 24,
+          "y": 2,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_1F",
+          "dest_warp_id": "20"
+        }
+      ],
+      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet"
+    },
+    {
+      "name": "SSAqua_SouthwestCabins",
+      "kind": "hgss",
+      "parent": "OlivineCity",
+      "cluster": "west",
+      "status": "implemented",
+      "map_group": 76,
+      "map_num": 46,
+      "display_name": "SSAqua_SouthwestCabins",
+      "role": "hgss",
+      "id": "MAP_SS_AQUA_SOUTHWEST_CABINS",
+      "layout": "LAYOUT_SS_AQUA_SOUTHWEST_CABINS",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 9,
+          "y": 2,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_1F",
+          "dest_warp_id": "1"
+        },
+        {
+          "x": 23,
+          "y": 2,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_1F",
+          "dest_warp_id": "2"
+        },
+        {
+          "x": 10,
+          "y": 2,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_1F",
+          "dest_warp_id": "17"
+        },
+        {
+          "x": 24,
+          "y": 2,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_1F",
+          "dest_warp_id": "18"
+        }
+      ],
+      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet"
+    },
+    {
+      "name": "SSAqua_NortheastCabins",
+      "kind": "hgss",
+      "parent": "OlivineCity",
+      "cluster": "west",
+      "status": "implemented",
+      "map_group": 76,
+      "map_num": 47,
+      "display_name": "SSAqua_NortheastCabins",
+      "role": "hgss",
+      "id": "MAP_SS_AQUA_NORTHEAST_CABINS",
+      "layout": "LAYOUT_SS_AQUA_NORTHEAST_CABINS",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 9,
+          "y": 11,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_1F",
+          "dest_warp_id": "7"
+        },
+        {
+          "x": 23,
+          "y": 11,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_1F",
+          "dest_warp_id": "8"
+        },
+        {
+          "x": 10,
+          "y": 11,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_1F",
+          "dest_warp_id": "23"
+        },
+        {
+          "x": 24,
+          "y": 11,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_1F",
+          "dest_warp_id": "24"
+        }
+      ],
+      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet"
+    },
+    {
+      "name": "SSAqua_NorthwestCabins",
+      "kind": "hgss",
+      "parent": "OlivineCity",
+      "cluster": "west",
+      "status": "implemented",
+      "map_group": 76,
+      "map_num": 48,
+      "display_name": "SSAqua_NorthwestCabins",
+      "role": "hgss",
+      "id": "MAP_SS_AQUA_NORTHWEST_CABINS",
+      "layout": "LAYOUT_SS_AQUA_NORTHWEST_CABINS",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 9,
+          "y": 11,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_1F",
+          "dest_warp_id": "5"
+        },
+        {
+          "x": 23,
+          "y": 11,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_1F",
+          "dest_warp_id": "6"
+        },
+        {
+          "x": 10,
+          "y": 11,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_1F",
+          "dest_warp_id": "21"
+        },
+        {
+          "x": 24,
+          "y": 11,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_1F",
+          "dest_warp_id": "22"
+        }
+      ],
+      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet"
+    },
+    {
+      "name": "SSAqua_B1F",
+      "kind": "hgss",
+      "parent": "OlivineCity",
+      "cluster": "west",
+      "status": "implemented",
+      "map_group": 76,
+      "map_num": 49,
+      "display_name": "SSAqua_B1F",
+      "role": "hgss",
+      "id": "MAP_SS_AQUA_B1F",
+      "layout": "LAYOUT_SS_AQUA_B1F",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 24,
+          "y": 3,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_1F",
+          "dest_warp_id": "9"
+        },
+        {
+          "x": 42,
+          "y": 9,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_1F",
+          "dest_warp_id": "10"
+        },
+        {
+          "x": 42,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_1F",
+          "dest_warp_id": "10"
+        },
+        {
+          "x": 43,
+          "y": 9,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_1F",
+          "dest_warp_id": "26"
+        },
+        {
+          "x": 43,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_1F",
+          "dest_warp_id": "27"
+        },
+        {
+          "x": 25,
+          "y": 3,
+          "elevation": 0,
+          "dest_map": "MAP_SS_AQUA_1F",
+          "dest_warp_id": "28"
         }
       ],
       "coverage": "structural/build/runtime checks recorded separately; no owner QA yet"

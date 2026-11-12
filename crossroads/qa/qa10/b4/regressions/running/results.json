@@ -1,0 +1,37 @@
+{
+  "rom_sha256": "4fb28fe64fc44c0546462a935655346a61f13b644bc3040468146d136cd6d656",
+  "setup": "Actual kit Running Shoes grant; normal controller road travel; same-ROM paired input trials; no map/coordinate/Running Shoes flag patches; shared RAM-only encounter suppression",
+  "results": [
+    {
+      "input": "walking",
+      "held_frames": 32,
+      "start": [
+        14,
+        24
+      ],
+      "end": [
+        14,
+        26
+      ],
+      "tiles_south": 2,
+      "joe_id": 250,
+      "joe_vram": true
+    },
+    {
+      "input": "running",
+      "held_frames": 32,
+      "start": [
+        14,
+        24
+      ],
+      "end": [
+        14,
+        27
+      ],
+      "tiles_south": 3,
+      "joe_id": 250,
+      "joe_vram": true
+    }
+  ],
+  "status": "PASS"
+}

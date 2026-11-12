@@ -1,0 +1,3274 @@
+{
+  "version": "black-ledger-olivine-aqua-qa10-a1",
+  "candidate": "Final B5",
+  "generated_utc": "2026-11-12T07:39:42.198111+00:00",
+  "branch": "feature/olivine-port-ship-qa10",
+  "game_source_checkpoint": "cc643ffe711204f3ef38e34e7aa1eb8c9558720f",
+  "rom_sha256": "ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b",
+  "elf_sha256": "a950a6fd77e4320c3bb864c3b96e981a1da24cb63727f8151e2124c6577f90eb",
+  "rom_bytes": 33554432,
+  "rom_payload_bytes": 30322784,
+  "ewram_bytes": 226448,
+  "iwram_bytes": 28392,
+  "build_passed": true,
+  "automated_checks_passed": true,
+  "automated_command_count": 68,
+  "final_runtime_passed": true,
+  "runtime_verification_scope": "All 18 scheduled phases completed for the final B5 delivery ROM ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b: 17 real mGBA suites (two migration/door, seven city/Aqua, eight accepted-function regressions), plus the independent audit of actual doorway records. A separate seven-case genuine-old-B4-save Continue pilot also passes. Every one of 45 doorway groups additionally passes the independent physical-facing audit. Static checks ran separately. Earlier candidates remain historical or diagnostic; B4 specifically failed 67 arrival-facing checks despite its older phase passes. No earlier result supplies a missing final-candidate phase. Scripted controller tests and native-frame inspection remain separate from owner Delta and visual acceptance.",
+  "actual_scheduled_phase_count": 18,
+  "actual_emulator_suite_count": 17,
+  "independent_record_postcheck_count": 1,
+  "owner_delta_and_visual_acceptance": "PENDING",
+  "phase_reports": {
+    "migration_doors_independent_postcheck": [
+      {
+        "suite": "migration",
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "crossroads/tools/olivine_port_save_migration_smoke.py",
+          "--fixtures",
+          "build/qa10-actual-old-port-saves/fixtures.json",
+          "--rom-sha256",
+          "ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b",
+          "--valid-surf-battery",
+          "build/qa09-olivine-saves-v5/surf-normal-save.sav",
+          "--valid-surf-position",
+          "19",
+          "47",
+          "--output",
+          "build/qa10-b5-genuine-port-migration"
+        ],
+        "exit_code": 0,
+        "seconds": 15.77,
+        "source_revision": "cc643ffe711204f3ef38e34e7aa1eb8c9558720f",
+        "rom_sha256": "ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b",
+        "elf_sha256": "a950a6fd77e4320c3bb864c3b96e981a1da24cb63727f8151e2124c6577f90eb",
+        "all_source_battery_hashes_unchanged": true,
+        "interrupted": false
+      },
+      {
+        "suite": "doors",
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "crossroads/tools/olivine_doorway_smoke.py",
+          "--save",
+          "/workspace/Project-crossroads/build/area-delivery-sram/EcruteakCity_BellTower-save.state.sav",
+          "--library",
+          "/tmp/johto-bridge.so",
+          "--output",
+          "build/qa10-b5-doorways",
+          "--city",
+          "both",
+          "--doors-only",
+          "--manifest",
+          "crossroads/hgss/doorways-qa10.json",
+          "--require-facing",
+          "--record-fronts-only"
+        ],
+        "exit_code": 0,
+        "seconds": 685.86,
+        "source_revision": "cc643ffe711204f3ef38e34e7aa1eb8c9558720f",
+        "rom_sha256": "ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b",
+        "elf_sha256": "a950a6fd77e4320c3bb864c3b96e981a1da24cb63727f8151e2124c6577f90eb",
+        "all_source_battery_hashes_unchanged": true,
+        "interrupted": false
+      },
+      {
+        "suite": "independent-facing-postcheck",
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "crossroads/tools/validate_qa10_arrival_facing.py",
+          "--contract",
+          "/workspace/Project-crossroads/crossroads/qa/qa10/final/B5/doorway-intended-facing.json",
+          "--results",
+          "build/qa10-b5-doorways/doorway-results.json",
+          "--output",
+          "build/qa10-b5-doorways/independent-facing-audit.json"
+        ],
+        "exit_code": 0,
+        "seconds": 0.16,
+        "source_revision": "cc643ffe711204f3ef38e34e7aa1eb8c9558720f",
+        "rom_sha256": "ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b",
+        "elf_sha256": "a950a6fd77e4320c3bb864c3b96e981a1da24cb63727f8151e2124c6577f90eb",
+        "all_source_battery_hashes_unchanged": true,
+        "interrupted": false
+      }
+    ],
+    "city_aqua": [
+      {
+        "phase": "lighthouse-tour",
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "/workspace/Project-crossroads/crossroads/tools/johto_network_smoke.py",
+          "--save",
+          "/workspace/Project-crossroads/build/qa10-city-lane-b5/input-copy.sav",
+          "--library",
+          "/tmp/johto-bridge.so",
+          "--targets",
+          "OlivineCity_Lighthouse_1F,OlivineCity_Lighthouse_2F,OlivineCity_Lighthouse_3F,OlivineCity_Lighthouse_4F,OlivineCity_Lighthouse_5F,OlivineCity_Lighthouse_6F,OlivineCity_Lighthouse_Balcony,OlivineCity_Lighthouse_Elevator",
+          "--all-edges",
+          "--output",
+          "/workspace/Project-crossroads/build/qa10-lighthouse-tour-b5"
+        ],
+        "repo_runner": "johto_network_smoke.py",
+        "repo_runner_sha256": "3bb4255c0aac1733ea644620a2ff0488cdc459863454d044c2a1f6d167e85a23",
+        "exit_code": 0,
+        "rom_sha256": "ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b",
+        "output": "build/qa10-lighthouse-tour-b5",
+        "log": "/tmp/qa10-lighthouse-tour-b5.log"
+      },
+      {
+        "phase": "city-collision",
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "/workspace/Project-crossroads/crossroads/tools/olivine_collision_smoke.py",
+          "--save",
+          "/workspace/Project-crossroads/build/qa10-city-lane-b5/input-copy.sav",
+          "--library",
+          "/tmp/johto-bridge.so",
+          "--output",
+          "/workspace/Project-crossroads/build/qa10-city-collision-b5"
+        ],
+        "repo_runner": "olivine_collision_smoke.py",
+        "repo_runner_sha256": "9d1a9e37eb9300e64ce429a1d69192803b04f8d3daa07936d54e912c19d6cf1d",
+        "exit_code": 0,
+        "rom_sha256": "ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b",
+        "output": "build/qa10-city-collision-b5",
+        "log": "/tmp/qa10-city-collision-b5.log"
+      },
+      {
+        "phase": "city-materials",
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "/workspace/Project-crossroads/crossroads/tools/olivine_materials_smoke.py",
+          "--save",
+          "/workspace/Project-crossroads/build/qa10-city-lane-b5/input-copy.sav",
+          "--library",
+          "/tmp/johto-bridge.so",
+          "--output",
+          "/workspace/Project-crossroads/build/qa10-city-materials-b5"
+        ],
+        "repo_runner": "olivine_materials_smoke.py",
+        "repo_runner_sha256": "037ecb3e8fd8da39e9e42ca72eaaf7ca21a65d738dbc4cfb425622c3e0c5b7d5",
+        "exit_code": 0,
+        "rom_sha256": "ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b",
+        "output": "build/qa10-city-materials-b5",
+        "log": "/tmp/qa10-city-materials-b5.log"
+      },
+      {
+        "phase": "front-counters",
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "/workspace/Project-crossroads/crossroads/tools/center_counter_smoke.py",
+          "--save",
+          "/workspace/Project-crossroads/build/qa10-city-lane-b5/input-copy.sav",
+          "--library",
+          "/tmp/johto-bridge.so",
+          "--rom-sha256",
+          "ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b",
+          "--output",
+          "/workspace/Project-crossroads/build/qa10-front-counters-b5"
+        ],
+        "repo_runner": "center_counter_smoke.py",
+        "repo_runner_sha256": "29e6d3e785b97f357315bd2788d2fcc98bd42232efc067906541203ade940257",
+        "exit_code": 0,
+        "rom_sha256": "ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b",
+        "output": "build/qa10-front-counters-b5",
+        "log": "/tmp/qa10-front-counters-b5.log"
+      },
+      {
+        "phase": "lighthouse-details",
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "/workspace/Project-crossroads/crossroads/tools/qa10_lighthouse_detail_smoke.py",
+          "--save",
+          "/workspace/Project-crossroads/build/qa10-city-lane-b5/input-copy.sav",
+          "--library",
+          "/tmp/johto-bridge.so",
+          "--rom-sha256",
+          "ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b",
+          "--output",
+          "/workspace/Project-crossroads/build/qa10-lighthouse-details-b5"
+        ],
+        "repo_runner": "qa10_lighthouse_detail_smoke.py",
+        "repo_runner_sha256": "a9e4e79c3371a20a7cdeaccc0a9a3fc54be91a865f2e968ebb390b3c854f82d9",
+        "exit_code": 0,
+        "rom_sha256": "ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b",
+        "output": "build/qa10-lighthouse-details-b5",
+        "log": "/tmp/qa10-lighthouse-details-b5.log"
+      },
+      {
+        "phase": "ecruteak-court",
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "/workspace/Project-crossroads/crossroads/tools/qa10_courtyard_smoke.py",
+          "--save",
+          "/workspace/Project-crossroads/build/qa10-city-lane-b5/input-copy.sav",
+          "--library",
+          "/tmp/johto-bridge.so",
+          "--rom-sha256",
+          "ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b",
+          "--output",
+          "/workspace/Project-crossroads/build/qa10-ecruteak-court-b5"
+        ],
+        "repo_runner": "qa10_courtyard_smoke.py",
+        "repo_runner_sha256": "657414351fc465a1cde20db03aa43a5cf4bb2a6276ef4f41c3728df30410cb58",
+        "exit_code": 0,
+        "rom_sha256": "ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b",
+        "output": "build/qa10-ecruteak-court-b5",
+        "log": "/tmp/qa10-ecruteak-court-b5.log"
+      },
+      {
+        "phase": "aqua-full-detail",
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "/workspace/Project-crossroads/crossroads/tools/ss_aqua_detail_smoke.py",
+          "--save",
+          "/workspace/Project-crossroads/build/qa10-city-lane-b5/input-copy.sav",
+          "--library",
+          "/tmp/johto-bridge.so",
+          "--rom-sha256",
+          "ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b",
+          "--output",
+          "/workspace/Project-crossroads/build/qa10-aqua-full-detail-b5"
+        ],
+        "repo_runner": "ss_aqua_detail_smoke.py",
+        "repo_runner_sha256": "0aa08dc7878aff02f6f0a0ab2e2c479ead31fc27405621b9968cf69ea2003caf",
+        "exit_code": 0,
+        "rom_sha256": "ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b",
+        "output": "build/qa10-aqua-full-detail-b5",
+        "log": "/tmp/qa10-aqua-full-detail-b5.log"
+      }
+    ],
+    "accepted_functions": [
+      {
+        "job": "title",
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "/workspace/Project-crossroads/crossroads/tools/emulator_smoke.py",
+          "--library",
+          "/tmp/johto-bridge.so",
+          "--title-only",
+          "--output",
+          "/workspace/Project-crossroads/build/qa10-b5-regression-title"
+        ],
+        "exit_code": 0,
+        "seconds": 3.85,
+        "output": "build/qa10-b5-regression-title",
+        "log": "/tmp/qa10-b5-regression-title.log",
+        "rom_sha256": "ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b",
+        "interrupted": false
+      },
+      {
+        "job": "pre-title",
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "/workspace/Project-crossroads/crossroads/tools/pre_title_smoke.py",
+          "--library",
+          "/tmp/johto-bridge.so",
+          "--output",
+          "/workspace/Project-crossroads/build/qa10-b5-regression-pre-title"
+        ],
+        "exit_code": 0,
+        "seconds": 3.31,
+        "output": "build/qa10-b5-regression-pre-title",
+        "log": "/tmp/qa10-b5-regression-pre-title.log",
+        "rom_sha256": "ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b",
+        "interrupted": false
+      },
+      {
+        "job": "starters",
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "/workspace/Project-crossroads/crossroads/tools/emulator_smoke.py",
+          "--library",
+          "/tmp/johto-bridge.so",
+          "--starters-only",
+          "--output",
+          "/workspace/Project-crossroads/build/qa10-b5-regression-starters"
+        ],
+        "exit_code": 0,
+        "seconds": 74.45,
+        "output": "build/qa10-b5-regression-starters",
+        "log": "/tmp/qa10-b5-regression-starters.log",
+        "rom_sha256": "ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b",
+        "interrupted": false
+      },
+      {
+        "job": "first-loss",
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "/workspace/Project-crossroads/crossroads/tools/joe_battle_graphics_smoke.py",
+          "--library",
+          "/tmp/johto-bridge.so",
+          "--output",
+          "/workspace/Project-crossroads/build/qa10-b5-regression-first-loss"
+        ],
+        "exit_code": 0,
+        "seconds": 20.67,
+        "output": "build/qa10-b5-regression-first-loss",
+        "log": "/tmp/qa10-b5-regression-first-loss.log",
+        "rom_sha256": "ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b",
+        "interrupted": false
+      },
+      {
+        "job": "fly",
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "/workspace/Project-crossroads/crossroads/tools/johto_fly_smoke.py",
+          "--save",
+          "/workspace/Project-crossroads/build/qa10-b5-regression-lane/input-copy.sav",
+          "--library",
+          "/tmp/johto-bridge.so",
+          "--record",
+          "--output",
+          "/workspace/Project-crossroads/build/qa10-b5-regression-fly"
+        ],
+        "exit_code": 0,
+        "seconds": 55.1,
+        "output": "build/qa10-b5-regression-fly",
+        "log": "/tmp/qa10-b5-regression-fly.log",
+        "rom_sha256": "ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b",
+        "interrupted": false
+      },
+      {
+        "job": "joe",
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "/workspace/Project-crossroads/crossroads/tools/joe_field_actions_smoke.py",
+          "--save",
+          "/workspace/Project-crossroads/build/qa10-b5-regression-lane/input-copy.sav",
+          "--library",
+          "/tmp/johto-bridge.so",
+          "--output",
+          "/workspace/Project-crossroads/build/qa10-b5-regression-joe"
+        ],
+        "exit_code": 0,
+        "seconds": 75.12,
+        "output": "build/qa10-b5-regression-joe",
+        "log": "/tmp/qa10-b5-regression-joe.log",
+        "rom_sha256": "ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b",
+        "interrupted": false
+      },
+      {
+        "job": "running",
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "/workspace/Project-crossroads/crossroads/tools/joe_running_smoke.py",
+          "--save",
+          "/workspace/Project-crossroads/build/qa10-b5-regression-lane/input-copy.sav",
+          "--library",
+          "/tmp/johto-bridge.so",
+          "--output",
+          "/workspace/Project-crossroads/build/qa10-b5-regression-running"
+        ],
+        "exit_code": 0,
+        "seconds": 64.95,
+        "output": "build/qa10-b5-regression-running",
+        "log": "/tmp/qa10-b5-regression-running.log",
+        "rom_sha256": "ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b",
+        "interrupted": false
+      },
+      {
+        "job": "services",
+        "command": [
+          "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+          "/workspace/Project-crossroads/crossroads/tools/olivine_service_smoke.py",
+          "--save",
+          "/workspace/Project-crossroads/build/qa10-b5-regression-lane/input-copy.sav",
+          "--library",
+          "/tmp/johto-bridge.so",
+          "--output",
+          "/workspace/Project-crossroads/build/qa10-b5-regression-services"
+        ],
+        "exit_code": 0,
+        "seconds": 267.91,
+        "output": "build/qa10-b5-regression-services",
+        "log": "/tmp/qa10-b5-regression-services.log",
+        "rom_sha256": "ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b",
+        "interrupted": false
+      }
+    ]
+  },
+  "identity_guards": {
+    "every_lane_rom_sha256": "ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b",
+    "every_lane_elf_sha256": "a950a6fd77e4320c3bb864c3b96e981a1da24cb63727f8151e2124c6577f90eb",
+    "game_source": "cc643ffe711204f3ef38e34e7aa1eb8c9558720f",
+    "source_battery_sha256": "b03ff1ef488fbd25de016e828483bc3001787b84e450a45eaa0ac12a11de30ab",
+    "all_original_and_lane_input_batteries_unchanged": true,
+    "source_dirty_note": "Some runs began with documentation/test changes uncommitted; later raw reports may identify a descendant source-only generator/check/documentation fix. Raw identities are preserved. Empty game-input diffs and exact frozen ROM/ELF are checked separately.",
+    "raw_source_compatibility": {
+      "cc643ffe711204f3ef38e34e7aa1eb8c9558720f": {
+        "raw_source_revision": "cc643ffe711204f3ef38e34e7aa1eb8c9558720f",
+        "game_source_checkpoint": "cc643ffe711204f3ef38e34e7aa1eb8c9558720f",
+        "verified_empty_diff_paths": [
+          "data",
+          "src",
+          "include",
+          "graphics",
+          "sound",
+          "Makefile"
+        ],
+        "changed_game_input_files": [],
+        "note": "Raw metadata is preserved. This descendant may differ only outside the checked game-input paths; exact frozen ROM/ELF guards remain independently required."
+      },
+      "ed375e9f382cafc8f225136876778534ac111a17": {
+        "raw_source_revision": "ed375e9f382cafc8f225136876778534ac111a17",
+        "game_source_checkpoint": "cc643ffe711204f3ef38e34e7aa1eb8c9558720f",
+        "verified_empty_diff_paths": [
+          "data",
+          "src",
+          "include",
+          "graphics",
+          "sound",
+          "Makefile"
+        ],
+        "changed_game_input_files": [],
+        "note": "Raw metadata is preserved. This descendant may differ only outside the checked game-input paths; exact frozen ROM/ELF guards remain independently required."
+      }
+    }
+  },
+  "doorways": {
+    "inventory_groups": 45,
+    "visible_segments": 173,
+    "front_segments_passed": 173,
+    "attempts": 519,
+    "executed_passes": 482,
+    "physically_inaccessible_lateral_approaches": 37,
+    "failed": 0,
+    "actual_arrival_and_walk_away_assertions": true,
+    "strict_all45_group_facing_attempts": 482,
+    "independent_all45_facing_audit_passed": true
+  },
+  "ship": {
+    "maps": 7,
+    "physical_components": 12,
+    "cabins": 8,
+    "normal_save_cold_continue": 12,
+    "berth_decline_accept_pairs": 2,
+    "npc_sign_interactions": 14,
+    "collision": {
+      "executed": 1169,
+      "expected_from_independent_reference_facts": 1169,
+      "per_map": {
+        "SSAqua_1F": 255,
+        "SSAqua_CaptainRoom": 52,
+        "SSAqua_SoutheastCabins": 116,
+        "SSAqua_SouthwestCabins": 115,
+        "SSAqua_NortheastCabins": 106,
+        "SSAqua_NorthwestCabins": 118,
+        "SSAqua_B1F": 407
+      },
+      "full_set_equality": true,
+      "skip_bumps": false
+    },
+    "whole_tour_party_integrity": "PASS; only legitimate vanilla walking friendship changes exempted"
+  },
+  "city": {
+    "lighthouse_tour_maps": 8,
+    "lighthouse_transitions": 76,
+    "lighthouse_roundtrip_edges": 19,
+    "lighthouse_normal_save_continue": 12,
+    "top_floor_controller_circuits_both_directions": 2,
+    "buildings_collision_exercised": 13,
+    "dry_building_tree_bumps": 199,
+    "actual_port_surf_bumps": 24,
+    "both_port_leaves_full_body_visibility": true,
+    "materials_cases": 59,
+    "unavailable_fence_approaches_separately_recorded": 37,
+    "ground_arrow_visible_samples": 0,
+    "front_counter_conversations": 6,
+    "courtyard_cells_walked_and_joe_visible": 39,
+    "courtyard_sign_sides": 4,
+    "courtyard_normal_save_continue": 1
+  },
+  "arrival_continue_pilot": {
+    "cases": 7,
+    "genuine_old_B4_source": "4fb28fe64fc44c0546462a935655346a61f13b644bc3040468146d136cd6d656",
+    "six_corrected_landing_facings": true,
+    "one_untouched_offlanding_control": true,
+    "exact_positions_party_boxes_starter_inventory_flags": true,
+    "all_input_batteries_unchanged": true,
+    "unlocked_controls_and_survey_off": "Asserted by actual fresh-core boot in hgss_arrival_continue_smoke.py",
+    "report": "final/B5/arrival-save-continue/results.json"
+  },
+  "static_ledger_note": "The effective 68-entry ledger records actual successful commands. The initial Route42 generator-check failure, source-only check-branch correction, and actual exact-command rerun are separately preserved; no failing result is silently erased.",
+  "save_compatibility": {
+    "genuine_obstructed_old_port_cases": 2,
+    "valid_old_water_surf_control": true,
+    "new_normal_save_cold_continue": true,
+    "six_full_joe_port_approach_exit_views": true,
+    "input_batteries_unchanged": true,
+    "party_boxes_starter_decoded_inventory_flags_exact_in_immediate_save_checks": true
+  },
+  "regressions_executed": [
+    "title Start/menu",
+    "Black Ledger pre-title",
+    "allthree Silph starter rescues/metlocations/duplicate prevention",
+    "firstloss/respawn plus actual Joe battleback OAM/OBJ/palette",
+    "Fly10destinations/cancel/postflightSaveContinue",
+    "Joe fieldstates Mach/Acro/wheelie/Surf/fishing/disembark",
+    "running/shoes",
+    "Olivine51services/interactions"
+  ],
+  "native_media": {
+    "native_240x160_screenshots": [
+      "final/B5/aqua/full-detail/SSAqua_1F-component-1-cold-continue.png",
+      "final/B5/aqua/full-detail/SSAqua_1F-component-1.png",
+      "final/B5/aqua/full-detail/SSAqua_1F-component-2-cold-continue.png",
+      "final/B5/aqua/full-detail/SSAqua_1F-component-2.png",
+      "final/B5/aqua/full-detail/SSAqua_1F-npc-1.png",
+      "final/B5/aqua/full-detail/SSAqua_1F-npc-2.png",
+      "final/B5/aqua/full-detail/SSAqua_1F-npc-3.png",
+      "final/B5/aqua/full-detail/SSAqua_1F-southern-settee-planter.png",
+      "final/B5/aqua/full-detail/SSAqua_1F-west-lounge-benches.png",
+      "final/B5/aqua/full-detail/SSAqua_B1F-component-1-cold-continue.png",
+      "final/B5/aqua/full-detail/SSAqua_B1F-component-1.png",
+      "final/B5/aqua/full-detail/SSAqua_B1F-crew-upper-berths.png",
+      "final/B5/aqua/full-detail/SSAqua_B1F-engine-safety-edge.png",
+      "final/B5/aqua/full-detail/SSAqua_B1F-engine-upper-equipment.png",
+      "final/B5/aqua/full-detail/SSAqua_B1F-galley-kitchen.png",
+      "final/B5/aqua/full-detail/SSAqua_B1F-galley-table-seats.png",
+      "final/B5/aqua/full-detail/SSAqua_B1F-npc-1.png",
+      "final/B5/aqua/full-detail/SSAqua_B1F-npc-2.png",
+      "final/B5/aqua/full-detail/SSAqua_B1F-six-crew-berths.png",
+      "final/B5/aqua/full-detail/SSAqua_CaptainRoom-component-1-cold-continue.png",
+      "final/B5/aqua/full-detail/SSAqua_CaptainRoom-component-1.png",
+      "final/B5/aqua/full-detail/SSAqua_CaptainRoom-npc-1.png",
+      "final/B5/aqua/full-detail/SSAqua_CaptainRoom-sign-1.png",
+      "final/B5/aqua/full-detail/SSAqua_NortheastCabins-component-1-cold-continue.png",
+      "final/B5/aqua/full-detail/SSAqua_NortheastCabins-component-1.png",
+      "final/B5/aqua/full-detail/SSAqua_NortheastCabins-component-2-cold-continue.png",
+      "final/B5/aqua/full-detail/SSAqua_NortheastCabins-component-2.png",
+      "final/B5/aqua/full-detail/SSAqua_NortheastCabins-npc-1.png",
+      "final/B5/aqua/full-detail/SSAqua_NortheastCabins-npc-2.png",
+      "final/B5/aqua/full-detail/SSAqua_NorthwestCabins-component-1-cold-continue.png",
+      "final/B5/aqua/full-detail/SSAqua_NorthwestCabins-component-1.png",
+      "final/B5/aqua/full-detail/SSAqua_NorthwestCabins-component-2-cold-continue.png",
+      "final/B5/aqua/full-detail/SSAqua_NorthwestCabins-component-2.png",
+      "final/B5/aqua/full-detail/SSAqua_NorthwestCabins-npc-1.png",
+      "final/B5/aqua/full-detail/SSAqua_NorthwestCabins-npc-2.png",
+      "final/B5/aqua/full-detail/SSAqua_SoutheastCabins-component-1-cold-continue.png",
+      "final/B5/aqua/full-detail/SSAqua_SoutheastCabins-component-1.png",
+      "final/B5/aqua/full-detail/SSAqua_SoutheastCabins-component-2-cold-continue.png",
+      "final/B5/aqua/full-detail/SSAqua_SoutheastCabins-component-2.png",
+      "final/B5/aqua/full-detail/SSAqua_SoutheastCabins-npc-1.png",
+      "final/B5/aqua/full-detail/SSAqua_SoutheastCabins-sign-1-actual-NO-cursor.png",
+      "final/B5/aqua/full-detail/SSAqua_SoutheastCabins-sign-1-actual-YES-cursor.png",
+      "final/B5/aqua/full-detail/SSAqua_SoutheastCabins-sign-1-decline-prompt.png",
+      "final/B5/aqua/full-detail/SSAqua_SoutheastCabins-sign-1-rested.png",
+      "final/B5/aqua/full-detail/SSAqua_SoutheastCabins-sign-2-actual-NO-cursor.png",
+      "final/B5/aqua/full-detail/SSAqua_SoutheastCabins-sign-2-actual-YES-cursor.png",
+      "final/B5/aqua/full-detail/SSAqua_SoutheastCabins-sign-2-decline-prompt.png",
+      "final/B5/aqua/full-detail/SSAqua_SoutheastCabins-sign-2-rested.png",
+      "final/B5/aqua/full-detail/SSAqua_SouthwestCabins-component-1-cold-continue.png",
+      "final/B5/aqua/full-detail/SSAqua_SouthwestCabins-component-1.png",
+      "final/B5/aqua/full-detail/SSAqua_SouthwestCabins-component-2-cold-continue.png",
+      "final/B5/aqua/full-detail/SSAqua_SouthwestCabins-component-2.png",
+      "final/B5/aqua/full-detail/SSAqua_SouthwestCabins-npc-1.png",
+      "final/B5/aqua/full-detail/SSAqua_SouthwestCabins-npc-2.png",
+      "final/B5/arrival-save-continue/city-west-landing-actual-new-cold-continue.png",
+      "final/B5/arrival-save-continue/corridor-landing-actual-new-cold-continue.png",
+      "final/B5/arrival-save-continue/eastgate-landing-actual-new-cold-continue.png",
+      "final/B5/arrival-save-continue/offlanding-control-actual-new-cold-continue.png",
+      "final/B5/arrival-save-continue/route38-landing-actual-new-cold-continue.png",
+      "final/B5/arrival-save-continue/route42-landing-actual-new-cold-continue.png",
+      "final/B5/arrival-save-continue/westgate-landing-actual-new-cold-continue.png",
+      "final/B5/city/city-collision/east-tree-under-canopy.png",
+      "final/B5/city/city-collision/fishing-house-wall-bump-before.png",
+      "final/B5/city/city-collision/fishing-house-wall-bump.png",
+      "final/B5/city/city-collision/port-body-surf-east-before.png",
+      "final/B5/city/city-collision/port-body-surf-east.png",
+      "final/B5/city/city-collision/port-body-surf-north-before.png",
+      "final/B5/city/city-collision/port-body-surf-north.png",
+      "final/B5/city/city-collision/port-body-surf-south-before.png",
+      "final/B5/city/city-collision/port-body-surf-south.png",
+      "final/B5/city/city-collision/port-body-surf-west-before.png",
+      "final/B5/city/city-collision/port-body-surf-west.png",
+      "final/B5/city/city-collision/port-north-landing-23-portal.png",
+      "final/B5/city/city-collision/port-north-landing-23.png",
+      "final/B5/city/city-collision/port-north-landing-24-portal.png",
+      "final/B5/city/city-collision/port-north-landing-24.png",
+      "final/B5/city/city-collision/residence-tree-under-canopy.png",
+      "final/B5/city/city-collision/residence-tree-wall-bump-before.png",
+      "final/B5/city/city-collision/residence-tree-wall-bump.png",
+      "final/B5/city/city-collision/silph-office-wall-bump-before.png",
+      "final/B5/city/city-collision/silph-office-wall-bump.png",
+      "final/B5/city/city-collision/south-tree-under-canopy.png",
+      "final/B5/city/city-materials/east-rock-a-before.png",
+      "final/B5/city/city-materials/east-rock-a.png",
+      "final/B5/city/city-materials/east-rock-b-before.png",
+      "final/B5/city/city-materials/east-rock-b.png",
+      "final/B5/city/city-materials/east-rock-c-before.png",
+      "final/B5/city/city-materials/east-rock-c.png",
+      "final/B5/city/city-materials/east-rock-chain-before.png",
+      "final/B5/city/city-materials/east-rock-chain.png",
+      "final/B5/city/city-materials/garden-fence-before.png",
+      "final/B5/city/city-materials/garden-fence.png",
+      "final/B5/city/city-materials/outer-fence-before.png",
+      "final/B5/city/city-materials/outer-fence.png",
+      "final/B5/city/city-materials/parasol-11-base-before.png",
+      "final/B5/city/city-materials/parasol-11-base.png",
+      "final/B5/city/city-materials/parasol-11-canopy-before.png",
+      "final/B5/city/city-materials/parasol-11-canopy.png",
+      "final/B5/city/city-materials/parasol-16-base-before.png",
+      "final/B5/city/city-materials/parasol-16-base.png",
+      "final/B5/city/city-materials/parasol-16-canopy-before.png",
+      "final/B5/city/city-materials/parasol-16-canopy.png",
+      "final/B5/city/city-materials/parasol-32-base-before.png",
+      "final/B5/city/city-materials/parasol-32-base.png",
+      "final/B5/city/city-materials/parasol-32-canopy-before.png",
+      "final/B5/city/city-materials/parasol-32-canopy.png",
+      "final/B5/city/city-materials/relocated-table-14-before.png",
+      "final/B5/city/city-materials/relocated-table-14.png",
+      "final/B5/city/city-materials/relocated-table-29-before.png",
+      "final/B5/city/city-materials/relocated-table-29.png",
+      "final/B5/city/city-materials/relocated-table-7-before.png",
+      "final/B5/city/city-materials/relocated-table-7.png",
+      "final/B5/city/city-materials/returned-to-dry-north-port-forecourt.png",
+      "final/B5/city/city-materials/south-of-terminal-native-sea-before.png",
+      "final/B5/city/city-materials/south-of-terminal-native-sea.png",
+      "final/B5/city/city-materials/southern-sea-boundary-before.png",
+      "final/B5/city/city-materials/southern-sea-boundary.png",
+      "final/B5/city/city-materials/timber-promenade-before.png",
+      "final/B5/city/city-materials/timber-promenade.png",
+      "final/B5/city/comparisons/ecruteak-directory-before-QA09.png",
+      "final/B5/city/comparisons/lighthouse-6F-before-B3.png",
+      "final/B5/city/comparisons/olivine-port-before-QA09.png",
+      "final/B5/city/ecruteak-court/court-31-42.png",
+      "final/B5/city/ecruteak-court/court-31-43.png",
+      "final/B5/city/ecruteak-court/court-31-44.png",
+      "final/B5/city/ecruteak-court/court-31-45.png",
+      "final/B5/city/ecruteak-court/court-31-46.png",
+      "final/B5/city/ecruteak-court/court-32-42.png",
+      "final/B5/city/ecruteak-court/court-32-43.png",
+      "final/B5/city/ecruteak-court/court-32-44.png",
+      "final/B5/city/ecruteak-court/court-32-45.png",
+      "final/B5/city/ecruteak-court/court-32-46.png",
+      "final/B5/city/ecruteak-court/court-33-42.png",
+      "final/B5/city/ecruteak-court/court-33-43.png",
+      "final/B5/city/ecruteak-court/court-33-44.png",
+      "final/B5/city/ecruteak-court/court-33-45.png",
+      "final/B5/city/ecruteak-court/court-33-46.png",
+      "final/B5/city/ecruteak-court/court-34-42.png",
+      "final/B5/city/ecruteak-court/court-34-43.png",
+      "final/B5/city/ecruteak-court/court-34-44.png",
+      "final/B5/city/ecruteak-court/court-34-45.png",
+      "final/B5/city/ecruteak-court/court-34-46.png",
+      "final/B5/city/ecruteak-court/court-35-42.png",
+      "final/B5/city/ecruteak-court/court-35-43.png",
+      "final/B5/city/ecruteak-court/court-35-44.png",
+      "final/B5/city/ecruteak-court/court-35-45.png",
+      "final/B5/city/ecruteak-court/court-35-46.png",
+      "final/B5/city/ecruteak-court/court-36-42.png",
+      "final/B5/city/ecruteak-court/court-36-43.png",
+      "final/B5/city/ecruteak-court/court-36-44.png",
+      "final/B5/city/ecruteak-court/court-36-46.png",
+      "final/B5/city/ecruteak-court/court-37-42.png",
+      "final/B5/city/ecruteak-court/court-37-43.png",
+      "final/B5/city/ecruteak-court/court-37-44.png",
+      "final/B5/city/ecruteak-court/court-37-45.png",
+      "final/B5/city/ecruteak-court/court-37-46.png",
+      "final/B5/city/ecruteak-court/court-38-42.png",
+      "final/B5/city/ecruteak-court/court-38-43.png",
+      "final/B5/city/ecruteak-court/court-38-44.png",
+      "final/B5/city/ecruteak-court/court-38-45.png",
+      "final/B5/city/ecruteak-court/court-38-46.png",
+      "final/B5/city/ecruteak-court/court-after-normal-continue-walkaway.png",
+      "final/B5/city/ecruteak-court/court-directory-east-message.png",
+      "final/B5/city/ecruteak-court/court-directory-north-message.png",
+      "final/B5/city/ecruteak-court/court-directory-south-message.png",
+      "final/B5/city/ecruteak-court/court-directory-west-message.png",
+      "final/B5/city/ecruteak-court/court-normal-save.png",
+      "final/B5/city/front-counters/PokemonCenter_1F-11.png",
+      "final/B5/city/front-counters/PokemonCenter_1F-2.png",
+      "final/B5/city/front-counters/PokemonCenter_1F-6.png",
+      "final/B5/city/front-counters/PokemonCenter_B1F-12.png",
+      "final/B5/city/front-counters/PokemonCenter_B1F-4.png",
+      "final/B5/city/front-counters/PokemonCenter_B1F-8.png",
+      "final/B5/city/lighthouse-details/OlivineCity_Lighthouse_1F-lift-leaf-0.png",
+      "final/B5/city/lighthouse-details/OlivineCity_Lighthouse_1F-lift-leaf-1.png",
+      "final/B5/city/lighthouse-details/OlivineCity_Lighthouse_6F-lift-leaf-0.png",
+      "final/B5/city/lighthouse-details/OlivineCity_Lighthouse_6F-lift-leaf-1.png",
+      "final/B5/city/lighthouse-details/lighthouse-1F-component-0-context.png",
+      "final/B5/city/lighthouse-details/lighthouse-1F-component-0-normal-save.png",
+      "final/B5/city/lighthouse-details/lighthouse-2F-component-0-context.png",
+      "final/B5/city/lighthouse-details/lighthouse-2F-component-0-normal-save.png",
+      "final/B5/city/lighthouse-details/lighthouse-3F-component-0-context.png",
+      "final/B5/city/lighthouse-details/lighthouse-3F-component-0-normal-save.png",
+      "final/B5/city/lighthouse-details/lighthouse-3F-component-5-context.png",
+      "final/B5/city/lighthouse-details/lighthouse-3F-component-5-normal-save.png",
+      "final/B5/city/lighthouse-details/lighthouse-4F-component-0-context.png",
+      "final/B5/city/lighthouse-details/lighthouse-4F-component-0-normal-save.png",
+      "final/B5/city/lighthouse-details/lighthouse-4F-component-3-context.png",
+      "final/B5/city/lighthouse-details/lighthouse-4F-component-3-normal-save.png",
+      "final/B5/city/lighthouse-details/lighthouse-5F-component-0-context.png",
+      "final/B5/city/lighthouse-details/lighthouse-5F-component-0-normal-save.png",
+      "final/B5/city/lighthouse-details/lighthouse-6F-component-0-context.png",
+      "final/B5/city/lighthouse-details/lighthouse-6F-component-0-normal-save.png",
+      "final/B5/city/lighthouse-details/lighthouse-6F-core-clockwise.png",
+      "final/B5/city/lighthouse-details/lighthouse-6F-core-counterclockwise.png",
+      "final/B5/city/lighthouse-details/lighthouse-6F-inner-stair-context.png",
+      "final/B5/city/lighthouse-details/lighthouse-Balcony-component-0-context.png",
+      "final/B5/city/lighthouse-details/lighthouse-Balcony-component-0-normal-save.png",
+      "final/B5/city/lighthouse-details/lighthouse-Elevator-component-None-context.png",
+      "final/B5/city/lighthouse-details/lighthouse-Elevator-component-None-normal-save.png",
+      "final/B5/city/lighthouse-details/lighthouse-selected-OlivineCity_Lighthouse_1F-normal-save.png",
+      "final/B5/city/lighthouse-details/lighthouse-selected-OlivineCity_Lighthouse_6F-normal-save.png",
+      "final/B5/city/lighthouse-details/lighthouse-window-balcony-arrival.png",
+      "final/B5/city/lighthouse-tour/OlivineCity_Lighthouse_1F.png",
+      "final/B5/city/lighthouse-tour/OlivineCity_Lighthouse_2F.png",
+      "final/B5/city/lighthouse-tour/OlivineCity_Lighthouse_3F.png",
+      "final/B5/city/lighthouse-tour/OlivineCity_Lighthouse_4F.png",
+      "final/B5/city/lighthouse-tour/OlivineCity_Lighthouse_5F.png",
+      "final/B5/city/lighthouse-tour/OlivineCity_Lighthouse_6F.png",
+      "final/B5/city/lighthouse-tour/OlivineCity_Lighthouse_Balcony.png",
+      "final/B5/city/lighthouse-tour/OlivineCity_Lighthouse_Elevator.png",
+      "final/B5/doorways/actual-arrivals/aqua-captainroom-0-inside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-captainroom-0-inside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-captainroom-0-inside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-captainroom-0-inside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-captainroom-0-inside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-captainroom-0-inside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-captainroom-0-outside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-captainroom-0-outside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-captainroom-0-outside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-captainroom-0-outside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-captainroom-0-outside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-captainroom-0-outside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-gangway-inside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-gangway-inside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-gangway-inside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-gangway-inside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-gangway-inside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-gangway-inside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-gangway-inside-2-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-gangway-inside-2-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-gangway-inside-3-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-gangway-inside-3-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-gangway-inside-3-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-gangway-inside-4-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-gangway-inside-4-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-gangway-outside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-gangway-outside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-gangway-outside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-gangway-outside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-northeastcabins-0-inside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-northeastcabins-0-inside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-northeastcabins-0-inside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-northeastcabins-0-inside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-northeastcabins-0-inside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-northeastcabins-0-inside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-northeastcabins-0-outside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-northeastcabins-0-outside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-northeastcabins-0-outside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-northeastcabins-0-outside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-northeastcabins-0-outside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-northeastcabins-0-outside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-northeastcabins-1-inside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-northeastcabins-1-inside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-northeastcabins-1-inside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-northeastcabins-1-inside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-northeastcabins-1-inside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-northeastcabins-1-inside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-northeastcabins-1-outside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-northeastcabins-1-outside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-northeastcabins-1-outside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-northeastcabins-1-outside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-northeastcabins-1-outside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-northeastcabins-1-outside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-northwestcabins-0-inside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-northwestcabins-0-inside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-northwestcabins-0-inside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-northwestcabins-0-inside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-northwestcabins-0-inside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-northwestcabins-0-inside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-northwestcabins-0-outside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-northwestcabins-0-outside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-northwestcabins-0-outside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-northwestcabins-0-outside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-northwestcabins-0-outside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-northwestcabins-0-outside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-northwestcabins-1-inside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-northwestcabins-1-inside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-northwestcabins-1-inside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-northwestcabins-1-inside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-northwestcabins-1-inside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-northwestcabins-1-inside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-northwestcabins-1-outside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-northwestcabins-1-outside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-northwestcabins-1-outside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-northwestcabins-1-outside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-northwestcabins-1-outside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-northwestcabins-1-outside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-right-stairs-north-rim-inside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-right-stairs-north-rim-inside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-right-stairs-north-rim-inside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-right-stairs-north-rim-inside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-right-stairs-north-rim-inside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-right-stairs-north-rim-outside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-right-stairs-north-rim-outside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-right-stairs-north-rim-outside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-right-stairs-north-rim-outside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-right-stairs-north-rim-outside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-right-stairs-south-rim-inside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-right-stairs-south-rim-inside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-right-stairs-south-rim-inside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-right-stairs-south-rim-inside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-right-stairs-south-rim-inside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-right-stairs-south-rim-outside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-right-stairs-south-rim-outside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-right-stairs-south-rim-outside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-right-stairs-south-rim-outside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-right-stairs-south-rim-outside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-southeastcabins-0-inside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-southeastcabins-0-inside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-southeastcabins-0-inside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-southeastcabins-0-inside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-southeastcabins-0-inside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-southeastcabins-0-inside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-southeastcabins-0-outside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-southeastcabins-0-outside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-southeastcabins-0-outside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-southeastcabins-0-outside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-southeastcabins-0-outside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-southeastcabins-0-outside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-southeastcabins-1-inside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-southeastcabins-1-inside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-southeastcabins-1-inside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-southeastcabins-1-inside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-southeastcabins-1-inside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-southeastcabins-1-outside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-southeastcabins-1-outside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-southeastcabins-1-outside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-southeastcabins-1-outside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-southeastcabins-1-outside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-southeastcabins-1-outside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-southwestcabins-0-inside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-southwestcabins-0-inside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-southwestcabins-0-inside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-southwestcabins-0-inside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-southwestcabins-0-inside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-southwestcabins-0-inside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-southwestcabins-0-outside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-southwestcabins-0-outside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-southwestcabins-0-outside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-southwestcabins-0-outside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-southwestcabins-0-outside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-southwestcabins-0-outside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-southwestcabins-1-inside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-southwestcabins-1-inside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-southwestcabins-1-inside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-southwestcabins-1-inside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-southwestcabins-1-inside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-southwestcabins-1-inside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-southwestcabins-1-outside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-southwestcabins-1-outside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-southwestcabins-1-outside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-southwestcabins-1-outside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-southwestcabins-1-outside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-southwestcabins-1-outside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-west-stairs-inside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-west-stairs-inside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-west-stairs-inside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-west-stairs-inside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-west-stairs-inside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-west-stairs-outside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-west-stairs-outside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-west-stairs-outside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-west-stairs-outside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/aqua-west-stairs-outside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/barrier-inside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/barrier-inside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/barrier-inside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/barrier-inside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/barrier-inside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/barrier-inside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/barrier-outside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/barrier-outside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/barrier-outside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/barrier-outside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/barrier-outside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/barrier-outside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/bell-tower-inside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/bell-tower-inside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/bell-tower-inside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/bell-tower-inside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/bell-tower-inside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/bell-tower-inside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/bell-tower-outside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/bell-tower-outside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/bell-tower-outside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/burned-tower-inside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/burned-tower-inside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/burned-tower-inside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/burned-tower-inside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/burned-tower-inside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/burned-tower-inside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/burned-tower-outside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/burned-tower-outside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/burned-tower-outside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/center-inside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/center-inside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/center-inside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/center-inside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/center-inside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/center-inside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/center-outside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/center-outside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/center-outside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/dowsing-house-inside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/dowsing-house-inside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/dowsing-house-inside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/dowsing-house-inside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/dowsing-house-inside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/dowsing-house-inside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/dowsing-house-outside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/dowsing-house-outside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/dowsing-house-outside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/east-city-gate-inside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/east-city-gate-inside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/east-city-gate-inside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/east-city-gate-inside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/east-city-gate-inside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/east-city-gate-inside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/east-city-gate-inside-2-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/east-city-gate-inside-2-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/east-city-gate-inside-2-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/east-city-gate-outside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/east-city-gate-outside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/east-city-gate-outside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/east-city-gate-outside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/east-city-gate-outside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/east-city-gate-outside-2-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/east-city-gate-outside-2-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/east-route-gate-inside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/east-route-gate-inside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/east-route-gate-inside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/east-route-gate-inside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/east-route-gate-inside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/east-route-gate-inside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/east-route-gate-inside-2-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/east-route-gate-inside-2-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/east-route-gate-inside-2-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/east-route-gate-outside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/east-route-gate-outside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/east-route-gate-outside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/east-route-gate-outside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/east-route-gate-outside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/east-route-gate-outside-2-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/east-route-gate-outside-2-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/gym-inside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/gym-inside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/gym-inside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/gym-inside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/gym-inside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/gym-inside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/gym-outside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/gym-outside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/gym-outside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/gym-outside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/gym-outside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/mart-inside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/mart-inside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/mart-inside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/mart-inside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/mart-inside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/mart-inside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/mart-outside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/mart-outside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/mart-outside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-accepted-neighbour-inside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-accepted-neighbour-inside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-accepted-neighbour-inside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-accepted-neighbour-inside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-accepted-neighbour-inside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-accepted-neighbour-inside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-accepted-neighbour-outside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-accepted-neighbour-outside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-cafe-inside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-cafe-inside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-cafe-inside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-cafe-inside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-cafe-inside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-cafe-inside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-cafe-outside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-cafe-outside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-custom-gym-inside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-custom-gym-inside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-custom-gym-inside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-custom-gym-inside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-custom-gym-inside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-custom-gym-inside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-custom-gym-outside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-custom-gym-outside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-custom-gym-outside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-custom-gym-outside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-custom-gym-outside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-custom-gym-outside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-fishing-house-inside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-fishing-house-inside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-fishing-house-inside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-fishing-house-inside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-fishing-house-inside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-fishing-house-inside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-fishing-house-outside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-fishing-house-outside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-gym-hallway-inside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-gym-hallway-inside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-gym-hallway-inside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-gym-hallway-inside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-gym-hallway-inside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-gym-hallway-inside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-gym-hallway-inside-2-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-gym-hallway-inside-2-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-gym-hallway-inside-2-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-gym-hallway-outside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-gym-hallway-outside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-gym-hallway-outside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-gym-hallway-outside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-gym-hallway-outside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-gym-hallway-outside-2-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-gym-hallway-outside-2-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-harbor-office-inside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-harbor-office-inside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-harbor-office-inside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-harbor-office-inside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-harbor-office-inside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-harbor-office-inside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-harbor-office-outside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-harbor-office-outside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-joe-residence-inside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-joe-residence-inside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-joe-residence-inside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-joe-residence-inside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-joe-residence-inside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-joe-residence-inside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-joe-residence-outside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-joe-residence-outside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-lighthouse-balcony-inside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-lighthouse-balcony-inside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-lighthouse-balcony-inside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-lighthouse-balcony-inside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-lighthouse-balcony-inside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-lighthouse-balcony-inside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-lighthouse-balcony-outside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-lighthouse-balcony-outside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-lighthouse-balcony-outside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-lighthouse-balcony-outside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-lighthouse-balcony-outside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-lighthouse-balcony-outside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-lighthouse-inside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-lighthouse-inside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-lighthouse-inside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-lighthouse-inside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-lighthouse-inside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-lighthouse-inside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-lighthouse-outside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-lighthouse-outside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-poke-mart-inside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-poke-mart-inside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-poke-mart-inside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-poke-mart-inside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-poke-mart-inside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-poke-mart-inside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-poke-mart-outside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-poke-mart-outside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-poke-mart-outside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-pokemon-center-inside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-pokemon-center-inside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-pokemon-center-inside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-pokemon-center-inside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-pokemon-center-inside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-pokemon-center-inside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-pokemon-center-outside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-pokemon-center-outside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-pokemon-center-outside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-pokemon-center-outside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-pokemon-center-outside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-pokemon-center-outside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-port-city-entrance-inside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-port-city-entrance-inside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-port-city-entrance-inside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-port-city-entrance-inside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-port-city-entrance-inside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-port-city-entrance-inside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-port-city-entrance-outside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-port-city-entrance-outside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-port-city-entrance-outside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-port-city-entrance-outside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-port-inspection-side-inside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-port-inspection-side-inside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-port-inspection-side-inside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-port-inspection-side-inside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-port-inspection-side-inside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-port-inspection-side-inside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-port-inspection-side-outside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-port-inspection-side-outside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-port-inspection-side-outside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-port-inspection-side-outside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-port-inspection-side-outside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-port-inspection-side-outside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-port-quay-main-inside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-port-quay-main-inside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-port-quay-main-inside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-port-quay-main-inside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-port-quay-main-inside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-port-quay-main-inside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-port-quay-main-outside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-port-quay-main-outside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-port-quay-main-outside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-port-quay-main-outside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-port-quay-main-outside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-seal-house-inside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-seal-house-inside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-seal-house-inside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-seal-house-inside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-seal-house-inside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-seal-house-inside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-seal-house-outside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-seal-house-outside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-silph-office-inside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-silph-office-inside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-silph-office-inside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-silph-office-inside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-silph-office-inside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-silph-office-inside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-silph-office-outside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-silph-office-outside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-silph-office-outside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-trade-house-inside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-trade-house-inside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-trade-house-inside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-trade-house-inside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-trade-house-inside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-trade-house-inside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-trade-house-outside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/olivine-trade-house-outside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/southwest-house-inside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/southwest-house-inside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/southwest-house-inside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/southwest-house-inside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/southwest-house-inside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/southwest-house-inside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/southwest-house-outside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/southwest-house-outside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/southwest-house-outside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/station-corridor-stairs-inside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/station-corridor-stairs-inside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/station-corridor-stairs-outside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/station-corridor-stairs-outside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/theater-inside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/theater-inside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/theater-inside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/theater-inside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/theater-inside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/theater-inside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/theater-outside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/theater-outside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/theater-outside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/theater-outside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/theater-outside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/trail-station-return-inside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/trail-station-return-inside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/trail-station-return-outside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/trail-station-return-outside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/west-city-gate-inside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/west-city-gate-inside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/west-city-gate-inside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/west-city-gate-inside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/west-city-gate-inside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/west-city-gate-inside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/west-city-gate-inside-2-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/west-city-gate-inside-2-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/west-city-gate-inside-2-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/west-city-gate-outside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/west-city-gate-outside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/west-city-gate-outside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/west-city-gate-outside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/west-city-gate-outside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/west-city-gate-outside-2-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/west-city-gate-outside-2-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/west-city-gate-outside-2-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/west-route-gate-inside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/west-route-gate-inside-0-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/west-route-gate-inside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/west-route-gate-inside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/west-route-gate-inside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/west-route-gate-inside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/west-route-gate-inside-2-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/west-route-gate-inside-2-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/west-route-gate-inside-2-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/west-route-gate-outside-0-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/west-route-gate-outside-0-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/west-route-gate-outside-1-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/west-route-gate-outside-1-lateral-negative-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/west-route-gate-outside-1-lateral-positive-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/west-route-gate-outside-2-front-actual-arrival.png",
+      "final/B5/doorways/actual-arrivals/west-route-gate-outside-2-lateral-negative-actual-arrival.png",
+      "final/B5/facing/after/east-city-gate-inside-0-front.png",
+      "final/B5/facing/after/east-city-gate-outside-0-front.png",
+      "final/B5/facing/after/east-route-gate-inside-0-front.png",
+      "final/B5/facing/after/east-route-gate-outside-0-front.png",
+      "final/B5/facing/after/trail-station-return-outside-0-front.png",
+      "final/B5/facing/after/west-city-gate-inside-0-front.png",
+      "final/B5/facing/after/west-city-gate-outside-0-front.png",
+      "final/B5/facing/after/west-route-gate-inside-0-front.png",
+      "final/B5/facing/after/west-route-gate-outside-0-front.png",
+      "final/B5/facing/before/east-city-gate-inside-0-front.png",
+      "final/B5/facing/before/east-city-gate-outside-0-front.png",
+      "final/B5/facing/before/east-route-gate-inside-0-front.png",
+      "final/B5/facing/before/east-route-gate-outside-0-front.png",
+      "final/B5/facing/before/trail-station-return-outside-0-front.png",
+      "final/B5/facing/before/west-city-gate-inside-0-front.png",
+      "final/B5/facing/before/west-city-gate-outside-0-front.png",
+      "final/B5/facing/before/west-route-gate-inside-0-front.png",
+      "final/B5/facing/before/west-route-gate-outside-0-front.png",
+      "final/B5/facing/old-save-continue/city-west-landing-actual-new-cold-continue.png",
+      "final/B5/facing/old-save-continue/corridor-landing-actual-new-cold-continue.png",
+      "final/B5/facing/old-save-continue/eastgate-landing-actual-new-cold-continue.png",
+      "final/B5/facing/old-save-continue/offlanding-control-actual-new-cold-continue.png",
+      "final/B5/facing/old-save-continue/route38-landing-actual-new-cold-continue.png",
+      "final/B5/facing/old-save-continue/route42-landing-actual-new-cold-continue.png",
+      "final/B5/facing/old-save-continue/westgate-landing-actual-new-cold-continue.png",
+      "final/B5/migration/actual-old-surf-city23-55-candidate-arrival-before-safety-assert.png",
+      "final/B5/migration/actual-old-surf-city23-55-migrated-arrival.png",
+      "final/B5/migration/actual-old-surf-city23-55-new-cold-continue.png",
+      "final/B5/migration/actual-old-surf-city23-55-walk-away.png",
+      "final/B5/migration/actual-old-walking-city23-53-candidate-arrival-before-safety-assert.png",
+      "final/B5/migration/actual-old-walking-city23-53-migrated-arrival.png",
+      "final/B5/migration/actual-old-walking-city23-53-new-cold-continue.png",
+      "final/B5/migration/actual-old-walking-city23-53-walk-away.png",
+      "final/B5/migration/portal-23-actual-exit-full-Joe.png",
+      "final/B5/migration/portal-23-landing-full-Joe.png",
+      "final/B5/migration/portal-23-north-approach-full-Joe.png",
+      "final/B5/migration/portal-24-actual-exit-full-Joe.png",
+      "final/B5/migration/portal-24-landing-full-Joe.png",
+      "final/B5/migration/portal-24-north-approach-full-Joe.png",
+      "final/B5/migration/valid-old-surf-water-arrival.png",
+      "final/B5/migration/valid-old-surf-water-new-continue.png",
+      "final/B5/regressions/first-loss/city.png",
+      "final/B5/regressions/first-loss/first-loss-olivine-center.png",
+      "final/B5/regressions/first-loss/joe-battle-back.png",
+      "final/B5/regressions/first-loss/joe-standing-east.png",
+      "final/B5/regressions/first-loss/joe-standing-north.png",
+      "final/B5/regressions/first-loss/joe-standing-south.png",
+      "final/B5/regressions/first-loss/joe-standing-west.png",
+      "final/B5/regressions/fly/AzaleaTown.png",
+      "final/B5/regressions/fly/BlackthornCity.png",
+      "final/B5/regressions/fly/CherrygroveCity.png",
+      "final/B5/regressions/fly/CianwoodCity.png",
+      "final/B5/regressions/fly/EcruteakCity.png",
+      "final/B5/regressions/fly/GoldenrodCity.png",
+      "final/B5/regressions/fly/MahoganyTown.png",
+      "final/B5/regressions/fly/NewBarkTown.png",
+      "final/B5/regressions/fly/OlivineCity.png",
+      "final/B5/regressions/fly/VioletCity.png",
+      "final/B5/regressions/fly/departure.png",
+      "final/B5/regressions/fly/fly-selection.png",
+      "final/B5/regressions/fly/joe-fly-pose.png",
+      "final/B5/regressions/joe/acro-wheelie.png",
+      "final/B5/regressions/joe/acro_bike.png",
+      "final/B5/regressions/joe/fishing.png",
+      "final/B5/regressions/joe/mach_bike.png",
+      "final/B5/regressions/joe/surf-east.png",
+      "final/B5/regressions/joe/surf-north.png",
+      "final/B5/regressions/joe/surf-south.png",
+      "final/B5/regressions/joe/surf-west.png",
+      "final/B5/regressions/pre-title/scene-0.png",
+      "final/B5/regressions/pre-title/scene-1.png",
+      "final/B5/regressions/pre-title/scene-2.png",
+      "final/B5/regressions/pre-title/title-handoff.png",
+      "final/B5/regressions/running/running.png",
+      "final/B5/regressions/running/walking.png",
+      "final/B5/regressions/services/Hgss_OlivineSign_Cafe.png",
+      "final/B5/regressions/services/Hgss_OlivineSign_FishingHouse.png",
+      "final/B5/regressions/services/Hgss_OlivineSign_Port.png",
+      "final/B5/regressions/services/Hgss_OlivineSign_SealHouse.png",
+      "final/B5/regressions/services/Hgss_OlivineSign_TradeHouse.png",
+      "final/B5/regressions/services/OlivineCity_FishingHouse-resident-1.png",
+      "final/B5/regressions/services/OlivineCity_HarborOffice-Olivine_HarborClerk.png",
+      "final/B5/regressions/services/OlivineCity_Lighthouse_1F-ambient-1.png",
+      "final/B5/regressions/services/OlivineCity_Lighthouse_1F-wayfinding-1.png",
+      "final/B5/regressions/services/OlivineCity_Lighthouse_2F-wayfinding-1.png",
+      "final/B5/regressions/services/OlivineCity_Lighthouse_3F-ambient-1.png",
+      "final/B5/regressions/services/OlivineCity_Lighthouse_3F-wayfinding-1.png",
+      "final/B5/regressions/services/OlivineCity_Lighthouse_4F-wayfinding-1.png",
+      "final/B5/regressions/services/OlivineCity_Lighthouse_5F-wayfinding-1.png",
+      "final/B5/regressions/services/OlivineCity_Lighthouse_6F-ambient-1.png",
+      "final/B5/regressions/services/OlivineCity_Lighthouse_6F-ambient-2.png",
+      "final/B5/regressions/services/OlivineCity_Lighthouse_6F-wayfinding-1.png",
+      "final/B5/regressions/services/OlivineCity_Lighthouse_Balcony-wayfinding-1.png",
+      "final/B5/regressions/services/OlivineCity_PokemonCenter_1F-front-desk-11.png",
+      "final/B5/regressions/services/OlivineCity_PokemonCenter_1F-front-desk-2.png",
+      "final/B5/regressions/services/OlivineCity_PokemonCenter_1F-front-desk-6.png",
+      "final/B5/regressions/services/OlivineCity_PokemonCenter_B1F-front-desk-12.png",
+      "final/B5/regressions/services/OlivineCity_PokemonCenter_B1F-front-desk-4.png",
+      "final/B5/regressions/services/OlivineCity_PokemonCenter_B1F-front-desk-8.png",
+      "final/B5/regressions/services/OlivineCity_PortQuay-ambient-1.png",
+      "final/B5/regressions/services/OlivineCity_PortQuay-wayfinding-1.png",
+      "final/B5/regressions/services/OlivineCity_PortTerminal-ambient-1.png",
+      "final/B5/regressions/services/OlivineCity_PortTerminal-ambient-2.png",
+      "final/B5/regressions/services/OlivineCity_SealHouse-resident-1.png",
+      "final/B5/regressions/services/OlivineCity_SealHouse-resident-2.png",
+      "final/B5/regressions/services/OlivineCity_SealHouse-resident-3.png",
+      "final/B5/regressions/services/OlivineCity_SilphOffice-Olivine_OfficeWorker.png",
+      "final/B5/regressions/services/OlivineCity_TradeHouse-resident-1.png",
+      "final/B5/regressions/services/Olivine_FreightChecklist.png",
+      "final/B5/regressions/services/Olivine_HarborDispatch.png",
+      "final/B5/regressions/services/Olivine_HarborLedger.png",
+      "final/B5/regressions/services/Olivine_HomeBooks.png",
+      "final/B5/regressions/services/Olivine_HomeNotes.png",
+      "final/B5/regressions/services/Olivine_StaffBoard.png",
+      "final/B5/regressions/services/Olivine_Terminal.png",
+      "final/B5/regressions/services/accepted-neighbor-1.png",
+      "final/B5/regressions/services/cafe-host-across-counter.png",
+      "final/B5/regressions/services/cafe-visitor-1.png",
+      "final/B5/regressions/services/cafe-visitor-2.png",
+      "final/B5/regressions/services/center-pc-menu.png",
+      "final/B5/regressions/services/center-visitor.png",
+      "final/B5/regressions/services/home-rest-accepted.png",
+      "final/B5/regressions/services/home-rest-declined.png",
+      "final/B5/regressions/services/jasmine-loss-local-whiteout.png",
+      "final/B5/regressions/services/jasmine-practice-battle.png",
+      "final/B5/regressions/services/mart-menu.png",
+      "final/B5/regressions/services/mart-purchase.png",
+      "final/B5/regressions/services/mart-stock.png",
+      "final/B5/regressions/services/mart-visitor.png",
+      "final/B5/regressions/services/nurse-healed.png",
+      "final/B5/regressions/starters/city.png",
+      "final/B5/regressions/starters/interior-0.png",
+      "final/B5/regressions/starters/interior-1.png",
+      "final/B5/regressions/starters/interior-10.png",
+      "final/B5/regressions/starters/interior-11.png",
+      "final/B5/regressions/starters/interior-12.png",
+      "final/B5/regressions/starters/interior-13.png",
+      "final/B5/regressions/starters/interior-14.png",
+      "final/B5/regressions/starters/interior-15.png",
+      "final/B5/regressions/starters/interior-2.png",
+      "final/B5/regressions/starters/interior-3.png",
+      "final/B5/regressions/starters/interior-4.png",
+      "final/B5/regressions/starters/interior-5.png",
+      "final/B5/regressions/starters/interior-6.png",
+      "final/B5/regressions/starters/interior-7.png",
+      "final/B5/regressions/starters/interior-8.png",
+      "final/B5/regressions/starters/interior-9.png",
+      "final/B5/regressions/starters/joe-standing-east.png",
+      "final/B5/regressions/starters/joe-standing-north.png",
+      "final/B5/regressions/starters/joe-standing-south.png",
+      "final/B5/regressions/starters/joe-standing-west.png",
+      "final/B5/regressions/starters/rescue-273.png",
+      "final/B5/regressions/starters/rescue-568.png",
+      "final/B5/regressions/starters/rescue-605.png",
+      "final/B5/regressions/title/main-menu.png",
+      "final/B5/regressions/title/new-game-handoff.png",
+      "final/B5/regressions/title/title.png"
+    ],
+    "movement_recordings": [
+      {
+        "path": "final/B5/aqua/full-detail/SSAqua_1F-component-1-wall-0.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/aqua/full-detail/SSAqua_1F-component-1-wall-105.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/aqua/full-detail/SSAqua_1F-component-1-wall-140.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/aqua/full-detail/SSAqua_1F-component-1-wall-35.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/aqua/full-detail/SSAqua_1F-component-1-wall-70.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/aqua/full-detail/SSAqua_1F-component-2-wall-175.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/aqua/full-detail/SSAqua_1F-component-2-wall-210.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/aqua/full-detail/SSAqua_1F-component-2-wall-245.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/aqua/full-detail/SSAqua_B1F-component-1-wall-1015.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/aqua/full-detail/SSAqua_B1F-component-1-wall-1050.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/aqua/full-detail/SSAqua_B1F-component-1-wall-1085.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/aqua/full-detail/SSAqua_B1F-component-1-wall-1120.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/aqua/full-detail/SSAqua_B1F-component-1-wall-1155.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/aqua/full-detail/SSAqua_B1F-component-1-wall-770.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/aqua/full-detail/SSAqua_B1F-component-1-wall-805.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/aqua/full-detail/SSAqua_B1F-component-1-wall-840.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/aqua/full-detail/SSAqua_B1F-component-1-wall-875.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/aqua/full-detail/SSAqua_B1F-component-1-wall-910.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/aqua/full-detail/SSAqua_B1F-component-1-wall-945.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/aqua/full-detail/SSAqua_B1F-component-1-wall-980.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/aqua/full-detail/SSAqua_CaptainRoom-component-1-wall-280.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/aqua/full-detail/SSAqua_NortheastCabins-component-1-wall-560.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/aqua/full-detail/SSAqua_NortheastCabins-component-2-wall-595.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/aqua/full-detail/SSAqua_NortheastCabins-component-2-wall-630.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/aqua/full-detail/SSAqua_NorthwestCabins-component-1-wall-665.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/aqua/full-detail/SSAqua_NorthwestCabins-component-2-wall-700.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/aqua/full-detail/SSAqua_NorthwestCabins-component-2-wall-735.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/aqua/full-detail/SSAqua_SoutheastCabins-component-1-wall-315.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/aqua/full-detail/SSAqua_SoutheastCabins-component-1-wall-350.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/aqua/full-detail/SSAqua_SoutheastCabins-component-2-wall-385.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/aqua/full-detail/SSAqua_SoutheastCabins-component-2-wall-420.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/aqua/full-detail/SSAqua_SouthwestCabins-component-1-wall-455.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/aqua/full-detail/SSAqua_SouthwestCabins-component-2-wall-490.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/aqua/full-detail/SSAqua_SouthwestCabins-component-2-wall-525.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/city/city-collision/fishing-house-wall-bump.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/city/city-collision/port-body-surf-east.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/city/city-collision/port-body-surf-north.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/city/city-collision/port-body-surf-south.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/city/city-collision/port-body-surf-west.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/city/city-collision/port-north-landing-23.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/city/city-collision/port-north-landing-24.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/city/city-collision/residence-tree-wall-bump.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/city/city-collision/silph-office-wall-bump.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/city/city-materials/east-rock-a.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/city/city-materials/east-rock-b.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/city/city-materials/east-rock-c.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/city/city-materials/east-rock-chain.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/city/city-materials/garden-fence.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/city/city-materials/outer-fence.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/city/city-materials/parasol-11-base.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/city/city-materials/parasol-11-canopy.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/city/city-materials/parasol-16-base.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/city/city-materials/parasol-16-canopy.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/city/city-materials/parasol-32-base.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/city/city-materials/parasol-32-canopy.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/city/city-materials/relocated-table-14.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/city/city-materials/relocated-table-29.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/city/city-materials/relocated-table-7.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/city/city-materials/south-of-terminal-native-sea.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/city/city-materials/southern-sea-boundary.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/city/city-materials/timber-promenade.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/city/ecruteak-court/court-normal-controller-circuit.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/city/front-counters/PokemonCenter_B1F-4.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/city/lighthouse-details/OlivineCity_Lighthouse_1F-lift-leaf-0.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/city/lighthouse-details/OlivineCity_Lighthouse_1F-lift-leaf-1.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/city/lighthouse-details/OlivineCity_Lighthouse_6F-lift-leaf-0.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/city/lighthouse-details/OlivineCity_Lighthouse_6F-lift-leaf-1.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/city/lighthouse-details/lighthouse-6F-core-continuous-both-directions.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/city/lighthouse-details/lighthouse-window-fall.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/aqua-captainroom-0-inside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/aqua-captainroom-0-inside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/aqua-captainroom-0-outside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/aqua-captainroom-0-outside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/aqua-gangway-inside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/aqua-gangway-inside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/aqua-gangway-inside-2-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/aqua-gangway-inside-3-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/aqua-gangway-inside-4-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/aqua-gangway-outside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/aqua-gangway-outside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/aqua-northeastcabins-0-inside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/aqua-northeastcabins-0-inside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/aqua-northeastcabins-0-outside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/aqua-northeastcabins-0-outside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/aqua-northeastcabins-1-inside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/aqua-northeastcabins-1-inside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/aqua-northeastcabins-1-outside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/aqua-northeastcabins-1-outside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/aqua-northwestcabins-0-inside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/aqua-northwestcabins-0-inside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/aqua-northwestcabins-0-outside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/aqua-northwestcabins-0-outside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/aqua-northwestcabins-1-inside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/aqua-northwestcabins-1-inside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/aqua-northwestcabins-1-outside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/aqua-northwestcabins-1-outside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/aqua-right-stairs-north-rim-inside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/aqua-right-stairs-north-rim-inside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/aqua-right-stairs-north-rim-outside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/aqua-right-stairs-north-rim-outside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/aqua-right-stairs-south-rim-inside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/aqua-right-stairs-south-rim-inside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/aqua-right-stairs-south-rim-outside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/aqua-right-stairs-south-rim-outside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/aqua-southeastcabins-0-inside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/aqua-southeastcabins-0-inside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/aqua-southeastcabins-0-outside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/aqua-southeastcabins-0-outside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/aqua-southeastcabins-1-inside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/aqua-southeastcabins-1-inside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/aqua-southeastcabins-1-outside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/aqua-southeastcabins-1-outside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/aqua-southwestcabins-0-inside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/aqua-southwestcabins-0-inside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/aqua-southwestcabins-0-outside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/aqua-southwestcabins-0-outside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/aqua-southwestcabins-1-inside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/aqua-southwestcabins-1-inside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/aqua-southwestcabins-1-outside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/aqua-southwestcabins-1-outside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/aqua-west-stairs-inside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/aqua-west-stairs-inside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/aqua-west-stairs-outside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/aqua-west-stairs-outside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/barrier-inside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/barrier-inside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/barrier-outside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/barrier-outside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/bell-tower-inside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/bell-tower-inside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/bell-tower-outside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/burned-tower-inside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/burned-tower-inside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/burned-tower-outside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/center-inside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/center-inside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/center-outside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/dowsing-house-inside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/dowsing-house-inside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/dowsing-house-outside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/east-city-gate-inside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/east-city-gate-inside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/east-city-gate-inside-2-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/east-city-gate-outside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/east-city-gate-outside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/east-city-gate-outside-2-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/east-route-gate-inside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/east-route-gate-inside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/east-route-gate-inside-2-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/east-route-gate-outside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/east-route-gate-outside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/east-route-gate-outside-2-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/gym-inside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/gym-inside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/gym-outside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/gym-outside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/mart-inside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/mart-inside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/mart-outside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/olivine-accepted-neighbour-inside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/olivine-accepted-neighbour-inside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/olivine-accepted-neighbour-outside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/olivine-cafe-inside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/olivine-cafe-inside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/olivine-cafe-outside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/olivine-custom-gym-inside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/olivine-custom-gym-inside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/olivine-custom-gym-outside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/olivine-custom-gym-outside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/olivine-fishing-house-inside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/olivine-fishing-house-inside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/olivine-fishing-house-outside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/olivine-gym-hallway-inside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/olivine-gym-hallway-inside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/olivine-gym-hallway-inside-2-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/olivine-gym-hallway-outside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/olivine-gym-hallway-outside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/olivine-gym-hallway-outside-2-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/olivine-harbor-office-inside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/olivine-harbor-office-inside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/olivine-harbor-office-outside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/olivine-joe-residence-inside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/olivine-joe-residence-inside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/olivine-joe-residence-outside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/olivine-lighthouse-balcony-inside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/olivine-lighthouse-balcony-inside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/olivine-lighthouse-balcony-outside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/olivine-lighthouse-balcony-outside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/olivine-lighthouse-inside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/olivine-lighthouse-inside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/olivine-lighthouse-outside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/olivine-poke-mart-inside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/olivine-poke-mart-inside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/olivine-poke-mart-outside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/olivine-pokemon-center-inside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/olivine-pokemon-center-inside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/olivine-pokemon-center-outside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/olivine-pokemon-center-outside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/olivine-port-city-entrance-inside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/olivine-port-city-entrance-inside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/olivine-port-city-entrance-outside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/olivine-port-city-entrance-outside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/olivine-port-inspection-side-inside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/olivine-port-inspection-side-inside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/olivine-port-inspection-side-outside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/olivine-port-inspection-side-outside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/olivine-port-quay-main-inside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/olivine-port-quay-main-inside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/olivine-port-quay-main-outside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/olivine-port-quay-main-outside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/olivine-seal-house-inside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/olivine-seal-house-inside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/olivine-seal-house-outside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/olivine-silph-office-inside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/olivine-silph-office-inside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/olivine-silph-office-outside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/olivine-trade-house-inside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/olivine-trade-house-inside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/olivine-trade-house-outside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/southwest-house-inside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/southwest-house-inside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/southwest-house-outside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/station-corridor-stairs-inside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/station-corridor-stairs-outside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/theater-inside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/theater-inside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/theater-outside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/theater-outside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/trail-station-return-inside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/trail-station-return-outside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/west-city-gate-inside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/west-city-gate-inside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/west-city-gate-inside-2-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/west-city-gate-outside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/west-city-gate-outside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/west-city-gate-outside-2-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/west-route-gate-inside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/west-route-gate-inside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/west-route-gate-inside-2-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/west-route-gate-outside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/west-route-gate-outside-1-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/doorways/clips/west-route-gate-outside-2-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/facing/after/east-city-gate-inside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/facing/after/east-city-gate-outside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/facing/after/east-route-gate-inside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/facing/after/east-route-gate-outside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/facing/after/trail-station-return-outside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/facing/after/west-city-gate-inside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/facing/after/west-city-gate-outside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/facing/after/west-route-gate-inside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/facing/after/west-route-gate-outside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/facing/before/east-city-gate-inside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/facing/before/east-city-gate-outside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/facing/before/east-route-gate-inside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/facing/before/east-route-gate-outside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/facing/before/trail-station-return-outside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/facing/before/west-city-gate-inside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/facing/before/west-city-gate-outside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/facing/before/west-route-gate-inside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/facing/before/west-route-gate-outside-0-front.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/migration/portal-both-leaves-normal-approach-exit.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/regressions/fly/fly-departure.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/regressions/running/running.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      },
+      {
+        "path": "final/B5/regressions/running/walking.mp4",
+        "codec_name": "h264",
+        "width": 240,
+        "height": 160,
+        "pix_fmt": "yuv420p"
+      }
+    ],
+    "labelled_contact_sheets": [
+      {
+        "path": "final/B5/arrival-save-continue/actual-before-after-comparison.png",
+        "dimensions": [
+          480,
+          1260
+        ],
+        "unscaled_native_panels_verified": 14,
+        "kind": "Labelled contact sheet, not a single native framebuffer screenshot"
+      },
+      {
+        "path": "final/B5/doorways/representative-actual-arrivals.png",
+        "dimensions": [
+          480,
+          540
+        ],
+        "unscaled_native_panels_verified": 6,
+        "kind": "Labelled contact sheet, not a single native framebuffer screenshot"
+      }
+    ]
+  },
+  "known_limitations_and_fixture_scope": [
+    "Owner Delta playtest and visual acceptance remain PENDING; no city/Johto100% or pixel-identical HGSS claim.",
+    "Docked S.S. Aqua exploration is implemented; voyages remain unimplemented because Vermilion, approved travel/ticket/progression, first-trip quest and rewards are absent.",
+    "Original orthographic GBA art/palettes adapt HGSS3D geometry. Lantern enclosure retains angular/U footprint and a small north cap; furniture groups compress into retained solid footprints; five interior gangway cells project to two exterior leaves. Some rugs/tablecloth shading/colors differ.",
+    "Bike states identify Joe but mounted poses remain visually unfinished; New Game cinematic retains inherited content. DS online services remain offline.",
+    "The latest private owner Delta battery was not supplied. Tests used copies of the documented historical B03 battery plus two genuinely normally saved QA09 port fixtures and a genuine still-water Surf control; original inputs remain unchanged.",
+    "Disclosed test fixtures: RAM-only encounter suppression; actual opt-in Survey desk; exact-ROM snapshots for isolated trials; berth-only first-mon1HP/poison fixture restored after real NO/YES checks. No map/XY/warp/identity/item/story writes in migration/door gameplay. Long Aqua walking comparisons exempt only legitimate vanilla friendship byte/checksum changes; immediate Save/interaction payload comparisons remain exact."
+  ],
+  "historical_candidates": "B1/B2/B3 and interrupted/failed harness runs remain diagnostic. B4 all 17 legacy phases completed but independent physical-facing audit failed 67 trials (415correct,37unavailable,67wrong); its overall verdict is FAIL. No earlier candidate supplies a missing final phase.",
+  "location_report": "../../hgss/qa10/LOCATION_CHECKLIST.md",
+  "evidence_gallery": "index.html",
+  "pull_request": "https://github.com/flimflam5/Project-crossroads/pull/17",
+  "independent_facing_audit": {
+    "public_report": "final/B5/automated/independent-facing-audit.json",
+    "passed": true,
+    "groups": 45,
+    "attempts": 519,
+    "correct_actual_facing": 482,
+    "unavailable_lateral_starts": 37,
+    "failures": 0,
+    "intended_reference_sha256": "13f3545be6681c44ab83a232b8d424ce7b04e434948da51a2b7ac14f00541b78",
+    "reference_authorship_source": "cc643ffe711204f3ef38e34e7aa1eb8c9558720f",
+    "note": "Independent physical-facing expectations retain their own authorship source; the audit and actual trial report both pin the final candidate ROM."
+  },
+  "ci_artifact_snapshot": {
+    "workflow_run_id": 43174824197,
+    "source_head": "ed375e9f382cafc8f225136876778534ac111a17",
+    "emerald_build_and_checks": "PASS",
+    "fire_red_and_leaf_green_builds": "PASS",
+    "broader_test_job_at_snapshot": "in_progress; not claimed passed",
+    "artifact_id": 13924251576,
+    "artifact_url": "https://github.com/flimflam5/Project-crossroads/actions/runs/43174824197/artifacts/13924251576",
+    "artifact_bytes": 37066716,
+    "artifact_archive_digest": "sha256:1f9630624f5ff1d209f5ebd528e551eeb5a34748a327a54f71af7580cc262d25",
+    "note": "Accessible CI ROM artifact exists. CI compilation can produce a different binary; actual emulator results and local delivery apply only to the recorded ee2d81... ROM checksum."
+  }
+}

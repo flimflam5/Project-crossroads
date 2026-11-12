@@ -10,7 +10,7 @@ from pathlib import Path
 from PIL import Image
 R=Path(__file__).resolve().parents[2];A=R/'crossroads/hgss/art/olivine'
 P=R/'data/tilesets/primary/hgss_olivine';S=R/'data/tilesets/secondary/hgss_olivine'
-SPECS=[('parasol','parasol',(0,0,1024,1536),(32,48),11,-1),('house','facades',(0,0,670,480),(64,64),8,1),('cafe','facades',(680,0,1377,470),(64,64),9,1),('lighthouse','facades',(0,470,670,1142),(112,144),11,3),('port','facades',(670,470,1377,1142),(128,96),11,3),('center','services',(0,0,870,887),(96,80),9,2),('mart','services',(870,0,1774,887),(80,64),11,1),('sailboat','harbor-decor',(0,0,1100,724),(96,80),11,-1),('pennant_arch','harbor-decor',(1100,0,2172,724),(112,48),9,-1)]
+SPECS=[('parasol','parasol',(0,0,1024,1536),(32,48),11,-1),('house','facades',(0,0,670,480),(64,64),8,1),('cafe','facades',(680,0,1377,470),(64,64),9,1),('lighthouse','facades',(0,470,670,1142),(112,144),11,3),('port','port-north-entry',(0,0,1448,1086),(128,96),11,3),('center','services',(0,0,870,887),(96,80),9,2),('mart','services',(870,0,1774,887),(80,64),11,1),('sailboat','harbor-decor',(0,0,1100,724),(96,80),11,-1),('pennant_arch','harbor-decor',(1100,0,2172,724),(112,48),9,-1)]
 def words(p):b=p.read_bytes();return list(struct.unpack('<'+str(len(b)//2)+'H',b))
 def legacy_ids():
  source=words(R/'data/layouts/SlateportCity/map.bin');ids={0x202,0x32e,0x32f,0x336,0x337}
@@ -43,6 +43,10 @@ def generate(check=False,measure=False):
   group=[ims[n] for n,src,b,size,k,d in SPECS if k==bank];strip=Image.new('RGB',(sum(im.width for im in group),max(im.height for im in group)));x=0
   for im in group:strip.paste(im,(x,0),im.getchannel('A'));x+=im.width
   pals[bank]=[0,0,0]+strip.quantize(colors=15,method=Image.Quantize.MEDIANCUT).getpalette()[:45]
+ # QA10 changes only the port drawing, not the shared maritime color bank.
+ # The immutable QA09 palette keeps lighthouse/Mart/boats/parasol pixels exact.
+ pals[11]=[int(v) for line in (A/'port-qa09-palette11.pal').read_text().splitlines()[3:] for v in line.split()]
+ assert len(pals[11])==48
  def alloc(tile):
   nonlocal cursor
   key=tile.tobytes()
@@ -90,17 +94,26 @@ def generate(check=False,measure=False):
   mirror_height=112 if name=='lighthouse' else 64 if name=='port' else 0
   if mirror_height:
    left=q.crop((0,0,size[0]//2,mirror_height));q.paste(left.transpose(Image.Transpose.FLIP_LEFT_RIGHT),(size[0]//2,0))
-  doors=([] if name in ['parasol','sailboat','pennant_arch'] else [[door,h-1]])+([[door+1,h-1]] if name in ['center','port'] else [])
+  door_y=1 if name=='port' else h-1
+  doors=([] if name in ['parasol','sailboat','pennant_arch'] else [[door,door_y]])+([[door+1,door_y]] if name in ['center','port'] else [])
+  canopy=[[door,0],[door+1,0]] if name=='port' else []
   ids=[]
   for y in range(h):
    for x in range(w):
     n=fm.pop(0);ids.append(n);top=[alloc(q.crop((x*16+dx,y*16+dy,x*16+dx+8,y*16+dy+8)))|(bank<<12) for dx,dy in [(0,0),(8,0),(0,8),(8,8)]]
-    ground=metas[0][0x170*8:0x170*8+4] if name in ['sailboat','port'] else metas[1][2*8:2*8+4] if name=='pennant_arch' else glyph['deck'] if name=='parasol' else metas[0][8:12]
+    ground=glyph['deck'] if name=='port' and ([x,y] in canopy or [x,y] in doors) else metas[0][0x170*8:0x170*8+4] if name in ['sailboat','port'] else metas[1][2*8:2*8+4] if name=='pennant_arch' else glyph['deck'] if name=='parasol' else metas[0][8:12]
     metas[1][n%512*8:n%512*8+8]=ground+top
     covered=(y>=h-2) if name=='sailboat' else (y==h-1 and x in [0,w-1]) if name=='pennant_arch' else (y==h-1 if name=='parasol' else y>=h-2)
-    port_eave=name=='port' and (y==0 or (y<h-2 and x in [0,w-1]))
-    attrs[1][n%512]=(0x1000 if covered else 0)|(0x15 if name=='sailboat' or port_eave else 0x60 if [x,y] in doors else 0)
-  out[name]=dict(width=w,height=h,metatiles=ids,door_x=door,door_y=h-1,doors=doors,solid=([[0,h-1],[w-1,h-1]] if name=='pennant_arch' else [[x,y] for y in range(h-2,h) for x in range(w)] if name=='sailboat' else [[x,h-1] for x in range(w)] if name=='parasol' else [[x,y] for y in range(1,h) for x in range(w) if (y>=h-2 or x not in [0,w-1]) and [x,y] not in doors]),palette=bank)
+    # Two north-side public landing cells must draw below Joe, like the
+    # threshold; keep all other roof/eave foreground layers unchanged.
+    port_eave=name=='port' and (y==0 or (y<h-2 and x in [0,w-1])) and [x,y] not in canopy
+    attrs[1][n%512]=(0x1000 if covered or name=='port' and ([x,y] in doors or [x,y] in canopy) else 0)|(0x15 if name=='sailboat' or port_eave else (0x61 if name=='port' else 0x60) if [x,y] in doors else 0)
+  out[name]=dict(width=w,height=h,metatiles=ids,door_x=door,door_y=door_y,doors=doors,solid=([[0,h-1],[w-1,h-1]] if name=='pennant_arch' else [[x,y] for y in range(h-2,h) for x in range(w)] if name=='sailboat' else [[x,h-1] for x in range(w)] if name=='parasol' else [[x,y] for y in range(1,h) for x in range(w) if (y>=h-2 or x not in [0,w-1]) and [x,y] not in doors]),palette=bank)
+  if name=='port':out[name].update(canopy=canopy,entry_direction='south',approach=[0,-1],design='North-entry visible portal below high canopy; closed south windows, no second false doorway')
+  if check and name=='sailboat':
+   # Detect any future preview ownership collision without changing game data.
+   actual=Image.open(A/'sailboat-native.png')
+   assert actual.mode=='P' and actual.size==q.size and actual.tobytes()==q.tobytes() and actual.getpalette()[:48]==q.getpalette()[:48], 'City sailboat-native preview overwritten by another projection'
   if not check and not measure:q.save(A/(name+'-native.png'),bits=4)
  # The sail extends over both quay paving and sea. Use separate underlays
  # without consuming any new glyphs: water keeps native water behavior/elevation.
@@ -128,6 +141,28 @@ def generate(check=False,measure=False):
      mask=Image.frombytes('P',(8,8),bytes(t if 1<=t<=4 else 0 for t in im.tobytes()));row[4+a]=alloc(mask)|(v&0xf000)
    metas[1][k%512*8:k%512*8+8]=row;attrs[1][k%512]=0 if j<2 else 0x1000
   out[title]=dict(width=2,height=2,metatiles=ids)
+ # Relocated port notice stands on timber, not an unrelated grass/stone tile.
+ # Preserve every original sign pixel except the edge-connected gray backing
+ # between/above its posts. Native palette0/1 foreground overlays opaque deck12.
+ # A high unused metatile keeps the owner Gym's old first-free IDs unchanged.
+ sign_words=metas[0][3*8:3*8+4];sign=Image.new('P',(16,16))
+ for j,v in enumerate(sign_words):
+  n=v&1023;tile=sheets[n//512].crop((n%512%16*8,n%512//16*8,n%512%16*8+8,n%512//16*8+8))
+  if v&0x400:tile=tile.transpose(Image.Transpose.FLIP_LEFT_RIGHT)
+  if v&0x800:tile=tile.transpose(Image.Transpose.FLIP_TOP_BOTTOM)
+  sign.paste(tile,(j%2*8,j//2*8))
+ pixels=bytearray(sign.tobytes());background=set();pending=[(x,y) for y in range(16) for x in range(16) if x in (0,15) or y in (0,15)]
+ while pending:
+  x,y=pending.pop();i=y*16+x
+  if i in background or pixels[i]!=5:continue
+  background.add(i)
+  pending.extend((X,Y) for X,Y in [(x-1,y),(x+1,y),(x,y-1),(x,y+1)] if 0<=X<16 and 0<=Y<16)
+ for i in background:pixels[i]=0
+ assert len(background)==46,('Unexpected native sign backing',len(background))
+ sign=Image.frombytes('P',(16,16),bytes(pixels));top=[]
+ for j,v in enumerate(sign_words):top.append(alloc(sign.crop((j%2*8,j//2*8,j%2*8+8,j//2*8+8)))|(v&0xf000))
+ n=0x3ef;assert n in fm;fm.remove(n);metas[1][n%512*8:n%512*8+8]=glyph['deck']+top;attrs[1][n%512]=0x1000
+ out['port_sign']=dict(width=1,height=1,metatiles=[n],palette=12,overlay_palettes=[0,1],native_sign_backing_pixels_removed=len(background),source='Unchanged native General sign foreground over timber deck; north apron22,50')
  for k,d in enumerate([P,S]):
   d.mkdir(parents=True,exist_ok=True)
   if check:assert Image.open(d/'tiles.png').tobytes()==sheets[k].tobytes()

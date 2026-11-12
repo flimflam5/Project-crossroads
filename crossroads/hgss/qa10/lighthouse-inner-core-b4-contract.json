@@ -1,0 +1,288 @@
+{
+  "version": "qa10-b4-lantern-inner-housing-art-only",
+  "baseline": "e7e2c085a5a61ef727d06f9f682af7d3a954cc06",
+  "baseline_rom_sha256": "af59dff1b06b99a9599c6f98b6fb6bd1e765cc52c0838a2dec5c79a6c1f88373",
+  "map": "OlivineCity_Lighthouse_6F",
+  "width": 17,
+  "height": 19,
+  "exact_changed_cells": 28,
+  "glass_cells": 26,
+  "model_corner_void_cells": 2,
+  "cells": [
+    {
+      "x": 6,
+      "y": 7,
+      "before_word": 1613,
+      "before_metatile": 589,
+      "physical_bits": 1024,
+      "attribute": 4096,
+      "reason": "Inner optical enclosure incorrectly drawn as outer diagonal window glass"
+    },
+    {
+      "x": 10,
+      "y": 7,
+      "before_word": 1613,
+      "before_metatile": 589,
+      "physical_bits": 1024,
+      "attribute": 4096,
+      "reason": "Inner optical enclosure incorrectly drawn as outer diagonal window glass"
+    },
+    {
+      "x": 5,
+      "y": 8,
+      "before_word": 1613,
+      "before_metatile": 589,
+      "physical_bits": 1024,
+      "attribute": 4096,
+      "reason": "Inner optical enclosure incorrectly drawn as outer diagonal window glass"
+    },
+    {
+      "x": 6,
+      "y": 8,
+      "before_word": 1615,
+      "before_metatile": 591,
+      "physical_bits": 1024,
+      "attribute": 0,
+      "reason": "Inner optical enclosure incorrectly drawn as outer diagonal window glass"
+    },
+    {
+      "x": 10,
+      "y": 8,
+      "before_word": 1615,
+      "before_metatile": 591,
+      "physical_bits": 1024,
+      "attribute": 0,
+      "reason": "Inner optical enclosure incorrectly drawn as outer diagonal window glass"
+    },
+    {
+      "x": 11,
+      "y": 8,
+      "before_word": 1613,
+      "before_metatile": 589,
+      "physical_bits": 1024,
+      "attribute": 4096,
+      "reason": "Inner optical enclosure incorrectly drawn as outer diagonal window glass"
+    },
+    {
+      "x": 5,
+      "y": 9,
+      "before_word": 1615,
+      "before_metatile": 591,
+      "physical_bits": 1024,
+      "attribute": 0,
+      "reason": "Inner optical enclosure incorrectly drawn as outer diagonal window glass"
+    },
+    {
+      "x": 6,
+      "y": 9,
+      "before_word": 1615,
+      "before_metatile": 591,
+      "physical_bits": 1024,
+      "attribute": 0,
+      "reason": "Inner optical enclosure incorrectly drawn as outer diagonal window glass"
+    },
+    {
+      "x": 10,
+      "y": 9,
+      "before_word": 1615,
+      "before_metatile": 591,
+      "physical_bits": 1024,
+      "attribute": 0,
+      "reason": "Inner optical enclosure incorrectly drawn as outer diagonal window glass"
+    },
+    {
+      "x": 11,
+      "y": 9,
+      "before_word": 1615,
+      "before_metatile": 591,
+      "physical_bits": 1024,
+      "attribute": 0,
+      "reason": "Inner optical enclosure incorrectly drawn as outer diagonal window glass"
+    },
+    {
+      "x": 5,
+      "y": 10,
+      "before_word": 1615,
+      "before_metatile": 591,
+      "physical_bits": 1024,
+      "attribute": 0,
+      "reason": "Inner optical enclosure incorrectly drawn as outer diagonal window glass"
+    },
+    {
+      "x": 6,
+      "y": 10,
+      "before_word": 1615,
+      "before_metatile": 591,
+      "physical_bits": 1024,
+      "attribute": 0,
+      "reason": "Inner optical enclosure incorrectly drawn as outer diagonal window glass"
+    },
+    {
+      "x": 10,
+      "y": 10,
+      "before_word": 1615,
+      "before_metatile": 591,
+      "physical_bits": 1024,
+      "attribute": 0,
+      "reason": "Inner optical enclosure incorrectly drawn as outer diagonal window glass"
+    },
+    {
+      "x": 11,
+      "y": 10,
+      "before_word": 1615,
+      "before_metatile": 591,
+      "physical_bits": 1024,
+      "attribute": 0,
+      "reason": "Inner optical enclosure incorrectly drawn as outer diagonal window glass"
+    },
+    {
+      "x": 5,
+      "y": 11,
+      "before_word": 1613,
+      "before_metatile": 589,
+      "physical_bits": 1024,
+      "attribute": 4096,
+      "reason": "Inner optical enclosure incorrectly drawn as outer diagonal window glass"
+    },
+    {
+      "x": 6,
+      "y": 11,
+      "before_word": 1613,
+      "before_metatile": 589,
+      "physical_bits": 1024,
+      "attribute": 4096,
+      "reason": "Inner optical enclosure incorrectly drawn as outer diagonal window glass"
+    },
+    {
+      "x": 10,
+      "y": 11,
+      "before_word": 1613,
+      "before_metatile": 589,
+      "physical_bits": 1024,
+      "attribute": 4096,
+      "reason": "Inner optical enclosure incorrectly drawn as outer diagonal window glass"
+    },
+    {
+      "x": 11,
+      "y": 11,
+      "before_word": 1613,
+      "before_metatile": 589,
+      "physical_bits": 1024,
+      "attribute": 4096,
+      "reason": "Inner optical enclosure incorrectly drawn as outer diagonal window glass"
+    },
+    {
+      "x": 5,
+      "y": 12,
+      "before_word": 1613,
+      "before_metatile": 589,
+      "physical_bits": 1024,
+      "attribute": 4096,
+      "reason": "Inner optical enclosure incorrectly drawn as outer diagonal window glass"
+    },
+    {
+      "x": 7,
+      "y": 12,
+      "before_word": 1613,
+      "before_metatile": 589,
+      "physical_bits": 1024,
+      "attribute": 4096,
+      "reason": "Inner optical enclosure incorrectly drawn as outer diagonal window glass"
+    },
+    {
+      "x": 9,
+      "y": 12,
+      "before_word": 1613,
+      "before_metatile": 589,
+      "physical_bits": 1024,
+      "attribute": 4096,
+      "reason": "Inner optical enclosure incorrectly drawn as outer diagonal window glass"
+    },
+    {
+      "x": 11,
+      "y": 12,
+      "before_word": 1613,
+      "before_metatile": 589,
+      "physical_bits": 1024,
+      "attribute": 4096,
+      "reason": "Inner optical enclosure incorrectly drawn as outer diagonal window glass"
+    },
+    {
+      "x": 6,
+      "y": 13,
+      "before_word": 1613,
+      "before_metatile": 589,
+      "physical_bits": 1024,
+      "attribute": 4096,
+      "reason": "Inner optical enclosure incorrectly drawn as outer diagonal window glass"
+    },
+    {
+      "x": 7,
+      "y": 13,
+      "before_word": 1613,
+      "before_metatile": 589,
+      "physical_bits": 1024,
+      "attribute": 4096,
+      "reason": "Inner optical enclosure incorrectly drawn as outer diagonal window glass"
+    },
+    {
+      "x": 9,
+      "y": 13,
+      "before_word": 1613,
+      "before_metatile": 589,
+      "physical_bits": 1024,
+      "attribute": 4096,
+      "reason": "Inner optical enclosure incorrectly drawn as outer diagonal window glass"
+    },
+    {
+      "x": 10,
+      "y": 13,
+      "before_word": 1613,
+      "before_metatile": 589,
+      "physical_bits": 1024,
+      "attribute": 4096,
+      "reason": "Inner optical enclosure incorrectly drawn as outer diagonal window glass"
+    },
+    {
+      "x": 6,
+      "y": 12,
+      "before_word": 1536,
+      "before_metatile": 512,
+      "physical_bits": 1024,
+      "attribute": 4096,
+      "reason": "Source-model corner mistakenly left generic-projector void"
+    },
+    {
+      "x": 10,
+      "y": 12,
+      "before_word": 1536,
+      "before_metatile": 512,
+      "physical_bits": 1024,
+      "attribute": 4096,
+      "reason": "Source-model corner mistakenly left generic-projector void"
+    }
+  ],
+  "baseline_raw_sha256": {
+    "OlivineCity_Lighthouse_1F": "b689e0a4c3ddd0b3268638e708d289ff4cc22ce04874f17b600c4d1fa8fae542",
+    "OlivineCity_Lighthouse_2F": "82522101624409303bf9ac8889d6a11e2b63efcd147d2a8e4a3a06b8b74189c9",
+    "OlivineCity_Lighthouse_3F": "f109ca2ab87f7492c7cc4544d2c23a4723972ce9e24ff05eb8c20653ba18d6fe",
+    "OlivineCity_Lighthouse_4F": "29c492067dd7bb1571e23dcb331699cd8765e2ae2679185168700a40fceaa3bf",
+    "OlivineCity_Lighthouse_5F": "3ccf4a03a7e4bd0a16eef06ece79bc7cfce175f6365aca27d5c1471654afd340",
+    "OlivineCity_Lighthouse_6F": "781166c424ba648a8ef86b417c134886efea9d7ddb2fd6e21281dc70607fe1a1",
+    "OlivineCity_Lighthouse_Balcony": "1f98ba80e476d1f1793821b61192f9872ad8ebbe07cab7c7a529c96ee2e021d0"
+  },
+  "preservation": "Only these28 art IDs and their new private drawing aliases may change. Every raw cell outside mask, all other mapraw/events/IDs, existing metadata attributes, used drawings/palettes, outer glass and old3x3 cap remain exact B3.",
+  "reference": "lighthouse-reference-manifest.json",
+  "reason": "Actual native B3 review showed cyan only on northerncap; actual HGSS entire inner optical housing is cyan, outer room ring is glass.",
+  "reviewed_source_freeze": {
+    "helper_sha256": "8b1d4f35757aef4a83590e3aa3daeae0561aa49c5b996b8b0582b81e2a37585a",
+    "baseline_allocated_new_glyphs": 134,
+    "baseline_private_aliases": 85,
+    "corrected_allocated_new_glyphs": 151,
+    "corrected_private_aliases": 102,
+    "added_glyphs": 17,
+    "added_aliases": 17,
+    "rim_and_base": "Bright/gold edges only at true exposed housing boundaries; no repeated row bands.",
+    "root_static_preview_review": "Approved for central generation; this is not gameplay or owner visual acceptance."
+  }
+}

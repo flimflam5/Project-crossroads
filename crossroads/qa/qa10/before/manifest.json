@@ -1,0 +1,308 @@
+{
+  "phase": "Actual QA09 BEFORE baseline",
+  "rom_sha256": "df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4",
+  "source_revision": "285cfa4ebddcb390a8a5bde6116748cbb5eaba6b",
+  "files": [
+    {
+      "path": "terminal-before-leaf-2.png",
+      "bytes": 4802,
+      "sha256": "c243f05c9ae6fcc44c7f1a6ba6094c1c6e54ef2179c4fa8b13912f21db2687b3"
+    },
+    {
+      "path": "city-sign-Olivine_GymSign-message.png",
+      "bytes": 11591,
+      "sha256": "f6bc7361c15671f6a7e47f0cf2f5d4a639c55285a57a1f00213365a0e5133651"
+    },
+    {
+      "path": "city-sign-Johto_OlivineSeaSign-message.png",
+      "bytes": 5618,
+      "sha256": "165aa665d16e48da1c4005e1ee7fe2f4daf86d71a29a5b51f4306d3b98b11715"
+    },
+    {
+      "path": "city-sign-Olivine_GymSign-context.png",
+      "bytes": 12389,
+      "sha256": "83de7d1779c681cd078d05a7f0882c3edbf2c8201badd215deb205b2d6778c2c"
+    },
+    {
+      "path": "city-sign-Olivine_HarborSign-message.png",
+      "bytes": 6145,
+      "sha256": "9ddb59c2cef8b10aeb9bb69afc32b4629a202834973447df66c2de37663b34ec"
+    },
+    {
+      "path": "terminal-arrival-0.png",
+      "bytes": 7534,
+      "sha256": "15d55d26d3af1c209c66190bb6f7b22854563c524d18264c4933ebcb45a5251d"
+    },
+    {
+      "path": "city-sign-Olivine_MartSign-message.png",
+      "bytes": 6208,
+      "sha256": "e195da54175d3cfa7f81f16ea5253af5731c98a875987f3ba9f38b0253358e98"
+    },
+    {
+      "path": "terminal-arrival-3.png",
+      "bytes": 7561,
+      "sha256": "ffaf9bc05c65bcd544d136545dc003b3bfefe1eb2328f650138e204fcb2a092a"
+    },
+    {
+      "path": "city-sign-Hgss_OlivineSign_FishingHouse-message.png",
+      "bytes": 7149,
+      "sha256": "da0cf63ea493b15b05e369992216f8e64572c44ddeb864f48efaeacc46ba15d9"
+    },
+    {
+      "path": "city-sign-Olivine_LighthouseSign-message.png",
+      "bytes": 7639,
+      "sha256": "a117af8119c733b9a2a0b2539a4a1118b686f7a3cacfec24bdef05fa5717852c"
+    },
+    {
+      "path": "city-sign-Olivine_NeighborSign-context.png",
+      "bytes": 8332,
+      "sha256": "58ff115c5cc9ebac2e539e83a64105b2b084cdf3e8f8ba22fb7660d269bf2404"
+    },
+    {
+      "path": "terminal-arrival-2.png",
+      "bytes": 6823,
+      "sha256": "61945d5ff19bd5bc8fc448b3bfb2a029c7fc23ef0883ec05ba53dd3d9b6a3553"
+    },
+    {
+      "path": "city-sign-Johto_OlivineSeaSign-context.png",
+      "bytes": 5957,
+      "sha256": "5b098072ab86fd3d1fe2b758c568dd449a09fcb5d1a740d6faea5b965d7d2758"
+    },
+    {
+      "path": "city-sign-Hgss_OlivineSign_Port-message.png",
+      "bytes": 6443,
+      "sha256": "9ccd9c61f74db6650b06abe2fa99125ca63ae794f4df12e0283a8d3f0e36b86a"
+    },
+    {
+      "path": "quay-current-ship.png",
+      "bytes": 6797,
+      "sha256": "1b67f487475c32dedad88c32c79e66e12291257aa7e4549a2e3db53e4cca8b66"
+    },
+    {
+      "path": "city-sign-Olivine_NeighborSign-message.png",
+      "bytes": 7379,
+      "sha256": "c1b45db09b413b0b40c8c76eef141aed6c8ddf90d0020877f2c99271e16356af"
+    },
+    {
+      "path": "terminal-before-leaf-3.png",
+      "bytes": 5076,
+      "sha256": "c1c7c143cf929cdb6619acf8285f38c820b0372b100542b0ed5cb46962ddfe80"
+    },
+    {
+      "path": "OlivineCity_Cafe-interior-context.png",
+      "bytes": 6548,
+      "sha256": "87c390065a46c3ddb38ecb938f53a0a8f2df02acc2f98c7854505de8d6715e93"
+    },
+    {
+      "path": "city-sign-Hgss_OlivineSign_Cafe-message.png",
+      "bytes": 6090,
+      "sha256": "39770dc2a71f394ad3350bf68b374e747c8d3708710207a8f143dbf5b9db7f3b"
+    },
+    {
+      "path": "city-port-north-approach.png",
+      "bytes": 8362,
+      "sha256": "2a20140ca6c608d9903f54fd755a4395235c45845b6c3fec06e8d86bc2e89f69"
+    },
+    {
+      "path": "city-sign-Olivine_CenterSign-context.png",
+      "bytes": 6949,
+      "sha256": "2356a4aab5ae2a42598eedcafb0a22a91460d4a61e61ec0392311f22846627a2"
+    },
+    {
+      "path": "city-sign-Olivine_OfficeSign-context.png",
+      "bytes": 5935,
+      "sha256": "ed6d04c1b641879302dbd70ee8a19633fba4da0208fea2f8a619ca258a98c849"
+    },
+    {
+      "path": "city-sign-Olivine_HarborSign-context.png",
+      "bytes": 6622,
+      "sha256": "a07160f292b8a46f46e6eb083e80f8deacfa5637c536bdd30edd81b4958991a7"
+    },
+    {
+      "path": "OlivineCity_PortTerminal-interior-context.png",
+      "bytes": 7246,
+      "sha256": "96ddc352da027b2ebb163f63f517fbaf4d2958fe7abda4409f8ec40a744c96b3"
+    },
+    {
+      "path": "city-sign-Hgss_OlivineSign_TradeHouse-context.png",
+      "bytes": 5888,
+      "sha256": "8008157eab345a5f7031bcea8ed349ca62bee94aba86a338e231b6fadad94e9b"
+    },
+    {
+      "path": "city-sign-Olivine_LighthouseSign-context.png",
+      "bytes": 7943,
+      "sha256": "85c471491bf628007517fa76e093c212647b54eb0fc99252bef90f44370a1caa"
+    },
+    {
+      "path": "city-sign-Olivine_MartSign-context.png",
+      "bytes": 6297,
+      "sha256": "4336a322390e6ea43b26ec99aa9c31b524401744290f5fe384aae969a7d8318f"
+    },
+    {
+      "path": "city-sign-Hgss_OlivineSign_Port-context.png",
+      "bytes": 5760,
+      "sha256": "ad404c282ebca63dd3c33b0d065811b2a5154fc7fdfe0a8be02d40eebf1bb3ca"
+    },
+    {
+      "path": "city-sign-Olivine_CityDirectory-context.png",
+      "bytes": 6077,
+      "sha256": "c954821dc56665656ca4b66dd35335c8a1977f9b2c878d4d14bd40b95da826e7"
+    },
+    {
+      "path": "terminal-arrival-4.png",
+      "bytes": 9920,
+      "sha256": "af4671d42e6ea44ee44556a360ddb6aac9bbbf6e9da300fb90341e3eeceb856e"
+    },
+    {
+      "path": "city-sign-Hgss_OlivineSign_FishingHouse-context.png",
+      "bytes": 8607,
+      "sha256": "386215f9c8fb505324438f9c8ea3a34d3d453605129580b098f66a0eb2141870"
+    },
+    {
+      "path": "terminal-before-leaf-4.png",
+      "bytes": 5371,
+      "sha256": "f7216abe9967ce8efe969fc6270afbdccf0918644834f0f3fd753baa42e6948c"
+    },
+    {
+      "path": "city-port-forecourt.png",
+      "bytes": 6854,
+      "sha256": "6cf391c9606d0fba60004b41f25feb8f1e3df68d2aae7e7b3796045bf83e6e64"
+    },
+    {
+      "path": "terminal-before-leaf-0.png",
+      "bytes": 5569,
+      "sha256": "69480a8dcf6cb243c409702a9f4210f09acc79e1d8b6329c8348f2d1565816db"
+    },
+    {
+      "path": "city-sign-Hgss_OlivineSign_Cafe-context.png",
+      "bytes": 6671,
+      "sha256": "38b83095a7df1f65a72ab3b575b6f90b78370145f73b9d864da0fa909e27f055"
+    },
+    {
+      "path": "terminal-before-leaf-1.png",
+      "bytes": 5569,
+      "sha256": "69480a8dcf6cb243c409702a9f4210f09acc79e1d8b6329c8348f2d1565816db"
+    },
+    {
+      "path": "OlivineCity_FishingHouse-interior-context.png",
+      "bytes": 4840,
+      "sha256": "1f388c3f3696512fb3b6d925c0d3b5cfa04fa4c8407d49ab9a96e34863c8b788"
+    },
+    {
+      "path": "city-directory-lot.png",
+      "bytes": 6145,
+      "sha256": "7962d3e3c351ea56df3ff1a86d29e569958627324327f7ccb178d6e87fa4d0c3"
+    },
+    {
+      "path": "city-sign-Olivine_ResidenceSign-message.png",
+      "bytes": 5963,
+      "sha256": "a4d19dedafa62273480733a4feb21303c645fcd099b68f66633ee45460c58d70"
+    },
+    {
+      "path": "city-sign-Hgss_OlivineSign_SealHouse-message.png",
+      "bytes": 8244,
+      "sha256": "fbe9255df53eba85b61efe070f473646a46fe398488b2e3b96fdb61b4be0833f"
+    },
+    {
+      "path": "city-sign-Olivine_NorthBoundary-context.png",
+      "bytes": 7056,
+      "sha256": "ec4b12adaa2a996ee58f6e789bf1fffe7f362fb86e5b64a39e7466fdcf46d54a"
+    },
+    {
+      "path": "quay-ship-boarding-closed-context.png",
+      "bytes": 6086,
+      "sha256": "3d0872a1508e1aaddb54d058bfb2f40f562ffb1fd8974fc9f71097b3c23baea9"
+    },
+    {
+      "path": "city-sign-Olivine_CityDirectory-message.png",
+      "bytes": 4712,
+      "sha256": "315dd04560c0b9065a113bf84d1d7387243d811797266d5a094628a1203005a3"
+    },
+    {
+      "path": "city-sign-Olivine_OfficeSign-message.png",
+      "bytes": 4833,
+      "sha256": "735a072b506af55728772110093a73866c3e509a172e6543b51ba45495fa15f2"
+    },
+    {
+      "path": "terminal-arrival-1.png",
+      "bytes": 9868,
+      "sha256": "0f54979469408254c1308b97fac8b0545b13de349063e39d8259068cc3aa1401"
+    },
+    {
+      "path": "terminal-before-leaf-5.png",
+      "bytes": 4636,
+      "sha256": "49502b89abe2e763cee96a97d7148c7c5d16555a1d773f3ec027dc9bffe1accd"
+    },
+    {
+      "path": "city-gym-sign-court.png",
+      "bytes": 12375,
+      "sha256": "9d43f3bc0de55ab34359d21e24da6ec620f4b86adace1df63dc134b610707806"
+    },
+    {
+      "path": "terminal-arrival-5.png",
+      "bytes": 7338,
+      "sha256": "23c33f6fb89d4ca403e5b6894c0b43a8852bdb4d3fc28daa29a9b978e05e5d29"
+    },
+    {
+      "path": "city-sign-Hgss_OlivineSign_TradeHouse-message.png",
+      "bytes": 5946,
+      "sha256": "8ddf07cc6c2b61be8780bec8d9e6ca6af45903627c733edac3dc6f5ea6cf753f"
+    },
+    {
+      "path": "city-sign-Olivine_ResidenceSign-context.png",
+      "bytes": 7139,
+      "sha256": "dd3f60959529ed5d2c73bf8d7dea9f991e6dbac8178107d84fe0967e0864be5d"
+    },
+    {
+      "path": "quay-ship-boarding-closed-message.png",
+      "bytes": 6631,
+      "sha256": "470fa16515f8cd7dac578230a2830599443dc95b64aa6cd11bd80e55bb1b03c5"
+    },
+    {
+      "path": "city-sign-Olivine_NorthBoundary-message.png",
+      "bytes": 6524,
+      "sha256": "8912ae5a385e659599f075cebf17e402148b028e9ebdb05dbc3ba550e166781b"
+    },
+    {
+      "path": "city-sign-Olivine_CenterSign-message.png",
+      "bytes": 6376,
+      "sha256": "4efce8817ed58f00b75146706771dc2594ef6100043b08bf3b6b5e359ec6fc57"
+    },
+    {
+      "path": "city-sign-Hgss_OlivineSign_SealHouse-context.png",
+      "bytes": 8290,
+      "sha256": "215b7e6ed5df7a1e292355f4f557f6f9419834f0f7958a08e3dea1505143fe9d"
+    },
+    {
+      "path": "terminal-leaf-2-out.mp4",
+      "bytes": 60467,
+      "sha256": "074547d60e2a94a958645213f2afeb21763de7273cd41ceb0d2b425519fffa13"
+    },
+    {
+      "path": "terminal-leaf-0-out.mp4",
+      "bytes": 42452,
+      "sha256": "9b55c297cfec4022e268b8f1b385a6b8b10e1e7ecf939baab3589f803733ee3b"
+    },
+    {
+      "path": "terminal-leaf-1-out.mp4",
+      "bytes": 69026,
+      "sha256": "a5adc22c64b0ba682cdf800ba7dea614d65351afeddbc30d1ffaed9fdaed9f41"
+    },
+    {
+      "path": "terminal-leaf-3-out.mp4",
+      "bytes": 64913,
+      "sha256": "7ad0795d2c07cac7ff878e55be497147576586c30596f583f280543e20cba0b1"
+    },
+    {
+      "path": "quay-gangway-current-solid.mp4",
+      "bytes": 18574,
+      "sha256": "064133cb14e4386bd8e399f425d3f59517bc1dec56711f8d6f93d99866c116e6"
+    },
+    {
+      "path": "results.json",
+      "bytes": 11342,
+      "sha256": "398f947cea40e12acdbaec7c03f5bf61c9fda6f6f5943528a9d220a9c44485eb"
+    }
+  ],
+  "privacy": "No ROM, private saves or snapshots copied"
+}

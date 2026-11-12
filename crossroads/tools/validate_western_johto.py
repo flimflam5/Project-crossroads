@@ -26,6 +26,13 @@ scripts+='\n'+(root/'crossroads/scripts/hgss_ecruteak.inc').read_text()+'\n'+(ro
 scripts+='\n'+'\n'.join(p.read_text() for p in (root/'crossroads/scripts').glob('hgss_olivine_*.inc'))
 assert 'crossroads/scripts/hgss_ecruteak.inc' in linked
 assert 'crossroads/scripts/hgss_violet.inc' in linked
+# QA10 ships use their own linked ambient script instead of imported Tidal
+# story code. Collect only after proving this exact file is actually linked.
+aqua_script='crossroads/scripts/ss_aqua.inc'
+if 'SSAqua_1F' in bynames:
+ assert re.search(r'^\s*\.include\s+"'+re.escape(aqua_script)+r'"\s*$',linked,re.M), 'Ship interaction file exists but is not linked'
+ scripts+='\n'+(root/aqua_script).read_text()
+
 for name,data in generate().items():assert (root/f'data/layouts/{name}/map.bin').read_bytes()==data
 reverse={'up':'down','down':'up','left':'right','right':'left'}
 for mid,m in maps.items():

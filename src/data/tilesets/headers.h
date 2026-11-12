@@ -1793,3 +1793,16 @@ const struct Tileset gTileset_HgssEcruteakTowerDetails = { .isCompressed=TRUE, .
 const struct Tileset gTileset_HgssCenterReception = {.isCompressed=TRUE,.isSecondary=TRUE,.tiles=gTilesetTiles_HgssCenterReception,.palettes=gTilesetPalettes_HgssCenterReception,.metatiles=gMetatiles_HgssCenterReception,.metatileAttributes=gMetatileAttributes_HgssCenterReception,.callback=NULL};
 #endif
 // END HGSS CENTER RECEPTION
+
+// BEGIN HGSS OLIVINE LIGHTHOUSE VISUALS
+#if !IS_FRLG
+const struct Tileset gTileset_HgssOlivineLighthouse = { .isCompressed=TRUE, .isSecondary=TRUE, .tiles=gTilesetTiles_HgssOlivineLighthouse, .palettes=gTilesetPalettes_HgssOlivineLighthouse, .metatiles=gMetatiles_HgssOlivineLighthouse, .metatileAttributes=gMetatileAttributes_HgssOlivineLighthouse, .callback=NULL };
+#endif
+// END HGSS OLIVINE LIGHTHOUSE VISUALS
+
+// BEGIN HGSS SS AQUA
+#if !IS_FRLG
+const struct Tileset gTileset_HgssSSAquaPrimary = {.isCompressed=TRUE,.isSecondary=FALSE,.tiles=gTilesetTiles_HgssSSAquaPrimary,.palettes=gTilesetPalettes_HgssSSAquaPrimary,.metatiles=gMetatiles_HgssSSAquaPrimary,.metatileAttributes=gMetatileAttributes_HgssSSAquaPrimary,.callback=NULL};
+const struct Tileset gTileset_HgssSSAqua = {.isCompressed=TRUE,.isSecondary=TRUE,.tiles=gTilesetTiles_HgssSSAqua,.palettes=gTilesetPalettes_HgssSSAqua,.metatiles=gMetatiles_HgssSSAqua,.metatileAttributes=gMetatileAttributes_HgssSSAqua,.callback=NULL};
+#endif
+// END HGSS SS AQUA

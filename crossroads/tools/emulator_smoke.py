@@ -269,8 +269,13 @@ if args.area_resume:
     sys.exit(0)
 
 for i, w in enumerate(city['warp_events']):
-    walk((w['x'], w['y'] + 1))
-    frames(16, 64)
+    # QA10 preserves the source port's NORTH entrance: its city-facing front
+    # is approached from y-1 while walking south. Other accepted facades retain
+    # their south front. Testing the obsolete y+1 position would walk into the
+    # intentionally solid new terminal body rather than exercise a real door.
+    port_north = map_names[w['dest_map']] == 'OlivineCity_PortTerminal'
+    walk((w['x'], w['y'] - 1 if port_north else w['y'] + 1))
+    frames(16, 128 if port_north else 64)
     frames(180)
     sb = read('gSaveBlock1Ptr')
     assert (read(sb + 4,1),read(sb + 5,1)) == map_locations[w['dest_map']], (i,pos(),read(sb+4,1),read(sb+5,1))

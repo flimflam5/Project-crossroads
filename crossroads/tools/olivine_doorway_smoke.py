@@ -7,14 +7,14 @@ Encounter suppression and opt-in survey Surf are disclosed by the shared harness
 """
 import argparse,hashlib,json,runpy,shutil,subprocess,sys
 from pathlib import Path
-p=argparse.ArgumentParser();p.add_argument('--save',required=True);p.add_argument('--library',default='/tmp/johto-bridge.so');p.add_argument('--output',required=True);p.add_argument('--city',choices=['olivine','ecruteak','both'],default='olivine');p.add_argument('--filter',default='');p.add_argument('--start-label',help='Resume with this named group after completed earlier groups were recorded on the identical ROM');p.add_argument('--special-only',action='store_true');p.add_argument('--doors-only',action='store_true');p.add_argument('--skip-elevator',action='store_true',help='Resume remaining special cases only after four panel/leaf checks are already recorded on the exact same ROM');a=p.parse_args()
+p=argparse.ArgumentParser();p.add_argument('--save',required=True);p.add_argument('--library',default='/tmp/johto-bridge.so');p.add_argument('--output',required=True);p.add_argument('--city',choices=['olivine','ecruteak','both'],default='olivine');p.add_argument('--filter',default='');p.add_argument('--start-label',help='Resume with this named group after completed earlier groups were recorded on the identical ROM');p.add_argument('--special-only',action='store_true');p.add_argument('--doors-only',action='store_true');p.add_argument('--skip-elevator',action='store_true',help='Resume remaining special cases only after four panel/leaf checks are already recorded on the exact same ROM');p.add_argument('--manifest',type=Path,help='Explicit reviewed visible-opening contract; defaults to the original QA09 contract');p.add_argument('--require-facing',action='store_true',help='Reject groups that omit independent intended arrival-facing expectations');p.add_argument('--require-facing-for',action='append',default=[],metavar='PREFIX',help='Require explicit facing for these group prefixes within a larger historical contract; repeatable');p.add_argument('--record-fronts-only',action='store_true',help='Run every controller/assertion case; record video only for required fronts and one actual arrival PNG for every executed approach');a=p.parse_args()
 R=Path(__file__).resolve().parents[2];out=Path(a.output);out.mkdir(parents=True,exist_ok=True)
 source_save=Path(a.save).resolve();save_hash=hashlib.sha256(source_save.read_bytes()).hexdigest();trial_save=out/'input-copy.sav'
 assert source_save!=trial_save.resolve(),'Output copy must differ from original source save'
 shutil.copyfile(source_save,trial_save)
 sys.argv=['johto_network_smoke.py','--save',str(trial_save),'--library',a.library,'--output',str(out),'--targets',''];d=runpy.run_path(str(Path(__file__).with_name('johto_network_smoke.py')))
 go,walk,frames,current,pos,lib=[d[k] for k in ['go','walk','frames','current','pos','lib']]
-manifest=json.loads((R/'crossroads/hgss/doorways-qa09.json').read_text());results=[];special=[]
+manifest_path=a.manifest or R/'crossroads/hgss/doorways-qa09.json';manifest=json.loads(manifest_path.read_text());results=[];special=[]
 # Pedestrian doors/return journeys must never be satisfied with Survey Surf.
 walk.__globals__['dry_only']=True;d['route_cache'].clear()
 BUTTON={(0,-1):64,(0,1):128,(-1,0):32,(1,0):16}
@@ -43,8 +43,9 @@ if not a.special_only:
    for i,cell in enumerate(source['segments']):
     x,y=cell;nx,ny=source.get('press',[0,-1] if side=='outside' else [0,1]);button=BUTTON[nx,ny]
     for approach,offset in [('front',0),('lateral-negative',-1),('lateral-positive',1)]:
-     assert lib.emu_state(str(state).encode(),1);label=f"{group['label']}-{side}-{i}-{approach}";folder=out/label;folder.mkdir(exist_ok=True);row=dict(label=label,source=n,segment=cell,expected_destination=other);counter=[0]
+     assert lib.emu_state(str(state).encode(),1);label=f"{group['label']}-{side}-{i}-{approach}";folder=out/label;folder.mkdir(exist_ok=True);row=dict(label=label,source=n,segment=cell,expected_destination=other);counter=[0];capture_video=not a.record_fronts_only or approach=='front'
      def record(count,keys=0):
+      if not capture_video:frames(count,keys);return
       while count:
        q=min(4,count);frames(q,keys);count-=q;lib.emu_image(str(folder/f'{counter[0]:04}.png').encode());counter[0]+=1
      try:
@@ -67,7 +68,14 @@ if not a.special_only:
       if d['behavior'](other,*expected_arrival) in [0x60,0x69]:expected_arrival=(expected_arrival[0],expected_arrival[1]+1)
       assert arrival==expected_arrival,('Wrong native arrival position',other,arrival,expected_arrival)
       targetside=group['inside' if side=='outside' else 'outside']
+      object_id=d['read'](d['syms']['gPlayerAvatar']+5,1);facing=d['read'](d['syms']['gObjectEvents']+object_id*36+24,1)&15
+      expected_facing=targetside.get('expected_facing')
+      if isinstance(expected_facing,list):expected_facing=expected_facing[i]
+      if a.require_facing or any(group['label'].startswith(v)for v in a.require_facing_for):assert expected_facing is not None,('Visible-opening contract lacks intended arrival facing',group['label'],other)
+      if expected_facing is not None:assert facing==expected_facing,('Arrival faces the wrong physical direction',group['label'],other,arrival,facing,expected_facing)
+      row.update(facing=facing,expected_facing=expected_facing)
       if 'arrivals' in targetside:assert arrival==tuple(targetside['arrivals'][i]),('Incorrect arrival',arrival,targetside['arrivals'][i])
+      if a.record_fronts_only:assert lib.emu_image(str(out/(label+'-actual-arrival.png')).encode())
       candidates=[(arrival[0],arrival[1]+v) for v in [1,-1]]+[(arrival[0]+v,arrival[1]) for v in [-1,1]]
       if 'arrivals' in targetside:
        vx,vy=targetside.get('press',[0,-1]);candidates.insert(0,(arrival[0]-vx,arrival[1]-vy))
@@ -122,6 +130,6 @@ if not a.doors_only and a.city in ['olivine','both'] and not a.filter:
    assert not d['read']('sLockFieldControls',1),(label,'Unexpected Surf/dialogue prompt')
   capture(label,push_rail);lib.emu_image(str(out/(label+'.png')).encode());special.append(dict(action=label,normal_controller_and_A=True,result='PASS'))
 assert hashlib.sha256(source_save.read_bytes()).hexdigest()==save_hash,'Source battery file changed'
-report=dict(source_save_sha256=save_hash,source_save_unchanged=True,rom_sha256=hashlib.sha256((R/'pokeemerald.gba').read_bytes()).hexdigest(),source_revision=subprocess.check_output(['git','rev-parse','HEAD'],cwd=R,text=True).strip(),source_dirty=bool(subprocess.check_output(['git','status','--porcelain','--untracked-files=no'],cwd=R)),setup='Read-only copied battery; cold Continue; normal controller travel. Only disclosed RAM encounter suppression and opt-in survey desk; no map/warp/position writes. Same-ROM trial snapshots.',results=results,special_journeys=special)
+report=dict(recording_scope='Every required front video and every executed actual-arrival PNG'if a.record_fronts_only else'Every executed approach video',all_controller_cases_and_assertions_unchanged=True,visible_opening_contract=str(manifest_path),visible_opening_contract_sha256=hashlib.sha256(manifest_path.read_bytes()).hexdigest(),explicit_arrival_facing_required=a.require_facing,explicit_arrival_facing_required_for=a.require_facing_for,source_save_sha256=save_hash,source_save_unchanged=True,rom_sha256=hashlib.sha256((R/'pokeemerald.gba').read_bytes()).hexdigest(),source_revision=subprocess.check_output(['git','rev-parse','HEAD'],cwd=R,text=True).strip(),source_dirty=bool(subprocess.check_output(['git','status','--porcelain','--untracked-files=no'],cwd=R)),setup='Read-only copied battery; cold Continue; normal controller travel. Only disclosed RAM encounter suppression and opt-in survey desk; no map/warp/position writes. Same-ROM trial snapshots.',results=results,special_journeys=special)
 (out/'doorway-results.json').write_text(json.dumps(report,indent=2)+'\n');failures=[r for r in results if r['result']=='FAIL'];executed=sum(r['result']=='PASS' for r in results);skipped=sum(r['result']=='inaccessible lateral approach' for r in results)
 print('QA09 doorway segments:',executed,'passed;',skipped,'physically unavailable lateral approaches;',len(failures),'failed;',len(special),'special journeys',flush=True);assert not failures,failures

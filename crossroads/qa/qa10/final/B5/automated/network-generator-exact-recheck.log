@@ -1,0 +1,13 @@
+Johto atlas: 53 labeled nodes, player positions for 177 maps
+Gate-only primary buffer: 79 graphics; original road/farm secondary resources retained
+HGSS-directed Ecruteak city generated; owner visual acceptance remains separate.
+Private Bell wall lamps/Burned collapsed opening: 4 new graphics; 396 metatiles; shared temple resources untouched
+Projected 13 canonical tower floors; missing10F/roof appended. Visual/runtime review required.
+Canonical house/theater rooms generated; source rewards/story omitted; runtime/visual review required.
+HGSS service footprints/Gym bridge generated; no DS online/story/badge implementation claimed.
+HGSS west/east gatehouses and road-width reciprocal portals registered; no existing IDs removed.
+Station/corridor/Bellchime Trail registered; existing Bell floor IDs/stairs retained. Full visual reference review pending.
+Canonical Violet ground/doors and twelve interior/gate/floor maps generated; runtime/visual QA required.
+HGSS64x64 Olivine; canonical buildings + four documented original additions; owner review pending
+Eight owner Gym exteriors fitted into private city resources; all legacy IDs retained.
+Johto cluster west : 177 maps registered; 7 new Centers; IDs preserved

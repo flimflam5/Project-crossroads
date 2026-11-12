@@ -1,0 +1,18 @@
+{
+  "contract": "/workspace/Project-crossroads/crossroads/qa/qa10/final/B5/doorway-intended-facing.json",
+  "contract_sha256": "13f3545be6681c44ab83a232b8d424ce7b04e434948da51a2b7ac14f00541b78",
+  "intended_source_revision": "cc643ffe711204f3ef38e34e7aa1eb8c9558720f",
+  "intended_rom_sha256": "ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b",
+  "method": "Physical-facing expectations existed before reading trial facing results; no emulator or game writes.",
+  "final_coverage": true,
+  "passed": true,
+  "groups": 45,
+  "expected_attempts": 519,
+  "recorded_attempts": 519,
+  "exact_facing_passes": 482,
+  "physically_unavailable_lateral_approaches": 37,
+  "missing_attempts": [],
+  "identity_errors": [],
+  "failures": [],
+  "no_facing_claim_for_unavailable_approaches": true
+}

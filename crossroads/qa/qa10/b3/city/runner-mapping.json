@@ -1,0 +1,80 @@
+{
+  "note": "Launchers contain only wait/runpy/import-path delegation. All test logic executes from these versioned repository files; the direct repository command removes every/tmp dependency.",
+  "files": [
+    {
+      "path": "/tmp/qa10-lighthouse-details.py",
+      "sha256": "76d4dd5a1d08723ec989bbd01cc78dc9af4895da1db92f001012863e18642a47",
+      "bytes": 170
+    },
+    {
+      "path": "/tmp/qa10-lighthouse-details-impl.py",
+      "sha256": "7d497e06f0e03e2ca623f529010e13165e6606e547f9c19e318e1d1c4f0cfe19",
+      "bytes": 227
+    },
+    {
+      "path": "/workspace/Project-crossroads/crossroads/tools/qa10_lighthouse_detail_smoke.py",
+      "sha256": "d1a1e0f0d419c9085eeca60d30d08c4db08dc3cebf2d7fc53e58627af816ca0f",
+      "bytes": 3841
+    },
+    {
+      "path": "/workspace/Project-crossroads/crossroads/tools/qa10_city_runtime.py",
+      "sha256": "9ba22fc4f27fb9c3a20316bac11caa13430625d734f9fd730ca89eb5751a8100",
+      "bytes": 4783
+    }
+  ],
+  "direct_equivalent_command": [
+    "python3",
+    "crossroads/tools/qa10_lighthouse_detail_smoke.py",
+    "--save",
+    "build/qa10-city-lane-b3-retry1/input-copy.sav",
+    "--library",
+    "/tmp/johto-bridge.so",
+    "--output",
+    "build/qa10-lighthouse-details-b3-retry1",
+    "--rom-sha256",
+    "af59dff1b06b99a9599c6f98b6fb6bd1e765cc52c0838a2dec5c79a6c1f88373"
+  ],
+  "semantic_test_logic_identical": true,
+  "court_actual_b3_launch_chain": {
+    "note": "B3 used this wait/runpy launcher and trivial runpy delegation into the exact versioned repository test. Its original launcher text is preserved here. The direct-exec launcher was edited later for future use and is not claimed to be the B3 launch. No gameplay logic exists only in/tmp.",
+    "files": [
+      {
+        "path": "/tmp/qa10-ecruteak-court-executed-b3-launcher.py",
+        "sha256": "967fe17850252b6e2f738feef0a759daf7fc5585e7a210eda17e7da932ecb2c5",
+        "bytes": 166
+      },
+      {
+        "path": "/tmp/qa10-ecruteak-court-impl.py",
+        "sha256": "43de7c3f1d9ef3493b8c8f02734f6c3247e031a09d16d24c92c3cf258b1f85f2",
+        "bytes": 219
+      },
+      {
+        "path": "/workspace/Project-crossroads/crossroads/tools/qa10_courtyard_smoke.py",
+        "sha256": "657414351fc465a1cde20db03aa43a5cf4bb2a6276ef4f41c3728df30410cb58",
+        "bytes": 3078
+      },
+      {
+        "path": "/workspace/Project-crossroads/crossroads/tools/qa10_city_runtime.py",
+        "sha256": "9ba22fc4f27fb9c3a20316bac11caa13430625d734f9fd730ca89eb5751a8100",
+        "bytes": 4783
+      },
+      {
+        "path": "/workspace/Project-crossroads/crossroads/tools/gate_layer_smoke.py",
+        "sha256": "d0af0cf39fbe417e1825e7c7df18e66931e20fae8730d7856891667e5aafb25f",
+        "bytes": 4940
+      }
+    ],
+    "direct_equivalent_command": [
+      "python3",
+      "crossroads/tools/qa10_courtyard_smoke.py",
+      "--save",
+      "build/qa10-city-lane-b3-retry1/input-copy.sav",
+      "--library",
+      "/tmp/johto-bridge.so",
+      "--output",
+      "build/qa10-ecruteak-court-b3-retry1",
+      "--rom-sha256",
+      "af59dff1b06b99a9599c6f98b6fb6bd1e765cc52c0838a2dec5c79a6c1f88373"
+    ]
+  }
+}

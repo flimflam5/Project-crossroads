@@ -2,6 +2,7 @@
 #include "johto_exploration.h"
 #include "crossroads_continue.h"
 #include "event_object_movement.h"
+#include "field_player_avatar.h"
 #include "fieldmap.h"
 #include "constants/maps.h"
 #include "constants/event_objects.h"
@@ -51,10 +52,29 @@ void Crossroads_EnsureAreaRespawn(void)
         SetLastHealLocationWarp(HEAL_LOCATION_OLIVINE_CITY);
 }
 
+static bool32 SavedPlayerWasSurfing(void)
+{
+    u32 i;
+
+    for (i = 0; i < OBJECT_EVENTS_COUNT; i++)
+    {
+        const struct ObjectEvent *event = &gSaveBlock1Ptr->objectEvents[i];
+        u16 graphicsId = (event->graphicsId >> 8) | (event->graphicsId << 8);
+
+        if (event->spriteId != 127)
+            graphicsId &= 0xFF;
+        if (event->isPlayer
+         && (graphicsId == OBJ_EVENT_GFX_JOE_SURFING
+          || graphicsId == OBJ_EVENT_GFX_BRENDAN_SURFING
+          || graphicsId == OBJ_EVENT_GFX_MAY_SURFING))
+            return TRUE;
+    }
+    return FALSE;
+}
+
 static bool32 NeedsDryLanding(s16 x, s16 y)
 {
     const struct MapLayout *layout = gMapHeader.mapLayout;
-    u32 i;
     bool32 reconstructedWater =
         (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_VIOLET_CITY)
          && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_VIOLET_CITY))
@@ -67,21 +87,7 @@ static bool32 NeedsDryLanding(s16 x, s16 y)
     // An old walking save can now occupy the reference pond or waterfront.
     // Preserve actual Surf saves; only move a walking avatar to nearby dry
     // ground on Continue.
-    for (i = 0; i < OBJECT_EVENTS_COUNT; i++)
-    {
-        const struct ObjectEvent *event = &gSaveBlock1Ptr->objectEvents[i];
-        // SaveObjectEvents stores this field with bytes swapped for vanilla
-        // compatibility. Mirror LoadObjectEvents; never change the save format.
-        u16 graphicsId = (event->graphicsId >> 8) | (event->graphicsId << 8);
-        if (event->spriteId != 127)
-            graphicsId &= 0xFF;
-        if (event->isPlayer
-         && (graphicsId == OBJ_EVENT_GFX_JOE_SURFING
-          || graphicsId == OBJ_EVENT_GFX_BRENDAN_SURFING
-          || graphicsId == OBJ_EVENT_GFX_MAY_SURFING))
-            return FALSE;
-    }
-    return TRUE;
+    return !SavedPlayerWasSurfing();
 }
 
 bool32 Crossroads_PrepareContinue(void)
@@ -122,6 +128,14 @@ bool32 Crossroads_PrepareContinue(void)
                 s16 dy = ny > y ? ny - y : y - ny;
                 if (dx + dy != radius || !IsClearContinueTile(nx, ny))
                     continue;
+                // A relocated Surf save now lands on verified dry floor.
+                // Continue restores avatar state from the saved/loaded player
+                // graphics, not only its coordinates. Normalize both copies
+                // here; valid water saves return above and remain untouched.
+                // Mirror SaveObjectEvents' byte order and sentinel exactly.
+                bool32 landFromSurf = SavedPlayerWasSurfing();
+                u16 walkingGraphics = GetPlayerAvatarGraphicsIdByStateIdAndGender(
+                    PLAYER_AVATAR_STATE_NORMAL, gSaveBlock2Ptr->playerGender);
                 gSaveBlock1Ptr->pos.x = nx;
                 gSaveBlock1Ptr->pos.y = ny;
                 for (i = 0; i < OBJECT_EVENTS_COUNT; i++)
@@ -130,11 +144,18 @@ bool32 Crossroads_PrepareContinue(void)
                     {
                         gObjectEvents[i].initialCoords.x = gObjectEvents[i].currentCoords.x = gObjectEvents[i].previousCoords.x = nx + MAP_OFFSET;
                         gObjectEvents[i].initialCoords.y = gObjectEvents[i].currentCoords.y = gObjectEvents[i].previousCoords.y = ny + MAP_OFFSET;
+                        if (landFromSurf)
+                            gObjectEvents[i].graphicsId = walkingGraphics;
                     }
                     if (gSaveBlock1Ptr->objectEvents[i].isPlayer)
                     {
                         gSaveBlock1Ptr->objectEvents[i].initialCoords.x = gSaveBlock1Ptr->objectEvents[i].currentCoords.x = gSaveBlock1Ptr->objectEvents[i].previousCoords.x = nx + MAP_OFFSET;
                         gSaveBlock1Ptr->objectEvents[i].initialCoords.y = gSaveBlock1Ptr->objectEvents[i].currentCoords.y = gSaveBlock1Ptr->objectEvents[i].previousCoords.y = ny + MAP_OFFSET;
+                        if (landFromSurf)
+                        {
+                            gSaveBlock1Ptr->objectEvents[i].graphicsId = (walkingGraphics >> 8) | (walkingGraphics << 8);
+                            gSaveBlock1Ptr->objectEvents[i].spriteId = 127;
+                        }
                     }
                 }
                 return TRUE;

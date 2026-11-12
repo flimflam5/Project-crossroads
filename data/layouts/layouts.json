@@ -9407,7 +9407,7 @@
       "width": 17,
       "height": 19,
       "primary_tileset": "gTileset_HgssOlivineLandmarkIndoor",
-      "secondary_tileset": "gTileset_HgssOlivineLandmarks",
+      "secondary_tileset": "gTileset_HgssOlivineLighthouse",
       "border_filepath": "data/layouts/OlivineCity_Lighthouse_1F/border.bin",
       "blockdata_filepath": "data/layouts/OlivineCity_Lighthouse_1F/map.bin",
       "layout_version": "emerald"
@@ -9418,7 +9418,7 @@
       "width": 17,
       "height": 19,
       "primary_tileset": "gTileset_HgssOlivineLandmarkIndoor",
-      "secondary_tileset": "gTileset_HgssOlivineLandmarks",
+      "secondary_tileset": "gTileset_HgssOlivineLighthouse",
       "border_filepath": "data/layouts/OlivineCity_Lighthouse_2F/border.bin",
       "blockdata_filepath": "data/layouts/OlivineCity_Lighthouse_2F/map.bin",
       "layout_version": "emerald"
@@ -9429,7 +9429,7 @@
       "width": 17,
       "height": 20,
       "primary_tileset": "gTileset_HgssOlivineLandmarkIndoor",
-      "secondary_tileset": "gTileset_HgssOlivineLandmarks",
+      "secondary_tileset": "gTileset_HgssOlivineLighthouse",
       "border_filepath": "data/layouts/OlivineCity_Lighthouse_3F/border.bin",
       "blockdata_filepath": "data/layouts/OlivineCity_Lighthouse_3F/map.bin",
       "layout_version": "emerald"
@@ -9440,7 +9440,7 @@
       "width": 17,
       "height": 19,
       "primary_tileset": "gTileset_HgssOlivineLandmarkIndoor",
-      "secondary_tileset": "gTileset_HgssOlivineLandmarks",
+      "secondary_tileset": "gTileset_HgssOlivineLighthouse",
       "border_filepath": "data/layouts/OlivineCity_Lighthouse_4F/border.bin",
       "blockdata_filepath": "data/layouts/OlivineCity_Lighthouse_4F/map.bin",
       "layout_version": "emerald"
@@ -9451,7 +9451,7 @@
       "width": 17,
       "height": 19,
       "primary_tileset": "gTileset_HgssOlivineLandmarkIndoor",
-      "secondary_tileset": "gTileset_HgssOlivineLandmarks",
+      "secondary_tileset": "gTileset_HgssOlivineLighthouse",
       "border_filepath": "data/layouts/OlivineCity_Lighthouse_5F/border.bin",
       "blockdata_filepath": "data/layouts/OlivineCity_Lighthouse_5F/map.bin",
       "layout_version": "emerald"
@@ -9462,7 +9462,7 @@
       "width": 17,
       "height": 19,
       "primary_tileset": "gTileset_HgssOlivineLandmarkIndoor",
-      "secondary_tileset": "gTileset_HgssOlivineLandmarks",
+      "secondary_tileset": "gTileset_HgssOlivineLighthouse",
       "border_filepath": "data/layouts/OlivineCity_Lighthouse_6F/border.bin",
       "blockdata_filepath": "data/layouts/OlivineCity_Lighthouse_6F/map.bin",
       "layout_version": "emerald"
@@ -11002,7 +11002,7 @@
       "width": 17,
       "height": 17,
       "primary_tileset": "gTileset_HgssOlivineLandmarkOutdoor",
-      "secondary_tileset": "gTileset_HgssOlivineLandmarks",
+      "secondary_tileset": "gTileset_HgssOlivineLighthouse",
       "border_filepath": "data/layouts/OlivineCity_Lighthouse_Balcony/border.bin",
       "blockdata_filepath": "data/layouts/OlivineCity_Lighthouse_Balcony/map.bin",
       "layout_version": "emerald"
@@ -11049,6 +11049,83 @@
       "secondary_tileset": "gTileset_HgssCenterReception",
       "border_filepath": "data/layouts/OlivineCity_PokemonCenter_1F/border.bin",
       "blockdata_filepath": "data/layouts/OlivineCity_PokemonCenter_1F/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_SS_AQUA_1F",
+      "name": "SSAqua_1F_Layout",
+      "width": 57,
+      "height": 21,
+      "primary_tileset": "gTileset_HgssSSAquaPrimary",
+      "secondary_tileset": "gTileset_HgssSSAqua",
+      "border_filepath": "data/layouts/SSAqua_1F/border.bin",
+      "blockdata_filepath": "data/layouts/SSAqua_1F/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_SS_AQUA_CAPTAIN_ROOM",
+      "name": "SSAqua_CaptainRoom_Layout",
+      "width": 14,
+      "height": 13,
+      "primary_tileset": "gTileset_HgssSSAquaPrimary",
+      "secondary_tileset": "gTileset_HgssSSAqua",
+      "border_filepath": "data/layouts/SSAqua_CaptainRoom/border.bin",
+      "blockdata_filepath": "data/layouts/SSAqua_CaptainRoom/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_SS_AQUA_SOUTHEAST_CABINS",
+      "name": "SSAqua_SoutheastCabins_Layout",
+      "width": 28,
+      "height": 13,
+      "primary_tileset": "gTileset_HgssSSAquaPrimary",
+      "secondary_tileset": "gTileset_HgssSSAqua",
+      "border_filepath": "data/layouts/SSAqua_SoutheastCabins/border.bin",
+      "blockdata_filepath": "data/layouts/SSAqua_SoutheastCabins/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_SS_AQUA_SOUTHWEST_CABINS",
+      "name": "SSAqua_SouthwestCabins_Layout",
+      "width": 28,
+      "height": 13,
+      "primary_tileset": "gTileset_HgssSSAquaPrimary",
+      "secondary_tileset": "gTileset_HgssSSAqua",
+      "border_filepath": "data/layouts/SSAqua_SouthwestCabins/border.bin",
+      "blockdata_filepath": "data/layouts/SSAqua_SouthwestCabins/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_SS_AQUA_NORTHEAST_CABINS",
+      "name": "SSAqua_NortheastCabins_Layout",
+      "width": 28,
+      "height": 13,
+      "primary_tileset": "gTileset_HgssSSAquaPrimary",
+      "secondary_tileset": "gTileset_HgssSSAqua",
+      "border_filepath": "data/layouts/SSAqua_NortheastCabins/border.bin",
+      "blockdata_filepath": "data/layouts/SSAqua_NortheastCabins/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_SS_AQUA_NORTHWEST_CABINS",
+      "name": "SSAqua_NorthwestCabins_Layout",
+      "width": 28,
+      "height": 13,
+      "primary_tileset": "gTileset_HgssSSAquaPrimary",
+      "secondary_tileset": "gTileset_HgssSSAqua",
+      "border_filepath": "data/layouts/SSAqua_NorthwestCabins/border.bin",
+      "blockdata_filepath": "data/layouts/SSAqua_NorthwestCabins/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_SS_AQUA_B1F",
+      "name": "SSAqua_B1F_Layout",
+      "width": 57,
+      "height": 21,
+      "primary_tileset": "gTileset_HgssSSAquaPrimary",
+      "secondary_tileset": "gTileset_HgssSSAqua",
+      "border_filepath": "data/layouts/SSAqua_B1F/border.bin",
+      "blockdata_filepath": "data/layouts/SSAqua_B1F/map.bin",
       "layout_version": "emerald"
     }
   ]

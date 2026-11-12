@@ -1,0 +1,62 @@
+{
+  "classification": "Separate actual Residence23,45, NOT the owner reported emptycourt; facade/entry/return work",
+  "source_revision": "285cfa4ebddcb390a8a5bde6116748cbb5eaba6b",
+  "rom_sha256": "df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4",
+  "files": [
+    {
+      "path": "reported-lot-after-north-bump.png",
+      "bytes": 5019,
+      "sha256": "a2c0802affee5aded76d8a330120f5967b7da3c055b81e71198d3758dec12974"
+    },
+    {
+      "path": "reported-lot-player25-44.png",
+      "bytes": 5508,
+      "sha256": "c98be779d972afc79f782d40669ffdd3143ebe00dd67c9212a0bab337e9cab8a"
+    },
+    {
+      "path": "residence-lot-sign-context.png",
+      "bytes": 6065,
+      "sha256": "5d5db9e6217c356dde67a57e973956d080683e0655d149990f9e58247efb3f4d"
+    },
+    {
+      "path": "residence-warp-front.png",
+      "bytes": 6445,
+      "sha256": "6524932c9fe27a681b431112a522e76db22e50e20c9b9bd5bc7c89f36ae87001"
+    },
+    {
+      "path": "residence-lot-sign-message.png",
+      "bytes": 5773,
+      "sha256": "f71a4d422732874c41863b7ec3f2c36ce646bf86fa2cbbced200fdec96e994ac"
+    },
+    {
+      "path": "residence-interior.png",
+      "bytes": 4426,
+      "sha256": "b44e1fc98ae11a60f3ea97976611fb512f7e555d3a6e4fdcd70a078b13fef3fd"
+    },
+    {
+      "path": "residence-return-arrival.png",
+      "bytes": 6496,
+      "sha256": "4481fac849204de6e9ce122eea774c3c83d82db375272f1ff7dbcc23f0b22ce8"
+    },
+    {
+      "path": "exit-reported-residence.mp4",
+      "bytes": 30097,
+      "sha256": "7f32c99e4ecd9e1e62ccf7e3077f28824fb904d2ab39cfad3e57addcfb5d9330"
+    },
+    {
+      "path": "reported-lot-normal-north-bump.mp4",
+      "bytes": 8751,
+      "sha256": "0bd4cd46ebab16289febff86e7b67ac4811850ecf722e6c820580e4e77da3ee2"
+    },
+    {
+      "path": "enter-reported-residence.mp4",
+      "bytes": 18956,
+      "sha256": "8593a93acf6d22c61bcc776556ebc2edacf24f4ad20804482b5cf2fe8ce34cd2"
+    },
+    {
+      "path": "results.json",
+      "bytes": 1325,
+      "sha256": "4b698de7048ffef981691ed3a36bc4512085ec76e2e7497ce600cd1232f2c376"
+    }
+  ]
+}

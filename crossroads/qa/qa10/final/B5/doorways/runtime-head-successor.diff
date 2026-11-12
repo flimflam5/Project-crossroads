@@ -1,0 +1,36 @@
+diff --git a/crossroads/hgss/qa10/VALIDATION_CHANGES.md b/crossroads/hgss/qa10/VALIDATION_CHANGES.md
+index 149994115f..331a199ee0 100644
+--- a/crossroads/hgss/qa10/VALIDATION_CHANGES.md
++++ b/crossroads/hgss/qa10/VALIDATION_CHANGES.md
+@@ -237,3 +237,14 @@ CRLF worktree `.pal` bytes and rejected identical colors. It now compares every
+ header/color line with line-ending normalization, keeping all values exact.
+ B4 source/built assertions pass, including all28 positive cyan cells and the
+ other-six-map/old-used-alias/glyph/full-attribute/palette invariants.
++
++
++## Route42 writer order during B5 verification
++
++The first68-command B5 ledger caught one remaining generator defect: the new-route
++script branch compared its bare Route42 header before the later arrival-facing
++postprocessor. The writer now renders the scoped native callbacks before that
++comparison; the existing-route final pass remains idempotent. The exact original
++`build_johto_network.py --through west --check` recheck passed with the B5 ROM
++unchanged. No assertion or generated game input was removed or relaxed. The
++initial failure and successful recheck are both retained in the final ledger.
+diff --git a/crossroads/tools/build_johto_network.py b/crossroads/tools/build_johto_network.py
+index 9615255e1c..d859552437 100644
+--- a/crossroads/tools/build_johto_network.py
++++ b/crossroads/tools/build_johto_network.py
+@@ -306,7 +306,11 @@ def main():
+    extra=''
+    if 'PokemonCenter_1F' in n:
+     parent=n.rsplit('_PokemonCenter_1F',1)[0];lab=script(parent+'_CenterOnTransition');extra=f'    map_script MAP_SCRIPT_ON_TRANSITION, {lab}\n    map_script MAP_SCRIPT_ON_RESUME, CableClub_OnResume\n';scripts.append(f'{lab}::\n    setrespawn HEAL_LOCATION_{sym(parent)}\n    end\n')
+-   write(f'data/maps/{n}/scripts.inc',f'{n}_MapScripts::\n'+extra+'    .byte 0\n')
++   script_data=f'{n}_MapScripts::\n'+extra+'    .byte 0\n'
++   if n in ('JohtoRoute38','JohtoRoute42'):
++    from build_qa10_arrival_facing import render as arrival_facing_scripts
++    script_data=arrival_facing_scripts(n,script_data)
++   write(f'data/maps/{n}/scripts.inc',script_data)
+   # Reused Center/Mart layouts stay byte-for-byte unchanged.
+   if n not in existing and meta[n]['kind']=='service':continue
+   path=bylayout[m['layout']]['blockdata_filepath']

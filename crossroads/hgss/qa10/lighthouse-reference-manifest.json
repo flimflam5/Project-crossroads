@@ -1,0 +1,275 @@
+{
+  "version": "qa10-lighthouse-actual-reference-audit",
+  "source_page": "https://bulbapedia.bulbagarden.net/wiki/Glitter_Lighthouse",
+  "rasters": [
+    {
+      "local_cache_name": "Glitter_Lighthouse_6F_HGSS.png",
+      "url": "https://archives.bulbagarden.net/media/upload/0/00/Glitter_Lighthouse_6F_HGSS.png",
+      "sha256": "2825a3dfd9aa030c2cd733f06561fd0e3f83f8b46fff53fa2dccdd470efcb0c5",
+      "dimensions": [
+        309,
+        272
+      ]
+    },
+    {
+      "local_cache_name": "Glitter_Lighthouse_4F_HGSS.png",
+      "url": "https://archives.bulbagarden.net/media/upload/2/21/Glitter_Lighthouse_4F_HGSS.png",
+      "sha256": "6a184bd7d285c722bad69d2459324b64cb80c4d849425d4ac561d904083836d1",
+      "dimensions": [
+        263,
+        235
+      ]
+    },
+    {
+      "local_cache_name": "Glitter_Lighthouse_1F_HGSS.png",
+      "url": "https://archives.bulbagarden.net/media/upload/5/55/Glitter_Lighthouse_1F_HGSS.png",
+      "sha256": "92985247f82730d01350a904af72e2cc670373bae91de1fb3a946ad0c10263fa",
+      "dimensions": [
+        240,
+        224
+      ]
+    },
+    {
+      "local_cache_name": "Glitter_Lighthouse_2F_HGSS.png",
+      "url": "https://archives.bulbagarden.net/media/upload/9/9c/Glitter_Lighthouse_2F_HGSS.png",
+      "sha256": "71210d1c5d951b5cdb83efd3e9d97538d897b12140183e2f1faff1340065cdab",
+      "dimensions": [
+        240,
+        222
+      ]
+    },
+    {
+      "local_cache_name": "Glitter_Lighthouse_3F_Balcony_HGSS.png",
+      "url": "https://archives.bulbagarden.net/media/upload/c/ce/Glitter_Lighthouse_3F_Balcony_HGSS.png",
+      "sha256": "c5afd24bc97e0b6239e77e88ad3543f5aa0f66c226a50bbbb925a634bdd6d48c",
+      "dimensions": [
+        314,
+        274
+      ]
+    },
+    {
+      "local_cache_name": "Glitter_Lighthouse_5F_HGSS.png",
+      "url": "https://archives.bulbagarden.net/media/upload/d/df/Glitter_Lighthouse_5F_HGSS.png",
+      "sha256": "c80a64ff536abf57004fe22f9a2c9269168a479373c12111810bb75109214ba6",
+      "dimensions": [
+        263,
+        235
+      ]
+    },
+    {
+      "local_cache_name": "Glitter_Lighthouse_3F_HGSS.png",
+      "url": "https://archives.bulbagarden.net/media/upload/e/ee/Glitter_Lighthouse_3F_HGSS.png",
+      "sha256": "7e1a83e3de6c5f0c79493357ac2982d9f548b63ed56f13630078e17abccab2f4",
+      "dimensions": [
+        263,
+        238
+      ]
+    }
+  ],
+  "reference_use": "Appearance and documentary comparison; no screenshot pixels imported into original GBA motifs.",
+  "canonical_geometry_file": "crossroads/hgss/canonical_events/olivine-interior-geometry.json",
+  "canonical_geometry_sha256": "06874f218fa58cc4eda0eef072cd982822bfd2a343293bd3118dc1498701b9c0",
+  "source_headers": {
+    "MAP_OLIVINE_LIGHTHOUSE_1F": {
+      "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0047_D27R0101.bin",
+      "matrix_blob_sha": "eb950e0ad409f48f13d29139bcf672378e474a7c",
+      "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/112_D27R0101.json",
+      "events_blob_sha": "380f6c22b55f61b350fc13d754e13bad3de6318b",
+      "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+    },
+    "MAP_OLIVINE_LIGHTHOUSE_2F": {
+      "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0048_D27R0102.bin",
+      "matrix_blob_sha": "66764818b798d61ae5d9b870986328849686e03b",
+      "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/206_D27R0102.json",
+      "events_blob_sha": "49fcae8af2473b2583ac3beb704c4c6304382c04",
+      "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+    },
+    "MAP_OLIVINE_LIGHTHOUSE_3F": {
+      "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0050_D27R0104.bin",
+      "matrix_blob_sha": "a654df56553acb73e364d438d993ee02c43c84fb",
+      "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/208_D27R0104.json",
+      "events_blob_sha": "8b670eb56a5f2ff10022fb19a18a0ae3d9329d9f",
+      "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+    },
+    "MAP_OLIVINE_LIGHTHOUSE_4F": {
+      "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0051_D27R0105.bin",
+      "matrix_blob_sha": "c19fa47a8e187560b7a351148fca9862e1ce4715",
+      "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/209_D27R0105.json",
+      "events_blob_sha": "732883dad10255ff73c33ee6d78097b5902570e1",
+      "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+    },
+    "MAP_OLIVINE_LIGHTHOUSE_5F": {
+      "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0052_D27R0106.bin",
+      "matrix_blob_sha": "c9c7113684985af9405df9fd4fca0b697e8da11b",
+      "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/210_D27R0106.json",
+      "events_blob_sha": "58595be5dd77623ab9e3986c15b0a0dd667c9133",
+      "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+    },
+    "MAP_OLIVINE_LIGHTHOUSE_LIGHT_ROOM": {
+      "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0131_D27R0107.bin",
+      "matrix_blob_sha": "21cde54d10af49aaba89b85fef06404f9cbf64ab",
+      "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/211_D27R0107.json",
+      "events_blob_sha": "f13bdcd507edd8a1532d26aad72a318afffa4f11",
+      "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+    },
+    "MAP_OLIVINE_LIGHTHOUSE_EXTERIOR": {
+      "matrix": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/mapmatrix/map_matrix/map_matrix_0049_D27R0103.bin",
+      "matrix_blob_sha": "f34a8d28acae8540ef803bbe3dd9b669f279c2d2",
+      "events": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/207_D27R0103.json",
+      "events_blob_sha": "bff57c361552a5590690ab654815e6636fd79ba0",
+      "terrain_blob_sha": "33105ab54c804a33503fb52db0ffa93a4d38191a"
+    }
+  },
+  "owner_photos": [
+    {
+      "file": "1-Photo-1.jpg",
+      "sha256": "94114e250c3064a10785be573296622bda31c6e36ac68a54174fc991e8fcc6d2",
+      "identification": "Ecruteak directory36,45 courtyard"
+    },
+    {
+      "file": "2-Photo-2.jpg",
+      "sha256": "0d08ac312fb7f1a80c70c8150396233204341ed55eaae2711b858d1b00d60caf",
+      "identification": "Ecruteak directory36,45 courtyard"
+    },
+    {
+      "file": "4-Photo-4.jpg",
+      "sha256": "501a72abc60e29c714ab9f8108a4ddf3053f7dfaa82c56f01010d59ff444fcbb",
+      "identification": "Olivine Lighthouse1F visitor deck"
+    }
+  ],
+  "observed_defects": [
+    "Lighthouse1F/2F native uniform green floor omits source pale diamond surround, teal inset/U runner and burgundy double border.",
+    "Lighthouse1F old art draws eight generic wooden chairs at four solid table footprints; source has four brown tables with eight orange seats, embedded in DS terrain rather than separate props.",
+    "Generic timber perimeter/shaft rails and repeated indoor wall panels mismatch the source pale maritime walls/windows.",
+    "Lighthouse6F uniform purple floor and old blue/gray ring differ from actual pink tiled floor, cyan optical enclosure and glass window ring.",
+    "Balcony repeated indoor-window facade and generic flooring differ from actual gray-purple shell, one east window, diagonal paving and blue parapets."
+  ],
+  "unchanged_constraints": [
+    "All seven existing native map/layout IDs/dimensions, mapJSON/actors/scripts/warps and every physical/elevation/behavior/layer attribute stay exact285 baseline.",
+    "No story actors/rewards/Ampharos/Jasmine quest imported.",
+    "All new native motifs original; screenshots remain documentary references."
+  ],
+  "proposed_native_sample_points": {
+    "OlivineCity_Lighthouse_1F": {
+      "pale_floor": [
+        1,
+        6
+      ],
+      "teal_inset": [
+        8,
+        10
+      ],
+      "burgundy_left_edge": [
+        3,
+        6
+      ],
+      "table_groups": [
+        [
+          3,
+          8
+        ],
+        [
+          13,
+          8
+        ],
+        [
+          3,
+          13
+        ],
+        [
+          13,
+          13
+        ]
+      ],
+      "ferns": [
+        [
+          6,
+          7
+        ],
+        [
+          10,
+          7
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          6,
+          13
+        ],
+        [
+          10,
+          13
+        ]
+      ]
+    },
+    "OlivineCity_Lighthouse_2F": {
+      "pale_floor": [
+        6,
+        13
+      ],
+      "teal_runner": [
+        [
+          3,
+          6
+        ],
+        [
+          13,
+          10
+        ],
+        [
+          6,
+          15
+        ]
+      ]
+    },
+    "OlivineCity_Lighthouse_6F": {
+      "pink_floor": [
+        4,
+        14
+      ],
+      "cyan_ring": [
+        8,
+        5
+      ]
+    },
+    "OlivineCity_Lighthouse_Balcony": {
+      "diagonal_paving": [
+        8,
+        14
+      ],
+      "blue_parapet": [
+        0,
+        14
+      ],
+      "east_window": [
+        12,
+        9
+      ],
+      "paired_dark_entrance": [
+        [
+          8,
+          12
+        ],
+        [
+          9,
+          12
+        ]
+      ]
+    }
+  },
+  "implementation_and_test_state": "Private helper source prepared and isolated static renders inspected; root central generation/build/final native emulator validation tracked separately.",
+  "b3_native_review_finding": {
+    "source": "e7e2c085a5a61ef727d06f9f682af7d3a954cc06",
+    "rom_sha256": "af59dff1b06b99a9599c6f98b6fb6bd1e765cc52c0838a2dec5c79a6c1f88373",
+    "status": "Actual native6F reference mismatch identified; B3 is not claimed reference matched.",
+    "defect": "26 inner optical-body cells used outer diagonal window glass; two model-corner cells stayed black.",
+    "correction_contract": "lighthouse-inner-core-b4-contract.json",
+    "b4_state": "Helper source/isolated static preview prepared; central generation/build/runtime pending."
+  }
+}

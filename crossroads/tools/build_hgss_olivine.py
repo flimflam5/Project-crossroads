@@ -38,9 +38,11 @@ def city_data(with_gym=True):
     # The waterfront port stands over sea: thin roof eaves retain surfable
     # water, the actual body/glass/upper door blocks, and both ground-level
     # entrance leaves stay dry. Never turn the whole center into a roof tunnel.
-    flags=(0x1400 if solid else 0x3000 if door else 0x1000) if kind=='port' else (0x400 if solid else 0x3000)
+    canopy=[x,y] in a.get('canopy',[])
+    flags=(0x1400 if solid else 0x3000 if door or canopy else 0x1000) if kind=='port' else (0x400 if solid else 0x3000)
     t[(oy+y)*w+ox+x]=flags|a['metatiles'][y*a['width']+x]
-  for x,y in a['doors']:rect(ox+x,oy+y+1,1,1,0x3202)
+  if kind!='port':
+   for x,y in a['doors']:rect(ox+x,oy+y+1,1,1,0x3202)
  for x,y,ww,hh in [(14,19,8,7),(28,12,6,8),(34,12,6,8),(6,28,7,7),(13,27,8,8),(27,28,8,7),(41,29,9,11)]:rect(x,y,ww,hh,0x3001)
  for kind,door in [('house',DOORS[9]),('house',DOORS[10]),('house',DOORS[11]),('cafe',DOORS[12]),('center',DOORS[3]),('mart',DOORS[4]),('lighthouse',DOORS[7]),('port',DOORS[13])]:facade(kind,door)
  # DS height is compressed, but its paths, house court, lighthouse cliff and
@@ -48,11 +50,12 @@ def city_data(with_gym=True):
  rect(21,0,5,10,0x3202);rect(21,9,5,30,0x3202)
  rect(7,34,31,3,0x3202);rect(5,39,33,3,0x3202)
  rect(21,42,5,5,0x3202)
+ # QA10: actual HGSS passenger flow enters from the northern harbor terrace.
+ # Keep both canonical warp coordinates/indices; the visible covered portal is
+ # on the building's NORTH end and its solid roof/body extends south over sea.
+ # This removes the old mandatory east-boardwalk U-turn into a south door.
+ rect(22,46,4,5,0x3000|spec['deck']['metatiles'][0])
  facade('port',DOORS[13])
- # The GBA facade faces south, unlike the DS roof-entry model. A bounded
- # east boardwalk joins its forecourt back to the city without stepping across
- # an active doorway; never cut a passage through the facade walls.
- rect(28,45,2,10,0x3202);rect(22,53,8,2,0x3202)
  rect(29,18,10,2,0x3001);rect(34,20,3,9,0x3202);rect(29,28,8,1,0x3202)
  rect(34,28,4,14,0x3202);rect(38,40,12,3,0x3202)
  # Paint source-specific fence/deck/breakwater materials before the four
@@ -82,7 +85,10 @@ def city_data(with_gym=True):
  # Direction/service signs retain existing event IDs/scripts and sit off doors.
  signs=[(7,24),(7,29),(9,14),(14,34),(27,34),(29,41),(7,41),(46,40),(24,42),(28,7),(7,36)]
  for x,y in signs:rect(x,y,1,1,0x403)
- for x,y in [(16,24),(30,18),(35,18),(8,34),(22,53)]:rect(x,y,1,1,0x403)
+ for x,y in [(16,24),(30,18),(35,18),(8,34)]:rect(x,y,1,1,0x403)
+ # Same port-sign identity, now on the accessible north forecourt. The old
+ #22,53 position belongs to the newly south-extending solid terminal body.
+ rect(22,50,1,1,0x400|spec['port_sign']['metatiles'][0])
  # Road seams are General-only. Replacing facade IDs in neighbouring resources
  # would corrupt scrolling before the engine finishes the map transition.
  for y in range(h):
@@ -143,7 +149,7 @@ def generate(check=False):
   if len(m['warp_events'])==i:m['warp_events'].append(e)
   else:m['warp_events'][i]=e
  for e,point in zip(m['bg_events'],[(7,24),(7,29),(9,14),(14,34),(27,34),(29,41),(7,41),(46,40),(24,42),(28,7),(7,36)]):e.update(x=point[0],y=point[1])
- extra=[((16,24),'FishingHouse','FISHING HOUSE'),((30,18),'TradeHouse','NORTH HOUSE'),((35,18),'SealHouse','NORTHEAST HOUSE'),((8,34),'Cafe','OLIVINE CAFE'),((22,53),'Port','OLIVINE PORT TERMINAL')]
+ extra=[((16,24),'FishingHouse','FISHING HOUSE'),((30,18),'TradeHouse','NORTH HOUSE'),((35,18),'SealHouse','NORTHEAST HOUSE'),((8,34),'Cafe','OLIVINE CAFE'),((22,50),'Port','OLIVINE PORT TERMINAL')]
  # Appended event IDs; all accepted sign scripts remain intact.
  for point,label,title in extra:
   event=dict(type='sign',x=point[0],y=point[1],elevation=0,player_facing_dir='BG_EVENT_PLAYER_FACING_ANY',script='Hgss_OlivineSign_'+label)

@@ -1,0 +1,18 @@
+{
+  "contract": "crossroads/hgss/qa10/doorway-intended-facing-b5.json",
+  "contract_sha256": "164ec88f66e6ba110a88e9951b2193cd138e5c346eedb210e778cf2c6bda5ec0",
+  "intended_source_revision": "cc643ffe711204f3ef38e34e7aa1eb8c9558720f",
+  "intended_rom_sha256": "ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b",
+  "method": "Physical-facing expectations existed before reading trial facing results; no emulator or game writes.",
+  "final_coverage": true,
+  "passed": true,
+  "groups": 45,
+  "expected_attempts": 519,
+  "recorded_attempts": 519,
+  "exact_facing_passes": 482,
+  "physically_unavailable_lateral_approaches": 37,
+  "missing_attempts": [],
+  "identity_errors": [],
+  "failures": [],
+  "no_facing_claim_for_unavailable_approaches": true
+}

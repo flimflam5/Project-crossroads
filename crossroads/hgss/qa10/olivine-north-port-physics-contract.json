@@ -1,0 +1,681 @@
+{
+  "baseline": "285cfa4ebddcb390a8a5bde6116748cbb5eaba6b",
+  "map": "OlivineCity",
+  "raw_before_sha256": "74cbcf16c294259e0ebbce0c541bd70cf061c5617654a802510411ac4d9fba6c",
+  "layout_dimensions": [
+    64,
+    64
+  ],
+  "physical_mask": "0xfc00",
+  "physical_changed_cells": 82,
+  "moves_only_existing_port_sign": {
+    "script": "Hgss_OlivineSign_Port",
+    "before": [
+      22,
+      53
+    ],
+    "after": [
+      22,
+      50
+    ]
+  },
+  "changes": [
+    {
+      "x": 28,
+      "y": 46,
+      "before_word": 12802,
+      "before_physics": 12288,
+      "after_physics": 1024,
+      "reason": "Retired east U-turn boardwalk restores its source shoreline/sea"
+    },
+    {
+      "x": 29,
+      "y": 46,
+      "before_word": 12802,
+      "before_physics": 12288,
+      "after_physics": 1024,
+      "reason": "Retired east U-turn boardwalk restores its source shoreline/sea"
+    },
+    {
+      "x": 21,
+      "y": 47,
+      "before_word": 4733,
+      "before_physics": 4096,
+      "after_physics": 12288,
+      "reason": "Direct northern passenger pier replaces former south-facing roof/body obstruction"
+    },
+    {
+      "x": 22,
+      "y": 47,
+      "before_word": 4734,
+      "before_physics": 4096,
+      "after_physics": 12288,
+      "reason": "Direct northern passenger pier replaces former south-facing roof/body obstruction"
+    },
+    {
+      "x": 23,
+      "y": 47,
+      "before_word": 4735,
+      "before_physics": 4096,
+      "after_physics": 12288,
+      "reason": "Direct northern passenger pier replaces former south-facing roof/body obstruction"
+    },
+    {
+      "x": 24,
+      "y": 47,
+      "before_word": 4736,
+      "before_physics": 4096,
+      "after_physics": 12288,
+      "reason": "Direct northern passenger pier replaces former south-facing roof/body obstruction"
+    },
+    {
+      "x": 25,
+      "y": 47,
+      "before_word": 4737,
+      "before_physics": 4096,
+      "after_physics": 12288,
+      "reason": "Direct northern passenger pier replaces former south-facing roof/body obstruction"
+    },
+    {
+      "x": 28,
+      "y": 47,
+      "before_word": 12800,
+      "before_physics": 12288,
+      "after_physics": 1024,
+      "reason": "Retired east U-turn boardwalk restores its source shoreline/sea"
+    },
+    {
+      "x": 29,
+      "y": 47,
+      "before_word": 12800,
+      "before_physics": 12288,
+      "after_physics": 1024,
+      "reason": "Retired east U-turn boardwalk restores its source shoreline/sea"
+    },
+    {
+      "x": 21,
+      "y": 48,
+      "before_word": 5765,
+      "before_physics": 5120,
+      "after_physics": 12288,
+      "reason": "Direct northern passenger pier replaces former south-facing roof/body obstruction"
+    },
+    {
+      "x": 22,
+      "y": 48,
+      "before_word": 5766,
+      "before_physics": 5120,
+      "after_physics": 12288,
+      "reason": "Direct northern passenger pier replaces former south-facing roof/body obstruction"
+    },
+    {
+      "x": 23,
+      "y": 48,
+      "before_word": 5767,
+      "before_physics": 5120,
+      "after_physics": 12288,
+      "reason": "Direct northern passenger pier replaces former south-facing roof/body obstruction"
+    },
+    {
+      "x": 24,
+      "y": 48,
+      "before_word": 5768,
+      "before_physics": 5120,
+      "after_physics": 12288,
+      "reason": "Direct northern passenger pier replaces former south-facing roof/body obstruction"
+    },
+    {
+      "x": 25,
+      "y": 48,
+      "before_word": 5769,
+      "before_physics": 5120,
+      "after_physics": 12288,
+      "reason": "Direct northern passenger pier replaces former south-facing roof/body obstruction"
+    },
+    {
+      "x": 26,
+      "y": 48,
+      "before_word": 5770,
+      "before_physics": 5120,
+      "after_physics": 4096,
+      "reason": "Direct northern passenger pier replaces former south-facing roof/body obstruction"
+    },
+    {
+      "x": 28,
+      "y": 48,
+      "before_word": 12800,
+      "before_physics": 12288,
+      "after_physics": 1024,
+      "reason": "Retired east U-turn boardwalk restores its source shoreline/sea"
+    },
+    {
+      "x": 29,
+      "y": 48,
+      "before_word": 12800,
+      "before_physics": 12288,
+      "after_physics": 1024,
+      "reason": "Retired east U-turn boardwalk restores its source shoreline/sea"
+    },
+    {
+      "x": 21,
+      "y": 49,
+      "before_word": 5773,
+      "before_physics": 5120,
+      "after_physics": 12288,
+      "reason": "Direct northern passenger pier replaces former south-facing roof/body obstruction"
+    },
+    {
+      "x": 22,
+      "y": 49,
+      "before_word": 5774,
+      "before_physics": 5120,
+      "after_physics": 12288,
+      "reason": "Direct northern passenger pier replaces former south-facing roof/body obstruction"
+    },
+    {
+      "x": 23,
+      "y": 49,
+      "before_word": 5775,
+      "before_physics": 5120,
+      "after_physics": 12288,
+      "reason": "Direct northern passenger pier replaces former south-facing roof/body obstruction"
+    },
+    {
+      "x": 24,
+      "y": 49,
+      "before_word": 5776,
+      "before_physics": 5120,
+      "after_physics": 12288,
+      "reason": "Direct northern passenger pier replaces former south-facing roof/body obstruction"
+    },
+    {
+      "x": 25,
+      "y": 49,
+      "before_word": 5777,
+      "before_physics": 5120,
+      "after_physics": 12288,
+      "reason": "Direct northern passenger pier replaces former south-facing roof/body obstruction"
+    },
+    {
+      "x": 26,
+      "y": 49,
+      "before_word": 5778,
+      "before_physics": 5120,
+      "after_physics": 4096,
+      "reason": "Direct northern passenger pier replaces former south-facing roof/body obstruction"
+    },
+    {
+      "x": 28,
+      "y": 49,
+      "before_word": 12800,
+      "before_physics": 12288,
+      "after_physics": 4096,
+      "reason": "Retired east U-turn boardwalk restores its source shoreline/sea"
+    },
+    {
+      "x": 29,
+      "y": 49,
+      "before_word": 12800,
+      "before_physics": 12288,
+      "after_physics": 4096,
+      "reason": "Retired east U-turn boardwalk restores its source shoreline/sea"
+    },
+    {
+      "x": 21,
+      "y": 50,
+      "before_word": 5781,
+      "before_physics": 5120,
+      "after_physics": 12288,
+      "reason": "Direct northern passenger pier replaces former south-facing roof/body obstruction"
+    },
+    {
+      "x": 22,
+      "y": 50,
+      "before_word": 5782,
+      "before_physics": 5120,
+      "after_physics": 1024,
+      "reason": "Relocated existing Port plaque on north pier, clear of both visible fronts"
+    },
+    {
+      "x": 23,
+      "y": 50,
+      "before_word": 5783,
+      "before_physics": 5120,
+      "after_physics": 12288,
+      "reason": "Direct northern passenger pier replaces former south-facing roof/body obstruction"
+    },
+    {
+      "x": 24,
+      "y": 50,
+      "before_word": 5784,
+      "before_physics": 5120,
+      "after_physics": 12288,
+      "reason": "Direct northern passenger pier replaces former south-facing roof/body obstruction"
+    },
+    {
+      "x": 25,
+      "y": 50,
+      "before_word": 5785,
+      "before_physics": 5120,
+      "after_physics": 12288,
+      "reason": "Direct northern passenger pier replaces former south-facing roof/body obstruction"
+    },
+    {
+      "x": 26,
+      "y": 50,
+      "before_word": 5786,
+      "before_physics": 5120,
+      "after_physics": 4096,
+      "reason": "Direct northern passenger pier replaces former south-facing roof/body obstruction"
+    },
+    {
+      "x": 28,
+      "y": 50,
+      "before_word": 12800,
+      "before_physics": 12288,
+      "after_physics": 4096,
+      "reason": "Retired east U-turn boardwalk restores its source shoreline/sea"
+    },
+    {
+      "x": 29,
+      "y": 50,
+      "before_word": 12800,
+      "before_physics": 12288,
+      "after_physics": 4096,
+      "reason": "Retired east U-turn boardwalk restores its source shoreline/sea"
+    },
+    {
+      "x": 20,
+      "y": 51,
+      "before_word": 5788,
+      "before_physics": 5120,
+      "after_physics": 4096,
+      "reason": "North-entry facade: two dry north portal/canopy leaves, actual solid body and sea eaves"
+    },
+    {
+      "x": 21,
+      "y": 51,
+      "before_word": 5789,
+      "before_physics": 5120,
+      "after_physics": 4096,
+      "reason": "North-entry facade: two dry north portal/canopy leaves, actual solid body and sea eaves"
+    },
+    {
+      "x": 22,
+      "y": 51,
+      "before_word": 5790,
+      "before_physics": 5120,
+      "after_physics": 4096,
+      "reason": "North-entry facade: two dry north portal/canopy leaves, actual solid body and sea eaves"
+    },
+    {
+      "x": 23,
+      "y": 51,
+      "before_word": 5791,
+      "before_physics": 5120,
+      "after_physics": 12288,
+      "reason": "North-entry facade: two dry north portal/canopy leaves, actual solid body and sea eaves"
+    },
+    {
+      "x": 24,
+      "y": 51,
+      "before_word": 5792,
+      "before_physics": 5120,
+      "after_physics": 12288,
+      "reason": "North-entry facade: two dry north portal/canopy leaves, actual solid body and sea eaves"
+    },
+    {
+      "x": 25,
+      "y": 51,
+      "before_word": 5793,
+      "before_physics": 5120,
+      "after_physics": 4096,
+      "reason": "North-entry facade: two dry north portal/canopy leaves, actual solid body and sea eaves"
+    },
+    {
+      "x": 26,
+      "y": 51,
+      "before_word": 5794,
+      "before_physics": 5120,
+      "after_physics": 4096,
+      "reason": "North-entry facade: two dry north portal/canopy leaves, actual solid body and sea eaves"
+    },
+    {
+      "x": 27,
+      "y": 51,
+      "before_word": 5795,
+      "before_physics": 5120,
+      "after_physics": 4096,
+      "reason": "North-entry facade: two dry north portal/canopy leaves, actual solid body and sea eaves"
+    },
+    {
+      "x": 28,
+      "y": 51,
+      "before_word": 12800,
+      "before_physics": 12288,
+      "after_physics": 4096,
+      "reason": "Retired east U-turn boardwalk restores its source shoreline/sea"
+    },
+    {
+      "x": 29,
+      "y": 51,
+      "before_word": 12800,
+      "before_physics": 12288,
+      "after_physics": 4096,
+      "reason": "Retired east U-turn boardwalk restores its source shoreline/sea"
+    },
+    {
+      "x": 20,
+      "y": 52,
+      "before_word": 5796,
+      "before_physics": 5120,
+      "after_physics": 4096,
+      "reason": "North-entry facade: two dry north portal/canopy leaves, actual solid body and sea eaves"
+    },
+    {
+      "x": 27,
+      "y": 52,
+      "before_word": 5803,
+      "before_physics": 5120,
+      "after_physics": 4096,
+      "reason": "North-entry facade: two dry north portal/canopy leaves, actual solid body and sea eaves"
+    },
+    {
+      "x": 28,
+      "y": 52,
+      "before_word": 12800,
+      "before_physics": 12288,
+      "after_physics": 4096,
+      "reason": "Retired east U-turn boardwalk restores its source shoreline/sea"
+    },
+    {
+      "x": 29,
+      "y": 52,
+      "before_word": 12800,
+      "before_physics": 12288,
+      "after_physics": 4096,
+      "reason": "Retired east U-turn boardwalk restores its source shoreline/sea"
+    },
+    {
+      "x": 20,
+      "y": 53,
+      "before_word": 1537,
+      "before_physics": 1024,
+      "after_physics": 4096,
+      "reason": "North-entry facade: two dry north portal/canopy leaves, actual solid body and sea eaves"
+    },
+    {
+      "x": 21,
+      "y": 53,
+      "before_word": 1537,
+      "before_physics": 1024,
+      "after_physics": 5120,
+      "reason": "North-entry facade: two dry north portal/canopy leaves, actual solid body and sea eaves"
+    },
+    {
+      "x": 22,
+      "y": 53,
+      "before_word": 1027,
+      "before_physics": 1024,
+      "after_physics": 5120,
+      "reason": "North-entry facade: two dry north portal/canopy leaves, actual solid body and sea eaves"
+    },
+    {
+      "x": 23,
+      "y": 53,
+      "before_word": 12800,
+      "before_physics": 12288,
+      "after_physics": 5120,
+      "reason": "North-entry facade: two dry north portal/canopy leaves, actual solid body and sea eaves"
+    },
+    {
+      "x": 24,
+      "y": 53,
+      "before_word": 12800,
+      "before_physics": 12288,
+      "after_physics": 5120,
+      "reason": "North-entry facade: two dry north portal/canopy leaves, actual solid body and sea eaves"
+    },
+    {
+      "x": 25,
+      "y": 53,
+      "before_word": 12800,
+      "before_physics": 12288,
+      "after_physics": 5120,
+      "reason": "North-entry facade: two dry north portal/canopy leaves, actual solid body and sea eaves"
+    },
+    {
+      "x": 26,
+      "y": 53,
+      "before_word": 12800,
+      "before_physics": 12288,
+      "after_physics": 5120,
+      "reason": "North-entry facade: two dry north portal/canopy leaves, actual solid body and sea eaves"
+    },
+    {
+      "x": 27,
+      "y": 53,
+      "before_word": 12800,
+      "before_physics": 12288,
+      "after_physics": 4096,
+      "reason": "North-entry facade: two dry north portal/canopy leaves, actual solid body and sea eaves"
+    },
+    {
+      "x": 28,
+      "y": 53,
+      "before_word": 12800,
+      "before_physics": 12288,
+      "after_physics": 1024,
+      "reason": "Retired east U-turn boardwalk restores its source shoreline/sea"
+    },
+    {
+      "x": 29,
+      "y": 53,
+      "before_word": 12800,
+      "before_physics": 12288,
+      "after_physics": 1024,
+      "reason": "Retired east U-turn boardwalk restores its source shoreline/sea"
+    },
+    {
+      "x": 21,
+      "y": 54,
+      "before_word": 4464,
+      "before_physics": 4096,
+      "after_physics": 5120,
+      "reason": "North-entry facade: two dry north portal/canopy leaves, actual solid body and sea eaves"
+    },
+    {
+      "x": 22,
+      "y": 54,
+      "before_word": 12800,
+      "before_physics": 12288,
+      "after_physics": 5120,
+      "reason": "North-entry facade: two dry north portal/canopy leaves, actual solid body and sea eaves"
+    },
+    {
+      "x": 23,
+      "y": 54,
+      "before_word": 12800,
+      "before_physics": 12288,
+      "after_physics": 5120,
+      "reason": "North-entry facade: two dry north portal/canopy leaves, actual solid body and sea eaves"
+    },
+    {
+      "x": 24,
+      "y": 54,
+      "before_word": 12800,
+      "before_physics": 12288,
+      "after_physics": 5120,
+      "reason": "North-entry facade: two dry north portal/canopy leaves, actual solid body and sea eaves"
+    },
+    {
+      "x": 25,
+      "y": 54,
+      "before_word": 12800,
+      "before_physics": 12288,
+      "after_physics": 5120,
+      "reason": "North-entry facade: two dry north portal/canopy leaves, actual solid body and sea eaves"
+    },
+    {
+      "x": 26,
+      "y": 54,
+      "before_word": 12800,
+      "before_physics": 12288,
+      "after_physics": 5120,
+      "reason": "North-entry facade: two dry north portal/canopy leaves, actual solid body and sea eaves"
+    },
+    {
+      "x": 27,
+      "y": 54,
+      "before_word": 12800,
+      "before_physics": 12288,
+      "after_physics": 4096,
+      "reason": "North-entry facade: two dry north portal/canopy leaves, actual solid body and sea eaves"
+    },
+    {
+      "x": 28,
+      "y": 54,
+      "before_word": 12800,
+      "before_physics": 12288,
+      "after_physics": 1024,
+      "reason": "Retired east U-turn boardwalk restores its source shoreline/sea"
+    },
+    {
+      "x": 29,
+      "y": 54,
+      "before_word": 12800,
+      "before_physics": 12288,
+      "after_physics": 1024,
+      "reason": "Retired east U-turn boardwalk restores its source shoreline/sea"
+    },
+    {
+      "x": 20,
+      "y": 55,
+      "before_word": 4464,
+      "before_physics": 4096,
+      "after_physics": 5120,
+      "reason": "North-entry facade: two dry north portal/canopy leaves, actual solid body and sea eaves"
+    },
+    {
+      "x": 21,
+      "y": 55,
+      "before_word": 4464,
+      "before_physics": 4096,
+      "after_physics": 5120,
+      "reason": "North-entry facade: two dry north portal/canopy leaves, actual solid body and sea eaves"
+    },
+    {
+      "x": 22,
+      "y": 55,
+      "before_word": 4464,
+      "before_physics": 4096,
+      "after_physics": 5120,
+      "reason": "North-entry facade: two dry north portal/canopy leaves, actual solid body and sea eaves"
+    },
+    {
+      "x": 23,
+      "y": 55,
+      "before_word": 4464,
+      "before_physics": 4096,
+      "after_physics": 5120,
+      "reason": "North-entry facade: two dry north portal/canopy leaves, actual solid body and sea eaves"
+    },
+    {
+      "x": 24,
+      "y": 55,
+      "before_word": 4464,
+      "before_physics": 4096,
+      "after_physics": 5120,
+      "reason": "North-entry facade: two dry north portal/canopy leaves, actual solid body and sea eaves"
+    },
+    {
+      "x": 25,
+      "y": 55,
+      "before_word": 4464,
+      "before_physics": 4096,
+      "after_physics": 5120,
+      "reason": "North-entry facade: two dry north portal/canopy leaves, actual solid body and sea eaves"
+    },
+    {
+      "x": 26,
+      "y": 55,
+      "before_word": 4464,
+      "before_physics": 4096,
+      "after_physics": 5120,
+      "reason": "North-entry facade: two dry north portal/canopy leaves, actual solid body and sea eaves"
+    },
+    {
+      "x": 27,
+      "y": 55,
+      "before_word": 4464,
+      "before_physics": 4096,
+      "after_physics": 5120,
+      "reason": "North-entry facade: two dry north portal/canopy leaves, actual solid body and sea eaves"
+    },
+    {
+      "x": 20,
+      "y": 56,
+      "before_word": 4464,
+      "before_physics": 4096,
+      "after_physics": 5120,
+      "reason": "North-entry facade: two dry north portal/canopy leaves, actual solid body and sea eaves"
+    },
+    {
+      "x": 21,
+      "y": 56,
+      "before_word": 4464,
+      "before_physics": 4096,
+      "after_physics": 5120,
+      "reason": "North-entry facade: two dry north portal/canopy leaves, actual solid body and sea eaves"
+    },
+    {
+      "x": 22,
+      "y": 56,
+      "before_word": 4464,
+      "before_physics": 4096,
+      "after_physics": 5120,
+      "reason": "North-entry facade: two dry north portal/canopy leaves, actual solid body and sea eaves"
+    },
+    {
+      "x": 23,
+      "y": 56,
+      "before_word": 4464,
+      "before_physics": 4096,
+      "after_physics": 5120,
+      "reason": "North-entry facade: two dry north portal/canopy leaves, actual solid body and sea eaves"
+    },
+    {
+      "x": 24,
+      "y": 56,
+      "before_word": 4464,
+      "before_physics": 4096,
+      "after_physics": 5120,
+      "reason": "North-entry facade: two dry north portal/canopy leaves, actual solid body and sea eaves"
+    },
+    {
+      "x": 25,
+      "y": 56,
+      "before_word": 4464,
+      "before_physics": 4096,
+      "after_physics": 5120,
+      "reason": "North-entry facade: two dry north portal/canopy leaves, actual solid body and sea eaves"
+    },
+    {
+      "x": 26,
+      "y": 56,
+      "before_word": 4464,
+      "before_physics": 4096,
+      "after_physics": 5120,
+      "reason": "North-entry facade: two dry north portal/canopy leaves, actual solid body and sea eaves"
+    },
+    {
+      "x": 27,
+      "y": 56,
+      "before_word": 4464,
+      "before_physics": 4096,
+      "after_physics": 5120,
+      "reason": "North-entry facade: two dry north portal/canopy leaves, actual solid body and sea eaves"
+    }
+  ],
+  "review": "Exact independently reviewed migration from south-entry U-turn into source-facing northern terminal. Every other physical/elevation cell remains immutable; positive facade, portal, water, sign and dry-return assertions supplement this mask. This is not visual acceptance."
+}

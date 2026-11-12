@@ -1,0 +1,218 @@
+{
+  "source_failure_checkpoint": "df8c4598d88c7770626be4621a5f39cf60dadb95",
+  "method": "Native immediate post-spawn turnobject on normal warp and field return, restricted to25 reviewed landing coordinates in6 maps.",
+  "changes_to_tiles_collision_warps_ids_save_flags": false,
+  "continue_behavior": "Normal Continue uses ReturnToFieldLocal and InitObjectEventsReturnToField, not OnWarp. The direct OnReturn hook runs after objects spawn and normalizes only the25 portal coordinates, including after menu/battle returns. Other coordinates and persistent data are untouched.",
+  "maps": [
+    {
+      "map": "EcruteakCity",
+      "callbacks": [
+        "MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE",
+        "MAP_SCRIPT_ON_RETURN_TO_FIELD"
+      ],
+      "coordinate_scratch": [
+        "VAR_0x8004",
+        "VAR_0x8005"
+      ],
+      "table_condition": "VAR_TEMP_0 equals itself; read only",
+      "landings": [
+        {
+          "x": 7,
+          "y": 37,
+          "facing": "DIR_EAST"
+        },
+        {
+          "x": 7,
+          "y": 38,
+          "facing": "DIR_EAST"
+        },
+        {
+          "x": 7,
+          "y": 39,
+          "facing": "DIR_EAST"
+        },
+        {
+          "x": 59,
+          "y": 46,
+          "facing": "DIR_WEST"
+        },
+        {
+          "x": 59,
+          "y": 47,
+          "facing": "DIR_WEST"
+        },
+        {
+          "x": 59,
+          "y": 48,
+          "facing": "DIR_WEST"
+        }
+      ]
+    },
+    {
+      "map": "JohtoRoute38",
+      "callbacks": [
+        "MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE",
+        "MAP_SCRIPT_ON_RETURN_TO_FIELD"
+      ],
+      "coordinate_scratch": [
+        "VAR_0x8004",
+        "VAR_0x8005"
+      ],
+      "table_condition": "VAR_TEMP_0 equals itself; read only",
+      "landings": [
+        {
+          "x": 62,
+          "y": 12,
+          "facing": "DIR_WEST"
+        },
+        {
+          "x": 62,
+          "y": 13,
+          "facing": "DIR_WEST"
+        },
+        {
+          "x": 62,
+          "y": 14,
+          "facing": "DIR_WEST"
+        }
+      ]
+    },
+    {
+      "map": "JohtoRoute42",
+      "callbacks": [
+        "MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE",
+        "MAP_SCRIPT_ON_RETURN_TO_FIELD"
+      ],
+      "coordinate_scratch": [
+        "VAR_0x8004",
+        "VAR_0x8005"
+      ],
+      "table_condition": "VAR_TEMP_0 equals itself; read only",
+      "landings": [
+        {
+          "x": 3,
+          "y": 13,
+          "facing": "DIR_EAST"
+        },
+        {
+          "x": 3,
+          "y": 14,
+          "facing": "DIR_EAST"
+        },
+        {
+          "x": 3,
+          "y": 15,
+          "facing": "DIR_EAST"
+        }
+      ]
+    },
+    {
+      "map": "EcruteakCity_WestGate",
+      "callbacks": [
+        "MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE",
+        "MAP_SCRIPT_ON_RETURN_TO_FIELD"
+      ],
+      "coordinate_scratch": [
+        "VAR_0x8004",
+        "VAR_0x8005"
+      ],
+      "table_condition": "VAR_TEMP_0 equals itself; read only",
+      "landings": [
+        {
+          "x": 1,
+          "y": 6,
+          "facing": "DIR_EAST"
+        },
+        {
+          "x": 1,
+          "y": 7,
+          "facing": "DIR_EAST"
+        },
+        {
+          "x": 1,
+          "y": 8,
+          "facing": "DIR_EAST"
+        },
+        {
+          "x": 10,
+          "y": 6,
+          "facing": "DIR_WEST"
+        },
+        {
+          "x": 10,
+          "y": 7,
+          "facing": "DIR_WEST"
+        },
+        {
+          "x": 10,
+          "y": 8,
+          "facing": "DIR_WEST"
+        }
+      ]
+    },
+    {
+      "map": "EcruteakCity_EastGate",
+      "callbacks": [
+        "MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE",
+        "MAP_SCRIPT_ON_RETURN_TO_FIELD"
+      ],
+      "coordinate_scratch": [
+        "VAR_0x8004",
+        "VAR_0x8005"
+      ],
+      "table_condition": "VAR_TEMP_0 equals itself; read only",
+      "landings": [
+        {
+          "x": 1,
+          "y": 6,
+          "facing": "DIR_EAST"
+        },
+        {
+          "x": 1,
+          "y": 7,
+          "facing": "DIR_EAST"
+        },
+        {
+          "x": 1,
+          "y": 8,
+          "facing": "DIR_EAST"
+        },
+        {
+          "x": 10,
+          "y": 6,
+          "facing": "DIR_WEST"
+        },
+        {
+          "x": 10,
+          "y": 7,
+          "facing": "DIR_WEST"
+        },
+        {
+          "x": 10,
+          "y": 8,
+          "facing": "DIR_WEST"
+        }
+      ]
+    },
+    {
+      "map": "EcruteakCity_BarrierCorridor",
+      "callbacks": [
+        "MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE",
+        "MAP_SCRIPT_ON_RETURN_TO_FIELD"
+      ],
+      "coordinate_scratch": [
+        "VAR_0x8004",
+        "VAR_0x8005"
+      ],
+      "table_condition": "VAR_TEMP_0 equals itself; read only",
+      "landings": [
+        {
+          "x": 6,
+          "y": 3,
+          "facing": "DIR_SOUTH"
+        }
+      ]
+    }
+  ],
+  "runtime_qa": "PENDING actual repaired build"
+}

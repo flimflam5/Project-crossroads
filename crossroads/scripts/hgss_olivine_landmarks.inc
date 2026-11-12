@@ -40,7 +40,7 @@ Hgss_OlivinePortDesk::
     msgbox Hgss_OlivinePortDeskText, MSGBOX_NPC
     end
 Hgss_OlivinePortDeskText:
-    .string "The quays are open to visitors.\nThe HARBOR OFFICE handles travel.$"
+    .string "The S.S. AQUA is alongside.\nThe gangway is open to visitors.\pNo departure is scheduled.\nLocal travel: HARBOR OFFICE.$"
 Hgss_OlivinePortVisitor::
     msgbox Hgss_OlivinePortVisitorText, MSGBOX_NPC
     end
@@ -50,4 +50,4 @@ Hgss_OlivineShipBoundary::
     msgbox Hgss_OlivineShipBoundaryText, MSGBOX_SIGN
     end
 Hgss_OlivineShipBoundaryText:
-    .string "S.S. AQUA BOARDING\nPassenger sailings are not operating.$"
+    .string "S.S. AQUA - GANGWAY\nBoard here. Return by this pier.\pNo departure is scheduled.$"

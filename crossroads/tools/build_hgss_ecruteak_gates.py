@@ -8,6 +8,7 @@ seven-tile scrolling buffer. Native warp indices/coordinates remain inspectable.
 import argparse,json,struct,copy
 from pathlib import Path
 from hgss_room_projection import project,ART,FACTS
+from build_qa10_arrival_facing import render as arrival_facing_scripts
 R=Path(__file__).resolve().parents[2]
 def load(p):return json.loads((R/p).read_text())
 def generate(check=False):
@@ -95,7 +96,7 @@ def generate(check=False):
   js(f'data/maps/{name}/map.json',m);js(f'data/maps/JohtoRoute{number}/map.json',route);write(l['blockdata_filepath'],struct.pack('<'+str(w*h)+'H',*t));write(l['border_filepath'],struct.pack('<4H',*([0x600]*4)))
   if name not in groups['gMapGroup_CrossroadsJohtoExpansion']:groups['gMapGroup_CrossroadsJohtoExpansion'].append(name)
   if not any(p['name']==name for p in manifest['planned']):manifest['planned'].append(dict(name=name,kind='hgss',parent='EcruteakCity',cluster='west',status='reference-runtime-review-pending'))
-  write(f'data/maps/{name}/scripts.inc',name+'_MapScripts::\n    .byte 0\n');line=f'\t.include "data/maps/{name}/scripts.inc"'
+  write(f'data/maps/{name}/scripts.inc',arrival_facing_scripts(name,name+'_MapScripts::\n    .byte 0\n'));line=f'\t.include "data/maps/{name}/scripts.inc"'
   if line not in inc:inc+='\n'+line+'\n'
   records.append(dict(name=name,source_header=header,source=FACTS[header]['source'],dimensions=[w,h],city_alias_indices=list(range(endpoints['city_entry']-1,endpoints['city_entry']+2)),city_arrival_indices=list(range(endpoints['city']-1,endpoints['city']+2)),route=f'JohtoRoute{number}',route_alias_indices=list(range(endpoints['route_entry']-1,endpoints['route_entry']+2)),route_arrival_indices=list(range(endpoints['route']-1,endpoints['route']+2)),adaptations=['GBA flat gatehouse/pillars instead of DS models','All three aisle rows work; source west entrance x6 retained','Visible native roof/front-wall models and shared resources across the east seam','Explicit return-only anchors put Joe on public ground outside each model'],visual_qa='pending',runtime_qa='pending'))
  js('data/maps/EcruteakCity/map.json',city);js('data/layouts/layouts.json',layouts);js('data/maps/map_groups.json',groups);js('crossroads/johto/manifest.json',manifest);js('crossroads/hgss/gate-review.json',records);write('crossroads/scripts/hgss_gates.inc','@ Reference gatehouses; no story/save flags.\n'+'\n'.join(scripts))

@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/workspace/Project-crossroads/crossroads/tools/olivine_port_save_migration_smoke.py", line 58, in <module>
+    assert not tile&0xc00 and tile>>12==3 and not avatar&8,(label,'Not a safe walking arrival',arrival,hex(tile),avatar)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('actual-old-surf-city23-55', 'Not a safe walking arrival', (23, 51), '0x327f', 40)

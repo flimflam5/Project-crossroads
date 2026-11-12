@@ -1,0 +1,113 @@
+{
+  "rom_sha256": "ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b",
+  "source_revision": "cc643ffe711204f3ef38e34e7aa1eb8c9558720f",
+  "old_rom_sha256": "4fb28fe64fc44c0546462a935655346a61f13b644bc3040468146d136cd6d656",
+  "method": "Seven genuinely reached/native-saved B4 batteries, fresh-core normal Continue on candidate. No memory writes, snapshots, coordinate changes or survey toggles in check mode. Six intended facing corrections; one untouched offlanding control. Exact position and save payload asserted.",
+  "records": [
+    {
+      "label": "city-west-landing",
+      "actual_map": "EcruteakCity",
+      "actual_position": [
+        7,
+        39
+      ],
+      "old_facing": 1,
+      "actual_new_facing": 4,
+      "expected_new_facing": 4,
+      "offlanding_control": false,
+      "exact_party_boxes_starter_flags_decoded_inventory": true,
+      "source_battery_unchanged": true,
+      "result": "PASS"
+    },
+    {
+      "label": "route38-landing",
+      "actual_map": "JohtoRoute38",
+      "actual_position": [
+        62,
+        14
+      ],
+      "old_facing": 1,
+      "actual_new_facing": 3,
+      "expected_new_facing": 3,
+      "offlanding_control": false,
+      "exact_party_boxes_starter_flags_decoded_inventory": true,
+      "source_battery_unchanged": true,
+      "result": "PASS"
+    },
+    {
+      "label": "route42-landing",
+      "actual_map": "JohtoRoute42",
+      "actual_position": [
+        3,
+        15
+      ],
+      "old_facing": 1,
+      "actual_new_facing": 4,
+      "expected_new_facing": 4,
+      "offlanding_control": false,
+      "exact_party_boxes_starter_flags_decoded_inventory": true,
+      "source_battery_unchanged": true,
+      "result": "PASS"
+    },
+    {
+      "label": "westgate-landing",
+      "actual_map": "EcruteakCity_WestGate",
+      "actual_position": [
+        1,
+        7
+      ],
+      "old_facing": 1,
+      "actual_new_facing": 4,
+      "expected_new_facing": 4,
+      "offlanding_control": false,
+      "exact_party_boxes_starter_flags_decoded_inventory": true,
+      "source_battery_unchanged": true,
+      "result": "PASS"
+    },
+    {
+      "label": "eastgate-landing",
+      "actual_map": "EcruteakCity_EastGate",
+      "actual_position": [
+        10,
+        7
+      ],
+      "old_facing": 1,
+      "actual_new_facing": 3,
+      "expected_new_facing": 3,
+      "offlanding_control": false,
+      "exact_party_boxes_starter_flags_decoded_inventory": true,
+      "source_battery_unchanged": true,
+      "result": "PASS"
+    },
+    {
+      "label": "corridor-landing",
+      "actual_map": "EcruteakCity_BarrierCorridor",
+      "actual_position": [
+        6,
+        3
+      ],
+      "old_facing": 2,
+      "actual_new_facing": 1,
+      "expected_new_facing": 1,
+      "offlanding_control": false,
+      "exact_party_boxes_starter_flags_decoded_inventory": true,
+      "source_battery_unchanged": true,
+      "result": "PASS"
+    },
+    {
+      "label": "offlanding-control",
+      "actual_map": "EcruteakCity",
+      "actual_position": [
+        32,
+        43
+      ],
+      "old_facing": 1,
+      "actual_new_facing": 1,
+      "expected_new_facing": 1,
+      "offlanding_control": true,
+      "exact_party_boxes_starter_flags_decoded_inventory": true,
+      "source_battery_unchanged": true,
+      "result": "PASS"
+    }
+  ]
+}

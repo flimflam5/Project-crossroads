@@ -12,7 +12,7 @@ for name,body in re.findall(r'const struct Tileset (gTileset_\w+)\s*=\s*\{([^}]+
  if m and m[1] in files:
   b=(R/files[m[1]]).read_bytes();attrs[name]=struct.unpack('<'+str(len(b)//2)+'H',b)
 groups=load('data/maps/map_groups.json');names=groups['gMapGroup_CrossroadsOlivine']+groups['gMapGroup_CrossroadsJohtoExpansion'];maps={n:load(f'data/maps/{n}/map.json') for n in names};ids={m['id']:n for n,m in maps.items()};count=0
-manifest='crossroads/hgss/doorways-qa09.json' if (R/'crossroads/hgss/authoring/OlivineCity.json').exists() else 'crossroads/hgss/doorways-qa08.json'
+manifest='crossroads/hgss/doorways-qa10.json' if (R/'crossroads/hgss/doorways-qa10.json').exists() else 'crossroads/hgss/doorways-qa09.json' if (R/'crossroads/hgss/authoring/OlivineCity.json').exists() else 'crossroads/hgss/doorways-qa08.json'
 for group in load(manifest)['groups']:
  for side in ['outside','inside']:
   src=group[side];n=src['map'];m=maps[n];other=group['inside' if side=='outside' else 'outside']['map'];l=ls[m['layout']];w,h=l['width'],l['height'];raw=struct.unpack('<'+str(w*h)+'H',(R/l['blockdata_filepath']).read_bytes())

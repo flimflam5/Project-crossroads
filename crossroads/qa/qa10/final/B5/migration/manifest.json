@@ -1,0 +1,86 @@
+[
+  {
+    "file": "README.md",
+    "sha256": "2c3afc842bf149f44c00e8d0d8c94ac60268d5a6cc2acd0c84734728b3bc89c4"
+  },
+  {
+    "file": "actual-old-surf-city23-55-candidate-arrival-before-safety-assert.png",
+    "sha256": "d0a04fc11dd704ea2502f94066aa1b6fbfc20a10274c26b9e826075be68f2196"
+  },
+  {
+    "file": "actual-old-surf-city23-55-candidate-arrival.json",
+    "sha256": "6518edd45f79ebb1d594ea23820e3f8e737081c804e59bcc0f44274508b699b9"
+  },
+  {
+    "file": "actual-old-surf-city23-55-migrated-arrival.png",
+    "sha256": "d0a04fc11dd704ea2502f94066aa1b6fbfc20a10274c26b9e826075be68f2196"
+  },
+  {
+    "file": "actual-old-surf-city23-55-new-cold-continue.png",
+    "sha256": "a088683bccdc91c3978cbbc2b0a5355f3c5d545e9878441c7786842b509c2994"
+  },
+  {
+    "file": "actual-old-surf-city23-55-walk-away.png",
+    "sha256": "95c444d62c7d6c3442c40b90e0164d820570da06ce4c2f47099f56f3824e8c1b"
+  },
+  {
+    "file": "actual-old-walking-city23-53-candidate-arrival-before-safety-assert.png",
+    "sha256": "ca376c07727a6003ace8afe826dbe2768208fef7e05c65f75e513a985b315e91"
+  },
+  {
+    "file": "actual-old-walking-city23-53-candidate-arrival.json",
+    "sha256": "933e4ce4dc5af5117da99b52d1b5423c6345b7b04260a3d43080b0d6c6d62795"
+  },
+  {
+    "file": "actual-old-walking-city23-53-migrated-arrival.png",
+    "sha256": "ca376c07727a6003ace8afe826dbe2768208fef7e05c65f75e513a985b315e91"
+  },
+  {
+    "file": "actual-old-walking-city23-53-new-cold-continue.png",
+    "sha256": "a088683bccdc91c3978cbbc2b0a5355f3c5d545e9878441c7786842b509c2994"
+  },
+  {
+    "file": "actual-old-walking-city23-53-walk-away.png",
+    "sha256": "a9272af76f295eda0b11a26b1fa0e6dfa5e2c0ed1cb439acc33d46a60ee2a121"
+  },
+  {
+    "file": "portal-23-actual-exit-full-Joe.png",
+    "sha256": "8c4765690e9c0b7e2d6cd4fe6e546cafffda7f2833b99963fa3a00c96d922354"
+  },
+  {
+    "file": "portal-23-landing-full-Joe.png",
+    "sha256": "69aa276d0cc0f6a3f17501ea31b03443c1eccd89ca3257b63da35fd3a1bcda16"
+  },
+  {
+    "file": "portal-23-north-approach-full-Joe.png",
+    "sha256": "cd24d24f153e2be674eb3d8dbdcffcad1d65639ddf972bf81c807bea9aa80fe4"
+  },
+  {
+    "file": "portal-24-actual-exit-full-Joe.png",
+    "sha256": "da4b2912de7fb5ce18e7e1c4343e2b4335779827b400932b963cc1c531c1214a"
+  },
+  {
+    "file": "portal-24-landing-full-Joe.png",
+    "sha256": "98b219169c2cbadd43778b0cb3014b5f3ecba30f862a0ef4183dfd70d825e660"
+  },
+  {
+    "file": "portal-24-north-approach-full-Joe.png",
+    "sha256": "bc6d8e5f2bec30ccccd7289374e54d192e63861fceae2ace2d1ea87f7a716a6c"
+  },
+  {
+    "file": "portal-both-leaves-normal-approach-exit.mp4",
+    "sha256": "409f66aab6c78920c833f11408c239c856201e065c32543d4510f22b5c16dce0"
+  },
+  {
+    "file": "results.json",
+    "sha256": "cd039c9c8b9e57ed64f27a88cb988e373b3bf82a95779c2395e01ba6eddd001d"
+  },
+  {
+    "file": "valid-old-surf-water-arrival.png",
+    "sha256": "4fcacb5458976e0d4fa3f1689a3a61ade0624a96f67ab9aa1aecf389e504e42a"
+  },
+  {
+    "file": "valid-old-surf-water-new-continue.png",
+    "sha256": "b2650a54b23f4141afda6a999570679e1f4d52baee3588f7fb8094cc5b0ab87f"
+  }
+]

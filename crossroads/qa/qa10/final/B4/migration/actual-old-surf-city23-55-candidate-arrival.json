@@ -1,0 +1,11 @@
+{
+  "label": "actual-old-surf-city23-55",
+  "rom_sha256": "4fb28fe64fc44c0546462a935655346a61f13b644bc3040468146d136cd6d656",
+  "arrival": [
+    23,
+    51
+  ],
+  "tile": "0x327f",
+  "avatar_flags": 33,
+  "expected_safety": "Must be dry, unblocked, outside active doors/actors and naturally walking; test writes no avatar/position/map state"
+}
