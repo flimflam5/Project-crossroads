@@ -306,7 +306,11 @@ def main():
    extra=''
    if 'PokemonCenter_1F' in n:
     parent=n.rsplit('_PokemonCenter_1F',1)[0];lab=script(parent+'_CenterOnTransition');extra=f'    map_script MAP_SCRIPT_ON_TRANSITION, {lab}\n    map_script MAP_SCRIPT_ON_RESUME, CableClub_OnResume\n';scripts.append(f'{lab}::\n    setrespawn HEAL_LOCATION_{sym(parent)}\n    end\n')
-   write(f'data/maps/{n}/scripts.inc',f'{n}_MapScripts::\n'+extra+'    .byte 0\n')
+   script_data=f'{n}_MapScripts::\n'+extra+'    .byte 0\n'
+   if n in ('JohtoRoute38','JohtoRoute42'):
+    from build_qa10_arrival_facing import render as arrival_facing_scripts
+    script_data=arrival_facing_scripts(n,script_data)
+   write(f'data/maps/{n}/scripts.inc',script_data)
   # Reused Center/Mart layouts stay byte-for-byte unchanged.
   if n not in existing and meta[n]['kind']=='service':continue
   path=bylayout[m['layout']]['blockdata_filepath']

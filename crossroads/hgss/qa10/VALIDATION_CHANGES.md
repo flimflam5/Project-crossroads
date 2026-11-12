@@ -237,3 +237,14 @@ CRLF worktree `.pal` bytes and rejected identical colors. It now compares every
 header/color line with line-ending normalization, keeping all values exact.
 B4 source/built assertions pass, including all28 positive cyan cells and the
 other-six-map/old-used-alias/glyph/full-attribute/palette invariants.
+
+
+## Route42 writer order during B5 verification
+
+The first68-command B5 ledger caught one remaining generator defect: the new-route
+script branch compared its bare Route42 header before the later arrival-facing
+postprocessor. The writer now renders the scoped native callbacks before that
+comparison; the existing-route final pass remains idempotent. The exact original
+`build_johto_network.py --through west --check` recheck passed with the B5 ROM
+unchanged. No assertion or generated game input was removed or relaxed. The
+initial failure and successful recheck are both retained in the final ledger.
