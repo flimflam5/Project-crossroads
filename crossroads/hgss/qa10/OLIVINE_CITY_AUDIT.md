@@ -183,3 +183,29 @@ old dry apron24,54 is positively required to be solid new terminal body. Actual
 disembark/return now uses the north pier24,50. Real desk OFF/ON/OFF separates
 ordinary dry movement from water testing. Source syntax checks pass; actual
 normal-controller execution waits for root's frozen delivery ROM.
+
+
+## B3 runtime checkpoint — functional passes and visual finding
+
+On exact ROM `af59dff1b06b99a9599c6f98b6fb6bd1e765cc52c0838a2dec5c79a6c1f88373`,
+all six city phases completed: eight-map lighthouse all-edge tour;199 normal dry
+building/tree bumps and24 actual-Surf terminal-body bumps with all four sides;
+full192/192 composed Joe pixels at both exact portals and both north landings;
+59 materials cases; six real counters;12 lighthouse normal Save/cold Continue
+cases and five special journeys;39 court cells with full Joe visibility, four
+exact directory-message approaches and a normal Save/cold Continue. Original
+and copied batteries remained unchanged. These are scripted normal-controller
+mGBA checks, not the owner's Delta visual acceptance.
+
+One independent visual review found a genuine6F reference-art mismatch despite
+those functional passes:26 inner optical-enclosure U-core cells used the outer
+window/glass motif. Actual HGSS puts cyan machinery/enclosure there. The geometry
+and collisions are correct; an art-only distinction is required. The final
+correction scope is28 cells:26 glass-motif cells plus two missing/void enclosure
+segments identified by the reference audit. All eight tour
+and ten centered frames were inspected against the actual individual floor
+references. Other floors' recognized features and flat GBA adaptations are
+recorded, but6F is explicitly not reference-matched on B3. The actual diagnostic
+frame is `qa/qa10/before/lighthouse-6F-b3-inner-glass.png` with separate identity.
+B3 does not certify a future corrected binary; final checks must record its
+own checksum. My emulator lane has ended so root can coordinate a later build.

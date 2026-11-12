@@ -38,7 +38,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Fetch immutable visual and player enum baselines
-        run: git fetch --no-tags --depth=1 origin 9cd6a73717c1bfd124967b7e485740aa5b25d651 690485c9971965af7d1a9134d1ba81f148b880b2 d3ab461912c51270b84d2eb8d9d7b3ee7a255717 fd151242458efe5759b18650f35a5e5b2fa47e45 3f935d5e8600c5a280b9172b555edb35ca52b6c0 5664fecee4337c5bdd442583e24cc91c09c0a0cd 7d92f79357b744dddb706bba121d7bd5e6fc4254 285cfa4ebddcb390a8a5bde6116748cbb5eaba6b
+        run: git fetch --no-tags --depth=1 origin 9cd6a73717c1bfd124967b7e485740aa5b25d651 690485c9971965af7d1a9134d1ba81f148b880b2 d3ab461912c51270b84d2eb8d9d7b3ee7a255717 fd151242458efe5759b18650f35a5e5b2fa47e45 3f935d5e8600c5a280b9172b555edb35ca52b6c0 5664fecee4337c5bdd442583e24cc91c09c0a0cd 7d92f79357b744dddb706bba121d7bd5e6fc4254 285cfa4ebddcb390a8a5bde6116748cbb5eaba6b e7e2c085a5a61ef727d06f9f682af7d3a954cc06
 
       - name: Install binutils
         run: |

@@ -263,5 +263,13 @@
       ]
     }
   },
-  "implementation_and_test_state": "Private helper source prepared and isolated static renders inspected; root central generation/build/final native emulator validation tracked separately."
+  "implementation_and_test_state": "Private helper source prepared and isolated static renders inspected; root central generation/build/final native emulator validation tracked separately.",
+  "b3_native_review_finding": {
+    "source": "e7e2c085a5a61ef727d06f9f682af7d3a954cc06",
+    "rom_sha256": "af59dff1b06b99a9599c6f98b6fb6bd1e765cc52c0838a2dec5c79a6c1f88373",
+    "status": "Actual native6F reference mismatch identified; B3 is not claimed reference matched.",
+    "defect": "26 inner optical-body cells used outer diagonal window glass; two model-corner cells stayed black.",
+    "correction_contract": "lighthouse-inner-core-b4-contract.json",
+    "b4_state": "Helper source/isolated static preview prepared; central generation/build/runtime pending."
+  }
 }

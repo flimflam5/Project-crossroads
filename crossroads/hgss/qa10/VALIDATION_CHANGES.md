@@ -213,3 +213,27 @@ unchanged. Both generator checks were re-executed and passed. The final effectiv
 66-command ledger retains the original failure and the exact replacement check
 results rather than deleting the diagnostic history. This fix changes preview
 ownership/checking only and requires no new gameplay claim.
+
+
+## Actual6F material failure: stronger independent B4 check
+
+The B3 positive cyan probe sampled only the original small northern cap. Actual
+native/reference review exposed26 inner wall cells still using the outer glass
+texture and two source-model corners left black. The stronger validator uses a
+literal28-coordinate mask independent of the writer, compares immutable B3 game
+commit e7e2c085a5, and requires exactly those art-ID changes. Other six map words,
+physical bits and full attributes remain exact; all previously used private
+metatile drawings remain unchanged. Every corrected cell needs a substantial
+actual cyan body and must contain no outer-window reflection color.
+
+It was run against the known-bad frozen B3 assets and correctly failed with the
+named missing28-cell correction; `/tmp/qa10-b3-inner-core-negative-control.log`
+retains the negative-control result. B4 positive/built checks are pending central
+generation. CI explicitly fetches the immutable e7 source baseline. This adds
+coverage after a real visual defect; it does not relax old physics/resource checks.
+
+The first B4 palette-preservation probe compared Git's LF-normalized blob with
+CRLF worktree `.pal` bytes and rejected identical colors. It now compares every
+header/color line with line-ending normalization, keeping all values exact.
+B4 source/built assertions pass, including all28 positive cyan cells and the
+other-six-map/old-used-alias/glyph/full-attribute/palette invariants.

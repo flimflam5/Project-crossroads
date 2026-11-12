@@ -9,7 +9,7 @@ compatibility fixture and never changes the input battery.
 The shared harness discloses its RAM-only encounter/Survey fixture. Compile and
 connectivity checks remain separate from this gameplay and from owner visual QA.
 """
-import argparse,hashlib,json,runpy,struct,subprocess,sys
+import argparse,hashlib,json,runpy,struct,subprocess,sys,re,shutil
 from collections import deque
 from pathlib import Path
 from PIL import Image
@@ -23,7 +23,8 @@ factpath=R/'crossroads/hgss/qa10/ss-aqua-geometry.json';assert sha(factpath.read
 from validate_ss_aqua import MODEL_BODIES,OPEN_CLEARANCES
 model_bodies={n:{(x+dx,y+dy)for x,y,w,h,reason in bodies for dx in range(w)for dy in range(h)}for n,bodies in MODEL_BODIES.items()}
 headers={'SSAqua_1F':'MAP_SS_AQUA_1F','SSAqua_CaptainRoom':'MAP_SS_AQUA_CAPTAIN_ROOM','SSAqua_SoutheastCabins':'MAP_SS_AQUA_1F_SOUTHEAST_ROOMS','SSAqua_SouthwestCabins':'MAP_SS_AQUA_1F_SOUTHWEST_ROOMS','SSAqua_NortheastCabins':'MAP_SS_AQUA_1F_NORTHEAST_ROOMS','SSAqua_NorthwestCabins':'MAP_SS_AQUA_1F_NORTHWEST_ROOMS','SSAqua_B1F':'MAP_SS_AQUA_B1F'}
-sys.argv=['johto_network_smoke.py','--save',str(a.save),'--library',a.library,'--output',str(out),'--targets',''];d=runpy.run_path(str(Path(__file__).with_name('johto_network_smoke.py')));go,walk,read,frames,key,current,pos,close,lib,syms,sb=[d[n]for n in ['go','walk','read','frames','key','current','pos','close','lib','syms','sb']];assert all(n in d['maps']for n in headers)
+trial_save=out/'input-copy.sav';assert a.save.resolve()!=trial_save.resolve();shutil.copyfile(a.save,trial_save)
+sys.argv=['johto_network_smoke.py','--save',str(trial_save),'--library',a.library,'--output',str(out),'--targets',''];d=runpy.run_path(str(Path(__file__).with_name('johto_network_smoke.py')));go,walk,read,frames,key,current,pos,close,lib,syms,sb=[d[n]for n in ['go','walk','read','frames','key','current','pos','close','lib','syms','sb']];assert all(n in d['maps']for n in headers)
 walk.__globals__['dry_only']=True;d['route_cache'].clear();records=[];native=[]
 def memory(addr,n):return bytes(read(addr+i,1)for i in range(n))
 def party_integrity(data):
@@ -101,18 +102,31 @@ def record_clip(label,fn):
  finally:g['frames']=old;globals()['frames']=local
  subprocess.run(['ffmpeg','-y','-loglevel','error','-framerate','15','-i',str(folder/'%04d.png'),'-pix_fmt','yuv420p',str(out/(label+'.mp4'))],check=True)
 
+def yes_no_task():
+ return [i for i in range(16)if read(syms['gTasks']+i*40)==syms['Task_HandleYesNoInput']|1 and read(syms['gTasks']+i*40+4,1)]
+# Several C files have private sMenu symbols. Resolve the actual menu.c pointer
+# from the public cursor getter's literal, rather than guessing the last name.
+cursor_disassembly=subprocess.check_output(['arm-none-eabi-objdump','-d','--disassemble=Menu_GetCursorPos',str(R/'pokeemerald.elf')],text=True);cursor_pointers=re.findall(r'\.word\s+(0x02[0-9a-fA-F]{6})',cursor_disassembly);assert len(cursor_pointers)==1,cursor_disassembly;menu_address=int(cursor_pointers[0],16)
+def yes_no_cursor():return read(menu_address+2,1)
 def berth_rest(point,button,label):
- # This health-only service fixture follows existing Olivine heal tests. It is
- # separate from the strict migration test, which binds no emu_write at all.
  payload=preserved();snapshot=out/(label+'-health-fixture.snapshot');assert lib.emu_state(str(snapshot).encode(),0);party=read('gPlayerPartyPtr');count=read(read('gPlayerPartyCountPtr'),1)
  assert count>0;d['write'](party+86,1,2);d['write'](party+80,8,4)
  def open_prompt():
-  frames(1,button);frames(20);key(1);frames(160);assert read('sLockFieldControls',1),(label,'Berth did not offer rest')
- open_prompt();image(label+'-decline-prompt');key(128);key(1);frames(180);close();assert read(party+86,2)==1 and read(party+80)==8,(label,'Declining rest altered health');assert pos()==point
- open_prompt();key(1);frames(600);close()
+  frames(1,button);frames(20);key(1)
+  for _ in range(30):
+   frames(12)
+   if yes_no_task():break
+   # Advance/finish text ONLY while no actual choice task exists. A task born
+   # during this one-frame press has its native five-frame input guard.
+   key(1)
+  else:raise AssertionError((label,'Actual native Yes/No task never appeared'))
+  frames(8);assert yes_no_task()and yes_no_cursor()==0,(label,'Native prompt is not active at default YES',yes_no_task(),yes_no_cursor())
+ open_prompt();image(label+'-decline-prompt');key(128);frames(8);assert yes_no_task()and yes_no_cursor()==1,(label,'NO cursor was not selected',yes_no_cursor());image(label+'-actual-NO-cursor');key(1);frames(180)
+ assert not yes_no_task()and not read('sLockFieldControls',1)and read('gSpecialVar_Result',2)==0,(label,'Native NO did not finish decline');assert read(party+86,2)==1 and read(party+80)==8,(label,'Declining rest altered health');assert pos()==point
+ open_prompt();assert yes_no_cursor()==0;image(label+'-actual-YES-cursor');key(1);frames(600);close()
  assert all(read(party+i*100+86,2)==read(party+i*100+88,2)>0 and read(party+i*100+80)==0 for i in range(count)),(label,'Accepted berth failed to heal actual party')
  assert current()=='SSAqua_SoutheastCabins' and pos()==point and not read('sLockFieldControls',1);image(label+'-rested');assert lib.emu_state(str(snapshot).encode(),1);assert preserved()==payload,(label,'Health fixture isolation did not restore exact payload')
- records.append(dict(case='berth-rest',label=label,map=current(),position=list(point),fixture='Private first-mon1HP/poison only, isolated by exact-ROM snapshot; no identity/item/coordinate/story writes',decline_preserves_low_hp_and_poison=True,accept_all_party_full_hp_and_status_cured=True,source_battery_unchanged=True,result='PASS'));save_report()
+ records.append(dict(case='berth-rest',label=label,map=current(),position=list(point),fixture='Private first-mon1HP/poison only, isolated by exact-ROM snapshot; no identity/item/coordinate/story writes',actual_native_task='Task_HandleYesNoInput',actual_menu_pointer=hex(menu_address),NO_cursor_verified=1,YES_cursor_verified=0,decline_preserves_low_hp_and_poison=True,accept_all_party_full_hp_and_status_cured=True,source_battery_unchanged=True,result='PASS'));save_report()
 
 def interact(event,label,index=None):
  n=current();x,y=event['x'],event['y'];candidate=None
@@ -134,6 +148,10 @@ def interact(event,label,index=None):
   assert len(active)==1 and read('gSpecialVar_LastTalked',2)==active[0],(n,label,'Wrong actual NPC received A',active,read('gSpecialVar_LastTalked',2))
  image(label);close();assert current()==n and pos()==point and not read('sLockFieldControls',1);assert preserved()==payload,('New ambient interaction altered story/party data',n,label);records.append(dict(case='interaction',map=n,label=label,target=[x,y],approach=list(point),actual_npc_local_id=active[0]if index is not None else None,result='PASS'));save_report()
 
+def contextual_view(name,near,label):
+ cells=component(name);options=[point for point in cells if point not in d['active_warps'](name)and d['path'](name,point)is not None];assert options,(name,'No public contextual viewpoint',near)
+ point=min(options,key=lambda v:abs(v[0]-near[0])+abs(v[1]-near[1]));walk(point);image(label);records.append(dict(case='contextual-native-view',map=name,reference_area=label,requested_near=list(near),actual_position=list(pos()),result='Captured actual native context; visual acceptance separate'));save_report()
+
 seen_components={n:[]for n in headers};bumps=0
 for n in headers:
  for entry in range(len(d['maps'][n]['warp_events'])):
@@ -143,7 +161,12 @@ for n in headers:
   # room. Only compare non-threshold floors; no paired cabin is silently skipped.
   core=cells-d['active_warps'](n)
   if any(core==(old-d['active_warps'](n))for old in seen_components[n]):continue
-  seen_components[n].append(cells);part=len(seen_components[n]);eligible=[v for v in cells if v not in d['active_warps'](n)and all((v[0]+dx,v[1]+dy)in cells for dx,dy in [(1,0),(-1,0),(0,1),(0,-1)])];assert eligible,('No clear room context',n,entry)
+  seen_components[n].append(cells);part=len(seen_components[n]);
+  if n=='SSAqua_1F'and part==1:
+   contextual_view(n,(7,10),'SSAqua_1F-west-lounge-benches');contextual_view(n,(6,17),'SSAqua_1F-southern-settee-planter')
+  if n=='SSAqua_B1F':
+   contextual_view(n,(13,10),'SSAqua_B1F-six-crew-berths');contextual_view(n,(13,5),'SSAqua_B1F-crew-upper-berths');contextual_view(n,(32,12),'SSAqua_B1F-galley-table-seats');contextual_view(n,(32,5),'SSAqua_B1F-galley-kitchen');contextual_view(n,(45,15),'SSAqua_B1F-engine-safety-edge');contextual_view(n,(45,7),'SSAqua_B1F-engine-upper-equipment')
+  eligible=[v for v in cells if v not in d['active_warps'](n)and all((v[0]+dx,v[1]+dy)in cells for dx,dy in [(1,0),(-1,0),(0,1),(0,-1)])];assert eligible,('No clear room context',n,entry)
   point=min(eligible,key=lambda v:abs(v[0]-sum(x for x,y in cells)/len(cells))+abs(v[1]-sum(y for x,y in cells)/len(cells)));walk(point);frame=image(n+'-component-'+str(part));visibility=joe_visible(frame);records.append(dict(case='public-room-component',map=n,entry_warp=entry,component=part,position=list(pos()),floor_cells=len(core),joe_visibility=visibility,result='PASS'));save_report();normal_save_cold_continue(n+'-component-'+str(part));print('Room component',n,part,'PASS',len(core),'floor cells +Save/coldContinue',flush=True)
   if not a.skip_bumps:
    targets=[]

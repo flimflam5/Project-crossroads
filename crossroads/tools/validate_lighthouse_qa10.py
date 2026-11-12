@@ -67,6 +67,52 @@ def motif_assertions(name,layout,raw):
  return records
 
 
+# Literal mask reviewed against the full HGSS6F raster and actual B3 framebuffer.
+# Do not derive expected scope from the writer's delta report.
+B3 = "e7e2c085a5a61ef727d06f9f682af7d3a954cc06"
+INNER_CORE = {(6,7),(10,7),(5,8),(6,8),(10,8),(11,8),
+ (5,9),(6,9),(10,9),(11,9),(5,10),(6,10),(10,10),(11,10),
+ (5,11),(6,11),(10,11),(11,11),(5,12),(6,12),(7,12),(9,12),
+ (10,12),(11,12),(6,13),(7,13),(9,13),(10,13)}
+
+
+def verify_inner_core(layouts):
+ from validate_city_ground_layers import side
+ prior = lambda path: subprocess.check_output(['git','show',B3+':'+path],cwd=R)
+ changes=[];pool='data/tilesets/secondary/hgss_olivine_lighthouse/'
+ raw_refs=prior(pool+'metatiles.bin');old_refs=struct.unpack('<'+str(len(raw_refs)//2)+'H',raw_refs)
+ old_attrs=struct.unpack('<512H',prior(pool+'metatile_attributes.bin'))
+ current_refs=words(pool+'metatiles.bin');current_attrs=words(pool+'metatile_attributes.bin')
+ used=set()
+ for name in NAMES:
+  m=load(f'data/maps/{name}/map.json');l=layouts[m['layout']]
+  for field in ('blockdata_filepath','border_filepath'):
+   b=prior(l[field]);before=struct.unpack('<'+str(len(b)//2)+'H',b);now=words(l[field]);assert len(before)==len(now)
+   used.update(v&1023 for v in before if v&1023>=512)
+   different={(i%l['width'],i//l['width']) for i,(a,b)in enumerate(zip(before,now))if a!=b}
+   expected=INNER_CORE if name.endswith('_6F') and field=='blockdata_filepath' else set()
+   assert different==expected,('B4 exact inner-core art scope mismatch',name,field,different,expected)
+   for x,y in different:
+    a=before[y*l['width']+x];b=now[y*l['width']+x]
+    assert a&0xfc00==b&0xfc00,('Inner-core physical data changed',x,y)
+    assert old_attrs[(a&1023)-512]==current_attrs[(b&1023)-512],('Inner-core layer/behavior changed',x,y)
+    colors=composed_colors(l,b)
+    assert colors[(8,26,28)]>=96,('Inner optical wall still lacks continuous cyan body',x,y,colors)
+    assert colors[(28,30,29)]==0,('Outer diagonal window reflection leaked into inner enclosure',x,y)
+   changes.extend((name,x,y)for x,y in different)
+ for n in used:
+  i=n-512;assert old_refs[i*8:i*8+8]==current_refs[i*8:i*8+8] and old_attrs[i]==current_attrs[i],('Old used lighthouse alias changed',hex(n))
+ from io import BytesIO
+ before_sheet=Image.open(BytesIO(prior(pool+'tiles.png')));current_sheet=Image.open(R/pool/'tiles.png')
+ glyphs={v&1023 for n in used for v in old_refs[(n-512)*8:(n-512)*8+8]if v&1023>=512}
+ for n in glyphs:
+  i=n-512;box=(i%16*8,i//16*8,i%16*8+8,i//16*8+8)
+  assert before_sheet.crop(box).tobytes()==current_sheet.crop(box).tobytes(),('Previously used lighthouse glyph changed',n)
+ for p in sorted((R/pool/'palettes').glob('*.pal')):
+  assert p.read_text().splitlines()==prior(str(p.relative_to(R))).decode().splitlines(),('Existing lighthouse palette changed',p.name)
+ return {'baseline_game_source':B3,'exact_art_cells':len(changes),'other_six_map_words':'EXACT','physical_bits_and_full_attributes':'EXACT','positive_inner_cyan_cells':28,'two_model_corner_voids_filled':True}
+
+
 def validate(built=False):
  before_layouts = {v['id']: v for v in old_json('data/layouts/layouts.json')['layouts']}
  layouts = {v['id']: v for v in load('data/layouts/layouts.json')['layouts']}
@@ -104,6 +150,7 @@ def validate(built=False):
    assert f'data/maps/{name}/header.inc' in headers and symbol in symbols
    offset=symbols[symbol]-0x08000000;data=(R/l['blockdata_filepath']).read_bytes();assert rom[offset:offset+len(data)]==data,('Stale compiled lighthouse art map',name)
   report['built_maps']=7
+ report['inner_core_correction']=verify_inner_core(layouts)
  return report
 
 

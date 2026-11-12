@@ -1,0 +1,133 @@
+{
+  "baseline": "e7e2c085a5a61ef727d06f9f682af7d3a954cc06",
+  "raw_changes": {
+    "OlivineCity_Lighthouse_1F": [],
+    "OlivineCity_Lighthouse_2F": [],
+    "OlivineCity_Lighthouse_3F": [],
+    "OlivineCity_Lighthouse_4F": [],
+    "OlivineCity_Lighthouse_5F": [],
+    "OlivineCity_Lighthouse_6F": [
+      [
+        6,
+        7
+      ],
+      [
+        10,
+        7
+      ],
+      [
+        5,
+        8
+      ],
+      [
+        6,
+        8
+      ],
+      [
+        10,
+        8
+      ],
+      [
+        11,
+        8
+      ],
+      [
+        5,
+        9
+      ],
+      [
+        6,
+        9
+      ],
+      [
+        10,
+        9
+      ],
+      [
+        11,
+        9
+      ],
+      [
+        5,
+        10
+      ],
+      [
+        6,
+        10
+      ],
+      [
+        10,
+        10
+      ],
+      [
+        11,
+        10
+      ],
+      [
+        5,
+        11
+      ],
+      [
+        6,
+        11
+      ],
+      [
+        10,
+        11
+      ],
+      [
+        11,
+        11
+      ],
+      [
+        5,
+        12
+      ],
+      [
+        6,
+        12
+      ],
+      [
+        7,
+        12
+      ],
+      [
+        9,
+        12
+      ],
+      [
+        10,
+        12
+      ],
+      [
+        11,
+        12
+      ],
+      [
+        6,
+        13
+      ],
+      [
+        7,
+        13
+      ],
+      [
+        9,
+        13
+      ],
+      [
+        10,
+        13
+      ]
+    ],
+    "OlivineCity_Lighthouse_Balcony": []
+  },
+  "all_old_used_metatiles_and_attributes_unchanged": true,
+  "all_physical_bits_unchanged": true,
+  "deterministic": true,
+  "classification": "Isolated original-art/source preflight, not an emulator or delivery-ROM test",
+  "helper_sha256": "8b1d4f35757aef4a83590e3aa3daeae0561aa49c5b996b8b0582b81e2a37585a",
+  "corrected_allocated_new_glyphs": 151,
+  "corrected_private_aliases": 102,
+  "no_shared_generation_or_rom_mutation": true
+}

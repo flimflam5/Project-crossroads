@@ -20,6 +20,7 @@ DEST = 'data/tilesets/secondary/hgss_olivine_lighthouse'
 SYMBOL = 'gTileset_HgssOlivineLighthouse'
 MARKER = 'HGSS OLIVINE LIGHTHOUSE VISUALS'
 MANIFEST = 'crossroads/hgss/qa10/lighthouse-art-manifest.json'
+INNER_CORE_CONTRACT = 'crossroads/hgss/qa10/lighthouse-inner-core-b4-contract.json'
 
 @functools.lru_cache(None)
 def baseline(path):
@@ -191,6 +192,44 @@ def housing_image():
     for box in [(6,10,11,12),(16,3,20,5),(32,7,36,9),(36,31,40,33),(9,35,13,37)]:d.rectangle(box,fill=7)
     return im
 
+def inner_housing_panel(x, y, occupied):
+    """A stitched cyan optical wall, distinct from OUTER diagonal glass.
+
+    Rims/plinths occur only where the complete housing has an exposed boundary;
+    there are no repeated horizontal bright/gold bands at every metatile row.
+    """
+    im = indexed((16, 16), 5, 12)
+    d = ImageDraw.Draw(im)
+    north = (x, y - 1) in occupied
+    south = (x, y + 1) in occupied
+    west = (x - 1, y) in occupied
+    east = (x + 1, y) in occupied
+    if not north:
+        d.rectangle((0, 0, 15, 1), fill=7)
+        d.line((0, 2, 15, 2), fill=6)
+    if not south:
+        d.rectangle((0, 13, 15, 15), fill=13)
+        d.line((0, 12, 15, 12), fill=8)
+    # A continuous vertical edge gradient suggests the curved source casing.
+    # Neighbouring columns share plain cyan at their join, without brick seams.
+    if not west:
+        if x <= 7:
+            d.line((0, 0, 0, 15), fill=8)
+            d.rectangle((1, 0, 2, 15), fill=6)
+        else:
+            d.rectangle((0, 0, 1, 15), fill=7)
+    if not east:
+        if x >= 9:
+            d.line((15, 0, 15, 15), fill=8)
+            d.rectangle((13, 0, 14, 15), fill=6)
+        else:
+            d.rectangle((14, 0, 15, 15), fill=7)
+    # Only the two real end posts at the southern access have vertical gold.
+    if y == 13 and x in (7, 9):
+        edge = 15 if x == 7 else 0
+        d.line((edge, 2, edge, 12), fill=13)
+    return im
+
 def patch(rooms, maps, check=False):
     def write(path,b):
         p=R/path
@@ -277,6 +316,32 @@ def patch(rooms, maps, check=False):
                     if new!=old:rows.append(dict(x=x,y=y,before=old,after=new,attribute=attr,kind=kind))
         deltas[n]=rows
         floor_samples[n]=dict(width=w,height=h,changed_cells=len(rows),raw_before_sha256=__import__('hashlib').sha256(packed(base_maps[n])).hexdigest(),raw_after_sha256=__import__('hashlib').sha256(packed(t)).hexdigest())
+    # B4 correction is intentionally late: first reproduce the reviewed B3
+    # packing, then append aliases. This keeps all other map IDs/drawings exact.
+    review=json.loads((R/INNER_CORE_CONTRACT).read_text())
+    for n in NAMES:
+        digest=__import__('hashlib').sha256(packed(rooms[n]['tiles'])).hexdigest()
+        assert digest==review['baseline_raw_sha256'][n],('B3 lighthouse art prefix changed before scoped B4 fix',n,digest)
+    core_deltas=[]
+    occupied={(r['x'],r['y'])for r in review['cells']} | {(x,y)for y in range(5,8)for x in range(7,10)}
+    n=NAMES[5];q=rooms[n];t=q['tiles'];w=q['width']
+    for r in review['cells']:
+        x,y=r['x'],r['y'];i=y*w+x;v=t[i]
+        assert v==r['before_word'] and(v&0x400),('Unexpected6F optical housing source cell',x,y,v)
+        attribute=attrs[(v&1023)-512];assert attribute==r['attribute']
+        bank,floor=floor_at(n,x,y)
+        refs=drawing(floor,bank)+drawing(inner_housing_panel(x,y,occupied),12)
+        new=alloc(refs,attribute,'cyan inner optical housing, distinct from outer window ring')
+        t[i]=(v&0xfc00)|new
+        assert t[i]&0xfc00==v&0xfc00 and attrs[new-512]==attribute
+        core_deltas.append(dict(x=x,y=y,before=v&1023,after=new,attribute=attribute,reason=r['reason']))
+        existing=next((d for d in deltas[n]if d['x']==x and d['y']==y),None)
+        if existing:
+            existing['after']=new;existing['kind']='cyan inner optical housing, distinct from outer window ring'
+        else:deltas[n].append(dict(x=x,y=y,before=v&1023,after=new,attribute=attribute,kind='opaque cyan model-corner housing instead of projector void'))
+    assert len(core_deltas)==28
+    floor_samples[n]['changed_cells']=len(deltas[n])
+    floor_samples[n]['raw_after_sha256']=__import__('hashlib').sha256(packed(t)).hexdigest()
     assert max(sheet.tobytes())<16 and len(meta)==4096 and len(attrs)==512
     output=io.BytesIO();sheet.save(output,format='PNG',bits=4);write(DEST+'/tiles.png',output.getvalue());write(DEST+'/metatiles.bin',packed(meta));write(DEST+'/metatile_attributes.bin',packed(attrs))
     for i in range(16):
@@ -293,6 +358,7 @@ def patch(rooms, maps, check=False):
         begin='// BEGIN '+MARKER;end='// END '+MARKER;section=begin+'\n#if !IS_FRLG\n'+body+'\n#endif\n'+end
         write(p,upsert((R/p).read_text(),begin,end,section,externs=p=='include/tilesets.h'))
     manifest=dict(version='qa10-lighthouse-original-native-surfaces',baseline=BASE,symbol=SYMBOL,resource=DEST,source_reference_manifest='lighthouse-reference-manifest.json',maps=floor_samples,cell_deltas=deltas,allocated_metatiles=added,new_glyphs=len(glyphs),preserved_original_used_glyphs=len(usedglyph),reclaimed_only_unreferenced_metatile_ids=True,palette_banks=[7,9,10,12],geometry_ids_attributes_events_unchanged=True,adaptations=['Original16px GBA motifs follow inspected actualHGSS floor/fixture references; source screenshot pixels are never imported.','Four one-column/two-row source table solids contain combined table/two-seat motifs; no new chair blockers are introduced into the public walking lane.','The original3x3 native optical housing footprint and overlap are retained; cyan enclosure replaces its old blue/gray motif.','DS curved masonry/windows use original native16px panels along the existing physical wall footprint.', 'Balcony retains its stable physical shell/17x17 map while adopting the actual gray-purple masonry, diagonal paving, east window and blue parapet colors.'])
+    manifest['b4_inner_housing_fix']=dict(contract=INNER_CORE_CONTRACT,baseline=review['baseline'],cells=core_deltas,changed_cells=28,outer_glass_and_old_cap_unchanged=True,all_other_map_raw_unchanged=True)
     js(MANIFEST,manifest)
     return SYMBOL
 

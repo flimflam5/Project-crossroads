@@ -43,9 +43,9 @@
     "OlivineCity_Lighthouse_6F": {
       "width": 17,
       "height": 19,
-      "changed_cells": 228,
+      "changed_cells": 230,
       "raw_before_sha256": "4c8f052b74ed8c0f18684f66471fd2eedb27c8058d9708c5d2919bf21cd1fa2e",
-      "raw_after_sha256": "781166c424ba648a8ef86b417c134886efea9d7ddb2fd6e21281dc70607fe1a1"
+      "raw_after_sha256": "f19ee05ab1f9a4df72a966e566489d8fee69d8113062ff92b0676f360a3948fb"
     },
     "OlivineCity_Lighthouse_Balcony": {
       "width": 17,
@@ -9967,9 +9967,9 @@
         "x": 6,
         "y": 7,
         "before": 705,
-        "after": 589,
+        "after": 611,
         "attribute": 4096,
-        "kind": "pale windows and wall, glass or perimeter trim"
+        "kind": "cyan inner optical housing, distinct from outer window ring"
       },
       {
         "x": 7,
@@ -9999,9 +9999,9 @@
         "x": 10,
         "y": 7,
         "before": 705,
-        "after": 589,
+        "after": 612,
         "attribute": 4096,
-        "kind": "pale windows and wall, glass or perimeter trim"
+        "kind": "cyan inner optical housing, distinct from outer window ring"
       },
       {
         "x": 11,
@@ -10095,17 +10095,17 @@
         "x": 5,
         "y": 8,
         "before": 700,
-        "after": 589,
+        "after": 611,
         "attribute": 4096,
-        "kind": "pale windows and wall, glass or perimeter trim"
+        "kind": "cyan inner optical housing, distinct from outer window ring"
       },
       {
         "x": 6,
         "y": 8,
         "before": 562,
-        "after": 591,
+        "after": 613,
         "attribute": 0,
-        "kind": "pale windows and wall, glass or perimeter trim"
+        "kind": "cyan inner optical housing, distinct from outer window ring"
       },
       {
         "x": 7,
@@ -10135,17 +10135,17 @@
         "x": 10,
         "y": 8,
         "before": 562,
-        "after": 591,
+        "after": 614,
         "attribute": 0,
-        "kind": "pale windows and wall, glass or perimeter trim"
+        "kind": "cyan inner optical housing, distinct from outer window ring"
       },
       {
         "x": 11,
         "y": 8,
         "before": 702,
-        "after": 589,
+        "after": 612,
         "attribute": 4096,
-        "kind": "pale windows and wall, glass or perimeter trim"
+        "kind": "cyan inner optical housing, distinct from outer window ring"
       },
       {
         "x": 12,
@@ -10231,17 +10231,17 @@
         "x": 5,
         "y": 9,
         "before": 563,
-        "after": 591,
+        "after": 615,
         "attribute": 0,
-        "kind": "pale windows and wall, glass or perimeter trim"
+        "kind": "cyan inner optical housing, distinct from outer window ring"
       },
       {
         "x": 6,
         "y": 9,
         "before": 563,
-        "after": 591,
+        "after": 613,
         "attribute": 0,
-        "kind": "pale windows and wall, glass or perimeter trim"
+        "kind": "cyan inner optical housing, distinct from outer window ring"
       },
       {
         "x": 7,
@@ -10271,17 +10271,17 @@
         "x": 10,
         "y": 9,
         "before": 563,
-        "after": 591,
+        "after": 614,
         "attribute": 0,
-        "kind": "pale windows and wall, glass or perimeter trim"
+        "kind": "cyan inner optical housing, distinct from outer window ring"
       },
       {
         "x": 11,
         "y": 9,
         "before": 563,
-        "after": 591,
+        "after": 616,
         "attribute": 0,
-        "kind": "pale windows and wall, glass or perimeter trim"
+        "kind": "cyan inner optical housing, distinct from outer window ring"
       },
       {
         "x": 12,
@@ -10367,17 +10367,17 @@
         "x": 5,
         "y": 10,
         "before": 564,
-        "after": 591,
+        "after": 615,
         "attribute": 0,
-        "kind": "pale windows and wall, glass or perimeter trim"
+        "kind": "cyan inner optical housing, distinct from outer window ring"
       },
       {
         "x": 6,
         "y": 10,
         "before": 564,
-        "after": 591,
+        "after": 613,
         "attribute": 0,
-        "kind": "pale windows and wall, glass or perimeter trim"
+        "kind": "cyan inner optical housing, distinct from outer window ring"
       },
       {
         "x": 7,
@@ -10407,17 +10407,17 @@
         "x": 10,
         "y": 10,
         "before": 564,
-        "after": 591,
+        "after": 614,
         "attribute": 0,
-        "kind": "pale windows and wall, glass or perimeter trim"
+        "kind": "cyan inner optical housing, distinct from outer window ring"
       },
       {
         "x": 11,
         "y": 10,
         "before": 564,
-        "after": 591,
+        "after": 616,
         "attribute": 0,
-        "kind": "pale windows and wall, glass or perimeter trim"
+        "kind": "cyan inner optical housing, distinct from outer window ring"
       },
       {
         "x": 12,
@@ -10503,17 +10503,17 @@
         "x": 5,
         "y": 11,
         "before": 565,
-        "after": 589,
+        "after": 617,
         "attribute": 4096,
-        "kind": "pale windows and wall, glass or perimeter trim"
+        "kind": "cyan inner optical housing, distinct from outer window ring"
       },
       {
         "x": 6,
         "y": 11,
         "before": 565,
-        "after": 589,
+        "after": 618,
         "attribute": 4096,
-        "kind": "pale windows and wall, glass or perimeter trim"
+        "kind": "cyan inner optical housing, distinct from outer window ring"
       },
       {
         "x": 7,
@@ -10543,17 +10543,17 @@
         "x": 10,
         "y": 11,
         "before": 565,
-        "after": 589,
+        "after": 619,
         "attribute": 4096,
-        "kind": "pale windows and wall, glass or perimeter trim"
+        "kind": "cyan inner optical housing, distinct from outer window ring"
       },
       {
         "x": 11,
         "y": 11,
         "before": 565,
-        "after": 589,
+        "after": 620,
         "attribute": 4096,
-        "kind": "pale windows and wall, glass or perimeter trim"
+        "kind": "cyan inner optical housing, distinct from outer window ring"
       },
       {
         "x": 12,
@@ -10639,17 +10639,17 @@
         "x": 5,
         "y": 12,
         "before": 700,
-        "after": 589,
+        "after": 622,
         "attribute": 4096,
-        "kind": "pale windows and wall, glass or perimeter trim"
+        "kind": "cyan inner optical housing, distinct from outer window ring"
       },
       {
         "x": 7,
         "y": 12,
         "before": 702,
-        "after": 589,
+        "after": 623,
         "attribute": 4096,
-        "kind": "pale windows and wall, glass or perimeter trim"
+        "kind": "cyan inner optical housing, distinct from outer window ring"
       },
       {
         "x": 8,
@@ -10663,17 +10663,17 @@
         "x": 9,
         "y": 12,
         "before": 700,
-        "after": 589,
+        "after": 624,
         "attribute": 4096,
-        "kind": "pale windows and wall, glass or perimeter trim"
+        "kind": "cyan inner optical housing, distinct from outer window ring"
       },
       {
         "x": 11,
         "y": 12,
         "before": 702,
-        "after": 589,
+        "after": 625,
         "attribute": 4096,
-        "kind": "pale windows and wall, glass or perimeter trim"
+        "kind": "cyan inner optical housing, distinct from outer window ring"
       },
       {
         "x": 12,
@@ -10759,17 +10759,17 @@
         "x": 6,
         "y": 13,
         "before": 705,
-        "after": 589,
+        "after": 622,
         "attribute": 4096,
-        "kind": "pale windows and wall, glass or perimeter trim"
+        "kind": "cyan inner optical housing, distinct from outer window ring"
       },
       {
         "x": 7,
         "y": 13,
         "before": 706,
-        "after": 589,
+        "after": 626,
         "attribute": 4096,
-        "kind": "pale windows and wall, glass or perimeter trim"
+        "kind": "cyan inner optical housing, distinct from outer window ring"
       },
       {
         "x": 8,
@@ -10783,17 +10783,17 @@
         "x": 9,
         "y": 13,
         "before": 704,
-        "after": 589,
+        "after": 627,
         "attribute": 4096,
-        "kind": "pale windows and wall, glass or perimeter trim"
+        "kind": "cyan inner optical housing, distinct from outer window ring"
       },
       {
         "x": 10,
         "y": 13,
         "before": 705,
-        "after": 589,
+        "after": 625,
         "attribute": 4096,
-        "kind": "pale windows and wall, glass or perimeter trim"
+        "kind": "cyan inner optical housing, distinct from outer window ring"
       },
       {
         "x": 11,
@@ -11258,6 +11258,22 @@
         "after": 589,
         "attribute": 4096,
         "kind": "pale windows and wall, glass or perimeter trim"
+      },
+      {
+        "x": 6,
+        "y": 12,
+        "before": 512,
+        "after": 628,
+        "attribute": 4096,
+        "kind": "opaque cyan model-corner housing instead of projector void"
+      },
+      {
+        "x": 10,
+        "y": 12,
+        "before": 512,
+        "after": 628,
+        "attribute": 4096,
+        "kind": "opaque cyan model-corner housing instead of projector void"
       }
     ],
     "OlivineCity_Lighthouse_Balcony": [
@@ -13904,9 +13920,94 @@
       "id": 610,
       "attribute": 4199,
       "kind": "floor or preserved furniture over corrected opaque floor"
+    },
+    {
+      "id": 611,
+      "attribute": 4096,
+      "kind": "cyan inner optical housing, distinct from outer window ring"
+    },
+    {
+      "id": 612,
+      "attribute": 4096,
+      "kind": "cyan inner optical housing, distinct from outer window ring"
+    },
+    {
+      "id": 613,
+      "attribute": 0,
+      "kind": "cyan inner optical housing, distinct from outer window ring"
+    },
+    {
+      "id": 614,
+      "attribute": 0,
+      "kind": "cyan inner optical housing, distinct from outer window ring"
+    },
+    {
+      "id": 615,
+      "attribute": 0,
+      "kind": "cyan inner optical housing, distinct from outer window ring"
+    },
+    {
+      "id": 616,
+      "attribute": 0,
+      "kind": "cyan inner optical housing, distinct from outer window ring"
+    },
+    {
+      "id": 617,
+      "attribute": 4096,
+      "kind": "cyan inner optical housing, distinct from outer window ring"
+    },
+    {
+      "id": 618,
+      "attribute": 4096,
+      "kind": "cyan inner optical housing, distinct from outer window ring"
+    },
+    {
+      "id": 619,
+      "attribute": 4096,
+      "kind": "cyan inner optical housing, distinct from outer window ring"
+    },
+    {
+      "id": 620,
+      "attribute": 4096,
+      "kind": "cyan inner optical housing, distinct from outer window ring"
+    },
+    {
+      "id": 622,
+      "attribute": 4096,
+      "kind": "cyan inner optical housing, distinct from outer window ring"
+    },
+    {
+      "id": 623,
+      "attribute": 4096,
+      "kind": "cyan inner optical housing, distinct from outer window ring"
+    },
+    {
+      "id": 624,
+      "attribute": 4096,
+      "kind": "cyan inner optical housing, distinct from outer window ring"
+    },
+    {
+      "id": 625,
+      "attribute": 4096,
+      "kind": "cyan inner optical housing, distinct from outer window ring"
+    },
+    {
+      "id": 626,
+      "attribute": 4096,
+      "kind": "cyan inner optical housing, distinct from outer window ring"
+    },
+    {
+      "id": 627,
+      "attribute": 4096,
+      "kind": "cyan inner optical housing, distinct from outer window ring"
+    },
+    {
+      "id": 628,
+      "attribute": 4096,
+      "kind": "cyan inner optical housing, distinct from outer window ring"
     }
   ],
-  "new_glyphs": 134,
+  "new_glyphs": 151,
   "preserved_original_used_glyphs": 87,
   "reclaimed_only_unreferenced_metatile_ids": true,
   "palette_banks": [
@@ -13922,5 +14023,238 @@
     "The original3x3 native optical housing footprint and overlap are retained; cyan enclosure replaces its old blue/gray motif.",
     "DS curved masonry/windows use original native16px panels along the existing physical wall footprint.",
     "Balcony retains its stable physical shell/17x17 map while adopting the actual gray-purple masonry, diagonal paving, east window and blue parapet colors."
-  ]
+  ],
+  "b4_inner_housing_fix": {
+    "contract": "crossroads/hgss/qa10/lighthouse-inner-core-b4-contract.json",
+    "baseline": "e7e2c085a5a61ef727d06f9f682af7d3a954cc06",
+    "cells": [
+      {
+        "x": 6,
+        "y": 7,
+        "before": 589,
+        "after": 611,
+        "attribute": 4096,
+        "reason": "Inner optical enclosure incorrectly drawn as outer diagonal window glass"
+      },
+      {
+        "x": 10,
+        "y": 7,
+        "before": 589,
+        "after": 612,
+        "attribute": 4096,
+        "reason": "Inner optical enclosure incorrectly drawn as outer diagonal window glass"
+      },
+      {
+        "x": 5,
+        "y": 8,
+        "before": 589,
+        "after": 611,
+        "attribute": 4096,
+        "reason": "Inner optical enclosure incorrectly drawn as outer diagonal window glass"
+      },
+      {
+        "x": 6,
+        "y": 8,
+        "before": 591,
+        "after": 613,
+        "attribute": 0,
+        "reason": "Inner optical enclosure incorrectly drawn as outer diagonal window glass"
+      },
+      {
+        "x": 10,
+        "y": 8,
+        "before": 591,
+        "after": 614,
+        "attribute": 0,
+        "reason": "Inner optical enclosure incorrectly drawn as outer diagonal window glass"
+      },
+      {
+        "x": 11,
+        "y": 8,
+        "before": 589,
+        "after": 612,
+        "attribute": 4096,
+        "reason": "Inner optical enclosure incorrectly drawn as outer diagonal window glass"
+      },
+      {
+        "x": 5,
+        "y": 9,
+        "before": 591,
+        "after": 615,
+        "attribute": 0,
+        "reason": "Inner optical enclosure incorrectly drawn as outer diagonal window glass"
+      },
+      {
+        "x": 6,
+        "y": 9,
+        "before": 591,
+        "after": 613,
+        "attribute": 0,
+        "reason": "Inner optical enclosure incorrectly drawn as outer diagonal window glass"
+      },
+      {
+        "x": 10,
+        "y": 9,
+        "before": 591,
+        "after": 614,
+        "attribute": 0,
+        "reason": "Inner optical enclosure incorrectly drawn as outer diagonal window glass"
+      },
+      {
+        "x": 11,
+        "y": 9,
+        "before": 591,
+        "after": 616,
+        "attribute": 0,
+        "reason": "Inner optical enclosure incorrectly drawn as outer diagonal window glass"
+      },
+      {
+        "x": 5,
+        "y": 10,
+        "before": 591,
+        "after": 615,
+        "attribute": 0,
+        "reason": "Inner optical enclosure incorrectly drawn as outer diagonal window glass"
+      },
+      {
+        "x": 6,
+        "y": 10,
+        "before": 591,
+        "after": 613,
+        "attribute": 0,
+        "reason": "Inner optical enclosure incorrectly drawn as outer diagonal window glass"
+      },
+      {
+        "x": 10,
+        "y": 10,
+        "before": 591,
+        "after": 614,
+        "attribute": 0,
+        "reason": "Inner optical enclosure incorrectly drawn as outer diagonal window glass"
+      },
+      {
+        "x": 11,
+        "y": 10,
+        "before": 591,
+        "after": 616,
+        "attribute": 0,
+        "reason": "Inner optical enclosure incorrectly drawn as outer diagonal window glass"
+      },
+      {
+        "x": 5,
+        "y": 11,
+        "before": 589,
+        "after": 617,
+        "attribute": 4096,
+        "reason": "Inner optical enclosure incorrectly drawn as outer diagonal window glass"
+      },
+      {
+        "x": 6,
+        "y": 11,
+        "before": 589,
+        "after": 618,
+        "attribute": 4096,
+        "reason": "Inner optical enclosure incorrectly drawn as outer diagonal window glass"
+      },
+      {
+        "x": 10,
+        "y": 11,
+        "before": 589,
+        "after": 619,
+        "attribute": 4096,
+        "reason": "Inner optical enclosure incorrectly drawn as outer diagonal window glass"
+      },
+      {
+        "x": 11,
+        "y": 11,
+        "before": 589,
+        "after": 620,
+        "attribute": 4096,
+        "reason": "Inner optical enclosure incorrectly drawn as outer diagonal window glass"
+      },
+      {
+        "x": 5,
+        "y": 12,
+        "before": 589,
+        "after": 622,
+        "attribute": 4096,
+        "reason": "Inner optical enclosure incorrectly drawn as outer diagonal window glass"
+      },
+      {
+        "x": 7,
+        "y": 12,
+        "before": 589,
+        "after": 623,
+        "attribute": 4096,
+        "reason": "Inner optical enclosure incorrectly drawn as outer diagonal window glass"
+      },
+      {
+        "x": 9,
+        "y": 12,
+        "before": 589,
+        "after": 624,
+        "attribute": 4096,
+        "reason": "Inner optical enclosure incorrectly drawn as outer diagonal window glass"
+      },
+      {
+        "x": 11,
+        "y": 12,
+        "before": 589,
+        "after": 625,
+        "attribute": 4096,
+        "reason": "Inner optical enclosure incorrectly drawn as outer diagonal window glass"
+      },
+      {
+        "x": 6,
+        "y": 13,
+        "before": 589,
+        "after": 622,
+        "attribute": 4096,
+        "reason": "Inner optical enclosure incorrectly drawn as outer diagonal window glass"
+      },
+      {
+        "x": 7,
+        "y": 13,
+        "before": 589,
+        "after": 626,
+        "attribute": 4096,
+        "reason": "Inner optical enclosure incorrectly drawn as outer diagonal window glass"
+      },
+      {
+        "x": 9,
+        "y": 13,
+        "before": 589,
+        "after": 627,
+        "attribute": 4096,
+        "reason": "Inner optical enclosure incorrectly drawn as outer diagonal window glass"
+      },
+      {
+        "x": 10,
+        "y": 13,
+        "before": 589,
+        "after": 625,
+        "attribute": 4096,
+        "reason": "Inner optical enclosure incorrectly drawn as outer diagonal window glass"
+      },
+      {
+        "x": 6,
+        "y": 12,
+        "before": 512,
+        "after": 628,
+        "attribute": 4096,
+        "reason": "Source-model corner mistakenly left generic-projector void"
+      },
+      {
+        "x": 10,
+        "y": 12,
+        "before": 512,
+        "after": 628,
+        "attribute": 4096,
+        "reason": "Source-model corner mistakenly left generic-projector void"
+      }
+    ],
+    "changed_cells": 28,
+    "outer_glass_and_old_cap_unchanged": true,
+    "all_other_map_raw_unchanged": true
+  }
 }

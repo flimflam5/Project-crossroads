@@ -77,3 +77,33 @@ are not emulator evidence. Central generation, actual C resource/ground limits,
 independent physical/reference regressions and final-ROM controller/visual tests
 are owned by root and the validation/runtime agents; their actual results must
 be recorded separately. Owner Delta/visual acceptance remains required.
+
+## B3 actual native review found an inner/outer material error
+
+The frozenB3 native review did **not** establish a reference-matched6F. It
+showed the actual central optical-body U rendered with the same diagonal glass
+as the room's outer windows, while only the northern3×3 cap was cyan. Two
+blocked model-corner cells were also left black by the old generic projector.
+The actual HGSS6F image shows cyan optical housing at the center, separate from
+the curved outer window ring. Earlier pink-floor/cyan-cap source checks did not
+cover that distinction and were insufficient.
+
+The scoped B4 correction is pinned to source
+`e7e2c085a5a61ef727d06f9f682af7d3a954cc06` / ROM
+`af59dff1b06b99a9599c6f98b6fb6bd1e765cc52c0838a2dec5c79a6c1f88373`.
+[The exact28-cell contract](lighthouse-inner-core-b4-contract.json) names26
+wrong-glass cells and the two model-corner voids(6,12)/(10,12). New original
+cyan panels with light rims/gold bases represent the retained physical housing.
+The outer glass and northern cap stay unchanged. Both voids remain physically
+blocked; opaque housing replaces their misleading black pixels, not collision.
+
+The generator first reconstructs B3 packing, then appends this correction so
+all other six mapraw files and every old used drawing/attribute remain exact.
+Isolated source comparisons and deterministic generation pass; only28 drawing
+IDs differ, with no physical/elevation/behavior/event/warp/actor change.
+The larger enclosure still follows the retained native physical U rather than
+claiming literal DS round perspective.
+
+This B4 preview is authored static artwork, not gameplay. Central generation,
+independent positive/negative material checks and actual B4 controller/native
+review remain required. B3 traversal/probe passes cannot certify this correction.

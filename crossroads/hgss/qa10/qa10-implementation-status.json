@@ -13,21 +13,25 @@
   "new_ship_generation": "COMPLETE: seven append-only maps, eight cabins, 12 physical components; 411 glyphs/508 secondary metatiles",
   "lighthouse_art_generation": "COMPLETE:7maps inclbalcony centrallygenerated; alloldphysical/event/ID/behavior contractsPASS",
   "final_build": {
-    "candidate": "QA10-A1 Build3 (frozen for final runtime)",
+    "candidate": "QA10-A1 Build4 (frozen for final runtime)",
     "status": "BUILD PASS",
-    "rom_sha256": "af59dff1b06b99a9599c6f98b6fb6bd1e765cc52c0838a2dec5c79a6c1f88373",
-    "elf_sha256": "e484ec2b6b7ba97e50d60805ef42b3a1ebe16bbb5815d703f02665daeaed5944",
-    "rom_payload_bytes": 30322400,
+    "rom_sha256": "4fb28fe64fc44c0546462a935655346a61f13b644bc3040468146d136cd6d656",
+    "elf_sha256": "3ad10d900c720ab625f6f041e1be9669638efe80dce542cf1ded1ec88a579949",
+    "rom_payload_bytes": 30322200,
     "ewram_bytes": 226448,
     "iwram_bytes": 28392
   },
-  "final_runtime": "Three one-emulator serial lanes running fresh on frozen B3 bytes. No final pass claimed yet.",
+  "final_runtime": "Starting fresh final B4 lanes: stage0+full519doors; sixcitysuites thenfullAquadetails; eightacceptedfunctions. Historical B3 results remain separately labelled.",
   "owner_visual_acceptance": "PENDING",
   "sailing": "Not implemented: destination, travel/story requirements and rewards are separately deferred",
   "ship_boarding_integration": "Root source implemented:2visiblehatch/gangwayleavesQuay4/5\u2192SSAqua1F0/12; no voyage",
   "door_contract": "Generated45groups with118legacy+55newvisiblethresholdsegments; strictnativefacing/controller evidence stillpending",
   "new_ship_independent_validation": "PASS: literal source/model/door projection masks, all7maps and12components,15negative controls",
-  "source_checks": "All 66 workflow commands passed individually on Build2 after explicit legacy-test migrations; final clean ledger pending",
+  "source_checks": "All66 commands PASS on B3, preserving original preview collision failure and exact successful rechecks; generator previews now have separate filenames.",
   "unresolved_before_next_build": null,
-  "portal_layer_correction": "Only two canopy attrs0000\u21921000; pixels/physics/warps unchanged. Final B3 controller/framebuffer checks pending."
+  "portal_layer_correction": "Only two canopy attrs0000\u21921000; pixels/physics/warps unchanged. Final B3 controller/framebuffer checks pending.",
+  "runtime_source_checkpoint": "e7e2c085a5a61ef727d06f9f682af7d3a954cc06",
+  "test_checkpoint": "521000c197",
+  "b4_art_correction": "Central generation and independent built check PASS: exactly28 6F art cells; other6maps/old used aliases/glyphs/fullattributes/palettes preserved. Cyan body continuous, two black model corners filled. No physical/event/ID change.",
+  "b3_aqua_focused": "All7maps/12components, allNPC/signs, nativeberthNO/YES and12normalSaveContinues PASS; sourcebodybumps explicitlySKIPPED, notPASS. No additional visual defect found in all12centers+8furnishedcontexts."
 }
