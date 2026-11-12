@@ -34,11 +34,24 @@ def generate(check=False):
     new=ship['groups']
     assert all(g['label']not in {v['label']for v in value['groups']}for g in new)
     value['groups']+=new
+    # Independently reviewed physical intentions exist for ALL45 groups,
+    # including legacy city/route gates. Never infer these from runtime output.
+    intent_path=R/'crossroads/hgss/qa10/doorway-intended-facing-b4.json'
+    intentions={g['label']:g for g in json.loads(intent_path.read_text())['groups']}
+    assert set(intentions)=={g['label']for g in value['groups']}
+    for group in value['groups']:
+        physical=intentions[group['label']]
+        for side in ['outside','inside']:
+            expected=physical['sides'][side]
+            assert group[side]['map']==expected['map']
+            assert group[side]['segments']==expected['segments']
+            group[side]['expected_facing']=expected['intended_arrival_facing']
     value['qa10']={
         'immutable_city_inventory_source':BASE,
         'preserved_city_groups':len(original['groups']),
         'new_ship_groups':len(new),
         'facing_numbers':{'south':1,'north':2,'west':3,'east':4},
+        'all_arrival_facing_basis':'crossroads/hgss/qa10/doorway-intended-facing-b4.json',
         'note':'North-entry port changes approach/facing only; every old leaf and warp ordinal remains. Docked ship returns to Olivine; no sailing destination is added.'}
     data=(json.dumps(value,indent=2)+'\n').encode()
     path=R/DEST

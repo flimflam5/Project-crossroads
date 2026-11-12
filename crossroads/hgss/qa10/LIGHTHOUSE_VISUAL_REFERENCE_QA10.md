@@ -107,3 +107,13 @@ claiming literal DS round perspective.
 This B4 preview is authored static artwork, not gameplay. Central generation,
 independent positive/negative material checks and actual B4 controller/native
 review remain required. B3 traversal/probe passes cannot certify this correction.
+
+## Separate elevator cabin: verified source, missing visual reference
+
+[Focused elevator follow-up](LIGHTHOUSE_ELEVATOR_REFERENCE_QA10.md) confirms
+an actual HGSS cabin with automatic opposite-floor ride/animation, not merely
+a floor menu. The preserved GBA 8×8 room/two-panel choice is deliberate, not an
+unavoidable hardware limit. Its original decor lacks an independently verified
+HGSS cabin raster and is not claimed reference matched. Model 208's off-public
+anchor does not establish its mesh extent/identity or safe cropping. No game
+change follows from this reference-only finding during the final frozen tests.

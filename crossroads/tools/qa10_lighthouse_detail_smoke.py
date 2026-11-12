@@ -5,7 +5,7 @@ from pathlib import Path
 from qa10_city_runtime import load
 p=argparse.ArgumentParser();p.add_argument('--save',required=True);p.add_argument('--library',default='/tmp/johto-bridge.so');p.add_argument('--output',required=True);p.add_argument('--rom-sha256',required=True);args=p.parse_args()
 h=load(args.save,args.library,args.output,args.rom_sha256)
-journeys=[]
+journeys=[];core_circuits=[]
 def main():
     go,walk=h['go'],h['walk'];d=h['d']
     # Public source components are selected through real doors/stairs, not XY writes.
@@ -17,6 +17,21 @@ def main():
         walk(away);assert not h['read']('gPlayerAvatar',1)&8
         d['warp'](exit_index);departed=h['current']();assert departed!=name
         go(name,entry);walk(target);h['records'][-1].update(actual_walk_away=away,actual_exit=departed,actual_return_to_saved_point=True)
+    # Continuous ordinary walking around BOTH sides of the corrected optical
+    # core. Independent public-floor anchors avoid stairs, actors and portals;
+    # pathfinding supplies controller inputs rather than coordinate writes.
+    go('OlivineCity_Lighthouse_6F',0);walk((9,11));h['shot']('lighthouse-6F-inner-stair-context');walk((12,14))
+    ring=[(13,10),(12,6),(10,5),(6,5),(4,6),(3,10),(4,14),(8,15),(12,14)]
+    def core_walk():
+        for direction,points in [('counterclockwise',ring),('clockwise',list(reversed(ring[:-1]))+[(12,14)])]:
+            start=h['pos']()
+            for point in points:
+                assert d['safe']('OlivineCity_Lighthouse_6F',point) and point not in d['active_warps']('OlivineCity_Lighthouse_6F')
+                walk(point);assert h['current']()=='OlivineCity_Lighthouse_6F' and h['pos']()==point and not h['read']('gPlayerAvatar',1)&8
+            h['shot']('lighthouse-6F-core-'+direction)
+            core_circuits.append(dict(direction=direction,start=start,anchors=points,end=h['pos'](),normal_controller=True,result='PASS'))
+    h['capture']('lighthouse-6F-core-continuous-both-directions',core_walk)
+    assert len(core_circuits)==2
     go(d['WINDOW'],'window')
     def window_trip():
         d['window_fall']();assert h['current']()==d['BALCONY'] and h['pos']()==(14,9)
@@ -40,7 +55,7 @@ def main():
         h['save_continue']('lighthouse-selected-'+floor+'-normal-save');walk((4,4));d['warp'](0);assert h['current']()==floor
         h['records'][-1].update(selected_floor_retained=True,actual_exit=floor)
     go('OlivineCity');assert h['read']('sJohtoTestAccess',1)==0
-    h['finish'](dict(journeys=journeys));print('Lighthouse details PASS:',len(h['records']),'normal Save/cold Continue cases;',len(journeys),'special journeys',flush=True)
+    h['finish'](dict(journeys=journeys,core_circuits=core_circuits));print('Lighthouse details PASS:',len(h['records']),'normal Save/cold Continue cases;',len(journeys),'special journeys;2 continuous optical-core circuits',flush=True)
 try:main()
 except Exception as error:
-    h['lib'].emu_image(str(Path(args.output)/'failure.png').encode());h['finish'](dict(journeys=journeys),str(error));raise
+    h['lib'].emu_image(str(Path(args.output)/'failure.png').encode());h['finish'](dict(journeys=journeys,core_circuits=core_circuits),str(error));raise

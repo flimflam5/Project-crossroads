@@ -53,3 +53,24 @@ visual pass or a confirmed game defect; the runtime owner is investigating it.
 No new source correction was justified solely by the initial read-only images.
 Final runtime coverage and owner visual acceptance remain required; this review
 does not label the ship, port, city or all furniture polished/complete.
+
+## Supplemental native component/context review
+
+After the first review, the runtime agent captured all12 actual public components
+and eight focused furnishing views in `build/qa10-b3-aqua-visual-fast/`.
+Independently inspected all20 views against the complete HGSS mosaics: the two
+1F lounge contexts, B1F upper/six-bed dormitory, galley/kitchen and engine/safety
+edge render coherently, with no new corruption or stray artifacts observed.
+The three previously unviewed cabin pairs are now included in this native visual
+sample. These remain still-image observations; the separate runtime report owns
+movement, boundary, service and cold-Continue assertions.
+
+The southeast left cabin has two **portrait berths side by side** in both source
+and native artwork. Earlier shorthand "horizontal beds" described the row
+arrangement, not landscape-oriented beds. The northeast left cabin instead stacks
+two portrait berths vertically. No bed-rotation correction is indicated.
+
+The berth decline assertion was traced to premature test input before the real
+Yes/No cursor/task was ready. The runtime agent reports explicit No/Yes cases
+passing after synchronizing the harness; no game fix was made or claimed. Final
+B4 results must still be identified separately from these B3 contexts.

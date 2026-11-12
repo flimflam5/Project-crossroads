@@ -349,6 +349,12 @@ def main():
   m=maps[p['name']];p.update(connections=m['connections'],entrances=m['warp_events'])
  manifest['dungeons']=DUNGEONS;manifest['border_topology']=EDGES
  manifest['checkpoint']=args.through;js('crossroads/johto/manifest.json',manifest)
+ # These existing routes own native map scripts independently of map metadata.
+ # Keep the reviewed gate arrival callback stable in normal/check generation.
+ from build_qa10_arrival_facing import render as arrival_facing_scripts
+ for n in ['JohtoRoute38','JohtoRoute42']:
+  script_path=f'data/maps/{n}/scripts.inc'
+  write(script_path,arrival_facing_scripts(n,(R/script_path).read_text()))
  from build_johto_atlas import generate as generate_atlas
  generate_atlas(args.check)
  from build_hgss_ecruteak import generate as generate_hgss

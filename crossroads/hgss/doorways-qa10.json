@@ -20,7 +20,8 @@
         "anchor": [
           41,
           46
-        ]
+        ],
+        "expected_facing": 1
       },
       "inside": {
         "map": "EcruteakCity_DanceTheater",
@@ -37,7 +38,8 @@
         "anchor": [
           7,
           15
-        ]
+        ],
+        "expected_facing": 2
       }
     },
     {
@@ -58,7 +60,8 @@
         "anchor": [
           39,
           28
-        ]
+        ],
+        "expected_facing": 1
       },
       "inside": {
         "map": "EcruteakCity_BarrierStation",
@@ -75,7 +78,8 @@
         "anchor": [
           9,
           9
-        ]
+        ],
+        "expected_facing": 2
       }
     },
     {
@@ -96,7 +100,8 @@
         "anchor": [
           24,
           58
-        ]
+        ],
+        "expected_facing": 1
       },
       "inside": {
         "map": "EcruteakCity_Gym",
@@ -113,7 +118,8 @@
         "anchor": [
           10,
           19
-        ]
+        ],
+        "expected_facing": 2
       }
     },
     {
@@ -130,7 +136,8 @@
         "anchor": [
           23,
           47
-        ]
+        ],
+        "expected_facing": 1
       },
       "inside": {
         "map": "EcruteakCity_Residence",
@@ -147,7 +154,8 @@
         "anchor": [
           4,
           7
-        ]
+        ],
+        "expected_facing": 2
       }
     },
     {
@@ -164,7 +172,8 @@
         "anchor": [
           34,
           57
-        ]
+        ],
+        "expected_facing": 1
       },
       "inside": {
         "map": "EcruteakCity_DowsingHouse",
@@ -181,7 +190,8 @@
         "anchor": [
           4,
           7
-        ]
+        ],
+        "expected_facing": 2
       }
     },
     {
@@ -198,7 +208,8 @@
         "anchor": [
           45,
           57
-        ]
+        ],
+        "expected_facing": 1
       },
       "inside": {
         "map": "EcruteakCity_PokemonCenter_1F",
@@ -215,7 +226,8 @@
         "anchor": [
           8,
           17
-        ]
+        ],
+        "expected_facing": 2
       }
     },
     {
@@ -232,7 +244,8 @@
         "anchor": [
           53,
           47
-        ]
+        ],
+        "expected_facing": 1
       },
       "inside": {
         "map": "EcruteakCity_Mart",
@@ -249,7 +262,8 @@
         "anchor": [
           4,
           9
-        ]
+        ],
+        "expected_facing": 2
       }
     },
     {
@@ -266,7 +280,8 @@
         "anchor": [
           24,
           24
-        ]
+        ],
+        "expected_facing": 1
       },
       "inside": {
         "map": "EcruteakCity_BurnedTower",
@@ -283,7 +298,8 @@
         "anchor": [
           11,
           20
-        ]
+        ],
+        "expected_facing": 2
       }
     },
     {
@@ -326,7 +342,8 @@
             7,
             39
           ]
-        ]
+        ],
+        "expected_facing": 4
       },
       "inside": {
         "map": "EcruteakCity_WestGate",
@@ -351,7 +368,8 @@
         "press": [
           1,
           0
-        ]
+        ],
+        "expected_facing": 3
       }
     },
     {
@@ -394,7 +412,8 @@
             62,
             14
           ]
-        ]
+        ],
+        "expected_facing": 3
       },
       "inside": {
         "map": "EcruteakCity_WestGate",
@@ -419,7 +438,8 @@
         "press": [
           -1,
           0
-        ]
+        ],
+        "expected_facing": 4
       }
     },
     {
@@ -462,7 +482,8 @@
             59,
             48
           ]
-        ]
+        ],
+        "expected_facing": 3
       },
       "inside": {
         "map": "EcruteakCity_EastGate",
@@ -487,7 +508,8 @@
         "press": [
           -1,
           0
-        ]
+        ],
+        "expected_facing": 4
       }
     },
     {
@@ -530,7 +552,8 @@
             3,
             15
           ]
-        ]
+        ],
+        "expected_facing": 4
       },
       "inside": {
         "map": "EcruteakCity_EastGate",
@@ -555,7 +578,8 @@
         "press": [
           1,
           0
-        ]
+        ],
+        "expected_facing": 3
       }
     },
     {
@@ -572,7 +596,8 @@
         "anchor": [
           37,
           22
-        ]
+        ],
+        "expected_facing": 1
       },
       "inside": {
         "map": "EcruteakCity_BellTower",
@@ -589,7 +614,8 @@
         "anchor": [
           11,
           20
-        ]
+        ],
+        "expected_facing": 2
       }
     },
     {
@@ -606,7 +632,8 @@
         "anchor": [
           10,
           15
-        ]
+        ],
+        "expected_facing": 1
       },
       "inside": {
         "map": "EcruteakCity_BarrierCorridor",
@@ -623,7 +650,8 @@
         "press": [
           0,
           -1
-        ]
+        ],
+        "expected_facing": 1
       }
     },
     {
@@ -640,7 +668,8 @@
         "anchor": [
           15,
           6
-        ]
+        ],
+        "expected_facing": 1
       },
       "inside": {
         "map": "EcruteakCity_BarrierCorridor",
@@ -653,7 +682,8 @@
         "anchor": [
           3,
           17
-        ]
+        ],
+        "expected_facing": 2
       }
     },
     {
@@ -670,7 +700,8 @@
         "anchor": [
           8,
           25
-        ]
+        ],
+        "expected_facing": 1
       },
       "inside": {
         "map": "OlivineCity_Residence",
@@ -687,7 +718,8 @@
         "anchor": [
           3,
           5
-        ]
+        ],
+        "expected_facing": 2
       }
     },
     {
@@ -704,7 +736,8 @@
         "anchor": [
           8,
           30
-        ]
+        ],
+        "expected_facing": 1
       },
       "inside": {
         "map": "OlivineCity_NeighborHouse",
@@ -721,7 +754,8 @@
         "anchor": [
           3,
           5
-        ]
+        ],
+        "expected_facing": 2
       }
     },
     {
@@ -742,7 +776,8 @@
         "anchor": [
           13,
           16
-        ]
+        ],
+        "expected_facing": 1
       },
       "inside": {
         "map": "OlivineCity_Gym",
@@ -759,7 +794,8 @@
         "anchor": [
           6,
           8
-        ]
+        ],
+        "expected_facing": 2
       }
     },
     {
@@ -780,7 +816,8 @@
         "anchor": [
           16,
           35
-        ]
+        ],
+        "expected_facing": 1
       },
       "inside": {
         "map": "OlivineCity_PokemonCenter_1F",
@@ -797,7 +834,8 @@
         "anchor": [
           8,
           17
-        ]
+        ],
+        "expected_facing": 2
       }
     },
     {
@@ -814,7 +852,8 @@
         "anchor": [
           29,
           35
-        ]
+        ],
+        "expected_facing": 1
       },
       "inside": {
         "map": "OlivineCity_Mart",
@@ -831,7 +870,8 @@
         "anchor": [
           4,
           9
-        ]
+        ],
+        "expected_facing": 2
       }
     },
     {
@@ -848,7 +888,8 @@
         "anchor": [
           31,
           43
-        ]
+        ],
+        "expected_facing": 1
       },
       "inside": {
         "map": "OlivineCity_SilphOffice",
@@ -865,7 +906,8 @@
         "anchor": [
           3,
           5
-        ]
+        ],
+        "expected_facing": 2
       }
     },
     {
@@ -882,7 +924,8 @@
         "anchor": [
           8,
           43
-        ]
+        ],
+        "expected_facing": 1
       },
       "inside": {
         "map": "OlivineCity_HarborOffice",
@@ -899,7 +942,8 @@
         "anchor": [
           3,
           5
-        ]
+        ],
+        "expected_facing": 2
       }
     },
     {
@@ -916,7 +960,8 @@
         "anchor": [
           45,
           41
-        ]
+        ],
+        "expected_facing": 1
       },
       "inside": {
         "map": "OlivineCity_Lighthouse_1F",
@@ -933,7 +978,8 @@
         "anchor": [
           8,
           16
-        ]
+        ],
+        "expected_facing": 2
       }
     },
     {
@@ -950,7 +996,8 @@
         "anchor": [
           17,
           25
-        ]
+        ],
+        "expected_facing": 1
       },
       "inside": {
         "map": "OlivineCity_FishingHouse",
@@ -967,7 +1014,8 @@
         "anchor": [
           4,
           7
-        ]
+        ],
+        "expected_facing": 2
       }
     },
     {
@@ -984,7 +1032,8 @@
         "anchor": [
           31,
           19
-        ]
+        ],
+        "expected_facing": 1
       },
       "inside": {
         "map": "OlivineCity_TradeHouse",
@@ -1001,7 +1050,8 @@
         "anchor": [
           4,
           7
-        ]
+        ],
+        "expected_facing": 2
       }
     },
     {
@@ -1018,7 +1068,8 @@
         "anchor": [
           36,
           19
-        ]
+        ],
+        "expected_facing": 1
       },
       "inside": {
         "map": "OlivineCity_SealHouse",
@@ -1035,7 +1086,8 @@
         "anchor": [
           4,
           7
-        ]
+        ],
+        "expected_facing": 2
       }
     },
     {
@@ -1052,7 +1104,8 @@
         "anchor": [
           9,
           35
-        ]
+        ],
+        "expected_facing": 1
       },
       "inside": {
         "map": "OlivineCity_Cafe",
@@ -1069,7 +1122,8 @@
         "anchor": [
           5,
           9
-        ]
+        ],
+        "expected_facing": 2
       }
     },
     {
@@ -1152,7 +1206,8 @@
         "anchor": [
           6,
           2
-        ]
+        ],
+        "expected_facing": 1
       },
       "inside": {
         "map": "OlivineCity_Gym_Arena",
@@ -1173,7 +1228,8 @@
         "anchor": [
           6,
           14
-        ]
+        ],
+        "expected_facing": 2
       }
     },
     {
@@ -1282,7 +1338,8 @@
         "anchor": [
           8,
           14
-        ]
+        ],
+        "expected_facing": 1
       },
       "inside": {
         "map": "OlivineCity_Lighthouse_3F",
@@ -1299,7 +1356,8 @@
         "anchor": [
           8,
           16
-        ]
+        ],
+        "expected_facing": 2
       }
     },
     {
@@ -2001,6 +2059,7 @@
       "west": 3,
       "east": 4
     },
+    "all_arrival_facing_basis": "crossroads/hgss/qa10/doorway-intended-facing-b4.json",
     "note": "North-entry port changes approach/facing only; every old leaf and warp ordinal remains. Docked ship returns to Olivine; no sailing destination is added."
   }
 }

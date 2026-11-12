@@ -31,7 +31,7 @@ All retain source coordinate origin(0,0); only unused southeast extent is croppe
 | --- | --- | --- |
 | `SSAqua_1F` |57×21|Orange/gold passenger hall, six seating fixtures, portholes/life rings/two plants, eight cabin hatches, gangway, both lower-deck stairs, officer corridor and captain approach. |
 | `SSAqua_CaptainRoom` |14×13|Chart desk/rug, bookcase, kitchenette/fridge, berth, windows/charts and vertical sofa. |
-| `SSAqua_SoutheastCabins` |28×13|Two separate cabins: red crew room with TV/kitchen and twin berths; mustard berth/rest room with dining table, four stools and rear fittings. |
+| `SSAqua_SoutheastCabins` |28×13|Two separate cabins: red crew room with TV/kitchen and side-by-side portrait twin berths; mustard berth/rest room with dining table, four stools and rear fittings. |
 | `SSAqua_SouthwestCabins` |28×13|Separate blue berth/dining cabin and gold bookcase/dining cabin. |
 | `SSAqua_NortheastCabins` |28×13|Separate red twin-berth/desks room and mustard berth/four-stool dining cabin. |
 | `SSAqua_NorthwestCabins` |28×13|Separate blue berth/dining cabin and gold twin-berth/yellow-sofa room. |

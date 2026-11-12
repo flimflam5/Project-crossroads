@@ -21,7 +21,7 @@ support purposeful individual rooms rather than generic furnished copies.
 | --- | --- | --- |
 | `MAP_SS_AQUA_1F` |0171 /643,644|Orange/gold passenger corridor, four vertical lounge benches plus two horizontal settees, portholes/life rings/planters, eight cabin hatches, entrance vestibule, two lower-deck stairs and east captain approach. |
 | `MAP_SS_AQUA_CAPTAIN_ROOM` |0172 /645|Green striped floor/rug; chart desk, berth, sofa, tall bookcase, kitchenette/fridge, framed charts/windows. |
-| `MAP_SS_AQUA_1F_SOUTHEAST_ROOMS` |0173 /646|Left: red sleeping-sailor cabin with horizontal beds and rear TV/kitchen. Right: mustard player/rest cabin with berth, four-stool table and rear fixtures. |
+| `MAP_SS_AQUA_1F_SOUTHEAST_ROOMS` |0173 /646|Left: red sleeping-sailor cabin with portrait berths placed side by side and rear TV/kitchen. Right: mustard player/rest cabin with berth, four-stool table and rear fixtures. |
 | `MAP_SS_AQUA_1F_SOUTHWEST_ROOMS` |0174 /647|Left: blue carpet, berth and dining table. Right: gold carpet, four-stool table, bookcase and picture. |
 | `MAP_SS_AQUA_1F_NORTHEAST_ROOMS` |0175 /648|Left: red carpet, vertically arranged twin berths and two rear desks. Right: mustard room with berth and four-stool table. |
 | `MAP_SS_AQUA_1F_NORTHWEST_ROOMS` |0176 /649|Left: blue grandfather cabin with berth and table/two diagonal red stools. Right: gold twin-bed cabin with yellow sofa. |

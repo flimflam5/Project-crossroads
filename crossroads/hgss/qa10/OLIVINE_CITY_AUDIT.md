@@ -209,3 +209,53 @@ recorded, but6F is explicitly not reference-matched on B3. The actual diagnostic
 frame is `qa/qa10/before/lighthouse-6F-b3-inner-glass.png` with separate identity.
 B3 does not certify a future corrected binary; final checks must record its
 own checksum. My emulator lane has ended so root can coordinate a later build.
+
+## B4 city runtime checkpoint — scoped passes, separate facing failure
+
+Frozen game source is `df8c4598d88c7770626be4621a5f39cf60dadb95`; ROM SHA256 is
+`4fb28fe64fc44c0546462a935655346a61f13b644bc3040468146d136cd6d656`.
+The overall B4 candidate failed a separate independent intended-facing audit:
+four Ecruteak gate links faced south rather than the intended west/east, and
+one Trail corridor arrival faced north rather than south. Root is coordinating
+a minimal correction and B5 retest. The scoped passes below do not waive those
+defects, claim overall acceptance or certify the pending B5 build.
+
+All six city suites ran again on these bytes and passed. The lighthouse tour
+covered eight maps,76 real transitions,19 roundtrip edge pairs and73 warp trials.
+The199 dry and24 actual-Surf collision cases,59 materials cases, six front
+counters,12 lighthouse normal Save/cold Continue cases, five window/lift journeys
+and39 court cells/four directory approaches/one normal save all passed fresh.
+Both actual port arrivals23/24,52 and following landings23/24,51 display all192
+opaque Joe pixels before walking away. Original and copied batteries are exact.
+
+The final lighthouse runner adds two strict ordinary walking circuits around
+both sides of the6F enclosure in opposite directions, recorded continuously in
+one native-resolution clip. This is an added regression check, not a change to
+game inputs or a replacement for any existing save, journey or collision test.
+
+Independent image review compared eight actual B4 tour views and ten centered
+views against seven individual HGSS lighthouse images. The inner cyan optical
+housing is now distinct from the outer glass ring; no new obvious corruption
+was found in those views. The angular flat2D tower/core projection, simplified
+wall/rail art and small northern cap are chosen adaptations, not pixel-identical
+DS geometry or proven hardware necessities. A separate HGSS elevator cabin
+raster remains unavailable. Stills, controller tests and owner visual acceptance
+remain separate; this checkpoint does not declare either city100% complete.
+
+The physical S.S.Aqua's full default runtime suite is a separate phase after
+these city suites. It must finish its own source-derived wall bumps, all12 room
+components, interactions and normal Save/cold Continue checks before it is
+reported as passed. Public final evidence and exact test hashes belong under
+`crossroads/qa/qa10/final/B4/`; no private batteries or emulator states are public.
+
+The subsequent full B4 S.S.Aqua default suite completed:1,169 actual
+source-derived solid-target bumps, all seven maps/twelve physical components,
+twelve normal Save/cold Continue cases, fourteen NPC/sign interactions, two
+actual berth NO/YES healing fixtures and eight furnishing contexts passed.
+Independent image review inspected all twelve component and eight context
+frames against four complete HGSS mosaics plus eight cached gameplay images.
+The viewed ship art is coherent; simplified furnishings and off-camera details
+remain qualified in its review. Original/copied batteries and the B4 ROM/ELF
+hashes stayed exact. These ship passes are historical B4 scoped evidence: the
+separate Ecruteak facing failures still prevent overall B4 acceptance, and B5
+requires its own fresh gameplay results.

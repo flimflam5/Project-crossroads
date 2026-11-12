@@ -6,6 +6,7 @@ Existing map/layout/warp indexes retain identities; positions follow the referen
 """
 import json,struct,argparse,copy
 from pathlib import Path
+from build_qa10_arrival_facing import render as arrival_facing_scripts
 R=Path(__file__).resolve().parents[2]
 def canonical_positions():
  source=json.loads((R/'crossroads/hgss/canonical_events/075_T27.json').read_text())
@@ -151,6 +152,8 @@ def generate(check=False):
  write('crossroads/hgss/authoring/EcruteakCity_Gym.bin',(R/il['blockdata_filepath']).read_bytes())
  from hgss_ecruteak_family import route_primary_ids,route_primary_graphics
  js('crossroads/hgss/authoring/EcruteakCity.json',dict(map=m,layout=source_layout,gym_warp=4,gym_alias=15,interior=inside,raw_path=raw_path,shared_primary_ids=sorted(route_primary_ids()),shared_primary_graphics=sorted(route_primary_graphics())))
+ script_path='data/maps/EcruteakCity/scripts.inc'
+ write(script_path,arrival_facing_scripts('EcruteakCity',(R/script_path).read_text()))
  write('data/layouts/EcruteakCity/map.bin',city_data());print('HGSS-directed Ecruteak city generated; owner visual acceptance remains separate.')
 if __name__=='__main__':
  p=argparse.ArgumentParser();p.add_argument('--check',action='store_true');generate(p.parse_args().check)
