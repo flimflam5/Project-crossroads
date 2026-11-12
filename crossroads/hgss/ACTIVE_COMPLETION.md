@@ -1,63 +1,53 @@
-# ACTIVE QA10 — owner visual corrections and docked S.S. Aqua
+# ACTIVE QA10 — final tested B5 handoff
 
-Latest owner feedback rejects a visual-completion claim for QA09. Continue only
-identified Ecruteak/Olivine corrections, port and physical S.S. Aqua interiors.
-Branch `feature/olivine-port-ship-qa10` starts clean at source285cfa4ebd / game489.
-No reset/merge/engine upgrade; keep saves, all map/layout/heal prefixes, accepted
-buildings/Gyms, Joe, starter rescue, encounters, title/V5 music and story canon.
-Physical docked ship is now authorized; voyages/destination/story/rewards are not.
+Owner scope remains Ecruteak/Olivine/physical docked Aqua only; no further regional
+expansion until review. Preserve all current IDs/saves/designs/additions, Joe,
+starters/encounters/battles/title/V5 music and story canon. No master merge,
+reset/force push, engine upgrade, arbitrary rewards or voyage/story invention.
 
-Owner images D187C84F identify Ecruteak Directory36,45's canonical vacant court,
-not a missing Olivine house. Actual HGSS mosaic confirms it has no building.
-Source fix adds native soil/curb detail on39 cells only. Other images show the
-Olivine port/quay, terminal, Lighthouse1F, Cafe/Center and Ecruteak Center.
+Branch feature/olivine-port-ship-qa10; game source
+cc643ffe711204f3ef38e34e7aa1eb8c9558720f; generator-only successor
+ed375e9f382cafc8f225136876778534ac111a17. Draft PR17 targets QA09.
+Tested ROM ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b;
+ELF a950a6fd77e4320c3bb864c3b96e981a1da24cb63727f8151e2124c6577f90eb.
+Payload30,322,784; EWRAM226448/IWRAM28392 unchanged. All emulator lanes ENDED.
 
-BEFORE gameplay is COMPLETE on exactdf69 ROM: all16 Olivine signs, six terminal
-leaves, correct Ecruteak court and genuine residence contrast, closed gangway,
-contexts. Two genuine old normal batteries privately saved/cold-Continued at
-walkingcity23,53 and Surf23,55, without position seeds; originalbattery unchanged.
-All emulator processes ended. Public-safe proof: `qa/qa10/before`.
+Completed: seven-map/eight-cabin/12-component physical Aqua; coherent north port
+and full two-leaf landing; source-referenced LHfloors/28-cell cyan enclosure fix;
+39-cell canonical vacant Ecruteak court;25-cell/6-map nativeOnWarp+OnReturn facing
+fix. Every other B4 game input remains exact apart from those six native scripts.
+All45groups have independently fixed intended facings; no arrowbehavior/art/
+collision/warp/ID/saveflag/C/criticalconstant change for the facing repair.
 
-Implementation is IN PROGRESS, not a release:
-- Root centrally generated Ecruteak/Olivine exterior assets/maps+owner Gyms;
-  capacity fits. North port keepsdoor indices13/15 at23/24,52, now approached
-  fromnorth; sign moves off newbody to22,50. Source2lowerhalf tricks forbidden.
-- Root maritime builder: two operative gangway leaves27/28,20 to new ship,
-  original4quay warps stable, signoffwalkway25,21, native61 opaque ground.
-  Old south cityPNG is pinned separately for rear-quay facade and elevator art.
-- New private LH helper integrated before final writes; all6floors keep physical
-  bits/warps/events and get actual reference carpets/tables/windows/pink lantern
-  room. Exactsource/globalground/resource validators pass; owner visual pending.
-- Port agent owns seven new SSAqua maps/8cabins+private art/generation. Source
-  geometry and all full HGSS floor/cabin rasters recovered. Append group76 IDs
-  only, private0–12palettes/512bounds. No imported S.S.Tidal plot or fake sailing.
-- Validation agent owns independent QA10 validators and named legacy-port test
-  migrations. Runtime agent owns strict facing/fullwidth/controller/oldsave tests.
+B5 PASS:68actualstaticcommands;18scheduledphases(17actualmGBA+1independentrecord
+postcheck); seven genuine old-gate/control coldContinue cases; old-port walking/
+Surf migration and valid-water control. All173doorfronts/482executedapproaches
+PASS;37unavailablelaterals(35solid+2sea),0fails/missing. All67B4facefailuresfixed.
+FullAqua1169bumps/12roomsaves/14interactions/2berthhealthfixtures; sixcitysuites
+including199dry+24Surf/59materials/6counters/LH12saves+5journeys+2circuits/court39;
+eightacceptedfunctionstages incl51services/3starters/battles/Fly/Joefields/running.
+Original b03ff1ef488fbd25de016e828483bc3001787b84e450a45eaa0ac12a11de30ab battery
+unchanged. Copies only; no private save/state/ROM belongs inGit.
 
-Build2 compiled successfully: ROM73b82a53ec237f531877f31aabdb76bb5ba56691f9de85d60a868446e4fc9e3a,
-payload30,322,400, EWRAM226448/IWRAM28392 unchanged. All66 workflow commands
-passed individually after explicit test migrations; final clean ledger pending.
-Actual genuine old walking and Surf saves on the new body safely relocate onto
-dry ground as walking Joe; unchanged-water Surf remains Surf. Their party/boxes/
-bag/money/flags and original batteries remain unchanged. Build1's real Surf-state
-failure remains recorded, not reclassified as a pass.
+Evidence qa/qa10/final/B5; raw reports keep real identities, not relabelled B4/B3.
+Historical failures and source/test migration explanations remain archived.
+Latest exact scope: verification-summary.json, RELEASE_OLIVINE_AQUA_QA10.md,
+LOCATION_CHECKLIST.md. Native240x160frames/MP4s plus labelled contact sheets are
+separate from source/static layouts. Owner visual/Delta approval remains PENDING.
 
-Build2 native review found Joe's torso/legs hidden by two north-port canopy
-cells on the public landing. Runtime lanes are stopping before central correction
-of ONLY those layer flags, keeping art/physics/warps. All partial Build2 results
-remain diagnostic. Do not package until corrected Build3 is built, frozen and
-actually tested. Never regenerate or swap ROM/ELF/resources while emulators run.
+Delivery identity is recorded by the final artifact build-info.json and
+BlackLedger-Olivine-Aqua-QA10-A1-Delivery.json. Distribution names are
+BlackLedger-Olivine-Aqua-QA10-A1.gba / .zip / -Evidence.zip / -SHA256.txt.
+The verified local ROM is authoritative; CI artifacts can differ by compiler.
+Older QA09 deliveries and all diagnostic proof remain preserved. The packaging
+script refuses stale checksums, uncommitted source, private evidence and overwrites.
+All engineering checks are complete; next action is owner Delta/visual review.
 
-Remaining: fresh519door approaches, all12shipcomponents/eightcabins/fullwalls/
-furniture, berthrest, allLHfloors/lift/window, services/collision/materials, oldsave
-fixtures, all3starters/Joe/actions/Fly and normal Save/cold Continue. Native PNGs
-and movement clips must identify the exact final binary; owner visual pending.
-
-Final delivery needs unique QA10 ROM, exact source/SHA, per-location comparison/
-change/test/limitation report, clean feature push/PR and resumable checkpoint.
-Sailing remains separately unavailable because no Vermilion destination/approved
-travel progression/first-trip quest/rewards exist; explain rather than invent.
-Owner Delta/visual acceptance remains PENDING. QA09 history below is superseded.
+Known limits: sailing/destination/story/rewards; DS online/Seal/trade/rod decisions;
+original HGSS elevator visual unavailable (preserved chooser is deliberateGBA
+adaptation); mountedbike silhouettes/legacyNewGame cinematic; cropped visual
+reviews do not certify all unseen decoration. No city100%/1:1 statement.
+After delivery: owner Delta checklist/visual review before expanding elsewhere.
 
 # QA09 final two-city checkpoint — implementation and verification complete
 

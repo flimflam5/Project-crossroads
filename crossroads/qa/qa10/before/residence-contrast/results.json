@@ -1,0 +1,50 @@
+{
+  "phase": "BEFORE Ecruteak reported signedlot",
+  "source_revision": "285cfa4ebddcb390a8a5bde6116748cbb5eaba6b",
+  "rom_sha256": "df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4",
+  "source_battery_sha256": "b03ff1ef488fbd25de016e828483bc3001787b84e450a45eaa0ac12a11de30ab",
+  "source_battery_unchanged": true,
+  "method": "Same-ROM private snapshot continued into normalcontroller travel. No coordinates/map/warp writes. Only RAM survey/encounter test setting from disclosed base harness.",
+  "records": [
+    {
+      "case": "residence-sign",
+      "map": "EcruteakCity",
+      "position": [
+        25,
+        47
+      ],
+      "script": "Ecruteak_ResidenceSign",
+      "result": "Actual controller text opened"
+    },
+    {
+      "case": "house-entry",
+      "map": "EcruteakCity_Residence",
+      "position": [
+        4,
+        8
+      ],
+      "result": "Actually entered existing home atcity23,45"
+    },
+    {
+      "case": "house-return",
+      "map": "EcruteakCity",
+      "position": [
+        23,
+        46
+      ],
+      "result": "Actually returned"
+    },
+    {
+      "case": "reported-blank-lot-north-bump",
+      "before": [
+        25,
+        44
+      ],
+      "after": [
+        25,
+        42
+      ],
+      "result": "Recorded actual boundary, not asserted as fixed"
+    }
+  ]
+}

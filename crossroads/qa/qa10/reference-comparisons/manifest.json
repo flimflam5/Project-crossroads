@@ -1,0 +1,205 @@
+{
+  "classification": "Historical native BEFORE versus actual HGSS reference only; AFTER pending",
+  "candidate_source": "e7e2c085a5a61ef727d06f9f682af7d3a954cc06",
+  "candidate_rom_sha256": "af59dff1b06b99a9599c6f98b6fb6bd1e765cc52c0838a2dec5c79a6c1f88373",
+  "baseline_identity_source": "crossroads/qa/qa09/olivine/final-v11-tour/identity.json",
+  "rows": [
+    {
+      "location": "OlivineCity_Lighthouse_1F",
+      "short_label": "1F",
+      "before": {
+        "file": "qa09-before-OlivineCity_Lighthouse_1F.png",
+        "source_path": "crossroads/qa/qa09/olivine/final-v11-tour/OlivineCity_Lighthouse_1F.png",
+        "sha256": "5b917a5cb8aa78949caa361f5c6f893de53d2df2a2cd5e00cf5c18db368a850d",
+        "dimensions": [
+          240,
+          160
+        ],
+        "source_commit": "489c404346f572aefb6856b3dd48a9b364a08ceb",
+        "rom_sha256": "df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4",
+        "classification": "Historical actual QA09 native emulator frame, copied unmodified; no new QA10 BEFORE recapture was performed for this room."
+      },
+      "hgss_reference": {
+        "file": "reference-Glitter_Lighthouse_1F_HGSS.png",
+        "local_cache_name": "Glitter_Lighthouse_1F_HGSS.png",
+        "url": "https://archives.bulbagarden.net/media/upload/5/55/Glitter_Lighthouse_1F_HGSS.png",
+        "sha256": "92985247f82730d01350a904af72e2cc670373bae91de1fb3a946ad0c10263fa",
+        "dimensions": [
+          240,
+          224
+        ],
+        "classification": "Actual published full HGSS map view, copied unmodified. Different DS projection/framing; not native GBA gameplay or imported ROM texture."
+      },
+      "qa10_after": "PENDING final delivery-byte native capture; do not substitute a source/static render."
+    },
+    {
+      "location": "OlivineCity_Lighthouse_2F",
+      "short_label": "2F",
+      "before": {
+        "file": "qa09-before-OlivineCity_Lighthouse_2F.png",
+        "source_path": "crossroads/qa/qa09/olivine/final-v11-tour/OlivineCity_Lighthouse_2F.png",
+        "sha256": "1aa1d0fafd2643c3947dd6b21c94a9e57e040beee50e5d5752065567cc7209f6",
+        "dimensions": [
+          240,
+          160
+        ],
+        "source_commit": "489c404346f572aefb6856b3dd48a9b364a08ceb",
+        "rom_sha256": "df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4",
+        "classification": "Historical actual QA09 native emulator frame, copied unmodified; no new QA10 BEFORE recapture was performed for this room."
+      },
+      "hgss_reference": {
+        "file": "reference-Glitter_Lighthouse_2F_HGSS.png",
+        "local_cache_name": "Glitter_Lighthouse_2F_HGSS.png",
+        "url": "https://archives.bulbagarden.net/media/upload/9/9c/Glitter_Lighthouse_2F_HGSS.png",
+        "sha256": "71210d1c5d951b5cdb83efd3e9d97538d897b12140183e2f1faff1340065cdab",
+        "dimensions": [
+          240,
+          222
+        ],
+        "classification": "Actual published full HGSS map view, copied unmodified. Different DS projection/framing; not native GBA gameplay or imported ROM texture."
+      },
+      "qa10_after": "PENDING final delivery-byte native capture; do not substitute a source/static render."
+    },
+    {
+      "location": "OlivineCity_Lighthouse_3F",
+      "short_label": "3F",
+      "before": {
+        "file": "qa09-before-OlivineCity_Lighthouse_3F.png",
+        "source_path": "crossroads/qa/qa09/olivine/final-v11-tour/OlivineCity_Lighthouse_3F.png",
+        "sha256": "cda7f91e1e3d6be3a6256127788dccdc28c37b0379607e5078de7c237e471241",
+        "dimensions": [
+          240,
+          160
+        ],
+        "source_commit": "489c404346f572aefb6856b3dd48a9b364a08ceb",
+        "rom_sha256": "df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4",
+        "classification": "Historical actual QA09 native emulator frame, copied unmodified; no new QA10 BEFORE recapture was performed for this room."
+      },
+      "hgss_reference": {
+        "file": "reference-Glitter_Lighthouse_3F_HGSS.png",
+        "local_cache_name": "Glitter_Lighthouse_3F_HGSS.png",
+        "url": "https://archives.bulbagarden.net/media/upload/e/ee/Glitter_Lighthouse_3F_HGSS.png",
+        "sha256": "7e1a83e3de6c5f0c79493357ac2982d9f548b63ed56f13630078e17abccab2f4",
+        "dimensions": [
+          263,
+          238
+        ],
+        "classification": "Actual published full HGSS map view, copied unmodified. Different DS projection/framing; not native GBA gameplay or imported ROM texture."
+      },
+      "qa10_after": "PENDING final delivery-byte native capture; do not substitute a source/static render."
+    },
+    {
+      "location": "OlivineCity_Lighthouse_4F",
+      "short_label": "4F",
+      "before": {
+        "file": "qa09-before-OlivineCity_Lighthouse_4F.png",
+        "source_path": "crossroads/qa/qa09/olivine/final-v11-tour/OlivineCity_Lighthouse_4F.png",
+        "sha256": "7fc070f6320bf7915b9ce811b4c86c7b02137f3a94bb6dfde2bd028a9161d951",
+        "dimensions": [
+          240,
+          160
+        ],
+        "source_commit": "489c404346f572aefb6856b3dd48a9b364a08ceb",
+        "rom_sha256": "df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4",
+        "classification": "Historical actual QA09 native emulator frame, copied unmodified; no new QA10 BEFORE recapture was performed for this room."
+      },
+      "hgss_reference": {
+        "file": "reference-Glitter_Lighthouse_4F_HGSS.png",
+        "local_cache_name": "Glitter_Lighthouse_4F_HGSS.png",
+        "url": "https://archives.bulbagarden.net/media/upload/2/21/Glitter_Lighthouse_4F_HGSS.png",
+        "sha256": "6a184bd7d285c722bad69d2459324b64cb80c4d849425d4ac561d904083836d1",
+        "dimensions": [
+          263,
+          235
+        ],
+        "classification": "Actual published full HGSS map view, copied unmodified. Different DS projection/framing; not native GBA gameplay or imported ROM texture."
+      },
+      "qa10_after": "PENDING final delivery-byte native capture; do not substitute a source/static render."
+    },
+    {
+      "location": "OlivineCity_Lighthouse_5F",
+      "short_label": "5F",
+      "before": {
+        "file": "qa09-before-OlivineCity_Lighthouse_5F.png",
+        "source_path": "crossroads/qa/qa09/olivine/final-v11-tour/OlivineCity_Lighthouse_5F.png",
+        "sha256": "540e74def76134b196f10641db01baef6df6b57548079ca752036fa861db3d74",
+        "dimensions": [
+          240,
+          160
+        ],
+        "source_commit": "489c404346f572aefb6856b3dd48a9b364a08ceb",
+        "rom_sha256": "df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4",
+        "classification": "Historical actual QA09 native emulator frame, copied unmodified; no new QA10 BEFORE recapture was performed for this room."
+      },
+      "hgss_reference": {
+        "file": "reference-Glitter_Lighthouse_5F_HGSS.png",
+        "local_cache_name": "Glitter_Lighthouse_5F_HGSS.png",
+        "url": "https://archives.bulbagarden.net/media/upload/d/df/Glitter_Lighthouse_5F_HGSS.png",
+        "sha256": "c80a64ff536abf57004fe22f9a2c9269168a479373c12111810bb75109214ba6",
+        "dimensions": [
+          263,
+          235
+        ],
+        "classification": "Actual published full HGSS map view, copied unmodified. Different DS projection/framing; not native GBA gameplay or imported ROM texture."
+      },
+      "qa10_after": "PENDING final delivery-byte native capture; do not substitute a source/static render."
+    },
+    {
+      "location": "OlivineCity_Lighthouse_6F",
+      "short_label": "6F",
+      "before": {
+        "file": "qa09-before-OlivineCity_Lighthouse_6F.png",
+        "source_path": "crossroads/qa/qa09/olivine/final-v11-tour/OlivineCity_Lighthouse_6F.png",
+        "sha256": "06fd2deecb23397bbc9f17a7eb0c0980279b2b25132389c5f263d354bd350626",
+        "dimensions": [
+          240,
+          160
+        ],
+        "source_commit": "489c404346f572aefb6856b3dd48a9b364a08ceb",
+        "rom_sha256": "df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4",
+        "classification": "Historical actual QA09 native emulator frame, copied unmodified; no new QA10 BEFORE recapture was performed for this room."
+      },
+      "hgss_reference": {
+        "file": "reference-Glitter_Lighthouse_6F_HGSS.png",
+        "local_cache_name": "Glitter_Lighthouse_6F_HGSS.png",
+        "url": "https://archives.bulbagarden.net/media/upload/0/00/Glitter_Lighthouse_6F_HGSS.png",
+        "sha256": "2825a3dfd9aa030c2cd733f06561fd0e3f83f8b46fff53fa2dccdd470efcb0c5",
+        "dimensions": [
+          309,
+          272
+        ],
+        "classification": "Actual published full HGSS map view, copied unmodified. Different DS projection/framing; not native GBA gameplay or imported ROM texture."
+      },
+      "qa10_after": "PENDING final delivery-byte native capture; do not substitute a source/static render."
+    },
+    {
+      "location": "OlivineCity_Lighthouse_Balcony",
+      "short_label": "Balcony",
+      "before": {
+        "file": "qa09-before-OlivineCity_Lighthouse_Balcony.png",
+        "source_path": "crossroads/qa/qa09/olivine/final-v11-tour/OlivineCity_Lighthouse_Balcony.png",
+        "sha256": "07a2e5509d5baa737715b62208c57e3cc162d08f301395d788e4a897893111ea",
+        "dimensions": [
+          240,
+          160
+        ],
+        "source_commit": "489c404346f572aefb6856b3dd48a9b364a08ceb",
+        "rom_sha256": "df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4",
+        "classification": "Historical actual QA09 native emulator frame, copied unmodified; no new QA10 BEFORE recapture was performed for this room."
+      },
+      "hgss_reference": {
+        "file": "reference-Glitter_Lighthouse_3F_Balcony_HGSS.png",
+        "local_cache_name": "Glitter_Lighthouse_3F_Balcony_HGSS.png",
+        "url": "https://archives.bulbagarden.net/media/upload/c/ce/Glitter_Lighthouse_3F_Balcony_HGSS.png",
+        "sha256": "c5afd24bc97e0b6239e77e88ad3543f5aa0f66c226a50bbbb925a634bdd6d48c",
+        "dimensions": [
+          314,
+          274
+        ],
+        "classification": "Actual published full HGSS map view, copied unmodified. Different DS projection/framing; not native GBA gameplay or imported ROM texture."
+      },
+      "qa10_after": "PENDING final delivery-byte native capture; do not substitute a source/static render."
+    }
+  ],
+  "privacy": "Only documentary reference/nativePNG and metadata; no ROM, battery or snapshot."
+}

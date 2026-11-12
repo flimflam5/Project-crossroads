@@ -96,3 +96,26 @@ CI must fetch the immutable full baseline before checking:
 The source-only prototype passes; the unchanged B4 ELF was correctly rejected
 because it lacks the new callback symbols. Actual compiled repair checks remain
 pending central generation/build.
+
+
+## Actual repaired B5 checkpoint
+
+Source `cc643ffe711204f3ef38e34e7aa1eb8c9558720f`; ROM SHA256
+`ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b`.
+The coordinator compiled and verified both native hooks in the actual ROM.
+Seven genuine B4 normal saves then passed fresh-core normal Continue: six exact
+landing directions corrected and one offlanding control unchanged, with exact
+position/party/boxes/starter/flags/decoded inventory and source files preserved.
+
+The complete fresh B5 normal-controller doorway suite recorded all519 attempts.
+The independent postcheck passed482 actual arrival facings, separately recorded
+37 physically unavailable lateral approaches, rejected no records and skipped
+no required front. B4's67 failures remain an identified historical failure, not
+relabeled as passes. [Native before/after, movement recordings and exact full
+facing results](../../qa/qa10/final/B5/facing/README.md) are curated separately
+from [the8 accepted-function regression stages](../../qa/qa10/final/B5/regressions/README.md).
+Those eight stages also passed on B5, including all3 starters, Joe battle/field
+states, Fly10, running,51 accepted services and normal Save/Continue. The authored
+bike silhouettes and inherited New Game presentation remain stated limitations;
+owner Delta/visual approval is still pending. These later actual results supersede
+the earlier source-only prototype's pending-build note, not its scope limits.

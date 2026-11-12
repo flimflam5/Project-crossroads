@@ -1,0 +1,39 @@
+{
+  "status": "Actual native prompt synchronization diagnostic PASS; initial failure was harness prematureinput",
+  "rom_sha256": "af59dff1b06b99a9599c6f98b6fb6bd1e765cc52c0838a2dec5c79a6c1f88373",
+  "actual_menu_pointer": "0x20310e0",
+  "task": "Task_HandleYesNoInput",
+  "private_fixture": "Same-ROM privatehealthsnapshot, firstHP1/statuspoison only",
+  "records": [
+    {
+      "phase": "native selection",
+      "accept": false,
+      "active_task": true,
+      "cursor": 1,
+      "hp": 1,
+      "status": 8
+    },
+    {
+      "phase": "after choice",
+      "accept": false,
+      "actual_result": 0,
+      "hp": 1,
+      "status": 8
+    },
+    {
+      "phase": "native selection",
+      "accept": true,
+      "active_task": true,
+      "cursor": 0,
+      "hp": 1,
+      "status": 8
+    },
+    {
+      "phase": "after choice",
+      "accept": true,
+      "actual_result": 1,
+      "hp": 21,
+      "status": 0
+    }
+  ]
+}

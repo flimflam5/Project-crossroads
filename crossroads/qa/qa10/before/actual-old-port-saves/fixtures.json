@@ -1,0 +1,58 @@
+{
+  "source_revision": "285cfa4ebddcb390a8a5bde6116748cbb5eaba6b",
+  "source_rom_sha256": "df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4",
+  "source_battery_sha256": "b03ff1ef488fbd25de016e828483bc3001787b84e450a45eaa0ac12a11de30ab",
+  "method": "Genuine native old-ROM controller walking/Surf; no coordinate seeding. Native Save and fresh-core Continue preserves location, avatar and exactparty/boxes/starter/flags/decodedinventory hashes. Private batteries are never published.",
+  "fixtures": [
+    {
+      "label": "actual-old-walking-city23-53",
+      "battery_file": "actual-old-walking-city23-53.sav",
+      "battery_sha256": "b5fb46c7cc028dbabe7c8bab960054b31ab8f766081c8faeb34c9cc692958727",
+      "actual_old_position": [
+        23,
+        53
+      ],
+      "actual_old_map": "OlivineCity",
+      "old_surf": false,
+      "state_before": {
+        "count": 1,
+        "party_sha256": "150032eb0c16612dcd4b1454cad6a86ed85b9a57b99715f1f51ac52a0bdd62b3",
+        "boxes_sha256": "faade62b8927615ebc110cf83881f1ac09fbf6367630ef6f194552c0d4693795",
+        "starter": 3,
+        "flags_sha256": "71f2c0abfa86de149d5f2c7b00595a4a5caf5638533a6bd73609109e1f8cb792",
+        "decoded_inventory_sha256": "043b1706754443e07699437643f560540fcdaad78a02e3c62fb3aaf455740bb3"
+      },
+      "source_rom_sha256": "df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4",
+      "genuinely_reached_by_normal_controller": true,
+      "normal_save_and_cold_continue_verified": true,
+      "source_story_flags_unchanged": true
+    },
+    {
+      "label": "actual-old-surf-city23-55",
+      "battery_file": "actual-old-surf-city23-55.sav",
+      "battery_sha256": "d019a8b1d17fdd0e6e7e742708802c261dc12b3a5aef40173bcac165fe8e3be8",
+      "actual_old_position": [
+        23,
+        55
+      ],
+      "actual_old_map": "OlivineCity",
+      "old_surf": true,
+      "state_before": {
+        "count": 1,
+        "party_sha256": "150032eb0c16612dcd4b1454cad6a86ed85b9a57b99715f1f51ac52a0bdd62b3",
+        "boxes_sha256": "faade62b8927615ebc110cf83881f1ac09fbf6367630ef6f194552c0d4693795",
+        "starter": 3,
+        "flags_sha256": "71f2c0abfa86de149d5f2c7b00595a4a5caf5638533a6bd73609109e1f8cb792",
+        "decoded_inventory_sha256": "043b1706754443e07699437643f560540fcdaad78a02e3c62fb3aaf455740bb3"
+      },
+      "source_rom_sha256": "df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4",
+      "genuinely_reached_by_normal_controller": true,
+      "normal_save_and_cold_continue_verified": true,
+      "source_story_flags_unchanged": true
+    }
+  ],
+  "setup_history": [
+    "Walking23,53 fixture passed actual normal Save and cold Continue in the first process. Its subsequent route back to the Survey desk incorrectly attempted water after Survey correctly cleared on boot; this was a test-setup route error, not a game defect.",
+    "The already-passed walking fixture was retained. A separate same-ROM snapshot with previously enabled real Survey access was used only for initial setup; native walking/Surf UI reached23,55, then actual Save and fresh-core Continue verified the second fixture. No coordinates were seeded."
+  ]
+}

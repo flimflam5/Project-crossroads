@@ -1,0 +1,47 @@
+{
+  "classification": "Actual owner screenshots1\u20132: Ecruteak Directory36,45; existing public court, not a missing house",
+  "source_revision": "285cfa4ebddcb390a8a5bde6116748cbb5eaba6b",
+  "rom_sha256": "df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4",
+  "files": [
+    {
+      "path": "directory-court-after-walk.png",
+      "bytes": 5714,
+      "sha256": "54e872c45a1b250dce2b1bae107fd285d3e4a8245683afb200e77f91ff5da28d"
+    },
+    {
+      "path": "directory-court-west.png",
+      "bytes": 4378,
+      "sha256": "2f285b4189a4aecc3a13aff246c8c138e6cb70e6798198f194d7866a4624ce99"
+    },
+    {
+      "path": "directory-court-north.png",
+      "bytes": 4601,
+      "sha256": "18d0d42af998343ca84d1158ff5b39d1e6ff086a4d0fcbeaaaeb3205f9fbdc0f"
+    },
+    {
+      "path": "directory-court-actual-message.png",
+      "bytes": 4982,
+      "sha256": "05dbb3c4a7c24b5419b1ee0fa6f3adbe05026a8506ca82325a76cfae78379035"
+    },
+    {
+      "path": "directory-court-north-message.png",
+      "bytes": 4965,
+      "sha256": "f38293204583c634434024586c14e9d3d106e5b069e3a0512d5f9769c4c6ff90"
+    },
+    {
+      "path": "directory-court-south.png",
+      "bytes": 4611,
+      "sha256": "ace4fe9cac2eac89819fb738544fa48f9859b4f47a7ba560ede76d2d45d65fb7"
+    },
+    {
+      "path": "directory-court-normal-walk.mp4",
+      "bytes": 13553,
+      "sha256": "7582d55b029f5fa4c2d6f301721ff7a06f56a9d9edbef6a124a531ce9ae8d7d2"
+    },
+    {
+      "path": "results.json",
+      "bytes": 1088,
+      "sha256": "e4c6772093f5d465dc851de373574d2289bf552264ee457b7e73b5987876f253"
+    }
+  ]
+}

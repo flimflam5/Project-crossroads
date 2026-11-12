@@ -1,0 +1,48 @@
+{
+  "rom_sha256": "ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b",
+  "source_revision": "cc643ffe711204f3ef38e34e7aa1eb8c9558720f",
+  "method": "Seven genuinely reached/native-saved B4 batteries, fresh-core normal Continue on candidate. No memory writes, snapshots, coordinate changes or survey toggles in check mode. Six intended facing corrections; one untouched offlanding control. Exact position and save payload asserted.",
+  "files": [
+    {
+      "path": "results.json",
+      "source": "build/qa10-b5-arrival-continue/results.json",
+      "sha256": "2492e9b1979e0caf3076c998df9fc8a8f23a91c0ff20bdc3c7bf9f221d9b1d05"
+    },
+    {
+      "path": "city-west-landing-actual-new-cold-continue.png",
+      "source": "build/qa10-b5-arrival-continue/city-west-landing-actual-new-cold-continue.png",
+      "sha256": "6f427fa62d55caa324a1dff1347f5eef2fc9ae706afd1c84c9837d70923b3f96"
+    },
+    {
+      "path": "corridor-landing-actual-new-cold-continue.png",
+      "source": "build/qa10-b5-arrival-continue/corridor-landing-actual-new-cold-continue.png",
+      "sha256": "47e2e52de6c571e4b21ae192b028f39b0ed944582bf87a81453d1b953639f08e"
+    },
+    {
+      "path": "eastgate-landing-actual-new-cold-continue.png",
+      "source": "build/qa10-b5-arrival-continue/eastgate-landing-actual-new-cold-continue.png",
+      "sha256": "35f15246d1cd1c9a1e44b2365611f9ab36d474bafd8f3bf7d8293670a87e8a18"
+    },
+    {
+      "path": "offlanding-control-actual-new-cold-continue.png",
+      "source": "build/qa10-b5-arrival-continue/offlanding-control-actual-new-cold-continue.png",
+      "sha256": "d546c431d772d3418d6014f0319c408b4f977edbb5cb6f929bbdb19c88c2a5dc"
+    },
+    {
+      "path": "route38-landing-actual-new-cold-continue.png",
+      "source": "build/qa10-b5-arrival-continue/route38-landing-actual-new-cold-continue.png",
+      "sha256": "899ae11e2e820105dc2a9d6b55a848f0324e9f696a6d6bd74f9b477a112381f0"
+    },
+    {
+      "path": "route42-landing-actual-new-cold-continue.png",
+      "source": "build/qa10-b5-arrival-continue/route42-landing-actual-new-cold-continue.png",
+      "sha256": "aa14d783cb5ffba9628b8dae5184b4dcdd07e3086b39da917c9d6d2e1fcb74d7"
+    },
+    {
+      "path": "westgate-landing-actual-new-cold-continue.png",
+      "source": "build/qa10-b5-arrival-continue/westgate-landing-actual-new-cold-continue.png",
+      "sha256": "245dfc5b0311615af149afdbd172f56485bdc6a8bea0979a8a04474e5343248f"
+    }
+  ],
+  "private_saves_or_states_exported": false
+}

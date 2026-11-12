@@ -1,0 +1,823 @@
+{
+  "contract": "/workspace/Project-crossroads/crossroads/hgss/qa10/doorway-intended-facing-b4.json",
+  "contract_sha256": "ef93a0d8d71e76234e2b66aa2d48cbc028944daf19dc592aa5e7c199d40b54bd",
+  "intended_source_revision": "df8c4598d88c7770626be4621a5f39cf60dadb95",
+  "intended_rom_sha256": "4fb28fe64fc44c0546462a935655346a61f13b644bc3040468146d136cd6d656",
+  "method": "Physical-facing expectations existed before reading trial facing results; no emulator or game writes.",
+  "final_coverage": true,
+  "passed": false,
+  "groups": 45,
+  "expected_attempts": 519,
+  "recorded_attempts": 519,
+  "exact_facing_passes": 415,
+  "physically_unavailable_lateral_approaches": 37,
+  "missing_attempts": [],
+  "identity_errors": [],
+  "failures": [
+    {
+      "label": "west-city-gate-outside-0-front",
+      "problem": "Incorrect actual arrival facing",
+      "source": "EcruteakCity",
+      "destination": "EcruteakCity_WestGate",
+      "arrival": [
+        10,
+        6
+      ],
+      "actual": 1,
+      "expected": 3
+    },
+    {
+      "label": "west-city-gate-outside-0-lateral-negative",
+      "problem": "Incorrect actual arrival facing",
+      "source": "EcruteakCity",
+      "destination": "EcruteakCity_WestGate",
+      "arrival": [
+        10,
+        6
+      ],
+      "actual": 1,
+      "expected": 3
+    },
+    {
+      "label": "west-city-gate-outside-1-front",
+      "problem": "Incorrect actual arrival facing",
+      "source": "EcruteakCity",
+      "destination": "EcruteakCity_WestGate",
+      "arrival": [
+        10,
+        7
+      ],
+      "actual": 1,
+      "expected": 3
+    },
+    {
+      "label": "west-city-gate-outside-1-lateral-negative",
+      "problem": "Incorrect actual arrival facing",
+      "source": "EcruteakCity",
+      "destination": "EcruteakCity_WestGate",
+      "arrival": [
+        10,
+        7
+      ],
+      "actual": 1,
+      "expected": 3
+    },
+    {
+      "label": "west-city-gate-outside-1-lateral-positive",
+      "problem": "Incorrect actual arrival facing",
+      "source": "EcruteakCity",
+      "destination": "EcruteakCity_WestGate",
+      "arrival": [
+        10,
+        7
+      ],
+      "actual": 1,
+      "expected": 3
+    },
+    {
+      "label": "west-city-gate-outside-2-front",
+      "problem": "Incorrect actual arrival facing",
+      "source": "EcruteakCity",
+      "destination": "EcruteakCity_WestGate",
+      "arrival": [
+        10,
+        8
+      ],
+      "actual": 1,
+      "expected": 3
+    },
+    {
+      "label": "west-city-gate-outside-2-lateral-negative",
+      "problem": "Incorrect actual arrival facing",
+      "source": "EcruteakCity",
+      "destination": "EcruteakCity_WestGate",
+      "arrival": [
+        10,
+        8
+      ],
+      "actual": 1,
+      "expected": 3
+    },
+    {
+      "label": "west-city-gate-outside-2-lateral-positive",
+      "problem": "Incorrect actual arrival facing",
+      "source": "EcruteakCity",
+      "destination": "EcruteakCity_WestGate",
+      "arrival": [
+        10,
+        8
+      ],
+      "actual": 1,
+      "expected": 3
+    },
+    {
+      "label": "west-city-gate-inside-0-front",
+      "problem": "Incorrect actual arrival facing",
+      "source": "EcruteakCity_WestGate",
+      "destination": "EcruteakCity",
+      "arrival": [
+        7,
+        37
+      ],
+      "actual": 1,
+      "expected": 4
+    },
+    {
+      "label": "west-city-gate-inside-0-lateral-negative",
+      "problem": "Incorrect actual arrival facing",
+      "source": "EcruteakCity_WestGate",
+      "destination": "EcruteakCity",
+      "arrival": [
+        7,
+        37
+      ],
+      "actual": 1,
+      "expected": 4
+    },
+    {
+      "label": "west-city-gate-inside-0-lateral-positive",
+      "problem": "Incorrect actual arrival facing",
+      "source": "EcruteakCity_WestGate",
+      "destination": "EcruteakCity",
+      "arrival": [
+        7,
+        37
+      ],
+      "actual": 1,
+      "expected": 4
+    },
+    {
+      "label": "west-city-gate-inside-1-front",
+      "problem": "Incorrect actual arrival facing",
+      "source": "EcruteakCity_WestGate",
+      "destination": "EcruteakCity",
+      "arrival": [
+        7,
+        38
+      ],
+      "actual": 1,
+      "expected": 4
+    },
+    {
+      "label": "west-city-gate-inside-1-lateral-negative",
+      "problem": "Incorrect actual arrival facing",
+      "source": "EcruteakCity_WestGate",
+      "destination": "EcruteakCity",
+      "arrival": [
+        7,
+        38
+      ],
+      "actual": 1,
+      "expected": 4
+    },
+    {
+      "label": "west-city-gate-inside-1-lateral-positive",
+      "problem": "Incorrect actual arrival facing",
+      "source": "EcruteakCity_WestGate",
+      "destination": "EcruteakCity",
+      "arrival": [
+        7,
+        38
+      ],
+      "actual": 1,
+      "expected": 4
+    },
+    {
+      "label": "west-city-gate-inside-2-front",
+      "problem": "Incorrect actual arrival facing",
+      "source": "EcruteakCity_WestGate",
+      "destination": "EcruteakCity",
+      "arrival": [
+        7,
+        39
+      ],
+      "actual": 1,
+      "expected": 4
+    },
+    {
+      "label": "west-city-gate-inside-2-lateral-negative",
+      "problem": "Incorrect actual arrival facing",
+      "source": "EcruteakCity_WestGate",
+      "destination": "EcruteakCity",
+      "arrival": [
+        7,
+        39
+      ],
+      "actual": 1,
+      "expected": 4
+    },
+    {
+      "label": "west-city-gate-inside-2-lateral-positive",
+      "problem": "Incorrect actual arrival facing",
+      "source": "EcruteakCity_WestGate",
+      "destination": "EcruteakCity",
+      "arrival": [
+        7,
+        39
+      ],
+      "actual": 1,
+      "expected": 4
+    },
+    {
+      "label": "west-route-gate-outside-0-front",
+      "problem": "Incorrect actual arrival facing",
+      "source": "JohtoRoute38",
+      "destination": "EcruteakCity_WestGate",
+      "arrival": [
+        1,
+        6
+      ],
+      "actual": 1,
+      "expected": 4
+    },
+    {
+      "label": "west-route-gate-outside-0-lateral-positive",
+      "problem": "Incorrect actual arrival facing",
+      "source": "JohtoRoute38",
+      "destination": "EcruteakCity_WestGate",
+      "arrival": [
+        1,
+        6
+      ],
+      "actual": 1,
+      "expected": 4
+    },
+    {
+      "label": "west-route-gate-outside-1-front",
+      "problem": "Incorrect actual arrival facing",
+      "source": "JohtoRoute38",
+      "destination": "EcruteakCity_WestGate",
+      "arrival": [
+        1,
+        7
+      ],
+      "actual": 1,
+      "expected": 4
+    },
+    {
+      "label": "west-route-gate-outside-1-lateral-negative",
+      "problem": "Incorrect actual arrival facing",
+      "source": "JohtoRoute38",
+      "destination": "EcruteakCity_WestGate",
+      "arrival": [
+        1,
+        7
+      ],
+      "actual": 1,
+      "expected": 4
+    },
+    {
+      "label": "west-route-gate-outside-1-lateral-positive",
+      "problem": "Incorrect actual arrival facing",
+      "source": "JohtoRoute38",
+      "destination": "EcruteakCity_WestGate",
+      "arrival": [
+        1,
+        7
+      ],
+      "actual": 1,
+      "expected": 4
+    },
+    {
+      "label": "west-route-gate-outside-2-front",
+      "problem": "Incorrect actual arrival facing",
+      "source": "JohtoRoute38",
+      "destination": "EcruteakCity_WestGate",
+      "arrival": [
+        1,
+        8
+      ],
+      "actual": 1,
+      "expected": 4
+    },
+    {
+      "label": "west-route-gate-outside-2-lateral-negative",
+      "problem": "Incorrect actual arrival facing",
+      "source": "JohtoRoute38",
+      "destination": "EcruteakCity_WestGate",
+      "arrival": [
+        1,
+        8
+      ],
+      "actual": 1,
+      "expected": 4
+    },
+    {
+      "label": "west-route-gate-inside-0-front",
+      "problem": "Incorrect actual arrival facing",
+      "source": "EcruteakCity_WestGate",
+      "destination": "JohtoRoute38",
+      "arrival": [
+        62,
+        12
+      ],
+      "actual": 1,
+      "expected": 3
+    },
+    {
+      "label": "west-route-gate-inside-0-lateral-negative",
+      "problem": "Incorrect actual arrival facing",
+      "source": "EcruteakCity_WestGate",
+      "destination": "JohtoRoute38",
+      "arrival": [
+        62,
+        12
+      ],
+      "actual": 1,
+      "expected": 3
+    },
+    {
+      "label": "west-route-gate-inside-0-lateral-positive",
+      "problem": "Incorrect actual arrival facing",
+      "source": "EcruteakCity_WestGate",
+      "destination": "JohtoRoute38",
+      "arrival": [
+        62,
+        12
+      ],
+      "actual": 1,
+      "expected": 3
+    },
+    {
+      "label": "west-route-gate-inside-1-front",
+      "problem": "Incorrect actual arrival facing",
+      "source": "EcruteakCity_WestGate",
+      "destination": "JohtoRoute38",
+      "arrival": [
+        62,
+        13
+      ],
+      "actual": 1,
+      "expected": 3
+    },
+    {
+      "label": "west-route-gate-inside-1-lateral-negative",
+      "problem": "Incorrect actual arrival facing",
+      "source": "EcruteakCity_WestGate",
+      "destination": "JohtoRoute38",
+      "arrival": [
+        62,
+        13
+      ],
+      "actual": 1,
+      "expected": 3
+    },
+    {
+      "label": "west-route-gate-inside-1-lateral-positive",
+      "problem": "Incorrect actual arrival facing",
+      "source": "EcruteakCity_WestGate",
+      "destination": "JohtoRoute38",
+      "arrival": [
+        62,
+        13
+      ],
+      "actual": 1,
+      "expected": 3
+    },
+    {
+      "label": "west-route-gate-inside-2-front",
+      "problem": "Incorrect actual arrival facing",
+      "source": "EcruteakCity_WestGate",
+      "destination": "JohtoRoute38",
+      "arrival": [
+        62,
+        14
+      ],
+      "actual": 1,
+      "expected": 3
+    },
+    {
+      "label": "west-route-gate-inside-2-lateral-negative",
+      "problem": "Incorrect actual arrival facing",
+      "source": "EcruteakCity_WestGate",
+      "destination": "JohtoRoute38",
+      "arrival": [
+        62,
+        14
+      ],
+      "actual": 1,
+      "expected": 3
+    },
+    {
+      "label": "west-route-gate-inside-2-lateral-positive",
+      "problem": "Incorrect actual arrival facing",
+      "source": "EcruteakCity_WestGate",
+      "destination": "JohtoRoute38",
+      "arrival": [
+        62,
+        14
+      ],
+      "actual": 1,
+      "expected": 3
+    },
+    {
+      "label": "east-city-gate-outside-0-front",
+      "problem": "Incorrect actual arrival facing",
+      "source": "EcruteakCity",
+      "destination": "EcruteakCity_EastGate",
+      "arrival": [
+        1,
+        6
+      ],
+      "actual": 1,
+      "expected": 4
+    },
+    {
+      "label": "east-city-gate-outside-0-lateral-positive",
+      "problem": "Incorrect actual arrival facing",
+      "source": "EcruteakCity",
+      "destination": "EcruteakCity_EastGate",
+      "arrival": [
+        1,
+        6
+      ],
+      "actual": 1,
+      "expected": 4
+    },
+    {
+      "label": "east-city-gate-outside-1-front",
+      "problem": "Incorrect actual arrival facing",
+      "source": "EcruteakCity",
+      "destination": "EcruteakCity_EastGate",
+      "arrival": [
+        1,
+        7
+      ],
+      "actual": 1,
+      "expected": 4
+    },
+    {
+      "label": "east-city-gate-outside-1-lateral-negative",
+      "problem": "Incorrect actual arrival facing",
+      "source": "EcruteakCity",
+      "destination": "EcruteakCity_EastGate",
+      "arrival": [
+        1,
+        7
+      ],
+      "actual": 1,
+      "expected": 4
+    },
+    {
+      "label": "east-city-gate-outside-1-lateral-positive",
+      "problem": "Incorrect actual arrival facing",
+      "source": "EcruteakCity",
+      "destination": "EcruteakCity_EastGate",
+      "arrival": [
+        1,
+        7
+      ],
+      "actual": 1,
+      "expected": 4
+    },
+    {
+      "label": "east-city-gate-outside-2-front",
+      "problem": "Incorrect actual arrival facing",
+      "source": "EcruteakCity",
+      "destination": "EcruteakCity_EastGate",
+      "arrival": [
+        1,
+        8
+      ],
+      "actual": 1,
+      "expected": 4
+    },
+    {
+      "label": "east-city-gate-outside-2-lateral-negative",
+      "problem": "Incorrect actual arrival facing",
+      "source": "EcruteakCity",
+      "destination": "EcruteakCity_EastGate",
+      "arrival": [
+        1,
+        8
+      ],
+      "actual": 1,
+      "expected": 4
+    },
+    {
+      "label": "east-city-gate-inside-0-front",
+      "problem": "Incorrect actual arrival facing",
+      "source": "EcruteakCity_EastGate",
+      "destination": "EcruteakCity",
+      "arrival": [
+        59,
+        46
+      ],
+      "actual": 1,
+      "expected": 3
+    },
+    {
+      "label": "east-city-gate-inside-0-lateral-negative",
+      "problem": "Incorrect actual arrival facing",
+      "source": "EcruteakCity_EastGate",
+      "destination": "EcruteakCity",
+      "arrival": [
+        59,
+        46
+      ],
+      "actual": 1,
+      "expected": 3
+    },
+    {
+      "label": "east-city-gate-inside-0-lateral-positive",
+      "problem": "Incorrect actual arrival facing",
+      "source": "EcruteakCity_EastGate",
+      "destination": "EcruteakCity",
+      "arrival": [
+        59,
+        46
+      ],
+      "actual": 1,
+      "expected": 3
+    },
+    {
+      "label": "east-city-gate-inside-1-front",
+      "problem": "Incorrect actual arrival facing",
+      "source": "EcruteakCity_EastGate",
+      "destination": "EcruteakCity",
+      "arrival": [
+        59,
+        47
+      ],
+      "actual": 1,
+      "expected": 3
+    },
+    {
+      "label": "east-city-gate-inside-1-lateral-negative",
+      "problem": "Incorrect actual arrival facing",
+      "source": "EcruteakCity_EastGate",
+      "destination": "EcruteakCity",
+      "arrival": [
+        59,
+        47
+      ],
+      "actual": 1,
+      "expected": 3
+    },
+    {
+      "label": "east-city-gate-inside-1-lateral-positive",
+      "problem": "Incorrect actual arrival facing",
+      "source": "EcruteakCity_EastGate",
+      "destination": "EcruteakCity",
+      "arrival": [
+        59,
+        47
+      ],
+      "actual": 1,
+      "expected": 3
+    },
+    {
+      "label": "east-city-gate-inside-2-front",
+      "problem": "Incorrect actual arrival facing",
+      "source": "EcruteakCity_EastGate",
+      "destination": "EcruteakCity",
+      "arrival": [
+        59,
+        48
+      ],
+      "actual": 1,
+      "expected": 3
+    },
+    {
+      "label": "east-city-gate-inside-2-lateral-negative",
+      "problem": "Incorrect actual arrival facing",
+      "source": "EcruteakCity_EastGate",
+      "destination": "EcruteakCity",
+      "arrival": [
+        59,
+        48
+      ],
+      "actual": 1,
+      "expected": 3
+    },
+    {
+      "label": "east-city-gate-inside-2-lateral-positive",
+      "problem": "Incorrect actual arrival facing",
+      "source": "EcruteakCity_EastGate",
+      "destination": "EcruteakCity",
+      "arrival": [
+        59,
+        48
+      ],
+      "actual": 1,
+      "expected": 3
+    },
+    {
+      "label": "east-route-gate-outside-0-front",
+      "problem": "Incorrect actual arrival facing",
+      "source": "JohtoRoute42",
+      "destination": "EcruteakCity_EastGate",
+      "arrival": [
+        10,
+        6
+      ],
+      "actual": 1,
+      "expected": 3
+    },
+    {
+      "label": "east-route-gate-outside-0-lateral-negative",
+      "problem": "Incorrect actual arrival facing",
+      "source": "JohtoRoute42",
+      "destination": "EcruteakCity_EastGate",
+      "arrival": [
+        10,
+        6
+      ],
+      "actual": 1,
+      "expected": 3
+    },
+    {
+      "label": "east-route-gate-outside-1-front",
+      "problem": "Incorrect actual arrival facing",
+      "source": "JohtoRoute42",
+      "destination": "EcruteakCity_EastGate",
+      "arrival": [
+        10,
+        7
+      ],
+      "actual": 1,
+      "expected": 3
+    },
+    {
+      "label": "east-route-gate-outside-1-lateral-negative",
+      "problem": "Incorrect actual arrival facing",
+      "source": "JohtoRoute42",
+      "destination": "EcruteakCity_EastGate",
+      "arrival": [
+        10,
+        7
+      ],
+      "actual": 1,
+      "expected": 3
+    },
+    {
+      "label": "east-route-gate-outside-1-lateral-positive",
+      "problem": "Incorrect actual arrival facing",
+      "source": "JohtoRoute42",
+      "destination": "EcruteakCity_EastGate",
+      "arrival": [
+        10,
+        7
+      ],
+      "actual": 1,
+      "expected": 3
+    },
+    {
+      "label": "east-route-gate-outside-2-front",
+      "problem": "Incorrect actual arrival facing",
+      "source": "JohtoRoute42",
+      "destination": "EcruteakCity_EastGate",
+      "arrival": [
+        10,
+        8
+      ],
+      "actual": 1,
+      "expected": 3
+    },
+    {
+      "label": "east-route-gate-outside-2-lateral-positive",
+      "problem": "Incorrect actual arrival facing",
+      "source": "JohtoRoute42",
+      "destination": "EcruteakCity_EastGate",
+      "arrival": [
+        10,
+        8
+      ],
+      "actual": 1,
+      "expected": 3
+    },
+    {
+      "label": "east-route-gate-inside-0-front",
+      "problem": "Incorrect actual arrival facing",
+      "source": "EcruteakCity_EastGate",
+      "destination": "JohtoRoute42",
+      "arrival": [
+        3,
+        13
+      ],
+      "actual": 1,
+      "expected": 4
+    },
+    {
+      "label": "east-route-gate-inside-0-lateral-negative",
+      "problem": "Incorrect actual arrival facing",
+      "source": "EcruteakCity_EastGate",
+      "destination": "JohtoRoute42",
+      "arrival": [
+        3,
+        13
+      ],
+      "actual": 1,
+      "expected": 4
+    },
+    {
+      "label": "east-route-gate-inside-0-lateral-positive",
+      "problem": "Incorrect actual arrival facing",
+      "source": "EcruteakCity_EastGate",
+      "destination": "JohtoRoute42",
+      "arrival": [
+        3,
+        13
+      ],
+      "actual": 1,
+      "expected": 4
+    },
+    {
+      "label": "east-route-gate-inside-1-front",
+      "problem": "Incorrect actual arrival facing",
+      "source": "EcruteakCity_EastGate",
+      "destination": "JohtoRoute42",
+      "arrival": [
+        3,
+        14
+      ],
+      "actual": 1,
+      "expected": 4
+    },
+    {
+      "label": "east-route-gate-inside-1-lateral-negative",
+      "problem": "Incorrect actual arrival facing",
+      "source": "EcruteakCity_EastGate",
+      "destination": "JohtoRoute42",
+      "arrival": [
+        3,
+        14
+      ],
+      "actual": 1,
+      "expected": 4
+    },
+    {
+      "label": "east-route-gate-inside-1-lateral-positive",
+      "problem": "Incorrect actual arrival facing",
+      "source": "EcruteakCity_EastGate",
+      "destination": "JohtoRoute42",
+      "arrival": [
+        3,
+        14
+      ],
+      "actual": 1,
+      "expected": 4
+    },
+    {
+      "label": "east-route-gate-inside-2-front",
+      "problem": "Incorrect actual arrival facing",
+      "source": "EcruteakCity_EastGate",
+      "destination": "JohtoRoute42",
+      "arrival": [
+        3,
+        15
+      ],
+      "actual": 1,
+      "expected": 4
+    },
+    {
+      "label": "east-route-gate-inside-2-lateral-negative",
+      "problem": "Incorrect actual arrival facing",
+      "source": "EcruteakCity_EastGate",
+      "destination": "JohtoRoute42",
+      "arrival": [
+        3,
+        15
+      ],
+      "actual": 1,
+      "expected": 4
+    },
+    {
+      "label": "east-route-gate-inside-2-lateral-positive",
+      "problem": "Incorrect actual arrival facing",
+      "source": "EcruteakCity_EastGate",
+      "destination": "JohtoRoute42",
+      "arrival": [
+        3,
+        15
+      ],
+      "actual": 1,
+      "expected": 4
+    },
+    {
+      "label": "trail-station-return-outside-0-front",
+      "problem": "Incorrect actual arrival facing",
+      "source": "BellchimeTrail",
+      "destination": "EcruteakCity_BarrierCorridor",
+      "arrival": [
+        6,
+        3
+      ],
+      "actual": 2,
+      "expected": 1
+    },
+    {
+      "label": "trail-station-return-outside-0-lateral-positive",
+      "problem": "Incorrect actual arrival facing",
+      "source": "BellchimeTrail",
+      "destination": "EcruteakCity_BarrierCorridor",
+      "arrival": [
+        6,
+        3
+      ],
+      "actual": 2,
+      "expected": 1
+    }
+  ],
+  "no_facing_claim_for_unavailable_approaches": true
+}

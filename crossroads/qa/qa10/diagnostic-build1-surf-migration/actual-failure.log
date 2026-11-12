@@ -1,0 +1,6 @@
+actual-old-walking-city23-53 PASS {'label': 'actual-old-walking-city23-53', 'result': 'PASS', 'old_position': [23, 53], 'old_surf': False, 'new_arrival': [23, 51], 'walk_away': [23, 50], 'new_save_continue': [23, 50], 'native_tile': '0x327f', 'exact_party_boxes_starter_flags_decoded_inventory': True, 'old_battery_unchanged': True}
+Traceback (most recent call last):
+  File "/workspace/Project-crossroads/crossroads/tools/olivine_port_save_migration_smoke.py", line 57, in <module>
+    assert not tile&0xc00 and tile>>12==3 and not avatar&8,(label,'Not a safe walking arrival',arrival,hex(tile),avatar)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('actual-old-surf-city23-55', 'Not a safe walking arrival', (23, 51), '0x327f', 40)

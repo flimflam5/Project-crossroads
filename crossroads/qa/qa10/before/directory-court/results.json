@@ -1,0 +1,42 @@
+{
+  "phase": "BEFORE corrected identification of owner shots1-2: Ecruteak Directory court",
+  "source_revision": "285cfa4ebddcb390a8a5bde6116748cbb5eaba6b",
+  "rom_sha256": "df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4",
+  "source_battery_sha256": "b03ff1ef488fbd25de016e828483bc3001787b84e450a45eaa0ac12a11de30ab",
+  "source_battery_unchanged": true,
+  "target_sign": {
+    "script": "Ecruteak_Directory",
+    "x": 36,
+    "y": 45
+  },
+  "method": "Same-ROM private snapshot to normal controller travel. No coordinates/map/warp writes.",
+  "records": [
+    {
+      "case": "directory-court-north",
+      "map": "EcruteakCity",
+      "position": [
+        36,
+        44
+      ],
+      "result": "Actual native view"
+    },
+    {
+      "case": "directory-court-south",
+      "map": "EcruteakCity",
+      "position": [
+        36,
+        46
+      ],
+      "result": "Actual native view"
+    },
+    {
+      "case": "directory-court-west",
+      "map": "EcruteakCity",
+      "position": [
+        33,
+        43
+      ],
+      "result": "Actual native view"
+    }
+  ]
+}

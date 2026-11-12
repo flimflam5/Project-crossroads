@@ -1,0 +1,9 @@
+{
+  "game_source_commit": "cc643ffe711204f3ef38e34e7aa1eb8c9558720f",
+  "rom_sha256": "ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b",
+  "elf_sha256": "a950a6fd77e4320c3bb864c3b96e981a1da24cb63727f8151e2124c6577f90eb",
+  "source_at_start": "cc643ffe711204f3ef38e34e7aa1eb8c9558720f",
+  "source_dirty_at_start": true,
+  "original_battery_sha256": "b03ff1ef488fbd25de016e828483bc3001787b84e450a45eaa0ac12a11de30ab",
+  "copied_battery_sha256": "b03ff1ef488fbd25de016e828483bc3001787b84e450a45eaa0ac12a11de30ab"
+}

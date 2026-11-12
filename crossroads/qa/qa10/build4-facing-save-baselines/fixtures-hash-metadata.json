@@ -1,0 +1,163 @@
+{
+  "source_rom_sha256": "4fb28fe64fc44c0546462a935655346a61f13b644bc3040468146d136cd6d656",
+  "source_revision": "df8c4598d88c7770626be4621a5f39cf60dadb95",
+  "source_battery_sha256": "b03ff1ef488fbd25de016e828483bc3001787b84e450a45eaa0ac12a11de30ab",
+  "source_battery_unchanged": true,
+  "method": "All positions genuinely reached with normal controller travel, native Save, then cold Continue on B4. No map/warp/position writes. Shared setup uses disclosed RAM-only encounter suppression/Survey desk, cleared by cold Continue.",
+  "fixtures": [
+    {
+      "label": "city-west-landing",
+      "battery_file": "city-west-landing.sav",
+      "battery_sha256": "4f8c6b72e978d53df22a200c894e799bd951367be6ac3acb8c2cb283db906271",
+      "actual_map": "EcruteakCity",
+      "actual_position": [
+        7,
+        39
+      ],
+      "actual_old_facing": 1,
+      "expected_new_facing": 4,
+      "offlanding_control": false,
+      "exact_state_before": {
+        "count": 1,
+        "party": "6b7f786b24ca9c2ebf8ad4fbead9686453caa298103fb1f680212ee87a925321",
+        "boxes": "faade62b8927615ebc110cf83881f1ac09fbf6367630ef6f194552c0d4693795",
+        "starter": 3,
+        "flags": "71f2c0abfa86de149d5f2c7b00595a4a5caf5638533a6bd73609109e1f8cb792",
+        "decoded_inventory": "043b1706754443e07699437643f560540fcdaad78a02e3c62fb3aaf455740bb3"
+      },
+      "old_normal_save_cold_continue_verified": true
+    },
+    {
+      "label": "route38-landing",
+      "battery_file": "route38-landing.sav",
+      "battery_sha256": "ed6cc07f6094179de9a73e80591a2d6921a806638d24a4eea2fb4c36683c565f",
+      "actual_map": "JohtoRoute38",
+      "actual_position": [
+        62,
+        14
+      ],
+      "actual_old_facing": 1,
+      "expected_new_facing": 3,
+      "offlanding_control": false,
+      "exact_state_before": {
+        "count": 1,
+        "party": "6b7f786b24ca9c2ebf8ad4fbead9686453caa298103fb1f680212ee87a925321",
+        "boxes": "faade62b8927615ebc110cf83881f1ac09fbf6367630ef6f194552c0d4693795",
+        "starter": 3,
+        "flags": "71f2c0abfa86de149d5f2c7b00595a4a5caf5638533a6bd73609109e1f8cb792",
+        "decoded_inventory": "043b1706754443e07699437643f560540fcdaad78a02e3c62fb3aaf455740bb3"
+      },
+      "old_normal_save_cold_continue_verified": true
+    },
+    {
+      "label": "route42-landing",
+      "battery_file": "route42-landing.sav",
+      "battery_sha256": "b2abd710242d48ed36b4f6a1111ab3527467fea32dd6ee59715ab6a21a7c7a53",
+      "actual_map": "JohtoRoute42",
+      "actual_position": [
+        3,
+        15
+      ],
+      "actual_old_facing": 1,
+      "expected_new_facing": 4,
+      "offlanding_control": false,
+      "exact_state_before": {
+        "count": 1,
+        "party": "6b7f786b24ca9c2ebf8ad4fbead9686453caa298103fb1f680212ee87a925321",
+        "boxes": "faade62b8927615ebc110cf83881f1ac09fbf6367630ef6f194552c0d4693795",
+        "starter": 3,
+        "flags": "71f2c0abfa86de149d5f2c7b00595a4a5caf5638533a6bd73609109e1f8cb792",
+        "decoded_inventory": "043b1706754443e07699437643f560540fcdaad78a02e3c62fb3aaf455740bb3"
+      },
+      "old_normal_save_cold_continue_verified": true
+    },
+    {
+      "label": "westgate-landing",
+      "battery_file": "westgate-landing.sav",
+      "battery_sha256": "266077ca53a45be4fa926581a94bfbbe62a8ea5302fb0ff6226fd8440fa6302e",
+      "actual_map": "EcruteakCity_WestGate",
+      "actual_position": [
+        1,
+        7
+      ],
+      "actual_old_facing": 1,
+      "expected_new_facing": 4,
+      "offlanding_control": false,
+      "exact_state_before": {
+        "count": 1,
+        "party": "6b7f786b24ca9c2ebf8ad4fbead9686453caa298103fb1f680212ee87a925321",
+        "boxes": "faade62b8927615ebc110cf83881f1ac09fbf6367630ef6f194552c0d4693795",
+        "starter": 3,
+        "flags": "71f2c0abfa86de149d5f2c7b00595a4a5caf5638533a6bd73609109e1f8cb792",
+        "decoded_inventory": "043b1706754443e07699437643f560540fcdaad78a02e3c62fb3aaf455740bb3"
+      },
+      "old_normal_save_cold_continue_verified": true
+    },
+    {
+      "label": "eastgate-landing",
+      "battery_file": "eastgate-landing.sav",
+      "battery_sha256": "218cfc0d23074fb8da8e1188d5fbd87f9d5bcc93bcb09d42a9d126c106761e17",
+      "actual_map": "EcruteakCity_EastGate",
+      "actual_position": [
+        10,
+        7
+      ],
+      "actual_old_facing": 1,
+      "expected_new_facing": 3,
+      "offlanding_control": false,
+      "exact_state_before": {
+        "count": 1,
+        "party": "d23e2d4a8b880fc3d95e0b9405e2d47f35a8262c10393e9b89fa1d3968210abd",
+        "boxes": "faade62b8927615ebc110cf83881f1ac09fbf6367630ef6f194552c0d4693795",
+        "starter": 3,
+        "flags": "71f2c0abfa86de149d5f2c7b00595a4a5caf5638533a6bd73609109e1f8cb792",
+        "decoded_inventory": "043b1706754443e07699437643f560540fcdaad78a02e3c62fb3aaf455740bb3"
+      },
+      "old_normal_save_cold_continue_verified": true
+    },
+    {
+      "label": "corridor-landing",
+      "battery_file": "corridor-landing.sav",
+      "battery_sha256": "cfaa07d9a41d3978842bfcc02e5c4bd0ad73c777e9bbe392bba7f026bd04edee",
+      "actual_map": "EcruteakCity_BarrierCorridor",
+      "actual_position": [
+        6,
+        3
+      ],
+      "actual_old_facing": 2,
+      "expected_new_facing": 1,
+      "offlanding_control": false,
+      "exact_state_before": {
+        "count": 1,
+        "party": "d23e2d4a8b880fc3d95e0b9405e2d47f35a8262c10393e9b89fa1d3968210abd",
+        "boxes": "faade62b8927615ebc110cf83881f1ac09fbf6367630ef6f194552c0d4693795",
+        "starter": 3,
+        "flags": "71f2c0abfa86de149d5f2c7b00595a4a5caf5638533a6bd73609109e1f8cb792",
+        "decoded_inventory": "043b1706754443e07699437643f560540fcdaad78a02e3c62fb3aaf455740bb3"
+      },
+      "old_normal_save_cold_continue_verified": true
+    },
+    {
+      "label": "offlanding-control",
+      "battery_file": "offlanding-control.sav",
+      "battery_sha256": "db07b453274a43069bb531595e65ba407851a1af99006473e3dbb2c219900115",
+      "actual_map": "EcruteakCity",
+      "actual_position": [
+        32,
+        43
+      ],
+      "actual_old_facing": 1,
+      "expected_new_facing": 1,
+      "offlanding_control": true,
+      "exact_state_before": {
+        "count": 1,
+        "party": "d23e2d4a8b880fc3d95e0b9405e2d47f35a8262c10393e9b89fa1d3968210abd",
+        "boxes": "faade62b8927615ebc110cf83881f1ac09fbf6367630ef6f194552c0d4693795",
+        "starter": 3,
+        "flags": "71f2c0abfa86de149d5f2c7b00595a4a5caf5638533a6bd73609109e1f8cb792",
+        "decoded_inventory": "043b1706754443e07699437643f560540fcdaad78a02e3c62fb3aaf455740bb3"
+      },
+      "old_normal_save_cold_continue_verified": true
+    }
+  ]
+}

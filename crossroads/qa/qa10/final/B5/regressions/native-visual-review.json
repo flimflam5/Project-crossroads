@@ -1,0 +1,547 @@
+{
+  "source_commit": "cc643ffe711204f3ef38e34e7aa1eb8c9558720f",
+  "rom_sha256": "ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b",
+  "review_method": "Independent read-only visual inspection of every actual fresh B5 PNG in unscaled240x160 contact pages, plus9 separately identified B4/B5 arrival comparison panels. No emulator run, video playback, source/game edit or ROM mutation by this reviewer.",
+  "png_files_reviewed": 116,
+  "stage_counts": {
+    "title": 3,
+    "pre-title": 4,
+    "starters": 24,
+    "first-loss": 7,
+    "fly": 13,
+    "joe": 8,
+    "running": 2,
+    "services": 55
+  },
+  "parent_regression_lane": "All8 actual B5 stages completed exit0; screenshot review is independent of those functional results.",
+  "new_visible_regression_found": false,
+  "observations": [
+    "Branded title/pre-title remain legible with no newly visible corruption.",
+    "Joe keeps the same brown-haired corporate design in standing, Surf, fishing, Fly and battle views.",
+    "All55 service captures show coherent furnishing and legible glyphs without a newly observed clipping/rendering anomaly.",
+    "Lighthouse6F central housing is visibly cyan, retaining the B4 correction. Unchanged outer diagonal glass is an intentional current design that still requires owner/reference visual assessment."
+  ],
+  "coverage_limits": [
+    "Bike/wheelie captures are pixel-identical pre-existing standing silhouettes; these stills do not visually verify distinct bike/wheelie appearance.",
+    "New Game handoff retains the inherited dim intro frame; the legacy introduction remains outside this map correction.",
+    "No movement videos were played and no emulator was run by this reviewer. Still screenshots cannot establish collision correctness, motion quality, exhaustive location fidelity or owner visual acceptance.",
+    "Other-region Fly captures document retained arrivals, not completed reconstruction of those other cities."
+  ],
+  "bike_rgb_sha256": {
+    "acro-wheelie.png": "eca6cc8c66ea930a849e6ee4579e46e8b5cdaebc960085d189d360c41c8ed9df",
+    "acro_bike.png": "eca6cc8c66ea930a849e6ee4579e46e8b5cdaebc960085d189d360c41c8ed9df",
+    "mach_bike.png": "eca6cc8c66ea930a849e6ee4579e46e8b5cdaebc960085d189d360c41c8ed9df"
+  },
+  "arrival_comparisons": {
+    "count": 9,
+    "method": "LEFT is native240x160 B4 frame extracted from compressedH264 doorway video atN-7, before its final6walk-away frames; RIGHT is direct nativeB5 arrival PNG from stricter controller tests. Compression differences are disclosed.",
+    "observed": "Changed Joe facing is visible in all9 pairs: gate mouths face along horizontal aisles/roads; Trail-to-Corridor faces down the corridor. Joe remains visible and no added ground-arrow graphics or fresh corruption is apparent in these frames.",
+    "coverage_limit": "Screenshot comparison only; this reviewer did not run a new movement test.",
+    "public_evidence_directory": "crossroads/qa/qa10/final/B5/facing",
+    "files": [
+      {
+        "path": "/tmp/qa10-b5-facing-native-comparison/east-city-gate-inside-0-front-comparison.png",
+        "sha256": "54b39387bb2e66f3f0096d705d9acfe8f6b43c8503e17c411b6638a386426f0d"
+      },
+      {
+        "path": "/tmp/qa10-b5-facing-native-comparison/east-city-gate-outside-0-front-comparison.png",
+        "sha256": "a96843b28a42b890935a1e2128ef1355ba59a48d53b446d61c574af5484d1f65"
+      },
+      {
+        "path": "/tmp/qa10-b5-facing-native-comparison/east-route-gate-inside-0-front-comparison.png",
+        "sha256": "aa39be4af58b968d196bcf4ba5f2c4b016193bdd95a697baf0340fb6c530c878"
+      },
+      {
+        "path": "/tmp/qa10-b5-facing-native-comparison/east-route-gate-outside-0-front-comparison.png",
+        "sha256": "bfc6c8ef325cda29814a850691f7603af0ca35d6326486c2b4177f6fdd2b8ef9"
+      },
+      {
+        "path": "/tmp/qa10-b5-facing-native-comparison/trail-station-return-outside-0-front-comparison.png",
+        "sha256": "380ab1087d42fd957ab14d4ba511fd5b8771d26c67a85b23b277674312951537"
+      },
+      {
+        "path": "/tmp/qa10-b5-facing-native-comparison/west-city-gate-inside-0-front-comparison.png",
+        "sha256": "157931e3578607c3ffd8676063394c3d45110f24a327900940badbe51160f766"
+      },
+      {
+        "path": "/tmp/qa10-b5-facing-native-comparison/west-city-gate-outside-0-front-comparison.png",
+        "sha256": "655494d2341a59249cfcd913f90008d62ba2f8082c9e3e6c10265eb32304cfe1"
+      },
+      {
+        "path": "/tmp/qa10-b5-facing-native-comparison/west-route-gate-inside-0-front-comparison.png",
+        "sha256": "976e3d10c56d9c63eb2632da74b9d99187f158763e83fb7fc55cf749655c5575"
+      },
+      {
+        "path": "/tmp/qa10-b5-facing-native-comparison/west-route-gate-outside-0-front-comparison.png",
+        "sha256": "a1c7ec78523e01fcc26b317e9987cd9ef70c426aba39de15e0885fd0e11559d8"
+      }
+    ]
+  },
+  "owner_visual_acceptance": "PENDING",
+  "files": [
+    {
+      "path": "build/qa10-b5-regression-title/main-menu.png",
+      "sha256": "cbf747b2f6aeeeb0d96f12336ae1f619cabaa98152a95619de4097ba39c554a6"
+    },
+    {
+      "path": "build/qa10-b5-regression-title/new-game-handoff.png",
+      "sha256": "ff08bdc4a62d623fd9794d7d36635ae7ebb0fa4b782cdf74ad3aa2f18fed01f8"
+    },
+    {
+      "path": "build/qa10-b5-regression-title/title.png",
+      "sha256": "72ebce70c2bf8f309d88818bc72ab8efaa0d6262c5e3d2dcbbf1b1046eff1f11"
+    },
+    {
+      "path": "build/qa10-b5-regression-pre-title/scene-0.png",
+      "sha256": "fdb3d9cdc6601dc00e382b194edc969219798eaa9ee714cd64e9d3912dbe7004"
+    },
+    {
+      "path": "build/qa10-b5-regression-pre-title/scene-1.png",
+      "sha256": "fcdf25b71a66df494539916d7ce4be87b913046a37a4756e36e276e1f051e159"
+    },
+    {
+      "path": "build/qa10-b5-regression-pre-title/scene-2.png",
+      "sha256": "97242e867f6333c4ec99aff04d59ecf342905aef972fa33fde35b859382e22e9"
+    },
+    {
+      "path": "build/qa10-b5-regression-pre-title/title-handoff.png",
+      "sha256": "739bd3ebc2a813a9ffad7820331ad51e159a35d1a463c6e24261bedaa5c3fc10"
+    },
+    {
+      "path": "build/qa10-b5-regression-starters/city.png",
+      "sha256": "f3fca7453adabd3420a90569cc6d62ba83b33369f674d0cab1db0ae4482495a0"
+    },
+    {
+      "path": "build/qa10-b5-regression-starters/interior-0.png",
+      "sha256": "97c0d66263d188775906e01b518a3ee32096fb69308124e18b87c7d8bc9a9080"
+    },
+    {
+      "path": "build/qa10-b5-regression-starters/interior-1.png",
+      "sha256": "2bf1ff0145e57713eff60ad3fcca5d86e641bf92ff8ec13870235f3e654b4510"
+    },
+    {
+      "path": "build/qa10-b5-regression-starters/interior-10.png",
+      "sha256": "73db7b2222f70cc91da0f358462fb6fe6f3111fd02804ea1689e82317da2206f"
+    },
+    {
+      "path": "build/qa10-b5-regression-starters/interior-11.png",
+      "sha256": "d0e5a51d1290eac991fc9e5159104799813cf8458720bac1eb3f82a59f1e3e76"
+    },
+    {
+      "path": "build/qa10-b5-regression-starters/interior-12.png",
+      "sha256": "d5b579bdfa615020e02e2835541406b9a1e79f586a592dee31cb0eac38ae1977"
+    },
+    {
+      "path": "build/qa10-b5-regression-starters/interior-13.png",
+      "sha256": "42fb7cb30aaf0019e478b79e9960ef32bcd5ae47d21b01433f14883cea682d83"
+    },
+    {
+      "path": "build/qa10-b5-regression-starters/interior-14.png",
+      "sha256": "3f48e54ee26086568fd22a76f81b2c5f5d420e7ce72b9fce56ae141727e55aad"
+    },
+    {
+      "path": "build/qa10-b5-regression-starters/interior-15.png",
+      "sha256": "d93bf25971eb7963dfbba4388e59696d7031b1d0d2568618393ca939ae2889ac"
+    },
+    {
+      "path": "build/qa10-b5-regression-starters/interior-2.png",
+      "sha256": "f0d75878c1e6bb7749aba21f3981cb479f3ca79c84ff73652f11dfb5aa0f3417"
+    },
+    {
+      "path": "build/qa10-b5-regression-starters/interior-3.png",
+      "sha256": "47f490083234d5bf6dd8a87310e6f96570b5dc7046279da6142996adb6b9db07"
+    },
+    {
+      "path": "build/qa10-b5-regression-starters/interior-4.png",
+      "sha256": "ca45f5614c517695727847a21629b5338649f96ddf6320a32a2deb1c2e7bfef2"
+    },
+    {
+      "path": "build/qa10-b5-regression-starters/interior-5.png",
+      "sha256": "24f5f3ef1651267dd5aa804ab9f30d352f9a09e07d63dc95ddeb5b4cdb8dd3a8"
+    },
+    {
+      "path": "build/qa10-b5-regression-starters/interior-6.png",
+      "sha256": "e35b858d67d89068574713a0e44de88a75d92a1f3bedd6b22b89791a5d444bd1"
+    },
+    {
+      "path": "build/qa10-b5-regression-starters/interior-7.png",
+      "sha256": "4dc72b397fc9998baeb7f0486a7edbc18134e43184ed584da327dce042cdcd53"
+    },
+    {
+      "path": "build/qa10-b5-regression-starters/interior-8.png",
+      "sha256": "3ed625ae1ea0e4f5fabe9f0775ee5ab3a1948400dbffd62697f5b0c658468362"
+    },
+    {
+      "path": "build/qa10-b5-regression-starters/interior-9.png",
+      "sha256": "73db7b2222f70cc91da0f358462fb6fe6f3111fd02804ea1689e82317da2206f"
+    },
+    {
+      "path": "build/qa10-b5-regression-starters/joe-standing-east.png",
+      "sha256": "7991d30ad2c2a8756835acdaa17a8391100230dbb3d3d288b8c4028a47c10040"
+    },
+    {
+      "path": "build/qa10-b5-regression-starters/joe-standing-north.png",
+      "sha256": "43079f4fbd80d2deb7e3a08a715eac26ba6267a7c6dc47d420096384143021e6"
+    },
+    {
+      "path": "build/qa10-b5-regression-starters/joe-standing-south.png",
+      "sha256": "07c32f9bc9ac873ade53f4045dfe862691c29899ee0fce3253315ad7ce4cdb93"
+    },
+    {
+      "path": "build/qa10-b5-regression-starters/joe-standing-west.png",
+      "sha256": "ffa302038299101d23f84bf83ae4e4dc3aaa7745d42c79b5b48fbfb902f2afc1"
+    },
+    {
+      "path": "build/qa10-b5-regression-starters/rescue-273.png",
+      "sha256": "78710fbd2005d26d403cb49919a9384638b8ce546320834c2502f2aa14d8d9a9"
+    },
+    {
+      "path": "build/qa10-b5-regression-starters/rescue-568.png",
+      "sha256": "78710fbd2005d26d403cb49919a9384638b8ce546320834c2502f2aa14d8d9a9"
+    },
+    {
+      "path": "build/qa10-b5-regression-starters/rescue-605.png",
+      "sha256": "78710fbd2005d26d403cb49919a9384638b8ce546320834c2502f2aa14d8d9a9"
+    },
+    {
+      "path": "build/qa10-b5-regression-first-loss/city.png",
+      "sha256": "901f740615e4f7a448a001bf9fbb29b504d5f03abdbe7471a416505b4fe82b91"
+    },
+    {
+      "path": "build/qa10-b5-regression-first-loss/first-loss-olivine-center.png",
+      "sha256": "3ddae1c7f7a451a607f8582dfd6e650121c29df283300be85d6d30c173099531"
+    },
+    {
+      "path": "build/qa10-b5-regression-first-loss/joe-battle-back.png",
+      "sha256": "7d11639ab978b2d9e65f48fa6d45b35b76e3cf4d5c5b8f383a0a8507b913685b"
+    },
+    {
+      "path": "build/qa10-b5-regression-first-loss/joe-standing-east.png",
+      "sha256": "9ed420ec25b84e40e9825b50924004153c2a7adc45aa6aeba8773283af0181e7"
+    },
+    {
+      "path": "build/qa10-b5-regression-first-loss/joe-standing-north.png",
+      "sha256": "fc89e1c36cc08e25bb9c740d3dc0a11fb19a533bfa2147498918bbe9d5ab7dbd"
+    },
+    {
+      "path": "build/qa10-b5-regression-first-loss/joe-standing-south.png",
+      "sha256": "7e65f35ac0baa9fbbeb95ab2e15f5552f09f0401aa15b474a4cab44c9676348a"
+    },
+    {
+      "path": "build/qa10-b5-regression-first-loss/joe-standing-west.png",
+      "sha256": "e7a55f6957102e9b3a0fd78313835bad3844731a27996902bf336edc19a63e0b"
+    },
+    {
+      "path": "build/qa10-b5-regression-fly/AzaleaTown.png",
+      "sha256": "846d8b0838b373a690b1226e9baa7ea9c5b31389d839d8d2a534bf2e3901a822"
+    },
+    {
+      "path": "build/qa10-b5-regression-fly/BlackthornCity.png",
+      "sha256": "0cacadf65c2fc8b1473e60dfa41c419ac9a81b3d0eb55712c40bd8b8339ab0be"
+    },
+    {
+      "path": "build/qa10-b5-regression-fly/CherrygroveCity.png",
+      "sha256": "7342fadad9aefe46f6cd259c6a98c8dec4b9d5b4979435bacedbda9641eabab3"
+    },
+    {
+      "path": "build/qa10-b5-regression-fly/CianwoodCity.png",
+      "sha256": "7e795b7f5f1286d560d1557492406cb4d4378af8981e766dea188e53521315e2"
+    },
+    {
+      "path": "build/qa10-b5-regression-fly/EcruteakCity.png",
+      "sha256": "5cdb6d1db4ecc61c6e30a3411f361b8c5499341eeb2ff51744745c44ee41f877"
+    },
+    {
+      "path": "build/qa10-b5-regression-fly/GoldenrodCity.png",
+      "sha256": "ddb240799a657c6b9a9a9d5b87877238080fa76455f0071c849cd523c79b5eff"
+    },
+    {
+      "path": "build/qa10-b5-regression-fly/MahoganyTown.png",
+      "sha256": "1eb18d5dc259970da46faa2a104548b129de4710d4f5421c8004d36356ef2a5e"
+    },
+    {
+      "path": "build/qa10-b5-regression-fly/NewBarkTown.png",
+      "sha256": "774cfdc89a13611886c10cd95044991fd6d8265093e6bc895c9d60c066367720"
+    },
+    {
+      "path": "build/qa10-b5-regression-fly/OlivineCity.png",
+      "sha256": "06128a3c3ca8d36dd233302b99d8ab2f7984bf4944c804bf071e338fda1246e0"
+    },
+    {
+      "path": "build/qa10-b5-regression-fly/VioletCity.png",
+      "sha256": "daad711d5261502bc60ac2eb1b3c21edfe4aedcf82c6f3dfaeb590ef72b0c006"
+    },
+    {
+      "path": "build/qa10-b5-regression-fly/departure.png",
+      "sha256": "988472204938839848c8aa0b4381aec7cb935f0e6e2ae3d18b37a6148d41b92c"
+    },
+    {
+      "path": "build/qa10-b5-regression-fly/fly-selection.png",
+      "sha256": "896d66edec57685cc578aa8699be3913c7511153d7f76332be48ee24592fa1a8"
+    },
+    {
+      "path": "build/qa10-b5-regression-fly/joe-fly-pose.png",
+      "sha256": "94a849520deee2864b5802ab340f184bcf732ce8f1545c97ae9c98255fb64673"
+    },
+    {
+      "path": "build/qa10-b5-regression-joe/acro-wheelie.png",
+      "sha256": "78e5181b98adc92f87bc8894401be0f5dbe7bb1e48dff13e9a395f4607e65ce2"
+    },
+    {
+      "path": "build/qa10-b5-regression-joe/acro_bike.png",
+      "sha256": "78e5181b98adc92f87bc8894401be0f5dbe7bb1e48dff13e9a395f4607e65ce2"
+    },
+    {
+      "path": "build/qa10-b5-regression-joe/fishing.png",
+      "sha256": "589b6be386eff10d92370a4040998f03d4b9306a48d0a27b76541e2ce6fc9d65"
+    },
+    {
+      "path": "build/qa10-b5-regression-joe/mach_bike.png",
+      "sha256": "78e5181b98adc92f87bc8894401be0f5dbe7bb1e48dff13e9a395f4607e65ce2"
+    },
+    {
+      "path": "build/qa10-b5-regression-joe/surf-east.png",
+      "sha256": "ff82c724aec6bdddc99813c8b4653105f64e705626dbb56a828662c1ac05360c"
+    },
+    {
+      "path": "build/qa10-b5-regression-joe/surf-north.png",
+      "sha256": "7d554d7adf8f1e0b5c3e41788e1fa55ab6321266c24104c7b1f2034bd638d018"
+    },
+    {
+      "path": "build/qa10-b5-regression-joe/surf-south.png",
+      "sha256": "68ec321745c0c6209865a85147d98737ddbe9511c967ca3f69204b047969034d"
+    },
+    {
+      "path": "build/qa10-b5-regression-joe/surf-west.png",
+      "sha256": "c17a7e4bb2f763412e72e1bad9508dc64320134014684793d1af5a71048ff1d5"
+    },
+    {
+      "path": "build/qa10-b5-regression-running/running.png",
+      "sha256": "383a1fcbf1a8f2624ebf08d5620cad0981f277acb1b451cca548bc34eab0bbea"
+    },
+    {
+      "path": "build/qa10-b5-regression-running/walking.png",
+      "sha256": "a5dc9a948b7744ce0166b0b53cd72d271d2456aee5cbf30ed0f3eb6a252799c2"
+    },
+    {
+      "path": "build/qa10-b5-regression-services/Hgss_OlivineSign_Cafe.png",
+      "sha256": "e72087ea7e444529e639ab895de2410577032566a57fa12f8677fbeafc547d8e"
+    },
+    {
+      "path": "build/qa10-b5-regression-services/Hgss_OlivineSign_FishingHouse.png",
+      "sha256": "d984f9fa0c03811083f9a0d3a4a927b37ddc68d3246e4ce4c69a95a079a30598"
+    },
+    {
+      "path": "build/qa10-b5-regression-services/Hgss_OlivineSign_Port.png",
+      "sha256": "e8974a647e47fc127a5ee96e2167c236934347434464a5f1663152b646c9696b"
+    },
+    {
+      "path": "build/qa10-b5-regression-services/Hgss_OlivineSign_SealHouse.png",
+      "sha256": "22e624e93a52575bf009cad19cbbbb5a262b34b392ce2fe3eea84218841e0e35"
+    },
+    {
+      "path": "build/qa10-b5-regression-services/Hgss_OlivineSign_TradeHouse.png",
+      "sha256": "14ae07ec8671cc0d00cb1e13e5c1f220f2a9675240a7b70ad6234fd52e6846fd"
+    },
+    {
+      "path": "build/qa10-b5-regression-services/OlivineCity_FishingHouse-resident-1.png",
+      "sha256": "d70e2a23cfa840f61d28d897d1a4a3c2985fde5a83596b06d55dee1a70f6b2c0"
+    },
+    {
+      "path": "build/qa10-b5-regression-services/OlivineCity_HarborOffice-Olivine_HarborClerk.png",
+      "sha256": "3a99aa5dfa89b93ea7834be91031d30d19a5f0a96457a77a0dc3c5ee3a65f66e"
+    },
+    {
+      "path": "build/qa10-b5-regression-services/OlivineCity_Lighthouse_1F-ambient-1.png",
+      "sha256": "f55aae5882978b268d2e444fd1616658d2956197bbf1b36197d914506bfa61da"
+    },
+    {
+      "path": "build/qa10-b5-regression-services/OlivineCity_Lighthouse_1F-wayfinding-1.png",
+      "sha256": "2919a9cd281eeda3869275514aed6078b39f828baa42113e7873d82ebf4d6dfb"
+    },
+    {
+      "path": "build/qa10-b5-regression-services/OlivineCity_Lighthouse_2F-wayfinding-1.png",
+      "sha256": "f2621eba50303ad50f0839ea71220e895cec833283772882519f39abeb4cb41f"
+    },
+    {
+      "path": "build/qa10-b5-regression-services/OlivineCity_Lighthouse_3F-ambient-1.png",
+      "sha256": "43ace6e67eda29dcc5d08f3aecf95677e417cc3aa7528097e407fb1773f6c2b6"
+    },
+    {
+      "path": "build/qa10-b5-regression-services/OlivineCity_Lighthouse_3F-wayfinding-1.png",
+      "sha256": "c11d8c06c1237d7f753e026e7db6bdd7f1be6cacb36f86810f3b11a669af2765"
+    },
+    {
+      "path": "build/qa10-b5-regression-services/OlivineCity_Lighthouse_4F-wayfinding-1.png",
+      "sha256": "ce8a7a81396ec2aa2e921170a6a8451a8ccf4f246b92b26eb669bb3aee0bf5eb"
+    },
+    {
+      "path": "build/qa10-b5-regression-services/OlivineCity_Lighthouse_5F-wayfinding-1.png",
+      "sha256": "790559140bb021df3ab498ff491da923393ddeebb396e73515ecd21b4c6f3cfc"
+    },
+    {
+      "path": "build/qa10-b5-regression-services/OlivineCity_Lighthouse_6F-ambient-1.png",
+      "sha256": "60cc9026c43b462ddc0cd3209c49d8864e7e33b86428b459c71da5ca224374e8"
+    },
+    {
+      "path": "build/qa10-b5-regression-services/OlivineCity_Lighthouse_6F-ambient-2.png",
+      "sha256": "1bc024adb9cb48a518458afcbce91e20b1b9e1224cfda4ab58b7eb0a6bf51fbb"
+    },
+    {
+      "path": "build/qa10-b5-regression-services/OlivineCity_Lighthouse_6F-wayfinding-1.png",
+      "sha256": "a9e71c342ec8a0859327e2c0c087143570930b4dcc27e0865d5bc1f6382457b5"
+    },
+    {
+      "path": "build/qa10-b5-regression-services/OlivineCity_Lighthouse_Balcony-wayfinding-1.png",
+      "sha256": "76ceeb74416ff0d9fd550e19906becb504a2d5f62e11721d1e5e0c937e2c6b03"
+    },
+    {
+      "path": "build/qa10-b5-regression-services/OlivineCity_PokemonCenter_1F-front-desk-11.png",
+      "sha256": "8d655193901592bfc1b4345638d44d0175851ac746780187da7dfd9a0e8faaa6"
+    },
+    {
+      "path": "build/qa10-b5-regression-services/OlivineCity_PokemonCenter_1F-front-desk-2.png",
+      "sha256": "973ec856dd526a77558482c1649a9010d6e69e6bd4480125004f83ed85a314d1"
+    },
+    {
+      "path": "build/qa10-b5-regression-services/OlivineCity_PokemonCenter_1F-front-desk-6.png",
+      "sha256": "46bfbbfb3e5e52d589a8cc52408eefb9391d1d00754215403de9bd2859d4a07e"
+    },
+    {
+      "path": "build/qa10-b5-regression-services/OlivineCity_PokemonCenter_B1F-front-desk-12.png",
+      "sha256": "bbbfde33e7bc4f88ea0963a4e56c80785601feae72090971fad9695532d34ca6"
+    },
+    {
+      "path": "build/qa10-b5-regression-services/OlivineCity_PokemonCenter_B1F-front-desk-4.png",
+      "sha256": "c7c4af0022360770f5bfa18bc3c58a818ab51f72a1aa5135f12fa7e41b352c15"
+    },
+    {
+      "path": "build/qa10-b5-regression-services/OlivineCity_PokemonCenter_B1F-front-desk-8.png",
+      "sha256": "5aa82a0e197eceda60707ed473c2e84044e7abab05f88d486a991f1be5237011"
+    },
+    {
+      "path": "build/qa10-b5-regression-services/OlivineCity_PortQuay-ambient-1.png",
+      "sha256": "8874f318799190d8ffc26d1da84639a78a2e0fba078fdba6e1355822e665fc00"
+    },
+    {
+      "path": "build/qa10-b5-regression-services/OlivineCity_PortQuay-wayfinding-1.png",
+      "sha256": "c343778c25ea9362a66bdd55537d7aadfb223537eeca4090118ba42e7c75ea09"
+    },
+    {
+      "path": "build/qa10-b5-regression-services/OlivineCity_PortTerminal-ambient-1.png",
+      "sha256": "846d59646aa9c1b443eeecd89f5ae3c61a0a208c2074afd721f75a56d5766f05"
+    },
+    {
+      "path": "build/qa10-b5-regression-services/OlivineCity_PortTerminal-ambient-2.png",
+      "sha256": "6465991b26df6eacfa058675aae20fca3df3d53837a7ee4bacf32601ea4e0a75"
+    },
+    {
+      "path": "build/qa10-b5-regression-services/OlivineCity_SealHouse-resident-1.png",
+      "sha256": "1f61a0578081a8462bd355838f1825e02fe220a4a7fdabf9311e0975d7a9b84d"
+    },
+    {
+      "path": "build/qa10-b5-regression-services/OlivineCity_SealHouse-resident-2.png",
+      "sha256": "5567e347bd0b52cf6809d4aa7f979a34c86dab8e204f9161ef331c4e5bdf3cbb"
+    },
+    {
+      "path": "build/qa10-b5-regression-services/OlivineCity_SealHouse-resident-3.png",
+      "sha256": "6ad476d9d3e18ae1a52bfb427e49f7707d0d1ad8b6d52c9d15c02eb3b2ed2cda"
+    },
+    {
+      "path": "build/qa10-b5-regression-services/OlivineCity_SilphOffice-Olivine_OfficeWorker.png",
+      "sha256": "df8ecfbcfc94aac4f43463f333f5ba845b22521fe678737832605c038fee7fef"
+    },
+    {
+      "path": "build/qa10-b5-regression-services/OlivineCity_TradeHouse-resident-1.png",
+      "sha256": "c39515f2e339640ca1798f5f0023f985bf224ae4a7d0c95b24b06d2cc240ebaa"
+    },
+    {
+      "path": "build/qa10-b5-regression-services/Olivine_FreightChecklist.png",
+      "sha256": "2cc14ec348f2232cfb457b3039093350c5d4ee92a470c4043e5521c89bdf485a"
+    },
+    {
+      "path": "build/qa10-b5-regression-services/Olivine_HarborDispatch.png",
+      "sha256": "be4c55e5f7337dd5139d3dabefcd9f6634c533f23f4706221abcb7f9ce0dc880"
+    },
+    {
+      "path": "build/qa10-b5-regression-services/Olivine_HarborLedger.png",
+      "sha256": "05de7feeac4e58ec014da23598ae400f1a111ed5f007853323246e633d9ecede"
+    },
+    {
+      "path": "build/qa10-b5-regression-services/Olivine_HomeBooks.png",
+      "sha256": "01fc9ee55e9a3e3c6868d08d843c4c1763f0de05319fa418e244cb5f73ed2fdc"
+    },
+    {
+      "path": "build/qa10-b5-regression-services/Olivine_HomeNotes.png",
+      "sha256": "106539ab8eaf295055cc0c16c0cc09927e8177ba11ed27b2842052a9d6f48e9e"
+    },
+    {
+      "path": "build/qa10-b5-regression-services/Olivine_StaffBoard.png",
+      "sha256": "d7ed3f42fca031d0a956c0f4381688ca3144f2aa36bdf89827869afa838d7992"
+    },
+    {
+      "path": "build/qa10-b5-regression-services/Olivine_Terminal.png",
+      "sha256": "a096c0bb539d013e841813659e8282d026ca8086b220d2620d8d1af0cda7ee26"
+    },
+    {
+      "path": "build/qa10-b5-regression-services/accepted-neighbor-1.png",
+      "sha256": "769128c0f7fbe3c40d6ad1362dc46a7b774ffe47c2514c2f49cd1f0e1dc94a08"
+    },
+    {
+      "path": "build/qa10-b5-regression-services/cafe-host-across-counter.png",
+      "sha256": "d33b679e49b9326cd40a48803f387be5e7e3d6f166b9689058485f1f85df9a33"
+    },
+    {
+      "path": "build/qa10-b5-regression-services/cafe-visitor-1.png",
+      "sha256": "124e4197046f6d7211bc6a3e99b72376e508d6cffed578735cd6606e888e5aac"
+    },
+    {
+      "path": "build/qa10-b5-regression-services/cafe-visitor-2.png",
+      "sha256": "fa08131c42cbfcd092b052d6f328da60cbec30b25a23496b4917c923be04c99b"
+    },
+    {
+      "path": "build/qa10-b5-regression-services/center-pc-menu.png",
+      "sha256": "bece2b7a4403bdb7c2f063130b613e22459b42fa85cf67928b037c546fae1d1f"
+    },
+    {
+      "path": "build/qa10-b5-regression-services/center-visitor.png",
+      "sha256": "5c70883913189588a3c331d8607faaaa2a46a7b57bb88c9253725573fd9a7c16"
+    },
+    {
+      "path": "build/qa10-b5-regression-services/home-rest-accepted.png",
+      "sha256": "f7454034ce8f4421b853272197abd9edefa1cd0849169048a8d13355c1d5f4db"
+    },
+    {
+      "path": "build/qa10-b5-regression-services/home-rest-declined.png",
+      "sha256": "4a6eb006d280f31127272069589ec255717b27f2faced304198526508dc06a43"
+    },
+    {
+      "path": "build/qa10-b5-regression-services/jasmine-loss-local-whiteout.png",
+      "sha256": "3ddae1c7f7a451a607f8582dfd6e650121c29df283300be85d6d30c173099531"
+    },
+    {
+      "path": "build/qa10-b5-regression-services/jasmine-practice-battle.png",
+      "sha256": "47e76164e2b040a73038aba28943cfee35d7fa0912dd76b5cc6331d95761f77a"
+    },
+    {
+      "path": "build/qa10-b5-regression-services/mart-menu.png",
+      "sha256": "35b6d23c77c08512b74c289065196e0669b945a48995d4253216030db885d6e7"
+    },
+    {
+      "path": "build/qa10-b5-regression-services/mart-purchase.png",
+      "sha256": "c9bd7e33a94cd73f8c488f05e533aae452ec47e9e73b55588b62bc2a9e8d3ac7"
+    },
+    {
+      "path": "build/qa10-b5-regression-services/mart-stock.png",
+      "sha256": "3d64b6630612104d0122deca150e26650d58f515a162ea21d180616a1a3c7473"
+    },
+    {
+      "path": "build/qa10-b5-regression-services/mart-visitor.png",
+      "sha256": "99c9ee2ad990c6a5e6856784cb1a79e554235b80886c066af6ba5747e70bf236"
+    },
+    {
+      "path": "build/qa10-b5-regression-services/nurse-healed.png",
+      "sha256": "69ceda8501183252b8a857a1a6cda161ca303734f00a1d9538d14727612e7c00"
+    }
+  ]
+}

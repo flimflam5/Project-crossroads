@@ -1,0 +1,1909 @@
+{
+  "groups": [
+    {
+      "group": "theater",
+      "city": "ecruteak",
+      "outside_map": "EcruteakCity",
+      "inside_map": "EcruteakCity_DanceTheater",
+      "visible_leaves": 4,
+      "required_fronts_passed": 4,
+      "all_strict_passes": 11,
+      "physically_unavailable_lateral_starts": [
+        {
+          "label": "theater-outside-0-lateral-negative",
+          "source_map": "EcruteakCity",
+          "desired_lateral_start": [
+            43,
+            46
+          ],
+          "direct_front_landing": [
+            44,
+            46
+          ],
+          "source_word": "0x403",
+          "collision_bits": true,
+          "elevation": 0,
+          "reason": "No normal dry path from this source entry component; required direct front was separately tested successfully. This lateral attempt is not counted as an executed movement pass."
+        }
+      ],
+      "every_visible_leaf_entered_and_left_with_exact_position_facing_and_walkaway": true,
+      "owner_visual_acceptance": "PENDING"
+    },
+    {
+      "group": "barrier",
+      "city": "ecruteak",
+      "outside_map": "EcruteakCity",
+      "inside_map": "EcruteakCity_BarrierStation",
+      "visible_leaves": 4,
+      "required_fronts_passed": 4,
+      "all_strict_passes": 12,
+      "physically_unavailable_lateral_starts": [],
+      "every_visible_leaf_entered_and_left_with_exact_position_facing_and_walkaway": true,
+      "owner_visual_acceptance": "PENDING"
+    },
+    {
+      "group": "gym",
+      "city": "ecruteak",
+      "outside_map": "EcruteakCity",
+      "inside_map": "EcruteakCity_Gym",
+      "visible_leaves": 4,
+      "required_fronts_passed": 4,
+      "all_strict_passes": 11,
+      "physically_unavailable_lateral_starts": [
+        {
+          "label": "gym-outside-1-lateral-positive",
+          "source_map": "EcruteakCity",
+          "desired_lateral_start": [
+            26,
+            56
+          ],
+          "direct_front_landing": [
+            25,
+            56
+          ],
+          "source_word": "0x403",
+          "collision_bits": true,
+          "elevation": 0,
+          "reason": "No normal dry path from this source entry component; required direct front was separately tested successfully. This lateral attempt is not counted as an executed movement pass."
+        }
+      ],
+      "every_visible_leaf_entered_and_left_with_exact_position_facing_and_walkaway": true,
+      "owner_visual_acceptance": "PENDING"
+    },
+    {
+      "group": "southwest-house",
+      "city": "ecruteak",
+      "outside_map": "EcruteakCity",
+      "inside_map": "EcruteakCity_Residence",
+      "visible_leaves": 3,
+      "required_fronts_passed": 3,
+      "all_strict_passes": 9,
+      "physically_unavailable_lateral_starts": [],
+      "every_visible_leaf_entered_and_left_with_exact_position_facing_and_walkaway": true,
+      "owner_visual_acceptance": "PENDING"
+    },
+    {
+      "group": "dowsing-house",
+      "city": "ecruteak",
+      "outside_map": "EcruteakCity",
+      "inside_map": "EcruteakCity_DowsingHouse",
+      "visible_leaves": 3,
+      "required_fronts_passed": 3,
+      "all_strict_passes": 9,
+      "physically_unavailable_lateral_starts": [],
+      "every_visible_leaf_entered_and_left_with_exact_position_facing_and_walkaway": true,
+      "owner_visual_acceptance": "PENDING"
+    },
+    {
+      "group": "center",
+      "city": "ecruteak",
+      "outside_map": "EcruteakCity",
+      "inside_map": "EcruteakCity_PokemonCenter_1F",
+      "visible_leaves": 3,
+      "required_fronts_passed": 3,
+      "all_strict_passes": 9,
+      "physically_unavailable_lateral_starts": [],
+      "every_visible_leaf_entered_and_left_with_exact_position_facing_and_walkaway": true,
+      "owner_visual_acceptance": "PENDING"
+    },
+    {
+      "group": "mart",
+      "city": "ecruteak",
+      "outside_map": "EcruteakCity",
+      "inside_map": "EcruteakCity_Mart",
+      "visible_leaves": 3,
+      "required_fronts_passed": 3,
+      "all_strict_passes": 9,
+      "physically_unavailable_lateral_starts": [],
+      "every_visible_leaf_entered_and_left_with_exact_position_facing_and_walkaway": true,
+      "owner_visual_acceptance": "PENDING"
+    },
+    {
+      "group": "burned-tower",
+      "city": "ecruteak",
+      "outside_map": "EcruteakCity",
+      "inside_map": "EcruteakCity_BurnedTower",
+      "visible_leaves": 3,
+      "required_fronts_passed": 3,
+      "all_strict_passes": 9,
+      "physically_unavailable_lateral_starts": [],
+      "every_visible_leaf_entered_and_left_with_exact_position_facing_and_walkaway": true,
+      "owner_visual_acceptance": "PENDING"
+    },
+    {
+      "group": "west-city-gate",
+      "city": "ecruteak",
+      "outside_map": "EcruteakCity",
+      "inside_map": "EcruteakCity_WestGate",
+      "visible_leaves": 6,
+      "required_fronts_passed": 6,
+      "all_strict_passes": 17,
+      "physically_unavailable_lateral_starts": [
+        {
+          "label": "west-city-gate-outside-0-lateral-positive",
+          "source_map": "EcruteakCity",
+          "desired_lateral_start": [
+            7,
+            36
+          ],
+          "direct_front_landing": [
+            7,
+            37
+          ],
+          "source_word": "0x6ed",
+          "collision_bits": true,
+          "elevation": 0,
+          "reason": "No normal dry path from this source entry component; required direct front was separately tested successfully. This lateral attempt is not counted as an executed movement pass."
+        }
+      ],
+      "every_visible_leaf_entered_and_left_with_exact_position_facing_and_walkaway": true,
+      "owner_visual_acceptance": "PENDING"
+    },
+    {
+      "group": "west-route-gate",
+      "city": "ecruteak",
+      "outside_map": "JohtoRoute38",
+      "inside_map": "EcruteakCity_WestGate",
+      "visible_leaves": 6,
+      "required_fronts_passed": 6,
+      "all_strict_passes": 16,
+      "physically_unavailable_lateral_starts": [
+        {
+          "label": "west-route-gate-outside-0-lateral-negative",
+          "source_map": "JohtoRoute38",
+          "desired_lateral_start": [
+            62,
+            11
+          ],
+          "direct_front_landing": [
+            62,
+            12
+          ],
+          "source_word": "0x4c6",
+          "collision_bits": true,
+          "elevation": 0,
+          "reason": "No normal dry path from this source entry component; required direct front was separately tested successfully. This lateral attempt is not counted as an executed movement pass."
+        },
+        {
+          "label": "west-route-gate-outside-2-lateral-positive",
+          "source_map": "JohtoRoute38",
+          "desired_lateral_start": [
+            62,
+            15
+          ],
+          "direct_front_landing": [
+            62,
+            14
+          ],
+          "source_word": "0x4c6",
+          "collision_bits": true,
+          "elevation": 0,
+          "reason": "No normal dry path from this source entry component; required direct front was separately tested successfully. This lateral attempt is not counted as an executed movement pass."
+        }
+      ],
+      "every_visible_leaf_entered_and_left_with_exact_position_facing_and_walkaway": true,
+      "owner_visual_acceptance": "PENDING"
+    },
+    {
+      "group": "east-city-gate",
+      "city": "ecruteak",
+      "outside_map": "EcruteakCity",
+      "inside_map": "EcruteakCity_EastGate",
+      "visible_leaves": 6,
+      "required_fronts_passed": 6,
+      "all_strict_passes": 16,
+      "physically_unavailable_lateral_starts": [
+        {
+          "label": "east-city-gate-outside-0-lateral-negative",
+          "source_map": "EcruteakCity",
+          "desired_lateral_start": [
+            62,
+            45
+          ],
+          "direct_front_landing": [
+            62,
+            46
+          ],
+          "source_word": "0x502",
+          "collision_bits": true,
+          "elevation": 0,
+          "reason": "No normal dry path from this source entry component; required direct front was separately tested successfully. This lateral attempt is not counted as an executed movement pass."
+        },
+        {
+          "label": "east-city-gate-outside-2-lateral-positive",
+          "source_map": "EcruteakCity",
+          "desired_lateral_start": [
+            62,
+            49
+          ],
+          "direct_front_landing": [
+            62,
+            48
+          ],
+          "source_word": "0x51e",
+          "collision_bits": true,
+          "elevation": 0,
+          "reason": "No normal dry path from this source entry component; required direct front was separately tested successfully. This lateral attempt is not counted as an executed movement pass."
+        }
+      ],
+      "every_visible_leaf_entered_and_left_with_exact_position_facing_and_walkaway": true,
+      "owner_visual_acceptance": "PENDING"
+    },
+    {
+      "group": "east-route-gate",
+      "city": "ecruteak",
+      "outside_map": "JohtoRoute42",
+      "inside_map": "EcruteakCity_EastGate",
+      "visible_leaves": 6,
+      "required_fronts_passed": 6,
+      "all_strict_passes": 16,
+      "physically_unavailable_lateral_starts": [
+        {
+          "label": "east-route-gate-outside-0-lateral-positive",
+          "source_map": "JohtoRoute42",
+          "desired_lateral_start": [
+            1,
+            12
+          ],
+          "direct_front_landing": [
+            1,
+            13
+          ],
+          "source_word": "0x505",
+          "collision_bits": true,
+          "elevation": 0,
+          "reason": "No normal dry path from this source entry component; required direct front was separately tested successfully. This lateral attempt is not counted as an executed movement pass."
+        },
+        {
+          "label": "east-route-gate-outside-2-lateral-negative",
+          "source_map": "JohtoRoute42",
+          "desired_lateral_start": [
+            1,
+            16
+          ],
+          "direct_front_landing": [
+            1,
+            15
+          ],
+          "source_word": "0x521",
+          "collision_bits": true,
+          "elevation": 0,
+          "reason": "No normal dry path from this source entry component; required direct front was separately tested successfully. This lateral attempt is not counted as an executed movement pass."
+        }
+      ],
+      "every_visible_leaf_entered_and_left_with_exact_position_facing_and_walkaway": true,
+      "owner_visual_acceptance": "PENDING"
+    },
+    {
+      "group": "bell-tower",
+      "city": "ecruteak",
+      "outside_map": "BellchimeTrail",
+      "inside_map": "EcruteakCity_BellTower",
+      "visible_leaves": 3,
+      "required_fronts_passed": 3,
+      "all_strict_passes": 9,
+      "physically_unavailable_lateral_starts": [],
+      "every_visible_leaf_entered_and_left_with_exact_position_facing_and_walkaway": true,
+      "owner_visual_acceptance": "PENDING"
+    },
+    {
+      "group": "trail-station-return",
+      "city": "ecruteak",
+      "outside_map": "BellchimeTrail",
+      "inside_map": "EcruteakCity_BarrierCorridor",
+      "visible_leaves": 2,
+      "required_fronts_passed": 2,
+      "all_strict_passes": 4,
+      "physically_unavailable_lateral_starts": [
+        {
+          "label": "trail-station-return-outside-0-lateral-negative",
+          "source_map": "BellchimeTrail",
+          "desired_lateral_start": [
+            8,
+            15
+          ],
+          "direct_front_landing": [
+            9,
+            15
+          ],
+          "source_word": "0x6bd",
+          "collision_bits": true,
+          "elevation": 0,
+          "reason": "No normal dry path from this source entry component; required direct front was separately tested successfully. This lateral attempt is not counted as an executed movement pass."
+        },
+        {
+          "label": "trail-station-return-inside-0-lateral-positive",
+          "source_map": "EcruteakCity_BarrierCorridor",
+          "desired_lateral_start": [
+            7,
+            4
+          ],
+          "direct_front_landing": [
+            6,
+            4
+          ],
+          "source_word": "0x608",
+          "collision_bits": true,
+          "elevation": 0,
+          "reason": "No normal dry path from this source entry component; required direct front was separately tested successfully. This lateral attempt is not counted as an executed movement pass."
+        }
+      ],
+      "every_visible_leaf_entered_and_left_with_exact_position_facing_and_walkaway": true,
+      "owner_visual_acceptance": "PENDING"
+    },
+    {
+      "group": "station-corridor-stairs",
+      "city": "ecruteak",
+      "outside_map": "EcruteakCity_BarrierStation",
+      "inside_map": "EcruteakCity_BarrierCorridor",
+      "visible_leaves": 2,
+      "required_fronts_passed": 2,
+      "all_strict_passes": 4,
+      "physically_unavailable_lateral_starts": [
+        {
+          "label": "station-corridor-stairs-outside-0-lateral-positive",
+          "source_map": "EcruteakCity_BarrierStation",
+          "desired_lateral_start": [
+            16,
+            4
+          ],
+          "direct_front_landing": [
+            15,
+            4
+          ],
+          "source_word": "0x605",
+          "collision_bits": true,
+          "elevation": 0,
+          "reason": "No normal dry path from this source entry component; required direct front was separately tested successfully. This lateral attempt is not counted as an executed movement pass."
+        },
+        {
+          "label": "station-corridor-stairs-inside-0-lateral-positive",
+          "source_map": "EcruteakCity_BarrierCorridor",
+          "desired_lateral_start": [
+            2,
+            18
+          ],
+          "direct_front_landing": [
+            3,
+            18
+          ],
+          "source_word": "0x607",
+          "collision_bits": true,
+          "elevation": 0,
+          "reason": "No normal dry path from this source entry component; required direct front was separately tested successfully. This lateral attempt is not counted as an executed movement pass."
+        }
+      ],
+      "every_visible_leaf_entered_and_left_with_exact_position_facing_and_walkaway": true,
+      "owner_visual_acceptance": "PENDING"
+    },
+    {
+      "group": "olivine-joe-residence",
+      "city": "olivine",
+      "outside_map": "OlivineCity",
+      "inside_map": "OlivineCity_Residence",
+      "visible_leaves": 3,
+      "required_fronts_passed": 3,
+      "all_strict_passes": 8,
+      "physically_unavailable_lateral_starts": [
+        {
+          "label": "olivine-joe-residence-outside-0-lateral-negative",
+          "source_map": "OlivineCity",
+          "desired_lateral_start": [
+            7,
+            24
+          ],
+          "direct_front_landing": [
+            8,
+            24
+          ],
+          "source_word": "0x403",
+          "collision_bits": true,
+          "elevation": 0,
+          "reason": "No normal dry path from this source entry component; required direct front was separately tested successfully. This lateral attempt is not counted as an executed movement pass."
+        }
+      ],
+      "every_visible_leaf_entered_and_left_with_exact_position_facing_and_walkaway": true,
+      "owner_visual_acceptance": "PENDING"
+    },
+    {
+      "group": "olivine-accepted-neighbour",
+      "city": "olivine",
+      "outside_map": "OlivineCity",
+      "inside_map": "OlivineCity_NeighborHouse",
+      "visible_leaves": 3,
+      "required_fronts_passed": 3,
+      "all_strict_passes": 8,
+      "physically_unavailable_lateral_starts": [
+        {
+          "label": "olivine-accepted-neighbour-outside-0-lateral-negative",
+          "source_map": "OlivineCity",
+          "desired_lateral_start": [
+            7,
+            29
+          ],
+          "direct_front_landing": [
+            8,
+            29
+          ],
+          "source_word": "0x403",
+          "collision_bits": true,
+          "elevation": 0,
+          "reason": "No normal dry path from this source entry component; required direct front was separately tested successfully. This lateral attempt is not counted as an executed movement pass."
+        }
+      ],
+      "every_visible_leaf_entered_and_left_with_exact_position_facing_and_walkaway": true,
+      "owner_visual_acceptance": "PENDING"
+    },
+    {
+      "group": "olivine-custom-gym",
+      "city": "olivine",
+      "outside_map": "OlivineCity",
+      "inside_map": "OlivineCity_Gym",
+      "visible_leaves": 4,
+      "required_fronts_passed": 4,
+      "all_strict_passes": 12,
+      "physically_unavailable_lateral_starts": [],
+      "every_visible_leaf_entered_and_left_with_exact_position_facing_and_walkaway": true,
+      "owner_visual_acceptance": "PENDING"
+    },
+    {
+      "group": "olivine-pokemon-center",
+      "city": "olivine",
+      "outside_map": "OlivineCity",
+      "inside_map": "OlivineCity_PokemonCenter_1F",
+      "visible_leaves": 4,
+      "required_fronts_passed": 4,
+      "all_strict_passes": 12,
+      "physically_unavailable_lateral_starts": [],
+      "every_visible_leaf_entered_and_left_with_exact_position_facing_and_walkaway": true,
+      "owner_visual_acceptance": "PENDING"
+    },
+    {
+      "group": "olivine-poke-mart",
+      "city": "olivine",
+      "outside_map": "OlivineCity",
+      "inside_map": "OlivineCity_Mart",
+      "visible_leaves": 3,
+      "required_fronts_passed": 3,
+      "all_strict_passes": 9,
+      "physically_unavailable_lateral_starts": [],
+      "every_visible_leaf_entered_and_left_with_exact_position_facing_and_walkaway": true,
+      "owner_visual_acceptance": "PENDING"
+    },
+    {
+      "group": "olivine-silph-office",
+      "city": "olivine",
+      "outside_map": "OlivineCity",
+      "inside_map": "OlivineCity_SilphOffice",
+      "visible_leaves": 3,
+      "required_fronts_passed": 3,
+      "all_strict_passes": 9,
+      "physically_unavailable_lateral_starts": [],
+      "every_visible_leaf_entered_and_left_with_exact_position_facing_and_walkaway": true,
+      "owner_visual_acceptance": "PENDING"
+    },
+    {
+      "group": "olivine-harbor-office",
+      "city": "olivine",
+      "outside_map": "OlivineCity",
+      "inside_map": "OlivineCity_HarborOffice",
+      "visible_leaves": 3,
+      "required_fronts_passed": 3,
+      "all_strict_passes": 8,
+      "physically_unavailable_lateral_starts": [
+        {
+          "label": "olivine-harbor-office-outside-0-lateral-negative",
+          "source_map": "OlivineCity",
+          "desired_lateral_start": [
+            7,
+            41
+          ],
+          "direct_front_landing": [
+            8,
+            41
+          ],
+          "source_word": "0x403",
+          "collision_bits": true,
+          "elevation": 0,
+          "reason": "No normal dry path from this source entry component; required direct front was separately tested successfully. This lateral attempt is not counted as an executed movement pass."
+        }
+      ],
+      "every_visible_leaf_entered_and_left_with_exact_position_facing_and_walkaway": true,
+      "owner_visual_acceptance": "PENDING"
+    },
+    {
+      "group": "olivine-lighthouse",
+      "city": "olivine",
+      "outside_map": "OlivineCity",
+      "inside_map": "OlivineCity_Lighthouse_1F",
+      "visible_leaves": 3,
+      "required_fronts_passed": 3,
+      "all_strict_passes": 8,
+      "physically_unavailable_lateral_starts": [
+        {
+          "label": "olivine-lighthouse-outside-0-lateral-positive",
+          "source_map": "OlivineCity",
+          "desired_lateral_start": [
+            46,
+            40
+          ],
+          "direct_front_landing": [
+            45,
+            40
+          ],
+          "source_word": "0x403",
+          "collision_bits": true,
+          "elevation": 0,
+          "reason": "No normal dry path from this source entry component; required direct front was separately tested successfully. This lateral attempt is not counted as an executed movement pass."
+        }
+      ],
+      "every_visible_leaf_entered_and_left_with_exact_position_facing_and_walkaway": true,
+      "owner_visual_acceptance": "PENDING"
+    },
+    {
+      "group": "olivine-fishing-house",
+      "city": "olivine",
+      "outside_map": "OlivineCity",
+      "inside_map": "OlivineCity_FishingHouse",
+      "visible_leaves": 3,
+      "required_fronts_passed": 3,
+      "all_strict_passes": 8,
+      "physically_unavailable_lateral_starts": [
+        {
+          "label": "olivine-fishing-house-outside-0-lateral-negative",
+          "source_map": "OlivineCity",
+          "desired_lateral_start": [
+            16,
+            24
+          ],
+          "direct_front_landing": [
+            17,
+            24
+          ],
+          "source_word": "0x403",
+          "collision_bits": true,
+          "elevation": 0,
+          "reason": "No normal dry path from this source entry component; required direct front was separately tested successfully. This lateral attempt is not counted as an executed movement pass."
+        }
+      ],
+      "every_visible_leaf_entered_and_left_with_exact_position_facing_and_walkaway": true,
+      "owner_visual_acceptance": "PENDING"
+    },
+    {
+      "group": "olivine-trade-house",
+      "city": "olivine",
+      "outside_map": "OlivineCity",
+      "inside_map": "OlivineCity_TradeHouse",
+      "visible_leaves": 3,
+      "required_fronts_passed": 3,
+      "all_strict_passes": 8,
+      "physically_unavailable_lateral_starts": [
+        {
+          "label": "olivine-trade-house-outside-0-lateral-negative",
+          "source_map": "OlivineCity",
+          "desired_lateral_start": [
+            30,
+            18
+          ],
+          "direct_front_landing": [
+            31,
+            18
+          ],
+          "source_word": "0x403",
+          "collision_bits": true,
+          "elevation": 0,
+          "reason": "No normal dry path from this source entry component; required direct front was separately tested successfully. This lateral attempt is not counted as an executed movement pass."
+        }
+      ],
+      "every_visible_leaf_entered_and_left_with_exact_position_facing_and_walkaway": true,
+      "owner_visual_acceptance": "PENDING"
+    },
+    {
+      "group": "olivine-seal-house",
+      "city": "olivine",
+      "outside_map": "OlivineCity",
+      "inside_map": "OlivineCity_SealHouse",
+      "visible_leaves": 3,
+      "required_fronts_passed": 3,
+      "all_strict_passes": 8,
+      "physically_unavailable_lateral_starts": [
+        {
+          "label": "olivine-seal-house-outside-0-lateral-negative",
+          "source_map": "OlivineCity",
+          "desired_lateral_start": [
+            35,
+            18
+          ],
+          "direct_front_landing": [
+            36,
+            18
+          ],
+          "source_word": "0x403",
+          "collision_bits": true,
+          "elevation": 0,
+          "reason": "No normal dry path from this source entry component; required direct front was separately tested successfully. This lateral attempt is not counted as an executed movement pass."
+        }
+      ],
+      "every_visible_leaf_entered_and_left_with_exact_position_facing_and_walkaway": true,
+      "owner_visual_acceptance": "PENDING"
+    },
+    {
+      "group": "olivine-cafe",
+      "city": "olivine",
+      "outside_map": "OlivineCity",
+      "inside_map": "OlivineCity_Cafe",
+      "visible_leaves": 3,
+      "required_fronts_passed": 3,
+      "all_strict_passes": 8,
+      "physically_unavailable_lateral_starts": [
+        {
+          "label": "olivine-cafe-outside-0-lateral-negative",
+          "source_map": "OlivineCity",
+          "desired_lateral_start": [
+            8,
+            34
+          ],
+          "direct_front_landing": [
+            9,
+            34
+          ],
+          "source_word": "0x403",
+          "collision_bits": true,
+          "elevation": 0,
+          "reason": "No normal dry path from this source entry component; required direct front was separately tested successfully. This lateral attempt is not counted as an executed movement pass."
+        }
+      ],
+      "every_visible_leaf_entered_and_left_with_exact_position_facing_and_walkaway": true,
+      "owner_visual_acceptance": "PENDING"
+    },
+    {
+      "group": "olivine-port-city-entrance",
+      "city": "olivine",
+      "outside_map": "OlivineCity",
+      "inside_map": "OlivineCity_PortTerminal",
+      "visible_leaves": 4,
+      "required_fronts_passed": 4,
+      "all_strict_passes": 10,
+      "physically_unavailable_lateral_starts": [
+        {
+          "label": "olivine-port-city-entrance-outside-0-lateral-positive",
+          "source_map": "OlivineCity",
+          "desired_lateral_start": [
+            22,
+            51
+          ],
+          "direct_front_landing": [
+            23,
+            51
+          ],
+          "source_word": "0x127e",
+          "collision_bits": false,
+          "elevation": 1,
+          "reason": "No normal dry path from this source entry component; required direct front was separately tested successfully. This lateral attempt is not counted as an executed movement pass."
+        },
+        {
+          "label": "olivine-port-city-entrance-outside-1-lateral-negative",
+          "source_map": "OlivineCity",
+          "desired_lateral_start": [
+            25,
+            51
+          ],
+          "direct_front_landing": [
+            24,
+            51
+          ],
+          "source_word": "0x1281",
+          "collision_bits": false,
+          "elevation": 1,
+          "reason": "No normal dry path from this source entry component; required direct front was separately tested successfully. This lateral attempt is not counted as an executed movement pass."
+        }
+      ],
+      "every_visible_leaf_entered_and_left_with_exact_position_facing_and_walkaway": true,
+      "owner_visual_acceptance": "PENDING"
+    },
+    {
+      "group": "olivine-gym-hallway",
+      "city": "olivine",
+      "outside_map": "OlivineCity_Gym",
+      "inside_map": "OlivineCity_Gym_Arena",
+      "visible_leaves": 6,
+      "required_fronts_passed": 6,
+      "all_strict_passes": 16,
+      "physically_unavailable_lateral_starts": [
+        {
+          "label": "olivine-gym-hallway-outside-0-lateral-negative",
+          "source_map": "OlivineCity_Gym",
+          "desired_lateral_start": [
+            4,
+            1
+          ],
+          "direct_front_landing": [
+            5,
+            1
+          ],
+          "source_word": "0x600",
+          "collision_bits": true,
+          "elevation": 0,
+          "reason": "No normal dry path from this source entry component; required direct front was separately tested successfully. This lateral attempt is not counted as an executed movement pass."
+        },
+        {
+          "label": "olivine-gym-hallway-outside-2-lateral-positive",
+          "source_map": "OlivineCity_Gym",
+          "desired_lateral_start": [
+            8,
+            1
+          ],
+          "direct_front_landing": [
+            7,
+            1
+          ],
+          "source_word": "0x600",
+          "collision_bits": true,
+          "elevation": 0,
+          "reason": "No normal dry path from this source entry component; required direct front was separately tested successfully. This lateral attempt is not counted as an executed movement pass."
+        }
+      ],
+      "every_visible_leaf_entered_and_left_with_exact_position_facing_and_walkaway": true,
+      "owner_visual_acceptance": "PENDING"
+    },
+    {
+      "group": "olivine-port-quay-main",
+      "city": "olivine",
+      "outside_map": "OlivineCity_PortQuay",
+      "inside_map": "OlivineCity_PortTerminal",
+      "visible_leaves": 4,
+      "required_fronts_passed": 4,
+      "all_strict_passes": 11,
+      "physically_unavailable_lateral_starts": [
+        {
+          "label": "olivine-port-quay-main-outside-1-lateral-positive",
+          "source_map": "OlivineCity_PortQuay",
+          "desired_lateral_start": [
+            18,
+            16
+          ],
+          "direct_front_landing": [
+            17,
+            16
+          ],
+          "source_word": "0x704",
+          "collision_bits": true,
+          "elevation": 0,
+          "reason": "No normal dry path from this source entry component; required direct front was separately tested successfully. This lateral attempt is not counted as an executed movement pass."
+        }
+      ],
+      "every_visible_leaf_entered_and_left_with_exact_position_facing_and_walkaway": true,
+      "owner_visual_acceptance": "PENDING"
+    },
+    {
+      "group": "olivine-port-inspection-side",
+      "city": "olivine",
+      "outside_map": "OlivineCity_PortQuay",
+      "inside_map": "OlivineCity_PortTerminal",
+      "visible_leaves": 4,
+      "required_fronts_passed": 4,
+      "all_strict_passes": 12,
+      "physically_unavailable_lateral_starts": [],
+      "every_visible_leaf_entered_and_left_with_exact_position_facing_and_walkaway": true,
+      "owner_visual_acceptance": "PENDING"
+    },
+    {
+      "group": "olivine-lighthouse-balcony",
+      "city": "olivine",
+      "outside_map": "OlivineCity_Lighthouse_Balcony",
+      "inside_map": "OlivineCity_Lighthouse_3F",
+      "visible_leaves": 4,
+      "required_fronts_passed": 4,
+      "all_strict_passes": 12,
+      "physically_unavailable_lateral_starts": [],
+      "every_visible_leaf_entered_and_left_with_exact_position_facing_and_walkaway": true,
+      "owner_visual_acceptance": "PENDING"
+    },
+    {
+      "group": "aqua-gangway",
+      "city": "olivine",
+      "outside_map": "OlivineCity_PortQuay",
+      "inside_map": "SSAqua_1F",
+      "visible_leaves": 7,
+      "required_fronts_passed": 7,
+      "all_strict_passes": 17,
+      "physically_unavailable_lateral_starts": [
+        {
+          "label": "aqua-gangway-outside-0-lateral-negative",
+          "source_map": "OlivineCity_PortQuay",
+          "desired_lateral_start": [
+            26,
+            21
+          ],
+          "direct_front_landing": [
+            27,
+            21
+          ],
+          "source_word": "0x704",
+          "collision_bits": true,
+          "elevation": 0,
+          "reason": "No normal dry path from this source entry component; required direct front was separately tested successfully. This lateral attempt is not counted as an executed movement pass."
+        },
+        {
+          "label": "aqua-gangway-outside-1-lateral-positive",
+          "source_map": "OlivineCity_PortQuay",
+          "desired_lateral_start": [
+            29,
+            21
+          ],
+          "direct_front_landing": [
+            28,
+            21
+          ],
+          "source_word": "0x703",
+          "collision_bits": true,
+          "elevation": 0,
+          "reason": "No normal dry path from this source entry component; required direct front was separately tested successfully. This lateral attempt is not counted as an executed movement pass."
+        },
+        {
+          "label": "aqua-gangway-inside-2-lateral-positive",
+          "source_map": "SSAqua_1F",
+          "desired_lateral_start": [
+            21,
+            18
+          ],
+          "direct_front_landing": [
+            22,
+            18
+          ],
+          "source_word": "0x625",
+          "collision_bits": true,
+          "elevation": 0,
+          "reason": "No normal dry path from this source entry component; required direct front was separately tested successfully. This lateral attempt is not counted as an executed movement pass."
+        },
+        {
+          "label": "aqua-gangway-inside-4-lateral-negative",
+          "source_map": "SSAqua_1F",
+          "desired_lateral_start": [
+            27,
+            18
+          ],
+          "direct_front_landing": [
+            26,
+            18
+          ],
+          "source_word": "0x627",
+          "collision_bits": true,
+          "elevation": 0,
+          "reason": "No normal dry path from this source entry component; required direct front was separately tested successfully. This lateral attempt is not counted as an executed movement pass."
+        }
+      ],
+      "every_visible_leaf_entered_and_left_with_exact_position_facing_and_walkaway": true,
+      "owner_visual_acceptance": "PENDING"
+    },
+    {
+      "group": "aqua-southwestcabins-0",
+      "city": "olivine",
+      "outside_map": "SSAqua_1F",
+      "inside_map": "SSAqua_SouthwestCabins",
+      "visible_leaves": 4,
+      "required_fronts_passed": 4,
+      "all_strict_passes": 12,
+      "physically_unavailable_lateral_starts": [],
+      "every_visible_leaf_entered_and_left_with_exact_position_facing_and_walkaway": true,
+      "owner_visual_acceptance": "PENDING"
+    },
+    {
+      "group": "aqua-southwestcabins-1",
+      "city": "olivine",
+      "outside_map": "SSAqua_1F",
+      "inside_map": "SSAqua_SouthwestCabins",
+      "visible_leaves": 4,
+      "required_fronts_passed": 4,
+      "all_strict_passes": 12,
+      "physically_unavailable_lateral_starts": [],
+      "every_visible_leaf_entered_and_left_with_exact_position_facing_and_walkaway": true,
+      "owner_visual_acceptance": "PENDING"
+    },
+    {
+      "group": "aqua-southeastcabins-0",
+      "city": "olivine",
+      "outside_map": "SSAqua_1F",
+      "inside_map": "SSAqua_SoutheastCabins",
+      "visible_leaves": 4,
+      "required_fronts_passed": 4,
+      "all_strict_passes": 12,
+      "physically_unavailable_lateral_starts": [],
+      "every_visible_leaf_entered_and_left_with_exact_position_facing_and_walkaway": true,
+      "owner_visual_acceptance": "PENDING"
+    },
+    {
+      "group": "aqua-southeastcabins-1",
+      "city": "olivine",
+      "outside_map": "SSAqua_1F",
+      "inside_map": "SSAqua_SoutheastCabins",
+      "visible_leaves": 4,
+      "required_fronts_passed": 4,
+      "all_strict_passes": 11,
+      "physically_unavailable_lateral_starts": [
+        {
+          "label": "aqua-southeastcabins-1-inside-1-lateral-positive",
+          "source_map": "SSAqua_SoutheastCabins",
+          "desired_lateral_start": [
+            25,
+            3
+          ],
+          "direct_front_landing": [
+            24,
+            3
+          ],
+          "source_word": "0x370a",
+          "collision_bits": true,
+          "elevation": 3,
+          "reason": "No normal dry path from this source entry component; required direct front was separately tested successfully. This lateral attempt is not counted as an executed movement pass."
+        }
+      ],
+      "every_visible_leaf_entered_and_left_with_exact_position_facing_and_walkaway": true,
+      "owner_visual_acceptance": "PENDING"
+    },
+    {
+      "group": "aqua-northwestcabins-0",
+      "city": "olivine",
+      "outside_map": "SSAqua_1F",
+      "inside_map": "SSAqua_NorthwestCabins",
+      "visible_leaves": 4,
+      "required_fronts_passed": 4,
+      "all_strict_passes": 12,
+      "physically_unavailable_lateral_starts": [],
+      "every_visible_leaf_entered_and_left_with_exact_position_facing_and_walkaway": true,
+      "owner_visual_acceptance": "PENDING"
+    },
+    {
+      "group": "aqua-northwestcabins-1",
+      "city": "olivine",
+      "outside_map": "SSAqua_1F",
+      "inside_map": "SSAqua_NorthwestCabins",
+      "visible_leaves": 4,
+      "required_fronts_passed": 4,
+      "all_strict_passes": 12,
+      "physically_unavailable_lateral_starts": [],
+      "every_visible_leaf_entered_and_left_with_exact_position_facing_and_walkaway": true,
+      "owner_visual_acceptance": "PENDING"
+    },
+    {
+      "group": "aqua-northeastcabins-0",
+      "city": "olivine",
+      "outside_map": "SSAqua_1F",
+      "inside_map": "SSAqua_NortheastCabins",
+      "visible_leaves": 4,
+      "required_fronts_passed": 4,
+      "all_strict_passes": 12,
+      "physically_unavailable_lateral_starts": [],
+      "every_visible_leaf_entered_and_left_with_exact_position_facing_and_walkaway": true,
+      "owner_visual_acceptance": "PENDING"
+    },
+    {
+      "group": "aqua-northeastcabins-1",
+      "city": "olivine",
+      "outside_map": "SSAqua_1F",
+      "inside_map": "SSAqua_NortheastCabins",
+      "visible_leaves": 4,
+      "required_fronts_passed": 4,
+      "all_strict_passes": 12,
+      "physically_unavailable_lateral_starts": [],
+      "every_visible_leaf_entered_and_left_with_exact_position_facing_and_walkaway": true,
+      "owner_visual_acceptance": "PENDING"
+    },
+    {
+      "group": "aqua-captainroom-0",
+      "city": "olivine",
+      "outside_map": "SSAqua_1F",
+      "inside_map": "SSAqua_CaptainRoom",
+      "visible_leaves": 4,
+      "required_fronts_passed": 4,
+      "all_strict_passes": 12,
+      "physically_unavailable_lateral_starts": [],
+      "every_visible_leaf_entered_and_left_with_exact_position_facing_and_walkaway": true,
+      "owner_visual_acceptance": "PENDING"
+    },
+    {
+      "group": "aqua-west-stairs",
+      "city": "olivine",
+      "outside_map": "SSAqua_1F",
+      "inside_map": "SSAqua_B1F",
+      "visible_leaves": 4,
+      "required_fronts_passed": 4,
+      "all_strict_passes": 10,
+      "physically_unavailable_lateral_starts": [
+        {
+          "label": "aqua-west-stairs-outside-0-lateral-negative",
+          "source_map": "SSAqua_1F",
+          "desired_lateral_start": [
+            23,
+            4
+          ],
+          "direct_front_landing": [
+            24,
+            4
+          ],
+          "source_word": "0x627",
+          "collision_bits": true,
+          "elevation": 0,
+          "reason": "No normal dry path from this source entry component; required direct front was separately tested successfully. This lateral attempt is not counted as an executed movement pass."
+        },
+        {
+          "label": "aqua-west-stairs-inside-1-lateral-positive",
+          "source_map": "SSAqua_B1F",
+          "desired_lateral_start": [
+            26,
+            4
+          ],
+          "direct_front_landing": [
+            25,
+            4
+          ],
+          "source_word": "0x636",
+          "collision_bits": true,
+          "elevation": 0,
+          "reason": "No normal dry path from this source entry component; required direct front was separately tested successfully. This lateral attempt is not counted as an executed movement pass."
+        }
+      ],
+      "every_visible_leaf_entered_and_left_with_exact_position_facing_and_walkaway": true,
+      "owner_visual_acceptance": "PENDING"
+    },
+    {
+      "group": "aqua-right-stairs-north-rim",
+      "city": "olivine",
+      "outside_map": "SSAqua_1F",
+      "inside_map": "SSAqua_B1F",
+      "visible_leaves": 4,
+      "required_fronts_passed": 4,
+      "all_strict_passes": 10,
+      "physically_unavailable_lateral_starts": [
+        {
+          "label": "aqua-right-stairs-north-rim-outside-1-lateral-negative",
+          "source_map": "SSAqua_1F",
+          "desired_lateral_start": [
+            44,
+            7
+          ],
+          "direct_front_landing": [
+            43,
+            7
+          ],
+          "source_word": "0x628",
+          "collision_bits": true,
+          "elevation": 0,
+          "reason": "No normal dry path from this source entry component; required direct front was separately tested successfully. This lateral attempt is not counted as an executed movement pass."
+        },
+        {
+          "label": "aqua-right-stairs-north-rim-inside-1-lateral-negative",
+          "source_map": "SSAqua_B1F",
+          "desired_lateral_start": [
+            44,
+            7
+          ],
+          "direct_front_landing": [
+            43,
+            7
+          ],
+          "source_word": "0x371e",
+          "collision_bits": true,
+          "elevation": 3,
+          "reason": "No normal dry path from this source entry component; required direct front was separately tested successfully. This lateral attempt is not counted as an executed movement pass."
+        }
+      ],
+      "every_visible_leaf_entered_and_left_with_exact_position_facing_and_walkaway": true,
+      "owner_visual_acceptance": "PENDING"
+    },
+    {
+      "group": "aqua-right-stairs-south-rim",
+      "city": "olivine",
+      "outside_map": "SSAqua_1F",
+      "inside_map": "SSAqua_B1F",
+      "visible_leaves": 4,
+      "required_fronts_passed": 4,
+      "all_strict_passes": 10,
+      "physically_unavailable_lateral_starts": [
+        {
+          "label": "aqua-right-stairs-south-rim-outside-1-lateral-positive",
+          "source_map": "SSAqua_1F",
+          "desired_lateral_start": [
+            44,
+            10
+          ],
+          "direct_front_landing": [
+            43,
+            10
+          ],
+          "source_word": "0x624",
+          "collision_bits": true,
+          "elevation": 0,
+          "reason": "No normal dry path from this source entry component; required direct front was separately tested successfully. This lateral attempt is not counted as an executed movement pass."
+        },
+        {
+          "label": "aqua-right-stairs-south-rim-inside-1-lateral-positive",
+          "source_map": "SSAqua_B1F",
+          "desired_lateral_start": [
+            44,
+            10
+          ],
+          "direct_front_landing": [
+            43,
+            10
+          ],
+          "source_word": "0x3736",
+          "collision_bits": true,
+          "elevation": 3,
+          "reason": "No normal dry path from this source entry component; required direct front was separately tested successfully. This lateral attempt is not counted as an executed movement pass."
+        }
+      ],
+      "every_visible_leaf_entered_and_left_with_exact_position_facing_and_walkaway": true,
+      "owner_visual_acceptance": "PENDING"
+    }
+  ],
+  "total_groups": 45,
+  "visible_leaves": 173,
+  "controller_attempts": 519,
+  "executed_strict_passes": 482,
+  "unavailable_lateral_starts": 37,
+  "independent_all45_facing_audit": "PASS",
+  "all_67_previously_failed_facings_fixed": [
+    {
+      "label": "west-city-gate-outside-0-front",
+      "actual_old_facing": 1,
+      "actual_new_facing": 3,
+      "independent_intended_facing": 3,
+      "native_arrival": [
+        10,
+        6
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "west-city-gate-outside-0-lateral-negative",
+      "actual_old_facing": 1,
+      "actual_new_facing": 3,
+      "independent_intended_facing": 3,
+      "native_arrival": [
+        10,
+        6
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "west-city-gate-outside-1-front",
+      "actual_old_facing": 1,
+      "actual_new_facing": 3,
+      "independent_intended_facing": 3,
+      "native_arrival": [
+        10,
+        7
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "west-city-gate-outside-1-lateral-negative",
+      "actual_old_facing": 1,
+      "actual_new_facing": 3,
+      "independent_intended_facing": 3,
+      "native_arrival": [
+        10,
+        7
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "west-city-gate-outside-1-lateral-positive",
+      "actual_old_facing": 1,
+      "actual_new_facing": 3,
+      "independent_intended_facing": 3,
+      "native_arrival": [
+        10,
+        7
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "west-city-gate-outside-2-front",
+      "actual_old_facing": 1,
+      "actual_new_facing": 3,
+      "independent_intended_facing": 3,
+      "native_arrival": [
+        10,
+        8
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "west-city-gate-outside-2-lateral-negative",
+      "actual_old_facing": 1,
+      "actual_new_facing": 3,
+      "independent_intended_facing": 3,
+      "native_arrival": [
+        10,
+        8
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "west-city-gate-outside-2-lateral-positive",
+      "actual_old_facing": 1,
+      "actual_new_facing": 3,
+      "independent_intended_facing": 3,
+      "native_arrival": [
+        10,
+        8
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "west-city-gate-inside-0-front",
+      "actual_old_facing": 1,
+      "actual_new_facing": 4,
+      "independent_intended_facing": 4,
+      "native_arrival": [
+        7,
+        37
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "west-city-gate-inside-0-lateral-negative",
+      "actual_old_facing": 1,
+      "actual_new_facing": 4,
+      "independent_intended_facing": 4,
+      "native_arrival": [
+        7,
+        37
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "west-city-gate-inside-0-lateral-positive",
+      "actual_old_facing": 1,
+      "actual_new_facing": 4,
+      "independent_intended_facing": 4,
+      "native_arrival": [
+        7,
+        37
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "west-city-gate-inside-1-front",
+      "actual_old_facing": 1,
+      "actual_new_facing": 4,
+      "independent_intended_facing": 4,
+      "native_arrival": [
+        7,
+        38
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "west-city-gate-inside-1-lateral-negative",
+      "actual_old_facing": 1,
+      "actual_new_facing": 4,
+      "independent_intended_facing": 4,
+      "native_arrival": [
+        7,
+        38
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "west-city-gate-inside-1-lateral-positive",
+      "actual_old_facing": 1,
+      "actual_new_facing": 4,
+      "independent_intended_facing": 4,
+      "native_arrival": [
+        7,
+        38
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "west-city-gate-inside-2-front",
+      "actual_old_facing": 1,
+      "actual_new_facing": 4,
+      "independent_intended_facing": 4,
+      "native_arrival": [
+        7,
+        39
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "west-city-gate-inside-2-lateral-negative",
+      "actual_old_facing": 1,
+      "actual_new_facing": 4,
+      "independent_intended_facing": 4,
+      "native_arrival": [
+        7,
+        39
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "west-city-gate-inside-2-lateral-positive",
+      "actual_old_facing": 1,
+      "actual_new_facing": 4,
+      "independent_intended_facing": 4,
+      "native_arrival": [
+        7,
+        39
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "west-route-gate-outside-0-front",
+      "actual_old_facing": 1,
+      "actual_new_facing": 4,
+      "independent_intended_facing": 4,
+      "native_arrival": [
+        1,
+        6
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "west-route-gate-outside-0-lateral-positive",
+      "actual_old_facing": 1,
+      "actual_new_facing": 4,
+      "independent_intended_facing": 4,
+      "native_arrival": [
+        1,
+        6
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "west-route-gate-outside-1-front",
+      "actual_old_facing": 1,
+      "actual_new_facing": 4,
+      "independent_intended_facing": 4,
+      "native_arrival": [
+        1,
+        7
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "west-route-gate-outside-1-lateral-negative",
+      "actual_old_facing": 1,
+      "actual_new_facing": 4,
+      "independent_intended_facing": 4,
+      "native_arrival": [
+        1,
+        7
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "west-route-gate-outside-1-lateral-positive",
+      "actual_old_facing": 1,
+      "actual_new_facing": 4,
+      "independent_intended_facing": 4,
+      "native_arrival": [
+        1,
+        7
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "west-route-gate-outside-2-front",
+      "actual_old_facing": 1,
+      "actual_new_facing": 4,
+      "independent_intended_facing": 4,
+      "native_arrival": [
+        1,
+        8
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "west-route-gate-outside-2-lateral-negative",
+      "actual_old_facing": 1,
+      "actual_new_facing": 4,
+      "independent_intended_facing": 4,
+      "native_arrival": [
+        1,
+        8
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "west-route-gate-inside-0-front",
+      "actual_old_facing": 1,
+      "actual_new_facing": 3,
+      "independent_intended_facing": 3,
+      "native_arrival": [
+        62,
+        12
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "west-route-gate-inside-0-lateral-negative",
+      "actual_old_facing": 1,
+      "actual_new_facing": 3,
+      "independent_intended_facing": 3,
+      "native_arrival": [
+        62,
+        12
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "west-route-gate-inside-0-lateral-positive",
+      "actual_old_facing": 1,
+      "actual_new_facing": 3,
+      "independent_intended_facing": 3,
+      "native_arrival": [
+        62,
+        12
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "west-route-gate-inside-1-front",
+      "actual_old_facing": 1,
+      "actual_new_facing": 3,
+      "independent_intended_facing": 3,
+      "native_arrival": [
+        62,
+        13
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "west-route-gate-inside-1-lateral-negative",
+      "actual_old_facing": 1,
+      "actual_new_facing": 3,
+      "independent_intended_facing": 3,
+      "native_arrival": [
+        62,
+        13
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "west-route-gate-inside-1-lateral-positive",
+      "actual_old_facing": 1,
+      "actual_new_facing": 3,
+      "independent_intended_facing": 3,
+      "native_arrival": [
+        62,
+        13
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "west-route-gate-inside-2-front",
+      "actual_old_facing": 1,
+      "actual_new_facing": 3,
+      "independent_intended_facing": 3,
+      "native_arrival": [
+        62,
+        14
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "west-route-gate-inside-2-lateral-negative",
+      "actual_old_facing": 1,
+      "actual_new_facing": 3,
+      "independent_intended_facing": 3,
+      "native_arrival": [
+        62,
+        14
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "west-route-gate-inside-2-lateral-positive",
+      "actual_old_facing": 1,
+      "actual_new_facing": 3,
+      "independent_intended_facing": 3,
+      "native_arrival": [
+        62,
+        14
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "east-city-gate-outside-0-front",
+      "actual_old_facing": 1,
+      "actual_new_facing": 4,
+      "independent_intended_facing": 4,
+      "native_arrival": [
+        1,
+        6
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "east-city-gate-outside-0-lateral-positive",
+      "actual_old_facing": 1,
+      "actual_new_facing": 4,
+      "independent_intended_facing": 4,
+      "native_arrival": [
+        1,
+        6
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "east-city-gate-outside-1-front",
+      "actual_old_facing": 1,
+      "actual_new_facing": 4,
+      "independent_intended_facing": 4,
+      "native_arrival": [
+        1,
+        7
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "east-city-gate-outside-1-lateral-negative",
+      "actual_old_facing": 1,
+      "actual_new_facing": 4,
+      "independent_intended_facing": 4,
+      "native_arrival": [
+        1,
+        7
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "east-city-gate-outside-1-lateral-positive",
+      "actual_old_facing": 1,
+      "actual_new_facing": 4,
+      "independent_intended_facing": 4,
+      "native_arrival": [
+        1,
+        7
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "east-city-gate-outside-2-front",
+      "actual_old_facing": 1,
+      "actual_new_facing": 4,
+      "independent_intended_facing": 4,
+      "native_arrival": [
+        1,
+        8
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "east-city-gate-outside-2-lateral-negative",
+      "actual_old_facing": 1,
+      "actual_new_facing": 4,
+      "independent_intended_facing": 4,
+      "native_arrival": [
+        1,
+        8
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "east-city-gate-inside-0-front",
+      "actual_old_facing": 1,
+      "actual_new_facing": 3,
+      "independent_intended_facing": 3,
+      "native_arrival": [
+        59,
+        46
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "east-city-gate-inside-0-lateral-negative",
+      "actual_old_facing": 1,
+      "actual_new_facing": 3,
+      "independent_intended_facing": 3,
+      "native_arrival": [
+        59,
+        46
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "east-city-gate-inside-0-lateral-positive",
+      "actual_old_facing": 1,
+      "actual_new_facing": 3,
+      "independent_intended_facing": 3,
+      "native_arrival": [
+        59,
+        46
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "east-city-gate-inside-1-front",
+      "actual_old_facing": 1,
+      "actual_new_facing": 3,
+      "independent_intended_facing": 3,
+      "native_arrival": [
+        59,
+        47
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "east-city-gate-inside-1-lateral-negative",
+      "actual_old_facing": 1,
+      "actual_new_facing": 3,
+      "independent_intended_facing": 3,
+      "native_arrival": [
+        59,
+        47
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "east-city-gate-inside-1-lateral-positive",
+      "actual_old_facing": 1,
+      "actual_new_facing": 3,
+      "independent_intended_facing": 3,
+      "native_arrival": [
+        59,
+        47
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "east-city-gate-inside-2-front",
+      "actual_old_facing": 1,
+      "actual_new_facing": 3,
+      "independent_intended_facing": 3,
+      "native_arrival": [
+        59,
+        48
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "east-city-gate-inside-2-lateral-negative",
+      "actual_old_facing": 1,
+      "actual_new_facing": 3,
+      "independent_intended_facing": 3,
+      "native_arrival": [
+        59,
+        48
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "east-city-gate-inside-2-lateral-positive",
+      "actual_old_facing": 1,
+      "actual_new_facing": 3,
+      "independent_intended_facing": 3,
+      "native_arrival": [
+        59,
+        48
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "east-route-gate-outside-0-front",
+      "actual_old_facing": 1,
+      "actual_new_facing": 3,
+      "independent_intended_facing": 3,
+      "native_arrival": [
+        10,
+        6
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "east-route-gate-outside-0-lateral-negative",
+      "actual_old_facing": 1,
+      "actual_new_facing": 3,
+      "independent_intended_facing": 3,
+      "native_arrival": [
+        10,
+        6
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "east-route-gate-outside-1-front",
+      "actual_old_facing": 1,
+      "actual_new_facing": 3,
+      "independent_intended_facing": 3,
+      "native_arrival": [
+        10,
+        7
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "east-route-gate-outside-1-lateral-negative",
+      "actual_old_facing": 1,
+      "actual_new_facing": 3,
+      "independent_intended_facing": 3,
+      "native_arrival": [
+        10,
+        7
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "east-route-gate-outside-1-lateral-positive",
+      "actual_old_facing": 1,
+      "actual_new_facing": 3,
+      "independent_intended_facing": 3,
+      "native_arrival": [
+        10,
+        7
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "east-route-gate-outside-2-front",
+      "actual_old_facing": 1,
+      "actual_new_facing": 3,
+      "independent_intended_facing": 3,
+      "native_arrival": [
+        10,
+        8
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "east-route-gate-outside-2-lateral-positive",
+      "actual_old_facing": 1,
+      "actual_new_facing": 3,
+      "independent_intended_facing": 3,
+      "native_arrival": [
+        10,
+        8
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "east-route-gate-inside-0-front",
+      "actual_old_facing": 1,
+      "actual_new_facing": 4,
+      "independent_intended_facing": 4,
+      "native_arrival": [
+        3,
+        13
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "east-route-gate-inside-0-lateral-negative",
+      "actual_old_facing": 1,
+      "actual_new_facing": 4,
+      "independent_intended_facing": 4,
+      "native_arrival": [
+        3,
+        13
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "east-route-gate-inside-0-lateral-positive",
+      "actual_old_facing": 1,
+      "actual_new_facing": 4,
+      "independent_intended_facing": 4,
+      "native_arrival": [
+        3,
+        13
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "east-route-gate-inside-1-front",
+      "actual_old_facing": 1,
+      "actual_new_facing": 4,
+      "independent_intended_facing": 4,
+      "native_arrival": [
+        3,
+        14
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "east-route-gate-inside-1-lateral-negative",
+      "actual_old_facing": 1,
+      "actual_new_facing": 4,
+      "independent_intended_facing": 4,
+      "native_arrival": [
+        3,
+        14
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "east-route-gate-inside-1-lateral-positive",
+      "actual_old_facing": 1,
+      "actual_new_facing": 4,
+      "independent_intended_facing": 4,
+      "native_arrival": [
+        3,
+        14
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "east-route-gate-inside-2-front",
+      "actual_old_facing": 1,
+      "actual_new_facing": 4,
+      "independent_intended_facing": 4,
+      "native_arrival": [
+        3,
+        15
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "east-route-gate-inside-2-lateral-negative",
+      "actual_old_facing": 1,
+      "actual_new_facing": 4,
+      "independent_intended_facing": 4,
+      "native_arrival": [
+        3,
+        15
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "east-route-gate-inside-2-lateral-positive",
+      "actual_old_facing": 1,
+      "actual_new_facing": 4,
+      "independent_intended_facing": 4,
+      "native_arrival": [
+        3,
+        15
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "trail-station-return-outside-0-front",
+      "actual_old_facing": 2,
+      "actual_new_facing": 1,
+      "independent_intended_facing": 1,
+      "native_arrival": [
+        6,
+        3
+      ],
+      "result": "PASS"
+    },
+    {
+      "label": "trail-station-return-outside-0-lateral-positive",
+      "actual_old_facing": 2,
+      "actual_new_facing": 1,
+      "independent_intended_facing": 1,
+      "native_arrival": [
+        6,
+        3
+      ],
+      "result": "PASS"
+    }
+  ],
+  "unavailable_start_classification": {
+    "solid_collision_cells": 35,
+    "real_sea_cells_not_dry_pedestrian_starts": 2
+  }
+}

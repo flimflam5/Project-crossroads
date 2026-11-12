@@ -1,0 +1,359 @@
+{
+  "visited": [
+    "BellchimeTrail",
+    "EcruteakCity",
+    "EcruteakCity_BarrierCorridor",
+    "EcruteakCity_BarrierStation",
+    "EcruteakCity_BellTower",
+    "EcruteakCity_BellTower_2F",
+    "EcruteakCity_BellTower_3F",
+    "EcruteakCity_BellTower_4F",
+    "EcruteakCity_BellTower_5F",
+    "EcruteakCity_BellTower_6F",
+    "EcruteakCity_BellTower_7F",
+    "EcruteakCity_BellTower_8F",
+    "EcruteakCity_WestGate",
+    "JohtoRoute38",
+    "JohtoRoute39",
+    "OlivineCity",
+    "OlivineCity_HarborOffice"
+  ],
+  "targets": [],
+  "transitions": [
+    [
+      "EcruteakCity_BellTower_9F",
+      "EcruteakCity_BellTower_8F",
+      "warp"
+    ],
+    [
+      "EcruteakCity_BellTower_8F",
+      "EcruteakCity_BellTower_7F",
+      "warp"
+    ],
+    [
+      "EcruteakCity_BellTower_7F",
+      "EcruteakCity_BellTower_6F",
+      "warp"
+    ],
+    [
+      "EcruteakCity_BellTower_6F",
+      "EcruteakCity_BellTower_5F",
+      "warp"
+    ],
+    [
+      "EcruteakCity_BellTower_5F",
+      "EcruteakCity_BellTower_4F",
+      "warp"
+    ],
+    [
+      "EcruteakCity_BellTower_4F",
+      "EcruteakCity_BellTower_3F",
+      "warp"
+    ],
+    [
+      "EcruteakCity_BellTower_3F",
+      "EcruteakCity_BellTower_2F",
+      "warp"
+    ],
+    [
+      "EcruteakCity_BellTower_2F",
+      "EcruteakCity_BellTower",
+      "warp"
+    ],
+    [
+      "EcruteakCity_BellTower",
+      "BellchimeTrail",
+      "warp"
+    ],
+    [
+      "BellchimeTrail",
+      "EcruteakCity_BarrierCorridor",
+      "warp"
+    ],
+    [
+      "EcruteakCity_BarrierCorridor",
+      "EcruteakCity_BarrierStation",
+      "warp"
+    ],
+    [
+      "EcruteakCity_BarrierStation",
+      "EcruteakCity",
+      "warp"
+    ],
+    [
+      "EcruteakCity",
+      "EcruteakCity_WestGate",
+      "warp"
+    ],
+    [
+      "EcruteakCity_WestGate",
+      "JohtoRoute38",
+      "warp"
+    ],
+    [
+      "JohtoRoute38",
+      "JohtoRoute39",
+      "border"
+    ],
+    [
+      "JohtoRoute39",
+      "OlivineCity",
+      "border"
+    ],
+    [
+      "OlivineCity",
+      "OlivineCity_HarborOffice",
+      "warp"
+    ],
+    [
+      "OlivineCity_HarborOffice",
+      "OlivineCity",
+      "warp"
+    ]
+  ],
+  "tested_roundtrip_edges": 0,
+  "tested_edges": [],
+  "warp_trials": [
+    {
+      "source": "EcruteakCity_BellTower_9F",
+      "source_warp": 1,
+      "threshold": [
+        16,
+        3
+      ],
+      "expected_map": "EcruteakCity_BellTower_8F",
+      "actual_map": "EcruteakCity_BellTower_8F",
+      "arrival": [
+        3,
+        16
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "EcruteakCity_BellTower_8F",
+      "source_warp": 0,
+      "threshold": [
+        3,
+        8
+      ],
+      "expected_map": "EcruteakCity_BellTower_7F",
+      "actual_map": "EcruteakCity_BellTower_7F",
+      "arrival": [
+        11,
+        22
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "EcruteakCity_BellTower_7F",
+      "source_warp": 0,
+      "threshold": [
+        2,
+        15
+      ],
+      "expected_map": "EcruteakCity_BellTower_6F",
+      "actual_map": "EcruteakCity_BellTower_6F",
+      "arrival": [
+        2,
+        15
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "EcruteakCity_BellTower_6F",
+      "source_warp": 0,
+      "threshold": [
+        9,
+        21
+      ],
+      "expected_map": "EcruteakCity_BellTower_5F",
+      "actual_map": "EcruteakCity_BellTower_5F",
+      "arrival": [
+        9,
+        21
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "EcruteakCity_BellTower_5F",
+      "source_warp": 2,
+      "threshold": [
+        2,
+        21
+      ],
+      "expected_map": "EcruteakCity_BellTower_4F",
+      "actual_map": "EcruteakCity_BellTower_4F",
+      "arrival": [
+        2,
+        21
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "EcruteakCity_BellTower_4F",
+      "source_warp": 0,
+      "threshold": [
+        20,
+        4
+      ],
+      "expected_map": "EcruteakCity_BellTower_3F",
+      "actual_map": "EcruteakCity_BellTower_3F",
+      "arrival": [
+        20,
+        4
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "EcruteakCity_BellTower_3F",
+      "source_warp": 0,
+      "threshold": [
+        11,
+        21
+      ],
+      "expected_map": "EcruteakCity_BellTower_2F",
+      "actual_map": "EcruteakCity_BellTower_2F",
+      "arrival": [
+        11,
+        21
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "EcruteakCity_BellTower_2F",
+      "source_warp": 0,
+      "threshold": [
+        5,
+        4
+      ],
+      "expected_map": "EcruteakCity_BellTower",
+      "actual_map": "EcruteakCity_BellTower",
+      "arrival": [
+        5,
+        4
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "EcruteakCity_BellTower",
+      "source_warp": 0,
+      "threshold": [
+        11,
+        22
+      ],
+      "expected_map": "BellchimeTrail",
+      "actual_map": "BellchimeTrail",
+      "arrival": [
+        37,
+        21
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "BellchimeTrail",
+      "source_warp": 0,
+      "threshold": [
+        9,
+        14
+      ],
+      "expected_map": "EcruteakCity_BarrierCorridor",
+      "actual_map": "EcruteakCity_BarrierCorridor",
+      "arrival": [
+        6,
+        3
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "EcruteakCity_BarrierCorridor",
+      "source_warp": 0,
+      "threshold": [
+        3,
+        19
+      ],
+      "expected_map": "EcruteakCity_BarrierStation",
+      "actual_map": "EcruteakCity_BarrierStation",
+      "arrival": [
+        15,
+        3
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "EcruteakCity_BarrierStation",
+      "source_warp": 0,
+      "threshold": [
+        9,
+        11
+      ],
+      "expected_map": "EcruteakCity",
+      "actual_map": "EcruteakCity",
+      "arrival": [
+        39,
+        26
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "EcruteakCity",
+      "source_warp": 9,
+      "threshold": [
+        6,
+        37
+      ],
+      "expected_map": "EcruteakCity_WestGate",
+      "actual_map": "EcruteakCity_WestGate",
+      "arrival": [
+        10,
+        6
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "EcruteakCity_WestGate",
+      "source_warp": 1,
+      "threshold": [
+        1,
+        7
+      ],
+      "expected_map": "JohtoRoute38",
+      "actual_map": "JohtoRoute38",
+      "arrival": [
+        62,
+        13
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity",
+      "source_warp": 6,
+      "threshold": [
+        8,
+        40
+      ],
+      "expected_map": "OlivineCity_HarborOffice",
+      "actual_map": "OlivineCity_HarborOffice",
+      "arrival": [
+        3,
+        7
+      ],
+      "result": "PASS"
+    },
+    {
+      "source": "OlivineCity_HarborOffice",
+      "source_warp": 0,
+      "threshold": [
+        3,
+        7
+      ],
+      "expected_map": "OlivineCity",
+      "actual_map": "OlivineCity",
+      "arrival": [
+        8,
+        41
+      ],
+      "result": "PASS"
+    }
+  ],
+  "actual_surf_entries": 0
+}

@@ -1,0 +1,30 @@
+{
+  "source_revision": "cc643ffe711204f3ef38e34e7aa1eb8c9558720f",
+  "rom_sha256": "ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b",
+  "explicit_require_facing_all_groups": true,
+  "video_scope": "Every required front only; all 519 controller cases/assertions still run; actual arrival PNG for every executed case",
+  "inputs": [
+    {
+      "path": "crossroads/tools/olivine_doorway_smoke.py",
+      "sha256": "9f2e0bf1b81699d81164554abbe139f83063652efff1f5019eaee444961667ab"
+    },
+    {
+      "path": "crossroads/tools/johto_network_smoke.py",
+      "sha256": "3bb4255c0aac1733ea644620a2ff0488cdc459863454d044c2a1f6d167e85a23"
+    },
+    {
+      "path": "crossroads/hgss/doorways-qa10.json",
+      "sha256": "6f7f35d785d025d5848013839f622c73b088bee048a0c98a6920729e80ff4851"
+    },
+    {
+      "path": "crossroads/tools/validate_qa10_arrival_facing.py",
+      "sha256": "c5f406b13623bf8fd9801cec15b129a71223f678fe2d9f1f5fca84b13c9f06bb"
+    }
+  ],
+  "actual_head_when_raw_report_completed": "ed375e9f382cafc8f225136876778534ac111a17",
+  "compiled_game_inputs_unchanged_between_checkpoints": true,
+  "successor_changed_paths": [
+    "crossroads/hgss/qa10/VALIDATION_CHANGES.md",
+    "crossroads/tools/build_johto_network.py"
+  ]
+}

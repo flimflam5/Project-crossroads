@@ -1,0 +1,159 @@
+{
+  "identity": {
+    "game_source_commit": "df8c4598d88c7770626be4621a5f39cf60dadb95",
+    "rom_sha256": "4fb28fe64fc44c0546462a935655346a61f13b644bc3040468146d136cd6d656",
+    "elf_sha256": "3ad10d900c720ab625f6f041e1be9669638efe80dce542cf1ded1ec88a579949",
+    "source_at_start": "df8c4598d88c7770626be4621a5f39cf60dadb95",
+    "source_dirty_at_start": true,
+    "original_battery_sha256": "b03ff1ef488fbd25de016e828483bc3001787b84e450a45eaa0ac12a11de30ab",
+    "copied_battery_sha256": "b03ff1ef488fbd25de016e828483bc3001787b84e450a45eaa0ac12a11de30ab"
+  },
+  "phases": [
+    {
+      "phase": "lighthouse-tour",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/Project-crossroads/crossroads/tools/johto_network_smoke.py",
+        "--save",
+        "/workspace/Project-crossroads/build/qa10-city-lane-b4/input-copy.sav",
+        "--library",
+        "/tmp/johto-bridge.so",
+        "--targets",
+        "OlivineCity_Lighthouse_1F,OlivineCity_Lighthouse_2F,OlivineCity_Lighthouse_3F,OlivineCity_Lighthouse_4F,OlivineCity_Lighthouse_5F,OlivineCity_Lighthouse_6F,OlivineCity_Lighthouse_Balcony,OlivineCity_Lighthouse_Elevator",
+        "--all-edges",
+        "--output",
+        "/workspace/Project-crossroads/build/qa10-lighthouse-tour-b4"
+      ],
+      "repo_runner": "johto_network_smoke.py",
+      "repo_runner_sha256": "3bb4255c0aac1733ea644620a2ff0488cdc459863454d044c2a1f6d167e85a23",
+      "exit_code": 0,
+      "rom_sha256": "4fb28fe64fc44c0546462a935655346a61f13b644bc3040468146d136cd6d656",
+      "output": "build/qa10-lighthouse-tour-b4",
+      "log": "/tmp/qa10-lighthouse-tour-b4.log"
+    },
+    {
+      "phase": "city-collision",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/Project-crossroads/crossroads/tools/olivine_collision_smoke.py",
+        "--save",
+        "/workspace/Project-crossroads/build/qa10-city-lane-b4/input-copy.sav",
+        "--library",
+        "/tmp/johto-bridge.so",
+        "--output",
+        "/workspace/Project-crossroads/build/qa10-city-collision-b4"
+      ],
+      "repo_runner": "olivine_collision_smoke.py",
+      "repo_runner_sha256": "9d1a9e37eb9300e64ce429a1d69192803b04f8d3daa07936d54e912c19d6cf1d",
+      "exit_code": 0,
+      "rom_sha256": "4fb28fe64fc44c0546462a935655346a61f13b644bc3040468146d136cd6d656",
+      "output": "build/qa10-city-collision-b4",
+      "log": "/tmp/qa10-city-collision-b4.log"
+    },
+    {
+      "phase": "city-materials",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/Project-crossroads/crossroads/tools/olivine_materials_smoke.py",
+        "--save",
+        "/workspace/Project-crossroads/build/qa10-city-lane-b4/input-copy.sav",
+        "--library",
+        "/tmp/johto-bridge.so",
+        "--output",
+        "/workspace/Project-crossroads/build/qa10-city-materials-b4"
+      ],
+      "repo_runner": "olivine_materials_smoke.py",
+      "repo_runner_sha256": "037ecb3e8fd8da39e9e42ca72eaaf7ca21a65d738dbc4cfb425622c3e0c5b7d5",
+      "exit_code": 0,
+      "rom_sha256": "4fb28fe64fc44c0546462a935655346a61f13b644bc3040468146d136cd6d656",
+      "output": "build/qa10-city-materials-b4",
+      "log": "/tmp/qa10-city-materials-b4.log"
+    },
+    {
+      "phase": "front-counters",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/Project-crossroads/crossroads/tools/center_counter_smoke.py",
+        "--save",
+        "/workspace/Project-crossroads/build/qa10-city-lane-b4/input-copy.sav",
+        "--library",
+        "/tmp/johto-bridge.so",
+        "--rom-sha256",
+        "4fb28fe64fc44c0546462a935655346a61f13b644bc3040468146d136cd6d656",
+        "--output",
+        "/workspace/Project-crossroads/build/qa10-front-counters-b4"
+      ],
+      "repo_runner": "center_counter_smoke.py",
+      "repo_runner_sha256": "29e6d3e785b97f357315bd2788d2fcc98bd42232efc067906541203ade940257",
+      "exit_code": 0,
+      "rom_sha256": "4fb28fe64fc44c0546462a935655346a61f13b644bc3040468146d136cd6d656",
+      "output": "build/qa10-front-counters-b4",
+      "log": "/tmp/qa10-front-counters-b4.log"
+    },
+    {
+      "phase": "lighthouse-details",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/Project-crossroads/crossroads/tools/qa10_lighthouse_detail_smoke.py",
+        "--save",
+        "/workspace/Project-crossroads/build/qa10-city-lane-b4/input-copy.sav",
+        "--library",
+        "/tmp/johto-bridge.so",
+        "--rom-sha256",
+        "4fb28fe64fc44c0546462a935655346a61f13b644bc3040468146d136cd6d656",
+        "--output",
+        "/workspace/Project-crossroads/build/qa10-lighthouse-details-b4"
+      ],
+      "repo_runner": "qa10_lighthouse_detail_smoke.py",
+      "repo_runner_sha256": "a9e4e79c3371a20a7cdeaccc0a9a3fc54be91a865f2e968ebb390b3c854f82d9",
+      "exit_code": 0,
+      "rom_sha256": "4fb28fe64fc44c0546462a935655346a61f13b644bc3040468146d136cd6d656",
+      "output": "build/qa10-lighthouse-details-b4",
+      "log": "/tmp/qa10-lighthouse-details-b4.log"
+    },
+    {
+      "phase": "ecruteak-court",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/Project-crossroads/crossroads/tools/qa10_courtyard_smoke.py",
+        "--save",
+        "/workspace/Project-crossroads/build/qa10-city-lane-b4/input-copy.sav",
+        "--library",
+        "/tmp/johto-bridge.so",
+        "--rom-sha256",
+        "4fb28fe64fc44c0546462a935655346a61f13b644bc3040468146d136cd6d656",
+        "--output",
+        "/workspace/Project-crossroads/build/qa10-ecruteak-court-b4"
+      ],
+      "repo_runner": "qa10_courtyard_smoke.py",
+      "repo_runner_sha256": "657414351fc465a1cde20db03aa43a5cf4bb2a6276ef4f41c3728df30410cb58",
+      "exit_code": 0,
+      "rom_sha256": "4fb28fe64fc44c0546462a935655346a61f13b644bc3040468146d136cd6d656",
+      "output": "build/qa10-ecruteak-court-b4",
+      "log": "/tmp/qa10-ecruteak-court-b4.log"
+    },
+    {
+      "phase": "aqua-full-detail",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/Project-crossroads/crossroads/tools/ss_aqua_detail_smoke.py",
+        "--save",
+        "/workspace/Project-crossroads/build/qa10-city-lane-b4/input-copy.sav",
+        "--library",
+        "/tmp/johto-bridge.so",
+        "--rom-sha256",
+        "4fb28fe64fc44c0546462a935655346a61f13b644bc3040468146d136cd6d656",
+        "--output",
+        "/workspace/Project-crossroads/build/qa10-aqua-full-detail-b4"
+      ],
+      "repo_runner": "ss_aqua_detail_smoke.py",
+      "repo_runner_sha256": "0aa08dc7878aff02f6f0a0ab2e2c479ead31fc27405621b9968cf69ea2003caf",
+      "exit_code": 0,
+      "rom_sha256": "4fb28fe64fc44c0546462a935655346a61f13b644bc3040468146d136cd6d656",
+      "output": "build/qa10-aqua-full-detail-b4",
+      "log": "/tmp/qa10-aqua-full-detail-b4.log"
+    }
+  ],
+  "original_and_copied_batteries_unchanged": true,
+  "ss_aqua_default_full_bumps": true
+}

@@ -1,0 +1,33 @@
+{
+  "overall_candidate_status": "FAIL",
+  "overall_failure": "Separate intended-facing audit found four Ecruteak gate links facing south instead of intended west/east and one Trail corridor arrival facing north instead of south. B5 correction/retest pending; these B4 city/ship functional passes are historical scoped evidence, not overall acceptance.",
+  "game_source": "df8c4598d88c7770626be4621a5f39cf60dadb95",
+  "rom_sha256": "4fb28fe64fc44c0546462a935655346a61f13b644bc3040468146d136cd6d656",
+  "elf_sha256": "3ad10d900c720ab625f6f041e1be9669638efe80dce542cf1ded1ec88a579949",
+  "source_battery_sha256": "b03ff1ef488fbd25de016e828483bc3001787b84e450a45eaa0ac12a11de30ab",
+  "original_and_copied_batteries_unchanged": true,
+  "owner_delta_visual_acceptance": "PENDING",
+  "gameplay_method": "Actual mGBA controller movement and UI on frozen delivery bytes; source checks are separate. Private copied batteries, no map/player/warp/story-coordinate setup. Shared harness encounter suppression and RAM-only Survey fixture disclosed. Native Save/cold Continue and actual public Survey desk transitions are separately recorded.",
+  "checkpoint": "QA10 B4 complete physical S.S.Aqua runtime suite",
+  "full_default_bumps_executed": true,
+  "record_counts": {
+    "contextual-native-view": 8,
+    "public-room-component": 12,
+    "normal-save-cold-continue": 12,
+    "source-blocked-bump": 1169,
+    "interaction": 14,
+    "berth-rest": 2,
+    "whole-tour-party-integrity": 1
+  },
+  "all_seven_maps_and_twelve_components": true,
+  "source_derived_collision_bumps": 1169,
+  "normal_save_cold_continue": 12,
+  "actual_interactions": 14,
+  "actual_berth_decline_accept_fixtures": 2,
+  "contextual_views": 8,
+  "fixture_limits": "Two private same-ROM snapshots lower first-mon HP/status solely for actual berth NO/YES checks, then restore exact payload. Long-tour integrity masks only legitimate normal-walking friendship byte plus checksum; individual Save and NPC tests require exact party bytes.",
+  "limits": [
+    "Physical visitor boarding/interiors are implemented; no unapproved destination, sailing timetable, ticket, reward or story progression is invented.",
+    "Owner visual acceptance remains pending."
+  ]
+}

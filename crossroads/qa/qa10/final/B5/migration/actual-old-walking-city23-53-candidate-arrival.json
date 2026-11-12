@@ -1,0 +1,11 @@
+{
+  "label": "actual-old-walking-city23-53",
+  "rom_sha256": "ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b",
+  "arrival": [
+    23,
+    51
+  ],
+  "tile": "0x327f",
+  "avatar_flags": 33,
+  "expected_safety": "Must be dry, unblocked, outside active doors/actors and naturally walking; test writes no avatar/position/map state"
+}

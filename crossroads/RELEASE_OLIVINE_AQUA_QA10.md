@@ -1,42 +1,116 @@
 # Black Ledger — Olivine / docked S.S. Aqua QA10 A1
 
-This is an owner-review checkpoint, not a claim that either city or Johto has
-passed visual acceptance. Feature branch: `feature/olivine-port-ship-qa10`.
-Exact delivery revision, checksums and final results accompany the delivery.
+Owner-review build on `feature/olivine-port-ship-qa10`, draft PR17. Game-source
+checkpoint: `cc643ffe711204f3ef38e34e7aa1eb8c9558720f`. The artifact's
+`build-info.json` identifies the exact final documentation/test revision and tree.
+No merge to master, engine upgrade, save-format change or regional expansion.
 
-## Changes
+ROM SHA256: `ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b`.
+32 MiB padded ROM; payload 30,322,784 bytes, EWRAM 226,448, IWRAM 28,392. RAM unchanged.
 
-- Corrected north-facing Olivine port entrance, both visible leaves and arrivals.
-- Added seven source-referenced S.S. Aqua maps: eight cabins, passenger hall,
-  captain room and furnished crew/galley/engine lower deck; physical boarding and
-  return only. No voyage destination, story rule, ticket or reward was invented.
-- Reworked all six lighthouse floors and balcony surfaces/furniture from actual
-  HGSS references, keeping their IDs, collision, events and connections.
-- Textured Ecruteak's directory courtyard. HGSS has an open plot here; no canonical
-  building is missing from that plot. See the location checklist and comparisons.
-- Fixed old Surf saves displaced by the new port body: relocate to safe dry floor
-  as walking Joe. Actual old water Surf remains unchanged.
-- Fixed two port-landing layer cells that hid Joe's torso/legs. The building art,
-  solid footprint and two opening leaves remain intact.
+## What changed
 
-## Verification boundary
+- Olivine port: north-facing two-leaf entrance, direct dry pier, correctly oriented
+  terminal arrivals/returns and solid building body. Two landing layer cells now
+  draw beneath Joe, keeping his entire body visible. The accepted building art
+  and both open leaves are retained.
+- Terminal/quay: main and inspection exits connect coherently; signs no longer
+  obstruct boarding. Both visible hatch/gangway leaves board a physical S.S. Aqua.
+- Ship: seven new append-only maps with 12 physical components/eight cabins,
+  captain's room, passenger lounge, crew berths, galley/kitchen and engine deck.
+  All cabins are furnished individually. Native rest supports Yes/No without
+  starting a voyage or changing story/progress. No arbitrary trainers/encounters.
+- Lighthouse: all six floors and balcony receive actual-HGSS-referenced floors,
+  rugs, furnishings, windows and lantern-room materials. Final 28-cell correction
+  separates the cyan inner enclosure from outer glass and fills two false black
+  corners. Other six maps/old used drawings/full attributes remain exact to B3.
+- Ecruteak: 39 directory-court cells gain soil/curb detail. The photographed signed
+  lot is west of the Dance Theater; actual HGSS leaves it open. No building belongs
+  on this plot. Accepted exterior/Gym and real western residence remain.
+- Gate and corridor arrivals: native post-spawn and return-to-field scripts correct
+  facing at 25 precise landing cells in six existing maps. East/west gates now face
+  into the landing; the Barrier Corridor entrance faces south. Graphics, collision,
+  open widths, warps and IDs stay exact. No arrow tile behavior is added. The same
+  correction applies to normal Continue/menu return only at those landing cells;
+  other positions and persistent data are untouched. All 45 doorway groups have
+  independent intended-facing expectations.
+- Save compatibility: genuine old port walking/Surf saves obstructed by the new
+  facade relocate to verified dry floor with walking Joe. A valid old water Surf
+  save remains Surf. No Pokémon metadata, party, boxes, bag or permanent flags are
+  rewritten. Existing map/layout/heal prefixes and starter uniqueness remain.
 
-Build3 compiles: payload30,322,400 bytes; EWRAM226,448; IWRAM28,392.
-ROM SHA256: `af59dff1b06b99a9599c6f98b6fb6bd1e765cc52c0838a2dec5c79a6c1f88373`.
-Fresh exact-ROM automated emulator lanes are in progress at this source checkpoint.
-Build1 Surf-state failure and Build2 portal visibility/partial suites remain
-explicit diagnostics. Do not treat their partial results as final-ROM passes.
-No private batteries or states are included in source or delivery.
+Primary changes: native Olivine/Ecruteak/landmark/ship generators and generated
+layouts, private tilesets, ship scripts, `src/crossroads_continue.c`, append-only
+map registrations/atlas, workflow and focused validators/emulator runners. The PR
+contains the full file diff; generators reproduce the authored outputs.
 
-## Delta review
+## Actual verification
 
-Back up your battery save. Import a COPY into this build and use normal Continue,
-not an older save state. Test Joe's port landing and both entrance leaves; proceed
-through the terminal and quay, board through both gangway halves, inspect all eight
-cabins and both lower-deck stairs, rest in the berth and return to Olivine. Visit
-all lighthouse floors, lift, window/balcony route and both city services. Save,
-restart and Continue. Inspect furniture, Joe overlap, doors, water and land edges.
+BUILD PASS. All 68 actual workflow commands pass (initial generator-check failure and exact rerun are retained). All 18 scheduled B5 phases pass: 17 fresh mGBA suites plus the independent facing-record audit. The separate seven-case old-save Continue pilot also passes. All 173 doorway fronts and 482 executable approaches pass; 37 lateral starts are physically unavailable and separately recorded (519 total attempts, zero failures).
 
-Sailings remain separately unfinished: Vermilion and approved Black Ledger travel,
-quest/progression and reward rules do not exist. The docked ship is explorable;
-this pass does not fake a destination or import HGSS's plot.
+All seven ship maps/12 physical components/eight cabins were visited; 12 normal Save/cold Continue checks, 14 NPC/sign interactions, both real NO/YES berth-rest checks, and all 1,169 independently enumerated source-wall/furniture approaches pass. Lighthouse 8-map traversal/lift/window/stairs and 12 normal Save/Continue checks pass, including both-direction 6F enclosure circuits.
+
+City collision: 199 dry building/tree approaches plus 24 actual Surf approaches around all four port sides; both port leaves require every opaque Joe pixel visible at the actual exit and north landing. All 59 ground/material cases, six front-counter conversations and 39 Ecruteak courtyard cells pass. Genuine old port walking/Surf saves and valid-water Surf control pass without mutating their original batteries.
+
+Title, boot, all three starters/met/uniqueness, first-loss/respawn and actual Joe battle graphics, Fly to all 10 cities/cancel/post-flight Save/Continue, Joe field states/running and 51 Olivine services were exercised on this same ROM. See the exact summary for fixture scopes and individually recorded results.
+
+Every one of 45 doorway groups passes strict arrival-facing checks plus the independent reference-based audit. Historical B4 failed 67 facing trials despite its old phase passes; those results remain diagnostic and are not called accepted.
+
+These are automated checks and scripted controller input in a real mGBA core,
+plus inspection of actual native 240×160 frames. They are separate from the
+owner's Delta playtest and visual acceptance, which remain PENDING. No private
+battery, state, ROM or memory dump is committed. Only copies/disclosed test
+fixtures were exercised; the owner's newest private Delta battery was not supplied.
+
+[Per-location reference/change/test checklist](hgss/qa10/LOCATION_CHECKLIST.md),
+[comparisons and movement recordings](qa/qa10/index.html),
+[exact verification summary](qa/qa10/verification-summary.json) and
+[test migrations/negative controls](hgss/qa10/VALIDATION_CHANGES.md).
+
+Earlier candidates remain explicitly labelled. Build1's actual Surf-state failure,
+Build2's portal body-occlusion, B3's incorrect 6F material, and premature berth-menu
+probe are diagnostic history. None is relabelled as final-ROM verification.
+
+## Limits and adaptations
+
+Sailing is separately unfinished: no Vermilion destination, approved Black Ledger
+travel/ticket/progression rules, first-trip quest or rewards exist. HGSS's original
+sailing dependencies are documented; this build opens the docked ship without
+inventing them. Existing Harbor Office travel/Alpha bridges are preserved.
+
+GBA walls/furniture/palettes are original orthographic adaptations of actual HGSS
+references. The top-floor optical enclosure uses the retained angular/U footprint
+and small northern cap, not a literal DS cylinder. Table/seat groups compress into
+existing solid footprints. Ship hatch widths project five inside cells to two
+outside leaves. These include deliberate art choices, not universal hardware
+limits. Little cabin rugs/tablecloth shading and some colors differ. The HGSS lighthouse lift has an automatic opposite-floor ride; the retained GBA
+floor chooser is a deliberate functional adaptation. Its cabin decor is original
+and lacks an independently verified HGSS raster; see the elevator reference audit.
+DS online and Seal functions remain unsupported. The canonical species trade and
+rod reward are deferred progression/content decisions, not implemented services.
+Owner visual review is required; no 1:1 or 100% claim.
+
+Existing scope outside this pass remains unfinished: bike art shows Joe but lacks
+convincing mounted poses; the New Game cinematic still retains inherited content.
+Title art, V5 music, Joe's field identity, accepted starters/battles, homes/offices
+and intentional additions were preserved. No new main-story decision was made.
+
+## Delta on iPhone
+
+1. Export and back up your existing battery save from Delta. Import a COPY into
+   this uniquely named ROM. Use normal **Continue**, not an older save state.
+2. Approach the port from the city pier. Enter each half separately; exit both
+   leaves, check Joe's full body/facing and walk back to the promenade. Test the
+   terminal's main and side exits both ways and read the relocated boarding sign.
+3. Board through both gangway halves. Visit all eight cabins, the captain, lounge,
+   crew berths, galley and engine deck; use both lower-deck stairs. Decline rest,
+   then accept it. Save aboard, restart/Continue and return to Olivine normally.
+4. Visit every lighthouse floor, the4F window/balcony return and lift. Try both lift
+   leaves for both destinations; save/Continue in the lift and a tower room. Check
+   the cyan top-floor enclosure, furniture overlap and movement around its walls.
+5. Recheck Center/healing/PC, Mart, Cafe, three canonical houses, Joe's residence,
+   Silph office and Harbor Office. Try every visible doorway segment from front
+   and accessible sides; inspect buildings, trees, water and signs.
+6. Visit Ecruteak's textured directory courtyard, surrounding buildings, Theater
+   and Gym. Recheck starter refusal, summary, Fly/Surf and normal save/Continue.
+   Report any clipping with the location and a screenshot. Visual acceptance is yours.

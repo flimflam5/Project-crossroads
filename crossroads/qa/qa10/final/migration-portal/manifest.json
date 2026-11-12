@@ -1,0 +1,117 @@
+{
+  "rom_sha256": "af59dff1b06b99a9599c6f98b6fb6bd1e765cc52c0838a2dec5c79a6c1f88373",
+  "source_revision": "e7e2c085a5a61ef727d06f9f682af7d3a954cc06",
+  "files": [
+    {
+      "path": "valid-old-surf-water-arrival.png",
+      "bytes": 7727,
+      "sha256": "1dffd2e986519fa043f336241be6c9d57ccfe6347bce02c787a47e57e1c2cb92"
+    },
+    {
+      "path": "portal-23-landing-full-Joe.png",
+      "bytes": 8518,
+      "sha256": "a7e476025755557abbf6618756c64f66047b604ef86701341188433eecff8a69"
+    },
+    {
+      "path": "actual-old-walking-city23-53-candidate-arrival-before-safety-assert.png",
+      "bytes": 8590,
+      "sha256": "f616b93a301e0dfff2eddbff826a1e1f6de2846d55f57cb95ea3e1c8a001bf02"
+    },
+    {
+      "path": "actual-old-surf-city23-55-migrated-arrival.png",
+      "bytes": 8722,
+      "sha256": "71c6434769e98c91e1b153ce600b808cfda72c260750e2302546a5fafa533087"
+    },
+    {
+      "path": "actual-old-surf-city23-55-new-cold-continue.png",
+      "bytes": 7908,
+      "sha256": "d11184e6942dfaec4b772c8aedc98a904b2c6a8775d0c0b6993dc868e730b6ac"
+    },
+    {
+      "path": "portal-23-actual-exit-full-Joe.png",
+      "bytes": 9830,
+      "sha256": "b2ed83453e185a5a9b41c3686773065e32eca0952466d3a625e3a10deabd1d49"
+    },
+    {
+      "path": "valid-old-surf-water-new-continue.png",
+      "bytes": 7928,
+      "sha256": "08491957066e35136d0d5e47195bae35a0bc37154ab8f14a4e7acd14725f856c"
+    },
+    {
+      "path": "actual-old-surf-city23-55-candidate-arrival-before-safety-assert.png",
+      "bytes": 8722,
+      "sha256": "71c6434769e98c91e1b153ce600b808cfda72c260750e2302546a5fafa533087"
+    },
+    {
+      "path": "portal-23-north-approach-full-Joe.png",
+      "bytes": 9659,
+      "sha256": "2eb7a3a9d3a4fb59a27afafee2517d5a1b19cccfa0173a99e8cc3804dcfb6bad"
+    },
+    {
+      "path": "actual-old-walking-city23-53-new-cold-continue.png",
+      "bytes": 7908,
+      "sha256": "d11184e6942dfaec4b772c8aedc98a904b2c6a8775d0c0b6993dc868e730b6ac"
+    },
+    {
+      "path": "portal-24-landing-full-Joe.png",
+      "bytes": 8685,
+      "sha256": "d29011488092bffe41a7ec4fb53080759d82d4a34863748c11abc1c0d0c42243"
+    },
+    {
+      "path": "actual-old-walking-city23-53-walk-away.png",
+      "bytes": 8820,
+      "sha256": "8f5a6b569fa9daca780b9f786c34722020058859ef92bc3c9babfcee82ee55e1"
+    },
+    {
+      "path": "actual-old-walking-city23-53-migrated-arrival.png",
+      "bytes": 8590,
+      "sha256": "f616b93a301e0dfff2eddbff826a1e1f6de2846d55f57cb95ea3e1c8a001bf02"
+    },
+    {
+      "path": "actual-old-surf-city23-55-walk-away.png",
+      "bytes": 8878,
+      "sha256": "92000d5e7eb73c4231a63f20f29c8353cfdf8a8f6674750ed5b08e4adcb6078a"
+    },
+    {
+      "path": "portal-24-north-approach-full-Joe.png",
+      "bytes": 8978,
+      "sha256": "989fd1b94d0f9b4b8430841820fe679e60dc2466bde78292a7d107ef84a528e2"
+    },
+    {
+      "path": "portal-24-actual-exit-full-Joe.png",
+      "bytes": 10047,
+      "sha256": "d6bd2c2e6a8b8e4c6d81f6522166cdaa2cd154a9f1da21cc97b0fa1c06b69af8"
+    },
+    {
+      "path": "portal-both-leaves-normal-approach-exit.mp4",
+      "bytes": 252096,
+      "sha256": "04243b430b5b97b91e1b2d8b4f02d0a5f78b345b60ed710d8af751d027f8ab1f"
+    },
+    {
+      "path": "actual-old-walking-city23-53-candidate-arrival.json",
+      "bytes": 347,
+      "sha256": "a85462b8972e733ad09a5b752f99c01eb277b1f72a1493b985e68d2222c7686f"
+    },
+    {
+      "path": "actual-old-surf-city23-55-candidate-arrival.json",
+      "bytes": 344,
+      "sha256": "abe2f30c070e3046faea42d59f2387f2183c961328d0b9e14ef879845c58941a"
+    },
+    {
+      "path": "results.json",
+      "bytes": 4092,
+      "sha256": "6a28dc0b3d6df7ad165283057a344b29b96cf8d0a6239246be54cc539e883eed"
+    }
+  ],
+  "native_dimensions": [
+    240,
+    160
+  ],
+  "private_data_excluded": [
+    "battery saves",
+    "snapshots",
+    "memory dumps",
+    "ROM/ELF",
+    "raw recording frame folders"
+  ]
+}

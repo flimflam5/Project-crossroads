@@ -1,0 +1,628 @@
+{
+  "rom_sha256": "af59dff1b06b99a9599c6f98b6fb6bd1e765cc52c0838a2dec5c79a6c1f88373",
+  "source_battery_sha256": "b03ff1ef488fbd25de016e828483bc3001787b84e450a45eaa0ac12a11de30ab",
+  "source_battery_unchanged": true,
+  "setup": "Normal copied-save title/Continue and controller movement; actual survey desk OFF and dry-only paths. Only first-mon HP/status test fixtures. Real existing shop money used. No other party/box/bag/progress edits, no Pokemon/item grants, and no map/warp/player coordinate writes.",
+  "battle_tested": true,
+  "records": [
+    {
+      "label": "nurse-healed",
+      "result": "actual nurse, full HP, Olivine heal metadata PASS"
+    },
+    {
+      "label": "center-pc-menu",
+      "result": "actual power/menu/cancel, exact party/box bytes PASS"
+    },
+    {
+      "label": "OlivineCity_PokemonCenter_1F-front-desk-2",
+      "map": "OlivineCity_PokemonCenter_1F",
+      "staff": [
+        2,
+        2
+      ],
+      "approach": [
+        2,
+        4
+      ],
+      "actual_staff_local_id": 3,
+      "result": "front A across native counter, exact actual text/local ID, control return PASS"
+    },
+    {
+      "label": "OlivineCity_PokemonCenter_1F-front-desk-6",
+      "map": "OlivineCity_PokemonCenter_1F",
+      "staff": [
+        6,
+        2
+      ],
+      "approach": [
+        6,
+        4
+      ],
+      "actual_staff_local_id": 4,
+      "result": "front A across native counter, exact actual text/local ID, control return PASS"
+    },
+    {
+      "label": "OlivineCity_PokemonCenter_1F-front-desk-11",
+      "map": "OlivineCity_PokemonCenter_1F",
+      "staff": [
+        11,
+        2
+      ],
+      "approach": [
+        11,
+        4
+      ],
+      "actual_staff_local_id": 5,
+      "result": "front A across native counter, exact actual text/local ID, control return PASS"
+    },
+    {
+      "label": "OlivineCity_PokemonCenter_B1F-front-desk-4",
+      "map": "OlivineCity_PokemonCenter_B1F",
+      "staff": [
+        4,
+        4
+      ],
+      "approach": [
+        4,
+        6
+      ],
+      "actual_staff_local_id": 1,
+      "result": "front A across native counter, exact actual text/local ID, control return PASS"
+    },
+    {
+      "label": "OlivineCity_PokemonCenter_B1F-front-desk-8",
+      "map": "OlivineCity_PokemonCenter_B1F",
+      "staff": [
+        8,
+        4
+      ],
+      "approach": [
+        8,
+        6
+      ],
+      "actual_staff_local_id": 2,
+      "result": "front A across native counter, exact actual text/local ID, control return PASS"
+    },
+    {
+      "label": "OlivineCity_PokemonCenter_B1F-front-desk-12",
+      "map": "OlivineCity_PokemonCenter_B1F",
+      "staff": [
+        12,
+        4
+      ],
+      "approach": [
+        12,
+        6
+      ],
+      "actual_staff_local_id": 3,
+      "result": "front A across native counter, exact actual text/local ID, control return PASS"
+    },
+    {
+      "label": "center-visitor",
+      "map": "OlivineCity_PokemonCenter_1F",
+      "target": [
+        4,
+        18
+      ],
+      "approach": [
+        4,
+        19
+      ],
+      "result": "controller interaction, message, control return PASS"
+    },
+    {
+      "label": "mart-purchase",
+      "result": "real one Poke Ball purchase at200, decoded balance and quantity PASS",
+      "money_before": 3000,
+      "money_after": 2800,
+      "quantity_before": 0,
+      "quantity_after": 1
+    },
+    {
+      "label": "mart-visitor",
+      "map": "OlivineCity_Mart",
+      "target": [
+        9,
+        4
+      ],
+      "approach": [
+        9,
+        5
+      ],
+      "result": "controller interaction, message, control return PASS"
+    },
+    {
+      "label": "home-rest",
+      "result": "NO retains1HP; YES heals HP/poison and retains chosen Center PASS"
+    },
+    {
+      "label": "Olivine_HomeNotes",
+      "map": "OlivineCity_Residence",
+      "target": [
+        7,
+        1
+      ],
+      "approach": [
+        7,
+        2
+      ],
+      "result": "controller interaction, message, control return PASS"
+    },
+    {
+      "label": "Olivine_HomeBooks",
+      "map": "OlivineCity_Residence",
+      "target": [
+        9,
+        1
+      ],
+      "approach": [
+        9,
+        2
+      ],
+      "result": "controller interaction, message, control return PASS"
+    },
+    {
+      "label": "OlivineCity_FishingHouse-resident-1",
+      "map": "OlivineCity_FishingHouse",
+      "target": [
+        5,
+        5
+      ],
+      "approach": [
+        5,
+        6
+      ],
+      "result": "controller interaction, message, control return PASS"
+    },
+    {
+      "label": "OlivineCity_TradeHouse-resident-1",
+      "map": "OlivineCity_TradeHouse",
+      "target": [
+        5,
+        5
+      ],
+      "approach": [
+        5,
+        6
+      ],
+      "result": "controller interaction, message, control return PASS"
+    },
+    {
+      "label": "OlivineCity_SealHouse-resident-1",
+      "map": "OlivineCity_SealHouse",
+      "target": [
+        5,
+        5
+      ],
+      "approach": [
+        5,
+        6
+      ],
+      "result": "controller interaction, message, control return PASS"
+    },
+    {
+      "label": "OlivineCity_SealHouse-resident-2",
+      "map": "OlivineCity_SealHouse",
+      "target": [
+        8,
+        5
+      ],
+      "approach": [
+        8,
+        6
+      ],
+      "result": "controller interaction, message, control return PASS"
+    },
+    {
+      "label": "OlivineCity_SealHouse-resident-3",
+      "map": "OlivineCity_SealHouse",
+      "target": [
+        2,
+        6
+      ],
+      "approach": [
+        2,
+        7
+      ],
+      "result": "controller interaction, message, control return PASS"
+    },
+    {
+      "label": "cafe-host-across-counter",
+      "result": "native MB_COUNTER conversation at distance2 and control return PASS"
+    },
+    {
+      "label": "cafe-visitor-1",
+      "map": "OlivineCity_Cafe",
+      "target": [
+        2,
+        6
+      ],
+      "approach": [
+        2,
+        7
+      ],
+      "result": "controller interaction, message, control return PASS"
+    },
+    {
+      "label": "cafe-visitor-2",
+      "map": "OlivineCity_Cafe",
+      "target": [
+        6,
+        7
+      ],
+      "approach": [
+        6,
+        8
+      ],
+      "result": "controller interaction, message, control return PASS"
+    },
+    {
+      "label": "Hgss_OlivineSign_FishingHouse",
+      "map": "OlivineCity",
+      "target": [
+        16,
+        24
+      ],
+      "approach": [
+        16,
+        25
+      ],
+      "result": "controller interaction, message, control return PASS"
+    },
+    {
+      "label": "Hgss_OlivineSign_TradeHouse",
+      "map": "OlivineCity",
+      "target": [
+        30,
+        18
+      ],
+      "approach": [
+        30,
+        19
+      ],
+      "result": "controller interaction, message, control return PASS"
+    },
+    {
+      "label": "Hgss_OlivineSign_SealHouse",
+      "map": "OlivineCity",
+      "target": [
+        35,
+        18
+      ],
+      "approach": [
+        35,
+        19
+      ],
+      "result": "controller interaction, message, control return PASS"
+    },
+    {
+      "label": "Hgss_OlivineSign_Cafe",
+      "map": "OlivineCity",
+      "target": [
+        8,
+        34
+      ],
+      "approach": [
+        8,
+        35
+      ],
+      "result": "controller interaction, message, control return PASS"
+    },
+    {
+      "label": "Hgss_OlivineSign_Port",
+      "map": "OlivineCity",
+      "target": [
+        22,
+        50
+      ],
+      "approach": [
+        21,
+        50
+      ],
+      "result": "controller interaction, message, control return PASS"
+    },
+    {
+      "label": "Olivine_Terminal",
+      "map": "OlivineCity_SilphOffice",
+      "target": [
+        7,
+        1
+      ],
+      "approach": [
+        7,
+        2
+      ],
+      "result": "controller interaction, message, control return PASS"
+    },
+    {
+      "label": "Olivine_FreightChecklist",
+      "map": "OlivineCity_SilphOffice",
+      "target": [
+        0,
+        4
+      ],
+      "approach": [
+        0,
+        5
+      ],
+      "result": "controller interaction, message, control return PASS"
+    },
+    {
+      "label": "Olivine_StaffBoard",
+      "map": "OlivineCity_SilphOffice",
+      "target": [
+        1,
+        1
+      ],
+      "approach": [
+        1,
+        2
+      ],
+      "result": "controller interaction, message, control return PASS"
+    },
+    {
+      "label": "OlivineCity_SilphOffice-Olivine_OfficeWorker",
+      "map": "OlivineCity_SilphOffice",
+      "target": [
+        7,
+        5
+      ],
+      "approach": [
+        7,
+        6
+      ],
+      "result": "controller interaction, message, control return PASS"
+    },
+    {
+      "label": "Olivine_HarborLedger",
+      "map": "OlivineCity_HarborOffice",
+      "target": [
+        2,
+        4
+      ],
+      "approach": [
+        2,
+        5
+      ],
+      "result": "controller interaction, message, control return PASS"
+    },
+    {
+      "label": "Olivine_HarborDispatch",
+      "map": "OlivineCity_HarborOffice",
+      "target": [
+        7,
+        1
+      ],
+      "approach": [
+        7,
+        2
+      ],
+      "result": "controller interaction, message, control return PASS"
+    },
+    {
+      "label": "OlivineCity_HarborOffice-Olivine_HarborClerk",
+      "map": "OlivineCity_HarborOffice",
+      "target": [
+        7,
+        5
+      ],
+      "approach": [
+        7,
+        6
+      ],
+      "result": "controller interaction, message, control return PASS"
+    },
+    {
+      "label": "OlivineCity_Lighthouse_1F-ambient-1",
+      "map": "OlivineCity_Lighthouse_1F",
+      "target": [
+        8,
+        15
+      ],
+      "approach": [
+        8,
+        16
+      ],
+      "result": "controller interaction, message, control return PASS"
+    },
+    {
+      "label": "OlivineCity_Lighthouse_1F-wayfinding-1",
+      "map": "OlivineCity_Lighthouse_1F",
+      "target": [
+        0,
+        16
+      ],
+      "approach": [
+        1,
+        16
+      ],
+      "result": "controller interaction, message, control return PASS"
+    },
+    {
+      "label": "OlivineCity_Lighthouse_2F-wayfinding-1",
+      "map": "OlivineCity_Lighthouse_2F",
+      "target": [
+        0,
+        16
+      ],
+      "approach": [
+        1,
+        16
+      ],
+      "result": "controller interaction, message, control return PASS"
+    },
+    {
+      "label": "OlivineCity_Lighthouse_3F-ambient-1",
+      "map": "OlivineCity_Lighthouse_3F",
+      "target": [
+        4,
+        13
+      ],
+      "approach": [
+        4,
+        14
+      ],
+      "result": "controller interaction, message, control return PASS"
+    },
+    {
+      "label": "OlivineCity_Lighthouse_3F-wayfinding-1",
+      "map": "OlivineCity_Lighthouse_3F",
+      "target": [
+        3,
+        16
+      ],
+      "approach": [
+        4,
+        16
+      ],
+      "result": "controller interaction, message, control return PASS"
+    },
+    {
+      "label": "OlivineCity_Lighthouse_4F-wayfinding-1",
+      "map": "OlivineCity_Lighthouse_4F",
+      "target": [
+        3,
+        16
+      ],
+      "approach": [
+        4,
+        16
+      ],
+      "result": "controller interaction, message, control return PASS"
+    },
+    {
+      "label": "OlivineCity_Lighthouse_5F-wayfinding-1",
+      "map": "OlivineCity_Lighthouse_5F",
+      "target": [
+        3,
+        16
+      ],
+      "approach": [
+        4,
+        16
+      ],
+      "result": "controller interaction, message, control return PASS"
+    },
+    {
+      "label": "OlivineCity_Lighthouse_6F-ambient-1",
+      "map": "OlivineCity_Lighthouse_6F",
+      "target": [
+        11,
+        14
+      ],
+      "approach": [
+        11,
+        15
+      ],
+      "result": "controller interaction, message, control return PASS"
+    },
+    {
+      "label": "OlivineCity_Lighthouse_6F-ambient-2",
+      "map": "OlivineCity_Lighthouse_6F",
+      "target": [
+        8,
+        6
+      ],
+      "approach": [
+        8,
+        5
+      ],
+      "result": "controller interaction, message, control return PASS"
+    },
+    {
+      "label": "OlivineCity_Lighthouse_6F-wayfinding-1",
+      "map": "OlivineCity_Lighthouse_6F",
+      "target": [
+        4,
+        16
+      ],
+      "approach": [
+        5,
+        16
+      ],
+      "result": "controller interaction, message, control return PASS"
+    },
+    {
+      "label": "OlivineCity_Lighthouse_Balcony-wayfinding-1",
+      "map": "OlivineCity_Lighthouse_Balcony",
+      "target": [
+        5,
+        16
+      ],
+      "approach": [
+        5,
+        15
+      ],
+      "result": "controller interaction, message, control return PASS"
+    },
+    {
+      "label": "OlivineCity_PortTerminal-ambient-1",
+      "map": "OlivineCity_PortTerminal",
+      "target": [
+        11,
+        4
+      ],
+      "approach": [
+        10,
+        4
+      ],
+      "result": "controller interaction, message, control return PASS"
+    },
+    {
+      "label": "OlivineCity_PortTerminal-ambient-2",
+      "map": "OlivineCity_PortTerminal",
+      "target": [
+        5,
+        7
+      ],
+      "approach": [
+        5,
+        8
+      ],
+      "result": "controller interaction, message, control return PASS"
+    },
+    {
+      "label": "OlivineCity_PortQuay-ambient-1",
+      "map": "OlivineCity_PortQuay",
+      "target": [
+        24,
+        24
+      ],
+      "approach": [
+        24,
+        25
+      ],
+      "result": "controller interaction, message, control return PASS"
+    },
+    {
+      "label": "OlivineCity_PortQuay-wayfinding-1",
+      "map": "OlivineCity_PortQuay",
+      "target": [
+        25,
+        21
+      ],
+      "approach": [
+        25,
+        22
+      ],
+      "result": "controller interaction, message, control return PASS"
+    },
+    {
+      "label": "accepted-neighbor-1",
+      "map": "OlivineCity_NeighborHouse",
+      "target": [
+        7,
+        5
+      ],
+      "approach": [
+        7,
+        6
+      ],
+      "result": "controller interaction, message, control return PASS"
+    },
+    {
+      "label": "jasmine-loss-local-whiteout",
+      "result": "actual trainer855 practice loss, local nurse arrival8,13 and full heal PASS"
+    }
+  ]
+}

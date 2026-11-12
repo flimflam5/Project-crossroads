@@ -1,0 +1,172 @@
+{
+  "rom_sha256": "af59dff1b06b99a9599c6f98b6fb6bd1e765cc52c0838a2dec5c79a6c1f88373",
+  "source_revision": "e7e2c085a5a61ef727d06f9f682af7d3a954cc06",
+  "dirty_tracked_sources": true,
+  "actual_old_rom_sha256": "df69e014e706168c56180828487a9ab12709a9bccd3dff063fee5f7af5d4f2f4",
+  "explicitly_focused_label": null,
+  "selected_fixture_count": 2,
+  "portal_approach_exit_visibility": [
+    {
+      "label": "portal-23-north-approach-full-Joe",
+      "position": [
+        23,
+        51
+      ],
+      "opaque": {
+        "opaque_expected": 187,
+        "opaque_visible": 187
+      },
+      "result": "PASS"
+    },
+    {
+      "label": "portal-23-actual-exit-full-Joe",
+      "position": [
+        23,
+        52
+      ],
+      "opaque": {
+        "opaque_expected": 192,
+        "opaque_visible": 192
+      },
+      "result": "PASS"
+    },
+    {
+      "label": "portal-23-landing-full-Joe",
+      "position": [
+        23,
+        51
+      ],
+      "opaque": {
+        "opaque_expected": 192,
+        "opaque_visible": 192
+      },
+      "result": "PASS"
+    },
+    {
+      "label": "portal-24-north-approach-full-Joe",
+      "position": [
+        24,
+        51
+      ],
+      "opaque": {
+        "opaque_expected": 187,
+        "opaque_visible": 187
+      },
+      "result": "PASS"
+    },
+    {
+      "label": "portal-24-actual-exit-full-Joe",
+      "position": [
+        24,
+        52
+      ],
+      "opaque": {
+        "opaque_expected": 192,
+        "opaque_visible": 192
+      },
+      "result": "PASS"
+    },
+    {
+      "label": "portal-24-landing-full-Joe",
+      "position": [
+        24,
+        51
+      ],
+      "opaque": {
+        "opaque_expected": 192,
+        "opaque_visible": 192
+      },
+      "result": "PASS"
+    }
+  ],
+  "method": "Actual old-ROM normally saved walking and Surf batteries; fresh-core normal Continue on new ROM; actual buffer tile reads, normal walk-away and new normal Save/cold Continue. No coordinate or save-state writes.",
+  "records": [
+    {
+      "label": "actual-old-walking-city23-53",
+      "result": "PASS",
+      "old_position": [
+        23,
+        53
+      ],
+      "old_surf": false,
+      "new_arrival": [
+        23,
+        51
+      ],
+      "walk_away": [
+        23,
+        50
+      ],
+      "new_save_continue": [
+        23,
+        50
+      ],
+      "native_tile": "0x327f",
+      "exact_party_boxes_starter_flags_decoded_inventory": true,
+      "old_battery_unchanged": true,
+      "joe": {
+        "graphics": 250,
+        "actual_obj_vram_matches_joe": true
+      },
+      "post_portal_probe_position": [
+        24,
+        50
+      ]
+    },
+    {
+      "label": "actual-old-surf-city23-55",
+      "result": "PASS",
+      "old_position": [
+        23,
+        55
+      ],
+      "old_surf": true,
+      "new_arrival": [
+        23,
+        51
+      ],
+      "walk_away": [
+        23,
+        50
+      ],
+      "new_save_continue": [
+        23,
+        50
+      ],
+      "native_tile": "0x327f",
+      "exact_party_boxes_starter_flags_decoded_inventory": true,
+      "old_battery_unchanged": true,
+      "joe": {
+        "graphics": 250,
+        "actual_obj_vram_matches_joe": true
+      }
+    },
+    {
+      "label": "valid-old-surf-water-retained",
+      "result": "PASS",
+      "actual_old_position": [
+        19,
+        47
+      ],
+      "new_arrival": [
+        19,
+        47
+      ],
+      "actual_water_movement": [
+        19,
+        48
+      ],
+      "new_normal_save_cold_continue": [
+        19,
+        48
+      ],
+      "source_battery_sha256": "31e4f90e36ce366ecd80606e319363db47142520d2a2590c03bb66c5086575d8",
+      "source_battery_unchanged": true,
+      "joe": {
+        "graphics": 16134,
+        "actual_obj_vram_matches_joe": true
+      }
+    }
+  ],
+  "metadata_timing_correction": "Walking case Save/coldContinue was strictly asserted and captured at23,50 before the extra real portal probe. Original report evaluated pos() after that probe ended24,50; field corrected to actual previously asserted position. Test source now captures the value before the probe. No game or assertion changed."
+}

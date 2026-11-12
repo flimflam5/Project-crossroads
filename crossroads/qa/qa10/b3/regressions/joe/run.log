@@ -1,0 +1,9 @@
+Normal old battery-save Continue: EcruteakCity_BellTower_9F (7, 3) PASS
+Actual survey desk enables RAM-only water access without changing saved flags: PASS
+Actual controller visits/return, healing and retained starter/party: PASS 0 target maps 18 transitions
+Actual R+talk/accept: Pidgeot species18, level100, Fly move19, running flag, original party/starter retained, repeat grant prevented: PASS
+Registered-item bike mount/dismount + Joe pixels: mach_bike PASS
+Registered-item bike mount/dismount + Joe pixels: acro_bike PASS
+Actual session-only Surf entry: JohtoRoute40 (29, 24) to (29, 23) PASS
+Actual survey Surf boarding and four-direction Joe VRAM: PASS
+Registered rod casting Joe pixels, return to Surf, disembark to Joe walking: PASS

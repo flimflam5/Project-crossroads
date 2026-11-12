@@ -1,0 +1,38 @@
+{
+  "status": "ACTUAL GAME DEFECT REPRODUCED; not a final tested build",
+  "rom_sha256": "39d88f4581da1d951f67b267059445dc1e5a3b4313bbc77a5b46d6be7dc9488a",
+  "actual_walking_case": {
+    "old_position": [
+      23,
+      53
+    ],
+    "new_arrival": [
+      23,
+      51
+    ],
+    "walk_away_and_new_cold_continue": [
+      23,
+      50
+    ],
+    "exact_payload_preserved": true,
+    "result": "PASS"
+  },
+  "actual_surf_case": {
+    "old_position": [
+      23,
+      55
+    ],
+    "new_arrival": [
+      23,
+      51
+    ],
+    "actual_tile": "0x327f",
+    "actual_avatar_flags": 40,
+    "surf_bit_still_set": true,
+    "exact_initial_payload_preserved": true,
+    "result": "FAIL: Surf state remains on safe dry relocated ground"
+  },
+  "input_batteries_unchanged": true,
+  "game_RAM_writes_in_test": false,
+  "failed_arrival_native_frame": "actual-old-surf-city23-55-candidate-arrival-before-safety-assert.png; focused actual repeat from same genuine battery and unchanged Build1, no RAM writes"
+}

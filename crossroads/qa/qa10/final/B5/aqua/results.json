@@ -1,0 +1,33 @@
+{
+  "scoped_runtime_status": "PASS",
+  "overall_candidate_result": "See the root release report for other independent runtime lanes; these are scoped city/ship results, with owner visual acceptance pending.",
+  "game_source": "cc643ffe711204f3ef38e34e7aa1eb8c9558720f",
+  "rom_sha256": "ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b",
+  "elf_sha256": "a950a6fd77e4320c3bb864c3b96e981a1da24cb63727f8151e2124c6577f90eb",
+  "source_battery_sha256": "b03ff1ef488fbd25de016e828483bc3001787b84e450a45eaa0ac12a11de30ab",
+  "original_and_copied_batteries_unchanged": true,
+  "owner_delta_visual_acceptance": "PENDING",
+  "gameplay_method": "Actual mGBA controller movement and UI on frozen delivery bytes; source checks are separate. Private copied batteries, no map/player/warp/story-coordinate setup. Shared harness encounter suppression and RAM-only Survey fixture disclosed. Native Save/cold Continue and actual public Survey desk transitions are separately recorded.",
+  "checkpoint": "QA10 B5 complete physical S.S.Aqua runtime suite",
+  "full_default_bumps_executed": true,
+  "record_counts": {
+    "contextual-native-view": 8,
+    "public-room-component": 12,
+    "normal-save-cold-continue": 12,
+    "source-blocked-bump": 1169,
+    "interaction": 14,
+    "berth-rest": 2,
+    "whole-tour-party-integrity": 1
+  },
+  "all_seven_maps_and_twelve_components": true,
+  "source_derived_collision_bumps": 1169,
+  "normal_save_cold_continue": 12,
+  "actual_interactions": 14,
+  "actual_berth_decline_accept_fixtures": 2,
+  "contextual_views": 8,
+  "fixture_limits": "Two private same-ROM snapshots lower first-mon HP/status solely for actual berth NO/YES checks, then restore exact payload. Long-tour integrity masks only legitimate normal-walking friendship byte plus checksum; individual Save and NPC tests require exact party bytes.",
+  "limits": [
+    "Physical visitor boarding/interiors are implemented; no unapproved destination, sailing timetable, ticket, reward or story progression is invented.",
+    "Owner visual acceptance remains pending."
+  ]
+}

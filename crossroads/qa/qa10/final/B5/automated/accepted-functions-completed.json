@@ -1,0 +1,158 @@
+{
+  "rom_sha256": "ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b",
+  "source_at_start": "cc643ffe711204f3ef38e34e7aa1eb8c9558720f",
+  "source_note": "Frozen B5 source cc643ffe711204f3ef38e34e7aa1eb8c9558720f; tests pin exact frozen ROM bytes and ELF.",
+  "elf_sha256": "a950a6fd77e4320c3bb864c3b96e981a1da24cb63727f8151e2124c6577f90eb",
+  "source_battery_sha256": "b03ff1ef488fbd25de016e828483bc3001787b84e450a45eaa0ac12a11de30ab",
+  "original_and_lane_battery_unchanged": true,
+  "jobs": [
+    {
+      "job": "title",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/Project-crossroads/crossroads/tools/emulator_smoke.py",
+        "--library",
+        "/tmp/johto-bridge.so",
+        "--title-only",
+        "--output",
+        "/workspace/Project-crossroads/build/qa10-b5-regression-title"
+      ],
+      "exit_code": 0,
+      "seconds": 3.85,
+      "output": "build/qa10-b5-regression-title",
+      "log": "/tmp/qa10-b5-regression-title.log",
+      "rom_sha256": "ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b",
+      "interrupted": false
+    },
+    {
+      "job": "pre-title",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/Project-crossroads/crossroads/tools/pre_title_smoke.py",
+        "--library",
+        "/tmp/johto-bridge.so",
+        "--output",
+        "/workspace/Project-crossroads/build/qa10-b5-regression-pre-title"
+      ],
+      "exit_code": 0,
+      "seconds": 3.31,
+      "output": "build/qa10-b5-regression-pre-title",
+      "log": "/tmp/qa10-b5-regression-pre-title.log",
+      "rom_sha256": "ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b",
+      "interrupted": false
+    },
+    {
+      "job": "starters",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/Project-crossroads/crossroads/tools/emulator_smoke.py",
+        "--library",
+        "/tmp/johto-bridge.so",
+        "--starters-only",
+        "--output",
+        "/workspace/Project-crossroads/build/qa10-b5-regression-starters"
+      ],
+      "exit_code": 0,
+      "seconds": 74.45,
+      "output": "build/qa10-b5-regression-starters",
+      "log": "/tmp/qa10-b5-regression-starters.log",
+      "rom_sha256": "ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b",
+      "interrupted": false
+    },
+    {
+      "job": "first-loss",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/Project-crossroads/crossroads/tools/joe_battle_graphics_smoke.py",
+        "--library",
+        "/tmp/johto-bridge.so",
+        "--output",
+        "/workspace/Project-crossroads/build/qa10-b5-regression-first-loss"
+      ],
+      "exit_code": 0,
+      "seconds": 20.67,
+      "output": "build/qa10-b5-regression-first-loss",
+      "log": "/tmp/qa10-b5-regression-first-loss.log",
+      "rom_sha256": "ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b",
+      "interrupted": false
+    },
+    {
+      "job": "fly",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/Project-crossroads/crossroads/tools/johto_fly_smoke.py",
+        "--save",
+        "/workspace/Project-crossroads/build/qa10-b5-regression-lane/input-copy.sav",
+        "--library",
+        "/tmp/johto-bridge.so",
+        "--record",
+        "--output",
+        "/workspace/Project-crossroads/build/qa10-b5-regression-fly"
+      ],
+      "exit_code": 0,
+      "seconds": 55.1,
+      "output": "build/qa10-b5-regression-fly",
+      "log": "/tmp/qa10-b5-regression-fly.log",
+      "rom_sha256": "ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b",
+      "interrupted": false
+    },
+    {
+      "job": "joe",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/Project-crossroads/crossroads/tools/joe_field_actions_smoke.py",
+        "--save",
+        "/workspace/Project-crossroads/build/qa10-b5-regression-lane/input-copy.sav",
+        "--library",
+        "/tmp/johto-bridge.so",
+        "--output",
+        "/workspace/Project-crossroads/build/qa10-b5-regression-joe"
+      ],
+      "exit_code": 0,
+      "seconds": 75.12,
+      "output": "build/qa10-b5-regression-joe",
+      "log": "/tmp/qa10-b5-regression-joe.log",
+      "rom_sha256": "ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b",
+      "interrupted": false
+    },
+    {
+      "job": "running",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/Project-crossroads/crossroads/tools/joe_running_smoke.py",
+        "--save",
+        "/workspace/Project-crossroads/build/qa10-b5-regression-lane/input-copy.sav",
+        "--library",
+        "/tmp/johto-bridge.so",
+        "--output",
+        "/workspace/Project-crossroads/build/qa10-b5-regression-running"
+      ],
+      "exit_code": 0,
+      "seconds": 64.95,
+      "output": "build/qa10-b5-regression-running",
+      "log": "/tmp/qa10-b5-regression-running.log",
+      "rom_sha256": "ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b",
+      "interrupted": false
+    },
+    {
+      "job": "services",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/Project-crossroads/crossroads/tools/olivine_service_smoke.py",
+        "--save",
+        "/workspace/Project-crossroads/build/qa10-b5-regression-lane/input-copy.sav",
+        "--library",
+        "/tmp/johto-bridge.so",
+        "--output",
+        "/workspace/Project-crossroads/build/qa10-b5-regression-services"
+      ],
+      "exit_code": 0,
+      "seconds": 267.91,
+      "output": "build/qa10-b5-regression-services",
+      "log": "/tmp/qa10-b5-regression-services.log",
+      "rom_sha256": "ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b",
+      "interrupted": false
+    }
+  ],
+  "all_passed": true
+}

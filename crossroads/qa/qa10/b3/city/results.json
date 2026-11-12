@@ -1,0 +1,285 @@
+{
+  "checkpoint": "QA10 B3 city functional verification / diagnostic visual state",
+  "rom_sha256": "af59dff1b06b99a9599c6f98b6fb6bd1e765cc52c0838a2dec5c79a6c1f88373",
+  "elf_sha256": "e484ec2b6b7ba97e50d60805ef42b3a1ebe16bbb5815d703f02665daeaed5944",
+  "game_source": "e7e2c085a5a61ef727d06f9f682af7d3a954cc06",
+  "test_source_note": "Focused versioned runners/helper were added after the frozen game commit; exact executed script hashes/launcher mappings are archived. No test logic depends only on/tmp.",
+  "all_six_functional_phases_passed": true,
+  "final_corrected_rom_claim": false,
+  "six_floors_reference_acceptance": false,
+  "open_visual_defect": "6F inner optical core uses outer-glass motif and two void segments; follow-up28-cell art correction pending.26 cells are glass-motif mismatch. These B3 functional results are not a future corrected-ROM pass.",
+  "owner_delta_visual_acceptance": "PENDING",
+  "tour": {
+    "targets": [
+      "OlivineCity_Lighthouse_1F",
+      "OlivineCity_Lighthouse_2F",
+      "OlivineCity_Lighthouse_3F",
+      "OlivineCity_Lighthouse_4F",
+      "OlivineCity_Lighthouse_5F",
+      "OlivineCity_Lighthouse_6F",
+      "OlivineCity_Lighthouse_Balcony",
+      "OlivineCity_Lighthouse_Elevator"
+    ],
+    "maps": 8,
+    "transitions": 76,
+    "roundtrip_pairs": 19,
+    "warp_trials": 73
+  },
+  "collision": {
+    "dry_bumps": 199,
+    "actual_surf_port_bumps": 24,
+    "dry_skips": 0,
+    "full_joe_checks": [
+      {
+        "inside_leaf": 0,
+        "arrival": [
+          23,
+          52
+        ],
+        "facing": 2,
+        "portal_framebuffer": {
+          "opaque_expected": 192,
+          "opaque_visible": 192,
+          "opaque_hidden": 0
+        },
+        "north_landing": [
+          23,
+          51
+        ],
+        "actual_framebuffer": {
+          "opaque_expected": 192,
+          "opaque_visible": 192,
+          "opaque_hidden": 0
+        },
+        "walk_away": [
+          23,
+          50
+        ],
+        "result": "PASS"
+      },
+      {
+        "inside_leaf": 3,
+        "arrival": [
+          24,
+          52
+        ],
+        "facing": 2,
+        "portal_framebuffer": {
+          "opaque_expected": 192,
+          "opaque_visible": 192,
+          "opaque_hidden": 0
+        },
+        "north_landing": [
+          24,
+          51
+        ],
+        "actual_framebuffer": {
+          "opaque_expected": 192,
+          "opaque_visible": 192,
+          "opaque_hidden": 0
+        },
+        "walk_away": [
+          24,
+          50
+        ],
+        "result": "PASS"
+      }
+    ],
+    "water_sides": [
+      "east",
+      "north",
+      "south",
+      "west"
+    ]
+  },
+  "materials": {
+    "cases": 59,
+    "recordings": 18,
+    "unavailable_fence_sides": 37
+  },
+  "counters": {
+    "actual_front_messages": 6
+  },
+  "lighthouse_details": {
+    "normal_save_cold_continue": 12,
+    "special_journeys": 5,
+    "records_file": "lighthouse-details/results.json"
+  },
+  "court": {
+    "actual_cells_full_joe": 39,
+    "exact_directory_sides": [
+      "north",
+      "south",
+      "west",
+      "east"
+    ],
+    "normal_save_cold_continue": 1
+  },
+  "source_battery_sha256": "b03ff1ef488fbd25de016e828483bc3001787b84e450a45eaa0ac12a11de30ab",
+  "original_and_copy_batteries_unchanged": true,
+  "commands": [
+    {
+      "phase": "lighthouse-tour",
+      "direct_repo_command": [
+        "python3",
+        "crossroads/tools/johto_network_smoke.py",
+        "--save",
+        "COPY_OF_NORMAL_BATTERY.sav",
+        "--library",
+        "/tmp/johto-bridge.so",
+        "--output",
+        "build/reproduce-b3-lighthouse-tour",
+        "--targets",
+        "OlivineCity_Lighthouse_1F,OlivineCity_Lighthouse_2F,OlivineCity_Lighthouse_3F,OlivineCity_Lighthouse_4F,OlivineCity_Lighthouse_5F,OlivineCity_Lighthouse_6F,OlivineCity_Lighthouse_Balcony,OlivineCity_Lighthouse_Elevator",
+        "--all-edges"
+      ],
+      "executed_command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/Project-crossroads/crossroads/tools/johto_network_smoke.py",
+        "--save",
+        "/workspace/Project-crossroads/build/qa10-city-lane-b3/input-copy.sav",
+        "--library",
+        "/tmp/johto-bridge.so",
+        "--targets",
+        "OlivineCity_Lighthouse_1F,OlivineCity_Lighthouse_2F,OlivineCity_Lighthouse_3F,OlivineCity_Lighthouse_4F,OlivineCity_Lighthouse_5F,OlivineCity_Lighthouse_6F,OlivineCity_Lighthouse_Balcony,OlivineCity_Lighthouse_Elevator",
+        "--all-edges",
+        "--output",
+        "/workspace/Project-crossroads/build/qa10-lighthouse-tour-b3"
+      ],
+      "exit_code": 0
+    },
+    {
+      "phase": "city-collision",
+      "direct_repo_command": [
+        "python3",
+        "crossroads/tools/olivine_collision_smoke.py",
+        "--save",
+        "COPY_OF_NORMAL_BATTERY.sav",
+        "--library",
+        "/tmp/johto-bridge.so",
+        "--output",
+        "build/reproduce-b3-city-collision"
+      ],
+      "executed_command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/Project-crossroads/crossroads/tools/olivine_collision_smoke.py",
+        "--save",
+        "/workspace/Project-crossroads/build/qa10-city-lane-b3-retry1/input-copy.sav",
+        "--library",
+        "/tmp/johto-bridge.so",
+        "--output",
+        "/workspace/Project-crossroads/build/qa10-city-collision-b3-retry1"
+      ],
+      "exit_code": 0
+    },
+    {
+      "phase": "city-materials",
+      "direct_repo_command": [
+        "python3",
+        "crossroads/tools/olivine_materials_smoke.py",
+        "--save",
+        "COPY_OF_NORMAL_BATTERY.sav",
+        "--library",
+        "/tmp/johto-bridge.so",
+        "--output",
+        "build/reproduce-b3-city-materials"
+      ],
+      "executed_command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/Project-crossroads/crossroads/tools/olivine_materials_smoke.py",
+        "--save",
+        "/workspace/Project-crossroads/build/qa10-city-lane-b3-retry1/input-copy.sav",
+        "--library",
+        "/tmp/johto-bridge.so",
+        "--output",
+        "/workspace/Project-crossroads/build/qa10-city-materials-b3-retry1"
+      ],
+      "exit_code": 0
+    },
+    {
+      "phase": "front-counters",
+      "direct_repo_command": [
+        "python3",
+        "crossroads/tools/center_counter_smoke.py",
+        "--save",
+        "COPY_OF_NORMAL_BATTERY.sav",
+        "--library",
+        "/tmp/johto-bridge.so",
+        "--output",
+        "build/reproduce-b3-front-counters",
+        "--rom-sha256",
+        "af59dff1b06b99a9599c6f98b6fb6bd1e765cc52c0838a2dec5c79a6c1f88373"
+      ],
+      "executed_command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/Project-crossroads/crossroads/tools/center_counter_smoke.py",
+        "--save",
+        "/workspace/Project-crossroads/build/qa10-city-lane-b3-retry1/input-copy.sav",
+        "--library",
+        "/tmp/johto-bridge.so",
+        "--rom-sha256",
+        "af59dff1b06b99a9599c6f98b6fb6bd1e765cc52c0838a2dec5c79a6c1f88373",
+        "--output",
+        "/workspace/Project-crossroads/build/qa10-front-counters-b3-retry1"
+      ],
+      "exit_code": 0
+    },
+    {
+      "phase": "lighthouse-details",
+      "direct_repo_command": [
+        "python3",
+        "crossroads/tools/qa10_lighthouse_detail_smoke.py",
+        "--save",
+        "COPY_OF_NORMAL_BATTERY.sav",
+        "--library",
+        "/tmp/johto-bridge.so",
+        "--output",
+        "build/reproduce-b3-lighthouse-details",
+        "--rom-sha256",
+        "af59dff1b06b99a9599c6f98b6fb6bd1e765cc52c0838a2dec5c79a6c1f88373"
+      ],
+      "executed_command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/tmp/qa10-lighthouse-details.py",
+        "--save",
+        "/workspace/Project-crossroads/build/qa10-city-lane-b3-retry1/input-copy.sav",
+        "--library",
+        "/tmp/johto-bridge.so",
+        "--rom-sha256",
+        "af59dff1b06b99a9599c6f98b6fb6bd1e765cc52c0838a2dec5c79a6c1f88373",
+        "--output",
+        "/workspace/Project-crossroads/build/qa10-lighthouse-details-b3-retry1"
+      ],
+      "exit_code": 0
+    },
+    {
+      "phase": "ecruteak-court",
+      "direct_repo_command": [
+        "python3",
+        "crossroads/tools/qa10_courtyard_smoke.py",
+        "--save",
+        "COPY_OF_NORMAL_BATTERY.sav",
+        "--library",
+        "/tmp/johto-bridge.so",
+        "--output",
+        "build/reproduce-b3-ecruteak-court",
+        "--rom-sha256",
+        "af59dff1b06b99a9599c6f98b6fb6bd1e765cc52c0838a2dec5c79a6c1f88373"
+      ],
+      "executed_command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/tmp/qa10-ecruteak-court.py",
+        "--save",
+        "/workspace/Project-crossroads/build/qa10-city-lane-b3-retry1/input-copy.sav",
+        "--library",
+        "/tmp/johto-bridge.so",
+        "--rom-sha256",
+        "af59dff1b06b99a9599c6f98b6fb6bd1e765cc52c0838a2dec5c79a6c1f88373",
+        "--output",
+        "/workspace/Project-crossroads/build/qa10-ecruteak-court-b3-retry1"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "guards": "ROM/ELF and original/copied batteries checked before/after every serial phase; exact frame pixels compare actual composed Joe; real Survey UI OFF/ON/OFF and normal Surf, no XY/map/warp/flag writes. Copied normal Save/cold Continue compares exact party/boxes/decoded inventory/flags/starter. Only shared encounter suppression is written in test RAM."
+}

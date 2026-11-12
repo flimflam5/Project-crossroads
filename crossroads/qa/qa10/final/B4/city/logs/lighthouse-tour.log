@@ -1,0 +1,11 @@
+Normal old battery-save Continue: EcruteakCity_BellTower_9F (7, 3) PASS
+Actual survey desk enables RAM-only water access without changing saved flags: PASS
+Controller visit: OlivineCity_Lighthouse_1F (9, 4) PASS
+Controller visit: OlivineCity_Lighthouse_2F (13, 6) PASS
+Controller visit: OlivineCity_Lighthouse_3F (9, 18) PASS
+Controller visit: OlivineCity_Lighthouse_4F (3, 5) PASS
+Controller visit: OlivineCity_Lighthouse_5F (10, 10) PASS
+Controller visit: OlivineCity_Lighthouse_6F (9, 4) PASS
+Controller visit: OlivineCity_Lighthouse_Balcony (8, 12) PASS
+Controller visit: OlivineCity_Lighthouse_Elevator (3, 6) PASS
+Actual controller visits/return, healing and retained starter/party: PASS 8 target maps 76 transitions

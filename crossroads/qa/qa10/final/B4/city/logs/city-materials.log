@@ -1,0 +1,23 @@
+Normal old battery-save Continue: EcruteakCity_BellTower_9F (7, 3) PASS
+Actual survey desk enables RAM-only water access without changing saved flags: PASS
+Actual controller visits/return, healing and retained starter/party: PASS 0 target maps 18 transitions
+relocated-table-7 PASS (10, 43)
+relocated-table-14 PASS (17, 43)
+relocated-table-29 PASS (32, 43)
+timber-promenade PASS (18, 43)
+parasol-11-canopy PASS (11, 42)
+parasol-11-base PASS (11, 45)
+parasol-16-canopy PASS (16, 42)
+parasol-16-base PASS (16, 45)
+parasol-32-canopy PASS (32, 42)
+parasol-32-base PASS (32, 45)
+outer-fence PASS (5, 10)
+garden-fence PASS (12, 21)
+Actual session-only Surf entry: OlivineCity (21, 47) to (20, 47) PASS
+east-rock-a PASS (57, 20)
+east-rock-b PASS (58, 24)
+east-rock-c PASS (55, 25)
+east-rock-chain PASS (59, 30)
+south-of-terminal-native-sea PASS (26, 58)
+southern-sea-boundary PASS (40, 62)
+Materials controller regression PASS: 59 semantic cases; 37 unavailable fence sides explicitly skipped; 18 native clips; actual Surf and dry return

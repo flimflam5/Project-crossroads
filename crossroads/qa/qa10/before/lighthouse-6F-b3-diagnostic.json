@@ -1,0 +1,11 @@
+{
+  "phase": "B3 diagnostic functional checkpoint; not final corrected6F appearance",
+  "rom_sha256": "af59dff1b06b99a9599c6f98b6fb6bd1e765cc52c0838a2dec5c79a6c1f88373",
+  "source_revision": "e7e2c085a5",
+  "native_image": "lighthouse-6F-b3-inner-glass.png",
+  "native_image_sha256": "3ba1fa996ef02d157ce487a61663ef49ca0e3c557a2e7ba5df920e27856e7c67",
+  "finding": "Actual HGSS6F shows cyan optical enclosure on26 central U-core cells; B3 incorrectly used outer-glass diagonal motif there. Geometry/physics are correct; art-only correction required.",
+  "reference": "/workspace/scratch/hgss-reference/Glitter_Lighthouse_6F_HGSS.png",
+  "owner_visual_acceptance": "PENDING",
+  "test_state": "All6 city serial phases passed functionally; visual mismatch deliberately remains unresolved on these bytes."
+}

@@ -1,0 +1,279 @@
+1/68 python3 crossroads/tools/build_johto_network.py --through west --check
+Traceback (most recent call last):
+  File "/workspace/Project-crossroads/crossroads/tools/build_johto_network.py", line 372, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/workspace/Project-crossroads/crossroads/tools/build_johto_network.py", line 309, in main
+    write(f'data/maps/{n}/scripts.inc',f'{n}_MapScripts::\n'+extra+'    .byte 0\n')
+  File "/workspace/Project-crossroads/crossroads/tools/build_johto_network.py", line 31, in compare
+    assert (R/p).read_bytes()==b,('Regenerate',p)
+           ^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('Regenerate', 'data/maps/JohtoRoute42/scripts.inc')
+
+2/68 python3 crossroads/tools/validate_johto_network.py --built
+Positive original-native Bell lamp fixtures and collapsed Burned shaft; exact prior raw outside 164 cells, all physics/events/IDs/old graphics retained: PASS 9 lamps, 155 shaft cells
+HGSS tower contracts, canonical stair/pad graph, directed jumps and escape from every public tile: PASS 2430 tiles
+Canonical Ecruteak houses/theater, preserved actors/IDs, furnished room access, performance lanes and every-tile escape: PASS 3
+HGSS Center/Mart/Gym reference paths, accepted service/practice scripts, safe floor and scripted fall coverage: PASS 551 public tiles
+Canonical west/east gate endpoints, all six aliases per road, temporary coordinate portals and safe floor: PASS
+Unrelated Violet services: exact immutable map/layout/actor/warp/room/border preservation PASS
+Canonical Violet door/stair coordinates, retained map/save IDs, exact neighbor changes and every-tile escape: PASS 3066 tiles in 13 maps
+All four accepted Black Ledger exterior facades: exact immutable per-layer RGB555/attributes/collision/elevation PASS 73 metatiles
+HGSS Olivine stable IDs/heals, canonical buildings, preserved additions, per-segment reciprocity, dry returns avoiding active doorways, scripts and Emerald inclusion: PASS
+HGSS Olivine/Aqua exact threshold graph, paired lift, source window, all12ship components and every public tile escape: PASS 3968 tiles 30 interior maps
+Johto valid IDs, whole tile/warp/border graph, interaction access, services and safe respawns: PASS {'maps': 177, 'reachable_tiles': 75276, 'warps': 506, 'connections': 66, 'centers': 10, 'mode': 'structural survey-water-enabled graph; not emulator playtesting'}
+Explicit QA kit: one guarded level100 flyer, shoes only, no badge/starter changes: PASS
+
+3/68 python3 crossroads/tools/validate_visual_repairs.py
+Eight owner asset checksums/pixel identity, all non-Gym pixels/collision/events, stable IDs and reciprocal two-door pairs: PASS 1077 legacy metatiles
+Positive original-native Bell lamp fixtures and collapsed Burned shaft; exact prior raw outside 164 cells, all physics/events/IDs/old graphics retained: PASS 9 lamps, 155 shaft cells
+HGSS tower contracts, canonical stair/pad graph, directed jumps and escape from every public tile: PASS 2430 tiles
+Canonical Ecruteak houses/theater, preserved actors/IDs, furnished room access, performance lanes and every-tile escape: PASS 3
+HGSS Center/Mart/Gym reference paths, accepted service/practice scripts, safe floor and scripted fall coverage: PASS 551 public tiles
+Canonical west/east gate endpoints, all six aliases per road, temporary coordinate portals and safe floor: PASS
+Unrelated Violet services: exact immutable map/layout/actor/warp/room/border preservation PASS
+Canonical Violet door/stair coordinates, retained map/save IDs, exact neighbor changes and every-tile escape: PASS 3066 tiles in 13 maps
+All four accepted Black Ledger exterior facades: exact immutable per-layer RGB555/attributes/collision/elevation PASS 73 metatiles
+HGSS Olivine stable IDs/heals, canonical buildings, preserved additions, per-segment reciprocity, dry returns avoiding active doorways, scripts and Emerald inclusion: PASS
+HGSS Olivine/Aqua exact threshold graph, paired lift, source window, all12ship components and every public tile escape: PASS 3968 tiles 30 interior maps
+HGSS Ecruteak stable IDs, reciprocal target positions, safe entire ground component, preserved animation slots and compatible buffers: PASS. Reference/visual completion is NOT asserted.
+All four accepted Black Ledger exterior facades: exact immutable per-layer RGB555/attributes/collision/elevation PASS 73 metatiles
+HGSS Olivine stable IDs/heals, canonical buildings, preserved additions, per-segment reciprocity, dry returns avoiding active doorways, scripts and Emerald inclusion: PASS
+All four accepted Black Ledger exterior facades: exact immutable per-layer RGB555/attributes/collision/elevation PASS 73 metatiles
+HGSS Olivine stable IDs/heals, canonical buildings, preserved additions, per-segment reciprocity, dry returns avoiding active doorways, scripts and Emerald inclusion: PASS
+HGSS Olivine/Aqua exact threshold graph, paired lift, source window, all12ship components and every public tile escape: PASS 3968 tiles 30 interior maps
+Visual repair scope, stable map/save contracts, complete benches, layers/door behavior: PASS. Owner visual QA remains pending.
+
+4/68 python3 crossroads/tools/build_eight_gym_integration.py --check
+Eight owner Gym exteriors fitted into private city resources; all legacy IDs retained.
+
+5/68 python3 crossroads/tools/validate_eight_gyms.py
+Eight owner asset checksums/pixel identity, all non-Gym pixels/collision/events, stable IDs and reciprocal two-door pairs: PASS 1077 legacy metatiles
+
+6/68 python3 crossroads/tools/build_hgss_ecruteak_assets.py --check
+Allocating gate after 1 tiles
+Allocating house after 78 tiles
+Allocating barrier after 142 tiles
+Allocating burned after 303 tiles
+Allocating theater after 460 tiles
+Allocating center after 576 tiles
+Allocating mart after 670 tiles
+HGSS-directed Ecruteak facades: 754 of 871 available graphics tiles; 505 metatiles. Visual acceptance pending.
+
+7/68 python3 crossroads/tools/build_hgss_ecruteak_assets.py --variant bell --check
+Allocating bell after 1 tiles
+Allocating trail_station after 509 tiles
+HGSS-directed Ecruteak facades: 713 of 885 available graphics tiles; 194 metatiles. Visual acceptance pending.
+
+8/68 python3 crossroads/tools/hgss_ecruteak_terrain.py --check
+
+9/68 python3 crossroads/tools/validate_ecruteak_qa07.py
+Theater actual green checker/13purple cushions: exact82raw/95pixel-cell migration;171othercells+all266physics/actors/events/IDs/stage/common resources preserved: PASS
+Theater stage exact69-cell art migration plus95 explicitly contracted audience pixels;all266physics and remaining102cells preserved;shared Temple unchanged: PASS
+Gate exact7d92 layer repair:50opaque-ground floors,8opaque plant underlays,2blackvoids;all144physics/attrs/aliases/events+oldglyphs/sharedTemple unchanged: PASS
+Gate art exact reviewed cells; both144-cell physics/layers, six alias behaviors, four source plants and shared Temple preserved: PASS
+B1F14-row source floor/complete furnishings; exact37old+34new cells;1F24visual+3pixel-identical counter cells;333othercells pixel-exact; exactly6counter behaviors fixed; shared Center unchanged: PASS
+HGSS common Mart:3 actual plants/glass display/4 stools/right rack;16 exact art cells;all289 native Shop signatures;only4 source stool bases gain collision;events/services unchanged: PASS
+Positive original-native Bell lamp fixtures and collapsed Burned shaft; exact prior raw outside 164 cells, all physics/events/IDs/old graphics retained: PASS 9 lamps, 155 shaft cells
+QA07 immutable QA06 IDs/events/interiors, static exterior pixels, semantic trunks/walls/doors, leaf foreground and neutral road behavior: PASS 6033 unchanged cells; 248 corrected road cells; exact39 courtyard art-only cells independently verified
+
+10/68 python3 crossroads/tools/validate_city_doorways.py
+Explicit city visible doorway segments, unblocked thresholds, native behavior/coordinate scripts and reciprocal arrivals: PASS 173 segments. Controller coverage is separate.
+
+11/68 python3 crossroads/tools/validate_ecruteak_family.py
+All six adjacent-map scrolling strips preserve their original decoded pixels/attributes: 53 unique-per-view tiles; all49 gate cells decode identically on both sides: PASS
+Immutable QA08 A1 IDs/heals and exact per-layer pixels/attributes/collision outside98 gate cells: PASS 8660 preserved cells; no engine limits increased
+
+12/68 python3 crossroads/tools/build_hgss_violet_assets.py --check
+Original Violet architecture: 745 graphics; 223 metatiles; no map-completion assertion.
+
+13/68 python3 crossroads/tools/build_hgss_violet.py --check
+Canonical Violet ground/doors and twelve interior/gate/floor maps generated; runtime/visual QA required.
+
+14/68 python3 crossroads/tools/validate_hgss_violet.py
+Unrelated Violet services: exact immutable map/layout/actor/warp/room/border preservation PASS
+Canonical Violet door/stair coordinates, retained map/save IDs, exact neighbor changes and every-tile escape: PASS 3066 tiles in 13 maps
+
+15/68 python3 crossroads/tools/validate_violet_service_preservation.py
+Unrelated Violet services: exact immutable map/layout/actor/warp/room/border preservation PASS
+
+16/68 python3 crossroads/tools/validate_city_graphics_limits.py
+Actual two-city tileset pointers, native4bpp bounds and loaded palette banks0–12: PASS 51 maps, 27062 cells
+
+17/68 python3 crossroads/tools/validate_city_ground_layers.py
+Actual NORMAL/SPLIT ground and all51-map composed debug-magenta rejection: PASS 27062 cells; 0 native frames
+
+18/68 python3 crossroads/tools/validate_tileset_registration.py
+Tileset registration: exact guard insertion, foreign-section preservation, idempotence and six guarded sibling externs: PASS
+
+19/68 python3 crossroads/tools/check_mapjson_outputs.py
+Mapjson stable timestamps and genuine content updates: PASS
+
+20/68 python3 crossroads/tools/validate_black_ledger_intro.py
+Pre-title accepted-art conversion, palette isolation, tilemap and VRAM bounds: PASS
+Pre-title branding, skip/fade cleanup, preserved save initialization and isolated assets: PASS
+
+21/68 python3 crossroads/tools/validate_title_music.py
+Title music source/hash, PCM limits, appended song ID and actual title wiring: PASS
+
+22/68 python3 crossroads/tools/validate_area_completion.py
+Positive original-native Bell lamp fixtures and collapsed Burned shaft; exact prior raw outside 164 cells, all physics/events/IDs/old graphics retained: PASS 9 lamps, 155 shaft cells
+HGSS tower contracts, canonical stair/pad graph, directed jumps and escape from every public tile: PASS 2430 tiles
+Canonical Ecruteak houses/theater, preserved actors/IDs, furnished room access, performance lanes and every-tile escape: PASS 3
+HGSS Center/Mart/Gym reference paths, accepted service/practice scripts, safe floor and scripted fall coverage: PASS 551 public tiles
+Canonical west/east gate endpoints, all six aliases per road, temporary coordinate portals and safe floor: PASS
+All four accepted Black Ledger exterior facades: exact immutable per-layer RGB555/attributes/collision/elevation PASS 73 metatiles
+HGSS Olivine stable IDs/heals, canonical buildings, preserved additions, per-segment reciprocity, dry returns avoiding active doorways, scripts and Emerald inclusion: PASS
+HGSS Olivine/Aqua exact threshold graph, paired lift, source window, all12ship components and every public tile escape: PASS 3968 tiles 30 interior maps
+All landmark/farm/Gym doors, indoor access, original graphics, tile limits, approved roster and unchanged flag space: PASS
+
+23/68 python3 crossroads/tools/validate_opening.py
+Project Crossroads narrative and staged script checks: PASS
+Linked starter rescue, duplication guard and success-only persistence: PASS
+Only live starter grant is in Olivine; legacy room is a travel bridge: PASS
+
+24/68 python3 crossroads/tools/validate_joe_special_assets.py
+Joe action palette/frame bounds, authored east timing, both saved genders and unchanged graphics enum: PASS
+
+25/68 python3 crossroads/tools/build_joe_special_assets.py --check
+Joe special-state frame contracts/palette conversion: PASS
+
+26/68 python3 crossroads/tools/build_ecruteak_npc_assets.py --check
+Ecruteak monk/performer16x32 palette and frame packing: PASS
+
+27/68 python3 crossroads/tools/build_hgss_temple_assets.py --check
+Temple asset conversion: 507 tiles; 392 metatiles; PASS
+
+28/68 python3 crossroads/tools/validate_joe_assets.py
+Joe source frames, transparency, shared palette, exact repack, 4-direction animations and playable wiring: PASS
+Joe spin animations preserve finite completion and 4-direction rotation: PASS
+Joe palette appended without shifting existing ordinals; trainer assets and references: PASS
+
+29/68 python3 crossroads/tools/validate_route39.py
+Route 39 reciprocal connections, stable map IDs, reachable signs/NPC and city seam: PASS
+
+30/68 python3 crossroads/tools/validate_western_johto.py --built
+Western Johto connected pedestrian graph, all doors/interactions, reciprocal exits, IDs and Center respawn: PASS
+
+31/68 python3 crossroads/tools/build_western_johto_layouts.py --check
+Route 38 and Ecruteak layout reproducibility: PASS
+
+32/68 python3 crossroads/tools/build_black_ledger_title.py --check
+Black Ledger native title palette, tilemap, VRAM bounds and provenance: PASS
+
+33/68 python3 crossroads/tools/build_route39_layout.py --check
+Route 39 layout reproducibility: PASS
+
+34/68 python3 crossroads/tools/build_hgss_olivine_assets.py --check
+Olivine original facade conversion 677 graphics; free 124 before owner Gym; native art review required
+
+35/68 python3 crossroads/tools/build_hgss_olivine_rooms.py --check
+HGSS Olivine3homes/cafe, canonical services/basement and split steel Gym generated; runtime/visual acceptance pending
+
+36/68 python3 crossroads/tools/build_hgss_olivine_landmarks.py --check
+HGSS lighthouse six floors/balcony/lift and port terminal/quay generated; delivery-ROM testing required
+
+37/68 python3 crossroads/tools/build_hgss_olivine.py --check
+HGSS64x64 Olivine; canonical buildings + four documented original additions; owner review pending
+
+38/68 python3 crossroads/tools/validate_hgss_olivine_rooms.py
+Olivine source-room dimensions/furniture/counter access, independent paired thresholds, nurse/PC/stairs, optional Gym corridor and stable IDs: PASS
+
+39/68 python3 crossroads/tools/validate_olivine_harbor_details.py
+Canonical harbor sailboats/3street pennants: water/layer/hull/pole footprints, clear5-wide roads, no arrows and ocean boundary: PASS
+
+40/68 python3 crossroads/tools/validate_olivine_materials.py
+Olivine material classification,12relocated tables, 20 white fence cells, timber/parasols, gray breakwater and Route40 buffer: PASS; exact V7→QA09 12table/65model migration retained; exact82-cell QA09→QA10 north-port migration, all other physics unchanged
+
+41/68 python3 crossroads/tools/validate_olivine_landmark_resources.py
+Olivine maritime image dimensions,4bpp indices, all glyph bounds/palettes, preserved source glyphs and native primary aliases: PASS
+
+42/68 python3 crossroads/tools/validate_ecruteak_furniture.py
+Ecruteak source kitchen/window/bookcases, three Center plants and append-only historical temple resources: PASS
+
+43/68 python3 crossroads/tools/validate_theater_seating.py
+HGSS Theater13 exact one-cell bench anchors, no duplicated rows, open source front aisle and intact room bounds: PASS
+
+44/68 python3 crossroads/tools/build_hgss_theater_assets.py --check
+Private Theater stage: 143 graphics; 418 metatiles; shared Temple unchanged
+
+45/68 python3 crossroads/tools/validate_theater_stage.py
+Theater actual green checker/13purple cushions: exact82raw/95pixel-cell migration;171othercells+all266physics/actors/events/IDs/stage/common resources preserved: PASS
+Theater stage exact69-cell art migration plus95 explicitly contracted audience pixels;all266physics and remaining102cells preserved;shared Temple unchanged: PASS
+
+46/68 python3 crossroads/tools/validate_theater_audience.py
+Theater actual green checker/13purple cushions: exact82raw/95pixel-cell migration;171othercells+all266physics/actors/events/IDs/stage/common resources preserved: PASS
+
+47/68 python3 crossroads/tools/build_hgss_gate_interior_assets.py --check
+Private gate interior: 142 graphics; 436 metatiles; 110 art cells per gate; unchanged shared Temple
+
+48/68 python3 crossroads/tools/validate_gate_interior_art.py
+Gate exact7d92 layer repair:50opaque-ground floors,8opaque plant underlays,2blackvoids;all144physics/attrs/aliases/events+oldglyphs/sharedTemple unchanged: PASS
+Gate art exact reviewed cells; both144-cell physics/layers, six alias behaviors, four source plants and shared Temple preserved: PASS
+
+49/68 python3 crossroads/tools/validate_gate_ground_layers.py
+Gate exact7d92 layer repair:50opaque-ground floors,8opaque plant underlays,2blackvoids;all144physics/attrs/aliases/events+oldglyphs/sharedTemple unchanged: PASS
+
+50/68 python3 crossroads/tools/build_hgss_center_basement_assets.py --check
+Private cool Center basement: 86 graphics; 251 metatiles; shared Center unchanged
+Private cool Center basement: 129 graphics; 255 metatiles; shared Center unchanged
+
+51/68 python3 crossroads/tools/validate_center_basement.py
+B1F14-row source floor/complete furnishings; exact37old+34new cells;1F24visual+3pixel-identical counter cells;333othercells pixel-exact; exactly6counter behaviors fixed; shared Center unchanged: PASS
+
+52/68 python3 crossroads/tools/build_hgss_mart_assets.py --check
+Private HGSS common Mart: 326 graphics, 305 metatiles;16 exact prop-art cells; all native Shop pixels retained
+
+53/68 python3 crossroads/tools/validate_hgss_mart_props.py
+HGSS common Mart:3 actual plants/glass display/4 stools/right rack;16 exact art cells;all289 native Shop signatures;only4 source stool bases gain collision;events/services unchanged: PASS
+
+54/68 python3 crossroads/tools/hgss_ecruteak_tower_details.py --check
+Private Bell wall lamps/Burned collapsed opening: 4 new graphics; 396 metatiles; shared temple resources untouched
+
+55/68 python3 crossroads/tools/hgss_ecruteak_tower_details.py --validate
+Positive original-native Bell lamp fixtures and collapsed Burned shaft; exact prior raw outside 164 cells, all physics/events/IDs/old graphics retained: PASS 9 lamps, 155 shaft cells
+
+56/68 python3 crossroads/tools/validate_hgss_olivine.py --built
+All four accepted Black Ledger exterior facades: exact immutable per-layer RGB555/attributes/collision/elevation PASS 73 metatiles
+Exact compiled delivery-ROM blockdata matches authored outputs: 24 Olivine maps PASS
+HGSS Olivine stable IDs/heals, canonical buildings, preserved additions, per-segment reciprocity, dry returns avoiding active doorways, scripts and Emerald inclusion: PASS
+
+57/68 python3 crossroads/tools/validate_olivine.py --built
+All four accepted Black Ledger exterior facades: exact immutable per-layer RGB555/attributes/collision/elevation PASS 73 metatiles
+Exact compiled delivery-ROM blockdata matches authored outputs: 24 Olivine maps PASS
+HGSS Olivine stable IDs/heals, canonical buildings, preserved additions, per-segment reciprocity, dry returns avoiding active doorways, scripts and Emerald inclusion: PASS
+
+58/68 python3 crossroads/tools/validate_olivine_interiors.py
+Office interactions/exit behaviors, starter coordinates, legacy escape paths and nonpersistent home rest: PASS
+
+59/68 python3 crossroads/tools/build_olivine_interiors.py --check
+Distinct Olivine offices: reproducible layouts and stable dimensions: PASS
+
+60/68 python3 crossroads/tools/build_olivine_layout.py --check
+Olivine layout reproducibility: PASS
+
+61/68 python3 crossroads/tools/build_ss_aqua.py --check
+Original private S.S.Aqua: 411 combined glyphs; 508 secondary metatiles; output /workspace/Project-crossroads
+S.S. Aqua seven source-shaped docked maps generated; voyages remain unimplemented and owner visual/runtime review required
+
+62/68 python3 crossroads/tools/build_qa10_doorways.py --check
+QA10 preserved city + docked ship doorway inventory: 45 groups; controller/facing verification remains separate
+
+63/68 python3 crossroads/tools/validate_ss_aqua.py --self-test
+QA10 source-map/ID negative controls: PASS
+
+64/68 python3 crossroads/tools/validate_ss_aqua.py --built
+QA10 immutable save/ID/addition preservation, all7 source-shaped Aqua maps/exits/resources: PASS
+
+65/68 python3 crossroads/tools/validate_lighthouse_qa10.py --built
+QA10 seven lighthouse maps: all interactions/physical cells/behaviors preserved; private native art bounds/layers PASS
+
+66/68 python3 crossroads/tools/validate_ecruteak_court_qa10.py
+QA10 Ecruteak directory court: exact39-art-cell delta; all other cells/physics/events/IDs preserved; native layers PASS
+
+67/68 python3 crossroads/tools/build_qa10_arrival_facing.py --check
+Native arrival-facing callback source: 6 maps; 25 landings; actual repaired-build tests pending
+
+68/68 python3 crossroads/tools/validate_qa10_arrival_facing_source.py --built
+Independent native arrival-facing source checks:6 maps,25 exactcells, 8188 coordinate cases; allothergameinputs unchanged;45groups/173segments requireintendedfacing; actual6ROM callbacks verified; PASS
+

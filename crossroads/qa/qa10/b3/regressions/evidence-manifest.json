@@ -1,0 +1,756 @@
+{
+  "source_commit": "e7e2c085a5a61ef727d06f9f682af7d3a954cc06",
+  "rom_sha256": "af59dff1b06b99a9599c6f98b6fb6bd1e765cc52c0838a2dec5c79a6c1f88373",
+  "files": [
+    {
+      "path": "title/main-menu.png",
+      "source": "build/qa10-b3-regression-title/main-menu.png",
+      "sha256": "cbf747b2f6aeeeb0d96f12336ae1f619cabaa98152a95619de4097ba39c554a6",
+      "bytes": 1416
+    },
+    {
+      "path": "title/new-game-handoff.png",
+      "source": "build/qa10-b3-regression-title/new-game-handoff.png",
+      "sha256": "ff08bdc4a62d623fd9794d7d36635ae7ebb0fa4b782cdf74ad3aa2f18fed01f8",
+      "bytes": 2342
+    },
+    {
+      "path": "title/title.png",
+      "source": "build/qa10-b3-regression-title/title.png",
+      "sha256": "72ebce70c2bf8f309d88818bc72ab8efaa0d6262c5e3d2dcbbf1b1046eff1f11",
+      "bytes": 30404
+    },
+    {
+      "path": "pre-title/scene-0.png",
+      "source": "build/qa10-b3-regression-pre-title/scene-0.png",
+      "sha256": "fdb3d9cdc6601dc00e382b194edc969219798eaa9ee714cd64e9d3912dbe7004",
+      "bytes": 1445
+    },
+    {
+      "path": "pre-title/scene-1.png",
+      "source": "build/qa10-b3-regression-pre-title/scene-1.png",
+      "sha256": "fcdf25b71a66df494539916d7ce4be87b913046a37a4756e36e276e1f051e159",
+      "bytes": 11499
+    },
+    {
+      "path": "pre-title/scene-2.png",
+      "source": "build/qa10-b3-regression-pre-title/scene-2.png",
+      "sha256": "97242e867f6333c4ec99aff04d59ecf342905aef972fa33fde35b859382e22e9",
+      "bytes": 1270
+    },
+    {
+      "path": "pre-title/title-handoff.png",
+      "source": "build/qa10-b3-regression-pre-title/title-handoff.png",
+      "sha256": "739bd3ebc2a813a9ffad7820331ad51e159a35d1a463c6e24261bedaa5c3fc10",
+      "bytes": 30306
+    },
+    {
+      "path": "starters/city.png",
+      "source": "build/qa10-b3-regression-starters/city.png",
+      "sha256": "8359c0c07e2a68d262aecd9193d26e3693ba9fcb43d80c87f63830cdefae3ac1",
+      "bytes": 7034
+    },
+    {
+      "path": "starters/interior-0.png",
+      "source": "build/qa10-b3-regression-starters/interior-0.png",
+      "sha256": "97c0d66263d188775906e01b518a3ee32096fb69308124e18b87c7d8bc9a9080",
+      "bytes": 2804
+    },
+    {
+      "path": "starters/interior-1.png",
+      "source": "build/qa10-b3-regression-starters/interior-1.png",
+      "sha256": "2bf1ff0145e57713eff60ad3fcca5d86e641bf92ff8ec13870235f3e654b4510",
+      "bytes": 2860
+    },
+    {
+      "path": "starters/interior-10.png",
+      "source": "build/qa10-b3-regression-starters/interior-10.png",
+      "sha256": "73db7b2222f70cc91da0f358462fb6fe6f3111fd02804ea1689e82317da2206f",
+      "bytes": 2829
+    },
+    {
+      "path": "starters/interior-11.png",
+      "source": "build/qa10-b3-regression-starters/interior-11.png",
+      "sha256": "d0e5a51d1290eac991fc9e5159104799813cf8458720bac1eb3f82a59f1e3e76",
+      "bytes": 3536
+    },
+    {
+      "path": "starters/interior-12.png",
+      "source": "build/qa10-b3-regression-starters/interior-12.png",
+      "sha256": "d5b579bdfa615020e02e2835541406b9a1e79f586a592dee31cb0eac38ae1977",
+      "bytes": 4030
+    },
+    {
+      "path": "starters/interior-13.png",
+      "source": "build/qa10-b3-regression-starters/interior-13.png",
+      "sha256": "42fb7cb30aaf0019e478b79e9960ef32bcd5ae47d21b01433f14883cea682d83",
+      "bytes": 5849
+    },
+    {
+      "path": "starters/interior-14.png",
+      "source": "build/qa10-b3-regression-starters/interior-14.png",
+      "sha256": "3f48e54ee26086568fd22a76f81b2c5f5d420e7ce72b9fce56ae141727e55aad",
+      "bytes": 3740
+    },
+    {
+      "path": "starters/interior-15.png",
+      "source": "build/qa10-b3-regression-starters/interior-15.png",
+      "sha256": "d93bf25971eb7963dfbba4388e59696d7031b1d0d2568618393ca939ae2889ac",
+      "bytes": 5583
+    },
+    {
+      "path": "starters/interior-2.png",
+      "source": "build/qa10-b3-regression-starters/interior-2.png",
+      "sha256": "f0d75878c1e6bb7749aba21f3981cb479f3ca79c84ff73652f11dfb5aa0f3417",
+      "bytes": 5362
+    },
+    {
+      "path": "starters/interior-3.png",
+      "source": "build/qa10-b3-regression-starters/interior-3.png",
+      "sha256": "47f490083234d5bf6dd8a87310e6f96570b5dc7046279da6142996adb6b9db07",
+      "bytes": 3676
+    },
+    {
+      "path": "starters/interior-4.png",
+      "source": "build/qa10-b3-regression-starters/interior-4.png",
+      "sha256": "ca45f5614c517695727847a21629b5338649f96ddf6320a32a2deb1c2e7bfef2",
+      "bytes": 3677
+    },
+    {
+      "path": "starters/interior-5.png",
+      "source": "build/qa10-b3-regression-starters/interior-5.png",
+      "sha256": "24f5f3ef1651267dd5aa804ab9f30d352f9a09e07d63dc95ddeb5b4cdb8dd3a8",
+      "bytes": 3483
+    },
+    {
+      "path": "starters/interior-6.png",
+      "source": "build/qa10-b3-regression-starters/interior-6.png",
+      "sha256": "e35b858d67d89068574713a0e44de88a75d92a1f3bedd6b22b89791a5d444bd1",
+      "bytes": 3598
+    },
+    {
+      "path": "starters/interior-7.png",
+      "source": "build/qa10-b3-regression-starters/interior-7.png",
+      "sha256": "4dc72b397fc9998baeb7f0486a7edbc18134e43184ed584da327dce042cdcd53",
+      "bytes": 3573
+    },
+    {
+      "path": "starters/interior-8.png",
+      "source": "build/qa10-b3-regression-starters/interior-8.png",
+      "sha256": "3ed625ae1ea0e4f5fabe9f0775ee5ab3a1948400dbffd62697f5b0c658468362",
+      "bytes": 5321
+    },
+    {
+      "path": "starters/interior-9.png",
+      "source": "build/qa10-b3-regression-starters/interior-9.png",
+      "sha256": "73db7b2222f70cc91da0f358462fb6fe6f3111fd02804ea1689e82317da2206f",
+      "bytes": 2829
+    },
+    {
+      "path": "starters/joe-standing-east.png",
+      "source": "build/qa10-b3-regression-starters/joe-standing-east.png",
+      "sha256": "59837fdedb37ea828263d8da2017c0bc857013315d7b5b58deba083f734a0fbb",
+      "bytes": 6232
+    },
+    {
+      "path": "starters/joe-standing-north.png",
+      "source": "build/qa10-b3-regression-starters/joe-standing-north.png",
+      "sha256": "7e8019b0eacb1d65d9c0ec58a2fb0cd1db6eee5fa5031140b04c77e993ddf612",
+      "bytes": 6251
+    },
+    {
+      "path": "starters/joe-standing-south.png",
+      "source": "build/qa10-b3-regression-starters/joe-standing-south.png",
+      "sha256": "58fd92b02a01d9691825ad53322d64f0ebc11be6b7bf3f014b1d816e2b1bee4c",
+      "bytes": 6316
+    },
+    {
+      "path": "starters/joe-standing-west.png",
+      "source": "build/qa10-b3-regression-starters/joe-standing-west.png",
+      "sha256": "69c90cfc58709f9fd3be195803f4b48bd7fa83cf493bd3a22134df349fe85da0",
+      "bytes": 6271
+    },
+    {
+      "path": "starters/rescue-273.png",
+      "source": "build/qa10-b3-regression-starters/rescue-273.png",
+      "sha256": "78710fbd2005d26d403cb49919a9384638b8ce546320834c2502f2aa14d8d9a9",
+      "bytes": 4729
+    },
+    {
+      "path": "starters/rescue-568.png",
+      "source": "build/qa10-b3-regression-starters/rescue-568.png",
+      "sha256": "78710fbd2005d26d403cb49919a9384638b8ce546320834c2502f2aa14d8d9a9",
+      "bytes": 4729
+    },
+    {
+      "path": "starters/rescue-605.png",
+      "source": "build/qa10-b3-regression-starters/rescue-605.png",
+      "sha256": "78710fbd2005d26d403cb49919a9384638b8ce546320834c2502f2aa14d8d9a9",
+      "bytes": 4729
+    },
+    {
+      "path": "first-loss/city.png",
+      "source": "build/qa10-b3-regression-first-loss/city.png",
+      "sha256": "8359c0c07e2a68d262aecd9193d26e3693ba9fcb43d80c87f63830cdefae3ac1",
+      "bytes": 7034
+    },
+    {
+      "path": "first-loss/first-loss-olivine-center.png",
+      "source": "build/qa10-b3-regression-first-loss/first-loss-olivine-center.png",
+      "sha256": "3ddae1c7f7a451a607f8582dfd6e650121c29df283300be85d6d30c173099531",
+      "bytes": 6463
+    },
+    {
+      "path": "first-loss/joe-battle-back.png",
+      "source": "build/qa10-b3-regression-first-loss/joe-battle-back.png",
+      "sha256": "7d11639ab978b2d9e65f48fa6d45b35b76e3cf4d5c5b8f383a0a8507b913685b",
+      "bytes": 5355
+    },
+    {
+      "path": "first-loss/joe-standing-east.png",
+      "source": "build/qa10-b3-regression-first-loss/joe-standing-east.png",
+      "sha256": "59837fdedb37ea828263d8da2017c0bc857013315d7b5b58deba083f734a0fbb",
+      "bytes": 6232
+    },
+    {
+      "path": "first-loss/joe-standing-north.png",
+      "source": "build/qa10-b3-regression-first-loss/joe-standing-north.png",
+      "sha256": "7e8019b0eacb1d65d9c0ec58a2fb0cd1db6eee5fa5031140b04c77e993ddf612",
+      "bytes": 6251
+    },
+    {
+      "path": "first-loss/joe-standing-south.png",
+      "source": "build/qa10-b3-regression-first-loss/joe-standing-south.png",
+      "sha256": "58fd92b02a01d9691825ad53322d64f0ebc11be6b7bf3f014b1d816e2b1bee4c",
+      "bytes": 6316
+    },
+    {
+      "path": "first-loss/joe-standing-west.png",
+      "source": "build/qa10-b3-regression-first-loss/joe-standing-west.png",
+      "sha256": "69c90cfc58709f9fd3be195803f4b48bd7fa83cf493bd3a22134df349fe85da0",
+      "bytes": 6271
+    },
+    {
+      "path": "first-loss/joe-battle-graphics-results.json",
+      "source": "build/qa10-b3-regression-first-loss/joe-battle-graphics-results.json",
+      "sha256": "1898b54d67479a59c530b77aa7f56de05520bb3fd4eb0cadf78da7a780543b98",
+      "bytes": 11416
+    },
+    {
+      "path": "fly/AzaleaTown.png",
+      "source": "build/qa10-b3-regression-fly/AzaleaTown.png",
+      "sha256": "a24e1b4a0590321e6ce21b091a06206961492bce3fe465dbdb1695a245f33860",
+      "bytes": 4731
+    },
+    {
+      "path": "fly/BlackthornCity.png",
+      "source": "build/qa10-b3-regression-fly/BlackthornCity.png",
+      "sha256": "f7fb87d722c98ccd93f6c105544411712ec911c09abe90722f18e7104d11e9b2",
+      "bytes": 4593
+    },
+    {
+      "path": "fly/CherrygroveCity.png",
+      "source": "build/qa10-b3-regression-fly/CherrygroveCity.png",
+      "sha256": "fbc228b8fa6467909f20dc56f251dfea33e0f46477cf8e7bf8c6411f06fab7ec",
+      "bytes": 3867
+    },
+    {
+      "path": "fly/CianwoodCity.png",
+      "source": "build/qa10-b3-regression-fly/CianwoodCity.png",
+      "sha256": "4d4c3d5c9b16cdba7a47bac06ba0a8c11013262ee42bad7ff7626cc4af128995",
+      "bytes": 5307
+    },
+    {
+      "path": "fly/EcruteakCity.png",
+      "source": "build/qa10-b3-regression-fly/EcruteakCity.png",
+      "sha256": "7c8b56954c3bf43bca9155e1c24009fe3b141263767746679f690138af22e1ad",
+      "bytes": 6589
+    },
+    {
+      "path": "fly/GoldenrodCity.png",
+      "source": "build/qa10-b3-regression-fly/GoldenrodCity.png",
+      "sha256": "1c9609a941ec9d291c1d629aabce2c8b3ba47f1c41461316fa6fc3e337e68d85",
+      "bytes": 4342
+    },
+    {
+      "path": "fly/MahoganyTown.png",
+      "source": "build/qa10-b3-regression-fly/MahoganyTown.png",
+      "sha256": "4f356ef8961395b6a5da8c5480069ba1e02910ba45693ab52f7f37ad2bae3d9b",
+      "bytes": 5362
+    },
+    {
+      "path": "fly/NewBarkTown.png",
+      "source": "build/qa10-b3-regression-fly/NewBarkTown.png",
+      "sha256": "48aa17f5dd9c12666caf36c78c4a05bb0ee95ed2bddf98c0c9ccc455cb35e6fc",
+      "bytes": 4828
+    },
+    {
+      "path": "fly/OlivineCity.png",
+      "source": "build/qa10-b3-regression-fly/OlivineCity.png",
+      "sha256": "2d267101db80a620ec9d4d843ca6db20e9a384017279415a3fdf4c834bda43ea",
+      "bytes": 6371
+    },
+    {
+      "path": "fly/VioletCity.png",
+      "source": "build/qa10-b3-regression-fly/VioletCity.png",
+      "sha256": "f06389efcfca0c90e7410ea0e99b314a92dd6bf8f8ec09d3437b9577ae0c4c19",
+      "bytes": 6076
+    },
+    {
+      "path": "fly/departure.png",
+      "source": "build/qa10-b3-regression-fly/departure.png",
+      "sha256": "5a2307e9f320d8da4100c77846a254152daa5b3eb358d6ad665e46ab7b19297b",
+      "bytes": 6605
+    },
+    {
+      "path": "fly/fly-selection.png",
+      "source": "build/qa10-b3-regression-fly/fly-selection.png",
+      "sha256": "896d66edec57685cc578aa8699be3913c7511153d7f76332be48ee24592fa1a8",
+      "bytes": 2272
+    },
+    {
+      "path": "fly/joe-fly-pose.png",
+      "source": "build/qa10-b3-regression-fly/joe-fly-pose.png",
+      "sha256": "f46316744152466d00132e5c6e2eb62c5652e89981dc1bc3b08bc5c7443e9b66",
+      "bytes": 5746
+    },
+    {
+      "path": "fly/coverage.json",
+      "source": "build/qa10-b3-regression-fly/coverage.json",
+      "sha256": "ea9fe853532e1c1c0b0f0293e21cef850b989b1b26abd5ccce34da3d783a2878",
+      "bytes": 329
+    },
+    {
+      "path": "fly/fly-departure.mp4",
+      "source": "build/qa10-b3-regression-fly/fly-frames",
+      "sha256": "ff927e02bdea529a76263b4acec21d9fc15d78c24878b07eedb7e3ac4f6dc9f7",
+      "bytes": 60018
+    },
+    {
+      "path": "joe/acro-wheelie.png",
+      "source": "build/qa10-b3-regression-joe/acro-wheelie.png",
+      "sha256": "22b240d948bdcd4d10c0a90c92b2841c0ed432dc3b62ed5dda16e55cfd0bff5c",
+      "bytes": 3987
+    },
+    {
+      "path": "joe/acro_bike.png",
+      "source": "build/qa10-b3-regression-joe/acro_bike.png",
+      "sha256": "22b240d948bdcd4d10c0a90c92b2841c0ed432dc3b62ed5dda16e55cfd0bff5c",
+      "bytes": 3987
+    },
+    {
+      "path": "joe/fishing.png",
+      "source": "build/qa10-b3-regression-joe/fishing.png",
+      "sha256": "a72980233578a09fb4162eb22184de68025343bacba598b19537313603241524",
+      "bytes": 3901
+    },
+    {
+      "path": "joe/mach_bike.png",
+      "source": "build/qa10-b3-regression-joe/mach_bike.png",
+      "sha256": "22b240d948bdcd4d10c0a90c92b2841c0ed432dc3b62ed5dda16e55cfd0bff5c",
+      "bytes": 3987
+    },
+    {
+      "path": "joe/surf-east.png",
+      "source": "build/qa10-b3-regression-joe/surf-east.png",
+      "sha256": "804a5700ee1da013e2abe1a2d2a5c2eec016da7ca5d4c89e8e19a2d2c52c3be7",
+      "bytes": 4020
+    },
+    {
+      "path": "joe/surf-north.png",
+      "source": "build/qa10-b3-regression-joe/surf-north.png",
+      "sha256": "50c6c96c8af9c4ace2fae7cd643911d653358960402cf00f203c080557e8c0b2",
+      "bytes": 4209
+    },
+    {
+      "path": "joe/surf-south.png",
+      "source": "build/qa10-b3-regression-joe/surf-south.png",
+      "sha256": "08278427cde66c2e5ea39fe8b598979431607edc48512b75a22438b5ccf35c0a",
+      "bytes": 3912
+    },
+    {
+      "path": "joe/surf-west.png",
+      "source": "build/qa10-b3-regression-joe/surf-west.png",
+      "sha256": "cbb9a40a02d8fddb3f5c976a2ec687a85f5d247260c7d513eabc258df044e4cb",
+      "bytes": 4309
+    },
+    {
+      "path": "joe/coverage.json",
+      "source": "build/qa10-b3-regression-joe/coverage.json",
+      "sha256": "9326cfc11fb14e9520dd25c43ec65140a8faf4ff6d5a0acafec72399df523325",
+      "bytes": 311
+    },
+    {
+      "path": "running/running.png",
+      "source": "build/qa10-b3-regression-running/running.png",
+      "sha256": "438193874c9505a84546e6fc67d9e2eef3fd0a61bf0c920c1f7576d1305896e6",
+      "bytes": 4130
+    },
+    {
+      "path": "running/walking.png",
+      "source": "build/qa10-b3-regression-running/walking.png",
+      "sha256": "c64ec34705fa2b6f31c9434d7f19fedffd2407e2a4bf89588662fbc475e0cb32",
+      "bytes": 4432
+    },
+    {
+      "path": "running/running.mp4",
+      "source": "build/qa10-b3-regression-running/running.mp4",
+      "sha256": "0d229e084de840e4a1ec213fd6fdebfa74bbe1e22d0286a040b31238e6996f8e",
+      "bytes": 11323
+    },
+    {
+      "path": "running/walking.mp4",
+      "source": "build/qa10-b3-regression-running/walking.mp4",
+      "sha256": "09a2867fdc31aac6cdf716ecfa71a9da3e9871963d6ef576592d668858ca2af3",
+      "bytes": 11519
+    },
+    {
+      "path": "running/results.json",
+      "source": "build/qa10-b3-regression-running/results.json",
+      "sha256": "c962bcec6b084e1e1114f29914545c3d0b7230f33fdf4c690c40d69ee8483702",
+      "bytes": 773
+    },
+    {
+      "path": "services/Hgss_OlivineSign_Cafe.png",
+      "source": "build/qa10-b3-regression-services/Hgss_OlivineSign_Cafe.png",
+      "sha256": "c07fb493af0c5b7ce4148da5efb38c4ea6623bf61091edf7815d5d99fbb6f7bc",
+      "bytes": 6272
+    },
+    {
+      "path": "services/Hgss_OlivineSign_FishingHouse.png",
+      "source": "build/qa10-b3-regression-services/Hgss_OlivineSign_FishingHouse.png",
+      "sha256": "0dcb6abb333fc1111a5b99a50c5e71f2d6e657acb0be11da7ca88e305b7a8b3b",
+      "bytes": 7301
+    },
+    {
+      "path": "services/Hgss_OlivineSign_Port.png",
+      "source": "build/qa10-b3-regression-services/Hgss_OlivineSign_Port.png",
+      "sha256": "c14aa64899f8e62a6ff20955c9cfb0c05ed2a9956ce1224109f86578650e31d9",
+      "bytes": 7380
+    },
+    {
+      "path": "services/Hgss_OlivineSign_SealHouse.png",
+      "source": "build/qa10-b3-regression-services/Hgss_OlivineSign_SealHouse.png",
+      "sha256": "a48fa5ade141bdd84e11453b0bd0778e20fb39aa6cd9d866cdbaaf4548148f6f",
+      "bytes": 8467
+    },
+    {
+      "path": "services/Hgss_OlivineSign_TradeHouse.png",
+      "source": "build/qa10-b3-regression-services/Hgss_OlivineSign_TradeHouse.png",
+      "sha256": "5eb4e68ca8f246abf1069d0c8c4ed223a6c986b024251de702adbe78715e4179",
+      "bytes": 5983
+    },
+    {
+      "path": "services/OlivineCity_FishingHouse-resident-1.png",
+      "source": "build/qa10-b3-regression-services/OlivineCity_FishingHouse-resident-1.png",
+      "sha256": "d70e2a23cfa840f61d28d897d1a4a3c2985fde5a83596b06d55dee1a70f6b2c0",
+      "bytes": 5242
+    },
+    {
+      "path": "services/OlivineCity_HarborOffice-Olivine_HarborClerk.png",
+      "source": "build/qa10-b3-regression-services/OlivineCity_HarborOffice-Olivine_HarborClerk.png",
+      "sha256": "3a99aa5dfa89b93ea7834be91031d30d19a5f0a96457a77a0dc3c5ee3a65f66e",
+      "bytes": 4557
+    },
+    {
+      "path": "services/OlivineCity_Lighthouse_1F-ambient-1.png",
+      "source": "build/qa10-b3-regression-services/OlivineCity_Lighthouse_1F-ambient-1.png",
+      "sha256": "f55aae5882978b268d2e444fd1616658d2956197bbf1b36197d914506bfa61da",
+      "bytes": 4643
+    },
+    {
+      "path": "services/OlivineCity_Lighthouse_1F-wayfinding-1.png",
+      "source": "build/qa10-b3-regression-services/OlivineCity_Lighthouse_1F-wayfinding-1.png",
+      "sha256": "2919a9cd281eeda3869275514aed6078b39f828baa42113e7873d82ebf4d6dfb",
+      "bytes": 4245
+    },
+    {
+      "path": "services/OlivineCity_Lighthouse_2F-wayfinding-1.png",
+      "source": "build/qa10-b3-regression-services/OlivineCity_Lighthouse_2F-wayfinding-1.png",
+      "sha256": "f2621eba50303ad50f0839ea71220e895cec833283772882519f39abeb4cb41f",
+      "bytes": 2894
+    },
+    {
+      "path": "services/OlivineCity_Lighthouse_3F-ambient-1.png",
+      "source": "build/qa10-b3-regression-services/OlivineCity_Lighthouse_3F-ambient-1.png",
+      "sha256": "43ace6e67eda29dcc5d08f3aecf95677e417cc3aa7528097e407fb1773f6c2b6",
+      "bytes": 3268
+    },
+    {
+      "path": "services/OlivineCity_Lighthouse_3F-wayfinding-1.png",
+      "source": "build/qa10-b3-regression-services/OlivineCity_Lighthouse_3F-wayfinding-1.png",
+      "sha256": "c11d8c06c1237d7f753e026e7db6bdd7f1be6cacb36f86810f3b11a669af2765",
+      "bytes": 3196
+    },
+    {
+      "path": "services/OlivineCity_Lighthouse_4F-wayfinding-1.png",
+      "source": "build/qa10-b3-regression-services/OlivineCity_Lighthouse_4F-wayfinding-1.png",
+      "sha256": "ce8a7a81396ec2aa2e921170a6a8451a8ccf4f246b92b26eb669bb3aee0bf5eb",
+      "bytes": 2606
+    },
+    {
+      "path": "services/OlivineCity_Lighthouse_5F-wayfinding-1.png",
+      "source": "build/qa10-b3-regression-services/OlivineCity_Lighthouse_5F-wayfinding-1.png",
+      "sha256": "790559140bb021df3ab498ff491da923393ddeebb396e73515ecd21b4c6f3cfc",
+      "bytes": 2644
+    },
+    {
+      "path": "services/OlivineCity_Lighthouse_6F-ambient-1.png",
+      "source": "build/qa10-b3-regression-services/OlivineCity_Lighthouse_6F-ambient-1.png",
+      "sha256": "585d693fb8febe813d4b5f959172d1f15f6fe2bc03d859eec91be743907a95cc",
+      "bytes": 3880
+    },
+    {
+      "path": "services/OlivineCity_Lighthouse_6F-ambient-2.png",
+      "source": "build/qa10-b3-regression-services/OlivineCity_Lighthouse_6F-ambient-2.png",
+      "sha256": "7c6c410fc3dd95faa6274ffaf27c508cadefa3a9f3144ede086c509cd66b2b8e",
+      "bytes": 4396
+    },
+    {
+      "path": "services/OlivineCity_Lighthouse_6F-wayfinding-1.png",
+      "source": "build/qa10-b3-regression-services/OlivineCity_Lighthouse_6F-wayfinding-1.png",
+      "sha256": "32e7780002275ae2a3734324381e11add55dfdb5825981b1a6da9097a6fd9c3f",
+      "bytes": 3720
+    },
+    {
+      "path": "services/OlivineCity_Lighthouse_Balcony-wayfinding-1.png",
+      "source": "build/qa10-b3-regression-services/OlivineCity_Lighthouse_Balcony-wayfinding-1.png",
+      "sha256": "535552cc75693776effbcdc6dca7ca86ced0cdbcc61c84a6838f00bd8d93750a",
+      "bytes": 3489
+    },
+    {
+      "path": "services/OlivineCity_PokemonCenter_1F-front-desk-11.png",
+      "source": "build/qa10-b3-regression-services/OlivineCity_PokemonCenter_1F-front-desk-11.png",
+      "sha256": "8d655193901592bfc1b4345638d44d0175851ac746780187da7dfd9a0e8faaa6",
+      "bytes": 3768
+    },
+    {
+      "path": "services/OlivineCity_PokemonCenter_1F-front-desk-2.png",
+      "source": "build/qa10-b3-regression-services/OlivineCity_PokemonCenter_1F-front-desk-2.png",
+      "sha256": "973ec856dd526a77558482c1649a9010d6e69e6bd4480125004f83ed85a314d1",
+      "bytes": 3246
+    },
+    {
+      "path": "services/OlivineCity_PokemonCenter_1F-front-desk-6.png",
+      "source": "build/qa10-b3-regression-services/OlivineCity_PokemonCenter_1F-front-desk-6.png",
+      "sha256": "46bfbbfb3e5e52d589a8cc52408eefb9391d1d00754215403de9bd2859d4a07e",
+      "bytes": 3297
+    },
+    {
+      "path": "services/OlivineCity_PokemonCenter_B1F-front-desk-12.png",
+      "source": "build/qa10-b3-regression-services/OlivineCity_PokemonCenter_B1F-front-desk-12.png",
+      "sha256": "bbbfde33e7bc4f88ea0963a4e56c80785601feae72090971fad9695532d34ca6",
+      "bytes": 3616
+    },
+    {
+      "path": "services/OlivineCity_PokemonCenter_B1F-front-desk-4.png",
+      "source": "build/qa10-b3-regression-services/OlivineCity_PokemonCenter_B1F-front-desk-4.png",
+      "sha256": "c7c4af0022360770f5bfa18bc3c58a818ab51f72a1aa5135f12fa7e41b352c15",
+      "bytes": 3766
+    },
+    {
+      "path": "services/OlivineCity_PokemonCenter_B1F-front-desk-8.png",
+      "source": "build/qa10-b3-regression-services/OlivineCity_PokemonCenter_B1F-front-desk-8.png",
+      "sha256": "5aa82a0e197eceda60707ed473c2e84044e7abab05f88d486a991f1be5237011",
+      "bytes": 3969
+    },
+    {
+      "path": "services/OlivineCity_PortQuay-ambient-1.png",
+      "source": "build/qa10-b3-regression-services/OlivineCity_PortQuay-ambient-1.png",
+      "sha256": "c9d0a315c81aac32684eda58d8b7a61c5d5443f11e3d708d8b61e2aaf47c5c57",
+      "bytes": 5125
+    },
+    {
+      "path": "services/OlivineCity_PortQuay-wayfinding-1.png",
+      "source": "build/qa10-b3-regression-services/OlivineCity_PortQuay-wayfinding-1.png",
+      "sha256": "370c3489be34a09e13a2b1fffaee5ca630827e6bbc336bb935f12fba845d172e",
+      "bytes": 6175
+    },
+    {
+      "path": "services/OlivineCity_PortTerminal-ambient-1.png",
+      "source": "build/qa10-b3-regression-services/OlivineCity_PortTerminal-ambient-1.png",
+      "sha256": "846d59646aa9c1b443eeecd89f5ae3c61a0a208c2074afd721f75a56d5766f05",
+      "bytes": 5718
+    },
+    {
+      "path": "services/OlivineCity_PortTerminal-ambient-2.png",
+      "source": "build/qa10-b3-regression-services/OlivineCity_PortTerminal-ambient-2.png",
+      "sha256": "6465991b26df6eacfa058675aae20fca3df3d53837a7ee4bacf32601ea4e0a75",
+      "bytes": 5735
+    },
+    {
+      "path": "services/OlivineCity_SealHouse-resident-1.png",
+      "source": "build/qa10-b3-regression-services/OlivineCity_SealHouse-resident-1.png",
+      "sha256": "1f61a0578081a8462bd355838f1825e02fe220a4a7fdabf9311e0975d7a9b84d",
+      "bytes": 5931
+    },
+    {
+      "path": "services/OlivineCity_SealHouse-resident-2.png",
+      "source": "build/qa10-b3-regression-services/OlivineCity_SealHouse-resident-2.png",
+      "sha256": "5567e347bd0b52cf6809d4aa7f979a34c86dab8e204f9161ef331c4e5bdf3cbb",
+      "bytes": 5954
+    },
+    {
+      "path": "services/OlivineCity_SealHouse-resident-3.png",
+      "source": "build/qa10-b3-regression-services/OlivineCity_SealHouse-resident-3.png",
+      "sha256": "6ad476d9d3e18ae1a52bfb427e49f7707d0d1ad8b6d52c9d15c02eb3b2ed2cda",
+      "bytes": 5351
+    },
+    {
+      "path": "services/OlivineCity_SilphOffice-Olivine_OfficeWorker.png",
+      "source": "build/qa10-b3-regression-services/OlivineCity_SilphOffice-Olivine_OfficeWorker.png",
+      "sha256": "df8ecfbcfc94aac4f43463f333f5ba845b22521fe678737832605c038fee7fef",
+      "bytes": 4528
+    },
+    {
+      "path": "services/OlivineCity_TradeHouse-resident-1.png",
+      "source": "build/qa10-b3-regression-services/OlivineCity_TradeHouse-resident-1.png",
+      "sha256": "c39515f2e339640ca1798f5f0023f985bf224ae4a7d0c95b24b06d2cc240ebaa",
+      "bytes": 5236
+    },
+    {
+      "path": "services/Olivine_FreightChecklist.png",
+      "source": "build/qa10-b3-regression-services/Olivine_FreightChecklist.png",
+      "sha256": "2cc14ec348f2232cfb457b3039093350c5d4ee92a470c4043e5521c89bdf485a",
+      "bytes": 4719
+    },
+    {
+      "path": "services/Olivine_HarborDispatch.png",
+      "source": "build/qa10-b3-regression-services/Olivine_HarborDispatch.png",
+      "sha256": "be4c55e5f7337dd5139d3dabefcd9f6634c533f23f4706221abcb7f9ce0dc880",
+      "bytes": 3528
+    },
+    {
+      "path": "services/Olivine_HarborLedger.png",
+      "source": "build/qa10-b3-regression-services/Olivine_HarborLedger.png",
+      "sha256": "05de7feeac4e58ec014da23598ae400f1a111ed5f007853323246e633d9ecede",
+      "bytes": 4842
+    },
+    {
+      "path": "services/Olivine_HomeBooks.png",
+      "source": "build/qa10-b3-regression-services/Olivine_HomeBooks.png",
+      "sha256": "01fc9ee55e9a3e3c6868d08d843c4c1763f0de05319fa418e244cb5f73ed2fdc",
+      "bytes": 2861
+    },
+    {
+      "path": "services/Olivine_HomeNotes.png",
+      "source": "build/qa10-b3-regression-services/Olivine_HomeNotes.png",
+      "sha256": "106539ab8eaf295055cc0c16c0cc09927e8177ba11ed27b2842052a9d6f48e9e",
+      "bytes": 3477
+    },
+    {
+      "path": "services/Olivine_StaffBoard.png",
+      "source": "build/qa10-b3-regression-services/Olivine_StaffBoard.png",
+      "sha256": "d7ed3f42fca031d0a956c0f4381688ca3144f2aa36bdf89827869afa838d7992",
+      "bytes": 3663
+    },
+    {
+      "path": "services/Olivine_Terminal.png",
+      "source": "build/qa10-b3-regression-services/Olivine_Terminal.png",
+      "sha256": "a096c0bb539d013e841813659e8282d026ca8086b220d2620d8d1af0cda7ee26",
+      "bytes": 3948
+    },
+    {
+      "path": "services/accepted-neighbor-1.png",
+      "source": "build/qa10-b3-regression-services/accepted-neighbor-1.png",
+      "sha256": "769128c0f7fbe3c40d6ad1362dc46a7b774ffe47c2514c2f49cd1f0e1dc94a08",
+      "bytes": 3886
+    },
+    {
+      "path": "services/cafe-host-across-counter.png",
+      "source": "build/qa10-b3-regression-services/cafe-host-across-counter.png",
+      "sha256": "d33b679e49b9326cd40a48803f387be5e7e3d6f166b9689058485f1f85df9a33",
+      "bytes": 4903
+    },
+    {
+      "path": "services/cafe-visitor-1.png",
+      "source": "build/qa10-b3-regression-services/cafe-visitor-1.png",
+      "sha256": "124e4197046f6d7211bc6a3e99b72376e508d6cffed578735cd6606e888e5aac",
+      "bytes": 4900
+    },
+    {
+      "path": "services/cafe-visitor-2.png",
+      "source": "build/qa10-b3-regression-services/cafe-visitor-2.png",
+      "sha256": "fa08131c42cbfcd092b052d6f328da60cbec30b25a23496b4917c923be04c99b",
+      "bytes": 5603
+    },
+    {
+      "path": "services/center-pc-menu.png",
+      "source": "build/qa10-b3-regression-services/center-pc-menu.png",
+      "sha256": "bece2b7a4403bdb7c2f063130b613e22459b42fa85cf67928b037c546fae1d1f",
+      "bytes": 5377
+    },
+    {
+      "path": "services/center-visitor.png",
+      "source": "build/qa10-b3-regression-services/center-visitor.png",
+      "sha256": "5c70883913189588a3c331d8607faaaa2a46a7b57bb88c9253725573fd9a7c16",
+      "bytes": 3600
+    },
+    {
+      "path": "services/home-rest-accepted.png",
+      "source": "build/qa10-b3-regression-services/home-rest-accepted.png",
+      "sha256": "f7454034ce8f4421b853272197abd9edefa1cd0849169048a8d13355c1d5f4db",
+      "bytes": 2966
+    },
+    {
+      "path": "services/home-rest-declined.png",
+      "source": "build/qa10-b3-regression-services/home-rest-declined.png",
+      "sha256": "4a6eb006d280f31127272069589ec255717b27f2faced304198526508dc06a43",
+      "bytes": 2995
+    },
+    {
+      "path": "services/jasmine-loss-local-whiteout.png",
+      "source": "build/qa10-b3-regression-services/jasmine-loss-local-whiteout.png",
+      "sha256": "3ddae1c7f7a451a607f8582dfd6e650121c29df283300be85d6d30c173099531",
+      "bytes": 6463
+    },
+    {
+      "path": "services/jasmine-practice-battle.png",
+      "source": "build/qa10-b3-regression-services/jasmine-practice-battle.png",
+      "sha256": "47e76164e2b040a73038aba28943cfee35d7fa0912dd76b5cc6331d95761f77a",
+      "bytes": 8519
+    },
+    {
+      "path": "services/mart-menu.png",
+      "source": "build/qa10-b3-regression-services/mart-menu.png",
+      "sha256": "35b6d23c77c08512b74c289065196e0669b945a48995d4253216030db885d6e7",
+      "bytes": 6088
+    },
+    {
+      "path": "services/mart-purchase.png",
+      "source": "build/qa10-b3-regression-services/mart-purchase.png",
+      "sha256": "c9bd7e33a94cd73f8c488f05e533aae452ec47e9e73b55588b62bc2a9e8d3ac7",
+      "bytes": 5882
+    },
+    {
+      "path": "services/mart-stock.png",
+      "source": "build/qa10-b3-regression-services/mart-stock.png",
+      "sha256": "3d64b6630612104d0122deca150e26650d58f515a162ea21d180616a1a3c7473",
+      "bytes": 5874
+    },
+    {
+      "path": "services/mart-visitor.png",
+      "source": "build/qa10-b3-regression-services/mart-visitor.png",
+      "sha256": "99c9ee2ad990c6a5e6856784cb1a79e554235b80886c066af6ba5747e70bf236",
+      "bytes": 6084
+    },
+    {
+      "path": "services/nurse-healed.png",
+      "source": "build/qa10-b3-regression-services/nurse-healed.png",
+      "sha256": "69ceda8501183252b8a857a1a6cda161ca303734f00a1d9538d14727612e7c00",
+      "bytes": 6601
+    },
+    {
+      "path": "services/coverage.json",
+      "source": "build/qa10-b3-regression-services/coverage.json",
+      "sha256": "668ab69bad92e77a83c45fe60b1cbd9db3e6e8e4ad203c08408ea99b1dcff4c8",
+      "bytes": 7007
+    },
+    {
+      "path": "services/results.json",
+      "source": "build/qa10-b3-regression-services/results.json",
+      "sha256": "b62e09becf82640775efb813d5ab82359a3500a80f14b8e19c3a0595c70bda3b",
+      "bytes": 14051
+    }
+  ]
+}

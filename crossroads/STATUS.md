@@ -1,3 +1,25 @@
+# QA10 B5 — tested owner-review checkpoint
+
+Game source cc643ffe711204f3ef38e34e7aa1eb8c9558720f; feature branch
+feature/olivine-port-ship-qa10; draft PR17 targets QA09, not master.
+ROM SHA256 ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b.
+BUILD PASS: payload30,322,784, RAM226448/28392 unchanged. All68 actual checks PASS.
+All18 scheduled phases passed (17 scripted mGBA suites +independent facing audit),
+plus seven genuine old-gate/control cold-Continue cases. Original batteries intact.
+
+All173 door fronts passed;482 executable approaches have exact destination,
+position, intended facing and walk-away;37 lateral starts are genuinely solid/sea.
+Zero facing failures; all67 B4 defects are fixed. FullAqua1169 collision approaches,
+12 components/saves,14 interactions/2berthheals, city/field/service regression pass.
+Native comparisons and movement recordings are in qa/qa10; exact individual scope
+and limits are in hgss/qa10/LOCATION_CHECKLIST.md and RELEASE_OLIVINE_AQUA_QA10.md.
+
+Owner Delta/visual acceptance remains PENDING. No100%/1:1 city claim. Voyages,
+source trade/rod/Seal/online features, original opening and mounted-bike art remain
+explicitly deferred; the GBA lift chooser/decor is a deliberate adaptation with no
+verified cabin raster. Preserve these boundaries and wait for visual review before
+expanding elsewhere. Historical entries below do not supersede this checkpoint.
+
 # QA10 — owner visual corrections in progress
 
 Latest owner screenshots reopen visual/content work after QA09. Branch

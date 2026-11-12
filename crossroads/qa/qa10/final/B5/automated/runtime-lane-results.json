@@ -1,0 +1,74 @@
+[
+  {
+    "suite": "migration",
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "crossroads/tools/olivine_port_save_migration_smoke.py",
+      "--fixtures",
+      "build/qa10-actual-old-port-saves/fixtures.json",
+      "--rom-sha256",
+      "ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b",
+      "--valid-surf-battery",
+      "build/qa09-olivine-saves-v5/surf-normal-save.sav",
+      "--valid-surf-position",
+      "19",
+      "47",
+      "--output",
+      "build/qa10-b5-genuine-port-migration"
+    ],
+    "exit_code": 0,
+    "seconds": 15.77,
+    "source_revision": "cc643ffe711204f3ef38e34e7aa1eb8c9558720f",
+    "rom_sha256": "ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b",
+    "elf_sha256": "a950a6fd77e4320c3bb864c3b96e981a1da24cb63727f8151e2124c6577f90eb",
+    "all_source_battery_hashes_unchanged": true,
+    "interrupted": false
+  },
+  {
+    "suite": "doors",
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "crossroads/tools/olivine_doorway_smoke.py",
+      "--save",
+      "/workspace/Project-crossroads/build/area-delivery-sram/EcruteakCity_BellTower-save.state.sav",
+      "--library",
+      "/tmp/johto-bridge.so",
+      "--output",
+      "build/qa10-b5-doorways",
+      "--city",
+      "both",
+      "--doors-only",
+      "--manifest",
+      "crossroads/hgss/doorways-qa10.json",
+      "--require-facing",
+      "--record-fronts-only"
+    ],
+    "exit_code": 0,
+    "seconds": 685.86,
+    "source_revision": "cc643ffe711204f3ef38e34e7aa1eb8c9558720f",
+    "rom_sha256": "ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b",
+    "elf_sha256": "a950a6fd77e4320c3bb864c3b96e981a1da24cb63727f8151e2124c6577f90eb",
+    "all_source_battery_hashes_unchanged": true,
+    "interrupted": false
+  },
+  {
+    "suite": "independent-facing-postcheck",
+    "command": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+      "crossroads/tools/validate_qa10_arrival_facing.py",
+      "--contract",
+      "/workspace/Project-crossroads/crossroads/qa/qa10/final/B5/doorway-intended-facing.json",
+      "--results",
+      "build/qa10-b5-doorways/doorway-results.json",
+      "--output",
+      "build/qa10-b5-doorways/independent-facing-audit.json"
+    ],
+    "exit_code": 0,
+    "seconds": 0.16,
+    "source_revision": "cc643ffe711204f3ef38e34e7aa1eb8c9558720f",
+    "rom_sha256": "ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b",
+    "elf_sha256": "a950a6fd77e4320c3bb864c3b96e981a1da24cb63727f8151e2124c6577f90eb",
+    "all_source_battery_hashes_unchanged": true,
+    "interrupted": false
+  }
+]

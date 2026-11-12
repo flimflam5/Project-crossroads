@@ -259,3 +259,37 @@ remain qualified in its review. Original/copied batteries and the B4 ROM/ELF
 hashes stayed exact. These ship passes are historical B4 scoped evidence: the
 separate Ecruteak facing failures still prevent overall B4 acceptance, and B5
 requires its own fresh gameplay results.
+
+## B5 fresh city and ship verification
+
+Game source `cc643ffe711204f3ef38e34e7aa1eb8c9558720f` built ROM
+`ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b`.
+After the six gate/trail script corrections, all seven serial city/ship suites
+ran fresh on these exact bytes and completed successfully. Nothing from B4 was
+relabelled. The same strict assertions remain, including all199 dry/24 native
+Surf bumps, full192/192 Joe at both port thresholds and landings,59 materials,
+six counters, all eight lighthouse maps,12 lighthouse normal Save/cold Continue
+cases, five special journeys, both continuous6F circuits and all39 court cells.
+The court's four exact sign approaches and normal save/walk-away also passed.
+
+The full default B5 ship suite again exercised1,169 source-derived solid-target
+bumps, seven maps/twelve physical components, twelve normal Save/cold Continue
+cases, fourteen actual NPC/sign interactions, two actual native berth NO/YES
+health fixtures and eight furnished contexts, followed by the real city return.
+Each phase guarded ROM/ELF and the unchanged original/copied battery. Private
+save outputs and same-ROM health snapshots remain excluded from public proof.
+
+Fresh independent image inspection opened eight B5 lighthouse tour images plus
+eleven centered/inner-stair views, and all twelve B5 ship component views plus
+eight furnishing contexts, against the actual cached HGSS references. No new
+obvious rendering defect appeared in those views. Chosen flat2D art, simplified
+furnishings, off-camera details and the missing separate HGSS elevator-cabin
+raster remain explicit limits. This image review is separate from controller
+tests and the owner's visual acceptance.
+
+Exact commands, executed script hashes, native screenshots/recordings and
+comparison galleries are under `crossroads/qa/qa10/final/B5/{city,aqua}/`.
+Separate parent-owned intended-facing, old-save migration, doorway and existing
+system regressions determine the overall candidate status. These scoped passes
+do not certify the owner's newest private save, unimplemented interregional
+sailings, whole-city visual acceptance or a100% completion claim.

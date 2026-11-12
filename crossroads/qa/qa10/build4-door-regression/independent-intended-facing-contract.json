@@ -1,0 +1,3358 @@
+{
+  "source_revision": "df8c4598d88c7770626be4621a5f39cf60dadb95",
+  "rom_sha256": "4fb28fe64fc44c0546462a935655346a61f13b644bc3040468146d136cd6d656",
+  "visible_opening_contract": "crossroads/hgss/doorways-qa10.json",
+  "visible_opening_contract_sha256": "c6d330d57b41b299123a805cd39eca273951d607ed41a95b59f93a169f234bc1",
+  "basis": "Desired direction determined from the target physical landing and the independently specified entrance/exit orientation, before reading runtime facing records. Same-orientation right-stair rims are explicit source-layout exceptions. GetAdjustedInitialDirection is an implementation cross-check, not the definition of correctness.",
+  "facing_numbers": {
+    "south": 1,
+    "north": 2,
+    "west": 3,
+    "east": 4
+  },
+  "groups": [
+    {
+      "label": "theater",
+      "city": "ecruteak",
+      "sides": {
+        "outside": {
+          "map": "EcruteakCity",
+          "segments": [
+            [
+              44,
+              45
+            ],
+            [
+              45,
+              45
+            ]
+          ],
+          "exit_press": [
+            0,
+            -1
+          ],
+          "intended_arrival_facing": 1,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                44,
+                45
+              ],
+              "behavior": 96
+            },
+            {
+              "cell": [
+                45,
+                45
+              ],
+              "behavior": 96
+            }
+          ]
+        },
+        "inside": {
+          "map": "EcruteakCity_DanceTheater",
+          "segments": [
+            [
+              7,
+              17
+            ],
+            [
+              8,
+              17
+            ]
+          ],
+          "exit_press": [
+            0,
+            1
+          ],
+          "intended_arrival_facing": 2,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                7,
+                17
+              ],
+              "behavior": 101
+            },
+            {
+              "cell": [
+                8,
+                17
+              ],
+              "behavior": 101
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "barrier",
+      "city": "ecruteak",
+      "sides": {
+        "outside": {
+          "map": "EcruteakCity",
+          "segments": [
+            [
+              39,
+              25
+            ],
+            [
+              40,
+              25
+            ]
+          ],
+          "exit_press": [
+            0,
+            -1
+          ],
+          "intended_arrival_facing": 1,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                39,
+                25
+              ],
+              "behavior": 96
+            },
+            {
+              "cell": [
+                40,
+                25
+              ],
+              "behavior": 96
+            }
+          ]
+        },
+        "inside": {
+          "map": "EcruteakCity_BarrierStation",
+          "segments": [
+            [
+              9,
+              11
+            ],
+            [
+              10,
+              11
+            ]
+          ],
+          "exit_press": [
+            0,
+            1
+          ],
+          "intended_arrival_facing": 2,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                9,
+                11
+              ],
+              "behavior": 101
+            },
+            {
+              "cell": [
+                10,
+                11
+              ],
+              "behavior": 101
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "gym",
+      "city": "ecruteak",
+      "sides": {
+        "outside": {
+          "map": "EcruteakCity",
+          "segments": [
+            [
+              24,
+              55
+            ],
+            [
+              25,
+              55
+            ]
+          ],
+          "exit_press": [
+            0,
+            -1
+          ],
+          "intended_arrival_facing": 1,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                24,
+                55
+              ],
+              "behavior": 96
+            },
+            {
+              "cell": [
+                25,
+                55
+              ],
+              "behavior": 96
+            }
+          ]
+        },
+        "inside": {
+          "map": "EcruteakCity_Gym",
+          "segments": [
+            [
+              10,
+              21
+            ],
+            [
+              11,
+              21
+            ]
+          ],
+          "exit_press": [
+            0,
+            1
+          ],
+          "intended_arrival_facing": 2,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                10,
+                21
+              ],
+              "behavior": 101
+            },
+            {
+              "cell": [
+                11,
+                21
+              ],
+              "behavior": 101
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "southwest-house",
+      "city": "ecruteak",
+      "sides": {
+        "outside": {
+          "map": "EcruteakCity",
+          "segments": [
+            [
+              23,
+              45
+            ]
+          ],
+          "exit_press": [
+            0,
+            -1
+          ],
+          "intended_arrival_facing": 1,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                23,
+                45
+              ],
+              "behavior": 96
+            }
+          ]
+        },
+        "inside": {
+          "map": "EcruteakCity_Residence",
+          "segments": [
+            [
+              4,
+              8
+            ],
+            [
+              5,
+              8
+            ]
+          ],
+          "exit_press": [
+            0,
+            1
+          ],
+          "intended_arrival_facing": 2,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                4,
+                8
+              ],
+              "behavior": 101
+            },
+            {
+              "cell": [
+                5,
+                8
+              ],
+              "behavior": 101
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "dowsing-house",
+      "city": "ecruteak",
+      "sides": {
+        "outside": {
+          "map": "EcruteakCity",
+          "segments": [
+            [
+              34,
+              55
+            ]
+          ],
+          "exit_press": [
+            0,
+            -1
+          ],
+          "intended_arrival_facing": 1,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                34,
+                55
+              ],
+              "behavior": 96
+            }
+          ]
+        },
+        "inside": {
+          "map": "EcruteakCity_DowsingHouse",
+          "segments": [
+            [
+              4,
+              8
+            ],
+            [
+              5,
+              8
+            ]
+          ],
+          "exit_press": [
+            0,
+            1
+          ],
+          "intended_arrival_facing": 2,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                4,
+                8
+              ],
+              "behavior": 101
+            },
+            {
+              "cell": [
+                5,
+                8
+              ],
+              "behavior": 101
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "center",
+      "city": "ecruteak",
+      "sides": {
+        "outside": {
+          "map": "EcruteakCity",
+          "segments": [
+            [
+              45,
+              55
+            ]
+          ],
+          "exit_press": [
+            0,
+            -1
+          ],
+          "intended_arrival_facing": 1,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                45,
+                55
+              ],
+              "behavior": 96
+            }
+          ]
+        },
+        "inside": {
+          "map": "EcruteakCity_PokemonCenter_1F",
+          "segments": [
+            [
+              8,
+              19
+            ],
+            [
+              9,
+              19
+            ]
+          ],
+          "exit_press": [
+            0,
+            1
+          ],
+          "intended_arrival_facing": 2,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                8,
+                19
+              ],
+              "behavior": 101
+            },
+            {
+              "cell": [
+                9,
+                19
+              ],
+              "behavior": 101
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "mart",
+      "city": "ecruteak",
+      "sides": {
+        "outside": {
+          "map": "EcruteakCity",
+          "segments": [
+            [
+              53,
+              45
+            ]
+          ],
+          "exit_press": [
+            0,
+            -1
+          ],
+          "intended_arrival_facing": 1,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                53,
+                45
+              ],
+              "behavior": 96
+            }
+          ]
+        },
+        "inside": {
+          "map": "EcruteakCity_Mart",
+          "segments": [
+            [
+              4,
+              11
+            ],
+            [
+              5,
+              11
+            ]
+          ],
+          "exit_press": [
+            0,
+            1
+          ],
+          "intended_arrival_facing": 2,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                4,
+                11
+              ],
+              "behavior": 101
+            },
+            {
+              "cell": [
+                5,
+                11
+              ],
+              "behavior": 101
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "burned-tower",
+      "city": "ecruteak",
+      "sides": {
+        "outside": {
+          "map": "EcruteakCity",
+          "segments": [
+            [
+              24,
+              21
+            ]
+          ],
+          "exit_press": [
+            0,
+            -1
+          ],
+          "intended_arrival_facing": 1,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                24,
+                21
+              ],
+              "behavior": 96
+            }
+          ]
+        },
+        "inside": {
+          "map": "EcruteakCity_BurnedTower",
+          "segments": [
+            [
+              11,
+              22
+            ],
+            [
+              12,
+              22
+            ]
+          ],
+          "exit_press": [
+            0,
+            1
+          ],
+          "intended_arrival_facing": 2,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                11,
+                22
+              ],
+              "behavior": 101
+            },
+            {
+              "cell": [
+                12,
+                22
+              ],
+              "behavior": 101
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "west-city-gate",
+      "city": "ecruteak",
+      "sides": {
+        "outside": {
+          "map": "EcruteakCity",
+          "segments": [
+            [
+              6,
+              37
+            ],
+            [
+              6,
+              38
+            ],
+            [
+              6,
+              39
+            ]
+          ],
+          "exit_press": [
+            -1,
+            0
+          ],
+          "intended_arrival_facing": 4,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                6,
+                37
+              ],
+              "behavior": 0
+            },
+            {
+              "cell": [
+                6,
+                38
+              ],
+              "behavior": 0
+            },
+            {
+              "cell": [
+                6,
+                39
+              ],
+              "behavior": 0
+            }
+          ]
+        },
+        "inside": {
+          "map": "EcruteakCity_WestGate",
+          "segments": [
+            [
+              10,
+              6
+            ],
+            [
+              10,
+              7
+            ],
+            [
+              10,
+              8
+            ]
+          ],
+          "exit_press": [
+            1,
+            0
+          ],
+          "intended_arrival_facing": 3,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                10,
+                6
+              ],
+              "behavior": 97
+            },
+            {
+              "cell": [
+                10,
+                7
+              ],
+              "behavior": 97
+            },
+            {
+              "cell": [
+                10,
+                8
+              ],
+              "behavior": 97
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "west-route-gate",
+      "city": "ecruteak",
+      "sides": {
+        "outside": {
+          "map": "JohtoRoute38",
+          "segments": [
+            [
+              63,
+              12
+            ],
+            [
+              63,
+              13
+            ],
+            [
+              63,
+              14
+            ]
+          ],
+          "exit_press": [
+            1,
+            0
+          ],
+          "intended_arrival_facing": 3,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                63,
+                12
+              ],
+              "behavior": 0
+            },
+            {
+              "cell": [
+                63,
+                13
+              ],
+              "behavior": 0
+            },
+            {
+              "cell": [
+                63,
+                14
+              ],
+              "behavior": 0
+            }
+          ]
+        },
+        "inside": {
+          "map": "EcruteakCity_WestGate",
+          "segments": [
+            [
+              1,
+              6
+            ],
+            [
+              1,
+              7
+            ],
+            [
+              1,
+              8
+            ]
+          ],
+          "exit_press": [
+            -1,
+            0
+          ],
+          "intended_arrival_facing": 4,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                1,
+                6
+              ],
+              "behavior": 97
+            },
+            {
+              "cell": [
+                1,
+                7
+              ],
+              "behavior": 97
+            },
+            {
+              "cell": [
+                1,
+                8
+              ],
+              "behavior": 97
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "east-city-gate",
+      "city": "ecruteak",
+      "sides": {
+        "outside": {
+          "map": "EcruteakCity",
+          "segments": [
+            [
+              63,
+              46
+            ],
+            [
+              63,
+              47
+            ],
+            [
+              63,
+              48
+            ]
+          ],
+          "exit_press": [
+            1,
+            0
+          ],
+          "intended_arrival_facing": 3,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                63,
+                46
+              ],
+              "behavior": 0
+            },
+            {
+              "cell": [
+                63,
+                47
+              ],
+              "behavior": 0
+            },
+            {
+              "cell": [
+                63,
+                48
+              ],
+              "behavior": 0
+            }
+          ]
+        },
+        "inside": {
+          "map": "EcruteakCity_EastGate",
+          "segments": [
+            [
+              1,
+              6
+            ],
+            [
+              1,
+              7
+            ],
+            [
+              1,
+              8
+            ]
+          ],
+          "exit_press": [
+            -1,
+            0
+          ],
+          "intended_arrival_facing": 4,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                1,
+                6
+              ],
+              "behavior": 97
+            },
+            {
+              "cell": [
+                1,
+                7
+              ],
+              "behavior": 97
+            },
+            {
+              "cell": [
+                1,
+                8
+              ],
+              "behavior": 97
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "east-route-gate",
+      "city": "ecruteak",
+      "sides": {
+        "outside": {
+          "map": "JohtoRoute42",
+          "segments": [
+            [
+              0,
+              13
+            ],
+            [
+              0,
+              14
+            ],
+            [
+              0,
+              15
+            ]
+          ],
+          "exit_press": [
+            -1,
+            0
+          ],
+          "intended_arrival_facing": 4,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                0,
+                13
+              ],
+              "behavior": 0
+            },
+            {
+              "cell": [
+                0,
+                14
+              ],
+              "behavior": 0
+            },
+            {
+              "cell": [
+                0,
+                15
+              ],
+              "behavior": 0
+            }
+          ]
+        },
+        "inside": {
+          "map": "EcruteakCity_EastGate",
+          "segments": [
+            [
+              10,
+              6
+            ],
+            [
+              10,
+              7
+            ],
+            [
+              10,
+              8
+            ]
+          ],
+          "exit_press": [
+            1,
+            0
+          ],
+          "intended_arrival_facing": 3,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                10,
+                6
+              ],
+              "behavior": 97
+            },
+            {
+              "cell": [
+                10,
+                7
+              ],
+              "behavior": 97
+            },
+            {
+              "cell": [
+                10,
+                8
+              ],
+              "behavior": 97
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "bell-tower",
+      "city": "ecruteak",
+      "sides": {
+        "outside": {
+          "map": "BellchimeTrail",
+          "segments": [
+            [
+              37,
+              20
+            ]
+          ],
+          "exit_press": [
+            0,
+            -1
+          ],
+          "intended_arrival_facing": 1,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                37,
+                20
+              ],
+              "behavior": 96
+            }
+          ]
+        },
+        "inside": {
+          "map": "EcruteakCity_BellTower",
+          "segments": [
+            [
+              11,
+              22
+            ],
+            [
+              12,
+              22
+            ]
+          ],
+          "exit_press": [
+            0,
+            1
+          ],
+          "intended_arrival_facing": 2,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                11,
+                22
+              ],
+              "behavior": 101
+            },
+            {
+              "cell": [
+                12,
+                22
+              ],
+              "behavior": 101
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "trail-station-return",
+      "city": "ecruteak",
+      "sides": {
+        "outside": {
+          "map": "BellchimeTrail",
+          "segments": [
+            [
+              9,
+              14
+            ]
+          ],
+          "exit_press": [
+            0,
+            -1
+          ],
+          "intended_arrival_facing": 1,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                9,
+                14
+              ],
+              "behavior": 96
+            }
+          ]
+        },
+        "inside": {
+          "map": "EcruteakCity_BarrierCorridor",
+          "segments": [
+            [
+              6,
+              3
+            ]
+          ],
+          "exit_press": [
+            0,
+            -1
+          ],
+          "intended_arrival_facing": 1,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                6,
+                3
+              ],
+              "behavior": 97
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "station-corridor-stairs",
+      "city": "ecruteak",
+      "sides": {
+        "outside": {
+          "map": "EcruteakCity_BarrierStation",
+          "segments": [
+            [
+              15,
+              3
+            ]
+          ],
+          "exit_press": [
+            0,
+            -1
+          ],
+          "intended_arrival_facing": 1,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                15,
+                3
+              ],
+              "behavior": 97
+            }
+          ]
+        },
+        "inside": {
+          "map": "EcruteakCity_BarrierCorridor",
+          "segments": [
+            [
+              3,
+              19
+            ]
+          ],
+          "exit_press": [
+            0,
+            1
+          ],
+          "intended_arrival_facing": 2,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                3,
+                19
+              ],
+              "behavior": 97
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "olivine-joe-residence",
+      "city": "olivine",
+      "sides": {
+        "outside": {
+          "map": "OlivineCity",
+          "segments": [
+            [
+              8,
+              23
+            ]
+          ],
+          "exit_press": [
+            0,
+            -1
+          ],
+          "intended_arrival_facing": 1,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                8,
+                23
+              ],
+              "behavior": 105
+            }
+          ]
+        },
+        "inside": {
+          "map": "OlivineCity_Residence",
+          "segments": [
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "exit_press": [
+            0,
+            1
+          ],
+          "intended_arrival_facing": 2,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                3,
+                7
+              ],
+              "behavior": 101
+            },
+            {
+              "cell": [
+                4,
+                7
+              ],
+              "behavior": 101
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "olivine-accepted-neighbour",
+      "city": "olivine",
+      "sides": {
+        "outside": {
+          "map": "OlivineCity",
+          "segments": [
+            [
+              8,
+              28
+            ]
+          ],
+          "exit_press": [
+            0,
+            -1
+          ],
+          "intended_arrival_facing": 1,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                8,
+                28
+              ],
+              "behavior": 105
+            }
+          ]
+        },
+        "inside": {
+          "map": "OlivineCity_NeighborHouse",
+          "segments": [
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "exit_press": [
+            0,
+            1
+          ],
+          "intended_arrival_facing": 2,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                3,
+                7
+              ],
+              "behavior": 101
+            },
+            {
+              "cell": [
+                4,
+                7
+              ],
+              "behavior": 101
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "olivine-custom-gym",
+      "city": "olivine",
+      "sides": {
+        "outside": {
+          "map": "OlivineCity",
+          "segments": [
+            [
+              13,
+              14
+            ],
+            [
+              14,
+              14
+            ]
+          ],
+          "exit_press": [
+            0,
+            -1
+          ],
+          "intended_arrival_facing": 1,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                13,
+                14
+              ],
+              "behavior": 96
+            },
+            {
+              "cell": [
+                14,
+                14
+              ],
+              "behavior": 96
+            }
+          ]
+        },
+        "inside": {
+          "map": "OlivineCity_Gym",
+          "segments": [
+            [
+              6,
+              10
+            ],
+            [
+              7,
+              10
+            ]
+          ],
+          "exit_press": [
+            0,
+            1
+          ],
+          "intended_arrival_facing": 2,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                6,
+                10
+              ],
+              "behavior": 101
+            },
+            {
+              "cell": [
+                7,
+                10
+              ],
+              "behavior": 101
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "olivine-pokemon-center",
+      "city": "olivine",
+      "sides": {
+        "outside": {
+          "map": "OlivineCity",
+          "segments": [
+            [
+              16,
+              33
+            ],
+            [
+              17,
+              33
+            ]
+          ],
+          "exit_press": [
+            0,
+            -1
+          ],
+          "intended_arrival_facing": 1,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                16,
+                33
+              ],
+              "behavior": 96
+            },
+            {
+              "cell": [
+                17,
+                33
+              ],
+              "behavior": 96
+            }
+          ]
+        },
+        "inside": {
+          "map": "OlivineCity_PokemonCenter_1F",
+          "segments": [
+            [
+              8,
+              19
+            ],
+            [
+              9,
+              19
+            ]
+          ],
+          "exit_press": [
+            0,
+            1
+          ],
+          "intended_arrival_facing": 2,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                8,
+                19
+              ],
+              "behavior": 101
+            },
+            {
+              "cell": [
+                9,
+                19
+              ],
+              "behavior": 101
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "olivine-poke-mart",
+      "city": "olivine",
+      "sides": {
+        "outside": {
+          "map": "OlivineCity",
+          "segments": [
+            [
+              29,
+              33
+            ]
+          ],
+          "exit_press": [
+            0,
+            -1
+          ],
+          "intended_arrival_facing": 1,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                29,
+                33
+              ],
+              "behavior": 96
+            }
+          ]
+        },
+        "inside": {
+          "map": "OlivineCity_Mart",
+          "segments": [
+            [
+              4,
+              11
+            ],
+            [
+              5,
+              11
+            ]
+          ],
+          "exit_press": [
+            0,
+            1
+          ],
+          "intended_arrival_facing": 2,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                4,
+                11
+              ],
+              "behavior": 101
+            },
+            {
+              "cell": [
+                5,
+                11
+              ],
+              "behavior": 101
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "olivine-silph-office",
+      "city": "olivine",
+      "sides": {
+        "outside": {
+          "map": "OlivineCity",
+          "segments": [
+            [
+              31,
+              40
+            ]
+          ],
+          "exit_press": [
+            0,
+            -1
+          ],
+          "intended_arrival_facing": 1,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                31,
+                40
+              ],
+              "behavior": 96
+            }
+          ]
+        },
+        "inside": {
+          "map": "OlivineCity_SilphOffice",
+          "segments": [
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "exit_press": [
+            0,
+            1
+          ],
+          "intended_arrival_facing": 2,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                3,
+                7
+              ],
+              "behavior": 101
+            },
+            {
+              "cell": [
+                4,
+                7
+              ],
+              "behavior": 101
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "olivine-harbor-office",
+      "city": "olivine",
+      "sides": {
+        "outside": {
+          "map": "OlivineCity",
+          "segments": [
+            [
+              8,
+              40
+            ]
+          ],
+          "exit_press": [
+            0,
+            -1
+          ],
+          "intended_arrival_facing": 1,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                8,
+                40
+              ],
+              "behavior": 105
+            }
+          ]
+        },
+        "inside": {
+          "map": "OlivineCity_HarborOffice",
+          "segments": [
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "exit_press": [
+            0,
+            1
+          ],
+          "intended_arrival_facing": 2,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                3,
+                7
+              ],
+              "behavior": 101
+            },
+            {
+              "cell": [
+                4,
+                7
+              ],
+              "behavior": 101
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "olivine-lighthouse",
+      "city": "olivine",
+      "sides": {
+        "outside": {
+          "map": "OlivineCity",
+          "segments": [
+            [
+              45,
+              39
+            ]
+          ],
+          "exit_press": [
+            0,
+            -1
+          ],
+          "intended_arrival_facing": 1,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                45,
+                39
+              ],
+              "behavior": 96
+            }
+          ]
+        },
+        "inside": {
+          "map": "OlivineCity_Lighthouse_1F",
+          "segments": [
+            [
+              8,
+              17
+            ],
+            [
+              9,
+              17
+            ]
+          ],
+          "exit_press": [
+            0,
+            1
+          ],
+          "intended_arrival_facing": 2,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                8,
+                17
+              ],
+              "behavior": 101
+            },
+            {
+              "cell": [
+                9,
+                17
+              ],
+              "behavior": 101
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "olivine-fishing-house",
+      "city": "olivine",
+      "sides": {
+        "outside": {
+          "map": "OlivineCity",
+          "segments": [
+            [
+              17,
+              23
+            ]
+          ],
+          "exit_press": [
+            0,
+            -1
+          ],
+          "intended_arrival_facing": 1,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                17,
+                23
+              ],
+              "behavior": 96
+            }
+          ]
+        },
+        "inside": {
+          "map": "OlivineCity_FishingHouse",
+          "segments": [
+            [
+              4,
+              8
+            ],
+            [
+              5,
+              8
+            ]
+          ],
+          "exit_press": [
+            0,
+            1
+          ],
+          "intended_arrival_facing": 2,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                4,
+                8
+              ],
+              "behavior": 101
+            },
+            {
+              "cell": [
+                5,
+                8
+              ],
+              "behavior": 101
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "olivine-trade-house",
+      "city": "olivine",
+      "sides": {
+        "outside": {
+          "map": "OlivineCity",
+          "segments": [
+            [
+              31,
+              17
+            ]
+          ],
+          "exit_press": [
+            0,
+            -1
+          ],
+          "intended_arrival_facing": 1,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                31,
+                17
+              ],
+              "behavior": 96
+            }
+          ]
+        },
+        "inside": {
+          "map": "OlivineCity_TradeHouse",
+          "segments": [
+            [
+              4,
+              8
+            ],
+            [
+              5,
+              8
+            ]
+          ],
+          "exit_press": [
+            0,
+            1
+          ],
+          "intended_arrival_facing": 2,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                4,
+                8
+              ],
+              "behavior": 101
+            },
+            {
+              "cell": [
+                5,
+                8
+              ],
+              "behavior": 101
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "olivine-seal-house",
+      "city": "olivine",
+      "sides": {
+        "outside": {
+          "map": "OlivineCity",
+          "segments": [
+            [
+              36,
+              17
+            ]
+          ],
+          "exit_press": [
+            0,
+            -1
+          ],
+          "intended_arrival_facing": 1,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                36,
+                17
+              ],
+              "behavior": 96
+            }
+          ]
+        },
+        "inside": {
+          "map": "OlivineCity_SealHouse",
+          "segments": [
+            [
+              4,
+              8
+            ],
+            [
+              5,
+              8
+            ]
+          ],
+          "exit_press": [
+            0,
+            1
+          ],
+          "intended_arrival_facing": 2,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                4,
+                8
+              ],
+              "behavior": 101
+            },
+            {
+              "cell": [
+                5,
+                8
+              ],
+              "behavior": 101
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "olivine-cafe",
+      "city": "olivine",
+      "sides": {
+        "outside": {
+          "map": "OlivineCity",
+          "segments": [
+            [
+              9,
+              33
+            ]
+          ],
+          "exit_press": [
+            0,
+            -1
+          ],
+          "intended_arrival_facing": 1,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                9,
+                33
+              ],
+              "behavior": 96
+            }
+          ]
+        },
+        "inside": {
+          "map": "OlivineCity_Cafe",
+          "segments": [
+            [
+              5,
+              10
+            ],
+            [
+              6,
+              10
+            ]
+          ],
+          "exit_press": [
+            0,
+            1
+          ],
+          "intended_arrival_facing": 2,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                5,
+                10
+              ],
+              "behavior": 101
+            },
+            {
+              "cell": [
+                6,
+                10
+              ],
+              "behavior": 101
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "olivine-port-city-entrance",
+      "city": "olivine",
+      "sides": {
+        "outside": {
+          "map": "OlivineCity",
+          "segments": [
+            [
+              23,
+              52
+            ],
+            [
+              24,
+              52
+            ]
+          ],
+          "exit_press": [
+            0,
+            1
+          ],
+          "intended_arrival_facing": 2,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                23,
+                52
+              ],
+              "behavior": 97
+            },
+            {
+              "cell": [
+                24,
+                52
+              ],
+              "behavior": 97
+            }
+          ]
+        },
+        "inside": {
+          "map": "OlivineCity_PortTerminal",
+          "segments": [
+            [
+              7,
+              2
+            ],
+            [
+              8,
+              2
+            ]
+          ],
+          "exit_press": [
+            0,
+            -1
+          ],
+          "intended_arrival_facing": 1,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                7,
+                2
+              ],
+              "behavior": 97
+            },
+            {
+              "cell": [
+                8,
+                2
+              ],
+              "behavior": 97
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "olivine-gym-hallway",
+      "city": "olivine",
+      "sides": {
+        "outside": {
+          "map": "OlivineCity_Gym",
+          "segments": [
+            [
+              5,
+              0
+            ],
+            [
+              6,
+              0
+            ],
+            [
+              7,
+              0
+            ]
+          ],
+          "exit_press": [
+            0,
+            -1
+          ],
+          "intended_arrival_facing": 1,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                5,
+                0
+              ],
+              "behavior": 97
+            },
+            {
+              "cell": [
+                6,
+                0
+              ],
+              "behavior": 97
+            },
+            {
+              "cell": [
+                7,
+                0
+              ],
+              "behavior": 97
+            }
+          ]
+        },
+        "inside": {
+          "map": "OlivineCity_Gym_Arena",
+          "segments": [
+            [
+              5,
+              16
+            ],
+            [
+              6,
+              16
+            ],
+            [
+              7,
+              16
+            ]
+          ],
+          "exit_press": [
+            0,
+            1
+          ],
+          "intended_arrival_facing": 2,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                5,
+                16
+              ],
+              "behavior": 97
+            },
+            {
+              "cell": [
+                6,
+                16
+              ],
+              "behavior": 97
+            },
+            {
+              "cell": [
+                7,
+                16
+              ],
+              "behavior": 97
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "olivine-port-quay-main",
+      "city": "olivine",
+      "sides": {
+        "outside": {
+          "map": "OlivineCity_PortQuay",
+          "segments": [
+            [
+              16,
+              15
+            ],
+            [
+              17,
+              15
+            ]
+          ],
+          "exit_press": [
+            0,
+            -1
+          ],
+          "intended_arrival_facing": 1,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                16,
+                15
+              ],
+              "behavior": 97
+            },
+            {
+              "cell": [
+                17,
+                15
+              ],
+              "behavior": 97
+            }
+          ]
+        },
+        "inside": {
+          "map": "OlivineCity_PortTerminal",
+          "segments": [
+            [
+              7,
+              11
+            ],
+            [
+              8,
+              11
+            ]
+          ],
+          "exit_press": [
+            0,
+            1
+          ],
+          "intended_arrival_facing": 2,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                7,
+                11
+              ],
+              "behavior": 101
+            },
+            {
+              "cell": [
+                8,
+                11
+              ],
+              "behavior": 101
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "olivine-port-inspection-side",
+      "city": "olivine",
+      "sides": {
+        "outside": {
+          "map": "OlivineCity_PortQuay",
+          "segments": [
+            [
+              11,
+              13
+            ],
+            [
+              11,
+              14
+            ]
+          ],
+          "exit_press": [
+            1,
+            0
+          ],
+          "intended_arrival_facing": 3,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                11,
+                13
+              ],
+              "behavior": 97
+            },
+            {
+              "cell": [
+                11,
+                14
+              ],
+              "behavior": 97
+            }
+          ]
+        },
+        "inside": {
+          "map": "OlivineCity_PortTerminal",
+          "segments": [
+            [
+              1,
+              7
+            ],
+            [
+              1,
+              8
+            ]
+          ],
+          "exit_press": [
+            -1,
+            0
+          ],
+          "intended_arrival_facing": 4,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                1,
+                7
+              ],
+              "behavior": 97
+            },
+            {
+              "cell": [
+                1,
+                8
+              ],
+              "behavior": 97
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "olivine-lighthouse-balcony",
+      "city": "olivine",
+      "sides": {
+        "outside": {
+          "map": "OlivineCity_Lighthouse_Balcony",
+          "segments": [
+            [
+              8,
+              12
+            ],
+            [
+              9,
+              12
+            ]
+          ],
+          "exit_press": [
+            0,
+            -1
+          ],
+          "intended_arrival_facing": 1,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                8,
+                12
+              ],
+              "behavior": 97
+            },
+            {
+              "cell": [
+                9,
+                12
+              ],
+              "behavior": 97
+            }
+          ]
+        },
+        "inside": {
+          "map": "OlivineCity_Lighthouse_3F",
+          "segments": [
+            [
+              8,
+              18
+            ],
+            [
+              9,
+              18
+            ]
+          ],
+          "exit_press": [
+            0,
+            1
+          ],
+          "intended_arrival_facing": 2,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                8,
+                18
+              ],
+              "behavior": 97
+            },
+            {
+              "cell": [
+                9,
+                18
+              ],
+              "behavior": 97
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "aqua-gangway",
+      "city": "olivine",
+      "sides": {
+        "outside": {
+          "map": "OlivineCity_PortQuay",
+          "segments": [
+            [
+              27,
+              20
+            ],
+            [
+              28,
+              20
+            ]
+          ],
+          "exit_press": [
+            0,
+            -1
+          ],
+          "intended_arrival_facing": 1,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                27,
+                20
+              ],
+              "behavior": 97
+            },
+            {
+              "cell": [
+                28,
+                20
+              ],
+              "behavior": 97
+            }
+          ]
+        },
+        "inside": {
+          "map": "SSAqua_1F",
+          "segments": [
+            [
+              24,
+              19
+            ],
+            [
+              25,
+              19
+            ],
+            [
+              22,
+              19
+            ],
+            [
+              23,
+              19
+            ],
+            [
+              26,
+              19
+            ]
+          ],
+          "exit_press": [
+            0,
+            1
+          ],
+          "intended_arrival_facing": 2,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                24,
+                19
+              ],
+              "behavior": 97
+            },
+            {
+              "cell": [
+                25,
+                19
+              ],
+              "behavior": 97
+            },
+            {
+              "cell": [
+                22,
+                19
+              ],
+              "behavior": 97
+            },
+            {
+              "cell": [
+                23,
+                19
+              ],
+              "behavior": 97
+            },
+            {
+              "cell": [
+                26,
+                19
+              ],
+              "behavior": 97
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "aqua-southwestcabins-0",
+      "city": "olivine",
+      "sides": {
+        "outside": {
+          "map": "SSAqua_1F",
+          "segments": [
+            [
+              13,
+              14
+            ],
+            [
+              14,
+              14
+            ]
+          ],
+          "exit_press": [
+            0,
+            1
+          ],
+          "intended_arrival_facing": 2,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                13,
+                14
+              ],
+              "behavior": 97
+            },
+            {
+              "cell": [
+                14,
+                14
+              ],
+              "behavior": 97
+            }
+          ]
+        },
+        "inside": {
+          "map": "SSAqua_SouthwestCabins",
+          "segments": [
+            [
+              9,
+              2
+            ],
+            [
+              10,
+              2
+            ]
+          ],
+          "exit_press": [
+            0,
+            -1
+          ],
+          "intended_arrival_facing": 1,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                9,
+                2
+              ],
+              "behavior": 96
+            },
+            {
+              "cell": [
+                10,
+                2
+              ],
+              "behavior": 96
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "aqua-southwestcabins-1",
+      "city": "olivine",
+      "sides": {
+        "outside": {
+          "map": "SSAqua_1F",
+          "segments": [
+            [
+              19,
+              14
+            ],
+            [
+              20,
+              14
+            ]
+          ],
+          "exit_press": [
+            0,
+            1
+          ],
+          "intended_arrival_facing": 2,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                19,
+                14
+              ],
+              "behavior": 97
+            },
+            {
+              "cell": [
+                20,
+                14
+              ],
+              "behavior": 97
+            }
+          ]
+        },
+        "inside": {
+          "map": "SSAqua_SouthwestCabins",
+          "segments": [
+            [
+              23,
+              2
+            ],
+            [
+              24,
+              2
+            ]
+          ],
+          "exit_press": [
+            0,
+            -1
+          ],
+          "intended_arrival_facing": 1,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                23,
+                2
+              ],
+              "behavior": 96
+            },
+            {
+              "cell": [
+                24,
+                2
+              ],
+              "behavior": 96
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "aqua-southeastcabins-0",
+      "city": "olivine",
+      "sides": {
+        "outside": {
+          "map": "SSAqua_1F",
+          "segments": [
+            [
+              30,
+              14
+            ],
+            [
+              31,
+              14
+            ]
+          ],
+          "exit_press": [
+            0,
+            1
+          ],
+          "intended_arrival_facing": 2,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                30,
+                14
+              ],
+              "behavior": 97
+            },
+            {
+              "cell": [
+                31,
+                14
+              ],
+              "behavior": 97
+            }
+          ]
+        },
+        "inside": {
+          "map": "SSAqua_SoutheastCabins",
+          "segments": [
+            [
+              9,
+              2
+            ],
+            [
+              10,
+              2
+            ]
+          ],
+          "exit_press": [
+            0,
+            -1
+          ],
+          "intended_arrival_facing": 1,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                9,
+                2
+              ],
+              "behavior": 96
+            },
+            {
+              "cell": [
+                10,
+                2
+              ],
+              "behavior": 96
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "aqua-southeastcabins-1",
+      "city": "olivine",
+      "sides": {
+        "outside": {
+          "map": "SSAqua_1F",
+          "segments": [
+            [
+              36,
+              14
+            ],
+            [
+              37,
+              14
+            ]
+          ],
+          "exit_press": [
+            0,
+            1
+          ],
+          "intended_arrival_facing": 2,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                36,
+                14
+              ],
+              "behavior": 97
+            },
+            {
+              "cell": [
+                37,
+                14
+              ],
+              "behavior": 97
+            }
+          ]
+        },
+        "inside": {
+          "map": "SSAqua_SoutheastCabins",
+          "segments": [
+            [
+              23,
+              2
+            ],
+            [
+              24,
+              2
+            ]
+          ],
+          "exit_press": [
+            0,
+            -1
+          ],
+          "intended_arrival_facing": 1,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                23,
+                2
+              ],
+              "behavior": 96
+            },
+            {
+              "cell": [
+                24,
+                2
+              ],
+              "behavior": 96
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "aqua-northwestcabins-0",
+      "city": "olivine",
+      "sides": {
+        "outside": {
+          "map": "SSAqua_1F",
+          "segments": [
+            [
+              13,
+              8
+            ],
+            [
+              14,
+              8
+            ]
+          ],
+          "exit_press": [
+            0,
+            -1
+          ],
+          "intended_arrival_facing": 1,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                13,
+                8
+              ],
+              "behavior": 96
+            },
+            {
+              "cell": [
+                14,
+                8
+              ],
+              "behavior": 96
+            }
+          ]
+        },
+        "inside": {
+          "map": "SSAqua_NorthwestCabins",
+          "segments": [
+            [
+              9,
+              11
+            ],
+            [
+              10,
+              11
+            ]
+          ],
+          "exit_press": [
+            0,
+            1
+          ],
+          "intended_arrival_facing": 2,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                9,
+                11
+              ],
+              "behavior": 97
+            },
+            {
+              "cell": [
+                10,
+                11
+              ],
+              "behavior": 97
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "aqua-northwestcabins-1",
+      "city": "olivine",
+      "sides": {
+        "outside": {
+          "map": "SSAqua_1F",
+          "segments": [
+            [
+              19,
+              8
+            ],
+            [
+              20,
+              8
+            ]
+          ],
+          "exit_press": [
+            0,
+            -1
+          ],
+          "intended_arrival_facing": 1,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                19,
+                8
+              ],
+              "behavior": 96
+            },
+            {
+              "cell": [
+                20,
+                8
+              ],
+              "behavior": 96
+            }
+          ]
+        },
+        "inside": {
+          "map": "SSAqua_NorthwestCabins",
+          "segments": [
+            [
+              23,
+              11
+            ],
+            [
+              24,
+              11
+            ]
+          ],
+          "exit_press": [
+            0,
+            1
+          ],
+          "intended_arrival_facing": 2,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                23,
+                11
+              ],
+              "behavior": 97
+            },
+            {
+              "cell": [
+                24,
+                11
+              ],
+              "behavior": 97
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "aqua-northeastcabins-0",
+      "city": "olivine",
+      "sides": {
+        "outside": {
+          "map": "SSAqua_1F",
+          "segments": [
+            [
+              30,
+              8
+            ],
+            [
+              31,
+              8
+            ]
+          ],
+          "exit_press": [
+            0,
+            -1
+          ],
+          "intended_arrival_facing": 1,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                30,
+                8
+              ],
+              "behavior": 96
+            },
+            {
+              "cell": [
+                31,
+                8
+              ],
+              "behavior": 96
+            }
+          ]
+        },
+        "inside": {
+          "map": "SSAqua_NortheastCabins",
+          "segments": [
+            [
+              9,
+              11
+            ],
+            [
+              10,
+              11
+            ]
+          ],
+          "exit_press": [
+            0,
+            1
+          ],
+          "intended_arrival_facing": 2,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                9,
+                11
+              ],
+              "behavior": 97
+            },
+            {
+              "cell": [
+                10,
+                11
+              ],
+              "behavior": 97
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "aqua-northeastcabins-1",
+      "city": "olivine",
+      "sides": {
+        "outside": {
+          "map": "SSAqua_1F",
+          "segments": [
+            [
+              36,
+              8
+            ],
+            [
+              37,
+              8
+            ]
+          ],
+          "exit_press": [
+            0,
+            -1
+          ],
+          "intended_arrival_facing": 1,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                36,
+                8
+              ],
+              "behavior": 96
+            },
+            {
+              "cell": [
+                37,
+                8
+              ],
+              "behavior": 96
+            }
+          ]
+        },
+        "inside": {
+          "map": "SSAqua_NortheastCabins",
+          "segments": [
+            [
+              23,
+              11
+            ],
+            [
+              24,
+              11
+            ]
+          ],
+          "exit_press": [
+            0,
+            1
+          ],
+          "intended_arrival_facing": 2,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                23,
+                11
+              ],
+              "behavior": 97
+            },
+            {
+              "cell": [
+                24,
+                11
+              ],
+              "behavior": 97
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "aqua-captainroom-0",
+      "city": "olivine",
+      "sides": {
+        "outside": {
+          "map": "SSAqua_1F",
+          "segments": [
+            [
+              49,
+              15
+            ],
+            [
+              50,
+              15
+            ]
+          ],
+          "exit_press": [
+            0,
+            -1
+          ],
+          "intended_arrival_facing": 1,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                49,
+                15
+              ],
+              "behavior": 96
+            },
+            {
+              "cell": [
+                50,
+                15
+              ],
+              "behavior": 96
+            }
+          ]
+        },
+        "inside": {
+          "map": "SSAqua_CaptainRoom",
+          "segments": [
+            [
+              9,
+              11
+            ],
+            [
+              10,
+              11
+            ]
+          ],
+          "exit_press": [
+            0,
+            1
+          ],
+          "intended_arrival_facing": 2,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                9,
+                11
+              ],
+              "behavior": 97
+            },
+            {
+              "cell": [
+                10,
+                11
+              ],
+              "behavior": 97
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "aqua-west-stairs",
+      "city": "olivine",
+      "sides": {
+        "outside": {
+          "map": "SSAqua_1F",
+          "segments": [
+            [
+              24,
+              3
+            ],
+            [
+              25,
+              3
+            ]
+          ],
+          "exit_press": [
+            0,
+            -1
+          ],
+          "intended_arrival_facing": 1,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                24,
+                3
+              ],
+              "behavior": 96
+            },
+            {
+              "cell": [
+                25,
+                3
+              ],
+              "behavior": 96
+            }
+          ]
+        },
+        "inside": {
+          "map": "SSAqua_B1F",
+          "segments": [
+            [
+              24,
+              3
+            ],
+            [
+              25,
+              3
+            ]
+          ],
+          "exit_press": [
+            0,
+            -1
+          ],
+          "intended_arrival_facing": 1,
+          "reason": "Face away from this visible threshold into its dry landing, opposite the independently specified outward/exit approach vector.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                24,
+                3
+              ],
+              "behavior": 96
+            },
+            {
+              "cell": [
+                25,
+                3
+              ],
+              "behavior": 96
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "aqua-right-stairs-north-rim",
+      "city": "olivine",
+      "sides": {
+        "outside": {
+          "map": "SSAqua_1F",
+          "segments": [
+            [
+              42,
+              8
+            ],
+            [
+              43,
+              8
+            ]
+          ],
+          "exit_press": [
+            0,
+            1
+          ],
+          "intended_arrival_facing": 1,
+          "reason": "Same-orientation north stair rim: arrive southwards into the lower landing. Source B1F ordinal2 returns to canonical1F row9; the other native north-rim leaf lands row8. Inverting this subgroup approach would face back toward the raised rim.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                42,
+                8
+              ],
+              "behavior": 97
+            },
+            {
+              "cell": [
+                43,
+                8
+              ],
+              "behavior": 97
+            }
+          ]
+        },
+        "inside": {
+          "map": "SSAqua_B1F",
+          "segments": [
+            [
+              42,
+              8
+            ],
+            [
+              43,
+              8
+            ]
+          ],
+          "exit_press": [
+            0,
+            1
+          ],
+          "intended_arrival_facing": 1,
+          "reason": "Same-orientation north stair rim: arrive southwards into the lower landing. Source B1F ordinal2 returns to canonical1F row9; the other native north-rim leaf lands row8. Inverting this subgroup approach would face back toward the raised rim.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                42,
+                8
+              ],
+              "behavior": 97
+            },
+            {
+              "cell": [
+                43,
+                8
+              ],
+              "behavior": 97
+            }
+          ]
+        }
+      }
+    },
+    {
+      "label": "aqua-right-stairs-south-rim",
+      "city": "olivine",
+      "sides": {
+        "outside": {
+          "map": "SSAqua_1F",
+          "segments": [
+            [
+              42,
+              9
+            ],
+            [
+              43,
+              9
+            ]
+          ],
+          "exit_press": [
+            0,
+            -1
+          ],
+          "intended_arrival_facing": 2,
+          "reason": "Same-orientation south stair rim: arrive northwards into the upper landing. These ladders preserve the entering northward movement; this is not a doorway that reverses its normal.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                42,
+                9
+              ],
+              "behavior": 97
+            },
+            {
+              "cell": [
+                43,
+                9
+              ],
+              "behavior": 97
+            }
+          ]
+        },
+        "inside": {
+          "map": "SSAqua_B1F",
+          "segments": [
+            [
+              42,
+              9
+            ],
+            [
+              43,
+              9
+            ]
+          ],
+          "exit_press": [
+            0,
+            -1
+          ],
+          "intended_arrival_facing": 2,
+          "reason": "Same-orientation south stair rim: arrive northwards into the upper landing. These ladders preserve the entering northward movement; this is not a doorway that reverses its normal.",
+          "native_target_behaviors": [
+            {
+              "cell": [
+                42,
+                9
+              ],
+              "behavior": 97
+            },
+            {
+              "cell": [
+                43,
+                9
+              ],
+              "behavior": 97
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
