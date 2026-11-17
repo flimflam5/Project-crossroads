@@ -30,6 +30,66 @@ def validate():
   before=struct.unpack('<'+str(w*h)+'H',old);after=struct.unpack('<'+str(w*h)+'H',b);oldres=resources(*[(SOURCES[c['layout'][k]][0],SOURCES[c['layout'][k]][1]) for k in ['primary_tileset','secondary_tileset']]);newres=resources(('primary','bl_gym_'+p['code']),('secondary','bl_gym_'+p['code']))
   allowed=set()
   for x,y,ww,hh in [p['old_footprint'],[*p['origin'],8,7]]:allowed|={(X,Y) for Y in range(y,y+hh) for X in range(x,x+ww)}
+  if n=='AzaleaTown':
+   # The separately attributed donor kiln is the only authorised non-Gym
+   # change. Verify its source pixels and attributes before excluding its
+   # sixteen tiles from the unchanged-baseline comparison below.
+   from hns_kiln_facade import D
+   kp=p['kiln'];assert kp['origin']==[19,30] and kp['door']==[20,33]
+   paths=[D/'tilesets/primary/johto_south_hns',D/'tilesets/secondary/azalea_town_hns'];sm=[];sa=[];sheets=[]
+   for q in paths:
+    z=(q/'metatiles.bin').read_bytes();sm.append(struct.unpack('<'+str(len(z)//2)+'H',z))
+    z=(q/'metatile_attributes.bin').read_bytes();sa.append(struct.unpack('<'+str(len(z)//2)+'H',z));sheets.append(Image.open(q/'tiles.png'))
+   dm=(D/'layouts/AzaleaTown_hns/map.bin').read_bytes();dm=struct.unpack('<'+str(len(dm)//2)+'H',dm)
+   donor_pal={i:[tuple(int(v)//8 for v in line.split()) for line in (paths[int(i>=6)]/f'palettes/{i:02}.pal').read_text().splitlines()[3:]] for i in [0,2,7,10,11]}
+   for i,dest in enumerate(kp['metatile_ids']):
+    x,y=i%4,i//4;source=dm[(20+y)*62+37+x];ident=source&1023;k=int(ident>=640);j=ident-(640 if k else 0)
+    raw=after[(30+y)*w+19+x];assert raw==kp['stamp'][i] and raw&1023==dest
+    expected_attr=sa[k][j];expected_collision=source&0xc00
+    if i==13:expected_attr=(expected_attr&~255)|0x60;expected_collision=0
+    assert newres[2][1][dest-512]==expected_attr and raw&0xc00==expected_collision
+    words=sm[k][j*8:j*8+8];target=newres[1][1][(dest-512)*8:(dest-511)*8]
+    for sv,dv in zip(words,target):
+     sid=sv&1023;dk=dv&1023
+     if sid==0:assert dk==0;continue
+     sk=int(sid>=640);sid-=640 if sk else 0;di=dk%512
+     src=sheets[sk].crop((sid%16*8,sid//16*8,sid%16*8+8,sid//16*8+8)).tobytes()
+     dst=newres[0][dk>=512].crop((di%16*8,di//16*8,di%16*8+8,di//16*8+8)).tobytes()
+     assert src==dst and sv&0xc00==dv&0xc00
+     assert donor_pal[sv>>12]==newres[3][dv>>12]
+    allowed.add((19+x,30+y))
+   door=m['warp_events'][7];assert (door['x'],door['y'],door['dest_map'],door['dest_warp_id'])==(20,33,'MAP_AZALEA_TOWN_CHARCOAL_KILN','0')
+   kiln=load('data/maps/AzaleaTown_CharcoalKiln/map.json');assert kiln['warp_events'][0]['dest_map']==m['id'] and kiln['warp_events'][0]['dest_warp_id']=='7'
+   anim=(R/'graphics/door_anims/hns_johto_general.png').read_bytes()
+   assert anim==(D.parent/'graphics/door_anims/johtogeneral_hns.png').read_bytes()
+   assert Image.open(R/'graphics/door_anims/hns_johto_general.png').size==(16,48)
+   header=(R/'include/constants/azalea_kiln_door.h').read_text()
+   assert f"METATILE_AZALEA_KILN_DOOR {kp['metatile_ids'][13]}" in header
+   assert f"AZALEA_KILN_DOOR_PALETTE {kp['palette_mapping']['2']}" in header
+   assert f"AZALEA_KILN_ORIGIN_X {kp['origin'][0]}" in header
+   assert f"AZALEA_KILN_ORIGIN_Y {kp['origin'][1]}" in header
+   assert 'AZALEA_KILN_WIDTH 4' in header and 'AZALEA_KILN_HEIGHT 4' in header
+   source=(R/'src/field_door.c').read_text()
+   entry=source.split('.metatileNum = METATILE_AZALEA_KILN_DOOR,',1)[1].split('},',1)[0]
+   assert '.tileset = &gTileset_BlGymAzaleaSecondary' in entry and '.size = DOOR_SIZE_1x1' in entry and '.tiles = sDoorAnimTiles_AzaleaKiln' in entry
+   # A preexisting save can stand on any old walkable tile of the new facade.
+   # Prove at least a conservative non-warp escape from each; runtime Continue
+   # tests are still required because this graph does not model object behavior.
+   from collections import deque
+   for yy in range(30,34):
+    for xx in range(19,23):
+     was=before[yy*w+xx]
+     if was&0xc00 or was>>12!=3:continue
+     queue=deque([(xx,yy)]);seen={(xx,yy)};escaped=False
+     while queue:
+      X,Y=queue.popleft()
+      if not (19<=X<23 and 30<=Y<34):escaped=True;break
+      for nx,ny in [(X-1,Y),(X+1,Y),(X,Y-1),(X,Y+1)]:
+       if not (0<=nx<w and 0<=ny<h) or (nx,ny) in seen or (nx,ny)==(20,33):continue
+       value=after[ny*w+nx]
+       if value&0xc00 or value>>12!=3:continue
+       seen.add((nx,ny));queue.append((nx,ny))
+     assert escaped,('Old Azalea save cannot escape kiln footprint',xx,yy)
   used=set()
   for i,(a,b) in enumerate(zip(before,after)):
    if (i%w,i//w) in allowed:continue
@@ -51,6 +111,6 @@ def validate():
     if v&0x800:actual=actual.transpose(Image.Transpose.FLIP_TOP_BOTTOM)
     expected=asset.crop((x*16+j%2*8,y*16+j//2*8,x*16+j%2*8+8,y*16+j//2*8+8)).tobytes();assert actual.tobytes()==expected,(n,'Owner Gym pixels changed',cell,j)
   count+=len(used)
- print('Eight owner asset checksums/pixel identity, all non-Gym pixels/collision/events, stable IDs and reciprocal two-door pairs: PASS',count,'legacy metatiles')
+ print('Eight owner Gym assets, unchanged legacy pixels/events and reciprocal doors: PASS',count,'legacy metatiles; Azalea kiln has separately validated donor pixels/collision and old-cell escape')
  return set(plans)
 if __name__=='__main__':validate()

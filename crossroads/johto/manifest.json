@@ -2929,6 +2929,13 @@
           "elevation": 0,
           "dest_map": "MAP_AZALEA_TOWN_GYM",
           "dest_warp_id": "1"
+        },
+        {
+          "x": 20,
+          "y": 33,
+          "elevation": 0,
+          "dest_map": "MAP_AZALEA_TOWN_CHARCOAL_KILN",
+          "dest_warp_id": "0"
         }
       ],
       "display_name": "AzaleaTown",
@@ -7416,6 +7423,30 @@
           "elevation": 0,
           "dest_map": "MAP_SS_AQUA_1F",
           "dest_warp_id": "28"
+        }
+      ],
+      "coverage": "structural/build/runtime checks recorded separately; no owner QA yet"
+    },
+    {
+      "name": "AzaleaTown_CharcoalKiln",
+      "kind": "hgss",
+      "parent": "AzaleaTown",
+      "cluster": "west",
+      "map_group": 76,
+      "map_num": 50,
+      "display_name": "AzaleaTown_CharcoalKiln",
+      "role": "hgss",
+      "status": "implemented",
+      "id": "MAP_AZALEA_TOWN_CHARCOAL_KILN",
+      "layout": "LAYOUT_AZALEA_TOWN_CHARCOAL_KILN",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 5,
+          "y": 8,
+          "elevation": 0,
+          "dest_map": "MAP_AZALEA_TOWN",
+          "dest_warp_id": "7"
         }
       ],
       "coverage": "structural/build/runtime checks recorded separately; no owner QA yet"

@@ -1,0 +1,156 @@
+{
+  "source_repository": "https://github.com/PokemonHnS-Development/pokehns-expansion",
+  "commit": "167aa6d537b109bb229c231ddce4616974c4da71",
+  "purpose": "Azalea Charcoal Kiln outdoor 4x4 metatiles; modified for Emerald tileset split and ordinary door behavior",
+  "credit": "Pok\u00e9mon Heart and Soul and upstream contributors: Crystal Advance/Kertra, Fire Gold/blackfragrant, SkidMarc25, Ekat99, TheDeadHeroAlistair, Johto Redrawn Team, zatavares852, lbsbezerra, WesleyFG, Kalarie. Donor credits are aggregate; specific authorship per file has not been established.",
+  "source_manifest": [
+    {
+      "path": "data/layouts/AzaleaTown_hns/map.bin",
+      "sha256": "c80cfe6aa1fa0d4c2ad6177632fa73ea19c227c7ccc742da092e9d097674ba15"
+    },
+    {
+      "path": "data/tilesets/primary/johto_south_hns/metatile_attributes.bin",
+      "sha256": "d027dcbeb6df0805132b2305c141b9229d07c02d903064ca02a265aa2be09e67"
+    },
+    {
+      "path": "data/tilesets/primary/johto_south_hns/metatiles.bin",
+      "sha256": "0d3ac83f833b7a0ec38e1054e6499dc9c54d739741d8aab1cf6e92ae75108447"
+    },
+    {
+      "path": "data/tilesets/primary/johto_south_hns/palettes/00.pal",
+      "sha256": "92877f7c77a07797dc785d73ba6f393a9ab0101ece9f7185800a087dfc3f1201"
+    },
+    {
+      "path": "data/tilesets/primary/johto_south_hns/palettes/01.pal",
+      "sha256": "91a30634f502429c89e3201b30eb8e3645f416f7f4a548e7e8c297a8804b16eb"
+    },
+    {
+      "path": "data/tilesets/primary/johto_south_hns/palettes/02.pal",
+      "sha256": "3367305df29dc5a3210f9a80b17c72fa68565930c94bf56b262b92e0707ce823"
+    },
+    {
+      "path": "data/tilesets/primary/johto_south_hns/palettes/03.pal",
+      "sha256": "0703076acb1b543d622f5ab944f28283439a7bfbbf73d7358aa389d768c8147e"
+    },
+    {
+      "path": "data/tilesets/primary/johto_south_hns/palettes/04.pal",
+      "sha256": "4fbaa2e8ad45b5d6c7c80ba20fd15975468a3d093af18f6e21941f187c5e40e7"
+    },
+    {
+      "path": "data/tilesets/primary/johto_south_hns/palettes/05.pal",
+      "sha256": "0333edc3d9e4b10058ab6f83e96071fd8bbf8451045b1248e693618659fce216"
+    },
+    {
+      "path": "data/tilesets/primary/johto_south_hns/palettes/06.pal",
+      "sha256": "0d68d2d5b18efef7636515a3357247279cde15ae56f8d70c6e7c2ba9b3f5085b"
+    },
+    {
+      "path": "data/tilesets/primary/johto_south_hns/palettes/07.pal",
+      "sha256": "81414395a15f17632007af0d70fb5634bf7df819ae5ccfde64803beeebf3168e"
+    },
+    {
+      "path": "data/tilesets/primary/johto_south_hns/palettes/08.pal",
+      "sha256": "9c02076428ccbee7ea37002b8a67968580c8e63683f9e129419c8663b2421d3c"
+    },
+    {
+      "path": "data/tilesets/primary/johto_south_hns/palettes/09.pal",
+      "sha256": "a76972d0f951a052d734326571cda26adff7dc0e5544397049b2760f2114c39f"
+    },
+    {
+      "path": "data/tilesets/primary/johto_south_hns/palettes/10.pal",
+      "sha256": "be18ea44b53b0c3226ffc0f3abad56ff85cfc5684f58057c1eb75e4153795aa9"
+    },
+    {
+      "path": "data/tilesets/primary/johto_south_hns/palettes/11.pal",
+      "sha256": "2a2f51a4ca708f5373069d35c0a91248c8e4d4a241a4e1eeed350c507b119060"
+    },
+    {
+      "path": "data/tilesets/primary/johto_south_hns/palettes/12.pal",
+      "sha256": "30480ba4881385d290d214f3a30306cc46a881479d3eb7325898680b10713303"
+    },
+    {
+      "path": "data/tilesets/primary/johto_south_hns/palettes/13.pal",
+      "sha256": "e4f434972431148fa844c0d06ff4fee94e65118aca8cab09d2446e0dd6713e79"
+    },
+    {
+      "path": "data/tilesets/primary/johto_south_hns/palettes/14.pal",
+      "sha256": "226f0ddc9a6d3b26b78e138333dfde67d39aa7ac95a257e9e53c766fb6035675"
+    },
+    {
+      "path": "data/tilesets/primary/johto_south_hns/palettes/15.pal",
+      "sha256": "64b87ff3eb44caada2f27f7b1e3195db1935f86460ec78e4bc3b3cffcb0e3251"
+    },
+    {
+      "path": "data/tilesets/primary/johto_south_hns/tiles.png",
+      "sha256": "9e30656123f470c6d29b690331bc43170caed005e5c29e35d5e2b7194d0263b0"
+    },
+    {
+      "path": "data/tilesets/secondary/azalea_town_hns/metatile_attributes.bin",
+      "sha256": "8337e0c0a0a94666da52a1cc9f6f3ff7c63e8794177846ee3b60b87a328cf75f"
+    },
+    {
+      "path": "data/tilesets/secondary/azalea_town_hns/metatiles.bin",
+      "sha256": "22bfc5df0c199a221660e66c12c6a9d244cb6418e7555ebe7a589da8c214f9ec"
+    },
+    {
+      "path": "data/tilesets/secondary/azalea_town_hns/palettes/00.pal",
+      "sha256": "fb2283c6f43e6729c353cca870ba7f721324681f7a6f0c4860784af6d9ca72dc"
+    },
+    {
+      "path": "data/tilesets/secondary/azalea_town_hns/palettes/01.pal",
+      "sha256": "226f0ddc9a6d3b26b78e138333dfde67d39aa7ac95a257e9e53c766fb6035675"
+    },
+    {
+      "path": "data/tilesets/secondary/azalea_town_hns/palettes/02.pal",
+      "sha256": "226f0ddc9a6d3b26b78e138333dfde67d39aa7ac95a257e9e53c766fb6035675"
+    },
+    {
+      "path": "data/tilesets/secondary/azalea_town_hns/palettes/03.pal",
+      "sha256": "226f0ddc9a6d3b26b78e138333dfde67d39aa7ac95a257e9e53c766fb6035675"
+    },
+    {
+      "path": "data/tilesets/secondary/azalea_town_hns/palettes/04.pal",
+      "sha256": "226f0ddc9a6d3b26b78e138333dfde67d39aa7ac95a257e9e53c766fb6035675"
+    },
+    {
+      "path": "data/tilesets/secondary/azalea_town_hns/palettes/05.pal",
+      "sha256": "226f0ddc9a6d3b26b78e138333dfde67d39aa7ac95a257e9e53c766fb6035675"
+    },
+    {
+      "path": "data/tilesets/secondary/azalea_town_hns/palettes/06.pal",
+      "sha256": "226f0ddc9a6d3b26b78e138333dfde67d39aa7ac95a257e9e53c766fb6035675"
+    },
+    {
+      "path": "data/tilesets/secondary/azalea_town_hns/palettes/07.pal",
+      "sha256": "f562b3594b7f01fea3bd50dd5521a045c4ea7310c54d200ca074cac0806869c1"
+    },
+    {
+      "path": "data/tilesets/secondary/azalea_town_hns/palettes/08.pal",
+      "sha256": "6952f3e0feb4ff77b6108f31f6c4969769395e14e7f24a3d4c01a0d5937ab5cb"
+    },
+    {
+      "path": "data/tilesets/secondary/azalea_town_hns/palettes/09.pal",
+      "sha256": "e3d330c25e1d65a8226b8a421a6c1a45f3bcf663fe660ee76fc6ea42cc0115a5"
+    },
+    {
+      "path": "data/tilesets/secondary/azalea_town_hns/palettes/10.pal",
+      "sha256": "06e590eda2267e8727add5ad9a2695309cbf6e16447145bac9868284c9287a9b"
+    },
+    {
+      "path": "data/tilesets/secondary/azalea_town_hns/palettes/11.pal",
+      "sha256": "11d3f87be5a0a61b6b434d3ced50a2ab109f7dadaafc67b5bdd7c282ab677b8b"
+    },
+    {
+      "path": "data/tilesets/secondary/azalea_town_hns/palettes/12.pal",
+      "sha256": "2c0663d11bd27c55e43084d841a24a735d2c9883f4eb72100ad466e75fd1899b"
+    },
+    {
+      "path": "data/tilesets/secondary/azalea_town_hns/tiles.png",
+      "sha256": "e5b11b181e2514c6f7c4b5a276090049aa6dd5889595bce98e671d65f879f655"
+    },
+    {
+      "path": "graphics/door_anims/johtogeneral_hns.png",
+      "sha256": "4669a6afc78f8bb3e0cc8cb6a2c54ec16341cef2a4cad509b43dfd468eceaf90"
+    }
+  ]
+}

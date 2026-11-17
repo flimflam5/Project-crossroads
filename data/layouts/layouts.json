@@ -11127,6 +11127,17 @@
       "border_filepath": "data/layouts/SSAqua_B1F/border.bin",
       "blockdata_filepath": "data/layouts/SSAqua_B1F/map.bin",
       "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_AZALEA_TOWN_CHARCOAL_KILN",
+      "name": "AzaleaTown_CharcoalKiln_Layout",
+      "width": 11,
+      "height": 10,
+      "primary_tileset": "gTileset_HnsCharcoalKiln",
+      "secondary_tileset": "gTileset_WesternInteriors",
+      "border_filepath": "data/layouts/AzaleaTown_CharcoalKiln/border.bin",
+      "blockdata_filepath": "data/layouts/AzaleaTown_CharcoalKiln/map.bin",
+      "layout_version": "emerald"
     }
   ]
 }
