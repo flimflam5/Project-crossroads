@@ -50,4 +50,30 @@ assert proposed[('UnionCave_1F',7)]['hgss_anchor']==7
 assert proposed[('UnionCave_2F',4)]['destination_index']==2
 assert proposed[('UnionCave_3F',4)]['destination_index']==4
 assert proposed[('UnionCave_1F',6)]['hgss_anchor']==6
-print('PASS: pinned HGSS source anchors, 18 proposed indexed exits, 6 preserved old indices and 2 isolated Ruins connector chains. Plan only; water/Surf/visual/emulator untested.')
+# Test HGSS terrain components conservatively, treating permission bit 0x8000
+# as blocked and 0x15 as water. This is not a movement/Surf implementation:
+# ledges, elevations, collision objects and event scripts are not simulated.
+from collections import deque
+geometry=read(R/'crossroads/hgss/canonical_events/union-cave-geometry.json')
+def component(mapname,anchor,allow_water):
+    a=geometry[mapname];cols,rows=a['matrix_dimensions'];w,h=cols*32,rows*32
+    plane=[0]*(w*h)
+    for k,c in enumerate(a['chunks']):
+        ox=(k%cols)*32;oy=(k//cols)*32
+        for i,value in enumerate(c['permissions']):plane[(oy+i//32)*w+ox+i%32]=value
+    e=a['warps'][anchor];start=(e['x'],e['z']);q=deque([start]);seen={start}
+    while q:
+        x,y=q.popleft()
+        for nx,ny in ((x-1,y),(x+1,y),(x,y-1),(x,y+1)):
+            if not (0<=nx<w and 0<=ny<h) or (nx,ny) in seen:continue
+            value=plane[ny*w+nx]
+            if value&0x8000 or (not allow_water and value&255==0x15):continue
+            seen.add((nx,ny));q.append((nx,ny))
+    return {i for i,e in enumerate(a['warps']) if (e['x'],e['z']) in seen}
+assert component('MAP_UNION_CAVE_1F',4,False)=={4,6}
+assert component('MAP_UNION_CAVE_1F',5,False)=={5,7}
+assert component('MAP_UNION_CAVE_B2F',2,False)=={2,4}
+assert component('MAP_UNION_CAVE_B2F',1,False)=={1}
+assert component('MAP_UNION_CAVE_B2F',1,True)=={1,3}
+assert component('MAP_UNION_CAVE_B2F',0,True)=={0}
+print('PASS: pinned HGSS anchors, 18 proposed indexed exits, 6 preserved old indices and distinct 1F/B2F connector components. Static graph only; actual Surf/visual/emulator untested.')
