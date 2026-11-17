@@ -596,3 +596,11 @@ const u16 gMetatiles_HnsCharcoalKiln[] = INCBIN_U16("data/tilesets/primary/hns_c
 const u16 gMetatileAttributes_HnsCharcoalKiln[] = INCBIN_U16("data/tilesets/primary/hns_charcoal_kiln/metatile_attributes.bin");
 #endif
 // END HNS CHARCOAL KILN PRIVATE
+
+
+// BEGIN HNS ROUTE33 PRIVATE SECONDARY
+#if !IS_FRLG
+const u16 gMetatiles_HnsRoute33[] = INCBIN_U16("data/tilesets/secondary/hns_route33/metatiles.bin");
+const u16 gMetatileAttributes_HnsRoute33[] = INCBIN_U16("data/tilesets/secondary/hns_route33/metatile_attributes.bin");
+#endif
+// END HNS ROUTE33 PRIVATE SECONDARY

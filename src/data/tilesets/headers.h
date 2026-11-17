@@ -1812,3 +1812,10 @@ const struct Tileset gTileset_HgssSSAqua = {.isCompressed=TRUE,.isSecondary=TRUE
 const struct Tileset gTileset_HnsCharcoalKiln = { .isCompressed=TRUE, .isSecondary=FALSE, .tiles=gTilesetTiles_HnsCharcoalKiln, .palettes=gTilesetPalettes_HnsCharcoalKiln, .metatiles=gMetatiles_HnsCharcoalKiln, .metatileAttributes=gMetatileAttributes_HnsCharcoalKiln, .callback=NULL };
 #endif
 // END HNS CHARCOAL KILN PRIVATE
+
+
+// BEGIN HNS ROUTE33 PRIVATE SECONDARY
+#if !IS_FRLG
+const struct Tileset gTileset_HnsRoute33 = { .isCompressed=TRUE, .isSecondary=TRUE, .tiles=gTilesetTiles_HnsRoute33, .palettes=gTilesetPalettes_HnsRoute33, .metatiles=gMetatiles_HnsRoute33, .metatileAttributes=gMetatileAttributes_HnsRoute33, .callback=NULL };
+#endif
+// END HNS ROUTE33 PRIVATE SECONDARY

@@ -171,4 +171,9 @@ extern const struct Tileset gTileset_HgssSSAqua;
 extern const struct Tileset gTileset_HnsCharcoalKiln;
 #endif
 // END HNS CHARCOAL KILN PRIVATE
+// BEGIN HNS ROUTE33 PRIVATE SECONDARY
+#if !IS_FRLG
+extern const struct Tileset gTileset_HnsRoute33;
+#endif
+// END HNS ROUTE33 PRIVATE SECONDARY
 #endif //GUARD_tilesets_H

@@ -32,6 +32,8 @@ def main():
    if isinstance(b,str):b=b.encode()
    assert (R/p).read_bytes()==b,('Regenerate',p)
   write=compare
+ from build_hns_route33 import generate as generate_route33
+ route33_tiles = generate_route33(write)
  groups=load('data/maps/map_groups.json');old=groups['gMapGroup_CrossroadsOlivine']+groups.get('gMapGroup_CrossroadsJohtoExpansion',[]);names=[p['name'] for p in manifest['existing']]+[p['name'] for p in selected]
  assert old==names[:len(old)],'Never discard newer maps/IDs when selecting an earlier checkpoint'
  layouts=load('data/layouts/layouts.json');bylayout={l['id']:l for l in layouts['layouts']}
@@ -75,6 +77,7 @@ def main():
   from build_eight_gym_integration import relocate_layout
   relocate_layout(n,l)
   if n=='JohtoRoute32':l['primary_tileset']='gTileset_HgssVioletRoutePrimary'
+  if n=='JohtoRoute33':l.update(primary_tileset='gTileset_BlGymAzaleaPrimary',secondary_tileset='gTileset_HnsRoute33')
   from hgss_ecruteak_family import relocate_layout as family_layout
   family_layout(n,l)
   from hgss_olivine_connections import layout as olivine_layout
@@ -318,7 +321,10 @@ def main():
   path=bylayout[m['layout']]['blockdata_filepath']
   from visual_repairs import repair
   from hgss_ecruteak_family import route_data
-  write(path,olivine_tiles(n,route_data(n,neighbor_tiles(n,interior_overlay(n,overlay(n,repair(n,struct.pack('<'+str(len(tiles[n]))+'H',*tiles[n]),*sizes[n]),*sizes[n]),*sizes[n]),*sizes[n]),*sizes[n]),*sizes[n]))
+  if n=='JohtoRoute33':
+   write(path,struct.pack('<'+str(len(route33_tiles))+'H',*route33_tiles))
+  else:
+   write(path,olivine_tiles(n,route_data(n,neighbor_tiles(n,interior_overlay(n,overlay(n,repair(n,struct.pack('<'+str(len(tiles[n]))+'H',*tiles[n]),*sizes[n]),*sizes[n]),*sizes[n]),*sizes[n]),*sizes[n]),*sizes[n]))
  groups['gMapGroup_CrossroadsOlivine']=names[:127]
  if len(names)>127:
   groups['gMapGroup_CrossroadsJohtoExpansion']=names[127:]

@@ -1,0 +1,33 @@
+{
+  "status": "Prototype; not a finished Johto or owner-approved release",
+  "source_commit": "5c308d1fbc66e202ee6da0c4de712079955851b0",
+  "rom_sha256": "d78f533b7cbc67d69a7eba333bc95595ba14747e1669ee3516b5e0fc070f0faf",
+  "actual_controller_results": {
+    "genuine_QA10_save": "Normal cold Continue at old (22,7) to relocated open (22,8); exact party/boxes/flags/starter/decoded money and inventory preserved; source battery unmodified. One sample does not establish all old-save compatibility.",
+    "visibility": "On SHORT_GRASS behavior 0x07, 5 of 192 Joe opaque pixels in bottom two sprite rows are masked by grass; on ordinary floor, all 183 opaque pixels visible. Earlier unconditional 192/192 failed; semantic check restricts exception to SHORT_GRASS and feet only.",
+    "travel": "Normal controller crossing Azalea/Route33 seam in both directions and Route33/Union Cave warp roundtrip; normal in-game Save and cold Continue.",
+    "collision": "39 sampled solid-boundary approaches and four directional ledge jumps passed, each jump checked against predicted actual destination. No sampled unsafe jump was skipped. This is not every tile or approach.",
+    "interactions": "One preserved resident and both preserved signs were activated by A."
+  },
+  "actual_compiled_runtime_checks": {
+    "metatile_ids": 56,
+    "secondary_vram_tiles": 103,
+    "compiled_secondary_palette_banks": 16,
+    "live_secondary_palette_banks": [
+      6,
+      7,
+      8
+    ],
+    "shared_seam_metatile": 514,
+    "shared_seam_vram_graphic": 582,
+    "limitations": "Checks source vs actual linked ROM and live Route33 VRAM; primary animation tiles excluded; no full visual acceptance."
+  },
+  "fixtures": "Copied owner-independent QA10 battery, ordinary in-game save; shared harness disables random encounters in RAM and uses actual Survey desk interaction. No map/warp/position writes. No saves or snapshots in this public evidence.",
+  "limitations": [
+    "Johto and Route33 not declared HGSS complete; reference deviations, scope and remaining work in HGSS_ADAPTATION.md.",
+    "Owner Delta and visual acceptance pending.",
+    "Only one prior-save position is emulator tested; 203 old traversable cells are modeled statically as needing relocation, not each individually cold-continued.",
+    "Sampled collision checks do not cover all positions, ledge combinations, field moves or battling.",
+    "No separate new-release ROM or permanent download has been published for this prototype."
+  ]
+}
