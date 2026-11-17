@@ -10066,8 +10066,8 @@
       "name": "JohtoRoute33_Layout",
       "width": 32,
       "height": 24,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_WesternCity",
+      "primary_tileset": "gTileset_BlGymAzaleaPrimary",
+      "secondary_tileset": "gTileset_HnsRoute33",
       "border_filepath": "data/layouts/JohtoRoute33/border.bin",
       "blockdata_filepath": "data/layouts/JohtoRoute33/map.bin",
       "layout_version": "emerald"
