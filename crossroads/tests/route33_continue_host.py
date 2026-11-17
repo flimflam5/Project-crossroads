@@ -79,8 +79,9 @@ bool8 MetatileBehavior_IsSurfableWaterOrUnderwater(u8 b){return b==0x10 || b==0x
 static void load(const char *path,u16 *dst,size_t count){FILE *f=fopen(path,"rb");assert(f);assert(fread(dst,2,count,f)==count);assert(fgetc(f)==EOF);fclose(f);}
 static int object(int x,int y){unsigned i;for(i=0;i<events.objectEventCount;i++)if(objects[i].x==x && objects[i].y==y)return 1;return 0;}
 static int valid(int x,int y){return x>=0 && x<32 && y>=0 && y<32 && !(blocks[y*32+x]&0xc00) && blocks[y*32+x]>>12==3 && !(x==19&&y==13) && !object(x,y);}
-static void reset(int x,int y,int surf){memset(&save1,0,sizeof(save1));memset(gObjectEvents,0,sizeof(gObjectEvents));save1.location.mapGroup=75;save1.location.mapNum=83;save1.lastHealLocation.mapGroup=2;save1.pos=(struct Coord){x,y};save1.mapLayoutId=44;gMapHeader=(struct MapHeader){&layout,&events,44};save1.partyMarker=0x10293847;save1.bagMarker=0xabcddcba;save1.flagsMarker=0x13579bdf;save1.objectEvents[0].isPlayer=1;save1.objectEvents[0].spriteId=127;save1.objectEvents[0].graphicsId=surf?((OBJ_EVENT_GFX_JOE_SURFING>>8)|(OBJ_EVENT_GFX_JOE_SURFING<<8)):0;}
+static void reset(int x,int y,int surf){memset(&save1,0,sizeof(save1));memset(gObjectEvents,0,sizeof(gObjectEvents));save1.location.mapGroup=75;save1.location.mapNum=83;save1.lastHealLocation.mapGroup=2;save1.pos=(struct Coord){x,y};save1.mapLayoutId=44;gMapHeader=(struct MapHeader){&layout,&events,44};save1.partyMarker=0x10293847;save1.bagMarker=0xabcddcba;save1.flagsMarker=0x13579bdf;save1.objectEvents[0].isPlayer=1;save1.objectEvents[0].spriteId=127;save1.objectEvents[0].graphicsId=surf?((OBJ_EVENT_GFX_JOE_SURFING>>8)|(OBJ_EVENT_GFX_JOE_SURFING<<8)):0;gObjectEvents[0].isPlayer=1;gObjectEvents[0].initialCoords=gObjectEvents[0].currentCoords=gObjectEvents[0].previousCoords=(struct Coord){x+7,y+7};save1.objectEvents[0].initialCoords=save1.objectEvents[0].currentCoords=save1.objectEvents[0].previousCoords=(struct Coord){x+7,y+7};}
 static void invariant(void){assert(save1.partyMarker==0x10293847 && save1.bagMarker==0xabcddcba && save1.flagsMarker==0x13579bdf);}
+static void player_coords_match(void){struct ObjectEvent a=gObjectEvents[0], b=save1.objectEvents[0];struct Coord p={save1.pos.x+7,save1.pos.y+7};assert(a.initialCoords.x==p.x&&a.initialCoords.y==p.y&&a.currentCoords.x==p.x&&a.currentCoords.y==p.y&&a.previousCoords.x==p.x&&a.previousCoords.y==p.y);assert(b.initialCoords.x==p.x&&b.initialCoords.y==p.y&&b.currentCoords.x==p.x&&b.currentCoords.y==p.y&&b.previousCoords.x==p.x&&b.previousCoords.y==p.y);}
 int main(int argc,char **argv){int x,y,count=0,stayed=0,moved=0,non3=0,warp=0;u16 original; assert(argc==5);load(argv[1],blocks,1024);load(argv[2],old,768);load(argv[3],attributes,512);load(argv[4],attributes+512,512);
  for(y=0;y<24;y++)for(x=0;x<32;x++){
   u16 prior=old[y*32+x], next=blocks[y*32+x];int keep,dist,best=9999,xx,yy;
@@ -89,7 +90,7 @@ int main(int argc,char **argv){int x,y,count=0,stayed=0,moved=0,non3=0,warp=0;u1
   keep=!(next&0xc00) && !object(x,y) && next>>12==3 && !(x==19&&y==13);
   if(!(next&0xc00) && next>>12!=3)non3++;
   if(x==19&&y==13)warp++;
-  reset(x,y,0);assert(Crossroads_PrepareContinue());invariant();
+  reset(x,y,0);assert(Crossroads_PrepareContinue());invariant();player_coords_match();
   if(keep){assert(save1.pos.x==x&&save1.pos.y==y);stayed++;}
   else{assert(valid(save1.pos.x,save1.pos.y));dist=abs(save1.pos.x-x)+abs(save1.pos.y-y);for(yy=0;yy<32;yy++)for(xx=0;xx<32;xx++)if(valid(xx,yy)&&abs(xx-x)+abs(yy-y)<best)best=abs(xx-x)+abs(yy-y);assert(dist==best);moved++;}
  }
@@ -102,7 +103,7 @@ int main(int argc,char **argv){int x,y,count=0,stayed=0,moved=0,non3=0,warp=0;u1
  reset(31,31,0);assert(Crossroads_PrepareContinue());assert(valid(save1.pos.x,save1.pos.y));invariant();
  /* A Surf sprite on non-surfable elevation-1 data must not be stranded. */
  blocks[31*32+31]=0x1000|1;assert((attributes[1]&255)!=0x15);
- reset(31,31,1);assert(Crossroads_PrepareContinue());assert(valid(save1.pos.x,save1.pos.y));invariant();blocks[31*32+31]=original;
+ reset(31,31,1);assert(Crossroads_PrepareContinue());assert(valid(save1.pos.x,save1.pos.y));invariant();player_coords_match();assert(gObjectEvents[0].graphicsId==73 && save1.objectEvents[0].graphicsId==(73<<8) && save1.objectEvents[0].spriteId==127);blocks[31*32+31]=original;
  /* No Route 33 migration guard applies to the old 24-row layout or another map. */
  layout.height=24;reset(25,18,0);assert(Crossroads_PrepareContinue());assert(save1.pos.x==25&&save1.pos.y==18);layout.height=32;
  reset(25,18,0);save1.location.mapNum=84;assert(Crossroads_PrepareContinue());assert(save1.pos.x==25&&save1.pos.y==18);
