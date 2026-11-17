@@ -8,6 +8,7 @@
 #include "tilesets.h"
 #include "constants/songs.h"
 #include "constants/metatile_labels.h"
+#include "constants/azalea_kiln_door.h"
 
 #define DOOR_SOUND_NORMAL  0
 #define DOOR_SOUND_SLIDING 1
@@ -57,6 +58,11 @@ static const u16 sDoorNullPalette4[16] = {};
 static const u8 sDoorAnimTiles_LilycoveWooden[] = INCGFX_U8("graphics/door_anims/lilycove_wooden.png", ".4bpp");
 static const u16 sDoorNullPalette5[16] = {};
 static const u8 sDoorAnimTiles_General[] = INCGFX_U8("graphics/door_anims/general.png", ".4bpp");
+#if !IS_FRLG
+// Heart & Soul Johto general door; palette and metatile follow private-city packing.
+static const u8 sDoorAnimTiles_AzaleaKiln[] = INCGFX_U8("graphics/door_anims/hns_johto_general.png", ".4bpp");
+static const u8 sDoorAnimPalettes_AzaleaKiln[] = {AZALEA_KILN_DOOR_PALETTE, AZALEA_KILN_DOOR_PALETTE, AZALEA_KILN_DOOR_PALETTE, AZALEA_KILN_DOOR_PALETTE, AZALEA_KILN_DOOR_PALETTE, AZALEA_KILN_DOOR_PALETTE, AZALEA_KILN_DOOR_PALETTE, AZALEA_KILN_DOOR_PALETTE};
+#endif
 static const u16 sDoorNullPalette6[16] = {};
 static const u8 sDoorAnimTiles_PokeCenter[] = INCGFX_U8("graphics/door_anims/poke_center.png", ".4bpp");
 static const u8 sDoorAnimTiles_Gym[] = INCGFX_U8("graphics/door_anims/gym.png", ".4bpp");
@@ -352,6 +358,14 @@ static const u8 sDoorAnimPalettes_TrainerTowerRoofElevator[] = {11, 11, 2, 2, 2,
 static const struct DoorGraphics sDoorAnimGraphicsTable[] =
 {
 #if !IS_FRLG
+    {
+        .metatileNum = METATILE_AZALEA_KILN_DOOR,
+        .tileset = &gTileset_BlGymAzaleaSecondary,
+        .sound = DOOR_SOUND_NORMAL,
+        .size = DOOR_SIZE_1x1,
+        .tiles = sDoorAnimTiles_AzaleaKiln,
+        .palettes = sDoorAnimPalettes_AzaleaKiln
+    },
     {
         .metatileNum = METATILE_General_Door,
         .tileset = &gTileset_General,

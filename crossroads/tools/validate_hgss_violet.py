@@ -25,7 +25,7 @@ def validate():
  # QA10's seven docked ship maps append after the exact Violet/Olivine
  # prefixes. Name each authorized addition; arbitrary later tails still fail.
  aqua_new=['SSAqua_1F','SSAqua_CaptainRoom','SSAqua_SoutheastCabins','SSAqua_SouthwestCabins','SSAqua_NortheastCabins','SSAqua_NorthwestCabins','SSAqua_B1F'] if (R/'data/maps/SSAqua_1F/map.json').exists() else []
- assert tail==NEW+olivine_new+aqua_new,('Violet IDs shifted or uncontracted appended maps',tail)
+ assert tail==NEW+olivine_new+aqua_new+['AzaleaTown_CharcoalKiln'],('Violet IDs shifted or uncontracted appended maps',tail)
  maps={n:load(f'data/maps/{n}/map.json') for n in OWNED};ids={m['id']:n for n,m in maps.items()};raw={};size={};attrs={};actors={}
  paths=dict(re.findall(r'const u16 (gMetatileAttributes_\w+)\[\] = INCBIN_U16\("([^"]+)"\)',(R/'src/data/tilesets/metatiles.h').read_text()))
  for key,body in re.findall(r'const struct Tileset (gTileset_\w+)\s*=\s*\{([^}]+)\}',(R/'src/data/tilesets/headers.h').read_text(),re.S):

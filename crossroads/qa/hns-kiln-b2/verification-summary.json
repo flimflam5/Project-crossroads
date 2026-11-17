@@ -1,0 +1,60 @@
+{
+  "game_source_commit": "ae3aee29989e1fb7371c3b31c0aecc965eabfeeb",
+  "rom_sha256": "6f9d45f8cc4c5b243f4264a129cc3d0695b875d8749518cbeef84727d8062ade",
+  "classification": "One donor-adapted Azalea charcoal kiln checkpoint; entire Johto remains unfinished.",
+  "owner_delta_and_visual_acceptance": "PENDING",
+  "runtime_results": {
+    "kiln": {
+      "file": "kiln-results.json",
+      "controller": "actual entry and return, walk-away, Joe arrival visibility, worker, 31 blocked neighbor approaches, normal Save/cold Continue",
+      "palette": "five source JASC banks checked against compiled ROM and live unfaded palette",
+      "limitations": "One exterior entrance and interior exit exercised; lateral approaches and all region maps are not exhaustively covered."
+    },
+    "old_saves": {
+      "file": "old-save-results.json",
+      "method": "Two genuine QA10 normal battery saves: original position (20,32) inside new building footprint, and unaffected position (17,32); exact decoded player party, boxes, flags, starter and inventory checked.",
+      "limitations": "These two test fixtures do not prove every possible historical save."
+    },
+    "compiled_tiles": {
+      "file": "compiled-tiles-results.json",
+      "coverage": "16 ROM facade metatile/attribute records and 37 live VRAM tiles"
+    },
+    "fly": {
+      "file": "fly-results.json",
+      "coverage": "Native QA kit Fly to all ten cities, cancel and normal post-flight Save/cold Continue"
+    },
+    "field_actions": {
+      "file": "field-actions-results.json",
+      "coverage": "Mach/Acro Bike, Surf four directions, fishing and disembark; test-only temporary gear"
+    },
+    "battle": {
+      "file": "battle-results.json",
+      "coverage": "Joe battle-back sprite/palette and optional first-loss/local heal; fresh-game/1 HP fixture"
+    }
+  },
+  "limitations": [
+    "Source-driven and scripted emulator tests are not owner Delta playtesting or visual acceptance.",
+    "Only a charcoal kiln was donor-adapted in this increment; most Johto geography, interiors, facilities and transport need further reconstruction and verification.",
+    "The new building adds a scoped Continue relocation for saves in its footprint; future saves in that same area can also be relocated.",
+    "DS-era HGSS graphics and events require explicit GBA adaptations; no unsupported donor story or rewards were imported.",
+    "Dive, watering, decoration and VS Seeker actions were not activated in the field-action suite."
+  ],
+  "screenshots_and_recordings": [
+    "before-qa10-azalea.png",
+    "after-b2-azalea.png",
+    "old-footprint-continue.png",
+    "old-footprint-walk-away.png",
+    "kiln-interior.png",
+    "kiln-worker.png",
+    "kiln-cold-continue.png",
+    "kiln-return.png",
+    "kiln-entry.mp4",
+    "kiln-exit.mp4",
+    "joe-surf.png",
+    "joe-battle-back.png",
+    "azalea-fly-arrival.png"
+  ],
+  "source_commit": "ae3aee29989e1fb7371c3b31c0aecc965eabfeeb",
+  "automated_checks_passed": true,
+  "runtime_checks_passed": true
+}

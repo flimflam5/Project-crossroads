@@ -20,6 +20,8 @@ def script(n):return 'Johto_'+n
 
 def main():
  ap=argparse.ArgumentParser();ap.add_argument('--through',choices=CLUSTERS,default='west');ap.add_argument('--check',action='store_true');args=ap.parse_args()
+ from build_hns_charcoal_kiln import generate as generate_hns_kiln
+ generate_hns_kiln(args.check)
  ambient=load('crossroads/johto/ambient.json');city_sites=load('crossroads/johto/city_sites.json')
  manifest=load('crossroads/johto/manifest.json');plans=manifest['planned'];selected=[p for p in plans if CLUSTERS.index(p['cluster'])<=CLUSTERS.index(args.through)]
  # --check runs the deterministic writer against an in-memory file comparison.

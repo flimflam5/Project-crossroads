@@ -29,6 +29,9 @@ def overlay(name,data,w,h):
  for i,value in enumerate(p['stamp']):
   X,Y=x+i%8,y+i//8
   if value is not None:t[Y*w+X]=value
+ if name=='AzaleaTown':
+  from hns_kiln_facade import overlay as kiln_overlay
+  kiln_overlay(t,w,h,p.get('kiln'))
  return struct.pack('<'+str(w*h)+'H',*t)
 def patch_events(name,m):
  if not PLANS.exists():return m
@@ -37,6 +40,9 @@ def patch_events(name,m):
   p=plans[name];i,j=p['exterior_warps'];m['warp_events'][i].update(x=p['doors'][0][0],y=p['doors'][0][1]);e=dict(m['warp_events'][i],x=p['doors'][1][0],dest_warp_id='1')
   if len(m['warp_events'])==j:m['warp_events'].append(e)
   else:assert len(m['warp_events'])>j;m['warp_events'][j]=e
+  if name=='AzaleaTown':
+   from hns_kiln_facade import patch_event
+   patch_event(m)
  else:
   city=next((n for n,p in plans.items() if p['interior']==name),None)
   if city:
@@ -53,6 +59,11 @@ def normalize_map(name,m):
  if not PLANS.exists():return copy.deepcopy(m)
  plans=json.loads(PLANS.read_text())['cities'];m=copy.deepcopy(m)
  if name in CODES:
+  if name=='AzaleaTown':
+   from hns_kiln_facade import patch_event
+   expected=patch_event({'warp_events':m['warp_events'][:7]})['warp_events'][7]
+   assert m['warp_events'][7]==expected
+   m['warp_events'].pop(7)
   p=plans[name];i,j=p['exterior_warps'];assert m['warp_events'][j]==dict(m['warp_events'][i],x=p['doors'][1][0],dest_warp_id='1')
   c=source_contract(name)
   if 'gym_alias' not in c:m['warp_events'].pop(j)
@@ -124,6 +135,10 @@ def generate(check=False):
    under=metas[old_id>=512][(old_id%512)*8:(old_id%512)*8+4];top=[(tile_mapping[v&1023]&1023)|((tile_mapping[v&1023]^v)&0xc00)|(bank<<12) for v in asset_metas[i*8+4:i*8+8]];metas[1][(dest_id-512)*8:(dest_id-511)*8]=under+top;attrs[1][dest_id-512]=asset_attrs[i]
    empty=all(not any(source.crop((((v&1023)-512)%16*8,((v&1023)-512)//16*8,((v&1023)-512)%16*8+8,((v&1023)-512)//16*8+8)).tobytes()) for v in asset_metas[i*8+4:i*8+8])
    stamp.append(None if empty else (asset_stamp[i]&~1023)|dest_id)
+  kiln_plan=None;kiln_palettes={}
+  if n=='AzaleaTown':
+   from hns_kiln_facade import augment
+   kiln_plan,kiln_palettes=augment(metas,attrs,sheets,protected,banks|{bank},secondary_ids,gym_meta)
   # Own every resource explicitly. Shared General/Western/HGSS files stay intact.
   for is_primary in [True,False]:
    k=0 if is_primary else 1;kind='primary' if is_primary else 'secondary';path=f'data/tilesets/{kind}/bl_gym_{code}';sym=symbol(n,is_primary).removeprefix('gTileset_');im=sheets[k]
@@ -131,28 +146,41 @@ def generate(check=False):
     oldim=Image.open(R/path/'tiles.png');assert oldim.tobytes()==im.tobytes(),(n,'Changed private tiles')
    else:(R/path).mkdir(parents=True,exist_ok=True);im.save(R/path/'tiles.png',bits=4)
    write(path+'/metatiles.bin',struct.pack('<'+str(len(metas[k]))+'H',*metas[k]));write(path+'/metatile_attributes.bin',struct.pack('<'+str(len(attrs[k]))+'H',*attrs[k]))
-   for pal in range(16):write(path+f'/palettes/{pal:02}.pal',(gym/'palette.pal').read_bytes() if not is_primary and pal==bank else (dirs[k]/f'palettes/{pal:02}.pal').read_bytes())
+   for pal in range(16):write(path+f'/palettes/{pal:02}.pal',kiln_palettes[pal] if not is_primary and pal in kiln_palettes else (gym/'palette.pal').read_bytes() if not is_primary and pal==bank else (dirs[k]/f'palettes/{pal:02}.pal').read_bytes())
    blocks['graphics'].append(f'const u32 gTilesetTiles_{sym}[] = INCGFX_U32("{path}/tiles.png", ".4bpp.fastSmol");\nconst u16 gTilesetPalettes_{sym}[][16] = {{\n'+''.join(f'    INCGFX_U16("{path}/palettes/{i:02}.pal", ".gbapal"),\n' for i in range(16))+'};\n')
    blocks['metatiles'].append(f'const u16 gMetatiles_{sym}[] = INCBIN_U16("{path}/metatiles.bin");\nconst u16 gMetatileAttributes_{sym}[] = INCBIN_U16("{path}/metatile_attributes.bin");\n')
    blocks['headers'].append(f'const struct Tileset gTileset_{sym} = {{\n .isCompressed=TRUE, .isSecondary={"FALSE" if is_primary else "TRUE"},\n .tiles=gTilesetTiles_{sym}, .palettes=gTilesetPalettes_{sym},\n .metatiles=gMetatiles_{sym}, .metatileAttributes=gMetatileAttributes_{sym},\n .callback={SOURCES[l["primary_tileset" if is_primary else "secondary_tileset"]][2]},\n}};\n');blocks['externs'].append(f'extern const struct Tileset gTileset_{sym};\n')
   current=allmaps[n];index=c['gym_warp'];current['warp_events'][index].update(x=door[0],y=door[1]);alias=dict(current['warp_events'][index],x=door[0]+1,dest_warp_id='1');alias_index=c.get('gym_alias',len(old['warp_events']))
   if len(current['warp_events'])==alias_index:current['warp_events'].append(alias)
   else:assert len(current['warp_events'])>alias_index;current['warp_events'][alias_index]=alias
+  if n=='AzaleaTown':
+   from hns_kiln_facade import patch_event
+   patch_event(current)
   inside=load(f'data/maps/{c["interior"]["name"]}/map.json')
   if len(inside['warp_events'])==1:inside['warp_events'].append(dict(inside['warp_events'][0],x=inside['warp_events'][0]['x']+1))
   inside['warp_events'][1]['dest_warp_id']=str(alias_index)
   if len(c['interior']['warp_events'])==1:
    il=ls[inside['layout']];ib=(R/il['blockdata_filepath']).read_bytes();it=list(struct.unpack('<'+str(il['width']*il['height'])+'H',ib));entry=inside['warp_events'][1];it[entry['y']*il['width']+entry['x']]=0x209;write(il['blockdata_filepath'],struct.pack('<'+str(len(it))+'H',*it))
   plan=dict(code=code,origin=origin,doors=[list(door),[door[0]+1,door[1]]],old_footprint=oldfoot,background=background,stamp=stamp,metatile_ids=gym_meta,tile_mapping=tile_mapping,palette=bank,source_sha256=hashlib.sha256((gym/'building.png').read_bytes()).hexdigest(),exterior_warps=[index,alias_index],interior=inside['name'],legacy_primary_ids=sorted(primary_ids),legacy_secondary_ids=sorted(secondary_ids),allocated_new_tiles=len({v&1023 for v in allocated.values()}),adaptations=['Owner-provided custom Black Ledger Gym, not literal HGSS art']+(['Entrance one tile east for border clearance; old warp ID retained'] if dx else []))
+  if kiln_plan:plan['kiln']=kiln_plan
   plans[n]=plan;relocate_layout(n,ls[l['id']]);js(f'data/maps/{n}/map.json',current);js(f'data/maps/{inside["name"]}/map.json',inside)
  # Commit resource plan before authoring data; overlay reads exactly this mapping.
  js('crossroads/art/eight_gyms_v1/integration.json',dict(version=1,baseline=BASE['source_commit'],cities=plans))
+ # The HNS 1x2 door animation uses donor palette 2. Emit the remapped
+ # palette/metatile IDs from the same allocator that produced the city tiles.
+ kiln=plans['AzaleaTown']['kiln']
+ x,y=kiln['origin']
+ write('include/constants/azalea_kiln_door.h',f"#ifndef GUARD_AZALEA_KILN_DOOR_H\n#define GUARD_AZALEA_KILN_DOOR_H\n#define METATILE_AZALEA_KILN_DOOR {kiln['metatile_ids'][13]}\n#define AZALEA_KILN_DOOR_PALETTE {kiln['palette_mapping'][2]}\n#define AZALEA_KILN_ORIGIN_X {x}\n#define AZALEA_KILN_ORIGIN_Y {y}\n#define AZALEA_KILN_WIDTH 4\n#define AZALEA_KILN_HEIGHT 4\n#endif\n")
+ write('graphics/door_anims/hns_johto_general.png',(R/'crossroads/donor/hns_azalea_exterior/graphics/door_anims/johtogeneral_hns.png').read_bytes())
  for n in CODES:
   c=source_contract(n);l=c['layout'];plan=plans[n];t=list(struct.unpack('<'+str(l['width']*l['height'])+'H',source_bytes(n,c)));x,y,ww,hh=plan['old_footprint']
   for yy in range(y,y+hh):
    for xx in range(x,x+ww):t[yy*l['width']+xx]=plan['background']
   for i,v in enumerate(plan['stamp']):
    if v is not None:t[(plan['origin'][1]+i//8)*l['width']+plan['origin'][0]+i%8]=v
+  if n=='AzaleaTown':
+   from hns_kiln_facade import overlay as kiln_overlay
+   kiln_overlay(t,l['width'],l['height'],plan.get('kiln'))
   write(l['blockdata_filepath'],struct.pack('<'+str(len(t))+'H',*t))
  js('data/layouts/layouts.json',layouts)
  for key,path in [('graphics','src/data/tilesets/graphics.h'),('metatiles','src/data/tilesets/metatiles.h'),('headers','src/data/tilesets/headers.h'),('externs','include/tilesets.h')]:

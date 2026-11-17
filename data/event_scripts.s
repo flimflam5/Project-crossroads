@@ -2083,3 +2083,5 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/SSAqua_NorthwestCabins/scripts.inc"
 	.include "data/maps/SSAqua_B1F/scripts.inc"
 	.include "crossroads/scripts/ss_aqua.inc"
+
+	.include "data/maps/AzaleaTown_CharcoalKiln/scripts.inc"

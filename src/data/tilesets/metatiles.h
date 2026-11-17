@@ -589,3 +589,10 @@ const u16 gMetatiles_HgssSSAqua[] = INCBIN_U16("data/tilesets/secondary/hgss_ss_
 const u16 gMetatileAttributes_HgssSSAqua[] = INCBIN_U16("data/tilesets/secondary/hgss_ss_aqua/metatile_attributes.bin");
 #endif
 // END HGSS SS AQUA
+
+// BEGIN HNS CHARCOAL KILN PRIVATE
+#if !IS_FRLG
+const u16 gMetatiles_HnsCharcoalKiln[] = INCBIN_U16("data/tilesets/primary/hns_charcoal_kiln/metatiles.bin");
+const u16 gMetatileAttributes_HnsCharcoalKiln[] = INCBIN_U16("data/tilesets/primary/hns_charcoal_kiln/metatile_attributes.bin");
+#endif
+// END HNS CHARCOAL KILN PRIVATE

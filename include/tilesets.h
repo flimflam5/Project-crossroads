@@ -166,4 +166,9 @@ extern const struct Tileset gTileset_HgssSSAquaPrimary;
 extern const struct Tileset gTileset_HgssSSAqua;
 #endif
 // END HGSS SS AQUA
+// BEGIN HNS CHARCOAL KILN PRIVATE
+#if !IS_FRLG
+extern const struct Tileset gTileset_HnsCharcoalKiln;
+#endif
+// END HNS CHARCOAL KILN PRIVATE
 #endif //GUARD_tilesets_H

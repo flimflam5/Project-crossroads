@@ -1,0 +1,42 @@
+[
+  {
+    "rom_sha256": "6f9d45f8cc4c5b243f4264a129cc3d0695b875d8749518cbeef84727d8062ade",
+    "continued_map": "AzaleaTown",
+    "continued_position": [
+      18,
+      32
+    ],
+    "walked_away_to": [
+      17,
+      32
+    ],
+    "joe_visibility": {
+      "opaque_expected": 192,
+      "opaque_visible": 192
+    },
+    "source_battery_unchanged": true,
+    "method": "Native cold battery Continue plus actual controller walking to outside the new footprint.",
+    "result": "PASS",
+    "fixture": "footprint"
+  },
+  {
+    "rom_sha256": "6f9d45f8cc4c5b243f4264a129cc3d0695b875d8749518cbeef84727d8062ade",
+    "continued_map": "AzaleaTown",
+    "continued_position": [
+      17,
+      32
+    ],
+    "walked_away_to": [
+      18,
+      32
+    ],
+    "joe_visibility": {
+      "opaque_expected": 174,
+      "opaque_visible": 174
+    },
+    "source_battery_unchanged": true,
+    "method": "Native cold battery Continue plus actual controller walking to outside the new footprint.",
+    "result": "PASS",
+    "fixture": "outside"
+  }
+]

@@ -7,14 +7,26 @@
 #include "constants/maps.h"
 #include "constants/event_objects.h"
 #include "constants/heal_locations.h"
+#include "constants/azalea_kiln_door.h"
 #include "overworld.h"
+
+// The newly built kiln replaced formerly walkable grass. Its roof can draw
+// over a player even on an otherwise passable cell, so old saves in its small
+// footprint must land on visible open ground when continuing.
+static bool32 IsAzaleaKilnFootprint(s16 x, s16 y)
+{
+    return gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_AZALEA_TOWN)
+        && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_AZALEA_TOWN)
+        && x >= AZALEA_KILN_ORIGIN_X && x < AZALEA_KILN_ORIGIN_X + AZALEA_KILN_WIDTH
+        && y >= AZALEA_KILN_ORIGIN_Y && y < AZALEA_KILN_ORIGIN_Y + AZALEA_KILN_HEIGHT;
+}
 
 static bool32 IsClearContinueTile(s16 x, s16 y)
 {
     const struct MapLayout *layout = gMapHeader.mapLayout;
     u16 block;
     u32 i;
-    if (x < 0 || y < 0 || x >= layout->width || y >= layout->height)
+    if (x < 0 || y < 0 || x >= layout->width || y >= layout->height || IsAzaleaKilnFootprint(x, y))
         return FALSE;
     block = layout->map[y * layout->width + x];
     if ((block & MAPGRID_COLLISION_MASK) || (block >> 12) != 3)
@@ -110,6 +122,7 @@ bool32 Crossroads_PrepareContinue(void)
     y = gSaveBlock1Ptr->pos.y;
     if (x >= 0 && y >= 0 && x < layout->width && y < layout->height
      && !(layout->map[y * layout->width + x] & MAPGRID_COLLISION_MASK)
+     && !IsAzaleaKilnFootprint(x, y)
      && !NeedsDryLanding(x, y))
     {
         bool32 occupied = FALSE;
