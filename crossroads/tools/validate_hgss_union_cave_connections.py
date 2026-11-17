@@ -37,7 +37,7 @@ for floor in baseline['floors']:
         assert (old['dest_map'],int(old['dest_warp_id']))==(e['destination'],e['destination_index'])
         new=proposed[(floor['existing_map'],e['existing_index'])]
         assert new['destination_index']==e['destination_index']
-        assert new['destination'] in headers
+        assert old['dest_map']=={'UnionCave_1F':'MAP_UNION_CAVE_1_F','UnionCave_2F':'MAP_UNION_CAVE_2_F','UnionCave_3F':'MAP_UNION_CAVE_3_F','JohtoRoute32':'MAP_JOHTO_ROUTE32','JohtoRoute33':'MAP_JOHTO_ROUTE33'}[new['destination']]
 outside=read(D/'hgss-reference/110_D24R0101.json')['warps']
 for anchor,local,ret in [(15,(3,52),6),(16,(3,33),7)]:
     e=outside[anchor];assert (e['x']-416,e['z']-256)==local
