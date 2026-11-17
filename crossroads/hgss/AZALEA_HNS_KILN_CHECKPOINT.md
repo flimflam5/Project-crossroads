@@ -1,5 +1,10 @@
 # Azalea Charcoal Kiln — donor integration checkpoint
 
+> **B2 update:** The source below was built and controller-tested. The exact scope,
+> checks, remaining work and ROM identity are in [the B2 release](../RELEASE_HNS_KILN_B2.md)
+> and [verification record](../qa/hns-kiln-b2/verification-summary.json).
+> The pending statements below describe the earlier source-only checkpoint.
+
 Status: source and generated assets are in progress on
 `feature/johto-donor-evaluation-01`. **A completed build, actual door and movement
 playtest, old-save test on the new ROM and owner visual review are pending.** This
