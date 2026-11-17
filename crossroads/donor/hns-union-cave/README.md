@@ -67,3 +67,15 @@ and 132 positions on new donor elevation-1 water on floors 1F, B1F and B2F
 respectively. Existing water recovery covers Violet and Olivine only. Even a
 collision-clean save can thus need safe relocation, without changing actual Surf
 saves; all positions require reachability/render checks in the finished layouts.
+
+The isolated prototype also extends `Crossroads_PrepareContinue`'s existing
+water landing guard to the three exact donor floor dimensions and existing
+Union Cave IDs. The current 28×22 playable rooms do not meet that guard; the
+change therefore does not alter their current water recovery. When and only when
+those donor-sized floors are installed, a saved walking avatar at elevation 1
+uses the existing dry-tile relocation, while an actual Surf avatar keeps its
+water position. The isolated C file passed ARM GCC syntax checking with the
+project's modern settings. This is **not** a build or gameplay verification;
+all prior safe-landing visibility, component reachability, and copied walking
+and Surf save requirements remain open. Future saves in those donor-sized maps
+are also subject to the guard, not only legacy saves.

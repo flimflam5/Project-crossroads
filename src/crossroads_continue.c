@@ -91,7 +91,17 @@ static bool32 NeedsDryLanding(s16 x, s16 y)
         (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_VIOLET_CITY)
          && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_VIOLET_CITY))
      || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_OLIVINE_CITY)
-         && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_OLIVINE_CITY));
+         && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_OLIVINE_CITY))
+     // Apply only after a donor-sized Union Cave floor is registered. The
+     // legacy 28x22 rooms keep their previous behavior; a walking save on a
+     // newly created cave pool must find dry ground. Surf saves remain valid.
+     || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_UNION_CAVE_1_F)
+         && ((gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_UNION_CAVE_1_F)
+              && layout->width == 48 && layout->height == 60)
+          || (gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_UNION_CAVE_2_F)
+              && layout->width == 48 && layout->height == 48)
+          || (gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_UNION_CAVE_3_F)
+              && layout->width == 40 && layout->height == 50)));
     if (!reconstructedWater
      || x < 0 || y < 0 || x >= layout->width || y >= layout->height
      || (layout->map[y * layout->width + x] >> 12) != 1)
