@@ -27,7 +27,28 @@
     "Johto and Route33 not declared HGSS complete; reference deviations, scope and remaining work in HGSS_ADAPTATION.md.",
     "Owner Delta and visual acceptance pending.",
     "Only one prior-save position is emulator tested; 203 old traversable cells are modeled statically as needing relocation, not each individually cold-continued.",
-    "Sampled collision checks do not cover all positions, ledge combinations, field moves or battling.",
-    "No separate new-release ROM or permanent download has been published for this prototype."
-  ]
+    "Collision checks are sampled, not exhaustive across all positions or ledge combinations.",
+    "No separate new-release ROM or permanent download has been published for this prototype.",
+    "The Fly, Surf and battle regressions exercise representative existing gameplay, not a Route 33 encounter, and do not cover every field action or battle."
+  ],
+  "cross_game_regressions": {
+    "Fly": {
+      "result": "PASS",
+      "coverage": "QA kit grant/repeat prevention, cancel, all ten city flights and normal post-flight Save/cold Continue",
+      "fixture": "Copied QA10 battery; opt-in QA kit",
+      "record": "fly-regression.json"
+    },
+    "Surf_and_other_field_actions": {
+      "result": "PASS",
+      "coverage": "Survey Surf boarding and four-direction Joe graphics, fishing, disembark, Mach/Acro bikes",
+      "fixture": "Copied QA10 battery, temporary emulator-only gear",
+      "record": "field-regression.json"
+    },
+    "battle": {
+      "result": "PASS",
+      "coverage": "Real optional first-loss practice battle, Joe battle-back VRAM/palette, local Center recovery",
+      "fixture": "Fresh-game test and 1 HP in-memory fixture",
+      "record": "battle-regression.json"
+    }
+  }
 }
