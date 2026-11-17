@@ -79,3 +79,9 @@ project's modern settings. This is **not** a build or gameplay verification;
 all prior safe-landing visibility, component reachability, and copied walking
 and Surf save requirements remain open. Future saves in those donor-sized maps
 are also subject to the guard, not only legacy saves.
+
+A pinned donor Ruins exterior map and event list are included to verify the two
+B1F exits against their actual reciprocal entries. A constrained static dry-grid
+check places the Route 32 public gate and the two cave entries in three distinct
+components. It does not model Surf, elevation transitions, ledges or event logic;
+actual HGSS geometry and normal emulator movement must verify accessibility.

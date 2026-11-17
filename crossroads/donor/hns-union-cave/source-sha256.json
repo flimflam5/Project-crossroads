@@ -44,6 +44,8 @@
     "data/maps/UnionCave_B1F_hns/map.json": "afed98e9485532edba95af05a8d1bd9e08a552b373c5c7a2458d2a5f2e1e47e5",
     "data/layouts/UnionCave_B2F_hns/map.bin": "7908a3cfd6f5049ee8d32b6d6cae9499f51efb69c413980879351c4a0f116464",
     "data/layouts/UnionCave_B2F_hns/border.bin": "379f8d1e17cb9bcad3a11243c396f7ba3e3095d10727d201c0e7b49ecdad94b5",
-    "data/maps/UnionCave_B2F_hns/map.json": "d4ce9fdea940b4418be640d490683c3371275a491e6a9d96dda3feb2515fa0a9"
+    "data/maps/UnionCave_B2F_hns/map.json": "d4ce9fdea940b4418be640d490683c3371275a491e6a9d96dda3feb2515fa0a9",
+    "data/layouts/RuinsOfAlph_Outside_hns/map.bin": "82b7e9d0f177ec08a19ba1100ad303c4ef38a180a7bb31093e5e0e5062548de0",
+    "data/maps/RuinsOfAlph_Outside_hns/map.json": "1214a14ef07dbfe8a2bab6d833f4dc93738b896ebec1a9157f81fb17c3738625"
   }
 }
