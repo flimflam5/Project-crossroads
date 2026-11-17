@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Prototype H&S Route 33 conversion with a preserved Azalea seam.
+"""Convert H&S Route 33 to HGSS dimensions with a preserved Azalea seam.
 
-Preserve QA10 size, cave events and the existing seven-column town buffer.
-The donor interior is selective and requires emulator/save/visual QA.
+Preserve map and warp IDs, and align the cave with the HGSS reference.
+The donor layout is adapted to the existing seven-column Azalea town buffer.
 """
 from pathlib import Path
 import hashlib,io,struct
@@ -23,15 +23,15 @@ def pack(a):return struct.pack('<%dH'%len(a),*a)
 def source():
  assert hashlib.sha256(D.read_bytes()).hexdigest()==EXPECTED
  donor=read16(D);assert len(donor)==44*40
- return [donor[(y+10)*44+x+3] for y in range(24) for x in range(32)]
+ return [donor[(y+4)*44+x+8] for y in range(32) for x in range(32)]
 def generate(write):
  cells=source();assert hashlib.sha256(B.read_bytes()).hexdigest()=='60e8ccacebe713c060fde8bd652d275cdbfae8676bd3847f0700118a2bf97f26'
  old=read16(B);assert len(old)==768
  assert {old[y*32+x]&1023 for y in range(24) for x in range(7)}=={1,198,514}
  meta=read16(H/'metatiles.bin');attrs=read16(H/'metatile_attributes.bin')
- used=sorted({v&1023 for v in cells});assert len(used)==55 and max(used)<640
+ used=sorted({v&1023 for v in cells});assert len(used)==71 and max(used)<640
  refs=[v for i in used for v in meta[i*8:i*8+8]]
- ids=sorted({v&1023 for v in refs});banks=sorted({v>>12 for v in refs});assert len(ids)==107 and banks==[0,1] and ids[0]==0
+ ids=sorted({v&1023 for v in refs});banks=sorted({v>>12 for v in refs});assert len(ids)==118 and banks==[0,1,4,6] and ids[0]==0
  # Route secondary retains Azalea's shared boundary tile ID 514 and tile 582.
  # Neither donor palette bank may use boundary bank 6.
  reserved_metatile=514; reserved_graphic=582
@@ -45,13 +45,15 @@ def generate(write):
   tile=donor.crop(((oldid%16)*8,(oldid//16)*8,(oldid%16)*8+8,(oldid//16)*8+8))
   j=newid-512;im.paste(tile,((j%16)*8,(j//16)*8))
  b=io.BytesIO();im.save(b,format='PNG',optimize=False);write(OUT+'/tiles.png',b.getvalue())
+ bankmap={old:7+i for i,old in enumerate(banks)}
  for i in range(16):
-  f=(H/f'palettes/{i-7:02}.pal') if i in (7,8) else C/f'palettes/{i:02}.pal'
+  donor_bank=next((old for old,new in bankmap.items() if new==i),None)
+  f=(H/f'palettes/{donor_bank:02}.pal') if donor_bank is not None else C/f'palettes/{i:02}.pal'
   write(OUT+f'/palettes/{i:02}.pal',f.read_bytes())
  newmeta=read16(C/'metatiles.bin');newattrs=read16(C/'metatile_attributes.bin')
  assert len(newmeta)==512*8 and len(newattrs)==512
  for oldid,newid in metamap.items():
-  newmeta[(newid-512)*8:(newid-511)*8]=[tilemap[v&1023]|(v&0xc00)|((7+(v>>12))<<12) for v in meta[oldid*8:oldid*8+8]]
+  newmeta[(newid-512)*8:(newid-511)*8]=[tilemap[v&1023]|(v&0xc00)|(bankmap[v>>12]<<12) for v in meta[oldid*8:oldid*8+8]]
   # The donor's Headbutt-tree behavior is not present in this engine.
   newattrs[newid-512]=(attrs[oldid]&~255) if attrs[oldid]&255==0xf0 else attrs[oldid]
  write(OUT+'/metatiles.bin',pack(newmeta));write(OUT+'/metatile_attributes.bin',pack(newattrs))
@@ -67,10 +69,15 @@ def generate(write):
  # All donor elevation-zero tree canopies are impassable in this engine.
  for i,v in enumerate(out):
   if v>>12==0 and not v&0xc00:out[i]=v|0x400
- # The town-side seven-column graphics/physics remain exactly QA10 source.
- for y in range(24):
-  for x in range(7):out[y*32+x]=old[y*32+x]
- # Existing sign locations and cave warp index remain unchanged.
- for x,y in [(13,15),(23,8)]:out[y*32+x]=0x3403
- assert cells[7*32+24]&1023==169 and attrs[169]&255==0x60
+ # Preserve the town's buffer at the same world coordinates.  The original
+ # 24 rows occupy rows 4..27 after the reciprocal offset changes by four.
+ for y in range(32):
+  source_y=max(0,min(23,y-4))
+  for x in range(7):out[y*32+x]=old[source_y*32+x]
+ # Keep native sign behavior and the original sign event indices.
+ for x,y in [(13,19),(18,14)]:out[y*32+x]=0x3403
+ # HGSS has two adjacent Apricorn trees here; object sprites occupy clear
+ # grass. They intentionally have no item reward in this exploration pass.
+ for x,y in [(23,26),(24,26),(24,25)]:out[y*32+x]=0x3000|metamap[1]
+ assert cells[13*32+19]&1023==169 and attrs[169]&255==0x60
  return out

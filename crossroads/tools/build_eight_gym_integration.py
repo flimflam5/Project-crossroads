@@ -64,6 +64,12 @@ def normalize_map(name,m):
    expected=patch_event({'warp_events':m['warp_events'][:7]})['warp_events'][7]
    assert m['warp_events'][7]==expected
    m['warp_events'].pop(7)
+   # Route 33 grows from 24 to the HGSS 32 rows.  Pin the new reciprocal
+   # offset, then restore the historic value solely for the immutable city
+   # comparison; every other connection and event must still match exactly.
+   seam=next(v for v in m['connections'] if v['map']=='MAP_JOHTO_ROUTE33')
+   assert seam==dict(map='MAP_JOHTO_ROUTE33',offset=6,direction='right')
+   seam['offset']=10
   p=plans[name];i,j=p['exterior_warps'];assert m['warp_events'][j]==dict(m['warp_events'][i],x=p['doors'][1][0],dest_warp_id='1')
   c=source_contract(name)
   if 'gym_alias' not in c:m['warp_events'].pop(j)

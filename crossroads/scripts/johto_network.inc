@@ -347,6 +347,18 @@ Johto_JohtoRoute33_Resident::
 Johto_JohtoRoute33_Resident_Text:
     .string "The signs help when the paths\nturn. There is no need to rush\pthe walk.$"
 
+Johto_JohtoRoute33_Hiker::
+    msgbox Johto_JohtoRoute33_Hiker_Text, MSGBOX_NPC
+    end
+Johto_JohtoRoute33_Hiker_Text:
+    .string "The cave leads north. Watch\nyour footing in the rain.$"
+
+Johto_JohtoRoute33_ApricornTree::
+    msgbox Johto_JohtoRoute33_ApricornTree_Text, MSGBOX_NPC
+    end
+Johto_JohtoRoute33_ApricornTree_Text:
+    .string "An APRICORN tree stands here.$"
+
 Johto_JohtoRoute32_Sign::
     msgbox Johto_JohtoRoute32_Sign_Text, MSGBOX_SIGN
     end
