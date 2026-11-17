@@ -85,3 +85,28 @@ B1F exits against their actual reciprocal entries. A constrained static dry-grid
 check places the Route 32 public gate and the two cave entries in three distinct
 components. It does not model Surf, elevation transitions, ledges or event logic;
 actual HGSS geometry and normal emulator movement must verify accessibility.
+
+## HGSS connector correction — source plan only
+
+The donor's two direct B1F exits to the Ruins omit real HGSS connector pockets.
+Pinned pret/pokeheartgold revision `6bf138d6035aa6b43d6f8f4132a12df70f86dcec`
+contains the actual four event records under `hgss-reference/`; individual
+SHA256 hashes are in `hgss-reference/sha256.json`. The full 18-anchor mapping,
+old warp-index contract, matrix dimensions and reference URLs are recorded in
+`hgss-corrected-warp-plan.json`. `validate_hgss_union_cave_connections.py`
+checks source anchors and reciprocal pairs without altering a playable map.
+
+HGSS 1F is 32×96, B1F 32×64, B2F 32×96, and Ruins outside is 32×64. Two
+separate B1F stairs lead via distinct B2F connector segments to isolated 1F
+pockets and then to the two western Ruins entrances. One B2F connection may
+require Surf and needs engine verification. HGSS reference source terrain
+permissions indicate the pockets are distinct, but are not a gameplay test.
+Directly binding the donor's B1F exits to the current generic Ruins map opens a
+misleading shortcut. Existing cave maps, saves, route links and guide/notes
+interactions must be retained while the floor geometries, all six current warp
+indices, new reciprocal connectors and distinct Ruins regions are constructed.
+
+The existing dimension-scoped water recovery prototype remains **untested** and
+is insufficient by itself for passable cliffs, active warps or obscured old
+positions. Capture real copied old saves and verify dry/Surf states, visual
+priority, full component reachability and event interaction in an actual ROM.

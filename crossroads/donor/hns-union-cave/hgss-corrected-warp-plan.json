@@ -1,0 +1,253 @@
+{
+  "pret_revision": "6bf138d6035aa6b43d6f8f4132a12df70f86dcec",
+  "reference_files": {
+    "outdoor": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/110_D24R0101.json",
+    "1f": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/096_D25R0101.json",
+    "b1f": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/148_D25R0102.json",
+    "b2f": "https://github.com/pret/pokeheartgold/blob/6bf138d6035aa6b43d6f8f4132a12df70f86dcec/files/fielddata/eventdata/zone_event/149_D25R0103.json"
+  },
+  "hgss_dimensions": {
+    "UnionCave_1F": [
+      32,
+      96
+    ],
+    "UnionCave_2F": [
+      32,
+      64
+    ],
+    "UnionCave_3F": [
+      32,
+      96
+    ],
+    "RuinsOfAlph": [
+      32,
+      64
+    ]
+  },
+  "outdoor_local_anchors": {
+    "southwest_cave": [
+      3,
+      52
+    ],
+    "northwest_cave": [
+      3,
+      33
+    ],
+    "southwest_chamber": [
+      9,
+      53
+    ],
+    "northwest_chamber": [
+      9,
+      33
+    ],
+    "route36_gate": [
+      [
+        14,
+        5
+      ],
+      [
+        15,
+        5
+      ]
+    ],
+    "route32_gate": [
+      [
+        31,
+        37
+      ],
+      [
+        31,
+        38
+      ]
+    ]
+  },
+  "warps": [
+    {
+      "existing_map": "UnionCave_1F",
+      "proposed_index": 0,
+      "hgss_anchor": 1,
+      "hgss_x": 4,
+      "hgss_y": 25,
+      "destination": "UnionCave_2F",
+      "destination_index": 0,
+      "status": "proposed-not-live"
+    },
+    {
+      "existing_map": "UnionCave_1F",
+      "proposed_index": 1,
+      "hgss_anchor": 0,
+      "hgss_x": 27,
+      "hgss_y": 43,
+      "destination": "JohtoRoute32",
+      "destination_index": 0,
+      "status": "proposed-not-live"
+    },
+    {
+      "existing_map": "UnionCave_1F",
+      "proposed_index": 2,
+      "hgss_anchor": 2,
+      "hgss_x": 27,
+      "hgss_y": 93,
+      "destination": "JohtoRoute33",
+      "destination_index": 0,
+      "status": "proposed-not-live"
+    },
+    {
+      "existing_map": "UnionCave_1F",
+      "proposed_index": 3,
+      "hgss_anchor": 3,
+      "hgss_x": 6,
+      "hgss_y": 92,
+      "destination": "UnionCave_2F",
+      "destination_index": 2,
+      "status": "proposed-not-live"
+    },
+    {
+      "existing_map": "UnionCave_1F",
+      "proposed_index": 4,
+      "hgss_anchor": 4,
+      "hgss_x": 5,
+      "hgss_y": 3,
+      "destination": "UnionCave_3F",
+      "destination_index": 4,
+      "status": "proposed-not-live"
+    },
+    {
+      "existing_map": "UnionCave_1F",
+      "proposed_index": 5,
+      "hgss_anchor": 5,
+      "hgss_x": 27,
+      "hgss_y": 3,
+      "destination": "UnionCave_3F",
+      "destination_index": 3,
+      "status": "proposed-not-live"
+    },
+    {
+      "existing_map": "UnionCave_1F",
+      "proposed_index": 6,
+      "hgss_anchor": 6,
+      "hgss_x": 4,
+      "hgss_y": 4,
+      "destination": "RuinsOfAlph",
+      "destination_index": null,
+      "status": "proposed-not-live"
+    },
+    {
+      "existing_map": "UnionCave_1F",
+      "proposed_index": 7,
+      "hgss_anchor": 7,
+      "hgss_x": 26,
+      "hgss_y": 6,
+      "destination": "RuinsOfAlph",
+      "destination_index": null,
+      "status": "proposed-not-live"
+    },
+    {
+      "existing_map": "UnionCave_2F",
+      "proposed_index": 0,
+      "hgss_anchor": 0,
+      "hgss_x": 29,
+      "hgss_y": 43,
+      "destination": "UnionCave_1F",
+      "destination_index": 0,
+      "status": "proposed-not-live"
+    },
+    {
+      "existing_map": "UnionCave_2F",
+      "proposed_index": 1,
+      "hgss_anchor": 2,
+      "hgss_x": 27,
+      "hgss_y": 57,
+      "destination": "UnionCave_3F",
+      "destination_index": 0,
+      "status": "proposed-not-live"
+    },
+    {
+      "existing_map": "UnionCave_2F",
+      "proposed_index": 2,
+      "hgss_anchor": 1,
+      "hgss_x": 2,
+      "hgss_y": 60,
+      "destination": "UnionCave_1F",
+      "destination_index": 3,
+      "status": "proposed-not-live"
+    },
+    {
+      "existing_map": "UnionCave_2F",
+      "proposed_index": 3,
+      "hgss_anchor": 3,
+      "hgss_x": 2,
+      "hgss_y": 3,
+      "destination": "UnionCave_3F",
+      "destination_index": 1,
+      "status": "proposed-not-live"
+    },
+    {
+      "existing_map": "UnionCave_2F",
+      "proposed_index": 4,
+      "hgss_anchor": 4,
+      "hgss_x": 2,
+      "hgss_y": 12,
+      "destination": "UnionCave_3F",
+      "destination_index": 2,
+      "status": "proposed-not-live"
+    },
+    {
+      "existing_map": "UnionCave_3F",
+      "proposed_index": 0,
+      "hgss_anchor": 0,
+      "hgss_x": 2,
+      "hgss_y": 43,
+      "destination": "UnionCave_2F",
+      "destination_index": 1,
+      "status": "proposed-not-live"
+    },
+    {
+      "existing_map": "UnionCave_3F",
+      "proposed_index": 1,
+      "hgss_anchor": 1,
+      "hgss_x": 27,
+      "hgss_y": 15,
+      "destination": "UnionCave_2F",
+      "destination_index": 3,
+      "status": "proposed-not-live"
+    },
+    {
+      "existing_map": "UnionCave_3F",
+      "proposed_index": 2,
+      "hgss_anchor": 2,
+      "hgss_x": 9,
+      "hgss_y": 27,
+      "destination": "UnionCave_2F",
+      "destination_index": 4,
+      "status": "proposed-not-live"
+    },
+    {
+      "existing_map": "UnionCave_3F",
+      "proposed_index": 3,
+      "hgss_anchor": 3,
+      "hgss_x": 20,
+      "hgss_y": 3,
+      "destination": "UnionCave_1F",
+      "destination_index": 5,
+      "status": "proposed-not-live"
+    },
+    {
+      "existing_map": "UnionCave_3F",
+      "proposed_index": 4,
+      "hgss_anchor": 4,
+      "hgss_x": 2,
+      "hgss_y": 19,
+      "destination": "UnionCave_1F",
+      "destination_index": 4,
+      "status": "proposed-not-live"
+    }
+  ],
+  "limitations": [
+    "Proposed graph derived from HGSS events; no live map data or reciprocal Ruins indices chosen.",
+    "Coordinates are HGSS reference facts; adaptation to Emerald tile visuals/elevations and collision not tested.",
+    "No saved map, party, flags or warp IDs altered.",
+    "Existing B1F donor links directly to Ruins, skipping HGSS isolated 1F/B2F connector segments."
+  ]
+}
