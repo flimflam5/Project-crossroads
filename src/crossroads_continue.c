@@ -4,6 +4,7 @@
 #include "event_object_movement.h"
 #include "field_player_avatar.h"
 #include "fieldmap.h"
+#include "metatile_behavior.h"
 #include "constants/maps.h"
 #include "constants/event_objects.h"
 #include "constants/heal_locations.h"
@@ -84,6 +85,42 @@ static bool32 SavedPlayerWasSurfing(void)
     return FALSE;
 }
 
+// The former Route 33 was 32x24 and contained walkable ground at coordinates
+// now occupied by cliff/sea layers and the relocated Union Cave threshold.
+// A clear collision bit alone is insufficient: upper cliff cells have
+// elevation 4, so an old walking save there can be stranded or obscured.
+// This guard is limited to the 32x32 reconstruction and does not change the
+// save format or flags. A genuine Surf save on elevation-1 water is retained.
+static bool32 IsRoute33UnsafeContinueTile(s16 x, s16 y)
+{
+    const struct MapLayout *layout = gMapHeader.mapLayout;
+    u16 block, elevation;
+    u32 i;
+
+    if (gSaveBlock1Ptr->location.mapGroup != MAP_GROUP(MAP_JOHTO_ROUTE33)
+     || gSaveBlock1Ptr->location.mapNum != MAP_NUM(MAP_JOHTO_ROUTE33)
+     || layout->width != 32 || layout->height != 32
+     || x < 0 || y < 0 || x >= layout->width || y >= layout->height)
+        return FALSE;
+
+    for (i = 0; i < gMapHeader.events->warpCount; i++)
+        if (gMapHeader.events->warps[i].x == x && gMapHeader.events->warps[i].y == y)
+            return TRUE;
+
+    block = layout->map[y * layout->width + x];
+    elevation = block >> 12;
+    if (elevation == 3)
+        return FALSE;
+    if (elevation == 1 && SavedPlayerWasSurfing())
+    {
+        u32 behavior = GetAttributeByMetatileIdAndMapLayout(
+            block & MAPGRID_METATILE_ID_MASK, METATILE_ATTRIBUTE_BEHAVIOR, layout->isFrlg);
+        if (MetatileBehavior_IsSurfableWaterOrUnderwater(behavior))
+            return FALSE;
+    }
+    return TRUE;
+}
+
 static bool32 NeedsDryLanding(s16 x, s16 y)
 {
     const struct MapLayout *layout = gMapHeader.mapLayout;
@@ -123,6 +160,7 @@ bool32 Crossroads_PrepareContinue(void)
     if (x >= 0 && y >= 0 && x < layout->width && y < layout->height
      && !(layout->map[y * layout->width + x] & MAPGRID_COLLISION_MASK)
      && !IsAzaleaKilnFootprint(x, y)
+     && !IsRoute33UnsafeContinueTile(x, y)
      && !NeedsDryLanding(x, y))
     {
         bool32 occupied = FALSE;

@@ -84,7 +84,7 @@ oldwalk={(x,y) for y in range(24) for x in range(32) if not old[y*32+x]&0xc00 an
 assert len(oldwalk)==530
 relocated=0
 for x,y in oldwalk:
- if walk(x,y):assert (x,y) in seen;continue
+ if walk(x,y) and (x,y) not in warps:assert (x,y) in seen;continue
  for rad in range(1,57):
   p=next(((nx,ny) for ny in range(y-rad,y+rad+1) for nx in range(x-rad,x+rad+1) if abs(nx-x)+abs(ny-y)==rad and walk(nx,ny) and (nx,ny) not in warps),None)
   if p:break
