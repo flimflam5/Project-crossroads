@@ -1,0 +1,7 @@
+{
+  "rom_sha256": "6f9d45f8cc4c5b243f4264a129cc3d0695b875d8749518cbeef84727d8062ade",
+  "metatiles_checked": 16,
+  "vram_tiles_checked": 37,
+  "result": "PASS",
+  "scope": "Cold Continue of copied Azalea save; compiled metatile bytes/attributes and live facade tile VRAM. Palette and visual checks are separate."
+}

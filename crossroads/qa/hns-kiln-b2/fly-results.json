@@ -1,0 +1,18 @@
+{
+  "cities": [
+    "OlivineCity",
+    "EcruteakCity",
+    "GoldenrodCity",
+    "VioletCity",
+    "AzaleaTown",
+    "CherrygroveCity",
+    "NewBarkTown",
+    "MahoganyTown",
+    "BlackthornCity",
+    "CianwoodCity"
+  ],
+  "cancel": true,
+  "old_save_continue": true,
+  "badge_flags_unchanged": true,
+  "starter_retained": true
+}
