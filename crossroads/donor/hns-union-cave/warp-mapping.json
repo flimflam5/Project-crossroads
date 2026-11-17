@@ -1,0 +1,33 @@
+{
+  "status": "prototype-only; no gameplay warp events are modified",
+  "source_commit": "167aa6d537b109bb229c231ddce4616974c4da71",
+  "floors": [
+    {
+      "donor_map": "UnionCave_1F_hns", "existing_map": "UnionCave_1F", "existing_id": "MAP_UNION_CAVE_1_F",
+      "warp_mapping": [
+        {"existing_index": 0, "donor_index": 1, "role": "northern stairs to B1F", "destination": "MAP_UNION_CAVE_2_F", "destination_index": 0},
+        {"existing_index": 1, "donor_index": 0, "role": "Route 32 exit", "destination": "MAP_JOHTO_ROUTE32", "destination_index": 0},
+        {"existing_index": 2, "donor_index": 2, "role": "Route 33 exit", "destination": "MAP_JOHTO_ROUTE33", "destination_index": 0},
+        {"existing_index": 3, "donor_index": 3, "role": "southern stairs to B1F", "destination": "MAP_UNION_CAVE_2_F", "destination_index": 2, "new": true}
+      ]
+    },
+    {
+      "donor_map": "UnionCave_B1F_hns", "existing_map": "UnionCave_2F", "existing_id": "MAP_UNION_CAVE_2_F",
+      "warp_mapping": [
+        {"existing_index": 0, "donor_index": 0, "role": "northern 1F stairs", "destination": "MAP_UNION_CAVE_1_F", "destination_index": 0},
+        {"existing_index": 1, "donor_index": 2, "role": "B2F stairs", "destination": "MAP_UNION_CAVE_3_F", "destination_index": 0},
+        {"existing_index": 2, "donor_index": 1, "role": "southern 1F stairs", "destination": "MAP_UNION_CAVE_1_F", "destination_index": 3, "new": true},
+        {"existing_index": null, "donor_index": 3, "role": "southern Ruins of Alph exit", "destination": null, "destination_index": null, "new": true},
+        {"existing_index": null, "donor_index": 4, "role": "northern Ruins of Alph exit", "destination": null, "destination_index": null, "new": true}
+      ]
+    },
+    {
+      "donor_map": "UnionCave_B2F_hns", "existing_map": "UnionCave_3F", "existing_id": "MAP_UNION_CAVE_3_F",
+      "warp_mapping": [
+        {"existing_index": 0, "donor_index": 0, "role": "B1F stairs", "destination": "MAP_UNION_CAVE_2_F", "destination_index": 1}
+      ]
+    }
+  ],
+  "ruins_constraint": "The two cave exits access isolated Ruins of Alph regions; existing RuinsOfAlph is a single connected generic 40x36 map with only two unrelated chamber warps. Do not redirect these exits to its main public component. Reconstruct and reference the Ruins subareas and add reciprocal IDs before live integration.",
+  "old_save_constraint": "Three maps resize from 28x22 to 48x60, 48x48 and 40x50. Existing collision-only Continue recovery admits elevation-1 water in these maps for old walking saves. A source-specific safe landing strategy and runtime testing are required. No save format, starter, party or flags change is authorized."
+}

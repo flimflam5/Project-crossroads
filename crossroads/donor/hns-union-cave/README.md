@@ -54,3 +54,16 @@ stairs, water/Surf, NPCs and Continue using real controller input; measure ROM
 and RAM and run actual compiled-map and regression validators. Do not describe
 Union Cave as complete until all floors, references, interactions and owner
 visual QA are finished.
+
+`warp-mapping.json` enumerates a proposed mapping preserving all six existing
+warp indices across the three floors. `validate_hns_union_cave_plan.py` checks
+those current reciprocal destinations and inventories every donor floor warp.
+The two Ruins exits remain unresolved: the existing Ruins map is one connected
+generic area, while [HGSS reference](https://bulbapedia.bulbagarden.net/wiki/Union_Cave)
+places the cave exits in distinct Ruins subareas; connecting them directly would
+open an incorrect route. Reconstruct those subareas before wiring the cave.
+A source comparison of previously walkable old-save coordinates found 68, 44
+and 132 positions on new donor elevation-1 water on floors 1F, B1F and B2F
+respectively. Existing water recovery covers Violet and Olivine only. Even a
+collision-clean save can thus need safe relocation, without changing actual Surf
+saves; all positions require reachability/render checks in the finished layouts.
