@@ -1,0 +1,29 @@
+{
+  "id": "MAP_RUINS_OF_ALPH_UNDERGROUND_HALL",
+  "name": "RuinsOfAlph_UndergroundHall",
+  "layout": "LAYOUT_RUINS_OF_ALPH_UNDERGROUND_HALL",
+  "music": "MUS_PETALBURG_WOODS",
+  "region": "REGION_HOENN",
+  "region_map_section": "MAPSEC_RUINS_OF_ALPH",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_UNDERGROUND",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": null,
+  "object_events": [],
+  "warp_events": [
+    {
+      "x": 15,
+      "y": 16,
+      "elevation": 0,
+      "dest_map": "MAP_RUINS_OF_ALPH_HALL_ENTRANCE",
+      "dest_warp_id": "1"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

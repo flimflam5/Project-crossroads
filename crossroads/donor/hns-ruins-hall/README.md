@@ -1,7 +1,7 @@
 # Heart & Soul Underground Hall conversion source
 
-This contains pinned input files for an **offline-only** Underground Hall
-conversion, not a playable map. Run:
+This contains pinned input files for an offline Underground Hall conversion.
+The separate integrated development candidate is described below. Run:
 
 ```
 python3 crossroads/tools/prepare_hns_ruins_hall.py --output /tmp/hns-hall-preview
@@ -25,3 +25,8 @@ blackfragrant and SkidMarc25, and tileset contributors Crystal Advance /
 Kertra, Ekat99, TheDeadHeroAlistair, Johto Redrawn Team, zatavares852,
 lbsbezerra, WesleyFG and Kalarie. These are aggregate acknowledgements, not
 individual file attribution; explicit file-specific licensing remains unverified.
+
+The main network now stages this source as an unverified development candidate.
+Its separate provisional hall entrance and chamber puzzle calls are not derived
+from donor direct chamber warps. See the Ruins pocket README for the remaining
+runtime, hidden-room and visual acceptance work.

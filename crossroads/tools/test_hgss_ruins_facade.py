@@ -12,6 +12,10 @@ from stage_hgss_ruins_network import flood
 def check():
     root=Path(__file__).resolve().parents[2]
     original=json.loads((root/'data/maps/RuinsOfAlph/map.json').read_text())
+    if len(original['warp_events'])==3:
+        assert original['layout']=='LAYOUT_HGSS_RUINS_OF_ALPH'
+        assert (original['warp_events'][-1]['x'],original['warp_events'][-1]['y'])==DOOR
+        original['warp_events'].pop();original['layout']='LAYOUT_RUINS_OF_ALPH'
     layout=next(e for e in json.loads((root/'data/layouts/layouts.json').read_text())['layouts']
                 if e['id']=='LAYOUT_RUINS_OF_ALPH')
     changed=derive_layout(layout)

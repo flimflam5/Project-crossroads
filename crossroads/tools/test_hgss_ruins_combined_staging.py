@@ -15,6 +15,10 @@ def run():
     def write(path,data):files[path]=data.encode() if isinstance(data,str) else data
     def read(path):return files[path].decode() if path in files else (ROOT/path).read_text()
     m=json.loads((ROOT/'data/maps/RuinsOfAlph/map.json').read_text())
+    if len(m['warp_events'])==3:
+        assert m['layout']=='LAYOUT_HGSS_RUINS_OF_ALPH'
+        assert (m['warp_events'][-1]['x'],m['warp_events'][-1]['y'])==(14,15)
+        m['warp_events'].pop();m['layout']='LAYOUT_RUINS_OF_ALPH'
     tiles=readwords(ROOT/'data/layouts/RuinsOfAlph/map.bin')
     border=readwords(ROOT/'data/layouts/RuinsOfAlph/border.bin')
     network(write,read)

@@ -2085,3 +2085,15 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "crossroads/scripts/ss_aqua.inc"
 
 	.include "data/maps/AzaleaTown_CharcoalKiln/scripts.inc"
+
+	.include "data/maps/RuinsOfAlph_SouthwestPocket/scripts.inc"
+
+	.include "data/maps/RuinsOfAlph_NorthwestPocket/scripts.inc"
+
+	.include "data/maps/RuinsOfAlph_SouthwestChamber/scripts.inc"
+
+	.include "data/maps/RuinsOfAlph_NorthwestChamber/scripts.inc"
+
+	.include "data/maps/RuinsOfAlph_UndergroundHall/scripts.inc"
+
+	.include "data/maps/RuinsOfAlph_HallEntrance/scripts.inc"

@@ -11171,6 +11171,83 @@
       "border_filepath": "data/layouts/HgssUnionCave_3F/border.bin",
       "blockdata_filepath": "data/layouts/HgssUnionCave_3F/map.bin",
       "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_RUINS_OF_ALPH_SOUTHWEST_POCKET",
+      "name": "RuinsOfAlph_SouthwestPocket_Layout",
+      "width": 22,
+      "height": 14,
+      "primary_tileset": "gTileset_HgssRuinsPocket",
+      "secondary_tileset": "gTileset_WesternInteriors",
+      "border_filepath": "data/layouts/RuinsOfAlph_SouthwestPocket/border.bin",
+      "blockdata_filepath": "data/layouts/RuinsOfAlph_SouthwestPocket/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_RUINS_OF_ALPH_NORTHWEST_POCKET",
+      "name": "RuinsOfAlph_NorthwestPocket_Layout",
+      "width": 16,
+      "height": 17,
+      "primary_tileset": "gTileset_HgssRuinsPocket",
+      "secondary_tileset": "gTileset_WesternInteriors",
+      "border_filepath": "data/layouts/RuinsOfAlph_NorthwestPocket/border.bin",
+      "blockdata_filepath": "data/layouts/RuinsOfAlph_NorthwestPocket/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_RUINS_OF_ALPH_SOUTHWEST_CHAMBER",
+      "name": "RuinsOfAlph_SouthwestChamber_Layout",
+      "width": 10,
+      "height": 11,
+      "primary_tileset": "gTileset_HgssRuinsChamber",
+      "secondary_tileset": "gTileset_WesternInteriors",
+      "border_filepath": "data/layouts/RuinsOfAlph_SouthwestChamber/border.bin",
+      "blockdata_filepath": "data/layouts/RuinsOfAlph_SouthwestChamber/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_RUINS_OF_ALPH_NORTHWEST_CHAMBER",
+      "name": "RuinsOfAlph_NorthwestChamber_Layout",
+      "width": 10,
+      "height": 11,
+      "primary_tileset": "gTileset_HgssRuinsChamber",
+      "secondary_tileset": "gTileset_WesternInteriors",
+      "border_filepath": "data/layouts/RuinsOfAlph_NorthwestChamber/border.bin",
+      "blockdata_filepath": "data/layouts/RuinsOfAlph_NorthwestChamber/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_RUINS_OF_ALPH_UNDERGROUND_HALL",
+      "name": "RuinsOfAlph_UndergroundHall_Layout",
+      "width": 29,
+      "height": 32,
+      "primary_tileset": "gTileset_HgssRuinsHall",
+      "secondary_tileset": "gTileset_WesternInteriors",
+      "border_filepath": "data/layouts/RuinsOfAlph_UndergroundHall/border.bin",
+      "blockdata_filepath": "data/layouts/RuinsOfAlph_UndergroundHall/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_RUINS_OF_ALPH_HALL_ENTRANCE",
+      "name": "RuinsOfAlph_HallEntrance_Layout",
+      "width": 13,
+      "height": 15,
+      "primary_tileset": "gTileset_HgssRuinsHall",
+      "secondary_tileset": "gTileset_WesternInteriors",
+      "border_filepath": "data/layouts/RuinsOfAlph_HallEntrance/border.bin",
+      "blockdata_filepath": "data/layouts/RuinsOfAlph_HallEntrance/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_HGSS_RUINS_OF_ALPH",
+      "name": "HgssRuinsOfAlph_Layout",
+      "width": 40,
+      "height": 36,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_HgssRuinsPublic",
+      "border_filepath": "data/layouts/HgssRuinsOfAlph/border.bin",
+      "blockdata_filepath": "data/layouts/HgssRuinsOfAlph/map.bin",
+      "layout_version": "emerald"
     }
   ]
 }

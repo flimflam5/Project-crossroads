@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Verify dormant donor puzzle assets and existing special ordinals.
+"""Verify donor puzzle assets, approved staged calls and existing special ordinals.
 
 This checks source identity and wiring only; it does not test gameplay,
 controls, emulator graphics, map return, or the full ROM link.
@@ -25,5 +25,12 @@ uses=[]
 for root in (R/'data/maps',R/'crossroads/scripts'):
     for path in root.rglob('*.inc'):
         if 'DoSlidingPuzzle' in path.read_text():uses.append(str(path.relative_to(R)))
-assert not uses,('Puzzle must remain unused until tested',uses)
-print('PASS: pinned puzzle assets, 624 preserved special ordinals, appended dormant puzzle and no flags/rewards. No emulator or full link claim.')
+expected={'data/maps/RuinsOfAlph_SouthwestChamber/scripts.inc',
+          'data/maps/RuinsOfAlph_NorthwestChamber/scripts.inc'}
+assert set(uses)==expected,('Unexpected puzzle caller or missing chamber',uses)
+for path in uses:
+    script=(R/path).read_text()
+    assert script.count('special DoSlidingPuzzle')==1
+    assert 'warp MAP_RUINS_OF_ALPH_UNDERGROUND_HALL' in script
+    assert not re.search(r'^\s*(?:setflag|clearflag|giveitem|removeitem)\b',script,re.M),path
+print('PASS: pinned puzzle assets, preserved 624 special ordinals, two chamber calls and no flags/rewards. Emulator and full link remain unverified.')

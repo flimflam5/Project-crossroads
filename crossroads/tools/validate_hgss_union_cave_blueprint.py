@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Exercise the isolated HGSS Union Cave layout generation without linking it.
+"""Exercise HGSS Union Cave generation against live or dormant installations.
 
-Checks in-memory map output, references and continue masks. Real Ruins maps,
-compiled gameplay, rendering, actions and old-save testing remain required.
+Checks in-memory map output, references and continue masks. Compiled gameplay,
+rendering, actions and old-save testing remain required.
 """
 import json, sys
 from pathlib import Path
@@ -13,8 +13,14 @@ import build_hgss_union_cave as g
 groups=json.loads((R/'data/maps/map_groups.json').read_text())
 names=groups['gMapGroup_CrossroadsOlivine']+groups['gMapGroup_CrossroadsJohtoExpansion']
 maps={n:json.loads((R/'data/maps'/n/'map.json').read_text()) for n in names}
+# Recreate the six legacy slots as generator input after live installation.
+# Their destination/index values must still match the installed prefix.
+for name in g.FLOORS:
+    if maps[name]['layout']==g.NEW_LAYOUTS[name]:
+        maps[name]['layout']='LAYOUT_UNION_CAVE_'+name[-2]+'_F'
+        maps[name]['warp_events']=maps[name]['warp_events'][:{'UnionCave_1F':3,'UnionCave_2F':2,'UnionCave_3F':1}[name]]
 old={n:json.loads(json.dumps(maps[n]['warp_events'])) for n in g.FLOORS}
-# Stubs are deliberately in-memory: user-facing pockets are not installed.
+# Stubs exercise the generator independently of the installed pocket contents.
 maps['RuinsOfAlph_SouthwestPocket']={'id':'MAP_RUINS_OF_ALPH_SOUTHWEST_POCKET'}
 maps['RuinsOfAlph_NorthwestPocket']={'id':'MAP_RUINS_OF_ALPH_NORTHWEST_POCKET'}
 layouts={x['id']:x for x in json.loads((R/'data/layouts/layouts.json').read_text())['layouts']}
@@ -121,4 +127,4 @@ try:
     except AssertionError as e:assert 'share a directly accessible chamber' in str(e)
     else:raise AssertionError('Shared chamber shortcut was accepted')
 finally:nw['warp_events'][1]=saved;shared['warp_events'].pop()
-print('PASS: isolated reference-shaped floor blueprint, retained warp indices, reciprocal ladders, safe masks and pocket guard negative cases. Not linked or emulator-tested.')
+print('PASS: isolated reference-shaped floor blueprint, retained warp indices, reciprocal ladders, safe masks and pocket guard negative cases. Full link and emulator behavior remain unverified.')

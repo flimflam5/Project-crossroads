@@ -1,8 +1,8 @@
 # Ruins of Alph donor pocket conversion
 
-This source-only prototype prepares the two western exterior pockets and their
-distinct Ho-Oh and Omanyte chambers for later Union Cave/Ruins integration. It
-does not register any live maps, events, rewards, puzzles or save changes.
+This donor-source package supports two western exterior pockets and distinct
+Ho-Oh and Omanyte chambers. See the integrated prototype checkpoint below for
+the current live-map status and the remaining validation.
 
 `python3 crossroads/tools/prepare_hns_ruins_pockets.py --output /tmp/hns-ruins-preview`
 verifies the pinned inputs in `source-sha256.json` and emits compact
@@ -52,8 +52,8 @@ local, and tests empty board slots without reading the cursor sprite; the
 special is appended at the end of the existing special table with `waitstate=1`,
 keeping all prior special numbers stable.
 
-The special is not used by any gameplay script. No flags, items, rewards,
-chamber events, or new maps are wired by this port. A scratch component test
+At the source-only checkpoint the special had no gameplay callers. The two
+subsequent draft chamber callers are described below. A scratch component test
 ran the actual scaninc-generated asset rules, project's preprocessor, ARM cc1
 with project flags, and assembler against the real graphics and palette assets;
 all 56 undefined object symbols exist in the prior QA10 ELF. This is **not** a
@@ -61,3 +61,20 @@ full project link, emulator run, or minigame test. Validate screen entry/exit,
 controls, success/cancellation, field return, and save safety before using it.
 Because the project special macro already emits an implicit `waitstate`, do not
 copy the donor script's extra explicit `waitstate` after this special.
+
+## Integrated prototype checkpoint
+
+The six Ruins maps are now wired as a **development candidate**, not an
+accepted or completed area. The southwest and northwest pockets retain
+separate chambers, and the cave connections follow the HGSS 1F/B2F chains.
+Both chamber picture boards now call the prepared puzzle special and use a
+scripted fade/warp to the underground hall on success. No permanent success
+flags, item grants, hidden rooms, or story events are implemented; the puzzles
+are repeatable. The GBA corridor between the hall and the public surface is
+provisional, and the southwest pocket has a two-cell path in the donor ledge
+so travel can work in both directions. These are adaptations, not HGSS 1:1
+claims. The surface entrance uses a private repacked donor facade; existing
+warps 0/1, signs, resident and border connections are retained. An appended
+layout ID distinguishes old Ruins saves for migration. No successful puzzle
+interaction, map traversal, old-save behavior or rendered facade has yet been
+confirmed by a full build and emulator test; owner visual acceptance is pending.

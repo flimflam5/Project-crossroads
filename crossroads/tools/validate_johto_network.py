@@ -88,6 +88,12 @@ reviewed|=validate_rooms()|validate_services()|validate_gates()
 from validate_hgss_violet import validate as validate_violet
 reviewed|=validate_violet()
 reviewed|=validate_olivine_graph()
+# HGSS Union Cave deliberately has three separate 1F components and branched
+# B2F rooms; a single-floor all-doors flood would falsely require shortcuts.
+# The replacement check compares every dry/Surf-permissive anchor component
+# to pinned HGSS permissions and checks every installed warp threshold.
+from validate_hgss_union_cave_installed import validate as validate_union_installed
+reviewed|=validate_union_installed()
 def behavior(n,x,y):
  w,h=sizes[n]
  if not(0<=x<w and 0<=y<h):return None

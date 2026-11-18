@@ -1,7 +1,7 @@
 {
   "id": "MAP_RUINS_OF_ALPH",
   "name": "RuinsOfAlph",
-  "layout": "LAYOUT_RUINS_OF_ALPH",
+  "layout": "LAYOUT_HGSS_RUINS_OF_ALPH",
   "music": "MUS_LILYCOVE",
   "region": "REGION_HOENN",
   "region_map_section": "MAPSEC_RUINS_OF_ALPH",
@@ -54,6 +54,13 @@
       "elevation": 0,
       "dest_map": "MAP_ALPH_CHAMBERS_3_F",
       "dest_warp_id": "1"
+    },
+    {
+      "x": 14,
+      "y": 15,
+      "elevation": 0,
+      "dest_map": "MAP_RUINS_OF_ALPH_HALL_ENTRANCE",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],

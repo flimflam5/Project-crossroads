@@ -42,6 +42,19 @@ def main():
  layouts=load('data/layouts/layouts.json');bylayout={l['id']:l for l in layouts['layouts']}
  service_templates=load('crossroads/hgss/contracts/ecruteak-rooms-qa04.json')
  existing={n:load(f'data/maps/{n}/map.json') for n in names[:37]};maps=copy.deepcopy(existing);tiles={};sizes={};meta={};sections={};protected={}
+ # Staged donor Ruins is activated only as a complete six-map candidate.
+ # Compose registration files via a shared overlay even in --check mode.
+ from stage_hgss_ruins_network import stage as stage_ruins, NAMES as RUINS_NAMES
+ ruins_selected=[n for n in RUINS_NAMES if n in names]
+ assert len(ruins_selected) in (0,len(RUINS_NAMES)),'All Ruins targets must be present together'
+ ruins_cache={}
+ def ruins_write(path,value):
+  write(path,value)
+  if path in ('src/data/tilesets/graphics.h','src/data/tilesets/metatiles.h','src/data/tilesets/headers.h','include/tilesets.h'):
+   ruins_cache[path]=value.decode() if isinstance(value,bytes) else value
+ def ruins_read(path):return ruins_cache[path] if path in ruins_cache else (R/path).read_text()
+ if ruins_selected:
+  ruins_maps,ruins_tiles,ruins_layouts,ruins_borders,ruins_scripts=stage_ruins(ruins_write,ruins_read)
  source=struct.unpack('<2400H',(R/'data/layouts/SlateportCity/map.bin').read_bytes())
  oldbytes={n:(R/bylayout[m['layout']]['blockdata_filepath']).read_bytes() for n,m in existing.items()}
  def obj(x,y,label,gfx='MAN_1',local=None):
@@ -94,6 +107,14 @@ def main():
   l=bylayout[m['layout']];sizes[n]=(l['width'],l['height']);tiles[n]=list(struct.unpack('<'+str(l['width']*l['height'])+'H',oldbytes[n]));sections[n]=m['region_map_section']
  for p in selected:
   n=p['name'];parent=p.get('parent');kind=p['kind'];c=p['cluster'];section=parent or n
+  if n in ruins_selected:
+   m=ruins_maps[n];l=ruins_layouts[m['layout']];maps[n]=m;tiles[n]=ruins_tiles[n];sizes[n]=(l['width'],l['height'])
+   if l['id'] not in bylayout:layouts['layouts'].append(l);bylayout[l['id']]=l
+   else:assert bylayout[l['id']]==l,(n,'Ruins layout identity changed')
+   write(l['border_filepath'],struct.pack('<4H',*ruins_borders[n]))
+   write(l['blockdata_filepath'],struct.pack('<'+str(len(tiles[n]))+'H',*tiles[n]))
+   js(f'data/maps/{n}/map.json',m);write(f'data/maps/{n}/scripts.inc',ruins_scripts[n])
+   meta[n]=dict(kind='hgss',outdoor=n.endswith('Pocket'),parent=parent,theme='hgss',floor=0x3001);sections[n]=m['region_map_section'];continue
   if kind=='hgss':
    m=load(f'data/maps/{n}/map.json');l=bylayout[m['layout']];maps[n]=m;sizes[n]=(l['width'],l['height']);tiles[n]=list(struct.unpack('<'+str(l['width']*l['height'])+'H',(R/l['blockdata_filepath']).read_bytes()));meta[n]=dict(kind='hgss',outdoor=n=='BellchimeTrail',parent=parent,theme='hgss',floor=0x3223);sections[n]=m['region_map_section'];continue
   if kind in ['cave','tower','ruins','well','ice','shrine','islandcave','falls','gate'] and re.search(r'_\d+F$',n):section=n.rsplit('_',1)[0]
@@ -305,6 +326,19 @@ def main():
  # Reserve appended layout IDs and graphics while leaving all old map IDs,
  # layouts, tiles and gameplay untouched until both Ruins pockets are ready.
  register_union_layouts(layouts['layouts'],bylayout,write)
+ if ruins_selected:
+  from stage_hgss_ruins_facade import stage as stage_facade, derive_layout as ruins_public_layout
+  m=maps['RuinsOfAlph'];legacy_layout=bylayout[m['layout']]
+  border=struct.unpack('<4H',(R/legacy_layout['border_filepath']).read_bytes())
+  m,newtiles,footprint=stage_facade(ruins_write,m,tiles['RuinsOfAlph'],border,ruins_read)
+  l=ruins_public_layout(legacy_layout)
+  if l['id'] not in bylayout:layouts['layouts'].append(l);bylayout[l['id']]=l
+  else:assert bylayout[l['id']]==l,'Ruins public layout identity changed'
+  assert footprint=={(x,y) for y in range(12,16) for x in range(13,16)}
+  maps['RuinsOfAlph']=m;tiles['RuinsOfAlph']=newtiles
+  write(l['border_filepath'],struct.pack('<4H',*border))
+  write(l['blockdata_filepath'],struct.pack('<'+str(len(newtiles))+'H',*newtiles))
+  js('data/maps/RuinsOfAlph/map.json',m)
  pocket_names=('RuinsOfAlph_SouthwestPocket','RuinsOfAlph_NorthwestPocket')
  pocket_count=sum(n in maps for n in pocket_names)
  assert pocket_count in (0,2),'Both distinct Ruins pockets are required'
@@ -325,7 +359,7 @@ def main():
   olivine_events(n,m)
   patch_events(n,m)
   relocate_layout(n,bylayout[m['layout']])
-  if n in ['EcruteakCity','OlivineCity'] or (n in meta and meta[n]['kind']=='hgss'):continue # Dedicated HGSS authoring
+  if (ruins_selected and n=='RuinsOfAlph') or n in ['EcruteakCity','OlivineCity'] or (n in meta and meta[n]['kind']=='hgss'):continue # Dedicated HGSS authoring
   if n=='CianwoodCity':rect(n,sizes[n][0]-3,sizes[n][1]//2-1,3,3,0x1170)
   if n not in existing and meta[n]['outdoor']:
    for e in m['bg_events']:rect(n,e['x'],e['y'],1,1,0x403)
@@ -383,6 +417,7 @@ def main():
   p['map_group']=75 if linear<127 else 76;p['map_num']=linear if linear<127 else linear-127
   if p['name'] in maps:
    n=p['name'];m=maps[n];linear=names.index(n);p['map_group']=75 if linear<127 else 76;p['map_num']=linear if linear<127 else linear-127;p.update(display_name=n.replace('_Gym','_CommunityHall') if n in ['NewBarkTown_Gym','CherrygroveCity_Gym'] else n,role='community hall (stable internal slot suffix Gym)' if n in ['NewBarkTown_Gym','CherrygroveCity_Gym'] else p['kind'],status='reference-runtime-review-pending' if n in VIOLET_OWNED else 'implemented',id=m['id'],layout=m['layout'],connections=m['connections'],entrances=m['warp_events']);p.setdefault('coverage','structural/build/runtime checks recorded separately; no owner QA yet')
+   if n in ruins_selected:p['status']='draft-unverified';p['coverage']='Draft donor geometry; gameplay, hidden rooms, corridor art and owner visual QA pending.'
  for p in manifest['existing']:
   m=maps[p['name']];p.update(connections=m['connections'],entrances=m['warp_events'])
  manifest['dungeons']=DUNGEONS;manifest['border_topology']=EDGES

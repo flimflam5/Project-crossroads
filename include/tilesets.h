@@ -181,4 +181,16 @@ extern const struct Tileset gTileset_HnsRoute33;
 extern const struct Tileset gTileset_HgssUnionCave;
 #endif
 // END HGSS UNION CAVE PRIVATE
+// BEGIN HGSS RUINS PRIVATE
+#if !IS_FRLG
+extern const struct Tileset gTileset_HgssRuinsPocket;
+extern const struct Tileset gTileset_HgssRuinsChamber;
+extern const struct Tileset gTileset_HgssRuinsHall;
+#endif
+// END HGSS RUINS PRIVATE
+// BEGIN HGSS RUINS PUBLIC PRIVATE
+#if !IS_FRLG
+extern const struct Tileset gTileset_HgssRuinsPublic;
+#endif
+// END HGSS RUINS PUBLIC PRIVATE
 #endif //GUARD_tilesets_H

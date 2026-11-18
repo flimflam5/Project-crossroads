@@ -1343,6 +1343,12 @@
     "SSAqua_NortheastCabins",
     "SSAqua_NorthwestCabins",
     "SSAqua_B1F",
-    "AzaleaTown_CharcoalKiln"
+    "AzaleaTown_CharcoalKiln",
+    "RuinsOfAlph_SouthwestPocket",
+    "RuinsOfAlph_NorthwestPocket",
+    "RuinsOfAlph_SouthwestChamber",
+    "RuinsOfAlph_NorthwestChamber",
+    "RuinsOfAlph_UndergroundHall",
+    "RuinsOfAlph_HallEntrance"
   ]
 }

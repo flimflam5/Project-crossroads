@@ -40,3 +40,9 @@ data/tilesets/primary/hns_charcoal_kiln/palettes/*.pal -text
 data/tilesets/secondary/hns_route33/palettes/*.pal -text
 # Preserve the source-pinned, deterministic private Union Cave palettes.
 data/tilesets/primary/hgss_union_cave/palettes/*.pal -text
+# Generated Ruins palettes retain donor-exact line endings for deterministic checks.
+data/tilesets/primary/hgssruinspocket/palettes/*.pal -text
+data/tilesets/primary/hgssruinschamber/palettes/*.pal -text
+data/tilesets/primary/hgssruinshall/palettes/*.pal -text
+data/tilesets/secondary/hgss_ruins_public/palettes/*.pal -text
+data/tilesets/secondary/hgss_ruins_public/palettes/*.pal -whitespace

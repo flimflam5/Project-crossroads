@@ -25,7 +25,11 @@ def validate():
  # QA10's seven docked ship maps append after the exact Violet/Olivine
  # prefixes. Name each authorized addition; arbitrary later tails still fail.
  aqua_new=['SSAqua_1F','SSAqua_CaptainRoom','SSAqua_SoutheastCabins','SSAqua_SouthwestCabins','SSAqua_NortheastCabins','SSAqua_NorthwestCabins','SSAqua_B1F'] if (R/'data/maps/SSAqua_1F/map.json').exists() else []
- assert tail==NEW+olivine_new+aqua_new+['AzaleaTown_CharcoalKiln'],('Violet IDs shifted or uncontracted appended maps',tail)
+ # The Ruins/Union prototype appends exactly six named maps after the kiln;
+ # prior Violet/Olivine/Aqua/kiln ordinals remain required byte-for-byte.
+ from stage_hgss_ruins_network import NAMES as RUINS_NEW
+ ruins_new=list(RUINS_NEW) if (R/'data/maps/RuinsOfAlph_SouthwestPocket/map.json').exists() else []
+ assert tail==NEW+olivine_new+aqua_new+['AzaleaTown_CharcoalKiln']+ruins_new,('Violet IDs shifted or uncontracted appended maps',tail)
  maps={n:load(f'data/maps/{n}/map.json') for n in OWNED};ids={m['id']:n for n,m in maps.items()};raw={};size={};attrs={};actors={}
  paths=dict(re.findall(r'const u16 (gMetatileAttributes_\w+)\[\] = INCBIN_U16\("([^"]+)"\)',(R/'src/data/tilesets/metatiles.h').read_text()))
  for key,body in re.findall(r'const struct Tileset (gTileset_\w+)\s*=\s*\{([^}]+)\}',(R/'src/data/tilesets/headers.h').read_text(),re.S):

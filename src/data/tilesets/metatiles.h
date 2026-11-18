@@ -611,3 +611,21 @@ const u16 gMetatiles_HgssUnionCave[] = INCBIN_U16("data/tilesets/primary/hgss_un
 const u16 gMetatileAttributes_HgssUnionCave[] = INCBIN_U16("data/tilesets/primary/hgss_union_cave/metatile_attributes.bin");
 #endif
 // END HGSS UNION CAVE PRIVATE
+
+// BEGIN HGSS RUINS PRIVATE
+#if !IS_FRLG
+const u16 gMetatiles_HgssRuinsPocket[] = INCBIN_U16("data/tilesets/primary/hgssruinspocket/metatiles.bin");
+const u16 gMetatileAttributes_HgssRuinsPocket[] = INCBIN_U16("data/tilesets/primary/hgssruinspocket/metatile_attributes.bin");
+const u16 gMetatiles_HgssRuinsChamber[] = INCBIN_U16("data/tilesets/primary/hgssruinschamber/metatiles.bin");
+const u16 gMetatileAttributes_HgssRuinsChamber[] = INCBIN_U16("data/tilesets/primary/hgssruinschamber/metatile_attributes.bin");
+const u16 gMetatiles_HgssRuinsHall[] = INCBIN_U16("data/tilesets/primary/hgssruinshall/metatiles.bin");
+const u16 gMetatileAttributes_HgssRuinsHall[] = INCBIN_U16("data/tilesets/primary/hgssruinshall/metatile_attributes.bin");
+#endif
+// END HGSS RUINS PRIVATE
+
+// BEGIN HGSS RUINS PUBLIC PRIVATE
+#if !IS_FRLG
+const u16 gMetatiles_HgssRuinsPublic[] = INCBIN_U16("data/tilesets/secondary/hgss_ruins_public/metatiles.bin");
+const u16 gMetatileAttributes_HgssRuinsPublic[] = INCBIN_U16("data/tilesets/secondary/hgss_ruins_public/metatile_attributes.bin");
+#endif
+// END HGSS RUINS PUBLIC PRIVATE
