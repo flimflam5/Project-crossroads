@@ -12,6 +12,7 @@ import hashlib
 import json
 import runpy
 import shutil
+import subprocess
 import sys
 from pathlib import Path
 from PIL import Image
@@ -95,6 +96,34 @@ for row in (15, 16, 17):
     else:
         assert best[0] * 4 < best[1] * 3, ('expected persistent obstruction', row, best)
     results.append(dict(case='pavement_visibility', position=[7,row], visible=best[0], expected=best[1], screenshot=best[2]))
+
+# Cross the centre of the transition from all four adjacent walkable cells.
+# Retain actual walking frames so the owner can inspect foreground order during
+# movement as well as the stationary samples above. The optional MP4 is made
+# only when ffmpeg is installed; the original native frames remain available.
+movement_frames = a.output / 'transition-walk-frames'
+movement_frames.mkdir(exist_ok=True)
+original_frames = walk.__globals__['frames']
+frame_number = 0
+def recorded_frames(n=60, k=0):
+    global frame_number
+    while n:
+        step = min(n, 4)
+        original_frames(step, k)
+        n -= step
+        assert lib.emu_image(str(movement_frames / f'{frame_number:04}.png').encode())
+        frame_number += 1
+for approach in ((6,16), (8,16), (7,15), (7,17)):
+    walk(approach)
+    walk.__globals__['frames'] = recorded_frames
+    try:
+        walk((7,16))
+    finally:
+        walk.__globals__['frames'] = original_frames
+    assert pos() == (7,16), ('paving approach failed', approach, pos())
+    results.append(dict(case='pavement_approach', approach=list(approach), arrival=[7,16]))
+if shutil.which('ffmpeg'):
+    subprocess.run(['ffmpeg','-y','-loglevel','error','-framerate','15','-i',str(movement_frames/'%04d.png'),'-pix_fmt','yuv420p',str(a.output/'transition-walk.mp4')], check=True)
 
 # Apricorn trees are object events, not solid trunk tiles. Push into every
 # reachable side of each separately and verify ordinary controller movement is
