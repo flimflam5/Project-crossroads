@@ -71,3 +71,15 @@ flags. No conditional gate or new map is registered in this checkpoint. The
 exact conditions, door presentation, trigger reset behavior, map inclusion,
 old-save compatibility, and visual/movement behavior require integration and
 engine/emulator tests before activation.
+
+A further unregistered gate prototype uses the donor's actual open-wall
+metatile and appends only its four graphic tiles and one previously unused
+palette bank to a copy of the first-chamber tileset. The staged scripts check
+for a Water Stone in the bag or Ho-Oh in the party without consuming either,
+then open the wall visually and enter the appropriate second room. The gate is
+rechecked each time rather than permanently opened; this is a documented
+nonpersistent GBA adaptation of the HGSS condition, not a claim of exact game
+behavior. `test_hgss_ruins_gate_candidates.py` checks original artwork and
+metadata are preserved, donor door pixels match, conditions do not grant or
+remove items or set flags, and the return-only landing is retained. Neither
+these scripts nor the additional metatile are installed in the game.
