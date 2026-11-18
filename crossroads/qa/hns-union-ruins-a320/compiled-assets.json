@@ -1,0 +1,31 @@
+{
+  "rom_sha256": "a320fc5947e7b207e5d496008e3593ef68a403fd5dbba7e73fd2830ccc4539d5",
+  "tilesets": {
+    "HgssUnionCave": {
+      "metatile_bytes": 1456,
+      "attribute_bytes": 182,
+      "compiled_palette_banks": 16
+    },
+    "HgssRuinsPocket": {
+      "metatile_bytes": 1232,
+      "attribute_bytes": 154,
+      "compiled_palette_banks": 16
+    },
+    "HgssRuinsChamber": {
+      "metatile_bytes": 640,
+      "attribute_bytes": 80,
+      "compiled_palette_banks": 16
+    },
+    "HgssRuinsHall": {
+      "metatile_bytes": 864,
+      "attribute_bytes": 108,
+      "compiled_palette_banks": 16
+    },
+    "HgssRuinsPublic": {
+      "metatile_bytes": 8032,
+      "attribute_bytes": 1004,
+      "compiled_palette_banks": 16
+    }
+  },
+  "result": "PASS"
+}

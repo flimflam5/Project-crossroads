@@ -1,0 +1,14 @@
+{
+  "map": "RuinsOfAlph_NorthwestPocket",
+  "tileset": "HgssRuinsPocket",
+  "metatiles": 60,
+  "tiles": 155,
+  "bad_tiles": [],
+  "banks": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "bad_banks": []
+}

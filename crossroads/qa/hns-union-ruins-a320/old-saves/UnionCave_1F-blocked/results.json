@@ -1,0 +1,30 @@
+{
+  "rom_sha256": "a320fc5947e7b207e5d496008e3593ef68a403fd5dbba7e73fd2830ccc4539d5",
+  "old_map": "UnionCave_1F",
+  "old_position": [
+    6,
+    2
+  ],
+  "arrival_map": "UnionCave_1F",
+  "arrival": [
+    5,
+    24
+  ],
+  "walked_to": [
+    4,
+    24
+  ],
+  "expected_relocation": true,
+  "new_save_cold_continue": true,
+  "tracked_steps": 120,
+  "friendship_wraps": 1,
+  "friendship_deltas": [
+    1
+  ],
+  "walked_to_exit": "JohtoRoute33",
+  "visible": 192,
+  "opaque": 192,
+  "behavior": 8,
+  "private_source_unchanged": true,
+  "result": "PASS"
+}

@@ -1,0 +1,353 @@
+{
+  "rom_sha256": "a320fc5947e7b207e5d496008e3593ef68a403fd5dbba7e73fd2830ccc4539d5",
+  "cases": [
+    {
+      "kind": "reciprocal_warp",
+      "source": "UnionCave_1F",
+      "index": 0,
+      "destination": "UnionCave_2F",
+      "return_index": 0,
+      "arrival": [
+        29,
+        43
+      ]
+    },
+    {
+      "kind": "reciprocal_warp",
+      "source": "UnionCave_1F",
+      "index": 1,
+      "destination": "JohtoRoute32",
+      "return_index": 0,
+      "arrival": [
+        18,
+        56
+      ]
+    },
+    {
+      "kind": "reciprocal_warp",
+      "source": "UnionCave_1F",
+      "index": 2,
+      "destination": "JohtoRoute33",
+      "return_index": 0,
+      "arrival": [
+        19,
+        14
+      ]
+    },
+    {
+      "kind": "reciprocal_warp",
+      "source": "UnionCave_1F",
+      "index": 3,
+      "destination": "UnionCave_2F",
+      "return_index": 2,
+      "arrival": [
+        2,
+        60
+      ]
+    },
+    {
+      "kind": "reciprocal_warp",
+      "source": "UnionCave_1F",
+      "index": 4,
+      "destination": "UnionCave_3F",
+      "return_index": 4,
+      "arrival": [
+        2,
+        19
+      ]
+    },
+    {
+      "kind": "reciprocal_warp",
+      "source": "UnionCave_1F",
+      "index": 5,
+      "destination": "UnionCave_3F",
+      "return_index": 3,
+      "arrival": [
+        20,
+        3
+      ]
+    },
+    {
+      "kind": "reciprocal_warp",
+      "source": "UnionCave_1F",
+      "index": 6,
+      "destination": "RuinsOfAlph_SouthwestPocket",
+      "return_index": 0,
+      "arrival": [
+        14,
+        3
+      ]
+    },
+    {
+      "kind": "reciprocal_warp",
+      "source": "UnionCave_1F",
+      "index": 7,
+      "destination": "RuinsOfAlph_NorthwestPocket",
+      "return_index": 0,
+      "arrival": [
+        13,
+        7
+      ]
+    },
+    {
+      "kind": "reciprocal_warp",
+      "source": "UnionCave_2F",
+      "index": 1,
+      "destination": "UnionCave_3F",
+      "return_index": 0,
+      "arrival": [
+        2,
+        43
+      ]
+    },
+    {
+      "kind": "reciprocal_warp",
+      "source": "UnionCave_2F",
+      "index": 3,
+      "destination": "UnionCave_3F",
+      "return_index": 1,
+      "arrival": [
+        27,
+        15
+      ]
+    },
+    {
+      "kind": "reciprocal_warp",
+      "source": "UnionCave_2F",
+      "index": 4,
+      "destination": "UnionCave_3F",
+      "return_index": 2,
+      "arrival": [
+        9,
+        27
+      ]
+    },
+    {
+      "kind": "reciprocal_warp",
+      "source": "RuinsOfAlph_SouthwestPocket",
+      "index": 1,
+      "destination": "RuinsOfAlph_SouthwestChamber",
+      "return_index": 0,
+      "arrival": [
+        4,
+        9
+      ]
+    },
+    {
+      "kind": "reciprocal_warp",
+      "source": "RuinsOfAlph_NorthwestPocket",
+      "index": 1,
+      "destination": "RuinsOfAlph_NorthwestChamber",
+      "return_index": 0,
+      "arrival": [
+        4,
+        9
+      ]
+    },
+    {
+      "kind": "reciprocal_warp",
+      "source": "RuinsOfAlph",
+      "index": 2,
+      "destination": "RuinsOfAlph_HallEntrance",
+      "return_index": 0,
+      "arrival": [
+        6,
+        13
+      ]
+    },
+    {
+      "kind": "reciprocal_warp",
+      "source": "RuinsOfAlph_HallEntrance",
+      "index": 1,
+      "destination": "RuinsOfAlph_UndergroundHall",
+      "return_index": 0,
+      "arrival": [
+        15,
+        16
+      ]
+    },
+    {
+      "kind": "collision",
+      "map": "UnionCave_1F",
+      "position": [
+        5,
+        24
+      ],
+      "direction": [
+        1,
+        0
+      ]
+    },
+    {
+      "kind": "collision",
+      "map": "UnionCave_1F",
+      "position": [
+        4,
+        24
+      ],
+      "direction": [
+        -1,
+        0
+      ]
+    },
+    {
+      "kind": "collision",
+      "map": "UnionCave_1F",
+      "position": [
+        4,
+        26
+      ],
+      "direction": [
+        0,
+        1
+      ]
+    },
+    {
+      "kind": "collision",
+      "map": "UnionCave_1F",
+      "position": [
+        4,
+        24
+      ],
+      "direction": [
+        0,
+        -1
+      ]
+    },
+    {
+      "kind": "collision",
+      "map": "UnionCave_2F",
+      "position": [
+        4,
+        2
+      ],
+      "direction": [
+        1,
+        0
+      ]
+    },
+    {
+      "kind": "collision",
+      "map": "UnionCave_2F",
+      "position": [
+        2,
+        2
+      ],
+      "direction": [
+        -1,
+        0
+      ]
+    },
+    {
+      "kind": "collision",
+      "map": "UnionCave_2F",
+      "position": [
+        2,
+        4
+      ],
+      "direction": [
+        0,
+        1
+      ]
+    },
+    {
+      "kind": "collision",
+      "map": "UnionCave_2F",
+      "position": [
+        2,
+        2
+      ],
+      "direction": [
+        0,
+        -1
+      ]
+    },
+    {
+      "kind": "collision",
+      "map": "UnionCave_3F",
+      "position": [
+        21,
+        2
+      ],
+      "direction": [
+        1,
+        0
+      ]
+    },
+    {
+      "kind": "collision",
+      "map": "UnionCave_3F",
+      "position": [
+        20,
+        2
+      ],
+      "direction": [
+        -1,
+        0
+      ]
+    },
+    {
+      "kind": "collision",
+      "map": "UnionCave_3F",
+      "position": [
+        22,
+        3
+      ],
+      "direction": [
+        0,
+        1
+      ]
+    },
+    {
+      "kind": "collision",
+      "map": "UnionCave_3F",
+      "position": [
+        20,
+        2
+      ],
+      "direction": [
+        0,
+        -1
+      ]
+    },
+    {
+      "kind": "puzzle_cancel",
+      "map": "RuinsOfAlph_SouthwestChamber"
+    },
+    {
+      "kind": "puzzle_solve",
+      "map": "RuinsOfAlph_SouthwestChamber",
+      "arrival": [
+        5,
+        23
+      ]
+    },
+    {
+      "kind": "puzzle_cancel",
+      "map": "RuinsOfAlph_NorthwestChamber"
+    },
+    {
+      "kind": "puzzle_solve",
+      "map": "RuinsOfAlph_NorthwestChamber",
+      "arrival": [
+        5,
+        6
+      ]
+    },
+    {
+      "kind": "surf_save_continue",
+      "map": "UnionCave_2F",
+      "position": [
+        25,
+        40
+      ],
+      "walked_to": [
+        25,
+        39
+      ],
+      "payload_equal": true
+    }
+  ],
+  "warnings": [],
+  "result": "PASS"
+}

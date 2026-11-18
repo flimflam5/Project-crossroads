@@ -1,0 +1,14 @@
+{
+  "source_commit": "00f5742b2cdb48a2256e79e796849dea8f070d1c",
+  "rom_sha256": "a320fc5947e7b207e5d496008e3593ef68a403fd5dbba7e73fd2830ccc4539d5",
+  "elf_sha256": "b5126e02d3f834f7d85e98d2dda4284fbe842c2d1d51eac02e7099922527cea6",
+  "returncodes": {
+    "title": 0,
+    "starters": 0,
+    "fly": 0,
+    "field": 0,
+    "battle": 0
+  },
+  "private_original_save_unchanged": true,
+  "limitations": "scripted emulator checks; starter opening is skipped via RAM fixture, QA kit/survey and gear fixtures used; no user Delta or visual acceptance"
+}

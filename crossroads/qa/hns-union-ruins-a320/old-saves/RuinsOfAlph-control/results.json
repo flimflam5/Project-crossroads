@@ -1,0 +1,30 @@
+{
+  "rom_sha256": "a320fc5947e7b207e5d496008e3593ef68a403fd5dbba7e73fd2830ccc4539d5",
+  "old_map": "RuinsOfAlph",
+  "old_position": [
+    17,
+    16
+  ],
+  "arrival_map": "RuinsOfAlph",
+  "arrival": [
+    17,
+    16
+  ],
+  "walked_to": [
+    17,
+    15
+  ],
+  "expected_relocation": false,
+  "new_save_cold_continue": true,
+  "tracked_steps": 25,
+  "friendship_wraps": 0,
+  "friendship_deltas": [
+    0
+  ],
+  "walked_to_exit": "JohtoRoute32",
+  "visible": 192,
+  "opaque": 192,
+  "behavior": 0,
+  "private_source_unchanged": true,
+  "result": "PASS"
+}

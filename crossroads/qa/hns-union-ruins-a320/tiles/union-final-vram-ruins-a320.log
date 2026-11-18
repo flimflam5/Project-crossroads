@@ -1,0 +1,14 @@
+{
+  "map": "RuinsOfAlph",
+  "tileset": "HgssRuinsPublic",
+  "metatiles": 13,
+  "tiles": 60,
+  "bad_tiles": [],
+  "banks": [
+    6,
+    7,
+    8,
+    9
+  ],
+  "bad_banks": []
+}

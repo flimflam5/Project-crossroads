@@ -1,0 +1,36 @@
+{
+  "map": "UnionCave_1F",
+  "rom_sha256": "a320fc5947e7b207e5d496008e3593ef68a403fd5dbba7e73fd2830ccc4539d5",
+  "border_ids": [
+    89,
+    89,
+    89,
+    89
+  ],
+  "graphic_ids": [
+    161
+  ],
+  "banks": [
+    0
+  ],
+  "source_rom_vram": "PASS",
+  "note": "Asset equality only; camera must still be visually inspected."
+}
+{
+  "map": "UnionCave_2F",
+  "rom_sha256": "a320fc5947e7b207e5d496008e3593ef68a403fd5dbba7e73fd2830ccc4539d5",
+  "border_ids": [
+    89,
+    89,
+    89,
+    89
+  ],
+  "graphic_ids": [
+    161
+  ],
+  "banks": [
+    0
+  ],
+  "source_rom_vram": "PASS",
+  "note": "Asset equality only; camera must still be visually inspected."
+}

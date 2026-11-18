@@ -1,0 +1,42 @@
+{
+  "map": "UnionCave_1F",
+  "tileset": "HgssUnionCave",
+  "metatiles": 23,
+  "tiles": 74,
+  "bad_tiles": [],
+  "banks": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "bad_banks": []
+}
+{
+  "map": "RuinsOfAlph_NorthwestChamber",
+  "tileset": "HgssRuinsChamber",
+  "metatiles": 34,
+  "tiles": 72,
+  "bad_tiles": [],
+  "banks": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "bad_banks": []
+}
+{
+  "map": "RuinsOfAlph_HallEntrance",
+  "tileset": "HgssRuinsHall",
+  "metatiles": 3,
+  "tiles": 12,
+  "bad_tiles": [],
+  "banks": [
+    0,
+    1,
+    2
+  ],
+  "bad_banks": []
+}
