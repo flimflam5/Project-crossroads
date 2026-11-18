@@ -51,8 +51,10 @@ public='data/tilesets/secondary/hgss_ruins_public/metatile_attributes.bin'
 for n in NAMES[:2]:
     for i in (0,1):doorway(n,i,outside,0x60,[(0,1)])
 for n in NAMES[2:4]:doorway(n,0,interior,0x65,[(0,-1)])
-doorway(NAMES[4],0,hall,0x61,[(0,-1),(0,1)])
+doorway(NAMES[4],0,hall,0x61,[(0,1)])
+doorway(NAMES[4],1,hall,0x61,[(0,-1)])
 doorway(NAMES[5],0,hall,0x61,[(0,-1)])
 doorway(NAMES[5],1,hall,0x61,[(0,-1),(0,1)])
+doorway(NAMES[5],2,hall,0x61,[(0,-1),(0,1)])
 doorway('RuinsOfAlph',2,public,0x60,[(0,1)])
 print('Generated IDs, reciprocal targets, door behavior, elevations and approaches pass. Emulator playtest and owner QA remain pending.')

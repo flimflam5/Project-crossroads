@@ -47,5 +47,15 @@ and 420-cell NW footprints. Donor letters are spaced onto the GBA footprints;
 no claim is made that their visual layout is identical to the 3D original.
 The donor north-door shortcuts are removed. These are offline candidate planes,
 not in-game screenshots or proof of collision, transitions, saves or visual
-quality. The existing 29×32 GBA Underground Hall cannot represent HGSS's
-southwest fall landing at (5,42); no guessed replacement is selected here.
+quality. The predecessor 29×32 GBA Underground Hall cannot represent HGSS's
+southwest fall landing at (5,42). This development branch appends a separate
+32×64 HGSS-shaped hall layout, retaining the same map ID and old layout files.
+Both verified fall landings exist there; old-layout Continue uses a generated
+safe-floor mask. Build, old-save and full movement tests remain required.
+
+The larger Underground Hall candidate follows the HGSS 816-cell dry component
+and uses the source (5,42)/(5,24) puzzle-fall destinations and two separately
+reciprocal exits. Its 30 donor-styled markers are visual-only; the original
+HGSS marker dialogue and conditional NPCs remain unimplemented. An old-save
+Continue mask and host fixture are present, but normal hardware/emulator save
+loading, both thresholds, puzzle returns and foreground layers need playtesting.

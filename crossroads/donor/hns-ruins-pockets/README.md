@@ -68,7 +68,9 @@ The six Ruins maps are now wired as a **development candidate**, not an
 accepted or completed area. The southwest and northwest pockets retain
 separate chambers, and the cave connections follow the HGSS 1F/B2F chains.
 Both chamber picture boards now call the prepared puzzle special and use a
-scripted fade/warp to the underground hall on success. No permanent success
+scripted fade/warp to the underground hall on success. The new 32×64 hall
+uses the reference SW (5,42) and NW (5,24) fall landings; its old layout and
+map ID are preserved for save migration. No permanent success
 flags, item grants, hidden rooms, or story events are implemented; the puzzles
 are repeatable. The GBA corridor between the hall and the public surface is
 provisional, and the southwest pocket has a two-cell path in the donor ledge

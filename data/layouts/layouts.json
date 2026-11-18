@@ -11248,6 +11248,17 @@
       "border_filepath": "data/layouts/HgssRuinsOfAlph/border.bin",
       "blockdata_filepath": "data/layouts/HgssRuinsOfAlph/map.bin",
       "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_HGSS_RUINS_HALL_EXPANDED",
+      "name": "RuinsOfAlph_UndergroundHall_ExpandedLayout",
+      "width": 32,
+      "height": 64,
+      "primary_tileset": "gTileset_HgssRuinsHall",
+      "secondary_tileset": "gTileset_WesternInteriors",
+      "border_filepath": "data/layouts/HgssRuinsHallExpanded/border.bin",
+      "blockdata_filepath": "data/layouts/HgssRuinsHallExpanded/map.bin",
+      "layout_version": "emerald"
     }
   ]
 }

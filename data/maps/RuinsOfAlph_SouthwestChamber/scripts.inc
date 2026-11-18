@@ -10,7 +10,7 @@ RuinsOfAlph_SouthwestChamber_Puzzle::
     releaseall
     end
 RuinsOfAlph_SouthwestChamber_Puzzle_Success::
-    warp MAP_RUINS_OF_ALPH_UNDERGROUND_HALL, 5, 23
+    warp MAP_RUINS_OF_ALPH_UNDERGROUND_HALL, 5, 42
     waitstate
     releaseall
     end

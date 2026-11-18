@@ -14,7 +14,7 @@ NAMES = ('RuinsOfAlph_SouthwestPocket', 'RuinsOfAlph_NorthwestPocket',
 IDS = ('MAP_RUINS_OF_ALPH_SOUTHWEST_POCKET', 'MAP_RUINS_OF_ALPH_NORTHWEST_POCKET',
        'MAP_RUINS_OF_ALPH_SOUTHWEST_CHAMBER', 'MAP_RUINS_OF_ALPH_NORTHWEST_CHAMBER',
        'MAP_RUINS_OF_ALPH_UNDERGROUND_HALL', 'MAP_RUINS_OF_ALPH_HALL_ENTRANCE')
-SIZES = ((22,14),(16,17),(10,11),(10,11),(29,32),(13,15))
+SIZES = ((22,14),(16,17),(10,11),(10,11),(32,64),(13,15))
 
 
 def warp(x, y, dest, index):
@@ -60,18 +60,20 @@ def stage(write, read=None):
     entrance=[0x040c]*(13*15)
     for y in range(2,14):
         for x in range(2,11):entrance[y*13+x]=0x3001
-    entrance[7*13+6]=entrance[13*13+6]=0x3019
+    entrance[7*13+6]=entrance[7*13+7]=entrance[13*13+6]=0x3019
     tiles.append(entrance)
-    hall=tiles[4];assert hall[16*29+15]==0x4019;hall[16*29+15]=0x3019
-    assert (15,16) in flood(hall,29,32,(5,6))
-    assert (15,16) in flood(hall,29,32,(5,23))
+    from build_hgss_ruins_hall_reference import build as build_hall, NEW_LAYOUT
+    hall,_,_=build_hall(write);tiles[4]=hall
+    assert (18,24) in flood(hall,32,64,(5,42))
+    assert (18,23) in flood(hall,32,64,(5,24))
     maps=[make_map(n,i,'LAYOUT_'+i[4:],j<2) for j,(n,i) in enumerate(zip(NAMES,IDS))]
+    maps[4]['layout']=NEW_LAYOUT
     maps[0]['warp_events']=[warp(14,2,'MAP_UNION_CAVE_1_F',6),warp(7,6,IDS[2],0)]
     maps[1]['warp_events']=[warp(13,6,'MAP_UNION_CAVE_1_F',7),warp(5,4,IDS[3],0)]
     maps[2]['warp_events']=[warp(4,9,IDS[0],1)]
     maps[3]['warp_events']=[warp(4,9,IDS[1],1)]
     scripts={n: n+'_MapScripts::\n    .byte 0\n' for n in NAMES}
-    for index, puzzle, landing in ((2,1,(5,23)),(3,3,(5,6))):
+    for index, puzzle, landing in ((2,1,(5,42)),(3,3,(5,24))):
         name=NAMES[index]; label=name+'_Puzzle'; success=label+'_Success'
         maps[index]['bg_events'].append(dict(type='sign',x=5,y=4,elevation=0,
             player_facing_dir='BG_EVENT_PLAYER_FACING_ANY',script=label))
@@ -82,17 +84,18 @@ def stage(write, read=None):
                           f'    warp {IDS[4]}, {landing[0]}, {landing[1]}\n'
                           f'    waitstate\n    releaseall\n    end\n')
         assert (5,5) in flood(tiles[index],10,11,(4,9))
-    maps[4]['warp_events']=[warp(15,16,IDS[5],1)]
-    maps[5]['warp_events']=[warp(6,13,'MAP_RUINS_OF_ALPH',2),warp(6,7,IDS[4],0)]
+    maps[4]['warp_events']=[warp(18,24,IDS[5],1),warp(18,23,IDS[5],2)]
+    maps[5]['warp_events']=[warp(6,13,'MAP_RUINS_OF_ALPH',2),warp(6,7,IDS[4],0),warp(7,7,IDS[4],1)]
     primaries=('gTileset_HgssRuinsPocket','gTileset_HgssRuinsPocket',
                'gTileset_HgssRuinsChamber','gTileset_HgssRuinsChamber',
                'gTileset_HgssRuinsHall','gTileset_HgssRuinsHall')
     layouts={}
     borders={}
     for name,m,(w,h),plane,primary in zip(NAMES,maps,SIZES,tiles,primaries):
-        layouts[m['layout']]=dict(id=m['layout'],name=name+'_Layout',width=w,height=h,
+        directory=f'data/layouts/{name}' if name!=NAMES[4] else 'data/layouts/HgssRuinsHallExpanded'
+        layouts[m['layout']]=dict(id=m['layout'],name=name+'_ExpandedLayout' if name==NAMES[4] else name+'_Layout',width=w,height=h,
             primary_tileset=primary,secondary_tileset='gTileset_WesternInteriors',
-            border_filepath=f'data/layouts/{name}/border.bin',
-            blockdata_filepath=f'data/layouts/{name}/map.bin',layout_version='emerald')
+            border_filepath=directory+'/border.bin',
+            blockdata_filepath=directory+'/map.bin',layout_version='emerald')
         borders[name]=[(plane[0]&1023)|0x400]*4
     return dict(zip(NAMES,maps)),dict(zip(NAMES,tiles)),layouts,borders,scripts
