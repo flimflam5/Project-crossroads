@@ -20,8 +20,10 @@ GROUPS = (
 )
 
 
-def prepare(write):
+def prepare(write, read=None):
     """Stage the three private tilesets; return converted map words and reports."""
+    if read is None:
+        read = lambda path: (ROOT/path).read_text()
     output = {}
     with tempfile.TemporaryDirectory(prefix='hgss-ruins-art-') as temp:
         base = Path(temp)
@@ -73,7 +75,7 @@ def prepare(write):
                            ('externs','include/tilesets.h')]:
             begin, end = '// BEGIN '+mark, '// END '+mark
             body=begin+'\n#if !IS_FRLG\n'+''.join(sections[kind])+'#endif\n'+end
-            write(path, upsert((ROOT/path).read_text(),begin,end,body,externs=kind=='externs'))
+            write(path, upsert(read(path),begin,end,body,externs=kind=='externs'))
     expected={'SouthwestPocket':22*14, 'NorthwestPocket':16*17,
               'SouthwestChamber':10*11, 'NorthwestChamber':10*11,
               'UndergroundHall':29*32}

@@ -41,7 +41,9 @@ def derive_layout(original):
     return new
 
 
-def stage(write, original_map, original_tiles, border):
+def stage(write, original_map, original_tiles, border, read=None):
+    if read is None:
+        read = lambda path: (ROOT/path).read_text()
     manifest=json.loads((DONOR/'source-sha256.json').read_text())
     assert manifest['revision']=='167aa6d537b109bb229c231ddce4616974c4da71'
     for path, digest in manifest['files'].items():
@@ -107,7 +109,7 @@ def stage(write, original_map, original_tiles, border):
     for kind,path in [('graphics','src/data/tilesets/graphics.h'),('metatiles','src/data/tilesets/metatiles.h'),('headers','src/data/tilesets/headers.h'),('externs','include/tilesets.h')]:
         begin='// BEGIN HGSS RUINS PUBLIC PRIVATE';end='// END HGSS RUINS PUBLIC PRIVATE'
         body=begin+'\n#if !IS_FRLG\n'+sections[kind]+'#endif\n'+end
-        write(path,upsert((ROOT/path).read_text(),begin,end,body,externs=kind=='externs'))
+        write(path,upsert(read(path),begin,end,body,externs=kind=='externs'))
     newtiles=original_tiles.copy()
     for i,value in enumerate(converted):newtiles[(y0+i//w)*40+x0+i%w]=value
     updated=copy.deepcopy(original_map)

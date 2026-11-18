@@ -42,8 +42,8 @@ def flood(cells, width, height, point):
     return seen
 
 
-def stage(write):
-    data=prepare(write)
+def stage(write, read=None):
+    data=prepare(write, read)
     tiles=[data['SouthwestPocket'],data['NorthwestPocket'],data['SouthwestChamber'],
            data['NorthwestChamber'],data['UndergroundHall']]
     # The donor puts a one-way ledge between cave and chamber. Reopen two
