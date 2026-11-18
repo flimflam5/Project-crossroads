@@ -2883,7 +2883,7 @@
         },
         {
           "map": "MAP_JOHTO_ROUTE33",
-          "offset": 10,
+          "offset": 6,
           "direction": "right"
         }
       ],
@@ -3640,14 +3640,14 @@
       "connections": [
         {
           "map": "MAP_AZALEA_TOWN",
-          "offset": -10,
+          "offset": -6,
           "direction": "left"
         }
       ],
       "entrances": [
         {
-          "x": 24,
-          "y": 7,
+          "x": 19,
+          "y": 13,
           "elevation": 0,
           "dest_map": "MAP_UNION_CAVE_1_F",
           "dest_warp_id": "2"
@@ -7922,8 +7922,8 @@
         ],
         [
           "JohtoRoute33",
-          24,
-          7,
+          19,
+          13,
           0
         ]
       ]

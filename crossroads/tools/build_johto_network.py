@@ -22,6 +22,8 @@ def main():
  ap=argparse.ArgumentParser();ap.add_argument('--through',choices=CLUSTERS,default='west');ap.add_argument('--check',action='store_true');args=ap.parse_args()
  from build_hns_charcoal_kiln import generate as generate_hns_kiln
  generate_hns_kiln(args.check)
+ from build_route33_apricorns import generate as generate_route33_apricorns
+ generate_route33_apricorns(args.check)
  ambient=load('crossroads/johto/ambient.json');city_sites=load('crossroads/johto/city_sites.json')
  manifest=load('crossroads/johto/manifest.json');plans=manifest['planned'];selected=[p for p in plans if CLUSTERS.index(p['cluster'])<=CLUSTERS.index(args.through)]
  # --check runs the deterministic writer against an in-memory file comparison.
@@ -182,7 +184,12 @@ def main():
    say(label,title+'. Follow the marked roads and direction signs.','SIGN')
    if theme in ['sea','islands']:m['object_events'].append(obj(sx+1,sy+1,'Johto_TestDesk','SAILOR'))
    if theme not in ['sea','islands']:
-    x,y=w//2+3,h//2+3;rect(n,x,y,1,1,floor);label=script(n+'_Resident');m['object_events'].append(obj(x,y,label,'WOMAN_3'));say(label,ambient[n] if n in ambient else {'commercial':'There is always another delivery crossing this city. I take the side streets when the market is busy.','academy':'The tower and the school are good landmarks. You can hear the bells from almost anywhere.','woodland':'The shade is welcome after a long walk. The forest path stays open in both directions.','ridge':'The mountain trail winds down to the south. Take your time on the descent.','mountain':'The lake road runs north. Pack something warm if you head toward the Ice Path.','village':'It is quiet here, apart from the wind off the water. The west road leads to Cherrygrove.','island':'The sea road reaches Olivine. Our pharmacy and Center are both near the main street.'}.get(theme,'The signs help when the paths turn. There is no need to rush the walk.'))
+    x,y=(21,25) if n=='JohtoRoute33' else (w//2+3,h//2+3);rect(n,x,y,1,1,floor);label=script(n+'_Resident');m['object_events'].append(obj(x,y,label,'WOMAN_3'));say(label,ambient[n] if n in ambient else {'commercial':'There is always another delivery crossing this city. I take the side streets when the market is busy.','academy':'The tower and the school are good landmarks. You can hear the bells from almost anywhere.','woodland':'The shade is welcome after a long walk. The forest path stays open in both directions.','ridge':'The mountain trail winds down to the south. Take your time on the descent.','mountain':'The lake road runs north. Pack something warm if you head toward the Ice Path.','village':'It is quiet here, apart from the wind off the water. The west road leads to Cherrygrove.','island':'The sea road reaches Olivine. Our pharmacy and Center are both near the main street.'}.get(theme,'The signs help when the paths turn. There is no need to rush the walk.'))
+    if n=='JohtoRoute33':
+     label=script(n+'_Hiker');m['object_events'].append(obj(10,19,label,'HIKER'));say(label,'The cave leads north. Watch your footing in the rain.')
+     label=script(n+'_ApricornTree');say(label,'An APRICORN tree stands here.')
+     m['object_events'].append(obj(23,26,label,'ROUTE33_APRICORN_PINK'))
+     m['object_events'].append(obj(24,26,label,'ROUTE33_APRICORN_BLACK'))
   else:
    rect(n,0,0,w,2,border);rect(n,0,h-1,w,1,border);rect(n,0,0,1,h,border);rect(n,w-1,0,1,h,border)
    if primary=='gTileset_General':

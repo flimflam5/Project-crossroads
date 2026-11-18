@@ -1,0 +1,29 @@
+{
+  "opaque_expected": 192,
+  "opaque_visible": 187,
+  "masked_pixels": [
+    [
+      5,
+      30
+    ],
+    [
+      7,
+      30
+    ],
+    [
+      10,
+      30
+    ],
+    [
+      6,
+      31
+    ],
+    [
+      9,
+      31
+    ]
+  ],
+  "short_grass": true,
+  "rejected_frames": [],
+  "successful_frame": 0
+}

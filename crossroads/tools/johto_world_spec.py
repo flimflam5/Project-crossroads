@@ -14,7 +14,7 @@ CITIES={
 ROUTES={
  37:('central',(12,9),'orchard',(28,40)),36:('central',(15,10),'junction',(56,28)),
  35:('central',(9,12),'garden',(28,36)),34:('south',(9,17),'coast',(28,44)),
- 33:('south',(16,19),'rain',(32,24)),32:('south',(18,15),'riverside',(28,64)),
+ 33:('south',(16,19),'rain',(32,32)),32:('south',(18,15),'riverside',(28,64)),
  31:('south',(20,10),'woodland',(40,28)),30:('south',(21,13),'orchard',(28,44)),
  29:('south',(23,16),'meadow',(52,28)),46:('east',(26,14),'foothills',(28,40)),
  45:('east',(27,11),'ridge',(28,64)),42:('east',(17,6),'lakes',(64,28)),
@@ -55,7 +55,7 @@ EDGES=[
 DUNGEONS=[
  ('SproutTower','SPROUT TOWER','central',3,'tower',[( 'VioletCity',10,7,0)]),
  ('AlphChambers','ALPH CHAMBERS','central',3,'ruins',[('RuinsOfAlph',10,8,0),('RuinsOfAlph',28,8,2)]),
- ('UnionCave','UNION CAVE','south',3,'cave',[('JohtoRoute32',18,55,0),('JohtoRoute33',24,7,0)]),
+ ('UnionCave','UNION CAVE','south',3,'cave',[('JohtoRoute32',18,55,0),('JohtoRoute33',19,13,0)]),
  ('SlowpokeWell','SLOWPOKE WELL','south',2,'well',[('AzaleaTown',38,26,0)]),
  ('DarkCave','DARK CAVE','east',3,'cave',[('JohtoRoute31',30,6,0),('JohtoRoute46',7,8,1),('JohtoRoute45',19,12,2)]),
  ('MtMortar','MT. MORTAR','east',4,'cave',[('JohtoRoute42',10,6,0),('JohtoRoute42',31,6,1),('JohtoRoute42',51,6,3)]),

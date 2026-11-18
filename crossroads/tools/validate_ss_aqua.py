@@ -185,7 +185,16 @@ def preservation():
  assert [v['id'] for v in now[:len(before)]] == [v['id'] for v in before], 'Existing layout IDs moved'
  assert len({v['id'] for v in now}) == len(now), 'Duplicate layout ID'
  for path in PRESERVED_PATHS:
-  assert (R / path).read_bytes() == old_bytes(path), ('Save/engine/starter contract changed', path)
+  expected=old_bytes(path)
+  if path=='include/constants/event_objects.h':
+   # Exact append only: two private Route 33 graphics identifiers and their
+   # shared palette. Every pre-existing enum, ID and flag remains byte-exact.
+   expected+=(b'\n// Reference-coloured Route 33 trees; append private IDs without moving the\n'
+              b'// engine enum, dynamic graphics slots, or any saved graphics identifier.\n'
+              b'#define OBJ_EVENT_GFX_ROUTE33_APRICORN_PINK  0x3F0E\n'
+              b'#define OBJ_EVENT_GFX_ROUTE33_APRICORN_BLACK 0x3F0F\n'
+              b'#define OBJ_EVENT_PAL_TAG_ROUTE33_APRICORN   0x1172\n')
+  assert (R / path).read_bytes() == expected, ('Save/engine/starter contract changed', path)
  old_layouts = {v['id']: v for v in before}; current_layouts = {v['id']: v for v in now}
  for name in ADDITIONS:
   path = f'data/maps/{name}/map.json'; was = old_json(path); m = load(path)
@@ -197,7 +206,8 @@ def preservation():
   path = f'data/maps/{name}/scripts.inc'
   assert (R / path).read_bytes() == old_bytes(path), ('Accepted room script changed', name)
  return {'baseline': BASE, 'existing_map_ids_preserved': True,
-         'existing_layout_ids_preserved': True, 'critical_files_exact': list(PRESERVED_PATHS),
+         'existing_layout_ids_preserved': True, 'critical_files_exact': [p for p in PRESERVED_PATHS if p!='include/constants/event_objects.h'],
+         'event_objects_exact_append': 'Route 33 private pink/black graphics IDs and shared palette only',
          'accepted_original_rooms_exact': list(ADDITIONS)}
 
 

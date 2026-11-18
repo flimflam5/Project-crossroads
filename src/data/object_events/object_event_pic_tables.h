@@ -1354,6 +1354,12 @@ static const struct SpriteFrameImage sPicTable_RubySapphireMay[] = {
 static const struct SpriteFrameImage sPicTable_ApricornTree[] = {
     overworld_frame(gObjectEventPic_ApricornTree, 2, 2, 0),
 };
+static const struct SpriteFrameImage sPicTable_Route33ApricornPink[] = {
+    overworld_frame(gObjectEventPic_Route33ApricornPink, 2, 2, 0),
+};
+static const struct SpriteFrameImage sPicTable_Route33ApricornBlack[] = {
+    overworld_frame(gObjectEventPic_Route33ApricornBlack, 2, 2, 0),
+};
 
 #if IS_FRLG
 

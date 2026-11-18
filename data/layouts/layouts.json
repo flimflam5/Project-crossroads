@@ -10065,7 +10065,7 @@
       "id": "LAYOUT_JOHTO_ROUTE33",
       "name": "JohtoRoute33_Layout",
       "width": 32,
-      "height": 24,
+      "height": 32,
       "primary_tileset": "gTileset_BlGymAzaleaPrimary",
       "secondary_tileset": "gTileset_HnsRoute33",
       "border_filepath": "data/layouts/JohtoRoute33/border.bin",

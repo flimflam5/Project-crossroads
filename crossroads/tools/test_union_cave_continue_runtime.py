@@ -29,7 +29,7 @@ for group_id, group_name in enumerate(groups['group_order']):
         data = json.loads((R / 'data/maps' / name / 'map.json').read_text())
         map_ids[data['id']] = (group_id << 8) | map_id
 required_maps = ['MAP_UNION_CAVE_1_F','MAP_UNION_CAVE_2_F','MAP_UNION_CAVE_3_F',
-                 'MAP_AZALEA_TOWN','MAP_ECRUTEAK_CITY','MAP_VIOLET_CITY','MAP_OLIVINE_CITY','MAP_RUINS_OF_ALPH']
+                 'MAP_AZALEA_TOWN','MAP_ECRUTEAK_CITY','MAP_VIOLET_CITY','MAP_OLIVINE_CITY','MAP_RUINS_OF_ALPH','MAP_JOHTO_ROUTE33']
 required_layouts = ['LAYOUT_UNION_CAVE_1_F','LAYOUT_UNION_CAVE_2_F','LAYOUT_UNION_CAVE_3_F',
                     'LAYOUT_HGSS_UNION_CAVE_1_F','LAYOUT_HGSS_UNION_CAVE_2_F','LAYOUT_HGSS_UNION_CAVE_3_F',
                     'LAYOUT_RUINS_OF_ALPH','LAYOUT_HGSS_RUINS_OF_ALPH']
@@ -48,6 +48,10 @@ typedef int16_t s16; typedef int32_t bool32;
 #define MAP_GROUP(id) ((id) >> 8)
 #define MAP_NUM(id) ((id) & 255)
 #define MAPGRID_COLLISION_MASK 0x0c00
+#define MAPGRID_METATILE_ID_MASK 0x03ff
+#define METATILE_ATTRIBUTE_BEHAVIOR 0
+#define MOVEMENT_TYPE_FACE_DOWN 8
+#define OBJ_EVENT_GFX_WOMAN_3 33
 #define MAP_OFFSET 7
 #define WARP_ID_NONE -1
 #define OBJECT_EVENTS_COUNT 16
@@ -63,11 +67,12 @@ typedef int16_t s16; typedef int32_t bool32;
 #define AZALEA_KILN_WIDTH 4
 #define AZALEA_KILN_HEIGHT 4
 struct Coords { s16 x, y; };
-struct ObjectEvent { unsigned isPlayer; u16 graphicsId; u8 spriteId; struct Coords initialCoords, currentCoords, previousCoords; };
+struct ObjectEvent { unsigned isPlayer, active; u16 graphicsId; u8 spriteId, localId, mapGroup, mapNum, movementType; struct Coords initialCoords, currentCoords, previousCoords; };
 struct WarpData { s16 mapGroup, mapNum, warpId, x, y; };
-struct MapLayout { int width, height; const u16 *map; };
+struct MapLayout { int width, height; const u16 *map; int isFrlg; };
 struct Event { s16 x, y; };
-struct Events { u32 warpCount, objectEventCount; struct Event *warps, *objectEvents; };
+struct ObjectEventTemplate { s16 x, y; u16 graphicsId; u8 localId, movementType; };
+struct Events { u32 warpCount, objectEventCount; struct Event *warps; struct ObjectEventTemplate *objectEvents; };
 struct MapHeader { const struct MapLayout *mapLayout; u16 mapLayoutId; struct Events *events; } gMapHeader;
 static struct MapHeader b1header;
 static struct MapLayout b1layout;
@@ -82,6 +87,9 @@ struct Save2 { u8 playerGender; } s2;
 struct Save1 *gSaveBlock1Ptr = &s1; struct Save2 *gSaveBlock2Ptr = &s2;
 struct ObjectEvent gObjectEvents[OBJECT_EVENTS_COUNT];
 static int setLayoutCalls, healCalls;
+static u32 mockBehavior;
+static u32 GetAttributeByMetatileIdAndMapLayout(u16 id, u8 type, int isFrlg) { (void)id; (void)type; (void)isFrlg; return mockBehavior; }
+static int MetatileBehavior_IsSurfableWaterOrUnderwater(u8 behavior) { return behavior==0x10 || behavior==0x15; }
 static int Johto_IsExplorationGroup(int group) { return group == MAP_GROUP(MAP_UNION_CAVE_1_F); }
 static void SetLastHealLocationWarp(int value) { (void)value; healCalls++; }
 static void SetCurrentMapLayout(u16 id) { gSaveBlock1Ptr->mapLayoutId = id; setLayoutCalls++; }
@@ -92,7 +100,8 @@ harness = r'''
 static u16 cells[32 * 96];
 static struct MapLayout layout;
 static struct Events events;
-static struct Event eventObjects[4], eventWarps[8];
+static struct ObjectEventTemplate eventObjects[4];
+static struct Event eventWarps[8];
 static void init(int map, int oldLayout, int newLayout, int height) {
     char path[128]; FILE *f;
     memset(&s1,0,sizeof(s1)); memset(&s2,0,sizeof(s2)); memset(gObjectEvents,0,sizeof(gObjectEvents));
@@ -219,7 +228,56 @@ static void runRuins(void) {
     assert(Crossroads_PrepareContinue()); assert(s1.pos.x==14 && s1.pos.y==15); assert(setLayoutCalls==1); unchangedData();
     puts("Ruins: 12 legacy facade cells + 4 unchanged/new/wrong-map controls PASS");
 }
+static void initRoute(void) {
+    FILE *f;
+    init(MAP_UNION_CAVE_1_F,LAYOUT_HGSS_UNION_CAVE_1_F,LAYOUT_HGSS_UNION_CAVE_1_F,96);
+    f=fopen("data/layouts/JohtoRoute33/map.bin","rb"); assert(f); assert(fread(cells,2,32*32,f)==32*32); fclose(f);
+    s1.location.mapGroup=MAP_GROUP(MAP_JOHTO_ROUTE33); s1.location.mapNum=MAP_NUM(MAP_JOHTO_ROUTE33);
+    s1.mapLayoutId=gMapHeader.mapLayoutId; layout.width=32; layout.height=32; layout.isFrlg=0;
+    events.warpCount=1; eventWarps[0]=(struct Event){19,13};
+    events.objectEventCount=1; eventObjects[0]=(struct ObjectEventTemplate){.x=21,.y=25,.localId=1,.graphicsId=OBJ_EVENT_GFX_WOMAN_3,.movementType=MOVEMENT_TYPE_FACE_DOWN};
+    mockBehavior=0;
+}
+static void initOldRouteResident(void) {
+    struct ObjectEvent *save=&s1.objectEvents[1], *live=&gObjectEvents[1];
+    memset(save,0,sizeof(*save)); memset(live,0,sizeof(*live));
+    save->active=live->active=1; save->localId=live->localId=1;
+    save->mapGroup=live->mapGroup=MAP_GROUP(MAP_JOHTO_ROUTE33);
+    save->mapNum=live->mapNum=MAP_NUM(MAP_JOHTO_ROUTE33);
+    save->movementType=live->movementType=MOVEMENT_TYPE_FACE_DOWN;
+    save->spriteId=127; save->graphicsId=OBJ_EVENT_GFX_WOMAN_3<<8; live->graphicsId=OBJ_EVENT_GFX_WOMAN_3;
+    struct Coords old={19+MAP_OFFSET,15+MAP_OFFSET};
+    save->initialCoords=save->currentCoords=save->previousCoords=old;
+    live->initialCoords=live->currentCoords=live->previousCoords=old;
+}
+static void runRoute(void) {
+    initRoute(); initOldRouteResident(); MigrateRoute33Resident();
+    assert(s1.objectEvents[1].currentCoords.x==21+MAP_OFFSET && s1.objectEvents[1].currentCoords.y==25+MAP_OFFSET);
+    assert(gObjectEvents[1].previousCoords.x==21+MAP_OFFSET && gObjectEvents[1].previousCoords.y==25+MAP_OFFSET);
+    assert(s1.objectEvents[1].graphicsId==(OBJ_EVENT_GFX_WOMAN_3<<8)); unchangedData();
+    initRoute(); initOldRouteResident();
+    int safe=-1; for(int i=0;i<32*32;i++) if((cells[i]&0xfc00)==0x3000 && !(i%32==19 && i/32==13) && !(i%32==21 && i/32==25)) {safe=i;break;}
+    assert(safe>=0); atXY(safe%32,safe/32); assert(Crossroads_PrepareContinue());
+    assert(s1.pos.x==safe%32 && s1.pos.y==safe/32);
+    assert(s1.objectEvents[1].currentCoords.x==21+MAP_OFFSET && gObjectEvents[1].currentCoords.y==25+MAP_OFFSET); unchangedData();
+    initRoute(); initOldRouteResident(); gObjectEvents[1].currentCoords.x++; MigrateRoute33Resident();
+    assert(s1.objectEvents[1].currentCoords.x==19+MAP_OFFSET && gObjectEvents[1].currentCoords.x==20+MAP_OFFSET);
+    initRoute(); initOldRouteResident(); eventObjects[0].x++; MigrateRoute33Resident();
+    assert(s1.objectEvents[1].currentCoords.x==19+MAP_OFFSET && gObjectEvents[1].currentCoords.x==19+MAP_OFFSET);
+    initRoute(); initOldRouteResident(); s1.location.mapNum=MAP_NUM(MAP_AZALEA_TOWN); MigrateRoute33Resident();
+    assert(s1.objectEvents[1].currentCoords.x==19+MAP_OFFSET && gObjectEvents[1].currentCoords.x==19+MAP_OFFSET);
+    initRoute(); cells[10*32+10]=0x3001; assert(!IsRoute33UnsafeContinueTile(10,10));
+    cells[10*32+10]=0x4001; assert(IsRoute33UnsafeContinueTile(10,10));
+    cells[10*32+10]=0x1001; assert(IsRoute33UnsafeContinueTile(10,10));
+    setSurf(); mockBehavior=0x15; assert(!IsRoute33UnsafeContinueTile(10,10));
+    mockBehavior=0; assert(IsRoute33UnsafeContinueTile(10,10));
+    cells[13*32+19]=0x3001; assert(IsRoute33UnsafeContinueTile(19,13));
+    s1.location.mapNum=MAP_NUM(MAP_AZALEA_TOWN); assert(!IsRoute33UnsafeContinueTile(19,13));
+    initRoute(); layout.height=24; cells[10*32+10]=0x4001; assert(!IsRoute33UnsafeContinueTile(10,10));
+    puts("Route33: resident migration and terrain/warp/Surf discriminator fixtures PASS");
+}
 int main(void) {
+    runRoute();
     runRuins();
     run(MAP_UNION_CAVE_1_F,LAYOUT_UNION_CAVE_1_F,LAYOUT_HGSS_UNION_CAVE_1_F,96,sUnionCave1FContinueMask);
     run(MAP_UNION_CAVE_2_F,LAYOUT_UNION_CAVE_2_F,LAYOUT_HGSS_UNION_CAVE_2_F,64,sUnionCaveB1FContinueMask);
@@ -251,9 +309,9 @@ with tempfile.TemporaryDirectory(prefix='union-continue-test-') as tmp:
     assert ruins['warp_events'][:len(staged_map['warp_events'])] == staged_map['warp_events']
     assert len(ruins['warp_events']) <= 8 and len(ruins['object_events']) <= 4
     setup = f"events.warpCount={len(ruins['warp_events'])}; events.objectEventCount={len(ruins['object_events'])};"
-    for array, group in [('eventWarps', 'warp_events'), ('eventObjects', 'object_events')]:
+    for array, group, typename in [('eventWarps', 'warp_events', 'Event'), ('eventObjects', 'object_events', 'ObjectEventTemplate')]:
         for i, event in enumerate(ruins[group]):
-            setup += f"{array}[{i}]=(struct Event){{{event['x']},{event['y']}}};"
+            setup += f"{array}[{i}]=(struct {typename}){{.x={event['x']},.y={event['y']}}};"
     fixture = harness.replace('RUINS_OLD_BIN', str(oldfile)).replace('RUINS_EVENT_SETUP', setup)
     cfile.write_text(defines + prelude + source + fixture)
     subprocess.run(['cc','-std=c11','-Wall','-Werror','-O2',str(cfile),'-o',str(exe)], check=True)

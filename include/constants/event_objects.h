@@ -659,3 +659,9 @@ enum
 #define OBJ_EVENT_GFX_ECRUTEAK_PERFORMER 0x3F0D
 #define OBJ_EVENT_PAL_TAG_ECRUTEAK_MONK 0x1170
 #define OBJ_EVENT_PAL_TAG_ECRUTEAK_PERFORMER 0x1171
+
+// Reference-coloured Route 33 trees; append private IDs without moving the
+// engine enum, dynamic graphics slots, or any saved graphics identifier.
+#define OBJ_EVENT_GFX_ROUTE33_APRICORN_PINK  0x3F0E
+#define OBJ_EVENT_GFX_ROUTE33_APRICORN_BLACK 0x3F0F
+#define OBJ_EVENT_PAL_TAG_ROUTE33_APRICORN   0x1172

@@ -1,0 +1,1006 @@
+[
+  {
+    "frame": 0,
+    "expected": 192,
+    "visible": 180,
+    "diff": [
+      {
+        "pixel": [
+          15,
+          17
+        ],
+        "screen": [
+          127,
+          73
+        ],
+        "expected": [
+          0,
+          0,
+          0
+        ],
+        "actual": [
+          33,
+          74,
+          156
+        ]
+      },
+      {
+        "pixel": [
+          14,
+          18
+        ],
+        "screen": [
+          126,
+          74
+        ],
+        "expected": [
+          0,
+          0,
+          0
+        ],
+        "actual": [
+          33,
+          74,
+          156
+        ]
+      },
+      {
+        "pixel": [
+          13,
+          20
+        ],
+        "screen": [
+          125,
+          76
+        ],
+        "expected": [
+          16,
+          8,
+          16
+        ],
+        "actual": [
+          49,
+          90,
+          156
+        ]
+      },
+      {
+        "pixel": [
+          13,
+          21
+        ],
+        "screen": [
+          125,
+          77
+        ],
+        "expected": [
+          0,
+          0,
+          0
+        ],
+        "actual": [
+          49,
+          90,
+          156
+        ]
+      },
+      {
+        "pixel": [
+          12,
+          22
+        ],
+        "screen": [
+          124,
+          78
+        ],
+        "expected": [
+          16,
+          8,
+          16
+        ],
+        "actual": [
+          49,
+          90,
+          156
+        ]
+      },
+      {
+        "pixel": [
+          11,
+          24
+        ],
+        "screen": [
+          123,
+          80
+        ],
+        "expected": [
+          49,
+          33,
+          41
+        ],
+        "actual": [
+          49,
+          90,
+          156
+        ]
+      },
+      {
+        "pixel": [
+          11,
+          25
+        ],
+        "screen": [
+          123,
+          81
+        ],
+        "expected": [
+          74,
+          66,
+          99
+        ],
+        "actual": [
+          49,
+          90,
+          156
+        ]
+      },
+      {
+        "pixel": [
+          10,
+          26
+        ],
+        "screen": [
+          122,
+          82
+        ],
+        "expected": [
+          74,
+          66,
+          99
+        ],
+        "actual": [
+          74,
+          99,
+          156
+        ]
+      },
+      {
+        "pixel": [
+          10,
+          27
+        ],
+        "screen": [
+          122,
+          83
+        ],
+        "expected": [
+          74,
+          57,
+          66
+        ],
+        "actual": [
+          74,
+          99,
+          156
+        ]
+      },
+      {
+        "pixel": [
+          9,
+          28
+        ],
+        "screen": [
+          121,
+          84
+        ],
+        "expected": [
+          16,
+          8,
+          16
+        ],
+        "actual": [
+          74,
+          99,
+          156
+        ]
+      },
+      {
+        "pixel": [
+          9,
+          29
+        ],
+        "screen": [
+          121,
+          85
+        ],
+        "expected": [
+          16,
+          8,
+          16
+        ],
+        "actual": [
+          74,
+          99,
+          156
+        ]
+      },
+      {
+        "pixel": [
+          8,
+          30
+        ],
+        "screen": [
+          120,
+          86
+        ],
+        "expected": [
+          0,
+          0,
+          0
+        ],
+        "actual": [
+          74,
+          99,
+          156
+        ]
+      }
+    ]
+  },
+  {
+    "frame": 1,
+    "expected": 192,
+    "visible": 180,
+    "diff": [
+      {
+        "pixel": [
+          15,
+          17
+        ],
+        "screen": [
+          127,
+          73
+        ],
+        "expected": [
+          0,
+          0,
+          0
+        ],
+        "actual": [
+          33,
+          74,
+          156
+        ]
+      },
+      {
+        "pixel": [
+          14,
+          18
+        ],
+        "screen": [
+          126,
+          74
+        ],
+        "expected": [
+          0,
+          0,
+          0
+        ],
+        "actual": [
+          33,
+          74,
+          156
+        ]
+      },
+      {
+        "pixel": [
+          13,
+          20
+        ],
+        "screen": [
+          125,
+          76
+        ],
+        "expected": [
+          16,
+          8,
+          16
+        ],
+        "actual": [
+          49,
+          90,
+          156
+        ]
+      },
+      {
+        "pixel": [
+          13,
+          21
+        ],
+        "screen": [
+          125,
+          77
+        ],
+        "expected": [
+          0,
+          0,
+          0
+        ],
+        "actual": [
+          49,
+          90,
+          156
+        ]
+      },
+      {
+        "pixel": [
+          12,
+          22
+        ],
+        "screen": [
+          124,
+          78
+        ],
+        "expected": [
+          16,
+          8,
+          16
+        ],
+        "actual": [
+          49,
+          90,
+          156
+        ]
+      },
+      {
+        "pixel": [
+          11,
+          24
+        ],
+        "screen": [
+          123,
+          80
+        ],
+        "expected": [
+          49,
+          33,
+          41
+        ],
+        "actual": [
+          49,
+          90,
+          156
+        ]
+      },
+      {
+        "pixel": [
+          11,
+          25
+        ],
+        "screen": [
+          123,
+          81
+        ],
+        "expected": [
+          74,
+          66,
+          99
+        ],
+        "actual": [
+          49,
+          90,
+          156
+        ]
+      },
+      {
+        "pixel": [
+          10,
+          26
+        ],
+        "screen": [
+          122,
+          82
+        ],
+        "expected": [
+          74,
+          66,
+          99
+        ],
+        "actual": [
+          74,
+          99,
+          156
+        ]
+      },
+      {
+        "pixel": [
+          10,
+          27
+        ],
+        "screen": [
+          122,
+          83
+        ],
+        "expected": [
+          74,
+          57,
+          66
+        ],
+        "actual": [
+          74,
+          99,
+          156
+        ]
+      },
+      {
+        "pixel": [
+          9,
+          28
+        ],
+        "screen": [
+          121,
+          84
+        ],
+        "expected": [
+          16,
+          8,
+          16
+        ],
+        "actual": [
+          74,
+          99,
+          156
+        ]
+      },
+      {
+        "pixel": [
+          9,
+          29
+        ],
+        "screen": [
+          121,
+          85
+        ],
+        "expected": [
+          16,
+          8,
+          16
+        ],
+        "actual": [
+          74,
+          99,
+          156
+        ]
+      },
+      {
+        "pixel": [
+          8,
+          30
+        ],
+        "screen": [
+          120,
+          86
+        ],
+        "expected": [
+          0,
+          0,
+          0
+        ],
+        "actual": [
+          74,
+          99,
+          156
+        ]
+      }
+    ]
+  },
+  {
+    "frame": 2,
+    "expected": 192,
+    "visible": 192,
+    "diff": []
+  },
+  {
+    "frame": 3,
+    "expected": 192,
+    "visible": 192,
+    "diff": []
+  },
+  {
+    "frame": 4,
+    "expected": 192,
+    "visible": 192,
+    "diff": []
+  },
+  {
+    "frame": 5,
+    "expected": 192,
+    "visible": 192,
+    "diff": []
+  },
+  {
+    "frame": 6,
+    "expected": 192,
+    "visible": 192,
+    "diff": []
+  },
+  {
+    "frame": 7,
+    "expected": 192,
+    "visible": 192,
+    "diff": []
+  },
+  {
+    "frame": 8,
+    "expected": 192,
+    "visible": 192,
+    "diff": []
+  },
+  {
+    "frame": 9,
+    "expected": 192,
+    "visible": 192,
+    "diff": []
+  },
+  {
+    "frame": 10,
+    "expected": 192,
+    "visible": 192,
+    "diff": []
+  },
+  {
+    "frame": 11,
+    "expected": 192,
+    "visible": 192,
+    "diff": []
+  },
+  {
+    "frame": 12,
+    "expected": 192,
+    "visible": 192,
+    "diff": []
+  },
+  {
+    "frame": 13,
+    "expected": 192,
+    "visible": 192,
+    "diff": []
+  },
+  {
+    "frame": 14,
+    "expected": 192,
+    "visible": 192,
+    "diff": []
+  },
+  {
+    "frame": 15,
+    "expected": 192,
+    "visible": 192,
+    "diff": []
+  },
+  {
+    "frame": 16,
+    "expected": 192,
+    "visible": 192,
+    "diff": []
+  },
+  {
+    "frame": 17,
+    "expected": 192,
+    "visible": 192,
+    "diff": []
+  },
+  {
+    "frame": 18,
+    "expected": 192,
+    "visible": 192,
+    "diff": []
+  },
+  {
+    "frame": 19,
+    "expected": 192,
+    "visible": 192,
+    "diff": []
+  },
+  {
+    "frame": 20,
+    "expected": 192,
+    "visible": 192,
+    "diff": []
+  },
+  {
+    "frame": 21,
+    "expected": 192,
+    "visible": 192,
+    "diff": []
+  },
+  {
+    "frame": 22,
+    "expected": 192,
+    "visible": 192,
+    "diff": []
+  },
+  {
+    "frame": 23,
+    "expected": 192,
+    "visible": 192,
+    "diff": []
+  },
+  {
+    "frame": 24,
+    "expected": 192,
+    "visible": 192,
+    "diff": []
+  },
+  {
+    "frame": 25,
+    "expected": 192,
+    "visible": 192,
+    "diff": []
+  },
+  {
+    "frame": 26,
+    "expected": 192,
+    "visible": 192,
+    "diff": []
+  },
+  {
+    "frame": 27,
+    "expected": 192,
+    "visible": 192,
+    "diff": []
+  },
+  {
+    "frame": 28,
+    "expected": 192,
+    "visible": 176,
+    "diff": [
+      {
+        "pixel": [
+          12,
+          15
+        ],
+        "screen": [
+          124,
+          71
+        ],
+        "expected": [
+          0,
+          0,
+          0
+        ],
+        "actual": [
+          49,
+          90,
+          156
+        ]
+      },
+      {
+        "pixel": [
+          11,
+          16
+        ],
+        "screen": [
+          123,
+          72
+        ],
+        "expected": [
+          0,
+          0,
+          0
+        ],
+        "actual": [
+          49,
+          90,
+          156
+        ]
+      },
+      {
+        "pixel": [
+          11,
+          17
+        ],
+        "screen": [
+          123,
+          73
+        ],
+        "expected": [
+          33,
+          24,
+          33
+        ],
+        "actual": [
+          49,
+          90,
+          156
+        ]
+      },
+      {
+        "pixel": [
+          10,
+          18
+        ],
+        "screen": [
+          122,
+          74
+        ],
+        "expected": [
+          49,
+          33,
+          41
+        ],
+        "actual": [
+          74,
+          99,
+          156
+        ]
+      },
+      {
+        "pixel": [
+          10,
+          19
+        ],
+        "screen": [
+          122,
+          75
+        ],
+        "expected": [
+          33,
+          24,
+          24
+        ],
+        "actual": [
+          74,
+          99,
+          156
+        ]
+      },
+      {
+        "pixel": [
+          9,
+          20
+        ],
+        "screen": [
+          121,
+          76
+        ],
+        "expected": [
+          24,
+          16,
+          24
+        ],
+        "actual": [
+          74,
+          99,
+          156
+        ]
+      },
+      {
+        "pixel": [
+          9,
+          21
+        ],
+        "screen": [
+          121,
+          77
+        ],
+        "expected": [
+          16,
+          0,
+          16
+        ],
+        "actual": [
+          74,
+          99,
+          156
+        ]
+      },
+      {
+        "pixel": [
+          8,
+          22
+        ],
+        "screen": [
+          120,
+          78
+        ],
+        "expected": [
+          16,
+          8,
+          16
+        ],
+        "actual": [
+          74,
+          99,
+          156
+        ]
+      },
+      {
+        "pixel": [
+          8,
+          23
+        ],
+        "screen": [
+          120,
+          79
+        ],
+        "expected": [
+          16,
+          0,
+          16
+        ],
+        "actual": [
+          74,
+          99,
+          156
+        ]
+      },
+      {
+        "pixel": [
+          7,
+          24
+        ],
+        "screen": [
+          119,
+          80
+        ],
+        "expected": [
+          0,
+          0,
+          0
+        ],
+        "actual": [
+          74,
+          99,
+          156
+        ]
+      },
+      {
+        "pixel": [
+          7,
+          25
+        ],
+        "screen": [
+          119,
+          81
+        ],
+        "expected": [
+          74,
+          66,
+          99
+        ],
+        "actual": [
+          74,
+          99,
+          156
+        ]
+      },
+      {
+        "pixel": [
+          6,
+          26
+        ],
+        "screen": [
+          118,
+          82
+        ],
+        "expected": [
+          74,
+          66,
+          99
+        ],
+        "actual": [
+          74,
+          99,
+          156
+        ]
+      },
+      {
+        "pixel": [
+          6,
+          27
+        ],
+        "screen": [
+          118,
+          83
+        ],
+        "expected": [
+          74,
+          57,
+          66
+        ],
+        "actual": [
+          74,
+          99,
+          156
+        ]
+      },
+      {
+        "pixel": [
+          5,
+          28
+        ],
+        "screen": [
+          117,
+          84
+        ],
+        "expected": [
+          24,
+          16,
+          24
+        ],
+        "actual": [
+          115,
+          115,
+          156
+        ]
+      },
+      {
+        "pixel": [
+          5,
+          29
+        ],
+        "screen": [
+          117,
+          85
+        ],
+        "expected": [
+          33,
+          24,
+          24
+        ],
+        "actual": [
+          115,
+          115,
+          156
+        ]
+      },
+      {
+        "pixel": [
+          4,
+          30
+        ],
+        "screen": [
+          116,
+          86
+        ],
+        "expected": [
+          0,
+          0,
+          0
+        ],
+        "actual": [
+          115,
+          115,
+          156
+        ]
+      }
+    ]
+  },
+  {
+    "frame": 29,
+    "expected": 192,
+    "visible": 191,
+    "diff": [
+      {
+        "pixel": [
+          4,
+          30
+        ],
+        "screen": [
+          116,
+          86
+        ],
+        "expected": [
+          0,
+          0,
+          0
+        ],
+        "actual": [
+          33,
+          74,
+          156
+        ]
+      }
+    ]
+  }
+]

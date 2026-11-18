@@ -47,6 +47,11 @@ def rendered(primary,secondary,n,baseline=False):
 
 
 def validate():
+    # Additional Ruins maps are accepted only with independent precise
+    # reference-anchor, preserved-ID and reciprocal-threshold validation.
+    from validate_hgss_union_cave_installed import validate as validate_union
+    validate_union()
+    subprocess.run(['python3',str(R/'crossroads/tools/test_hgss_ruins_live_structure.py')],check=True)
     # Owner's QA10 image identifies the canonical open directory court. Its
     # exact39-cell art-only finish has an independent authenticated QA09 check;
     # no other accepted exterior pixels gain a blanket exception.
@@ -75,7 +80,7 @@ def validate():
     for key,values in BASE['groups'].items():
         if key=='gMapGroup_CrossroadsJohtoExpansion':
             assert groups[key][:len(values)]==values,'Existing map IDs changed'
-            assert groups[key][len(values):]==['OlivineCity_FishingHouse','OlivineCity_TradeHouse','OlivineCity_SealHouse','OlivineCity_Cafe','OlivineCity_PokemonCenter_B1F','OlivineCity_Lighthouse_Balcony','OlivineCity_Lighthouse_Elevator','OlivineCity_PortTerminal','OlivineCity_PortQuay','SSAqua_1F','SSAqua_CaptainRoom','SSAqua_SoutheastCabins','SSAqua_SouthwestCabins','SSAqua_NortheastCabins','SSAqua_NorthwestCabins','SSAqua_B1F','AzaleaTown_CharcoalKiln'],'Unexpected appended map IDs'
+            assert groups[key][len(values):]==['OlivineCity_FishingHouse','OlivineCity_TradeHouse','OlivineCity_SealHouse','OlivineCity_Cafe','OlivineCity_PokemonCenter_B1F','OlivineCity_Lighthouse_Balcony','OlivineCity_Lighthouse_Elevator','OlivineCity_PortTerminal','OlivineCity_PortQuay','SSAqua_1F','SSAqua_CaptainRoom','SSAqua_SoutheastCabins','SSAqua_SouthwestCabins','SSAqua_NortheastCabins','SSAqua_NorthwestCabins','SSAqua_B1F','AzaleaTown_CharcoalKiln','RuinsOfAlph_SouthwestPocket','RuinsOfAlph_NorthwestPocket','RuinsOfAlph_SouthwestChamber','RuinsOfAlph_NorthwestChamber','RuinsOfAlph_UndergroundHall','RuinsOfAlph_HallEntrance'],'Unexpected appended map IDs'
         else:assert groups[key]==values,'Map group/order changed'
     ls=load('data/layouts/layouts.json')['layouts']
     assert [l['id'] for l in ls[:len(BASE['all_layout_ids'])]]==BASE['all_layout_ids'],'Existing layout IDs changed'

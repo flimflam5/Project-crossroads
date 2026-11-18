@@ -44,11 +44,19 @@ def load(p):
    value['warp_events'].pop(15)
  return value
 def validate():
+ # Additional Ruins maps are accepted only with independent precise
+ # reference-anchor, preserved-ID and reciprocal-threshold validation.
+ from validate_hgss_union_cave_installed import validate as validate_union
+ union_reviewed=validate_union()
+ subprocess.run(['python3',str(R/'crossroads/tools/test_hgss_ruins_live_structure.py')],check=True)
  from validate_eight_gyms import validate as validate_gyms
  validate_gyms()
+ # Route 33 is a reviewed later reconstruction; its dedicated validator pins
+ # donor data, map events, exact resources, cave and reciprocal town seam.
+ subprocess.run(['python3',str(R/'crossroads/tools/validate_hns_route33.py')],check=True)
  from build_eight_gym_integration import relocate_layout,CODES
  from hgss_tower_validation import validate_towers
- reviewed=validate_towers()
+ reviewed=validate_towers()|union_reviewed
  from hgss_room_validation import validate_rooms
  from hgss_service_validation import validate_services
  from hgss_gate_validation import validate_gates
@@ -65,7 +73,7 @@ def validate():
  baseline=load('crossroads/hgss/contracts/save-contracts.json');groups=load('data/maps/map_groups.json');layouts=load('data/layouts/layouts.json');heals=load('src/data/heal_locations.json')
  assert groups['group_order']==baseline['groups']['group_order']
  for key,old in baseline['groups'].items():
-  if key=='gMapGroup_CrossroadsJohtoExpansion':assert groups[key][:len(old)]==old and groups[key][len(old):]==['EcruteakCity_BarrierStation','EcruteakCity_BarrierCorridor','BellchimeTrail','EcruteakCity_BellTower_10F','EcruteakCity_BellTower_Roof','EcruteakCity_DowsingHouse','EcruteakCity_PokemonCenter_B1F','EcruteakCity_WestGate','EcruteakCity_EastGate','VioletCity_PokemonCenter_B1F','VioletCity_WestGate','VioletCity_EastGate']+(['OlivineCity_FishingHouse','OlivineCity_TradeHouse','OlivineCity_SealHouse','OlivineCity_Cafe','OlivineCity_PokemonCenter_B1F','OlivineCity_Lighthouse_Balcony','OlivineCity_Lighthouse_Elevator','OlivineCity_PortTerminal','OlivineCity_PortQuay'] if olivine else [])+['SSAqua_1F','SSAqua_CaptainRoom','SSAqua_SoutheastCabins','SSAqua_SouthwestCabins','SSAqua_NortheastCabins','SSAqua_NorthwestCabins','SSAqua_B1F','AzaleaTown_CharcoalKiln']
+  if key=='gMapGroup_CrossroadsJohtoExpansion':assert groups[key][:len(old)]==old and groups[key][len(old):]==['EcruteakCity_BarrierStation','EcruteakCity_BarrierCorridor','BellchimeTrail','EcruteakCity_BellTower_10F','EcruteakCity_BellTower_Roof','EcruteakCity_DowsingHouse','EcruteakCity_PokemonCenter_B1F','EcruteakCity_WestGate','EcruteakCity_EastGate','VioletCity_PokemonCenter_B1F','VioletCity_WestGate','VioletCity_EastGate']+(['OlivineCity_FishingHouse','OlivineCity_TradeHouse','OlivineCity_SealHouse','OlivineCity_Cafe','OlivineCity_PokemonCenter_B1F','OlivineCity_Lighthouse_Balcony','OlivineCity_Lighthouse_Elevator','OlivineCity_PortTerminal','OlivineCity_PortQuay'] if olivine else [])+['SSAqua_1F','SSAqua_CaptainRoom','SSAqua_SoutheastCabins','SSAqua_SouthwestCabins','SSAqua_NortheastCabins','SSAqua_NorthwestCabins','SSAqua_B1F','AzaleaTown_CharcoalKiln','RuinsOfAlph_SouthwestPocket','RuinsOfAlph_NorthwestPocket','RuinsOfAlph_SouthwestChamber','RuinsOfAlph_NorthwestChamber','RuinsOfAlph_UndergroundHall','RuinsOfAlph_HallEntrance']
   else:assert groups[key]==old,('Map IDs reordered',key)
  assert [l['id'] for l in layouts['layouts'][:len(baseline['layouts']['layouts'])]]==[l['id'] for l in baseline['layouts']['layouts']]
  for old,new in zip(baseline['layouts']['layouts'],layouts['layouts']):
@@ -74,6 +82,8 @@ def validate():
    expected=old.copy();name=next((n for n in CODES if load(f'data/maps/{n}/map.json')['layout']==old['id']),None)
    if name:relocate_layout(name,expected)
    if old['id'] in ['LAYOUT_JOHTO_ROUTE37','LAYOUT_JOHTO_ROUTE38','LAYOUT_JOHTO_ROUTE42']:expected.update(primary_tileset='gTileset_HgssEcruteakGateBuffer',secondary_tileset='gTileset_WesternCity')
+   if old['id']=='LAYOUT_JOHTO_ROUTE33':
+    expected.update(width=32,height=32,primary_tileset='gTileset_BlGymAzaleaPrimary',secondary_tileset='gTileset_HnsRoute33')
    if olivine and old['id']=='LAYOUT_OLIVINE_CITY':expected.update(width=64,height=64)
    if olivine and old['id'] in ['LAYOUT_JOHTO_ROUTE39','LAYOUT_JOHTO_ROUTE40']:
     # Only Route40 shares the new three primary fence cells with Olivine.
@@ -89,6 +99,21 @@ def validate():
   elif olivine and old['id']=='HEAL_LOCATION_OLIVINE_CITY':assert dict(old,x=16,y=34,respawn_x=8,respawn_y=13)==new
   else:assert old==new
  for n,digest in baseline['map_metadata_hashes'].items():
+  if n=='RuinsOfAlph':
+   # Project back only the independently checked exact new public doorway
+   # and appended layout identity before requiring the original whole hash.
+   actual=load(f'data/maps/{n}/map.json')
+   assert actual['layout']=='LAYOUT_HGSS_RUINS_OF_ALPH'
+   assert actual['warp_events'][-1]==dict(x=14,y=15,elevation=0,dest_map='MAP_RUINS_OF_ALPH_HALL_ENTRANCE',dest_warp_id='0')
+   actual['layout']='LAYOUT_RUINS_OF_ALPH';actual['warp_events'].pop()
+   assert hashlib.sha256((json.dumps(actual,indent=2)+'\n').encode()).hexdigest()==digest,('Unrelated Ruins events changed',n)
+   continue
+  if n=='JohtoRoute33':
+   # The detailed Route 33 assertions use this exact historical metadata as
+   # their base; bind it to the same hash used for every unrelated map.
+   old=json.loads(subprocess.check_output(['git','show','3138de89d9:data/maps/JohtoRoute33/map.json'],cwd=R))
+   assert hashlib.sha256((json.dumps(old,indent=2)+'\n').encode()).hexdigest()==digest
+   continue # Exact later reconstruction validated above.
   if n in reviewed:continue
   if olivine and n in ['JohtoRoute39','JohtoRoute40']:
    # Normalize only the two exact connection offsets; even connection ordering
