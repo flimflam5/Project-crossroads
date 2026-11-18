@@ -70,9 +70,10 @@ separate chambers, and the cave connections follow the HGSS 1F/B2F chains.
 Both chamber picture boards now call the prepared puzzle special and use a
 scripted fade/warp to the underground hall on success. The new 32×64 hall
 uses the reference SW (5,42) and NW (5,24) fall landings; its old layout and
-map ID are preserved for save migration. No permanent success
-flags, item grants, hidden rooms, or story events are implemented; the puzzles
-are repeatable. The GBA corridor between the hall and the public surface is
+map ID are preserved for save migration. No permanent puzzle/gate flags, item grants, or story events are implemented;
+the puzzles and temporary wall openings are repeatable. Four prototype
+second/hidden rooms have since been added; their item plinths and inscriptions
+remain without rewards or dialogue, and the full route is not yet playtested. The GBA corridor between the hall and the public surface is
 provisional, and the southwest pocket has a two-cell path in the donor ledge
 so travel can work in both directions. These are adaptations, not HGSS 1:1
 claims. The surface entrance uses a private repacked donor facade; existing

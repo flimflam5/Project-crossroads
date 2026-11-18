@@ -14,3 +14,18 @@ RuinsOfAlph_NorthwestChamber_Puzzle_Success::
     waitstate
     releaseall
     end
+
+RuinsOfAlph_NorthwestChamber_HiddenGate::
+    lockall
+    specialvar VAR_RESULT, Crossroads_AlphHasNonEggHoOh
+    goto_if_eq VAR_RESULT, FALSE, RuinsOfAlph_NorthwestChamber_HiddenGate_Closed
+    setmetatile 5, 1, 40, FALSE
+    special DrawWholeMapView
+    releaseall
+    end
+RuinsOfAlph_NorthwestChamber_HiddenGate_Closed::
+    msgbox RuinsOfAlph_NorthwestChamber_HiddenGate_Text, MSGBOX_SIGN
+    releaseall
+    end
+RuinsOfAlph_NorthwestChamber_HiddenGate_Text:
+    .string "HO-OH$"

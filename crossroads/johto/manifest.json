@@ -7548,7 +7548,7 @@
       "parent": "RuinsOfAlph",
       "cluster": "west",
       "status": "draft-unverified",
-      "coverage": "Draft donor geometry; gameplay, hidden rooms, corridor art and owner visual QA pending.",
+      "coverage": "Prototype: temporary no-flag gates, movement, old-save compatibility and owner visual QA pending.",
       "map_group": 76,
       "map_num": 51,
       "display_name": "RuinsOfAlph_SouthwestPocket",
@@ -7579,7 +7579,7 @@
       "parent": "RuinsOfAlph",
       "cluster": "west",
       "status": "draft-unverified",
-      "coverage": "Draft donor geometry; gameplay, hidden rooms, corridor art and owner visual QA pending.",
+      "coverage": "Prototype: temporary no-flag gates, movement, old-save compatibility and owner visual QA pending.",
       "map_group": 76,
       "map_num": 52,
       "display_name": "RuinsOfAlph_NorthwestPocket",
@@ -7610,7 +7610,7 @@
       "parent": "RuinsOfAlph",
       "cluster": "west",
       "status": "draft-unverified",
-      "coverage": "Draft donor geometry; gameplay, hidden rooms, corridor art and owner visual QA pending.",
+      "coverage": "Prototype: temporary no-flag gates, movement, old-save compatibility and owner visual QA pending.",
       "map_group": 76,
       "map_num": 53,
       "display_name": "RuinsOfAlph_SouthwestChamber",
@@ -7625,6 +7625,20 @@
           "elevation": 0,
           "dest_map": "MAP_RUINS_OF_ALPH_SOUTHWEST_POCKET",
           "dest_warp_id": "1"
+        },
+        {
+          "x": 5,
+          "y": 2,
+          "elevation": 0,
+          "dest_map": "MAP_RUINS_OF_ALPH_SOUTHWEST_SECOND_ROOM",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 5,
+          "y": 1,
+          "elevation": 0,
+          "dest_map": "MAP_RUINS_OF_ALPH_SOUTHWEST_SECOND_ROOM",
+          "dest_warp_id": "0"
         }
       ]
     },
@@ -7634,7 +7648,7 @@
       "parent": "RuinsOfAlph",
       "cluster": "west",
       "status": "draft-unverified",
-      "coverage": "Draft donor geometry; gameplay, hidden rooms, corridor art and owner visual QA pending.",
+      "coverage": "Prototype: temporary no-flag gates, movement, old-save compatibility and owner visual QA pending.",
       "map_group": 76,
       "map_num": 54,
       "display_name": "RuinsOfAlph_NorthwestChamber",
@@ -7649,6 +7663,20 @@
           "elevation": 0,
           "dest_map": "MAP_RUINS_OF_ALPH_NORTHWEST_POCKET",
           "dest_warp_id": "1"
+        },
+        {
+          "x": 5,
+          "y": 2,
+          "elevation": 0,
+          "dest_map": "MAP_RUINS_OF_ALPH_NORTHWEST_SECOND_ROOM",
+          "dest_warp_id": "0"
+        },
+        {
+          "x": 5,
+          "y": 1,
+          "elevation": 0,
+          "dest_map": "MAP_RUINS_OF_ALPH_NORTHWEST_SECOND_ROOM",
+          "dest_warp_id": "0"
         }
       ]
     },
@@ -7658,7 +7686,7 @@
       "parent": "RuinsOfAlph",
       "cluster": "west",
       "status": "draft-unverified",
-      "coverage": "Draft donor geometry; gameplay, hidden rooms, corridor art and owner visual QA pending.",
+      "coverage": "Prototype: temporary no-flag gates, movement, old-save compatibility and owner visual QA pending.",
       "map_group": 76,
       "map_num": 55,
       "display_name": "RuinsOfAlph_UndergroundHall",
@@ -7689,7 +7717,7 @@
       "parent": "RuinsOfAlph",
       "cluster": "west",
       "status": "draft-unverified",
-      "coverage": "Draft donor geometry; gameplay, hidden rooms, corridor art and owner visual QA pending.",
+      "coverage": "Prototype: temporary no-flag gates, movement, old-save compatibility and owner visual QA pending.",
       "map_group": 76,
       "map_num": 56,
       "display_name": "RuinsOfAlph_HallEntrance",
@@ -7720,6 +7748,86 @@
           "dest_warp_id": "1"
         }
       ]
+    },
+    {
+      "name": "RuinsOfAlph_SouthwestSecondRoom",
+      "kind": "hgss_ruins_hidden",
+      "parent": "RuinsOfAlph",
+      "cluster": "west",
+      "status": "draft-unverified",
+      "coverage": "Prototype: temporary no-flag gates, movement, old-save compatibility and owner visual QA pending.",
+      "map_group": 76,
+      "map_num": 57,
+      "display_name": "RuinsOfAlph_SouthwestSecondRoom",
+      "role": "hgss_ruins_hidden",
+      "id": "MAP_RUINS_OF_ALPH_SOUTHWEST_SECOND_ROOM",
+      "layout": "LAYOUT_RUINS_OF_ALPH_SOUTHWEST_SECOND_ROOM",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 6,
+          "y": 17,
+          "elevation": 0,
+          "dest_map": "MAP_RUINS_OF_ALPH_SOUTHWEST_CHAMBER",
+          "dest_warp_id": "1"
+        }
+      ]
+    },
+    {
+      "name": "RuinsOfAlph_NorthwestSecondRoom",
+      "kind": "hgss_ruins_hidden",
+      "parent": "RuinsOfAlph",
+      "cluster": "west",
+      "status": "draft-unverified",
+      "coverage": "Prototype: temporary no-flag gates, movement, old-save compatibility and owner visual QA pending.",
+      "map_group": 76,
+      "map_num": 58,
+      "display_name": "RuinsOfAlph_NorthwestSecondRoom",
+      "role": "hgss_ruins_hidden",
+      "id": "MAP_RUINS_OF_ALPH_NORTHWEST_SECOND_ROOM",
+      "layout": "LAYOUT_RUINS_OF_ALPH_NORTHWEST_SECOND_ROOM",
+      "connections": null,
+      "entrances": [
+        {
+          "x": 6,
+          "y": 17,
+          "elevation": 0,
+          "dest_map": "MAP_RUINS_OF_ALPH_NORTHWEST_CHAMBER",
+          "dest_warp_id": "1"
+        }
+      ]
+    },
+    {
+      "name": "RuinsOfAlph_SouthwestHiddenRoom",
+      "kind": "hgss_ruins_hidden",
+      "parent": "RuinsOfAlph",
+      "cluster": "west",
+      "status": "draft-unverified",
+      "coverage": "Prototype: temporary no-flag gates, movement, old-save compatibility and owner visual QA pending.",
+      "map_group": 76,
+      "map_num": 59,
+      "display_name": "RuinsOfAlph_SouthwestHiddenRoom",
+      "role": "hgss_ruins_hidden",
+      "id": "MAP_RUINS_OF_ALPH_SOUTHWEST_HIDDEN_ROOM",
+      "layout": "LAYOUT_RUINS_OF_ALPH_SOUTHWEST_HIDDEN_ROOM",
+      "connections": null,
+      "entrances": []
+    },
+    {
+      "name": "RuinsOfAlph_NorthwestHiddenRoom",
+      "kind": "hgss_ruins_hidden",
+      "parent": "RuinsOfAlph",
+      "cluster": "west",
+      "status": "draft-unverified",
+      "coverage": "Prototype: temporary no-flag gates, movement, old-save compatibility and owner visual QA pending.",
+      "map_group": 76,
+      "map_num": 60,
+      "display_name": "RuinsOfAlph_NorthwestHiddenRoom",
+      "role": "hgss_ruins_hidden",
+      "id": "MAP_RUINS_OF_ALPH_NORTHWEST_HIDDEN_ROOM",
+      "layout": "LAYOUT_RUINS_OF_ALPH_NORTHWEST_HIDDEN_ROOM",
+      "connections": null,
+      "entrances": []
     }
   ],
   "border_topology": [

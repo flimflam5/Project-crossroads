@@ -29,7 +29,12 @@ def validate():
  # prior Violet/Olivine/Aqua/kiln ordinals remain required byte-for-byte.
  from stage_hgss_ruins_network import NAMES as RUINS_NEW
  ruins_new=list(RUINS_NEW) if (R/'data/maps/RuinsOfAlph_SouthwestPocket/map.json').exists() else []
- assert tail==NEW+olivine_new+aqua_new+['AzaleaTown_CharcoalKiln']+ruins_new,('Violet IDs shifted or uncontracted appended maps',tail)
+ from stage_hgss_ruins_hidden_graph import NAMES as HIDDEN_NEW
+ hidden_new=list(HIDDEN_NEW) if (R/'data/maps/RuinsOfAlph_SouthwestSecondRoom/map.json').exists() else []
+ if hidden_new:
+  from validate_hgss_ruins_hidden_installed import validate as validate_hidden
+  validate_hidden()
+ assert tail==NEW+olivine_new+aqua_new+['AzaleaTown_CharcoalKiln']+ruins_new+hidden_new,('Violet IDs shifted or uncontracted appended maps',tail)
  maps={n:load(f'data/maps/{n}/map.json') for n in OWNED};ids={m['id']:n for n,m in maps.items()};raw={};size={};attrs={};actors={}
  paths=dict(re.findall(r'const u16 (gMetatileAttributes_\w+)\[\] = INCBIN_U16\("([^"]+)"\)',(R/'src/data/tilesets/metatiles.h').read_text()))
  for key,body in re.findall(r'const struct Tileset (gTileset_\w+)\s*=\s*\{([^}]+)\}',(R/'src/data/tilesets/headers.h').read_text(),re.S):

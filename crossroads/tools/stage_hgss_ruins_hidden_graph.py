@@ -28,12 +28,12 @@ def map_data(name,map_id,layout):
 
 
 def transition(x,y,label):
-    return dict(x=x,y=y,elevation=0,var='VAR_TEMP_0',var_value='0',script=label)
+    return dict(type='trigger',x=x,y=y,elevation=0,var='VAR_TEMP_0',var_value='0',script=label)
 
 
-def stage(write,first_rooms):
+def stage(write,first_rooms,read=None):
     """Return isolated map/layout/script and first-room proposals, not live changes."""
-    tiles,sizes,borders,facts=stage_rooms(write)
+    tiles,sizes,borders,facts=stage_rooms(write,read)
     assert set(first_rooms)==set(FIRST)
     proposals=copy.deepcopy(first_rooms)
     for i,first_id in enumerate(FIRST):

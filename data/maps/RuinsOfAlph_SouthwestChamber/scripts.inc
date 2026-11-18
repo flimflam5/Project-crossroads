@@ -14,3 +14,15 @@ RuinsOfAlph_SouthwestChamber_Puzzle_Success::
     waitstate
     releaseall
     end
+
+RuinsOfAlph_SouthwestChamber_HiddenGate::
+    msgbox RuinsOfAlph_SouthwestChamber_HiddenGate_Text, MSGBOX_SIGN
+    end
+RuinsOfAlph_SouthwestChamber_HiddenGate_Text:
+    .string "WATER$"
+RuinsOfAlph_SouthwestChamber_WaterStoneUsed::
+    lockall
+    setmetatile 5, 1, 40, FALSE
+    special DrawWholeMapView
+    releaseall
+    end

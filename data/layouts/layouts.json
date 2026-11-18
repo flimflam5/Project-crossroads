@@ -11259,6 +11259,50 @@
       "border_filepath": "data/layouts/HgssRuinsHallExpanded/border.bin",
       "blockdata_filepath": "data/layouts/HgssRuinsHallExpanded/map.bin",
       "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_RUINS_OF_ALPH_SOUTHWEST_SECOND_ROOM",
+      "name": "RuinsOfAlph_SouthwestSecondRoom_Layout",
+      "width": 14,
+      "height": 20,
+      "primary_tileset": "gTileset_HgssRuinsHiddenSecond",
+      "secondary_tileset": "gTileset_WesternInteriors",
+      "border_filepath": "data/layouts/RuinsOfAlph_SouthwestSecondRoom/border.bin",
+      "blockdata_filepath": "data/layouts/RuinsOfAlph_SouthwestSecondRoom/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_RUINS_OF_ALPH_NORTHWEST_SECOND_ROOM",
+      "name": "RuinsOfAlph_NorthwestSecondRoom_Layout",
+      "width": 14,
+      "height": 20,
+      "primary_tileset": "gTileset_HgssRuinsHiddenSecond",
+      "secondary_tileset": "gTileset_WesternInteriors",
+      "border_filepath": "data/layouts/RuinsOfAlph_NorthwestSecondRoom/border.bin",
+      "blockdata_filepath": "data/layouts/RuinsOfAlph_NorthwestSecondRoom/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_RUINS_OF_ALPH_SOUTHWEST_HIDDEN_ROOM",
+      "name": "RuinsOfAlph_SouthwestHiddenRoom_Layout",
+      "width": 24,
+      "height": 19,
+      "primary_tileset": "gTileset_HgssRuinsHiddenSouthwest",
+      "secondary_tileset": "gTileset_WesternInteriors",
+      "border_filepath": "data/layouts/RuinsOfAlph_SouthwestHiddenRoom/border.bin",
+      "blockdata_filepath": "data/layouts/RuinsOfAlph_SouthwestHiddenRoom/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_RUINS_OF_ALPH_NORTHWEST_HIDDEN_ROOM",
+      "name": "RuinsOfAlph_NorthwestHiddenRoom_Layout",
+      "width": 24,
+      "height": 27,
+      "primary_tileset": "gTileset_HgssRuinsHiddenNorthwest",
+      "secondary_tileset": "gTileset_WesternInteriors",
+      "border_filepath": "data/layouts/RuinsOfAlph_NorthwestHiddenRoom/border.bin",
+      "blockdata_filepath": "data/layouts/RuinsOfAlph_NorthwestHiddenRoom/map.bin",
+      "layout_version": "emerald"
     }
   ]
 }

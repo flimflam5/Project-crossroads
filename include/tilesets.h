@@ -193,4 +193,11 @@ extern const struct Tileset gTileset_HgssRuinsHall;
 extern const struct Tileset gTileset_HgssRuinsPublic;
 #endif
 // END HGSS RUINS PUBLIC PRIVATE
+// BEGIN HGSS RUINS HIDDEN PRIVATE
+#if !IS_FRLG
+extern const struct Tileset gTileset_HgssRuinsHiddenSecond;
+extern const struct Tileset gTileset_HgssRuinsHiddenSouthwest;
+extern const struct Tileset gTileset_HgssRuinsHiddenNorthwest;
+#endif
+// END HGSS RUINS HIDDEN PRIVATE
 #endif //GUARD_tilesets_H

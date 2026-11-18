@@ -9,6 +9,13 @@ def load(p):return json.loads((R/p).read_text())
 from hgss_gate_arrivals import arrivals
 from hgss_olivine_validation import active as olivine_active,dynamic_pair,dynamic_destinations,extra_edges,validate_olivine_graph
 arrival_only=arrivals()
+# These two floor aliases receive the second-room exit. Their paired gate
+# warp is only reachable after the separately verified item/party interaction.
+arrival_only.update({('RuinsOfAlph_SouthwestChamber',1):2,
+                     ('RuinsOfAlph_NorthwestChamber',1):2})
+from validate_hgss_ruins_hidden_installed import validate as validate_hidden
+hidden_falls=validate_hidden()
+dynamic_hidden_gates={('RuinsOfAlph_SouthwestChamber',2),('RuinsOfAlph_NorthwestChamber',2)}
 groups=load('data/maps/map_groups.json');base=groups['gMapGroup_CrossroadsOlivine'];west=groups.get('gMapGroup_CrossroadsJohtoExpansion',[]);names=base+west;locations={n:(75,i) for i,n in enumerate(base)}|{n:(76,i) for i,n in enumerate(west)};manifest=load('crossroads/johto/manifest.json')
 for preserved,digest in manifest.get('preserved_sources',{}).items():
  assert hashlib.sha256((R/preserved).read_bytes()).hexdigest()==digest,('Accepted source changed',preserved)
@@ -50,6 +57,13 @@ for n,m in maps.items():
   at=lookup[l['primary_tileset'] if t<512 else l['secondary_tileset']]
   assert t-(512 if t>=512 else 0)<len(at),('Metatile out of bounds',n,e,t)
   if at[t-(512 if t>=512 else 0)]&255==0:
+   if (n,m['warp_events'].index(e)) in dynamic_hidden_gates:
+    # The closed static wall becomes donor behavior 0x60 via the exact
+    # separately validated field-use/Ho-Oh scripts; do not pretend it is open
+    # without this explicit condition in the survey graph.
+    assert (e['x'],e['y'])==(5,1) and raw[n][e['y']*w+e['x']]&0xc00
+    assert lookup[l['primary_tileset']][40]&255==0x60
+    continue
    if (n,m['warp_events'].index(e)) in arrival_only:
     entry=m['warp_events'][arrival_only[(n,m['warp_events'].index(e))]]
     assert entry['dest_map']==e['dest_map'] and entry['dest_warp_id']==e['dest_warp_id']
@@ -103,7 +117,7 @@ def behavior(n,x,y):
 start=('OlivineCity',16,34) if olivine_active() else ('OlivineCity',12,13);q=deque([start]);seen={start}
 while q:
  n,x,y=q.popleft();w,h=sizes[n];m=maps[n]
- moves=extra_edges(n,x,y)
+ moves=extra_edges(n,x,y)+hidden_falls.get((n,x,y),[])
  for dx,dy,d in [(1,0,'right'),(-1,0,'left'),(0,1,'down'),(0,-1,'up')]:
   step=next_position(x,y,dx,dy,lambda a,b:behavior(n,a,b))
   if step is None:continue
@@ -170,7 +184,7 @@ if a.built:
  sec=(R/'include/constants/region_map_sections.h').read_text();values=re.findall(r'^\s*(MAPSEC_\w+),',sec,re.M)
  assert values.index('MAPSEC_NONE')==213 and len(values)==253
  assert len((R/'pokeemerald.gba').read_bytes())<=32*1024*1024
-report=dict(maps=len(names),reachable_tiles=len(seen),warps=sum(len(m['warp_events']) for m in maps.values()),connections=sum(len(m['connections'] or []) for m in maps.values()),centers=sum(n.endswith('PokemonCenter_1F') for n in names),mode='structural survey-water-enabled graph; not emulator playtesting')
+report=dict(maps=len(names),reachable_tiles=len(seen),warps=sum(len(m['warp_events']) for m in maps.values()),connections=sum(len(m['connections'] or []) for m in maps.values()),centers=sum(n.endswith('PokemonCenter_1F') for n in names),mode='structural survey graph; assumes Surf and verified temporary Ruins gate conditions, not emulator playtesting')
 (R/'build').mkdir(exist_ok=True);(R/'build/johto-topology-validation.json').write_text(json.dumps(report,indent=2)+'\n')
 print('Johto valid IDs, whole tile/warp/border graph, interaction access, services and safe respawns: PASS',report)
 

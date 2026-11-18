@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-"""Test staged gated-return/fall graph; it remains unregistered and unplayed."""
-import json,re,struct
+"""Test independently staged gated-return/fall graph; no gameplay claim."""
+import json,re,struct,subprocess
 from collections import deque
 from pathlib import Path
 from stage_hgss_ruins_hidden_graph import stage,NAMES,IDS,FIRST,LAYOUTS
@@ -22,14 +22,14 @@ def local(plane,w,h,start):
 
 def run():
  names=('RuinsOfAlph_SouthwestChamber','RuinsOfAlph_NorthwestChamber')
- first={m['id']:m for m in (load(f'data/maps/{n}/map.json') for n in names)}
+ first={m['id']:m for m in (json.loads(subprocess.check_output(['git','show',f'ee1042d7ae:data/maps/{n}/map.json'],cwd=R)) for n in names)}
  before=json.dumps(first,sort_keys=True)
  files={}
  def write(path,data):assert path not in files;files[path]=data
  maps,tiles,layouts,borders,scripts,proposed,gates=stage(write,first)
  assert json.dumps(first,sort_keys=True)==before,'Source first-room data was modified'
- assert not set(NAMES).intersection(load('data/maps/map_groups.json')['gMapGroup_CrossroadsJohtoExpansion'])
- assert len(files)==57 and tuple(maps)==NAMES
+ assert load('data/maps/map_groups.json')['gMapGroup_CrossroadsJohtoExpansion'][57:61]==list(NAMES)
+ assert len(files)==61 and tuple(maps)==NAMES
  for i,first_id in enumerate(FIRST):
   old=first[first_id];room=proposed[first_id];new=maps[NAMES[i]]
   assert room['warp_events'][0]==old['warp_events'][0] and len(room['warp_events'])==2
@@ -44,12 +44,12 @@ def run():
   assert (5,3) in local(source,10,11,(5,2)), 'No safe walking exit from return tile'
   plane=tiles[NAMES[i]];l=layouts[LAYOUTS[i]];reachable=local(plane,l['width'],l['height'],(6,17))
   assert (6,3) in reachable and (6,4) in reachable
-  assert new['coord_events']==[dict(x=6,y=3,elevation=0,var='VAR_TEMP_0',var_value='0',script=NAMES[i]+'_Fall')]
+  assert new['coord_events']==[dict(type='trigger',x=6,y=3,elevation=0,var='VAR_TEMP_0',var_value='0',script=NAMES[i]+'_Fall')]
   assert f'warp {IDS[i+2]}, '+('11, 7' if i==0 else '11, 14') in scripts[NAMES[i]]
  for i in (2,3):
   n=NAMES[i];l=layouts[LAYOUTS[i]];m=maps[n];seed=(11,7) if i==2 else (11,14);edge=(20,13) if i==2 else (20,21)
   assert not m['warp_events'] and edge in local(tiles[n],l['width'],l['height'],seed)
-  assert m['coord_events']==[dict(x=edge[0],y=edge[1],elevation=0,var='VAR_TEMP_0',var_value='0',script=n+'_Fall')]
+  assert m['coord_events']==[dict(type='trigger',x=edge[0],y=edge[1],elevation=0,var='VAR_TEMP_0',var_value='0',script=n+'_Fall')]
   destination='5, 42' if i==2 else '5, 24'
   assert f'warp MAP_RUINS_OF_ALPH_UNDERGROUND_HALL, {destination}' in scripts[n]
   hall=words('data/layouts/HgssRuinsHallExpanded/map.bin');x,y=(5,42) if i==2 else (5,24)

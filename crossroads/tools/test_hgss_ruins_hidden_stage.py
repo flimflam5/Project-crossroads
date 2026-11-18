@@ -13,7 +13,7 @@ def run():
         assert path not in files
         files[path]=data
     planes,layouts,borders,transitions=stage(write)
-    assert len(files)==57 and tuple(planes)==NAMES
+    assert len(files)==61 and tuple(planes)==NAMES
     for name in NAMES:
         width,height,tileset=layouts[name];values=planes[name]
         assert len(values)==width*height and len(borders[name])==4
@@ -45,4 +45,4 @@ def run():
 
 if __name__=='__main__':
     assert run()==run(),'Non-deterministic room staging'
-    print('Four unregistered rooms: reference dry components, bounds, elevations, behaviors and transition anchors PASS; no emulator test.')
+    print('Four candidate rooms: reference dry components, bounds, elevations, behaviors and transition anchors PASS; no emulator test.')

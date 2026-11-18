@@ -9,6 +9,7 @@ from collections import deque
 import hashlib, json, struct, tempfile
 from pathlib import Path
 import prepare_hns_ruins_pockets as packer
+from tileset_registration import upsert
 
 ROOT=Path(__file__).resolve().parents[2]
 SOURCE=ROOT/'crossroads/donor/hns-ruins-hidden'
@@ -42,7 +43,8 @@ def reference_component(perms,seed):
     return seen
 
 
-def stage(write):
+def stage(write, read=None):
+    if read is None:read=lambda path:(ROOT/path).read_text()
     manifest=json.loads((SOURCE/'source-sha256.json').read_text())
     assert manifest['revision']=='167aa6d537b109bb229c231ddce4616974c4da71'
     for path,digest in manifest['files'].items():
@@ -76,6 +78,22 @@ def stage(write):
         words={'southwest':readwords(root/'southwest'/'SouthwestHidden.bin'),
                'northwest':readwords(root/'northwest'/'NorthwestHidden.bin')}
         attrs={g:readwords(root/g/'metatile_attributes.bin') for g in GROUPS}
+    sections={k:[] for k in ('graphics','metatiles','headers','externs')}
+    for group in ('second','southwest','northwest'):
+        symbol='HgssRuinsHidden'+group.title();dest='data/tilesets/primary/hgss_ruins_hidden_'+group
+        sections['graphics'].append(f'const u32 gTilesetTiles_{symbol}[] = INCGFX_U32("{dest}/tiles.png", ".4bpp.fastSmol");\n'
+            f'const u16 gTilesetPalettes_{symbol}[][16] = {{\n'+''.join(f'    INCGFX_U16("{dest}/palettes/{i:02}.pal", ".gbapal"),\n' for i in range(16))+'};\n')
+        sections['metatiles'].append(f'const u16 gMetatiles_{symbol}[] = INCBIN_U16("{dest}/metatiles.bin");\n'
+            f'const u16 gMetatileAttributes_{symbol}[] = INCBIN_U16("{dest}/metatile_attributes.bin");\n')
+        sections['headers'].append(f'const struct Tileset gTileset_{symbol} = {{ .isCompressed=TRUE, .isSecondary=FALSE, '
+            f'.tiles=gTilesetTiles_{symbol}, .palettes=gTilesetPalettes_{symbol}, .metatiles=gMetatiles_{symbol}, '
+            f'.metatileAttributes=gMetatileAttributes_{symbol}, .callback=NULL }};\n')
+        sections['externs'].append(f'extern const struct Tileset gTileset_{symbol};\n')
+    for kind,path in [('graphics','src/data/tilesets/graphics.h'),('metatiles','src/data/tilesets/metatiles.h'),
+                      ('headers','src/data/tilesets/headers.h'),('externs','include/tilesets.h')]:
+        begin='// BEGIN HGSS RUINS HIDDEN PRIVATE';end='// END HGSS RUINS HIDDEN PRIVATE'
+        body=begin+'\n#if !IS_FRLG\n'+''.join(sections[kind])+'#endif\n'+end
+        write(path,upsert(read(path),begin,end,body,externs=kind=='externs'))
     assert {g:(r['metatiles'],r['tiles'],len(r['palette_banks'])) for g,r in reports.items()}=={
         'second':(27,50,5),'southwest':(36,101,5),'northwest':(37,105,5)}
     second=facts['second'];component=reference_component(second['permissions'],second['exit'])

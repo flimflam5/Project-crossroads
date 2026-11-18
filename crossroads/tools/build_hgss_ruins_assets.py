@@ -32,6 +32,12 @@ def prepare(write, read=None):
             subprocess.run([sys.executable, str(ROOT/'crossroads/tools'/script),
                             '--output', str(target)], check=True, stdout=subprocess.DEVNULL)
         sections = {k: [] for k in ('graphics', 'metatiles', 'headers', 'externs')}
+        # Append the donor's open-wall tile while retaining all prior indices.
+        # Existing chamber cells use palette banks 0..4; the new gate uses 5.
+        from stage_hgss_ruins_gate_art import stage as stage_gate_art
+        gate_assets={}
+        gate_id=stage_gate_art(lambda path,data: gate_assets.__setitem__(path,data))
+        assert gate_id==40
         for name, group, palette_count in GROUPS:
             source = base/'hall' if group == 'hall' else base/'pockets'/group
             dest = f'data/tilesets/primary/{name.lower()}'
@@ -44,12 +50,12 @@ def prepare(write, read=None):
                 for i in range(0, len(attrs), 2):
                     if attrs[i] == 0xf0:
                         attrs[i] = 0
-            write(dest+'/tiles.png', (source/'tiles.png').read_bytes())
-            write(dest+'/metatiles.bin', meta)
-            write(dest+'/metatile_attributes.bin', bytes(attrs))
+            for file,content in [('tiles.png',(source/'tiles.png').read_bytes()),
+                                 ('metatiles.bin',meta),('metatile_attributes.bin',bytes(attrs))]:
+                path=dest+'/'+file;write(path,gate_assets[path] if group=='chambers' else content)
             for i in range(16):
                 palette = source/'palettes'/f'{i if i < palette_count else 0:02}.pal'
-                write(dest+f'/palettes/{i:02}.pal', palette.read_bytes())
+                path=dest+f'/palettes/{i:02}.pal';write(path,gate_assets[path] if group=='chambers' else palette.read_bytes())
             sections['graphics'].append(
                 f'const u32 gTilesetTiles_{name}[] = INCGFX_U32("{dest}/tiles.png", ".4bpp.fastSmol");\n'
                 f'const u16 gTilesetPalettes_{name}[][16] = {{\n' +
