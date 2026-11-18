@@ -16,6 +16,7 @@ EXAMPLES = {
     '3F': ((7,73), (10,81)),
 }
 EXTERIOR = {'1F': (0,5), '2F': (0,14), '3F': (0,0)}
+EXIT_ARROWS = {'1F': {(4,4), (26,6), (27,43), (27,93)}, '2F': set(), '3F': set()}
 
 def main():
     parser=argparse.ArgumentParser()
@@ -42,6 +43,13 @@ def main():
             assert before==after or (before,after)==(b,s)
         if args.installed:assert vals==result,(floor,'generator has not installed the rock fill')
         events=json.loads((R/f'data/maps/UnionCave_{floor}/map.json').read_text())
+        expected_warps={(event['x'],event['y']) for event in events['warp_events']}
+        arrows=set()
+        for i,value in enumerate(vals):
+            tile=value&1023
+            if tile<512 and attrs[tile]&255 in (0x62,0x63,0x64,0x65):
+                arrows.add((i%w,i//w))
+        assert arrows==EXIT_ARROWS[floor] and arrows<=expected_warps,(floor,'stray arrow-warp behavior',arrows)
         for event in events['warp_events']:
             i=event['y']*w+event['x'];assert vals[i]==result[i],(floor,'warp changed')
     print('PASS cave rock fills, external void, collision and warp preservation; emulator visual QA pending')
