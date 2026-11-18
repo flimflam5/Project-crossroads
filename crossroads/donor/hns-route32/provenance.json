@@ -1,0 +1,160 @@
+{
+  "source_repository": "https://github.com/PokemonHnS-Development/pokehns-expansion",
+  "commit": "167aa6d537b109bb229c231ddce4616974c4da71",
+  "purpose": "Route 32 donor tiles and source layout, staged for conversion only; map is not installed.",
+  "credit": "Pokémon Heart and Soul and upstream contributors: Crystal Advance/Kertra, Fire Gold/blackfragrant, SkidMarc25, Ekat99, TheDeadHeroAlistair, Johto Redrawn Team, zatavares852, lbsbezerra, WesleyFG, Kalarie. Aggregate credits; per-file authorship not established.",
+  "source_manifest": [
+    {
+      "path": "data/layouts/Route32_hns/map.bin",
+      "sha256": "fba82fa4f37d52afc05b219c6cb3721af336c74e1e4074e89e2eff0bd22cac44"
+    },
+    {
+      "path": "data/maps/Route32_hns/map.json",
+      "sha256": "fb90760fcc7fe5eb69d9fab274280fa8b39c56892d4c40120a29e143ec6cc909"
+    },
+    {
+      "path": "data/tilesets/primary/johto_general_hns/metatile_attributes.bin",
+      "sha256": "9e19b8b4590cfb8a1450229054d6b08ff3fe1afc4972982fea36aaeac393c86e"
+    },
+    {
+      "path": "data/tilesets/primary/johto_general_hns/metatiles.bin",
+      "sha256": "7caf7abcddb072c18ab43683d701b52a8de5bcaaa76a444d8ed986eeb23295ac"
+    },
+    {
+      "path": "data/tilesets/primary/johto_general_hns/palettes/00.pal",
+      "sha256": "47e1d13b41cecfc973241cbba71bfa5f009751ce8e3152f9862c5eedfd72a564"
+    },
+    {
+      "path": "data/tilesets/primary/johto_general_hns/palettes/01.pal",
+      "sha256": "baec95e65952c79e6ceb9cf8306995379982dc9253e67797b350556e1db83bfb"
+    },
+    {
+      "path": "data/tilesets/primary/johto_general_hns/palettes/02.pal",
+      "sha256": "aaa8764fd852ae9c506036e9ab4a2c5e8e6fc67677775b11dc594866cba8037a"
+    },
+    {
+      "path": "data/tilesets/primary/johto_general_hns/palettes/03.pal",
+      "sha256": "0703076acb1b543d622f5ab944f28283439a7bfbbf73d7358aa389d768c8147e"
+    },
+    {
+      "path": "data/tilesets/primary/johto_general_hns/palettes/04.pal",
+      "sha256": "7fed8601788c83852288c2395afd84a2c9ca6717c1eb38b762ad8ae7a9d61c5d"
+    },
+    {
+      "path": "data/tilesets/primary/johto_general_hns/palettes/05.pal",
+      "sha256": "7348c4dee3e724ce4ba1bfe9011b4fdf35f5ee4956581e21987ad4a5c8e5f009"
+    },
+    {
+      "path": "data/tilesets/primary/johto_general_hns/palettes/06.pal",
+      "sha256": "4d2d0cfdc068acb9bc2adc9d4d762bcee527fd0cf045c30728632e15b0590582"
+    },
+    {
+      "path": "data/tilesets/primary/johto_general_hns/palettes/07.pal",
+      "sha256": "81414395a15f17632007af0d70fb5634bf7df819ae5ccfde64803beeebf3168e"
+    },
+    {
+      "path": "data/tilesets/primary/johto_general_hns/palettes/08.pal",
+      "sha256": "9c02076428ccbee7ea37002b8a67968580c8e63683f9e129419c8663b2421d3c"
+    },
+    {
+      "path": "data/tilesets/primary/johto_general_hns/palettes/09.pal",
+      "sha256": "a76972d0f951a052d734326571cda26adff7dc0e5544397049b2760f2114c39f"
+    },
+    {
+      "path": "data/tilesets/primary/johto_general_hns/palettes/10.pal",
+      "sha256": "be18ea44b53b0c3226ffc0f3abad56ff85cfc5684f58057c1eb75e4153795aa9"
+    },
+    {
+      "path": "data/tilesets/primary/johto_general_hns/palettes/11.pal",
+      "sha256": "2a2f51a4ca708f5373069d35c0a91248c8e4d4a241a4e1eeed350c507b119060"
+    },
+    {
+      "path": "data/tilesets/primary/johto_general_hns/palettes/12.pal",
+      "sha256": "30480ba4881385d290d214f3a30306cc46a881479d3eb7325898680b10713303"
+    },
+    {
+      "path": "data/tilesets/primary/johto_general_hns/palettes/13.pal",
+      "sha256": "e4f434972431148fa844c0d06ff4fee94e65118aca8cab09d2446e0dd6713e79"
+    },
+    {
+      "path": "data/tilesets/primary/johto_general_hns/palettes/14.pal",
+      "sha256": "226f0ddc9a6d3b26b78e138333dfde67d39aa7ac95a257e9e53c766fb6035675"
+    },
+    {
+      "path": "data/tilesets/primary/johto_general_hns/palettes/15.pal",
+      "sha256": "64b87ff3eb44caada2f27f7b1e3195db1935f86460ec78e4bc3b3cffcb0e3251"
+    },
+    {
+      "path": "data/tilesets/primary/johto_general_hns/tiles.png",
+      "sha256": "a92f626fbb43fdb00903d8cca8b16c25174db3167ef41f5a1ec71818deb5d29e"
+    },
+    {
+      "path": "data/tilesets/secondary/route_32_hns/metatile_attributes.bin",
+      "sha256": "d1231f46a21965ea685b71a7c2d00715630beec1e037c2f4f8001929dc37eaf2"
+    },
+    {
+      "path": "data/tilesets/secondary/route_32_hns/metatiles.bin",
+      "sha256": "7a40b2d79db1d20b66089e7d38793108a835a75f8fb01ed575e0dcb856785f4c"
+    },
+    {
+      "path": "data/tilesets/secondary/route_32_hns/palettes/00.pal",
+      "sha256": "fb2283c6f43e6729c353cca870ba7f721324681f7a6f0c4860784af6d9ca72dc"
+    },
+    {
+      "path": "data/tilesets/secondary/route_32_hns/palettes/01.pal",
+      "sha256": "226f0ddc9a6d3b26b78e138333dfde67d39aa7ac95a257e9e53c766fb6035675"
+    },
+    {
+      "path": "data/tilesets/secondary/route_32_hns/palettes/02.pal",
+      "sha256": "226f0ddc9a6d3b26b78e138333dfde67d39aa7ac95a257e9e53c766fb6035675"
+    },
+    {
+      "path": "data/tilesets/secondary/route_32_hns/palettes/03.pal",
+      "sha256": "226f0ddc9a6d3b26b78e138333dfde67d39aa7ac95a257e9e53c766fb6035675"
+    },
+    {
+      "path": "data/tilesets/secondary/route_32_hns/palettes/04.pal",
+      "sha256": "226f0ddc9a6d3b26b78e138333dfde67d39aa7ac95a257e9e53c766fb6035675"
+    },
+    {
+      "path": "data/tilesets/secondary/route_32_hns/palettes/05.pal",
+      "sha256": "226f0ddc9a6d3b26b78e138333dfde67d39aa7ac95a257e9e53c766fb6035675"
+    },
+    {
+      "path": "data/tilesets/secondary/route_32_hns/palettes/06.pal",
+      "sha256": "226f0ddc9a6d3b26b78e138333dfde67d39aa7ac95a257e9e53c766fb6035675"
+    },
+    {
+      "path": "data/tilesets/secondary/route_32_hns/palettes/07.pal",
+      "sha256": "0b353312f7ebcd1952b8940ce5cd4d8fcb61dfa3e78aedc6f70186f5c3004b2e"
+    },
+    {
+      "path": "data/tilesets/secondary/route_32_hns/palettes/08.pal",
+      "sha256": "6c4a2eb73e0ce06d54205fd96247b23be9ef7f4d1faa9a0fc7d9e132c8ed3191"
+    },
+    {
+      "path": "data/tilesets/secondary/route_32_hns/palettes/09.pal",
+      "sha256": "cb1e70225b12fd99b325881a76acb5aa3e9db5bcf5234e51662d102c15f23e35"
+    },
+    {
+      "path": "data/tilesets/secondary/route_32_hns/palettes/10.pal",
+      "sha256": "db742128e2528bc357d6e593883408550c492e728d4fad4cede4106dc564066a"
+    },
+    {
+      "path": "data/tilesets/secondary/route_32_hns/palettes/11.pal",
+      "sha256": "1ba4868e8dde2181a6a70012bed70c2c1ccea3111824c956bf7fb9018fdb395f"
+    },
+    {
+      "path": "data/tilesets/secondary/route_32_hns/palettes/12.pal",
+      "sha256": "d6e6f2ee0ab2f440b797e51fd5bad76df23c8481728ff6252873e63c121d64e9"
+    },
+    {
+      "path": "data/tilesets/secondary/route_32_hns/palettes/bellchime_12.pal",
+      "sha256": "b54735158970cdddf4127e474adfc51564496d22f03f5d2a08cd9130c184a3f9"
+    },
+    {
+      "path": "data/tilesets/secondary/route_32_hns/tiles.png",
+      "sha256": "cffe7604dce90fdd80206c18bb061465130e9755f34ee101f61f21665d3d83e9"
+    }
+  ]
+}
