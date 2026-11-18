@@ -1,0 +1,61 @@
+name: HNS Route 33 refined tested build delivery
+
+# This branch is created only after the actual candidate has passed its checks.
+# Ordinary feature pushes and pull requests do not publish releases.
+on:
+  push:
+    branches:
+      - feature/hns-route33-refined-delivery-01
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    concurrency:
+      group: hns-route33-refined-tested-delivery
+      cancel-in-progress: false
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch the pinned tested source
+        run: |
+          set -euo pipefail
+          source_commit=$(python3 -c 'import json; print(json.load(open("crossroads/delivery/hns-route33-refined/spec.json"))["source_commit"])')
+          evidence_commit=$(python3 -c 'import json; print(json.load(open("crossroads/delivery/hns-route33-refined/spec.json"))["evidence_commit"])')
+          git fetch --no-tags --depth=1 origin "$source_commit" "$evidence_commit"
+      - name: Download our previously published QA10 base
+        run: |
+          set -euo pipefail
+          mkdir -p build/hns-route33-refined-delivery
+          curl --fail --location --retry 3 --output build/hns-route33-refined-delivery/qa10.gba https://github.com/flimflam5/Project-crossroads/releases/download/qa10-olivine-aqua-a1/BlackLedger-Olivine-Aqua-QA10-A1.gba
+      - name: Recover and verify the tested ROM
+        run: python3 crossroads/tools/prepare_hns_route33_refined_delivery.py --base-rom build/hns-route33-refined-delivery/qa10.gba --output build/hns-route33-refined-delivery/ready
+      - name: Publish or verify the prerelease
+        run: |
+          set -euo pipefail
+          tag=$(python3 -c 'import json; print(json.load(open("crossroads/delivery/hns-route33-refined/spec.json"))["tag"])')
+          source_commit=$(python3 -c 'import json; print(json.load(open("crossroads/delivery/hns-route33-refined/spec.json"))["source_commit"])')
+          if gh release view "$tag" --repo "$GH_REPO" >/dev/null 2>&1; then
+            metadata=$(gh release view "$tag" --repo "$GH_REPO" --json isDraft,isPrerelease,targetCommitish)
+            python3 -c 'import json,sys; m=json.loads(sys.argv[1]); assert not m["isDraft"] and m["isPrerelease"] and m["targetCommitish"]==sys.argv[2], "Existing release has different identity"' "$metadata" "$source_commit"
+            existing=$(mktemp -d)
+            trap 'rm -rf "$existing"' EXIT
+            gh release download "$tag" --repo "$GH_REPO" --dir "$existing"
+            for file in build/hns-route33-refined-delivery/ready/assets/*; do cmp -- "$file" "$existing/$(basename "$file")"; done
+            test "$(find "$existing" -type f | wc -l)" -eq "$(find build/hns-route33-refined-delivery/ready/assets -type f | wc -l)"
+            echo 'Existing prerelease matches; no asset replaced.'
+          else
+            gh release create "$tag" --repo "$GH_REPO" --target "$source_commit" --prerelease --latest=false --title 'Black Ledger — HNS Route 33 Refined QA' --notes-file build/hns-route33-refined-delivery/ready/RELEASE.md build/hns-route33-refined-delivery/ready/assets/*
+          fi
+          gh release view "$tag" --repo "$GH_REPO" --json url --jq .url
+      - name: Retain packaged downloads if publication fails
+        if: always() && hashFiles('build/hns-route33-refined-delivery/ready/assets/*') != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: black-ledger-hns-route33-refined-tested-${{ github.sha }}
+          path: build/hns-route33-refined-delivery/ready/assets/*
+          if-no-files-found: error
+          retention-days: 90
