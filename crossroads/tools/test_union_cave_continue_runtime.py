@@ -7,6 +7,7 @@ mocks; no ROM, user's save, hardware graphics or game ABI are exercised.
 """
 import json
 import re
+import struct
 import subprocess
 import tempfile
 from pathlib import Path
@@ -28,9 +29,10 @@ for group_id, group_name in enumerate(groups['group_order']):
         data = json.loads((R / 'data/maps' / name / 'map.json').read_text())
         map_ids[data['id']] = (group_id << 8) | map_id
 required_maps = ['MAP_UNION_CAVE_1_F','MAP_UNION_CAVE_2_F','MAP_UNION_CAVE_3_F',
-                 'MAP_AZALEA_TOWN','MAP_ECRUTEAK_CITY','MAP_VIOLET_CITY','MAP_OLIVINE_CITY']
+                 'MAP_AZALEA_TOWN','MAP_ECRUTEAK_CITY','MAP_VIOLET_CITY','MAP_OLIVINE_CITY','MAP_RUINS_OF_ALPH']
 required_layouts = ['LAYOUT_UNION_CAVE_1_F','LAYOUT_UNION_CAVE_2_F','LAYOUT_UNION_CAVE_3_F',
-                    'LAYOUT_HGSS_UNION_CAVE_1_F','LAYOUT_HGSS_UNION_CAVE_2_F','LAYOUT_HGSS_UNION_CAVE_3_F']
+                    'LAYOUT_HGSS_UNION_CAVE_1_F','LAYOUT_HGSS_UNION_CAVE_2_F','LAYOUT_HGSS_UNION_CAVE_3_F',
+                    'LAYOUT_RUINS_OF_ALPH','LAYOUT_HGSS_RUINS_OF_ALPH']
 defines = ''.join(f'#define {n} {map_ids[n]}\n' for n in required_maps)
 defines += ''.join(f'#define {n} {layout_ids[n]}\n' for n in required_layouts)
 prelude = r'''
@@ -90,7 +92,7 @@ harness = r'''
 static u16 cells[32 * 96];
 static struct MapLayout layout;
 static struct Events events;
-static struct Event eventObjects[2], eventWarps[2];
+static struct Event eventObjects[4], eventWarps[8];
 static void init(int map, int oldLayout, int newLayout, int height) {
     char path[128]; FILE *f;
     memset(&s1,0,sizeof(s1)); memset(&s2,0,sizeof(s2)); memset(gObjectEvents,0,sizeof(gObjectEvents));
@@ -161,7 +163,64 @@ static void run(int map,int legacy,int modern,int height,const u8 *mask) {
     init(map,modern,modern,height); layout.width=28; layout.height=22; at(0); cells[0]=0x3001; assert(Crossroads_PrepareContinue()); assert(posIndex()==0); unchangedData();
     printf("map %d: 11 actual-C fixture cases PASS\n",map);
 }
+static void atXY(int x, int y) {
+    s1.pos.x=x; s1.pos.y=y;
+    struct Coords v={x+MAP_OFFSET,y+MAP_OFFSET};
+    s1.objectEvents[0].initialCoords=s1.objectEvents[0].currentCoords=s1.objectEvents[0].previousCoords=v;
+    gObjectEvents[0].initialCoords=gObjectEvents[0].currentCoords=gObjectEvents[0].previousCoords=v;
+}
+static int isFootprint(int x,int y) { return x>=13 && x<16 && y>=12 && y<16; }
+static u16 ruinsOld[40*36];
+static void initRuins(int oldLayout) {
+    FILE *f;
+    init(MAP_UNION_CAVE_1_F,LAYOUT_HGSS_UNION_CAVE_1_F,LAYOUT_HGSS_UNION_CAVE_1_F,96);
+    f=fopen("data/layouts/HgssRuinsOfAlph/map.bin","rb"); assert(f); assert(fread(cells,2,40*36,f)==40*36); fclose(f);
+    s1.location.mapGroup=MAP_GROUP(MAP_RUINS_OF_ALPH); s1.location.mapNum=MAP_NUM(MAP_RUINS_OF_ALPH);
+    s1.location.warpId=-1; s1.location.x=7; s1.location.y=8;
+    s1.mapLayoutId=oldLayout; layout.width=40; layout.height=36; layout.map=cells;
+    gMapHeader.mapLayout=&layout; gMapHeader.mapLayoutId=LAYOUT_HGSS_RUINS_OF_ALPH;
+    RUINS_EVENT_SETUP
+    s1.lastHealLocation=(struct WarpData){4,5,WARP_ID_NONE,7,9};
+}
+static void assertRuinsState(void) {
+    assert(s1.location.mapGroup==MAP_GROUP(MAP_RUINS_OF_ALPH));
+    assert(s1.location.mapNum==MAP_NUM(MAP_RUINS_OF_ALPH));
+    assert(s1.location.warpId==-1 && s1.location.x==7 && s1.location.y==8);
+    assert(s1.lastHealLocation.mapGroup==4 && s1.lastHealLocation.mapNum==5);
+    assert(s1.lastHealLocation.warpId==WARP_ID_NONE && s1.lastHealLocation.x==7 && s1.lastHealLocation.y==9);
+    assert(s1.mapLayoutId==LAYOUT_HGSS_RUINS_OF_ALPH); unchangedData();
+}
+static void runRuins(void) {
+    FILE *f=fopen("RUINS_OLD_BIN","rb"); assert(f); assert(fread(ruinsOld,2,40*36,f)==40*36); fclose(f);
+    for(int y=12;y<16;y++) for(int x=13;x<16;x++) {
+        initRuins(LAYOUT_RUINS_OF_ALPH); atXY(x,y);
+        assert(!(ruinsOld[y*40+x]&MAPGRID_COLLISION_MASK) && ruinsOld[y*40+x]>>12==3);
+        assert(Crossroads_PrepareContinue()); assert(!isFootprint(s1.pos.x,s1.pos.y));
+        assert(s1.pos.x>=0 && s1.pos.x<40 && s1.pos.y>=0 && s1.pos.y<36);
+        u16 tile=cells[s1.pos.y*40+s1.pos.x]; assert(!(tile&MAPGRID_COLLISION_MASK) && tile>>12==3);
+        for(unsigned i=0;i<events.warpCount;i++) assert(s1.pos.x!=eventWarps[i].x || s1.pos.y!=eventWarps[i].y);
+        for(unsigned i=0;i<events.objectEventCount;i++) assert(s1.pos.x!=eventObjects[i].x || s1.pos.y!=eventObjects[i].y);
+        assert(s1.objectEvents[0].currentCoords.x==s1.pos.x+MAP_OFFSET);
+        assert(s1.objectEvents[0].currentCoords.y==s1.pos.y+MAP_OFFSET);
+        assert(setLayoutCalls==1); assertRuinsState();
+    }
+    // An actually unchanged dry cell in the old public area keeps its position.
+    initRuins(LAYOUT_RUINS_OF_ALPH); int open=-1;
+    for(int i=0;i<40*36;i++) if(!isFootprint(i%40,i/40) && ruinsOld[i]==cells[i] && !(cells[i]&MAPGRID_COLLISION_MASK) && cells[i]>>12==3 && !(i%40==23 && i/40==21)) {open=i;break;}
+    assert(open>=0); atXY(open%40,open/40); assert(Crossroads_PrepareContinue()); assert(s1.pos.x==open%40 && s1.pos.y==open/40); assert(setLayoutCalls==1); assertRuinsState();
+    // A normal new-layout save on the same safe ground remains exactly there.
+    initRuins(LAYOUT_HGSS_RUINS_OF_ALPH); atXY(open%40,open/40); assert(Crossroads_PrepareContinue()); assert(s1.pos.x==open%40 && s1.pos.y==open/40); assert(!setLayoutCalls); assertRuinsState();
+    // Synthetic save on the new door tile checks the new-layout discriminator;
+    // this is not proof that the game can normally save while on a warp.
+    initRuins(LAYOUT_HGSS_RUINS_OF_ALPH); atXY(14,15); assert(!(cells[15*40+14]&MAPGRID_COLLISION_MASK));
+    assert(Crossroads_PrepareContinue()); assert(s1.pos.x==14 && s1.pos.y==15); assert(!setLayoutCalls); assertRuinsState();
+    // Same coordinates and layout on another map must not activate Ruins migration.
+    initRuins(LAYOUT_RUINS_OF_ALPH); s1.location.mapNum=MAP_NUM(MAP_AZALEA_TOWN); atXY(14,15);
+    assert(Crossroads_PrepareContinue()); assert(s1.pos.x==14 && s1.pos.y==15); assert(setLayoutCalls==1); unchangedData();
+    puts("Ruins: 12 legacy facade cells + 4 unchanged/new/wrong-map controls PASS");
+}
 int main(void) {
+    runRuins();
     run(MAP_UNION_CAVE_1_F,LAYOUT_UNION_CAVE_1_F,LAYOUT_HGSS_UNION_CAVE_1_F,96,sUnionCave1FContinueMask);
     run(MAP_UNION_CAVE_2_F,LAYOUT_UNION_CAVE_2_F,LAYOUT_HGSS_UNION_CAVE_2_F,64,sUnionCaveB1FContinueMask);
     run(MAP_UNION_CAVE_3_F,LAYOUT_UNION_CAVE_3_F,LAYOUT_HGSS_UNION_CAVE_3_F,96,sUnionCaveB2FContinueMask);
@@ -172,6 +231,30 @@ int main(void) {
 with tempfile.TemporaryDirectory(prefix='union-continue-test-') as tmp:
     cfile = Path(tmp) / 'fixture.c'
     exe = Path(tmp) / 'fixture'
-    cfile.write_text(defines + prelude + source + harness)
+    # The published kiln checkpoint is the immutable pre-reconstruction map.
+    old = subprocess.check_output(['git', 'show', 'b4d14a260b:data/layouts/RuinsOfAlph/map.bin'], cwd=R)
+    assert len(old) == 40 * 36 * 2
+    oldfile = Path(tmp) / 'ruins-old.bin'
+    oldfile.write_bytes(old)
+    # Independently regenerate the public facade from the immutable B2 map;
+    # compare its entire generated plane rather than trusting current layout ID.
+    from stage_hgss_ruins_facade import stage
+    old_map = json.loads(subprocess.check_output(['git', 'show', 'b4d14a260b:data/maps/RuinsOfAlph/map.json'], cwd=R))
+    old_border = subprocess.check_output(['git', 'show', 'b4d14a260b:data/layouts/RuinsOfAlph/border.bin'], cwd=R)
+    unpack = lambda b: list(struct.unpack(f'<{len(b)//2}H', b))
+    staged_writes = {}
+    staged_map, plane, footprint = stage(lambda p, b: staged_writes.__setitem__(p, b), old_map, unpack(old), unpack(old_border))
+    assert len(footprint) == 12
+    assert (R / 'data/layouts/HgssRuinsOfAlph/map.bin').read_bytes() == struct.pack(f'<{len(plane)}H', *plane)
+    ruins = json.loads((R / 'data/maps/RuinsOfAlph/map.json').read_text())
+    assert ruins['layout'] == 'LAYOUT_HGSS_RUINS_OF_ALPH'
+    assert ruins['warp_events'][:len(staged_map['warp_events'])] == staged_map['warp_events']
+    assert len(ruins['warp_events']) <= 8 and len(ruins['object_events']) <= 4
+    setup = f"events.warpCount={len(ruins['warp_events'])}; events.objectEventCount={len(ruins['object_events'])};"
+    for array, group in [('eventWarps', 'warp_events'), ('eventObjects', 'object_events')]:
+        for i, event in enumerate(ruins[group]):
+            setup += f"{array}[{i}]=(struct Event){{{event['x']},{event['y']}}};"
+    fixture = harness.replace('RUINS_OLD_BIN', str(oldfile)).replace('RUINS_EVENT_SETUP', setup)
+    cfile.write_text(defines + prelude + source + fixture)
     subprocess.run(['cc','-std=c11','-Wall','-Werror','-O2',str(cfile),'-o',str(exe)], check=True)
     subprocess.run([str(exe)], cwd=R, check=True)
