@@ -1,0 +1,9 @@
+{
+  "source_commit": "04f88ee948c26c8da06d239b8203453147c171d1",
+  "rom_sha256": "07f2a10ca19e3eb585c1114ce656caa2475f4de487a4d416dc5bef461a2627a5",
+  "elf_sha256": "ce32b5ba4d016bbb62054c4f97ac40630d461f58a693b4ae96f168eb7c6de92f",
+  "automated_checks_passed": true,
+  "runtime_checks_passed": true,
+  "scope": "Sampled controller: Route 33 player visibility, three cave viewpoints and four actual exits, 15 reciprocal warp pairs, 12 collisions, both implemented puzzle cancels/solves, Surf Save/Continue and dry Route 33\u201332 journey. Twelve copied QA10 save fixtures from one profile. Title, three starter selections/duplicate guard, Fly, field moves, battle loss/healing. Port evidence was obtained on the earlier a320 baseline only.",
+  "limitations": "Scripted emulator controller tests with Survey and temporary QA gear; starter opening skipped with RAM fixture. Neither full collision coverage nor all possible saves have been tested. User Delta and visual acceptance remain pending; full Johto, enlarged Ruins hall and hidden rooms are unfinished."
+}

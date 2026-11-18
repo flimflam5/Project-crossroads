@@ -19,7 +19,7 @@ ROOT = Path(__file__).resolve().parents[2]
 SPEC = ROOT / 'crossroads/delivery/route33-union-visual/spec.json'
 PATCH = ROOT / 'crossroads/delivery/route33-union-visual/qa10-to-tested.patch'
 BASE_HASH = 'ee2d81d5d0b55b7f1f9d36d1c9b055700164da439f51af7a66b5fb2d2147f90b'
-ALLOWED = {'.png', '.jpg', '.jpeg', '.gif', '.webm', '.mp4', '.md', '.json', '.txt'}
+ALLOWED = {'.png', '.jpg', '.jpeg', '.gif', '.webm', '.mp4', '.md', '.json', '.txt', '.log'}
 
 
 def digest(data):
