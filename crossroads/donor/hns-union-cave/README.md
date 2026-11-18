@@ -110,3 +110,42 @@ The existing dimension-scoped water recovery prototype remains **untested** and
 is insufficient by itself for passable cliffs, active warps or obscured old
 positions. Capture real copied old saves and verify dry/Surf states, visual
 priority, full component reachability and event interaction in an actual ROM.
+
+## Reference-shaped native layout prototype
+
+`crossroads/tools/build_hgss_union_cave.py` now constructs three in-memory
+Emerald maps using the pinned HGSS permission planes and converted private Heart
+and Soul cave art. It preserves the existing six warp destinations and models
+the complete 18-anchor cave graph, including the two distinct 1F/B2F connector
+chains. The existing guide and notes events are retained and assigned candidate
+dry positions. Old layout/map IDs remain reserved. It explicitly requires both
+Ruins pocket maps before any live wiring.
+
+`python3 crossroads/tools/validate_hgss_union_cave_blueprint.py` creates the
+output **in memory with stub destinations** and checks dimensions, reciprocal
+ladders, existing warp targets and generated private resources. The current
+playable 28×22 rooms are not replaced by this code. The source-derived terrain
+and neighbor-matched GBA wall/water art remain an approximation requiring native
+visual inspection, staircase/Surf tests and HGSS comparison, not final art.
+
+Three generated `safe_continue.bin` masks use bit 0 for plain dry positions,
+bit 1 for Surf positions and bit 2 for public-component dry fallback. The
+proposed `Crossroads_PrepareContinue` change activates only on the corresponding
+32×96/32×64/32×96 floor dimensions and keeps other maps and current legacy
+28×22 floors unchanged. `validate_union_cave_continue_masks.py` independently
+checks mask dimensions, source permissions, threshold exclusions and public
+dry components. The C source passed project-preprocessor plus ARM GCC object
+compilation, but the game has not been built or tested with installed caves.
+
+**Unresolved save limitation:** without adding a save version marker, a legacy
+position that happens to coincide with valid floor in an isolated new component
+cannot be distinguished from an intentional later save there. Do not claim old
+save compatibility until that ambiguity, safe visible arrivals, all components,
+walking/Surf states and copied real saves are addressed and emulator-tested.
+Future saves on unsupported positions can also relocate to public fallback.
+
+The two Ruins exterior pockets and Omanyte/Ho-Oh chambers have deterministic,
+pinned donor conversion under `crossroads/tools/prepare_hns_ruins_pockets.py`;
+these are unregistered previews. HGSS reference second rooms, underground hall,
+hidden rooms and actual sliding-puzzle mechanics remain unfinished. Do not wire
+misleading shortcuts, blocked entrances or empty rooms as if they were complete.

@@ -176,4 +176,9 @@ extern const struct Tileset gTileset_HnsCharcoalKiln;
 extern const struct Tileset gTileset_HnsRoute33;
 #endif
 // END HNS ROUTE33 PRIVATE SECONDARY
+// BEGIN HGSS UNION CAVE PRIVATE
+#if !IS_FRLG
+extern const struct Tileset gTileset_HgssUnionCave;
+#endif
+// END HGSS UNION CAVE PRIVATE
 #endif //GUARD_tilesets_H

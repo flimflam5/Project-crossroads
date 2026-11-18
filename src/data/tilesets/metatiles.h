@@ -604,3 +604,10 @@ const u16 gMetatiles_HnsRoute33[] = INCBIN_U16("data/tilesets/secondary/hns_rout
 const u16 gMetatileAttributes_HnsRoute33[] = INCBIN_U16("data/tilesets/secondary/hns_route33/metatile_attributes.bin");
 #endif
 // END HNS ROUTE33 PRIVATE SECONDARY
+
+// BEGIN HGSS UNION CAVE PRIVATE
+#if !IS_FRLG
+const u16 gMetatiles_HgssUnionCave[] = INCBIN_U16("data/tilesets/primary/hgss_union_cave/metatiles.bin");
+const u16 gMetatileAttributes_HgssUnionCave[] = INCBIN_U16("data/tilesets/primary/hgss_union_cave/metatile_attributes.bin");
+#endif
+// END HGSS UNION CAVE PRIVATE

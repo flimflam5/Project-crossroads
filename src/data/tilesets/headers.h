@@ -1819,3 +1819,9 @@ const struct Tileset gTileset_HnsCharcoalKiln = { .isCompressed=TRUE, .isSeconda
 const struct Tileset gTileset_HnsRoute33 = { .isCompressed=TRUE, .isSecondary=TRUE, .tiles=gTilesetTiles_HnsRoute33, .palettes=gTilesetPalettes_HnsRoute33, .metatiles=gMetatiles_HnsRoute33, .metatileAttributes=gMetatileAttributes_HnsRoute33, .callback=NULL };
 #endif
 // END HNS ROUTE33 PRIVATE SECONDARY
+
+// BEGIN HGSS UNION CAVE PRIVATE
+#if !IS_FRLG
+const struct Tileset gTileset_HgssUnionCave = { .isCompressed=TRUE, .isSecondary=FALSE, .tiles=gTilesetTiles_HgssUnionCave, .palettes=gTilesetPalettes_HgssUnionCave, .metatiles=gMetatiles_HgssUnionCave, .metatileAttributes=gMetatileAttributes_HgssUnionCave, .callback=NULL };
+#endif
+// END HGSS UNION CAVE PRIVATE

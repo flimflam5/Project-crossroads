@@ -10,6 +10,38 @@
 #include "constants/azalea_kiln_door.h"
 #include "overworld.h"
 
+// Authored masks are generated with the corresponding reconstructed floors.
+// Bit 0 marks walkable saves; bit 1 marks Surf saves; bit 2 marks dry fallback
+// tiles in the public component. Valid new saves in other components stay put,
+// but a blocked legacy position must not be moved into an isolated side area.
+// Matching map IDs and exact dimensions prevent use on earlier 28x22 floors.
+#define UNION_CONTINUE_DRY      1
+#define UNION_CONTINUE_SURF     2
+#define UNION_CONTINUE_FALLBACK 4
+static const u8 sUnionCave1FContinueMask[] = INCBIN_U8("data/layouts/UnionCave_1F/safe_continue.bin");
+static const u8 sUnionCaveB1FContinueMask[] = INCBIN_U8("data/layouts/UnionCave_2F/safe_continue.bin");
+static const u8 sUnionCaveB2FContinueMask[] = INCBIN_U8("data/layouts/UnionCave_3F/safe_continue.bin");
+_Static_assert(sizeof(sUnionCave1FContinueMask) == 32 * 96, "Union Cave 1F continue mask size");
+_Static_assert(sizeof(sUnionCaveB1FContinueMask) == 32 * 64, "Union Cave B1F continue mask size");
+_Static_assert(sizeof(sUnionCaveB2FContinueMask) == 32 * 96, "Union Cave B2F continue mask size");
+
+static const u8 *GetUnionCaveContinueMask(void)
+{
+    const struct MapLayout *layout = gMapHeader.mapLayout;
+    if (gSaveBlock1Ptr->location.mapGroup != MAP_GROUP(MAP_UNION_CAVE_1_F))
+        return NULL;
+    if (gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_UNION_CAVE_1_F)
+     && layout->width == 32 && layout->height == 96)
+        return sUnionCave1FContinueMask;
+    if (gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_UNION_CAVE_2_F)
+     && layout->width == 32 && layout->height == 64)
+        return sUnionCaveB1FContinueMask;
+    if (gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_UNION_CAVE_3_F)
+     && layout->width == 32 && layout->height == 96)
+        return sUnionCaveB2FContinueMask;
+    return NULL;
+}
+
 // The newly built kiln replaced formerly walkable grass. Its roof can draw
 // over a player even on an otherwise passable cell, so old saves in its small
 // footprint must land on visible open ground when continuing.
@@ -24,12 +56,15 @@ static bool32 IsAzaleaKilnFootprint(s16 x, s16 y)
 static bool32 IsClearContinueTile(s16 x, s16 y)
 {
     const struct MapLayout *layout = gMapHeader.mapLayout;
+    const u8 *unionMask = GetUnionCaveContinueMask();
     u16 block;
     u32 i;
     if (x < 0 || y < 0 || x >= layout->width || y >= layout->height || IsAzaleaKilnFootprint(x, y))
         return FALSE;
     block = layout->map[y * layout->width + x];
     if ((block & MAPGRID_COLLISION_MASK) || (block >> 12) != 3)
+        return FALSE;
+    if (unionMask != NULL && !(unionMask[y * layout->width + x] & UNION_CONTINUE_FALLBACK))
         return FALSE;
     for (i = 0; i < gMapHeader.events->warpCount; i++)
         if (gMapHeader.events->warps[i].x == x && gMapHeader.events->warps[i].y == y)
@@ -91,17 +126,7 @@ static bool32 NeedsDryLanding(s16 x, s16 y)
         (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_VIOLET_CITY)
          && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_VIOLET_CITY))
      || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_OLIVINE_CITY)
-         && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_OLIVINE_CITY))
-     // Apply only after a donor-sized Union Cave floor is registered. The
-     // legacy 28x22 rooms keep their previous behavior; a walking save on a
-     // newly created cave pool must find dry ground. Surf saves remain valid.
-     || (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_UNION_CAVE_1_F)
-         && ((gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_UNION_CAVE_1_F)
-              && layout->width == 48 && layout->height == 60)
-          || (gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_UNION_CAVE_2_F)
-              && layout->width == 48 && layout->height == 48)
-          || (gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_UNION_CAVE_3_F)
-              && layout->width == 40 && layout->height == 50)));
+         && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_OLIVINE_CITY));
     if (!reconstructedWater
      || x < 0 || y < 0 || x >= layout->width || y >= layout->height
      || (layout->map[y * layout->width + x] >> 12) != 1)
@@ -110,6 +135,19 @@ static bool32 NeedsDryLanding(s16 x, s16 y)
     // Preserve actual Surf saves; only move a walking avatar to nearby dry
     // ground on Continue.
     return !SavedPlayerWasSurfing();
+}
+
+static bool32 NeedsUnionCaveRelocation(s16 x, s16 y)
+{
+    const struct MapLayout *layout = gMapHeader.mapLayout;
+    const u8 *mask = GetUnionCaveContinueMask();
+    u8 needed;
+    if (mask == NULL)
+        return FALSE;
+    if (x < 0 || y < 0 || x >= layout->width || y >= layout->height)
+        return TRUE;
+    needed = SavedPlayerWasSurfing() ? UNION_CONTINUE_SURF : UNION_CONTINUE_DRY;
+    return !(mask[y * layout->width + x] & needed);
 }
 
 bool32 Crossroads_PrepareContinue(void)
@@ -133,7 +171,8 @@ bool32 Crossroads_PrepareContinue(void)
     if (x >= 0 && y >= 0 && x < layout->width && y < layout->height
      && !(layout->map[y * layout->width + x] & MAPGRID_COLLISION_MASK)
      && !IsAzaleaKilnFootprint(x, y)
-     && !NeedsDryLanding(x, y))
+     && !NeedsDryLanding(x, y)
+     && !NeedsUnionCaveRelocation(x, y))
     {
         bool32 occupied = FALSE;
         for (i = 0; i < gMapHeader.events->objectEventCount; i++)
