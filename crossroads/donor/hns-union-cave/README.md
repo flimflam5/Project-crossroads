@@ -134,24 +134,30 @@ proposed `Crossroads_PrepareContinue` change activates only on the corresponding
 32×96/32×64/32×96 floor dimensions and keeps other maps and current legacy
 28×22 floors unchanged. `validate_union_cave_continue_masks.py` independently
 checks mask dimensions, source permissions, threshold exclusions and public
-dry components. The C source passed project-preprocessor plus ARM GCC object
-compilation, but the game has not been built or tested with installed caves.
+dry components. The earlier C version passed project-preprocessor plus ARM GCC
+object compilation; the latest migration change still requires a new compile.
 
-**Unresolved save limitation:** without adding a save version marker, a legacy
-position that happens to coincide with valid floor in an isolated new component
-cannot be distinguished from an intentional later save there. Do not claim old
-save compatibility until that ambiguity, safe visible arrivals, all components,
-walking/Surf states and copied real saves are addressed and emulator-tested.
-Future saves on unsupported positions can also relocate to public fallback.
+Three new layout IDs and files are appended; the legacy 28×22 identities and
+bytes remain unchanged. Continue distinguishes legacy and reconstructed cave
+saves using the saved layout ID before it is updated, with no new save fields
+or flags. Legacy saves outside a public dry component relocate once; valid new
+walking and Surf saves stay in their own components. Because B2F's otherwise
+safe dry fallback can require Surf to reach an exit, legacy B2F saves move once
+to B1F's public component. Future saves on unsafe positions can still relocate.
+This is a source-level strategy, not proof of save compatibility: actual copied
+old/new saves, Surf state, safe visible arrivals, rendering and emulator movement
+remain mandatory before delivery.
 
 The two Ruins exterior pockets and Omanyte/Ho-Oh chambers have deterministic,
 pinned donor conversion under `crossroads/tools/prepare_hns_ruins_pockets.py`;
-these are unregistered previews. HGSS reference second rooms, underground hall,
-hidden rooms and actual sliding-puzzle mechanics remain unfinished. Do not wire
+these are unregistered previews. The donor hall and sliding-puzzle engine now
+have staged candidate implementations, but are not linked or emulator-tested;
+hidden rooms and public hall entry remain unfinished. Do not wire
 misleading shortcuts, blocked entrances or empty rooms as if they were complete.
 
-The network generator now reproducibly packs the cave resources and checks for
-both pocket destinations; it activates the cave layout only if both are present.
+The network generator now reproducibly packs the cave resources and requires
+both pocket destinations, distinct chambers, the hall and its public entrance
+before it activates the cave layout.
 This guards against partial or one-sided wiring and currently leaves the
 previous live rooms untouched. The candidate draws a visible original sign on
 each retained notes interaction and treats disconnected zero-permission matrix
