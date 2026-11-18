@@ -169,3 +169,14 @@ The reconstructed floors use the private tileset's collidable blank metatile
 for their repeated 2×2 borders. The previous copied General/Cave border decoded
 as a checkerboard with this tileset. Source validation checks the border words,
 blank tile pixels and palette; the corrected ROM still needs an emulator check.
+
+## Owner-reported interior rock holes
+
+The two-tile generated wall fringe left black, rectangular voids inside solid
+rock shelves. The generator now replaces only enclosed black components whose
+entire perimeter is already the donor's blocked solid-rock top metatile 15.
+External black space, ambiguous notches, walks, water, collision bits, warps and
+save masks are retained. `validate_union_cave_rock_fill.py` tests the distinction
+and `--installed` checks generated floors. Reference 1F, B1F and B2F show filled
+rock shelves and black outside cave walls. Boundary-connected notches remain for
+individual in-game visual review; this change is not complete visual QA.

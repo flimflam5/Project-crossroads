@@ -23,6 +23,9 @@ NEW_LAYOUTS={name:'LAYOUT_HGSS_UNION_CAVE_'+str(i)+'_F' for i,name in enumerate(
 # The appended metatile is blank in the private cave tileset. The collision
 # bit keeps the repeated map border impassable, including at camera edges.
 VOID_BORDER=0x0459
+# The donor's common, collision-blocked cave rock top. Use it inside solid
+# formations; actual exterior void remains black.
+SOLID_ROCK=0x040f
 
 def pack(v):return struct.pack('<%dH'%len(v),*v)
 def read16(path):
@@ -134,6 +137,44 @@ def flood(w,h,classes,start,allow_water):
             seen.add((xx,yy));q.append((xx,yy))
     return seen
 
+def fill_enclosed_void(w,h,values):
+    """Fill black holes enclosed by rock without changing exterior void.
+
+    The reference permission grid has no artwork for solid cells. The old
+    two-tile fringe put black holes inside thick cliff islands. Distinguish
+    external black space by flooding only black cells from the matrix edges.
+    Neither walkable/water cells nor the shape of the external void changes.
+    """
+    outside=set()
+    q=deque()
+    for y in range(h):
+        for x in range(w):
+            if (x in (0,w-1) or y in (0,h-1)) and values[y*w+x]==VOID_BORDER:
+                outside.add((x,y));q.append((x,y))
+    while q:
+        x,y=q.popleft()
+        for xx,yy in ((x-1,y),(x+1,y),(x,y-1),(x,y+1)):
+            if 0<=xx<w and 0<=yy<h and (xx,yy) not in outside and values[yy*w+xx]==VOID_BORDER:
+                outside.add((xx,yy));q.append((xx,yy))
+    # Only close islands whose entire perimeter is the authored rock-top
+    # tile. An enclosed black area adjoining a different tile is ambiguous and
+    # must be reviewed rather than silently reinterpreted as solid rock.
+    remaining={(i%w,i//w) for i,v in enumerate(values)
+               if v==VOID_BORDER and (i%w,i//w) not in outside}
+    fill=set()
+    while remaining:
+        start=remaining.pop();component={start};q=deque([start]);perimeter=set()
+        while q:
+            x,y=q.popleft()
+            for xx,yy in ((x-1,y),(x+1,y),(x,y-1),(x,y+1)):
+                if not (0<=xx<w and 0<=yy<h):continue
+                if (xx,yy) in remaining:
+                    remaining.remove((xx,yy));component.add((xx,yy));q.append((xx,yy))
+                elif (xx,yy) not in component:
+                    perimeter.add(values[yy*w+xx])
+        if perimeter=={SOLID_ROCK}:fill.update(component)
+    return [SOLID_ROCK if (i%w,i//w) in fill else v for i,v in enumerate(values)]
+
 def build_plane(fact,attrs,catalog):
     w,h,perms=reference_planes(fact)
     # Conservative interpretation of referenced permission plane. Field actions
@@ -167,7 +208,7 @@ def build_plane(fact,attrs,catalog):
                 raw=candidates.most_common(1)[0][0]
                 vals.append(((raw&1023)|0x400) if cls==0 else ((raw&1023)|0x1000))
             else:vals.append(0x040f if cls==0 else 0x1000)
-    return w,h,classes,vals
+    return w,h,classes,fill_enclosed_void(w,h,vals)
 
 def validate_pocket_warps(maps):
     names=('RuinsOfAlph_SouthwestPocket','RuinsOfAlph_NorthwestPocket')
