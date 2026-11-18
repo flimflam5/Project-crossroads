@@ -1,0 +1,285 @@
+{
+  "recording_scope": "Every required front video and every executed actual-arrival PNG",
+  "all_controller_cases_and_assertions_unchanged": true,
+  "visible_opening_contract": "crossroads/hgss/doorways-qa10.json",
+  "visible_opening_contract_sha256": "6f7f35d785d025d5848013839f622c73b088bee048a0c98a6920729e80ff4851",
+  "explicit_arrival_facing_required": true,
+  "explicit_arrival_facing_required_for": [],
+  "source_save_sha256": "b03ff1ef488fbd25de016e828483bc3001787b84e450a45eaa0ac12a11de30ab",
+  "source_save_unchanged": true,
+  "rom_sha256": "a320fc5947e7b207e5d496008e3593ef68a403fd5dbba7e73fd2830ccc4539d5",
+  "source_revision": "3d45e6c207dc82b5cacab1e0fce87531fccc5573",
+  "source_dirty": false,
+  "setup": "Read-only copied battery; cold Continue; normal controller travel. Only disclosed RAM encounter suppression and opt-in survey desk; no map/warp/position writes. Same-ROM trial snapshots.",
+  "results": [
+    {
+      "label": "olivine-port-city-entrance-outside-0-front",
+      "source": "OlivineCity",
+      "segment": [
+        23,
+        52
+      ],
+      "expected_destination": "OlivineCity_PortTerminal",
+      "facing": 1,
+      "expected_facing": 1,
+      "result": "PASS",
+      "arrival": [
+        7,
+        2
+      ],
+      "expected_arrival": [
+        7,
+        2
+      ],
+      "walk_away": [
+        7,
+        3
+      ]
+    },
+    {
+      "label": "olivine-port-city-entrance-outside-0-lateral-negative",
+      "source": "OlivineCity",
+      "segment": [
+        23,
+        52
+      ],
+      "expected_destination": "OlivineCity_PortTerminal",
+      "facing": 1,
+      "expected_facing": 1,
+      "result": "PASS",
+      "arrival": [
+        7,
+        2
+      ],
+      "expected_arrival": [
+        7,
+        2
+      ],
+      "walk_away": [
+        7,
+        3
+      ]
+    },
+    {
+      "label": "olivine-port-city-entrance-outside-0-lateral-positive",
+      "source": "OlivineCity",
+      "segment": [
+        23,
+        52
+      ],
+      "expected_destination": "OlivineCity_PortTerminal",
+      "result": "inaccessible lateral approach",
+      "position": [
+        23,
+        50
+      ]
+    },
+    {
+      "label": "olivine-port-city-entrance-outside-1-front",
+      "source": "OlivineCity",
+      "segment": [
+        24,
+        52
+      ],
+      "expected_destination": "OlivineCity_PortTerminal",
+      "facing": 1,
+      "expected_facing": 1,
+      "result": "PASS",
+      "arrival": [
+        8,
+        2
+      ],
+      "expected_arrival": [
+        8,
+        2
+      ],
+      "walk_away": [
+        8,
+        3
+      ]
+    },
+    {
+      "label": "olivine-port-city-entrance-outside-1-lateral-negative",
+      "source": "OlivineCity",
+      "segment": [
+        24,
+        52
+      ],
+      "expected_destination": "OlivineCity_PortTerminal",
+      "result": "inaccessible lateral approach",
+      "position": [
+        23,
+        50
+      ]
+    },
+    {
+      "label": "olivine-port-city-entrance-outside-1-lateral-positive",
+      "source": "OlivineCity",
+      "segment": [
+        24,
+        52
+      ],
+      "expected_destination": "OlivineCity_PortTerminal",
+      "facing": 1,
+      "expected_facing": 1,
+      "result": "PASS",
+      "arrival": [
+        8,
+        2
+      ],
+      "expected_arrival": [
+        8,
+        2
+      ],
+      "walk_away": [
+        8,
+        3
+      ]
+    },
+    {
+      "label": "olivine-port-city-entrance-inside-0-front",
+      "source": "OlivineCity_PortTerminal",
+      "segment": [
+        7,
+        2
+      ],
+      "expected_destination": "OlivineCity",
+      "facing": 2,
+      "expected_facing": 2,
+      "result": "PASS",
+      "arrival": [
+        23,
+        52
+      ],
+      "expected_arrival": [
+        23,
+        52
+      ],
+      "walk_away": [
+        23,
+        51
+      ]
+    },
+    {
+      "label": "olivine-port-city-entrance-inside-0-lateral-negative",
+      "source": "OlivineCity_PortTerminal",
+      "segment": [
+        7,
+        2
+      ],
+      "expected_destination": "OlivineCity",
+      "facing": 2,
+      "expected_facing": 2,
+      "result": "PASS",
+      "arrival": [
+        23,
+        52
+      ],
+      "expected_arrival": [
+        23,
+        52
+      ],
+      "walk_away": [
+        23,
+        51
+      ]
+    },
+    {
+      "label": "olivine-port-city-entrance-inside-0-lateral-positive",
+      "source": "OlivineCity_PortTerminal",
+      "segment": [
+        7,
+        2
+      ],
+      "expected_destination": "OlivineCity",
+      "facing": 2,
+      "expected_facing": 2,
+      "result": "PASS",
+      "arrival": [
+        23,
+        52
+      ],
+      "expected_arrival": [
+        23,
+        52
+      ],
+      "walk_away": [
+        23,
+        51
+      ]
+    },
+    {
+      "label": "olivine-port-city-entrance-inside-1-front",
+      "source": "OlivineCity_PortTerminal",
+      "segment": [
+        8,
+        2
+      ],
+      "expected_destination": "OlivineCity",
+      "facing": 2,
+      "expected_facing": 2,
+      "result": "PASS",
+      "arrival": [
+        24,
+        52
+      ],
+      "expected_arrival": [
+        24,
+        52
+      ],
+      "walk_away": [
+        24,
+        51
+      ]
+    },
+    {
+      "label": "olivine-port-city-entrance-inside-1-lateral-negative",
+      "source": "OlivineCity_PortTerminal",
+      "segment": [
+        8,
+        2
+      ],
+      "expected_destination": "OlivineCity",
+      "facing": 2,
+      "expected_facing": 2,
+      "result": "PASS",
+      "arrival": [
+        24,
+        52
+      ],
+      "expected_arrival": [
+        24,
+        52
+      ],
+      "walk_away": [
+        24,
+        51
+      ]
+    },
+    {
+      "label": "olivine-port-city-entrance-inside-1-lateral-positive",
+      "source": "OlivineCity_PortTerminal",
+      "segment": [
+        8,
+        2
+      ],
+      "expected_destination": "OlivineCity",
+      "facing": 2,
+      "expected_facing": 2,
+      "result": "PASS",
+      "arrival": [
+        24,
+        52
+      ],
+      "expected_arrival": [
+        24,
+        52
+      ],
+      "walk_away": [
+        24,
+        51
+      ]
+    }
+  ],
+  "special_journeys": []
+}

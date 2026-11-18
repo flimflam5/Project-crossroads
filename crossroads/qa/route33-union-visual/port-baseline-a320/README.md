@@ -1,0 +1,3 @@
+# Olivine port, pre-fix baseline check
+
+These native screenshots, movement clips and results are from the earlier released ROM SHA-256 `a320fc5947e7b207e5d496008e3593ef68a403fd5dbba7e73fd2830ccc4539d5`, not the visual-repair candidate. In scripted mGBA controller testing of a copied QA10 battery, both north entrance leaves worked in both directions with expected facing, arrivals and walking away: 10 approaches passed; two lateral approaches could not start on dry land. The screenshot shows the intended north-facing landing in a roof-heavy perspective. This is not proof of a candidate-ROM test or the owner’s visual acceptance. No saves or snapshots are included.
