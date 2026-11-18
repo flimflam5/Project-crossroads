@@ -164,3 +164,8 @@ each retained notes interaction and treats disconnected zero-permission matrix
 void as impassable black background. Static component tests verify that retained
 actors and signs do not alter the HGSS anchor-component relationships. Those
 conservative tests do not simulate all runtime metatile behavior.
+
+The reconstructed floors use the private tileset's collidable blank metatile
+for their repeated 2×2 borders. The previous copied General/Cave border decoded
+as a checkerboard with this tileset. Source validation checks the border words,
+blank tile pixels and palette; the corrected ROM still needs an emulator check.
