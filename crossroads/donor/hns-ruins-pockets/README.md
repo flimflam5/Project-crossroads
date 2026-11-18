@@ -47,9 +47,10 @@ are ported separately into `src/sliding_puzzle.c`, `src/data/sliding_puzzles.h`,
 `include/sliding_puzzle.h`, `include/constants/sliding_puzzles.h`, and
 `graphics/sliding_puzzle/`. Their donor paths and original SHA256 hashes are in
 `puzzle-source-sha256.json`. The port adds a public declaration, converts asset
-references to this project's `INCGFX` build convention, and removes an unused
-local; the special is appended at the end of the existing special table with
-`waitstate=1`, keeping all prior special numbers stable.
+references to this project's `INCGFX` build convention, removes an unused
+local, and tests empty board slots without reading the cursor sprite; the
+special is appended at the end of the existing special table with `waitstate=1`,
+keeping all prior special numbers stable.
 
 The special is not used by any gameplay script. No flags, items, rewards,
 chamber events, or new maps are wired by this port. A scratch component test

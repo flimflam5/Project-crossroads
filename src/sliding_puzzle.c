@@ -889,8 +889,21 @@ static void CheckForSolution(void)
     {
         for (col = 0; col < NUM_SLIDING_PUZZLE_COLS; col++)
         {
-            struct Sprite *tile = &gSprites[sSlidingPuzzle->tiles[row][col]];
             u8 tileId = sPuzzleLayouts[SLIDING_PUZZLE_SOLVED][row][col];
+            u8 spriteId = sSlidingPuzzle->tiles[row][col];
+            struct Sprite *tile;
+
+            // The source uses zero as the empty-slot sentinel. Do not inspect
+            // sprite zero (normally the cursor) when testing an empty slot.
+            if (tileId == __ || spriteId == __)
+            {
+                if (tileId == spriteId)
+                    continue;
+                sSlidingPuzzle->solved = FALSE;
+                return;
+            }
+
+            tile = &gSprites[spriteId];
 
             if (tile->sTileId != tileId || tile->sOrientation != ORIENTATION_0)
             {
