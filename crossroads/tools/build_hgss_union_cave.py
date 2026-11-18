@@ -20,6 +20,9 @@ FLOORS={'UnionCave_1F':'MAP_UNION_CAVE_1F','UnionCave_2F':'MAP_UNION_CAVE_B1F','
 DONOR={'UnionCave_1F_hns':(48,60),'UnionCave_B1F_hns':(48,48),'UnionCave_B2F_hns':(40,50)}
 POCKETS={'UnionCave_1F':{6:('RuinsOfAlph_SouthwestPocket',0),7:('RuinsOfAlph_NorthwestPocket',0)}}
 NEW_LAYOUTS={name:'LAYOUT_HGSS_UNION_CAVE_'+str(i)+'_F' for i,name in enumerate(FLOORS,1)}
+# The appended metatile is blank in the private cave tileset. The collision
+# bit keeps the repeated map border impassable, including at camera edges.
+VOID_BORDER=0x0459
 
 def pack(v):return struct.pack('<%dH'%len(v),*v)
 def read16(path):
@@ -41,7 +44,7 @@ def register_layouts(layout_list, layouts, write):
                     border_filepath=directory+'/border.bin',blockdata_filepath=directory+'/map.bin')
         if lid not in layouts:layout_list.append(layout);layouts[lid]=layout
         else:assert layouts[lid]==layout,(lid,'Reconstructed layout changed unexpectedly')
-        write(layout['border_filepath'],(R/original['border_filepath']).read_bytes())
+        write(layout['border_filepath'],pack([VOID_BORDER]*4))
 
 def preview_resources(maps,layouts,write):
     """Pack dormant layouts without installing any incomplete pocket map."""
@@ -75,7 +78,9 @@ def generate_assets(write):
         write(OUT+'/tiles.png',buffer.getvalue())
         original_meta=(t/'metatiles.bin').read_bytes();floor=read16(t/'metatiles.bin')[8:12]
         write(OUT+'/metatiles.bin',original_meta+pack([161]*8)+pack(floor+[(3<<12)|i for i in range(162,166)]))
-        write(OUT+'/metatile_attributes.bin',(t/'metatile_attributes.bin').read_bytes()+pack([0,0x101d]))
+        # COVERED places both blank layers over the black backdrop; NORMAL
+        # exposes the engine's unrelated BG3 fill tile through transparency.
+        write(OUT+'/metatile_attributes.bin',(t/'metatile_attributes.bin').read_bytes()+pack([0x1000,0x101d]))
         for i in range(16):
             src=t/'palettes'/f'{i if i<6 else 0:02}.pal'
             write(OUT+f'/palettes/{i:02}.pal',src.read_bytes())
@@ -151,7 +156,7 @@ def build_plane(fact,attrs,catalog):
     for y in range(h):
         for x in range(w):
             i=y*w+x;cls=classes[i]
-            if cls==0 and (x,y) not in wall_fringe:vals.append(0x0459);continue # appended black void metatile 89
+            if cls==0 and (x,y) not in wall_fringe:vals.append(VOID_BORDER);continue # appended black void metatile 89
             if cls==1:vals.append(0x3001);continue
             bits=0
             for j,(dx,dy) in enumerate(((0,-1),(1,0),(0,1),(-1,0))):

@@ -6,6 +6,7 @@ This is a static component/elevation check, not normal movement or Surf QA.
 import json
 import subprocess
 from pathlib import Path
+from PIL import Image
 import build_hgss_union_cave as g
 
 R=Path(__file__).resolve().parents[2]
@@ -16,6 +17,24 @@ def validate():
     plan=load('crossroads/donor/hns-union-cave/hgss-corrected-warp-plan.json')
     layouts={e['id']:e for e in load('data/layouts/layouts.json')['layouts']}
     maps={n:load(f'data/maps/{n}/map.json') for n in g.FLOORS}
+    # Inspect the actual private tileset as well as the border word: a future
+    # art edit must not silently reintroduce the checkerboard.
+    private=R/g.OUT
+    meta=g.read16(private/'metatiles.bin');attrs=g.read16(private/'metatile_attributes.bin')
+    metatile=g.VOID_BORDER&1023
+    assert (g.VOID_BORDER&0xc00)==0x400 and metatile<512
+    # COVERED layer type (1) prevents the normal renderer from drawing its
+    # visible garbage fill tile beneath this transparent metatile.
+    assert meta[metatile*8:metatile*8+8]==[161]*8 and attrs[metatile]==0x1000
+    image=Image.open(private/'tiles.png')
+    assert image.mode=='P' and set(image.crop((8,80,16,88)).get_flattened_data())=={0}
+    assert set(image.crop((0,0,8,8)).get_flattened_data())=={0}
+    assert (private/'palettes/00.pal').read_text().splitlines()[3]=='0 0 0'
+    covered=(R/'src/field_camera.c').read_text().split('case METATILE_LAYER_TYPE_COVERED:',1)[1].split('case METATILE_LAYER_TYPE_NORMAL:',1)[0]
+    assert 'gOverworldTilemapBuffer_Bg3[offset] = tiles[0]' in covered
+    assert 'gOverworldTilemapBuffer_Bg2[offset] = tiles[4]' in covered
+    assert 'gOverworldTilemapBuffer_Bg1[offset] = 0' in covered
+    assert 'gPlttBufferFaded[destOffset] = gPlttBufferUnfaded[destOffset] = RGB_BLACK' in (R/'src/fieldmap.c').read_text()
     groups=load('data/maps/map_groups.json')['gMapGroup_CrossroadsOlivine']
     for index,name in ((53,'RuinsOfAlph'),(89,'UnionCave_1F'),(90,'UnionCave_2F'),(91,'UnionCave_3F')):
         assert groups[index]==name,('Existing map ID changed',name,index)
@@ -31,6 +50,8 @@ def validate():
     for name,reference in g.FLOORS.items():
         m=maps[name];layout=layouts[m['layout']]
         assert m['layout']==g.NEW_LAYOUTS[name]
+        assert layout['primary_tileset']=='gTileset_HgssUnionCave'
+        assert g.read16(R/layout['border_filepath'])==[g.VOID_BORDER]*4,(name,'unsafe or nonblank border')
         old=layouts['LAYOUT_UNION_CAVE_'+name[-2]+'_F']
         assert (old['width'],old['height'])==(28,22)
         assert old['blockdata_filepath']!=layout['blockdata_filepath']
