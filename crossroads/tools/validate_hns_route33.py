@@ -73,10 +73,16 @@ assert {'map':'MAP_JOHTO_ROUTE33','offset':6,'direction':'right'} in town['conne
 assert len(m['warp_events'])==len(src['warp_events'])==1
 assert m['warp_events'][0]==dict(src['warp_events'][0],x=19,y=13)
 assert outattr[(new[13*32+19]&1023)-512]&255==0x60
-assert len(m['object_events'])==4 and m['object_events'][0]==dict(src['object_events'][0],x=21,y=25)
-assert [(v['graphics_id'],v['x'],v['y'],v['trainer_type']) for v in m['object_events'][1:]]==[
- ('OBJ_EVENT_GFX_HIKER',10,19,'TRAINER_TYPE_NONE'),('OBJ_EVENT_GFX_ROUTE33_APRICORN_PINK',23,26,'TRAINER_TYPE_NONE'),('OBJ_EVENT_GFX_ROUTE33_APRICORN_BLACK',24,26,'TRAINER_TYPE_NONE')]
-assert [v['script'] for v in m['bg_events']]==[v['script'] for v in src['bg_events']]
+# Pin the complete event dictionaries: this protects their flags, movement,
+# scripts, elevation and all other fields, not just the visible locations.
+resident=src['object_events'][0]
+assert m['object_events']==[
+ dict(resident,x=21,y=25),
+ dict(resident,graphics_id='OBJ_EVENT_GFX_HIKER',x=10,y=19,script='Johto_JohtoRoute33_Hiker'),
+ dict(resident,graphics_id='OBJ_EVENT_GFX_ROUTE33_APRICORN_PINK',x=23,y=26,script='Johto_JohtoRoute33_ApricornTree'),
+ dict(resident,graphics_id='OBJ_EVENT_GFX_ROUTE33_APRICORN_BLACK',x=24,y=26,script='Johto_JohtoRoute33_ApricornTree'),
+]
+assert m['bg_events']==[dict(src['bg_events'][0],x=13,y=19),dict(src['bg_events'][1],x=18,y=14)]
 objects={(v['x'],v['y']) for v in m['object_events']};warps={(v['x'],v['y']) for v in m['warp_events']}
 def walk(x,y):return 0<=x<32 and 0<=y<32 and not new[y*32+x]&0xc00 and new[y*32+x]>>12==3 and (x,y) not in objects
 q=deque([(0,16)]);seen={(0,16)}

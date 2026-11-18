@@ -46,6 +46,9 @@ def load(p):
 def validate():
  from validate_eight_gyms import validate as validate_gyms
  validate_gyms()
+ # Route 33 is a reviewed later reconstruction; its dedicated validator pins
+ # donor data, map events, exact resources, cave and reciprocal town seam.
+ subprocess.run(['python3',str(R/'crossroads/tools/validate_hns_route33.py')],check=True)
  from build_eight_gym_integration import relocate_layout,CODES
  from hgss_tower_validation import validate_towers
  reviewed=validate_towers()
@@ -74,6 +77,8 @@ def validate():
    expected=old.copy();name=next((n for n in CODES if load(f'data/maps/{n}/map.json')['layout']==old['id']),None)
    if name:relocate_layout(name,expected)
    if old['id'] in ['LAYOUT_JOHTO_ROUTE37','LAYOUT_JOHTO_ROUTE38','LAYOUT_JOHTO_ROUTE42']:expected.update(primary_tileset='gTileset_HgssEcruteakGateBuffer',secondary_tileset='gTileset_WesternCity')
+   if old['id']=='LAYOUT_JOHTO_ROUTE33':
+    expected.update(width=32,height=32,primary_tileset='gTileset_BlGymAzaleaPrimary',secondary_tileset='gTileset_HnsRoute33')
    if olivine and old['id']=='LAYOUT_OLIVINE_CITY':expected.update(width=64,height=64)
    if olivine and old['id'] in ['LAYOUT_JOHTO_ROUTE39','LAYOUT_JOHTO_ROUTE40']:
     # Only Route40 shares the new three primary fence cells with Olivine.
@@ -89,6 +94,12 @@ def validate():
   elif olivine and old['id']=='HEAL_LOCATION_OLIVINE_CITY':assert dict(old,x=16,y=34,respawn_x=8,respawn_y=13)==new
   else:assert old==new
  for n,digest in baseline['map_metadata_hashes'].items():
+  if n=='JohtoRoute33':
+   # The detailed Route 33 assertions use this exact historical metadata as
+   # their base; bind it to the same hash used for every unrelated map.
+   old=json.loads(subprocess.check_output(['git','show','3138de89d9:data/maps/JohtoRoute33/map.json'],cwd=R))
+   assert hashlib.sha256((json.dumps(old,indent=2)+'\n').encode()).hexdigest()==digest
+   continue # Exact later reconstruction validated above.
   if n in reviewed:continue
   if olivine and n in ['JohtoRoute39','JohtoRoute40']:
    # Normalize only the two exact connection offsets; even connection ordering
