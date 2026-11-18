@@ -149,3 +149,12 @@ pinned donor conversion under `crossroads/tools/prepare_hns_ruins_pockets.py`;
 these are unregistered previews. HGSS reference second rooms, underground hall,
 hidden rooms and actual sliding-puzzle mechanics remain unfinished. Do not wire
 misleading shortcuts, blocked entrances or empty rooms as if they were complete.
+
+The network generator now reproducibly packs the cave resources and checks for
+both pocket destinations; it activates the cave layout only if both are present.
+This guards against partial or one-sided wiring and currently leaves the
+previous live rooms untouched. The candidate draws a visible original sign on
+each retained notes interaction and treats disconnected zero-permission matrix
+void as impassable black background. Static component tests verify that retained
+actors and signs do not alter the HGSS anchor-component relationships. Those
+conservative tests do not simulate all runtime metatile behavior.

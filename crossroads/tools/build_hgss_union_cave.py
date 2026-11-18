@@ -7,7 +7,7 @@ separate, physically reconstructed Ruins pockets. Normal playtesting, Surf,
 old-save migration, terrain art and owner visual acceptance remain mandatory.
 """
 import hashlib, io, json, struct, subprocess, sys, tempfile
-from PIL import Image
+from PIL import Image, ImageDraw
 from collections import Counter, defaultdict, deque
 from pathlib import Path
 from tileset_registration import upsert
@@ -32,10 +32,22 @@ def generate_assets(write):
         # pixels/indices remain unchanged; blank art is appended to free slots.
         sheet=Image.open(t/'tiles.png');assert sheet.mode=='P' and sheet.width==128 and sheet.height>=88
         assert all(v==0 for v in sheet.crop((8,80,16,88)).get_flattened_data())
-        sheet.paste(Image.new('P',(8,8),0),(8,80));buffer=io.BytesIO();sheet.save(buffer,format='PNG',optimize=False)
+        sheet.paste(Image.new('P',(8,8),0),(8,80))
+        # A small original sign uses the cave's existing neutral palette. It
+        # keeps the three preserved notes events visible and interactable.
+        sign=Image.new('P',(16,16),0);draw=ImageDraw.Draw(sign)
+        draw.rectangle((2,2,13,10),fill=4,outline=5)
+        draw.rectangle((3,3,12,8),fill=1)
+        draw.line((4,5,11,5),fill=4);draw.line((4,7,9,7),fill=4)
+        draw.rectangle((6,11,9,15),fill=4,outline=5)
+        for j in range(4):
+            tile=sign.crop(((j%2)*8,(j//2)*8,(j%2+1)*8,(j//2+1)*8))
+            index=162+j;sheet.paste(tile,((index%16)*8,(index//16)*8))
+        buffer=io.BytesIO();sheet.save(buffer,format='PNG',optimize=False)
         write(OUT+'/tiles.png',buffer.getvalue())
-        write(OUT+'/metatiles.bin',(t/'metatiles.bin').read_bytes()+pack([161]*8))
-        write(OUT+'/metatile_attributes.bin',(t/'metatile_attributes.bin').read_bytes()+pack([0]))
+        original_meta=(t/'metatiles.bin').read_bytes();floor=read16(t/'metatiles.bin')[8:12]
+        write(OUT+'/metatiles.bin',original_meta+pack([161]*8)+pack(floor+[(3<<12)|i for i in range(162,166)]))
+        write(OUT+'/metatile_attributes.bin',(t/'metatile_attributes.bin').read_bytes()+pack([0,0x101d]))
         for i in range(16):
             src=t/'palettes'/f'{i if i<6 else 0:02}.pal'
             write(OUT+f'/palettes/{i:02}.pal',src.read_bytes())
@@ -156,6 +168,7 @@ def apply(maps,tiles,sizes,layouts,write):
             for event in m[group]:
                 while floor and any(abs(floor[0][0]-x)+abs(floor[0][1]-y)<2 for x,y in occupied):floor.pop(0)
                 x,y=floor.pop(0);event['x']=x;event['y']=y;occupied.add((x,y))
+                if group=='bg_events':values[y*w+x]=0x045a # visible preserved notes sign
         # Bit0=dry, bit1=surf, bit2=public dry fallback. Plain selected
         # floor tiles have no authored foreground; warps and actors excluded.
         water_reachable=set()

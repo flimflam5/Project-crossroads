@@ -34,6 +34,9 @@ def main():
   write=compare
  from build_hns_route33 import generate as generate_route33
  route33_tiles = generate_route33(write)
+ # Keep private cave tiles reproducible even while live Ruins destinations are unfinished.
+ from build_hgss_union_cave import generate_assets as generate_union_assets
+ generate_union_assets(write)
  groups=load('data/maps/map_groups.json');old=groups['gMapGroup_CrossroadsOlivine']+groups.get('gMapGroup_CrossroadsJohtoExpansion',[]);names=[p['name'] for p in manifest['existing']]+[p['name'] for p in selected]
  assert old==names[:len(old)],'Never discard newer maps/IDs when selecting an earlier checkpoint'
  layouts=load('data/layouts/layouts.json');bylayout={l['id']:l for l in layouts['layouts']}
@@ -294,6 +297,14 @@ def main():
   if not any(e['dest_map']==gate_mid for e in maps[n]['warp_events']):
    maps[n]['warp_events'] += [copy.deepcopy(e) for e in old_gate['warp_events'] if e['dest_map']==gate_mid]
    maps[n]['coord_events'] += [copy.deepcopy(e) for e in old_gate['coord_events'] if e['script'].startswith('Hgss_') and 'GateEnter' in e['script']]
+ # Both pocket maps must exist together before enabling the exact HGSS
+ # 1F/B2F connector graph; never add one-sided or fabricated shortcuts.
+ from build_hgss_union_cave import apply as apply_union, FLOORS as UNION_FLOORS
+ pocket_names=('RuinsOfAlph_SouthwestPocket','RuinsOfAlph_NorthwestPocket')
+ pocket_count=sum(n in maps for n in pocket_names)
+ assert pocket_count in (0,2),'Both distinct Ruins pockets are required'
+ union_enabled=pocket_count==2
+ if union_enabled:apply_union(maps,tiles,sizes,bylayout,write)
  from build_eight_gym_integration import patch_events,overlay,interior_overlay,relocate_layout
  for n,m in maps.items():
   patch_neighbor(n,m)
@@ -321,7 +332,9 @@ def main():
   path=bylayout[m['layout']]['blockdata_filepath']
   from visual_repairs import repair
   from hgss_ecruteak_family import route_data
-  if n=='JohtoRoute33':
+  if union_enabled and n in UNION_FLOORS:
+   write(path,struct.pack('<'+str(len(tiles[n]))+'H',*tiles[n]))
+  elif n=='JohtoRoute33':
    write(path,struct.pack('<'+str(len(route33_tiles))+'H',*route33_tiles))
   else:
    write(path,olivine_tiles(n,route_data(n,neighbor_tiles(n,interior_overlay(n,overlay(n,repair(n,struct.pack('<'+str(len(tiles[n]))+'H',*tiles[n]),*sizes[n]),*sizes[n]),*sizes[n]),*sizes[n]),*sizes[n]),*sizes[n]))

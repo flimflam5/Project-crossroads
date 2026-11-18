@@ -39,6 +39,21 @@ for name in g.FLOORS:
     on_disk=R/f'data/layouts/{name}/safe_continue.bin'
     assert on_disk.read_bytes()==mask,('Run isolated mask generator',name)
     print(name, 'dimensions',w,h,'warps',len(m['warp_events']),'dry',sum(bool(v&1) for v in mask),'Surf',sum(bool(v&2) for v in mask),'fallback',sum(bool(v&4) for v in mask))
+# Every proposed reference anchor must retain its dry and water-permissive
+# component relationships after placing the preserved actors and signs. This
+# catches artificial shortcuts and interactions that block a narrow passage.
+facts=json.loads((R/'crossroads/hgss/canonical_events/union-cave-geometry.json').read_text())
+for name,refname in g.FLOORS.items():
+    w,h=sizes[name];fact=facts[refname];generated=[0 if v&0xc00 else 2 if v>>12==1 else 1 for v in tiles[name]]
+    for event in maps[name]['object_events']:generated[event['y']*w+event['x']]=0
+    _,_,permissions=g.reference_planes(fact)
+    reference=[0 if v&0x8000 else 2 if v&255==0x15 else 1 for v in permissions]
+    for i,e in enumerate(fact['warps']):
+        seed=(e['x'],e['z'])
+        for allow_water in (False,True):
+            got=g.flood(w,h,generated,seed,allow_water);want=g.flood(w,h,reference,seed,allow_water)
+            anchors=lambda region:{j for j,z in enumerate(fact['warps']) if (z['x'],z['z']) in region}
+            assert anchors(got)==anchors(want),(name,i,allow_water,anchors(got),anchors(want))
 for name in g.FLOORS:
     m=maps[name]
     for e in m['warp_events']:

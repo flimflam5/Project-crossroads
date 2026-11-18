@@ -50,8 +50,21 @@ for name, ref in FLOORS.items():
             assert not (p & 0x8000) and (p & 255) == 0x15, (name, i, 'unsafe water')
         if bits & 4:
             assert (i % w, i // w) in public, (name, i, 'isolated fallback')
+    # Once the generated floor is installed, also verify every authored warp
+    # and actor against its actual generated map, not just the reference plan.
+    # The layout is still old while the prototype is being prepared.
+    maps = json.loads((R / f'data/maps/{name}/map.json').read_text())
+    layouts = json.loads((R / 'data/layouts/layouts.json').read_text())['layouts']
+    layout = next(v for v in layouts if v['id'] == maps['layout'])
+    if (layout['width'], layout['height']) == (w, h):
+        for group in ('warp_events', 'object_events', 'bg_events'):
+            for e in maps[group]:
+                x, y = e['x'], e['y']
+                assert 0 <= x < w and 0 <= y < h, (name, group, x, y)
+                assert mask[y*w+x] == 0, (name, group, x, y, 'occupied safe cell')
     print(f'{name}: {w}x{h}, dry={sum(bool(m & 1) for m in mask)}, '
           f'Surf={sum(bool(m & 2) for m in mask)}, fallback={sum(bool(m & 4) for m in mask)}')
 
 print('PASS: masks match reference geometry, exclude thresholds, and place fallbacks in the public dry component.')
-print('Static permission modeling only; verify actual rendering, components, walking and Surf saves in emulator.')
+print('Static permission modeling only; generated-map event checks run only on installed floors. '
+      'Verify rendering, components, walking and Surf saves in emulator.')
