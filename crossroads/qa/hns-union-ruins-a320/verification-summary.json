@@ -1,0 +1,13 @@
+{
+  "source_commit": "00f5742b2cdb48a2256e79e796849dea8f070d1c",
+  "rom_sha256": "a320fc5947e7b207e5d496008e3593ef68a403fd5dbba7e73fd2830ccc4539d5",
+  "elf_sha256": "b5126e02d3f834f7d85e98d2dda4284fbe842c2d1d51eac02e7099922527cea6",
+  "old_save_scope": "12 real QA10 saves from one profile, including blocked/cave-water/ladder/ruins hazards and an unchanged control. Exact recovery, native Save/cold Continue, dry public exit, party, boxes, flags, decoded inventory and heal location checked. Wild encounters disabled in test process. After long walk, tracked actual friendship counter and fully decrypted checksum before allowing bounded friendship change only.",
+  "crossgame_scope": "title, three starters and duplicate guard, Fly ten destinations, Surf and bikes/fishing, loss/healing; test fixtures and limitations in per-suite reports. Opening skipped in starter tests; opt-in QA gear/Survey and temporary RAM gear used.",
+  "limitations": "Not full collision or HGSS visual QA; player Delta and visual acceptance pending. Other Johto areas and staged hidden rooms remain unfinished.",
+  "tour_scope": "Exact ROM scripted controller: 15 reciprocal warp pairs, 12 sampled collision bumps, two puzzle cancels/solves, actual Surf Save/cold Continue with payload/heal check, and separate dry Route33\u2013Route32 traversal. Survey access and copied QA10 battery used. Cave border photographed on each floor.",
+  "automated_checks_passed": true,
+  "runtime_checks_passed": true,
+  "validation_scope": "18 listed source/build validators passed; runtime scope is the sampled cases recorded in README and JSON, not complete collision, old-save or HGSS visual verification.",
+  "owner_delta_and_visual_acceptance": "PENDING"
+}
