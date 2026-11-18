@@ -7,6 +7,7 @@
 #include "metatile_behavior.h"
 #include "constants/maps.h"
 #include "constants/event_objects.h"
+#include "constants/event_object_movement.h"
 #include "constants/heal_locations.h"
 #include "constants/azalea_kiln_door.h"
 #include "overworld.h"
@@ -85,6 +86,60 @@ static bool32 SavedPlayerWasSurfing(void)
     return FALSE;
 }
 
+// The 24-row Route 33 used one stationary woman at (19,15). Continue restores
+// active object events separately from the newly loaded map templates; leaving
+// this old instance in place blocks the reconstructed cave approach. Migrate
+// only the exact former resident, and update both the live and saved copies.
+// The current template is checked as well, so another map edit cannot silently
+// turn this into a relocation of a different NPC.
+static void MigrateRoute33Resident(void)
+{
+    const struct MapLayout *layout = gMapHeader.mapLayout;
+    const struct ObjectEventTemplate *resident;
+    u32 i;
+
+    if (gSaveBlock1Ptr->location.mapGroup != MAP_GROUP(MAP_JOHTO_ROUTE33)
+     || gSaveBlock1Ptr->location.mapNum != MAP_NUM(MAP_JOHTO_ROUTE33)
+     || layout->width != 32 || layout->height != 32
+     || gMapHeader.events->objectEventCount == 0)
+        return;
+
+    resident = &gMapHeader.events->objectEvents[0];
+    if (resident->localId != 1 || resident->graphicsId != OBJ_EVENT_GFX_WOMAN_3
+     || resident->movementType != MOVEMENT_TYPE_FACE_DOWN
+     || resident->x != 21 || resident->y != 25)
+        return;
+
+    for (i = 0; i < OBJECT_EVENTS_COUNT; i++)
+    {
+        struct ObjectEvent *saved = &gSaveBlock1Ptr->objectEvents[i];
+        struct ObjectEvent *live = &gObjectEvents[i];
+        u16 savedGraphics = (saved->graphicsId >> 8) | (saved->graphicsId << 8);
+        if (saved->spriteId != 127)
+            savedGraphics &= 0xFF;
+        if (!saved->active || saved->isPlayer || saved->localId != 1
+         || saved->mapGroup != MAP_GROUP(MAP_JOHTO_ROUTE33)
+         || saved->mapNum != MAP_NUM(MAP_JOHTO_ROUTE33)
+         || savedGraphics != OBJ_EVENT_GFX_WOMAN_3
+         || saved->movementType != MOVEMENT_TYPE_FACE_DOWN
+         || saved->initialCoords.x != 19 + MAP_OFFSET || saved->initialCoords.y != 15 + MAP_OFFSET
+         || saved->currentCoords.x != 19 + MAP_OFFSET || saved->currentCoords.y != 15 + MAP_OFFSET
+         || !live->active || live->isPlayer || live->localId != 1
+         || live->mapGroup != MAP_GROUP(MAP_JOHTO_ROUTE33)
+         || live->mapNum != MAP_NUM(MAP_JOHTO_ROUTE33)
+         || live->graphicsId != OBJ_EVENT_GFX_WOMAN_3
+         || live->movementType != MOVEMENT_TYPE_FACE_DOWN
+         || live->initialCoords.x != 19 + MAP_OFFSET || live->initialCoords.y != 15 + MAP_OFFSET
+         || live->currentCoords.x != 19 + MAP_OFFSET || live->currentCoords.y != 15 + MAP_OFFSET)
+            continue;
+
+        saved->initialCoords.x = saved->currentCoords.x = saved->previousCoords.x = resident->x + MAP_OFFSET;
+        saved->initialCoords.y = saved->currentCoords.y = saved->previousCoords.y = resident->y + MAP_OFFSET;
+        live->initialCoords.x = live->currentCoords.x = live->previousCoords.x = resident->x + MAP_OFFSET;
+        live->initialCoords.y = live->currentCoords.y = live->previousCoords.y = resident->y + MAP_OFFSET;
+    }
+}
+
 // The former Route 33 was 32x24 and contained walkable ground at coordinates
 // now occupied by cliff/sea layers and the relocated Union Cave threshold.
 // A clear collision bit alone is insufficient: upper cliff cells have
@@ -147,6 +202,7 @@ bool32 Crossroads_PrepareContinue(void)
     if (!Johto_IsExplorationGroup(gSaveBlock1Ptr->location.mapGroup))
         return FALSE;
     Crossroads_EnsureAreaRespawn();
+    MigrateRoute33Resident();
     // Old saves inside a shared-layout room must use that room's new dedicated
     // layout. Map/layout identities remain appended/stable; save format is intact.
     if (gSaveBlock1Ptr->mapLayoutId != gMapHeader.mapLayoutId)
