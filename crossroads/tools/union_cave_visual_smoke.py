@@ -8,7 +8,7 @@ and disables random encounters only in emulator RAM. It does not write map,
 warp, inventory, or player-position state. Never pass the owner's only save.
 
     python3 crossroads/tools/union_cave_visual_smoke.py --save QA.sav \\
-        --rom-sha256 SHA256 --library /tmp/johto-bridge.so --output /tmp/cave-captures
+        --rom-sha256 SHA256 --elf-sha256 SHA256 --library /tmp/johto-bridge.so --output /tmp/cave-captures
 
 Output contains still frames, optional clips and coverage, not the input save.
 Individual arrow animation frames are kept for inspection; black pixels alone
@@ -28,6 +28,7 @@ R=Path(__file__).resolve().parents[2]
 parser=argparse.ArgumentParser()
 parser.add_argument('--save',type=Path,required=True)
 parser.add_argument('--rom-sha256',required=True)
+parser.add_argument('--elf-sha256',required=True)
 parser.add_argument('--library',type=Path,required=True)
 parser.add_argument('--output',type=Path,required=True)
 args=parser.parse_args()
@@ -36,9 +37,9 @@ if out.exists() and any(out.iterdir()):raise SystemExit('Use a new, empty output
 out.mkdir(parents=True,exist_ok=True)
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
 rom=R/'pokeemerald.gba';elf=R/'pokeemerald.elf'
-assert sha(rom)==args.rom_sha256 and elf.is_file(),'ROM hash or matching ELF missing'
+assert sha(rom)==args.rom_sha256 and elf.is_file() and sha(elf)==args.elf_sha256,'ROM or ELF hash mismatch'
 original=sha(args.save)
-report={'rom_sha256':args.rom_sha256,'cases':[],'setup':'copied battery; Survey enabled in-game; encounters disabled only in emulator RAM','result':'IN PROGRESS'}
+report={'rom_sha256':args.rom_sha256,'elf_sha256':args.elf_sha256,'cases':[],'setup':'copied battery; Survey enabled in-game; encounters disabled only in emulator RAM','result':'IN PROGRESS'}
 
 def save_report():
     (out/'coverage.json').write_text(json.dumps(report,indent=2)+'\n')
