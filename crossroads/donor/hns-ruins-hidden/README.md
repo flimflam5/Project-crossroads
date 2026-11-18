@@ -28,3 +28,24 @@ remain unverified.
 This source and geometry checkpoint does not register playable maps, add item
 rewards, change saves or implement the fall scripts. All GBA adaptation and
 runtime/visual validation remains pending.
+
+## Staged geometry candidate
+
+`crossroads/tools/stage_hgss_ruins_hidden.py` returns four separate room planes,
+layout dimensions, blocked borders and transition facts through a caller-owned
+writer. It does not register maps, install the proposed tilesets, add flags,
+place items, or write room scripts. `test_hgss_ruins_hidden_stage.py` checks each
+walkable cell against its pinned HGSS permission component, field elevation,
+metatile behavior, exact anchors and deterministic output. It also checks that
+only the south-facing room exit uses a warp behavior; future hidden-room falls
+need explicit script events.
+
+The two second-room layouts share HGSS's 115-cell footprint, each with its own
+map name. The four stone plinths mark reference item positions but grant no
+items. Separate donor-inscription visual adaptations use HGSS's 260-cell SW
+and 420-cell NW footprints. Donor letters are spaced onto the GBA footprints;
+no claim is made that their visual layout is identical to the 3D original.
+The donor north-door shortcuts are removed. These are offline candidate planes,
+not in-game screenshots or proof of collision, transitions, saves or visual
+quality. The existing 29×32 GBA Underground Hall cannot represent HGSS's
+southwest fall landing at (5,42); no guessed replacement is selected here.
