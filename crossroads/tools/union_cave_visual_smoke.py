@@ -106,7 +106,11 @@ with tempfile.TemporaryDirectory(prefix='black-ledger-cave-private-') as tmp:
                                         behavior=read(obj+0x1e,1),
                                         direction=(read(obj+0x18,1)>>4)&15,
                                         visible=bool(flags&1) and not bool(flags&4)))
-        frames(180);dest=d['ids'][event['dest_map']];on_map(dest)
+        # First step lands on a directional threshold; the arrow points to the
+        # next southward step, which triggers the actual warp.
+        on_map('UnionCave_1F');assert pos()==(x,y),(index,'did not reach exit threshold',pos())
+        capture(f'arrow-{index}-threshold')
+        frames(16,128);frames(180);dest=d['ids'][event['dest_map']];on_map(dest)
         back=int(event['dest_warp_id']);d['warp'](back);on_map('UnionCave_1F')
         clip=out/f'arrow-{index}.mp4'
         if shutil.which('ffmpeg'):
