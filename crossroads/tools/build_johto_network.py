@@ -305,6 +305,9 @@ def main():
  assert pocket_count in (0,2),'Both distinct Ruins pockets are required'
  union_enabled=pocket_count==2
  if union_enabled:
+  required=('RuinsOfAlph_SouthwestChamber','RuinsOfAlph_NorthwestChamber',
+            'RuinsOfAlph_UndergroundHall','RuinsOfAlph_HallEntrance')
+  assert all(n in maps for n in required),'Both chambers, the authentic underground hall and its public entrance are required before cave activation'
   apply_union(maps,tiles,sizes,bylayout,write)
   from build_hgss_union_cave import validate_pocket_warps
   validate_pocket_warps(maps)
