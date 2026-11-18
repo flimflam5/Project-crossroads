@@ -1,0 +1,16 @@
+{
+  "actual": [
+    "Mach Bike mount/dismount",
+    "Acro Bike mount/wheelie/dismount",
+    "Surf four directions",
+    "fishing while Surfing",
+    "disembark"
+  ],
+  "gear_fixture": "Private emulator RAM only",
+  "not_normally_activated": [
+    "Dive",
+    "watering",
+    "decorating",
+    "VS Seeker"
+  ]
+}

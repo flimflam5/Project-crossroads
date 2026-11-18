@@ -1,0 +1,9 @@
+{
+  "rom_sha256": "a5b9b82db937ed12bcdd2fae571f99843491c78150efa1f2b60806e9e428ef75",
+  "source_game_commit": "3f20e0cb9f1650a3e18303802bb5e423dfed58e6",
+  "fixture": "Genuine QA10 battery saved at Route 33 (22,7); copied test save and native cold Continue, no location or warp writes",
+  "observation": "Read-only inspection of actual live and saved object event records at initial Continue, prior to any movement",
+  "resident": {"local_id": 1, "map_group": 75, "map_number": 83, "graphics_live": "0x18", "graphics_saved_byte_swapped": "0x1800", "live_initial_current_previous": [[21,25],[21,25],[21,25]], "saved_initial_current_previous": [[21,25],[21,25],[21,25]], "previous_QA10_position": [19,15], "saved_sprite_sentinel": 127},
+  "result": "PASS",
+  "limitations": "Only this genuine old-save fixture was directly inspected; host tests cover other object identities. No other save records were intentionally modified."
+}

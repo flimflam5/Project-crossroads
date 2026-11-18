@@ -1,0 +1,21 @@
+{
+  "rom_sha256": "a5b9b82db937ed12bcdd2fae571f99843491c78150efa1f2b60806e9e428ef75",
+  "old_position": [
+    5,
+    14
+  ],
+  "arrival": [
+    5,
+    14
+  ],
+  "walked_to": [
+    5,
+    13
+  ],
+  "expected_relocation": false,
+  "visible": 192,
+  "opaque": 192,
+  "behavior": 0,
+  "private_source_unchanged": true,
+  "result": "PASS"
+}

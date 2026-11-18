@@ -1,0 +1,18 @@
+{
+  "rom_sha256": "a5b9b82db937ed12bcdd2fae571f99843491c78150efa1f2b60806e9e428ef75",
+  "metatile_ids": 74,
+  "live_secondary_graphics": 117,
+  "compiled_palette_banks": 16,
+  "live_palette_banks": [
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "shared_seam_metatile": 514,
+  "shared_seam_vram_graphic": 582,
+  "shared_seam_secondary_palette_bank": 6,
+  "result": "PASS",
+  "limitations": "Real source/ROM/VRAM equality, not visual acceptance; primary animation tiles excluded from static VRAM comparisons."
+}

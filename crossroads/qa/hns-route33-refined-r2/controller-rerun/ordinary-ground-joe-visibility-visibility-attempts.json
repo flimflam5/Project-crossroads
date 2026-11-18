@@ -1,0 +1,13 @@
+{
+  "opaque_expected": 192,
+  "opaque_visible": 192,
+  "masked_pixels": [],
+  "short_grass": false,
+  "rejected_frames": [
+    {
+      "frame": 0,
+      "error": "(('Joe occluded on ordinary floor', [(15, 17), (14, 18), (13, 20), (13, 21), (12, 22), (11, 24), (11, 25), (10, 26), (10, 27), (9, 28), (9, 29), (8, 30)], 192),)"
+    }
+  ],
+  "successful_frame": 1
+}

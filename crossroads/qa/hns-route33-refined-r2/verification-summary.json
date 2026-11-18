@@ -1,0 +1,44 @@
+{
+  "source_commit": "3f20e0cb9f1650a3e18303802bb5e423dfed58e6",
+  "validation_commit": "0932ad9148b7d3d43ceefbc1ebc647183931d182",
+  "rom_sha256": "a5b9b82db937ed12bcdd2fae571f99843491c78150efa1f2b60806e9e428ef75",
+  "elf_sha256": "d084a8bb9b2202763ef52593a45021565075762faa43e3d4e99555cbbf73f281",
+  "automated_checks_passed": true,
+  "runtime_checks_passed": true,
+  "static_scope": [
+    "Johto generator --check",
+    "Route33 donor reference/seam/layout/ID validation",
+    "Apricorn graphics generator and assertions",
+    "Actual Continue C host harness for old saved positions, object identities and mocked Surf/water",
+    "opening and starter-uniqueness source checks",
+    "Olivine source/built map inclusion and generator check",
+    "eight Gym art and save contracts",
+    "Violet, Ecruteak and Johto network validators",
+    "Joe graphics/assets checks"
+  ],
+  "validation_migration": "Legacy Ecruteak validator previously pinned the old Route33 layout and failed intentionally changed 32\u00d732 geometry. Tests-only commit 0932ad9148 replaces that one exact assumption with the dedicated Route33 validator, pins its historic metadata hash, and preserves unrelated map assertions. No game bytes changed.",
+  "runtime_scope": {
+    "route": "Genuine QA10 (22,7) cold Continue, reciprocal Azalea and Union Cave transitions, 39 sampled blocked and 4 directional jump approaches, six interactions with decoded payload unchanged, native Save/cold Continue",
+    "old_saves": "Four genuine QA10 positions: (22,7), (25,18) new elevation4, (19,13) new cave threshold, (5,14) unaffected; compare party/boxes/flags/starter/decoded inventory, verify visible player and controller walk-away",
+    "resident": "Direct read-only inspection of old saved/live local ID 1 object after Continue confirmed both moved from (19,15) to (21,25), prior to movement",
+    "apricorns": "Pink 0x3F0E and black 0x3F0F; source PNG vs linked ROM vs live OBJ VRAM and palette tag 0x1172/source/unfaded/hardware palette, before interaction and after native Save/cold Continue",
+    "assets": "74 map-used compiled metatile IDs, 117 live secondary VRAM graphics, all 16 ROM palette banks, live 6\u201310 and shared seam metatile 514/graphic 582",
+    "title": "actual cold boot/title animation, Start/New Game handoff, soft reset",
+    "starters": "Elgyem/Seedot/Trubbish acquisition, Olivine met origin/level, duplicate prevention; original opening skipped using disclosed RAM fixture",
+    "fly": "QA-kit grant/repeat prevention, cancel, ten destination landings, native Save/cold Continue",
+    "field": "Surf four directions, fishing/disembark, Mach/Acro bike, test-only temporary gear",
+    "battle": "actual first-loss practice battle, Joe battle-back sprite/palette, local Center recovery, fresh-game/1HP in-memory fixture"
+  },
+  "prior_candidate_failure": "Rejected ROM 69429b2d6df08d2757da8c92c94aa4a5316588626f583056856ab8fb30358ef7 restored an old resident at (19,15) and blocked the cave route. Screenshots explicitly named rejected-69429. R2 scoped migration corrected that actual old-save condition.",
+  "weather_visibility_test": "One strict ordinary-ground frame failed from moving rain. An independent 30-frame (60-native-frame) probe recorded moving blue streaks, then 26 consecutive frames with all 192/192 opaque pixels visible. R2 controller rerun still requires a fully matching ordinary-ground frame; rejected visibility samples are retained. Short grass permits only at most ten bottom-two-row pixels when tile behavior is 0x07.",
+  "fixtures": "Genuine QA10 battery copies; native movement and Save/Continue. RAM-only encounter suppression and Survey access through normal desk; no position or warp writes. Test saves/snapshots/private memory not distributed.",
+  "owner_delta_and_visual_acceptance": "PENDING",
+  "limitations": [
+    "HGSS rendering is a GBA adaptation. The existing Azalea border remains an intentional technical seam, not exact HGSS geometry.",
+    "Owner Delta and visual QA pending. Collision tests sampled rather than every tile and all old saves; host model is not emulator coverage.",
+    "Apricorn observations do not grant items; harvest and progression deferred by owner.",
+    "Union Cave and Ruins of Alph remain older foundations and their basement topology is not finished.",
+    "Original Birch intro and ship voyages remain incomplete.",
+    "Dive, watering, decoration and VS Seeker not activated."
+  ]
+}
