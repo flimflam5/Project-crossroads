@@ -1,0 +1,18 @@
+{
+  "revision": "167aa6d537b109bb229c231ddce4616974c4da71",
+  "files": {
+    "src/sliding_puzzle.c": "b6d6ab5d6232a666187cdfe08dba7e819192fbad3d90ac1b604e91e31daf6f8a",
+    "src/data/sliding_puzzles.h": "f30c3c761d308d55f087b71dcdd3e24934b26f0cc1a8e45c0ae274047f3be6a2",
+    "include/sliding_puzzle.h": "386d871095cfedcf77d2d72588e1985d43e013a01ad7050da3f26cb9f32492f6",
+    "include/constants/sliding_puzzles.h": "1906d62f47e0538cd46d76ec10cb7acee4c1484b01c47d84fc198e2a75b93283",
+    "graphics/sliding_puzzle/bg.pal": "112e066f12d38c79a4f87105580c3158f577a4ae9602ca639de0ec9d2e48abd3",
+    "graphics/sliding_puzzle/bg.png": "d33368f50812c33eb72842f18610fb11f3c8ff230d304c167897f8497811b29c",
+    "graphics/sliding_puzzle/cursor.png": "28fef2b6e02b8f61cea49c60a7607fa39cb742dbf7cc468ab8dde5b1acba163b",
+    "graphics/sliding_puzzle/cursor_tiles.pal": "4783358f6927d8f5e47aeac09524cce154d70fdbb55befb09602d632a0ee1bd6",
+    "graphics/sliding_puzzle/map.bin": "7c765d62b353a15ca31ef8138ec10f5f277ac9ff1654be3fbe850999141bf903",
+    "graphics/sliding_puzzle/puzzles/kabuto/tiles.png": "4a582a440050043d3cc0f88fe69ce92031db9a832a6cc7c86cda64442e851af9",
+    "graphics/sliding_puzzle/puzzles/omanyte/tiles.png": "23227983f47c72d947f5ffac5486eabbce80b91e55e7232d02f3b279b107befc",
+    "graphics/sliding_puzzle/puzzles/aerodactyl/tiles.png": "ad00811bfa940a1a90fb290065d5e664c4eff95ce27ed9111856b8f6796ae22b",
+    "graphics/sliding_puzzle/puzzles/ho_oh/tiles.png": "72f205eec997e91dd9beb70499e810a4e1cda32885b263527b3c10093f474d69"
+  }
+}

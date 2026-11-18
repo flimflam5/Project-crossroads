@@ -39,3 +39,24 @@ Advance / Kertra, Ekat99, TheDeadHeroAlistair, Johto Redrawn Team, zatavares852,
 lbsbezerra, WesleyFG and Kalarie. These are aggregate acknowledgements, not
 claims about authorship of individual files. Explicit file-specific terms remain
 unverified. Exact input paths and SHA256 hashes are in `source-sha256.json`.
+
+## Sliding-puzzle engine preparation
+
+The HNS 4-by-4 picture puzzle implementation and its two extra staging columns
+are ported separately into `src/sliding_puzzle.c`, `src/data/sliding_puzzles.h`,
+`include/sliding_puzzle.h`, `include/constants/sliding_puzzles.h`, and
+`graphics/sliding_puzzle/`. Their donor paths and original SHA256 hashes are in
+`puzzle-source-sha256.json`. The port adds a public declaration, converts asset
+references to this project's `INCGFX` build convention, and removes an unused
+local; the special is appended at the end of the existing special table with
+`waitstate=1`, keeping all prior special numbers stable.
+
+The special is not used by any gameplay script. No flags, items, rewards,
+chamber events, or new maps are wired by this port. A scratch component test
+ran the actual scaninc-generated asset rules, project's preprocessor, ARM cc1
+with project flags, and assembler against the real graphics and palette assets;
+all 56 undefined object symbols exist in the prior QA10 ELF. This is **not** a
+full project link, emulator run, or minigame test. Validate screen entry/exit,
+controls, success/cancellation, field return, and save safety before using it.
+Because the project special macro already emits an implicit `waitstate`, do not
+copy the donor script's extra explicit `waitstate` after this special.

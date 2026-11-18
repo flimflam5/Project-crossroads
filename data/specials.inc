@@ -643,3 +643,5 @@ gSpecials::
 	def_special Johto_EnableTestAccess
 
 	def_special Johto_QAKitRequested
+
+	def_special DoSlidingPuzzle, waitstate=1

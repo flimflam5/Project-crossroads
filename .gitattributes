@@ -34,6 +34,7 @@ crossroads/art/eight_gyms_v1/build_attempt.log -whitespace
 
 # Donor assets and generated palettes are hash-verified byte for byte.
 crossroads/donor/** -text
+graphics/sliding_puzzle/** -text
 data/tilesets/primary/hns_charcoal_kiln/palettes/*.pal -text
 
 data/tilesets/secondary/hns_route33/palettes/*.pal -text
