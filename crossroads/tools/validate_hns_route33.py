@@ -16,11 +16,15 @@ meta=words(h/'metatiles.bin');attr=words(h/'metatile_attributes.bin');outmeta=wo
 assert len(source)==len(new)==1024 and len(old)==768 and len(used)==71
 signs={(13,19),(18,14)}
 tree_aprons={(23,26),(24,26),(24,25)}
+transition={(7,15+row):freemeta[len(used)+row] for row in range(3)}
 for i,(raw,val) in enumerate(zip(source,new)):
  x,y=i%32,i//32
  if x<7: assert val==old[max(0,min(23,y-4))*32+x];continue
  if (x,y) in signs:assert val==0x3403;continue
  if (x,y) in tree_aprons:assert val==0x3000|mmap[1];continue
+ if (x,y) in transition:
+  assert not raw&0xc00 and raw>>12==3, ('Transition must not open an obstacle',x,y)
+  assert val==0x3000|transition[(x,y)];continue
  want=(raw&0xfc00)|mmap[raw&1023]
  if want>>12==0 and not want&0xc00:want|=0x400
  assert val==want,(x,y,hex(val),hex(want))
@@ -36,6 +40,22 @@ for oldid,newid in mmap.items():
   assert s&0xc00==t&0xc00 and bankmap[s>>12]==t>>12
   assert tile(si,s&1023)==tile(primary,t&1023) if (t&1023)<512 else tile(si,s&1023)==tile(oi,(t&1023)-512)
 for oldbank,newbank in bankmap.items():assert (h/f'palettes/{oldbank:02}.pal').read_bytes()==(o/f'palettes/{newbank:02}.pal').read_bytes()
+# Verify each transition pixel against the preserved town paving and exact
+# intended transparent taper; this is still only a static render check.
+road=Image.open(c/'tiles.png').crop((70%16*8,70//16*8,70%16*8+8,70//16*8+8)).tobytes()
+ground=outmeta[(mmap[9]-512)*8:(mmap[9]-512)*8+4]
+for row in range(3):
+ mi=transition[(7,15+row)]-512; words4=outmeta[mi*8:mi*8+8]
+ assert words4[:4]==ground and outattr[mi]==0
+ for y in range(16):
+  limit=(8+y//2 if row==0 else 15 if row==1 else 15-y//2)
+  for x in range(16):
+   v=words4[4+(y//8)*2+x//8]
+   if v:
+    assert v>>12==6 and (v&1023)>=512 and (v&1023)!=582
+    pixel=oi.getpixel((((v&1023)-512)%16*8+x%8,((v&1023)-512)//16*8+y%8))
+   else:pixel=0
+   assert pixel==(road[(y%8)*8+x%8] if x<limit else 0), ('Paving transition pixel',row,x,y)
 # Required shared transition assets: primary is exactly shared, secondary
 # metatile 514, behavior, palette 6 and its referenced graphic 582 match town.
 assert outmeta[16:24]==words(c/'metatiles.bin')[16:24] and outattr[2]==words(c/'metatile_attributes.bin')[2]
@@ -55,7 +75,7 @@ assert m['warp_events'][0]==dict(src['warp_events'][0],x=19,y=13)
 assert outattr[(new[13*32+19]&1023)-512]&255==0x60
 assert len(m['object_events'])==4 and m['object_events'][0]==dict(src['object_events'][0],x=21,y=25)
 assert [(v['graphics_id'],v['x'],v['y'],v['trainer_type']) for v in m['object_events'][1:]]==[
- ('OBJ_EVENT_GFX_HIKER',10,19,'TRAINER_TYPE_NONE'),('OBJ_EVENT_GFX_APRICORN_TREE',23,26,'TRAINER_TYPE_NONE'),('OBJ_EVENT_GFX_APRICORN_TREE',24,26,'TRAINER_TYPE_NONE')]
+ ('OBJ_EVENT_GFX_HIKER',10,19,'TRAINER_TYPE_NONE'),('OBJ_EVENT_GFX_ROUTE33_APRICORN_PINK',23,26,'TRAINER_TYPE_NONE'),('OBJ_EVENT_GFX_ROUTE33_APRICORN_BLACK',24,26,'TRAINER_TYPE_NONE')]
 assert [v['script'] for v in m['bg_events']]==[v['script'] for v in src['bg_events']]
 objects={(v['x'],v['y']) for v in m['object_events']};warps={(v['x'],v['y']) for v in m['warp_events']}
 def walk(x,y):return 0<=x<32 and 0<=y<32 and not new[y*32+x]&0xc00 and new[y*32+x]>>12==3 and (x,y) not in objects

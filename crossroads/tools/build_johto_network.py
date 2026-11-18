@@ -22,6 +22,8 @@ def main():
  ap=argparse.ArgumentParser();ap.add_argument('--through',choices=CLUSTERS,default='west');ap.add_argument('--check',action='store_true');args=ap.parse_args()
  from build_hns_charcoal_kiln import generate as generate_hns_kiln
  generate_hns_kiln(args.check)
+ from build_route33_apricorns import generate as generate_route33_apricorns
+ generate_route33_apricorns(args.check)
  ambient=load('crossroads/johto/ambient.json');city_sites=load('crossroads/johto/city_sites.json')
  manifest=load('crossroads/johto/manifest.json');plans=manifest['planned'];selected=[p for p in plans if CLUSTERS.index(p['cluster'])<=CLUSTERS.index(args.through)]
  # --check runs the deterministic writer against an in-memory file comparison.
@@ -162,7 +164,8 @@ def main():
     if n=='JohtoRoute33':
      label=script(n+'_Hiker');m['object_events'].append(obj(10,19,label,'HIKER'));say(label,'The cave leads north. Watch your footing in the rain.')
      label=script(n+'_ApricornTree');say(label,'An APRICORN tree stands here.')
-     for x,y in [(23,26),(24,26)]:m['object_events'].append(obj(x,y,label,'APRICORN_TREE'))
+     m['object_events'].append(obj(23,26,label,'ROUTE33_APRICORN_PINK'))
+     m['object_events'].append(obj(24,26,label,'ROUTE33_APRICORN_BLACK'))
   else:
    rect(n,0,0,w,2,border);rect(n,0,h-1,w,1,border);rect(n,0,0,1,h,border);rect(n,w-1,0,1,h,border)
    if primary=='gTileset_General':

@@ -48,7 +48,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_APRICORN_TREE",
+      "graphics_id": "OBJ_EVENT_GFX_ROUTE33_APRICORN_PINK",
       "x": 23,
       "y": 26,
       "elevation": 3,
@@ -61,7 +61,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_APRICORN_TREE",
+      "graphics_id": "OBJ_EVENT_GFX_ROUTE33_APRICORN_BLACK",
       "x": 24,
       "y": 26,
       "elevation": 3,

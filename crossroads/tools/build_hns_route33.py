@@ -44,7 +44,6 @@ def generate(write):
   if oldid==0:continue
   tile=donor.crop(((oldid%16)*8,(oldid//16)*8,(oldid%16)*8+8,(oldid//16)*8+8))
   j=newid-512;im.paste(tile,((j%16)*8,(j//16)*8))
- b=io.BytesIO();im.save(b,format='PNG',optimize=False);write(OUT+'/tiles.png',b.getvalue())
  bankmap={old:7+i for i,old in enumerate(banks)}
  for i in range(16):
   donor_bank=next((old for old,new in bankmap.items() if new==i),None)
@@ -56,6 +55,34 @@ def generate(write):
   newmeta[(newid-512)*8:(newid-511)*8]=[tilemap[v&1023]|(v&0xc00)|(bankmap[v>>12]<<12) for v in meta[oldid*8:oldid*8+8]]
   # The donor's Headbutt-tree behavior is not present in this engine.
   newattrs[newid-512]=(attrs[oldid]&~255) if attrs[oldid]&255==0xf0 else attrs[oldid]
+ # Blend the city paving into the donor grass over exactly three walkable
+ # cells outside the seven-column shared buffer.  New transparent overlays
+ # reuse the city's palette-6 paving and donor grass below; no existing tile,
+ # collision, border or field-effect resource is overwritten.
+ road=Image.open(C/'tiles.png').crop((70%16*8,70//16*8,70%16*8+8,70//16*8+8))
+ roadpixels=road.tobytes();assert set(roadpixels)=={2,3}
+ free_transition_gfx=iter(free_gfx[len(ids)-1:]);tile_cache={}
+ transition_meta=free_meta[len(used):len(used)+3]
+ ground=newmeta[(metamap[9]-512)*8:(metamap[9]-512)*8+4]
+ for row,newid in enumerate(transition_meta):
+  overlay=[]
+  for part in range(4):
+   tx,ty=part%2,part//2;tile=Image.new('P',(8,8),0)
+   for yy in range(8):
+    y=ty*8+yy
+    limit=(8+y//2 if row==0 else 15 if row==1 else 15-y//2)
+    for xx in range(8):
+     x=tx*8+xx
+     if x<limit:tile.putpixel((xx,yy),roadpixels[(y%8)*8+(x%8)])
+   pixels=tile.tobytes()
+   if not any(pixels):overlay.append(0);continue
+   if pixels not in tile_cache:
+    gfx=next(free_transition_gfx);tile_cache[pixels]=gfx
+    slot=gfx-512;im.paste(tile,(slot%16*8,slot//16*8))
+   overlay.append(tile_cache[pixels]|(6<<12))
+  newmeta[(newid-512)*8:(newid-511)*8]=ground+overlay
+  newattrs[newid-512]=0
+ b=io.BytesIO();im.save(b,format='PNG',optimize=False);write(OUT+'/tiles.png',b.getvalue())
  write(OUT+'/metatiles.bin',pack(newmeta));write(OUT+'/metatile_attributes.bin',pack(newattrs))
  symbol='HnsRoute33';mark='HNS ROUTE33 PRIVATE SECONDARY'
  sections={'graphics': f'const u32 gTilesetTiles_{symbol}[] = INCGFX_U32("{OUT}/tiles.png", ".4bpp.fastSmol");\nconst u16 gTilesetPalettes_{symbol}[][16] = {{\n'+''.join(f' INCGFX_U16("{OUT}/palettes/{i:02}.pal", ".gbapal"),\n' for i in range(16))+'};\n',
@@ -74,6 +101,7 @@ def generate(write):
  for y in range(32):
   source_y=max(0,min(23,y-4))
   for x in range(7):out[y*32+x]=old[source_y*32+x]
+ for row,newid in enumerate(transition_meta):out[(15+row)*32+7]=0x3000|newid
  # Keep native sign behavior and the original sign event indices.
  for x,y in [(13,19),(18,14)]:out[y*32+x]=0x3403
  # HGSS has two adjacent Apricorn trees here; object sprites occupy clear
