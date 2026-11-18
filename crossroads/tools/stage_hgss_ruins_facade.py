@@ -30,6 +30,17 @@ def readwords(path):
 def pack(v):return struct.pack('<%dH'%len(v),*v)
 
 
+def derive_layout(original):
+    """Return a distinct layout definition; caller must append it and copy border."""
+    assert original['id']=='LAYOUT_RUINS_OF_ALPH'
+    new=copy.deepcopy(original)
+    new.update(id='LAYOUT_HGSS_RUINS_OF_ALPH',name='HgssRuinsOfAlph_Layout',
+               secondary_tileset='gTileset_HgssRuinsPublic',
+               border_filepath='data/layouts/HgssRuinsOfAlph/border.bin',
+               blockdata_filepath='data/layouts/HgssRuinsOfAlph/map.bin')
+    return new
+
+
 def stage(write, original_map, original_tiles, border):
     manifest=json.loads((DONOR/'source-sha256.json').read_text())
     assert manifest['revision']=='167aa6d537b109bb229c231ddce4616974c4da71'

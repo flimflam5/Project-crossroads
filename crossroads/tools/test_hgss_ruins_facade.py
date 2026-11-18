@@ -5,13 +5,20 @@ import io
 import struct
 from PIL import Image
 from pathlib import Path
-from stage_hgss_ruins_facade import stage, readwords, FOOTPRINT, DOOR
+from stage_hgss_ruins_facade import stage, derive_layout, readwords, FOOTPRINT, DOOR
 from stage_hgss_ruins_network import flood
 
 
 def check():
     root=Path(__file__).resolve().parents[2]
     original=json.loads((root/'data/maps/RuinsOfAlph/map.json').read_text())
+    layout=next(e for e in json.loads((root/'data/layouts/layouts.json').read_text())['layouts']
+                if e['id']=='LAYOUT_RUINS_OF_ALPH')
+    changed=derive_layout(layout)
+    assert changed['id']!='LAYOUT_RUINS_OF_ALPH' and changed['width']==40 and changed['height']==36
+    assert changed['secondary_tileset']=='gTileset_HgssRuinsPublic'
+    assert changed['blockdata_filepath']!=layout['blockdata_filepath']
+    assert changed['border_filepath']!=layout['border_filepath']
     tiles=readwords(root/'data/layouts/RuinsOfAlph/map.bin')
     border=readwords(root/'data/layouts/RuinsOfAlph/border.bin')
     writes={}

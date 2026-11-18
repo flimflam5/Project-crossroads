@@ -84,4 +84,15 @@ def stage(write):
         assert (5,5) in flood(tiles[index],10,11,(4,9))
     maps[4]['warp_events']=[warp(15,16,IDS[5],1)]
     maps[5]['warp_events']=[warp(6,13,'MAP_RUINS_OF_ALPH',2),warp(6,7,IDS[4],0)]
-    return dict(zip(NAMES,maps)),dict(zip(NAMES,tiles)),scripts
+    primaries=('gTileset_HgssRuinsPocket','gTileset_HgssRuinsPocket',
+               'gTileset_HgssRuinsChamber','gTileset_HgssRuinsChamber',
+               'gTileset_HgssRuinsHall','gTileset_HgssRuinsHall')
+    layouts={}
+    borders={}
+    for name,m,(w,h),plane,primary in zip(NAMES,maps,SIZES,tiles,primaries):
+        layouts[m['layout']]=dict(id=m['layout'],name=name+'_Layout',width=w,height=h,
+            primary_tileset=primary,secondary_tileset='gTileset_WesternInteriors',
+            border_filepath=f'data/layouts/{name}/border.bin',
+            blockdata_filepath=f'data/layouts/{name}/map.bin',layout_version='emerald')
+        borders[name]=[(plane[0]&1023)|0x400]*4
+    return dict(zip(NAMES,maps)),dict(zip(NAMES,tiles)),layouts,borders,scripts
