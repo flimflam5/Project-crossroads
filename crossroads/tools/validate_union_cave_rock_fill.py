@@ -38,8 +38,12 @@ def main():
         vals=list(struct.unpack(f'<{len(raw)//2}H',raw)); w=32; h=len(vals)//w
         result=cave.fill_enclosed_void(w,h,vals)
         for (x,y) in examples:assert result[y*w+x]==s,(floor,x,y)
-        for x,y in cave.OWNER_EDGE_NOTCHES.get('UnionCave_'+floor,()):
-            assert vals[y*w+x] in (b,s) and vals[y*w+x-1]==s,(floor,x,y,'edge notch')
+        edge=set(cave.OWNER_EDGE_NOTCHES.get('UnionCave_'+floor,()))
+        for x,y in edge:
+            assert vals[y*w+x] in (b,s) and vals[y*w+x]&0xc00==0x400,(floor,x,y,'edge notch')
+            for xx,yy in ((x-1,y),(x+1,y),(x,y-1),(x,y+1)):
+                if 0<=xx<w and 0<=yy<h and (xx,yy) not in edge:
+                    assert vals[yy*w+xx]==s,(floor,x,y,'edge perimeter',xx,yy)
             if args.installed:assert vals[y*w+x]==s,(floor,x,y,'edge notch not repaired')
         x,y=EXTERIOR[floor];assert vals[y*w+x]==result[y*w+x]==b,(floor,x,y)
         for before,after in zip(vals,result):
