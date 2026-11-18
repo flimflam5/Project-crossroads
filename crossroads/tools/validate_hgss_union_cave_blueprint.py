@@ -61,4 +61,34 @@ for name in g.FLOORS:
         if dst:
             target=maps[dst]['warp_events'][int(e['dest_warp_id'])]
             assert target['dest_map']==m['id'] and int(target['dest_warp_id'])==m['warp_events'].index(e)
-print('PASS: isolated reference-shaped floor blueprint, retained warp indices, reciprocal internal ladders and explicit save masks. Not linked or emulator-tested.')
+# Exercise both positive and negative pocket contract: no one-sided entrance,
+# unknown destination, unpaired warp, or missing distinct chamber is accepted.
+for suffix,warp in [('Southwest',6),('Northwest',7)]:
+    pocket=maps['RuinsOfAlph_'+suffix+'Pocket'];pid=pocket['id'];cid='MAP_TEST_'+suffix.upper()+'_CHAMBER'
+    pocket['warp_events']=[dict(dest_map=maps['UnionCave_1F']['id'],dest_warp_id=str(warp)),dict(dest_map=cid,dest_warp_id='0')]
+    maps['Test'+suffix+'Chamber']={'id':cid,'warp_events':[dict(dest_map=pid,dest_warp_id='1')]}
+g.validate_pocket_warps(maps)
+for pocket_name in ('RuinsOfAlph_SouthwestPocket','RuinsOfAlph_NorthwestPocket'):
+    events=maps[pocket_name]['warp_events'];saved=events.pop()
+    try:
+        try:g.validate_pocket_warps(maps)
+        except AssertionError:pass
+        else:raise AssertionError(('Missing chamber was accepted',pocket_name))
+    finally:events.append(saved)
+    saved=events[1]['dest_warp_id'];events[1]['dest_warp_id']='99'
+    try:
+        try:g.validate_pocket_warps(maps)
+        except AssertionError:pass
+        else:raise AssertionError(('Invalid chamber return was accepted',pocket_name))
+    finally:events[1]['dest_warp_id']=saved
+# Even fully reciprocal entrances cannot use one shared accessible chamber,
+# because that would join the two intentionally isolated outside pockets.
+sw=maps['RuinsOfAlph_SouthwestPocket'];nw=maps['RuinsOfAlph_NorthwestPocket'];shared=maps['TestSouthwestChamber']
+saved=dict(nw['warp_events'][1]);shared['warp_events'].append(dict(dest_map=nw['id'],dest_warp_id='1'))
+nw['warp_events'][1].update(dest_map=shared['id'],dest_warp_id='1')
+try:
+    try:g.validate_pocket_warps(maps)
+    except AssertionError as e:assert 'share a directly accessible chamber' in str(e)
+    else:raise AssertionError('Shared chamber shortcut was accepted')
+finally:nw['warp_events'][1]=saved;shared['warp_events'].pop()
+print('PASS: isolated reference-shaped floor blueprint, retained warp indices, reciprocal ladders, safe masks and pocket guard negative cases. Not linked or emulator-tested.')

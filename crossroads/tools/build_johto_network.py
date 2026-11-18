@@ -306,16 +306,8 @@ def main():
  union_enabled=pocket_count==2
  if union_enabled:
   apply_union(maps,tiles,sizes,bylayout,write)
-  by_id={m['id']:m for m in maps.values()}
-  cave_id=maps['UnionCave_1F']['id']
-  for pocket,cave_warp in zip(pocket_names,(6,7)):
-   m=maps[pocket];events=m['warp_events']
-   assert len(events)>=2 and events[0]['dest_map']==cave_id and int(events[0]['dest_warp_id'])==cave_warp,(pocket,'Missing reciprocal cave entrance or chamber')
-   assert any(e['dest_map']!=cave_id for e in events),'Pocket must have its own actual chamber'
-   for i,e in enumerate(events):
-    assert e['dest_map'] in by_id,(pocket,i,'Missing destination')
-    other=by_id[e['dest_map']]['warp_events'][int(e['dest_warp_id'])]
-    assert other['dest_map']==m['id'] and int(other['dest_warp_id'])==i,(pocket,i,'Nonreciprocal warp')
+  from build_hgss_union_cave import validate_pocket_warps
+  validate_pocket_warps(maps)
  from build_eight_gym_integration import patch_events,overlay,interior_overlay,relocate_layout
  for n,m in maps.items():
   patch_neighbor(n,m)

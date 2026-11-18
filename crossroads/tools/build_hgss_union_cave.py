@@ -136,6 +136,27 @@ def build_plane(fact,attrs,catalog):
             else:vals.append(0x040f if cls==0 else 0x1000)
     return w,h,classes,vals
 
+def validate_pocket_warps(maps):
+    names=('RuinsOfAlph_SouthwestPocket','RuinsOfAlph_NorthwestPocket')
+    assert all(n in maps for n in names),'Both distinct Ruins pockets are required'
+    by_id={m['id']:m for m in maps.values()}
+    cave_id=maps['UnionCave_1F']['id']
+    targets=[]
+    for pocket,cave_warp in zip(names,(6,7)):
+        m=maps[pocket];events=m['warp_events']
+        assert len(events)>=2 and events[0]['dest_map']==cave_id and int(events[0]['dest_warp_id'])==cave_warp,(pocket,'Missing reciprocal cave entrance or chamber')
+        chambers={e['dest_map'] for e in events if e['dest_map']!=cave_id}
+        assert chambers,'Pocket must have its own actual chamber'
+        assert not chambers.intersection({maps[n]['id'] for n in names}),'Separate pockets cannot connect directly'
+        targets.append(chambers)
+        for i,e in enumerate(events):
+            assert e['dest_map'] in by_id,(pocket,i,'Missing destination')
+            target=by_id[e['dest_map']]['warp_events'];index=int(e['dest_warp_id'])
+            assert 0<=index<len(target),(pocket,i,'Invalid target index')
+            other=target[index]
+            assert other['dest_map']==m['id'] and int(other['dest_warp_id'])==i,(pocket,i,'Nonreciprocal warp')
+    assert not targets[0].intersection(targets[1]),'Distinct Ruins pockets cannot share a directly accessible chamber'
+
 def apply(maps,tiles,sizes,layouts,write):
     attrs,catalog=generate_assets(write);facts=js('crossroads/hgss/canonical_events/union-cave-geometry.json');plan=js('crossroads/donor/hns-union-cave/hgss-corrected-warp-plan.json')
     for name,refname in FLOORS.items():
