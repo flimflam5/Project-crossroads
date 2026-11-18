@@ -59,3 +59,15 @@ reciprocal exits. Its 30 donor-styled markers are visual-only; the original
 HGSS marker dialogue and conditional NPCs remain unimplemented. An old-save
 Continue mask and host fixture are present, but normal hardware/emulator save
 loading, both thresholds, puzzle returns and foreground layers need playtesting.
+
+`crossroads/tools/stage_hgss_ruins_hidden_graph.py` separately constructs a
+candidate map/event/script graph in memory. It preserves each first-room warp 0,
+proposes append-only warp 1 as a **return-only** neutral floor at (5,2), and
+reserves the wall at (5,1) for the still-unimplemented conditional entrance.
+This keeps a return safe if the player's Water Stone or party changes while
+inside. The staged second and hidden rooms have one-way scripted falls to the
+source-reference coordinates, with no item grants, story changes or permanent
+flags. No conditional gate or new map is registered in this checkpoint. The
+exact conditions, door presentation, trigger reset behavior, map inclusion,
+old-save compatibility, and visual/movement behavior require integration and
+engine/emulator tests before activation.
