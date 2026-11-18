@@ -1,0 +1,5 @@
+# Route 33 prototype — fresh emulator rerun, 2026-11-18
+
+The older candidate was rebuilt from source `5c308d1fbc66e202ee6da0c4de712079955851b0`. Its ROM SHA-256 is `d78f533b7cbc67d69a7eba333bc95595ba14747e1669ee3516b5e0fc070f0faf`, identical to the previously tested bytes. Results in this directory are from the **new** build and new runs, not copied old output. See `verification-summary.json` for detailed coverage and limitations. All PNGs are native game frames; MP4s record controller-driven travel. No private batteries, snapshots or dumps are included.
+
+The original 32×24 route remains an interim donor adaptation: HGSS reference dimensions are 32×32 and the western seam, cave placement, Apricorn objects and NPCs require further work. These checks are not visual acceptance or exhaustive save/collision testing. Union Cave remains an older foundation; its basement connections need coordinated reconstruction with the Ruins of Alph. The newer route refinement branch is a separate untested candidate and is not this ROM.

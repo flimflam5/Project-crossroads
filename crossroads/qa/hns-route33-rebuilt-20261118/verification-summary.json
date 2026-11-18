@@ -1,0 +1,45 @@
+{
+  "rom_sha256": "d78f533b7cbc67d69a7eba333bc95595ba14747e1669ee3516b5e0fc070f0faf",
+  "source_game_commit": "5c308d1fbc66e202ee6da0c4de712079955851b0",
+  "checks": [
+    "controller",
+    "compiled_assets",
+    "title",
+    "starters",
+    "fly",
+    "field",
+    "battle"
+  ],
+  "result": "PASS",
+  "source_batteries_unchanged": true,
+  "limitations": [
+    "Scripted emulator checks, not owner visual acceptance.",
+    "Route 33 collision sampled; geometry and content still incomplete.",
+    "Starter suite skips original opening; other tests use disclosed QA kit, temporary gear and fresh-game/1 HP fixture.",
+    "Dive, watering, decoration and VS Seeker were not activated.",
+    "Source/battery saves, snapshots and memory dumps are excluded."
+  ],
+  "source_commit": "5c308d1fbc66e202ee6da0c4de712079955851b0",
+  "automated_checks_passed": true,
+  "runtime_checks_passed": true,
+  "prior_run_distinction": "Fresh 2026-11-18 build and emulator rerun; ROM reproduces the earlier d78f... bytes. Results in this directory come from this new run.",
+  "automated_scope": [
+    "Johto generator --check",
+    "Route33 donor remap and seam validation",
+    "opening starter/duplication source checks",
+    "Olivine source and compiled-map inclusion",
+    "eight custom gyms",
+    "Violet",
+    "Johto structural graph",
+    "Olivine generator --check"
+  ],
+  "runtime_scope": {
+    "route": "Old QA10 cold Continue, Azalea seam and Union Cave both ways, 39 sampled collision approaches and 4 modeled ledge jumps, NPC/sign interaction, normal Save/cold Continue",
+    "tiles": "56 compiled metatile IDs, 103 live secondary VRAM tiles, 16 compiled secondary palette banks and live banks 6-8; excludes primary animated VRAM tiles",
+    "title": "cold boot, title VRAM/light animation, Start/New Game handoff, soft reset",
+    "starters": "Elgyem/Seedot/Trubbish grant, met metadata and duplicate protection; original opening skipped by a disclosed RAM fixture",
+    "fly": "QA kit grant/repeat guard, cancel, ten city landings and post-flight Save/Continue",
+    "field": "Surf in four directions and fishing/disembark; Mach/Acro Bike using temporary emulator-only gear",
+    "battle": "Optional first-loss battle, Joe sprite/palette and Center recovery with disclosed fresh-game/1HP fixture"
+  }
+}

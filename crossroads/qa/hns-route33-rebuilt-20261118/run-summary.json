@@ -1,0 +1,22 @@
+{
+  "rom_sha256": "d78f533b7cbc67d69a7eba333bc95595ba14747e1669ee3516b5e0fc070f0faf",
+  "source_game_commit": "5c308d1fbc66e202ee6da0c4de712079955851b0",
+  "checks": [
+    "controller",
+    "compiled_assets",
+    "title",
+    "starters",
+    "fly",
+    "field",
+    "battle"
+  ],
+  "result": "PASS",
+  "source_batteries_unchanged": true,
+  "limitations": [
+    "Scripted emulator checks, not owner visual acceptance.",
+    "Route 33 collision sampled; geometry and content still incomplete.",
+    "Starter suite skips original opening; other tests use disclosed QA kit, temporary gear and fresh-game/1 HP fixture.",
+    "Dive, watering, decoration and VS Seeker were not activated.",
+    "Source/battery saves, snapshots and memory dumps are excluded."
+  ]
+}
