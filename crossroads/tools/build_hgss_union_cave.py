@@ -239,9 +239,13 @@ def apply(maps,tiles,sizes,layouts,write):
     for name,refname in FLOORS.items():
         assert name in maps and all(p in maps for p in ('RuinsOfAlph_SouthwestPocket','RuinsOfAlph_NorthwestPocket')),'Complete Ruins pocket destinations before integrating cave'
         m=maps[name];fact=facts[refname];w,h,classes,values=build_plane(fact,attrs,catalog)
-        for x,y in OWNER_EDGE_NOTCHES.get(name,()):
+        notches=set(OWNER_EDGE_NOTCHES.get(name,()))
+        for x,y in notches:
             assert classes[y*w+x]==0 and values[y*w+x]==VOID_BORDER
-            assert values[y*w+x-1]==SOLID_ROCK,(name,x,y,'notch no longer borders the same shelf')
+            for xx,yy in ((x-1,y),(x+1,y),(x,y-1),(x,y+1)):
+                if 0<=xx<w and 0<=yy<h and (xx,yy) not in notches:
+                    assert values[yy*w+xx]==SOLID_ROCK,(name,x,y,'notch perimeter changed',xx,yy)
+        for x,y in notches:
             values[y*w+x]=SOLID_ROCK
         m['layout']=NEW_LAYOUTS[name]
         layout=layouts[m['layout']]
