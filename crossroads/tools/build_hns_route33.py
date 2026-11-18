@@ -81,7 +81,11 @@ def generate(write):
     slot=gfx-512;im.paste(tile,(slot%16*8,slot//16*8))
    overlay.append(tile_cache[pixels]|(6<<12))
   newmeta[(newid-512)*8:(newid-511)*8]=ground+overlay
-  newattrs[newid-512]=0
+  # Both layers are ground (grass with a paving overlay). NORMAL would put
+  # the opaque paving on the top background above Joe, hiding him as he
+  # walks across this otherwise traversable transition. COVERED puts both
+  # layers below the player without changing the map cell or its collision.
+  newattrs[newid-512]=0x1000
  b=io.BytesIO();im.save(b,format='PNG',optimize=False);write(OUT+'/tiles.png',b.getvalue())
  write(OUT+'/metatiles.bin',pack(newmeta));write(OUT+'/metatile_attributes.bin',pack(newattrs))
  symbol='HnsRoute33';mark='HNS ROUTE33 PRIVATE SECONDARY'
