@@ -54,13 +54,23 @@ static bool32 IsAzaleaKilnFootprint(s16 x, s16 y)
         && y >= AZALEA_KILN_ORIGIN_Y && y < AZALEA_KILN_ORIGIN_Y + AZALEA_KILN_HEIGHT;
 }
 
+// The public Ruins hall facade replaces twelve previously walkable cells.
+// Restrict this test to the reconstructed layout so the older map is intact.
+static bool32 IsRuinsHallFootprint(s16 x, s16 y)
+{
+    return gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_RUINS_OF_ALPH)
+        && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_RUINS_OF_ALPH)
+        && gMapHeader.mapLayoutId == LAYOUT_HGSS_RUINS_OF_ALPH
+        && x >= 13 && x < 16 && y >= 12 && y < 16;
+}
+
 static bool32 IsClearContinueTile(s16 x, s16 y)
 {
     const struct MapLayout *layout = gMapHeader.mapLayout;
     const u8 *unionMask = GetUnionCaveContinueMask();
     u16 block;
     u32 i;
-    if (x < 0 || y < 0 || x >= layout->width || y >= layout->height || IsAzaleaKilnFootprint(x, y))
+    if (x < 0 || y < 0 || x >= layout->width || y >= layout->height || IsAzaleaKilnFootprint(x, y) || IsRuinsHallFootprint(x, y))
         return FALSE;
     block = layout->map[y * layout->width + x];
     if ((block & MAPGRID_COLLISION_MASK) || (block >> 12) != 3)
@@ -188,11 +198,15 @@ bool32 Crossroads_PrepareContinue(void)
     const struct MapLayout *layout;
     s16 x, y, nx, ny, radius;
     u32 i;
-    bool32 legacyUnionCave;
+    bool32 legacyUnionCave, legacyRuins;
     if (!Johto_IsExplorationGroup(gSaveBlock1Ptr->location.mapGroup))
         return FALSE;
     Crossroads_EnsureAreaRespawn();
     legacyUnionCave = IsLegacyUnionCaveLayout(gSaveBlock1Ptr->mapLayoutId);
+    legacyRuins = gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_RUINS_OF_ALPH)
+               && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_RUINS_OF_ALPH)
+               && gSaveBlock1Ptr->mapLayoutId == LAYOUT_RUINS_OF_ALPH
+               && gMapHeader.mapLayoutId == LAYOUT_HGSS_RUINS_OF_ALPH;
     // The old B2F was a single room. In the reconstructed map its dry
     // components require Surf or a Ruins puzzle to reach the public exit;
     // a legacy save cannot be assumed to have either. Migrate it once to the
@@ -220,6 +234,7 @@ bool32 Crossroads_PrepareContinue(void)
     if (x >= 0 && y >= 0 && x < layout->width && y < layout->height
      && !(layout->map[y * layout->width + x] & MAPGRID_COLLISION_MASK)
      && !IsAzaleaKilnFootprint(x, y)
+     && !(legacyRuins && IsRuinsHallFootprint(x, y))
      && !NeedsDryLanding(x, y)
      && !NeedsLegacyUnionCaveRelocation(legacyUnionCave, x, y)
      && !NeedsUnionCaveRelocation(x, y))
