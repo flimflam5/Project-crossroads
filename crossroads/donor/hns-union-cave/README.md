@@ -175,8 +175,10 @@ blank tile pixels and palette; the corrected ROM still needs an emulator check.
 The two-tile generated wall fringe left black, rectangular voids inside solid
 rock shelves. The generator now replaces only enclosed black components whose
 entire perimeter is already the donor's blocked solid-rock top metatile 15.
-External black space, ambiguous notches, walks, water, collision bits, warps and
-save masks are retained. `validate_union_cave_rock_fill.py` tests the distinction
+Three pictured 1F boundary notches at (31,56), (31,57) and (31,59) are repaired
+individually after checking the existing blocked shelf at their west. Other
+external black space, walks, water, collision bits, warps and save masks are
+retained. `validate_union_cave_rock_fill.py` tests the distinction
 and `--installed` checks generated floors. Reference 1F, B1F and B2F show filled
 rock shelves and black outside cave walls. Boundary-connected notches remain for
 individual in-game visual review; this change is not complete visual QA.

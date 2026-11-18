@@ -26,6 +26,9 @@ VOID_BORDER=0x0459
 # The donor's common, collision-blocked cave rock top. Use it inside solid
 # formations; actual exterior void remains black.
 SOLID_ROCK=0x040f
+# Delta screenshot of the east wall (1F around 28,57): three short edge
+# notches interrupt a continuous solid shelf. Other exterior black remains.
+OWNER_EDGE_NOTCHES={'UnionCave_1F':((31,56),(31,57),(31,59))}
 
 def pack(v):return struct.pack('<%dH'%len(v),*v)
 def read16(path):
@@ -236,6 +239,10 @@ def apply(maps,tiles,sizes,layouts,write):
     for name,refname in FLOORS.items():
         assert name in maps and all(p in maps for p in ('RuinsOfAlph_SouthwestPocket','RuinsOfAlph_NorthwestPocket')),'Complete Ruins pocket destinations before integrating cave'
         m=maps[name];fact=facts[refname];w,h,classes,values=build_plane(fact,attrs,catalog)
+        for x,y in OWNER_EDGE_NOTCHES.get(name,()):
+            assert classes[y*w+x]==0 and values[y*w+x]==VOID_BORDER
+            assert values[y*w+x-1]==SOLID_ROCK,(name,x,y,'notch no longer borders the same shelf')
+            values[y*w+x]=SOLID_ROCK
         m['layout']=NEW_LAYOUTS[name]
         layout=layouts[m['layout']]
         assert (layout['width'],layout['height'])==(w,h)

@@ -66,10 +66,12 @@ with tempfile.TemporaryDirectory(prefix='black-ledger-cave-private-') as tmp:
         assert lib.emu_image(str(out/(name+'.png')).encode()),name
     def on_map(name):assert current()==name,(name,current(),pos())
 
-    # The pictured notch is (5,31) in the solid shelf, viewed from (7,28)
-    # near the ladder at (4,25). The second enclosed shelf is viewed at 22,63.
-    for title,target in [('ladder-pocket',(7,28)),('two-tile-shelf',(22,63))]:
-        go('UnionCave_1F',0 if title=='ladder-pocket' else 2);walk(target)
+    # Match screenshot compositions at the ladder pocket, 2-cell hole, and
+    # eastern edge notches. The adjacent ladder viewpoint captures camera drift.
+    views=[('ladder-pocket',(7,27),0),('ladder-pocket-south',(7,28),0),
+           ('two-tile-shelf',(23,69),2),('eastern-edge',(28,57),2)]
+    for title,target,warp_index in views:
+        go('UnionCave_1F',warp_index);walk(target)
         on_map('UnionCave_1F');assert pos()==target;frames(60);capture(title)
         record(kind='owner_viewpoint',map='UnionCave_1F',position=target,image=title+'.png')
 
