@@ -2,7 +2,7 @@
 """Normal-controller Route 33 pavement visibility and tree collision check.
 
 Requires a matching built ROM/ELF, mGBA bridge and a disposable old battery.
-The survey desk is used in game, and random encounters are suppressed only in
+This focused test is dry land only; random encounters are suppressed only in
 the running emulator. Outputs contain a copied battery and snapshots: keep
 them private. Use --expect occluded to reproduce the released defect, and
 --expect visible on the corrected candidate. Screenshots are native 240x160.
@@ -10,7 +10,6 @@ them private. Use --expect occluded to reproduce the released defect, and
 import argparse
 import hashlib
 import json
-import runpy
 import shutil
 import subprocess
 import sys
@@ -34,7 +33,18 @@ assert copy.resolve() != a.save.resolve()
 shutil.copyfile(a.save, copy)
 sys.path.insert(0, str(R / 'crossroads/tools'))
 sys.argv = ['johto_network_smoke.py', '--save', str(copy), '--library', str(a.library), '--output', str(a.output / 'tour'), '--targets', '']
-d = runpy.run_path(str(R / 'crossroads/tools/johto_network_smoke.py'))
+network = R / 'crossroads/tools/johto_network_smoke.py'
+source = network.read_text()
+# The generic tour visits the Survey desk. This Route 33 test is dry land
+# only: routing to the desk can itself require Surf on the cave network.
+start = source.index("access_before=read('sJohtoTestAccess',1)")
+end = source.index('for n in targets:', start)
+source = source[:start] + source[end:]
+assert source.count("go('OlivineCity')\nend=") == 1
+source = source.replace("go('OlivineCity')\nend=", 'end=', 1)
+d = {'__name__': '__main__', '__file__': str(network)}
+exec(compile(source, str(network), 'exec'), d)
+d['dry_only'] = True
 go, walk, read, frames, pos, current, lib, syms = (d[n] for n in ('go', 'walk', 'read', 'frames', 'pos', 'current', 'lib', 'syms'))
 go('JohtoRoute33')
 
