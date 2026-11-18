@@ -5,6 +5,7 @@
 #include "field_player_avatar.h"
 #include "fieldmap.h"
 #include "constants/maps.h"
+#include "constants/layouts.h"
 #include "constants/event_objects.h"
 #include "constants/heal_locations.h"
 #include "constants/azalea_kiln_door.h"
@@ -150,14 +151,48 @@ static bool32 NeedsUnionCaveRelocation(s16 x, s16 y)
     return !(mask[y * layout->width + x] & needed);
 }
 
+// New cave geometry has appended layout identities. The saved layout ID is
+// still the legacy ID on the first Continue, before SetCurrentMapLayout updates
+// it. This distinguishes an old coordinate which happens to be walkable in an
+// isolated pocket from a deliberate new save there without adding save fields.
+static bool32 IsLegacyUnionCaveLayout(u16 savedLayout)
+{
+    if (gSaveBlock1Ptr->location.mapGroup != MAP_GROUP(MAP_UNION_CAVE_1_F))
+        return FALSE;
+    switch (gSaveBlock1Ptr->location.mapNum)
+    {
+    case MAP_NUM(MAP_UNION_CAVE_1_F):
+        return savedLayout == LAYOUT_UNION_CAVE_1_F && gMapHeader.mapLayoutId == LAYOUT_HGSS_UNION_CAVE_1_F;
+    case MAP_NUM(MAP_UNION_CAVE_2_F):
+        return savedLayout == LAYOUT_UNION_CAVE_2_F && gMapHeader.mapLayoutId == LAYOUT_HGSS_UNION_CAVE_2_F;
+    case MAP_NUM(MAP_UNION_CAVE_3_F):
+        return savedLayout == LAYOUT_UNION_CAVE_3_F && gMapHeader.mapLayoutId == LAYOUT_HGSS_UNION_CAVE_3_F;
+    default:
+        return FALSE;
+    }
+}
+
+static bool32 NeedsLegacyUnionCaveRelocation(bool32 legacy, s16 x, s16 y)
+{
+    const struct MapLayout *layout = gMapHeader.mapLayout;
+    const u8 *mask = GetUnionCaveContinueMask();
+    if (!legacy || mask == NULL)
+        return FALSE;
+    if (x < 0 || y < 0 || x >= layout->width || y >= layout->height)
+        return TRUE;
+    return !(mask[y * layout->width + x] & UNION_CONTINUE_FALLBACK);
+}
+
 bool32 Crossroads_PrepareContinue(void)
 {
     const struct MapLayout *layout;
     s16 x, y, nx, ny, radius;
     u32 i;
+    bool32 legacyUnionCave;
     if (!Johto_IsExplorationGroup(gSaveBlock1Ptr->location.mapGroup))
         return FALSE;
     Crossroads_EnsureAreaRespawn();
+    legacyUnionCave = IsLegacyUnionCaveLayout(gSaveBlock1Ptr->mapLayoutId);
     // Old saves inside a shared-layout room must use that room's new dedicated
     // layout. Map/layout identities remain appended/stable; save format is intact.
     if (gSaveBlock1Ptr->mapLayoutId != gMapHeader.mapLayoutId)
@@ -172,6 +207,7 @@ bool32 Crossroads_PrepareContinue(void)
      && !(layout->map[y * layout->width + x] & MAPGRID_COLLISION_MASK)
      && !IsAzaleaKilnFootprint(x, y)
      && !NeedsDryLanding(x, y)
+     && !NeedsLegacyUnionCaveRelocation(legacyUnionCave, x, y)
      && !NeedsUnionCaveRelocation(x, y))
     {
         bool32 occupied = FALSE;
@@ -181,7 +217,8 @@ bool32 Crossroads_PrepareContinue(void)
         if (!occupied)
             return TRUE;
     }
-    // Only repair positions that became blocked; valid saves never move.
+    // Repair blocked positions and legacy cave saves outside the public
+    // component. Valid saves on the new layout keep their exact position.
     for (radius = 1; radius <= layout->width + layout->height; radius++)
         for (ny = y - radius; ny <= y + radius; ny++)
             for (nx = x - radius; nx <= x + radius; nx++)

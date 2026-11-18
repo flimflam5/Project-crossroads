@@ -11138,6 +11138,39 @@
       "border_filepath": "data/layouts/AzaleaTown_CharcoalKiln/border.bin",
       "blockdata_filepath": "data/layouts/AzaleaTown_CharcoalKiln/map.bin",
       "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_HGSS_UNION_CAVE_1_F",
+      "name": "HgssUnionCave_1F_Layout",
+      "width": 32,
+      "height": 96,
+      "primary_tileset": "gTileset_HgssUnionCave",
+      "secondary_tileset": "gTileset_WesternInteriors",
+      "border_filepath": "data/layouts/HgssUnionCave_1F/border.bin",
+      "blockdata_filepath": "data/layouts/HgssUnionCave_1F/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_HGSS_UNION_CAVE_2_F",
+      "name": "HgssUnionCave_2F_Layout",
+      "width": 32,
+      "height": 64,
+      "primary_tileset": "gTileset_HgssUnionCave",
+      "secondary_tileset": "gTileset_WesternInteriors",
+      "border_filepath": "data/layouts/HgssUnionCave_2F/border.bin",
+      "blockdata_filepath": "data/layouts/HgssUnionCave_2F/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_HGSS_UNION_CAVE_3_F",
+      "name": "HgssUnionCave_3F_Layout",
+      "width": 32,
+      "height": 96,
+      "primary_tileset": "gTileset_HgssUnionCave",
+      "secondary_tileset": "gTileset_WesternInteriors",
+      "border_filepath": "data/layouts/HgssUnionCave_3F/border.bin",
+      "blockdata_filepath": "data/layouts/HgssUnionCave_3F/map.bin",
+      "layout_version": "emerald"
     }
   ]
 }

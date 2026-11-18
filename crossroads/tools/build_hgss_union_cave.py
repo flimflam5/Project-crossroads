@@ -6,7 +6,7 @@ warp indices remain intact. The two HGSS 1F/B2F connector chains must target
 separate, physically reconstructed Ruins pockets. Normal playtesting, Surf,
 old-save migration, terrain art and owner visual acceptance remain mandatory.
 """
-import hashlib, io, json, struct, subprocess, sys, tempfile
+import copy, hashlib, io, json, struct, subprocess, sys, tempfile
 from PIL import Image, ImageDraw
 from collections import Counter, defaultdict, deque
 from pathlib import Path
@@ -19,11 +19,39 @@ OUT='data/tilesets/primary/hgss_union_cave'
 FLOORS={'UnionCave_1F':'MAP_UNION_CAVE_1F','UnionCave_2F':'MAP_UNION_CAVE_B1F','UnionCave_3F':'MAP_UNION_CAVE_B2F'}
 DONOR={'UnionCave_1F_hns':(48,60),'UnionCave_B1F_hns':(48,48),'UnionCave_B2F_hns':(40,50)}
 POCKETS={'UnionCave_1F':{6:('RuinsOfAlph_SouthwestPocket',0),7:('RuinsOfAlph_NorthwestPocket',0)}}
+NEW_LAYOUTS={name:'LAYOUT_HGSS_UNION_CAVE_'+str(i)+'_F' for i,name in enumerate(FLOORS,1)}
 
 def pack(v):return struct.pack('<%dH'%len(v),*v)
 def read16(path):
     b=path.read_bytes();assert len(b)%2==0;return list(struct.unpack('<%dH'%(len(b)//2),b))
 def js(path):return json.loads((R/path).read_text())
+
+def register_layouts(layout_list, layouts, write):
+    """Append new identities; leave legacy IDs and their layout files intact.
+
+    Continue uses the saved layout identity to distinguish legacy coordinates
+    from legitimate new isolated-pocket saves without another save field.
+    """
+    for name,lid in NEW_LAYOUTS.items():
+        original=layouts['LAYOUT_UNION_CAVE_'+name[-2]+'_F']
+        directory='data/layouts/Hgss'+name
+        layout=dict(original,id=lid,name='Hgss'+name+'_Layout',
+                    width=32,height=64 if name=='UnionCave_2F' else 96,
+                    primary_tileset='gTileset_HgssUnionCave',secondary_tileset='gTileset_WesternInteriors',
+                    border_filepath=directory+'/border.bin',blockdata_filepath=directory+'/map.bin')
+        if lid not in layouts:layout_list.append(layout);layouts[lid]=layout
+        else:assert layouts[lid]==layout,(lid,'Reconstructed layout changed unexpectedly')
+        write(layout['border_filepath'],(R/original['border_filepath']).read_bytes())
+
+def preview_resources(maps,layouts,write):
+    """Pack dormant layouts without installing any incomplete pocket map."""
+    preview={n:copy.deepcopy(maps[n]) for n in FLOORS}
+    preview.update({n:{'id':'MAP_PREVIEW_'+n.upper()} for n in ('RuinsOfAlph_SouthwestPocket','RuinsOfAlph_NorthwestPocket')})
+    # Existing route target IDs are needed to preserve the original warp slots.
+    for n in ('JohtoRoute32','JohtoRoute33'):preview[n]=maps[n]
+    tiles={};sizes={};apply(preview,tiles,sizes,layouts,write)
+    for name,values in tiles.items():
+        write(layouts[NEW_LAYOUTS[name]]['blockdata_filepath'],pack(values))
 
 def generate_assets(write):
     with tempfile.TemporaryDirectory(prefix='black-ledger-hgss-union-') as d:
@@ -162,7 +190,9 @@ def apply(maps,tiles,sizes,layouts,write):
     for name,refname in FLOORS.items():
         assert name in maps and all(p in maps for p in ('RuinsOfAlph_SouthwestPocket','RuinsOfAlph_NorthwestPocket')),'Complete Ruins pocket destinations before integrating cave'
         m=maps[name];fact=facts[refname];w,h,classes,values=build_plane(fact,attrs,catalog)
-        layout=layouts[m['layout']];layout.update(width=w,height=h,primary_tileset='gTileset_HgssUnionCave',secondary_tileset='gTileset_WesternInteriors')
+        m['layout']=NEW_LAYOUTS[name]
+        layout=layouts[m['layout']]
+        assert (layout['width'],layout['height'])==(w,h)
         old=m['warp_events'];assert len(old)=={'UnionCave_1F':3,'UnionCave_2F':2,'UnionCave_3F':1}[name]
         entries=sorted((e for e in plan['warps'] if e['existing_map']==name),key=lambda e:e['proposed_index'])
         assert [e['proposed_index'] for e in entries]==list(range(len(entries)))

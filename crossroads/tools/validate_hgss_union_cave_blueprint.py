@@ -18,6 +18,12 @@ old={n:json.loads(json.dumps(maps[n]['warp_events'])) for n in g.FLOORS}
 maps['RuinsOfAlph_SouthwestPocket']={'id':'MAP_RUINS_OF_ALPH_SOUTHWEST_POCKET'}
 maps['RuinsOfAlph_NorthwestPocket']={'id':'MAP_RUINS_OF_ALPH_NORTHWEST_POCKET'}
 layouts={x['id']:x for x in json.loads((R/'data/layouts/layouts.json').read_text())['layouts']}
+for name,new_id in g.NEW_LAYOUTS.items():
+    old_layout=layouts[maps[name]['layout']];new_layout=layouts[new_id]
+    assert (old_layout['width'],old_layout['height'])==(28,22),(name,'Legacy layout changed')
+    assert old_layout['blockdata_filepath']!=new_layout['blockdata_filepath']
+    assert len((R/old_layout['blockdata_filepath']).read_bytes())==28*22*2
+    assert len((R/new_layout['blockdata_filepath']).read_bytes())==new_layout['width']*new_layout['height']*2
 outputs={};tiles={};sizes={}
 def write(path,data):outputs[path]=data.encode() if isinstance(data,str) else data
 g.apply(maps,tiles,sizes,layouts,write)
@@ -27,6 +33,7 @@ for path,content in outputs.items():
 assert sizes=={'UnionCave_1F':(32,96),'UnionCave_2F':(32,64),'UnionCave_3F':(32,96)}
 for name in g.FLOORS:
     w,h=sizes[name];m=maps[name];assert len(tiles[name])==w*h
+    assert m['layout']==g.NEW_LAYOUTS[name]
     for i,event in enumerate(old[name]):
         newer=m['warp_events'][i]
         assert (newer['dest_map'],newer['dest_warp_id'])==(event['dest_map'],event['dest_warp_id'])

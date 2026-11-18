@@ -299,7 +299,12 @@ def main():
    maps[n]['coord_events'] += [copy.deepcopy(e) for e in old_gate['coord_events'] if e['script'].startswith('Hgss_') and 'GateEnter' in e['script']]
  # Both pocket maps must exist together before enabling the exact HGSS
  # 1F/B2F connector graph; never add one-sided or fabricated shortcuts.
- from build_hgss_union_cave import apply as apply_union, FLOORS as UNION_FLOORS
+ from build_hgss_union_cave import (apply as apply_union, FLOORS as UNION_FLOORS,
+                                   register_layouts as register_union_layouts,
+                                   preview_resources as preview_union_resources)
+ # Reserve appended layout IDs and graphics while leaving all old map IDs,
+ # layouts, tiles and gameplay untouched until both Ruins pockets are ready.
+ register_union_layouts(layouts['layouts'],bylayout,write)
  pocket_names=('RuinsOfAlph_SouthwestPocket','RuinsOfAlph_NorthwestPocket')
  pocket_count=sum(n in maps for n in pocket_names)
  assert pocket_count in (0,2),'Both distinct Ruins pockets are required'
@@ -311,6 +316,8 @@ def main():
   apply_union(maps,tiles,sizes,bylayout,write)
   from build_hgss_union_cave import validate_pocket_warps
   validate_pocket_warps(maps)
+ else:
+  preview_union_resources(maps,bylayout,write)
  from build_eight_gym_integration import patch_events,overlay,interior_overlay,relocate_layout
  for n,m in maps.items():
   patch_neighbor(n,m)
