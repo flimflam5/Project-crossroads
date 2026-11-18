@@ -48,6 +48,21 @@ for name,refname in g.FLOORS.items():
     for event in maps[name]['object_events']:generated[event['y']*w+event['x']]=0
     _,_,permissions=g.reference_planes(fact)
     reference=[0 if v&0x8000 else 2 if v&255==0x15 else 1 for v in permissions]
+    # Emerald's south-arrow warps only trigger when entered facing south,
+    # and the avatar arrives facing north. Ensure the approach/return tile
+    # remains ordinary unoccupied dry floor; connectivity alone would not
+    # catch an arrow placed against a wall or behind a guide/sign.
+    for event in maps[name]['warp_events']:
+        x,y=event['x'],event['y'];raw=tiles[name][y*w+x]
+        assert raw in (0x3005,0x3006),(name,'unexpected warp tile',x,y,hex(raw))
+        if raw==0x3006:
+            assert y>0 and tiles[name][(y-1)*w+x]==0x3001,(name,'blocked south-arrow approach',x,y)
+            assert (x,y-1) not in {(z['x'],z['y']) for z in maps[name]['object_events']+maps[name]['bg_events']},(name,'occupied arrow approach',x,y)
+        else:
+            # Ladders are omnidirectional but need at least one walkable way
+            # off the destination tile after arrival.
+            adjacent=[(x+dx,y+dy) for dx,dy in ((0,-1),(1,0),(0,1),(-1,0))]
+            assert any(0<=xx<w and 0<=yy<h and generated[yy*w+xx]==1 and tiles[name][yy*w+xx]==0x3001 for xx,yy in adjacent),(name,'ladder has no dry exit',x,y)
     for i,e in enumerate(fact['warps']):
         seed=(e['x'],e['z'])
         for allow_water in (False,True):
