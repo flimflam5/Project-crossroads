@@ -33,3 +33,23 @@ The present 28 × 64 route and its existing scripts/warps stay active. Do not
 reuse donor story, trainers or rewards. Build and emulator-test the exact
 installed candidate, including old saves and clipping, before offering it for
 visual QA.
+
+The recovered HGSS world-matrix reference describes Route 32 as 32 × 160,
+with gate exits at (6,5)/(6,6), Center entrance at (20,130), and Union Cave
+at (14,142). The H&S source compresses this geography to 42 × 103. The
+separate `stage_hns_route32_violet_seam.py` prototype retains the donor at
+36 × 110 after preserving seven rows of the accepted Violet seam; it does not
+match canonical dimensions or those entrances and must not be installed as a
+finished route. It does prove a graphics-packing approach: seven existing
+Violet seam metatile IDs, their referenced graphics and palette banks remain
+unchanged while 254 donor metatiles and 291 donor graphics fit in the primary
+slots. Unsupported H&S headbutt behavior is reduced to ordinary behavior in
+the staged copy only, leaving collision data intact. Its collision-only flood
+reaches gate, Center approach and cave; this does not check directional movement,
+field actions, doors or rendering.
+
+A comparison of currently valid old walking cells against that candidate found
+525 blocked, 91 elevation-1, 35 elevation-4 and 6 elevation-0 positions. Safe
+old-save migration must account for sprite and Surf state and reachable dry
+landings. The prototype is an intermediate engineering experiment, not a
+replacement for building and validating the reference-sized route.
