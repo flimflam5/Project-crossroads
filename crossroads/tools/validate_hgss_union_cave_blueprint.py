@@ -83,6 +83,14 @@ for name in g.FLOORS:
         if dst:
             target=maps[dst]['warp_events'][int(e['dest_warp_id'])]
             assert target['dest_map']==m['id'] and int(target['dest_warp_id'])==m['warp_events'].index(e)
+# Legacy B2F saves migrate to B1F's public component because B2F's own
+# fallback can require Surf to escape. Verify the dry B1F ladder lands in the
+# 1F component containing both outside exits. Runtime movement still matters.
+b1=maps['UnionCave_2F'];one=maps['UnionCave_1F'];b1w,b1h=sizes['UnionCave_2F'];onew,oneh=sizes['UnionCave_1F']
+b1warp=b1['warp_events'][0];assert (b1warp['dest_map'],b1warp['dest_warp_id'])==(one['id'],'0')
+classes=lambda n:[0 if v&0xc00 else 2 if v>>12==1 else 1 for v in tiles[n]]
+landing=one['warp_events'][0];reachable=g.flood(onew,oneh,classes('UnionCave_1F'),(landing['x'],landing['y']),False)
+assert all((one['warp_events'][i]['x'],one['warp_events'][i]['y']) in reachable for i in (1,2)), 'B1F migration cannot reach both land exits'
 # Exercise both positive and negative pocket contract: no one-sided entrance,
 # unknown destination, unpaired warp, or missing distinct chamber is accepted.
 for suffix,warp in [('Southwest',6),('Northwest',7)]:

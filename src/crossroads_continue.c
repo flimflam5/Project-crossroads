@@ -193,6 +193,20 @@ bool32 Crossroads_PrepareContinue(void)
         return FALSE;
     Crossroads_EnsureAreaRespawn();
     legacyUnionCave = IsLegacyUnionCaveLayout(gSaveBlock1Ptr->mapLayoutId);
+    // The old B2F was a single room. In the reconstructed map its dry
+    // components require Surf or a Ruins puzzle to reach the public exit;
+    // a legacy save cannot be assumed to have either. Migrate it once to the
+    // public B1F component instead of potentially trapping the player.
+    if (legacyUnionCave
+     && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_UNION_CAVE_3_F))
+    {
+        gSaveBlock1Ptr->location.mapGroup = MAP_GROUP(MAP_UNION_CAVE_2_F);
+        gSaveBlock1Ptr->location.mapNum = MAP_NUM(MAP_UNION_CAVE_2_F);
+        gSaveBlock1Ptr->location.warpId = WARP_ID_NONE;
+        gSaveBlock1Ptr->location.x = WARP_ID_NONE;
+        gSaveBlock1Ptr->location.y = WARP_ID_NONE;
+        gMapHeader = *Overworld_GetMapHeaderByGroupAndId(MAP_GROUP(MAP_UNION_CAVE_2_F), MAP_NUM(MAP_UNION_CAVE_2_F));
+    }
     // Old saves inside a shared-layout room must use that room's new dedicated
     // layout. Map/layout identities remain appended/stable; save format is intact.
     if (gSaveBlock1Ptr->mapLayoutId != gMapHeader.mapLayoutId)
