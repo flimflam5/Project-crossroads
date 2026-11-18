@@ -85,15 +85,36 @@ with tempfile.TemporaryDirectory(prefix='black-ledger-cave-private-') as tmp:
         x,y=event['x'],event['y'];approach=(x,y-1);walk(approach)
         on_map('UnionCave_1F');assert pos()==approach and d['behavior']('UnionCave_1F',x,y)==0x65
         folder=out/f'arrow-{index}-frames';folder.mkdir()
+        samples=[]
         for frame in range(36):
             frames(1,128 if frame<16 else 0)
             assert lib.emu_image(str(folder/f'{frame:03}.png').encode())
+            # Observe the engine's actual warp-arrow object rather than infer
+            # it from pixels. Struct sizes/offsets match global.fieldmap.h and
+            # sprite.h; guard IDs because objects change during map transition.
+            read,syms=d['read'],d['syms']
+            oid=read(syms['gPlayerAvatar']+5,1)
+            if oid<16:
+                obj=syms['gObjectEvents']+oid*0x24
+                sid=read(obj+0x1b,1)
+                if sid<64:
+                    flags=read(syms['gSprites']+sid*0x44+0x3e,1)
+                    samples.append(dict(frame=frame,map=current(),
+                                        behavior=read(obj+0x1e,1),
+                                        direction=(read(obj+0x18,1)>>4)&15,
+                                        visible=bool(flags&1) and not bool(flags&4)))
         frames(180);dest=d['ids'][event['dest_map']];on_map(dest)
         back=int(event['dest_warp_id']);d['warp'](back);on_map('UnionCave_1F')
         clip=out/f'arrow-{index}.mp4'
         if shutil.which('ffmpeg'):
             subprocess.run(['ffmpeg','-y','-loglevel','error','-framerate','30','-i',str(folder/'%03d.png'),'-pix_fmt','yuv420p',str(clip)],check=True)
-        record(kind='exit_roundtrip',source_index=index,threshold=[x,y],destination=dest,frames=folder.name,clip=clip.name if clip.exists() else None)
+        visible=[sample for sample in samples if sample['visible'] and sample['map']=='UnionCave_1F']
+        for sample in visible:
+            assert sample['behavior']==0x65 and sample['direction']==1,(index,sample,'unexpected warp arrow')
+        record(kind='exit_roundtrip',source_index=index,threshold=[x,y],destination=dest,
+               frames=folder.name,clip=clip.name if clip.exists() else None,
+               visible_source_frames=[sample['frame'] for sample in visible],
+               note='Zero visible frames means the animation needs manual review; it is not a pass for arrow visibility.')
 
     # Exercise one actual Survey Surf entry from reachable shore. The helper
     # opens the in-game field-action prompt with buttons; no move is granted.
