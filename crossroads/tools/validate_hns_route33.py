@@ -46,7 +46,12 @@ road=Image.open(c/'tiles.png').crop((70%16*8,70//16*8,70%16*8+8,70//16*8+8)).tob
 ground=outmeta[(mmap[9]-512)*8:(mmap[9]-512)*8+4]
 for row in range(3):
  mi=transition[(7,15+row)]-512; words4=outmeta[mi*8:mi*8+8]
- assert words4[:4]==ground and outattr[mi]==0
+ # The paving is ground, not a roof/canopy: both visual layers must draw
+ # behind Joe. Pin behavior and layer separately so neither collision nor
+ # foreground priority can regress while preserving the pixel-level checks.
+ assert words4[:4]==ground
+ assert outattr[mi]&0x00ff==0, ('Paving transition behavior',row,hex(outattr[mi]))
+ assert (outattr[mi]&0xf000)>>12==1, ('Paving transition must be COVERED',row,hex(outattr[mi]))
  for y in range(16):
   limit=(8+y//2 if row==0 else 15 if row==1 else 15-y//2)
   for x in range(16):
