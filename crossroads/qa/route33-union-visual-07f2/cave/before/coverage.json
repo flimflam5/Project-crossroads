@@ -1,0 +1,231 @@
+{
+  "rom_sha256": "a320fc5947e7b207e5d496008e3593ef68a403fd5dbba7e73fd2830ccc4539d5",
+  "elf_sha256": "b5126e02d3f834f7d85e98d2dda4284fbe842c2d1d51eac02e7099922527cea6",
+  "cases": [
+    {
+      "kind": "owner_viewpoint",
+      "map": "UnionCave_1F",
+      "position": [
+        7,
+        27
+      ],
+      "image": "ladder-pocket.png"
+    },
+    {
+      "kind": "owner_viewpoint",
+      "map": "UnionCave_1F",
+      "position": [
+        7,
+        28
+      ],
+      "image": "ladder-pocket-south.png"
+    },
+    {
+      "kind": "owner_viewpoint",
+      "map": "UnionCave_1F",
+      "position": [
+        23,
+        69
+      ],
+      "image": "two-tile-shelf.png"
+    },
+    {
+      "kind": "owner_viewpoint",
+      "map": "UnionCave_1F",
+      "position": [
+        28,
+        57
+      ],
+      "image": "eastern-edge.png"
+    },
+    {
+      "kind": "ladder_roundtrip",
+      "source_index": 0
+    },
+    {
+      "kind": "exit_roundtrip",
+      "source_index": 1,
+      "threshold": [
+        27,
+        43
+      ],
+      "destination": "JohtoRoute32",
+      "visible_source_frames": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35
+      ],
+      "note": "Zero visible frames means the animation needs manual review; it is not a pass for arrow visibility."
+    },
+    {
+      "kind": "exit_roundtrip",
+      "source_index": 2,
+      "threshold": [
+        27,
+        93
+      ],
+      "destination": "JohtoRoute33",
+      "visible_source_frames": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35
+      ],
+      "note": "Zero visible frames means the animation needs manual review; it is not a pass for arrow visibility."
+    },
+    {
+      "kind": "exit_roundtrip",
+      "source_index": 6,
+      "threshold": [
+        4,
+        4
+      ],
+      "destination": "RuinsOfAlph_SouthwestPocket",
+      "visible_source_frames": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35
+      ],
+      "note": "Zero visible frames means the animation needs manual review; it is not a pass for arrow visibility."
+    },
+    {
+      "kind": "exit_roundtrip",
+      "source_index": 7,
+      "threshold": [
+        26,
+        6
+      ],
+      "destination": "RuinsOfAlph_NorthwestPocket",
+      "visible_source_frames": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35
+      ],
+      "note": "Zero visible frames means the animation needs manual review; it is not a pass for arrow visibility."
+    },
+    {
+      "kind": "surf_entry",
+      "shore": [
+        9,
+        43
+      ],
+      "water": [
+        9,
+        44
+      ]
+    }
+  ],
+  "setup": "copied battery; Survey enabled in-game; encounters disabled only in emulator RAM",
+  "result": "PASS"
+}

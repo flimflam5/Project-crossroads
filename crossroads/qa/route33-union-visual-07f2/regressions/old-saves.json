@@ -1,0 +1,17 @@
+{
+  "rom_sha256": "07f2a10ca19e3eb585c1114ce656caa2475f4de487a4d416dc5bef461a2627a5",
+  "returncodes": {
+    "UnionCave_1F-blocked": 0,
+    "UnionCave_1F-isolated": 0,
+    "UnionCave_1F-ladder": 0,
+    "UnionCave_2F-blocked": 0,
+    "UnionCave_2F-isolated": 0,
+    "UnionCave_2F-ladder": 0,
+    "UnionCave_3F-blocked": 0,
+    "UnionCave_3F-water": 0,
+    "UnionCave_3F-isolated": 0,
+    "UnionCave_3F-ladder": 0,
+    "RuinsOfAlph-footprint": 0,
+    "RuinsOfAlph-control": 0
+  }
+}
