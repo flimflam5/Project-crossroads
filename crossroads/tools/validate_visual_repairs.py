@@ -19,6 +19,13 @@ if (R/'crossroads/hgss/authoring/OlivineCity.json').exists():
  from validate_hgss_olivine import validate as validate_olivine
  from hgss_olivine_validation import validate_olivine_graph
  validate_olivine();reconstructed|=validate_olivine_graph()|{'OlivineCity','JohtoRoute39','JohtoRoute40'} # Exact source/append-only/bounded-buffer checks run above; other old hashes remain required.
+if hgss:
+ # Later HGSS Union Cave, Ruins of Alph and Route 33 reconstructions. validate()
+ # above already runs validate_hgss_union_cave_installed (pinned anchors and
+ # thresholds), test_hgss_ruins_live_structure (IDs, reciprocal targets, doors)
+ # and validate_hns_route33 (donor data, events, cave and town seams).
+ from validate_hgss_union_cave_installed import validate as validate_union
+ reconstructed|=validate_union()|{'RuinsOfAlph','JohtoRoute33'}
 for p,h in report['unchanged_contracts'].items():
  if p not in replaced:assert sha(p)==h,('Changed preserved contract',p)
 layouts={l['id']:l for l in json.loads((R/'data/layouts/layouts.json').read_text())['layouts']};changed=[]

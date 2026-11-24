@@ -138,6 +138,9 @@ def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--built',action='store_true',help='Verify actual ROM group/header/OnWarp+OnReturn pointers, table and native turn bytes using ELF symbols')
     p.add_argument('--report',type=Path)
+    p.add_argument('--qa10-scope',action='store_true',help='Also require that no game input except the six QA10 scripts differs from B4. '
+        'This reproduces the QA10 delivery claim; later checkpoints (Kiln, Route 33, Union Cave, Ruins) intentionally change other inputs '
+        'and carry their own preservation validators.')
     a=p.parse_args()
     assert subprocess.check_output(['git','rev-parse',BASE+'^{commit}'],cwd=R,text=True).strip()==BASE, 'Fetch the immutable full B4 commit before preservation checks'
     simulations=validate_callbacks()
@@ -148,7 +151,12 @@ def main():
     untracked=subprocess.check_output(['git','ls-files','--others','--exclude-standard','--']+paths,cwd=R,text=True).splitlines()
     assert not untracked,('Untracked game inputs escape the preservation baseline',untracked)
     allowed={f'data/maps/{n}/scripts.inc'for n in EXPECTED}
-    assert changed==allowed,('Changes escaped the6 native scripts',sorted(changed-allowed),sorted(allowed-changed))
+    if a.qa10_scope:
+        assert changed==allowed,('Changes escaped the6 native scripts',sorted(changed-allowed),sorted(allowed-changed))
+    else:
+        # validate_callbacks() already proves each hooked script equals B4 outside
+        # its scoped block; here only require that those six scripts did change.
+        assert allowed<=changed,('QA10 facing hooks missing',sorted(allowed-changed))
     manifest=json.loads((R/'crossroads/hgss/doorways-qa10.json').read_text())
     intended=json.loads((R/'crossroads/hgss/qa10/doorway-intended-facing-b4.json').read_text())
     groups={g['label']:g for g in manifest['groups']}
@@ -162,12 +170,12 @@ def main():
     assert sum(len(v['segments'])for g in groups.values()for k,v in g.items()if k in['outside','inside'])==173
     report=dict(source_preservation_baseline=BASE,source_coordinate_cases=simulations,
         exact_native_scripts=6,exact_landings=25,independent_facing_groups=45,
-        all_other_game_inputs_unchanged=True)
+        all_other_game_inputs_unchanged=bool(a.qa10_scope))
     if a.built:report['built']=validate_built()
     if a.report:
         a.report.parent.mkdir(parents=True,exist_ok=True)
         a.report.write_text(json.dumps(report,indent=2)+'\n')
-    print('Independent native arrival-facing source checks:6 maps,25 exactcells,',simulations,'coordinate cases; allothergameinputs unchanged;45groups/173segments requireintendedfacing;', 'actual6ROM callbacks verified;'if a.built else'compiled callbacks not checked;', 'PASS')
+    print('Independent native arrival-facing source checks:6 maps,25 exactcells,',simulations,'coordinate cases;', 'allothergameinputs unchanged;' if a.qa10_scope else 'later checkpoints outside QA10 scope;', '45groups/173segments requireintendedfacing;', 'actual6ROM callbacks verified;'if a.built else'compiled callbacks not checked;', 'PASS')
 
 
 if __name__=='__main__':main()
