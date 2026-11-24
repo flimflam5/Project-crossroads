@@ -1,0 +1,106 @@
+{
+  "rom_sha256": "07f2a10ca19e3eb585c1114ce656caa2475f4de487a4d416dc5bef461a2627a5",
+  "expectation": "visible",
+  "cases": [
+    {
+      "case": "pavement_visibility",
+      "position": [
+        7,
+        15
+      ],
+      "visible": 186,
+      "expected": 186,
+      "screenshot": "pavement-15-00.png"
+    },
+    {
+      "case": "pavement_visibility",
+      "position": [
+        7,
+        16
+      ],
+      "visible": 187,
+      "expected": 187,
+      "screenshot": "pavement-16-02.png"
+    },
+    {
+      "case": "pavement_visibility",
+      "position": [
+        7,
+        17
+      ],
+      "visible": 192,
+      "expected": 192,
+      "screenshot": "pavement-17-00.png"
+    },
+    {
+      "case": "pavement_approach",
+      "approach": [
+        6,
+        16
+      ],
+      "arrival": [
+        7,
+        16
+      ]
+    },
+    {
+      "case": "pavement_approach",
+      "approach": [
+        8,
+        16
+      ],
+      "arrival": [
+        7,
+        16
+      ]
+    },
+    {
+      "case": "pavement_approach",
+      "approach": [
+        7,
+        15
+      ],
+      "arrival": [
+        7,
+        16
+      ]
+    },
+    {
+      "case": "pavement_approach",
+      "approach": [
+        7,
+        17
+      ],
+      "arrival": [
+        7,
+        16
+      ]
+    },
+    {
+      "case": "tree_collision",
+      "tree": [
+        23,
+        26
+      ],
+      "accessible_sides": [
+        [
+          0,
+          -1
+        ]
+      ]
+    },
+    {
+      "case": "tree_collision",
+      "tree": [
+        24,
+        26
+      ],
+      "accessible_sides": [
+        [
+          0,
+          -1
+        ]
+      ]
+    }
+  ]
+}

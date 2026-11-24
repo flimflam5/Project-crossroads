@@ -1,0 +1,13 @@
+{
+  "rom_sha256": "07f2a10ca19e3eb585c1114ce656caa2475f4de487a4d416dc5bef461a2627a5",
+  "elf_sha256": "ce32b5ba4d016bbb62054c4f97ac40630d461f58a693b4ae96f168eb7c6de92f",
+  "returncodes": {
+    "title": 0,
+    "starters": 0,
+    "fly": 0,
+    "field": 0,
+    "battle": 0
+  },
+  "private_original_save_unchanged": true,
+  "limitations": "scripted emulator checks; starter opening skipped with RAM fixture; QA kit, Survey and temporary gear used; no Delta or visual acceptance"
+}

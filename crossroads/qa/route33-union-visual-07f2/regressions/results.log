@@ -1,0 +1,24 @@
+Exact-ROM scripted regression results
+old-save UnionCave_1F-blocked: PASS
+old-save UnionCave_1F-isolated: PASS
+old-save UnionCave_1F-ladder: PASS
+old-save UnionCave_2F-blocked: PASS
+old-save UnionCave_2F-isolated: PASS
+old-save UnionCave_2F-ladder: PASS
+old-save UnionCave_3F-blocked: PASS
+old-save UnionCave_3F-water: PASS
+old-save UnionCave_3F-isolated: PASS
+old-save UnionCave_3F-ladder: PASS
+old-save RuinsOfAlph-footprint: PASS
+old-save RuinsOfAlph-control: PASS
+crossgame title: PASS
+crossgame starters: PASS
+crossgame fly: PASS
+crossgame field: PASS
+crossgame battle: PASS
+tour collision: 12 PASS
+tour puzzle_cancel: 2 PASS
+tour puzzle_solve: 2 PASS
+tour reciprocal_warp: 15 PASS
+tour surf_save_continue: 1 PASS
+dry Route 33–Union Cave–Route 32 return journey: PASS

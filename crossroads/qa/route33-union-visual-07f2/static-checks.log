@@ -1,0 +1,134 @@
+$ python3 crossroads/tools/build_johto_network.py --through west --check
+Heart & Soul Charcoal Kiln: 37 donor metatiles, 79 donor tiles, 5 palettes; 9 original kiln cells added.
+Route 33 pink/black Apricorn sprites: upstream tree + original fruit pixels; no item/flag behavior.
+HGSS Union Cave: 3 reference-shaped floors, six old warp indices and two separate connector chains; runtime and owner QA required.
+Johto atlas: 53 labeled nodes, player positions for 184 maps
+Gate-only primary buffer: 79 graphics; original road/farm secondary resources retained
+HGSS-directed Ecruteak city generated; owner visual acceptance remains separate.
+Private Bell wall lamps/Burned collapsed opening: 4 new graphics; 396 metatiles; shared temple resources untouched
+Projected 13 canonical tower floors; missing10F/roof appended. Visual/runtime review required.
+Canonical house/theater rooms generated; source rewards/story omitted; runtime/visual review required.
+HGSS service footprints/Gym bridge generated; no DS online/story/badge implementation claimed.
+HGSS west/east gatehouses and road-width reciprocal portals registered; no existing IDs removed.
+Station/corridor/Bellchime Trail registered; existing Bell floor IDs/stairs retained. Full visual reference review pending.
+Canonical Violet ground/doors and twelve interior/gate/floor maps generated; runtime/visual QA required.
+HGSS64x64 Olivine; canonical buildings + four documented original additions; owner review pending
+Eight owner Gym exteriors fitted into private city resources; all legacy IDs retained.
+Johto cluster west : 184 maps registered; 7 new Centers; IDs preserved
+
+exit=0
+
+$ python3 crossroads/tools/validate_union_cave_rock_fill.py --installed
+PASS cave rock fills, external void, collision and warp preservation; emulator visual QA pending
+
+exit=0
+
+$ python3 crossroads/tools/validate_hns_route33.py
+PASS donor metatile remap/attributes/pixels, preserved 7-column seam and boundary resources, cave+west graph, 280-cell static path and 530 old collision-free cells; 344 require nearest-clear relocation.
+Prototype only: no actual build, play, clipping/priority, reload or visual approval established.
+
+exit=0
+
+$ python3 crossroads/tools/validate_hgss_union_cave_installed.py
+Installed Union Cave: append-only layouts, all HGSS anchors and exact dry/Surf-permissive reference components PASS; emulator testing pending.
+
+exit=0
+
+$ python3 crossroads/tools/validate_hgss_union_cave_connections.py
+PASS: pinned HGSS anchors, 18 proposed indexed exits, 6 preserved old indices and distinct 1F/B2F connector components. Static graph only; actual Surf/visual/emulator untested.
+
+exit=0
+
+$ python3 crossroads/tools/validate_union_cave_continue_masks.py
+UnionCave_1F: 32x96, dry=611, Surf=285, fallback=572
+UnionCave_2F: 32x64, dry=342, Surf=176, fallback=88
+UnionCave_3F: 32x96, dry=114, Surf=601, fallback=42
+PASS: masks match reference geometry, exclude thresholds, and place fallbacks in the public dry component.
+Static permission modeling only; generated-map event checks run only on installed floors. Verify rendering, components, walking and Surf saves in emulator.
+
+exit=0
+
+$ python3 crossroads/tools/validate_hns_sliding_puzzle.py
+PASS: pinned puzzle assets, preserved 624 special ordinals, two chamber calls and no flags/rewards. Emulator and full link remain unverified.
+
+exit=0
+
+$ python3 crossroads/tools/validate_johto_network.py
+Positive original-native Bell lamp fixtures and collapsed Burned shaft; exact prior raw outside 164 cells, all physics/events/IDs/old graphics retained: PASS 9 lamps, 155 shaft cells
+HGSS tower contracts, canonical stair/pad graph, directed jumps and escape from every public tile: PASS 2430 tiles
+Canonical Ecruteak houses/theater, preserved actors/IDs, furnished room access, performance lanes and every-tile escape: PASS 3
+HGSS Center/Mart/Gym reference paths, accepted service/practice scripts, safe floor and scripted fall coverage: PASS 551 public tiles
+Canonical west/east gate endpoints, all six aliases per road, temporary coordinate portals and safe floor: PASS
+Unrelated Violet services: exact immutable map/layout/actor/warp/room/border preservation PASS
+Canonical Violet door/stair coordinates, retained map/save IDs, exact neighbor changes and every-tile escape: PASS 3066 tiles in 13 maps
+All four accepted Black Ledger exterior facades: exact immutable per-layer RGB555/attributes/collision/elevation PASS 73 metatiles
+HGSS Olivine stable IDs/heals, canonical buildings, preserved additions, per-segment reciprocity, dry returns avoiding active doorways, scripts and Emerald inclusion: PASS
+HGSS Olivine/Aqua exact threshold graph, paired lift, source window, all12ship components and every public tile escape: PASS 3968 tiles 30 interior maps
+Installed Union Cave: append-only layouts, all HGSS anchors and exact dry/Surf-permissive reference components PASS; emulator testing pending.
+Johto valid IDs, whole tile/warp/border graph, interaction access, services and safe respawns: PASS {'maps': 184, 'reachable_tiles': 77173, 'warps': 530, 'connections': 66, 'centers': 10, 'mode': 'structural survey-water-enabled graph; not emulator playtesting'}
+Explicit QA kit: one guarded level100 flyer, shoes only, no badge/starter changes: PASS
+
+exit=0
+
+$ python3 crossroads/tools/validate_opening.py
+Project Crossroads narrative and staged script checks: PASS
+Linked starter rescue, duplication guard and success-only persistence: PASS
+Only live starter grant is in Olivine; legacy room is a travel bridge: PASS
+
+exit=0
+
+$ python3 crossroads/tools/validate_olivine.py
+All four accepted Black Ledger exterior facades: exact immutable per-layer RGB555/attributes/collision/elevation PASS 73 metatiles
+HGSS Olivine stable IDs/heals, canonical buildings, preserved additions, per-segment reciprocity, dry returns avoiding active doorways, scripts and Emerald inclusion: PASS
+
+exit=0
+
+$ python3 crossroads/tools/build_olivine_layout.py --check
+Olivine layout reproducibility: PASS
+
+exit=0
+
+$ python3 crossroads/tools/validate_hgss_ecruteak.py
+Generated IDs, reciprocal targets, door behavior, elevations and approaches pass. Emulator playtest and owner QA remain pending.
+PASS donor metatile remap/attributes/pixels, preserved 7-column seam and boundary resources, cave+west graph, 280-cell static path and 530 old collision-free cells; 344 require nearest-clear relocation.
+Prototype only: no actual build, play, clipping/priority, reload or visual approval established.
+Installed Union Cave: append-only layouts, all HGSS anchors and exact dry/Surf-permissive reference components PASS; emulator testing pending.
+Eight owner Gym assets, unchanged legacy pixels/events and reciprocal doors: PASS 1077 legacy metatiles; Azalea kiln has separately validated donor pixels/collision and old-cell escape
+Positive original-native Bell lamp fixtures and collapsed Burned shaft; exact prior raw outside 164 cells, all physics/events/IDs/old graphics retained: PASS 9 lamps, 155 shaft cells
+HGSS tower contracts, canonical stair/pad graph, directed jumps and escape from every public tile: PASS 2430 tiles
+Canonical Ecruteak houses/theater, preserved actors/IDs, furnished room access, performance lanes and every-tile escape: PASS 3
+HGSS Center/Mart/Gym reference paths, accepted service/practice scripts, safe floor and scripted fall coverage: PASS 551 public tiles
+Canonical west/east gate endpoints, all six aliases per road, temporary coordinate portals and safe floor: PASS
+Unrelated Violet services: exact immutable map/layout/actor/warp/room/border preservation PASS
+Canonical Violet door/stair coordinates, retained map/save IDs, exact neighbor changes and every-tile escape: PASS 3066 tiles in 13 maps
+All four accepted Black Ledger exterior facades: exact immutable per-layer RGB555/attributes/collision/elevation PASS 73 metatiles
+HGSS Olivine stable IDs/heals, canonical buildings, preserved additions, per-segment reciprocity, dry returns avoiding active doorways, scripts and Emerald inclusion: PASS
+HGSS Olivine/Aqua exact threshold graph, paired lift, source window, all12ship components and every public tile escape: PASS 3968 tiles 30 interior maps
+HGSS Ecruteak stable IDs, reciprocal target positions, safe entire ground component, preserved animation slots and compatible buffers: PASS. Reference/visual completion is NOT asserted.
+
+exit=0
+
+$ python3 crossroads/tools/validate_hgss_violet.py
+Unrelated Violet services: exact immutable map/layout/actor/warp/room/border preservation PASS
+Canonical Violet door/stair coordinates, retained map/save IDs, exact neighbor changes and every-tile escape: PASS 3066 tiles in 13 maps
+
+exit=0
+
+$ python3 crossroads/tools/validate_eight_gyms.py
+Eight owner Gym assets, unchanged legacy pixels/events and reciprocal doors: PASS 1077 legacy metatiles; Azalea kiln has separately validated donor pixels/collision and old-cell escape
+
+exit=0
+
+$ python3 crossroads/tools/validate_joe_assets.py
+Joe source frames, transparency, shared palette, exact repack, 4-direction animations and playable wiring: PASS
+Joe spin animations preserve finite completion and 4-direction rotation: PASS
+Joe palette appended without shifting existing ordinals; trainer assets and references: PASS
+
+exit=0
+
+$ python3 crossroads/tools/validate_route33_apricorns.py
+Route 33 pink/black Apricorn sprites: upstream tree + original fruit pixels; no item/flag behavior.
+PASS pink/black original-fruit art, unshifted reserved IDs, shared palette and no-reward tree events; runtime VRAM and Save/Continue pending.
+
+exit=0
+
