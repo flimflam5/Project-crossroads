@@ -57,6 +57,20 @@ def main():
  def ruins_read(path):return ruins_cache[path] if path in ruins_cache else (R/path).read_text()
  if ruins_selected:
   ruins_maps,ruins_tiles,ruins_layouts,ruins_borders,ruins_scripts=stage_ruins(ruins_write,ruins_read)
+  from stage_hgss_ruins_hidden_graph import stage as stage_hidden_graph, NAMES as HIDDEN_NAMES, FIRST as HIDDEN_FIRST
+  hidden_selected=[n for n in HIDDEN_NAMES if n in names]
+  assert len(hidden_selected) in (0,len(HIDDEN_NAMES)),'All four hidden targets must be present together'
+  if hidden_selected:
+   first_rooms={m['id']:m for m in ruins_maps.values() if m['id'] in HIDDEN_FIRST}
+   hidden_maps,hidden_tiles,hidden_layouts,hidden_borders,hidden_scripts,first_proposals,gates=stage_hidden_graph(ruins_write,first_rooms,ruins_read)
+   from stage_hgss_ruins_gate_events import stage as stage_gate_events
+   by_first_scripts={m['id']:ruins_scripts[n] for n,m in ruins_maps.items() if m['id'] in HIDDEN_FIRST}
+   opened_maps,opened_scripts=stage_gate_events(first_proposals,by_first_scripts,40)
+   for n,m in tuple(ruins_maps.items()):
+    if m['id'] in opened_maps:ruins_maps[n]=opened_maps[m['id']];ruins_scripts[n]=opened_scripts[m['id']]
+   ruins_maps.update(hidden_maps);ruins_tiles.update(hidden_tiles);ruins_layouts.update(hidden_layouts)
+   ruins_borders.update(hidden_borders);ruins_scripts.update(hidden_scripts)
+ else:hidden_selected=[]
  source=struct.unpack('<2400H',(R/'data/layouts/SlateportCity/map.bin').read_bytes())
  oldbytes={n:(R/bylayout[m['layout']]['blockdata_filepath']).read_bytes() for n,m in existing.items()}
  def obj(x,y,label,gfx='MAN_1',local=None):
@@ -109,7 +123,7 @@ def main():
   l=bylayout[m['layout']];sizes[n]=(l['width'],l['height']);tiles[n]=list(struct.unpack('<'+str(l['width']*l['height'])+'H',oldbytes[n]));sections[n]=m['region_map_section']
  for p in selected:
   n=p['name'];parent=p.get('parent');kind=p['kind'];c=p['cluster'];section=parent or n
-  if n in ruins_selected:
+  if n in ruins_selected or n in hidden_selected:
    m=ruins_maps[n];l=ruins_layouts[m['layout']];maps[n]=m;tiles[n]=ruins_tiles[n];sizes[n]=(l['width'],l['height'])
    if l['id'] not in bylayout:layouts['layouts'].append(l);bylayout[l['id']]=l
    else:assert bylayout[l['id']]==l,(n,'Ruins layout identity changed')
@@ -424,7 +438,7 @@ def main():
   p['map_group']=75 if linear<127 else 76;p['map_num']=linear if linear<127 else linear-127
   if p['name'] in maps:
    n=p['name'];m=maps[n];linear=names.index(n);p['map_group']=75 if linear<127 else 76;p['map_num']=linear if linear<127 else linear-127;p.update(display_name=n.replace('_Gym','_CommunityHall') if n in ['NewBarkTown_Gym','CherrygroveCity_Gym'] else n,role='community hall (stable internal slot suffix Gym)' if n in ['NewBarkTown_Gym','CherrygroveCity_Gym'] else p['kind'],status='reference-runtime-review-pending' if n in VIOLET_OWNED else 'implemented',id=m['id'],layout=m['layout'],connections=m['connections'],entrances=m['warp_events']);p.setdefault('coverage','structural/build/runtime checks recorded separately; no owner QA yet')
-   if n in ruins_selected:p['status']='draft-unverified';p['coverage']='Draft donor geometry; gameplay, hidden rooms, corridor art and owner visual QA pending.'
+   if n in ruins_selected or n in hidden_selected:p['status']='draft-unverified';p['coverage']='Prototype: temporary no-flag gates, movement, old-save compatibility and owner visual QA pending.'
  for p in manifest['existing']:
   m=maps[p['name']];p.update(connections=m['connections'],entrances=m['warp_events'])
  manifest['dungeons']=DUNGEONS;manifest['border_topology']=EDGES

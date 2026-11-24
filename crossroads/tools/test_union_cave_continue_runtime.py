@@ -29,10 +29,12 @@ for group_id, group_name in enumerate(groups['group_order']):
         data = json.loads((R / 'data/maps' / name / 'map.json').read_text())
         map_ids[data['id']] = (group_id << 8) | map_id
 required_maps = ['MAP_UNION_CAVE_1_F','MAP_UNION_CAVE_2_F','MAP_UNION_CAVE_3_F',
-                 'MAP_AZALEA_TOWN','MAP_ECRUTEAK_CITY','MAP_VIOLET_CITY','MAP_OLIVINE_CITY','MAP_RUINS_OF_ALPH','MAP_JOHTO_ROUTE33']
+                 'MAP_AZALEA_TOWN','MAP_ECRUTEAK_CITY','MAP_VIOLET_CITY','MAP_OLIVINE_CITY','MAP_RUINS_OF_ALPH','MAP_JOHTO_ROUTE33',
+                 'MAP_RUINS_OF_ALPH_UNDERGROUND_HALL']
 required_layouts = ['LAYOUT_UNION_CAVE_1_F','LAYOUT_UNION_CAVE_2_F','LAYOUT_UNION_CAVE_3_F',
                     'LAYOUT_HGSS_UNION_CAVE_1_F','LAYOUT_HGSS_UNION_CAVE_2_F','LAYOUT_HGSS_UNION_CAVE_3_F',
-                    'LAYOUT_RUINS_OF_ALPH','LAYOUT_HGSS_RUINS_OF_ALPH']
+                    'LAYOUT_RUINS_OF_ALPH','LAYOUT_HGSS_RUINS_OF_ALPH',
+                    'LAYOUT_RUINS_OF_ALPH_UNDERGROUND_HALL','LAYOUT_HGSS_RUINS_HALL_EXPANDED']
 defines = ''.join(f'#define {n} {map_ids[n]}\n' for n in required_maps)
 defines += ''.join(f'#define {n} {layout_ids[n]}\n' for n in required_layouts)
 prelude = r'''
@@ -90,7 +92,7 @@ static int setLayoutCalls, healCalls;
 static u32 mockBehavior;
 static u32 GetAttributeByMetatileIdAndMapLayout(u16 id, u8 type, int isFrlg) { (void)id; (void)type; (void)isFrlg; return mockBehavior; }
 static int MetatileBehavior_IsSurfableWaterOrUnderwater(u8 behavior) { return behavior==0x10 || behavior==0x15; }
-static int Johto_IsExplorationGroup(int group) { return group == MAP_GROUP(MAP_UNION_CAVE_1_F); }
+static int Johto_IsExplorationGroup(int group) { return group == MAP_GROUP(MAP_UNION_CAVE_1_F) || group == MAP_GROUP(MAP_RUINS_OF_ALPH_UNDERGROUND_HALL); }
 static void SetLastHealLocationWarp(int value) { (void)value; healCalls++; }
 static void SetCurrentMapLayout(u16 id) { gSaveBlock1Ptr->mapLayoutId = id; setLayoutCalls++; }
 static void CpuFill16(int value, void *dst, size_t size) { memset(dst, value, size); }
@@ -228,6 +230,80 @@ static void runRuins(void) {
     assert(Crossroads_PrepareContinue()); assert(s1.pos.x==14 && s1.pos.y==15); assert(setLayoutCalls==1); unchangedData();
     puts("Ruins: 12 legacy facade cells + 4 unchanged/new/wrong-map controls PASS");
 }
+// Exercise the actual linked Continue function with generated expanded Hall
+// geometry/mask and the immutable legacy floor, not only mock coordinates.
+static u16 oldHall[29*32];
+static void initHall(int savedLayout) {
+    FILE *f;
+    init(MAP_UNION_CAVE_1_F,LAYOUT_HGSS_UNION_CAVE_1_F,LAYOUT_HGSS_UNION_CAVE_1_F,96);
+    f=fopen("data/layouts/HgssRuinsHallExpanded/map.bin","rb"); assert(f);
+    assert(fread(cells,2,32*64,f)==32*64); fclose(f);
+    s1.location.mapGroup=MAP_GROUP(MAP_RUINS_OF_ALPH_UNDERGROUND_HALL);
+    s1.location.mapNum=MAP_NUM(MAP_RUINS_OF_ALPH_UNDERGROUND_HALL);
+    s1.location.warpId=-1; s1.location.x=7; s1.location.y=8;
+    s1.mapLayoutId=savedLayout; layout.width=32; layout.height=64; layout.map=cells;
+    gMapHeader.mapLayout=&layout; gMapHeader.mapLayoutId=LAYOUT_HGSS_RUINS_HALL_EXPANDED;
+    HALL_EVENT_SETUP
+    s1.lastHealLocation=(struct WarpData){4,5,WARP_ID_NONE,7,9};
+}
+static void assertHallState(void) {
+    assert(s1.location.mapGroup==MAP_GROUP(MAP_RUINS_OF_ALPH_UNDERGROUND_HALL));
+    assert(s1.location.mapNum==MAP_NUM(MAP_RUINS_OF_ALPH_UNDERGROUND_HALL));
+    assert(s1.location.warpId==-1 && s1.location.x==7 && s1.location.y==8);
+    assert(s1.lastHealLocation.mapGroup==4 && s1.lastHealLocation.mapNum==5);
+    assert(s1.lastHealLocation.warpId==WARP_ID_NONE && s1.lastHealLocation.x==7 && s1.lastHealLocation.y==9);
+    assert(s1.mapLayoutId==LAYOUT_HGSS_RUINS_HALL_EXPANDED); unchangedData();
+}
+static void runHall(void) {
+    FILE *f=fopen("HALL_OLD_BIN","rb"); assert(f); assert(fread(oldHall,2,29*32,f)==29*32); fclose(f);
+    int oldOpen=0, oldSafe=0, oldRelocated=0;
+    for(int y=0;y<32;y++) for(int x=0;x<29;x++) {
+        if((oldHall[y*29+x]&MAPGRID_COLLISION_MASK) || oldHall[y*29+x]>>12!=3) continue;
+        initHall(LAYOUT_RUINS_OF_ALPH_UNDERGROUND_HALL); atXY(x,y);
+        int safe=sRuinsExpandedHallContinueMask[y*32+x]&4;
+        assert(Crossroads_PrepareContinue()); oldOpen++;
+        int to=s1.pos.y*32+s1.pos.x;
+        assert(sRuinsExpandedHallContinueMask[to]&4);
+        if(safe) {assert(s1.pos.x==x && s1.pos.y==y); oldSafe++;}
+        else {assert(s1.pos.x!=x || s1.pos.y!=y); oldRelocated++;}
+        assert(s1.objectEvents[0].currentCoords.x==s1.pos.x+MAP_OFFSET);
+        assert(s1.objectEvents[0].currentCoords.y==s1.pos.y+MAP_OFFSET);
+        assert(gObjectEvents[0].currentCoords.x==s1.pos.x+MAP_OFFSET);
+        assert(gObjectEvents[0].currentCoords.y==s1.pos.y+MAP_OFFSET);
+        assert(setLayoutCalls==1); assertHallState();
+    }
+    assert(oldOpen && oldSafe && oldRelocated);
+    int safe=-1; for(int i=0;i<32*64;i++) if(sRuinsExpandedHallContinueMask[i]&4) {safe=i;break;}
+    assert(safe>=0);
+    initHall(LAYOUT_HGSS_RUINS_HALL_EXPANDED); atXY(safe%32,safe/32);
+    assert(Crossroads_PrepareContinue()); assert(s1.pos.x==safe%32 && s1.pos.y==safe/32); assert(!setLayoutCalls); assertHallState();
+    // A synthetic legacy Surf save must become a dry walking avatar.
+    initHall(LAYOUT_RUINS_OF_ALPH_UNDERGROUND_HALL); atXY(safe%32,safe/32); setSurf();
+    assert(Crossroads_PrepareContinue()); assert(sRuinsExpandedHallContinueMask[s1.pos.y*32+s1.pos.x]&4);
+    assert(!SavedPlayerWasSurfing() && gObjectEvents[0].graphicsId==42); assertHallState();
+    // A passable non-mask coordinate checks that new and wrong-old IDs do not
+    // inherit the stricter legacy public-component restriction. Synthetic case;
+    // visual safety of any real saved position still needs emulator testing.
+    initHall(LAYOUT_HGSS_RUINS_HALL_EXPANDED);
+    int nonguarded=-1;
+    for(int i=0;i<32*64;i++) {
+        if(sRuinsExpandedHallContinueMask[i] || (cells[i]&MAPGRID_COLLISION_MASK) || (cells[i]>>12)!=3) continue;
+        int occupied=0;
+        for(unsigned j=0;j<events.objectEventCount;j++) if(eventObjects[j].x==i%32 && eventObjects[j].y==i/32) occupied=1;
+        if(!occupied) {nonguarded=i;break;}
+    }
+    assert(nonguarded>=0); atXY(nonguarded%32,nonguarded/32);
+    assert(Crossroads_PrepareContinue()); assert(s1.pos.x==nonguarded%32 && s1.pos.y==nonguarded/32); assert(!setLayoutCalls); assertHallState();
+    initHall(LAYOUT_HGSS_RUINS_HALL_EXPANDED+100); atXY(nonguarded%32,nonguarded/32);
+    assert(Crossroads_PrepareContinue()); assert(s1.pos.x==nonguarded%32 && s1.pos.y==nonguarded/32); assert(setLayoutCalls==1); assertHallState();
+    // Even an old hall ID cannot trigger the migration on another map.
+    initHall(LAYOUT_RUINS_OF_ALPH_UNDERGROUND_HALL); s1.location.mapNum=MAP_NUM(MAP_AZALEA_TOWN);
+    assert(!NeedsLegacyRuinsExpandedHallRelocation(TRUE,nonguarded%32,nonguarded/32));
+    // Wrong dimensions must not read beyond the fixed-size Hall mask.
+    initHall(LAYOUT_HGSS_RUINS_HALL_EXPANDED); layout.width=29; layout.height=32;
+    assert(GetRuinsExpandedHallContinueMask()==NULL);
+    printf("Ruins Hall: %d legacy open cells (%d unchanged, %d relocated) + modern/Surf/ID/dimensions controls PASS\n",oldOpen,oldSafe,oldRelocated);
+}
 static void initRoute(void) {
     FILE *f;
     init(MAP_UNION_CAVE_1_F,LAYOUT_HGSS_UNION_CAVE_1_F,LAYOUT_HGSS_UNION_CAVE_1_F,96);
@@ -279,6 +355,7 @@ static void runRoute(void) {
 int main(void) {
     runRoute();
     runRuins();
+    runHall();
     run(MAP_UNION_CAVE_1_F,LAYOUT_UNION_CAVE_1_F,LAYOUT_HGSS_UNION_CAVE_1_F,96,sUnionCave1FContinueMask);
     run(MAP_UNION_CAVE_2_F,LAYOUT_UNION_CAVE_2_F,LAYOUT_HGSS_UNION_CAVE_2_F,64,sUnionCaveB1FContinueMask);
     run(MAP_UNION_CAVE_3_F,LAYOUT_UNION_CAVE_3_F,LAYOUT_HGSS_UNION_CAVE_3_F,96,sUnionCaveB2FContinueMask);
@@ -312,7 +389,19 @@ with tempfile.TemporaryDirectory(prefix='union-continue-test-') as tmp:
     for array, group, typename in [('eventWarps', 'warp_events', 'Event'), ('eventObjects', 'object_events', 'ObjectEventTemplate')]:
         for i, event in enumerate(ruins[group]):
             setup += f"{array}[{i}]=(struct {typename}){{.x={event['x']},.y={event['y']}}};"
-    fixture = harness.replace('RUINS_OLD_BIN', str(oldfile)).replace('RUINS_EVENT_SETUP', setup)
+    old_hall = subprocess.check_output(['git', 'show', '1752f15e53:data/layouts/RuinsOfAlph_UndergroundHall/map.bin'], cwd=R)
+    assert len(old_hall) == 29 * 32 * 2
+    old_hall_file = Path(tmp) / 'hall-old.bin'
+    old_hall_file.write_bytes(old_hall)
+    hall = json.loads((R / 'data/maps/RuinsOfAlph_UndergroundHall/map.json').read_text())
+    assert hall['layout'] == 'LAYOUT_HGSS_RUINS_HALL_EXPANDED'
+    assert len(hall['warp_events']) <= 8 and len(hall['object_events']) <= 4
+    hall_setup = f"events.warpCount={len(hall['warp_events'])}; events.objectEventCount={len(hall['object_events'])};"
+    for array, group, typename in [('eventWarps', 'warp_events', 'Event'), ('eventObjects', 'object_events', 'ObjectEventTemplate')]:
+        for i, event in enumerate(hall[group]):
+            hall_setup += f"{array}[{i}]=(struct {typename}){{.x={event['x']},.y={event['y']}}};"
+    fixture = (harness.replace('RUINS_OLD_BIN', str(oldfile)).replace('RUINS_EVENT_SETUP', setup)
+               .replace('HALL_OLD_BIN', str(old_hall_file)).replace('HALL_EVENT_SETUP', hall_setup))
     cfile.write_text(defines + prelude + source + fixture)
     subprocess.run(['cc','-std=c11','-Wall','-Werror','-O2',str(cfile),'-o',str(exe)], check=True)
     subprocess.run([str(exe)], cwd=R, check=True)

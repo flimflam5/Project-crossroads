@@ -9,6 +9,7 @@
 #include "berry_powder.h"
 #include "bike.h"
 #include "coins.h"
+#include "crossroads_alph.h"
 #include "data.h"
 #include "event_data.h"
 #include "event_object_lock.h"
@@ -1113,8 +1114,34 @@ void ItemUseOutOfBattle_EscapeRope(u8 taskId)
     }
 }
 
+#if !IS_FRLG
+// The target script opens the wall only for this map visit. It allocates no
+// save flags and must not take the Water Stone.
+extern const u8 RuinsOfAlph_SouthwestChamber_WaterStoneUsed[];
+static void ItemUseOnFieldCB_AlphWaterStone(u8 taskId)
+{
+    ScriptContext_SetupScript(RuinsOfAlph_SouthwestChamber_WaterStoneUsed);
+    DestroyTask(taskId);
+}
+#endif
+
 void ItemUseOutOfBattle_EvolutionStone(u8 taskId)
 {
+#if !IS_FRLG
+    // Evolution stones normally use the party menu. Explicitly return to the
+    // field for this one interaction instead of routing by the item type.
+    if (!gTasks[taskId].tUsingRegisteredKeyItem
+     && CurrentBattlePyramidLocation() == PYRAMID_LOCATION_NONE
+     && gBagPosition.location == ITEMMENULOCATION_FIELD
+     && Crossroads_AlphShouldUseWaterStone())
+    {
+        sItemUseOnFieldCB = ItemUseOnFieldCB_AlphWaterStone;
+        gFieldCallback = FieldCB_UseItemOnField;
+        gBagMenu->newScreenCallback = CB2_ReturnToField;
+        Task_FadeAndCloseBagMenu(taskId);
+        return;
+    }
+#endif
     gItemUseCB = ItemUseCB_EvolutionStone;
     SetUpItemUseCallback(taskId);
 }

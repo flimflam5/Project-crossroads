@@ -21,6 +21,9 @@
 #define UNION_CONTINUE_DRY      1
 #define UNION_CONTINUE_SURF     2
 #define UNION_CONTINUE_FALLBACK 4
+static const u8 sRuinsExpandedHallContinueMask[] = INCBIN_U8("data/layouts/RuinsOfAlph_UndergroundHall/safe_continue_expanded.bin");
+_Static_assert(sizeof(sRuinsExpandedHallContinueMask) == 32 * 64, "Ruins expanded hall continue mask size");
+
 static const u8 sUnionCave1FContinueMask[] = INCBIN_U8("data/layouts/UnionCave_1F/safe_continue.bin");
 static const u8 sUnionCaveB1FContinueMask[] = INCBIN_U8("data/layouts/UnionCave_2F/safe_continue.bin");
 static const u8 sUnionCaveB2FContinueMask[] = INCBIN_U8("data/layouts/UnionCave_3F/safe_continue.bin");
@@ -42,6 +45,20 @@ static const u8 *GetUnionCaveContinueMask(void)
     if (gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_UNION_CAVE_3_F)
      && layout->width == 32 && layout->height == 96)
         return sUnionCaveB2FContinueMask;
+    return NULL;
+}
+
+// This mask applies only to the new HGSS hall. A legacy coordinate is safe
+// only when it belongs to the public, unobscured dry component. Do not impose
+// that historical restriction on deliberate saves made on the new layout.
+static const u8 *GetRuinsExpandedHallContinueMask(void)
+{
+    const struct MapLayout *layout = gMapHeader.mapLayout;
+    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_RUINS_OF_ALPH_UNDERGROUND_HALL)
+     && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_RUINS_OF_ALPH_UNDERGROUND_HALL)
+     && gMapHeader.mapLayoutId == LAYOUT_HGSS_RUINS_HALL_EXPANDED
+     && layout->width == 32 && layout->height == 64)
+        return sRuinsExpandedHallContinueMask;
     return NULL;
 }
 
@@ -70,6 +87,7 @@ static bool32 IsClearContinueTile(s16 x, s16 y)
 {
     const struct MapLayout *layout = gMapHeader.mapLayout;
     const u8 *unionMask = GetUnionCaveContinueMask();
+    const u8 *hallMask = GetRuinsExpandedHallContinueMask();
     u16 block;
     u32 i;
     if (x < 0 || y < 0 || x >= layout->width || y >= layout->height || IsAzaleaKilnFootprint(x, y) || IsRuinsHallFootprint(x, y))
@@ -77,7 +95,8 @@ static bool32 IsClearContinueTile(s16 x, s16 y)
     block = layout->map[y * layout->width + x];
     if ((block & MAPGRID_COLLISION_MASK) || (block >> 12) != 3)
         return FALSE;
-    if (unionMask != NULL && !(unionMask[y * layout->width + x] & UNION_CONTINUE_FALLBACK))
+    if ((unionMask != NULL && !(unionMask[y * layout->width + x] & UNION_CONTINUE_FALLBACK))
+     || (hallMask != NULL && !(hallMask[y * layout->width + x] & UNION_CONTINUE_FALLBACK)))
         return FALSE;
     for (i = 0; i < gMapHeader.events->warpCount; i++)
         if (gMapHeader.events->warps[i].x == x && gMapHeader.events->warps[i].y == y)
@@ -130,6 +149,17 @@ static bool32 SavedPlayerWasSurfing(void)
             return TRUE;
     }
     return FALSE;
+}
+
+static bool32 NeedsLegacyRuinsExpandedHallRelocation(bool32 legacy, s16 x, s16 y)
+{
+    const struct MapLayout *layout = gMapHeader.mapLayout;
+    const u8 *mask = GetRuinsExpandedHallContinueMask();
+    if (!legacy || mask == NULL)
+        return FALSE;
+    if (x < 0 || y < 0 || x >= layout->width || y >= layout->height)
+        return TRUE;
+    return SavedPlayerWasSurfing() || !(mask[y * layout->width + x] & UNION_CONTINUE_FALLBACK);
 }
 
 // The 24-row Route 33 used one stationary woman at (19,15). Continue restores
@@ -290,7 +320,7 @@ bool32 Crossroads_PrepareContinue(void)
     const struct MapLayout *layout;
     s16 x, y, nx, ny, radius;
     u32 i;
-    bool32 legacyUnionCave, legacyRuins;
+    bool32 legacyUnionCave, legacyRuins, legacyRuinsExpandedHall;
     if (!Johto_IsExplorationGroup(gSaveBlock1Ptr->location.mapGroup))
         return FALSE;
     Crossroads_EnsureAreaRespawn();
@@ -300,6 +330,10 @@ bool32 Crossroads_PrepareContinue(void)
                && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_RUINS_OF_ALPH)
                && gSaveBlock1Ptr->mapLayoutId == LAYOUT_RUINS_OF_ALPH
                && gMapHeader.mapLayoutId == LAYOUT_HGSS_RUINS_OF_ALPH;
+    legacyRuinsExpandedHall = gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_RUINS_OF_ALPH_UNDERGROUND_HALL)
+                           && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_RUINS_OF_ALPH_UNDERGROUND_HALL)
+                           && gSaveBlock1Ptr->mapLayoutId == LAYOUT_RUINS_OF_ALPH_UNDERGROUND_HALL
+                           && gMapHeader.mapLayoutId == LAYOUT_HGSS_RUINS_HALL_EXPANDED;
     // The old B2F was a single room. In the reconstructed map its dry
     // components require Surf or a Ruins puzzle to reach the public exit;
     // a legacy save cannot be assumed to have either. Migrate it once to the
@@ -330,6 +364,7 @@ bool32 Crossroads_PrepareContinue(void)
      && !(legacyRuins && IsRuinsHallFootprint(x, y))
      && !IsRoute33UnsafeContinueTile(x, y)
      && !NeedsDryLanding(x, y)
+     && !NeedsLegacyRuinsExpandedHallRelocation(legacyRuinsExpandedHall, x, y)
      && !NeedsLegacyUnionCaveRelocation(legacyUnionCave, x, y)
      && !NeedsUnionCaveRelocation(x, y))
     {

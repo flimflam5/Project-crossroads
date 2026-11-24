@@ -49,6 +49,8 @@ def validate():
  from validate_hgss_union_cave_installed import validate as validate_union
  union_reviewed=validate_union()
  subprocess.run(['python3',str(R/'crossroads/tools/test_hgss_ruins_live_structure.py')],check=True)
+ from validate_hgss_ruins_hidden_installed import validate as validate_hidden
+ validate_hidden()
  from validate_eight_gyms import validate as validate_gyms
  validate_gyms()
  # Route 33 is a reviewed later reconstruction; its dedicated validator pins
@@ -73,7 +75,7 @@ def validate():
  baseline=load('crossroads/hgss/contracts/save-contracts.json');groups=load('data/maps/map_groups.json');layouts=load('data/layouts/layouts.json');heals=load('src/data/heal_locations.json')
  assert groups['group_order']==baseline['groups']['group_order']
  for key,old in baseline['groups'].items():
-  if key=='gMapGroup_CrossroadsJohtoExpansion':assert groups[key][:len(old)]==old and groups[key][len(old):]==['EcruteakCity_BarrierStation','EcruteakCity_BarrierCorridor','BellchimeTrail','EcruteakCity_BellTower_10F','EcruteakCity_BellTower_Roof','EcruteakCity_DowsingHouse','EcruteakCity_PokemonCenter_B1F','EcruteakCity_WestGate','EcruteakCity_EastGate','VioletCity_PokemonCenter_B1F','VioletCity_WestGate','VioletCity_EastGate']+(['OlivineCity_FishingHouse','OlivineCity_TradeHouse','OlivineCity_SealHouse','OlivineCity_Cafe','OlivineCity_PokemonCenter_B1F','OlivineCity_Lighthouse_Balcony','OlivineCity_Lighthouse_Elevator','OlivineCity_PortTerminal','OlivineCity_PortQuay'] if olivine else [])+['SSAqua_1F','SSAqua_CaptainRoom','SSAqua_SoutheastCabins','SSAqua_SouthwestCabins','SSAqua_NortheastCabins','SSAqua_NorthwestCabins','SSAqua_B1F','AzaleaTown_CharcoalKiln','RuinsOfAlph_SouthwestPocket','RuinsOfAlph_NorthwestPocket','RuinsOfAlph_SouthwestChamber','RuinsOfAlph_NorthwestChamber','RuinsOfAlph_UndergroundHall','RuinsOfAlph_HallEntrance']
+  if key=='gMapGroup_CrossroadsJohtoExpansion':assert groups[key][:len(old)]==old and groups[key][len(old):]==['EcruteakCity_BarrierStation','EcruteakCity_BarrierCorridor','BellchimeTrail','EcruteakCity_BellTower_10F','EcruteakCity_BellTower_Roof','EcruteakCity_DowsingHouse','EcruteakCity_PokemonCenter_B1F','EcruteakCity_WestGate','EcruteakCity_EastGate','VioletCity_PokemonCenter_B1F','VioletCity_WestGate','VioletCity_EastGate']+(['OlivineCity_FishingHouse','OlivineCity_TradeHouse','OlivineCity_SealHouse','OlivineCity_Cafe','OlivineCity_PokemonCenter_B1F','OlivineCity_Lighthouse_Balcony','OlivineCity_Lighthouse_Elevator','OlivineCity_PortTerminal','OlivineCity_PortQuay'] if olivine else [])+['SSAqua_1F','SSAqua_CaptainRoom','SSAqua_SoutheastCabins','SSAqua_SouthwestCabins','SSAqua_NortheastCabins','SSAqua_NorthwestCabins','SSAqua_B1F','AzaleaTown_CharcoalKiln','RuinsOfAlph_SouthwestPocket','RuinsOfAlph_NorthwestPocket','RuinsOfAlph_SouthwestChamber','RuinsOfAlph_NorthwestChamber','RuinsOfAlph_UndergroundHall','RuinsOfAlph_HallEntrance','RuinsOfAlph_SouthwestSecondRoom','RuinsOfAlph_NorthwestSecondRoom','RuinsOfAlph_SouthwestHiddenRoom','RuinsOfAlph_NorthwestHiddenRoom']
   else:assert groups[key]==old,('Map IDs reordered',key)
  assert [l['id'] for l in layouts['layouts'][:len(baseline['layouts']['layouts'])]]==[l['id'] for l in baseline['layouts']['layouts']]
  for old,new in zip(baseline['layouts']['layouts'],layouts['layouts']):

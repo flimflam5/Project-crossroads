@@ -629,3 +629,14 @@ const u16 gMetatiles_HgssRuinsPublic[] = INCBIN_U16("data/tilesets/secondary/hgs
 const u16 gMetatileAttributes_HgssRuinsPublic[] = INCBIN_U16("data/tilesets/secondary/hgss_ruins_public/metatile_attributes.bin");
 #endif
 // END HGSS RUINS PUBLIC PRIVATE
+
+// BEGIN HGSS RUINS HIDDEN PRIVATE
+#if !IS_FRLG
+const u16 gMetatiles_HgssRuinsHiddenSecond[] = INCBIN_U16("data/tilesets/primary/hgss_ruins_hidden_second/metatiles.bin");
+const u16 gMetatileAttributes_HgssRuinsHiddenSecond[] = INCBIN_U16("data/tilesets/primary/hgss_ruins_hidden_second/metatile_attributes.bin");
+const u16 gMetatiles_HgssRuinsHiddenSouthwest[] = INCBIN_U16("data/tilesets/primary/hgss_ruins_hidden_southwest/metatiles.bin");
+const u16 gMetatileAttributes_HgssRuinsHiddenSouthwest[] = INCBIN_U16("data/tilesets/primary/hgss_ruins_hidden_southwest/metatile_attributes.bin");
+const u16 gMetatiles_HgssRuinsHiddenNorthwest[] = INCBIN_U16("data/tilesets/primary/hgss_ruins_hidden_northwest/metatiles.bin");
+const u16 gMetatileAttributes_HgssRuinsHiddenNorthwest[] = INCBIN_U16("data/tilesets/primary/hgss_ruins_hidden_northwest/metatile_attributes.bin");
+#endif
+// END HGSS RUINS HIDDEN PRIVATE
