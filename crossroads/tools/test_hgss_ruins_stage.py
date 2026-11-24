@@ -24,7 +24,7 @@ def run():
         assert len(tiles[name])==SIZES[NAMES.index(name)][0]*SIZES[NAMES.index(name)][1]
         layout=layouts[m['layout']]
         assert (layout['width'],layout['height'])==SIZES[NAMES.index(name)]
-        assert layout['blockdata_filepath']==f'data/layouts/{name}/map.bin'
+        assert layout['blockdata_filepath']==('data/layouts/HgssRuinsHallExpanded/map.bin' if name==NAMES[4] else f'data/layouts/{name}/map.bin')
         assert len(borders[name])==4 and all(v&0x400 for v in borders[name])
     for n in NAMES[2:4]:
         assert len(maps[n]['bg_events'])==1

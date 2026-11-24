@@ -1,3 +1,21 @@
+# Ruins hidden-room development prototype — not a release
+
+On `feature/hgss-ruins-hidden-01`, the current source adds the four HGSS-shaped
+southwest/northwest second and hidden rooms to the expanded Underground Hall.
+Water Stone must be used while facing the SW wall; NW checks a non-egg Ho-Oh
+in the party. Both doors reopen per visit rather than saving persistent flags.
+The Water Stone is not consumed. First-room warp indices remain stable; an
+arrival-only floor prevents a changed bag or party from trapping a return.
+
+No item rewards, new trainers, story flags, marker dialogue or new NPCs are
+implemented. The four item plinths and the Hall/hidden inscriptions remain
+visual-only. HGSS-derived GBA geometry and temporary door behavior are subject
+to owner visual review. Map generator, mapjson component, event-script ARM
+assembly, static graph, original C host mocks and appropriate regressions pass.
+There is no full linked ROM build or actual emulator playtest for this source;
+do not present it as a tested release or as completed Johto. Exact limits,
+references and test commands are in `donor/hns-ruins-hidden/README.md`.
+
 # QA10 B5 — tested owner-review checkpoint
 
 Game source cc643ffe711204f3ef38e34e7aa1eb8c9558720f; feature branch

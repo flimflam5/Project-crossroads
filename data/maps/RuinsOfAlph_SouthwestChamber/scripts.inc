@@ -10,7 +10,19 @@ RuinsOfAlph_SouthwestChamber_Puzzle::
     releaseall
     end
 RuinsOfAlph_SouthwestChamber_Puzzle_Success::
-    warp MAP_RUINS_OF_ALPH_UNDERGROUND_HALL, 5, 23
+    warp MAP_RUINS_OF_ALPH_UNDERGROUND_HALL, 5, 42
     waitstate
+    releaseall
+    end
+
+RuinsOfAlph_SouthwestChamber_HiddenGate::
+    msgbox RuinsOfAlph_SouthwestChamber_HiddenGate_Text, MSGBOX_SIGN
+    end
+RuinsOfAlph_SouthwestChamber_HiddenGate_Text:
+    .string "WATER$"
+RuinsOfAlph_SouthwestChamber_WaterStoneUsed::
+    lockall
+    setmetatile 5, 1, 40, FALSE
+    special DrawWholeMapView
     releaseall
     end

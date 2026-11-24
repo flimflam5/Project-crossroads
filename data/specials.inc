@@ -645,3 +645,5 @@ gSpecials::
 	def_special Johto_QAKitRequested
 
 	def_special DoSlidingPuzzle, waitstate=1
+
+	def_special Crossroads_AlphHasNonEggHoOh

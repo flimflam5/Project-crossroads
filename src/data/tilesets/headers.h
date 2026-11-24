@@ -1839,3 +1839,11 @@ const struct Tileset gTileset_HgssRuinsHall = { .isCompressed=TRUE, .isSecondary
 const struct Tileset gTileset_HgssRuinsPublic = { .isCompressed=TRUE, .isSecondary=TRUE, .tiles=gTilesetTiles_HgssRuinsPublic, .palettes=gTilesetPalettes_HgssRuinsPublic, .metatiles=gMetatiles_HgssRuinsPublic, .metatileAttributes=gMetatileAttributes_HgssRuinsPublic, .callback=InitTilesetAnim_Slateport };
 #endif
 // END HGSS RUINS PUBLIC PRIVATE
+
+// BEGIN HGSS RUINS HIDDEN PRIVATE
+#if !IS_FRLG
+const struct Tileset gTileset_HgssRuinsHiddenSecond = { .isCompressed=TRUE, .isSecondary=FALSE, .tiles=gTilesetTiles_HgssRuinsHiddenSecond, .palettes=gTilesetPalettes_HgssRuinsHiddenSecond, .metatiles=gMetatiles_HgssRuinsHiddenSecond, .metatileAttributes=gMetatileAttributes_HgssRuinsHiddenSecond, .callback=NULL };
+const struct Tileset gTileset_HgssRuinsHiddenSouthwest = { .isCompressed=TRUE, .isSecondary=FALSE, .tiles=gTilesetTiles_HgssRuinsHiddenSouthwest, .palettes=gTilesetPalettes_HgssRuinsHiddenSouthwest, .metatiles=gMetatiles_HgssRuinsHiddenSouthwest, .metatileAttributes=gMetatileAttributes_HgssRuinsHiddenSouthwest, .callback=NULL };
+const struct Tileset gTileset_HgssRuinsHiddenNorthwest = { .isCompressed=TRUE, .isSecondary=FALSE, .tiles=gTilesetTiles_HgssRuinsHiddenNorthwest, .palettes=gTilesetPalettes_HgssRuinsHiddenNorthwest, .metatiles=gMetatiles_HgssRuinsHiddenNorthwest, .metatileAttributes=gMetatileAttributes_HgssRuinsHiddenNorthwest, .callback=NULL };
+#endif
+// END HGSS RUINS HIDDEN PRIVATE

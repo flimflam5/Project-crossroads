@@ -7,6 +7,7 @@ import json
 import struct
 from pathlib import Path
 from stage_hgss_ruins_network import NAMES, IDS
+from stage_hgss_ruins_hidden_graph import NAMES as HIDDEN_NAMES
 
 R=Path(__file__).resolve().parents[2]
 def load(path):return json.loads((R/path).read_text())
@@ -15,7 +16,7 @@ def words(path):
     return struct.unpack('<%dH'%(len(data)//2),data)
 
 layouts={x['id']:x for x in load('data/layouts/layouts.json')['layouts']}
-maps={n:load(f'data/maps/{n}/map.json') for n in (*NAMES,'RuinsOfAlph','UnionCave_1F')}
+maps={n:load(f'data/maps/{n}/map.json') for n in (*NAMES,*HIDDEN_NAMES,'RuinsOfAlph','UnionCave_1F')}
 assert [maps[n]['id'] for n in NAMES]==list(IDS)
 assert load('data/maps/map_groups.json')['gMapGroup_CrossroadsJohtoExpansion'][51:57]==list(NAMES)
 by_id={m['id']:m for m in maps.values()}
@@ -23,7 +24,14 @@ for name in NAMES:
     m=maps[name]
     for i,w in enumerate(m['warp_events']):
         target=by_id[w['dest_map']]['warp_events'][int(w['dest_warp_id'])]
-        assert target['dest_map']==m['id'] and int(target['dest_warp_id'])==i,(name,i,target)
+        if name in NAMES[2:4] and i==2:
+            # The conditionally opened doorway returns to a neutral floor
+            # alias, never into a closed wall when an item/party has changed.
+            alias=m['warp_events'][1]
+            assert (w['x'],w['y'])==(5,1) and (alias['x'],alias['y'])==(5,2)
+            assert (w['dest_map'],w['dest_warp_id'])==(alias['dest_map'],alias['dest_warp_id'])
+            assert target['dest_map']==m['id'] and int(target['dest_warp_id'])==1
+        else:assert target['dest_map']==m['id'] and int(target['dest_warp_id'])==i,(name,i,target)
 
 def tileinfo(name,x,y,attribute_path):
     m=maps[name];layout=layouts[m['layout']];w,h=layout['width'],layout['height']
@@ -51,8 +59,10 @@ public='data/tilesets/secondary/hgss_ruins_public/metatile_attributes.bin'
 for n in NAMES[:2]:
     for i in (0,1):doorway(n,i,outside,0x60,[(0,1)])
 for n in NAMES[2:4]:doorway(n,0,interior,0x65,[(0,-1)])
-doorway(NAMES[4],0,hall,0x61,[(0,-1),(0,1)])
+doorway(NAMES[4],0,hall,0x61,[(0,1)])
+doorway(NAMES[4],1,hall,0x61,[(0,-1)])
 doorway(NAMES[5],0,hall,0x61,[(0,-1)])
 doorway(NAMES[5],1,hall,0x61,[(0,-1),(0,1)])
+doorway(NAMES[5],2,hall,0x61,[(0,-1),(0,1)])
 doorway('RuinsOfAlph',2,public,0x60,[(0,1)])
 print('Generated IDs, reciprocal targets, door behavior, elevations and approaches pass. Emulator playtest and owner QA remain pending.')

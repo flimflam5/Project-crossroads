@@ -1,7 +1,7 @@
 {
   "id": "MAP_RUINS_OF_ALPH_UNDERGROUND_HALL",
   "name": "RuinsOfAlph_UndergroundHall",
-  "layout": "LAYOUT_RUINS_OF_ALPH_UNDERGROUND_HALL",
+  "layout": "LAYOUT_HGSS_RUINS_HALL_EXPANDED",
   "music": "MUS_PETALBURG_WOODS",
   "region": "REGION_HOENN",
   "region_map_section": "MAPSEC_RUINS_OF_ALPH",
@@ -17,11 +17,18 @@
   "object_events": [],
   "warp_events": [
     {
-      "x": 15,
-      "y": 16,
+      "x": 18,
+      "y": 24,
       "elevation": 0,
       "dest_map": "MAP_RUINS_OF_ALPH_HALL_ENTRANCE",
       "dest_warp_id": "1"
+    },
+    {
+      "x": 18,
+      "y": 23,
+      "elevation": 0,
+      "dest_map": "MAP_RUINS_OF_ALPH_HALL_ENTRANCE",
+      "dest_warp_id": "2"
     }
   ],
   "coord_events": [],

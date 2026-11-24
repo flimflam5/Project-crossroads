@@ -46,3 +46,8 @@ data/tilesets/primary/hgssruinschamber/palettes/*.pal -text
 data/tilesets/primary/hgssruinshall/palettes/*.pal -text
 data/tilesets/secondary/hgss_ruins_public/palettes/*.pal -text
 data/tilesets/secondary/hgss_ruins_public/palettes/*.pal -whitespace
+
+# HGSS Ruins second/hidden palettes are hash-verified generator output.
+data/tilesets/primary/hgss_ruins_hidden_second/palettes/*.pal -text
+data/tilesets/primary/hgss_ruins_hidden_southwest/palettes/*.pal -text
+data/tilesets/primary/hgss_ruins_hidden_northwest/palettes/*.pal -text

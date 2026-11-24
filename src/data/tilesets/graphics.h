@@ -4015,3 +4015,65 @@ const u16 gTilesetPalettes_HgssRuinsPublic[][16] = {
 };
 #endif
 // END HGSS RUINS PUBLIC PRIVATE
+
+// BEGIN HGSS RUINS HIDDEN PRIVATE
+#if !IS_FRLG
+const u32 gTilesetTiles_HgssRuinsHiddenSecond[] = INCGFX_U32("data/tilesets/primary/hgss_ruins_hidden_second/tiles.png", ".4bpp.fastSmol");
+const u16 gTilesetPalettes_HgssRuinsHiddenSecond[][16] = {
+    INCGFX_U16("data/tilesets/primary/hgss_ruins_hidden_second/palettes/00.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/hgss_ruins_hidden_second/palettes/01.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/hgss_ruins_hidden_second/palettes/02.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/hgss_ruins_hidden_second/palettes/03.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/hgss_ruins_hidden_second/palettes/04.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/hgss_ruins_hidden_second/palettes/05.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/hgss_ruins_hidden_second/palettes/06.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/hgss_ruins_hidden_second/palettes/07.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/hgss_ruins_hidden_second/palettes/08.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/hgss_ruins_hidden_second/palettes/09.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/hgss_ruins_hidden_second/palettes/10.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/hgss_ruins_hidden_second/palettes/11.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/hgss_ruins_hidden_second/palettes/12.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/hgss_ruins_hidden_second/palettes/13.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/hgss_ruins_hidden_second/palettes/14.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/hgss_ruins_hidden_second/palettes/15.pal", ".gbapal"),
+};
+const u32 gTilesetTiles_HgssRuinsHiddenSouthwest[] = INCGFX_U32("data/tilesets/primary/hgss_ruins_hidden_southwest/tiles.png", ".4bpp.fastSmol");
+const u16 gTilesetPalettes_HgssRuinsHiddenSouthwest[][16] = {
+    INCGFX_U16("data/tilesets/primary/hgss_ruins_hidden_southwest/palettes/00.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/hgss_ruins_hidden_southwest/palettes/01.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/hgss_ruins_hidden_southwest/palettes/02.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/hgss_ruins_hidden_southwest/palettes/03.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/hgss_ruins_hidden_southwest/palettes/04.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/hgss_ruins_hidden_southwest/palettes/05.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/hgss_ruins_hidden_southwest/palettes/06.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/hgss_ruins_hidden_southwest/palettes/07.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/hgss_ruins_hidden_southwest/palettes/08.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/hgss_ruins_hidden_southwest/palettes/09.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/hgss_ruins_hidden_southwest/palettes/10.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/hgss_ruins_hidden_southwest/palettes/11.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/hgss_ruins_hidden_southwest/palettes/12.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/hgss_ruins_hidden_southwest/palettes/13.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/hgss_ruins_hidden_southwest/palettes/14.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/hgss_ruins_hidden_southwest/palettes/15.pal", ".gbapal"),
+};
+const u32 gTilesetTiles_HgssRuinsHiddenNorthwest[] = INCGFX_U32("data/tilesets/primary/hgss_ruins_hidden_northwest/tiles.png", ".4bpp.fastSmol");
+const u16 gTilesetPalettes_HgssRuinsHiddenNorthwest[][16] = {
+    INCGFX_U16("data/tilesets/primary/hgss_ruins_hidden_northwest/palettes/00.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/hgss_ruins_hidden_northwest/palettes/01.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/hgss_ruins_hidden_northwest/palettes/02.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/hgss_ruins_hidden_northwest/palettes/03.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/hgss_ruins_hidden_northwest/palettes/04.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/hgss_ruins_hidden_northwest/palettes/05.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/hgss_ruins_hidden_northwest/palettes/06.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/hgss_ruins_hidden_northwest/palettes/07.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/hgss_ruins_hidden_northwest/palettes/08.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/hgss_ruins_hidden_northwest/palettes/09.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/hgss_ruins_hidden_northwest/palettes/10.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/hgss_ruins_hidden_northwest/palettes/11.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/hgss_ruins_hidden_northwest/palettes/12.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/hgss_ruins_hidden_northwest/palettes/13.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/hgss_ruins_hidden_northwest/palettes/14.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/hgss_ruins_hidden_northwest/palettes/15.pal", ".gbapal"),
+};
+#endif
+// END HGSS RUINS HIDDEN PRIVATE

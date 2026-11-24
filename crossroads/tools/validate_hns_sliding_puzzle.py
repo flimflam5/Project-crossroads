@@ -17,7 +17,7 @@ prior=subprocess.check_output(['git','show','9b97772586:data/specials.inc'],cwd=
 current=(R/'data/specials.inc').read_text()
 def entries(text):return re.findall(r'^\s*def_special\s+([A-Za-z_][A-Za-z0-9_]*)',text,re.M)
 old,new=entries(prior),entries(current)
-assert len(old)==624 and new==old+['DoSlidingPuzzle'],'An existing special ordinal changed or puzzle not appended'
+assert len(old)==624 and new==old+['DoSlidingPuzzle','Crossroads_AlphHasNonEggHoOh'],'An existing special ordinal changed or expected puzzle/party specials missing'
 code=(R/'src/sliding_puzzle.c').read_text()
 assert 'void DoSlidingPuzzle(void)' in code and 'gSpecialVar_Result' in code
 assert not re.search(r'\b(?:FlagSet|FlagClear|GiveItem|AddBagItem|RemoveBagItem)\s*\(',code),'Puzzle must not grant items or set flags'
@@ -33,4 +33,4 @@ for path in uses:
     assert script.count('special DoSlidingPuzzle')==1
     assert 'warp MAP_RUINS_OF_ALPH_UNDERGROUND_HALL' in script
     assert not re.search(r'^\s*(?:setflag|clearflag|giveitem|removeitem)\b',script,re.M),path
-print('PASS: pinned puzzle assets, preserved 624 special ordinals, two chamber calls and no flags/rewards. Emulator and full link remain unverified.')
+print('PASS: pinned puzzle assets, preserved 624 special ordinals, appended puzzle/party specials, two chamber calls and no flags/rewards. Emulator and full link remain unverified.')

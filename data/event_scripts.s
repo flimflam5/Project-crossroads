@@ -2097,3 +2097,11 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/RuinsOfAlph_UndergroundHall/scripts.inc"
 
 	.include "data/maps/RuinsOfAlph_HallEntrance/scripts.inc"
+
+	.include "data/maps/RuinsOfAlph_SouthwestSecondRoom/scripts.inc"
+
+	.include "data/maps/RuinsOfAlph_NorthwestSecondRoom/scripts.inc"
+
+	.include "data/maps/RuinsOfAlph_SouthwestHiddenRoom/scripts.inc"
+
+	.include "data/maps/RuinsOfAlph_NorthwestHiddenRoom/scripts.inc"
